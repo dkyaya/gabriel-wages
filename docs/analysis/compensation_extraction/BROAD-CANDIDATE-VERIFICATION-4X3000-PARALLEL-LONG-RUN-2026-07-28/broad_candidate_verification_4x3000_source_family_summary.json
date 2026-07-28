@@ -1,0 +1,279 @@
+{
+  "completed_result_rows": 6430,
+  "global_analysis_readiness": false,
+  "group_count": 30,
+  "group_field": "source_family_hint",
+  "groups": [
+    {
+      "blocked_or_timeout": 18,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "agenda_packet_or_minutes",
+      "unavailable": 161,
+      "verification_error": 1,
+      "verification_rows": 972,
+      "verified_reachable": 791
+    },
+    {
+      "blocked_or_timeout": 3,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "arbitration_award",
+      "unavailable": 26,
+      "verification_error": 0,
+      "verification_rows": 132,
+      "verified_reachable": 103
+    },
+    {
+      "blocked_or_timeout": 18,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "budget_or_pay_plan",
+      "unavailable": 320,
+      "verification_error": 0,
+      "verification_rows": 887,
+      "verified_reachable": 549
+    },
+    {
+      "blocked_or_timeout": 20,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba",
+      "unavailable": 400,
+      "verification_error": 0,
+      "verification_rows": 961,
+      "verified_reachable": 541
+    },
+    {
+      "blocked_or_timeout": 2,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record",
+      "unavailable": 23,
+      "verification_error": 0,
+      "verification_rows": 84,
+      "verified_reachable": 59
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed)",
+      "unavailable": 0,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 1
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible municipal posting route; not confirmed)",
+      "unavailable": 1,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 0
+    },
+    {
+      "blocked_or_timeout": 6,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_budget_pay_plan_with_explicit_compensation_mechanism",
+      "unavailable": 108,
+      "verification_error": 0,
+      "verification_rows": 315,
+      "verified_reachable": 201
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule",
+      "unavailable": 136,
+      "verification_error": 0,
+      "verification_rows": 425,
+      "verified_reachable": 284
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules)",
+      "unavailable": 0,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 1
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (public budget/payroll schedule proxy)",
+      "unavailable": 1,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 0
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit)",
+      "unavailable": 0,
+      "verification_error": 0,
+      "verification_rows": 2,
+      "verified_reachable": 2
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index)",
+      "unavailable": 0,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 1
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey)",
+      "unavailable": 0,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 1
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "civil_service_or_hr_pay_plan",
+      "unavailable": 47,
+      "verification_error": 0,
+      "verification_rows": 153,
+      "verified_reachable": 105
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "classification_study",
+      "unavailable": 14,
+      "verification_error": 0,
+      "verification_rows": 40,
+      "verified_reachable": 26
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "collective_bargaining_agreement_or_moa_or_wage_schedule",
+      "unavailable": 89,
+      "verification_error": 0,
+      "verification_rows": 215,
+      "verified_reachable": 120
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "compensation_or_budget_payroll_schedule_or_salary_benefits_summary",
+      "unavailable": 1,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 0
+    },
+    {
+      "blocked_or_timeout": 2,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "compensation_study",
+      "unavailable": 25,
+      "verification_error": 0,
+      "verification_rows": 79,
+      "verified_reachable": 52
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "factfinding_report",
+      "unavailable": 2,
+      "verification_error": 0,
+      "verification_rows": 7,
+      "verified_reachable": 5
+    },
+    {
+      "blocked_or_timeout": 10,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "mou_or_memorandum",
+      "unavailable": 125,
+      "verification_error": 0,
+      "verification_rows": 356,
+      "verified_reachable": 220
+    },
+    {
+      "blocked_or_timeout": 8,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "other_local_government_pay_policy",
+      "unavailable": 201,
+      "verification_error": 0,
+      "verification_rows": 452,
+      "verified_reachable": 243
+    },
+    {
+      "blocked_or_timeout": 7,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "personnel_policy",
+      "unavailable": 41,
+      "verification_error": 0,
+      "verification_rows": 118,
+      "verified_reachable": 69
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "salary_ordinance",
+      "unavailable": 42,
+      "verification_error": 0,
+      "verification_rows": 181,
+      "verified_reachable": 138
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "settlement_agreement",
+      "unavailable": 2,
+      "verification_error": 0,
+      "verification_rows": 7,
+      "verified_reachable": 4
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing)",
+      "unavailable": 0,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 1
+    },
+    {
+      "blocked_or_timeout": 4,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "unknown_or_needs_review",
+      "unavailable": 55,
+      "verification_error": 0,
+      "verification_rows": 213,
+      "verified_reachable": 154
+    },
+    {
+      "blocked_or_timeout": 19,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "wage_schedule",
+      "unavailable": 316,
+      "verification_error": 0,
+      "verification_rows": 820,
+      "verified_reachable": 485
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "wage_schedule_or_pay_scale_discussion_in_council_minutes",
+      "unavailable": 2,
+      "verification_error": 0,
+      "verification_rows": 2,
+      "verified_reachable": 0
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "source_family_hint": "wage_schedule_or_salary_range_disclosure",
+      "unavailable": 1,
+      "verification_error": 0,
+      "verification_rows": 1,
+      "verified_reachable": 0
+    }
+  ],
+  "verified_reachable_count": 4156
+}

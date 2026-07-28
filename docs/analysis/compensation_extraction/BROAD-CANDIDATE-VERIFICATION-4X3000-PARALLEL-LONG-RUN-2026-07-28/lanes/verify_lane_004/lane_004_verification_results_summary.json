@@ -1,0 +1,24 @@
+{
+  "lane_id": "verify_lane_004",
+  "worker_id": "worker_verify_lane_004",
+  "status": "incomplete_invalid_transport_attempt_quarantined",
+  "scheduled_start_at": "2026-07-28T14:21:00Z",
+  "actual_started_at": "2026-07-28T14:21:00Z",
+  "invalid_attempt_completed_at": "2026-07-28T14:48:55Z",
+  "scheduled_stagger_minutes": 24,
+  "locked_rows": 2144,
+  "completed_rows": 0,
+  "remaining_rows": 2144,
+  "resume_required": true,
+  "invalid_attempt_rows_excluded": 2144,
+  "invalid_attempt_status_counts": {
+    "blocked_transport": 2144
+  },
+  "invalid_attempt_transport_error": "ConnectError",
+  "network_permission_escalated": false,
+  "downloads": 0,
+  "source_reviews": 0,
+  "raw_bodies_saved": 0,
+  "raw_headers_saved": 0,
+  "global_analysis_readiness": false
+}

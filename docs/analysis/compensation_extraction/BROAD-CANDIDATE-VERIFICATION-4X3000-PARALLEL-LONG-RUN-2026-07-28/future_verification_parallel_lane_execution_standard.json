@@ -1,0 +1,18 @@
+{
+  "checkpoint_after_each_row": true,
+  "completed_lane_rerun_forbidden": true,
+  "coordinator_only_shared_outputs": true,
+  "global_analysis_readiness": false,
+  "head_only": true,
+  "isolated_worker_outputs": true,
+  "lane_local_escalated_network_smoke_required": true,
+  "lane_count": 4,
+  "sandbox_denied_rows_counted_as_verification": false,
+  "stagger_minutes": [
+    0,
+    8,
+    16,
+    24
+  ],
+  "uniform_connect_error_attempt_must_be_quarantined": true
+}

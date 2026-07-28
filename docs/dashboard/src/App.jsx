@@ -149,9 +149,9 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              The bounded Tier C evidence-memo supplement integrates {formatNumber(projectPhaseSummary.tier_c_memo_supplement_valid_scope)}
-              {" "}valid aggregate ratings and excludes {formatNumber(projectPhaseSummary.tier_c_memo_supplement_quarantines_excluded)}
-              {" "}quarantines. Broad state-by-state, source-diverse scouting is next; no wage gaps or causal findings are available.
+              The four-lane broad scout is complete and the current operation is bounded locator verification:
+              {" "}{formatNumber(projectPhaseSummary.verification_completed_count)} of {formatNumber(projectPhaseSummary.verification_queue_size)}
+              {" "}locked outcomes completed. No document review, wage gaps, or causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -174,29 +174,29 @@ function App() {
             <div className="overview-heading">
               <div>
                 <p className="eyebrow">Overview</p>
-                <h2 id="overview-title">Current bounded evidence and retained-source status</h2>
+                <h2 id="overview-title">Current broad-scout and verification status</h2>
               </div>
                 <div className="checkpoint-label">
                   <span>Next authorized stage</span>
-                  <strong>Broad state-by-state source scouting</strong>
+                  <strong>{projectPhaseSummary.next_phase}</strong>
                 </div>
             </div>
 
             <div className="headline-grid" aria-label="National headline metrics">
               <MetricCard
-                label="Tier C text artifacts"
-                value={formatNumber(projectPhaseSummary.tier_c_text_extracted_ok_count)}
-                note="Extracted locally without OCR; not rated or ingested"
+                label="Scout-covered municipalities"
+                value={formatNumber(projectPhaseSummary.current_scout_covered)}
+                note="Actual parseable scout outcomes only · map data date 2026-07-27"
               />
               <MetricCard
-                label="Valid ratings summarized"
-                value={formatNumber(projectPhaseSummary.tier_c_rating_summary_valid_count)}
-                note={`${formatNumber(projectPhaseSummary.tier_c_rating_summary_quarantine_excluded_count)} quarantines excluded · 159 total reconciled`}
+                label="Total candidate rows"
+                value={formatNumber(projectPhaseSummary.current_candidate_queue_rows)}
+                note={`${formatNumber(projectPhaseSummary.broad_state_4x1000_live_candidate_count)} new · ${formatNumber(projectPhaseSummary.broad_state_4x1000_live_deduped_candidate_count)} deduplicated in the 4x1000 wave`}
               />
               <MetricCard
-                label="Same-source linked pairs"
-                value={formatNumber(projectPhaseSummary.memo_scope.exact_same_source_linked_pair_count)}
-                note={`${formatNumber(projectPhaseSummary.memo_scope.linked_quantitative_row_count)} quantitative rows · ${formatNumber(projectPhaseSummary.memo_scope.linked_qualitative_record_count)} qualitative records`}
+                label="Verification completed"
+                value={formatNumber(projectPhaseSummary.verification_completed_count)}
+                note={`${formatNumber(projectPhaseSummary.verification_verified_reachable_count)} reachable of ${formatNumber(projectPhaseSummary.verification_queue_size)} locked locators`}
               />
               <MetricCard
                 label="Global analysis readiness"
@@ -208,8 +208,8 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                The Tier C supplement remains not ingested, codified, causal, final, or analysis-ready. It supports
-                bounded documentary findings and hypothesis hints only, not normalized comparisons or causal conclusions.
+                Locator verification is reachability metadata only. The Tier C memo remains a completed historical
+                evidence artifact; neither stage supplies normalized comparisons or causal conclusions.
               </span>
             </div>
 

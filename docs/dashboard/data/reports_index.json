@@ -1,38 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-28T10:43:55Z",
+  "generated_at": "2026-07-28T14:54:42Z",
   "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "bounded-tier-c-evidence-memo-supplement-2026-07-27",
-      "title": "Bounded Tier C Evidence Memo Supplement",
-      "report_type": "Bounded internal evidence memo supplement",
-      "date": "2026-07-27",
-      "checkpoint": "140 valid aggregate ratings; 19 quarantines excluded",
-      "summary": "The current supplement closes the targeted Tier C evidence pass with bounded documentary additions for strike/no-strike, market/comparability, non-safety constraint, and fiscal constraint. Direction remains largely unresolved.",
+      "id": "broad-candidate-verification-4x3000-2026-07-28",
+      "title": "Broad Candidate Verification 4x3000 Result",
+      "report_type": "Current verification operations report",
+      "date": "2026-07-28",
+      "checkpoint": "6,430 HEAD-only locator outcomes from 8,574 locked rows",
+      "summary": "The current operation verifies locator reachability in four isolated, staggered lanes. It does not download, source-review, extract, rate, ingest, codify, or make analytical claims.",
       "tags": [
         "current",
-        "Tier C",
-        "memo supplement",
+        "verification",
+        "4x3000",
+        "HEAD-only",
         "claim boundaries"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
-      "link_label": "Open current memo supplement",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_candidate_verification_4x3000_result_2026-07-28.md",
+      "link_label": "Open current verification report",
       "scope_metrics": [
         {
-          "label": "valid ratings",
-          "value": 140
+          "label": "locked locators",
+          "value": 8574
         },
         {
-          "label": "quarantines excluded",
-          "value": 19
+          "label": "completed outcomes",
+          "value": 6430
         },
         {
-          "label": "claim candidates",
-          "value": 115
+          "label": "reachable",
+          "value": 4156
         }
       ]
     },
@@ -132,6 +133,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "bounded-tier-c-evidence-memo-supplement-2026-07-27",
+      "title": "Bounded Tier C Evidence Memo Supplement",
+      "report_type": "Bounded internal evidence memo supplement",
+      "date": "2026-07-27",
+      "checkpoint": "140 valid aggregate ratings; 19 quarantines excluded",
+      "summary": "The current supplement closes the targeted Tier C evidence pass with bounded documentary additions for strike/no-strike, market/comparability, non-safety constraint, and fiscal constraint. Direction remains largely unresolved.",
+      "tags": [
+        "Tier C",
+        "memo supplement",
+        "claim boundaries",
+        "completed evidence artifact"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
+      "link_label": "Open current memo supplement",
+      "scope_metrics": [
+        {
+          "label": "valid ratings",
+          "value": 140
+        },
+        {
+          "label": "quarantines excluded",
+          "value": 19
+        },
+        {
+          "label": "claim candidates",
+          "value": 115
         }
       ]
     },

@@ -1,0 +1,2886 @@
+municipality,verification_rows,verified_reachable,unavailable,blocked_or_timeout,verification_error,global_analysis_readiness
+Abbeville,3,3,0,0,0,false
+Abbotsford,1,0,1,0,0,false
+Aberdeen,3,1,2,0,0,false
+Abilene,2,0,2,0,0,false
+Abingdon,1,0,1,0,0,false
+Abington,4,1,3,0,0,false
+Abita Springs,2,2,0,0,0,false
+Absecon,3,3,0,0,0,false
+Acton,5,0,5,0,0,false
+Acworth,5,4,1,0,0,false
+Ada,4,2,2,0,0,false
+Adams,1,1,0,0,0,false
+Addis,4,4,0,0,0,false
+Adel,1,0,1,0,0,false
+Afton,2,2,0,0,0,false
+Agoura Hills,1,1,0,0,0,false
+Aiken,2,2,0,0,0,false
+Ainsworth,2,2,0,0,0,false
+Airway Heights,2,1,1,0,0,false
+Alabaster,1,1,0,0,0,false
+Alachua,2,2,0,0,0,false
+Alamo,2,2,0,0,0,false
+Alamosa,1,1,0,0,0,false
+Albany,2,0,2,0,0,false
+Albemarle,2,0,2,0,0,false
+Alberton,3,3,0,0,0,false
+Albertville,3,0,3,0,0,false
+Albia,2,2,0,0,0,false
+Albion,4,4,0,0,0,false
+Albuquerque,1,1,0,0,0,false
+Alburgh,2,2,0,0,0,false
+Alcester,1,1,0,0,0,false
+Alcoa,2,1,1,0,0,false
+Aleknagik,1,1,0,0,0,false
+Alexander City,2,0,2,0,0,false
+Alexandria,1,1,0,0,0,false
+Algona,1,0,1,0,0,false
+Alice,1,1,0,0,0,false
+Allegan,1,1,0,0,0,false
+Allendale,1,1,0,0,0,false
+Allendale charter,1,1,0,0,0,false
+Allenstown,3,1,2,0,0,false
+Alliance,2,0,2,0,0,false
+Alma,3,3,0,0,0,false
+Alpena,3,3,0,0,0,false
+Alpharetta,1,1,0,0,0,false
+Alpine,1,1,0,0,0,false
+Alsip,4,3,0,1,0,false
+Altavista,1,1,0,0,0,false
+Alton,2,2,0,0,0,false
+Alva,3,3,0,0,0,false
+Alvin,3,3,0,0,0,false
+Ambler,1,1,0,0,0,false
+Ambridge,1,0,1,0,0,false
+American,1,1,0,0,0,false
+American Falls,2,2,0,0,0,false
+Amery,2,2,0,0,0,false
+Amherst,5,5,0,0,0,false
+Amite City,2,1,1,0,0,false
+Amity,3,1,2,0,0,false
+Amityville,2,1,1,0,0,false
+Anadarko,1,0,1,0,0,false
+Anamosa,1,1,0,0,0,false
+Andalusia,1,1,0,0,0,false
+Anderson,5,5,0,0,0,false
+Andover,5,1,4,0,0,false
+Andrews,2,2,0,0,0,false
+Angel Fire,1,1,0,0,0,false
+Angier,2,0,2,0,0,false
+Angleton,1,1,0,0,0,false
+Angola,1,1,0,0,0,false
+Angoon,2,2,0,0,0,false
+Anna,4,1,3,0,0,false
+Anniston,2,2,0,0,0,false
+Ansted,2,2,0,0,0,false
+Anthony,2,2,0,0,0,false
+Antioch,2,1,1,0,0,false
+Antwerp,1,1,0,0,0,false
+Apache Junction,3,1,2,0,0,false
+Apex,1,0,1,0,0,false
+Appomattox,2,2,0,0,0,false
+Arab,1,1,0,0,0,false
+Arcadia,4,4,0,0,0,false
+Arcanum,2,2,0,0,0,false
+Archbald,2,0,2,0,0,false
+Archdale,1,1,0,0,0,false
+Arco,2,2,0,0,0,false
+Arden,2,2,0,0,0,false
+Arden Hills,2,2,0,0,0,false
+Ardmore,2,2,0,0,0,false
+Argusville,1,1,0,0,0,false
+Arkansas City,2,1,1,0,0,false
+Arlington,2,2,0,0,0,false
+Armour,1,0,1,0,0,false
+Artesia,4,0,4,0,0,false
+Asbury,2,1,1,0,0,false
+Asheboro,1,1,0,0,0,false
+Ashland,6,2,4,0,0,false
+Ashland City,1,1,0,0,0,false
+Aspen,2,1,1,0,0,false
+Atchison,2,2,0,0,0,false
+Athena,2,2,0,0,0,false
+Athens,5,5,0,0,0,false
+Athol,4,1,3,0,0,false
+Atkinson,4,2,2,0,0,false
+Atlanta,1,1,0,0,0,false
+Atlantic Beach,1,1,0,0,0,false
+Atoka,2,0,2,0,0,false
+Atqasuk,1,1,0,0,0,false
+Attalla,1,1,0,0,0,false
+Auburn,9,3,6,0,0,false
+Audubon,2,2,0,0,0,false
+Augusta,1,1,0,0,0,false
+Ault,1,0,1,0,0,false
+Aumsville,2,1,1,0,0,false
+Aurora,5,2,2,1,0,false
+Austell,1,1,0,0,0,false
+Austin,1,1,0,0,0,false
+Austintown,3,3,0,0,0,false
+Avenal,4,3,1,0,0,false
+Avon,4,3,1,0,0,false
+Avon Park,2,0,2,0,0,false
+Azle,4,4,0,0,0,false
+Aztec,1,1,0,0,0,false
+Azusa,2,0,2,0,0,false
+Babylon,1,1,0,0,0,false
+Bainville,2,2,0,0,0,false
+Baker,1,1,0,0,0,false
+Baldwin,6,4,2,0,0,false
+Baldwin Park,2,0,2,0,0,false
+Baldwinsville,1,0,1,0,0,false
+Ball,3,0,3,0,0,false
+Baltimore,2,2,0,0,0,false
+Bandon,3,0,3,0,0,false
+Banks,1,1,0,0,0,false
+Bar Harbor,1,1,0,0,0,false
+Bar Nunn,3,3,0,0,0,false
+Barboursville,2,1,1,0,0,false
+Bardstown,3,2,1,0,0,false
+Barling,2,0,2,0,0,false
+Barnstead,2,1,1,0,0,false
+Barnwell,2,2,0,0,0,false
+Barrington,9,7,2,0,0,false
+Barton,1,1,0,0,0,false
+Basalt,2,0,2,0,0,false
+Basehor,2,1,1,0,0,false
+Bastrop,1,1,0,0,0,false
+Batavia,4,2,2,0,0,false
+Batesburg-Leesville,3,1,2,0,0,false
+Batesville,5,4,1,0,0,false
+Bath,5,4,1,0,0,false
+Battlefield,3,0,3,0,0,false
+Baxter,2,0,2,0,0,false
+Baxter Springs,2,2,0,0,0,false
+Bay City,5,0,5,0,0,false
+Bay Harbor Islands,2,0,2,0,0,false
+Bay Minette,3,0,3,0,0,false
+Bay St. Louis,1,1,0,0,0,false
+Bayard,3,3,0,0,0,false
+Bayfield,1,0,1,0,0,false
+Bayside,1,1,0,0,0,false
+Beach,2,1,1,0,0,false
+Beach Park,1,1,0,0,0,false
+Beachwood,1,0,1,0,0,false
+Bear River,1,1,0,0,0,false
+Beaumont,2,1,1,0,0,false
+Beavercreek,1,1,0,0,0,false
+Beaverton,3,3,0,0,0,false
+Becker,3,3,0,0,0,false
+Bedford,7,1,6,0,0,false
+Beebe,1,1,0,0,0,false
+Beech Grove,2,2,0,0,0,false
+Beekman,1,1,0,0,0,false
+Beeville,1,1,0,0,0,false
+Bel Aire,1,1,0,0,0,false
+Belchertown,3,0,3,0,0,false
+Belding,1,1,0,0,0,false
+Belgrade,3,2,1,0,0,false
+Belington,1,1,0,0,0,false
+Bella Vista,1,1,0,0,0,false
+Belle,2,2,0,0,0,false
+Belle Isle,1,1,0,0,0,false
+Belle Plaine,1,1,0,0,0,false
+Bellefontaine Neighbors,1,1,0,0,0,false
+Bellefonte,4,4,0,0,0,false
+Belleview,1,1,0,0,0,false
+Belleville,2,2,0,0,0,false
+Bellevue,2,1,1,0,0,false
+Bellingham,5,0,5,0,0,false
+Bellmawr,2,1,1,0,0,false
+Bellows Falls,1,0,1,0,0,false
+Bellwood,2,2,0,0,0,false
+Belmont,5,3,2,0,0,false
+Belton,4,4,0,0,0,false
+Belvidere,2,0,2,0,0,false
+Benbrook,3,1,2,0,0,false
+Bennet,1,1,0,0,0,false
+Bennettsville,2,2,0,0,0,false
+Bennington,4,4,0,0,0,false
+Bensalem,1,0,1,0,0,false
+Bensenville,3,0,3,0,0,false
+Benton,4,4,0,0,0,false
+Benton charter,3,3,0,0,0,false
+Benwood,1,1,0,0,0,false
+Berea,2,0,2,0,0,false
+Beresford,1,1,0,0,0,false
+Berkeley,2,2,0,0,0,false
+Berkeley Heights,3,3,0,0,0,false
+Berlin,5,3,2,0,0,false
+Bernardsville,2,2,0,0,0,false
+Berthold,1,1,0,0,0,false
+Berwick,5,5,0,0,0,false
+Berwyn,1,1,0,0,0,false
+Berwyn Heights,1,1,0,0,0,false
+Bessemer,2,1,1,0,0,false
+Bethany,2,0,2,0,0,false
+Bethel,4,2,1,1,0,false
+Bethlehem,1,0,1,0,0,false
+Beulah,1,1,0,0,0,false
+Beverly Hills,3,3,0,0,0,false
+Big Lake,2,1,1,0,0,false
+Big Rapids,1,0,1,0,0,false
+Big Sandy,1,1,0,0,0,false
+Big Spring,2,1,1,0,0,false
+Big Stone Gap,2,2,0,0,0,false
+Billerica,1,0,1,0,0,false
+Bisbee,1,0,1,0,0,false
+Bishopville,2,1,1,0,0,false
+Black Diamond,2,0,2,0,0,false
+Black Jack,2,2,0,0,0,false
+Black River Falls,2,1,1,0,0,false
+Blackfoot,2,1,1,0,0,false
+Blackstone,2,0,2,0,0,false
+Blades,1,1,0,0,0,false
+Blaine,3,0,3,0,0,false
+Blair,1,0,1,0,0,false
+Blanchard,1,1,0,0,0,false
+Bloom,1,1,0,0,0,false
+Bloomer,2,1,1,0,0,false
+Bloomfield,9,4,5,0,0,false
+Bloomington,5,1,4,0,0,false
+Bloomington City,1,1,0,0,0,false
+Blue Ash,1,1,0,0,0,false
+Blue Springs,2,0,2,0,0,false
+Bluefield,1,1,0,0,0,false
+Blythe,4,4,0,0,0,false
+Blytheville,1,0,1,0,0,false
+Blythewood,1,1,0,0,0,false
+Boardman,5,5,0,0,0,false
+Boerne,2,1,1,0,0,false
+Bogota,2,1,1,0,0,false
+Bolivar,6,4,2,0,0,false
+Bonner Springs,2,1,1,0,0,false
+Bonners Ferry,2,0,2,0,0,false
+Boone,2,1,1,0,0,false
+Booneville,3,3,0,0,0,false
+Boonsboro,2,2,0,0,0,false
+Boonton,2,0,2,0,0,false
+Boonville,3,2,1,0,0,false
+Boscawen,3,3,0,0,0,false
+Boscobel,2,2,0,0,0,false
+Bosque Farms,2,0,2,0,0,false
+Bottineau,1,1,0,0,0,false
+Boulder,1,0,0,1,0,false
+Bourbonnais,1,1,0,0,0,false
+Bourne,4,1,3,0,0,false
+Bow,2,0,2,0,0,false
+Bowers,1,1,0,0,0,false
+Bradford,4,4,0,0,0,false
+Bradley,3,3,0,0,0,false
+Brandon,1,1,0,0,0,false
+Branford,3,0,3,0,0,false
+Brattleboro,1,1,0,0,0,false
+Brazil,2,2,0,0,0,false
+Breaux Bridge,2,2,0,0,0,false
+Bremen,1,0,1,0,0,false
+Brenham,1,1,0,0,0,false
+Brentwood,9,5,4,0,0,false
+Brevard,2,0,2,0,0,false
+Brewster,3,1,2,0,0,false
+Briarcliff Manor,2,2,0,0,0,false
+Brick,1,0,1,0,0,false
+Bridgeport,2,2,0,0,0,false
+Bridger,1,1,0,0,0,false
+Bridgeton,3,0,3,0,0,false
+Bridgeview,1,1,0,0,0,false
+Bridgeville,2,2,0,0,0,false
+Bridgewater,3,2,1,0,0,false
+Bridgton,1,1,0,0,0,false
+Brigantine,2,0,2,0,0,false
+Brigham City,2,2,0,0,0,false
+Brighton,4,3,1,0,0,false
+Bristol,9,5,4,0,0,false
+Bristow,3,3,0,0,0,false
+Britton,1,1,0,0,0,false
+Broadus,1,1,0,0,0,false
+Brockport,2,2,0,0,0,false
+Brodhead,1,1,0,0,0,false
+Broken Bow,1,1,0,0,0,false
+Brookfield,8,7,1,0,0,false
+Brookhaven,7,4,3,0,0,false
+Brookland,3,2,1,0,0,false
+Brookline,4,3,1,0,0,false
+Brooklyn,3,1,2,0,0,false
+Brooksville,1,0,1,0,0,false
+Brownsville,2,1,1,0,0,false
+Brownwood,3,1,2,0,0,false
+Brunswick,6,3,3,0,0,false
+Brush,1,1,0,0,0,false
+Bryant,1,0,1,0,0,false
+Buckeye,1,1,0,0,0,false
+Buckhannon,2,2,0,0,0,false
+Buckley,3,1,2,0,0,false
+Bucksport,1,1,0,0,0,false
+Bucyrus,1,1,0,0,0,false
+Buena Park,1,0,1,0,0,false
+Buena Vista,6,4,2,0,0,false
+Buffalo,3,2,1,0,0,false
+Buffalo Grove,1,1,0,0,0,false
+Buford,1,1,0,0,0,false
+Buhl,1,1,0,0,0,false
+Bullhead City,1,1,0,0,0,false
+Bunnell,3,0,3,0,0,false
+Burlington,12,3,9,0,0,false
+Burns,1,1,0,0,0,false
+Burnsville,3,3,0,0,0,false
+Burr Ridge,2,1,1,0,0,false
+Burrillville,3,2,1,0,0,false
+Butler,3,3,0,0,0,false
+Butner,1,0,1,0,0,false
+Buxton,1,1,0,0,0,false
+Byhalia,1,1,0,0,0,false
+Byron,2,2,0,0,0,false
+Cadillac,2,2,0,0,0,false
+Calais,1,1,0,0,0,false
+Caldwell,3,1,2,0,0,false
+Caledonia,3,3,0,0,0,false
+Calera,7,3,4,0,0,false
+Calhoun,3,3,0,0,0,false
+California City,3,2,1,0,0,false
+Calimesa,3,3,0,0,0,false
+Calumet,1,1,0,0,0,false
+Camanche,1,0,1,0,0,false
+Cambridge,1,1,0,0,0,false
+Camden,3,3,0,0,0,false
+Cameron,2,2,0,0,0,false
+Camillus,3,3,0,0,0,false
+Camp Hill,1,1,0,0,0,false
+Camp Verde,1,1,0,0,0,false
+Campbellsville,2,0,2,0,0,false
+Campton,3,2,1,0,0,false
+Canaan,3,0,3,0,0,false
+Canandaigua,1,1,0,0,0,false
+Cando,2,2,0,0,0,false
+Canfield,1,1,0,0,0,false
+Cannon Beach,4,0,4,0,0,false
+Cannon Falls,1,0,1,0,0,false
+Canton,13,3,10,0,0,false
+Canton charter,3,0,3,0,0,false
+Canyon,1,0,1,0,0,false
+Canyon Lake,1,1,0,0,0,false
+Canyonville,2,2,0,0,0,false
+Cape Elizabeth,1,0,1,0,0,false
+Capitola,2,0,2,0,0,false
+Carefree,2,2,0,0,0,false
+Carencro,2,2,0,0,0,false
+Carey,3,3,0,0,0,false
+Carl Junction,1,1,0,0,0,false
+Carlin,2,2,0,0,0,false
+Carlisle,3,1,2,0,0,false
+Carnation,2,1,0,1,0,false
+Carnegie,2,2,0,0,0,false
+Carpinteria,2,2,0,0,0,false
+Carrboro,2,1,1,0,0,false
+Carrington,1,1,0,0,0,false
+Carrizozo,2,2,0,0,0,false
+Carroll,1,1,0,0,0,false
+Carrollton,2,2,0,0,0,false
+Carson,1,0,1,0,0,false
+Carter Lake,1,1,0,0,0,false
+Carthage,2,2,0,0,0,false
+Caruthersville,1,1,0,0,0,false
+Carver,5,5,0,0,0,false
+Cary,3,1,2,0,0,false
+Cascade,3,3,0,0,0,false
+Casco,1,1,0,0,0,false
+Caseyville,1,1,0,0,0,false
+Castle Dale,1,1,0,0,0,false
+Castle Pines,1,1,0,0,0,false
+Castle Rock,4,2,2,0,0,false
+Castle Shannon,1,1,0,0,0,false
+Castleton,1,1,0,0,0,false
+Castlewood,3,3,0,0,0,false
+Catoosa,1,1,0,0,0,false
+Cave City,4,4,0,0,0,false
+Cave Creek,3,1,2,0,0,false
+Cave Springs,2,0,2,0,0,false
+Cayce,1,1,0,0,0,false
+Cañon City,2,2,0,0,0,false
+Cecil,1,1,0,0,0,false
+Cecilton,3,3,0,0,0,false
+Cedar Creek,1,1,0,0,0,false
+Cedar Grove,1,0,1,0,0,false
+Cedar Hills,2,2,0,0,0,false
+Cedar Lake,4,4,0,0,0,false
+Cedaredge,1,0,1,0,0,false
+Center,2,2,0,0,0,false
+Center Point,2,2,0,0,0,false
+Centerton,1,0,1,0,0,false
+Centerville,1,0,1,0,0,false
+Centralia,4,0,4,0,0,false
+Centre,1,1,0,0,0,false
+Centreville,3,0,3,0,0,false
+Ceredo,1,1,0,0,0,false
+Ceres,1,1,0,0,0,false
+Ceresco,1,1,0,0,0,false
+Chadron,1,0,1,0,0,false
+Chagrin Falls,2,2,0,0,0,false
+Chama,2,0,2,0,0,false
+Chamblee,1,1,0,0,0,false
+Champaign City,1,1,0,0,0,false
+Channahon,3,3,0,0,0,false
+Chanute,2,2,0,0,0,false
+Chariton,1,1,0,0,0,false
+Charles City,2,2,0,0,0,false
+Charles Town,1,1,0,0,0,false
+Charleston,6,6,0,0,0,false
+Charlestown,5,4,1,0,0,false
+Charlotte,3,2,1,0,0,false
+Charlton,3,0,3,0,0,false
+Chase City,3,3,0,0,0,false
+Chaska,1,1,0,0,0,false
+Chatham,5,1,2,2,0,false
+Chattahoochee,1,1,0,0,0,false
+Cheboygan,3,3,0,0,0,false
+Checotah,2,2,0,0,0,false
+Cheektowaga,1,1,0,0,0,false
+Chehalis,3,1,2,0,0,false
+Chelan,1,0,1,0,0,false
+Chelmsford,3,0,3,0,0,false
+Chelsea,1,1,0,0,0,false
+Cheney,1,1,0,0,0,false
+Cheraw,1,0,1,0,0,false
+Cherokee,2,0,2,0,0,false
+Cherokee Village,1,1,0,0,0,false
+Cherry Hill,1,0,1,0,0,false
+Cherry Hills Village,2,1,1,0,0,false
+Cherry Valley,2,0,2,0,0,false
+Cherryvale,1,1,0,0,0,false
+Chesapeake,2,0,2,0,0,false
+Cheshire,4,1,3,0,0,false
+Chester,4,4,0,0,0,false
+Chesterfield,4,0,4,0,0,false
+Chesterton,5,1,4,0,0,false
+Cheswold,1,1,0,0,0,false
+Chevy Chase,1,0,1,0,0,false
+Chevy Chase Village,2,0,2,0,0,false
+Chewelah,2,0,2,0,0,false
+Chicago Ridge,3,0,3,0,0,false
+Chickasaw,1,1,0,0,0,false
+Chickasha,4,3,1,0,0,false
+Chilhowie,1,1,0,0,0,false
+Chilton,2,1,1,0,0,false
+China,2,2,0,0,0,false
+Chincoteague,1,1,0,0,0,false
+Chino,1,0,1,0,0,false
+Chino Valley,3,0,3,0,0,false
+Chinook,2,0,2,0,0,false
+Chisholm,2,2,0,0,0,false
+Choctaw,2,2,0,0,0,false
+Choteau,2,1,1,0,0,false
+Chowchilla,2,0,2,0,0,false
+Christiansburg,4,2,2,0,0,false
+Chubbuck,2,2,0,0,0,false
+Church Hill,3,3,0,0,0,false
+Church Point,1,1,0,0,0,false
+Cicero,2,2,0,0,0,false
+Cincinnati,3,3,0,0,0,false
+Circle,2,2,0,0,0,false
+Claremore,1,1,0,0,0,false
+Clarendon,1,1,0,0,0,false
+Clarinda,1,1,0,0,0,false
+Clarion,2,2,0,0,0,false
+Clark,2,1,1,0,0,false
+Clark Fork,1,1,0,0,0,false
+Clarkdale,2,0,2,0,0,false
+Clarkston,6,5,1,0,0,false
+Clatskanie,3,2,1,0,0,false
+Clay,2,0,0,2,0,false
+Clayton,4,0,4,0,0,false
+Cle Elum,1,1,0,0,0,false
+Clear Lake,3,3,0,0,0,false
+Clearmont,2,2,0,0,0,false
+Clearwater,1,1,0,0,0,false
+Clemmons,3,3,0,0,0,false
+Clemson,2,2,0,0,0,false
+Cleveland,6,5,1,0,0,false
+Cleves,3,0,3,0,0,false
+Clewiston,1,0,1,0,0,false
+Clifton,1,1,0,0,0,false
+Clifton Forge,1,1,0,0,0,false
+Clifton Heights,2,1,1,0,0,false
+Clinton,15,6,9,0,0,false
+Clinton charter,4,0,4,0,0,false
+Clintonville,1,0,1,0,0,false
+Closter,1,0,1,0,0,false
+Cloudcroft,4,3,1,0,0,false
+Clover,1,1,0,0,0,false
+Cloverdale,2,0,2,0,0,false
+Clyde Hill,2,2,0,0,0,false
+Clyde Park,2,2,0,0,0,false
+Coalville,1,0,1,0,0,false
+Coburg,1,1,0,0,0,false
+Cocoa Beach,1,1,0,0,0,false
+Coffeyville,2,2,0,0,0,false
+Colby,2,2,0,0,0,false
+Colchester,6,4,2,0,0,false
+Cold Spring,1,1,0,0,0,false
+Colerain,2,1,1,0,0,false
+Colfax,2,0,2,0,0,false
+College Place,1,0,1,0,0,false
+Colleyville,3,0,3,0,0,false
+Collingdale,2,1,1,0,0,false
+Collinsville,2,2,0,0,0,false
+Colman,1,0,1,0,0,false
+Colonial Beach,1,0,1,0,0,false
+Colonial Heights,2,1,1,0,0,false
+Colorado City,3,3,0,0,0,false
+Colstrip,1,1,0,0,0,false
+Colton,2,2,0,0,0,false
+Columbia,5,1,4,0,0,false
+Columbia City,2,2,0,0,0,false
+Columbus,6,3,3,0,0,false
+Columbus Grove,2,1,1,0,0,false
+Combined Locks,2,2,0,0,0,false
+Commerce,1,0,1,0,0,false
+Commerce charter,3,3,0,0,0,false
+Comstock charter,1,0,1,0,0,false
+Concord,7,3,4,0,0,false
+Connell,2,2,0,0,0,false
+Connellsville,2,2,0,0,0,false
+Connersville,2,0,2,0,0,false
+Conover,1,1,0,0,0,false
+Conshohocken,1,1,0,0,0,false
+Converse,1,0,1,0,0,false
+Conway,1,1,0,0,0,false
+Conyers,1,0,1,0,0,false
+Coolbaugh,1,1,0,0,0,false
+Coolidge,2,2,0,0,0,false
+Coon Rapids,2,2,0,0,0,false
+Cooperstown,2,2,0,0,0,false
+Coopersville,2,2,0,0,0,false
+Coopertown,2,2,0,0,0,false
+Coquille,1,1,0,0,0,false
+Corcoran,4,3,1,0,0,false
+Cordele,3,1,2,0,0,false
+Cordova,1,1,0,0,0,false
+Cornelius,1,1,0,0,0,false
+Corning,5,2,3,0,0,false
+Coronado,5,5,0,0,0,false
+Corry,2,1,1,0,0,false
+Corsicana,2,2,0,0,0,false
+Corte Madera,3,1,2,0,0,false
+Cortez,2,1,1,0,0,false
+Cosmopolis,1,1,0,0,0,false
+Cotati,3,0,3,0,0,false
+Cottage City,2,0,2,0,0,false
+Cottonwood Heights,1,0,1,0,0,false
+Council,1,1,0,0,0,false
+Council Grove,2,2,0,0,0,false
+Country Club Hills,6,5,1,0,0,false
+Coupeville,2,2,0,0,0,false
+Coventry,5,3,2,0,0,false
+Covina,2,2,0,0,0,false
+Covington,8,7,1,0,0,false
+Coweta,2,2,0,0,0,false
+Cozad,1,0,1,0,0,false
+Craig,2,0,2,0,0,false
+Cranford,1,0,1,0,0,false
+Credit River,2,1,1,0,0,false
+Creighton,1,1,0,0,0,false
+Crescent City,1,1,0,0,0,false
+Crescent Springs,1,0,1,0,0,false
+Cresskill,2,2,0,0,0,false
+Crest Hill,3,3,0,0,0,false
+Creston,2,2,0,0,0,false
+Crestwood,4,1,3,0,0,false
+Crete,3,3,0,0,0,false
+Crisfield,1,0,1,0,0,false
+Crittenden,2,1,1,0,0,false
+Cromwell,3,0,3,0,0,false
+Crooks,1,1,0,0,0,false
+Crookston,2,2,0,0,0,false
+Crooksville,2,2,0,0,0,false
+Crossett,2,2,0,0,0,false
+Crossville,2,1,1,0,0,false
+Croton-on-Hudson,1,1,0,0,0,false
+Crowley,3,1,2,0,0,false
+Crystal River,3,0,3,0,0,false
+Crystal Springs,1,1,0,0,0,false
+Cuba,1,1,0,0,0,false
+Cuba City,1,1,0,0,0,false
+Culbertson,2,1,0,1,0,false
+Cullman,1,0,1,0,0,false
+Culpeper,3,3,0,0,0,false
+Culver,1,1,0,0,0,false
+Cumberland,5,2,3,0,0,false
+Cumru,2,2,0,0,0,false
+Cushing,1,1,0,0,0,false
+Custer,1,0,1,0,0,false
+Dacono,2,1,1,0,0,false
+Dade City,4,3,0,1,0,false
+Dalhart,1,0,1,0,0,false
+Dallas,1,0,0,1,0,false
+Dalton,2,2,0,0,0,false
+Daly City,2,0,2,0,0,false
+Danvers,3,3,0,0,0,false
+Danville,7,4,3,0,0,false
+Daphne,3,1,2,0,0,false
+Darby,1,1,0,0,0,false
+Dardanelle,3,1,2,0,0,false
+Dardenne Prairie,4,1,3,0,0,false
+Darien,2,0,2,0,0,false
+Dartmouth,2,1,1,0,0,false
+David City,2,2,0,0,0,false
+Davidson,4,2,2,0,0,false
+Davison,3,2,1,0,0,false
+Dayton,4,2,0,2,0,false
+Daytona Beach Shores,2,1,1,0,0,false
+De Pere,1,1,0,0,0,false
+De Smet,1,1,0,0,0,false
+De Witt,2,2,0,0,0,false
+DeFuniak Springs,1,0,1,0,0,false
+DeKalb,2,0,2,0,0,false
+DeWitt,3,3,0,0,0,false
+DeWitt charter,1,1,0,0,0,false
+Deadwood,2,2,0,0,0,false
+Decatur,3,3,0,0,0,false
+Decorah,1,1,0,0,0,false
+Dedham,1,0,1,0,0,false
+Deer Lodge,2,1,1,0,0,false
+Deer Park,1,1,0,0,0,false
+Deerfield,1,1,0,0,0,false
+Defiance,1,1,0,0,0,false
+Del City,5,4,0,1,0,false
+Del Rio,2,2,0,0,0,false
+Delafield,6,6,0,0,0,false
+Delano,1,0,1,0,0,false
+Delcambre,2,2,0,0,0,false
+Delhi,1,1,0,0,0,false
+Delhi charter,1,1,0,0,0,false
+Dell Rapids,1,1,0,0,0,false
+Delmar,4,3,1,0,0,false
+Delta,1,0,0,1,0,false
+Delta Junction,2,2,0,0,0,false
+Demopolis,2,2,0,0,0,false
+Denham Springs,1,1,0,0,0,false
+Denison,3,3,0,0,0,false
+Dennis,2,0,2,0,0,false
+Denton,2,2,0,0,0,false
+Denver,1,1,0,0,0,false
+Depoe Bay,2,0,2,0,0,false
+Derby,1,1,0,0,0,false
+Derry,3,0,3,0,0,false
+Des Peres,2,0,2,0,0,false
+Detroit,1,1,0,0,0,false
+Detroit Lakes,2,2,0,0,0,false
+Devils Lake,1,0,1,0,0,false
+Dewey-Humboldt,2,1,1,0,0,false
+Diamondville,3,3,0,0,0,false
+Dickinson,2,2,0,0,0,false
+Dickson City,2,2,0,0,0,false
+Dillingham,2,1,0,1,0,false
+Dilworth,1,1,0,0,0,false
+District Heights,2,0,2,0,0,false
+Dixon,4,0,3,1,0,false
+Dobbs Ferry,3,2,1,0,0,false
+Dodgeville,1,0,0,1,0,false
+Dolton,1,1,0,0,0,false
+Donald,2,2,0,0,0,false
+Donna,2,2,0,0,0,false
+Doraville,1,1,0,0,0,false
+Dormont,3,3,0,0,0,false
+Dorr,1,1,0,0,0,false
+Douglas,2,0,2,0,0,false
+Douglass Hills,3,0,3,0,0,false
+Douglasville,1,1,0,0,0,false
+Dover,2,2,0,0,0,false
+Dover-Foxcroft,2,1,1,0,0,false
+Dowagiac,1,1,0,0,0,false
+Downers Grove,2,2,0,0,0,false
+Downingtown,2,0,2,0,0,false
+Doylestown,1,1,0,0,0,false
+Dracut,5,0,5,0,0,false
+Drain,2,0,2,0,0,false
+Driggs,1,1,0,0,0,false
+Dryden,1,0,1,0,0,false
+Du Page,1,1,0,0,0,false
+DuBois,2,0,2,0,0,false
+DuPont,1,0,1,0,0,false
+Dublin,6,3,3,0,0,false
+Duchouquet,3,3,0,0,0,false
+Dumfries,1,1,0,0,0,false
+Dunbar,1,1,0,0,0,false
+Duncan,4,3,1,0,0,false
+Dundee,3,2,1,0,0,false
+Dunkirk,1,1,0,0,0,false
+Dunwoody,2,0,2,0,0,false
+Durango,2,0,2,0,0,false
+Durant,4,1,3,0,0,false
+Durham,4,1,0,3,0,false
+Dutton,2,2,0,0,0,false
+Duvall,2,0,2,0,0,false
+Duxbury,3,3,0,0,0,false
+Dyersville,1,0,0,1,0,false
+Eagar,2,2,0,0,0,false
+Eagle,2,1,1,0,0,false
+Eagle Grove,2,2,0,0,0,false
+Eagle Nest,1,0,0,1,0,false
+East Aurora,1,1,0,0,0,false
+East Bethel,2,2,0,0,0,false
+East Bridgewater,5,0,5,0,0,false
+East Chicago,5,4,1,0,0,false
+East Goshen,2,2,0,0,0,false
+East Grand Forks,2,2,0,0,0,false
+East Grand Rapids,2,1,1,0,0,false
+East Greenwich,6,2,4,0,0,false
+East Haddam,2,1,1,0,0,false
+East Hampton,1,0,1,0,0,false
+East Hartford,2,2,0,0,0,false
+East Haven,1,1,0,0,0,false
+East Helena,3,3,0,0,0,false
+East Hempfield,1,1,0,0,0,false
+East Hills,2,0,2,0,0,false
+East Lampeter,2,2,0,0,0,false
+East Longmeadow,2,0,2,0,0,false
+East Lyme,4,3,1,0,0,false
+East Pennsboro,1,0,1,0,0,false
+East Point,1,1,0,0,0,false
+East Ridge,2,2,0,0,0,false
+East Rochester,2,1,1,0,0,false
+East Rutherford,1,0,1,0,0,false
+East St. Louis,2,1,1,0,0,false
+East Troy,2,1,1,0,0,false
+East Whiteland,2,1,1,0,0,false
+East Windsor,3,1,2,0,0,false
+Easton,3,1,2,0,0,false
+Eastport,2,2,0,0,0,false
+Eatonville,3,3,0,0,0,false
+Eau Claire,2,2,0,0,0,false
+Economy,2,2,0,0,0,false
+Ecorse,2,2,0,0,0,false
+Eden,2,0,2,0,0,false
+Edgemont,1,1,0,0,0,false
+Edgewater,1,0,1,0,0,false
+Edgewood,1,1,0,0,0,false
+Edinboro,1,1,0,0,0,false
+Edinburgh,1,1,0,0,0,false
+Edison,1,1,0,0,0,false
+Edmonston,2,1,1,0,0,false
+Edwardsville,3,3,0,0,0,false
+Effingham,3,3,0,0,0,false
+El Dorado,4,2,2,0,0,false
+El Mirage,1,1,0,0,0,false
+El Monte,1,0,1,0,0,false
+El Paso,1,1,0,0,0,false
+El Reno,4,1,3,0,0,false
+El Segundo,1,0,1,0,0,false
+Eldon,2,1,1,0,0,false
+Eldridge,3,2,1,0,0,false
+Elgin,6,5,1,0,0,false
+Elim,1,1,0,0,0,false
+Eliot,1,1,0,0,0,false
+Elizabeth,1,1,0,0,0,false
+Elizabeth City,2,2,0,0,0,false
+Elizabethton,1,1,0,0,0,false
+Elk Mountain,2,2,0,0,0,false
+Elk Point,1,0,1,0,0,false
+Elk Ridge,1,1,0,0,0,false
+Elkins,3,3,0,0,0,false
+Elko New Market,1,1,0,0,0,false
+Elkton,2,2,0,0,0,false
+Ellendale,3,3,0,0,0,false
+Ellettsville,3,3,0,0,0,false
+Ellington,1,1,0,0,0,false
+Ellisville,2,0,2,0,0,false
+Ellsworth,3,3,0,0,0,false
+Elm Grove,3,2,1,0,0,false
+Elma,1,0,1,0,0,false
+Elmhurst,3,2,1,0,0,false
+Elmwood Park,1,1,0,0,0,false
+Elon,2,2,0,0,0,false
+Eloy,1,0,1,0,0,false
+Elsmere,4,2,2,0,0,false
+Elwood,2,2,0,0,0,false
+Ely,1,1,0,0,0,false
+Emerado,1,1,0,0,0,false
+Emerson,1,1,0,0,0,false
+Emeryville,3,0,3,0,0,false
+Emmaus,1,1,0,0,0,false
+Emmetsburg,1,1,0,0,0,false
+Emmitsburg,2,2,0,0,0,false
+Emporia,2,0,2,0,0,false
+Encampment,2,0,0,2,0,false
+Enfield,2,0,2,0,0,false
+Englewood,3,3,0,0,0,false
+Ennis,7,4,3,0,0,false
+Enoch,2,2,0,0,0,false
+Enosburg Falls,1,1,0,0,0,false
+Enterprise,2,2,0,0,0,false
+Ephraim,1,1,0,0,0,false
+Epsom,1,0,1,0,0,false
+Erath,2,2,0,0,0,false
+Erda,2,2,0,0,0,false
+Essex,5,0,5,0,0,false
+Estancia,2,2,0,0,0,false
+Estherville,2,2,0,0,0,false
+Eudora,1,1,0,0,0,false
+Eufaula,2,0,2,0,0,false
+Eunice,2,2,0,0,0,false
+Eureka,5,3,2,0,0,false
+Evans,3,3,0,0,0,false
+Evansville,4,3,1,0,0,false
+Evergreen Park,3,0,3,0,0,false
+Everson,3,3,0,0,0,false
+Exeter,9,5,1,3,0,false
+Exmore,1,1,0,0,0,false
+Fair Haven,5,5,0,0,0,false
+Fair Oaks Ranch,1,1,0,0,0,false
+Fairburn,1,1,0,0,0,false
+Fairbury,1,1,0,0,0,false
+Fairfax,2,2,0,0,0,false
+Fairfield,11,9,2,0,0,false
+Fairfield Bay,3,3,0,0,0,false
+Fairhaven,3,3,0,0,0,false
+Fairhope,1,0,1,0,0,false
+Fairmont,1,1,0,0,0,false
+Fairmount Heights,2,1,1,0,0,false
+Fairport,2,1,1,0,0,false
+Fairport Harbor,1,0,1,0,0,false
+Fairview,6,4,2,0,0,false
+Fairview Heights,6,0,6,0,0,false
+Falls Church,3,1,2,0,0,false
+Falls City,2,2,0,0,0,false
+Fallsburg,1,1,0,0,0,false
+Falmouth,3,1,2,0,0,false
+False Pass,2,2,0,0,0,false
+Farmersville,3,0,3,0,0,false
+Farmingdale,2,1,1,0,0,false
+Farmington,11,7,4,0,0,false
+Farmville,1,0,1,0,0,false
+Farr West,2,2,0,0,0,false
+Fate,1,1,0,0,0,false
+Faulkton,3,3,0,0,0,false
+Fayetteville,7,7,0,0,0,false
+Federal Heights,1,1,0,0,0,false
+Federal Way,1,1,0,0,0,false
+Fellsmere,1,0,1,0,0,false
+Fenton charter,1,0,1,0,0,false
+Ferriday,1,1,0,0,0,false
+Ferrisburgh,3,3,0,0,0,false
+Ferron,2,2,0,0,0,false
+Festus,4,3,1,0,0,false
+Fillmore,4,2,2,0,0,false
+Fircrest,3,3,0,0,0,false
+Firebaugh,4,3,0,1,0,false
+Firestone,2,2,0,0,0,false
+Flandreau,4,2,2,0,0,false
+Flemingsburg,1,1,0,0,0,false
+Fletcher,2,1,1,0,0,false
+Flint,2,2,0,0,0,false
+Florence,8,5,0,3,0,false
+Florida City,1,0,1,0,0,false
+Flowery Branch,2,2,0,0,0,false
+Floyd,1,1,0,0,0,false
+Folcroft,2,1,1,0,0,false
+Foley,1,1,0,0,0,false
+Fontana,1,1,0,0,0,false
+Forest Acres,1,1,0,0,0,false
+Forest City,4,4,0,0,0,false
+Forest Heights,1,1,0,0,0,false
+Forest Hill,1,1,0,0,0,false
+Forest Hills,1,1,0,0,0,false
+Forest Park,6,0,6,0,0,false
+Forks,2,1,1,0,0,false
+Forman,2,2,0,0,0,false
+Forney,4,4,0,0,0,false
+Forsyth,3,2,1,0,0,false
+Fort Benton,2,2,0,0,0,false
+Fort Bragg,2,1,0,0,0,false
+Fort Calhoun,2,2,0,0,0,false
+Fort Fairfield,1,1,0,0,0,false
+Fort Kent,1,1,0,0,0,false
+Fort Laramie,1,1,0,0,0,false
+Fort Lupton,2,1,1,0,0,false
+Fort Madison,3,2,1,0,0,false
+Fort Meade,2,2,0,0,0,false
+Fort Mill,1,1,0,0,0,false
+Fort Mitchell,1,1,0,0,0,false
+Fort Morgan,3,2,1,0,0,false
+Fort Oglethorpe,1,1,0,0,0,false
+Fort Payne,2,2,0,0,0,false
+Fort Pierce,2,0,2,0,0,false
+Fort Pierre,2,1,1,0,0,false
+Fort Scott,1,0,1,0,0,false
+Fort Thomas,2,2,0,0,0,false
+Fort Wayne,2,2,0,0,0,false
+Fort Wright,1,1,0,0,0,false
+Fort Yukon,1,1,0,0,0,false
+Fortuna,1,1,0,0,0,false
+Foster,3,3,0,0,0,false
+Fountain,2,1,1,0,0,false
+Fountain Hills,3,3,0,0,0,false
+Fox Lake,2,1,1,0,0,false
+Foxborough,1,1,0,0,0,false
+Framingham,3,0,3,0,0,false
+Francis,1,1,0,0,0,false
+Frankenmuth,2,2,0,0,0,false
+Frankfort,3,3,0,0,0,false
+Franklin,6,5,1,0,0,false
+Franklin Lakes,1,0,1,0,0,false
+Franklin Park,5,5,0,0,0,false
+Frannie,2,2,0,0,0,false
+Fraser,3,1,2,0,0,false
+Frederica,2,2,0,0,0,false
+Frederick,4,1,3,0,0,false
+Fredonia,4,2,2,0,0,false
+Freehold,1,1,0,0,0,false
+Freeman,1,1,0,0,0,false
+Freeport,2,2,0,0,0,false
+Fremont,6,2,4,0,0,false
+Frenchtown,1,0,1,0,0,false
+Friday Harbor,4,0,4,0,0,false
+Friendsville,2,2,0,0,0,false
+Froid,1,1,0,0,0,false
+Fromberg,1,1,0,0,0,false
+Front Royal,1,1,0,0,0,false
+Fruit Heights,2,1,1,0,0,false
+Fruita,2,0,2,0,0,false
+Fruitland,3,2,1,0,0,false
+Fruitland Park,2,1,1,0,0,false
+Fruitport charter,3,2,1,0,0,false
+Fryeburg,1,0,1,0,0,false
+Fullerton,1,0,1,0,0,false
+Fulton,2,2,0,0,0,false
+Fultondale,2,2,0,0,0,false
+Funkstown,1,0,1,0,0,false
+Gadsden,1,1,0,0,0,false
+Gaffney,2,1,1,0,0,false
+Gaines charter,1,1,0,0,0,false
+Gainesville,4,2,2,0,0,false
+Galax,1,0,1,0,0,false
+Galena,3,2,1,0,0,false
+Galt,3,0,3,0,0,false
+Gambell,1,1,0,0,0,false
+Garden City,2,0,2,0,0,false
+Gardena,2,2,0,0,0,false
+Gardendale,1,1,0,0,0,false
+Garfield charter,1,0,1,0,0,false
+Garibaldi,1,0,0,1,0,false
+Garland,1,1,0,0,0,false
+Garner,2,0,0,2,0,false
+Garretson,1,1,0,0,0,false
+Garrett,2,2,0,0,0,false
+Garrettsville,2,2,0,0,0,false
+Gate City,2,2,0,0,0,false
+Gatesville,2,2,0,0,0,false
+Gearhart,1,0,1,0,0,false
+Geddes,1,0,1,0,0,false
+Genesee,2,1,1,0,0,false
+Genesee charter,2,2,0,0,0,false
+Geneseo,1,1,0,0,0,false
+Geneva,2,2,0,0,0,false
+Genoa,4,4,0,0,0,false
+Genoa City,1,1,0,0,0,false
+Gentry,2,2,0,0,0,false
+Georgia,3,0,3,0,0,false
+Gettysburg,3,0,3,0,0,false
+Gibsonburg,2,1,1,0,0,false
+Gibsonville,4,4,0,0,0,false
+Gilford,2,0,2,0,0,false
+Gilmanton,1,0,1,0,0,false
+Girard,1,0,1,0,0,false
+Glade Spring,3,3,0,0,0,false
+Gladstone,1,1,0,0,0,false
+Glasgow,1,0,1,0,0,false
+Glassboro,1,1,0,0,0,false
+Glastonbury,1,0,1,0,0,false
+Glen Carbon,4,4,0,0,0,false
+Glen Dale,1,1,0,0,0,false
+Glen Ridge,2,2,0,0,0,false
+Glen Rock,2,2,0,0,0,false
+Glen Ullin,1,1,0,0,0,false
+Glenarden,1,0,1,0,0,false
+Glencoe,6,6,0,0,0,false
+Glendale,1,0,1,0,0,false
+Glendora,1,0,1,0,0,false
+Glenn Heights,3,0,3,0,0,false
+Glenolden,2,1,1,0,0,false
+Glenpool,2,0,2,0,0,false
+Glenville,1,1,0,0,0,false
+Glocester,2,2,0,0,0,false
+Gloucester City,2,1,1,0,0,false
+Godfrey,2,2,0,0,0,false
+Goffstown,2,0,2,0,0,false
+Gold Bar,2,2,0,0,0,false
+Gold Beach,2,2,0,0,0,false
+Gold Hill,2,0,2,0,0,false
+Goldendale,1,1,0,0,0,false
+Goldsboro,2,2,0,0,0,false
+Gonzales,1,0,0,1,0,false
+Goodlettsville,2,1,1,0,0,false
+Gordon,1,1,0,0,0,false
+Gordonsville,2,2,0,0,0,false
+Gorham,2,2,0,0,0,false
+Goshen,5,5,0,0,0,false
+Gothenburg,2,2,0,0,0,false
+Grafton,1,0,1,0,0,false
+Graham,1,1,0,0,0,false
+Grain Valley,3,3,0,0,0,false
+Gramercy,1,1,0,0,0,false
+Granbury,3,2,1,0,0,false
+Granby,3,1,2,0,0,false
+Grand Blanc,3,3,0,0,0,false
+Grand Blanc charter,1,1,0,0,0,false
+Grand Chute,5,5,0,0,0,false
+Grand Haven,3,2,1,0,0,false
+Grand Island,1,0,1,0,0,false
+Grand Isle,1,1,0,0,0,false
+Grand Ledge,3,2,1,0,0,false
+Grand Rapids,2,0,0,2,0,false
+Grand Rapids charter,2,0,2,0,0,false
+Granger,1,0,1,0,0,false
+Grangeville,2,2,0,0,0,false
+Granite Falls,2,1,1,0,0,false
+Grant,1,1,0,0,0,false
+Grantham,3,3,0,0,0,false
+Grantsville,3,3,0,0,0,false
+Granville,2,2,0,0,0,false
+Gray,2,2,0,0,0,false
+Great Bend,5,4,0,0,0,false
+Great Neck,1,1,0,0,0,false
+Green Cove Springs,2,0,2,0,0,false
+Greendale,1,0,1,0,0,false
+Greene,1,1,0,0,0,false
+Greenland,1,1,0,0,0,false
+Greenleaf,2,0,0,2,0,false
+Greensboro,1,0,1,0,0,false
+Greensburg,3,2,1,0,0,false
+Greenville,2,1,1,0,0,false
+Greenwich,2,2,0,0,0,false
+Greenwood,4,4,0,0,0,false
+Greenwood Village,2,1,1,0,0,false
+Gregory,2,2,0,0,0,false
+Gretna,3,3,0,0,0,false
+Gridley,3,1,2,0,0,false
+Griffin,4,1,3,0,0,false
+Grinnell,1,1,0,0,0,false
+Grosse Pointe Farms,3,3,0,0,0,false
+Grosse Pointe Park,1,1,0,0,0,false
+Groton,3,1,2,0,0,false
+Grottoes,3,3,0,0,0,false
+Grove,2,0,2,0,0,false
+Grove City,2,2,0,0,0,false
+Grover Beach,2,0,2,0,0,false
+Groves,2,0,2,0,0,false
+Grovetown,4,4,0,0,0,false
+Grundy Center,3,3,0,0,0,false
+Guadalupe,7,5,2,0,0,false
+Guernsey,2,2,0,0,0,false
+Guilford,3,1,1,1,0,false
+Gulf Shores,2,2,0,0,0,false
+Gulfport,2,1,1,0,0,false
+Gunnison,2,1,1,0,0,false
+Gustavus,2,1,1,0,0,false
+Guthrie,1,0,1,0,0,false
+Guymon,1,0,1,0,0,false
+Gwinner,2,2,0,0,0,false
+Gypsum,2,2,0,0,0,false
+Hackettstown,2,1,1,0,0,false
+Haddon Heights,1,0,1,0,0,false
+Haddonfield,1,1,0,0,0,false
+Hailey,2,2,0,0,0,false
+Haledon,3,1,2,0,0,false
+Hales Corners,3,2,1,0,0,false
+Haleyville,1,1,0,0,0,false
+Half Moon Bay,1,0,1,0,0,false
+Halfmoon,1,1,0,0,0,false
+Hallowell,1,1,0,0,0,false
+Halstead,1,1,0,0,0,false
+Hamburg,3,3,0,0,0,false
+Hamden,2,0,2,0,0,false
+Hamilton,2,2,0,0,0,false
+Hampden,1,1,0,0,0,false
+Hampstead,2,0,2,0,0,false
+Hampton,4,2,2,0,0,false
+Hanahan,1,1,0,0,0,false
+Hancock,1,1,0,0,0,false
+Hankinson,2,0,0,2,0,false
+Hanover,8,6,2,0,0,false
+Hanover Park,2,2,0,0,0,false
+Harahan,1,0,1,0,0,false
+Harborcreek,1,1,0,0,0,false
+Hardeeville,1,0,1,0,0,false
+Hardwick,2,2,0,0,0,false
+Harlan,1,1,0,0,0,false
+Harlem,2,1,1,0,0,false
+Harlingen,1,0,0,1,0,false
+Harlowton,1,1,0,0,0,false
+Harper Woods,2,2,0,0,0,false
+Harpswell,1,1,0,0,0,false
+Harrah,2,2,0,0,0,false
+Harriman,1,1,0,0,0,false
+Harrisburg,2,2,0,0,0,false
+Harrison,3,2,1,0,0,false
+Harrisonville,3,1,2,0,0,false
+Harrodsburg,1,0,1,0,0,false
+Hartford,3,0,3,0,0,false
+Hartford City,1,1,0,0,0,false
+Hartland,2,2,0,0,0,false
+Hartselle,1,1,0,0,0,false
+Hartsville/Trousdale County,1,0,1,0,0,false
+Harvey,4,3,1,0,0,false
+Harwich,1,1,0,0,0,false
+Hasbrouck Heights,1,0,1,0,0,false
+Haskell,2,2,0,0,0,false
+Hastings,5,3,2,0,0,false
+Hastings-on-Hudson,3,1,2,0,0,false
+Hatch,2,2,0,0,0,false
+Hatton,2,1,1,0,0,false
+Haughton,1,1,0,0,0,false
+Hauser,1,1,0,0,0,false
+Havelock,1,1,0,0,0,false
+Haverford,1,0,1,0,0,false
+Hawthorne,1,0,1,0,0,false
+Hayden,2,1,1,0,0,false
+Haymarket,2,1,1,0,0,false
+Hazel Park,2,2,0,0,0,false
+Hazen,2,2,0,0,0,false
+Healdsburg,4,1,3,0,0,false
+Heavener,1,1,0,0,0,false
+Heber,2,2,0,0,0,false
+Heber Springs,1,0,1,0,0,false
+Hebron,7,7,0,0,0,false
+Helena,1,0,1,0,0,false
+Helena-West Helena,1,0,1,0,0,false
+Hellertown,3,3,0,0,0,false
+Helper,1,1,0,0,0,false
+Henderson,5,2,1,2,0,false
+Hendersonville,3,3,0,0,0,false
+Henlopen Acres,1,1,0,0,0,false
+Henniker,1,1,0,0,0,false
+Henryetta,3,3,0,0,0,false
+Herington,1,1,0,0,0,false
+Herkimer,2,2,0,0,0,false
+Hermantown,1,1,0,0,0,false
+Hermon,1,1,0,0,0,false
+Hermosa Beach,3,1,2,0,0,false
+Herrin,3,3,0,0,0,false
+Heyburn,1,1,0,0,0,false
+Hialeah,1,1,0,0,0,false
+Hiawatha,4,2,2,0,0,false
+Hickman,2,1,1,0,0,false
+Hickory Hills,3,3,0,0,0,false
+High Springs,1,1,0,0,0,false
+Highgate,2,2,0,0,0,false
+Highland,5,5,0,0,0,false
+Highland Beach,3,3,0,0,0,false
+Highland Heights,2,2,0,0,0,false
+Highland Park,1,1,0,0,0,false
+Highland Village,3,0,3,0,0,false
+Highland charter,2,2,0,0,0,false
+Hightstown,2,1,1,0,0,false
+Hillsboro,2,2,0,0,0,false
+Hillsborough,5,2,3,0,0,false
+Hillsdale,5,1,1,3,0,false
+Hillsville,2,1,1,0,0,false
+Hilltown,2,2,0,0,0,false
+Hillview,1,0,1,0,0,false
+Hilton,2,2,0,0,0,false
+Hilton Head Island,2,1,1,0,0,false
+Hines,1,0,1,0,0,false
+Hinesburg,2,1,1,0,0,false
+Hingham,4,0,4,0,0,false
+Hinsdale,4,3,1,0,0,false
+Hinton,3,2,1,0,0,false
+Hobart,2,2,0,0,0,false
+Hobbs,1,1,0,0,0,false
+Hoisington,1,1,0,0,0,false
+Holbrook,2,2,0,0,0,false
+Holden,4,0,4,0,0,false
+Holladay,1,1,0,0,0,false
+Hollis,2,0,2,0,0,false
+Hollister,2,1,1,0,0,false
+Holliston,2,0,2,0,0,false
+Holly,2,2,0,0,0,false
+Holly Springs,3,2,1,0,0,false
+Holmdel,2,1,1,0,0,false
+Homewood,2,0,2,0,0,false
+Honea Path,1,1,0,0,0,false
+Honey Creek,1,1,0,0,0,false
+Hooksett,2,1,1,0,0,false
+Hoonah,2,0,2,0,0,false
+Hooper,2,1,1,0,0,false
+Hope Mills,3,3,0,0,0,false
+Hopewell,3,2,1,0,0,false
+Hopkinton,5,2,3,0,0,false
+Hoquiam,2,2,0,0,0,false
+Horicon,1,1,0,0,0,false
+Horizon City,1,0,1,0,0,false
+Hornell,2,1,1,0,0,false
+Horseheads,3,1,2,0,0,false
+Horseshoe Bend,2,0,2,0,0,false
+Horsham,1,1,0,0,0,false
+Hot Springs,3,3,0,0,0,false
+Houlton,4,4,0,0,0,false
+Houston,3,1,2,0,0,false
+Howard,1,1,0,0,0,false
+Howards Grove,3,2,1,0,0,false
+Howell,2,2,0,0,0,false
+Howland,1,1,0,0,0,false
+Huachuca City,2,0,2,0,0,false
+Hubbard,2,0,2,0,0,false
+Huber Heights,1,0,1,0,0,false
+Hudson,8,2,3,3,0,false
+Hudson Falls,3,2,1,0,0,false
+Hueytown,2,2,0,0,0,false
+Hugo,1,1,0,0,0,false
+Hulett,4,4,0,0,0,false
+Humble,2,2,0,0,0,false
+Huntersville,1,1,0,0,0,false
+Huntertown,1,1,0,0,0,false
+Huntingburg,1,1,0,0,0,false
+Huntingdon,2,2,0,0,0,false
+Huntington,1,1,0,0,0,false
+Huntington Woods,1,1,0,0,0,false
+Huntley,3,3,0,0,0,false
+Huntsville,1,0,1,0,0,false
+Hurley,2,2,0,0,0,false
+Huron charter,1,1,0,0,0,false
+Hurricane,1,1,0,0,0,false
+Hurstbourne,1,1,0,0,0,false
+Huslia,1,1,0,0,0,false
+Hutto,2,2,0,0,0,false
+Huxley,1,1,0,0,0,false
+Hyde Park,5,5,0,0,0,false
+Hyrum,2,0,0,2,0,false
+Idaho Falls,1,1,0,0,0,false
+Imperial,1,1,0,0,0,false
+Imperial Beach,4,1,3,0,0,false
+Independence charter,1,1,0,0,0,false
+Indian Harbour Beach,2,1,1,0,0,false
+Indian Head,3,1,2,0,0,false
+Indian River Shores,2,2,0,0,0,false
+Indian Trail,1,0,1,0,0,false
+Indiantown,1,1,0,0,0,false
+Indio,2,1,1,0,0,false
+Ingleside,2,1,1,0,0,false
+Inglewood,2,2,0,0,0,false
+Inkom,2,2,0,0,0,false
+Inman,1,1,0,0,0,false
+International Falls,3,3,0,0,0,false
+Inver Grove Heights,3,3,0,0,0,false
+Ione,3,1,2,0,0,false
+Iowa,2,2,0,0,0,false
+Iowa Colony,1,0,1,0,0,false
+Iowa Falls,3,3,0,0,0,false
+Ipswich,4,2,2,0,0,false
+Iron Mountain,3,3,0,0,0,false
+Irondale,3,3,0,0,0,false
+Ironwood,1,1,0,0,0,false
+Irrigon,1,1,0,0,0,false
+Isanti,2,2,0,0,0,false
+"Islamorada, Village of Islands",2,0,2,0,0,false
+Island City,2,0,2,0,0,false
+Island Lake,1,1,0,0,0,false
+Isle of Palms,1,1,0,0,0,false
+Ithaca,1,0,1,0,0,false
+Itta Bena,1,0,1,0,0,false
+Ivins,1,1,0,0,0,false
+Jackson,10,10,0,0,0,false
+Jacksonville,3,1,2,0,0,false
+Jaffrey,2,2,0,0,0,false
+James Island,1,1,0,0,0,false
+Jasper,6,6,0,0,0,false
+Jay,1,1,0,0,0,false
+Jeanerette,1,1,0,0,0,false
+Jeannette,4,4,0,0,0,false
+Jefferson,9,8,1,0,0,false
+Jefferson City,2,2,0,0,0,false
+Jeffersonville,2,2,0,0,0,false
+Jena,2,2,0,0,0,false
+Jennings,1,1,0,0,0,false
+Jerome,2,2,0,0,0,false
+Jesup,5,3,2,0,0,false
+Johnson,3,3,0,0,0,false
+Johnson Creek,1,1,0,0,0,false
+Johnston,1,0,1,0,0,false
+Johnstown,4,3,1,0,0,false
+Joliet,2,2,0,0,0,false
+Joplin,2,2,0,0,0,false
+Jordan,2,2,0,0,0,false
+Joseph,1,0,1,0,0,false
+Junction City,4,4,0,0,0,false
+Jupiter,1,1,0,0,0,false
+Kachemak,3,3,0,0,0,false
+Kadoka,3,3,0,0,0,false
+Kake,1,1,0,0,0,false
+Kalama,1,0,1,0,0,false
+Kalamazoo,1,1,0,0,0,false
+Kalamazoo charter,2,1,1,0,0,false
+Kamas,1,1,0,0,0,false
+Kanab,2,1,1,0,0,false
+Kansas City,3,3,0,0,0,false
+Kaplan,1,0,1,0,0,false
+Kasson,1,1,0,0,0,false
+Katy,2,0,2,0,0,false
+Keansburg,1,1,0,0,0,false
+Kechi,2,1,1,0,0,false
+Keedysville,2,2,0,0,0,false
+Kemmerer,2,2,0,0,0,false
+Kendallville,1,1,0,0,0,false
+Kenmare,1,1,0,0,0,false
+Kennebunk,3,1,2,0,0,false
+Kenneth City,1,1,0,0,0,false
+Kennett,1,1,0,0,0,false
+Kensington,1,1,0,0,0,false
+Keokuk,3,3,0,0,0,false
+Kernersville,2,2,0,0,0,false
+Kerrville,1,0,1,0,0,false
+Ketchum,2,0,0,2,0,false
+Kettle Falls,2,2,0,0,0,false
+Kewanee,1,1,0,0,0,false
+Kewaskum,1,1,0,0,0,false
+Key Biscayne,3,1,1,0,0,false
+Keyport,2,0,2,0,0,false
+Kiel,2,2,0,0,0,false
+Kilgore,2,1,1,0,0,false
+Kill Devil Hills,1,1,0,0,0,false
+Killdeer,2,2,0,0,0,false
+Killingly,2,2,0,0,0,false
+Kimberly,3,2,1,0,0,false
+Kindred,2,2,0,0,0,false
+King,2,2,0,0,0,false
+Kingman,2,2,0,0,0,false
+Kings Mountain,1,0,1,0,0,false
+Kingsburg,3,2,1,0,0,false
+Kingsford,1,1,0,0,0,false
+Kingsland,1,1,0,0,0,false
+Kingston,5,0,5,0,0,false
+Kingstree,3,1,2,0,0,false
+Kingsville,3,3,0,0,0,false
+Kingwood,2,1,1,0,0,false
+Kinnelon,2,2,0,0,0,false
+Kinston,1,1,0,0,0,false
+Kittery,2,1,1,0,0,false
+Kittitas,1,0,0,1,0,false
+Kitzmiller,4,4,0,0,0,false
+Kivalina,1,1,0,0,0,false
+Knightdale,2,2,0,0,0,false
+Knoxville,2,2,0,0,0,false
+Kokomo,1,1,0,0,0,false
+Kotlik,1,1,0,0,0,false
+Kotzebue,1,1,0,0,0,false
+La Barge,1,1,0,0,0,false
+La Center,2,2,0,0,0,false
+La Crescent,2,1,1,0,0,false
+La Follette,1,1,0,0,0,false
+La Grange,6,3,3,0,0,false
+La Habra,2,0,2,0,0,false
+La Marque,1,1,0,0,0,false
+La Mesa,1,1,0,0,0,false
+La Palma,2,2,0,0,0,false
+La Pine,1,0,1,0,0,false
+La Verkin,3,1,2,0,0,false
+LaBelle,1,1,0,0,0,false
+LaGrange,1,1,0,0,0,false
+LaSalle,6,6,0,0,0,false
+Lacey,1,1,0,0,0,false
+Ladue,1,0,1,0,0,false
+Ladysmith,2,2,0,0,0,false
+Lafayette,5,5,0,0,0,false
+Laguna Beach,3,0,3,0,0,false
+Laguna Woods,1,1,0,0,0,false
+Lake,2,2,0,0,0,false
+Lake Alfred,1,0,1,0,0,false
+Lake Arthur,1,1,0,0,0,false
+Lake City,4,4,0,0,0,false
+Lake Elmo,5,3,2,0,0,false
+Lake Forest,3,3,0,0,0,false
+Lake Hallie,1,1,0,0,0,false
+Lake Jackson,3,2,1,0,0,false
+Lake Mills,1,1,0,0,0,false
+Lake Norden,1,1,0,0,0,false
+Lake Park,1,1,0,0,0,false
+Lake Preston,2,0,0,2,0,false
+Lake Station,1,1,0,0,0,false
+Lake View,1,1,0,0,0,false
+Lake Villa,1,1,0,0,0,false
+Lake Zurich,4,0,4,0,0,false
+Lakeland,2,0,2,0,0,false
+Lakemore,1,1,0,0,0,false
+Lakeside,2,0,2,0,0,false
+Lakeview,1,1,0,0,0,false
+Lakeville,3,0,3,0,0,false
+Lakewood,3,3,0,0,0,false
+Lakota,2,2,0,0,0,false
+Lancaster,5,5,0,0,0,false
+Landover Hills,2,2,0,0,0,false
+Landrum,1,1,0,0,0,false
+Lanett,2,1,1,0,0,false
+Langdon,2,2,0,0,0,false
+Lansing,1,1,0,0,0,false
+Lantana,1,0,1,0,0,false
+Lapeer,1,1,0,0,0,false
+Lapwai,2,0,2,0,0,false
+Larkspur,3,0,3,0,0,false
+Las Vegas,3,3,0,0,0,false
+Latrobe,5,4,0,0,1,false
+Lauderdale-by-the-Sea,1,1,0,0,0,false
+Laurel,2,2,0,0,0,false
+Laurens,1,1,0,0,0,false
+Laurinburg,1,1,0,0,0,false
+Lawrence,2,2,0,0,0,false
+Lawrenceburg,4,3,1,0,0,false
+Lawrenceville,3,3,0,0,0,false
+Le Mars,1,0,1,0,0,false
+Le Sueur,2,2,0,0,0,false
+Lead,1,1,0,0,0,false
+Leander,1,1,0,0,0,false
+Leavenworth,2,2,0,0,0,false
+Lebanon,2,1,1,0,0,false
+Ledgeview,3,1,2,0,0,false
+Ledyard,4,3,1,0,0,false
+Lee,2,0,2,0,0,false
+Leeds,2,2,0,0,0,false
+Leipsic,1,1,0,0,0,false
+Leitchfield,2,1,1,0,0,false
+Leland,2,2,0,0,0,false
+Lemmon,1,1,0,0,0,false
+Lemon,2,1,0,1,0,false
+Lemont,2,2,0,0,0,false
+Lennox,1,1,0,0,0,false
+Lenoir,1,1,0,0,0,false
+Lenoir City,3,3,0,0,0,false
+Leonardtown,2,0,2,0,0,false
+Levelland,2,0,2,0,0,false
+Lewisburg,6,6,0,0,0,false
+Lewiston,3,3,0,0,0,false
+Lewistown,3,2,1,0,0,false
+Lewisville,1,1,0,0,0,false
+Lexington,9,3,6,0,0,false
+Libby,1,1,0,0,0,false
+Liberty,6,6,0,0,0,false
+Lighthouse Point,2,2,0,0,0,false
+Lilburn,2,1,1,0,0,false
+Lima,1,1,0,0,0,false
+Limerick,3,2,1,0,0,false
+Limestone,1,1,0,0,0,false
+Limon,2,1,1,0,0,false
+Lincoln,10,3,7,0,0,false
+Lincoln Heights,1,0,1,0,0,false
+Lincoln Park,3,3,0,0,0,false
+Lincolnton,1,0,1,0,0,false
+Lindenhurst,2,2,0,0,0,false
+Lindon,1,1,0,0,0,false
+Lindsay,3,0,0,3,0,false
+Linton,1,0,1,0,0,false
+Linwood,1,0,1,0,0,false
+Lisbon,4,4,0,0,0,false
+Lisle,1,0,1,0,0,false
+Litchfield,2,1,1,0,0,false
+Litchfield Park,3,2,1,0,0,false
+Little Canada,3,2,1,0,0,false
+Little Compton,2,2,0,0,0,false
+Little Egg Harbor,2,2,0,0,0,false
+Little Elm,1,0,1,0,0,false
+Little Falls,1,1,0,0,0,false
+Little Ferry,1,0,1,0,0,false
+Little Flock,2,2,0,0,0,false
+Little Rock,4,4,0,0,0,false
+Little Silver,3,1,2,0,0,false
+Littleton,2,2,0,0,0,false
+Live Oak,3,3,0,0,0,false
+Livermore,1,0,1,0,0,false
+Livingston,4,1,3,0,0,false
+Loch Lynn Heights,2,2,0,0,0,false
+Lochbuie,1,0,1,0,0,false
+Lock Haven,4,2,2,0,0,false
+Lockhart,1,0,1,0,0,false
+Locust,2,2,0,0,0,false
+Locust Grove,1,0,1,0,0,false
+Logansport,3,3,0,0,0,false
+Loganville,1,1,0,0,0,false
+Lonaconing,1,1,0,0,0,false
+London,1,1,0,0,0,false
+Londonderry,4,0,4,0,0,false
+Lone Tree,2,2,0,0,0,false
+Long Beach,2,0,2,0,0,false
+Long Branch,1,1,0,0,0,false
+Longboat Key,2,0,2,0,0,false
+Lonoke,3,3,0,0,0,false
+Lonsdale,3,3,0,0,0,false
+Los Alamitos,2,0,2,0,0,false
+Los Banos,1,1,0,0,0,false
+Loudon,3,2,1,0,0,false
+Louisa,1,1,0,0,0,false
+Louisburg,1,1,0,0,0,false
+Lovelock,3,3,0,0,0,false
+Lovettsville,2,2,0,0,0,false
+Lowell,7,2,2,3,0,false
+Lower Merion,2,0,2,0,0,false
+Lower Moreland,2,2,0,0,0,false
+Lower Providence,1,0,1,0,0,false
+Lower Salford,2,2,0,0,0,false
+Lucedale,2,2,0,0,0,false
+Ludington,1,1,0,0,0,false
+Ludlow,12,12,0,0,0,false
+Lumberton,1,1,0,0,0,false
+Lunenburg,3,0,3,0,0,false
+Luray,3,3,0,0,0,false
+Lutcher,1,1,0,0,0,false
+Luverne,2,1,1,0,0,false
+Lyman,1,0,1,0,0,false
+Lynchburg,1,1,0,0,0,false
+Lyndhurst,1,1,0,0,0,false
+Lyndon,5,2,3,0,0,false
+Lynnwood,2,0,2,0,0,false
+Lyon charter,2,2,0,0,0,false
+Lyons,2,1,1,0,0,false
+Lysander,1,1,0,0,0,false
+Mableton,2,2,0,0,0,false
+Mabton,2,1,1,0,0,false
+Macclenny,1,1,0,0,0,false
+Macomb,5,3,2,0,0,false
+Macon,2,0,2,0,0,false
+Madawaska,2,2,0,0,0,false
+Madera,1,0,1,0,0,false
+Madison,6,3,3,0,0,false
+Madisonville,1,0,1,0,0,false
+Magdalena,2,2,0,0,0,false
+Magna metro,1,0,1,0,0,false
+Magnolia,2,2,0,0,0,false
+Mahomet,2,0,2,0,0,false
+Maize,1,0,1,0,0,false
+Malad City,2,2,0,0,0,false
+Malone,2,2,0,0,0,false
+Malta,4,4,0,0,0,false
+Malvern,2,0,2,0,0,false
+Malverne,2,2,0,0,0,false
+Mammoth Lakes,3,0,3,0,0,false
+Manasquan,1,0,1,0,0,false
+Manassas Park,1,1,0,0,0,false
+Manchester,5,4,1,0,0,false
+Mandeville,4,1,0,3,0,false
+Manheim,1,0,1,0,0,false
+Manistee,1,1,0,0,0,false
+Manitou Springs,2,2,0,0,0,false
+Mannford,1,1,0,0,0,false
+Mannington,3,1,2,0,0,false
+Manor,2,2,0,0,0,false
+Manorhaven,1,1,0,0,0,false
+Mansfield,9,4,5,0,0,false
+Mantua,3,0,3,0,0,false
+Manvel,2,0,2,0,0,false
+Manville,2,0,2,0,0,false
+Many,2,0,0,2,0,false
+Mapleton,1,1,0,0,0,false
+Maplewood,4,3,1,0,0,false
+Maquoketa,3,2,1,0,0,false
+Marathon,2,0,0,2,0,false
+Marblehead,2,2,0,0,0,false
+Mardela Springs,3,2,1,0,0,false
+Margaret,3,3,0,0,0,false
+Marianna,1,0,1,0,0,false
+Marietta,2,1,1,0,0,false
+Marion,6,6,0,0,0,false
+Marlinton,2,0,2,0,0,false
+Marlow,2,2,0,0,0,false
+Marple,1,1,0,0,0,false
+Marriott-Slaterville,2,2,0,0,0,false
+Marshall,5,4,1,0,0,false
+Marshfield,4,4,0,0,0,false
+Martin,1,0,0,1,0,false
+Martinsville,2,2,0,0,0,false
+Marysville,5,4,1,0,0,false
+Mashpee,5,0,5,0,0,false
+Mason,1,1,0,0,0,false
+Massena,3,2,1,0,0,false
+Matawan,2,2,0,0,0,false
+Matteson,4,3,1,0,0,false
+Mauldin,2,2,0,0,0,false
+Maumelle,1,1,0,0,0,false
+Mauston,1,1,0,0,0,false
+Mayfield,5,5,0,0,0,false
+Maysville,2,1,1,0,0,false
+Mayville,5,2,3,0,0,false
+Maywood,2,1,1,0,0,false
+McAlester,1,1,0,0,0,false
+McCall,1,0,1,0,0,false
+McCandless,1,0,1,0,0,false
+McCleary,1,1,0,0,0,false
+McCook,1,0,1,0,0,false
+McCordsville,3,3,0,0,0,false
+McDonough,2,1,1,0,0,false
+McFarland,3,0,3,0,0,false
+McKenzie,2,1,1,0,0,false
+McLoud,3,0,3,0,0,false
+McMinnville,1,1,0,0,0,false
+McPherson,3,1,2,0,0,false
+Mead,1,1,0,0,0,false
+Mebane,1,1,0,0,0,false
+Medford,3,3,0,0,0,false
+Medical Lake,1,1,0,0,0,false
+Medicine Lake,1,1,0,0,0,false
+Medina,4,2,1,1,0,false
+Medway,2,2,0,0,0,false
+Melrose,1,1,0,0,0,false
+Mena,1,0,1,0,0,false
+Mendota,2,2,0,0,0,false
+Mendota Heights,1,1,0,0,0,false
+Menominee,3,0,3,0,0,false
+Meredith,1,1,0,0,0,false
+Meridian,1,1,0,0,0,false
+Merriam,2,0,2,0,0,false
+Merrimack,2,1,1,0,0,false
+Merton,1,0,1,0,0,false
+Mesilla,3,2,1,0,0,false
+Methuen,1,0,1,0,0,false
+Mexico,2,2,0,0,0,false
+Miami,3,3,0,0,0,false
+Miami Shores,1,1,0,0,0,false
+Miami Springs,2,0,2,0,0,false
+Michigan,3,0,3,0,0,false
+Middle,3,3,0,0,0,false
+Middleborough,3,3,0,0,0,false
+Middlebury,1,1,0,0,0,false
+Middleport,1,1,0,0,0,false
+Middletown,4,2,2,0,0,false
+Middleville,2,0,2,0,0,false
+Midlothian,4,2,2,0,0,false
+Midway,1,1,0,0,0,false
+Midwest,2,2,0,0,0,false
+Mifflin,1,1,0,0,0,false
+Milan,2,2,0,0,0,false
+Milbank,1,1,0,0,0,false
+Milford,10,8,2,0,0,false
+Milford city (balance),1,0,1,0,0,false
+Mill City,3,0,3,0,0,false
+Mill Valley,4,1,3,0,0,false
+Millbrook,2,2,0,0,0,false
+Millbury,4,1,3,0,0,false
+Milledgeville,1,1,0,0,0,false
+Millersburg,1,1,0,0,0,false
+Millersville,4,3,1,0,0,false
+Millington,2,2,0,0,0,false
+Millinocket,1,1,0,0,0,false
+Mills,1,0,0,1,0,false
+Mills River,1,1,0,0,0,false
+Millville,6,6,0,0,0,false
+Millwood,1,0,1,0,0,false
+Milnor,2,2,0,0,0,false
+Milton,15,7,8,0,0,false
+Milwaukee,1,1,0,0,0,false
+Minden,3,3,0,0,0,false
+Minneapolis,1,1,0,0,0,false
+Minnetrista,3,1,2,0,0,false
+Minooka,3,2,1,0,0,false
+Mint Hill,1,1,0,0,0,false
+Mission Hills,2,2,0,0,0,false
+Mitchell,1,0,1,0,0,false
+Mitchellville,2,0,2,0,0,false
+Moab,2,0,2,0,0,false
+Moberly,1,0,1,0,0,false
+Mobridge,1,1,0,0,0,false
+Mohall,1,1,0,0,0,false
+Mokena,3,3,0,0,0,false
+Mona,2,1,1,0,0,false
+Monaca,3,0,3,0,0,false
+Moncks Corner,2,2,0,0,0,false
+Monclova,2,2,0,0,0,false
+Mondovi,1,1,0,0,0,false
+Monessen,4,3,1,0,0,false
+Monett,2,0,2,0,0,false
+Monkton,2,0,2,0,0,false
+Monmouth,2,2,0,0,0,false
+Monroe,5,3,1,1,0,false
+Monroe charter,1,1,0,0,0,false
+Mont Belvieu,1,0,1,0,0,false
+Montebello,2,2,0,0,0,false
+Monterey Park,1,1,0,0,0,false
+Montesano,2,2,0,0,0,false
+Montevallo,1,1,0,0,0,false
+Montevideo,3,3,0,0,0,false
+Montgomery,3,1,2,0,0,false
+Monticello,5,5,0,0,0,false
+Montpelier,1,1,0,0,0,false
+Montrose,3,0,3,0,0,false
+Montvale,1,1,0,0,0,false
+Montville,3,1,1,1,0,false
+Moorcroft,1,1,0,0,0,false
+Moorefield,2,1,1,0,0,false
+Mooresville,1,0,1,0,0,false
+Mora,2,2,0,0,0,false
+Moraga,4,0,4,0,0,false
+Morehead,2,0,2,0,0,false
+Morehead City,2,0,2,0,0,false
+Moreland Hills,3,2,1,0,0,false
+Moreno Valley,2,2,0,0,0,false
+Morgan,3,0,3,0,0,false
+Morganton,3,0,3,0,0,false
+Moriarty,1,1,0,0,0,false
+Morrilton,1,0,0,1,0,false
+Morris,4,1,3,0,0,false
+Morris Plains,2,2,0,0,0,false
+Morrisville,3,0,3,0,0,false
+Morro Bay,4,2,2,0,0,false
+Morton,4,4,0,0,0,false
+Mosinee,1,1,0,0,0,false
+Mosquero,2,2,0,0,0,false
+Moultonborough,3,0,3,0,0,false
+Moultrie,5,5,0,0,0,false
+Moundsville,2,1,1,0,0,false
+Mount Airy,1,0,1,0,0,false
+Mount Angel,1,1,0,0,0,false
+Mount Carmel,4,4,0,0,0,false
+Mount Healthy,1,1,0,0,0,false
+Mount Holly,2,2,0,0,0,false
+Mount Joy,1,1,0,0,0,false
+Mount Kisco,1,1,0,0,0,false
+Mount Pleasant,2,2,0,0,0,false
+Mount Vernon,5,5,0,0,0,false
+Mount Washington,1,0,1,0,0,false
+Mountain Brook,4,0,4,0,0,false
+Mountain Grove,2,1,1,0,0,false
+Mountain Home,3,2,1,0,0,false
+Moxee,2,2,0,0,0,false
+Mulberry,1,0,1,0,0,false
+Mulvane,1,1,0,0,0,false
+Mundy,1,1,0,0,0,false
+Munford,1,1,0,0,0,false
+Munster,4,4,0,0,0,false
+Murphy,3,1,2,0,0,false
+Murray,1,0,1,0,0,false
+Muscle Shoals,2,2,0,0,0,false
+Muskegon Heights,1,1,0,0,0,false
+Mustang,3,3,0,0,0,false
+Myrtle Beach,2,2,0,0,0,false
+Myrtle Creek,2,2,0,0,0,false
+Nantucket,6,1,5,0,0,false
+Naples,3,3,0,0,0,false
+Nappanee,1,0,1,0,0,false
+Narragansett,5,4,1,0,0,false
+Narrows,2,2,0,0,0,false
+Natick,1,0,1,0,0,false
+Nazareth,2,2,0,0,0,false
+Nebraska City,1,0,1,0,0,false
+Nederland,4,0,4,0,0,false
+Needham,1,0,1,0,0,false
+Negaunee,1,1,0,0,0,false
+Neligh,2,2,0,0,0,false
+Nenana,3,3,0,0,0,false
+Neosho,3,2,1,0,0,false
+Nephi,1,1,0,0,0,false
+Neptune Beach,3,3,0,0,0,false
+Nether Providence,2,2,0,0,0,false
+Nevada,4,1,3,0,0,false
+New Baltimore,1,1,0,0,0,false
+New Bern,1,1,0,0,0,false
+New Boston,3,1,2,0,0,false
+New Brighton,2,2,0,0,0,false
+New Canaan,4,3,1,0,0,false
+New Castle,6,6,0,0,0,false
+New Concord,1,1,0,0,0,false
+New England,2,2,0,0,0,false
+New Fairfield,2,0,2,0,0,false
+New Gloucester,2,2,0,0,0,false
+New Hampton,1,1,0,0,0,false
+New Hanover,1,0,1,0,0,false
+New Haven,6,2,4,0,0,false
+New Hyde Park,2,1,1,0,0,false
+New Lebanon,1,1,0,0,0,false
+New Llano,1,1,0,0,0,false
+New London,5,4,1,0,0,false
+New Market,3,3,0,0,0,false
+New Meadows,2,2,0,0,0,false
+New Milford,2,2,0,0,0,false
+New Paltz,1,1,0,0,0,false
+New Prague,2,2,0,0,0,false
+New Richmond,1,1,0,0,0,false
+New Roads,1,0,0,1,0,false
+New Rockford,2,2,0,0,0,false
+New Salem,2,2,0,0,0,false
+New Shoreham,2,2,0,0,0,false
+New Underwood,1,1,0,0,0,false
+New Whiteland,2,2,0,0,0,false
+Newark,4,4,0,0,0,false
+Newcastle,2,2,0,0,0,false
+Newman,1,1,0,0,0,false
+Newmarket,2,0,2,0,0,false
+Newnan,3,3,0,0,0,false
+Newport,7,3,4,0,0,false
+Newton,7,4,3,0,0,false
+Newtown,3,1,2,0,0,false
+Niagara Falls,1,1,0,0,0,false
+Nibley,1,1,0,0,0,false
+Niles,2,2,0,0,0,false
+Nitro,1,1,0,0,0,false
+Nixa,1,1,0,0,0,false
+Noble,2,2,0,0,0,false
+Noblesville,2,1,1,0,0,false
+Nogales,4,4,0,0,0,false
+Nolensville,2,1,1,0,0,false
+Nome,1,1,0,0,0,false
+Norfolk,1,0,1,0,0,false
+Normandy Park,1,1,0,0,0,false
+Norridge,1,0,1,0,0,false
+Norridgewock,1,1,0,0,0,false
+North Andover,2,2,0,0,0,false
+North Augusta,2,0,2,0,0,false
+North Aurora,3,3,0,0,0,false
+North Beach,2,0,2,0,0,false
+North Bend,3,2,1,0,0,false
+North Berwick,2,0,2,0,0,false
+North Bonneville,3,3,0,0,0,false
+North Branford,3,3,0,0,0,false
+North Caldwell,2,0,2,0,0,false
+North Chevy Chase,1,1,0,0,0,false
+North East,1,1,0,0,0,false
+North Fayette,2,2,0,0,0,false
+North Fond du Lac,1,1,0,0,0,false
+North Haledon,3,1,2,0,0,false
+North Hampton,2,2,0,0,0,false
+North Hempstead,1,0,1,0,0,false
+North Kansas City,3,0,3,0,0,false
+North Kingstown,3,3,0,0,0,false
+North Kingsville,2,0,2,0,0,false
+North Logan,2,2,0,0,0,false
+North Manchester,1,1,0,0,0,false
+North Miami,2,0,0,2,0,false
+North Ogden,2,2,0,0,0,false
+North Palm Beach,4,3,1,0,0,false
+North Plains,1,1,0,0,0,false
+North Providence,3,3,0,0,0,false
+North Reading,4,2,2,0,0,false
+North Salt Lake,3,2,1,0,0,false
+North Sioux City,1,1,0,0,0,false
+North Smithfield,4,0,4,0,0,false
+North Syracuse,3,2,1,0,0,false
+North Vernon,3,3,0,0,0,false
+North Whitehall,1,1,0,0,0,false
+North Yarmouth,2,1,1,0,0,false
+Northborough,1,0,1,0,0,false
+Northbridge,3,3,0,0,0,false
+Northfield,10,7,3,0,0,false
+Northglenn,2,2,0,0,0,false
+Northport,4,0,4,0,0,false
+Northville,1,1,0,0,0,false
+Northwood,3,2,1,0,0,false
+Norton,4,0,4,0,0,false
+Norwell,2,1,1,0,0,false
+Norwich,5,3,2,0,0,false
+Norwood,5,0,5,0,0,false
+Nottingham,2,1,1,0,0,false
+Novato,1,1,0,0,0,false
+Nutter Fort,1,1,0,0,0,false
+Nyack,1,1,0,0,0,false
+O'Fallon,2,0,2,0,0,false
+Oak Grove,3,2,1,0,0,false
+Oak Hill,2,1,1,0,0,false
+Oakland,5,3,2,0,0,false
+Oakland Park,1,1,0,0,0,false
+Oakland charter,2,0,2,0,0,false
+Oakley,4,2,0,2,0,false
+Oakmont,1,1,0,0,0,false
+Oakridge,3,2,1,0,0,false
+Oakwood,3,3,0,0,0,false
+Ocean City,2,2,0,0,0,false
+Ocean Shores,2,2,0,0,0,false
+Ocean View,2,2,0,0,0,false
+Oceana,3,1,2,0,0,false
+Oceanport,2,2,0,0,0,false
+Oconomowoc,3,3,0,0,0,false
+Oconto,3,3,0,0,0,false
+Oconto Falls,3,3,0,0,0,false
+Odessa,1,1,0,0,0,false
+Oelwein,2,2,0,0,0,false
+Ogallala,1,1,0,0,0,false
+Ogdensburg,3,1,2,0,0,false
+Okanogan,1,0,1,0,0,false
+Okemah,2,1,1,0,0,false
+Okmulgee,2,2,0,0,0,false
+Old Lyme,2,0,2,0,0,false
+Old Orchard Beach,2,2,0,0,0,false
+Old Saybrook,3,0,3,0,0,false
+Oliver Springs,2,1,1,0,0,false
+Olivette,1,1,0,0,0,false
+Olmsted,2,2,0,0,0,false
+Omak,2,2,0,0,0,false
+Omro,1,0,1,0,0,false
+Onawa,1,1,0,0,0,false
+Oneida,5,5,0,0,0,false
+Oneonta,4,4,0,0,0,false
+Onida,1,1,0,0,0,false
+Onondaga,1,1,0,0,0,false
+Oradell,2,2,0,0,0,false
+Orange,9,5,4,0,0,false
+Orange Beach,2,0,2,0,0,false
+Orange Cove,1,1,0,0,0,false
+Orange Park,1,0,1,0,0,false
+Orangeburg,3,3,0,0,0,false
+Oregon,1,0,1,0,0,false
+Orinda,4,2,2,0,0,false
+Orion charter,1,1,0,0,0,false
+Orland,2,1,1,0,0,false
+Orland Park,2,1,1,0,0,false
+Oro Valley,3,1,2,0,0,false
+Orofino,2,2,0,0,0,false
+Orono,5,4,1,0,0,false
+Oroville,3,3,0,0,0,false
+Orrington,1,1,0,0,0,false
+Orting,1,0,1,0,0,false
+Osage,2,2,0,0,0,false
+Osage Beach,2,2,0,0,0,false
+Osage City,3,3,0,0,0,false
+Osawatomie,2,0,2,0,0,false
+Osceola,2,2,0,0,0,false
+Oshtemo charter,1,0,1,0,0,false
+Ossipee,1,1,0,0,0,false
+Oswego,1,0,1,0,0,false
+Othello,1,1,0,0,0,false
+Ottawa,3,3,0,0,0,false
+Overland,3,3,0,0,0,false
+Oxford,10,4,6,0,0,false
+Oxnard,3,3,0,0,0,false
+Oyster Bay,1,1,0,0,0,false
+Ozark,2,1,1,0,0,false
+Pacific,4,4,0,0,0,false
+Paden City,2,1,1,0,0,false
+Paducah,3,3,0,0,0,false
+Page,2,2,0,0,0,false
+Pahokee,1,1,0,0,0,false
+Painesville,1,1,0,0,0,false
+Paintsville,1,0,1,0,0,false
+Palatine,1,0,1,0,0,false
+Palestine,5,4,1,0,0,false
+Palisade,1,1,0,0,0,false
+Palm Beach,2,1,0,1,0,false
+Palm Springs,1,0,1,0,0,false
+Palmer Lake,1,0,1,0,0,false
+Palmerton,1,1,0,0,0,false
+Palmview,1,1,0,0,0,false
+Palmyra,1,1,0,0,0,false
+Palos Hills,1,1,0,0,0,false
+Palos Verdes Estates,2,0,2,0,0,false
+Panguitch,1,1,0,0,0,false
+Paola,1,0,0,1,0,false
+Paradise,1,0,0,1,0,false
+Paradise Valley,2,2,0,0,0,false
+Paris,12,8,4,0,0,false
+Park City,2,1,1,0,0,false
+Park Rapids,1,1,0,0,0,false
+Park Ridge,2,2,0,0,0,false
+Park River,1,1,0,0,0,false
+Parker,6,3,3,0,0,false
+Parkston,4,4,0,0,0,false
+Parma,1,0,1,0,0,false
+Parowan,2,2,0,0,0,false
+Parsons,2,2,0,0,0,false
+Pass Christian,1,1,0,0,0,false
+Patagonia,1,1,0,0,0,false
+Patterson,1,1,0,0,0,false
+Pauls Valley,1,1,0,0,0,false
+Paulsboro,4,3,1,0,0,false
+Payson,5,1,4,0,0,false
+Pea Ridge,1,0,1,0,0,false
+Peachtree City,2,0,2,0,0,false
+Pearl River,1,1,0,0,0,false
+Peculiar,1,1,0,0,0,false
+Pelham,8,2,6,0,0,false
+Pell City,2,2,0,0,0,false
+Pembina,1,1,0,0,0,false
+Pembroke,5,0,5,0,0,false
+Pembroke Park,2,0,2,0,0,false
+Pender,2,1,1,0,0,false
+Pendleton,1,0,1,0,0,false
+Pequannock,2,0,2,0,0,false
+Perry,10,9,1,0,0,false
+Perrysburg,1,1,0,0,0,false
+Perryville,4,3,1,0,0,false
+Peru,3,3,0,0,0,false
+Peshtigo,1,1,0,0,0,false
+Petal,2,1,0,1,0,false
+Peters,1,0,1,0,0,false
+Petersburg,2,2,0,0,0,false
+Petoskey,1,1,0,0,0,false
+Pevely,1,0,1,0,0,false
+Pewaukee,1,0,1,0,0,false
+Philip,1,1,0,0,0,false
+Philipsburg,4,4,0,0,0,false
+Philomath,2,1,1,0,0,false
+Phoenix,3,3,0,0,0,false
+Pickens,3,2,1,0,0,false
+Piedmont,2,2,0,0,0,false
+Pierce,1,1,0,0,0,false
+Pigeon Forge,2,2,0,0,0,false
+Pike,2,2,0,0,0,false
+Piketon,2,2,0,0,0,false
+Pikeville,1,1,0,0,0,false
+Pilot Rock,4,0,4,0,0,false
+Pilot Station,1,1,0,0,0,false
+Pima,2,2,0,0,0,false
+Pine,1,0,1,0,0,false
+Pine City,1,1,0,0,0,false
+Pine Haven,1,1,0,0,0,false
+Pine Hill,1,0,1,0,0,false
+Pine Island,1,1,0,0,0,false
+Pinedale,2,0,2,0,0,false
+Pinehurst,3,2,1,0,0,false
+Pinetop-Lakeside,2,1,1,0,0,false
+Pineville,1,1,0,0,0,false
+Pinole,4,3,1,0,0,false
+Pipestone,2,1,0,1,0,false
+Pitman,2,0,2,0,0,false
+Pittsburg,1,0,1,0,0,false
+Pittsfield,3,1,2,0,0,false
+Pittsfield charter,3,0,3,0,0,false
+Pittsford,2,2,0,0,0,false
+Pittston,3,2,1,0,0,false
+Pittsville,1,1,0,0,0,false
+Placerville,3,3,0,0,0,false
+Plain City,1,1,0,0,0,false
+Plainfield,2,2,0,0,0,false
+Plainview,5,5,0,0,0,false
+Plainville,2,1,1,0,0,false
+Plankinton,1,1,0,0,0,false
+Plano,2,2,0,0,0,false
+Plaquemine,2,2,0,0,0,false
+Platte City,1,1,0,0,0,false
+Plattsmouth,3,3,0,0,0,false
+Pleasant Grove,2,2,0,0,0,false
+Pleasant Hill,1,1,0,0,0,false
+Pleasant View,1,1,0,0,0,false
+Pleasantville,2,1,1,0,0,false
+Plumstead,3,3,0,0,0,false
+Plymouth,12,9,3,0,0,false
+Plymouth charter,3,3,0,0,0,false
+Pocola,1,1,0,0,0,false
+Pocomoke City,2,1,1,0,0,false
+Point Hope,1,1,0,0,0,false
+Point Pleasant,1,0,1,0,0,false
+Poland,3,2,1,0,0,false
+Polk,2,2,0,0,0,false
+Polk City,2,2,0,0,0,false
+Pompton Lakes,2,1,1,0,0,false
+Ponca City,2,2,0,0,0,false
+Ponchatoula,3,3,0,0,0,false
+Ponderay,2,2,0,0,0,false
+Pontiac,2,2,0,0,0,false
+Poolesville,2,2,0,0,0,false
+Poplar Bluff,3,3,0,0,0,false
+Poplarville,1,0,1,0,0,false
+Poquoson,2,1,1,0,0,false
+Port Allen,2,0,2,0,0,false
+Port Barre,4,4,0,0,0,false
+Port Deposit,2,1,1,0,0,false
+Port Jefferson,1,1,0,0,0,false
+Port Jervis,4,4,0,0,0,false
+Port Neches,1,1,0,0,0,false
+Port Orford,2,2,0,0,0,false
+Port Royal,1,0,1,0,0,false
+Port St. Joe,1,1,0,0,0,false
+Port St. Lucie,1,0,1,0,0,false
+Port Wentworth,2,2,0,0,0,false
+Portage,1,0,1,0,0,false
+Portland,7,6,1,0,0,false
+Portsmouth,3,0,3,0,0,false
+Post Falls,1,1,0,0,0,false
+Poteau,1,0,1,0,0,false
+Potsdam,3,2,1,0,0,false
+Poultney,3,3,0,0,0,false
+Poway,1,0,1,0,0,false
+Powder Springs,5,3,2,0,0,false
+Pownal,1,1,0,0,0,false
+Prairie,1,1,0,0,0,false
+Prairie Grove,2,2,0,0,0,false
+Prairie du Chien,3,3,0,0,0,false
+Pratt,1,1,0,0,0,false
+Prescott,1,1,0,0,0,false
+Preston,2,2,0,0,0,false
+Prestonsburg,1,0,0,1,0,false
+Price,1,1,0,0,0,false
+Princess Anne,1,0,1,0,0,false
+Princeton,8,6,2,0,0,false
+Prospect,4,2,2,0,0,false
+Prospect Heights,5,2,3,0,0,false
+Prospect Park,2,0,2,0,0,false
+Prosser,2,1,1,0,0,false
+Pryor Creek,2,0,2,0,0,false
+Pulaski,3,2,1,0,0,false
+Punxsutawney,2,1,1,0,0,false
+Purcell,1,1,0,0,0,false
+Purcellville,2,2,0,0,0,false
+Putnam,1,0,1,0,0,false
+Quakertown,1,1,0,0,0,false
+Quartzsite,2,1,1,0,0,false
+Queenstown,1,1,0,0,0,false
+Quincy,2,1,1,0,0,false
+Quinhagak,1,1,0,0,0,false
+Quitman,1,1,0,0,0,false
+Racine,1,1,0,0,0,false
+Radcliff,2,2,0,0,0,false
+Radford,1,1,0,0,0,false
+Rainier,1,1,0,0,0,false
+Rainsville,3,3,0,0,0,false
+Ralston,2,0,2,0,0,false
+Ramapo,2,2,0,0,0,false
+Ranchester,3,2,1,0,0,false
+Rancho Mirage,2,1,1,0,0,false
+Randolph,2,2,0,0,0,false
+Rantoul,3,0,3,0,0,false
+Raritan,1,1,0,0,0,false
+Raton,1,1,0,0,0,false
+Ravenswood,1,0,0,1,0,false
+Raymond,7,2,5,0,0,false
+Raynham,2,2,0,0,0,false
+Reading,5,0,5,0,0,false
+Readington,1,0,1,0,0,false
+Red Bank,4,0,4,0,0,false
+Red Lion,2,2,0,0,0,false
+Red Lodge,1,0,1,0,0,false
+Red Oak,3,2,1,0,0,false
+Redding,4,4,0,0,0,false
+Redfield,2,2,0,0,0,false
+Redford charter,2,0,2,0,0,false
+Redwood City,2,0,2,0,0,false
+Redwood Falls,2,2,0,0,0,false
+Reedsport,1,0,1,0,0,false
+Rehoboth,1,1,0,0,0,false
+Rehoboth Beach,2,2,0,0,0,false
+Reile's Acres,3,3,0,0,0,false
+Rensselaer,4,3,1,0,0,false
+Reserve,1,0,0,1,0,false
+Rich,2,2,0,0,0,false
+Richardton,3,3,0,0,0,false
+Richfield,4,0,4,0,0,false
+Richland,5,3,2,0,0,false
+Richland Center,2,2,0,0,0,false
+Richlands,1,0,0,1,0,false
+Richmond,5,4,1,0,0,false
+Richmond Heights,1,0,1,0,0,false
+Richwood,4,4,0,0,0,false
+Ridgefield,4,4,0,0,0,false
+Ridgeland,2,2,0,0,0,false
+Ridgely,3,0,3,0,0,false
+Ridley,1,1,0,0,0,false
+Ridley Park,1,1,0,0,0,false
+Rifle,2,1,1,0,0,false
+Rigby,2,1,1,0,0,false
+Rincon,1,1,0,0,0,false
+Rindge,3,2,1,0,0,false
+Ringwood,2,0,2,0,0,false
+Rio Communities,2,0,0,2,0,false
+Rio Grande City,1,1,0,0,0,false
+Rio Vista,1,0,1,0,0,false
+Ripley,4,0,4,0,0,false
+Ripon,5,1,4,0,0,false
+Ritzville,1,1,0,0,0,false
+River Heights,1,1,0,0,0,false
+Riverdale,3,1,2,0,0,false
+Riverside,2,1,1,0,0,false
+Riverview,1,1,0,0,0,false
+Roanoke,1,1,0,0,0,false
+Roanoke Rapids,3,3,0,0,0,false
+Robbinsdale,4,4,0,0,0,false
+Roberts,1,1,0,0,0,false
+Robertsdale,2,2,0,0,0,false
+Robins,1,1,0,0,0,false
+Robinson,1,1,0,0,0,false
+Rochelle,3,3,0,0,0,false
+Rochester,4,0,4,0,0,false
+Rochester Hills,1,0,1,0,0,false
+Rock Island,1,1,0,0,0,false
+Rock Rapids,2,1,0,1,0,false
+Rock River,2,2,0,0,0,false
+Rockaway,4,1,3,0,0,false
+Rockaway Beach,1,0,1,0,0,false
+Rockford,3,1,2,0,0,false
+Rockingham,2,1,1,0,0,false
+Rockland,3,0,3,0,0,false
+Rocklin,1,1,0,0,0,false
+Rockport,1,1,0,0,0,false
+Rockton,3,3,0,0,0,false
+Rockwood,1,1,0,0,0,false
+Rocky Hill,2,0,2,0,0,false
+Roeland Park,2,0,2,0,0,false
+Rogersville,1,1,0,0,0,false
+Rogue River,2,2,0,0,0,false
+Rohnert Park,2,2,0,0,0,false
+Roland,1,0,0,1,0,false
+Rolesville,2,2,0,0,0,false
+Rolla,2,2,0,0,0,false
+Rolling Fork,1,1,0,0,0,false
+Roosevelt,1,1,0,0,0,false
+Roscoe,3,1,2,0,0,false
+Rose Hill,2,2,0,0,0,false
+Roseland,1,0,1,0,0,false
+Roselle,3,0,3,0,0,false
+Rosenberg,1,1,0,0,0,false
+Roseville,1,1,0,0,0,false
+Rothschild,1,1,0,0,0,false
+Round Lake,1,1,0,0,0,false
+Roxboro,2,0,2,0,0,false
+Royal City,1,1,0,0,0,false
+Royal Oak,2,0,2,0,0,false
+Royalton,1,1,0,0,0,false
+Royse City,2,1,1,0,0,false
+Ruidoso Downs,1,1,0,0,0,false
+Rumford,2,2,0,0,0,false
+Rumson,1,0,1,0,0,false
+Runnemede,1,1,0,0,0,false
+Rupert,2,1,1,0,0,false
+Russell,1,0,1,0,0,false
+Russellville,2,2,0,0,0,false
+Rutland,1,1,0,0,0,false
+Rye,2,1,1,0,0,false
+Rye Brook,1,1,0,0,0,false
+Sabattus,3,3,0,0,0,false
+Sabina,1,0,1,0,0,false
+Sachse,2,0,2,0,0,false
+Saddle Brook,3,2,1,0,0,false
+Safford,1,0,1,0,0,false
+Saginaw,1,1,0,0,0,false
+Sahuarita,1,0,1,0,0,false
+Salamanca,2,2,0,0,0,false
+Salem,4,2,2,0,0,false
+Salida,1,0,1,0,0,false
+Saline,1,0,1,0,0,false
+Salisbury,4,3,0,1,0,false
+Sallisaw,1,0,1,0,0,false
+Saltillo,3,0,0,3,0,false
+San Anselmo,3,0,3,0,0,false
+San Benito,1,0,1,0,0,false
+San Luis,1,0,1,0,0,false
+San Marcos,1,0,1,0,0,false
+San Marino,3,3,0,0,0,false
+San Mateo,2,0,2,0,0,false
+San Ramon,2,2,0,0,0,false
+San Ysidro,1,1,0,0,0,false
+Sand Point,2,2,0,0,0,false
+Sand Springs,2,0,2,0,0,false
+Sandown,2,0,2,0,0,false
+Sandwich,5,0,5,0,0,false
+Sanger,2,0,2,0,0,false
+Sanibel,2,0,2,0,0,false
+Santa Ana,1,1,0,0,0,false
+Santa Clara,2,1,1,0,0,false
+Santa Cruz,1,0,1,0,0,false
+Santa Maria,1,1,0,0,0,false
+Santa Monica,2,1,1,0,0,false
+Santa Rosa,1,1,0,0,0,false
+Santee,2,1,1,0,0,false
+Saraland,3,1,2,0,0,false
+Saranac Lake,2,2,0,0,0,false
+Saratoga,1,0,1,0,0,false
+Satsuma,2,2,0,0,0,false
+Sauk Centre,2,2,0,0,0,false
+Sauk City,2,2,0,0,0,false
+Sauk Rapids,4,3,1,0,0,false
+Sausalito,3,2,1,0,0,false
+Savannah,3,2,1,0,0,false
+Sayre,2,1,1,0,0,false
+Scarborough,2,2,0,0,0,false
+Schaumburg,3,2,1,0,0,false
+Schererville,2,2,0,0,0,false
+Schuyler,1,0,1,0,0,false
+Scio,2,1,1,0,0,false
+Scioto,4,4,0,0,0,false
+Scituate,4,2,2,0,0,false
+Scobey,1,0,1,0,0,false
+Scotia,3,2,1,0,0,false
+Scotland,2,0,0,2,0,false
+Scott,2,2,0,0,0,false
+Scott City,4,0,4,0,0,false
+Scotts Valley,2,0,2,0,0,false
+Scottsboro,1,1,0,0,0,false
+Scottsville,3,0,3,0,0,false
+Seabrook,6,2,4,0,0,false
+Searcy,4,4,0,0,0,false
+Seat Pleasant,2,2,0,0,0,false
+Sebastian,1,0,1,0,0,false
+Sebastopol,3,3,0,0,0,false
+Selah,2,0,2,0,0,false
+Selinsgrove,2,2,0,0,0,false
+Sellersburg,1,1,0,0,0,false
+Selma,2,2,0,0,0,false
+Selmer,2,2,0,0,0,false
+Seminole,1,0,1,0,0,false
+Seneca,3,3,0,0,0,false
+Sequim,5,0,5,0,0,false
+Sergeant Bluff,1,1,0,0,0,false
+Seward,1,1,0,0,0,false
+Seymour,8,8,0,0,0,false
+Shady Cove,1,1,0,0,0,false
+Shaftsbury,1,1,0,0,0,false
+Shakopee,1,1,0,0,0,false
+Shamokin,2,0,2,0,0,false
+Shannon Hills,2,2,0,0,0,false
+Sharon,3,1,2,0,0,false
+Sharon Hill,3,1,2,0,0,false
+Sharpsburg,1,1,0,0,0,false
+Sharptown,2,1,1,0,0,false
+Shasta Lake,3,1,2,0,0,false
+Shawnee,1,0,0,1,0,false
+Shawswick,1,1,0,0,0,false
+Sheboygan,2,2,0,0,0,false
+Sheffield,1,1,0,0,0,false
+Shelburne,2,2,0,0,0,false
+Shelby,4,3,1,0,0,false
+Shelby charter,1,0,1,0,0,false
+Shelbyville,6,3,3,0,0,false
+Sheldon,1,1,0,0,0,false
+Shelley,1,1,0,0,0,false
+Shelton,2,2,0,0,0,false
+Shenandoah,5,4,0,1,0,false
+Shepherdstown,1,1,0,0,0,false
+Sheridan,3,3,0,0,0,false
+Shiloh,1,0,1,0,0,false
+Shinnston,2,2,0,0,0,false
+Shippensburg,3,2,1,0,0,false
+Shively,5,4,1,0,0,false
+Shorewood,5,4,1,0,0,false
+Shoshone,1,1,0,0,0,false
+Shoshoni,1,1,0,0,0,false
+Show Low,1,1,0,0,0,false
+Shrewsbury,3,0,3,0,0,false
+Sidney,1,1,0,0,0,false
+Sierra Madre,3,3,0,0,0,false
+Sierra Vista,2,1,1,0,0,false
+Signal Hill,1,1,0,0,0,false
+Signal Mountain,2,2,0,0,0,false
+Siloam Springs,2,1,1,0,0,false
+Simi Valley,2,0,2,0,0,false
+Simpsonville,2,2,0,0,0,false
+Simsbury,5,1,4,0,0,false
+Sinclair,2,2,0,0,0,false
+Sioux Center,1,1,0,0,0,false
+Sisseton,1,1,0,0,0,false
+Sisters,2,0,2,0,0,false
+Skiatook,1,1,0,0,0,false
+Skokie,1,1,0,0,0,false
+Skowhegan,4,1,3,0,0,false
+Sleepy Hollow,1,0,1,0,0,false
+Slinger,1,0,1,0,0,false
+Smithfield,8,4,4,0,0,false
+Smithsburg,2,0,2,0,0,false
+Smithtown,1,1,0,0,0,false
+Smithville,3,3,0,0,0,false
+Smyrna,1,0,1,0,0,false
+Snellville,3,3,0,0,0,false
+Snohomish,3,1,2,0,0,false
+Snow Hill,1,0,1,0,0,false
+Snowmass Village,3,1,2,0,0,false
+Soap Lake,2,2,0,0,0,false
+Soddy-Daisy,4,4,0,0,0,false
+Solana Beach,2,2,0,0,0,false
+Soldier,1,1,0,0,0,false
+Solvay,2,1,1,0,0,false
+Somers,4,3,1,0,0,false
+Somers Point,2,2,0,0,0,false
+Somerset,10,8,2,0,0,false
+Somerton,4,3,1,0,0,false
+Sonoma,2,2,0,0,0,false
+Sonora,3,3,0,0,0,false
+Souderton,2,1,1,0,0,false
+South Amboy,1,1,0,0,0,false
+South Berwick,2,2,0,0,0,false
+South Bethany,2,2,0,0,0,false
+South Bloomfield,2,0,2,0,0,false
+South Boston,1,0,1,0,0,false
+South Burlington,1,1,0,0,0,false
+South Congaree,2,2,0,0,0,false
+South Daytona,3,0,3,0,0,false
+South El Monte,3,1,2,0,0,false
+South Gate,2,1,1,0,0,false
+South Hadley,4,1,3,0,0,false
+South Hill,2,1,1,0,0,false
+South Hutchinson,2,1,1,0,0,false
+South Kingstown,1,0,1,0,0,false
+South Lyon,1,1,0,0,0,false
+South Miami,2,0,2,0,0,false
+South Ogden,4,4,0,0,0,false
+South Orange Village,1,0,1,0,0,false
+South Park,3,3,0,0,0,false
+South Rock Island,1,1,0,0,0,false
+South Salt Lake,2,1,1,0,0,false
+South Tucson,2,1,1,0,0,false
+South Weber,2,2,0,0,0,false
+South Windsor,5,2,3,0,0,false
+Southbury,2,2,0,0,0,false
+Southern Pines,4,4,0,0,0,false
+Southfield,1,1,0,0,0,false
+Southgate,2,2,0,0,0,false
+Southington,3,1,1,1,0,false
+Southlake,2,2,0,0,0,false
+Southside,2,2,0,0,0,false
+Spanish Fort,1,1,0,0,0,false
+Sparta,3,2,1,0,0,false
+Spartanburg,2,2,0,0,0,false
+Speedway,3,2,1,0,0,false
+Spencer,7,2,5,0,0,false
+Spencerville,1,1,0,0,0,false
+Spirit Lake,1,1,0,0,0,false
+Spring Garden,3,2,1,0,0,false
+Spring Hill,2,1,0,1,0,false
+Spring Lake,2,1,1,0,0,false
+Spring Lake Park,1,1,0,0,0,false
+Springdale,2,2,0,0,0,false
+Springer,1,1,0,0,0,false
+Springerville,2,2,0,0,0,false
+Springfield,10,6,4,0,0,false
+Springfield charter,3,3,0,0,0,false
+Springhill,1,1,0,0,0,false
+St. Albans,1,1,0,0,0,false
+St. Anthony,3,1,2,0,0,false
+St. Augustine Beach,2,0,2,0,0,false
+St. Charles,2,2,0,0,0,false
+St. Clair,3,3,0,0,0,false
+St. Cloud,2,0,2,0,0,false
+St. Francis,4,2,2,0,0,false
+St. Gabriel,1,0,0,1,0,false
+St. Ignatius,2,2,0,0,0,false
+St. James,1,1,0,0,0,false
+St. John,4,2,2,0,0,false
+St. Johnsbury,3,3,0,0,0,false
+St. Joseph,1,1,0,0,0,false
+St. Louis,3,3,0,0,0,false
+St. Maries,1,0,1,0,0,false
+St. Martinville,1,1,0,0,0,false
+St. Marys,2,2,0,0,0,false
+St. Matthews,4,4,0,0,0,false
+St. Michaels,1,1,0,0,0,false
+St. Paul Park,1,1,0,0,0,false
+St. Pete Beach,1,0,1,0,0,false
+St. Peter,3,3,0,0,0,false
+St. Robert,1,0,1,0,0,false
+Stafford,4,2,2,0,0,false
+Stallings,2,2,0,0,0,false
+Stanfield,1,0,1,0,0,false
+Stanford,2,1,1,0,0,false
+Stanley,5,1,4,0,0,false
+Stanwood,3,0,3,0,0,false
+Staples,1,1,0,0,0,false
+Star City,1,1,0,0,0,false
+Star Valley,3,3,0,0,0,false
+Starke,1,0,1,0,0,false
+Statesville,2,2,0,0,0,false
+Steelton,1,1,0,0,0,false
+Steger,4,4,0,0,0,false
+Steilacoom,2,2,0,0,0,false
+Stephenville,1,1,0,0,0,false
+Sterling,6,4,2,0,0,false
+Sterling Heights,1,1,0,0,0,false
+Sterlington,3,3,0,0,0,false
+Stevenson,4,4,0,0,0,false
+Stevensville,1,0,0,1,0,false
+Stewartville,1,0,1,0,0,false
+Stilwell,1,1,0,0,0,false
+Stockton,2,2,0,0,0,false
+Stonecrest,2,2,0,0,0,false
+Stoneham,1,0,1,0,0,false
+Stonewall,2,2,0,0,0,false
+Stonington,2,0,2,0,0,false
+Story City,3,3,0,0,0,false
+Stoughton,4,0,4,0,0,false
+Stowe,2,0,2,0,0,false
+Strafford,1,1,0,0,0,false
+Strasburg,1,0,1,0,0,false
+Stratford,2,2,0,0,0,false
+Streamwood,3,1,2,0,0,false
+Streator,2,2,0,0,0,false
+Stromsburg,1,0,1,0,0,false
+Stroudsburg,1,1,0,0,0,false
+Sturgis,2,2,0,0,0,false
+Sturtevant,4,0,4,0,0,false
+Sublimity,3,0,3,0,0,false
+Sudbury,2,2,0,0,0,false
+Sudlersville,1,1,0,0,0,false
+Suffern,4,3,1,0,0,false
+Suffield,3,3,0,0,0,false
+Sugar Hill,2,2,0,0,0,false
+Sullivan,1,1,0,0,0,false
+Sulphur,3,3,0,0,0,false
+Sulphur Springs,4,4,0,0,0,false
+Sultan,1,0,1,0,0,false
+Summerfield,2,2,0,0,0,false
+Summersville,1,0,1,0,0,false
+Sumter,2,2,0,0,0,false
+Sunapee,1,0,1,0,0,false
+Sundance,2,1,1,0,0,false
+Sunset,3,1,2,0,0,false
+Sunset Hills,3,3,0,0,0,false
+Superior,7,3,4,0,0,false
+Superior charter,2,0,2,0,0,false
+Surf City,1,0,1,0,0,false
+Surfside,3,2,1,0,0,false
+Surrey,1,1,0,0,0,false
+Sutherland,2,2,0,0,0,false
+Suwanee,4,3,1,0,0,false
+Swansea,3,0,3,0,0,false
+Swanton,3,3,0,0,0,false
+Swarthmore,1,0,1,0,0,false
+Swartz Creek,3,2,1,0,0,false
+Sweetwater,2,2,0,0,0,false
+Swissvale,1,1,0,0,0,false
+Symmes,1,1,0,0,0,false
+Syracuse,1,1,0,0,0,false
+Tahlequah,4,1,3,0,0,false
+Talent,1,0,1,0,0,false
+Talladega,3,3,0,0,0,false
+Tamaqua,4,3,1,0,0,false
+Tampa,1,1,0,0,0,false
+Tamworth,2,2,0,0,0,false
+Tanana,1,1,0,0,0,false
+Taos Ski Valley,1,1,0,0,0,false
+Tappahannock,3,3,0,0,0,false
+Tarrant,1,0,0,1,0,false
+Tarrytown,2,2,0,0,0,false
+Taylor,2,1,1,0,0,false
+Taylor Mill,3,3,0,0,0,false
+Taylorville,2,2,0,0,0,false
+Tecumseh,3,3,0,0,0,false
+Tega Cay,2,2,0,0,0,false
+Tehachapi,3,2,1,0,0,false
+Telford,1,0,1,0,0,false
+Tenino,1,1,0,0,0,false
+Tequesta,2,1,1,0,0,false
+Terrell,4,0,4,0,0,false
+Terry,2,2,0,0,0,false
+Teton,3,3,0,0,0,false
+Tewksbury,2,0,2,0,0,false
+Texico,2,0,2,0,0,false
+The Village,2,0,2,0,0,false
+Thermopolis,2,2,0,0,0,false
+Thetford,2,1,1,0,0,false
+Thief River Falls,1,1,0,0,0,false
+Thomaston,1,1,0,0,0,false
+Thomasville,3,3,0,0,0,false
+Thorne Bay,1,0,1,0,0,false
+Three Forks,2,2,0,0,0,false
+Tiburon,2,1,1,0,0,false
+Tiffin,2,2,0,0,0,false
+Tifton,2,2,0,0,0,false
+Tijeras,2,2,0,0,0,false
+Tilden,2,2,0,0,0,false
+Timber Lake,1,1,0,0,0,false
+Timberville,2,2,0,0,0,false
+Timnath,2,2,0,0,0,false
+Tioga,3,3,0,0,0,false
+Tipton,2,0,2,0,0,false
+Tishomingo,1,0,1,0,0,false
+Tiverton,1,0,1,0,0,false
+Togiak,2,2,0,0,0,false
+Toksook Bay,1,1,0,0,0,false
+Toledo,5,4,1,0,0,false
+Tolland,3,1,2,0,0,false
+Tolleson,1,1,0,0,0,false
+Tomahawk,1,1,0,0,0,false
+Tomball,3,3,0,0,0,false
+Tombstone,1,0,1,0,0,false
+Toms River,2,1,1,0,0,false
+Tonganoxie,2,2,0,0,0,false
+Tonkawa,1,0,0,1,0,false
+Tontitown,2,2,0,0,0,false
+Toppenish,2,1,1,0,0,false
+Topsham,1,1,0,0,0,false
+Toquerville,1,1,0,0,0,false
+Totowa,2,1,1,0,0,false
+Towamencin,2,2,0,0,0,false
+Town and Country,1,0,1,0,0,false
+Townsend,5,5,0,0,0,false
+Trappe,1,1,0,0,0,false
+Treasure Island,3,3,0,0,0,false
+Tremonton,2,2,0,0,0,false
+Trenton,3,3,0,0,0,false
+Trinidad,2,2,0,0,0,false
+Trophy Club,2,2,0,0,0,false
+Troy,4,4,0,0,0,false
+Trumbull,2,1,1,0,0,false
+Tuckahoe,2,1,1,0,0,false
+Tucker,1,1,0,0,0,false
+Tucson,1,0,1,0,0,false
+Tucumcari,3,3,0,0,0,false
+Tulare,2,0,2,0,0,false
+Tularosa,1,1,0,0,0,false
+Turner,2,2,0,0,0,false
+Turtle Lake,1,1,0,0,0,false
+Tustin,2,0,2,0,0,false
+Tuttle,1,0,1,0,0,false
+Twin Bridges,2,1,1,0,0,false
+Twin Lakes,3,2,0,1,0,false
+Twinsburg,3,3,0,0,0,false
+Ulysses,2,0,2,0,0,false
+Unalaska,2,0,0,2,0,false
+Underhill,1,0,1,0,0,false
+Union,1,1,0,0,0,false
+Union City,3,1,2,0,0,false
+Unionville,1,0,1,0,0,false
+Universal City,1,0,1,0,0,false
+University Park,4,1,3,0,0,false
+Upland,2,0,2,0,0,false
+Upper Chichester,2,1,1,0,0,false
+Upper Darby,1,0,1,0,0,false
+Upper Gwynedd,1,1,0,0,0,false
+Upper Providence,1,1,0,0,0,false
+Upper Saddle River,2,0,2,0,0,false
+Upper St. Clair,1,1,0,0,0,false
+Upper Uwchlan,2,0,2,0,0,false
+Utica,1,0,1,0,0,false
+Uvalde,3,3,0,0,0,false
+Uxbridge,5,0,5,0,0,false
+Vail,4,0,4,0,0,false
+Valdez,1,0,1,0,0,false
+Valdosta,1,1,0,0,0,false
+Vale,2,2,0,0,0,false
+Valier,2,2,0,0,0,false
+Valley,2,2,0,0,0,false
+Valley Center,1,0,1,0,0,false
+Valley Park,2,0,2,0,0,false
+Valley Springs,2,2,0,0,0,false
+Valparaiso,1,0,1,0,0,false
+Van Buren,1,0,1,0,0,false
+Van Buren charter,1,1,0,0,0,false
+Vancouver,4,4,0,0,0,false
+Vassalboro,1,1,0,0,0,false
+Velva,1,1,0,0,0,false
+Veneta,1,0,1,0,0,false
+Ventnor City,2,2,0,0,0,false
+Vergennes,1,1,0,0,0,false
+Vernal,3,3,0,0,0,false
+Vernon,8,5,2,1,0,false
+Vernon Hills,2,0,2,0,0,false
+Verona,2,2,0,0,0,false
+Versailles,4,3,1,0,0,false
+Viborg,2,2,0,0,0,false
+Victor,3,3,0,0,0,false
+Vidalia,5,5,0,0,0,false
+Vienna,2,1,1,0,0,false
+Villa Hills,1,1,0,0,0,false
+Villa Rica,2,1,1,0,0,false
+Ville Platte,2,2,0,0,0,false
+Vilonia,2,2,0,0,0,false
+Vine Grove,2,2,0,0,0,false
+Vineyard,2,1,1,0,0,false
+Vinita,1,0,1,0,0,false
+Vinton,6,4,2,0,0,false
+Virginia,2,2,0,0,0,false
+Virginia City,2,2,0,0,0,false
+Viroqua,1,1,0,0,0,false
+Vivian,2,2,0,0,0,false
+Waco,1,1,0,0,0,false
+Waconia,2,2,0,0,0,false
+Wagner,1,1,0,0,0,false
+Wagon Mound,1,1,0,0,0,false
+Wahoo,1,1,0,0,0,false
+Wakefield,4,0,4,0,0,false
+Walden,3,2,1,0,0,false
+Waldoboro,1,1,0,0,0,false
+Waldwick,3,2,1,0,0,false
+Walhalla,2,1,1,0,0,false
+Walker,2,2,0,0,0,false
+Walkerville,2,2,0,0,0,false
+Wall,2,0,2,0,0,false
+Wallace,3,2,1,0,0,false
+Walled Lake,2,2,0,0,0,false
+Wallowa,1,1,0,0,0,false
+Walpole,4,2,2,0,0,false
+Walsenburg,1,0,1,0,0,false
+Walterboro,1,1,0,0,0,false
+Walton,3,3,0,0,0,false
+Wamego,1,1,0,0,0,false
+Wamsutter,2,2,0,0,0,false
+Wanaque,1,0,1,0,0,false
+Wapato,4,3,1,0,0,false
+Wappingers Falls,3,3,0,0,0,false
+Warden,1,1,0,0,0,false
+Ware Shoals,2,2,0,0,0,false
+Warr Acres,2,1,1,0,0,false
+Warren,10,8,2,0,0,false
+Warrensburg,2,2,0,0,0,false
+Warrenton,4,1,3,0,0,false
+Warrenville,2,1,1,0,0,false
+Warrington,3,1,2,0,0,false
+Warsaw,5,4,1,0,0,false
+Warwick,1,0,1,0,0,false
+Waseca,2,0,2,0,0,false
+Washburn,3,3,0,0,0,false
+Washington,9,8,1,0,0,false
+Washington Grove,2,2,0,0,0,false
+Washington Terrace,1,1,0,0,0,false
+Washingtonville,1,1,0,0,0,false
+Watauga,3,1,2,0,0,false
+Watchung,1,1,0,0,0,false
+Water Valley,2,2,0,0,0,false
+Waterboro,2,2,0,0,0,false
+Waterbury,1,1,0,0,0,false
+Waterford,3,0,3,0,0,false
+Waterford charter,6,1,5,0,0,false
+Waterloo,4,4,0,0,0,false
+Watertown,6,6,0,0,0,false
+Watervliet,2,2,0,0,0,false
+Watford City,1,1,0,0,0,false
+Wauchula,2,1,0,1,0,false
+Wauconda,3,3,0,0,0,false
+Waukon,1,1,0,0,0,false
+Waupaca,1,1,0,0,0,false
+Waveland,1,0,1,0,0,false
+Waverly,5,4,1,0,0,false
+Waxhaw,1,1,0,0,0,false
+Waycross,1,0,1,0,0,false
+Wayne,4,4,0,0,0,false
+Waynesboro,2,2,0,0,0,false
+Waynesville,5,4,1,0,0,false
+Weare,3,2,1,0,0,false
+Weatherford,3,3,0,0,0,false
+Weathersfield,4,2,2,0,0,false
+Webb City,1,1,0,0,0,false
+Webster,6,1,5,0,0,false
+Webster City,2,0,2,0,0,false
+Weddington,1,1,0,0,0,false
+Weeping Water,2,1,1,0,0,false
+Weiser,1,1,0,0,0,false
+Wellesley,2,0,2,0,0,false
+Wellington,6,5,1,0,0,false
+Wells,2,0,2,0,0,false
+Wells River,1,1,0,0,0,false
+Wellsville,1,0,1,0,0,false
+Wellton,1,1,0,0,0,false
+Wendell,4,0,4,0,0,false
+Wentzville,2,2,0,0,0,false
+Wesley Chapel,2,0,2,0,0,false
+Wesley Hills,1,0,1,0,0,false
+Wessington Springs,3,2,1,0,0,false
+West Bloomfield charter,5,3,2,0,0,false
+West Bountiful,2,2,0,0,0,false
+West Branch,3,3,0,0,0,false
+West Columbia,3,3,0,0,0,false
+West Deptford,1,1,0,0,0,false
+West Greenwich,2,1,1,0,0,false
+West Haverstraw,2,1,1,0,0,false
+West Hempfield,2,2,0,0,0,false
+West Lafayette,2,2,0,0,0,false
+West Lampeter,1,1,0,0,0,false
+West Liberty,1,1,0,0,0,false
+West Long Branch,2,0,2,0,0,false
+West Manchester,1,1,0,0,0,false
+West Miami,1,1,0,0,0,false
+West Norriton,3,0,3,0,0,false
+West Park,3,2,1,0,0,false
+West Point,4,3,1,0,0,false
+West Salem,2,2,0,0,0,false
+West University Place,2,2,0,0,0,false
+West View,1,1,0,0,0,false
+West Warwick,3,3,0,0,0,false
+West Wendover,2,2,0,0,0,false
+West Whiteland,1,0,1,0,0,false
+West Yellowstone,3,3,0,0,0,false
+Westborough,3,0,3,0,0,false
+Westbrook,1,0,1,0,0,false
+Westby,1,0,1,0,0,false
+Westchester,3,3,0,0,0,false
+Westerly,5,3,2,0,0,false
+Western Springs,2,0,2,0,0,false
+Westernport,1,1,0,0,0,false
+Westfield Washington,1,0,1,0,0,false
+Westford,5,2,3,0,0,false
+Westlake,2,1,0,1,0,false
+Westminster,4,3,0,0,0,false
+Weston,5,0,5,0,0,false
+Westport,5,2,3,0,0,false
+Westwego,2,2,0,0,0,false
+Westwood,4,0,4,0,0,false
+Wethersfield,3,0,3,0,0,false
+Wetumpka,3,0,3,0,0,false
+Wharton,2,2,0,0,0,false
+Wheat Ridge,1,1,0,0,0,false
+Wheeling,1,0,1,0,0,false
+White,1,1,0,0,0,false
+White Bluff,1,1,0,0,0,false
+White Castle,1,1,0,0,0,false
+White City metro,1,1,0,0,0,false
+White House,2,0,2,0,0,false
+White Lake charter,1,0,0,1,0,false
+White Mountain,1,1,0,0,0,false
+White Oak,2,2,0,0,0,false
+White Salmon,2,0,0,2,0,false
+White Settlement,2,0,2,0,0,false
+White Sulphur Springs,3,2,1,0,0,false
+Whitehall,2,2,0,0,0,false
+Whitestown,1,1,0,0,0,false
+Whitewood,1,0,1,0,0,false
+Whitman,3,0,3,0,0,false
+Whittier,3,2,1,0,0,false
+Wickenburg,1,0,1,0,0,false
+Wilber,3,2,1,0,0,false
+Wilbraham,1,0,1,0,0,false
+Wilder,2,2,0,0,0,false
+Willamina,2,2,0,0,0,false
+Willard,3,2,1,0,0,false
+Willcox,2,2,0,0,0,false
+Williams,2,2,0,0,0,false
+Williamsburg,6,6,0,0,0,false
+Williamston,1,1,0,0,0,false
+Williamstown,2,2,0,0,0,false
+Williston,5,5,0,0,0,false
+Willows,2,0,2,0,0,false
+Wilmington,7,3,4,0,0,false
+Wilmore,1,1,0,0,0,false
+Wilson,3,0,3,0,0,false
+Wilton,8,4,4,0,0,false
+Wilton Manors,3,0,3,0,0,false
+Winchester,11,4,7,0,0,false
+Winder,2,1,1,0,0,false
+Windham,7,3,4,0,0,false
+Windom,2,0,0,2,0,false
+Windsor,2,1,1,0,0,false
+Windsor Locks,1,1,0,0,0,false
+Winfield,5,4,1,0,0,false
+Winlock,2,1,1,0,0,false
+Winner,1,1,0,0,0,false
+Winnfield,2,2,0,0,0,false
+Winnsboro,1,1,0,0,0,false
+Winslow,2,2,0,0,0,false
+Winston,2,1,1,0,0,false
+Winterport,2,2,0,0,0,false
+Winterset,1,1,0,0,0,false
+Winterville,1,1,0,0,0,false
+Winthrop,2,1,1,0,0,false
+Wiscasset,2,2,0,0,0,false
+Wisconsin Dells,2,2,0,0,0,false
+Wise,1,0,0,1,0,false
+Wisner,2,2,0,0,0,false
+Wolcott,4,2,0,2,0,false
+Wolf Point,2,0,1,1,0,false
+Wolfeboro,2,1,1,0,0,false
+Wood Dale,1,0,1,0,0,false
+Wood River,1,1,0,0,0,false
+Wood-Ridge,2,2,0,0,0,false
+Woodbridge,1,0,1,0,0,false
+Woodbury,4,4,0,0,0,false
+Woodhaven,3,3,0,0,0,false
+Woodlake,1,1,0,0,0,false
+Woodland,2,0,2,0,0,false
+Woodland Park,2,2,0,0,0,false
+Woodsfield,2,2,0,0,0,false
+Woodstock,6,5,1,0,0,false
+Woodward,2,2,0,0,0,false
+Woolwich,1,1,0,0,0,false
+Worth,3,0,3,0,0,false
+Worthing,1,1,0,0,0,false
+Wrangell,2,0,0,2,0,false
+Wyckoff,2,2,0,0,0,false
+Wymore,1,1,0,0,0,false
+Wyndmere,2,2,0,0,0,false
+Wynne,2,2,0,0,0,false
+Wyoming,4,4,0,0,0,false
+Wytheville,2,1,1,0,0,false
+Yamhill,1,1,0,0,0,false
+Yarmouth,3,3,0,0,0,false
+Yerington,1,1,0,0,0,false
+York,8,2,6,0,0,false
+Yorktown,1,1,0,0,0,false
+Youngsville,2,2,0,0,0,false
+Youngtown,2,2,0,0,0,false
+Ypsilanti charter,3,0,3,0,0,false
+Yreka,3,0,3,0,0,false
+Yucca Valley,1,0,1,0,0,false
+Yukon,2,2,0,0,0,false
+Yutan,1,1,0,0,0,false
+Zachary,2,1,0,1,0,false
+Zebulon,2,0,2,0,0,false
+Zeeland,1,0,1,0,0,false
+Zillah,3,2,1,0,0,false
+Zimmerman,2,1,1,0,0,false
+Zumbrota,1,1,0,0,0,false

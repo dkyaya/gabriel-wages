@@ -1,0 +1,12 @@
+{
+  "invalid_or_unsupported_count": 0,
+  "status_counts": {
+    "invalid_locator": 0,
+    "unavailable_404_410": 1273,
+    "unavailable_other_status": 866,
+    "unsupported_locator": 0,
+    "verification_error": 1
+  },
+  "unavailable_count": 2139,
+  "verification_error_count": 1
+}

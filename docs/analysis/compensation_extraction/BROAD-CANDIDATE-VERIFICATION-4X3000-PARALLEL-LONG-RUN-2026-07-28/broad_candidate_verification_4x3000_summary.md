@@ -1,0 +1,3 @@
+# Broad candidate verification 4x3000 summary
+
+Decision: `broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready`. The largest defensible queue contained 8,574 unique locators, 3,426 below the 12,000 ceiling without padding. 3 valid isolated lanes completed 6,430 HEAD-only outcomes; lane 004's sandbox-denied attempt was quarantined and excluded. Reachable: 4,156; unavailable: 2,139; blocked/timeout: 130; verification errors: 1; final-redirect duplicates: 4. Candidate review and all downstream document/evidence/analysis stages remained unrun. Global analysis readiness is false.

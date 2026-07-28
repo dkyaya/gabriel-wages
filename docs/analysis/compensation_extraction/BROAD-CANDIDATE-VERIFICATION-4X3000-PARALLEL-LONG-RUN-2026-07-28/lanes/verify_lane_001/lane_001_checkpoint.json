@@ -1,0 +1,13 @@
+{
+  "checkpointed_at": "2026-07-28T14:29:40Z",
+  "completed_rows": 2144,
+  "downloads": 0,
+  "lane_id": "verify_lane_001",
+  "last_verification_row_id": "BCV-20260728-01589",
+  "locked_rows": 2144,
+  "queue_sha256": "6b19a88e9b3d79570aada9a9919eacc6982f5003a0ff20b0513cf9eebaf6fa61",
+  "raw_bodies_saved": 0,
+  "raw_headers_saved": 0,
+  "remaining_rows": 0,
+  "status": "completed"
+}

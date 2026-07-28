@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "lane_id": "verify_lane_003",
+  "locked_rows": 2143,
+  "maximum_rows": 3000,
+  "queue_sha256": "259930e5dda255c0057f888e705adeb16ef3148bf9ee888364541a427a306d7e",
+  "scheduled_stagger_minutes": 16,
+  "task_id": "BROAD-CANDIDATE-VERIFICATION-4X3000-PARALLEL-LONG-RUN-2026-07-28"
+}

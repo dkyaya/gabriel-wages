@@ -1,0 +1,17 @@
+{
+  "lane_id": "verify_lane_004",
+  "status": "resume_required",
+  "queue_sha256": "c9451cbfda541c78522e665f651c61d44d92fb72c02df0d1a865d9dccd6c054c",
+  "locked_rows": 2144,
+  "completed_rows": 0,
+  "remaining_rows": 2144,
+  "resume_required": true,
+  "invalid_attempt_rows_excluded": 2144,
+  "reason": "The staggered worker ran without escalated network permission; all rows returned ConnectError and are quarantined as invalid transport outcomes.",
+  "quarantine_path": "docs/analysis/compensation_extraction/BROAD-CANDIDATE-VERIFICATION-4X3000-PARALLEL-LONG-RUN-2026-07-28/quarantine/verify_lane_004_sandbox_network_attempt/",
+  "downloads": 0,
+  "source_reviews": 0,
+  "raw_bodies_saved": 0,
+  "raw_headers_saved": 0,
+  "global_analysis_readiness": false
+}

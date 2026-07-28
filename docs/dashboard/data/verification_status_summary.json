@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-28T10:43:55Z",
+  "generated_at": "2026-07-28T14:54:42Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,12 +95,12 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "candidate_source_verification_routing",
-  "verification_phase": "full_url_routing_merged",
+  "stage": "broad_candidate_locator_verification",
+  "verification_phase": "current_wave_4x3000_partial_resume",
   "latest_merged_round_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-2026-07-24",
   "latest_merge_id": "VERIFICATION-SCALE-ROUND2-3X1000-REMAINDER-MERGE-2026-07-24",
-  "live_verification_status": "all_candidate_urls_routed",
-  "verification_live_status": "all_candidate_urls_routed",
+  "live_verification_status": "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
+  "verification_live_status": "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
   "total_url_bearing_candidate_rows": 4726,
   "scheduled_verification_rows": 3600,
   "held_or_context_rows": 827,
@@ -175,5 +175,35 @@
     "Blocked, not-found, oversized, and transport statuses are URL-routing outcomes, not municipality source-absence findings.",
     "Held, context, duplicate, canonical, and rejected rows retain their original lower dispositions.",
     "No wage gaps have been calculated."
-  ]
+  ],
+  "current_wave_locked_rows": 8574,
+  "current_wave_completed_rows": 6430,
+  "current_wave_remaining_rows": 2144,
+  "current_wave_completed_lane_count": 3,
+  "current_wave_lane_counts": {
+    "verify_lane_001": 2144,
+    "verify_lane_002": 2143,
+    "verify_lane_003": 2143,
+    "verify_lane_004": 2144
+  },
+  "current_wave_status_counts": {
+    "blocked_transport": 116,
+    "duplicate_locator_skipped": 4,
+    "timeout": 14,
+    "unavailable_404_410": 1273,
+    "unavailable_other_status": 866,
+    "verification_error": 1,
+    "verified_reachable": 3938,
+    "verified_reachable_redirected": 218
+  },
+  "current_wave_verified_reachable_total": 4156,
+  "current_wave_reused_prior_verified_total": 0,
+  "current_wave_unavailable_total": 2139,
+  "current_wave_blocked_or_timeout_total": 130,
+  "current_wave_verification_error_total": 1,
+  "current_wave_duplicate_final_locator_total": 4,
+  "current_wave_candidate_review_runs": 0,
+  "current_wave_downloads": 0,
+  "current_wave_source_review_runs": 0,
+  "global_analysis_readiness": false
 }

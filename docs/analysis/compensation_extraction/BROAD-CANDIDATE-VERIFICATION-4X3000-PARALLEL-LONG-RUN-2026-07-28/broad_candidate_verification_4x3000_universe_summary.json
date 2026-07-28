@@ -1,0 +1,23 @@
+{
+  "candidate_review_performed": false,
+  "cumulative_dashboard_candidate_rows": 13041,
+  "eligible_unique_locator_rows": 8574,
+  "excluded_rows": 2542,
+  "exclusion_counts": {
+    "already_present_in_prior_verification_results": 2039,
+    "cross_origin_canonical_locator_duplicate": 140,
+    "invalid_or_unsupported_locator": 19,
+    "source_marked_duplicate_or_prior_seen": 2,
+    "weak_or_needs_review_not_used_as_queue_padding": 342
+  },
+  "global_analysis_readiness": false,
+  "input_candidate_rows": 11116,
+  "input_counts_by_origin": {
+    "broad_490_preserved_review_queue": 1205,
+    "broad_4x1000_deduped": 6437,
+    "targeted_prior_unrouted": 3474
+  },
+  "prior_verification_unique_locators": 6606,
+  "queue_shortfall_from_target_ceiling": 3426,
+  "target_ceiling": 12000
+}

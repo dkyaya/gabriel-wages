@@ -110,7 +110,10 @@ def main() -> None:
     assert state["totals"]["scout_covered_municipalities"] == 6919
     assert phase["current_scout_covered"] == 6919
     assert phase["global_analysis_readiness"] is False
-    assert "combined candidate review" in phase["current_phase"].casefold()
+    assert (
+        "combined candidate review" in phase["current_phase"].casefold()
+        or "verification" in phase["current_phase"].casefold()
+    )
     assert parallel["completed_live_shard_count"] == 4
     assert "staggered" in parallel["current_parallel_mode"]
     print("Broad state 4x1000 staggered parallel live scout tests passed")

@@ -131,8 +131,10 @@ def main() -> None:
     assert phase["current_phase_code"] in {
         runner.DECISION,
         "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
+        "broad_candidate_verification_4x3000_completed_review_ready",
+        "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
     }
-    live_complete = phase["current_phase_code"].startswith("broad_state_4x1000_parallel_live_scout_completed")
+    live_complete = phase["broad_state_4x1000_live_available"] is True
     assert phase["current_scout_covered"] == (6919 if live_complete else 2922)
     assert phase["current_candidate_queue_rows"] == (13041 if live_complete else 6027)
     assert phase["broad_state_4x1000_master_locked_target_count"] == 4000

@@ -1,0 +1,9 @@
+{
+  "completed_at": "2026-07-28T14:29:40Z",
+  "completed_rows": 2144,
+  "lane_id": "verify_lane_001",
+  "queue_sha256": "6b19a88e9b3d79570aada9a9919eacc6982f5003a0ff20b0513cf9eebaf6fa61",
+  "remaining_rows": 0,
+  "resume_required": false,
+  "status": "completed"
+}

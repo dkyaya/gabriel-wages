@@ -1,0 +1,31 @@
+{
+  "canonical_locator_set_sha256": "590f4dcf997d0062c78de70a9cc5a2b19969c9f63569f60e40ba5f5e237deeec",
+  "global_analysis_readiness": false,
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_decision.json": "a0159ff74d8b492bc479b22397570bc5015300e0aa06a608456ff461fe8277d4",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_deduped_candidates.csv": "6ab133e7217e8a85a4feabbb6a4a111220b61dfaaa7c063e3cc4784a57de9dce",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_candidate_review_queue.csv": "e97d5e381152f3f4a021b1f4cd73459b24eb4ad713dde4a8edd85b3ae103f93f",
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_verification_ready_queue.csv": "197963f7dbf7c50856723bfc597fe72caf3c1f236aabc9d40891771ef7b92916",
+    "docs/analysis/compensation_extraction/TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_source_verification_tier_a_b_results.csv": "92b16ee1d2a2782e0eb7888b2dcad3ff65cfebeaa108453368d9c363da1f2785",
+    "docs/analysis/compensation_extraction/TARGETED-TIER-C-VERIFICATION-FROM-BOUNDED-MEMO-GAPS-AND-DASHBOARD-VISIBILITY-CHECK-2026-07-26/targeted_tier_c_verification_results.csv": "2e64a2c289fa9333e4814fcbe38e96f0d200ecd2efa429574b9dd1f30614846e",
+    "docs/analysis/source_review_ledgers/source_review_ledger_cumulative.csv": "e29d580d42068615611b464e6da40654f336f273fa7c40a7b0717d4894148c9f",
+    "docs/analysis/verification_ledgers/verified_source_routing_ledger_cumulative.csv": "831f40dacf3f0362d5c3c81cb2e59c4d3da502187c94672e381d355ae79f5499"
+  },
+  "lane_counts": {
+    "verify_lane_001": 2144,
+    "verify_lane_002": 2143,
+    "verify_lane_003": 2143,
+    "verify_lane_004": 2144
+  },
+  "lane_queue_sha256": {
+    "verify_lane_001": "6b19a88e9b3d79570aada9a9919eacc6982f5003a0ff20b0513cf9eebaf6fa61",
+    "verify_lane_002": "cfabe98714b1c287c63fdd5a6f609ab398e3cd6a85cf6ba056023290e991a03d",
+    "verify_lane_003": "259930e5dda255c0057f888e705adeb16ef3148bf9ee888364541a427a306d7e",
+    "verify_lane_004": "c9451cbfda541c78522e665f651c61d44d92fb72c02df0d1a865d9dccd6c054c"
+  },
+  "maximum_lane_rows": 3000,
+  "queue_rows": 8574,
+  "queue_sha256": "6e48a4be54cce7da84c2e1885149fa2ebf76abc29fd7b7ddf80a2a53351160c2",
+  "task_date": "2026-07-28",
+  "task_id": "BROAD-CANDIDATE-VERIFICATION-4X3000-PARALLEL-LONG-RUN-2026-07-28"
+}

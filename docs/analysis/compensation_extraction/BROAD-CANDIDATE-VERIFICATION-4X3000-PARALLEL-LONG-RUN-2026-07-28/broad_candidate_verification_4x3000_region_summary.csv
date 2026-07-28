@@ -1,0 +1,5 @@
+region,verification_rows,verified_reachable,unavailable,blocked_or_timeout,verification_error,global_analysis_readiness
+Midwest,1849,1347,471,30,0,false
+Northeast,1590,883,690,16,1,false
+South,1714,1141,530,42,0,false
+West,1277,785,448,42,0,false

@@ -1,0 +1,25 @@
+{
+  "actual_started_at": "2026-07-28T14:13:00Z",
+  "completed_at": "2026-07-28T14:45:17Z",
+  "completed_rows": 2143,
+  "downloads": 0,
+  "global_analysis_readiness": false,
+  "lane_id": "verify_lane_003",
+  "locked_rows": 2143,
+  "raw_bodies_saved": 0,
+  "raw_headers_saved": 0,
+  "resumed_completed_rows": 0,
+  "scheduled_stagger_minutes": 16,
+  "scheduled_start_at": "2026-07-28T14:13:00Z",
+  "source_reviews": 0,
+  "status": "completed",
+  "status_counts": {
+    "blocked_transport": 44,
+    "timeout": 6,
+    "unavailable_404_410": 424,
+    "unavailable_other_status": 285,
+    "verified_reachable": 1306,
+    "verified_reachable_redirected": 78
+  },
+  "worker_id": "worker_verify_lane_003"
+}

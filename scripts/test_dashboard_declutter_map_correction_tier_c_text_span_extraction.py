@@ -96,9 +96,16 @@ def main() -> None:
     )
     broad_completed = broad_decision_path.is_file()
     broad_decision = json.loads(broad_decision_path.read_text()) if broad_completed else {}
+    live_decision_path = (
+        ROOT
+        / "docs/analysis/compensation_extraction/"
+        "BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/"
+        "broad_state_4x1000_parallel_live_scout_decision.json"
+    )
+    live_decision = json.loads(live_decision_path.read_text()) if live_decision_path.is_file() else {}
     expected_scout_coverage = 2436 + (
         broad_decision["parseable_target_count"] if broad_completed else 0
-    )
+    ) + live_decision.get("new_scout_covered_municipalities", 0)
     assert sum(row["total_scout_coverage_count"] for row in state["states"]) == expected_scout_coverage
     assert phase["current_phase_code"] in {
         decision["decision"],
@@ -108,6 +115,9 @@ def main() -> None:
         "bounded_tier_c_evidence_memo_supplement_completed_broad_scouting_ready",
         "broad_state_by_state_source_scout_completed_candidate_review_ready",
         "broad_state_4x1000_scout_dry_run_prep_completed_live_ready",
+        "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
+        "broad_candidate_verification_4x3000_completed_review_ready",
+        "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159
@@ -122,8 +132,8 @@ def main() -> None:
     for forbidden in ("tier_c_retained_source_count", "mechanism", "source family", "readiness only"):
         assert forbidden not in map_source
     assert 'id="historical-archive"' in app and "Open current evidence memo" in app
-    assert "bounded Tier C evidence-memo supplement" in app
-    assert "Broad state-by-state source scouting" in app
+    assert "Tier C memo remains a completed historical" in app
+    assert "current operation is bounded locator verification" in app
     assert "Global analysis readiness" in app
     for policy in (
         OUT / "future_prompt_dashboard_update_requirement.md",

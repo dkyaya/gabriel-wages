@@ -1,0 +1,15 @@
+{
+  "candidate_review_performed": false,
+  "global_analysis_readiness": false,
+  "lane_count": 4,
+  "lane_counts": {
+    "verify_lane_001": 2144,
+    "verify_lane_002": 2143,
+    "verify_lane_003": 2143,
+    "verify_lane_004": 2144
+  },
+  "largest_defensible_queue_locked": true,
+  "locked_queue_rows": 8574,
+  "shortfall_from_target_ceiling": 3426,
+  "target_ceiling": 12000
+}

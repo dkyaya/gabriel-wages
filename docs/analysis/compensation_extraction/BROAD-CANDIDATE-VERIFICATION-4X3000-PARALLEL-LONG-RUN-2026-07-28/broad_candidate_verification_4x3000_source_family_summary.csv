@@ -1,0 +1,31 @@
+source_family_hint,verification_rows,verified_reachable,unavailable,blocked_or_timeout,verification_error,global_analysis_readiness
+agenda_packet_or_minutes,972,791,161,18,1,false
+arbitration_award,132,103,26,3,0,false
+budget_or_pay_plan,887,549,320,18,0,false
+cba,961,541,400,20,0,false
+cba_or_arbitration_award_or_factfinding_or_impasse_record,84,59,23,2,0,false
+cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed),1,1,0,0,0,false
+cba_or_arbitration_award_or_factfinding_or_impasse_record (possible municipal posting route; not confirmed),1,0,1,0,0,false
+cba_or_budget_pay_plan_with_explicit_compensation_mechanism,315,201,108,6,0,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule,425,284,136,5,0,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules),1,1,0,0,0,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (public budget/payroll schedule proxy),1,0,1,0,0,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit),2,2,0,0,0,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index),1,1,0,0,0,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey),1,1,0,0,0,false
+civil_service_or_hr_pay_plan,153,105,47,1,0,false
+classification_study,40,26,14,0,0,false
+collective_bargaining_agreement_or_moa_or_wage_schedule,215,120,89,5,0,false
+compensation_or_budget_payroll_schedule_or_salary_benefits_summary,1,0,1,0,0,false
+compensation_study,79,52,25,2,0,false
+factfinding_report,7,5,2,0,0,false
+mou_or_memorandum,356,220,125,10,0,false
+other_local_government_pay_policy,452,243,201,8,0,false
+personnel_policy,118,69,41,7,0,false
+salary_ordinance,181,138,42,1,0,false
+settlement_agreement,7,4,2,1,0,false
+strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing),1,1,0,0,0,false
+unknown_or_needs_review,213,154,55,4,0,false
+wage_schedule,820,485,316,19,0,false
+wage_schedule_or_pay_scale_discussion_in_council_minutes,2,0,2,0,0,false
+wage_schedule_or_salary_range_disclosure,1,0,1,0,0,false

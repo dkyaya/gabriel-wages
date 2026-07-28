@@ -1,0 +1,9 @@
+verification_row_id,source_domain,verification_status,http_status_code,attempt_count,response_body_saved,raw_headers_saved,downloaded
+BCV-20260728-04561,cityofasbury.community.diligentoneplatform.com,verified_reachable,200,1,false,false,false
+BCV-20260728-05305,go.boarddocs.com,unavailable_other_status,403,1,false,false,false
+BCV-20260728-00180,carlisleiowa.org,verified_reachable,200,1,false,false,false
+BCV-20260728-00960,files.municipalone.com,verified_reachable,200,1,false,false,false
+BCV-20260728-07224,eab.iowa.gov,verified_reachable,200,1,false,false,false
+BCV-20260728-02897,denisonia.com,verified_reachable,200,1,false,false,false
+BCV-20260728-00606,codelibrary.amlegal.com,unavailable_other_status,403,1,false,false,false
+BCV-20260728-00330,cityofeldridgeia.org,verified_reachable,200,1,false,false,false

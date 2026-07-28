@@ -1,0 +1,19 @@
+{
+  "broad_4x1000_candidate_rows": 7014,
+  "broad_4x1000_deduped_candidates": 6437,
+  "combined_broad_review_scope_before_verification": 7642,
+  "current_operation": "broad candidate verification 4x3000 partially completed",
+  "dashboard_updated": true,
+  "failed_unavailable_blocked_count": 2270,
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "next_authorized_stage": "resume incomplete verification lanes",
+  "preserved_prior_review_candidates": 1205,
+  "scout_covered_municipalities": 6919,
+  "tier_c_memo_supplement_current_operation": false,
+  "total_candidate_rows": 13041,
+  "verification_completed_count": 6430,
+  "verification_queue_size": 8574,
+  "verified_reachable_count": 4156
+}

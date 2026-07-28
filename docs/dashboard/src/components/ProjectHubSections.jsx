@@ -18,15 +18,15 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Tier C evidence memo supplement complete</h2>
+        <h2>Broad candidate locator verification</h2>
         <p>
-          {formatNumber(phase.tier_c_memo_supplement_valid_scope)} valid aggregate ratings were integrated;
-          {" "}{formatNumber(phase.tier_c_memo_supplement_quarantines_excluded)} quarantines remain explicitly excluded.
+          {formatNumber(phase.verification_completed_count)} of {formatNumber(phase.verification_queue_size)} locked
+          locators have terminal HEAD-only outcomes; {formatNumber(phase.verification_verified_reachable_count)} are reachable.
         </p>
       </article>
       <article>
         <p className="eyebrow">Current evidence memo</p>
-        <h2>{report.title}</h2>
+        <h2>Bounded Tier C evidence memo supplement</h2>
         <p>
           The bounded memo covers {formatNumber(phase.memo_scope.exact_same_source_linked_pair_count)} exact
           same-source pairs, {formatNumber(phase.memo_scope.linked_quantitative_row_count)} quantitative rows,
@@ -35,10 +35,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       </article>
       <article>
         <p className="eyebrow">Next authorized stage</p>
-        <h2>Broad state-by-state source scouting</h2>
+        <h2>{phase.next_phase}</h2>
         <p>
-          Resume broad geographic collection, prioritize matched non-safety opportunities, and track source-family
-          balance so targeted mechanism discovery returns to its intended secondary gap-filling role.
+          Review the combined broad candidate scope separately after verification. Candidate review remains distinct
+          from download, source review, extraction, rating, and ingestion.
         </p>
       </article>
     </section>
@@ -52,10 +52,10 @@ export function ProjectPhasePanel({ phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Project phase</p>
-          <h2 id="project-phase-title">Tier C memo supplement complete; broad state-by-state scouting ready next</h2>
+          <h2 id="project-phase-title">{phase.current_phase}</h2>
         </div>
         <StatusPill tone="verified">
-          {formatNumber(phase.tier_c_positive_exact_span_count)} exact spans
+          {formatNumber(phase.verification_completed_count)} verified outcomes
         </StatusPill>
       </div>
 
@@ -70,13 +70,13 @@ export function ProjectPhasePanel({ phase }) {
       </div>
 
       <div className="phase-metrics">
-        <div><span>Verified Tier C leads</span><strong>{formatNumber(phase.tier_c_verified_source_lead_count)}</strong></div>
-        <div><span>Retained sources</span><strong>{formatNumber(phase.tier_c_retained_downloaded_source_count)}</strong></div>
-        <div><span>Text artifacts</span><strong>{formatNumber(phase.tier_c_text_extracted_ok_count)}</strong></div>
-        <div><span>Exact positive spans</span><strong>{formatNumber(phase.tier_c_positive_exact_span_count)}</strong></div>
-        <div><span>Valid ratings</span><strong>{formatNumber(phase.tier_c_rating_valid_count)}</strong></div>
-        <div><span>Quarantined</span><strong>{formatNumber(phase.tier_c_rating_quarantine_count)}</strong></div>
-        <div><span>Summary scope</span><strong>{formatNumber(phase.tier_c_rating_summary_valid_count)}</strong></div>
+        <div><span>Scout-covered municipalities</span><strong>{formatNumber(phase.current_scout_covered)}</strong></div>
+        <div><span>Total candidate rows</span><strong>{formatNumber(phase.current_candidate_queue_rows)}</strong></div>
+        <div><span>Verification queue</span><strong>{formatNumber(phase.verification_queue_size)}</strong></div>
+        <div><span>Completed outcomes</span><strong>{formatNumber(phase.verification_completed_count)}</strong></div>
+        <div><span>Reachable locators</span><strong>{formatNumber(phase.verification_verified_reachable_count)}</strong></div>
+        <div><span>Unavailable</span><strong>{formatNumber(phase.verification_unavailable_count)}</strong></div>
+        <div><span>Blocked / timeout</span><strong>{formatNumber(phase.verification_blocked_timeout_count)}</strong></div>
         <div><span>Wage-gap estimates</span><strong>None</strong></div>
         <div><span>Global readiness</span><strong>False</strong></div>
       </div>
@@ -84,16 +84,16 @@ export function ProjectPhasePanel({ phase }) {
       <div className="phase-next">
         <div>
           <p className="eyebrow">Current transition</p>
-          <h3>Resume broad, source-diverse discovery</h3>
+          <h3>{phase.next_phase}</h3>
         </div>
         <ol>
-          <li>Build locked broad state and municipality inputs</li>
-          <li>Prioritize matched non-safety opportunities within city and cycle</li>
-          <li>Track geographic and source-family balance explicitly</li>
-          <li>Collect diverse document families without requiring a preselected mechanism</li>
-          <li>Use targeted mechanism scouts only for secondary gap filling</li>
+          <li>Preserve all four locked verification lane ledgers</li>
+          <li>Review candidate quality separately from locator reachability</li>
+          <li>Keep prior 1,205 broad-wave candidates in the combined review scope</li>
+          <li>Do not download or source-review documents during candidate review</li>
+          <li>Retain broad geographic and source-family diversity metrics</li>
         </ol>
-        <StatusPill tone="future">Broad scouting next</StatusPill>
+        <StatusPill tone="future">Combined review next</StatusPill>
       </div>
       <p className="panel-note">
         Exact-span rating is not causal proof. The ratings and bounded memo remain documentary scaffolding only;
@@ -263,13 +263,13 @@ export function VerificationPipeline({
     verificationStatus.live_verification_status ===
     "round2_3x1000_remainder_collected_not_merged";
   const stages = [
-    ["Verified Tier C lead", formatNumber(phase.tier_c_verified_source_lead_count), "Completed", "scout"],
-    ["Retained Tier C source", formatNumber(phase.tier_c_retained_downloaded_source_count), "Completed", "verified"],
-    ["Text-layer extraction", formatNumber(phase.tier_c_text_extracted_ok_count), "Completed", "verified"],
-    ["Exact positive spans", formatNumber(phase.tier_c_positive_exact_span_count), "Rated", "verified"],
-    ["Valid bounded ratings", formatNumber(phase.tier_c_rating_valid_count), "Summarized", "verified"],
-    ["Valid summary scope", formatNumber(phase.tier_c_rating_summary_valid_count), "Memo complete", "verified"],
-    ["Memo supplement scope", formatNumber(phase.tier_c_memo_supplement_valid_scope), "Scouting next", "future"],
+    ["Broad scout candidate rows", formatNumber(phase.current_candidate_queue_rows), "Discovery complete", "scout"],
+    ["Locked verification locators", formatNumber(phase.verification_queue_size), "Four lanes", "verified"],
+    ["Completed verification outcomes", formatNumber(phase.verification_completed_count), "HEAD-only", "verified"],
+    ["Reachable locators", formatNumber(phase.verification_verified_reachable_count), "Review pending", "verified"],
+    ["Unavailable locators", formatNumber(phase.verification_unavailable_count), "Excluded from reachable", "future"],
+    ["Blocked or timed out", formatNumber(phase.verification_blocked_timeout_count), "Deferred", "future"],
+    ["Tier C memo supplement", formatNumber(phase.tier_c_memo_supplement_valid_scope), "Completed evidence artifact", "future"],
     ["Global analysis-ready evidence", "False", "Closed", "future"],
   ];
 
@@ -277,10 +277,12 @@ export function VerificationPipeline({
     <section className="panel hub-section" id="verification" aria-labelledby="verification-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Current evidence pipeline</p>
-          <h2 id="verification-title">From verified Tier C leads to a bounded memo supplement</h2>
+          <p className="eyebrow">Current operations pipeline</p>
+          <h2 id="verification-title">From broad scout candidates to bounded locator verification</h2>
         </div>
-        <StatusPill tone="verified">Parallel scout complete; combined review next</StatusPill>
+        <StatusPill tone="verified">
+          {phase.verification_all_lanes_completed ? "Four-lane verification complete; combined review next" : "Three lanes complete; lane 004 resume next"}
+        </StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -297,17 +299,15 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Review the combined broad-state candidate queue</h3>
+          <h3>Review verified and unresolved broad-state candidates</h3>
         </div>
         <p>
-          The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
-          leads, and bounded GET/source review retained {formatNumber(phase.tier_c_retained_downloaded_source_count)}
-          source files. Local non-OCR extraction produced {formatNumber(phase.tier_c_text_extracted_ok_count)} text
-          artifacts and {formatNumber(phase.tier_c_positive_exact_span_count)} exact positive spans. Bounded rating
-          produced {formatNumber(phase.tier_c_rating_valid_count)} valid outputs and {formatNumber(phase.tier_c_rating_quarantine_count)}
-          quarantines. The bounded memo supplement and four-lane broad scout are complete. A separately authorized
-          candidate review is next; verification, ingestion, codification, wage-gap analysis, and causal analysis have
-          not run on the new scout scope.
+          The broad scout produced {formatNumber(phase.broad_state_4x1000_live_candidate_count)} new rows and
+          {" "}{formatNumber(phase.broad_state_4x1000_live_deduped_candidate_count)} deduplicated candidates. The
+          bounded verifier locked {formatNumber(phase.verification_queue_size)} defensible locators and completed
+          {" "}{formatNumber(phase.verification_completed_count)} HEAD-only outcomes. A separately authorized combined
+          candidate review is next; download, source review, extraction, rating, ingestion, codification, wage-gap
+          analysis, and causal analysis have not run on this verification scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -1951,19 +1951,19 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
           </article>
         ))}
         <article className="report-card">
-          <div className="report-card-topline"><span>Current operations</span><span>2026-07-27</span></div>
+          <div className="report-card-topline"><span>Completed evidence artifact</span><span>2026-07-27</span></div>
           <h3>Bounded Tier C evidence memo supplement</h3>
           <p>
             The supplement integrates 140 valid aggregate ratings and excludes all 19 quarantines. It closes the
             targeted Tier C pass while keeping every finding documentary, bounded, and globally analysis-closed.
           </p>
-          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md" target="_blank" rel="noreferrer">Open current memo supplement</a>
+          <a className="primary-link" href="https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md" target="_blank" rel="noreferrer">Open completed memo supplement</a>
         </article>
         <article className="report-card report-card-planned">
           <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
-          <h3>Broad state-by-state source scouting</h3>
-          <p>Next discovery phase for geographic balance, matched non-safety opportunities, and source-family diversity.</p>
-          <StatusPill tone="future">Broad scouting next</StatusPill>
+          <h3>Combined broad candidate review</h3>
+          <p>Next bounded stage for reviewing preserved discovery metadata alongside current locator-verification outcomes.</p>
+          <StatusPill tone="future">Combined review next</StatusPill>
         </article>
       </div>
       <p className="panel-note">{reportsIndex.disclaimer}</p>
@@ -2013,7 +2013,7 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Resume broad state-by-state source scouting</h2>
+          <h2 id="next-steps-title">Review the combined broad candidate and verification scope</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
@@ -2021,22 +2021,22 @@ export function NextStepsPanel({ priority, phase }) {
         <article className="recommended-step">
           <span>Immediate</span>
           <h3>Run one combined candidate review</h3>
-          <p>Review the preserved 1,205 prior rows together with the new deduplicated broad-state candidates. Candidate review must remain separate from verification and downloading.</p>
+          <p>Review the preserved 1,205 prior rows, new broad-state candidates, and current verification outcomes. Candidate review must remain separate from downloading and source review.</p>
         </article>
         <article>
-          <span>Completed input scope</span>
-          <h3>{formatNumber(phase.tier_c_retained_downloaded_source_count)} retained sources</h3>
-          <p>These came from {formatNumber(phase.tier_c_verified_source_lead_count)} verified Tier C leads. The completed source-review/download outputs are immutable inputs and will not be rerun.</p>
+          <span>Completed verification scope</span>
+          <h3>{formatNumber(phase.verification_completed_count)} locator outcomes</h3>
+          <p>{formatNumber(phase.verification_verified_reachable_count)} locators are reachable metadata leads. They have not been downloaded, source-reviewed, extracted, rated, or ingested.</p>
         </article>
         <article>
           <span>Future source expansion</span>
-          <h3>Return to broad state-by-state scouting</h3>
-          <p>When scouting resumes, prioritize geographic balance and diverse source families. Preserve mechanism tags after collection; use mechanism-targeted discovery only as secondary gap-filling.</p>
+          <h3>Preserve broad scouting strategy</h3>
+          <p>After combined review, any future scouting should retain geographic balance and diverse source families; mechanism-targeted discovery remains secondary gap-filling.</p>
         </article>
       </div>
       <p className="panel-note">
         Historical discovery tiers remain available above for provenance only. The current operational next task is
-        combined review of broad-state discovery metadata. Global analysis readiness remains false.
+        combined review of broad-state discovery and locator-verification metadata. Global analysis readiness remains false.
       </p>
     </section>
   );

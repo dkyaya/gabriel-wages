@@ -63,9 +63,10 @@ export function AnalysisReadinessPanel({ data, phase }) {
       </div>
 
       <p className="panel-note">
-        The four-lane broad state scout is complete. The current operational next step is one bounded combined
-        candidate review over the preserved prior queue and new discovery metadata. Scout candidates remain unverified
-        operational metadata and do not make the project globally analysis-ready.
+        The four-lane broad state scout is complete. The bounded locator-verification wave is
+        {phase.verification_all_lanes_completed ? " complete" : " partial, with one lane resume required"}. The next operational step is
+        {phase.verification_all_lanes_completed ? " one separately authorized combined candidate review" : " a bounded resume of the incomplete verification lane"} over preserved discovery and verification metadata.
+        Reachability is not source review or evidence and does not make the project globally analysis-ready.
       </p>
 
       <details>

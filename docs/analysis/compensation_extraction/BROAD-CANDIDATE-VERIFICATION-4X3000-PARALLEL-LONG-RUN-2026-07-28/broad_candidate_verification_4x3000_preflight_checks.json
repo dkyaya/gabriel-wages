@@ -1,0 +1,33 @@
+{
+  "all_lanes_at_or_below_3000": true,
+  "candidate_review_planned": false,
+  "candidate_universe_reconciled": true,
+  "cumulative_candidate_pool_reconciled_to": 13041,
+  "dashboard_candidate_rows": 13041,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "dashboard_overview_metric_sync_planned": true,
+  "dashboard_scout_covered_municipalities": 6919,
+  "deterministic_preflight_passed": true,
+  "downloads_planned": false,
+  "extraction_rating_ingestion_codification_planned": false,
+  "get_fallback_enabled": false,
+  "global_analysis_readiness": false,
+  "head_requests_only": true,
+  "lane_counts": {
+    "verify_lane_001": 2144,
+    "verify_lane_002": 2143,
+    "verify_lane_003": 2143,
+    "verify_lane_004": 2144
+  },
+  "largest_defensible_queue_locked": true,
+  "locked_queue_rows": 8574,
+  "master_equals_union_of_lanes": true,
+  "preflight_passed": true,
+  "raw_prompts_or_responses_saved": 0,
+  "source_document_inspection_planned": false,
+  "source_review_planned": false,
+  "target_ceiling": 12000,
+  "transport_smoke_http_responses": 8,
+  "transport_smoke_passed": true,
+  "transport_smoke_rows": 8
+}

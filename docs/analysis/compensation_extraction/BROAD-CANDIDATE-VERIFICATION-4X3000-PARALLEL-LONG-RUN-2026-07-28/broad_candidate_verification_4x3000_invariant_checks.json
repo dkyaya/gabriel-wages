@@ -1,0 +1,18 @@
+{
+  "all_four_lanes_controlled": true,
+  "all_invariants_passed": true,
+  "all_lanes_at_or_below_3000": true,
+  "all_locked_rows_completed": false,
+  "candidate_review_runs": 0,
+  "controlled_statuses_only": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "downloads": 0,
+  "extraction_rating_ingestion_codification_runs": 0,
+  "global_analysis_readiness": false,
+  "master_equals_union_of_completed_lanes": true,
+  "partial_resume_state_valid": true,
+  "planned_or_incomplete_rows_counted_verified": 0,
+  "quarantined_invalid_transport_rows_counted": 0,
+  "source_document_content_accesses": 0,
+  "source_review_runs": 0
+}

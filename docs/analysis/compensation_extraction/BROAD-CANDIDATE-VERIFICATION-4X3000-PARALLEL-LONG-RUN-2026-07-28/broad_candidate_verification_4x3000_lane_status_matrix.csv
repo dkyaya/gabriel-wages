@@ -1,0 +1,5 @@
+lane_id,locked_rows,completed_rows,remaining_rows,lane_status,scheduled_stagger_minutes,actual_started_at,completed_at,resume_required
+verify_lane_001,2144,2144,0,completed,0,2026-07-28T13:57:50Z,2026-07-28T14:29:40Z,false
+verify_lane_002,2143,2143,0,completed,8,2026-07-28T14:05:00Z,2026-07-28T14:35:57Z,false
+verify_lane_003,2143,2143,0,completed,16,2026-07-28T14:13:00Z,2026-07-28T14:45:17Z,false
+verify_lane_004,2144,0,2144,incomplete_invalid_transport_attempt_quarantined,24,2026-07-28T14:21:00Z,,true

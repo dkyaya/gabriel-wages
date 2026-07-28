@@ -1,0 +1,11 @@
+{
+  "excluded_rows": 2542,
+  "excluded_rows_verified_in_this_task": 0,
+  "exclusion_counts": {
+    "already_present_in_prior_verification_results": 2039,
+    "cross_origin_canonical_locator_duplicate": 140,
+    "invalid_or_unsupported_locator": 19,
+    "source_marked_duplicate_or_prior_seen": 2,
+    "weak_or_needs_review_not_used_as_queue_padding": 342
+  }
+}
