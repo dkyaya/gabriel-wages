@@ -1,0 +1,16 @@
+{
+  "current_operation": "broad candidate verification 4x3000 completed",
+  "dashboard_updated": true,
+  "failed_unavailable_blocked_count": 3043,
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "next_authorized_stage": "combined broad candidate review",
+  "prior_connecterror_rows_counted": 0,
+  "scout_covered_municipalities": 6919,
+  "total_candidate_rows": 13041,
+  "verification_completed_count": 8574,
+  "verification_queue_size": 8574,
+  "verification_remaining_count": 0,
+  "verified_reachable_count": 5524
+}

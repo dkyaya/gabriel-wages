@@ -1,0 +1,45 @@
+{
+  "completed_result_rows": 8574,
+  "global_analysis_readiness": false,
+  "group_count": 4,
+  "group_field": "region",
+  "groups": [
+    {
+      "blocked_or_timeout": 43,
+      "global_analysis_readiness": "false",
+      "region": "Midwest",
+      "unavailable": 635,
+      "verification_error": 0,
+      "verification_rows": 2466,
+      "verified_reachable": 1787
+    },
+    {
+      "blocked_or_timeout": 20,
+      "global_analysis_readiness": "false",
+      "region": "Northeast",
+      "unavailable": 925,
+      "verification_error": 1,
+      "verification_rows": 2120,
+      "verified_reachable": 1174
+    },
+    {
+      "blocked_or_timeout": 55,
+      "global_analysis_readiness": "false",
+      "region": "South",
+      "unavailable": 708,
+      "verification_error": 0,
+      "verification_rows": 2284,
+      "verified_reachable": 1518
+    },
+    {
+      "blocked_or_timeout": 56,
+      "global_analysis_readiness": "false",
+      "region": "West",
+      "unavailable": 600,
+      "verification_error": 0,
+      "verification_rows": 1704,
+      "verified_reachable": 1045
+    }
+  ],
+  "verified_reachable_count": 5524
+}

@@ -1,0 +1,16 @@
+{
+  "all_invariants_passed": true,
+  "candidate_review_runs": 0,
+  "controlled_statuses_only": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "downloads": 0,
+  "extraction_rating_ingestion_codification_runs": 0,
+  "final_queue_reconciles_to_8574": true,
+  "global_analysis_readiness": false,
+  "lane_004_hash_matches_committed_lock": true,
+  "lanes_001_003_rerun_count": 0,
+  "only_lane_004_resumed": true,
+  "prior_connecterror_rows_counted": 0,
+  "source_document_content_accesses": 0,
+  "source_review_runs": 0
+}

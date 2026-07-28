@@ -1,0 +1,450 @@
+{
+  "completed_result_rows": 8574,
+  "global_analysis_readiness": false,
+  "group_count": 49,
+  "group_field": "state",
+  "groups": [
+    {
+      "blocked_or_timeout": 7,
+      "global_analysis_readiness": "false",
+      "state": "AK",
+      "unavailable": 16,
+      "verification_error": 0,
+      "verification_rows": 72,
+      "verified_reachable": 49
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "state": "AL",
+      "unavailable": 48,
+      "verification_error": 0,
+      "verification_rows": 154,
+      "verified_reachable": 101
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "AR",
+      "unavailable": 34,
+      "verification_error": 0,
+      "verification_rows": 112,
+      "verified_reachable": 77
+    },
+    {
+      "blocked_or_timeout": 4,
+      "global_analysis_readiness": "false",
+      "state": "AZ",
+      "unavailable": 54,
+      "verification_error": 0,
+      "verification_rows": 149,
+      "verified_reachable": 90
+    },
+    {
+      "blocked_or_timeout": 6,
+      "global_analysis_readiness": "false",
+      "state": "CA",
+      "unavailable": 203,
+      "verification_error": 0,
+      "verification_rows": 403,
+      "verified_reachable": 192
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "CO",
+      "unavailable": 60,
+      "verification_error": 0,
+      "verification_rows": 141,
+      "verified_reachable": 80
+    },
+    {
+      "blocked_or_timeout": 7,
+      "global_analysis_readiness": "false",
+      "state": "CT",
+      "unavailable": 138,
+      "verification_error": 0,
+      "verification_rows": 266,
+      "verified_reachable": 121
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "DE",
+      "unavailable": 2,
+      "verification_error": 0,
+      "verification_rows": 54,
+      "verified_reachable": 52
+    },
+    {
+      "blocked_or_timeout": 8,
+      "global_analysis_readiness": "false",
+      "state": "FL",
+      "unavailable": 78,
+      "verification_error": 0,
+      "verification_rows": 177,
+      "verified_reachable": 90
+    },
+    {
+      "blocked_or_timeout": 3,
+      "global_analysis_readiness": "false",
+      "state": "GA",
+      "unavailable": 44,
+      "verification_error": 0,
+      "verification_rows": 179,
+      "verified_reachable": 131
+    },
+    {
+      "blocked_or_timeout": 3,
+      "global_analysis_readiness": "false",
+      "state": "IA",
+      "unavailable": 31,
+      "verification_error": 0,
+      "verification_rows": 161,
+      "verified_reachable": 127
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "state": "ID",
+      "unavailable": 25,
+      "verification_error": 0,
+      "verification_rows": 104,
+      "verified_reachable": 74
+    },
+    {
+      "blocked_or_timeout": 4,
+      "global_analysis_readiness": "false",
+      "state": "IL",
+      "unavailable": 155,
+      "verification_error": 0,
+      "verification_rows": 429,
+      "verified_reachable": 270
+    },
+    {
+      "blocked_or_timeout": 3,
+      "global_analysis_readiness": "false",
+      "state": "IN",
+      "unavailable": 37,
+      "verification_error": 0,
+      "verification_rows": 202,
+      "verified_reachable": 162
+    },
+    {
+      "blocked_or_timeout": 2,
+      "global_analysis_readiness": "false",
+      "state": "KS",
+      "unavailable": 47,
+      "verification_error": 0,
+      "verification_rows": 149,
+      "verified_reachable": 99
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "KY",
+      "unavailable": 53,
+      "verification_error": 0,
+      "verification_rows": 165,
+      "verified_reachable": 111
+    },
+    {
+      "blocked_or_timeout": 12,
+      "global_analysis_readiness": "false",
+      "state": "LA",
+      "unavailable": 12,
+      "verification_error": 0,
+      "verification_rows": 145,
+      "verified_reachable": 121
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "MA",
+      "unavailable": 272,
+      "verification_error": 0,
+      "verification_rows": 377,
+      "verified_reachable": 105
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "MD",
+      "unavailable": 47,
+      "verification_error": 0,
+      "verification_rows": 123,
+      "verified_reachable": 76
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "ME",
+      "unavailable": 43,
+      "verification_error": 0,
+      "verification_rows": 185,
+      "verified_reachable": 142
+    },
+    {
+      "blocked_or_timeout": 6,
+      "global_analysis_readiness": "false",
+      "state": "MI",
+      "unavailable": 93,
+      "verification_error": 0,
+      "verification_rows": 307,
+      "verified_reachable": 208
+    },
+    {
+      "blocked_or_timeout": 7,
+      "global_analysis_readiness": "false",
+      "state": "MN",
+      "unavailable": 37,
+      "verification_error": 0,
+      "verification_rows": 200,
+      "verified_reachable": 156
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "MO",
+      "unavailable": 84,
+      "verification_error": 0,
+      "verification_rows": 188,
+      "verified_reachable": 104
+    },
+    {
+      "blocked_or_timeout": 6,
+      "global_analysis_readiness": "false",
+      "state": "MS",
+      "unavailable": 4,
+      "verification_error": 0,
+      "verification_rows": 38,
+      "verified_reachable": 28
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "state": "MT",
+      "unavailable": 19,
+      "verification_error": 0,
+      "verification_rows": 120,
+      "verified_reachable": 96
+    },
+    {
+      "blocked_or_timeout": 2,
+      "global_analysis_readiness": "false",
+      "state": "NC",
+      "unavailable": 62,
+      "verification_error": 0,
+      "verification_rows": 192,
+      "verified_reachable": 127
+    },
+    {
+      "blocked_or_timeout": 3,
+      "global_analysis_readiness": "false",
+      "state": "ND",
+      "unavailable": 6,
+      "verification_error": 0,
+      "verification_rows": 106,
+      "verified_reachable": 97
+    },
+    {
+      "blocked_or_timeout": 2,
+      "global_analysis_readiness": "false",
+      "state": "NE",
+      "unavailable": 32,
+      "verification_error": 0,
+      "verification_rows": 136,
+      "verified_reachable": 102
+    },
+    {
+      "blocked_or_timeout": 12,
+      "global_analysis_readiness": "false",
+      "state": "NH",
+      "unavailable": 112,
+      "verification_error": 0,
+      "verification_rows": 198,
+      "verified_reachable": 74
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "NJ",
+      "unavailable": 120,
+      "verification_error": 0,
+      "verification_rows": 281,
+      "verified_reachable": 161
+    },
+    {
+      "blocked_or_timeout": 6,
+      "global_analysis_readiness": "false",
+      "state": "NM",
+      "unavailable": 15,
+      "verification_error": 0,
+      "verification_rows": 80,
+      "verified_reachable": 59
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "NV",
+      "unavailable": 1,
+      "verification_error": 0,
+      "verification_rows": 18,
+      "verified_reachable": 17
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "NY",
+      "unavailable": 72,
+      "verification_error": 0,
+      "verification_rows": 252,
+      "verified_reachable": 180
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "OH",
+      "unavailable": 44,
+      "verification_error": 0,
+      "verification_rows": 253,
+      "verified_reachable": 208
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "state": "OK",
+      "unavailable": 59,
+      "verification_error": 0,
+      "verification_rows": 167,
+      "verified_reachable": 103
+    },
+    {
+      "blocked_or_timeout": 6,
+      "global_analysis_readiness": "false",
+      "state": "OR",
+      "unavailable": 66,
+      "verification_error": 0,
+      "verification_rows": 148,
+      "verified_reachable": 76
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "PA",
+      "unavailable": 95,
+      "verification_error": 1,
+      "verification_rows": 314,
+      "verified_reachable": 217
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "RI",
+      "unavailable": 37,
+      "verification_error": 0,
+      "verification_rows": 99,
+      "verified_reachable": 62
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "SC",
+      "unavailable": 22,
+      "verification_error": 0,
+      "verification_rows": 119,
+      "verified_reachable": 97
+    },
+    {
+      "blocked_or_timeout": 9,
+      "global_analysis_readiness": "false",
+      "state": "SD",
+      "unavailable": 16,
+      "verification_error": 0,
+      "verification_rows": 120,
+      "verified_reachable": 95
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "TN",
+      "unavailable": 33,
+      "verification_error": 0,
+      "verification_rows": 130,
+      "verified_reachable": 96
+    },
+    {
+      "blocked_or_timeout": 2,
+      "global_analysis_readiness": "false",
+      "state": "TX",
+      "unavailable": 116,
+      "verification_error": 0,
+      "verification_rows": 266,
+      "verified_reachable": 148
+    },
+    {
+      "blocked_or_timeout": 5,
+      "global_analysis_readiness": "false",
+      "state": "UT",
+      "unavailable": 38,
+      "verification_error": 0,
+      "verification_rows": 173,
+      "verified_reachable": 130
+    },
+    {
+      "blocked_or_timeout": 8,
+      "global_analysis_readiness": "false",
+      "state": "VA",
+      "unavailable": 58,
+      "verification_error": 0,
+      "verification_rows": 164,
+      "verified_reachable": 98
+    },
+    {
+      "blocked_or_timeout": 0,
+      "global_analysis_readiness": "false",
+      "state": "VT",
+      "unavailable": 36,
+      "verification_error": 0,
+      "verification_rows": 148,
+      "verified_reachable": 112
+    },
+    {
+      "blocked_or_timeout": 7,
+      "global_analysis_readiness": "false",
+      "state": "WA",
+      "unavailable": 95,
+      "verification_error": 0,
+      "verification_rows": 219,
+      "verified_reachable": 117
+    },
+    {
+      "blocked_or_timeout": 3,
+      "global_analysis_readiness": "false",
+      "state": "WI",
+      "unavailable": 53,
+      "verification_error": 0,
+      "verification_rows": 215,
+      "verified_reachable": 159
+    },
+    {
+      "blocked_or_timeout": 1,
+      "global_analysis_readiness": "false",
+      "state": "WV",
+      "unavailable": 36,
+      "verification_error": 0,
+      "verification_rows": 99,
+      "verified_reachable": 62
+    },
+    {
+      "blocked_or_timeout": 4,
+      "global_analysis_readiness": "false",
+      "state": "WY",
+      "unavailable": 8,
+      "verification_error": 0,
+      "verification_rows": 77,
+      "verified_reachable": 65
+    }
+  ],
+  "verified_reachable_count": 5524
+}

@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "new_suite": "scripts/test_broad_candidate_verification_4x3000_resume_lane_004.py",
+  "predecessor_suites": [
+    "scripts/test_broad_candidate_verification_4x3000.py",
+    "scripts/test_broad_state_4x1000_parallel_live_scout.py",
+    "scripts/test_broad_state_4x1000_scout_dry_run_prep.py"
+  ]
+}

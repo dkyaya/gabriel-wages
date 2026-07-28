@@ -1,0 +1,8 @@
+{
+  "global_analysis_readiness": false,
+  "guard_passed": true,
+  "map_filter_total_scout_coverage_only": true,
+  "planned_or_quarantined_rows_counted_verified": 0,
+  "stale_resume_stage_removed": true,
+  "tier_c_memo_not_current_operation": true
+}

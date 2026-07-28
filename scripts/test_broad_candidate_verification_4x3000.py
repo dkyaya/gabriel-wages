@@ -129,9 +129,17 @@ def main() -> None:
         assert phase["current_scout_covered"] == 6919
         assert phase["current_candidate_queue_rows"] == 13041
         assert phase["dashboard_map_filter"] == "total_scout_coverage_only"
-        assert phase["verification_all_lanes_completed"] is False
-        assert phase["verification_completed_lane_count"] == 3
-        assert phase["verification_remaining_count"] == 2144
+        if phase["verification_all_lanes_completed"]:
+            # The immutable predecessor remains partial, while a later isolated
+            # lane-004 resume may advance the dashboard to the reconciled final state.
+            assert phase["verification_completed_lane_count"] == 4
+            assert phase["verification_completed_count"] == 8574
+            assert phase["verification_remaining_count"] == 0
+            assert "combined broad candidate review" in phase["next_task"].casefold()
+        else:
+            assert phase["verification_completed_lane_count"] == 3
+            assert phase["verification_completed_count"] == 6430
+            assert phase["verification_remaining_count"] == 2144
         assert "tier c memo supplement" not in phase["current_phase"].casefold()
     print("PASS: broad candidate verification 4x3000 invariants")
 

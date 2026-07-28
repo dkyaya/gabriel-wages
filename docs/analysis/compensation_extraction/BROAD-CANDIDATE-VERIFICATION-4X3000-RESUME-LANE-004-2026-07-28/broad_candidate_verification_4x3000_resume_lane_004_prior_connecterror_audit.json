@@ -1,0 +1,11 @@
+{
+  "counted_as_completed": false,
+  "counted_in_dashboard": false,
+  "global_analysis_readiness": false,
+  "network_permission_escalated": false,
+  "prior_attempt_rows": 2144,
+  "prior_attempt_status": "blocked_transport",
+  "prior_transport_error": "ConnectError",
+  "quarantined": true,
+  "valid_completed_rows_before_resume": 0
+}

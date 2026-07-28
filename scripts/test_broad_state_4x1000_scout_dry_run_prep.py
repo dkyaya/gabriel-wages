@@ -133,6 +133,8 @@ def main() -> None:
         "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
         "broad_candidate_verification_4x3000_completed_review_ready",
         "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
+        "broad_candidate_verification_4x3000_resume_lane_004_completed_review_ready",
+        "broad_candidate_verification_4x3000_resume_lane_004_partial_resume_ready",
     }
     live_complete = phase["broad_state_4x1000_live_available"] is True
     assert phase["current_scout_covered"] == (6919 if live_complete else 2922)

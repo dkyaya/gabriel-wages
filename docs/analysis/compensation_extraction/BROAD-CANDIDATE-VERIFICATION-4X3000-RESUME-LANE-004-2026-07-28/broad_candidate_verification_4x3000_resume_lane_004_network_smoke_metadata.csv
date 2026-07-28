@@ -1,0 +1,9 @@
+verification_row_id,source_domain,verification_status,http_status_code,transport_error_type,attempt_count,response_body_saved,raw_headers_saved,downloaded
+BCV-20260728-07224,eab.iowa.gov,verified_reachable,200,,1,false,false,false
+BCV-20260728-07183,denisonia.com,verified_reachable,200,,1,false,false,false
+BCV-20260728-06801,cityofiowafalls.com,blocked_transport,,ConnectError,2,false,false,false
+BCV-20260728-07037,codelibrary.amlegal.com,unavailable_other_status,403,,1,false,false,false
+BCV-20260728-07916,newhamptonia.com,verified_reachable,200,,1,false,false,false
+BCV-20260728-08554,winterset.gov,verified_reachable,200,,1,false,false,false
+BCV-20260728-06509,barrington-il.gov,verified_reachable,200,,1,false,false,false
+BCV-20260728-06538,bensenville.gov,unavailable_404_410,404,,1,false,false,false

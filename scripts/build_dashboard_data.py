@@ -1432,6 +1432,23 @@ BROAD_CANDIDATE_VERIFICATION_4X3000_INVARIANTS_PATH = (
 BROAD_CANDIDATE_VERIFICATION_4X3000_RESULTS_SUMMARY_PATH = (
     BROAD_CANDIDATE_VERIFICATION_4X3000_DIR / "broad_candidate_verification_4x3000_results_summary.json"
 )
+BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-CANDIDATE-VERIFICATION-4X3000-RESUME-LANE-004-2026-07-28"
+)
+BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DECISION_PATH = (
+    BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DIR
+    / "broad_candidate_verification_4x3000_resume_lane_004_decision.json"
+)
+BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_INVARIANTS_PATH = (
+    BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DIR
+    / "broad_candidate_verification_4x3000_resume_lane_004_invariant_checks.json"
+)
+BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_RESULTS_SUMMARY_PATH = (
+    BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DIR
+    / "broad_candidate_verification_4x3000_final_results_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4784,31 +4801,47 @@ def broad_state_4x1000_live_scout_status() -> tuple[bool, dict[str, Any]]:
 
 def broad_candidate_verification_4x3000_status() -> tuple[bool, dict[str, Any]]:
     """Recognize the current bounded four-lane HEAD-only verification wave."""
-    required = (
-        BROAD_CANDIDATE_VERIFICATION_4X3000_DECISION_PATH,
-        BROAD_CANDIDATE_VERIFICATION_4X3000_INVARIANTS_PATH,
-        BROAD_CANDIDATE_VERIFICATION_4X3000_RESULTS_SUMMARY_PATH,
-        BROAD_CANDIDATE_VERIFICATION_4X3000_DIR / "broad_candidate_verification_4x3000_lane_status_matrix.csv",
+    resume_required = (
+        BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DECISION_PATH,
+        BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_INVARIANTS_PATH,
+        BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_RESULTS_SUMMARY_PATH,
     )
-    if not all(path.exists() for path in required):
-        return False, {}
-    decision = read_json(BROAD_CANDIDATE_VERIFICATION_4X3000_DECISION_PATH)
-    invariants = read_json(BROAD_CANDIDATE_VERIFICATION_4X3000_INVARIANTS_PATH)
-    summary = read_json(BROAD_CANDIDATE_VERIFICATION_4X3000_RESULTS_SUMMARY_PATH)
+    resume_available = all(path.exists() for path in resume_required)
+    if resume_available:
+        decision = read_json(BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DECISION_PATH)
+        invariants = read_json(BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_INVARIANTS_PATH)
+        summary = read_json(BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_RESULTS_SUMMARY_PATH)
+        decision["dashboard_result_path"] = "docs/analysis/broad_candidate_verification_4x3000_resume_lane_004_result_2026-07-28.md"
+    else:
+        required = (
+            BROAD_CANDIDATE_VERIFICATION_4X3000_DECISION_PATH,
+            BROAD_CANDIDATE_VERIFICATION_4X3000_INVARIANTS_PATH,
+            BROAD_CANDIDATE_VERIFICATION_4X3000_RESULTS_SUMMARY_PATH,
+            BROAD_CANDIDATE_VERIFICATION_4X3000_DIR / "broad_candidate_verification_4x3000_lane_status_matrix.csv",
+        )
+        if not all(path.exists() for path in required):
+            return False, {}
+        decision = read_json(BROAD_CANDIDATE_VERIFICATION_4X3000_DECISION_PATH)
+        invariants = read_json(BROAD_CANDIDATE_VERIFICATION_4X3000_INVARIANTS_PATH)
+        summary = read_json(BROAD_CANDIDATE_VERIFICATION_4X3000_RESULTS_SUMMARY_PATH)
+        decision["dashboard_result_path"] = "docs/analysis/broad_candidate_verification_4x3000_result_2026-07-28.md"
     allowed = {
         "broad_candidate_verification_4x3000_completed_review_ready",
         "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
+        "broad_candidate_verification_4x3000_resume_lane_004_completed_review_ready",
+        "broad_candidate_verification_4x3000_resume_lane_004_partial_resume_ready",
     }
     status_counts = decision.get("verification_status_counts", {})
     completed = as_int(decision.get("completed_result_rows"))
     locked = as_int(decision.get("verification_queue_rows"))
-    if not (
+    lane_counts = decision.get("lane_counts", {})
+    common_gates = (
         decision.get("decision") in allowed
         and 0 < locked <= 12000
         and completed <= locked
-        and sum(as_int(value) for value in decision.get("lane_counts", {}).values()) == locked
-        and len(decision.get("lane_counts", {})) == 4
-        and max(as_int(value) for value in decision.get("lane_counts", {}).values()) <= 3000
+        and len(lane_counts) == 4
+        and sum(as_int(value) for value in lane_counts.values()) == locked
+        and max(as_int(value) for value in lane_counts.values()) <= 3000
         and sum(as_int(value) for value in status_counts.values()) == completed
         and decision.get("candidate_review_runs") == 0
         and decision.get("downloads") == 0
@@ -4824,8 +4857,13 @@ def broad_candidate_verification_4x3000_status() -> tuple[bool, dict[str, Any]]:
         and decision.get("global_analysis_readiness") is False
         and summary.get("completed_result_rows") == completed
         and invariants.get("all_invariants_passed") is True
-        and invariants.get("planned_or_incomplete_rows_counted_verified") == 0
-    ):
+    )
+    resume_gates = (
+        decision.get("prior_connecterror_rows_counted") == 0
+        if resume_available
+        else invariants.get("planned_or_incomplete_rows_counted_verified") == 0
+    )
+    if not (common_gates and resume_gates):
         raise ValueError("broad candidate verification 4x3000 package fails dashboard gates")
     return True, decision
 
@@ -4931,7 +4969,7 @@ def build_reports_index_layer(
                     "tags": ["current", "verification", "4x3000", "HEAD-only", "claim boundaries"],
                     "current": True,
                     "historical": False,
-                    "href": repository_root_url + "docs/analysis/broad_candidate_verification_4x3000_result_2026-07-28.md",
+                    "href": repository_root_url + verification["dashboard_result_path"],
                     "link_label": "Open current verification report",
                     "scope_metrics": [
                         {"label": "locked locators", "value": verification["verification_queue_rows"]},
@@ -7751,12 +7789,12 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            "docs/analysis/broad_candidate_verification_4x3000_result_2026-07-28.md"
+            verification["dashboard_result_path"]
             if verification_available
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            "docs/analysis/broad_candidate_verification_4x3000_result_2026-07-28.md"
+            verification["dashboard_result_path"]
             if verification_available
             else "docs/analysis/broad_state_4x1000_parallel_live_scout_result_2026-07-27.md"
             if live_available

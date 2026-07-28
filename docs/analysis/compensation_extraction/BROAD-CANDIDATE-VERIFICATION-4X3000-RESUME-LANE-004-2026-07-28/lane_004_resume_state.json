@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-07-28T15:40:43Z",
+  "completed_rows": 2144,
+  "lane_id": "verify_lane_004",
+  "network_permission_escalated": true,
+  "prior_connecterror_rows_counted": 0,
+  "queue_sha256": "c9451cbfda541c78522e665f651c61d44d92fb72c02df0d1a865d9dccd6c054c",
+  "remaining_rows": 0,
+  "resume_required": false,
+  "status": "completed"
+}
