@@ -1,0 +1,11 @@
+{
+  "artifact_storage_guard": true,
+  "dashboard_map_guard": true,
+  "new_suite": "scripts/test_combined_broad_text_extraction_4051.py",
+  "predecessor_suites": [
+    "scripts/test_retained_source_storage_history_repair.py",
+    "scripts/test_combined_broad_pdf_text_layer_readiness_4961.py",
+    "scripts/test_combined_broad_source_review_download_5589.py",
+    "scripts/test_dashboard_declutter_map_correction_tier_c_text_span_extraction.py"
+  ]
+}

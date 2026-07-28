@@ -1,0 +1,52 @@
+{
+  "attempted_count": 4051,
+  "extracted_ok_count": 3815,
+  "group_count": 4,
+  "group_field": "region",
+  "rows": [
+    {
+      "attempted_count": 1371,
+      "empty_or_too_short_count": 4,
+      "extracted_ok_count": 1294,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 63,
+      "low_text_density_count": 3,
+      "other_document_extraction_unsupported_count": 0,
+      "region": "Midwest",
+      "suspected_bad_text_layer_count": 7
+    },
+    {
+      "attempted_count": 816,
+      "empty_or_too_short_count": 2,
+      "extracted_ok_count": 779,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 29,
+      "low_text_density_count": 2,
+      "other_document_extraction_unsupported_count": 0,
+      "region": "Northeast",
+      "suspected_bad_text_layer_count": 4
+    },
+    {
+      "attempted_count": 1115,
+      "empty_or_too_short_count": 1,
+      "extracted_ok_count": 1036,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 74,
+      "low_text_density_count": 3,
+      "other_document_extraction_unsupported_count": 0,
+      "region": "South",
+      "suspected_bad_text_layer_count": 1
+    },
+    {
+      "attempted_count": 749,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 706,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 42,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "region": "West",
+      "suspected_bad_text_layer_count": 1
+    }
+  ]
+}

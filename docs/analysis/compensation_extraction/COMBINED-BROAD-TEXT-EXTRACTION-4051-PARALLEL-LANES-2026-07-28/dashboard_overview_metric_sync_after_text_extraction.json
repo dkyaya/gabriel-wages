@@ -1,0 +1,9 @@
+{
+  "current_operation_updated": true,
+  "global_analysis_readiness": false,
+  "map_metric_unchanged": "total_scout_coverage_only",
+  "next_authorized_stage_updated": true,
+  "required_extraction_metrics_present": true,
+  "sync_required": true,
+  "sync_source": "docs/analysis/compensation_extraction/COMBINED-BROAD-TEXT-EXTRACTION-4051-PARALLEL-LANES-2026-07-28/combined_broad_text_extraction_4051_results_summary.json"
+}

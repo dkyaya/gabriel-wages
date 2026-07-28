@@ -1,0 +1,7 @@
+{
+  "delay_seconds": 1440,
+  "lane_id": "extraction_lane_004",
+  "queue_count": 1012,
+  "sequence_max": 1012,
+  "sequence_min": 1
+}

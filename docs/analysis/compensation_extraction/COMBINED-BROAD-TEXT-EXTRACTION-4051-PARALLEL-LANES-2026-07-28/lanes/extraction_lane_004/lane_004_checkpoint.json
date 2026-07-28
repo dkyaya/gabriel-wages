@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "completed_count": 1012,
+  "ended_at": "2026-07-28T22:49:47Z",
+  "lane_id": "extraction_lane_004",
+  "queue_count": 1012,
+  "resume_relative_delay_seconds": 1095,
+  "standard_delay_seconds": 1440,
+  "started_at": "2026-07-28T22:40:53Z",
+  "status": "completed",
+  "status_counts": {
+    "empty_or_too_short": 2,
+    "extracted_ok": 799,
+    "html_noisy_or_shell": 208,
+    "suspected_bad_text_layer": 3
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "attempted_count": 4051,
+  "extracted_ok_count": 3815,
+  "group_count": 23,
+  "group_field": "source_family_hint",
+  "rows": [
+    {
+      "attempted_count": 891,
+      "empty_or_too_short_count": 2,
+      "extracted_ok_count": 827,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 58,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "agenda_packet_or_minutes",
+      "suspected_bad_text_layer_count": 4
+    },
+    {
+      "attempted_count": 122,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 120,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 1,
+      "low_text_density_count": 1,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "arbitration_award",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 553,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 520,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 30,
+      "low_text_density_count": 2,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "budget_or_pay_plan",
+      "suspected_bad_text_layer_count": 1
+    },
+    {
+      "attempted_count": 423,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 411,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 9,
+      "low_text_density_count": 3,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 72,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 67,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 4,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record",
+      "suspected_bad_text_layer_count": 1
+    },
+    {
+      "attempted_count": 1,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 1,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed)",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 204,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 194,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 9,
+      "low_text_density_count": 1,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_budget_pay_plan_with_explicit_compensation_mechanism",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 289,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 272,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 16,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule",
+      "suspected_bad_text_layer_count": 1
+    },
+    {
+      "attempted_count": 1,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 0,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 1,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules)",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 1,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 1,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index)",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 1,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 1,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey)",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 93,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 85,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 7,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "civil_service_or_hr_pay_plan",
+      "suspected_bad_text_layer_count": 1
+    },
+    {
+      "attempted_count": 26,
+      "empty_or_too_short_count": 1,
+      "extracted_ok_count": 25,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "classification_study",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 118,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 100,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 17,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "collective_bargaining_agreement_or_moa_or_wage_schedule",
+      "suspected_bad_text_layer_count": 1
+    },
+    {
+      "attempted_count": 55,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 54,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 1,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "compensation_study",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 8,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 8,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "factfinding_report",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 213,
+      "empty_or_too_short_count": 1,
+      "extracted_ok_count": 206,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 6,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "mou_or_memorandum",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 172,
+      "empty_or_too_short_count": 2,
+      "extracted_ok_count": 169,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 1,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "other_local_government_pay_policy",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 69,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 67,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 2,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "personnel_policy",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 132,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 120,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 12,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "salary_ordinance",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 4,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 4,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 0,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "settlement_agreement",
+      "suspected_bad_text_layer_count": 0
+    },
+    {
+      "attempted_count": 131,
+      "empty_or_too_short_count": 1,
+      "extracted_ok_count": 111,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 17,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "unknown_or_needs_review",
+      "suspected_bad_text_layer_count": 2
+    },
+    {
+      "attempted_count": 472,
+      "empty_or_too_short_count": 0,
+      "extracted_ok_count": 452,
+      "extraction_error_count": 0,
+      "html_noisy_or_shell_count": 18,
+      "low_text_density_count": 0,
+      "other_document_extraction_unsupported_count": 0,
+      "source_family_hint": "wage_schedule",
+      "suspected_bad_text_layer_count": 2
+    }
+  ]
+}

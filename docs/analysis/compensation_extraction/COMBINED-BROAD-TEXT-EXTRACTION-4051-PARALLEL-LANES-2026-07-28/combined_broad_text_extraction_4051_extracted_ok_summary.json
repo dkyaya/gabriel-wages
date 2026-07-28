@@ -1,0 +1,8 @@
+{
+  "all_rows_have_artifact_path_size_and_hash": true,
+  "deterministic_span_extraction_queue_count": 3815,
+  "extracted_ok_count": 3815,
+  "html_count": 623,
+  "other_document_count": 38,
+  "pdf_count": 3154
+}

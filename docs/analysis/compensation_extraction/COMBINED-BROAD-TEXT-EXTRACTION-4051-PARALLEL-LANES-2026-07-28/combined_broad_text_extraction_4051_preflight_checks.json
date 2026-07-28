@@ -1,0 +1,30 @@
+{
+  "approved_status_counts": {
+    "html_text_later": 834,
+    "other_document_text_later": 40,
+    "parse_text_layer_later": 3177
+  },
+  "artifact_root_ignored": true,
+  "dashboard_map_contract": "total_scout_coverage_only",
+  "excluded_readiness_rows_in_queue": 0,
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "extraction_lane_001": 1013,
+    "extraction_lane_002": 1013,
+    "extraction_lane_003": 1013,
+    "extraction_lane_004": 1012
+  },
+  "no_ocr_or_rendering": true,
+  "no_readiness_rerun": true,
+  "no_redownload": true,
+  "no_source_review_rerun": true,
+  "no_span_rating_ingestion_or_analysis": true,
+  "preflight_passed": true,
+  "queue_count": 4051,
+  "readiness_decision_confirmed": true,
+  "retained_hashes_match": true,
+  "rollback_safe": true,
+  "storage_repair_decision_confirmed": true,
+  "tracked_extracted_text_count": 0,
+  "tracked_retained_source_count": 0
+}

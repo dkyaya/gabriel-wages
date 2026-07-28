@@ -1,0 +1,9 @@
+{
+  "final_repeated_character_rule": "80 or more identical alphanumeric characters",
+  "reclassified_saved_artifact_count": 519,
+  "repair_files": [
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-TEXT-EXTRACTION-4051-PARALLEL-LANES-2026-07-28/lanes/extraction_lane_001/lane_001_quality_repair.json"
+  ],
+  "repair_reason": "fixed-width PDF spacing initially triggered an over-broad repeated-character rule",
+  "source_reextraction_count": 0
+}

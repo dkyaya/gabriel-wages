@@ -1,0 +1,6 @@
+{
+  "completed_text_extraction_is_current_operation": true,
+  "global_analysis_readiness": false,
+  "map_filter_guard": "total_scout_coverage_only",
+  "stale_readiness_complete_current_operation_blocked": true
+}

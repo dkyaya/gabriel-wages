@@ -1,0 +1,16 @@
+{
+  "checkpointed_quality_reclassification_count": 519,
+  "encoding_issue_flag_count": 10,
+  "html_shell_flag_count": 206,
+  "quality_repair_source_reextraction_count": 0,
+  "repeated_garbage_flag_count": 4,
+  "status_counts": {
+    "empty_or_too_short": 7,
+    "extracted_ok": 3815,
+    "html_noisy_or_shell": 208,
+    "low_text_density": 8,
+    "suspected_bad_text_layer": 13
+  },
+  "suspected_scanned_pdf_flag_count": 9,
+  "warning_count": 236
+}

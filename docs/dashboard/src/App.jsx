@@ -199,6 +199,35 @@ function App() {
                 note={`${formatNumber(projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} technically ready of ${formatNumber(projectPhaseSummary.pdf_text_readiness_queue_size)} retained sources`}
               />
               <MetricCard
+                label="Text extraction attempted"
+                value={formatNumber(projectPhaseSummary.text_extraction_attempted_count)}
+                note={`${formatNumber(projectPhaseSummary.text_extracted_ok_count)} extracted OK · PDF ${formatNumber(projectPhaseSummary.text_extraction_pdf_extracted_ok_count)} · HTML ${formatNumber(projectPhaseSummary.text_extraction_html_extracted_ok_count)} · other ${formatNumber(projectPhaseSummary.text_extraction_other_document_extracted_ok_count)}`}
+              />
+              <MetricCard
+                label="Extraction quality deferrals"
+                value={formatNumber(
+                  projectPhaseSummary.text_extraction_empty_too_short_count
+                  + projectPhaseSummary.text_extraction_low_density_count
+                  + projectPhaseSummary.text_extraction_bad_text_layer_count
+                  + projectPhaseSummary.text_extraction_html_noisy_shell_count
+                  + projectPhaseSummary.text_extraction_other_document_unsupported_count
+                  + projectPhaseSummary.text_extraction_error_count
+                )}
+                note={
+                  "Empty/short " + formatNumber(projectPhaseSummary.text_extraction_empty_too_short_count)
+                  + " · low density " + formatNumber(projectPhaseSummary.text_extraction_low_density_count)
+                  + " · bad layer " + formatNumber(projectPhaseSummary.text_extraction_bad_text_layer_count)
+                  + " · HTML noisy " + formatNumber(projectPhaseSummary.text_extraction_html_noisy_shell_count)
+                  + " · unsupported " + formatNumber(projectPhaseSummary.text_extraction_other_document_unsupported_count)
+                  + " · errors " + formatNumber(projectPhaseSummary.text_extraction_error_count)
+                }
+              />
+              <MetricCard
+                label="Extracted text storage"
+                value="Git-ignored"
+                note={projectPhaseSummary.text_extraction_artifact_root}
+              />
+              <MetricCard
                 label="Global analysis readiness"
                 value="False"
                 note="No wage-gap, regression, treatment-effect, or final causal result"
@@ -208,7 +237,7 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Readiness is local-file technical parseability only. It is not durable text extraction, evidence
+                Extracted text is a local, Git-ignored machine-readable artifact only. It is not an evidence span,
                 rating, ingestion, codification, quantitative comparison, population evidence, or a causal conclusion.
                 The Tier C memo remains a completed historical evidence artifact, not the current operation.
               </span>

@@ -1537,6 +1537,35 @@ COMBINED_BROAD_PDF_TEXT_READINESS_RESULTS_PATH = (
     COMBINED_BROAD_PDF_TEXT_READINESS_DIR
     / "combined_broad_pdf_text_layer_readiness_4961_results.csv"
 )
+COMBINED_BROAD_TEXT_EXTRACTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-TEXT-EXTRACTION-4051-PARALLEL-LANES-2026-07-28"
+)
+COMBINED_BROAD_TEXT_EXTRACTION_DECISION_PATH = (
+    COMBINED_BROAD_TEXT_EXTRACTION_DIR
+    / "combined_broad_text_extraction_4051_decision.json"
+)
+COMBINED_BROAD_TEXT_EXTRACTION_INVARIANTS_PATH = (
+    COMBINED_BROAD_TEXT_EXTRACTION_DIR
+    / "combined_broad_text_extraction_4051_invariant_checks.json"
+)
+COMBINED_BROAD_TEXT_EXTRACTION_SUMMARY_PATH = (
+    COMBINED_BROAD_TEXT_EXTRACTION_DIR
+    / "combined_broad_text_extraction_4051_results_summary.json"
+)
+COMBINED_BROAD_TEXT_EXTRACTION_QUEUE_PATH = (
+    COMBINED_BROAD_TEXT_EXTRACTION_DIR
+    / "combined_broad_text_extraction_4051_locked_queue.csv"
+)
+COMBINED_BROAD_TEXT_EXTRACTION_RESULTS_PATH = (
+    COMBINED_BROAD_TEXT_EXTRACTION_DIR
+    / "combined_broad_text_extraction_4051_results.csv"
+)
+COMBINED_BROAD_TEXT_EXTRACTION_OK_PATH = (
+    COMBINED_BROAD_TEXT_EXTRACTION_DIR
+    / "combined_broad_text_extraction_4051_extracted_ok.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5160,6 +5189,60 @@ def combined_broad_pdf_text_readiness_status() -> tuple[bool, dict[str, Any]]:
     return True, payload
 
 
+def combined_broad_text_extraction_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed local-only 4,051-source text extraction."""
+    required = (
+        COMBINED_BROAD_TEXT_EXTRACTION_DECISION_PATH,
+        COMBINED_BROAD_TEXT_EXTRACTION_INVARIANTS_PATH,
+        COMBINED_BROAD_TEXT_EXTRACTION_SUMMARY_PATH,
+        COMBINED_BROAD_TEXT_EXTRACTION_QUEUE_PATH,
+        COMBINED_BROAD_TEXT_EXTRACTION_RESULTS_PATH,
+        COMBINED_BROAD_TEXT_EXTRACTION_OK_PATH,
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_TEXT_EXTRACTION_DECISION_PATH)
+    invariants = read_json(COMBINED_BROAD_TEXT_EXTRACTION_INVARIANTS_PATH)
+    summary = read_json(COMBINED_BROAD_TEXT_EXTRACTION_SUMMARY_PATH)
+    queue = read_csv(COMBINED_BROAD_TEXT_EXTRACTION_QUEUE_PATH)
+    results = read_csv(COMBINED_BROAD_TEXT_EXTRACTION_RESULTS_PATH)
+    extracted_ok = read_csv(COMBINED_BROAD_TEXT_EXTRACTION_OK_PATH)
+    queue_ids = {row["extraction_id"] for row in queue}
+    result_ids = {row["extraction_id"] for row in results}
+    ok_ids = {row["extraction_id"] for row in extracted_ok}
+    gates = (
+        decision.get("decision")
+        == "combined_broad_text_extraction_4051_completed_span_extraction_ready"
+        and decision.get("completed_lane_count") == 4
+        and decision.get("extraction_queue_count") == 4051
+        and len(queue) == len(results) == len(queue_ids) == len(result_ids) == 4051
+        and queue_ids == result_ids
+        and ok_ids.issubset(result_ids)
+        and len(extracted_ok) == summary.get("extracted_ok_count")
+        and summary.get("extraction_attempted_count") == 4051
+        and summary.get("pdf_extraction_attempted_count") == 3177
+        and summary.get("html_extraction_attempted_count") == 834
+        and summary.get("other_document_extraction_attempted_count") == 40
+        and summary.get("artifact_root_git_ignored") is True
+        and summary.get("full_extracted_text_tracked_in_git") is False
+        and summary.get("retained_source_binaries_tracked_in_git") is False
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("queue_count_exact") is True
+        and invariants.get("master_equals_lane_union") is True
+        and invariants.get("four_lanes_completed") is True
+        and invariants.get("staggered_overlap_achieved") is True
+        and all(row["global_analysis_readiness"] == "false" for row in results)
+    )
+    if not gates:
+        raise ValueError("combined broad text-extraction package fails dashboard gates")
+    payload = {**decision, **summary}
+    payload["dashboard_result_path"] = (
+        "docs/analysis/combined_broad_text_extraction_4051_result_2026-07-28.md"
+    )
+    return True, payload
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5244,13 +5327,49 @@ def build_reports_index_layer(
     candidate_review_available, candidate_review = combined_broad_candidate_review_status()
     source_download_available, source_download = combined_broad_source_review_download_status()
     broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
+    broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "combined-broad-text-extraction-4051-2026-07-28",
+                    "title": "Combined Broad Text Extraction Result",
+                    "report_type": "Current bounded text-extraction report",
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{broad_extraction['extraction_attempted_count']:,} extraction attempts; "
+                        f"{broad_extraction['extracted_ok_count']:,} extracted OK"
+                    ),
+                    "summary": (
+                        "Four isolated, staggered lanes extracted only machine-readable local text "
+                        "to ignored artifact storage. No OCR, rendering, span extraction, evidence "
+                        "rating, ingestion, wage analysis, or causal analysis occurred."
+                    ),
+                    "tags": ["current", "text extraction", "ignored artifacts", "claim boundaries"],
+                    "current": True,
+                    "historical": False,
+                    "href": repository_root_url + broad_extraction["dashboard_result_path"],
+                    "link_label": "Open current text-extraction report",
+                    "scope_metrics": [
+                        {"label": "extraction queue", "value": broad_extraction["extraction_queue_count"]},
+                        {"label": "attempted", "value": broad_extraction["extraction_attempted_count"]},
+                        {"label": "extracted OK", "value": broad_extraction["extracted_ok_count"]},
+                    ],
+                }
+            ]
+            if broad_extraction_available
+            else []
+        ),
         *(
             [
                 {
                     "id": "combined-broad-pdf-text-readiness-4961-2026-07-28",
                     "title": "Combined Broad PDF and Text-Layer Readiness Result",
-                    "report_type": "Current technical readiness report",
+                    "report_type": (
+                        "Historical technical readiness report"
+                        if broad_extraction_available
+                        else "Current technical readiness report"
+                    ),
                     "date": "2026-07-28",
                     "checkpoint": (
                         f"{broad_readiness['readiness_reviewed_count']:,} retained sources reviewed; "
@@ -5261,9 +5380,12 @@ def build_reports_index_layer(
                         "page-count, and bounded text-layer/HTML readiness checks. This is not "
                         "text extraction, evidence rating, ingestion, wage analysis, or causal evidence."
                     ),
-                    "tags": ["current", "PDF readiness", "text layer", "local files", "claim boundaries"],
-                    "current": True,
-                    "historical": False,
+                    "tags": [
+                        "historical" if broad_extraction_available else "current",
+                        "PDF readiness", "text layer", "local files", "claim boundaries",
+                    ],
+                    "current": not broad_extraction_available,
+                    "historical": broad_extraction_available,
                     "href": repository_root_url + broad_readiness["dashboard_result_path"],
                     "link_label": "Open current PDF/text-readiness report",
                     "scope_metrics": [
@@ -8005,6 +8127,7 @@ def build_project_phase_summary(
     candidate_review_available, candidate_review = combined_broad_candidate_review_status()
     source_download_available, source_download = combined_broad_source_review_download_status()
     broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
+    broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8030,10 +8153,12 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-28" if (
-            broad_readiness_available or source_download_available or candidate_review_available or verification_available
+            broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "combined_broad_pdf_text_readiness_complete_text_extraction_transition"
+            "combined_broad_text_extraction_complete_span_extraction_transition"
+            if broad_extraction_available
+            else "combined_broad_pdf_text_readiness_complete_text_extraction_transition"
             if broad_readiness_available
             else "combined_broad_source_review_download_complete_pdf_readiness_transition"
             if source_download_available
@@ -8054,7 +8179,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Combined broad PDF/text-layer readiness complete; four-lane bounded text extraction ready next"
+            "Combined broad text extraction complete; deterministic verbatim span extraction ready next"
+            if broad_extraction_available
+            else "Combined broad PDF/text-layer readiness complete; four-lane bounded text extraction ready next"
             if broad_readiness_available
             else "Combined broad source review/download complete; PDF/text-layer readiness ready next"
             if source_download_available
@@ -8075,7 +8202,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_readiness["decision"]
+            broad_extraction["decision"]
+            if broad_extraction_available
+            else broad_readiness["decision"]
             if broad_readiness_available
             else source_download["decision"]
             if source_download_available
@@ -8262,8 +8391,24 @@ def build_project_phase_summary(
         "pdf_text_readiness_needs_review_count": broad_readiness.get("needs_review_count") if broad_readiness_available else 0,
         "pdf_text_readiness_error_count": broad_readiness.get("readiness_error_count") if broad_readiness_available else 0,
         "pdf_text_readiness_extraction_ready_count": broad_readiness.get("extraction_ready_count") if broad_readiness_available else 0,
+        "combined_text_extraction_available": broad_extraction_available,
+        "text_extraction_queue_size": broad_extraction.get("extraction_queue_count") if broad_extraction_available else 0,
+        "text_extraction_attempted_count": broad_extraction.get("extraction_attempted_count") if broad_extraction_available else 0,
+        "text_extracted_ok_count": broad_extraction.get("extracted_ok_count") if broad_extraction_available else 0,
+        "text_extraction_pdf_extracted_ok_count": broad_extraction.get("pdf_extracted_ok_count") if broad_extraction_available else 0,
+        "text_extraction_html_extracted_ok_count": broad_extraction.get("html_extracted_ok_count") if broad_extraction_available else 0,
+        "text_extraction_other_document_extracted_ok_count": broad_extraction.get("other_document_extracted_ok_count") if broad_extraction_available else 0,
+        "text_extraction_empty_too_short_count": broad_extraction.get("empty_or_too_short_count") if broad_extraction_available else 0,
+        "text_extraction_low_density_count": broad_extraction.get("low_text_density_count") if broad_extraction_available else 0,
+        "text_extraction_bad_text_layer_count": broad_extraction.get("suspected_bad_text_layer_count") if broad_extraction_available else 0,
+        "text_extraction_html_noisy_shell_count": broad_extraction.get("html_noisy_or_shell_count") if broad_extraction_available else 0,
+        "text_extraction_other_document_unsupported_count": broad_extraction.get("other_document_extraction_unsupported_count") if broad_extraction_available else 0,
+        "text_extraction_error_count": broad_extraction.get("extraction_error_count") if broad_extraction_available else 0,
+        "text_extraction_artifact_root": broad_extraction.get("artifact_root") if broad_extraction_available else None,
         "current_report_title": (
-            "Combined Broad PDF and Text-Layer Readiness Result"
+            "Combined Broad Text Extraction Result"
+            if broad_extraction_available
+            else "Combined Broad PDF and Text-Layer Readiness Result"
             if broad_readiness_available
             else "Combined Broad Source Review and Download Result"
             if source_download_available
@@ -8273,7 +8418,9 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_readiness["dashboard_result_path"]
+            broad_extraction["dashboard_result_path"]
+            if broad_extraction_available
+            else broad_readiness["dashboard_result_path"]
             if broad_readiness_available
             else source_download["dashboard_result_path"]
             if source_download_available
@@ -8284,7 +8431,9 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_readiness["dashboard_result_path"]
+            broad_extraction["dashboard_result_path"]
+            if broad_extraction_available
+            else broad_readiness["dashboard_result_path"]
             if broad_readiness_available
             else source_download["dashboard_result_path"]
             if source_download_available
@@ -8301,7 +8450,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run four-lane bounded text extraction over readiness-approved retained sources only"
+            "run deterministic verbatim span/evidence extraction over extracted-ok text artifacts only"
+            if broad_extraction_available
+            else "run four-lane bounded text extraction over readiness-approved retained sources only"
             if broad_readiness_available
             else "run a separately authorized bounded PDF/text-layer readiness pass over unique retained local sources"
             if source_download_available
@@ -8375,7 +8526,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "four-lane bounded text extraction over readiness-approved retained sources"
+            "deterministic verbatim span/evidence extraction over extracted-ok text artifacts"
+            if broad_extraction_available
+            else "four-lane bounded text extraction over readiness-approved retained sources"
             if broad_readiness_available
             else "bounded PDF/text-layer readiness over retained local sources"
             if source_download_available
@@ -8388,16 +8541,18 @@ def build_project_phase_summary(
             else "broad state-by-state source scouting"
         ),
         "next_phase_sequence": [
-            "build locked broad state and municipality inputs",
-            "prioritize matched non-safety opportunities within city and cycle",
-            "track geographic and source-family balance explicitly",
-            "collect diverse document families without requiring a preselected mechanism",
-            "use mechanism-targeted scouting only as secondary gap filling",
+            "lock only extracted-ok text artifacts after path, size, and SHA-256 validation",
+            "split the exact queue across four isolated staggered lanes",
+            "capture exact verbatim evidence spans without paraphrase or rating",
+            "exclude empty, low-density, bad-layer, noisy, unsupported, and error rows",
+            "merge lightweight span manifests while full text remains in ignored storage",
         ],
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "combined_broad_pdf_text_readiness_complete_text_extraction_ready"
+            "combined_broad_text_extraction_complete_span_extraction_ready"
+            if broad_extraction_available
+            else "combined_broad_pdf_text_readiness_complete_text_extraction_ready"
             if broad_readiness_available
             else "combined_broad_source_review_download_complete_pdf_readiness_ready"
             if source_download_available
@@ -10186,6 +10341,44 @@ def build_source_review_status_summary(
                     "Readiness is technical local-file parseability only; retained source text was not saved or treated as extracted evidence.",
                     "No OCR, PDF rendering, table/span extraction, evidence rating, model analysis, ingestion, or codification occurred.",
                     "Readiness counts do not establish wage differences, national prevalence, effects, or causation.",
+                    "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
+                ],
+            }
+        )
+    broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
+    if broad_extraction_available:
+        payload.update(
+            {
+                "stage": "combined_broad_text_extraction_complete",
+                "source_review_phase": "combined_broad_4051_text_extraction_parallel_lanes_completed",
+                "source_review_live_status": "text_extraction_completed_all_four_lanes",
+                "text_extraction_queue_size": broad_extraction["extraction_queue_count"],
+                "text_extraction_attempted_count": broad_extraction["extraction_attempted_count"],
+                "text_extracted_ok_count": broad_extraction["extracted_ok_count"],
+                "pdf_extracted_ok_count": broad_extraction["pdf_extracted_ok_count"],
+                "html_extracted_ok_count": broad_extraction["html_extracted_ok_count"],
+                "other_document_extracted_ok_count": broad_extraction["other_document_extracted_ok_count"],
+                "empty_or_too_short_count": broad_extraction["empty_or_too_short_count"],
+                "low_text_density_count": broad_extraction["low_text_density_count"],
+                "suspected_bad_text_layer_count": broad_extraction["suspected_bad_text_layer_count"],
+                "html_noisy_or_shell_count": broad_extraction["html_noisy_or_shell_count"],
+                "other_document_extraction_unsupported_count": broad_extraction[
+                    "other_document_extraction_unsupported_count"
+                ],
+                "extraction_error_count": broad_extraction["extraction_error_count"],
+                "extracted_text_artifact_root": broad_extraction["artifact_root"],
+                "extraction_readiness_status": "text_extraction_completed_span_queue_ready",
+                "source_rating_status": "not_started",
+                "next_recommendation": "deterministic_verbatim_span_extraction",
+                "next_scaling_decision": "deterministic_verbatim_span_extraction",
+                "combined_broad_text_extraction_result_path": broad_extraction[
+                    "dashboard_result_path"
+                ],
+                "global_analysis_readiness": False,
+                "caveats": [
+                    "Extracted text is a local machine-readable artifact, not an evidence span or rating.",
+                    "No OCR, rendering, span extraction, evidence rating, model analysis, ingestion, or codification occurred.",
+                    "Extraction counts do not establish wage differences, national prevalence, effects, or causation.",
                     "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
                 ],
             }

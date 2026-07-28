@@ -1,0 +1,16 @@
+{
+  "approved_status_counts": {
+    "html_text_later": 834,
+    "other_document_text_later": 40,
+    "parse_text_layer_later": 3177
+  },
+  "excluded_status_count": 0,
+  "lane_counts": {
+    "extraction_lane_001": 1013,
+    "extraction_lane_002": 1013,
+    "extraction_lane_003": 1013,
+    "extraction_lane_004": 1012
+  },
+  "queue_count": 4051,
+  "queue_sha256": "632943cb9ca676c5938fe8224535cbbb4017d66a6d6e2a27d7caad4f59724d2d"
+}

@@ -1,0 +1,16 @@
+{
+  "approved_readiness_only": true,
+  "controlled_extraction_statuses": true,
+  "excluded_readiness_status_count": 0,
+  "extracted_ok_has_hashes": true,
+  "forbidden_actions_performed": [],
+  "four_lanes_completed": true,
+  "full_text_tracked_count": 0,
+  "global_analysis_readiness": false,
+  "lane_counts_exact": true,
+  "master_equals_lane_union": true,
+  "queue_count_exact": true,
+  "retained_binary_tracked_count": 0,
+  "staggered_overlap_achieved": true,
+  "standard_stagger_offsets_achieved": true
+}

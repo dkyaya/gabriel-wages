@@ -1,0 +1,14 @@
+{
+  "checkpoint_after_each_row": true,
+  "controlled_overlap_required": true,
+  "coordinator_only_shared_outputs": true,
+  "full_text_storage": "ignored_artifact_storage_only",
+  "independent_lane_count": 4,
+  "lane_output_isolation": true,
+  "standard_stagger_seconds": [
+    0,
+    480,
+    960,
+    1440
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "lane_id": "extraction_lane_003",
+  "queue_count": 1013,
+  "queue_sha256": "70e7665224ec7798038bb2a77aeb57ab5fcb3f2bdb12dbacae8eaab71423e367",
+  "writes_are_lane_isolated": true
+}
