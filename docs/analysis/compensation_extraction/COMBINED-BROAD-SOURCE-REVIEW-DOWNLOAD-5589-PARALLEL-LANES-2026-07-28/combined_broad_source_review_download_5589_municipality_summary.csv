@@ -1,0 +1,2492 @@
+municipality,attempted_rows,retained_sources,excluded_or_deferred,retained_bytes,global_analysis_readiness
+Abbeville,4,3,1,1392950,false
+Aberdeen,1,1,0,164958,false
+Abilene,1,1,0,100713,false
+Abington,3,3,0,939273,false
+Abita Springs,2,2,0,875270,false
+Absecon,4,4,0,2885312,false
+Acworth,4,3,1,107292,false
+Ada,2,0,2,0,false
+Adams,3,3,0,302550,false
+Addis,4,0,4,0,false
+Adel,1,1,0,7826415,false
+Afton,2,2,0,623802,false
+Agoura Hills,1,1,0,36101970,false
+Aiken,2,0,2,0,false
+Ainsworth,2,2,0,857628,false
+Airmont,1,1,0,95219,false
+Airway Heights,1,1,0,269867,false
+Akutan,1,1,0,1617863,false
+Alabaster,1,1,0,1085932,false
+Alachua,2,0,2,0,false
+Alamo,2,2,0,13873992,false
+Alamosa,1,0,1,0,false
+Alberton,3,3,0,222581,false
+Albia,3,3,0,755285,false
+Albion,6,6,0,11119715,false
+Albuquerque,1,1,0,6916762,false
+Alburgh,3,3,0,715347,false
+Alcester,1,1,0,164306,false
+Alcoa,1,1,0,30200,false
+Aleknagik,1,1,0,113505,false
+Alexandria,1,1,0,5693315,false
+Algoma,1,1,0,44225,false
+Algona,1,1,0,6937551,false
+Alice,1,1,0,193822,false
+Allegan,1,1,0,852771,false
+Allendale,2,2,0,1412589,false
+Allendale charter,2,2,0,23670371,false
+Allenstown,1,1,0,2715216,false
+Alma,4,4,0,36036117,false
+Alpena,3,3,0,13200581,false
+Alpharetta,2,1,1,248235,false
+Alpine,2,2,0,4011123,false
+Alsip,4,4,0,103231798,false
+Altavista,1,1,0,6822166,false
+Alton,3,3,0,22236349,false
+Alva,3,3,0,3921304,false
+Alvin,3,3,0,16431268,false
+Ambler,1,1,0,3552793,false
+American,1,1,0,5568056,false
+American Falls,2,1,1,127296,false
+Americus,2,1,1,3761598,false
+Amery,2,2,0,3030913,false
+Amherst,8,8,0,44838840,false
+Amite City,2,0,2,0,false
+Amity,2,2,0,411560,false
+Amityville,1,1,0,943467,false
+Anadarko,1,0,1,0,false
+Anaktuvuk Pass,1,1,0,820662,false
+Anamosa,2,2,0,20485989,false
+Andalusia,1,1,0,326946,false
+Anderson,7,7,0,57710850,false
+Andover,2,2,0,202577,false
+Andrews,2,2,0,8051138,false
+Angel Fire,1,1,0,1859286,false
+Angleton,1,1,0,14817910,false
+Angola,2,2,0,9497052,false
+Angoon,3,2,1,862950,false
+Anna,1,1,0,106612,false
+Anniston,3,3,0,48767402,false
+Ansted,2,2,0,6994951,false
+Anthony,2,2,0,446031,false
+Antioch,1,1,0,1840804,false
+Antwerp,2,2,0,198325,false
+Apache Junction,1,1,0,98820,false
+Appalachia,1,1,0,423211,false
+Apple Creek,1,1,0,13342,false
+Appomattox,2,2,0,459090,false
+Arab,1,0,1,0,false
+Arcadia,5,5,0,13840836,false
+Arcanum,2,2,0,283807,false
+Archdale,2,2,0,417403,false
+Arco,2,2,0,216546,false
+Arden,3,3,0,876877,false
+Arden Hills,2,0,2,0,false
+Ardmore,2,0,2,0,false
+Argusville,2,2,0,71491,false
+Arkansas City,1,1,0,464798,false
+Arlington,4,4,0,3439415,false
+Armour,1,1,0,58370,false
+Artesia,1,1,0,101233,false
+Asbury,1,1,0,47801,false
+Asheboro,2,2,0,1276576,false
+Ashland,3,2,1,475920,false
+Ashland City,1,1,0,1780436,false
+Asotin,1,1,0,451104,false
+Aspen,1,1,0,26002341,false
+Atchison,2,1,1,139011,false
+Athena,2,2,0,84060,false
+Athens,9,9,0,32367238,false
+Athol,2,2,0,504696,false
+Atkinson,2,2,0,347673,false
+Atlanta,1,1,0,442375,false
+Atlantic Beach,2,2,0,12905873,false
+Atqasuk,1,1,0,3273406,false
+Attalla,1,1,0,226864,false
+Auburn,4,4,0,1914512,false
+Audubon,3,3,0,497817,false
+Augusta,2,2,0,20603476,false
+Aumsville,1,1,0,198835,false
+Aurora,3,1,2,11003562,false
+Austell,2,2,0,98608,false
+Austin,1,1,0,230114,false
+Austintown,4,4,0,10464073,false
+Avenal,4,4,0,3815115,false
+Avon,3,1,2,2903735,false
+Azle,5,5,0,13453832,false
+Aztec,2,2,0,848120,false
+Babylon,2,2,0,1614994,false
+Bainville,2,2,0,812100,false
+Baker,1,1,0,315819,false
+Baldwin,4,2,2,131994,false
+Baltimore,2,2,0,338155,false
+Bandon,1,0,1,0,false
+Banks,2,2,0,1302726,false
+Bar Harbor,2,2,0,893020,false
+Bar Nunn,3,3,0,1077758,false
+Barboursville,1,1,0,36252,false
+Bardstown,3,2,1,1217135,false
+Barnstead,2,0,2,0,false
+Barnwell,2,2,0,7089158,false
+Barrington,9,9,0,12294005,false
+Barton,1,1,0,4880272,false
+Basehor,1,1,0,1985994,false
+Bastrop,2,2,0,512773,false
+Batavia,2,2,0,8686943,false
+Batesburg-Leesville,1,1,0,107112,false
+Batesville,5,5,0,8590879,false
+Bath,5,5,0,14605582,false
+Baxter Springs,2,2,0,189252,false
+Bay Harbor Islands,1,1,0,108012,false
+Bay St. Louis,1,1,0,97612,false
+Bayard,4,4,0,6728204,false
+Bayside,2,2,0,16490970,false
+Beach,1,1,0,303645,false
+Beach Park,3,2,1,13898896,false
+Bear River,1,1,0,460540,false
+Beaufort,1,1,0,6153832,false
+Beaumont,1,1,0,693172,false
+Beaver Falls,1,1,0,183743,false
+Beavercreek,1,1,0,709812,false
+Beaverton,3,3,0,4715688,false
+Becker,3,3,0,38579027,false
+Bedford,1,1,0,5478800,false
+Beebe,2,2,0,2512078,false
+Beech Grove,2,2,0,319664,false
+Beekman,1,1,0,212486,false
+Beeville,3,3,0,1817631,false
+Bel Aire,2,2,0,2212592,false
+Belchertown,1,1,0,10515,false
+Belding,2,2,0,7513270,false
+Belgrade,3,2,1,15995397,false
+Belington,2,2,0,622181,false
+Bella Vista,1,0,1,0,false
+Belle,3,3,0,1564084,false
+Belle Isle,2,2,0,4646528,false
+Belle Plaine,1,0,1,0,false
+Belleair,1,0,1,0,false
+Bellefontaine Neighbors,2,2,0,2097871,false
+Bellefonte,4,4,0,50577249,false
+Belleview,1,1,0,4203679,false
+Belleville,3,3,0,6994005,false
+Bellevue,1,1,0,2808742,false
+Bellmawr,2,2,0,236004,false
+Bellwood,4,4,0,1010963,false
+Belmont,4,4,0,2514792,false
+Belton,4,4,0,42720020,false
+Benbrook,1,1,0,2588157,false
+Bennet,1,1,0,153558,false
+Bennettsville,3,3,0,700391,false
+Bennington,6,6,0,11784383,false
+Benton,6,6,0,8392877,false
+Benton City,1,1,0,1401420,false
+Benton charter,3,3,0,10170830,false
+Benwood,1,1,0,133947,false
+Beresford,1,1,0,207315,false
+Berkeley,3,3,0,900130,false
+Berkeley Heights,3,1,2,4038,false
+Berlin,5,5,0,6450163,false
+Bernardsville,2,2,0,2258383,false
+Berthold,1,1,0,31195,false
+Berwick,6,5,1,8585334,false
+Berwyn,1,1,0,881905,false
+Berwyn Heights,1,0,1,0,false
+Bessemer,1,0,1,0,false
+Bethel,3,2,1,86167,false
+Beulah,1,1,0,129180,false
+Beverly Hills,3,3,0,9398913,false
+Big Lake,1,1,0,23753567,false
+Big Rapids,1,1,0,346180,false
+Big Sandy,2,2,0,231364,false
+Big Spring,1,1,0,10198191,false
+Big Stone Gap,2,1,1,203088,false
+Bishopville,1,0,1,0,false
+Black Jack,2,2,0,133009,false
+Black River Falls,1,1,0,36797839,false
+Blackfoot,1,1,0,98158,false
+Blades,2,2,0,897451,false
+Blakely,1,1,0,2768528,false
+Blanchard,1,1,0,68265,false
+Bloom,1,1,0,72697,false
+Bloomer,2,2,0,256013,false
+Bloomfield,5,5,0,556289,false
+Bloomington,1,1,0,1100357,false
+Bloomington City,1,1,0,373614,false
+Blue Ash,2,2,0,1198861,false
+Bluefield,2,0,2,0,false
+Blythe,6,6,0,1027497,false
+Blythewood,1,1,0,42405869,false
+Boardman,5,5,0,10831843,false
+Boerne,2,1,1,97910,false
+Bogota,1,1,0,9236216,false
+Bolivar,4,4,0,3869320,false
+Bonner Springs,1,0,1,0,false
+Boone,1,1,0,1802547,false
+Booneville,4,4,0,1099922,false
+Boonsboro,3,3,0,1832150,false
+Boonville,3,1,2,1004714,false
+Boothbay,1,1,0,107973,false
+Boscawen,3,3,0,583010,false
+Boscobel,2,2,0,999544,false
+Bottineau,1,1,0,28110,false
+Boulder,1,1,0,40779,false
+Bourbonnais,2,2,0,399811,false
+Bourne,1,1,0,118050,false
+Bowers,1,1,0,78880,false
+Bradford,6,6,0,4150843,false
+Bradley,3,3,0,9222190,false
+Brandenburg,1,1,0,129632,false
+Brandon,1,1,0,1364513,false
+Brattleboro,2,2,0,186080,false
+Brazil,3,3,0,223012,false
+Breaux Bridge,2,1,1,248211,false
+Bremen,1,0,1,0,false
+Brenham,2,2,0,12309129,false
+Brentwood,5,4,1,45963188,false
+Brewster,1,1,0,155514,false
+Briarcliff Manor,2,2,0,905337,false
+Bridgeport,3,3,0,1273217,false
+Bridger,1,1,0,3917078,false
+Bridgeview,2,2,0,2793245,false
+Bridgeville,3,3,0,639054,false
+Bridgewater,3,3,0,238338,false
+Bridgton,2,2,0,1433168,false
+Brier,1,1,0,2236471,false
+Brigham City,3,3,0,3931072,false
+Brighton,5,5,0,40681371,false
+Bristol,6,5,1,31179372,false
+Bristow,3,3,0,408649,false
+Britton,1,1,0,131187,false
+Broadus,2,2,0,583576,false
+Broadway,1,1,0,1523127,false
+Brockport,2,2,0,6475050,false
+Brodhead,1,1,0,5307423,false
+Broken Bow,2,2,0,16177721,false
+Brookfield,10,10,0,55026034,false
+Brookhaven,4,4,0,5516018,false
+Brookland,2,2,0,235780,false
+Brookline,4,4,0,1747166,false
+Brooklyn,1,1,0,104372,false
+Brownstown charter,1,1,0,956753,false
+Brownsville,1,1,0,27672,false
+Brownwood,2,2,0,1200494,false
+Brunswick,4,4,0,4410483,false
+Brush,1,0,1,0,false
+Brusly,1,1,0,177799,false
+Buckeye,1,1,0,4474,false
+Buckhannon,3,3,0,14800642,false
+Buckingham,2,2,0,10046774,false
+Buckley,1,1,0,96953,false
+Bucksport,1,0,1,0,false
+Bucyrus,1,1,0,591031,false
+Buena Vista,5,5,0,8571089,false
+Buffalo,3,3,0,108864,false
+Buffalo Grove,1,1,0,110982,false
+Buford,3,2,1,2716164,false
+Buhl,2,2,0,440531,false
+Bullhead City,3,1,2,5219027,false
+Burbank,1,1,0,1426971,false
+Burlington,5,5,0,2088383,false
+Burns,1,1,0,1384368,false
+Burnsville,3,1,2,449229,false
+Burr Ridge,2,2,0,52510099,false
+Burrillville,2,2,0,7564414,false
+Butler,5,5,0,2530971,false
+Buxton,1,1,0,1095148,false
+Byhalia,1,1,0,117247,false
+Byron,2,2,0,7920982,false
+Cadillac,3,2,1,13654590,false
+Cahokia Heights,1,1,0,47709,false
+Calais,2,2,0,77484,false
+Caldwell,1,1,0,107529,false
+Caledonia,3,3,0,4931553,false
+Calera,3,3,0,908687,false
+Calhoun,3,3,0,4158070,false
+Caliente,1,1,0,50042,false
+California City,4,1,3,1527426,false
+Calimesa,3,3,0,812895,false
+Calumet,2,2,0,3400588,false
+Cambridge,1,1,0,2098765,false
+Camden,4,4,0,20092157,false
+Cameron,2,2,0,3279616,false
+Camillus,3,3,0,2550157,false
+Camp Hill,1,1,0,157537,false
+Camp Verde,1,0,1,0,false
+Campton,2,2,0,4799477,false
+Canandaigua,3,3,0,1942704,false
+Cando,2,2,0,1028997,false
+Canfield,2,2,0,3964281,false
+Cannon Falls,1,1,0,147841,false
+Canton,4,4,0,8612425,false
+Canyon Lake,2,2,0,1646076,false
+Canyonville,3,3,0,24270760,false
+Capitan,1,0,1,0,false
+Carefree,2,2,0,4196241,false
+Carencro,2,2,0,557348,false
+Carey,3,0,3,0,false
+Carl Junction,1,1,0,337491,false
+Carlin,3,3,0,6597918,false
+Carlisle,2,2,0,1260658,false
+Carmel,1,1,0,7946017,false
+Carnation,1,1,0,74373,false
+Carnegie,2,2,0,360169,false
+Carpinteria,3,3,0,39841039,false
+Carrboro,1,0,1,0,false
+Carrington,2,2,0,166277,false
+Carrizozo,3,3,0,447615,false
+Carroll,2,2,0,13418901,false
+Carrollton,2,2,0,280169,false
+Carter Lake,2,2,0,14240518,false
+Cartersville,1,0,1,0,false
+Carthage,2,1,1,336025,false
+Caruthersville,1,1,0,398579,false
+Carver,6,3,3,7279745,false
+Cary,1,1,0,13688388,false
+Cascade,3,0,3,0,false
+Cascade Locks,1,1,0,25065723,false
+Casco,1,1,0,726079,false
+Caseyville,1,1,0,122478,false
+Cashmere,1,1,0,580259,false
+Castle Dale,2,1,1,15110,false
+Castle Pines,2,1,1,1844458,false
+Castle Rock,3,2,1,368839,false
+Castle Shannon,1,1,0,2876955,false
+Castleton,1,1,0,325817,false
+Castlewood,4,4,0,1107710,false
+Catasauqua,1,1,0,167415,false
+Catoosa,1,0,1,0,false
+Cave City,5,5,0,718807,false
+Cave Creek,1,1,0,134605,false
+Cayce,2,2,0,9797639,false
+Cañon City,3,3,0,43624386,false
+Cecil,3,3,0,556637,false
+Cecilton,3,3,0,209592,false
+Cedar Creek,2,2,0,3813887,false
+Cedar Hills,2,0,2,0,false
+Cedar Lake,5,5,0,11513657,false
+Center,2,2,0,2160514,false
+Center Line,1,1,0,370883,false
+Center Point,2,0,2,0,false
+Centerville,1,1,0,584954,false
+Centre,1,1,0,1208958,false
+Ceredo,1,1,0,3352131,false
+Ceres,2,2,0,31013741,false
+Ceresco,1,1,0,3556707,false
+Chagrin Falls,2,2,0,5953134,false
+Chamblee,1,1,0,6890694,false
+Champaign City,2,2,0,366932,false
+Channahon,4,4,0,1449168,false
+Chanute,2,2,0,264666,false
+Chariton,2,2,0,1654355,false
+Charles City,3,0,3,0,false
+Charles Town,1,0,1,0,false
+Charleston,7,7,0,35059294,false
+Charlestown,4,3,1,4586409,false
+Charlotte,4,4,0,35339921,false
+Chase City,3,1,2,17517,false
+Chaska,1,1,0,44606,false
+Chatfield,1,1,0,13425959,false
+Chatham,1,1,0,135238,false
+Chattahoochee,1,0,1,0,false
+Cheboygan,3,2,1,3862281,false
+Checotah,2,2,0,2266243,false
+Cheektowaga,1,1,0,7549078,false
+Chehalis,1,0,1,0,false
+Chelsea,1,1,0,6106082,false
+Cheney,2,2,0,195343,false
+Cherokee,1,1,0,23180878,false
+Cherokee Village,2,2,0,891868,false
+Cherry Hills Village,2,2,0,7515628,false
+Cherryvale,2,2,0,83962,false
+Cheshire,1,1,0,88648,false
+Chester,6,6,0,7057258,false
+Chesterton,1,0,1,0,false
+Cheswold,2,2,0,711428,false
+Cheverly,1,0,1,0,false
+Chickasaw,2,2,0,302829,false
+Chickasha,3,2,1,500874,false
+Chilhowie,2,2,0,505267,false
+Chilton,1,1,0,416744,false
+China,2,2,0,1207527,false
+Chincoteague,2,2,0,3362967,false
+Chisholm,2,2,0,226756,false
+Choctaw,2,2,0,48896955,false
+Choteau,1,1,0,201949,false
+Christiansburg,3,2,1,175120,false
+Chubbuck,3,1,2,198497,false
+Church Hill,3,3,0,457152,false
+Church Point,3,2,1,424433,false
+Cicero,3,3,0,4062653,false
+Cimarron,1,1,0,471709,false
+Cincinnati,4,3,1,3111434,false
+Circle,2,2,0,1683229,false
+Citrus Heights,1,1,0,108213,false
+Claremore,3,3,0,15206216,false
+Clarendon,1,1,0,1486379,false
+Clarinda,2,2,0,4496084,false
+Clarion,2,2,0,198647,false
+Clark,3,3,0,2509917,false
+Clark Fork,2,2,0,770562,false
+Clarkston,7,7,0,33401544,false
+Clatskanie,2,2,0,4634115,false
+Clawson,1,0,1,0,false
+Cle Elum,2,2,0,4077272,false
+Clear Lake,4,4,0,10692429,false
+Clearmont,2,2,0,608703,false
+Clearwater,2,2,0,2600888,false
+Clemmons,4,4,0,1656953,false
+Clemson,2,2,0,1419233,false
+Cleveland,9,7,2,18553770,false
+Clifton,2,2,0,461420,false
+Clifton Forge,2,2,0,889060,false
+Clifton Heights,1,1,0,418891,false
+Clinton,8,7,1,19363576,false
+Cloudcroft,3,3,0,520984,false
+Clover,2,2,0,181110,false
+Clyde Hill,2,2,0,323032,false
+Clyde Park,2,2,0,467327,false
+Coburg,1,1,0,131050,false
+Cocoa Beach,1,0,1,0,false
+Coffeyville,2,2,0,7197989,false
+Colby,3,3,0,119379,false
+Colchester,6,6,0,4242024,false
+Cold Spring,3,3,0,37534347,false
+Coldwater,1,1,0,83463,false
+Colerain,1,1,0,10514153,false
+Collingdale,2,2,0,380044,false
+Collinsville,4,4,0,2822789,false
+Colonial Heights,1,0,1,0,false
+Colorado City,3,2,1,159849,false
+Colstrip,2,2,0,1490044,false
+Colton,2,2,0,8884997,false
+Columbia,2,1,1,1690424,false
+Columbia City,3,3,0,11045116,false
+Columbus,4,4,0,758266,false
+Columbus Grove,1,1,0,430030,false
+Colusa,1,1,0,335753,false
+Combined Locks,2,2,0,583267,false
+Commerce City,2,1,1,51977,false
+Commerce charter,3,3,0,11315095,false
+Comstock charter,1,1,0,60967,false
+Concord,5,5,0,7508848,false
+Connell,3,3,0,87773,false
+Connellsville,3,3,0,490421,false
+Conover,2,1,1,18253669,false
+Conshohocken,1,1,0,114324,false
+Conway,2,2,0,3609517,false
+Coolbaugh,1,1,0,424561,false
+Coolidge,4,4,0,810352,false
+Coon Rapids,2,2,0,1067028,false
+Cooperstown,3,3,0,96731,false
+Coopersville,2,2,0,535455,false
+Coopertown,2,2,0,1480220,false
+Coquille,1,1,0,525685,false
+Corcoran,4,2,2,59520221,false
+Cordele,1,0,1,0,false
+Cordova,1,1,0,3617118,false
+Cornelius,1,0,1,0,false
+Corning,2,2,0,8577340,false
+Coronado,6,6,0,12741392,false
+Corry,2,2,0,9111768,false
+Corsicana,2,2,0,4779965,false
+Corte Madera,1,1,0,905414,false
+Cortez,2,2,0,294345,false
+Corvallis,1,1,0,60729,false
+Cosmopolis,2,2,0,3655261,false
+Cottage City,1,1,0,2656287,false
+Council,1,1,0,83112,false
+Council Grove,3,3,0,13848329,false
+Country Club Hills,6,6,0,12150615,false
+Coupeville,2,2,0,3158286,false
+Coventry,4,4,0,10803859,false
+Covina,2,2,0,1133359,false
+Covington,9,9,0,46642927,false
+Coweta,2,0,2,0,false
+Credit River,1,1,0,650434,false
+Creighton,1,1,0,531248,false
+Crescent City,2,2,0,26298494,false
+Cresskill,3,3,0,272077,false
+Crest Hill,3,3,0,36294644,false
+Creston,3,3,0,439180,false
+Crestwood,1,0,1,0,false
+Crete,5,4,1,353388,false
+Crittenden,2,1,1,36376,false
+Cromwell,1,1,0,106893,false
+Crooks,2,2,0,6919637,false
+Crookston,2,0,2,0,false
+Crooksville,3,3,0,396822,false
+Cross Plains,2,2,0,152169,false
+Crossett,2,2,0,559716,false
+Crossville,1,0,1,0,false
+Croton-on-Hudson,1,1,0,1258126,false
+Crowley,1,0,1,0,false
+Crystal Springs,2,2,0,1297130,false
+Cuba,2,2,0,513398,false
+Cuba City,1,1,0,44702,false
+Culbertson,1,1,0,1023064,false
+Cullman,1,0,1,0,false
+Culpeper,3,3,0,5099828,false
+Culver,1,1,0,2157141,false
+Cumberland,2,2,0,544494,false
+Cumru,2,1,1,195,false
+Cushing,2,2,0,23106436,false
+Cut Bank,1,1,0,44807,false
+D'Iberville,1,1,0,381781,false
+Dacono,2,0,2,0,false
+Dade City,4,4,0,885155,false
+Dalhart,1,1,0,93986,false
+Dalton,2,2,0,484606,false
+Danvers,3,3,0,2058844,false
+Danville,5,5,0,4798561,false
+Daphne,1,0,1,0,false
+Darby,2,2,0,290656,false
+Dardanelle,1,1,0,198733,false
+Dardenne Prairie,1,1,0,3130541,false
+Dartmouth,2,2,0,6612592,false
+David City,2,2,0,3998309,false
+Davidson,3,3,0,54164849,false
+Davison,2,2,0,7648798,false
+Dayton,3,2,1,1099174,false
+Daytona Beach Shores,1,1,0,105533,false
+De Pere,1,1,0,77903,false
+De Smet,1,1,0,169703,false
+De Witt,3,3,0,1234993,false
+DeWitt,3,3,0,19373048,false
+DeWitt charter,2,0,2,0,false
+Deadwood,2,2,0,784725,false
+Decatur,4,4,0,337507,false
+Decorah,1,1,0,265061,false
+Deer Lodge,1,0,1,0,false
+Deer Park,1,0,1,0,false
+Deerfield,1,0,1,0,false
+Defiance,1,1,0,768936,false
+Del City,4,3,1,550116,false
+Del Rio,2,1,1,1016370,false
+Delafield,8,5,3,1786005,false
+Delcambre,2,1,1,579480,false
+Delhi,2,2,0,604384,false
+Delhi charter,2,2,0,34244,false
+Dell Rapids,2,2,0,74513,false
+Delmar,4,4,0,1443335,false
+Delta Junction,2,2,0,1248567,false
+Demopolis,2,1,1,353192,false
+Denham Springs,2,2,0,424924,false
+Denison,4,4,0,38727050,false
+Denton,2,2,0,367256,false
+Denver,1,0,1,0,false
+Derby,2,2,0,3383103,false
+Derry,1,1,0,139849,false
+Detroit,1,1,0,1083226,false
+Detroit Lakes,3,3,0,43623134,false
+Dewey Beach,1,1,0,1090670,false
+Dewey-Humboldt,1,0,1,0,false
+Diamondville,3,3,0,489157,false
+Dickinson,3,3,0,34854745,false
+Dickson,1,1,0,419633,false
+Dickson City,2,2,0,232077,false
+Dillingham,1,1,0,585165,false
+Dilworth,2,2,0,3041624,false
+Dobbs Ferry,3,2,1,8508818,false
+Dodgeville,1,1,0,2443598,false
+Dolton,1,1,0,1662767,false
+Donald,3,3,0,4474647,false
+Donna,3,3,0,32527278,false
+Doraville,1,1,0,669444,false
+Dormont,4,4,0,2705822,false
+Dorr,1,1,0,230271,false
+Douglas,2,2,0,406127,false
+Douglasville,1,0,1,0,false
+Dover,3,0,3,0,false
+Dover-Foxcroft,1,1,0,101737,false
+Dowagiac,1,1,0,8347833,false
+Downers Grove,3,3,0,4836140,false
+Doylestown,2,2,0,5273472,false
+Drayton,1,1,0,87733,false
+Driggs,2,1,1,349983,false
+Du Page,1,1,0,15606049,false
+DuPont,1,1,0,96313,false
+Dublin,4,3,1,3848523,false
+Duchesne,2,0,2,0,false
+Duchouquet,3,3,0,1561249,false
+Dumfries,2,1,1,2437639,false
+Dunbar,1,1,0,66509,false
+Duncan,3,2,1,5473521,false
+Dundee,3,3,0,23037641,false
+Dunkirk,3,1,2,1096899,false
+Durant,1,1,0,83185,false
+Durham,1,1,0,5856939,false
+Dutton,3,3,0,5804331,false
+Duxbury,4,4,0,6753046,false
+Eagar,2,1,1,1105604,false
+Eagle,1,1,0,1962054,false
+Eagle Grove,3,3,0,6578573,false
+East Aurora,1,1,0,289694,false
+East Bethel,3,3,0,75853578,false
+East Chicago,5,5,0,2394965,false
+East Goshen,3,3,0,25751320,false
+East Grand Forks,3,3,0,61897259,false
+East Grand Rapids,1,1,0,3955311,false
+East Greenwich,3,3,0,6130253,false
+East Haddam,1,1,0,297766,false
+East Hartford,3,1,2,1237593,false
+East Haven,2,2,0,239746,false
+East Helena,3,3,0,338906,false
+East Hempfield,2,2,0,8884698,false
+East Lampeter,2,2,0,1512216,false
+East Lyme,3,3,0,10693098,false
+East Montpelier,1,1,0,799252,false
+East Point,1,1,0,76590,false
+East Ridge,3,3,0,4232463,false
+East Rochester,1,1,0,140285,false
+East St. Louis,1,1,0,52559,false
+East Troy,1,1,0,107994,false
+East Whiteland,2,2,0,888588,false
+East Windsor,2,1,1,3135,false
+Easton,1,1,0,3740411,false
+Eastport,2,2,0,467878,false
+Eaton Rapids,1,1,0,380097,false
+Eatonville,3,3,0,11507491,false
+Eau Claire,3,3,0,404358,false
+Economy,2,2,0,1259749,false
+Ecorse,3,3,0,7393145,false
+Edgemont,1,1,0,130290,false
+Edgewood,1,1,0,1289686,false
+Edinboro,2,2,0,1444933,false
+Edinburgh,2,2,0,502602,false
+Edison,2,2,0,1181837,false
+Edmonston,1,1,0,132399,false
+Edwardsville,4,4,0,2183889,false
+Effingham,3,2,1,1525746,false
+El Dorado,4,4,0,14097047,false
+El Mirage,2,2,0,620636,false
+El Paso,1,1,0,39401,false
+El Reno,1,1,0,6435480,false
+El Segundo,1,0,1,0,false
+Eldon,1,1,0,67612,false
+Eldridge,2,2,0,192080,false
+Elgin,8,8,0,4913480,false
+Elim,1,1,0,1360197,false
+Eliot,2,2,0,60566,false
+Elizabeth,1,1,0,541585,false
+Elizabeth City,3,3,0,2243381,false
+Elizabethton,2,2,0,1523116,false
+Elk Mountain,2,2,0,3180190,false
+Elk Ridge,2,2,0,74540325,false
+Elkins,4,4,0,4104443,false
+Elko New Market,1,1,0,1705819,false
+Elkton,2,2,0,956377,false
+Ellendale,4,4,0,631659,false
+Ellettsville,4,4,0,4933065,false
+Ellington,2,2,0,15453582,false
+Ellsworth,6,5,1,7811945,false
+Elm Grove,3,2,1,1322294,false
+Elmhurst,2,2,0,2874302,false
+Elmwood Park,1,1,0,172981,false
+Elon,2,2,0,32620279,false
+Elsmere,2,2,0,325527,false
+Elwood,2,1,1,205114,false
+Ely,2,2,0,4591446,false
+Emerado,2,2,0,1726283,false
+Emerson,2,2,0,16072506,false
+Emmaus,1,1,0,419724,false
+Emmetsburg,1,1,0,315044,false
+Emmitsburg,3,2,1,6321482,false
+Emporia,1,1,0,88848,false
+Englewood,3,3,0,5324443,false
+Ennis,5,5,0,5613592,false
+Enoch,2,0,2,0,false
+Enosburg Falls,1,1,0,235349,false
+Enterprise,3,1,2,524007,false
+Ephraim,1,0,1,0,false
+Erath,2,2,0,3238202,false
+Erda,2,0,2,0,false
+Estancia,3,3,0,2307299,false
+Estherville,2,2,0,45179384,false
+Eudora,2,2,0,316251,false
+Eunice,2,2,0,451780,false
+Eureka,4,3,1,246614,false
+Evans,3,2,1,215452,false
+Evansdale,1,1,0,8369966,false
+Evansville,5,5,0,2060765,false
+Everson,3,3,0,3222389,false
+Excelsior Springs,1,1,0,1548,false
+Exeter,8,8,0,9930749,false
+Exmore,2,2,0,172536,false
+Fair Haven,6,3,3,1174283,false
+Fair Oaks Ranch,2,2,0,34971012,false
+Fairburn,1,1,0,327799,false
+Fairbury,2,2,0,825941,false
+Fairfax,3,3,0,10127069,false
+Fairfield,11,10,1,6131060,false
+Fairfield Bay,3,3,0,2261725,false
+Fairhaven,4,4,0,4447691,false
+Fairmont,2,1,1,865218,false
+Fairmount Heights,1,1,0,216536,false
+Fairport,1,1,0,443457,false
+Fairview,5,5,0,13484352,false
+Falls Church,1,0,1,0,false
+Falls City,3,3,0,8112510,false
+Fallsburg,1,0,1,0,false
+Falmouth,2,2,0,901588,false
+False Pass,2,2,0,1991237,false
+Farmerville,2,2,0,29847338,false
+Farmingdale,1,1,0,118978,false
+Farmington,10,10,0,46430966,false
+Farr West,2,0,2,0,false
+Fate,1,1,0,110586,false
+Faulkton,4,3,1,20398565,false
+Fayetteville,9,9,0,47030705,false
+Federal Heights,1,1,0,415617,false
+Federal Way,1,1,0,114069,false
+Ferriday,1,1,0,3776697,false
+Ferrisburgh,4,3,1,957614,false
+Ferron,2,1,1,2090499,false
+Festus,4,4,0,4246790,false
+Fillmore,2,2,0,5275482,false
+Fircrest,3,1,2,2573306,false
+Firebaugh,3,3,0,4085016,false
+Firestone,2,2,0,248582,false
+Flagler Beach,1,1,0,477660,false
+Flandreau,3,3,0,258738,false
+Flatwoods,1,0,1,0,false
+Flemingsburg,1,1,0,6006417,false
+Fletcher,2,2,0,2605097,false
+Flint,2,2,0,297531,false
+Florence,6,5,1,9528977,false
+Flowery Branch,2,1,1,4829371,false
+Floyd,1,1,0,126849,false
+Folcroft,1,1,0,476436,false
+Foley,2,1,1,6575292,false
+Fontana,1,1,0,97805,false
+Forest Acres,2,2,0,111268,false
+Forest City,5,5,0,7317347,false
+Forest Heights,1,1,0,356975,false
+Forest Hill,1,0,1,0,false
+Forest Hills,2,2,0,276194,false
+Forest Park,2,1,1,3124895,false
+Forks,3,3,0,467553,false
+Forman,2,2,0,134699,false
+Forney,6,3,3,321142,false
+Forrest City,1,1,0,37647,false
+Forsyth,4,4,0,1077494,false
+Fort Benton,3,1,2,183113,false
+Fort Bragg,1,0,1,0,false
+Fort Calhoun,2,2,0,10439754,false
+Fort Fairfield,3,3,0,2910032,false
+Fort Kent,1,1,0,159603,false
+Fort Laramie,1,1,0,256037,false
+Fort Lupton,1,0,1,0,false
+Fort Madison,2,2,0,831638,false
+Fort Meade,3,3,0,126238754,false
+Fort Mill,2,2,0,286288,false
+Fort Mitchell,2,2,0,1424338,false
+Fort Morgan,2,1,1,972057,false
+Fort Oglethorpe,3,2,1,2388517,false
+Fort Payne,3,3,0,1582130,false
+Fort Pierre,2,2,0,419618,false
+Fort Thomas,2,2,0,485200,false
+Fort Wayne,3,3,0,20251394,false
+Fort Wright,2,2,0,490445,false
+Fort Yukon,1,1,0,1571787,false
+Fortuna,2,2,0,2162708,false
+Foster,3,3,0,5761042,false
+Fountain,1,0,1,0,false
+Fountain Hills,4,4,0,25297162,false
+Fox Lake,3,3,0,754536,false
+Foxborough,2,1,1,1615989,false
+Francis,1,1,0,324633,false
+Frankenmuth,2,2,0,6087683,false
+Frankfort,4,4,0,729688,false
+Franklin,7,7,0,4592942,false
+Franklin Lakes,1,1,0,59257,false
+Franklin Park,6,6,0,5415050,false
+Frannie,2,1,1,19047,false
+Fraser,1,1,0,51936,false
+Frederica,2,2,0,343382,false
+Frederick,1,1,0,1322848,false
+Fredericktown,1,1,0,240881,false
+Fredonia,2,2,0,303338,false
+Freehold,4,4,0,6298834,false
+Freeman,1,1,0,163817,false
+Freeport,3,3,0,3299106,false
+Fremont,3,3,0,14125430,false
+Friendsville,3,3,0,2876060,false
+Froid,2,2,0,94250,false
+Fromberg,1,1,0,4546788,false
+Front Royal,2,2,0,177070,false
+Fruit Heights,1,1,0,1220406,false
+Fruitland,3,3,0,257648,false
+Fruitland Park,1,0,1,0,false
+Fruitport charter,2,2,0,2676851,false
+Fulton,2,2,0,7513240,false
+Fultondale,2,0,2,0,false
+Gadsden,1,1,0,28240,false
+Gaffney,1,1,0,91546,false
+Gaines charter,1,1,0,20562254,false
+Gainesville,2,1,1,85669,false
+Galena,3,3,0,606610,false
+Gambell,1,1,0,803316,false
+Gardena,2,2,0,3109484,false
+Gardendale,1,0,1,0,false
+Garfield charter,1,1,0,1455652,false
+Garland,2,2,0,1064762,false
+Garretson,2,2,0,949845,false
+Garrett,2,2,0,255527,false
+Garrettsville,2,2,0,2387795,false
+Gate City,2,1,1,2167243,false
+Gatesville,4,2,2,156356,false
+Gearhart,1,1,0,9915,false
+Genesee,1,1,0,74259,false
+Genesee charter,2,2,0,174795,false
+Geneseo,1,1,0,1727191,false
+Geneva,3,3,0,3299527,false
+Genoa,6,6,0,3898477,false
+Genoa City,1,1,0,137784,false
+Gentry,3,3,0,1791193,false
+Gibsonburg,1,1,0,228593,false
+Gibsonville,5,5,0,1373885,false
+Glade Spring,3,3,0,5309162,false
+Gladstone,2,2,0,10546526,false
+Glasgow,2,2,0,114271,false
+Glassboro,1,1,0,106444,false
+Glen Carbon,4,4,0,40478332,false
+Glen Dale,2,2,0,70285,false
+Glen Ridge,2,2,0,199742,false
+Glen Rock,3,3,0,1506290,false
+Glen Ullin,1,1,0,2178433,false
+Glenarden,1,1,0,180744,false
+Glenburn,1,1,0,143395,false
+Glencoe,6,6,0,22925723,false
+Glenolden,1,1,0,1794348,false
+Glenville,1,1,0,80933,false
+Glenwood,1,1,0,541994,false
+Glocester,3,3,0,7739668,false
+Gloucester City,1,0,1,0,false
+Godfrey,2,1,1,1424705,false
+Gold Bar,2,2,0,592365,false
+Gold Beach,3,3,0,12085581,false
+Goldendale,1,1,0,1915440,false
+Goldsboro,2,0,2,0,false
+Goodland,1,1,0,7129800,false
+Goodlettsville,2,2,0,185106,false
+Gordon,1,1,0,182406,false
+Gordonsville,2,2,0,1037822,false
+Gorham,2,2,0,1971766,false
+Goshen,8,8,0,7012767,false
+Gosnell,1,1,0,4751993,false
+Gothenburg,3,3,0,11169317,false
+Grafton,1,0,1,0,false
+Graham,2,2,0,16805631,false
+Grain Valley,4,4,0,25877479,false
+Gramercy,1,1,0,214688,false
+Granbury,2,2,0,304265,false
+Granby,1,1,0,9838404,false
+Grand Blanc,3,2,1,243096,false
+Grand Blanc charter,1,1,0,3009669,false
+Grand Chute,5,5,0,1017131,false
+Grand Haven,2,2,0,3717433,false
+Grand Haven charter,1,1,0,1341122,false
+Grand Island,1,1,0,62530,false
+Grand Isle,2,2,0,996213,false
+Grand Ledge,2,2,0,818290,false
+Grangeville,2,2,0,313863,false
+Granite Falls,1,1,0,2012735,false
+Grant,2,0,2,0,false
+Grantham,3,3,0,13772558,false
+Grantsville,3,2,1,18405742,false
+Granville,2,1,1,46003,false
+Gray,2,2,0,3158792,false
+Great Bend,4,2,2,349162,false
+Great Neck,2,2,0,1077940,false
+Greene,1,1,0,100042,false
+Greenland,1,1,0,304796,false
+Greensburg,2,2,0,1176071,false
+Greenville,1,1,0,2261324,false
+Greenwich,3,3,0,1602588,false
+Greenwood,5,4,1,8587786,false
+Greenwood Village,2,1,1,95181,false
+Gregory,2,2,0,343224,false
+Gretna,4,4,0,700091,false
+Gridley,1,1,0,2012522,false
+Griffin,1,1,0,568020,false
+Grinnell,1,0,1,0,false
+Grosse Pointe Farms,3,3,0,5674788,false
+Grosse Pointe Park,2,2,0,4419673,false
+Grosse Pointe Woods,1,1,0,197523,false
+Groton,1,0,1,0,false
+Grottoes,4,4,0,939111,false
+Grove City,2,2,0,400091,false
+Grovetown,5,5,0,5494834,false
+Grundy Center,3,3,0,2593346,false
+Guadalupe,6,6,0,28923426,false
+Guernsey,3,3,0,232009,false
+Guilford,2,2,0,3879680,false
+Gulf Breeze,1,1,0,1774967,false
+Gulf Shores,3,1,2,10061109,false
+Gulfport,1,0,1,0,false
+Gunnison,1,0,1,0,false
+Gustavus,1,1,0,346218,false
+Guymon,1,0,1,0,false
+Gwinner,3,3,0,196056,false
+Gypsum,3,2,1,15110753,false
+Hackettstown,1,1,0,44844,false
+Haddonfield,1,1,0,2918552,false
+Hailey,2,2,0,1198137,false
+Haledon,1,1,0,12154351,false
+Hales Corners,3,3,0,424644,false
+Haleyville,2,0,2,0,false
+Halfmoon,1,1,0,9997610,false
+Hallowell,1,1,0,1089247,false
+Halstead,1,1,0,12909333,false
+Hamburg,5,2,3,10603484,false
+Hamilton,3,2,1,3364218,false
+Hampden,3,3,0,7348471,false
+Hampton,2,2,0,754856,false
+Hanahan,1,0,1,0,false
+Hancock,1,1,0,167617,false
+Hanover,8,8,0,31137601,false
+Hanover Park,2,2,0,14704985,false
+Harborcreek,2,0,2,0,false
+Hardwick,2,2,0,351270,false
+Harlan,1,1,0,429259,false
+Harlem,1,1,0,228879,false
+Harlowton,2,2,0,248447,false
+Harper Woods,2,2,0,4593542,false
+Harpswell,1,1,0,1430970,false
+Harrah,3,3,0,43323562,false
+Harriman,1,1,0,567559,false
+Harrington,1,1,0,337381,false
+Harrisburg,2,2,0,637671,false
+Harrison,3,3,0,8988242,false
+Harrisonville,1,1,0,982872,false
+Hartford,1,1,0,5305001,false
+Hartford City,1,1,0,129869,false
+Hartland,3,3,0,2649851,false
+Hartselle,2,2,0,299034,false
+Harvey,4,4,0,4789161,false
+Harwich,1,1,0,276184,false
+Haskell,3,3,0,135847,false
+Hastings,3,3,0,25827637,false
+Hastings-on-Hudson,1,1,0,128590,false
+Hatch,2,2,0,526870,false
+Hatton,1,1,0,33196,false
+Haughton,2,1,1,34695688,false
+Hauser,2,2,0,206765,false
+Havelock,2,2,0,16878990,false
+Haverford,1,0,1,0,false
+Hayden,2,2,0,733631,false
+Haymarket,1,1,0,75321,false
+Hazel Park,2,2,0,12554344,false
+Hazen,2,2,0,323299,false
+Healdsburg,1,1,0,46884072,false
+Heavener,1,1,0,78597,false
+Heber,3,1,2,114740,false
+Hebron,9,9,0,35782776,false
+Helena-West Helena,1,1,0,159163,false
+Hellertown,4,4,0,6822370,false
+Helper,1,0,1,0,false
+Henderson,2,2,0,663662,false
+Hendersonville,3,3,0,21047253,false
+Henlopen Acres,1,1,0,425412,false
+Henniker,1,0,1,0,false
+Henryetta,3,3,0,172197,false
+Herington,1,1,0,858672,false
+Herkimer,2,2,0,543382,false
+Hermantown,2,2,0,7374973,false
+Hermon,1,1,0,1153849,false
+Hermosa Beach,1,1,0,19,false
+Herrin,4,4,0,47319328,false
+Heyburn,2,2,0,340037,false
+Hialeah,1,0,1,0,false
+Hiawatha,3,3,0,2381505,false
+Hickman,1,0,1,0,false
+Hickory Hills,4,4,0,1502472,false
+High Springs,2,2,0,2276074,false
+Highgate,3,3,0,5739857,false
+Highland,7,2,5,8483291,false
+Highland Beach,3,3,0,4488055,false
+Highland Heights,2,2,0,704822,false
+Highland Park,2,2,0,4146731,false
+Highland charter,2,2,0,17116381,false
+Hightstown,2,2,0,8750111,false
+Hillsboro,2,2,0,3533531,false
+Hillsborough,2,2,0,5247773,false
+Hillsdale,1,1,0,588922,false
+Hillsville,1,1,0,551998,false
+Hilltown,3,3,0,845357,false
+Hilton,3,3,0,1788128,false
+Hilton Head Island,2,1,1,139269,false
+Hinesburg,2,2,0,457751,false
+Hinsdale,4,4,0,75568431,false
+Hinton,2,2,0,732387,false
+Hobart,3,3,0,910706,false
+Hobbs,1,1,0,1199365,false
+Hoisington,2,2,0,583964,false
+Holbrook,3,3,0,269324,false
+Holdenville,1,1,0,550512,false
+Holdrege,1,1,0,793315,false
+Holladay,2,0,2,0,false
+Hollister,2,1,1,360850,false
+Holliston,1,1,0,2850,false
+Holly,3,3,0,129071,false
+Holly Springs,2,2,0,6493776,false
+Holmdel,2,2,0,2988229,false
+Honea Path,1,1,0,93982,false
+Honey Creek,1,1,0,844965,false
+Hooksett,2,2,0,1811279,false
+Hooper,1,1,0,1058774,false
+Hope Mills,3,3,0,12338508,false
+Hopewell,2,2,0,30157578,false
+Hopkinton,3,3,0,3012377,false
+Hoquiam,2,2,0,2762884,false
+Horicon,2,2,0,1303728,false
+Hornell,1,1,0,102378,false
+Horseheads,2,2,0,675553,false
+Horsham,1,1,0,191629,false
+Hot Springs,4,4,0,270261,false
+Houlton,4,4,0,5808939,false
+Houston,2,2,0,1070049,false
+Howard,2,1,1,25917,false
+Howards Grove,3,3,0,314839,false
+Howell,2,1,1,9421239,false
+Howland,1,1,0,1631473,false
+Hudson,2,2,0,3689182,false
+Hudson Falls,2,2,0,1027037,false
+Hueytown,3,1,2,30374616,false
+Hugo,1,1,0,71211,false
+Hulett,5,5,0,669910,false
+Humble,2,2,0,27618561,false
+Humboldt,1,1,0,65627,false
+Huntersville,1,1,0,44484095,false
+Huntertown,2,2,0,163120,false
+Huntingburg,1,1,0,225651,false
+Huntingdon,2,2,0,2148694,false
+Huntington,2,2,0,737616,false
+Huntington Woods,1,1,0,16206,false
+Huntley,3,3,0,3116074,false
+Hurley,2,2,0,640481,false
+Huron charter,1,1,0,189403,false
+Hurricane,1,0,1,0,false
+Hurstbourne,2,2,0,2014661,false
+Huslia,1,1,0,1893170,false
+Hutto,2,2,0,112630,false
+Huxley,1,1,0,30393551,false
+Hyde Park,5,2,3,1119908,false
+Hyrum,1,1,0,215267,false
+Idaho Falls,1,1,0,1189865,false
+Imperial,1,0,1,0,false
+Imperial Beach,1,1,0,123415,false
+Independence,1,1,0,183524,false
+Independence charter,1,1,0,905325,false
+Indian Harbour Beach,1,1,0,17661762,false
+Indian Head,2,2,0,94922,false
+Indian River Shores,3,3,0,31390270,false
+Indianapolis city (balance),2,2,0,5004105,false
+Indiantown,1,0,1,0,false
+Indio,2,2,0,302694,false
+Ingleside,1,1,0,34524425,false
+Inglewood,2,2,0,792539,false
+Inkom,3,3,0,457923,false
+Inman,1,1,0,914686,false
+International Falls,3,3,0,339754,false
+Inver Grove Heights,3,2,1,1555885,false
+Ione,1,1,0,5592115,false
+Iowa,3,3,0,517895,false
+Iowa Falls,3,3,0,213045,false
+Ipswich,3,3,0,172577,false
+Iron Mountain,4,4,0,7097913,false
+Irondale,4,3,1,3757388,false
+Ironwood,1,1,0,48977,false
+Irrigon,2,2,0,178110,false
+Irvine,1,0,1,0,false
+Isanti,2,2,0,14362983,false
+Island Lake,2,2,0,486908,false
+Isle of Palms,2,2,0,542936,false
+Ivins,1,0,1,0,false
+Jackson,10,10,0,17333984,false
+Jacksonville,4,1,3,1611351,false
+Jaffrey,3,3,0,20710432,false
+James Island,1,1,0,71265,false
+Jamestown,2,2,0,6938463,false
+Jasper,9,8,1,955136,false
+Jay,1,1,0,99737,false
+Jeanerette,2,1,1,690498,false
+Jeannette,5,5,0,17622512,false
+Jefferson,9,9,0,15327395,false
+Jefferson City,2,2,0,117900,false
+Jeffersonville,2,2,0,1594393,false
+Jemez Springs,1,1,0,6298102,false
+Jena,2,1,1,96521,false
+Jenks,1,1,0,13261169,false
+Jennings,1,1,0,82756,false
+Jerome,3,3,0,500464,false
+Jesup,3,3,0,677975,false
+Johns Creek,1,1,0,1564704,false
+Johnson,4,4,0,2614228,false
+Johnson Creek,1,1,0,748169,false
+Johnston,3,3,0,10368415,false
+Johnstown,4,4,0,2391668,false
+Joliet,3,2,1,1213625,false
+Jonesborough,1,1,0,2665428,false
+Joplin,3,1,2,302820,false
+Jordan,2,1,1,157053,false
+Junction City,6,6,0,8869527,false
+Jupiter,1,1,0,152704,false
+Kachemak,3,3,0,983126,false
+Kadoka,4,4,0,150301,false
+Kake,1,1,0,1650179,false
+Kalamazoo,1,0,1,0,false
+Kalamazoo charter,1,1,0,1812365,false
+Kamas,2,0,2,0,false
+Kanab,3,1,2,82228,false
+Kankakee,1,1,0,84943,false
+Kansas City,3,2,1,31105824,false
+Kasson,1,1,0,9711630,false
+Keansburg,2,2,0,862577,false
+Kearney,1,1,0,8988481,false
+Kechi,1,1,0,8762602,false
+Keedysville,3,3,0,1012914,false
+Kemmerer,3,3,0,805472,false
+Kendallville,2,2,0,61307,false
+Kenmare,1,1,0,502704,false
+Kennebunk,1,1,0,803379,false
+Kenneth City,1,1,0,2704644,false
+Kennett,2,2,0,2538275,false
+Kensington,1,1,0,3192939,false
+Keokuk,3,2,1,12380650,false
+Kernersville,2,2,0,215509,false
+Kettle Falls,3,3,0,1331937,false
+Kewanee,2,2,0,8405079,false
+Kewaskum,1,1,0,6427837,false
+Key Biscayne,1,0,1,0,false
+Kiel,2,2,0,753884,false
+Kilgore,2,2,0,3593070,false
+Kill Devil Hills,1,1,0,102961,false
+Killdeer,3,3,0,2366767,false
+Killingly,4,4,0,10961319,false
+Kimberly,3,3,0,21138094,false
+Kinder,1,1,0,118811,false
+Kindred,2,2,0,2006144,false
+King,2,2,0,300628,false
+King Cove,1,1,0,69457,false
+Kingman,2,2,0,24578231,false
+Kingsburg,2,2,0,1510707,false
+Kingsford,1,1,0,117340,false
+Kingsland,1,1,0,19559,false
+Kingston,1,1,0,7058100,false
+Kingstree,1,1,0,273132,false
+Kingsville,3,3,0,23956913,false
+Kingwood,1,1,0,55433,false
+Kinnelon,3,2,1,1302781,false
+Kinston,2,2,0,67851466,false
+Kirtland,1,1,0,4813377,false
+Kittery,1,1,0,13806,false
+Kitzmiller,5,5,0,14566066,false
+Kivalina,1,1,0,1754377,false
+Knightdale,2,2,0,226092,false
+Knoxville,2,1,1,216839,false
+Kokomo,1,1,0,18153004,false
+Kotlik,1,1,0,707437,false
+Kotzebue,2,1,1,1930710,false
+La Barge,1,0,1,0,false
+La Center,3,3,0,851256,false
+La Crescent,1,1,0,10387638,false
+La Follette,1,1,0,326075,false
+La Grange,3,2,1,9155357,false
+La Marque,1,1,0,3114392,false
+La Mesa,3,2,1,196603,false
+La Palma,3,3,0,1331445,false
+La Pine,1,1,0,5154410,false
+La Porte,1,1,0,206170,false
+La Verkin,1,0,1,0,false
+LaBelle,2,2,0,29442222,false
+LaGrange,2,0,2,0,false
+LaSalle,7,7,0,21504161,false
+Lacey,1,1,0,308376,false
+Ladysmith,3,3,0,400022,false
+Lafayette,6,5,1,64084037,false
+Laguna Beach,1,0,1,0,false
+Laguna Woods,1,1,0,1974516,false
+Lake,4,4,0,7101034,false
+Lake Arthur,2,2,0,258497,false
+Lake City,5,4,1,1582022,false
+Lake Elmo,3,1,2,1737,false
+Lake Forest,3,3,0,8230095,false
+Lake Hallie,2,2,0,313821,false
+Lake Jackson,3,3,0,35607049,false
+Lake Mills,1,0,1,0,false
+Lake Norden,1,1,0,227590,false
+Lake Park,2,2,0,722852,false
+Lake Station,1,0,1,0,false
+Lake View,2,2,0,10350636,false
+Lake Villa,1,1,0,212,false
+Lake Zurich,1,1,0,116337,false
+Lakemore,1,1,0,412720,false
+Lakeview,1,1,0,51657,false
+Lakeway,2,2,0,23923411,false
+Lakewood,4,4,0,10274158,false
+Lakota,2,2,0,387690,false
+Lamar,1,0,1,0,false
+Lancaster,6,6,0,5747103,false
+Landover Hills,3,3,0,447719,false
+Landrum,2,2,0,368265,false
+Lanett,1,1,0,141946,false
+Langdon,2,2,0,282808,false
+Lansing,2,2,0,2777119,false
+Lantana,1,1,0,2926859,false
+Lapeer,2,2,0,30709055,false
+Las Vegas,3,3,0,5378334,false
+Latrobe,4,4,0,6916039,false
+Lauderdale-by-the-Sea,2,2,0,89948614,false
+Laurel,2,0,2,0,false
+Laurens,1,1,0,238720,false
+Laurinburg,2,2,0,893145,false
+Lawrence,2,2,0,794639,false
+Lawrenceburg,4,4,0,2366402,false
+Lawrenceville,4,0,4,0,false
+Le Sueur,2,0,2,0,false
+Lead,1,1,0,368223,false
+Leander,1,1,0,172916,false
+Leavenworth,2,2,0,4275544,false
+Lebanon,2,2,0,188623,false
+Ledgeview,1,0,1,0,false
+Ledyard,3,0,3,0,false
+Lee's Summit,1,0,1,0,false
+Leeds,3,3,0,75786,false
+Leipsic,2,2,0,265471,false
+Leitchfield,1,1,0,1026729,false
+Leland,3,3,0,389446,false
+Lemmon,1,1,0,79245,false
+Lemon,2,2,0,3491975,false
+Lemont,3,3,0,17141549,false
+Lennox,2,2,0,1296796,false
+Lenoir,2,2,0,17730420,false
+Lenoir City,4,4,0,2912235,false
+Leonia,1,1,0,1428785,false
+Lewisburg,8,8,0,1795436,false
+Lewiston,3,2,1,390958,false
+Lewistown,2,2,0,500321,false
+Lewisville,2,2,0,12045873,false
+Lexington,4,4,0,36989450,false
+Libby,1,1,0,3541217,false
+Liberty,8,6,2,3674655,false
+Lighthouse Point,3,3,0,253141,false
+Lilburn,2,1,1,102630,false
+Lima,1,1,0,93049,false
+Limerick,2,2,0,2913740,false
+Limestone,1,1,0,190506,false
+Limon,1,1,0,3029989,false
+Lincoln,4,4,0,17265946,false
+Lincoln Park,3,3,0,3317221,false
+Lindenhurst,3,3,0,15939085,false
+Lindon,1,0,1,0,false
+Lisbon,6,6,0,9050599,false
+Lisle,1,1,0,89032,false
+Litchfield,3,3,0,1972673,false
+Litchfield Park,2,2,0,48345,false
+Little Canada,2,0,2,0,false
+Little Compton,3,3,0,5363915,false
+Little Egg Harbor,3,3,0,584903,false
+Little Falls,2,2,0,36613791,false
+Little Ferry,1,0,1,0,false
+Little Flock,2,2,0,3517352,false
+Little Rock,6,6,0,5399430,false
+Little Silver,1,1,0,623152,false
+Littleton,2,2,0,2678655,false
+Live Oak,4,4,0,4820145,false
+Livingston,2,2,0,11387603,false
+Loch Lynn Heights,2,2,0,350004,false
+Lock Haven,4,4,0,13856479,false
+Locust,2,2,0,1832693,false
+Logansport,3,3,0,875719,false
+Loganville,1,1,0,308469,false
+Lonaconing,2,2,0,96077,false
+London,2,2,0,21881057,false
+Lone Tree,2,2,0,4983074,false
+Long Branch,1,1,0,88177,false
+Lonoke,3,3,0,403431,false
+Lonsdale,4,4,0,433942,false
+Los Alamitos,1,1,0,1104808,false
+Los Banos,2,2,0,27571961,false
+Loudon,3,3,0,4657327,false
+Louisa,1,1,0,828154,false
+Louisburg,1,1,0,903674,false
+Lovelock,3,3,0,1504140,false
+Lovettsville,3,2,1,8887075,false
+Lowell,3,3,0,808148,false
+Lower Moreland,2,2,0,280120,false
+Lower Paxton,1,1,0,344642,false
+Lower Salford,2,2,0,189767,false
+Loxley,1,1,0,7054157,false
+Lucedale,2,2,0,169119,false
+Ludington,1,1,0,5665399,false
+Ludlow,15,15,0,13437297,false
+Lufkin,1,1,0,4592115,false
+Lumberton,2,2,0,340119,false
+Luray,5,5,0,5999142,false
+Lutcher,1,0,1,0,false
+Luverne,1,0,1,0,false
+Lynchburg,1,1,0,167234,false
+Lyndhurst,2,2,0,11702638,false
+Lyndon,2,2,0,281419,false
+Lyon charter,3,3,0,1151617,false
+Lyons,1,1,0,220066,false
+Lysander,2,1,1,822614,false
+Mableton,3,3,0,4626378,false
+Mabton,1,1,0,1359074,false
+Macclenny,2,0,2,0,false
+Macomb,3,3,0,1563491,false
+Macomb City,1,1,0,146021,false
+Madawaska,2,2,0,592881,false
+Madison,5,3,2,265256,false
+Magdalena,2,0,2,0,false
+Magnolia,3,3,0,90627,false
+Maize,1,1,0,4860,false
+Malad City,2,2,0,423807,false
+Malone,2,1,1,200733,false
+Malta,4,4,0,34295421,false
+Malverne,2,1,1,872923,false
+Manassas Park,2,1,1,4221665,false
+Manchester,5,5,0,7444508,false
+Mandeville,1,0,1,0,false
+Manistee,2,2,0,20815287,false
+Manitou Springs,2,2,0,1220784,false
+Mannford,2,2,0,220580,false
+Mannington,1,0,1,0,false
+Manokotak,1,1,0,945074,false
+Manor,2,2,0,6959706,false
+Manorhaven,2,2,0,1016755,false
+Mansfield,5,5,0,5455413,false
+Maple Grove,1,1,0,288371,false
+Mapleton,2,2,0,18761261,false
+Maplewood,3,2,1,22614664,false
+Maquoketa,2,1,1,78445,false
+Marblehead,3,3,0,1666995,false
+Mardela Springs,2,2,0,171494,false
+Margaret,3,3,0,279947,false
+Marianna,1,1,0,41489,false
+Marietta,1,0,1,0,false
+Marion,8,8,0,2102723,false
+Marlboro,1,1,0,449188,false
+Marlow,2,2,0,249501,false
+Marple,1,1,0,102195,false
+Marriott-Slaterville,2,0,2,0,false
+Marshall,4,4,0,13439419,false
+Marshfield,6,6,0,58537312,false
+Martinsville,3,3,0,1938079,false
+Marysville,6,6,0,21638972,false
+Mason,2,2,0,958000,false
+Massena,3,1,2,1145572,false
+Matawan,2,2,0,948979,false
+Matteson,4,4,0,3234607,false
+Matthews,1,1,0,501077,false
+Mauldin,2,2,0,2801732,false
+Maumelle,1,1,0,1169747,false
+Maurice,1,1,0,10586,false
+Mauston,1,1,0,399937,false
+Mayfield,7,6,1,11454671,false
+Maysville,1,0,1,0,false
+Mayville,3,3,0,798510,false
+Maywood,1,1,0,1327081,false
+McAlester,2,2,0,5311375,false
+McCleary,1,1,0,673905,false
+McCordsville,3,1,2,242997,false
+McDonough,2,2,0,286194,false
+McKenzie,1,1,0,1683172,false
+McMinnville,2,2,0,8214043,false
+McPherson,1,1,0,138648,false
+Mead,2,2,0,962165,false
+Mebane,2,2,0,41646818,false
+Medford,5,5,0,4277474,false
+Medical Lake,2,2,0,4471957,false
+Medicine Lake,1,1,0,6635,false
+Medina,5,5,0,2556590,false
+Medway,3,3,0,6064999,false
+Meeteetse,1,1,0,282486,false
+Melrose,1,1,0,5807408,false
+Melvindale,2,2,0,4272352,false
+Mendota,2,2,0,9761308,false
+Mendota Heights,2,2,0,7317001,false
+Menno,1,1,0,505989,false
+Mercedes,1,1,0,21578955,false
+Meredith,1,1,0,27348477,false
+Meridian,1,1,0,198308,false
+Merrimack,4,3,1,2462780,false
+Mesilla,2,2,0,737124,false
+Mexico,2,2,0,15263788,false
+Miami,6,5,1,11194219,false
+Miami Shores,1,0,1,0,false
+Middle,3,3,0,1250158,false
+Middleborough,4,4,0,14627898,false
+Middlebury,1,1,0,721977,false
+Middlefield,1,1,0,260523,false
+Middleport,1,1,0,114358,false
+Middletown,3,1,2,2011123,false
+Midlothian,3,3,0,2233873,false
+Midway,2,2,0,1362297,false
+Midwest,2,0,2,0,false
+Mifflin,2,2,0,14628787,false
+Milan,2,2,0,11124694,false
+Milbank,2,2,0,356544,false
+Milford,9,8,1,17034948,false
+Mill Valley,1,1,0,112657,false
+Millbrook,4,3,1,564828,false
+Millbury,1,1,0,289739,false
+Milledgeville,2,1,1,161004,false
+Miller,1,1,0,2167957,false
+Millersburg,2,2,0,2238300,false
+Millersville,4,4,0,726394,false
+Millington,2,1,1,38466,false
+Millinocket,2,2,0,5841330,false
+Mills River,2,2,0,12554274,false
+Millville,7,7,0,6302110,false
+Milnor,2,2,0,1741571,false
+Milton,10,8,2,2351732,false
+Milwaukee,1,1,0,38412,false
+Minden,4,4,0,1124574,false
+Minneapolis,1,1,0,187920,false
+Minnetrista,1,1,0,892046,false
+Minooka,2,2,0,1028605,false
+Mint Hill,2,2,0,17427674,false
+Minto,1,1,0,81823,false
+Mission,1,1,0,185734,false
+Mission Hills,2,2,0,327599,false
+Moberly,1,1,0,193710,false
+Mobridge,2,2,0,7389020,false
+Mohall,2,2,0,39128,false
+Mokena,4,4,0,10285854,false
+Mona,1,1,0,165061,false
+Monaca,1,1,0,211248,false
+Moncks Corner,2,2,0,518680,false
+Monclova,3,3,0,6690886,false
+Mondovi,2,2,0,1103927,false
+Monessen,4,4,0,4880899,false
+Monkton,1,0,1,0,false
+Monmouth,2,2,0,10853926,false
+Monroe,5,5,0,64261672,false
+Monroe charter,1,1,0,3537437,false
+Mont Belvieu,1,1,0,47404,false
+Montebello,3,2,1,6435471,false
+Monterey Park,1,1,0,115698,false
+Montesano,4,4,0,7215326,false
+Montevallo,1,1,0,2647306,false
+Montevideo,4,0,4,0,false
+Montgomery,1,1,0,106415,false
+Monticello,5,3,2,3734466,false
+Montpelier,1,1,0,150659,false
+Montrose,1,1,0,814011,false
+Montvale,1,1,0,95244,false
+Montville,1,1,0,1633,false
+Moorcroft,1,1,0,42719,false
+Moorefield,1,1,0,388070,false
+Mooresville,2,2,0,227889,false
+Mora,3,3,0,45816184,false
+Morehead City,1,1,0,42487,false
+Moreland Hills,2,2,0,155838,false
+Moreno Valley,2,2,0,527186,false
+Morganfield,1,1,0,507000,false
+Moriarty,1,1,0,841858,false
+Morrilton,1,1,0,431194,false
+Morris,1,1,0,2335362,false
+Morris Plains,3,3,0,433090,false
+Morro Bay,3,3,0,61802644,false
+Morton,6,6,0,40038400,false
+Mosinee,1,1,0,104025,false
+Mosquero,3,3,0,1126874,false
+Moultrie,5,4,1,39171032,false
+Mound,1,1,0,244340,false
+Mounds View,1,1,0,7162254,false
+Moundsville,1,0,1,0,false
+Mount Airy,1,0,1,0,false
+Mount Angel,2,2,0,1419204,false
+Mount Carmel,4,4,0,898684,false
+Mount Healthy,1,1,0,584633,false
+Mount Holly,2,2,0,957714,false
+Mount Joy,2,2,0,3659734,false
+Mount Kisco,2,2,0,3459319,false
+Mount Pleasant,3,1,2,63844,false
+Mount Vernon,6,6,0,12199162,false
+Mount Washington,1,1,0,112834,false
+Mountain Grove,1,1,0,79775,false
+Mountain Home,2,2,0,3258291,false
+Mountainair,1,1,0,341330,false
+Moxee,3,3,0,2921873,false
+Mulvane,1,1,0,3838364,false
+Mundy,2,2,0,36052,false
+Munford,2,2,0,5167275,false
+Munster,5,5,0,2276781,false
+Murphy,1,1,0,1948,false
+Muscle Shoals,3,3,0,2094441,false
+Muskegon Heights,2,1,1,177189,false
+Mustang,5,2,3,5649808,false
+Myrtle Beach,2,2,0,11914365,false
+Myrtle Creek,2,2,0,3908471,false
+Nantucket,1,1,0,112446,false
+Naples,3,3,0,2578270,false
+Narragansett,5,5,0,24152689,false
+Narrows,2,2,0,138836,false
+Nazareth,2,2,0,134654,false
+Nederland,1,1,0,2768819,false
+Negaunee,1,0,1,0,false
+Neligh,2,0,2,0,false
+Nenana,3,3,0,1810038,false
+Neodesha,1,1,0,193225,false
+Neosho,3,3,0,7683232,false
+Nephi,1,1,0,56485,false
+Neptune Beach,4,3,1,47649279,false
+Nether Providence,3,3,0,4144528,false
+Nevada,1,1,0,9127778,false
+New Baltimore,2,1,1,13573336,false
+New Bern,2,2,0,56779596,false
+New Boston,1,0,1,0,false
+New Brighton,3,3,0,286798,false
+New Canaan,5,5,0,5658054,false
+New Castle,6,6,0,9783912,false
+New Concord,2,2,0,327681,false
+New England,2,2,0,6796066,false
+New Gloucester,2,2,0,20265324,false
+New Hampton,2,2,0,18276871,false
+New Haven,2,2,0,1044044,false
+New Hyde Park,2,2,0,1891543,false
+New Lebanon,1,1,0,281769,false
+New Llano,2,2,0,18612374,false
+New London,5,5,0,31645766,false
+New Market,4,3,1,585775,false
+New Meadows,2,2,0,6076412,false
+New Milford,3,2,1,9419980,false
+New Paltz,2,2,0,171253,false
+New Prague,2,2,0,5916464,false
+New Richmond,1,1,0,55627,false
+New Rockford,2,2,0,87802,false
+New Salem,2,2,0,309224,false
+New Shoreham,2,2,0,19105196,false
+New Underwood,1,1,0,32477,false
+New Whiteland,2,2,0,1502506,false
+Newark,4,4,0,10144868,false
+Newberry,1,1,0,624867,false
+Newcastle,2,2,0,2438387,false
+Newman,3,3,0,336335,false
+Newnan,3,3,0,26918534,false
+Newport,4,4,0,3451859,false
+Newton,6,5,1,10776941,false
+Newtown,2,2,0,4058862,false
+Niagara Falls,1,1,0,1151483,false
+Nibley,2,1,1,164290,false
+Niles,3,3,0,2274468,false
+Nitro,1,1,0,381666,false
+Nixa,3,3,0,6362798,false
+Noble,3,3,0,301576,false
+Noblesville,1,1,0,2136606,false
+Nogales,4,4,0,20287554,false
+Nolensville,1,1,0,705887,false
+Nome,2,2,0,1022710,false
+Normandy Park,1,1,0,613256,false
+Norridgewock,2,2,0,12363760,false
+North Andover,2,2,0,83363,false
+North Aurora,4,4,0,28292851,false
+North Bay Village,1,1,0,447686,false
+North Bend,2,2,0,170406,false
+North Berwick,1,1,0,800595,false
+North Bonneville,3,1,2,58412,false
+North Branford,4,4,0,23814004,false
+North Chevy Chase,2,2,0,2217283,false
+North East,1,1,0,4142331,false
+North Fayette,2,0,2,0,false
+North Fond du Lac,2,2,0,3823864,false
+North Haledon,1,1,0,204698,false
+North Hampton,2,2,0,2472852,false
+North Haven,1,0,1,0,false
+North Hempstead,1,1,0,10470,false
+North Kingstown,3,3,0,8530425,false
+North Logan,2,0,2,0,false
+North Manchester,2,2,0,341251,false
+North Myrtle Beach,2,0,2,0,false
+North Ogden,4,2,2,2522908,false
+North Palm Beach,3,3,0,16101200,false
+North Plains,1,1,0,1948483,false
+North Providence,4,4,0,12573287,false
+North Reading,2,2,0,567506,false
+North Salt Lake,2,0,2,0,false
+North Sioux City,1,1,0,98223,false
+North Syracuse,3,1,2,136847,false
+North Vernon,4,4,0,799168,false
+North Whitehall,3,3,0,634762,false
+North Yarmouth,1,1,0,2062885,false
+Northampton,1,1,0,65154,false
+Northborough,1,1,0,1001300,false
+Northbridge,3,3,0,31713,false
+Northfield,9,9,0,12402149,false
+Northglenn,3,3,0,2343685,false
+Northville,2,2,0,63449,false
+Northwood,3,3,0,5328188,false
+Norwell,1,1,0,143923,false
+Norwich,5,5,0,13526586,false
+Nottingham,1,1,0,12051,false
+Novato,1,1,0,520850,false
+Nutter Fort,1,0,1,0,false
+Nyack,2,2,0,3498893,false
+Nyssa,1,1,0,80444,false
+Oak Grove,2,2,0,333460,false
+Oak Hill,1,1,0,3598803,false
+Oakland,4,2,2,6904967,false
+Oakland Park,1,0,1,0,false
+Oakley,2,2,0,209716,false
+Oakmont,2,2,0,209605,false
+Oakridge,2,2,0,3901313,false
+Oakwood,4,4,0,1675379,false
+Ocala,1,0,1,0,false
+Ocean City,2,2,0,31797455,false
+Ocean Shores,2,2,0,2654428,false
+Ocean View,3,3,0,1531098,false
+Oceana,1,1,0,18049,false
+Oceanport,2,2,0,3846376,false
+Oconomowoc,5,5,0,1675847,false
+Oconto,4,3,1,698909,false
+Oconto Falls,3,3,0,20673306,false
+Odessa,1,1,0,650566,false
+Oelwein,2,2,0,419395,false
+Ogallala,1,1,0,620789,false
+Ogdensburg,1,1,0,303817,false
+Okemah,1,1,0,52723,false
+Okmulgee,3,3,0,230894,false
+Old Orchard Beach,3,3,0,2286209,false
+Oliver Springs,1,1,0,16724,false
+Olivette,1,0,1,0,false
+Olmsted,2,2,0,3369718,false
+Omaha,1,0,1,0,false
+Omak,2,2,0,1450000,false
+Omro,1,1,0,88033,false
+Onawa,1,1,0,41608,false
+Oneida,6,6,0,11926793,false
+Oneonta,4,3,1,2135831,false
+Onida,1,1,0,160853,false
+Onondaga,2,2,0,3500330,false
+Oradell,3,3,0,402994,false
+Orange,7,7,0,25439091,false
+Orange Cove,2,2,0,10740301,false
+Orange Park,1,1,0,455590,false
+Orangeburg,5,5,0,41361614,false
+Orinda,3,3,0,5562192,false
+Orion charter,3,3,0,494241,false
+Orland,3,3,0,3855885,false
+Orland Park,2,1,1,17201,false
+Oro Valley,1,1,0,219899,false
+Orofino,2,2,0,2152045,false
+Orono,5,5,0,14134205,false
+Oroville,3,3,0,182342,false
+Orrington,1,1,0,267764,false
+Osage,2,2,0,80874,false
+Osage Beach,3,3,0,78901308,false
+Osage City,4,3,1,2503027,false
+Osceola,4,4,0,31275916,false
+Ossipee,1,1,0,6399,false
+Othello,2,2,0,379668,false
+Ottawa,3,3,0,244852,false
+Overland,3,3,0,14728152,false
+Oxford,6,6,0,60094749,false
+Oxnard,4,4,0,1774231,false
+Oyster Bay,1,1,0,43981266,false
+Ozark,2,2,0,1776291,false
+Pacific,5,5,0,31563952,false
+Paden City,1,0,1,0,false
+Paducah,4,3,1,2471848,false
+Page,3,3,0,2510816,false
+Pahokee,2,1,1,1005490,false
+Painesville,1,1,0,1231995,false
+Palestine,4,4,0,24456537,false
+Palisade,1,0,1,0,false
+Palm Beach,1,1,0,112214,false
+Palmerton,2,2,0,169044,false
+Palmview,1,1,0,217738,false
+Palmyra,2,2,0,3628582,false
+Palos,1,1,0,131324,false
+Palos Hills,2,1,1,1305236,false
+Pampa,1,1,0,5142653,false
+Panguitch,2,2,0,249490,false
+Paradise Valley,2,1,1,200913,false
+Paris,9,9,0,4700960,false
+Park City,2,2,0,23418553,false
+Park Rapids,1,1,0,6890828,false
+Park Ridge,2,2,0,2353772,false
+Park River,2,2,0,546776,false
+Parker,4,3,1,2631513,false
+Parkston,4,4,0,124125,false
+Parowan,2,2,0,678076,false
+Parsons,3,3,0,396569,false
+Pass Christian,2,2,0,7935560,false
+Patagonia,2,2,0,575003,false
+Patterson,2,2,0,226893,false
+Pauls Valley,2,0,2,0,false
+Paulsboro,4,4,0,1943367,false
+Payette,1,1,0,8011024,false
+Payson,1,1,0,8954289,false
+Pea Ridge,1,1,0,310241,false
+Pearl River,2,2,0,195272,false
+Peculiar,1,1,0,6095112,false
+Pelham,3,3,0,737181,false
+Pell City,3,3,0,443357,false
+Pembina,2,1,1,209855,false
+Pender,1,1,0,686755,false
+Perry,13,11,2,17726150,false
+Perrysburg,1,1,0,448410,false
+Perryville,4,3,1,18262970,false
+Peru,5,5,0,2244932,false
+Peshtigo,2,2,0,298091,false
+Petal,1,0,1,0,false
+Petersburg,2,2,0,203284,false
+Petoskey,2,2,0,13461223,false
+Philip,2,2,0,202097,false
+Philipsburg,5,5,0,2394804,false
+Philomath,1,0,1,0,false
+Phoenix,5,5,0,6218590,false
+Pickens,3,3,0,2853835,false
+Piedmont,2,0,2,0,false
+Pierce,4,4,0,3389435,false
+Pigeon Forge,3,3,0,322178,false
+Pike,3,3,0,3726308,false
+Piketon,2,1,1,208694,false
+Pikeville,1,1,0,4039836,false
+Pilot Station,1,1,0,397227,false
+Pima,2,2,0,684225,false
+Pine City,2,2,0,1882056,false
+Pine Haven,2,1,1,52972,false
+Pine Island,1,1,0,7942918,false
+Pinehurst,2,0,2,0,false
+Pinetop-Lakeside,1,1,0,10497864,false
+Pineville,2,2,0,274368,false
+Pinole,4,4,0,3939934,false
+Pipestone,1,1,0,583875,false
+Pittsburg,1,1,0,2544,false
+Pittsfield,1,1,0,74807,false
+Pittsford,3,3,0,378047,false
+Pittston,2,2,0,497177,false
+Pittsville,1,1,0,293853,false
+Placerville,3,3,0,2191289,false
+Plain City,2,2,0,207754,false
+Plainfield,4,3,1,1010132,false
+Plainview,7,7,0,1901511,false
+Plainville,2,2,0,14437159,false
+Plankinton,2,2,0,427092,false
+Plano,2,1,1,310009,false
+Plaquemine,2,1,1,248481,false
+Platte City,2,2,0,11862422,false
+Plattsmouth,3,3,0,3295190,false
+Pleasant Grove,2,2,0,53853,false
+Pleasant Hill,1,1,0,3004379,false
+Pleasant View,2,2,0,417000,false
+Pleasantville,1,0,1,0,false
+Plumstead,3,3,0,30164452,false
+Plymouth,13,10,3,3314170,false
+Plymouth charter,3,3,0,40255335,false
+Pocola,2,2,0,53230,false
+Pocomoke City,1,1,0,337675,false
+Point Hope,1,1,0,5337071,false
+Poland,3,3,0,8347796,false
+Polk,2,2,0,41656653,false
+Polk City,2,2,0,18393585,false
+Pompano Beach,1,0,1,0,false
+Pompton Lakes,1,1,0,1119770,false
+Ponca City,2,2,0,204835,false
+Ponchatoula,3,3,0,680887,false
+Ponderay,2,2,0,436646,false
+Pontiac,2,2,0,9828327,false
+Pooler,2,1,1,66473,false
+Poolesville,3,1,2,611816,false
+Poplar Bluff,3,3,0,1568703,false
+Poquoson,2,1,1,91687,false
+Port Barre,5,5,0,8045441,false
+Port Deposit,2,2,0,2918729,false
+Port Jefferson,2,1,1,125420,false
+Port Jervis,4,4,0,4655215,false
+Port Neches,2,2,0,1823579,false
+Port Orford,2,2,0,14318176,false
+Port St. Joe,2,2,0,264108,false
+Port Wentworth,2,2,0,468128,false
+Portage,1,1,0,101514,false
+Portland,7,7,0,3924985,false
+Post Falls,2,2,0,117833,false
+Potsdam,2,2,0,219820,false
+Poultney,4,4,0,921646,false
+Powder Springs,4,3,1,474649,false
+Pownal,1,1,0,556317,false
+Prairie,2,2,0,39678358,false
+Prairie Grove,2,0,2,0,false
+Prairie du Chien,3,3,0,267179,false
+Pratt,1,1,0,143535,false
+Prescott,2,2,0,19829344,false
+Preston,3,3,0,850490,false
+Price,2,0,2,0,false
+Prichard,1,1,0,14454,false
+Princeton,7,6,1,3388562,false
+Prospect,2,2,0,18435439,false
+Prospect Heights,2,2,0,2847897,false
+Prosser,1,0,1,0,false
+Providence,1,0,1,0,false
+Proviso,1,1,0,1416702,false
+Pulaski,3,3,0,261281,false
+Punxsutawney,1,1,0,36798,false
+Purcell,2,2,0,443037,false
+Purcellville,2,2,0,11762360,false
+Quakertown,1,1,0,1088850,false
+Quartzsite,1,1,0,536614,false
+Queenstown,2,2,0,4173476,false
+Quincy,1,1,0,100750,false
+Quinhagak,1,1,0,881868,false
+Quitman,1,1,0,138237,false
+Racine,1,1,0,532270,false
+Radcliff,2,2,0,5257690,false
+Radford,1,1,0,102685,false
+Rainier,2,2,0,34217138,false
+Rainsville,4,4,0,234022,false
+Ramapo,2,0,2,0,false
+Ramsey,1,1,0,472361,false
+Ranchester,2,2,0,141708,false
+Rancho Mirage,1,1,0,845602,false
+Randolph,2,2,0,8555604,false
+Raritan,1,1,0,764170,false
+Rathdrum,1,0,1,0,false
+Raton,2,2,0,229177,false
+Raymond,2,2,0,5971112,false
+Raynham,2,2,0,1493849,false
+Red Lion,2,2,0,341929,false
+Red Oak,2,2,0,10052659,false
+Redding,4,3,1,3028196,false
+Redfield,2,2,0,293849,false
+Redwood Falls,2,2,0,8020601,false
+Rehoboth,1,1,0,10833,false
+Rehoboth Beach,2,2,0,277806,false
+Reile's Acres,4,4,0,830200,false
+Rensselaer,4,4,0,1513453,false
+Rice Lake,1,1,0,510238,false
+Rich,3,3,0,5225199,false
+Richardton,4,4,0,182221,false
+Richland,3,3,0,8408586,false
+Richland Center,2,2,0,172113,false
+Richmond,5,5,0,12648859,false
+Richwood,5,4,1,2259193,false
+Ridgefield,5,4,1,69895927,false
+Ridgeland,2,2,0,134670,false
+Ridley,1,1,0,142818,false
+Ridley Park,2,2,0,192272,false
+Rifle,1,1,0,1640966,false
+Rigby,1,1,0,145519,false
+Rincon,1,0,1,0,false
+Rindge,2,2,0,11806528,false
+Rio Grande City,2,2,0,10297990,false
+Rio Vista,1,0,1,0,false
+Ripon,1,0,1,0,false
+Ritzville,1,1,0,5330088,false
+River Edge,2,2,0,942591,false
+River Heights,1,1,0,29473,false
+Riverdale,2,0,2,0,false
+Riverside,1,1,0,711571,false
+Riverview,1,1,0,2431520,false
+Roanoke,1,1,0,7958117,false
+Roanoke Rapids,3,3,0,987843,false
+Robbinsdale,4,4,0,9301926,false
+Roberts,1,1,0,473076,false
+Robertsdale,2,2,0,5191800,false
+Robins,1,1,0,1820637,false
+Robinson,1,1,0,1317985,false
+Rochelle,3,2,1,2126869,false
+Rochester,1,1,0,214040,false
+Rock Hall,1,1,0,95196,false
+Rock Island,2,1,1,225794,false
+Rock Rapids,1,1,0,162296,false
+Rock River,2,2,0,159989,false
+Rock Valley,1,1,0,71898,false
+Rockaway,2,2,0,448608,false
+Rockaway Beach,1,1,0,71212,false
+Rockford,2,2,0,3033760,false
+Rockingham,1,1,0,338171,false
+Rocklin,2,2,0,688247,false
+Rockport,2,2,0,4874980,false
+Rockton,3,3,0,636389,false
+Rockwood,1,1,0,2101368,false
+Rogers,1,1,0,936119,false
+Rogersville,1,1,0,661907,false
+Rogue River,2,2,0,1197685,false
+Rohnert Park,3,3,0,8235430,false
+Rolesville,3,3,0,9377283,false
+Rolla,2,2,0,318285,false
+Rolling Fork,2,2,0,160028,false
+Roosevelt,1,0,1,0,false
+Roscoe,2,2,0,683631,false
+Rose Hill,2,2,0,481907,false
+Roselle,1,0,1,0,false
+Rosenberg,1,1,0,154997,false
+Roseville,1,1,0,11671492,false
+Rothschild,2,2,0,407711,false
+Round Lake,1,1,0,2182166,false
+Royal City,1,1,0,585593,false
+Royalton,2,2,0,914040,false
+Royse City,1,1,0,107956,false
+Ruidoso Downs,1,1,0,429959,false
+Rumford,4,4,0,4787958,false
+Runnemede,2,2,0,4555644,false
+Rupert,1,1,0,23152,false
+Russellville,2,1,1,224874,false
+Rutland,2,2,0,678173,false
+Rye,1,1,0,103364,false
+Rye Brook,2,2,0,1028869,false
+Sabattus,3,1,2,1964777,false
+Saddle Brook,2,2,0,236653,false
+Saginaw,3,2,1,9799748,false
+Salamanca,3,3,0,1564437,false
+Salem,2,2,0,247607,false
+Saline,1,1,0,2263593,false
+Salisbury,4,4,0,2242275,false
+San Leandro,1,1,0,2023322,false
+San Marino,3,3,0,1513283,false
+San Ramon,2,2,0,646834,false
+San Ysidro,1,1,0,160212,false
+Sand Point,3,3,0,7772442,false
+Sandpoint,2,2,0,590624,false
+Sanford,1,0,1,0,false
+Sanibel,1,0,1,0,false
+Santa Ana,2,1,1,2103,false
+Santa Clara,1,0,1,0,false
+Santa Maria,2,2,0,68722,false
+Santa Monica,1,1,0,354476,false
+Santa Rosa,1,1,0,1160754,false
+Santee,1,1,0,18301757,false
+Saraland,1,0,1,0,false
+Saranac Lake,2,2,0,6429138,false
+Satsuma,3,3,0,1402881,false
+Sauk Centre,3,3,0,8547349,false
+Sauk City,3,3,0,335113,false
+Sauk Rapids,3,3,0,10630034,false
+Sausalito,2,0,2,0,false
+Savannah,2,2,0,5310191,false
+Sayre,2,2,0,1181504,false
+Scarborough,3,3,0,2639781,false
+Schaumburg,2,1,1,686,false
+Schererville,2,2,0,609007,false
+Scio,1,1,0,7362742,false
+Scioto,4,4,0,9929914,false
+Scituate,3,3,0,2264981,false
+Scotia,2,2,0,4430479,false
+Scott,2,1,1,201422,false
+Scottsboro,1,1,0,340258,false
+Scottsburg,1,1,0,10283671,false
+Seabrook,2,2,0,1657060,false
+Seal Beach,1,1,0,27184283,false
+Searcy,5,5,0,2015381,false
+Seat Pleasant,2,2,0,879704,false
+Sebastopol,5,5,0,19708575,false
+Selinsgrove,2,2,0,389711,false
+Sellersburg,1,1,0,2012947,false
+Selma,4,4,0,6520337,false
+Selmer,3,3,0,1769425,false
+Seneca,4,4,0,340693,false
+Sergeant Bluff,1,1,0,1538675,false
+Sevierville,1,1,0,80972,false
+Seville,1,1,0,215425,false
+Seward,1,1,0,833629,false
+Seymour,10,8,2,4581215,false
+Shady Cove,1,1,0,233744,false
+Shaftsbury,1,1,0,337076,false
+Shakopee,1,1,0,1472411,false
+Shamokin,1,0,1,0,false
+Shannon Hills,2,2,0,82848,false
+Sharon,1,1,0,7248051,false
+Sharon Hill,1,1,0,54374,false
+Sharpsburg,1,1,0,1703213,false
+Sharptown,1,1,0,98063,false
+Shasta Lake,1,1,0,1587984,false
+Shawswick,2,2,0,3713775,false
+Sheboygan,2,2,0,216281,false
+Sheffield,2,1,1,195487,false
+Shelburne,2,2,0,1198068,false
+Shelby,5,5,0,31073141,false
+Shelbyville,4,3,1,805963,false
+Sheldon,1,1,0,385862,false
+Shelley,1,1,0,77304,false
+Shelton,2,2,0,352018,false
+Shenandoah,4,3,1,321549,false
+Shepherdstown,2,2,0,26537941,false
+Shepherdsville,2,2,0,2879421,false
+Sheridan,3,3,0,20360738,false
+Shinnston,4,3,1,519538,false
+Shippensburg,2,2,0,134601,false
+Shively,5,5,0,4357246,false
+Shorewood,4,4,0,14943185,false
+Shoshone,2,2,0,300599,false
+Shoshoni,2,2,0,178862,false
+Show Low,1,1,0,708832,false
+Sidney,2,2,0,118252,false
+Sierra Madre,4,4,0,4811310,false
+Sierra Vista,1,1,0,49890,false
+Signal Hill,1,0,1,0,false
+Signal Mountain,2,2,0,5221968,false
+Siloam Springs,1,1,0,744822,false
+Simpsonville,2,2,0,553968,false
+Simsbury,1,1,0,9132199,false
+Sinclair,2,2,0,2561361,false
+Sioux Center,2,2,0,151858,false
+Sisseton,1,1,0,86960,false
+Skiatook,1,1,0,90889,false
+Skokie,1,1,0,1676154,false
+Skowhegan,1,1,0,9749276,false
+Smithfield,4,4,0,31478603,false
+Smithtown,1,1,0,101814,false
+Smithville,4,4,0,3963389,false
+Snellville,3,3,0,5007356,false
+Snohomish,1,1,0,8358203,false
+Snowmass Village,2,2,0,230769,false
+Soap Lake,3,3,0,8975551,false
+Soddy-Daisy,5,5,0,879985,false
+Solana Beach,3,3,0,4355446,false
+Soldier,1,1,0,2387592,false
+Solvay,2,2,0,6034625,false
+Somers,3,3,0,4285807,false
+Somers Point,2,2,0,194473,false
+Somerset,10,10,0,11120454,false
+Somerton,4,3,1,14807196,false
+Sonoma,2,2,0,399258,false
+Sonora,4,4,0,2716771,false
+Souderton,1,1,0,134721,false
+South Amboy,1,1,0,115667,false
+South Berwick,2,2,0,2348062,false
+South Bethany,3,3,0,409729,false
+South Burlington,1,1,0,78277,false
+South Congaree,2,2,0,317984,false
+South El Monte,1,1,0,145949,false
+South Gate,1,1,0,21293485,false
+South Hadley,1,0,1,0,false
+South Hill,1,1,0,849626,false
+South Houston,1,0,1,0,false
+South Hutchinson,1,1,0,7538,false
+South Lyon,1,1,0,9806347,false
+South Ogden,4,4,0,7867298,false
+South Park,3,3,0,13791501,false
+South Rock Island,1,1,0,129385,false
+South Salt Lake,1,0,1,0,false
+South Tucson,1,0,1,0,false
+South Weber,2,2,0,4658510,false
+South Windsor,3,0,3,0,false
+Southbury,3,3,0,13569523,false
+Southern Pines,4,4,0,61344125,false
+Southfield,1,1,0,4622636,false
+Southgate,3,3,0,249307,false
+Southington,1,1,0,2550173,false
+Southlake,3,3,0,675071,false
+Southside,3,3,0,510396,false
+Spanish Fort,1,1,0,1325505,false
+Sparta,2,2,0,7281534,false
+Spartanburg,3,2,1,196581,false
+Speedway,2,0,2,0,false
+Spencer,3,2,1,137850,false
+Spencerville,2,2,0,422738,false
+Spirit Lake,2,2,0,239008,false
+Spring Garden,2,2,0,1060401,false
+Spring Hill,1,1,0,775014,false
+Spring Lake,1,1,0,2417476,false
+Spring Lake Park,3,3,0,1051388,false
+Springdale,2,2,0,991067,false
+Springer,1,1,0,516195,false
+Springerville,3,2,1,26115587,false
+Springfield,8,8,0,7805499,false
+Springfield charter,3,3,0,2360395,false
+Springhill,2,2,0,158919,false
+St. Albans,2,2,0,248182,false
+St. Anthony,1,0,1,0,false
+St. Charles,2,2,0,10287895,false
+St. Clair,3,3,0,1908468,false
+St. Francis,3,3,0,42007686,false
+St. Ignatius,2,2,0,83029,false
+St. James,3,3,0,22470681,false
+St. John,2,2,0,887859,false
+St. Johns,1,1,0,134518,false
+St. Johnsbury,3,3,0,794509,false
+St. Joseph,1,0,1,0,false
+St. Louis,3,3,0,27697009,false
+St. Martinville,1,1,0,122516,false
+St. Marys,2,2,0,12862021,false
+St. Matthews,5,5,0,3640707,false
+St. Michaels,1,1,0,10023,false
+St. Paul Park,1,1,0,1046464,false
+St. Peter,4,4,0,4550092,false
+Stafford,3,3,0,5789293,false
+Stallings,3,3,0,3777267,false
+Stanfield,1,0,1,0,false
+Stanford,2,2,0,423915,false
+Stanley,1,1,0,393546,false
+Staples,1,1,0,2345918,false
+Star City,1,1,0,127964,false
+Star Valley,3,3,0,702325,false
+Star Valley Ranch,1,1,0,115881,false
+Statesville,2,2,0,37530758,false
+Steamboat Springs,1,1,0,3146,false
+Steelton,1,1,0,339156,false
+Steger,4,4,0,942155,false
+Steilacoom,3,3,0,9173503,false
+Stephenville,2,2,0,23818560,false
+Sterling,5,4,1,4196850,false
+Sterling Heights,1,1,0,1045896,false
+Sterlington,3,3,0,1452841,false
+Stevenson,4,3,1,1505015,false
+Stilwell,2,2,0,528797,false
+Stockton,3,1,2,769708,false
+Stonecrest,2,2,0,1100234,false
+Stonewall,3,3,0,45549782,false
+Stonewood,1,0,1,0,false
+Story City,4,4,0,1543876,false
+Strafford,1,1,0,8203451,false
+Stratford,3,3,0,1705456,false
+Streamwood,1,1,0,240783,false
+Streator,2,2,0,764979,false
+Stromsburg,1,1,0,1496646,false
+Stroudsburg,2,2,0,898675,false
+Sturgis,2,2,0,571101,false
+Sudbury,3,3,0,1412221,false
+Sudlersville,1,1,0,3451253,false
+Suffern,4,4,0,2363275,false
+Suffield,4,3,1,3604606,false
+Sugar Hill,2,1,1,1188464,false
+Sullivan,2,1,1,5707538,false
+Sulphur,3,3,0,1730427,false
+Sulphur Springs,4,4,0,1227541,false
+Summerfield,2,0,2,0,false
+Sumter,2,2,0,10728095,false
+Sun Valley,1,1,0,6368681,false
+Sundance,1,1,0,15158968,false
+Sunset,1,0,1,0,false
+Sunset Hills,3,0,3,0,false
+Superior,4,4,0,268361,false
+Surfside,2,2,0,8228960,false
+Surfside Beach,1,1,0,159850,false
+Surrey,1,1,0,39272,false
+Sutherland,3,3,0,476639,false
+Sutton,1,1,0,372708,false
+Suwanee,5,4,1,78962642,false
+Swansea,1,1,0,104548,false
+Swanton,4,4,0,442072,false
+Swartz Creek,2,2,0,14651619,false
+Sweetwater,4,4,0,7322390,false
+Swissvale,1,1,0,200469,false
+Sylacauga,1,0,1,0,false
+Symmes,1,1,0,118443,false
+Syracuse,1,1,0,91803,false
+Tahlequah,2,2,0,17794790,false
+Talladega,4,4,0,559136,false
+Tama,1,0,1,0,false
+Tamaqua,3,3,0,359881,false
+Tampa,2,2,0,3187465,false
+Tamworth,2,2,0,324343,false
+Tanana,1,1,0,6214,false
+Taos Ski Valley,2,2,0,888407,false
+Tappahannock,3,2,1,65396,false
+Tarrant,1,0,1,0,false
+Tarrytown,2,2,0,1906336,false
+Taylor,2,2,0,1060626,false
+Taylor Mill,4,4,0,2491514,false
+Taylorville,2,2,0,320965,false
+Tecumseh,3,3,0,198354,false
+Tega Cay,2,1,1,12601,false
+Tehachapi,2,2,0,1323179,false
+Teller,1,1,0,929868,false
+Tenino,2,2,0,44013,false
+Tequesta,1,1,0,1387471,false
+Terry,3,3,0,417621,false
+Teton,3,3,0,1066635,false
+Thermopolis,3,3,0,3785984,false
+Thetford,1,0,1,0,false
+Thief River Falls,1,1,0,5984308,false
+Thomaston,1,1,0,179744,false
+Thomasville,4,4,0,83359796,false
+Thompson,1,1,0,1353987,false
+Thornton,2,2,0,3921975,false
+Three Forks,3,3,0,2749490,false
+Three Rivers,1,0,1,0,false
+Tiburon,1,1,0,678580,false
+Tiffin,2,2,0,2275736,false
+Tifton,2,2,0,1789049,false
+Tijeras,2,2,0,664550,false
+Tilden,3,3,0,2137173,false
+Tilton,1,1,0,5155449,false
+Timber Lake,1,1,0,435483,false
+Timberville,2,2,0,447861,false
+Timnath,2,2,0,190435,false
+Tinley Park,1,1,0,7101306,false
+Tioga,4,4,0,2542850,false
+Tiverton,2,2,0,3770001,false
+Togiak,2,2,0,642487,false
+Toksook Bay,1,1,0,1021827,false
+Toledo,5,5,0,5034964,false
+Tolland,1,0,1,0,false
+Tolleson,1,0,1,0,false
+Tomahawk,1,1,0,1466246,false
+Tomball,3,3,0,1238981,false
+Toms River,1,1,0,495761,false
+Tonganoxie,2,0,2,0,false
+Tonkawa,1,1,0,1348927,false
+Tontitown,2,2,0,315763,false
+Toppenish,1,1,0,681301,false
+Topsham,1,1,0,1372279,false
+Toquerville,1,0,1,0,false
+Torrington,1,1,0,94159,false
+Totowa,1,1,0,1321575,false
+Towamencin,2,2,0,19054894,false
+Townsend,7,7,0,1034865,false
+Trappe,1,1,0,93921,false
+Treasure Island,3,2,1,1693022,false
+Tremonton,2,1,1,5726371,false
+Trenton,4,4,0,6792827,false
+Trinidad,3,3,0,1418520,false
+Trophy Club,3,1,2,199250,false
+Troy,5,5,0,4121498,false
+Trumbull,1,1,0,89792,false
+Tuckahoe,2,2,0,549020,false
+Tucker,1,0,1,0,false
+Tucson,1,1,0,713478,false
+Tucumcari,3,2,1,17317746,false
+Tularosa,1,1,0,209940,false
+Turner,3,3,0,12377057,false
+Turtle Lake,1,1,0,470388,false
+Tuttle,1,1,0,151932,false
+Twin Bridges,2,2,0,2081030,false
+Twin Lakes,2,2,0,473951,false
+Twinsburg,6,6,0,13939408,false
+Union,2,2,0,567287,false
+Union City,1,0,1,0,false
+Unionville,1,1,0,132631,false
+University Park,2,2,0,436229,false
+Upper Chichester,1,1,0,90714,false
+Upper Gwynedd,1,1,0,1248162,false
+Upper Providence,1,1,0,97404,false
+Upper Saucon,1,1,0,71539,false
+Upper St. Clair,1,1,0,10500552,false
+Uvalde,4,4,0,18455940,false
+Vadnais Heights,1,0,1,0,false
+Valdosta,1,1,0,115272,false
+Vale,2,2,0,405467,false
+Valier,2,2,0,729675,false
+Vallejo,1,1,0,2934091,false
+Valley,2,1,1,57422,false
+Valley Springs,2,2,0,78772,false
+Van Buren charter,2,2,0,1803242,false
+Vancouver,5,5,0,3316677,false
+Vassalboro,1,1,0,21850725,false
+Velva,2,1,1,206488,false
+Ventnor City,3,3,0,4554856,false
+Vergennes,1,1,0,1707082,false
+Vernal,3,0,3,0,false
+Vernon,6,6,0,6780698,false
+Verona,2,2,0,2865655,false
+Versailles,4,4,0,451014,false
+Viborg,3,3,0,539137,false
+Victor,3,2,1,432889,false
+Vidalia,6,5,1,2293766,false
+Vienna,1,1,0,2438854,false
+Villa Hills,1,0,1,0,false
+Villa Rica,1,0,1,0,false
+Ville Platte,2,2,0,559713,false
+Vilonia,3,3,0,3875194,false
+Vincennes,1,0,1,0,false
+Vine Grove,3,3,0,1092482,false
+Vineyard,1,1,0,441784,false
+Vinton,4,4,0,4875538,false
+Virginia,3,3,0,13120030,false
+Virginia City,2,2,0,1699295,false
+Viroqua,2,2,0,1006552,false
+Vivian,3,3,0,370926,false
+Wabash,1,1,0,153719,false
+Waco,1,1,0,165970,false
+Waconia,2,1,1,1776388,false
+Wagner,1,1,0,560696,false
+Wagon Mound,1,1,0,397148,false
+Wahoo,1,0,1,0,false
+Wahpeton,1,0,1,0,false
+Wainwright,1,0,1,0,false
+Waite Park,1,1,0,104454,false
+Walden,2,1,1,628013,false
+Waldoboro,2,2,0,10111562,false
+Waldwick,2,2,0,2141126,false
+Walhalla,1,1,0,1694513,false
+Walker,2,2,0,954017,false
+Walkerville,2,2,0,461929,false
+Wallace,2,2,0,343367,false
+Walled Lake,3,3,0,17162817,false
+Wallingford,2,1,1,2442127,false
+Wallowa,2,2,0,303585,false
+Walpole,3,0,3,0,false
+Walterboro,1,1,0,30629,false
+Walton,3,3,0,777541,false
+Wamego,1,0,1,0,false
+Wamsutter,2,2,0,364023,false
+Wapato,4,3,1,457688,false
+Wappingers Falls,3,2,1,476353,false
+Ward,1,1,0,315205,false
+Warden,1,1,0,3784043,false
+Ware Shoals,2,1,1,1170124,false
+Wareham,1,1,0,1533738,false
+Warr Acres,1,1,0,92096,false
+Warren,10,10,0,17111532,false
+Warrensburg,2,2,0,221089,false
+Warrenton,1,1,0,98878,false
+Warrenville,1,1,0,42443711,false
+Warrington,1,1,0,288213,false
+Warsaw,6,5,1,1053239,false
+Washburn,3,3,0,134756,false
+Washington,11,11,0,17701992,false
+Washington Grove,2,2,0,409791,false
+Washington Terrace,1,1,0,1218388,false
+Washingtonville,1,1,0,338438,false
+Watauga,1,1,0,63137322,false
+Watchung,2,2,0,448556,false
+Water Valley,2,2,0,28423,false
+Waterboro,2,2,0,3025523,false
+Waterbury,2,2,0,7147342,false
+Waterford,1,0,1,0,false
+Waterford charter,1,1,0,89440,false
+Waterloo,5,5,0,32738842,false
+Watertown,7,5,2,23045718,false
+Watervliet,3,2,1,879400,false
+Watford City,2,2,0,64269071,false
+Wauchula,1,1,0,72118,false
+Wauconda,3,3,0,6996984,false
+Waukon,2,2,0,70765,false
+Waupaca,1,1,0,16571,false
+Waverly,4,3,1,6235627,false
+Waxhaw,1,1,0,1170776,false
+Waycross,1,1,0,32427,false
+Wayne,5,5,0,323756,false
+Waynesboro,4,3,1,4742042,false
+Waynesville,5,5,0,11367498,false
+Weare,3,3,0,11861338,false
+Weatherford,4,4,0,1393563,false
+Weathersfield,3,3,0,34375051,false
+Webb City,1,1,0,2324571,false
+Webster,1,1,0,223389,false
+Webster City,1,1,0,122058,false
+Weddington,2,2,0,54699,false
+Weeping Water,2,2,0,76605,false
+Weiser,2,2,0,304729,false
+Wellington,7,3,4,2051032,false
+Wells,1,1,0,1219603,false
+Wells River,1,1,0,7245429,false
+Wellton,1,1,0,1216294,false
+Wendell,1,1,0,48119,false
+Wentzville,2,2,0,370811,false
+Wessington Springs,2,2,0,396408,false
+West Bloomfield charter,4,4,0,21645190,false
+West Bountiful,3,3,0,2387388,false
+West Branch,3,3,0,199102,false
+West Columbia,5,5,0,3350658,false
+West Deptford,1,1,0,322591,false
+West Greenwich,1,1,0,10277303,false
+West Haverstraw,1,0,1,0,false
+West Hempfield,2,2,0,2032666,false
+West Lafayette,3,3,0,39350435,false
+West Lampeter,2,2,0,627219,false
+West Liberty,1,1,0,681367,false
+West Long Branch,1,1,0,505753,false
+West Manchester,1,1,0,86538,false
+West Miami,1,1,0,93014,false
+West Park,2,1,1,2209301,false
+West Plains,1,1,0,6477758,false
+West Point,3,2,1,190245,false
+West Salem,3,3,0,704955,false
+West University Place,2,2,0,42402593,false
+West View,1,1,0,102359,false
+West Warwick,4,4,0,11859151,false
+West Wendover,2,2,0,3425458,false
+West Yellowstone,3,3,0,4380767,false
+Westchester,4,4,0,19670137,false
+Westerly,3,3,0,4019486,false
+Westernport,1,1,0,101881,false
+Westford,3,3,0,568083,false
+Westlake,1,1,0,676945,false
+Westminster,4,3,1,40275559,false
+Westport,3,3,0,31256,false
+Westwego,4,3,1,484487,false
+Wharton,3,3,0,1444488,false
+Wheat Ridge,1,1,0,322871,false
+Wheatfield,1,1,0,132151,false
+Wheatland,1,1,0,34087,false
+White,1,1,0,379784,false
+White Bluff,1,1,0,2092729,false
+White Castle,1,1,0,94852,false
+White City metro,1,1,0,1879374,false
+White House,1,1,0,819860,false
+White Mountain,1,1,0,958755,false
+White Oak,3,3,0,234794,false
+White Sulphur Springs,2,2,0,145168,false
+Whitehall,2,2,0,13155030,false
+Whitestown,3,3,0,387951,false
+Whitewood,1,1,0,126421,false
+Whittier,2,2,0,108397,false
+Wichita,1,1,0,55295209,false
+Wilber,2,1,1,86127,false
+Wilder,2,2,0,393654,false
+Willamina,2,2,0,36404029,false
+Willard,4,4,0,13802855,false
+Willcox,2,2,0,1622901,false
+Williams,4,4,0,2696228,false
+Williamsburg,7,6,1,730924,false
+Williamston,2,2,0,206767,false
+Williamstown,3,3,0,8306182,false
+Williston,7,7,0,7731575,false
+Williston Park,1,0,1,0,false
+Wilmington,5,1,4,585245,false
+Wilmore,1,1,0,72930,false
+Wilton,5,4,1,6669478,false
+Wilton Manors,1,1,0,133290,false
+Winchester,5,4,1,8566829,false
+Winder,1,1,0,37523646,false
+Windham,3,3,0,14714035,false
+Windsor,1,1,0,3288,false
+Windsor Locks,2,2,0,3116718,false
+Winfield,5,5,0,875486,false
+Winifred,1,1,0,949154,false
+Winlock,2,2,0,23791000,false
+Winner,1,1,0,981457,false
+Winnfield,2,1,1,5760984,false
+Winnsboro,1,0,1,0,false
+Winslow,3,3,0,6408335,false
+Winston,1,1,0,190316,false
+Winterport,2,2,0,2787937,false
+Winterset,2,2,0,268386,false
+Winterville,2,2,0,17178468,false
+Winthrop,1,1,0,15514877,false
+Wiscasset,3,3,0,221887,false
+Wisconsin Dells,2,2,0,1367522,false
+Wisner,2,0,2,0,false
+Wolcott,2,1,1,126035,false
+Wolfeboro,1,1,0,91937,false
+Wood River,2,2,0,4085321,false
+Wood-Ridge,2,2,0,521199,false
+Woodbridge,1,1,0,233460,false
+Woodbury,5,5,0,24674713,false
+Woodhaven,3,3,0,598673,false
+Woodlake,1,0,1,0,false
+Woodland Park,2,2,0,52968420,false
+Woods Cross,2,0,2,0,false
+Woodsfield,2,2,0,172059,false
+Woodstock,8,7,1,80778570,false
+Woodward,4,4,0,293224,false
+Woolwich,1,1,0,88444,false
+Worthing,1,1,0,187584,false
+Wright,1,1,0,410955,false
+Wyckoff,3,3,0,24305294,false
+Wymore,2,2,0,218537,false
+Wyndmere,2,2,0,209967,false
+Wynne,2,2,0,635704,false
+Wyoming,4,4,0,1448825,false
+Wytheville,1,1,0,772070,false
+Yamhill,1,1,0,1936670,false
+Yarmouth,5,5,0,5278788,false
+Yerington,2,2,0,7819370,false
+York,3,1,2,1241619,false
+Yorktown,1,1,0,164012,false
+Youngsville,2,2,0,1056526,false
+Youngtown,3,2,1,4450201,false
+Yukon,2,1,1,6022818,false
+Yutan,2,0,2,0,false
+Zachary,1,1,0,1807544,false
+Zeeland,1,1,0,5802359,false
+Zillah,3,3,0,18449089,false
+Zimmerman,2,2,0,644126,false
+Zumbrota,2,2,0,12342256,false

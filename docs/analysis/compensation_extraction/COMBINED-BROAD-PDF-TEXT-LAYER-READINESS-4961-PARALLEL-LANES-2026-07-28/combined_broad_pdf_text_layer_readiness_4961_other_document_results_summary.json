@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "readiness_status_counts": {
+    "other_document_text_later": 40
+  },
+  "retained_type_group": "other_document",
+  "reviewed_count": 40,
+  "text_ready_count": 40
+}

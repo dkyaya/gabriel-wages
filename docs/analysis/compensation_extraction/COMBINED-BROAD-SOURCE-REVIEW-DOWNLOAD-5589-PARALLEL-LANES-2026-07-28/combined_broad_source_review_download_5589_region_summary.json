@@ -1,0 +1,41 @@
+{
+  "attempted_rows": 5589,
+  "global_analysis_readiness": false,
+  "group_count": 4,
+  "group_field": "region",
+  "groups": [
+    {
+      "attempted_rows": 1794,
+      "excluded_or_deferred": 154,
+      "global_analysis_readiness": "false",
+      "region": "Midwest",
+      "retained_bytes": 4491056243,
+      "retained_sources": 1640
+    },
+    {
+      "attempted_rows": 1200,
+      "excluded_or_deferred": 97,
+      "global_analysis_readiness": "false",
+      "region": "Northeast",
+      "retained_bytes": 2172000372,
+      "retained_sources": 1103
+    },
+    {
+      "attempted_rows": 1546,
+      "excluded_or_deferred": 217,
+      "global_analysis_readiness": "false",
+      "region": "South",
+      "retained_bytes": 3892178624,
+      "retained_sources": 1329
+    },
+    {
+      "attempted_rows": 1049,
+      "excluded_or_deferred": 160,
+      "global_analysis_readiness": "false",
+      "region": "West",
+      "retained_bytes": 1920714532,
+      "retained_sources": 889
+    }
+  ],
+  "retained_sources": 4961
+}

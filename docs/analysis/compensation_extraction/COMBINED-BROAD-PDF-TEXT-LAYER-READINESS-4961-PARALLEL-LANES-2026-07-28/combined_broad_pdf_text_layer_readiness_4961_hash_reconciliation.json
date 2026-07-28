@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "hash_manifest_count": 4961,
+  "hash_values_equal": true,
+  "identity_sets_equal": true,
+  "readiness_result_hash_count": 4961,
+  "retained_ledger_hash_count": 4961,
+  "unique_sha256_count": 4961
+}

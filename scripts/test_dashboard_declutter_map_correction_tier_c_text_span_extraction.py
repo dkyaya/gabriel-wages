@@ -120,6 +120,8 @@ def main() -> None:
         "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
         "broad_candidate_verification_4x3000_resume_lane_004_completed_review_ready",
         "combined_broad_candidate_review_completed_source_review_ready",
+        "combined_broad_source_review_download_5589_completed_pdf_readiness_ready",
+        "combined_broad_pdf_text_layer_readiness_4961_completed_extraction_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159
@@ -135,7 +137,7 @@ def main() -> None:
         assert forbidden not in map_source
     assert 'id="historical-archive"' in app and "Open current evidence memo" in app
     assert "Tier C memo remains a completed historical" in app
-    assert "current operation is bounded locator verification" in app
+    assert "Current operation:" in app
     assert "Global analysis readiness" in app
     for policy in (
         OUT / "future_prompt_dashboard_update_requirement.md",

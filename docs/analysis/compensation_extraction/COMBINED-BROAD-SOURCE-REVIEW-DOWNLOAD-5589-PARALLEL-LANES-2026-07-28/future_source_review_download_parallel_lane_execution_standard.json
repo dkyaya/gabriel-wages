@@ -1,0 +1,13 @@
+{
+  "checkpoint_after_every_row": true,
+  "completed_lanes_never_rerun": true,
+  "coordinator_only_dashboard_update": true,
+  "lane_count": 4,
+  "lane_isolation": true,
+  "stagger_minutes": [
+    0,
+    8,
+    16,
+    24
+  ]
+}

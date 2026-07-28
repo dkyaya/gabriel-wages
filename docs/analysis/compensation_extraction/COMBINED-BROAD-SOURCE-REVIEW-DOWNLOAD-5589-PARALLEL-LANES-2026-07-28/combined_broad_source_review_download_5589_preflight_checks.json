@@ -1,0 +1,35 @@
+{
+  "all_candidates_source_review_ready": true,
+  "all_verification_statuses_reachable_or_reused": true,
+  "candidate_review_reruns": 0,
+  "codification_runs": 0,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "lane_counts": {
+    "source_review_lane_001": 1397,
+    "source_review_lane_002": 1397,
+    "source_review_lane_003": 1397,
+    "source_review_lane_004": 1398
+  },
+  "lane_isolation": true,
+  "locked_queue_count": 5589,
+  "master_equals_lane_union": true,
+  "network_smoke_passed": true,
+  "network_smoke_probe_count": 8,
+  "network_smoke_responded_by_lane": {
+    "source_review_lane_001": true,
+    "source_review_lane_002": true,
+    "source_review_lane_003": true,
+    "source_review_lane_004": true
+  },
+  "ocr_runs": 0,
+  "preflight_passed": true,
+  "prior_decision": "combined_broad_candidate_review_completed_source_review_ready",
+  "rating_model_api_runs": 0,
+  "rendering_runs": 0,
+  "retained_directory_writable": true,
+  "storage_sanity_passed": true,
+  "text_table_span_extraction_runs": 0,
+  "verification_reruns": 0
+}

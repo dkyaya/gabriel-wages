@@ -1,0 +1,14 @@
+{
+  "all_valid": true,
+  "artifact_hash_match_count": 4961,
+  "artifact_root": "artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28",
+  "ocr_runs": 0,
+  "operational_manifest_paths_remain_resolvable": true,
+  "original_hash_match_count": 4961,
+  "phase": "after_local_artifact_preservation",
+  "render_runs": 0,
+  "row_count": 4961,
+  "text_extraction_runs": 0,
+  "total_expected_bytes": 12475949771,
+  "unique_expected_sha256_count": 4961
+}

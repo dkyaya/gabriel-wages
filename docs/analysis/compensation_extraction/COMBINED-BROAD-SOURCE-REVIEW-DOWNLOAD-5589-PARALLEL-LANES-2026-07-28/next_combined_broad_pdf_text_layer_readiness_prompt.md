@@ -1,0 +1,3 @@
+# Next task prompt
+
+Run bounded PDF/text-layer readiness over only the 4,961 unique retained local sources from this completed source-review/download task. Revalidate every retained path, size, and SHA-256 before entry. Do not access URLs or redownload; do not OCR, render, extract evidence spans, rate, ingest, codify, calculate wage gaps, run regressions or treatment effects, or make national/prevalence/final causal claims. Dashboard update requirement: update dashboard/status/docs with substantive results, keep the map total scout coverage only, and keep global analysis readiness false. Future rating tasks must apply the post-rating artifact-completeness and deterministic reconstruction fallback rule.

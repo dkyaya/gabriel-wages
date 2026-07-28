@@ -1,0 +1,33 @@
+{
+  "checkpoint_after_every_source": true,
+  "completed_at": "2026-07-28T20:56:53Z",
+  "global_analysis_readiness": false,
+  "html_reviewed_count": 271,
+  "integrity_fail_count": 0,
+  "lane_id": "readiness_lane_003",
+  "locked_queue_count": 1240,
+  "model_api_calls": 0,
+  "ocr_runs": 0,
+  "other_document_reviewed_count": 3,
+  "pdf_render_runs": 0,
+  "pdf_reviewed_count": 966,
+  "process_started_at": "2026-07-28T20:40:29Z",
+  "readiness_status_counts": {
+    "encrypted_or_locked": 11,
+    "html_text_later": 222,
+    "needs_review": 42,
+    "ocr_later_or_defer": 129,
+    "other_document_text_later": 3,
+    "oversized_for_text_pass": 37,
+    "parse_text_layer_later": 789,
+    "shell_or_navigation_only": 7
+  },
+  "redownloads": 0,
+  "reviewed_count": 1240,
+  "saved_text_artifacts": 0,
+  "shared_output_mutations": 0,
+  "source_review_download_reruns": 0,
+  "stagger_seconds": 960,
+  "status": "completed",
+  "work_started_at": "2026-07-28T20:56:29Z"
+}

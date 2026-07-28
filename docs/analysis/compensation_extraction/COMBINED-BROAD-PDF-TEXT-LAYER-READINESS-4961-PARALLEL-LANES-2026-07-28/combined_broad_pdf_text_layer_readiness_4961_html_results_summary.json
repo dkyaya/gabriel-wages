@@ -1,0 +1,12 @@
+{
+  "global_analysis_readiness": false,
+  "readiness_status_counts": {
+    "corrupt_or_unreadable": 2,
+    "html_text_later": 834,
+    "needs_review": 87,
+    "shell_or_navigation_only": 18
+  },
+  "retained_type_group": "html",
+  "reviewed_count": 941,
+  "text_ready_count": 834
+}

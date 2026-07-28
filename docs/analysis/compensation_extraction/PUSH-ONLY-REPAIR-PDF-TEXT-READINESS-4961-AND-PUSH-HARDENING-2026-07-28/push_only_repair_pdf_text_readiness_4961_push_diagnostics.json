@@ -1,0 +1,34 @@
+{
+  "ahead_commit_count": 3,
+  "ahead_commits": [
+    "1b46e0ded70c8ab30b7c1b8651906ef93d030aa1",
+    "a305a4dd18f47099f000c48aa8c5d11f6df7bc04",
+    "d17549fe065c243d753167e5df4c7edba4e89209"
+  ],
+  "added_path_count": 5200,
+  "added_retained_source_path_count": 4961,
+  "tracked_retained_source_bytes": 12475949771,
+  "tracked_retained_source_gib": 11.619,
+  "tracked_retained_type_counts": {
+    "pdf": 3980,
+    "html": 941,
+    "doc": 5,
+    "docx": 34,
+    "txt": 1
+  },
+  "new_blob_count": 5182,
+  "new_blob_bytes": 12415784234,
+  "new_blob_gib": 11.563,
+  "new_retained_source_blob_count": 4898,
+  "new_retained_source_blob_bytes": 12325687089,
+  "new_retained_source_blob_gib": 11.479,
+  "over_100mb_blob_count": 0,
+  "largest_new_blob_bytes": 65319205,
+  "added_extracted_text_or_corpus_path_count": 0,
+  "added_binary_build_or_archive_path_count": 0,
+  "material_push_risk": "aggregate_retained_source_object_volume",
+  "push_attempt_count": 2,
+  "push_failure_repeated": true,
+  "push_error": "HTTP 500 and unexpected sideband disconnect",
+  "root_cause_statement": "Aggregate object volume is a material and plausible contributor; remote internal cause was not independently observable."
+}

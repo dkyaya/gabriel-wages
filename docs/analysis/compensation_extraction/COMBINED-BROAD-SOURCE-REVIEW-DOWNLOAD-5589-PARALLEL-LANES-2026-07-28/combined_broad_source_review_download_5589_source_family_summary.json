@@ -1,0 +1,209 @@
+{
+  "attempted_rows": 5589,
+  "global_analysis_readiness": false,
+  "group_count": 25,
+  "group_field": "source_family_hint",
+  "groups": [
+    {
+      "attempted_rows": 1048,
+      "excluded_or_deferred": 55,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 1769942206,
+      "retained_sources": 993,
+      "source_family_hint": "agenda_packet_or_minutes"
+    },
+    {
+      "attempted_rows": 139,
+      "excluded_or_deferred": 3,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 109853596,
+      "retained_sources": 136,
+      "source_family_hint": "arbitration_award"
+    },
+    {
+      "attempted_rows": 747,
+      "excluded_or_deferred": 106,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 1968009968,
+      "retained_sources": 641,
+      "source_family_hint": "budget_or_pay_plan"
+    },
+    {
+      "attempted_rows": 740,
+      "excluded_or_deferred": 68,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 2327637952,
+      "retained_sources": 672,
+      "source_family_hint": "cba"
+    },
+    {
+      "attempted_rows": 83,
+      "excluded_or_deferred": 6,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 136048820,
+      "retained_sources": 77,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record"
+    },
+    {
+      "attempted_rows": 1,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 49890,
+      "retained_sources": 1,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed)"
+    },
+    {
+      "attempted_rows": 278,
+      "excluded_or_deferred": 17,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 1175170283,
+      "retained_sources": 261,
+      "source_family_hint": "cba_or_budget_pay_plan_with_explicit_compensation_mechanism"
+    },
+    {
+      "attempted_rows": 378,
+      "excluded_or_deferred": 37,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 955918918,
+      "retained_sources": 341,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule"
+    },
+    {
+      "attempted_rows": 1,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 36512,
+      "retained_sources": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules)"
+    },
+    {
+      "attempted_rows": 2,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 1524737,
+      "retained_sources": 2,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit)"
+    },
+    {
+      "attempted_rows": 1,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 61005,
+      "retained_sources": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index)"
+    },
+    {
+      "attempted_rows": 1,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 407123,
+      "retained_sources": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey)"
+    },
+    {
+      "attempted_rows": 132,
+      "excluded_or_deferred": 25,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 259742811,
+      "retained_sources": 107,
+      "source_family_hint": "civil_service_or_hr_pay_plan"
+    },
+    {
+      "attempted_rows": 37,
+      "excluded_or_deferred": 7,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 137729537,
+      "retained_sources": 30,
+      "source_family_hint": "classification_study"
+    },
+    {
+      "attempted_rows": 167,
+      "excluded_or_deferred": 21,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 362974542,
+      "retained_sources": 146,
+      "source_family_hint": "collective_bargaining_agreement_or_moa_or_wage_schedule"
+    },
+    {
+      "attempted_rows": 67,
+      "excluded_or_deferred": 9,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 188740335,
+      "retained_sources": 58,
+      "source_family_hint": "compensation_study"
+    },
+    {
+      "attempted_rows": 10,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 70037164,
+      "retained_sources": 10,
+      "source_family_hint": "factfinding_report"
+    },
+    {
+      "attempted_rows": 298,
+      "excluded_or_deferred": 31,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 888642731,
+      "retained_sources": 267,
+      "source_family_hint": "mou_or_memorandum"
+    },
+    {
+      "attempted_rows": 321,
+      "excluded_or_deferred": 72,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 389027065,
+      "retained_sources": 249,
+      "source_family_hint": "other_local_government_pay_policy"
+    },
+    {
+      "attempted_rows": 96,
+      "excluded_or_deferred": 17,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 143359873,
+      "retained_sources": 79,
+      "source_family_hint": "personnel_policy"
+    },
+    {
+      "attempted_rows": 180,
+      "excluded_or_deferred": 17,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 124476117,
+      "retained_sources": 163,
+      "source_family_hint": "salary_ordinance"
+    },
+    {
+      "attempted_rows": 6,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 36548573,
+      "retained_sources": 6,
+      "source_family_hint": "settlement_agreement"
+    },
+    {
+      "attempted_rows": 1,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 212,
+      "retained_sources": 1,
+      "source_family_hint": "strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing)"
+    },
+    {
+      "attempted_rows": 204,
+      "excluded_or_deferred": 48,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 170665637,
+      "retained_sources": 156,
+      "source_family_hint": "unknown_or_needs_review"
+    },
+    {
+      "attempted_rows": 651,
+      "excluded_or_deferred": 89,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 1259344164,
+      "retained_sources": 562,
+      "source_family_hint": "wage_schedule"
+    }
+  ],
+  "retained_sources": 4961
+}

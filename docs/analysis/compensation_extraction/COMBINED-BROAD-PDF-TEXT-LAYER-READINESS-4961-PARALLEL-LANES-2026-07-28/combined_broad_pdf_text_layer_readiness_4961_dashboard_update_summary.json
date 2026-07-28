@@ -1,0 +1,18 @@
+{
+  "corrupt_or_unreadable_count": 2,
+  "current_operation": "combined broad PDF/text-layer readiness complete",
+  "dashboard_data_builder_integration": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "dashboard_update_required": true,
+  "global_analysis_readiness": false,
+  "html_text_ready_count": 834,
+  "map_data_date": "2026-07-27",
+  "needs_review_count": 87,
+  "next_authorized_stage": "four-lane bounded text extraction over readiness-approved sources",
+  "ocr_later_or_defer_count": 625,
+  "other_document_text_ready_count": 40,
+  "oversized_for_text_pass_count": 140,
+  "parse_text_layer_ready_count": 3177,
+  "readiness_error_count": 0,
+  "readiness_reviewed_count": 4961
+}

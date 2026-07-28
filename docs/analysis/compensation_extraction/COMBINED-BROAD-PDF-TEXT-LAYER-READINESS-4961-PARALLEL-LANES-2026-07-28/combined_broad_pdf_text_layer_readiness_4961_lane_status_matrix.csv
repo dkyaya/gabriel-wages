@@ -1,0 +1,5 @@
+lane_id,locked_queue_count,reviewed_count,status,process_started_at,work_started_at,completed_at,stagger_seconds,checkpoint_after_every_source
+readiness_lane_001,1240,1240,completed,2026-07-28T20:40:29Z,2026-07-28T20:40:29Z,2026-07-28T20:40:54Z,0,true
+readiness_lane_002,1240,1240,completed,2026-07-28T20:40:29Z,2026-07-28T20:48:29Z,2026-07-28T20:48:55Z,480,true
+readiness_lane_003,1240,1240,completed,2026-07-28T20:40:29Z,2026-07-28T20:56:29Z,2026-07-28T20:56:53Z,960,true
+readiness_lane_004,1241,1241,completed,2026-07-28T20:40:29Z,2026-07-28T21:04:29Z,2026-07-28T21:04:55Z,1440,true

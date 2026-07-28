@@ -1,0 +1,33 @@
+{
+  "policy_id": "future_large_artifact_push_preflight_policy_v1",
+  "effective_date": "2026-07-28",
+  "staged_path_fail_classes": [
+    "configured_retained_or_artifact_payload_root",
+    "source_pdf_or_saved_html",
+    "office_document_or_archive",
+    "image_or_ocr_output",
+    "extracted_full_text_payload",
+    "unclassified_non_lightweight_artifact"
+  ],
+  "ahead_history_fail_conditions": {
+    "retained_payload_path_count_greater_than": 0,
+    "single_blob_bytes_greater_than": 104857600,
+    "aggregate_new_blob_bytes_greater_than_without_exception": 262144000,
+    "unreconciled_manifest_hash_or_pointer_count": true,
+    "ambiguous_upstream_base": true
+  },
+  "required_report_fields": [
+    "upstream_base",
+    "ahead_behind_counts",
+    "changed_and_added_path_counts",
+    "retained_payload_path_count",
+    "new_blob_count_and_aggregate_bytes",
+    "largest_20_new_blobs",
+    "over_100mib_blob_count",
+    "artifact_pointer_size_hash_reconciliation",
+    "post_push_ahead_behind_status",
+    "local_commit_and_remote_push_status_separately"
+  ],
+  "inspect_commits_not_only_index": true,
+  "push_success_required_before_public_update_claim": true
+}

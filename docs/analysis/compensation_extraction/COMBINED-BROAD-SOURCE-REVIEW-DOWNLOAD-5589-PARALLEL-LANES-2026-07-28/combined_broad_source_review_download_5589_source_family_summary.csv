@@ -1,0 +1,26 @@
+source_family_hint,attempted_rows,retained_sources,excluded_or_deferred,retained_bytes,global_analysis_readiness
+agenda_packet_or_minutes,1048,993,55,1769942206,false
+arbitration_award,139,136,3,109853596,false
+budget_or_pay_plan,747,641,106,1968009968,false
+cba,740,672,68,2327637952,false
+cba_or_arbitration_award_or_factfinding_or_impasse_record,83,77,6,136048820,false
+cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed),1,1,0,49890,false
+cba_or_budget_pay_plan_with_explicit_compensation_mechanism,278,261,17,1175170283,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule,378,341,37,955918918,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules),1,1,0,36512,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit),2,2,0,1524737,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index),1,1,0,61005,false
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey),1,1,0,407123,false
+civil_service_or_hr_pay_plan,132,107,25,259742811,false
+classification_study,37,30,7,137729537,false
+collective_bargaining_agreement_or_moa_or_wage_schedule,167,146,21,362974542,false
+compensation_study,67,58,9,188740335,false
+factfinding_report,10,10,0,70037164,false
+mou_or_memorandum,298,267,31,888642731,false
+other_local_government_pay_policy,321,249,72,389027065,false
+personnel_policy,96,79,17,143359873,false
+salary_ordinance,180,163,17,124476117,false
+settlement_agreement,6,6,0,36548573,false
+strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing),1,1,0,212,false
+unknown_or_needs_review,204,156,48,170665637,false
+wage_schedule,651,562,89,1259344164,false

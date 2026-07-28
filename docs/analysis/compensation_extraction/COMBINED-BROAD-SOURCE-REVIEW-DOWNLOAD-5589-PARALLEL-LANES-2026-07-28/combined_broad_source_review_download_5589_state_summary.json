@@ -1,0 +1,401 @@
+{
+  "attempted_rows": 5589,
+  "global_analysis_readiness": false,
+  "group_count": 49,
+  "group_field": "state",
+  "groups": [
+    {
+      "attempted_rows": 49,
+      "excluded_or_deferred": 3,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 49868054,
+      "retained_sources": 46,
+      "state": "AK"
+    },
+    {
+      "attempted_rows": 106,
+      "excluded_or_deferred": 28,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 151104359,
+      "retained_sources": 78,
+      "state": "AL"
+    },
+    {
+      "attempted_rows": 78,
+      "excluded_or_deferred": 4,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 56148209,
+      "retained_sources": 74,
+      "state": "AR"
+    },
+    {
+      "attempted_rows": 91,
+      "excluded_or_deferred": 12,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 178978922,
+      "retained_sources": 79,
+      "state": "AZ"
+    },
+    {
+      "attempted_rows": 194,
+      "excluded_or_deferred": 24,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 583160751,
+      "retained_sources": 170,
+      "state": "CA"
+    },
+    {
+      "attempted_rows": 80,
+      "excluded_or_deferred": 17,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 238897989,
+      "retained_sources": 63,
+      "state": "CO"
+    },
+    {
+      "attempted_rows": 128,
+      "excluded_or_deferred": 22,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 260823619,
+      "retained_sources": 106,
+      "state": "CT"
+    },
+    {
+      "attempted_rows": 52,
+      "excluded_or_deferred": 2,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 21929481,
+      "retained_sources": 50,
+      "state": "DE"
+    },
+    {
+      "attempted_rows": 90,
+      "excluded_or_deferred": 21,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 433116738,
+      "retained_sources": 69,
+      "state": "FL"
+    },
+    {
+      "attempted_rows": 135,
+      "excluded_or_deferred": 31,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 561917074,
+      "retained_sources": 104,
+      "state": "GA"
+    },
+    {
+      "attempted_rows": 127,
+      "excluded_or_deferred": 12,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 315154205,
+      "retained_sources": 115,
+      "state": "IA"
+    },
+    {
+      "attempted_rows": 75,
+      "excluded_or_deferred": 10,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 35525005,
+      "retained_sources": 65,
+      "state": "ID"
+    },
+    {
+      "attempted_rows": 273,
+      "excluded_or_deferred": 18,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 942125506,
+      "retained_sources": 255,
+      "state": "IL"
+    },
+    {
+      "attempted_rows": 163,
+      "excluded_or_deferred": 14,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 165584586,
+      "retained_sources": 149,
+      "state": "IN"
+    },
+    {
+      "attempted_rows": 99,
+      "excluded_or_deferred": 10,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 205337512,
+      "retained_sources": 89,
+      "state": "KS"
+    },
+    {
+      "attempted_rows": 113,
+      "excluded_or_deferred": 8,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 132730074,
+      "retained_sources": 105,
+      "state": "KY"
+    },
+    {
+      "attempted_rows": 121,
+      "excluded_or_deferred": 23,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 200848083,
+      "retained_sources": 98,
+      "state": "LA"
+    },
+    {
+      "attempted_rows": 108,
+      "excluded_or_deferred": 10,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 166599792,
+      "retained_sources": 98,
+      "state": "MA"
+    },
+    {
+      "attempted_rows": 76,
+      "excluded_or_deferred": 7,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 109973502,
+      "retained_sources": 69,
+      "state": "MD"
+    },
+    {
+      "attempted_rows": 142,
+      "excluded_or_deferred": 4,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 297995030,
+      "retained_sources": 138,
+      "state": "ME"
+    },
+    {
+      "attempted_rows": 208,
+      "excluded_or_deferred": 14,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 727314536,
+      "retained_sources": 194,
+      "state": "MI"
+    },
+    {
+      "attempted_rows": 156,
+      "excluded_or_deferred": 30,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 715334694,
+      "retained_sources": 126,
+      "state": "MN"
+    },
+    {
+      "attempted_rows": 104,
+      "excluded_or_deferred": 16,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 341723293,
+      "retained_sources": 88,
+      "state": "MO"
+    },
+    {
+      "attempted_rows": 29,
+      "excluded_or_deferred": 2,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 27358587,
+      "retained_sources": 27,
+      "state": "MS"
+    },
+    {
+      "attempted_rows": 96,
+      "excluded_or_deferred": 4,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 60113013,
+      "retained_sources": 92,
+      "state": "MT"
+    },
+    {
+      "attempted_rows": 130,
+      "excluded_or_deferred": 12,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 664015533,
+      "retained_sources": 118,
+      "state": "NC"
+    },
+    {
+      "attempted_rows": 97,
+      "excluded_or_deferred": 3,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 131480575,
+      "retained_sources": 94,
+      "state": "ND"
+    },
+    {
+      "attempted_rows": 102,
+      "excluded_or_deferred": 16,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 148189152,
+      "retained_sources": 86,
+      "state": "NE"
+    },
+    {
+      "attempted_rows": 79,
+      "excluded_or_deferred": 6,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 213435313,
+      "retained_sources": 73,
+      "state": "NH"
+    },
+    {
+      "attempted_rows": 165,
+      "excluded_or_deferred": 13,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 270691071,
+      "retained_sources": 152,
+      "state": "NJ"
+    },
+    {
+      "attempted_rows": 59,
+      "excluded_or_deferred": 4,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 65922076,
+      "retained_sources": 55,
+      "state": "NM"
+    },
+    {
+      "attempted_rows": 17,
+      "excluded_or_deferred": 0,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 30586311,
+      "retained_sources": 17,
+      "state": "NV"
+    },
+    {
+      "attempted_rows": 181,
+      "excluded_or_deferred": 27,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 261403313,
+      "retained_sources": 154,
+      "state": "NY"
+    },
+    {
+      "attempted_rows": 211,
+      "excluded_or_deferred": 6,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 472124024,
+      "retained_sources": 205,
+      "state": "OH"
+    },
+    {
+      "attempted_rows": 105,
+      "excluded_or_deferred": 19,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 206247304,
+      "retained_sources": 86,
+      "state": "OK"
+    },
+    {
+      "attempted_rows": 76,
+      "excluded_or_deferred": 3,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 260672422,
+      "retained_sources": 73,
+      "state": "OR"
+    },
+    {
+      "attempted_rows": 219,
+      "excluded_or_deferred": 10,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 350632656,
+      "retained_sources": 209,
+      "state": "PA"
+    },
+    {
+      "attempted_rows": 66,
+      "excluded_or_deferred": 2,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 218149233,
+      "retained_sources": 64,
+      "state": "RI"
+    },
+    {
+      "attempted_rows": 98,
+      "excluded_or_deferred": 14,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 240365343,
+      "retained_sources": 84,
+      "state": "SC"
+    },
+    {
+      "attempted_rows": 95,
+      "excluded_or_deferred": 5,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 68720873,
+      "retained_sources": 90,
+      "state": "SD"
+    },
+    {
+      "attempted_rows": 97,
+      "excluded_or_deferred": 5,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 128213408,
+      "retained_sources": 92,
+      "state": "TN"
+    },
+    {
+      "attempted_rows": 156,
+      "excluded_or_deferred": 13,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 760475714,
+      "retained_sources": 143,
+      "state": "TX"
+    },
+    {
+      "attempted_rows": 130,
+      "excluded_or_deferred": 69,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 167010584,
+      "retained_sources": 61,
+      "state": "UT"
+    },
+    {
+      "attempted_rows": 98,
+      "excluded_or_deferred": 17,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 124243879,
+      "retained_sources": 81,
+      "state": "VA"
+    },
+    {
+      "attempted_rows": 112,
+      "excluded_or_deferred": 3,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 132270345,
+      "retained_sources": 109,
+      "state": "VT"
+    },
+    {
+      "attempted_rows": 117,
+      "excluded_or_deferred": 8,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 213124311,
+      "retained_sources": 109,
+      "state": "WA"
+    },
+    {
+      "attempted_rows": 159,
+      "excluded_or_deferred": 10,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 257967287,
+      "retained_sources": 149,
+      "state": "WI"
+    },
+    {
+      "attempted_rows": 62,
+      "excluded_or_deferred": 11,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 73491336,
+      "retained_sources": 51,
+      "state": "WV"
+    },
+    {
+      "attempted_rows": 65,
+      "excluded_or_deferred": 6,
+      "global_analysis_readiness": "false",
+      "retained_bytes": 36855094,
+      "retained_sources": 59,
+      "state": "WY"
+    }
+  ],
+  "retained_sources": 4961
+}

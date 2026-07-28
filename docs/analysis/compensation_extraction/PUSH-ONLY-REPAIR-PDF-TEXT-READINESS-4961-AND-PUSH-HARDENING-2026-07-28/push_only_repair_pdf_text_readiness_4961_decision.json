@@ -1,0 +1,15 @@
+{
+  "task_id": "PUSH-ONLY-REPAIR-PDF-TEXT-READINESS-4961-AND-PUSH-HARDENING-2026-07-28",
+  "decision": "push_only_repair_pdf_text_readiness_4961_push_failed",
+  "recorded_at_utc": "2026-07-28T21:26:32Z",
+  "readiness_commit": "d17549fe065c243d753167e5df4c7edba4e89209",
+  "readiness_decision": "combined_broad_pdf_text_layer_readiness_4961_completed_extraction_ready",
+  "branch": "main",
+  "push_attempts": 2,
+  "push_succeeded": false,
+  "failure_class": "repeated_http_500_transport_failure_with_large_unpushed_object_set",
+  "local_commits_ahead_of_origin_main": 3,
+  "global_analysis_readiness": false,
+  "research_stage_rerun": false,
+  "next_authorized_stage_blocked_until_push_repair": true
+}

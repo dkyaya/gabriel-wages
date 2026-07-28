@@ -1,0 +1,19 @@
+{
+  "task_id": "PUSH-ONLY-REPAIR-SOURCE-REVIEW-DOWNLOAD-5589-2026-07-28",
+  "status": "initial_push_succeeded_status_note_recorded_for_push",
+  "pushed_commit": "1b46e0ded70c8ab30b7c1b8651906ef93d030aa1",
+  "pushed_commit_subject": "Run combined broad source review downloads",
+  "branch": "main",
+  "remote": "origin/main",
+  "source_review_decision": "combined_broad_source_review_download_5589_completed_pdf_readiness_ready",
+  "source_review_rerun": false,
+  "redownload": false,
+  "text_table_span_extraction": false,
+  "ocr_or_rendering": false,
+  "rating_model_or_api": false,
+  "ingestion_or_codification": false,
+  "retained_sources": 4961,
+  "next_research_step": "PDF/text-layer readiness over 4,961 retained local sources",
+  "dashboard_map_scope": "total scout coverage only",
+  "global_analysis_readiness": false
+}

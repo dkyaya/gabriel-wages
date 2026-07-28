@@ -1,0 +1,13 @@
+{
+  "excluded_or_deferred_count": 95,
+  "global_analysis_readiness": false,
+  "lane_id": "source_review_lane_004",
+  "status_counts": {
+    "blocked_by_transport": 37,
+    "download_error": 5,
+    "generic_navigation_or_search_page": 4,
+    "oversized_for_this_pass": 3,
+    "unavailable_on_get": 18,
+    "weak_or_needs_review": 28
+  }
+}

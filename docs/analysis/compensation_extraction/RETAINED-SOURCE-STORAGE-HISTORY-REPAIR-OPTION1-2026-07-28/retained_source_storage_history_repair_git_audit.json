@@ -1,0 +1,25 @@
+{
+  "branch": "main",
+  "original_head": "d17549fe065c243d753167e5df4c7edba4e89209",
+  "origin_main_base": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "merge_base": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "ahead_before_repair": 3,
+  "behind_before_repair": 0,
+  "unpushed_commits": [
+    "1b46e0ded70c8ab30b7c1b8651906ef93d030aa1",
+    "a305a4dd18f47099f000c48aa8c5d11f6df7bc04",
+    "d17549fe065c243d753167e5df4c7edba4e89209"
+  ],
+  "unrelated_tracked_modification_count": 0,
+  "tracked_retained_source_path_count_before": 4961,
+  "tracked_retained_source_bytes_before": 12475949771,
+  "new_blob_count_before": 5182,
+  "new_blob_bytes_before": 12415784234,
+  "retained_source_new_blob_count_before": 4898,
+  "retained_source_new_blob_bytes_before": 12325687089,
+  "blob_over_100mib_count_before": 0,
+  "largest_blob_bytes_before": 65319205,
+  "already_pushed_history_rewritten": false,
+  "force_push_allowed": false,
+  "remote_configuration_change_allowed": false
+}

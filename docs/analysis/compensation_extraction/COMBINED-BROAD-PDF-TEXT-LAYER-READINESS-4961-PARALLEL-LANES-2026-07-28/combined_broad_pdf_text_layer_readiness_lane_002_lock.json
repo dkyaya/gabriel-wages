@@ -1,0 +1,12 @@
+{
+  "global_analysis_readiness": false,
+  "inspection_status": "not_started",
+  "lane_id": "readiness_lane_002",
+  "locked_queue_count": 1240,
+  "queue_sha256": "6b58a0b207339c64cde8e9ff4cfbafb144fc9797bf6358a6ff5dea284ee2c919",
+  "shared_output_mutation_allowed": false,
+  "source_id_set_sha256": "6c92da93b0d0b8bcc616024d349c61b4a322e3a3a8306ca54b014f61007469b0",
+  "stagger_start_minutes": 8,
+  "task_id": "COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28",
+  "worker_output_directory": "docs/analysis/compensation_extraction/COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28/lanes/readiness_lane_002"
+}

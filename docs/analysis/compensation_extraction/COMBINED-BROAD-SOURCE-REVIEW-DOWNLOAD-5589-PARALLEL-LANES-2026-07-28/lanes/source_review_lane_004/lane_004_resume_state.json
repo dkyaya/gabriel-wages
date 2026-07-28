@@ -1,0 +1,9 @@
+{
+  "completed_rows": 1398,
+  "global_analysis_readiness": false,
+  "lane_id": "source_review_lane_004",
+  "queue_sha256": "df5346475bdb28f2c595a95ae9289775e925be177fe693450ed367a5817f9d5e",
+  "remaining_rows": 0,
+  "resume_required": false,
+  "status": "completed"
+}

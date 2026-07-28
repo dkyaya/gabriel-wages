@@ -1,38 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-28T18:40:35Z",
+  "generated_at": "2026-07-28T21:05:06Z",
   "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "combined-broad-candidate-review-2026-07-28",
-      "title": "Combined Broad Candidate Review Result",
-      "report_type": "Current metadata-only candidate-review report",
+      "id": "combined-broad-pdf-text-readiness-4961-2026-07-28",
+      "title": "Combined Broad PDF and Text-Layer Readiness Result",
+      "report_type": "Current technical readiness report",
       "date": "2026-07-28",
-      "checkpoint": "5,589 source-review-ready candidates from 9,065 reviewed rows",
-      "summary": "The current operation completed local metadata triage and locked a later source-review queue. No URLs were opened and no documents were downloaded, source-reviewed, extracted, rated, ingested, or codified.",
+      "checkpoint": "4,961 retained sources reviewed; 4,051 technically text-ready",
+      "summary": "Four isolated, staggered lanes completed local path, hash, metadata, page-count, and bounded text-layer/HTML readiness checks. This is not text extraction, evidence rating, ingestion, wage analysis, or causal evidence.",
       "tags": [
         "current",
-        "candidate review",
-        "metadata only",
+        "PDF readiness",
+        "text layer",
+        "local files",
         "claim boundaries"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_candidate_review_result_2026-07-28.md",
-      "link_label": "Open current candidate-review report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_pdf_text_layer_readiness_4961_result_2026-07-28.md",
+      "link_label": "Open current PDF/text-readiness report",
       "scope_metrics": [
         {
-          "label": "review universe",
-          "value": 9065
+          "label": "readiness queue",
+          "value": 4961
         },
         {
-          "label": "source-review ready",
-          "value": 5589
+          "label": "reviewed",
+          "value": 4961
         },
         {
-          "label": "non-CBA ready",
-          "value": 4849
+          "label": "text-ready",
+          "value": 4051
         }
       ]
     },
@@ -132,6 +133,71 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-source-review-download-5589-2026-07-28",
+      "title": "Combined Broad Source Review and Download Result",
+      "report_type": "Historical bounded source-review/download report",
+      "date": "2026-07-28",
+      "checkpoint": "4,961 retained sources from 5,589 locked rows",
+      "summary": "Four isolated, staggered lanes completed bounded source retrieval, retention, hashing, and metadata-only source review. Retained files remain unextracted, unrated, uningested, non-causal, and outside global analysis readiness.",
+      "tags": [
+        "historical",
+        "source review",
+        "downloads",
+        "retained sources",
+        "claim boundaries"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_source_review_download_5589_result_2026-07-28.md",
+      "link_label": "Open current source-review/download report",
+      "scope_metrics": [
+        {
+          "label": "locked rows",
+          "value": 5589
+        },
+        {
+          "label": "retained sources",
+          "value": 4961
+        },
+        {
+          "label": "retained PDFs",
+          "value": 3980
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-candidate-review-2026-07-28",
+      "title": "Combined Broad Candidate Review Result",
+      "report_type": "Current metadata-only candidate-review report",
+      "date": "2026-07-28",
+      "checkpoint": "5,589 source-review-ready candidates from 9,065 reviewed rows",
+      "summary": "The current operation completed local metadata triage and locked a later source-review queue. No URLs were opened and no documents were downloaded, source-reviewed, extracted, rated, ingested, or codified.",
+      "tags": [
+        "current",
+        "candidate review",
+        "metadata only",
+        "claim boundaries"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_candidate_review_result_2026-07-28.md",
+      "link_label": "Open current candidate-review report",
+      "scope_metrics": [
+        {
+          "label": "review universe",
+          "value": 9065
+        },
+        {
+          "label": "source-review ready",
+          "value": 5589
+        },
+        {
+          "label": "non-CBA ready",
+          "value": 4849
         }
       ]
     },

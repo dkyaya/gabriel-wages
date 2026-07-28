@@ -1,0 +1,10 @@
+## git status --short
+?? docs/analysis/compensation_extraction/PUSH-ONLY-REPAIR-PDF-TEXT-READINESS-4961-AND-PUSH-HARDENING-2026-07-28/
+?? docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/
+?? package-lock.json
+
+## git status -sb
+## main...origin/main [ahead 3]
+?? docs/analysis/compensation_extraction/PUSH-ONLY-REPAIR-PDF-TEXT-READINESS-4961-AND-PUSH-HARDENING-2026-07-28/
+?? docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/
+?? package-lock.json

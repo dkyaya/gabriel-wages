@@ -18,11 +18,24 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Combined broad candidate review complete</h2>
-        <p>
-          {formatNumber(phase.candidate_review_universe_size)} local metadata rows were reviewed; a locked
-          queue of {formatNumber(phase.source_review_ready_count)} candidates is ready for separately authorized source review.
-        </p>
+        <h2>{phase.combined_pdf_text_readiness_available ? "Combined broad PDF/text-layer readiness complete" : phase.combined_source_review_download_available ? "Combined broad source review/download complete" : "Combined broad candidate review complete"}</h2>
+        {phase.combined_pdf_text_readiness_available ? (
+          <p>
+            All {formatNumber(phase.pdf_text_readiness_reviewed_count)} retained sources were reviewed across four
+            staggered lanes; {formatNumber(phase.pdf_text_readiness_extraction_ready_count)} are technically approved
+            for a later bounded text pass.
+          </p>
+        ) : phase.combined_source_review_download_available ? (
+          <p>
+            All {formatNumber(phase.source_review_download_attempted_count)} locked rows were processed in four
+            lanes; {formatNumber(phase.source_review_download_retained_count)} unique source files were retained and hashed.
+          </p>
+        ) : (
+          <p>
+            {formatNumber(phase.candidate_review_universe_size)} local metadata rows were reviewed; a locked
+            queue of {formatNumber(phase.source_review_ready_count)} candidates is ready for separately authorized source review.
+          </p>
+        )}
       </article>
       <article>
         <p className="eyebrow">Current evidence memo</p>
@@ -36,10 +49,11 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       <article>
         <p className="eyebrow">Next authorized stage</p>
         <h2>{phase.next_phase}</h2>
-        <p>
-          Use only the locked reviewed queue in a separately authorized bounded source-review/download wave.
-          Candidate review itself did not download, inspect, extract, rate, or ingest documents.
-        </p>
+        <p>{phase.combined_pdf_text_readiness_available
+          ? "Use only readiness-approved manifests in four isolated text-extraction lanes; do not admit deferred rows or treat extracted text as rated, ingested, causal, or globally analysis-ready."
+          : phase.combined_source_review_download_available
+          ? "Use only hashed retained local files in a separately authorized PDF/text-layer readiness pass; do not redownload or treat retention as evidence."
+          : "Use only the locked reviewed queue in a separately authorized bounded source-review/download wave. Candidate review itself did not download, inspect, extract, rate, or ingest documents."}</p>
       </article>
     </section>
   );
@@ -55,7 +69,11 @@ export function ProjectPhasePanel({ phase }) {
           <h2 id="project-phase-title">{phase.current_phase}</h2>
         </div>
         <StatusPill tone="verified">
-          {formatNumber(phase.source_review_ready_count)} source-review-ready
+          {phase.combined_pdf_text_readiness_available
+            ? `${formatNumber(phase.pdf_text_readiness_reviewed_count)} readiness-reviewed`
+            : phase.combined_source_review_download_available
+            ? `${formatNumber(phase.source_review_download_retained_count)} retained sources`
+            : `${formatNumber(phase.source_review_ready_count)} source-review-ready`}
         </StatusPill>
       </div>
 
@@ -78,6 +96,17 @@ export function ProjectPhasePanel({ phase }) {
         <div><span>Candidate review universe</span><strong>{formatNumber(phase.candidate_review_universe_size)}</strong></div>
         <div><span>Source-review ready</span><strong>{formatNumber(phase.source_review_ready_count)}</strong></div>
         <div><span>High / medium / low ready</span><strong>{formatNumber(phase.source_review_ready_high_count)} / {formatNumber(phase.source_review_ready_medium_count)} / {formatNumber(phase.source_review_ready_low_count)}</strong></div>
+        <div><span>Source-review/download attempted</span><strong>{formatNumber(phase.source_review_download_attempted_count)}</strong></div>
+        <div><span>Retained sources</span><strong>{formatNumber(phase.source_review_download_retained_count)}</strong></div>
+        <div><span>Retained PDF / HTML / other</span><strong>{formatNumber(phase.source_review_download_retained_pdf_count)} / {formatNumber(phase.source_review_download_retained_html_count)} / {formatNumber(phase.source_review_download_retained_other_count)}</strong></div>
+        <div><span>PDF/text readiness queue / reviewed</span><strong>{formatNumber(phase.pdf_text_readiness_queue_size)} / {formatNumber(phase.pdf_text_readiness_reviewed_count)}</strong></div>
+        <div><span>Parse-layer / HTML / other ready</span><strong>{formatNumber(phase.pdf_text_readiness_parse_text_layer_ready_count)} / {formatNumber(phase.pdf_text_readiness_html_text_ready_count)} / {formatNumber(phase.pdf_text_readiness_other_document_text_ready_count)}</strong></div>
+        <div><span>OCR-later / oversized defer</span><strong>{formatNumber(phase.pdf_text_readiness_ocr_later_defer_count)} / {formatNumber(phase.pdf_text_readiness_oversized_defer_count)}</strong></div>
+        <div><span>Corrupt / locked / shell</span><strong>{formatNumber(phase.pdf_text_readiness_corrupt_unreadable_count)} / {formatNumber(phase.pdf_text_readiness_encrypted_locked_count)} / {formatNumber(phase.pdf_text_readiness_shell_navigation_count)}</strong></div>
+        <div><span>Unsupported / needs review / errors</span><strong>{formatNumber(phase.pdf_text_readiness_unsupported_count)} / {formatNumber(phase.pdf_text_readiness_needs_review_count)} / {formatNumber(phase.pdf_text_readiness_error_count)}</strong></div>
+        <div><span>Excluded / deferred source review</span><strong>{formatNumber(phase.source_review_download_excluded_deferred_count)}</strong></div>
+        <div><span>Oversized / duplicate hashes</span><strong>{formatNumber(phase.source_review_download_oversized_count)} / {formatNumber(phase.source_review_download_duplicate_file_hash_count)}</strong></div>
+        <div><span>Blocked / unavailable downloads</span><strong>{formatNumber(phase.source_review_download_blocked_unavailable_count)}</strong></div>
         <div><span>Unavailable</span><strong>{formatNumber(phase.verification_unavailable_count)}</strong></div>
         <div><span>Blocked / timeout</span><strong>{formatNumber(phase.verification_blocked_timeout_count)}</strong></div>
         <div><span>Deferred unavailable / blocked</span><strong>{formatNumber(phase.candidate_review_deferred_unavailable_count)} / {formatNumber(phase.candidate_review_deferred_blocked_timeout_count)}</strong></div>
@@ -92,14 +121,30 @@ export function ProjectPhasePanel({ phase }) {
           <p className="eyebrow">Current transition</p>
           <h3>{phase.next_phase}</h3>
         </div>
-        <ol>
-          <li>Use only the locked {formatNumber(phase.source_review_ready_count)}-row reviewed queue</li>
-          <li>Start with {formatNumber(phase.source_review_ready_high_count)} high-priority metadata leads</li>
-          <li>Preserve geographic and non-CBA source-family diversity</li>
-          <li>Keep downloading and source review separately authorized and bounded</li>
-          <li>Do not treat a reviewed locator as retained, extracted, rated, or analysis-ready evidence</li>
-        </ol>
-        <StatusPill tone="future">Source review/download next</StatusPill>
+        {phase.combined_pdf_text_readiness_available ? (
+          <ol>
+            <li>Lock only parse-layer, HTML-text, and other-document-text approved identities</li>
+            <li>Use four isolated extraction workers with T+0/T+8/T+16/T+24 starts</li>
+            <li>Keep OCR/defer, oversized, corrupt, locked, shell, unsupported, review, and error rows excluded</li>
+            <li>Keep extraction separate from rating, ingestion, codification, wage analysis, and causal claims</li>
+          </ol>
+        ) : phase.combined_source_review_download_available ? (
+          <ol>
+            <li>Use only the unique retained files and verify path, size, and SHA-256 lineage</li>
+            <li>Separate PDF text-layer readiness from HTML/document handling</li>
+            <li>Do not access URLs, redownload, OCR, render, extract evidence, or rate without authorization</li>
+            <li>Keep every retained file non-causal and outside global analysis readiness</li>
+          </ol>
+        ) : (
+          <ol>
+            <li>Use only the locked {formatNumber(phase.source_review_ready_count)}-row reviewed queue</li>
+            <li>Start with {formatNumber(phase.source_review_ready_high_count)} high-priority metadata leads</li>
+            <li>Preserve geographic and non-CBA source-family diversity</li>
+            <li>Keep downloading and source review separately authorized and bounded</li>
+            <li>Do not treat a reviewed locator as retained, extracted, rated, or analysis-ready evidence</li>
+          </ol>
+        )}
+        <StatusPill tone="future">{phase.combined_pdf_text_readiness_available ? "Four-lane bounded text extraction next" : phase.combined_source_review_download_available ? "PDF/text-layer readiness next" : "Source review/download next"}</StatusPill>
       </div>
       <p className="panel-note">
         Exact-span rating is not causal proof. The ratings and bounded memo remain documentary scaffolding only;
@@ -274,7 +319,11 @@ export function VerificationPipeline({
     ["Completed verification outcomes", formatNumber(phase.verification_completed_count), "HEAD-only", "verified"],
     ["Reachable locators", formatNumber(phase.verification_verified_reachable_count), "Metadata review complete", "verified"],
     ["Candidate review universe", formatNumber(phase.candidate_review_universe_size), "Metadata-only complete", "verified"],
-    ["Source-review-ready queue", formatNumber(phase.source_review_ready_count), "Separately authorized next", "verified"],
+    ["Source-review-ready queue", formatNumber(phase.source_review_ready_count), "Processed in four lanes", "verified"],
+    ["Source-review/download outcomes", formatNumber(phase.source_review_download_attempted_count), phase.combined_source_review_download_available ? "Complete" : "Not started", "verified"],
+    ["Unique retained sources", formatNumber(phase.source_review_download_retained_count), phase.combined_source_review_download_available ? "Hashed local files" : "None", "verified"],
+    ["Readiness-reviewed sources", formatNumber(phase.pdf_text_readiness_reviewed_count), phase.combined_pdf_text_readiness_available ? "Four lanes complete" : "Not started", "verified"],
+    ["Technically text-ready", formatNumber(phase.pdf_text_readiness_extraction_ready_count), phase.combined_pdf_text_readiness_available ? "Extraction queue eligible" : "Not classified", "verified"],
     ["Unavailable locators", formatNumber(phase.verification_unavailable_count), "Excluded from reachable", "future"],
     ["Blocked or timed out", formatNumber(phase.verification_blocked_timeout_count), "Deferred", "future"],
     ["Tier C memo supplement", formatNumber(phase.tier_c_memo_supplement_valid_scope), "Completed evidence artifact", "future"],
@@ -289,7 +338,7 @@ export function VerificationPipeline({
           <h2 id="verification-title">From broad scout candidates to bounded locator verification</h2>
         </div>
         <StatusPill tone="verified">
-          {phase.combined_candidate_review_available ? "Combined candidate review complete; source review next" : phase.verification_all_lanes_completed ? "Four-lane verification complete; combined review next" : "Three lanes complete; lane 004 resume next"}
+          {phase.combined_pdf_text_readiness_available ? "Four-lane readiness complete; bounded text extraction next" : phase.combined_source_review_download_available ? "Four-lane source review/download complete; readiness next" : phase.combined_candidate_review_available ? "Combined candidate review complete; source review next" : phase.verification_all_lanes_completed ? "Four-lane verification complete; combined review next" : "Three lanes complete; lane 004 resume next"}
         </StatusPill>
       </div>
 
@@ -307,9 +356,19 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Candidate metadata reviewed; locked source-review queue ready</h3>
+          <h3>{phase.combined_pdf_text_readiness_available ? "Readiness complete; approved retained files ready for bounded text extraction" : phase.combined_source_review_download_available ? "Source retrieval complete; retained files ready for bounded readiness review" : "Candidate metadata reviewed; locked source-review queue ready"}</h3>
         </div>
-        <p>
+        {phase.combined_pdf_text_readiness_available ? <p>
+          The four-lane local readiness review covered all {formatNumber(phase.pdf_text_readiness_reviewed_count)}
+          {" "}retained files and approved {formatNumber(phase.pdf_text_readiness_extraction_ready_count)} for the later
+          bounded extraction queue. Deferred and error categories remain excluded. This stage saved no source text,
+          ran no OCR/rendering/rating/model/ingestion/codification or wage analysis, and left global readiness false.
+        </p> : phase.combined_source_review_download_available ? <p>
+          The four-lane source-review run processed {formatNumber(phase.source_review_download_attempted_count)} locked rows,
+          retained {formatNumber(phase.source_review_download_retained_count)} unique hashed local files, and routed
+          {" "}{formatNumber(phase.source_review_download_excluded_deferred_count)} rows to bounded exclusions or deferrals.
+          No retained document was parsed, rendered, OCRed, extracted, rated, ingested, codified, or used for analytical claims.
+        </p> : <p>
           The broad scout produced {formatNumber(phase.broad_state_4x1000_live_candidate_count)} new rows and
           {" "}{formatNumber(phase.broad_state_4x1000_live_deduped_candidate_count)} deduplicated candidates. The
           bounded verifier locked {formatNumber(phase.verification_queue_size)} defensible locators and completed
@@ -317,7 +376,7 @@ export function VerificationPipeline({
           {" "}{formatNumber(phase.candidate_review_universe_size)} rows and retained {formatNumber(phase.source_review_ready_count)}
           for a later bounded source-review wave; download, source review, extraction, rating, ingestion, codification,
           wage-gap analysis, and causal analysis have not run on this reviewed scope.
-        </p>
+        </p>}
       </div>
       <div className="verification-callout">
         <div>
@@ -385,7 +444,11 @@ export function VerificationPipeline({
         <div>
           <p className="eyebrow">Source review</p>
           <h3>
-            {sourceReviewStatus.source_review_phase ===
+            {sourceReviewStatus.source_review_phase === "combined_broad_4961_readiness_parallel_lanes_completed"
+              ? "Combined broad PDF/text-layer readiness complete in four lanes"
+              : sourceReviewStatus.source_review_phase === "combined_broad_5589_parallel_lanes_completed"
+              ? "Combined broad source review/download complete in four lanes"
+              : sourceReviewStatus.source_review_phase ===
             "batch3_3x500_merged"
               ? "Batch 3 merged: 2,150 cumulative source-review rows"
               : sourceReviewStatus.source_review_phase ===
@@ -416,7 +479,37 @@ export function VerificationPipeline({
           </h3>
         </div>
         <p>
-          {sourceReviewStatus.source_review_phase ===
+          {sourceReviewStatus.source_review_phase === "combined_broad_4961_readiness_parallel_lanes_completed" ? (
+            <>
+              The coordinator readiness-reviewed all {formatNumber(sourceReviewStatus.pdf_text_readiness_reviewed_count)}
+              {" "}retained local sources: {formatNumber(sourceReviewStatus.pdf_text_readiness_pdf_reviewed_count)} PDFs,
+              {" "}{formatNumber(sourceReviewStatus.pdf_text_readiness_html_reviewed_count)} HTML files, and
+              {" "}{formatNumber(sourceReviewStatus.pdf_text_readiness_other_document_reviewed_count)} other documents.
+              Later local text parsing is approved for {formatNumber(sourceReviewStatus.parse_text_layer_ready_count)}
+              {" "}text-layer PDFs, {formatNumber(sourceReviewStatus.html_text_ready_count)} HTML files, and
+              {" "}{formatNumber(sourceReviewStatus.other_document_text_ready_count)} other documents.
+              Deferred boundaries remain visible: {formatNumber(sourceReviewStatus.ocr_later_or_defer_count)} OCR-later,
+              {" "}{formatNumber(sourceReviewStatus.oversized_for_text_pass_count)} oversized,
+              {" "}{formatNumber(sourceReviewStatus.corrupt_or_unreadable_count)} corrupt/unreadable,
+              {" "}{formatNumber(sourceReviewStatus.encrypted_or_locked_count)} encrypted/locked,
+              {" "}{formatNumber(sourceReviewStatus.shell_or_navigation_only_count)} shell/navigation-only,
+              {" "}{formatNumber(sourceReviewStatus.unsupported_for_text_extraction_count)} unsupported,
+              {" "}{formatNumber(sourceReviewStatus.needs_review_count)} needing review, and
+              {" "}{formatNumber(sourceReviewStatus.readiness_error_count)} readiness errors. No full text, tables,
+              spans, OCR, rendering, rating, model analysis, ingestion, codification, or wage/causal analysis occurred.
+              Global analysis readiness remains false; four-lane bounded extraction is the next authorized stage.
+            </>
+          ) : sourceReviewStatus.source_review_phase === "combined_broad_5589_parallel_lanes_completed" ? (
+            <>
+              All {formatNumber(sourceReviewStatus.source_review_download_attempted_count)} locked rows reached
+              terminal source-review/download outcomes. The coordinator retained {formatNumber(sourceReviewStatus.retained_source_count)}
+              {" "}unique hashed local sources: {formatNumber(sourceReviewStatus.retained_pdf_count)} PDFs,
+              {" "}{formatNumber(sourceReviewStatus.retained_html_count)} HTML files, and
+              {" "}{formatNumber(sourceReviewStatus.retained_other_document_count)} other documents. The files remain
+              unparsed, unrendered, un-OCRed, unextracted, unrated, uningested, uncodified, non-causal, and outside
+              global analysis readiness. A separately authorized PDF/text-layer readiness pass is next.
+            </>
+          ) : sourceReviewStatus.source_review_phase ===
           "batch3_3x500_merged" ? (
             <>
               Batch 3 is durably merged:{" "}
@@ -551,6 +644,9 @@ export function VerificationPipeline({
           <p className="eyebrow">PDF readiness</p>
           <h3>
             {pdfReadinessStatus.pdf_readiness_phase ===
+            "combined_broad_4961_completed"
+              ? "Combined broad readiness complete for all retained source types"
+              : pdfReadinessStatus.pdf_readiness_phase ===
             "full_retained_merged"
               ? "Full retained PDF readiness merged"
               : pdfReadinessStatus.pdf_readiness_phase ===
@@ -564,6 +660,17 @@ export function VerificationPipeline({
         </div>
         <p>
           {pdfReadinessStatus.pdf_readiness_phase ===
+          "combined_broad_4961_completed" ? (
+            <>
+              Four staggered lanes readiness-reviewed {formatNumber(pdfReadinessStatus.readiness_reviewed_count)}
+              {" "}retained sources, including {formatNumber(pdfReadinessStatus.retained_pdf_artifacts_available)} PDFs,
+              {" "}{formatNumber(pdfReadinessStatus.retained_html_artifacts_available)} HTML files, and
+              {" "}{formatNumber(pdfReadinessStatus.retained_other_document_artifacts_available)} other documents.
+              A total of {formatNumber(pdfReadinessStatus.extraction_ready_rows)} are technically ready for a later
+              bounded text pass; all OCR-later, oversized, corrupt, locked, shell, unsupported, needs-review, and
+              error rows remain excluded. No OCR or rendering occurred, and global analysis readiness remains false.
+            </>
+          ) : pdfReadinessStatus.pdf_readiness_phase ===
           "full_retained_merged" ? (
             <>
               The durable technical-readiness layer covers{" "}
@@ -1970,9 +2077,9 @@ export function ReportsLibrary({ reportsIndex, reportAssets }) {
         </article>
         <article className="report-card report-card-planned">
           <div className="report-card-topline"><span>Forthcoming</span><span>Next authorized stage</span></div>
-          <h3>Combined broad candidate review</h3>
-          <p>Next bounded stage for reviewing preserved discovery metadata alongside current locator-verification outcomes.</p>
-          <StatusPill tone="future">Combined review next</StatusPill>
+          <h3>Combined broad PDF/text-layer readiness</h3>
+          <p>Next bounded stage for checking only retained local source files by path, size, hash, file type, and text-layer eligibility without OCR, rendering, or evidence extraction.</p>
+          <StatusPill tone="future">Readiness next</StatusPill>
         </article>
       </div>
       <p className="panel-note">{reportsIndex.disclaimer}</p>
@@ -2017,20 +2124,23 @@ export function MethodologyDefinitions() {
 }
 
 export function NextStepsPanel({ priority, phase }) {
+  const downloadsComplete = phase.combined_source_review_download_available;
   return (
     <section className="panel hub-section next-steps-panel" id="next-steps" aria-labelledby="next-steps-title">
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Run bounded source review from the locked reviewed queue</h2>
+          <h2 id="next-steps-title">{downloadsComplete ? "Run bounded PDF/text-layer readiness over retained local sources" : "Run bounded source review from the locked reviewed queue"}</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Authorize a bounded source-review/download wave</h3>
-          <p>Use only the locked {formatNumber(phase.source_review_ready_count)}-row queue, beginning with {formatNumber(phase.source_review_ready_high_count)} high-priority candidates while preserving geography and source-family diversity.</p>
+          <h3>{downloadsComplete ? "Authorize a bounded retained-file readiness pass" : "Authorize a bounded source-review/download wave"}</h3>
+          <p>{downloadsComplete
+            ? `Use only the ${formatNumber(phase.source_review_download_retained_count)} unique retained hashed local sources; revalidate path, size, and SHA-256 and do not access URLs or redownload.`
+            : `Use only the locked ${formatNumber(phase.source_review_ready_count)}-row queue, beginning with ${formatNumber(phase.source_review_ready_high_count)} high-priority candidates while preserving geography and source-family diversity.`}</p>
         </article>
         <article>
           <span>Completed verification scope</span>
@@ -2038,14 +2148,16 @@ export function NextStepsPanel({ priority, phase }) {
           <p>{formatNumber(phase.verification_verified_reachable_count)} locators are reachable metadata leads. They have not been downloaded, source-reviewed, extracted, rated, or ingested.</p>
         </article>
         <article>
-          <span>Completed candidate review</span>
-          <h3>{formatNumber(phase.candidate_review_universe_size)} metadata rows</h3>
-          <p>The review used only committed snippets, candidate metadata, and verification results. No source URLs or document contents were opened.</p>
+          <span>{downloadsComplete ? "Completed source review/download" : "Completed candidate review"}</span>
+          <h3>{formatNumber(downloadsComplete ? phase.source_review_download_attempted_count : phase.candidate_review_universe_size)} rows</h3>
+          <p>{downloadsComplete
+            ? `${formatNumber(phase.source_review_download_retained_count)} unique files were retained and hashed. No text, tables, spans, evidence, or analytical quantities were extracted.`
+            : "The review used only committed snippets, candidate metadata, and verification results. No source URLs or document contents were opened."}</p>
         </article>
       </div>
       <p className="panel-note">
-        Historical discovery and verification tiers remain available above for provenance only. The current next task is
-        a separately authorized bounded source-review/download wave; global analysis readiness remains false.
+        Historical discovery, verification, and candidate-review stages remain available above for provenance only. The current next task is
+        {downloadsComplete ? " a separately authorized retained-file PDF/text-layer readiness pass" : " a separately authorized bounded source-review/download wave"}; global analysis readiness remains false.
       </p>
     </section>
   );

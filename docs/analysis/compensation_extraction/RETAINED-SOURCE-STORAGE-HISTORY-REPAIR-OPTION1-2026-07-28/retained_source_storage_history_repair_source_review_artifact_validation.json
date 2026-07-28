@@ -1,0 +1,17 @@
+{
+  "decision": "combined_broad_source_review_download_5589_completed_pdf_readiness_ready",
+  "queue_count": 5589,
+  "completed_lane_count": 4,
+  "retained_source_count": 4961,
+  "retained_pdf_count": 3980,
+  "retained_html_count": 941,
+  "retained_other_document_count": 40,
+  "excluded_deferred_count": 628,
+  "retained_bytes": 12475949771,
+  "unique_retained_sha256_count": 4961,
+  "lightweight_file_count_outside_payload_root": 109,
+  "manifest_paths_locally_resolvable": true,
+  "artifact_mapping_resolves": true,
+  "source_review_download_rerun": false,
+  "all_required_lightweight_artifacts_preserved": true
+}

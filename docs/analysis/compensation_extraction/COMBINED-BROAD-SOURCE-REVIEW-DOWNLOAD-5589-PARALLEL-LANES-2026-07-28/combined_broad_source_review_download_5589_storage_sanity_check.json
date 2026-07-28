@@ -1,0 +1,12 @@
+{
+  "available_bytes_before_run": 130595987456,
+  "known_capped_bytes": 13070199980,
+  "known_content_length_rows": 4601,
+  "maximum_file_bytes": 78643200,
+  "minimum_free_bytes_required": 31753682440,
+  "projected_retained_bytes": 15876841220,
+  "storage_sanity_passed": true,
+  "theoretical_75mb_cap_bytes": 439536844800,
+  "total_filesystem_bytes": 494384795648,
+  "unknown_content_length_rows": 988
+}

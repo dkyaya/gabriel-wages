@@ -1,0 +1,11 @@
+{
+  "checkpoint_after_every_source": true,
+  "checkpointed_at": "2026-07-28T20:48:55Z",
+  "completed_count": 1240,
+  "global_analysis_readiness": false,
+  "lane_id": "readiness_lane_002",
+  "last_lane_sequence": 1240,
+  "locked_queue_count": 1240,
+  "remaining_count": 0,
+  "status": "completed"
+}

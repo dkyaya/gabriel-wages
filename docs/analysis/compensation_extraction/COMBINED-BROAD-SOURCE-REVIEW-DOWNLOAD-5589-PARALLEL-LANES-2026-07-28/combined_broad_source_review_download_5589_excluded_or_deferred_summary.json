@@ -1,0 +1,15 @@
+{
+  "excluded_or_deferred_count": 628,
+  "global_analysis_readiness": false,
+  "status_counts": {
+    "blocked_by_transport": 166,
+    "download_error": 11,
+    "duplicate_canonical_locator": 1,
+    "duplicate_file_hash": 243,
+    "generic_navigation_or_search_page": 7,
+    "oversized_for_this_pass": 5,
+    "unavailable_on_get": 133,
+    "unsupported_content_type": 4,
+    "weak_or_needs_review": 58
+  }
+}

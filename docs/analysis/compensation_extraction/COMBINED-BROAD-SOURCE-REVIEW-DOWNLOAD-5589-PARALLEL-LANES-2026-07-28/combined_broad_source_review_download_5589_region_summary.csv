@@ -1,0 +1,5 @@
+region,attempted_rows,retained_sources,excluded_or_deferred,retained_bytes,global_analysis_readiness
+Midwest,1794,1640,154,4491056243,false
+Northeast,1200,1103,97,2172000372,false
+South,1546,1329,217,3892178624,false
+West,1049,889,160,1920714532,false

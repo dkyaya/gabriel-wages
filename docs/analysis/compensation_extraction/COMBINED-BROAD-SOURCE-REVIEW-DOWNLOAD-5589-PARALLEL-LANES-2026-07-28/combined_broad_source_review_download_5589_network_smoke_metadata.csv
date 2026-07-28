@@ -1,0 +1,9 @@
+lane_id,source_review_download_id,smoke_started_at,smoke_completed_at,http_status,bytes_read,content_type,transport_error_type,retained_file_written
+source_review_lane_001,CBSRD-20260728-74d1b2c3b872fb346d35,2026-07-28T19:16:26Z,2026-07-28T19:16:28Z,206,4096,application/pdf,,false
+source_review_lane_001,CBSRD-20260728-ffe736525031f76f4348,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,200,4096,text/html,,false
+source_review_lane_002,CBSRD-20260728-73081728123d0b0acde2,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,200,4096,application/pdf,,false
+source_review_lane_002,CBSRD-20260728-9ef388f07c1e31588bac,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,200,4096,application/pdf,,false
+source_review_lane_003,CBSRD-20260728-f9d44f1699c0b9ab8a93,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,200,4096,application/pdf,,false
+source_review_lane_003,CBSRD-20260728-502d50407a982e8d4866,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,206,4096,application/pdf,,false
+source_review_lane_004,CBSRD-20260728-a5b12d5430882f4857cb,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,200,4096,application/pdf,,false
+source_review_lane_004,CBSRD-20260728-981496c8b8ba3f2448e8,2026-07-28T19:16:26Z,2026-07-28T19:16:27Z,206,4096,text/html,,false

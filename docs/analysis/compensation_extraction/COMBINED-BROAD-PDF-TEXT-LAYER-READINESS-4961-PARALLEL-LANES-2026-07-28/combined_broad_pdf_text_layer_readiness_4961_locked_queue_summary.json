@@ -1,0 +1,15 @@
+{
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "readiness_lane_001": 1240,
+    "readiness_lane_002": 1240,
+    "readiness_lane_003": 1240,
+    "readiness_lane_004": 1241
+  },
+  "locked_queue_count": 4961,
+  "master_equals_union_of_lanes": true,
+  "only_retained_local_sources": true,
+  "retained_html_count": 941,
+  "retained_other_document_count": 40,
+  "retained_pdf_count": 3980
+}

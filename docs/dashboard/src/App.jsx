@@ -149,9 +149,9 @@ function App() {
             <p className="eyebrow">HBS municipal labor evidence project</p>
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
-              The four-lane broad scout is complete and the current operation is bounded locator verification:
-              {" "}{formatNumber(projectPhaseSummary.verification_completed_count)} of {formatNumber(projectPhaseSummary.verification_queue_size)}
-              {" "}locked outcomes completed. No document review, wage gaps, or causal findings are available.
+              Current operation: {projectPhaseSummary.current_phase}. The next authorized stage is
+              {" "}{projectPhaseSummary.next_task}. No evidence rating, ingestion, wage gaps, regressions,
+              treatment effects, population-prevalence estimates, or final causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -174,7 +174,7 @@ function App() {
             <div className="overview-heading">
               <div>
                 <p className="eyebrow">Overview</p>
-                <h2 id="overview-title">Current broad-scout and verification status</h2>
+                <h2 id="overview-title">Current source-pipeline readiness status</h2>
               </div>
                 <div className="checkpoint-label">
                   <span>Next authorized stage</span>
@@ -194,9 +194,9 @@ function App() {
                 note={`${formatNumber(projectPhaseSummary.broad_state_4x1000_live_candidate_count)} new · ${formatNumber(projectPhaseSummary.broad_state_4x1000_live_deduped_candidate_count)} deduplicated in the 4x1000 wave`}
               />
               <MetricCard
-                label="Verification completed"
-                value={formatNumber(projectPhaseSummary.verification_completed_count)}
-                note={`${formatNumber(projectPhaseSummary.verification_verified_reachable_count)} reachable of ${formatNumber(projectPhaseSummary.verification_queue_size)} locked locators`}
+                label="Readiness reviewed"
+                value={formatNumber(projectPhaseSummary.pdf_text_readiness_reviewed_count)}
+                note={`${formatNumber(projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} technically ready of ${formatNumber(projectPhaseSummary.pdf_text_readiness_queue_size)} retained sources`}
               />
               <MetricCard
                 label="Global analysis readiness"
@@ -208,8 +208,9 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Locator verification is reachability metadata only. The Tier C memo remains a completed historical
-                evidence artifact; neither stage supplies normalized comparisons or causal conclusions.
+                Readiness is local-file technical parseability only. It is not durable text extraction, evidence
+                rating, ingestion, codification, quantitative comparison, population evidence, or a causal conclusion.
+                The Tier C memo remains a completed historical evidence artifact, not the current operation.
               </span>
             </div>
 

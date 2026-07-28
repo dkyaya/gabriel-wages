@@ -113,6 +113,8 @@ def main() -> None:
         assert (
             "combined broad candidate review" in phase["next_task"].casefold()
             or "source-review/download" in phase["next_task"].casefold()
+            or "pdf/text-layer readiness" in phase["next_task"].casefold()
+            or "text extraction" in phase["next_task"].casefold()
         )
         assert "resume incomplete" not in phase["next_task"].casefold()
     assert "tier c memo supplement" not in phase["current_phase"].casefold()

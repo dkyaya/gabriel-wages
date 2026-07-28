@@ -1,0 +1,41 @@
+{
+  "standard_id": "future_artifact_storage_standard_for_retained_sources_v1",
+  "effective_date": "2026-07-28",
+  "normal_git_retained_source_binaries_allowed": false,
+  "approved_storage_required": true,
+  "local_ignored_artifact_storage_allowed": true,
+  "tracked_control_plane_artifacts": [
+    "source_and_lineage_ids",
+    "canonical_locators_and_retrieval_metadata",
+    "content_type",
+    "file_size_bytes",
+    "sha256",
+    "artifact_storage_pointer",
+    "availability_and_backup_status",
+    "decisions_summaries_queues_checkpoints_validations_tests"
+  ],
+  "required_pointer_fields": [
+    "artifact_storage_scheme",
+    "artifact_storage_pointer",
+    "artifact_object_key_or_content_address",
+    "local_artifact_relative_path",
+    "retained_file_size_bytes",
+    "retained_file_sha256",
+    "artifact_availability_status",
+    "artifact_replication_or_backup_status",
+    "artifact_access_scope",
+    "source_review_download_id"
+  ],
+  "required_gates": {
+    "hash_and_size_reconcile": true,
+    "storage_pointer_resolves": true,
+    "payload_root_is_git_ignored": true,
+    "no_retained_payload_staged": true,
+    "no_retained_payload_in_ahead_history": true,
+    "largest_and_aggregate_blob_preflight": true,
+    "push_success_required_before_public_update_claim": true
+  },
+  "credential_material_in_pointer_forbidden": true,
+  "local_artifact_existence_is_not_remote_publication": true,
+  "global_analysis_readiness_affected_by_storage": false
+}

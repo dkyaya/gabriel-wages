@@ -1,0 +1,15 @@
+{
+  "all_hashes_reconciled": true,
+  "all_invariants_passed": true,
+  "controlled_statuses_only": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "deferred_rows_excluded_from_extraction_ready_queues": true,
+  "extraction_queues_only_approved_statuses": true,
+  "forbidden_action_counts_all_zero": true,
+  "global_analysis_readiness": false,
+  "lane_counts_exact": true,
+  "locked_queue_count_exact": true,
+  "master_equals_union_of_lanes": true,
+  "only_retained_local_sources_reviewed": true,
+  "partial_outputs_cannot_masquerade_as_complete": true
+}

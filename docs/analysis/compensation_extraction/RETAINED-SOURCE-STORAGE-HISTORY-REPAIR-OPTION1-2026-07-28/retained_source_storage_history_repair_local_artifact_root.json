@@ -1,0 +1,18 @@
+{
+  "storage_scheme": "project_local_git_ignored_artifact_copy",
+  "artifact_root": "artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28",
+  "artifact_payload_root": "artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28/retained_sources",
+  "operational_manifest_root": "docs/analysis/compensation_extraction/COMBINED-BROAD-SOURCE-REVIEW-DOWNLOAD-5589-PARALLEL-LANES-2026-07-28/retained_sources",
+  "mapping_rule": "preserve_the_relative_suffix_below_retained_sources",
+  "retained_source_count": 4961,
+  "total_bytes": 12475949771,
+  "unique_sha256_count": 4961,
+  "operational_hash_match_count": 4961,
+  "artifact_hash_match_count": 4961,
+  "operational_paths_remain_resolvable": true,
+  "artifact_paths_resolve": true,
+  "git_ignored": true,
+  "external_backup": false,
+  "publicly_available": false,
+  "credentials_embedded": false
+}

@@ -1,0 +1,30 @@
+{
+  "actual_start_at": "2026-07-28T19:33:04Z",
+  "checkpoint_after_every_row": true,
+  "completed_at": "2026-07-28T19:43:37Z",
+  "completed_rows": 1397,
+  "excluded_or_deferred_count": 214,
+  "global_analysis_readiness": false,
+  "lane_id": "source_review_lane_003",
+  "locked_rows": 1397,
+  "maximum_concurrency": 2,
+  "remaining_rows": 0,
+  "retained_bytes": 3468275354,
+  "retained_source_count": 1183,
+  "scheduled_start_at": "2026-07-28T19:33:04Z",
+  "status": "completed",
+  "status_counts": {
+    "blocked_by_transport": 46,
+    "download_error": 2,
+    "duplicate_canonical_locator": 1,
+    "duplicate_file_hash": 111,
+    "generic_navigation_or_search_page": 2,
+    "oversized_for_this_pass": 1,
+    "retained_document_other": 4,
+    "retained_html": 265,
+    "retained_pdf": 914,
+    "unavailable_on_get": 32,
+    "unsupported_content_type": 1,
+    "weak_or_needs_review": 18
+  }
+}

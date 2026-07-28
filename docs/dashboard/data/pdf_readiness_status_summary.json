@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-28T18:40:35Z",
+  "generated_at": "2026-07-28T21:05:06Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,80 +95,51 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "pdf_readiness_phase": "full_retained_merged",
-  "latest_pdf_readiness_pilot_id": "PDF-READINESS-PILOT1-150-2026-07-24",
-  "latest_pdf_readiness_round_id": "PDF-READINESS-REMAINDER-ALL-RETAINED-2026-07-24",
-  "latest_pdf_readiness_merge_id": "PDF-READINESS-FULL-RETAINED-MERGE-2026-07-24",
-  "pdf_readiness_merge_status": "merged",
-  "source_review_rows_available": 2150,
-  "retained_pdf_artifacts_available": 2124,
-  "pdf_readiness_rows_merged": 2124,
-  "retained_pdf_readiness_coverage_rate": 1.0,
+  "pdf_readiness_phase": "combined_broad_4961_completed",
+  "latest_pdf_readiness_round_id": "COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28",
+  "pdf_readiness_merge_status": "coordinator_merged",
+  "source_review_rows_available": 5589,
+  "retained_source_count": 4961,
+  "retained_pdf_artifacts_available": 3980,
+  "retained_html_artifacts_available": 941,
+  "retained_other_document_artifacts_available": 40,
+  "pdf_readiness_rows_merged": 3980,
+  "readiness_reviewed_count": 4961,
   "readiness_status_counts": {
-    "readiness_checked": 2124
+    "corrupt_or_unreadable": 2,
+    "encrypted_or_locked": 38,
+    "html_text_later": 834,
+    "needs_review": 87,
+    "ocr_later_or_defer": 625,
+    "other_document_text_later": 40,
+    "oversized_for_text_pass": 140,
+    "parse_text_layer_later": 3177,
+    "shell_or_navigation_only": 18
   },
-  "text_layer_status_counts": {
-    "absent": 296,
-    "partial": 220,
-    "present": 1608
-  },
-  "text_layer_present_rows": 1608,
-  "text_layer_partial_rows": 220,
-  "text_layer_absent_rows": 296,
-  "technical_parseability_rating_counts": {
-    "high": 1608,
-    "low": 296,
-    "medium": 220
-  },
-  "recommended_next_action_counts": {
-    "ocr_later": 296,
-    "parse_text_layer_later": 1828
-  },
-  "parse_text_layer_later_rows": 1828,
-  "ocr_later_rows": 296,
-  "page_count_summary": {
-    "buckets": {
-      "11_to_25": 215,
-      "1_to_10": 86,
-      "26_to_50": 990,
-      "51_to_100": 701,
-      "over_100": 132
-    },
-    "count": 2124,
-    "maximum": 463,
-    "mean": 50.86064,
-    "median": 44,
-    "minimum": 1,
-    "p90": 84,
-    "total_pages": 108028
-  },
-  "total_pages_represented": 108028,
-  "median_page_count": 44,
-  "max_page_count": 463,
-  "sampled_pages_checked": 6322,
-  "sampled_pages_with_text": 5201,
-  "parser_library_counts": {
-    "pypdf": 2124
-  },
-  "parser_version_counts": {
-    "6.13.2": 2124
-  },
-  "parser_error_rows": 0,
-  "hash_failure_rows": 0,
-  "missing_artifact_rows": 0,
-  "durable_pdf_readiness_ledger_latest": "docs/analysis/pdf_readiness_ledgers/pdf_readiness_ledger_latest.csv",
-  "technical_readiness_status": "complete_for_retained_pdfs",
-  "next_recommendation": "text_layer_table_detection_pilot",
+  "parse_text_layer_later_rows": 3177,
+  "html_text_later_rows": 834,
+  "other_document_text_later_rows": 40,
+  "ocr_later_rows": 625,
+  "oversized_rows": 140,
+  "corrupt_or_unreadable_rows": 2,
+  "encrypted_or_locked_rows": 38,
+  "shell_or_navigation_only_rows": 18,
+  "unsupported_rows": 0,
+  "needs_review_rows": 87,
+  "readiness_error_rows": 0,
+  "extraction_ready_rows": 4051,
+  "technical_readiness_status": "complete_for_all_retained_sources",
+  "next_recommendation": "four_lane_bounded_text_extraction",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
   "wage_extraction_status": "not_started",
   "wage_gap_analysis_status": "not_started",
-  "summary_source": "docs/analysis/pdf_readiness_ledgers/pdf_readiness_summary_cumulative.json",
+  "summary_source": "docs/analysis/compensation_extraction/COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28/combined_broad_pdf_text_layer_readiness_4961_results_summary.json",
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "global_analysis_readiness": false,
   "caveats": [
-    "PDF-readiness is technical parseability only.",
-    "Text-layer presence does not prove wage data exists.",
-    "OCR has not run.",
-    "Wage extraction has not started.",
-    "No ingestion or codification has occurred."
+    "Readiness is technical local-file parseability only and is not durable text extraction.",
+    "No OCR, rendering, evidence extraction/rating, ingestion, codification, or wage analysis occurred.",
+    "Readiness does not establish population prevalence, wage differences, effects, or causation."
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "all_file_sizes_match": true,
+  "all_retained_paths_exist": true,
+  "all_sha256_hashes_match": true,
+  "codification_runs": 0,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "dashboard_overview_update_required_after_results": true,
+  "global_analysis_readiness": false,
+  "ingestion_runs": 0,
+  "lane_counts": {
+    "readiness_lane_001": 1240,
+    "readiness_lane_002": 1240,
+    "readiness_lane_003": 1240,
+    "readiness_lane_004": 1241
+  },
+  "lane_isolation_required": true,
+  "locked_queue_count": 4961,
+  "master_equals_union_of_lanes": true,
+  "ocr_runs": 0,
+  "pdf_render_runs": 0,
+  "preflight_passed": true,
+  "prior_decision_confirmed": "combined_broad_source_review_download_5589_completed_pdf_readiness_ready",
+  "rating_model_api_runs": 0,
+  "redownloads": 0,
+  "retained_hash_manifest_count": 4961,
+  "retained_source_count": 4961,
+  "retained_type_counts": {
+    "html": 941,
+    "other_document": 40,
+    "pdf": 3980
+  },
+  "rollback_safe_output_directory": true,
+  "secrets_printed_or_saved": false,
+  "source_review_download_reruns": 0,
+  "span_extraction_runs": 0,
+  "statistical_analysis_runs": 0,
+  "table_extraction_runs": 0,
+  "text_extraction_runs": 0,
+  "unique_retained_sha256_count": 4961
+}

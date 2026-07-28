@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-07-28T20:40:54Z",
+  "completed_count": 1240,
+  "global_analysis_readiness": false,
+  "lane_id": "readiness_lane_001",
+  "process_started_at": "2026-07-28T20:40:29Z",
+  "remaining_count": 0,
+  "resumable": true,
+  "resume_needed": false,
+  "stagger_seconds": 0,
+  "status": "completed",
+  "work_started_at": "2026-07-28T20:40:29Z"
+}

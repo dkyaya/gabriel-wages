@@ -1,0 +1,12 @@
+{
+  "decision": "push_only_repair_source_review_download_5589_completed_with_status_note",
+  "task_id": "PUSH-ONLY-REPAIR-SOURCE-REVIEW-DOWNLOAD-5589-2026-07-28",
+  "prior_commit": "1b46e0ded70c8ab30b7c1b8651906ef93d030aa1",
+  "prior_decision": "combined_broad_source_review_download_5589_completed_pdf_readiness_ready",
+  "initial_push_status": "succeeded",
+  "status_note_commit": "created_for_push",
+  "source_review_rerun": false,
+  "redownload": false,
+  "extraction_ocr_rating_ingestion": false,
+  "global_analysis_readiness": false
+}

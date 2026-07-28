@@ -1,0 +1,7 @@
+{
+  "all_sha256_present": true,
+  "duplicate_hash_rows_routed_out": 243,
+  "global_analysis_readiness": false,
+  "hash_manifest_rows": 4961,
+  "unique_sha256_count": 4961
+}

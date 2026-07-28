@@ -1,0 +1,32 @@
+{
+  "policy_id": "future_source_review_download_artifact_storage_policy_v1",
+  "effective_date": "2026-07-28",
+  "preflight_requirements": [
+    "approved_artifact_storage_scheme_and_root",
+    "git_ignore_proof",
+    "deterministic_storage_pointer_mapping",
+    "size_sha256_access_availability_backup_manifest_fields",
+    "staged_retained_payload_guard"
+  ],
+  "live_run_requirements": [
+    "isolated_lane_artifact_prefixes",
+    "separate_lightweight_checkpoints_and_manifests",
+    "hash_before_retained_status",
+    "coordinator_count_byte_type_hash_reconciliation",
+    "explicit_git_add_only"
+  ],
+  "closeout_requirements": [
+    "staged_path_audit",
+    "ahead_history_payload_audit",
+    "individual_and_aggregate_blob_audit",
+    "lightweight_artifact_tracking_validation",
+    "artifact_pointer_resolution",
+    "plain_git_push_success",
+    "branch_not_ahead_after_push"
+  ],
+  "blanket_git_add_dot_forbidden": true,
+  "failed_push_blocks_next_research_phase": true,
+  "failed_push_must_not_rerun_download": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "global_analysis_readiness": false
+}

@@ -1,0 +1,6 @@
+{
+  "completed_readiness_is_current_operation": true,
+  "global_analysis_readiness": false,
+  "map_filter_guard": "total_scout_coverage_only",
+  "stale_source_review_download_in_progress_blocked": true
+}

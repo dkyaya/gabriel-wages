@@ -1467,6 +1467,76 @@ COMBINED_BROAD_CANDIDATE_REVIEW_READY_SUMMARY_PATH = (
     COMBINED_BROAD_CANDIDATE_REVIEW_DIR
     / "combined_broad_candidate_review_source_review_ready_summary.json"
 )
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-SOURCE-REVIEW-DOWNLOAD-5589-PARALLEL-LANES-2026-07-28"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DECISION_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_decision.json"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_INVARIANTS_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_invariant_checks.json"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_SUMMARY_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_results_summary.json"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RETAINED_SUMMARY_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_retained_sources_summary.json"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_EXCLUDED_SUMMARY_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_excluded_or_deferred_summary.json"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_LOCK_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_lock.json"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_QUEUE_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_locked_queue.csv"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_results.csv"
+)
+COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_MANIFEST_PATH = (
+    COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR
+    / "combined_broad_source_review_download_5589_retained_sources_manifest.csv"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_DECISION_PATH = (
+    COMBINED_BROAD_PDF_TEXT_READINESS_DIR
+    / "combined_broad_pdf_text_layer_readiness_4961_decision.json"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_INVARIANTS_PATH = (
+    COMBINED_BROAD_PDF_TEXT_READINESS_DIR
+    / "combined_broad_pdf_text_layer_readiness_4961_invariant_checks.json"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_SUMMARY_PATH = (
+    COMBINED_BROAD_PDF_TEXT_READINESS_DIR
+    / "combined_broad_pdf_text_layer_readiness_4961_results_summary.json"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_LOCK_PATH = (
+    COMBINED_BROAD_PDF_TEXT_READINESS_DIR
+    / "combined_broad_pdf_text_layer_readiness_4961_lock.json"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_QUEUE_PATH = (
+    COMBINED_BROAD_PDF_TEXT_READINESS_DIR
+    / "combined_broad_pdf_text_layer_readiness_4961_locked_queue.csv"
+)
+COMBINED_BROAD_PDF_TEXT_READINESS_RESULTS_PATH = (
+    COMBINED_BROAD_PDF_TEXT_READINESS_DIR
+    / "combined_broad_pdf_text_layer_readiness_4961_results.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4940,6 +5010,156 @@ def combined_broad_candidate_review_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def combined_broad_source_review_download_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed 5,589-row bounded source-review/download wave."""
+    required = (
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DECISION_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_INVARIANTS_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_SUMMARY_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RETAINED_SUMMARY_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_EXCLUDED_SUMMARY_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_LOCK_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_QUEUE_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_PATH,
+        COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_MANIFEST_PATH,
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DECISION_PATH)
+    invariants = read_json(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_INVARIANTS_PATH)
+    summary = read_json(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_SUMMARY_PATH)
+    retained_summary = read_json(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RETAINED_SUMMARY_PATH)
+    excluded_summary = read_json(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_EXCLUDED_SUMMARY_PATH)
+    lock = read_json(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_LOCK_PATH)
+    queue = read_csv(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_QUEUE_PATH)
+    results = read_csv(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_PATH)
+    manifest = read_csv(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_MANIFEST_PATH)
+    retained_root = (COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR / "retained_sources").resolve()
+    retained_paths_valid = True
+    for row in manifest:
+        path = (ROOT / row["retained_file_path"]).resolve()
+        if not (
+            path.is_file()
+            and path.is_relative_to(retained_root)
+            and path.stat().st_size == as_int(row["retained_file_size_bytes"])
+            and len(row["retained_file_sha256"]) == 64
+        ):
+            retained_paths_valid = False
+            break
+    status_counts = decision.get("status_counts", {})
+    retained_count = as_int(decision.get("retained_source_count"))
+    excluded_count = as_int(excluded_summary.get("excluded_or_deferred_count"))
+    gates = (
+        decision.get("decision") == "combined_broad_source_review_download_5589_completed_pdf_readiness_ready"
+        and decision.get("all_lanes_completed") is True
+        and decision.get("completed_lane_count") == 4
+        and decision.get("locked_queue_count") == 5589
+        and decision.get("attempted_source_review_download_count") == 5589
+        and len(queue) == len(results) == 5589
+        and hashlib.sha256(
+            COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_QUEUE_PATH.read_bytes()
+        ).hexdigest()
+        == lock.get("queue_sha256")
+        and lock.get("lane_counts") == {
+            "source_review_lane_001": 1397,
+            "source_review_lane_002": 1397,
+            "source_review_lane_003": 1397,
+            "source_review_lane_004": 1398,
+        }
+        and sum(as_int(value) for value in status_counts.values()) == 5589
+        and retained_count + excluded_count == 5589
+        and retained_summary.get("retained_source_count") == retained_count
+        and len(manifest) == retained_count
+        and retained_paths_valid
+        and summary.get("attempted_source_review_download_count") == 5589
+        and decision.get("candidate_review_reruns") == 0
+        and decision.get("verification_reruns") == 0
+        and decision.get("extraction_runs") == 0
+        and decision.get("ocr_runs") == 0
+        and decision.get("rendering_runs") == 0
+        and decision.get("rating_model_api_runs") == 0
+        and decision.get("ingestion_runs") == 0
+        and decision.get("codification_runs") == 0
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("dashboard_scout_covered_municipalities") == 6919
+        and decision.get("dashboard_candidate_rows") == 13041
+        and decision.get("global_analysis_readiness") is False
+        and invariants.get("all_invariants_passed") is True
+    )
+    if not gates:
+        raise ValueError("combined broad source-review/download package fails dashboard gates")
+    decision = dict(decision)
+    decision["excluded_or_deferred_count"] = excluded_count
+    decision["dashboard_result_path"] = (
+        "docs/analysis/combined_broad_source_review_download_5589_result_2026-07-28.md"
+    )
+    return True, decision
+
+
+def combined_broad_pdf_text_readiness_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed local-only 4,961-source readiness review."""
+    required = (
+        COMBINED_BROAD_PDF_TEXT_READINESS_DECISION_PATH,
+        COMBINED_BROAD_PDF_TEXT_READINESS_INVARIANTS_PATH,
+        COMBINED_BROAD_PDF_TEXT_READINESS_SUMMARY_PATH,
+        COMBINED_BROAD_PDF_TEXT_READINESS_LOCK_PATH,
+        COMBINED_BROAD_PDF_TEXT_READINESS_QUEUE_PATH,
+        COMBINED_BROAD_PDF_TEXT_READINESS_RESULTS_PATH,
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_PDF_TEXT_READINESS_DECISION_PATH)
+    invariants = read_json(COMBINED_BROAD_PDF_TEXT_READINESS_INVARIANTS_PATH)
+    summary = read_json(COMBINED_BROAD_PDF_TEXT_READINESS_SUMMARY_PATH)
+    lock = read_json(COMBINED_BROAD_PDF_TEXT_READINESS_LOCK_PATH)
+    queue = read_csv(COMBINED_BROAD_PDF_TEXT_READINESS_QUEUE_PATH)
+    results = read_csv(COMBINED_BROAD_PDF_TEXT_READINESS_RESULTS_PATH)
+    result_ids = {row["source_review_download_id"] for row in results}
+    queue_ids = {row["source_review_download_id"] for row in queue}
+    status_counts = summary.get("readiness_status_counts", {})
+    gates = (
+        decision.get("decision")
+        == "combined_broad_pdf_text_layer_readiness_4961_completed_extraction_ready"
+        and decision.get("completed_lane_count") == 4
+        and decision.get("retained_source_readiness_queue_count") == 4961
+        and lock.get("lane_counts")
+        == {
+            "readiness_lane_001": 1240,
+            "readiness_lane_002": 1240,
+            "readiness_lane_003": 1240,
+            "readiness_lane_004": 1241,
+        }
+        and len(queue) == len(results) == len(queue_ids) == len(result_ids) == 4961
+        and queue_ids == result_ids
+        and sum(as_int(value) for value in status_counts.values()) == 4961
+        and summary.get("pdf_reviewed_count") == 3980
+        and summary.get("html_reviewed_count") == 941
+        and summary.get("other_document_reviewed_count") == 40
+        and summary.get("source_review_download_reruns") == 0
+        and summary.get("redownloads") == 0
+        and summary.get("text_extraction_runs") == 0
+        and summary.get("table_extraction_runs") == 0
+        and summary.get("span_extraction_runs") == 0
+        and summary.get("ocr_runs") == 0
+        and summary.get("pdf_render_runs") == 0
+        and summary.get("rating_model_api_runs") == 0
+        and summary.get("ingestion_runs") == 0
+        and summary.get("codification_runs") == 0
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+        and all(row["global_analysis_readiness"] == "false" for row in results)
+    )
+    if not gates:
+        raise ValueError("combined broad PDF/text readiness package fails dashboard gates")
+    payload = {**decision, **summary}
+    payload["dashboard_result_path"] = (
+        "docs/analysis/combined_broad_pdf_text_layer_readiness_4961_result_2026-07-28.md"
+    )
+    return True, payload
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5022,7 +5242,79 @@ def build_reports_index_layer(
     repository_root_url = "https://github.com/dkyaya/gabriel-wages/blob/main/"
     verification_available, verification = broad_candidate_verification_4x3000_status()
     candidate_review_available, candidate_review = combined_broad_candidate_review_status()
+    source_download_available, source_download = combined_broad_source_review_download_status()
+    broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "combined-broad-pdf-text-readiness-4961-2026-07-28",
+                    "title": "Combined Broad PDF and Text-Layer Readiness Result",
+                    "report_type": "Current technical readiness report",
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{broad_readiness['readiness_reviewed_count']:,} retained sources reviewed; "
+                        f"{broad_readiness['extraction_ready_count']:,} technically text-ready"
+                    ),
+                    "summary": (
+                        "Four isolated, staggered lanes completed local path, hash, metadata, "
+                        "page-count, and bounded text-layer/HTML readiness checks. This is not "
+                        "text extraction, evidence rating, ingestion, wage analysis, or causal evidence."
+                    ),
+                    "tags": ["current", "PDF readiness", "text layer", "local files", "claim boundaries"],
+                    "current": True,
+                    "historical": False,
+                    "href": repository_root_url + broad_readiness["dashboard_result_path"],
+                    "link_label": "Open current PDF/text-readiness report",
+                    "scope_metrics": [
+                        {"label": "readiness queue", "value": broad_readiness["retained_source_readiness_queue_count"]},
+                        {"label": "reviewed", "value": broad_readiness["readiness_reviewed_count"]},
+                        {"label": "text-ready", "value": broad_readiness["extraction_ready_count"]},
+                    ],
+                }
+            ]
+            if broad_readiness_available
+            else []
+        ),
+        *(
+            [
+                {
+                    "id": "combined-broad-source-review-download-5589-2026-07-28",
+                    "title": "Combined Broad Source Review and Download Result",
+                    "report_type": (
+                        "Historical bounded source-review/download report"
+                        if broad_readiness_available
+                        else "Current bounded source-review/download report"
+                    ),
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{source_download['retained_source_count']:,} retained sources from "
+                        f"{source_download['attempted_source_review_download_count']:,} locked rows"
+                    ),
+                    "summary": (
+                        "Four isolated, staggered lanes completed bounded source retrieval, "
+                        "retention, hashing, and metadata-only source review. Retained files "
+                        "remain unextracted, unrated, uningested, non-causal, and outside "
+                        "global analysis readiness."
+                    ),
+                    "tags": [
+                        "historical" if broad_readiness_available else "current",
+                        "source review", "downloads", "retained sources", "claim boundaries",
+                    ],
+                    "current": not broad_readiness_available,
+                    "historical": broad_readiness_available,
+                    "href": repository_root_url + source_download["dashboard_result_path"],
+                    "link_label": "Open current source-review/download report",
+                    "scope_metrics": [
+                        {"label": "locked rows", "value": source_download["locked_queue_count"]},
+                        {"label": "retained sources", "value": source_download["retained_source_count"]},
+                        {"label": "retained PDFs", "value": source_download["retained_pdf_count"]},
+                    ],
+                }
+            ]
+            if source_download_available
+            else []
+        ),
         *(
             [
                 {
@@ -5040,8 +5332,8 @@ def build_reports_index_layer(
                         "source-reviewed, extracted, rated, ingested, or codified."
                     ),
                     "tags": ["current", "candidate review", "metadata only", "claim boundaries"],
-                    "current": True,
-                    "historical": False,
+                    "current": not source_download_available,
+                    "historical": source_download_available,
                     "href": repository_root_url + candidate_review["dashboard_result_path"],
                     "link_label": "Open current candidate-review report",
                     "scope_metrics": [
@@ -5097,7 +5389,9 @@ def build_reports_index_layer(
                 "non-safety constraint, and fiscal constraint. Direction remains largely unresolved."
             ),
             "tags": ["Tier C", "memo supplement", "claim boundaries", "completed evidence artifact"],
-            "current": not (candidate_review_available or verification_available),
+            "current": not (
+                source_download_available or candidate_review_available or verification_available
+            ),
             "historical": False,
             "href": repository_root_url + (
                 "docs/analysis/compensation_extraction/"
@@ -5284,7 +5578,9 @@ def build_reports_index_layer(
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
         "generated_at": metadata["generated_at"],
-        "data_vintage": "2026-07-28" if candidate_review_available else "2026-07-27",
+        "data_vintage": "2026-07-28" if (
+            source_download_available or candidate_review_available
+        ) else "2026-07-27",
         "source_file": relative(REPORTS_INDEX_SOURCE_PATH),
         "reports": published_reports,
         "disclaimer": (
@@ -7707,6 +8003,8 @@ def build_project_phase_summary(
     live_available, live = broad_state_4x1000_live_scout_status()
     verification_available, verification = broad_candidate_verification_4x3000_status()
     candidate_review_available, candidate_review = combined_broad_candidate_review_status()
+    source_download_available, source_download = combined_broad_source_review_download_status()
+    broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -7731,9 +8029,15 @@ def build_project_phase_summary(
     )
     return {
         **metadata,
-        "data_vintage": "2026-07-28" if (candidate_review_available or verification_available) else "2026-07-27",
+        "data_vintage": "2026-07-28" if (
+            broad_readiness_available or source_download_available or candidate_review_available or verification_available
+        ) else "2026-07-27",
         "stage": (
-            "combined_broad_candidate_review_complete_source_review_transition"
+            "combined_broad_pdf_text_readiness_complete_text_extraction_transition"
+            if broad_readiness_available
+            else "combined_broad_source_review_download_complete_pdf_readiness_transition"
+            if source_download_available
+            else "combined_broad_candidate_review_complete_source_review_transition"
             if candidate_review_available
             else "broad_candidate_verification_4x3000_complete_review_transition"
             if verification_available and verification.get("all_lanes_completed")
@@ -7750,7 +8054,11 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Combined broad candidate review complete; bounded source review/download ready next"
+            "Combined broad PDF/text-layer readiness complete; four-lane bounded text extraction ready next"
+            if broad_readiness_available
+            else "Combined broad source review/download complete; PDF/text-layer readiness ready next"
+            if source_download_available
+            else "Combined broad candidate review complete; bounded source review/download ready next"
             if candidate_review_available
             else "Broad candidate verification complete; combined candidate review ready next"
             if verification_available and verification.get("all_lanes_completed")
@@ -7767,7 +8075,11 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            candidate_review["decision"]
+            broad_readiness["decision"]
+            if broad_readiness_available
+            else source_download["decision"]
+            if source_download_available
+            else candidate_review["decision"]
             if candidate_review_available
             else verification["decision"]
             if verification_available
@@ -7911,21 +8223,72 @@ def build_project_phase_summary(
         "candidate_review_excluded_count": candidate_review.get("excluded_count") if candidate_review_available else 0,
         "candidate_review_non_cba_ready_count": candidate_review.get("non_cba_source_review_ready_count") if candidate_review_available else 0,
         "candidate_review_cba_concentration": candidate_review.get("exact_cba_concentration") if candidate_review_available else 0,
+        "combined_source_review_download_available": source_download_available,
+        "combined_source_review_download_decision": source_download.get("decision") if source_download_available else None,
+        "source_review_download_queue_size": source_download.get("locked_queue_count") if source_download_available else 0,
+        "source_review_download_attempted_count": source_download.get("attempted_source_review_download_count") if source_download_available else 0,
+        "source_review_download_completed_lane_count": source_download.get("completed_lane_count") if source_download_available else 0,
+        "source_review_download_retained_count": source_download.get("retained_source_count") if source_download_available else 0,
+        "source_review_download_retained_pdf_count": source_download.get("retained_pdf_count") if source_download_available else 0,
+        "source_review_download_retained_html_count": source_download.get("retained_html_count") if source_download_available else 0,
+        "source_review_download_retained_other_count": source_download.get("retained_other_document_count") if source_download_available else 0,
+        "source_review_download_excluded_deferred_count": source_download.get("excluded_or_deferred_count") if source_download_available else 0,
+        "source_review_download_duplicate_file_hash_count": source_download.get("duplicate_file_hash_count") if source_download_available else 0,
+        "source_review_download_duplicate_canonical_count": source_download.get("duplicate_canonical_locator_count") if source_download_available else 0,
+        "source_review_download_oversized_count": source_download.get("oversized_count") if source_download_available else 0,
+        "source_review_download_blocked_unavailable_count": source_download.get("blocked_unavailable_count") if source_download_available else 0,
+        "source_review_download_weak_needs_review_count": source_download.get("weak_or_needs_review_count") if source_download_available else 0,
+        "source_review_download_error_count": source_download.get("download_error_count") if source_download_available else 0,
+        "source_review_download_retained_byte_total": source_download.get("retained_byte_total") if source_download_available else 0,
+        "source_review_download_non_cba_retained_count": source_download.get("non_cba_retained_source_count") if source_download_available else 0,
+        "source_review_download_cba_concentration": source_download.get("exact_cba_concentration") if source_download_available else 0,
+        "combined_pdf_text_readiness_available": broad_readiness_available,
+        "pdf_text_readiness_queue_size": broad_readiness.get("retained_source_readiness_queue_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_reviewed_count": broad_readiness.get("readiness_reviewed_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_completed_lane_count": broad_readiness.get("completed_lane_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_lane_counts": broad_readiness.get("lane_counts") if broad_readiness_available else {},
+        "pdf_text_readiness_pdf_reviewed_count": broad_readiness.get("pdf_reviewed_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_html_reviewed_count": broad_readiness.get("html_reviewed_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_other_document_reviewed_count": broad_readiness.get("other_document_reviewed_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_parse_text_layer_ready_count": broad_readiness.get("parse_text_layer_ready_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_html_text_ready_count": broad_readiness.get("html_text_ready_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_other_document_text_ready_count": broad_readiness.get("other_document_text_ready_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_ocr_later_defer_count": broad_readiness.get("ocr_later_or_defer_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_oversized_defer_count": broad_readiness.get("oversized_for_text_pass_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_corrupt_unreadable_count": broad_readiness.get("corrupt_or_unreadable_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_encrypted_locked_count": broad_readiness.get("encrypted_or_locked_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_shell_navigation_count": broad_readiness.get("shell_or_navigation_only_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_unsupported_count": broad_readiness.get("unsupported_for_text_extraction_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_needs_review_count": broad_readiness.get("needs_review_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_error_count": broad_readiness.get("readiness_error_count") if broad_readiness_available else 0,
+        "pdf_text_readiness_extraction_ready_count": broad_readiness.get("extraction_ready_count") if broad_readiness_available else 0,
         "current_report_title": (
-            "Combined Broad Candidate Review Result"
+            "Combined Broad PDF and Text-Layer Readiness Result"
+            if broad_readiness_available
+            else "Combined Broad Source Review and Download Result"
+            if source_download_available
+            else "Combined Broad Candidate Review Result"
             if candidate_review_available
             else "Broad Candidate Verification 4x3000 Result"
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            candidate_review["dashboard_result_path"]
+            broad_readiness["dashboard_result_path"]
+            if broad_readiness_available
+            else source_download["dashboard_result_path"]
+            if source_download_available
+            else candidate_review["dashboard_result_path"]
             if candidate_review_available
             else verification["dashboard_result_path"]
             if verification_available
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            candidate_review["dashboard_result_path"]
+            broad_readiness["dashboard_result_path"]
+            if broad_readiness_available
+            else source_download["dashboard_result_path"]
+            if source_download_available
+            else candidate_review["dashboard_result_path"]
             if candidate_review_available
             else verification["dashboard_result_path"]
             if verification_available
@@ -7938,7 +8301,11 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run a separately authorized bounded source-review/download wave from the locked reviewed queue"
+            "run four-lane bounded text extraction over readiness-approved retained sources only"
+            if broad_readiness_available
+            else "run a separately authorized bounded PDF/text-layer readiness pass over unique retained local sources"
+            if source_download_available
+            else "run a separately authorized bounded source-review/download wave from the locked reviewed queue"
             if candidate_review_available
             else "run one combined broad candidate review over preserved candidates and current verification outcomes"
             if verification_available and verification.get("all_lanes_completed")
@@ -8008,7 +8375,11 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "bounded broad source review/download"
+            "four-lane bounded text extraction over readiness-approved retained sources"
+            if broad_readiness_available
+            else "bounded PDF/text-layer readiness over retained local sources"
+            if source_download_available
+            else "bounded broad source review/download"
             if candidate_review_available
             else "combined broad candidate review"
             if verification_available and verification.get("all_lanes_completed")
@@ -8026,7 +8397,11 @@ def build_project_phase_summary(
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "combined_broad_candidate_review_complete_source_review_ready"
+            "combined_broad_pdf_text_readiness_complete_text_extraction_ready"
+            if broad_readiness_available
+            else "combined_broad_source_review_download_complete_pdf_readiness_ready"
+            if source_download_available
+            else "combined_broad_candidate_review_complete_source_review_ready"
             if candidate_review_available
             else "broad_candidate_verification_4x3000_complete_review_ready"
             if verification_available and verification.get("all_lanes_completed")
@@ -9682,6 +10057,139 @@ def build_source_review_status_summary(
                 ],
             }
         )
+    source_download_available, source_download = combined_broad_source_review_download_status()
+    if source_download_available:
+        payload.update(
+            {
+                "stage": "combined_broad_source_review_download_complete",
+                "source_review_phase": "combined_broad_5589_parallel_lanes_completed",
+                "source_review_live_status": "completed_all_four_lanes",
+                "source_review_queue_size": source_download["locked_queue_count"],
+                "source_review_download_attempted_count": source_download[
+                    "attempted_source_review_download_count"
+                ],
+                "source_review_completed_lane_count": source_download[
+                    "completed_lane_count"
+                ],
+                "retained_source_count": source_download["retained_source_count"],
+                "retained_pdf_count": source_download["retained_pdf_count"],
+                "retained_html_count": source_download["retained_html_count"],
+                "retained_other_document_count": source_download[
+                    "retained_other_document_count"
+                ],
+                "excluded_or_deferred_count": source_download[
+                    "excluded_or_deferred_count"
+                ],
+                "duplicate_file_hash_count": source_download[
+                    "duplicate_file_hash_count"
+                ],
+                "duplicate_canonical_locator_count": source_download[
+                    "duplicate_canonical_locator_count"
+                ],
+                "oversized_for_this_pass_count": source_download[
+                    "oversized_count"
+                ],
+                "blocked_or_unavailable_count": source_download[
+                    "blocked_unavailable_count"
+                ],
+                "weak_or_needs_review_count": source_download[
+                    "weak_or_needs_review_count"
+                ],
+                "download_error_count": source_download["download_error_count"],
+                "retained_byte_total": source_download["retained_byte_total"],
+                "non_cba_retained_source_count": source_download[
+                    "non_cba_retained_source_count"
+                ],
+                "exact_cba_concentration": source_download[
+                    "exact_cba_concentration"
+                ],
+                "content_download_status": "completed_bounded_retained_sources",
+                "source_rating_status": "not_started",
+                "extraction_readiness_status": "ready_for_separately_authorized_pass",
+                "next_recommendation": "bounded_pdf_text_layer_readiness",
+                "next_scaling_decision": "bounded_pdf_text_layer_readiness",
+                "combined_broad_source_review_result_path": source_download[
+                    "dashboard_result_path"
+                ],
+                "global_analysis_readiness": False,
+                "caveats": [
+                    "Retained files were downloaded and hashed but not parsed for text or evidence.",
+                    "No PDF rendering, OCR, text/table/span extraction, evidence rating, model analysis, ingestion, or codification occurred.",
+                    "Retention is an operational source stage and does not establish wage differences, prevalence, effects, or causation.",
+                    "Global analysis readiness remains false.",
+                ],
+            }
+        )
+    broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
+    if broad_readiness_available:
+        payload.update(
+            {
+                "stage": "combined_broad_pdf_text_layer_readiness_complete",
+                "source_review_phase": "combined_broad_4961_readiness_parallel_lanes_completed",
+                "source_review_live_status": "readiness_completed_all_four_lanes",
+                "pdf_text_readiness_queue_size": broad_readiness[
+                    "retained_source_readiness_queue_count"
+                ],
+                "pdf_text_readiness_reviewed_count": broad_readiness[
+                    "readiness_reviewed_count"
+                ],
+                "pdf_text_readiness_completed_lane_count": broad_readiness[
+                    "completed_lane_count"
+                ],
+                "pdf_text_readiness_pdf_reviewed_count": broad_readiness[
+                    "pdf_reviewed_count"
+                ],
+                "pdf_text_readiness_html_reviewed_count": broad_readiness[
+                    "html_reviewed_count"
+                ],
+                "pdf_text_readiness_other_document_reviewed_count": broad_readiness[
+                    "other_document_reviewed_count"
+                ],
+                "parse_text_layer_ready_count": broad_readiness[
+                    "parse_text_layer_ready_count"
+                ],
+                "html_text_ready_count": broad_readiness["html_text_ready_count"],
+                "other_document_text_ready_count": broad_readiness[
+                    "other_document_text_ready_count"
+                ],
+                "ocr_later_or_defer_count": broad_readiness[
+                    "ocr_later_or_defer_count"
+                ],
+                "oversized_for_text_pass_count": broad_readiness[
+                    "oversized_for_text_pass_count"
+                ],
+                "corrupt_or_unreadable_count": broad_readiness[
+                    "corrupt_or_unreadable_count"
+                ],
+                "encrypted_or_locked_count": broad_readiness[
+                    "encrypted_or_locked_count"
+                ],
+                "shell_or_navigation_only_count": broad_readiness[
+                    "shell_or_navigation_only_count"
+                ],
+                "unsupported_for_text_extraction_count": broad_readiness[
+                    "unsupported_for_text_extraction_count"
+                ],
+                "needs_review_count": broad_readiness["needs_review_count"],
+                "readiness_error_count": broad_readiness["readiness_error_count"],
+                "extraction_ready_count": broad_readiness["extraction_ready_count"],
+                "extraction_readiness_status": "completed_all_retained_sources",
+                "content_download_status": "completed_unchanged",
+                "source_rating_status": "not_started",
+                "next_recommendation": "four_lane_bounded_text_extraction",
+                "next_scaling_decision": "four_lane_bounded_text_extraction",
+                "combined_broad_readiness_result_path": broad_readiness[
+                    "dashboard_result_path"
+                ],
+                "global_analysis_readiness": False,
+                "caveats": [
+                    "Readiness is technical local-file parseability only; retained source text was not saved or treated as extracted evidence.",
+                    "No OCR, PDF rendering, table/span extraction, evidence rating, model analysis, ingestion, or codification occurred.",
+                    "Readiness counts do not establish wage differences, national prevalence, effects, or causation.",
+                    "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
+                ],
+            }
+        )
     return payload
 
 
@@ -9689,6 +10197,51 @@ def build_pdf_readiness_status_summary(
     *, metadata: dict[str, Any]
 ) -> dict[str, Any]:
     """Build the local-only PDF-readiness collection status."""
+
+    broad_available, broad = combined_broad_pdf_text_readiness_status()
+    if broad_available:
+        return {
+            **metadata,
+            "pdf_readiness_phase": "combined_broad_4961_completed",
+            "latest_pdf_readiness_round_id": (
+                "COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28"
+            ),
+            "pdf_readiness_merge_status": "coordinator_merged",
+            "source_review_rows_available": 5589,
+            "retained_source_count": 4961,
+            "retained_pdf_artifacts_available": 3980,
+            "retained_html_artifacts_available": 941,
+            "retained_other_document_artifacts_available": 40,
+            "pdf_readiness_rows_merged": broad["pdf_reviewed_count"],
+            "readiness_reviewed_count": broad["readiness_reviewed_count"],
+            "readiness_status_counts": broad["readiness_status_counts"],
+            "parse_text_layer_later_rows": broad["parse_text_layer_ready_count"],
+            "html_text_later_rows": broad["html_text_ready_count"],
+            "other_document_text_later_rows": broad["other_document_text_ready_count"],
+            "ocr_later_rows": broad["ocr_later_or_defer_count"],
+            "oversized_rows": broad["oversized_for_text_pass_count"],
+            "corrupt_or_unreadable_rows": broad["corrupt_or_unreadable_count"],
+            "encrypted_or_locked_rows": broad["encrypted_or_locked_count"],
+            "shell_or_navigation_only_rows": broad["shell_or_navigation_only_count"],
+            "unsupported_rows": broad["unsupported_for_text_extraction_count"],
+            "needs_review_rows": broad["needs_review_count"],
+            "readiness_error_rows": broad["readiness_error_count"],
+            "extraction_ready_rows": broad["extraction_ready_count"],
+            "technical_readiness_status": "complete_for_all_retained_sources",
+            "next_recommendation": "four_lane_bounded_text_extraction",
+            "ingestion_status": "not_started",
+            "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "not_started",
+            "summary_source": relative(COMBINED_BROAD_PDF_TEXT_READINESS_SUMMARY_PATH),
+            "dashboard_map_filter": "total_scout_coverage_only",
+            "global_analysis_readiness": False,
+            "caveats": [
+                "Readiness is technical local-file parseability only and is not durable text extraction.",
+                "No OCR, rendering, evidence extraction/rating, ingestion, codification, or wage analysis occurred.",
+                "Readiness does not establish population prevalence, wage differences, effects, or causation.",
+            ],
+        }
 
     if not PDF_READINESS_PILOT1_SUMMARY_PATH.exists():
         return {

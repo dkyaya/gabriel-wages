@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-07-28T21:26:32Z",
+  "branch": "main",
+  "head": "d17549fe065c243d753167e5df4c7edba4e89209",
+  "origin_main_local_tracking_ref": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "ahead_count_after_attempts": 3,
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": "git push",
+      "status": "failed",
+      "error": "RPC failed; HTTP 500 curl 22; send-pack unexpected disconnect while reading sideband packet"
+    },
+    {
+      "attempt": 2,
+      "command": "git push",
+      "status": "failed",
+      "error": "RPC failed; HTTP 500 curl 22; send-pack unexpected disconnect while reading sideband packet"
+    }
+  ],
+  "retry_limit_exhausted": true,
+  "pushed_readiness_commit": false,
+  "additional_local_commits_pushed": false,
+  "push_status_note_commit_created": false,
+  "push_hardening_commit_created": false,
+  "remote_configuration_changed": false,
+  "fetch_pull_rebase_merge_performed": false
+}

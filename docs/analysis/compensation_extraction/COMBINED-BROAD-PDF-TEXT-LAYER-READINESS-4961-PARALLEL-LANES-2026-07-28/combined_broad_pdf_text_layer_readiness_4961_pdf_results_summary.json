@@ -1,0 +1,12 @@
+{
+  "global_analysis_readiness": false,
+  "readiness_status_counts": {
+    "encrypted_or_locked": 38,
+    "ocr_later_or_defer": 625,
+    "oversized_for_text_pass": 140,
+    "parse_text_layer_later": 3177
+  },
+  "retained_type_group": "pdf",
+  "reviewed_count": 3980,
+  "text_ready_count": 3177
+}

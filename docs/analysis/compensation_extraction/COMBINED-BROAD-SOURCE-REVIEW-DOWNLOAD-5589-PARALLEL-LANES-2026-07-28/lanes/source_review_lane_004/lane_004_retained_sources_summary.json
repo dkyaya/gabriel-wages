@@ -1,0 +1,11 @@
+{
+  "global_analysis_readiness": false,
+  "lane_id": "source_review_lane_004",
+  "retained_bytes": 3258160113,
+  "retained_source_count": 1303,
+  "status_counts": {
+    "retained_document_other": 17,
+    "retained_html": 407,
+    "retained_pdf": 879
+  }
+}

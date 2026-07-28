@@ -1,0 +1,11 @@
+{
+  "global_analysis_readiness": false,
+  "lane_id": "readiness_lane_001",
+  "locked_queue_count": 1240,
+  "queue_sha256": "ef2c6809dcda8d07a77c4e017fae15614b5d47b7bfa5b57f87268c08d320c4cb",
+  "retained_type_counts": {
+    "docx": 6,
+    "html": 182,
+    "pdf": 1052
+  }
+}

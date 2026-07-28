@@ -1,0 +1,13 @@
+{
+  "all_valid": true,
+  "existing_file_count": 4961,
+  "hash_match_count": 4961,
+  "ocr_runs": 0,
+  "phase": "before_history_repair",
+  "render_runs": 0,
+  "row_count": 4961,
+  "size_match_count": 4961,
+  "text_extraction_runs": 0,
+  "total_expected_bytes": 12475949771,
+  "unique_expected_sha256_count": 4961
+}

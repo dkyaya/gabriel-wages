@@ -1,0 +1,73 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 4,
+  "group_field": "region",
+  "retained_source_count": 4961,
+  "rows": [
+    {
+      "corrupt_or_unreadable_count": 1,
+      "encrypted_or_locked_count": 16,
+      "html_text_later_count": 232,
+      "needs_review_count": 24,
+      "ocr_later_or_defer_count": 180,
+      "other_document_text_later_count": 19,
+      "oversized_for_text_pass_count": 46,
+      "parse_text_layer_later_count": 1120,
+      "readiness_error_count": 0,
+      "region": "Midwest",
+      "retained_source_count": 1640,
+      "shell_or_navigation_only_count": 2,
+      "text_ready_count": 1371,
+      "unsupported_for_text_extraction_count": 0
+    },
+    {
+      "corrupt_or_unreadable_count": 0,
+      "encrypted_or_locked_count": 13,
+      "html_text_later_count": 119,
+      "needs_review_count": 15,
+      "ocr_later_or_defer_count": 244,
+      "other_document_text_later_count": 1,
+      "oversized_for_text_pass_count": 15,
+      "parse_text_layer_later_count": 696,
+      "readiness_error_count": 0,
+      "region": "Northeast",
+      "retained_source_count": 1103,
+      "shell_or_navigation_only_count": 0,
+      "text_ready_count": 816,
+      "unsupported_for_text_extraction_count": 0
+    },
+    {
+      "corrupt_or_unreadable_count": 1,
+      "encrypted_or_locked_count": 4,
+      "html_text_later_count": 309,
+      "needs_review_count": 25,
+      "ocr_later_or_defer_count": 121,
+      "other_document_text_later_count": 8,
+      "oversized_for_text_pass_count": 57,
+      "parse_text_layer_later_count": 798,
+      "readiness_error_count": 0,
+      "region": "South",
+      "retained_source_count": 1329,
+      "shell_or_navigation_only_count": 6,
+      "text_ready_count": 1115,
+      "unsupported_for_text_extraction_count": 0
+    },
+    {
+      "corrupt_or_unreadable_count": 0,
+      "encrypted_or_locked_count": 5,
+      "html_text_later_count": 174,
+      "needs_review_count": 23,
+      "ocr_later_or_defer_count": 80,
+      "other_document_text_later_count": 12,
+      "oversized_for_text_pass_count": 22,
+      "parse_text_layer_later_count": 563,
+      "readiness_error_count": 0,
+      "region": "West",
+      "retained_source_count": 889,
+      "shell_or_navigation_only_count": 10,
+      "text_ready_count": 749,
+      "unsupported_for_text_extraction_count": 0
+    }
+  ],
+  "text_ready_count": 4051
+}

@@ -1,0 +1,5 @@
+region,retained_source_count,text_ready_count,corrupt_or_unreadable_count,encrypted_or_locked_count,html_text_later_count,needs_review_count,ocr_later_or_defer_count,other_document_text_later_count,oversized_for_text_pass_count,parse_text_layer_later_count,readiness_error_count,shell_or_navigation_only_count,unsupported_for_text_extraction_count
+Midwest,1640,1371,1,16,232,24,180,19,46,1120,0,2,0
+Northeast,1103,816,0,13,119,15,244,1,15,696,0,0,0
+South,1329,1115,1,4,309,25,121,8,57,798,0,6,0
+West,889,749,0,5,174,23,80,12,22,563,0,10,0

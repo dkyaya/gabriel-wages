@@ -1,0 +1,26 @@
+source_family_hint,retained_source_count,text_ready_count,corrupt_or_unreadable_count,encrypted_or_locked_count,html_text_later_count,needs_review_count,ocr_later_or_defer_count,other_document_text_later_count,oversized_for_text_pass_count,parse_text_layer_later_count,readiness_error_count,shell_or_navigation_only_count,unsupported_for_text_extraction_count
+agenda_packet_or_minutes,993,891,0,2,249,20,57,12,19,630,0,4,0
+arbitration_award,136,122,0,2,11,0,11,0,0,111,0,1,0
+budget_or_pay_plan,641,553,0,5,96,5,48,8,26,449,0,4,0
+cba,672,423,0,6,53,10,212,1,21,369,0,0,0
+cba_or_arbitration_award_or_factfinding_or_impasse_record,77,72,0,0,15,1,4,0,0,57,0,0,0
+cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed),1,1,0,0,1,0,0,0,0,0,0,0,0
+cba_or_budget_pay_plan_with_explicit_compensation_mechanism,261,204,0,4,29,4,35,0,14,175,0,0,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule,341,289,0,9,75,6,23,0,13,214,0,1,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules),1,1,0,0,1,0,0,0,0,0,0,0,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit),2,0,0,2,0,0,0,0,0,0,0,0,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index),1,1,0,0,1,0,0,0,0,0,0,0,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey),1,1,0,0,1,0,0,0,0,0,0,0,0
+civil_service_or_hr_pay_plan,107,93,0,0,32,3,6,2,4,59,0,1,0
+classification_study,30,26,0,0,2,1,1,0,2,24,0,0,0
+collective_bargaining_agreement_or_moa_or_wage_schedule,146,118,0,3,48,9,12,0,3,70,0,1,0
+compensation_study,58,55,0,0,6,0,2,0,1,49,0,0,0
+factfinding_report,10,8,0,1,1,0,0,0,1,7,0,0,0
+mou_or_memorandum,267,213,1,2,15,2,34,0,15,198,0,0,0
+other_local_government_pay_policy,249,172,0,0,15,3,70,5,4,152,0,0,0
+personnel_policy,79,69,0,0,7,3,6,2,1,60,0,0,0
+salary_ordinance,163,132,0,1,38,2,25,2,1,92,0,2,0
+settlement_agreement,6,4,0,0,0,1,0,0,1,4,0,0,0
+strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing),1,0,0,0,0,1,0,0,0,0,0,0,0
+unknown_or_needs_review,156,131,0,1,67,8,12,2,1,62,0,3,0
+wage_schedule,562,472,1,0,71,8,67,6,13,395,0,1,0

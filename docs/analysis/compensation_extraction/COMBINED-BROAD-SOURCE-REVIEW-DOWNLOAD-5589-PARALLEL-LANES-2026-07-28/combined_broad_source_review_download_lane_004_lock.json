@@ -1,0 +1,8 @@
+{
+  "global_analysis_readiness": false,
+  "id_set_sha256": "17f3624b2f151c5359ed590d4f7df9241044dbf760ee22242428d4500aad48e4",
+  "lane_id": "source_review_lane_004",
+  "queue_rows": 1398,
+  "queue_sha256": "df5346475bdb28f2c595a95ae9289775e925be177fe693450ed367a5817f9d5e",
+  "scheduled_stagger_minutes": 24
+}

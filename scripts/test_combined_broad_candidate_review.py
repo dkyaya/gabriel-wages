@@ -129,13 +129,25 @@ def main() -> None:
     assert phase["source_review_ready_high_count"] == 2884
     assert phase["source_review_ready_medium_count"] == 2562
     assert phase["source_review_ready_low_count"] == 143
-    assert "candidate review complete" in phase["current_phase"].casefold()
-    assert "source-review/download" in phase["next_task"].casefold()
+    assert (
+        "candidate review complete" in phase["current_phase"].casefold()
+        or "source review/download complete" in phase["current_phase"].casefold()
+        or "pdf/text-layer readiness complete" in phase["current_phase"].casefold()
+    )
+    assert (
+        "source-review/download" in phase["next_task"].casefold()
+        or "pdf/text-layer readiness" in phase["next_task"].casefold()
+        or "text extraction" in phase["next_task"].casefold()
+    )
     assert "tier c memo supplement" not in phase["current_phase"].casefold()
     reports = read_json(ROOT / "docs/dashboard/data/reports_index.json")["reports"]
     current_reports = [report for report in reports if report["current"]]
     assert len(current_reports) == 1
-    assert current_reports[0]["id"] == "combined-broad-candidate-review-2026-07-28"
+    assert current_reports[0]["id"] in {
+        "combined-broad-candidate-review-2026-07-28",
+        "combined-broad-source-review-download-5589-2026-07-28",
+        "combined-broad-pdf-text-readiness-4961-2026-07-28",
+    }
     frontend = (ROOT / "docs/dashboard/src/components/ProjectHubSections.jsx").read_text(encoding="utf-8")
     assert "Combined broad candidate review complete" in frontend
     assert "Broad candidate locator verification</h2>" not in frontend

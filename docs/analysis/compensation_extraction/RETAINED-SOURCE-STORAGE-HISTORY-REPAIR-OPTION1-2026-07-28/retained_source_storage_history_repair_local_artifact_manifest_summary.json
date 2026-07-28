@@ -1,0 +1,9 @@
+{
+  "all_valid": true,
+  "artifact_root": "artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28",
+  "git_ignored_local_only": true,
+  "resolved_pointer_count": 4961,
+  "row_count": 4961,
+  "total_bytes": 12475949771,
+  "unique_sha256_count": 4961
+}

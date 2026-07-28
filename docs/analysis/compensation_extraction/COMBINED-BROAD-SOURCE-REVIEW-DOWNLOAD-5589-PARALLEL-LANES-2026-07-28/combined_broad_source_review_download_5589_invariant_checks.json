@@ -1,0 +1,16 @@
+{
+  "all_invariants_passed": true,
+  "candidate_review_reruns": 0,
+  "controlled_statuses_only": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "exact_locked_queue_count_5589": true,
+  "extraction_ocr_render_rating_model_runs": 0,
+  "global_analysis_readiness": false,
+  "ingestion_codification_statistical_runs": 0,
+  "lane_counts_exact": true,
+  "master_equals_completed_rows": true,
+  "nonretained_rows_not_marked_retained": true,
+  "retained_files_exist": true,
+  "retained_files_have_hashes": true,
+  "verification_reruns": 0
+}

@@ -1,0 +1,14 @@
+{
+  "checkpoint_frequency": "after_every_source",
+  "coordinator_only_shared_mutations": true,
+  "global_analysis_readiness": false,
+  "isolated_worker_outputs": true,
+  "lane_count": 4,
+  "lane_stagger_minutes": {
+    "readiness_lane_001": 0,
+    "readiness_lane_002": 8,
+    "readiness_lane_003": 16,
+    "readiness_lane_004": 24
+  },
+  "partial_completion_requires_resume_decision": true
+}

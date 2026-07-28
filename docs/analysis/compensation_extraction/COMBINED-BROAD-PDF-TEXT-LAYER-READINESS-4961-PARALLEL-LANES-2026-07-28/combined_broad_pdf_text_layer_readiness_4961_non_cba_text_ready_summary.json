@@ -1,0 +1,7 @@
+{
+  "definition": "source_family_hint is not exact cba and readiness status is extraction-approved",
+  "global_analysis_readiness": false,
+  "non_cba_retained_source_count": 4289,
+  "non_cba_text_ready_count": 3628,
+  "non_cba_text_ready_rate": 0.845885
+}

@@ -34,3 +34,9 @@ docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-
 
 # Keep the corpus/ folder tracked even if empty
 !corpus/.gitkeep
+
+# Retained/downloaded source binaries are local or external artifacts, not normal
+# Git content. Git tracks their manifests, hashes, lineage, summaries, and storage
+# pointers instead. See future_artifact_storage_standard_for_retained_sources.md.
+/artifacts/local_retained_sources/
+/docs/analysis/compensation_extraction/*/retained_sources/

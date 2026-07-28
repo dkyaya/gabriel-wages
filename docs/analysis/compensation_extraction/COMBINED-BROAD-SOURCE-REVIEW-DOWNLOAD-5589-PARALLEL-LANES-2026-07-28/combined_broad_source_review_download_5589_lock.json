@@ -1,0 +1,25 @@
+{
+  "canonical_duplicate_rows": 1,
+  "global_analysis_readiness": false,
+  "id_set_sha256": "6896db398e81e2b022fd0cd2d584a2c29e6a3fd740ba43998d2ea1f2439f506c",
+  "input_commit": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "input_lock_sha256": "3cc76f6efa6ce7565f430dc440b13ed06049ba5c7293d22c587ed6e6116aa30d",
+  "input_queue_sha256": "df1fcb9e7bbfb81fe9b637ff4507cc7833a8fe15ecfdf5e631b97bd9a37b78c6",
+  "lane_counts": {
+    "source_review_lane_001": 1397,
+    "source_review_lane_002": 1397,
+    "source_review_lane_003": 1397,
+    "source_review_lane_004": 1398
+  },
+  "lane_queue_sha256": {
+    "source_review_lane_001": "09925c231a64118b5d2634e57deae2970151cd86651d2dae464106f28a2bd2d2",
+    "source_review_lane_002": "b65b83f3064384c92262fceb1a1e30e28f472111a9ebf9dd9257835d6ac84613",
+    "source_review_lane_003": "342e2b8320961bf13b7f4ff73554a382f6536e45b7040b4e3db974f3de93baf2",
+    "source_review_lane_004": "df5346475bdb28f2c595a95ae9289775e925be177fe693450ed367a5817f9d5e"
+  },
+  "maximum_file_bytes": 78643200,
+  "locked_rows": 5589,
+  "queue_rows": 5589,
+  "queue_sha256": "996fd6e2f79f4baca69fc739b3b4cbea38d1addc1f6c6e9beb08c8fd33caf675",
+  "task_id": "COMBINED-BROAD-SOURCE-REVIEW-DOWNLOAD-5589-PARALLEL-LANES-2026-07-28"
+}

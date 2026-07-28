@@ -1,0 +1,11 @@
+{
+  "global_analysis_readiness": false,
+  "lane_id": "source_review_lane_003",
+  "live_status": "not_run",
+  "locked_rows": 1397,
+  "priority_counts": {
+    "high": 90,
+    "medium": 1307
+  },
+  "scheduled_stagger_minutes": 16
+}

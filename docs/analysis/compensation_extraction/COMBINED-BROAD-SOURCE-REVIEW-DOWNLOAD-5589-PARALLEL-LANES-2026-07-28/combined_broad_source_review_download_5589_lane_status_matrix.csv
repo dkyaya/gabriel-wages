@@ -1,0 +1,5 @@
+lane_id,scheduled_stagger_minutes,locked_rows,completed_rows,remaining_rows,status,scheduled_start_at,actual_start_at,completed_at
+source_review_lane_001,0,1397,1397,0,completed,2026-07-28T19:17:04Z,2026-07-28T19:17:29Z,2026-07-28T19:31:41Z
+source_review_lane_002,8,1397,1397,0,completed,2026-07-28T19:25:04Z,2026-07-28T19:25:04Z,2026-07-28T19:35:23Z
+source_review_lane_003,16,1397,1397,0,completed,2026-07-28T19:33:04Z,2026-07-28T19:33:04Z,2026-07-28T19:43:37Z
+source_review_lane_004,24,1398,1398,0,completed,2026-07-28T19:41:04Z,2026-07-28T19:41:04Z,2026-07-28T19:52:43Z
