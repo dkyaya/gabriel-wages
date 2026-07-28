@@ -1,0 +1,17 @@
+{
+  "candidate_count": 148,
+  "checkpoint_status": "in_progress",
+  "complete_shard_reusable": false,
+  "dashboard_was_not_updated_from_partial_attempt": true,
+  "excluded_from_candidate_accounting": true,
+  "excluded_from_coverage_accounting": true,
+  "failed_outcome_count": 2,
+  "global_analysis_readiness": false,
+  "last_completed_scout_target_id": "B4X1000-20260727-0069",
+  "nonterminal_target_70_directory_present": true,
+  "original_shard_id": "broad_shard_001",
+  "parseable_outcome_count": 67,
+  "quarantine_action": "temporary tree renamed and preserved; no row reused",
+  "quarantine_path": "tmp/quarantine_interrupted_sequential_broad_state_4x1000_live_scout_2026-07-27",
+  "terminal_outcome_count": 69
+}

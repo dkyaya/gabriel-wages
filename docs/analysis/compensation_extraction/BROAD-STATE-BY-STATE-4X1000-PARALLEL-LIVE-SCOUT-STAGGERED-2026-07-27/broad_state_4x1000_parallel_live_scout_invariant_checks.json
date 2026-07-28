@@ -1,0 +1,22 @@
+{
+  "all_invariants_passed": true,
+  "candidate_review_zero": true,
+  "completed_lanes_never_rerun": true,
+  "coordinator_merge_only_completed_lanes": true,
+  "dashboard_map_total_scout_coverage_only": true,
+  "extraction_rating_ingestion_codification_statistics_zero": true,
+  "four_controlled_lanes_exist": true,
+  "future_parallel_standard_recorded": true,
+  "global_analysis_readiness_false": true,
+  "incomplete_lanes_have_resume_states": true,
+  "interrupted_sequential_outputs_excluded": true,
+  "lane_output_isolation": true,
+  "lane_overlap_occurred_or_attempted": true,
+  "master_equals_union_of_completed_lanes": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "planned_incomplete_failed_quarantined_not_counted_as_coverage": true,
+  "prior_1205_preserved": true,
+  "raw_prompts_responses_saved_zero": true,
+  "standard_stagger_offsets_recorded": true,
+  "url_head_get_download_document_access_zero": true
+}

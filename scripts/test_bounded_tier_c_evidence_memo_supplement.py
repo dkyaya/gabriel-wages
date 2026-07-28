@@ -93,11 +93,12 @@ def main() -> None:
         runner.DECISION,
         "broad_state_by_state_source_scout_completed_candidate_review_ready",
         "broad_state_4x1000_scout_dry_run_prep_completed_live_ready",
+        "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
     }
     assert phase["tier_c_memo_supplement_valid_scope"] == 140
     assert phase["tier_c_memo_supplement_quarantines_excluded"] == 19
     assert phase["next_task"].startswith(
-        ("broad state-by-state scouting", "bounded candidate review", "run broad state 4x1000 live scout")
+        ("broad state-by-state scouting", "bounded candidate review", "run broad state 4x1000 live scout", "run one combined candidate review")
     )
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"

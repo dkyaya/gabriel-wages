@@ -1,0 +1,13 @@
+{
+  "completed_lane_count": 4,
+  "current_total_candidate_rows": 13041,
+  "current_total_scout_covered_municipalities": 6919,
+  "dashboard_updated": true,
+  "decision": "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter": "total_scout_coverage_only",
+  "new_candidate_rows": 7014,
+  "new_parseable_municipalities": 3997,
+  "planned_incomplete_or_quarantined_targets_added_to_map": 0
+}

@@ -1,0 +1,8 @@
+{
+  "predecessor_suites": [
+    "scripts/test_broad_state_4x1000_scout_dry_run_prep.py",
+    "scripts/test_broad_state_by_state_source_scout_wave.py",
+    "scripts/test_bounded_tier_c_evidence_memo_supplement.py"
+  ],
+  "suite": "scripts/test_broad_state_4x1000_parallel_live_scout.py"
+}

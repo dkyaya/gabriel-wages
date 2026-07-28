@@ -1,0 +1,5 @@
+check,status,detail
+no_search_control,passed,response id/text/tokens present
+hosted_search_trivial,passed,metadata-only transport diagnostic
+hosted_search_municipality,passed,metadata-only municipality-style query
+secret_exposure,passed,credential_values_logged=false

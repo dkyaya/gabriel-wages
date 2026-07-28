@@ -1,0 +1,34 @@
+{
+  "adaptive_sleep_seconds": {
+    "backoff": 10,
+    "base": 5,
+    "max": 15,
+    "min": 3
+  },
+  "bounded_transport_retry_per_target": 1,
+  "coordinator_only_merge_dashboard_commit_push": true,
+  "lane_count": 4,
+  "lane_ids": [
+    "lane_001",
+    "lane_002",
+    "lane_003",
+    "lane_004"
+  ],
+  "per_target_checkpoint_required": true,
+  "sequential_fallback_allowed": false,
+  "shard_ids": [
+    "broad_shard_001",
+    "broad_shard_002",
+    "broad_shard_003",
+    "broad_shard_004"
+  ],
+  "simultaneous_overlap_required": true,
+  "stagger_offsets_minutes": {
+    "lane_001": 0,
+    "lane_002": 8,
+    "lane_003": 16,
+    "lane_004": 24
+  },
+  "worker_cross_lane_reads_or_writes_allowed": false,
+  "worker_dashboard_writes_allowed": false
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T22:54:27Z",
+  "generated_at": "2026-07-28T10:43:55Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -79,7 +79,10 @@
     "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_state_coverage.csv",
     "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_dry_run_prep_decision.json",
     "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_dry_run_prep_invariant_checks.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_master_locked_queue_summary.json"
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_master_locked_queue_summary.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_decision.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_invariant_checks.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_state_coverage.csv"
   ],
   "warnings": [],
   "limitations": [

@@ -1,0 +1,1 @@
+lane_id,shard_id,worker_id,shard_sequence,scout_target_id,municipality_id,municipality,state,region,parse_status,success_status,failure_type,attempt_count,candidate_count,target_input_sha256,target_output_dir,input_tokens,reasoning_tokens,output_tokens,total_tokens,response_id_present

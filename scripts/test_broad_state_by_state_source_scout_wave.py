@@ -98,12 +98,15 @@ def main() -> None:
     assert phase["current_phase_code"] in {
         runner.DECISION,
         "broad_state_4x1000_scout_dry_run_prep_completed_live_ready",
+        "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
     }
     assert phase["broad_state_source_scout_locked_target_count"] == 490
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metadata"]["broad_state_source_scout_included"] is True
-    assert state["totals"]["scout_covered_municipalities"] == 2436 + decision["parseable_target_count"]
+    assert state["totals"]["scout_covered_municipalities"] in {
+        2436 + decision["parseable_target_count"], 6919
+    }
 
     resumed = subprocess.run(
         [str(ROOT / ".venv/bin/python"), str(RUNNER_PATH), "--validate"],

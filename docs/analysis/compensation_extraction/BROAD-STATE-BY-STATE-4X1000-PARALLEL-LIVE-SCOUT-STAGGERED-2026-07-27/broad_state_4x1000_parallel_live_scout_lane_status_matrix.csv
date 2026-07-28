@@ -1,0 +1,5 @@
+lane_id,shard_id,worker_id,lane_status,scheduled_start_offset_minutes,actual_started_at,completed_at,terminal_target_count,parseable_count,failed_or_stopped_count,candidate_count,completed_lane_included_in_merge,global_analysis_readiness
+lane_001,broad_shard_001,worker_lane_001,completed,0,2026-07-27T19:47:15.704731-04:00,2026-07-28T03:20:32.615879-04:00,1000,1000,0,1685,True,False
+lane_002,broad_shard_002,worker_lane_002,completed,8,2026-07-27T19:55:13.624496-04:00,2026-07-28T03:36:37.846266-04:00,1000,1000,0,1817,True,False
+lane_003,broad_shard_003,worker_lane_003,completed,16,2026-07-27T20:03:26.669137-04:00,2026-07-28T03:35:33.772863-04:00,1000,999,1,1768,True,False
+lane_004,broad_shard_004,worker_lane_004,completed,24,2026-07-27T20:11:55.866150-04:00,2026-07-28T06:40:32.856624-04:00,1000,998,2,1744,True,False

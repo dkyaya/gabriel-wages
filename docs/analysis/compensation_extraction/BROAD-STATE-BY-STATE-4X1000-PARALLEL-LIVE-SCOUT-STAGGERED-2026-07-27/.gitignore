@@ -1,0 +1,4 @@
+# Per-target worker scratch is retained locally for audit but excluded from the
+# durable repo and lite relay.  Compact lane checkpoints/results/candidates and
+# coordinator ledgers preserve all terminal identities and accounting.
+lanes/lane_*/targets/

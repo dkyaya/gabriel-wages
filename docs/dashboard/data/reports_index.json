@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-27T22:54:27Z",
+  "generated_at": "2026-07-28T10:43:55Z",
   "data_vintage": "2026-07-27",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
@@ -33,6 +33,41 @@
         {
           "label": "claim candidates",
           "value": 115
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x1000-parallel-live-scout-2026-07-27",
+      "title": "Parallel Broad State 4x1000 Live Scout",
+      "report_type": "Current staggered live discovery operations report",
+      "date": "2026-07-27",
+      "checkpoint": "4 of 4 lanes complete; 3997 parseable municipalities",
+      "summary": "Staggered, isolated, per-target-checkpointed live discovery results are committed. Only parseable outcomes extend total scout coverage; candidate review remains deferred until a separate authorization.",
+      "tags": [
+        "broad scout",
+        "4x1000",
+        "parallel",
+        "staggered",
+        "live",
+        "checkpointed",
+        "candidate review deferred"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_state_4x1000_parallel_live_scout_result_2026-07-27.md",
+      "link_label": "Open parallel 4x1000 live scout report",
+      "scope_metrics": [
+        {
+          "label": "completed lanes",
+          "value": 4
+        },
+        {
+          "label": "parseable municipalities",
+          "value": 3997
+        },
+        {
+          "label": "candidate rows",
+          "value": 7014
         }
       ]
     },

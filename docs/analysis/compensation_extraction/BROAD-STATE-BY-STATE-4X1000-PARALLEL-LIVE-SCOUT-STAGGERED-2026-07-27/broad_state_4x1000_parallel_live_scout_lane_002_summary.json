@@ -1,0 +1,15 @@
+{
+  "actual_started_at": "2026-07-27T19:55:13.624496-04:00",
+  "candidate_count": 1817,
+  "completed_at": "2026-07-28T03:36:37.846266-04:00",
+  "completed_lane_included_in_merge": true,
+  "failed_or_stopped_count": 0,
+  "global_analysis_readiness": false,
+  "lane_id": "lane_002",
+  "lane_status": "completed",
+  "parseable_count": 1000,
+  "scheduled_start_offset_minutes": 8,
+  "shard_id": "broad_shard_002",
+  "terminal_target_count": 1000,
+  "worker_id": "worker_lane_002"
+}

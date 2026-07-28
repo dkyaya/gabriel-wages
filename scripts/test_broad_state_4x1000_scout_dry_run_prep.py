@@ -128,17 +128,24 @@ def main() -> None:
     phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
     state = json.loads((ROOT / "docs/dashboard/data/state_summary.json").read_text())
     operations = json.loads((ROOT / "docs/dashboard/data/parallel_scout_status.json").read_text())
-    assert phase["current_phase_code"] == runner.DECISION
-    assert phase["current_scout_covered"] == 2922
-    assert phase["current_candidate_queue_rows"] == 6027
+    assert phase["current_phase_code"] in {
+        runner.DECISION,
+        "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
+    }
+    live_complete = phase["current_phase_code"].startswith("broad_state_4x1000_parallel_live_scout_completed")
+    assert phase["current_scout_covered"] == (6919 if live_complete else 2922)
+    assert phase["current_candidate_queue_rows"] == (13041 if live_complete else 6027)
     assert phase["broad_state_4x1000_master_locked_target_count"] == 4000
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metadata"]["broad_state_4x1000_planned_targets_added_to_map"] == 0
-    assert state["totals"]["scout_covered_municipalities"] == 2922
-    assert state["totals"]["candidate_rows"] == 6027
+    assert state["totals"]["scout_covered_municipalities"] == (6919 if live_complete else 2922)
+    assert state["totals"]["candidate_rows"] == (13041 if live_complete else 6027)
     assert state["metadata"]["global_analysis_readiness"] is False
-    assert operations["parallel_mode_status"] == "broad_4x1000_dry_run_locked_live_not_run"
-    assert operations["current_scout_covered"] == 2922
+    assert operations["parallel_mode_status"] in {
+        "broad_4x1000_dry_run_locked_live_not_run",
+        "broad_4x1000_live_complete_combined_review_deferred",
+    }
+    assert operations["current_scout_covered"] == (6919 if live_complete else 2922)
     assert operations["planned_round_expected_attempted"] == 4000
     assert operations["planned_targets_added_to_actual_coverage"] == 0
     assert operations["candidate_review_deferred"] is True

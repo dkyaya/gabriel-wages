@@ -63,8 +63,9 @@ export function AnalysisReadinessPanel({ data, phase }) {
       </div>
 
       <p className="panel-note">
-        The current operational next step is broad state-by-state source scouting with geographic and source-family
-        balance. Scout coverage is operational discovery metadata and will not make the project globally analysis-ready.
+        The four-lane broad state scout is complete. The current operational next step is one bounded combined
+        candidate review over the preserved prior queue and new discovery metadata. Scout candidates remain unverified
+        operational metadata and do not make the project globally analysis-ready.
       </p>
 
       <details>

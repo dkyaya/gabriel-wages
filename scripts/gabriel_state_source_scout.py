@@ -1377,11 +1377,25 @@ def triad_value_for(unit_types_present: set[str]) -> str:
 # Response -> candidate rows
 # ---------------------------------------------------------------------------
 
-def extract_raw_candidate_items(parsed: dict) -> list[tuple[str, dict]]:
+def extract_raw_candidate_items(parsed: object) -> list[tuple[str, dict]]:
     """Return (unit_type, item) pairs from either the original per-unit-type-list
     format (police_candidates/fire_candidates/non_safety_candidates) or the
-    minimal prompt's flat "candidates" list with a unit_type field per item."""
+    minimal prompt's flat "candidates" list with a unit_type field per item.
+
+    Some schema-valid backend responses use the flat candidate list as the
+    top-level JSON value instead of wrapping it in ``{"candidates": ...}``.
+    Accept that equivalent shape conservatively; non-list/non-object shapes
+    still yield no candidates rather than being coerced.
+    """
     items: list[tuple[str, dict]] = []
+    if isinstance(parsed, list):
+        for item in parsed:
+            if not isinstance(item, dict):
+                continue
+            items.append((normalize_unit_type(str(item.get("unit_type", "") or "")), item))
+        return items
+    if not isinstance(parsed, dict):
+        return items
     flat = parsed.get("candidates")
     if isinstance(flat, list):
         for item in flat:

@@ -1,0 +1,20 @@
+{
+  "by_family": {
+    "agenda_packet_or_minutes": 1248,
+    "arbitration_award": 137,
+    "budget_or_pay_plan": 1061,
+    "civil_service_or_hr_pay_plan": 172,
+    "classification_study": 46,
+    "compensation_study": 95,
+    "factfinding_report": 12,
+    "mou_or_memorandum": 427,
+    "other_local_government_pay_policy": 544,
+    "personnel_policy": 119,
+    "salary_ordinance": 227,
+    "settlement_agreement": 7,
+    "unknown_or_needs_review": 263,
+    "wage_schedule": 990
+  },
+  "non_cba_opportunity_count": 5348,
+  "unverified_metadata_only": true
+}

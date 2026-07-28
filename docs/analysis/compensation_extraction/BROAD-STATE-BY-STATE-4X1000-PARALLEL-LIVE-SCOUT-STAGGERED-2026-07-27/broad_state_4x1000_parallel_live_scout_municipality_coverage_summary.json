@@ -1,0 +1,9 @@
+{
+  "completed_lane_count": 4,
+  "cumulative_after_completed_lane_overlay": 6919,
+  "cumulative_before_wave": 2922,
+  "failed_or_stopped_parses": 3,
+  "new_scout_covered_municipalities": 3997,
+  "parseable_municipality_outcomes": 3997,
+  "planned_or_incomplete_targets_counted": 0
+}

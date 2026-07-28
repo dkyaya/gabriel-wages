@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-27T22:54:27Z",
+  "generated_at": "2026-07-28T10:43:55Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -79,7 +79,10 @@
     "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_state_coverage.csv",
     "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_dry_run_prep_decision.json",
     "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_dry_run_prep_invariant_checks.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_master_locked_queue_summary.json"
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27/broad_state_4x1000_scout_master_locked_queue_summary.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_decision.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_invariant_checks.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_state_coverage.csv"
   ],
   "warnings": [],
   "limitations": [
@@ -93,23 +96,23 @@
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
   "stage": "parallel_scout_operations_status",
-  "parallel_mode_status": "broad_4x1000_dry_run_locked_live_not_run",
-  "current_parallel_mode": "four_independent_geographic_shards_prepared_no_call",
+  "parallel_mode_status": "broad_4x1000_live_complete_combined_review_deferred",
+  "current_parallel_mode": "four_independent_geographic_lanes_live_staggered_overlapping_checkpointed",
   "supported_lanes_initial": 2,
   "supported_lanes_future": 4,
   "rows_per_lane": 1000,
   "latest_completed_round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
   "current_parallel_round_id": "POST-PI-AGGRESSIVE-ROUND-3X300-2026-07-23",
-  "next_parallel_test": "broad_shard_001_live_after_separate_external_preflight",
-  "aggressive_mode_planned": "four_shards_locked_not_run",
-  "current_scout_covered": 2922,
+  "next_parallel_test": "combined_candidate_review_separately_authorized",
+  "aggressive_mode_planned": "four_shards_live_in_progress_or_complete",
+  "current_scout_covered": 6919,
   "target_checkpoint": 2000,
   "remaining_to_checkpoint": 0,
   "planned_round_expected_attempted": 4000,
   "planned_round_expected_parseable": 4000,
   "planned_round_expected_post_coverage": 6922,
   "planned_round_expected_checkpoint_margin": 4922,
-  "planned_round_status": "dry_run_locked_live_not_run",
+  "planned_round_status": "completed",
   "planned_shard_target_counts": {
     "broad_shard_001": 1000,
     "broad_shard_002": 1000,
@@ -117,13 +120,15 @@
     "broad_shard_004": 1000
   },
   "planned_targets_added_to_actual_coverage": 0,
+  "committed_parseable_live_targets_added_to_actual_coverage": 3997,
+  "completed_live_shard_count": 4,
   "candidate_review_deferred": true,
   "checkpoint_overshoot_intent": "completed_intentional_user_approved",
   "superseded_round": {
     "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
     "status": "superseded_preserved_not_active"
   },
-  "lane_start_stagger_minutes": 0,
+  "lane_start_stagger_minutes": 8,
   "3x150_expected_attempted": 450,
   "3x300_expected_attempted": 900,
   "accounting_policy": "shard_local_checkpoint_then_commit_parseable_actuals_only",

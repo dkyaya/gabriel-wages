@@ -1,0 +1,41 @@
+{
+  "actual_coverage_before_wave": 2922,
+  "all_target_live_status_not_run": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "disallowed_quality_target_count": 0,
+  "external_smoke_calls_attempted": 3,
+  "external_smoke_gate_status": "passed",
+  "four_controlled_lanes": [
+    "lane_001",
+    "lane_002",
+    "lane_003",
+    "lane_004"
+  ],
+  "global_analysis_readiness": false,
+  "interrupted_partial_excluded": true,
+  "master_equals_four_shard_union": true,
+  "master_queue_sha256": "5507c81d5f7d9bceeda695f00207ec473f1ebd806cdeb2e6a41ea29c8d5885cb",
+  "master_target_count": 4000,
+  "prior_1205_count": 1205,
+  "prior_1205_sha256": "e97d5e381152f3f4a021b1f4cd73459b24eb4ad713dde4a8edd85b3ae103f93f",
+  "shard_counts": {
+    "broad_shard_001": 1000,
+    "broad_shard_002": 1000,
+    "broad_shard_003": 1000,
+    "broad_shard_004": 1000
+  },
+  "shard_hashes": {
+    "broad_shard_001": "088259886bb0c3f4d5fb82585925c11d579f202fa77dfb63704908dc54df8b2a",
+    "broad_shard_002": "3e619704dec44038964bc2d0150c25fd47ab727e3c774b84096427cd915b8724",
+    "broad_shard_003": "e8a6c596065977748c57e4d521b847d79fc0ad922fb9775152eca214352a29d6",
+    "broad_shard_004": "2c26616f042cac51a295a46b93979b3dcfd853131f21b60801a8f8cf2654c246"
+  },
+  "stagger_offsets_minutes": {
+    "lane_001": 0,
+    "lane_002": 8,
+    "lane_003": 16,
+    "lane_004": 24
+  },
+  "status": "passed",
+  "transport_diagnosis_category": "A"
+}

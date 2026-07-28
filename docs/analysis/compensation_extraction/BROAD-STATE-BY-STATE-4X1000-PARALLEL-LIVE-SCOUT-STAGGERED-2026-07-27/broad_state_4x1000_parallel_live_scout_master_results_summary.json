@@ -1,0 +1,20 @@
+{
+  "candidate_count": 7014,
+  "combined_future_review_eligible_candidate_count": 7642,
+  "completed_lane_count": 4,
+  "completed_lane_target_outcome_count": 4000,
+  "completed_lanes": [
+    "lane_001",
+    "lane_002",
+    "lane_003",
+    "lane_004"
+  ],
+  "deduped_candidate_count": 6437,
+  "failed_or_stopped_parses": 3,
+  "global_analysis_readiness": false,
+  "incomplete_lane_outcomes_included": 0,
+  "interrupted_sequential_outcomes_included": 0,
+  "parseable_municipality_outcomes": 3997,
+  "preserved_prior_candidate_count": 1205,
+  "review_eligible_new_candidate_count": 6437
+}

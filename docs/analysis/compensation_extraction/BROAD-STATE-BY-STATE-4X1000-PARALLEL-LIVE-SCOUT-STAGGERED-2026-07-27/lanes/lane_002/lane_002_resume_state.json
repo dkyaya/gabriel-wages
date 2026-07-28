@@ -1,0 +1,9 @@
+{
+  "completed_lane_must_not_be_rerun": true,
+  "completed_target_count": 1000,
+  "global_analysis_readiness": false,
+  "lane_id": "lane_002",
+  "last_completed_scout_target_id": "B4X1000-20260727-2000",
+  "resume_required": false,
+  "shard_id": "broad_shard_002"
+}

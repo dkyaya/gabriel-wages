@@ -280,7 +280,7 @@ export function VerificationPipeline({
           <p className="eyebrow">Current evidence pipeline</p>
           <h2 id="verification-title">From verified Tier C leads to a bounded memo supplement</h2>
         </div>
-        <StatusPill tone="verified">Memo complete; broad scouting next</StatusPill>
+        <StatusPill tone="verified">Parallel scout complete; combined review next</StatusPill>
       </div>
 
       <div className="verification-flow">
@@ -297,7 +297,7 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Resume broad state-by-state source scouting</h3>
+          <h3>Review the combined broad-state candidate queue</h3>
         </div>
         <p>
           The targeted Tier C verification retained {formatNumber(phase.tier_c_verified_source_lead_count)} verified
@@ -305,8 +305,9 @@ export function VerificationPipeline({
           source files. Local non-OCR extraction produced {formatNumber(phase.tier_c_text_extracted_ok_count)} text
           artifacts and {formatNumber(phase.tier_c_positive_exact_span_count)} exact positive spans. Bounded rating
           produced {formatNumber(phase.tier_c_rating_valid_count)} valid outputs and {formatNumber(phase.tier_c_rating_quarantine_count)}
-          quarantines. The valid-only summary and bounded memo supplement are complete; ingestion, codification,
-          wage-gap analysis, and causal analysis have not run on this scope.
+          quarantines. The bounded memo supplement and four-lane broad scout are complete. A separately authorized
+          candidate review is next; verification, ingestion, codification, wage-gap analysis, and causal analysis have
+          not run on the new scout scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -2019,8 +2020,8 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Build the next broad geographic wave</h3>
-          <p>Use locked state and municipality inputs, prioritize matched non-safety opportunities, and report geographic and source-family balance after the wave.</p>
+          <h3>Run one combined candidate review</h3>
+          <p>Review the preserved 1,205 prior rows together with the new deduplicated broad-state candidates. Candidate review must remain separate from verification and downloading.</p>
         </article>
         <article>
           <span>Completed input scope</span>
@@ -2035,7 +2036,7 @@ export function NextStepsPanel({ priority, phase }) {
       </div>
       <p className="panel-note">
         Historical discovery tiers remain available above for provenance only. The current operational next task is
-        broad state-by-state source scouting. Global analysis readiness remains false.
+        combined review of broad-state discovery metadata. Global analysis readiness remains false.
       </p>
     </section>
   );

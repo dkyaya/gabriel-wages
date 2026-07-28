@@ -1,0 +1,22 @@
+{
+  "lane_001": {
+    "parseable": 1000,
+    "shard_id": "broad_shard_001",
+    "status": "completed"
+  },
+  "lane_002": {
+    "parseable": 1000,
+    "shard_id": "broad_shard_002",
+    "status": "completed"
+  },
+  "lane_003": {
+    "parseable": 999,
+    "shard_id": "broad_shard_003",
+    "status": "completed"
+  },
+  "lane_004": {
+    "parseable": 998,
+    "shard_id": "broad_shard_004",
+    "status": "completed"
+  }
+}

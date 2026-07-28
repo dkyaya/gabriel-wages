@@ -1,0 +1,5 @@
+region,completed_target_count,parseable_municipality_count,failed_or_stopped_target_count,candidate_count
+Midwest,1042,1042,0,1990
+Northeast,716,715,1,1664
+South,1344,1343,1,1970
+West,898,897,1,1390
