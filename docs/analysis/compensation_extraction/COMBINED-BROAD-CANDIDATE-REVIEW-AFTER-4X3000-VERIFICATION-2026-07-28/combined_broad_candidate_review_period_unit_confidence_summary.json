@@ -1,0 +1,16 @@
+{
+  "employer_match_confidence": {
+    "high": 8142,
+    "medium": 923
+  },
+  "period_or_cycle_confidence": {
+    "high": 4638,
+    "low": 2106,
+    "medium": 2321
+  },
+  "unit_or_occupation_confidence": {
+    "high": 4424,
+    "low": 1120,
+    "medium": 3521
+  }
+}

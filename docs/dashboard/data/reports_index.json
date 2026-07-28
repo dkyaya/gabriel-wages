@@ -1,39 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-28T15:41:43Z",
-  "data_vintage": "2026-07-27",
+  "generated_at": "2026-07-28T18:40:35Z",
+  "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-candidate-verification-4x3000-2026-07-28",
-      "title": "Broad Candidate Verification 4x3000 Result",
-      "report_type": "Current verification operations report",
+      "id": "combined-broad-candidate-review-2026-07-28",
+      "title": "Combined Broad Candidate Review Result",
+      "report_type": "Current metadata-only candidate-review report",
       "date": "2026-07-28",
-      "checkpoint": "8,574 HEAD-only locator outcomes from 8,574 locked rows",
-      "summary": "The current operation verifies locator reachability in four isolated, staggered lanes. It does not download, source-review, extract, rate, ingest, codify, or make analytical claims.",
+      "checkpoint": "5,589 source-review-ready candidates from 9,065 reviewed rows",
+      "summary": "The current operation completed local metadata triage and locked a later source-review queue. No URLs were opened and no documents were downloaded, source-reviewed, extracted, rated, ingested, or codified.",
       "tags": [
         "current",
-        "verification",
-        "4x3000",
-        "HEAD-only",
+        "candidate review",
+        "metadata only",
         "claim boundaries"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_candidate_verification_4x3000_resume_lane_004_result_2026-07-28.md",
-      "link_label": "Open current verification report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_candidate_review_result_2026-07-28.md",
+      "link_label": "Open current candidate-review report",
       "scope_metrics": [
         {
-          "label": "locked locators",
-          "value": 8574
+          "label": "review universe",
+          "value": 9065
         },
         {
-          "label": "completed outcomes",
-          "value": 8574
+          "label": "source-review ready",
+          "value": 5589
         },
         {
-          "label": "reachable",
-          "value": 5524
+          "label": "non-CBA ready",
+          "value": 4849
         }
       ]
     },
@@ -133,6 +132,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "broad-candidate-verification-4x3000-2026-07-28",
+      "title": "Broad Candidate Verification 4x3000 Result",
+      "report_type": "Completed verification operations report",
+      "date": "2026-07-28",
+      "checkpoint": "8,574 HEAD-only locator outcomes from 8,574 locked rows",
+      "summary": "The current operation verifies locator reachability in four isolated, staggered lanes. It does not download, source-review, extract, rate, ingest, codify, or make analytical claims.",
+      "tags": [
+        "verification",
+        "4x3000",
+        "HEAD-only",
+        "claim boundaries"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_candidate_verification_4x3000_resume_lane_004_result_2026-07-28.md",
+      "link_label": "Open verification report",
+      "scope_metrics": [
+        {
+          "label": "locked locators",
+          "value": 8574
+        },
+        {
+          "label": "completed outcomes",
+          "value": 8574
+        },
+        {
+          "label": "reachable",
+          "value": 5524
         }
       ]
     },

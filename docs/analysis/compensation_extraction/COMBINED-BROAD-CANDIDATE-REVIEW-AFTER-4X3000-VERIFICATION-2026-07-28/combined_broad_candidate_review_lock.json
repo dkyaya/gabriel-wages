@@ -1,0 +1,19 @@
+{
+  "inputs_immutable": true,
+  "lane_counts": {
+    "review_lane_001": 2267,
+    "review_lane_002": 2266,
+    "review_lane_003": 2266,
+    "review_lane_004": 2266
+  },
+  "lane_queue_sha256": {
+    "review_lane_001": "e8001c5ddfdff56dd195ae099d6a062c9fae89adebf5c822414e140bac73cb04",
+    "review_lane_002": "9d528cd8a9d1c25f16cad7b74fed2432e01fcf263bf4fefdeafa2ab514bc48a3",
+    "review_lane_003": "d86aebf6914cf4d4f773052c9846e76cef190eee9f8cf49edc1c96728dd4cca1",
+    "review_lane_004": "991d09f75a5cd9ebe485d77a8da86006f2e8b1b2d2c98608780bca89565da868"
+  },
+  "local_metadata_only": true,
+  "locked_rows": 9065,
+  "queue_sha256": "37254e4f7e6c1c9805b8e4320c3a35a758c03b860bb7a4825fe7e243830b66b9",
+  "task_id": "COMBINED-BROAD-CANDIDATE-REVIEW-AFTER-4X3000-VERIFICATION-2026-07-28"
+}

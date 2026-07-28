@@ -1,0 +1,18 @@
+{
+  "all_invariants_passed": true,
+  "broad_subtotal_reconciles_to_7642": true,
+  "controlled_review_statuses_only": true,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "downloads": 0,
+  "extraction_rating_ingestion_codification_runs": 0,
+  "global_analysis_readiness": false,
+  "master_equals_lane_union": true,
+  "ready_queue_contains_only_reachable_or_reused": true,
+  "review_universe_reconciles_to_9065": true,
+  "source_document_content_accesses": 0,
+  "source_review_runs": 0,
+  "supplementary_rows_reconcile_to_1423": true,
+  "unavailable_blocked_invalid_ready_rows": 0,
+  "url_opens": 0,
+  "verification_runs": 0
+}

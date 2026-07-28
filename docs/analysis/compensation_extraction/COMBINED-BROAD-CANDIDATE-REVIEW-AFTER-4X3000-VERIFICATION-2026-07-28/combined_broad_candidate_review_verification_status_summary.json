@@ -1,0 +1,19 @@
+{
+  "broad_not_in_final_verification_rows": 491,
+  "final_verification_rows": 8574,
+  "verification_reruns": 0,
+  "verification_status_counts": {
+    "blocked_transport": 162,
+    "duplicate_locator_skipped": 7,
+    "invalid_locator": 19,
+    "reused_prior_verified": 65,
+    "timeout": 14,
+    "unavailable_404_410": 1725,
+    "unavailable_other_status": 1202,
+    "verification_error": 1,
+    "verification_not_run": 343,
+    "verified_reachable": 5232,
+    "verified_reachable_redirected": 292,
+    "wrong_period": 3
+  }
+}

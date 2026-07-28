@@ -1,0 +1,499 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 49,
+  "group_field": "state",
+  "groups": [
+    {
+      "deferred_or_excluded": 33,
+      "global_analysis_readiness": "false",
+      "ready_high": 33,
+      "ready_low": 1,
+      "ready_medium": 15,
+      "reviewed_rows": 82,
+      "source_review_ready": 49,
+      "state": "AK"
+    },
+    {
+      "deferred_or_excluded": 61,
+      "global_analysis_readiness": "false",
+      "ready_high": 51,
+      "ready_low": 1,
+      "ready_medium": 54,
+      "reviewed_rows": 167,
+      "source_review_ready": 106,
+      "state": "AL"
+    },
+    {
+      "deferred_or_excluded": 42,
+      "global_analysis_readiness": "false",
+      "ready_high": 48,
+      "ready_low": 4,
+      "ready_medium": 26,
+      "reviewed_rows": 120,
+      "source_review_ready": 78,
+      "state": "AR"
+    },
+    {
+      "deferred_or_excluded": 72,
+      "global_analysis_readiness": "false",
+      "ready_high": 45,
+      "ready_low": 5,
+      "ready_medium": 41,
+      "reviewed_rows": 163,
+      "source_review_ready": 91,
+      "state": "AZ"
+    },
+    {
+      "deferred_or_excluded": 222,
+      "global_analysis_readiness": "false",
+      "ready_high": 101,
+      "ready_low": 4,
+      "ready_medium": 89,
+      "reviewed_rows": 416,
+      "source_review_ready": 194,
+      "state": "CA"
+    },
+    {
+      "deferred_or_excluded": 67,
+      "global_analysis_readiness": "false",
+      "ready_high": 36,
+      "ready_low": 6,
+      "ready_medium": 38,
+      "reviewed_rows": 147,
+      "source_review_ready": 80,
+      "state": "CO"
+    },
+    {
+      "deferred_or_excluded": 162,
+      "global_analysis_readiness": "false",
+      "ready_high": 58,
+      "ready_low": 4,
+      "ready_medium": 66,
+      "reviewed_rows": 290,
+      "source_review_ready": 128,
+      "state": "CT"
+    },
+    {
+      "deferred_or_excluded": 9,
+      "global_analysis_readiness": "false",
+      "ready_high": 42,
+      "ready_low": 0,
+      "ready_medium": 10,
+      "reviewed_rows": 61,
+      "source_review_ready": 52,
+      "state": "DE"
+    },
+    {
+      "deferred_or_excluded": 93,
+      "global_analysis_readiness": "false",
+      "ready_high": 33,
+      "ready_low": 1,
+      "ready_medium": 56,
+      "reviewed_rows": 183,
+      "source_review_ready": 90,
+      "state": "FL"
+    },
+    {
+      "deferred_or_excluded": 62,
+      "global_analysis_readiness": "false",
+      "ready_high": 33,
+      "ready_low": 24,
+      "ready_medium": 78,
+      "reviewed_rows": 197,
+      "source_review_ready": 135,
+      "state": "GA"
+    },
+    {
+      "deferred_or_excluded": 44,
+      "global_analysis_readiness": "false",
+      "ready_high": 63,
+      "ready_low": 0,
+      "ready_medium": 64,
+      "reviewed_rows": 171,
+      "source_review_ready": 127,
+      "state": "IA"
+    },
+    {
+      "deferred_or_excluded": 38,
+      "global_analysis_readiness": "false",
+      "ready_high": 42,
+      "ready_low": 2,
+      "ready_medium": 31,
+      "reviewed_rows": 113,
+      "source_review_ready": 75,
+      "state": "ID"
+    },
+    {
+      "deferred_or_excluded": 169,
+      "global_analysis_readiness": "false",
+      "ready_high": 95,
+      "ready_low": 18,
+      "ready_medium": 160,
+      "reviewed_rows": 442,
+      "source_review_ready": 273,
+      "state": "IL"
+    },
+    {
+      "deferred_or_excluded": 45,
+      "global_analysis_readiness": "false",
+      "ready_high": 107,
+      "ready_low": 2,
+      "ready_medium": 54,
+      "reviewed_rows": 208,
+      "source_review_ready": 163,
+      "state": "IN"
+    },
+    {
+      "deferred_or_excluded": 55,
+      "global_analysis_readiness": "false",
+      "ready_high": 55,
+      "ready_low": 4,
+      "ready_medium": 40,
+      "reviewed_rows": 154,
+      "source_review_ready": 99,
+      "state": "KS"
+    },
+    {
+      "deferred_or_excluded": 58,
+      "global_analysis_readiness": "false",
+      "ready_high": 74,
+      "ready_low": 2,
+      "ready_medium": 37,
+      "reviewed_rows": 171,
+      "source_review_ready": 113,
+      "state": "KY"
+    },
+    {
+      "deferred_or_excluded": 33,
+      "global_analysis_readiness": "false",
+      "ready_high": 64,
+      "ready_low": 6,
+      "ready_medium": 51,
+      "reviewed_rows": 154,
+      "source_review_ready": 121,
+      "state": "LA"
+    },
+    {
+      "deferred_or_excluded": 297,
+      "global_analysis_readiness": "false",
+      "ready_high": 67,
+      "ready_low": 0,
+      "ready_medium": 41,
+      "reviewed_rows": 405,
+      "source_review_ready": 108,
+      "state": "MA"
+    },
+    {
+      "deferred_or_excluded": 56,
+      "global_analysis_readiness": "false",
+      "ready_high": 39,
+      "ready_low": 1,
+      "ready_medium": 36,
+      "reviewed_rows": 132,
+      "source_review_ready": 76,
+      "state": "MD"
+    },
+    {
+      "deferred_or_excluded": 47,
+      "global_analysis_readiness": "false",
+      "ready_high": 102,
+      "ready_low": 1,
+      "ready_medium": 39,
+      "reviewed_rows": 189,
+      "source_review_ready": 142,
+      "state": "ME"
+    },
+    {
+      "deferred_or_excluded": 106,
+      "global_analysis_readiness": "false",
+      "ready_high": 65,
+      "ready_low": 17,
+      "ready_medium": 126,
+      "reviewed_rows": 314,
+      "source_review_ready": 208,
+      "state": "MI"
+    },
+    {
+      "deferred_or_excluded": 52,
+      "global_analysis_readiness": "false",
+      "ready_high": 79,
+      "ready_low": 3,
+      "ready_medium": 74,
+      "reviewed_rows": 208,
+      "source_review_ready": 156,
+      "state": "MN"
+    },
+    {
+      "deferred_or_excluded": 91,
+      "global_analysis_readiness": "false",
+      "ready_high": 52,
+      "ready_low": 2,
+      "ready_medium": 50,
+      "reviewed_rows": 195,
+      "source_review_ready": 104,
+      "state": "MO"
+    },
+    {
+      "deferred_or_excluded": 18,
+      "global_analysis_readiness": "false",
+      "ready_high": 9,
+      "ready_low": 1,
+      "ready_medium": 19,
+      "reviewed_rows": 47,
+      "source_review_ready": 29,
+      "state": "MS"
+    },
+    {
+      "deferred_or_excluded": 32,
+      "global_analysis_readiness": "false",
+      "ready_high": 41,
+      "ready_low": 0,
+      "ready_medium": 55,
+      "reviewed_rows": 128,
+      "source_review_ready": 96,
+      "state": "MT"
+    },
+    {
+      "deferred_or_excluded": 73,
+      "global_analysis_readiness": "false",
+      "ready_high": 53,
+      "ready_low": 1,
+      "ready_medium": 76,
+      "reviewed_rows": 203,
+      "source_review_ready": 130,
+      "state": "NC"
+    },
+    {
+      "deferred_or_excluded": 16,
+      "global_analysis_readiness": "false",
+      "ready_high": 40,
+      "ready_low": 0,
+      "ready_medium": 57,
+      "reviewed_rows": 113,
+      "source_review_ready": 97,
+      "state": "ND"
+    },
+    {
+      "deferred_or_excluded": 42,
+      "global_analysis_readiness": "false",
+      "ready_high": 60,
+      "ready_low": 0,
+      "ready_medium": 42,
+      "reviewed_rows": 144,
+      "source_review_ready": 102,
+      "state": "NE"
+    },
+    {
+      "deferred_or_excluded": 141,
+      "global_analysis_readiness": "false",
+      "ready_high": 59,
+      "ready_low": 0,
+      "ready_medium": 20,
+      "reviewed_rows": 220,
+      "source_review_ready": 79,
+      "state": "NH"
+    },
+    {
+      "deferred_or_excluded": 132,
+      "global_analysis_readiness": "false",
+      "ready_high": 103,
+      "ready_low": 4,
+      "ready_medium": 58,
+      "reviewed_rows": 297,
+      "source_review_ready": 165,
+      "state": "NJ"
+    },
+    {
+      "deferred_or_excluded": 24,
+      "global_analysis_readiness": "false",
+      "ready_high": 30,
+      "ready_low": 0,
+      "ready_medium": 29,
+      "reviewed_rows": 83,
+      "source_review_ready": 59,
+      "state": "NM"
+    },
+    {
+      "deferred_or_excluded": 7,
+      "global_analysis_readiness": "false",
+      "ready_high": 17,
+      "ready_low": 0,
+      "ready_medium": 0,
+      "reviewed_rows": 24,
+      "source_review_ready": 17,
+      "state": "NV"
+    },
+    {
+      "deferred_or_excluded": 80,
+      "global_analysis_readiness": "false",
+      "ready_high": 106,
+      "ready_low": 3,
+      "ready_medium": 72,
+      "reviewed_rows": 261,
+      "source_review_ready": 181,
+      "state": "NY"
+    },
+    {
+      "deferred_or_excluded": 49,
+      "global_analysis_readiness": "false",
+      "ready_high": 128,
+      "ready_low": 1,
+      "ready_medium": 82,
+      "reviewed_rows": 260,
+      "source_review_ready": 211,
+      "state": "OH"
+    },
+    {
+      "deferred_or_excluded": 70,
+      "global_analysis_readiness": "false",
+      "ready_high": 47,
+      "ready_low": 3,
+      "ready_medium": 55,
+      "reviewed_rows": 175,
+      "source_review_ready": 105,
+      "state": "OK"
+    },
+    {
+      "deferred_or_excluded": 79,
+      "global_analysis_readiness": "false",
+      "ready_high": 48,
+      "ready_low": 0,
+      "ready_medium": 28,
+      "reviewed_rows": 155,
+      "source_review_ready": 76,
+      "state": "OR"
+    },
+    {
+      "deferred_or_excluded": 114,
+      "global_analysis_readiness": "false",
+      "ready_high": 79,
+      "ready_low": 5,
+      "ready_medium": 135,
+      "reviewed_rows": 333,
+      "source_review_ready": 219,
+      "state": "PA"
+    },
+    {
+      "deferred_or_excluded": 45,
+      "global_analysis_readiness": "false",
+      "ready_high": 51,
+      "ready_low": 0,
+      "ready_medium": 15,
+      "reviewed_rows": 111,
+      "source_review_ready": 66,
+      "state": "RI"
+    },
+    {
+      "deferred_or_excluded": 34,
+      "global_analysis_readiness": "false",
+      "ready_high": 38,
+      "ready_low": 2,
+      "ready_medium": 58,
+      "reviewed_rows": 132,
+      "source_review_ready": 98,
+      "state": "SC"
+    },
+    {
+      "deferred_or_excluded": 30,
+      "global_analysis_readiness": "false",
+      "ready_high": 48,
+      "ready_low": 0,
+      "ready_medium": 47,
+      "reviewed_rows": 125,
+      "source_review_ready": 95,
+      "state": "SD"
+    },
+    {
+      "deferred_or_excluded": 43,
+      "global_analysis_readiness": "false",
+      "ready_high": 43,
+      "ready_low": 2,
+      "ready_medium": 52,
+      "reviewed_rows": 140,
+      "source_review_ready": 97,
+      "state": "TN"
+    },
+    {
+      "deferred_or_excluded": 128,
+      "global_analysis_readiness": "false",
+      "ready_high": 48,
+      "ready_low": 6,
+      "ready_medium": 102,
+      "reviewed_rows": 284,
+      "source_review_ready": 156,
+      "state": "TX"
+    },
+    {
+      "deferred_or_excluded": 51,
+      "global_analysis_readiness": "false",
+      "ready_high": 99,
+      "ready_low": 0,
+      "ready_medium": 31,
+      "reviewed_rows": 181,
+      "source_review_ready": 130,
+      "state": "UT"
+    },
+    {
+      "deferred_or_excluded": 71,
+      "global_analysis_readiness": "false",
+      "ready_high": 49,
+      "ready_low": 2,
+      "ready_medium": 47,
+      "reviewed_rows": 169,
+      "source_review_ready": 98,
+      "state": "VA"
+    },
+    {
+      "deferred_or_excluded": 43,
+      "global_analysis_readiness": "false",
+      "ready_high": 70,
+      "ready_low": 3,
+      "ready_medium": 39,
+      "reviewed_rows": 155,
+      "source_review_ready": 112,
+      "state": "VT"
+    },
+    {
+      "deferred_or_excluded": 112,
+      "global_analysis_readiness": "false",
+      "ready_high": 63,
+      "ready_low": 0,
+      "ready_medium": 54,
+      "reviewed_rows": 229,
+      "source_review_ready": 117,
+      "state": "WA"
+    },
+    {
+      "deferred_or_excluded": 63,
+      "global_analysis_readiness": "false",
+      "ready_high": 108,
+      "ready_low": 1,
+      "ready_medium": 50,
+      "reviewed_rows": 222,
+      "source_review_ready": 159,
+      "state": "WI"
+    },
+    {
+      "deferred_or_excluded": 46,
+      "global_analysis_readiness": "false",
+      "ready_high": 32,
+      "ready_low": 1,
+      "ready_medium": 29,
+      "reviewed_rows": 108,
+      "source_review_ready": 62,
+      "state": "WV"
+    },
+    {
+      "deferred_or_excluded": 19,
+      "global_analysis_readiness": "false",
+      "ready_high": 31,
+      "ready_low": 0,
+      "ready_medium": 34,
+      "reviewed_rows": 84,
+      "source_review_ready": 65,
+      "state": "WY"
+    }
+  ],
+  "reviewed_rows": 9065,
+  "source_review_ready_count": 5589
+}

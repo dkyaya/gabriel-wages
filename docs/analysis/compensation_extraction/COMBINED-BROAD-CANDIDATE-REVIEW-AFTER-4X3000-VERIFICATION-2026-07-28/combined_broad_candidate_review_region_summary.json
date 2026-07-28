@@ -1,0 +1,49 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 4,
+  "group_field": "region",
+  "groups": [
+    {
+      "deferred_or_excluded": 762,
+      "global_analysis_readiness": "false",
+      "ready_high": 900,
+      "ready_low": 48,
+      "ready_medium": 846,
+      "region": "Midwest",
+      "reviewed_rows": 2556,
+      "source_review_ready": 1794
+    },
+    {
+      "deferred_or_excluded": 1061,
+      "global_analysis_readiness": "false",
+      "ready_high": 695,
+      "ready_low": 20,
+      "ready_medium": 485,
+      "region": "Northeast",
+      "reviewed_rows": 2261,
+      "source_review_ready": 1200
+    },
+    {
+      "deferred_or_excluded": 897,
+      "global_analysis_readiness": "false",
+      "ready_high": 703,
+      "ready_low": 57,
+      "ready_medium": 786,
+      "region": "South",
+      "reviewed_rows": 2443,
+      "source_review_ready": 1546
+    },
+    {
+      "deferred_or_excluded": 756,
+      "global_analysis_readiness": "false",
+      "ready_high": 586,
+      "ready_low": 18,
+      "ready_medium": 445,
+      "region": "West",
+      "reviewed_rows": 1805,
+      "source_review_ready": 1049
+    }
+  ],
+  "reviewed_rows": 9065,
+  "source_review_ready_count": 5589
+}

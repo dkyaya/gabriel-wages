@@ -1449,6 +1449,24 @@ BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_RESULTS_SUMMARY_PATH = (
     BROAD_CANDIDATE_VERIFICATION_RESUME_LANE004_DIR
     / "broad_candidate_verification_4x3000_final_results_summary.json"
 )
+COMBINED_BROAD_CANDIDATE_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-CANDIDATE-REVIEW-AFTER-4X3000-VERIFICATION-2026-07-28"
+)
+COMBINED_BROAD_CANDIDATE_REVIEW_DECISION_PATH = (
+    COMBINED_BROAD_CANDIDATE_REVIEW_DIR / "combined_broad_candidate_review_decision.json"
+)
+COMBINED_BROAD_CANDIDATE_REVIEW_INVARIANTS_PATH = (
+    COMBINED_BROAD_CANDIDATE_REVIEW_DIR / "combined_broad_candidate_review_invariant_checks.json"
+)
+COMBINED_BROAD_CANDIDATE_REVIEW_RESULTS_SUMMARY_PATH = (
+    COMBINED_BROAD_CANDIDATE_REVIEW_DIR / "combined_broad_candidate_review_results_summary.json"
+)
+COMBINED_BROAD_CANDIDATE_REVIEW_READY_SUMMARY_PATH = (
+    COMBINED_BROAD_CANDIDATE_REVIEW_DIR
+    / "combined_broad_candidate_review_source_review_ready_summary.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -4868,6 +4886,60 @@ def broad_candidate_verification_4x3000_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def combined_broad_candidate_review_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed metadata-only combined candidate review."""
+    required = (
+        COMBINED_BROAD_CANDIDATE_REVIEW_DECISION_PATH,
+        COMBINED_BROAD_CANDIDATE_REVIEW_INVARIANTS_PATH,
+        COMBINED_BROAD_CANDIDATE_REVIEW_RESULTS_SUMMARY_PATH,
+        COMBINED_BROAD_CANDIDATE_REVIEW_READY_SUMMARY_PATH,
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_CANDIDATE_REVIEW_DECISION_PATH)
+    invariants = read_json(COMBINED_BROAD_CANDIDATE_REVIEW_INVARIANTS_PATH)
+    summary = read_json(COMBINED_BROAD_CANDIDATE_REVIEW_RESULTS_SUMMARY_PATH)
+    ready = read_json(COMBINED_BROAD_CANDIDATE_REVIEW_READY_SUMMARY_PATH)
+    status_counts = decision.get("candidate_review_status_counts", {})
+    gates = (
+        decision.get("decision") == "combined_broad_candidate_review_completed_source_review_ready"
+        and decision.get("review_universe_count") == 9065
+        and decision.get("broad_review_subtotal") == 7642
+        and decision.get("supplementary_verification_row_count") == 1423
+        and sum(as_int(value) for value in status_counts.values()) == 9065
+        and decision.get("source_review_ready_count") == 5589
+        and decision.get("source_review_ready_high") == 2884
+        and decision.get("source_review_ready_medium") == 2562
+        and decision.get("source_review_ready_low") == 143
+        and decision.get("verified_reachable_reviewed_count") == 5589
+        and decision.get("url_opens") == 0
+        and decision.get("verification_runs") == 0
+        and decision.get("downloads") == 0
+        and decision.get("source_review_runs") == 0
+        and decision.get("source_document_content_accesses") == 0
+        and decision.get("extraction_runs") == 0
+        and decision.get("rating_runs") == 0
+        and decision.get("ingestion_runs") == 0
+        and decision.get("codification_runs") == 0
+        and decision.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and decision.get("dashboard_scout_covered_municipalities") == 6919
+        and decision.get("dashboard_candidate_rows") == 13041
+        and decision.get("global_analysis_readiness") is False
+        and summary.get("review_universe_count") == 9065
+        and ready.get("source_review_ready_count") == 5589
+        and ready.get("reachable_statuses_only") is True
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("unavailable_blocked_invalid_ready_rows") == 0
+    )
+    if not gates:
+        raise ValueError("combined broad candidate review package fails dashboard gates")
+    decision = dict(decision)
+    decision["dashboard_result_path"] = (
+        "docs/analysis/combined_broad_candidate_review_result_2026-07-28.md"
+    )
+    return True, decision
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -4949,13 +5021,45 @@ def build_reports_index_layer(
     ]
     repository_root_url = "https://github.com/dkyaya/gabriel-wages/blob/main/"
     verification_available, verification = broad_candidate_verification_4x3000_status()
+    candidate_review_available, candidate_review = combined_broad_candidate_review_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "combined-broad-candidate-review-2026-07-28",
+                    "title": "Combined Broad Candidate Review Result",
+                    "report_type": "Current metadata-only candidate-review report",
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{candidate_review['source_review_ready_count']:,} source-review-ready "
+                        f"candidates from {candidate_review['review_universe_count']:,} reviewed rows"
+                    ),
+                    "summary": (
+                        "The current operation completed local metadata triage and locked a later "
+                        "source-review queue. No URLs were opened and no documents were downloaded, "
+                        "source-reviewed, extracted, rated, ingested, or codified."
+                    ),
+                    "tags": ["current", "candidate review", "metadata only", "claim boundaries"],
+                    "current": True,
+                    "historical": False,
+                    "href": repository_root_url + candidate_review["dashboard_result_path"],
+                    "link_label": "Open current candidate-review report",
+                    "scope_metrics": [
+                        {"label": "review universe", "value": candidate_review["review_universe_count"]},
+                        {"label": "source-review ready", "value": candidate_review["source_review_ready_count"]},
+                        {"label": "non-CBA ready", "value": candidate_review["non_cba_source_review_ready_count"]},
+                    ],
+                }
+            ]
+            if candidate_review_available
+            else []
+        ),
         *(
             [
                 {
                     "id": "broad-candidate-verification-4x3000-2026-07-28",
                     "title": "Broad Candidate Verification 4x3000 Result",
-                    "report_type": "Current verification operations report",
+                    "report_type": "Completed verification operations report",
                     "date": "2026-07-28",
                     "checkpoint": (
                         f"{verification['completed_result_rows']:,} HEAD-only locator outcomes from "
@@ -4966,11 +5070,11 @@ def build_reports_index_layer(
                         "staggered lanes. It does not download, source-review, extract, rate, "
                         "ingest, codify, or make analytical claims."
                     ),
-                    "tags": ["current", "verification", "4x3000", "HEAD-only", "claim boundaries"],
-                    "current": True,
-                    "historical": False,
+                    "tags": ["verification", "4x3000", "HEAD-only", "claim boundaries"],
+                    "current": not candidate_review_available,
+                    "historical": candidate_review_available,
                     "href": repository_root_url + verification["dashboard_result_path"],
-                    "link_label": "Open current verification report",
+                    "link_label": "Open verification report",
                     "scope_metrics": [
                         {"label": "locked locators", "value": verification["verification_queue_rows"]},
                         {"label": "completed outcomes", "value": verification["completed_result_rows"]},
@@ -4993,7 +5097,7 @@ def build_reports_index_layer(
                 "non-safety constraint, and fiscal constraint. Direction remains largely unresolved."
             ),
             "tags": ["Tier C", "memo supplement", "claim boundaries", "completed evidence artifact"],
-            "current": not verification_available,
+            "current": not (candidate_review_available or verification_available),
             "historical": False,
             "href": repository_root_url + (
                 "docs/analysis/compensation_extraction/"
@@ -5180,7 +5284,7 @@ def build_reports_index_layer(
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
         "generated_at": metadata["generated_at"],
-        "data_vintage": "2026-07-27",
+        "data_vintage": "2026-07-28" if candidate_review_available else "2026-07-27",
         "source_file": relative(REPORTS_INDEX_SOURCE_PATH),
         "reports": published_reports,
         "disclaimer": (
@@ -7602,6 +7706,7 @@ def build_project_phase_summary(
     prep_completed, prep = broad_state_4x1000_dry_run_prep_status()
     live_available, live = broad_state_4x1000_live_scout_status()
     verification_available, verification = broad_candidate_verification_4x3000_status()
+    candidate_review_available, candidate_review = combined_broad_candidate_review_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -7626,9 +7731,11 @@ def build_project_phase_summary(
     )
     return {
         **metadata,
-        "data_vintage": "2026-07-28" if verification_available else "2026-07-27",
+        "data_vintage": "2026-07-28" if (candidate_review_available or verification_available) else "2026-07-27",
         "stage": (
-            "broad_candidate_verification_4x3000_complete_review_transition"
+            "combined_broad_candidate_review_complete_source_review_transition"
+            if candidate_review_available
+            else "broad_candidate_verification_4x3000_complete_review_transition"
             if verification_available and verification.get("all_lanes_completed")
             else "broad_candidate_verification_4x3000_partial_resume_transition"
             if verification_available
@@ -7643,7 +7750,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Broad candidate verification complete; combined candidate review ready next"
+            "Combined broad candidate review complete; bounded source review/download ready next"
+            if candidate_review_available
+            else "Broad candidate verification complete; combined candidate review ready next"
             if verification_available and verification.get("all_lanes_completed")
             else f"Broad candidate verification in progress: {verification.get('completed_lane_count', 0)} of 4 lanes complete"
             if verification_available
@@ -7658,7 +7767,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            verification["decision"]
+            candidate_review["decision"]
+            if candidate_review_available
+            else verification["decision"]
             if verification_available
             else live["decision"]
             if live_available
@@ -7784,17 +7895,39 @@ def build_project_phase_summary(
             verification.get("verification_queue_rows", 0) - verification.get("completed_result_rows", 0)
             if verification_available else 0
         ),
+        "combined_candidate_review_available": candidate_review_available,
+        "combined_candidate_review_decision": candidate_review.get("decision") if candidate_review_available else None,
+        "candidate_review_universe_size": candidate_review.get("review_universe_count") if candidate_review_available else 0,
+        "candidate_review_broad_subtotal": candidate_review.get("broad_review_subtotal") if candidate_review_available else 0,
+        "candidate_review_supplementary_count": candidate_review.get("supplementary_verification_row_count") if candidate_review_available else 0,
+        "source_review_ready_count": candidate_review.get("source_review_ready_count") if candidate_review_available else 0,
+        "source_review_ready_high_count": candidate_review.get("source_review_ready_high") if candidate_review_available else 0,
+        "source_review_ready_medium_count": candidate_review.get("source_review_ready_medium") if candidate_review_available else 0,
+        "source_review_ready_low_count": candidate_review.get("source_review_ready_low") if candidate_review_available else 0,
+        "candidate_review_repair_or_needs_review_count": candidate_review.get("repair_or_needs_review_count") if candidate_review_available else 0,
+        "candidate_review_deferred_unavailable_count": candidate_review.get("deferred_unreachable_or_unavailable_count") if candidate_review_available else 0,
+        "candidate_review_deferred_blocked_timeout_count": candidate_review.get("deferred_blocked_or_timeout_count") if candidate_review_available else 0,
+        "candidate_review_deprioritized_count": candidate_review.get("deprioritized_count") if candidate_review_available else 0,
+        "candidate_review_excluded_count": candidate_review.get("excluded_count") if candidate_review_available else 0,
+        "candidate_review_non_cba_ready_count": candidate_review.get("non_cba_source_review_ready_count") if candidate_review_available else 0,
+        "candidate_review_cba_concentration": candidate_review.get("exact_cba_concentration") if candidate_review_available else 0,
         "current_report_title": (
-            "Broad Candidate Verification 4x3000 Result"
+            "Combined Broad Candidate Review Result"
+            if candidate_review_available
+            else "Broad Candidate Verification 4x3000 Result"
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            verification["dashboard_result_path"]
+            candidate_review["dashboard_result_path"]
+            if candidate_review_available
+            else verification["dashboard_result_path"]
             if verification_available
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            verification["dashboard_result_path"]
+            candidate_review["dashboard_result_path"]
+            if candidate_review_available
+            else verification["dashboard_result_path"]
             if verification_available
             else "docs/analysis/broad_state_4x1000_parallel_live_scout_result_2026-07-27.md"
             if live_available
@@ -7805,7 +7938,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run one combined broad candidate review over preserved candidates and current verification outcomes"
+            "run a separately authorized bounded source-review/download wave from the locked reviewed queue"
+            if candidate_review_available
+            else "run one combined broad candidate review over preserved candidates and current verification outcomes"
             if verification_available and verification.get("all_lanes_completed")
             else "resume only incomplete verification lanes from durable checkpoints"
             if verification_available
@@ -7873,7 +8008,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "combined broad candidate review"
+            "bounded broad source review/download"
+            if candidate_review_available
+            else "combined broad candidate review"
             if verification_available and verification.get("all_lanes_completed")
             else "resume incomplete broad candidate verification lanes"
             if verification_available
@@ -7889,7 +8026,9 @@ def build_project_phase_summary(
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "broad_candidate_verification_4x3000_complete_review_ready"
+            "combined_broad_candidate_review_complete_source_review_ready"
+            if candidate_review_available
+            else "broad_candidate_verification_4x3000_complete_review_ready"
             if verification_available and verification.get("all_lanes_completed")
             else "broad_candidate_verification_4x3000_partial_resume_ready"
             if verification_available

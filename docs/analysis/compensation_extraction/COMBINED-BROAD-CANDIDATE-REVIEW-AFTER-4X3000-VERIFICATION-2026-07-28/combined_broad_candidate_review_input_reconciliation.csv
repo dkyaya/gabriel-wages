@@ -1,0 +1,6 @@
+input_scope,input_rows,rows_in_final_verification,rows_not_in_final_verification,rows_in_combined_review
+prior_490_preserved,1205,798,407,1205
+broad_4x1000_deduped,6437,6353,84,6437
+broad_review_subtotal,7642,7151,491,7642
+supplementary_cumulative_pool,1423,1423,0,1423
+combined_review_universe,9065,8574,491,9065

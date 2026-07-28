@@ -1,0 +1,10 @@
+{
+  "downloaded": 0,
+  "global_analysis_readiness": false,
+  "high": 2884,
+  "low": 143,
+  "medium": 2562,
+  "reachable_statuses_only": true,
+  "source_review_ready_count": 5589,
+  "source_reviewed": 0
+}

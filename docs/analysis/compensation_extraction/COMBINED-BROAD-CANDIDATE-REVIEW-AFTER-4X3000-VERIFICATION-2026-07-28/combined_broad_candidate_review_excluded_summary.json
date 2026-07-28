@@ -1,0 +1,9 @@
+{
+  "candidate_review_status_counts": {
+    "exclude_duplicate_or_prior_seen": 7,
+    "exclude_insufficient_locator": 19,
+    "exclude_out_of_scope": 3
+  },
+  "global_analysis_readiness": false,
+  "row_count": 29
+}

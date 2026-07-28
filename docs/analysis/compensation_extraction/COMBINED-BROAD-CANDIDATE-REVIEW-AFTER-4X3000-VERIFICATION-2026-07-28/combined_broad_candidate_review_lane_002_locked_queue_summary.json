@@ -1,0 +1,56 @@
+{
+  "candidate_origins": {
+    "broad_490_preserved_review_queue": 309,
+    "broad_4x1000_deduped": 1598,
+    "targeted_prior_unrouted": 359
+  },
+  "global_analysis_readiness": false,
+  "locked_rows": 2266,
+  "regions": {
+    "Midwest": 639,
+    "Northeast": 565,
+    "South": 611,
+    "West": 451
+  },
+  "review_lane_id": "review_lane_002",
+  "source_family_hints": {
+    "agenda_packet_or_minutes": 336,
+    "arbitration_award": 47,
+    "budget_or_pay_plan": 316,
+    "cba": 348,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": 32,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed)": 1,
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": 108,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": 138,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule (public budget/payroll schedule proxy)": 1,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit)": 1,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index)": 1,
+    "civil_service_or_hr_pay_plan": 61,
+    "classification_study": 14,
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": 76,
+    "compensation_study": 26,
+    "factfinding_report": 6,
+    "mou_or_memorandum": 127,
+    "other_local_government_pay_policy": 162,
+    "personnel_policy": 46,
+    "salary_ordinance": 59,
+    "settlement_agreement": 2,
+    "unknown_or_needs_review": 72,
+    "wage_schedule": 285,
+    "wage_schedule_or_pay_scale_discussion_in_council_minutes": 1
+  },
+  "verification_statuses": {
+    "blocked_transport": 36,
+    "duplicate_locator_skipped": 1,
+    "invalid_locator": 3,
+    "reused_prior_verified": 16,
+    "timeout": 3,
+    "unavailable_404_410": 422,
+    "unavailable_other_status": 290,
+    "verification_error": 1,
+    "verification_not_run": 87,
+    "verified_reachable": 1325,
+    "verified_reachable_redirected": 81,
+    "wrong_period": 1
+  }
+}

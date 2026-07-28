@@ -1,0 +1,8 @@
+{
+  "candidate_review_status_counts": {
+    "defer_blocked_or_timeout": 176,
+    "defer_unreachable_or_unavailable": 2927
+  },
+  "global_analysis_readiness": false,
+  "row_count": 3103
+}

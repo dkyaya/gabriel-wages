@@ -113,6 +113,7 @@ def main() -> None:
     assert (
         "combined candidate review" in phase["current_phase"].casefold()
         or "verification" in phase["current_phase"].casefold()
+        or "candidate review complete" in phase["current_phase"].casefold()
     )
     assert parallel["completed_live_shard_count"] == 4
     assert "staggered" in parallel["current_parallel_mode"]

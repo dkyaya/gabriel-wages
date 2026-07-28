@@ -1,0 +1,12 @@
+{
+  "checkpointed_at": "2026-07-28T18:34:36Z",
+  "completed_rows": 2266,
+  "last_combined_review_id": "CBCR-20260728-04824",
+  "locked_rows": 2266,
+  "queue_sha256": "d86aebf6914cf4d4f773052c9846e76cef190eee9f8cf49edc1c96728dd4cca1",
+  "remaining_rows": 0,
+  "review_lane_id": "review_lane_003",
+  "status": "completed",
+  "url_opens": 0,
+  "verification_runs": 0
+}

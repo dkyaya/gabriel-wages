@@ -124,7 +124,10 @@ def main() -> None:
         assert audit["counted_in_dashboard_verification"] is False
         assert audit["network_permission_escalated"] is False
         phase = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
-        assert "verification" in phase["current_phase"].casefold()
+        assert (
+            "verification" in phase["current_phase"].casefold()
+            or "candidate review complete" in phase["current_phase"].casefold()
+        )
         assert phase["global_analysis_readiness"] is False
         assert phase["current_scout_covered"] == 6919
         assert phase["current_candidate_queue_rows"] == 13041
@@ -135,7 +138,10 @@ def main() -> None:
             assert phase["verification_completed_lane_count"] == 4
             assert phase["verification_completed_count"] == 8574
             assert phase["verification_remaining_count"] == 0
-            assert "combined broad candidate review" in phase["next_task"].casefold()
+            assert (
+                "combined broad candidate review" in phase["next_task"].casefold()
+                or "source-review/download" in phase["next_task"].casefold()
+            )
         else:
             assert phase["verification_completed_lane_count"] == 3
             assert phase["verification_completed_count"] == 6430

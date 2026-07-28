@@ -1,0 +1,60 @@
+{
+  "quality_by_review_status": {
+    "high_candidate": {
+      "defer_blocked_or_timeout": 5,
+      "defer_unreachable_or_unavailable": 80,
+      "source_review_ready_high": 77,
+      "source_review_ready_medium": 2
+    },
+    "low_candidate": {
+      "defer_blocked_or_timeout": 15,
+      "defer_unreachable_or_unavailable": 142,
+      "exclude_duplicate_or_prior_seen": 2,
+      "source_review_ready_high": 53,
+      "source_review_ready_low": 17,
+      "source_review_ready_medium": 138
+    },
+    "medium_candidate": {
+      "defer_blocked_or_timeout": 10,
+      "defer_unreachable_or_unavailable": 147,
+      "source_review_ready_high": 142,
+      "source_review_ready_medium": 14
+    },
+    "pending_combined_review": {
+      "defer_blocked_or_timeout": 125,
+      "defer_unreachable_or_unavailable": 2072,
+      "exclude_duplicate_or_prior_seen": 3,
+      "exclude_out_of_scope": 3,
+      "repair_or_needs_review": 2,
+      "source_review_ready_high": 2539,
+      "source_review_ready_low": 8,
+      "source_review_ready_medium": 1685
+    },
+    "verification_ready_low": {
+      "defer_blocked_or_timeout": 20,
+      "defer_unreachable_or_unavailable": 435,
+      "exclude_duplicate_or_prior_seen": 2,
+      "source_review_ready_low": 118,
+      "source_review_ready_medium": 666
+    },
+    "verification_ready_medium": {
+      "defer_blocked_or_timeout": 1,
+      "defer_unreachable_or_unavailable": 51,
+      "source_review_ready_high": 73,
+      "source_review_ready_medium": 57
+    },
+    "weak_or_needs_review": {
+      "deprioritize_for_now": 342,
+      "exclude_insufficient_locator": 19
+    }
+  },
+  "quality_tier_counts": {
+    "high_candidate": 164,
+    "low_candidate": 367,
+    "medium_candidate": 313,
+    "pending_combined_review": 6437,
+    "verification_ready_low": 1241,
+    "verification_ready_medium": 182,
+    "weak_or_needs_review": 361
+  }
+}

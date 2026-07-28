@@ -1,0 +1,53 @@
+{
+  "candidate_origins": {
+    "broad_490_preserved_review_queue": 299,
+    "broad_4x1000_deduped": 1615,
+    "targeted_prior_unrouted": 353
+  },
+  "global_analysis_readiness": false,
+  "locked_rows": 2267,
+  "regions": {
+    "Midwest": 639,
+    "Northeast": 566,
+    "South": 610,
+    "West": 452
+  },
+  "review_lane_id": "review_lane_001",
+  "source_family_hints": {
+    "agenda_packet_or_minutes": 329,
+    "arbitration_award": 53,
+    "budget_or_pay_plan": 314,
+    "cba": 350,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": 29,
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": 106,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": 147,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit)": 1,
+    "civil_service_or_hr_pay_plan": 59,
+    "classification_study": 18,
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": 67,
+    "compensation_or_budget_payroll_schedule_or_salary_benefits_summary": 1,
+    "compensation_study": 26,
+    "factfinding_report": 5,
+    "mou_or_memorandum": 128,
+    "other_local_government_pay_policy": 166,
+    "personnel_policy": 41,
+    "salary_ordinance": 57,
+    "settlement_agreement": 2,
+    "strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing)": 1,
+    "unknown_or_needs_review": 75,
+    "wage_schedule": 291,
+    "wage_schedule_or_salary_range_disclosure": 1
+  },
+  "verification_statuses": {
+    "blocked_transport": 47,
+    "duplicate_locator_skipped": 2,
+    "invalid_locator": 8,
+    "reused_prior_verified": 13,
+    "timeout": 2,
+    "unavailable_404_410": 439,
+    "unavailable_other_status": 326,
+    "verification_not_run": 86,
+    "verified_reachable": 1272,
+    "verified_reachable_redirected": 72
+  }
+}

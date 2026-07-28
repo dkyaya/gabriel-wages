@@ -18,10 +18,10 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>Broad candidate locator verification</h2>
+        <h2>Combined broad candidate review complete</h2>
         <p>
-          {formatNumber(phase.verification_completed_count)} of {formatNumber(phase.verification_queue_size)} locked
-          locators have terminal HEAD-only outcomes; {formatNumber(phase.verification_verified_reachable_count)} are reachable.
+          {formatNumber(phase.candidate_review_universe_size)} local metadata rows were reviewed; a locked
+          queue of {formatNumber(phase.source_review_ready_count)} candidates is ready for separately authorized source review.
         </p>
       </article>
       <article>
@@ -37,8 +37,8 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
         <p className="eyebrow">Next authorized stage</p>
         <h2>{phase.next_phase}</h2>
         <p>
-          Review the combined broad candidate scope separately after verification. Candidate review remains distinct
-          from download, source review, extraction, rating, and ingestion.
+          Use only the locked reviewed queue in a separately authorized bounded source-review/download wave.
+          Candidate review itself did not download, inspect, extract, rate, or ingest documents.
         </p>
       </article>
     </section>
@@ -55,7 +55,7 @@ export function ProjectPhasePanel({ phase }) {
           <h2 id="project-phase-title">{phase.current_phase}</h2>
         </div>
         <StatusPill tone="verified">
-          {formatNumber(phase.verification_completed_count)} verified outcomes
+          {formatNumber(phase.source_review_ready_count)} source-review-ready
         </StatusPill>
       </div>
 
@@ -75,8 +75,14 @@ export function ProjectPhasePanel({ phase }) {
         <div><span>Verification queue</span><strong>{formatNumber(phase.verification_queue_size)}</strong></div>
         <div><span>Completed outcomes</span><strong>{formatNumber(phase.verification_completed_count)}</strong></div>
         <div><span>Reachable locators</span><strong>{formatNumber(phase.verification_verified_reachable_count)}</strong></div>
+        <div><span>Candidate review universe</span><strong>{formatNumber(phase.candidate_review_universe_size)}</strong></div>
+        <div><span>Source-review ready</span><strong>{formatNumber(phase.source_review_ready_count)}</strong></div>
+        <div><span>High / medium / low ready</span><strong>{formatNumber(phase.source_review_ready_high_count)} / {formatNumber(phase.source_review_ready_medium_count)} / {formatNumber(phase.source_review_ready_low_count)}</strong></div>
         <div><span>Unavailable</span><strong>{formatNumber(phase.verification_unavailable_count)}</strong></div>
         <div><span>Blocked / timeout</span><strong>{formatNumber(phase.verification_blocked_timeout_count)}</strong></div>
+        <div><span>Deferred unavailable / blocked</span><strong>{formatNumber(phase.candidate_review_deferred_unavailable_count)} / {formatNumber(phase.candidate_review_deferred_blocked_timeout_count)}</strong></div>
+        <div><span>Excluded / duplicate / out-of-scope</span><strong>{formatNumber(phase.candidate_review_excluded_count)}</strong></div>
+        <div><span>Map data date</span><strong>{phase.map_data_date}</strong></div>
         <div><span>Wage-gap estimates</span><strong>None</strong></div>
         <div><span>Global readiness</span><strong>False</strong></div>
       </div>
@@ -87,13 +93,13 @@ export function ProjectPhasePanel({ phase }) {
           <h3>{phase.next_phase}</h3>
         </div>
         <ol>
-          <li>Preserve all four locked verification lane ledgers</li>
-          <li>Review candidate quality separately from locator reachability</li>
-          <li>Keep prior 1,205 broad-wave candidates in the combined review scope</li>
-          <li>Do not download or source-review documents during candidate review</li>
-          <li>Retain broad geographic and source-family diversity metrics</li>
+          <li>Use only the locked {formatNumber(phase.source_review_ready_count)}-row reviewed queue</li>
+          <li>Start with {formatNumber(phase.source_review_ready_high_count)} high-priority metadata leads</li>
+          <li>Preserve geographic and non-CBA source-family diversity</li>
+          <li>Keep downloading and source review separately authorized and bounded</li>
+          <li>Do not treat a reviewed locator as retained, extracted, rated, or analysis-ready evidence</li>
         </ol>
-        <StatusPill tone="future">Combined review next</StatusPill>
+        <StatusPill tone="future">Source review/download next</StatusPill>
       </div>
       <p className="panel-note">
         Exact-span rating is not causal proof. The ratings and bounded memo remain documentary scaffolding only;
@@ -266,7 +272,9 @@ export function VerificationPipeline({
     ["Broad scout candidate rows", formatNumber(phase.current_candidate_queue_rows), "Discovery complete", "scout"],
     ["Locked verification locators", formatNumber(phase.verification_queue_size), "Four lanes", "verified"],
     ["Completed verification outcomes", formatNumber(phase.verification_completed_count), "HEAD-only", "verified"],
-    ["Reachable locators", formatNumber(phase.verification_verified_reachable_count), "Review pending", "verified"],
+    ["Reachable locators", formatNumber(phase.verification_verified_reachable_count), "Metadata review complete", "verified"],
+    ["Candidate review universe", formatNumber(phase.candidate_review_universe_size), "Metadata-only complete", "verified"],
+    ["Source-review-ready queue", formatNumber(phase.source_review_ready_count), "Separately authorized next", "verified"],
     ["Unavailable locators", formatNumber(phase.verification_unavailable_count), "Excluded from reachable", "future"],
     ["Blocked or timed out", formatNumber(phase.verification_blocked_timeout_count), "Deferred", "future"],
     ["Tier C memo supplement", formatNumber(phase.tier_c_memo_supplement_valid_scope), "Completed evidence artifact", "future"],
@@ -281,7 +289,7 @@ export function VerificationPipeline({
           <h2 id="verification-title">From broad scout candidates to bounded locator verification</h2>
         </div>
         <StatusPill tone="verified">
-          {phase.verification_all_lanes_completed ? "Four-lane verification complete; combined review next" : "Three lanes complete; lane 004 resume next"}
+          {phase.combined_candidate_review_available ? "Combined candidate review complete; source review next" : phase.verification_all_lanes_completed ? "Four-lane verification complete; combined review next" : "Three lanes complete; lane 004 resume next"}
         </StatusPill>
       </div>
 
@@ -299,15 +307,16 @@ export function VerificationPipeline({
       <div className="verification-callout">
         <div>
           <p className="eyebrow">Current operational handoff</p>
-          <h3>Review verified and unresolved broad-state candidates</h3>
+          <h3>Candidate metadata reviewed; locked source-review queue ready</h3>
         </div>
         <p>
           The broad scout produced {formatNumber(phase.broad_state_4x1000_live_candidate_count)} new rows and
           {" "}{formatNumber(phase.broad_state_4x1000_live_deduped_candidate_count)} deduplicated candidates. The
           bounded verifier locked {formatNumber(phase.verification_queue_size)} defensible locators and completed
-          {" "}{formatNumber(phase.verification_completed_count)} HEAD-only outcomes. A separately authorized combined
-          candidate review is next; download, source review, extraction, rating, ingestion, codification, wage-gap
-          analysis, and causal analysis have not run on this verification scope.
+          {" "}{formatNumber(phase.verification_completed_count)} HEAD-only outcomes. The local combined review covered
+          {" "}{formatNumber(phase.candidate_review_universe_size)} rows and retained {formatNumber(phase.source_review_ready_count)}
+          for a later bounded source-review wave; download, source review, extraction, rating, ingestion, codification,
+          wage-gap analysis, and causal analysis have not run on this reviewed scope.
         </p>
       </div>
       <div className="verification-callout">
@@ -2013,15 +2022,15 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">Review the combined broad candidate and verification scope</h2>
+          <h2 id="next-steps-title">Run bounded source review from the locked reviewed queue</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>Run one combined candidate review</h3>
-          <p>Review the preserved 1,205 prior rows, new broad-state candidates, and current verification outcomes. Candidate review must remain separate from downloading and source review.</p>
+          <h3>Authorize a bounded source-review/download wave</h3>
+          <p>Use only the locked {formatNumber(phase.source_review_ready_count)}-row queue, beginning with {formatNumber(phase.source_review_ready_high_count)} high-priority candidates while preserving geography and source-family diversity.</p>
         </article>
         <article>
           <span>Completed verification scope</span>
@@ -2029,14 +2038,14 @@ export function NextStepsPanel({ priority, phase }) {
           <p>{formatNumber(phase.verification_verified_reachable_count)} locators are reachable metadata leads. They have not been downloaded, source-reviewed, extracted, rated, or ingested.</p>
         </article>
         <article>
-          <span>Future source expansion</span>
-          <h3>Preserve broad scouting strategy</h3>
-          <p>After combined review, any future scouting should retain geographic balance and diverse source families; mechanism-targeted discovery remains secondary gap-filling.</p>
+          <span>Completed candidate review</span>
+          <h3>{formatNumber(phase.candidate_review_universe_size)} metadata rows</h3>
+          <p>The review used only committed snippets, candidate metadata, and verification results. No source URLs or document contents were opened.</p>
         </article>
       </div>
       <p className="panel-note">
-        Historical discovery tiers remain available above for provenance only. The current operational next task is
-        combined review of broad-state discovery and locator-verification metadata. Global analysis readiness remains false.
+        Historical discovery and verification tiers remain available above for provenance only. The current next task is
+        a separately authorized bounded source-review/download wave; global analysis readiness remains false.
       </p>
     </section>
   );

@@ -110,7 +110,10 @@ def main() -> None:
     if decision["all_lanes_completed"]:
         assert phase["verification_all_lanes_completed"] is True
         assert phase["verification_remaining_count"] == 0
-        assert "combined broad candidate review" in phase["next_task"].casefold()
+        assert (
+            "combined broad candidate review" in phase["next_task"].casefold()
+            or "source-review/download" in phase["next_task"].casefold()
+        )
         assert "resume incomplete" not in phase["next_task"].casefold()
     assert "tier c memo supplement" not in phase["current_phase"].casefold()
 

@@ -1,0 +1,309 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 30,
+  "group_field": "source_family_hint",
+  "groups": [
+    {
+      "deferred_or_excluded": 269,
+      "global_analysis_readiness": "false",
+      "ready_high": 580,
+      "ready_low": 2,
+      "ready_medium": 466,
+      "reviewed_rows": 1317,
+      "source_family_hint": "agenda_packet_or_minutes",
+      "source_review_ready": 1048
+    },
+    {
+      "deferred_or_excluded": 65,
+      "global_analysis_readiness": "false",
+      "ready_high": 130,
+      "ready_low": 0,
+      "ready_medium": 9,
+      "reviewed_rows": 204,
+      "source_family_hint": "arbitration_award",
+      "source_review_ready": 139
+    },
+    {
+      "deferred_or_excluded": 515,
+      "global_analysis_readiness": "false",
+      "ready_high": 389,
+      "ready_low": 3,
+      "ready_medium": 355,
+      "reviewed_rows": 1262,
+      "source_family_hint": "budget_or_pay_plan",
+      "source_review_ready": 747
+    },
+    {
+      "deferred_or_excluded": 661,
+      "global_analysis_readiness": "false",
+      "ready_high": 450,
+      "ready_low": 3,
+      "ready_medium": 287,
+      "reviewed_rows": 1401,
+      "source_family_hint": "cba",
+      "source_review_ready": 740
+    },
+    {
+      "deferred_or_excluded": 35,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 16,
+      "ready_medium": 67,
+      "reviewed_rows": 118,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record",
+      "source_review_ready": 83
+    },
+    {
+      "deferred_or_excluded": 0,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 1,
+      "reviewed_rows": 1,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed)",
+      "source_review_ready": 1
+    },
+    {
+      "deferred_or_excluded": 1,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 0,
+      "reviewed_rows": 1,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible municipal posting route; not confirmed)",
+      "source_review_ready": 0
+    },
+    {
+      "deferred_or_excluded": 155,
+      "global_analysis_readiness": "false",
+      "ready_high": 1,
+      "ready_low": 46,
+      "ready_medium": 231,
+      "reviewed_rows": 433,
+      "source_family_hint": "cba_or_budget_pay_plan_with_explicit_compensation_mechanism",
+      "source_review_ready": 278
+    },
+    {
+      "deferred_or_excluded": 191,
+      "global_analysis_readiness": "false",
+      "ready_high": 47,
+      "ready_low": 37,
+      "ready_medium": 294,
+      "reviewed_rows": 569,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule",
+      "source_review_ready": 378
+    },
+    {
+      "deferred_or_excluded": 0,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 1,
+      "reviewed_rows": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (municipal audit entry likely linked to payroll/compensation supporting schedules)",
+      "source_review_ready": 1
+    },
+    {
+      "deferred_or_excluded": 1,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 0,
+      "reviewed_rows": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (public budget/payroll schedule proxy)",
+      "source_review_ready": 0
+    },
+    {
+      "deferred_or_excluded": 0,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 2,
+      "reviewed_rows": 2,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (public payroll/compensation support schedules within municipal audit)",
+      "source_review_ready": 2
+    },
+    {
+      "deferred_or_excluded": 0,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 1,
+      "reviewed_rows": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index)",
+      "source_review_ready": 1
+    },
+    {
+      "deferred_or_excluded": 0,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 1,
+      "reviewed_rows": 1,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey)",
+      "source_review_ready": 1
+    },
+    {
+      "deferred_or_excluded": 106,
+      "global_analysis_readiness": "false",
+      "ready_high": 58,
+      "ready_low": 1,
+      "ready_medium": 73,
+      "reviewed_rows": 238,
+      "source_family_hint": "civil_service_or_hr_pay_plan",
+      "source_review_ready": 132
+    },
+    {
+      "deferred_or_excluded": 22,
+      "global_analysis_readiness": "false",
+      "ready_high": 27,
+      "ready_low": 0,
+      "ready_medium": 10,
+      "reviewed_rows": 59,
+      "source_family_hint": "classification_study",
+      "source_review_ready": 37
+    },
+    {
+      "deferred_or_excluded": 121,
+      "global_analysis_readiness": "false",
+      "ready_high": 25,
+      "ready_low": 19,
+      "ready_medium": 123,
+      "reviewed_rows": 288,
+      "source_family_hint": "collective_bargaining_agreement_or_moa_or_wage_schedule",
+      "source_review_ready": 167
+    },
+    {
+      "deferred_or_excluded": 1,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 0,
+      "reviewed_rows": 1,
+      "source_family_hint": "compensation_or_budget_payroll_schedule_or_salary_benefits_summary",
+      "source_review_ready": 0
+    },
+    {
+      "deferred_or_excluded": 42,
+      "global_analysis_readiness": "false",
+      "ready_high": 44,
+      "ready_low": 0,
+      "ready_medium": 23,
+      "reviewed_rows": 109,
+      "source_family_hint": "compensation_study",
+      "source_review_ready": 67
+    },
+    {
+      "deferred_or_excluded": 5,
+      "global_analysis_readiness": "false",
+      "ready_high": 9,
+      "ready_low": 0,
+      "ready_medium": 1,
+      "reviewed_rows": 15,
+      "source_family_hint": "factfinding_report",
+      "source_review_ready": 10
+    },
+    {
+      "deferred_or_excluded": 222,
+      "global_analysis_readiness": "false",
+      "ready_high": 160,
+      "ready_low": 1,
+      "ready_medium": 137,
+      "reviewed_rows": 520,
+      "source_family_hint": "mou_or_memorandum",
+      "source_review_ready": 298
+    },
+    {
+      "deferred_or_excluded": 322,
+      "global_analysis_readiness": "false",
+      "ready_high": 231,
+      "ready_low": 0,
+      "ready_medium": 90,
+      "reviewed_rows": 643,
+      "source_family_hint": "other_local_government_pay_policy",
+      "source_review_ready": 321
+    },
+    {
+      "deferred_or_excluded": 84,
+      "global_analysis_readiness": "false",
+      "ready_high": 64,
+      "ready_low": 0,
+      "ready_medium": 32,
+      "reviewed_rows": 180,
+      "source_family_hint": "personnel_policy",
+      "source_review_ready": 96
+    },
+    {
+      "deferred_or_excluded": 56,
+      "global_analysis_readiness": "false",
+      "ready_high": 141,
+      "ready_low": 0,
+      "ready_medium": 39,
+      "reviewed_rows": 236,
+      "source_family_hint": "salary_ordinance",
+      "source_review_ready": 180
+    },
+    {
+      "deferred_or_excluded": 5,
+      "global_analysis_readiness": "false",
+      "ready_high": 4,
+      "ready_low": 0,
+      "ready_medium": 2,
+      "reviewed_rows": 11,
+      "source_family_hint": "settlement_agreement",
+      "source_review_ready": 6
+    },
+    {
+      "deferred_or_excluded": 0,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 1,
+      "reviewed_rows": 1,
+      "source_family_hint": "strike_or_no_strike constraint (public-press coverage of bargaining impasse/strike timing)",
+      "source_review_ready": 1
+    },
+    {
+      "deferred_or_excluded": 95,
+      "global_analysis_readiness": "false",
+      "ready_high": 14,
+      "ready_low": 15,
+      "ready_medium": 175,
+      "reviewed_rows": 299,
+      "source_family_hint": "unknown_or_needs_review",
+      "source_review_ready": 204
+    },
+    {
+      "deferred_or_excluded": 498,
+      "global_analysis_readiness": "false",
+      "ready_high": 510,
+      "ready_low": 0,
+      "ready_medium": 141,
+      "reviewed_rows": 1149,
+      "source_family_hint": "wage_schedule",
+      "source_review_ready": 651
+    },
+    {
+      "deferred_or_excluded": 3,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 0,
+      "reviewed_rows": 3,
+      "source_family_hint": "wage_schedule_or_pay_scale_discussion_in_council_minutes",
+      "source_review_ready": 0
+    },
+    {
+      "deferred_or_excluded": 1,
+      "global_analysis_readiness": "false",
+      "ready_high": 0,
+      "ready_low": 0,
+      "ready_medium": 0,
+      "reviewed_rows": 1,
+      "source_family_hint": "wage_schedule_or_salary_range_disclosure",
+      "source_review_ready": 0
+    }
+  ],
+  "reviewed_rows": 9065,
+  "source_review_ready_count": 5589
+}

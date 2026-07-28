@@ -1,0 +1,13 @@
+{
+  "all_counts_reconciled": true,
+  "broad_4x1000_deduped_candidates": 6437,
+  "broad_candidates_in_final_verification": 7151,
+  "broad_candidates_not_in_final_verification": 491,
+  "broad_review_subtotal": 7642,
+  "combined_review_universe_rows": 9065,
+  "final_verification_rows": 8574,
+  "final_verification_statuses_reconciled": true,
+  "identity_formula": "7642 broad + 1423 supplementary = 9065 combined review rows",
+  "prior_490_review_candidates": 1205,
+  "supplementary_final_verification_candidates": 1423
+}

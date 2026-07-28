@@ -118,6 +118,8 @@ def main() -> None:
         "broad_state_4x1000_parallel_live_scout_completed_combined_candidate_review_ready",
         "broad_candidate_verification_4x3000_completed_review_ready",
         "broad_candidate_verification_4x3000_partial_lanes_completed_resume_ready",
+        "broad_candidate_verification_4x3000_resume_lane_004_completed_review_ready",
+        "combined_broad_candidate_review_completed_source_review_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159

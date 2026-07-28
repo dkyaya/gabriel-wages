@@ -1,0 +1,5 @@
+region,reviewed_rows,source_review_ready,ready_high,ready_medium,ready_low,deferred_or_excluded,global_analysis_readiness
+Midwest,2556,1794,900,846,48,762,false
+Northeast,2261,1200,695,485,20,1061,false
+South,2443,1546,703,786,57,897,false
+West,1805,1049,586,445,18,756,false

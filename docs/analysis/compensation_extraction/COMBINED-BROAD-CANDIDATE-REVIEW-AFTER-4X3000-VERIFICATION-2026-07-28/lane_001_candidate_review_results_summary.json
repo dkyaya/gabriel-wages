@@ -1,0 +1,23 @@
+{
+  "candidate_review_status_counts": {
+    "defer_blocked_or_timeout": 49,
+    "defer_unreachable_or_unavailable": 765,
+    "deprioritize_for_now": 86,
+    "exclude_duplicate_or_prior_seen": 2,
+    "exclude_insufficient_locator": 8,
+    "source_review_ready_high": 716,
+    "source_review_ready_low": 36,
+    "source_review_ready_medium": 605
+  },
+  "completed_rows": 2267,
+  "downloads": 0,
+  "global_analysis_readiness": false,
+  "locked_rows": 2267,
+  "remaining_rows": 0,
+  "review_lane_id": "review_lane_001",
+  "source_review_ready_count": 1357,
+  "source_review_runs": 0,
+  "status": "completed",
+  "url_opens": 0,
+  "verification_runs": 0
+}
