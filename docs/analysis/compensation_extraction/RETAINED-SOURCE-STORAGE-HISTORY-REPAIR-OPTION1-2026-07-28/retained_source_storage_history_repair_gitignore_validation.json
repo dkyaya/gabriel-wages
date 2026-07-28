@@ -1,0 +1,9 @@
+{
+  "all_required_rules_present": true,
+  "artifact_root_ignored": true,
+  "operational_retained_root_ignored": true,
+  "required_rules": [
+    "/artifacts/local_retained_sources/",
+    "/docs/analysis/compensation_extraction/*/retained_sources/"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "storage_only_task": true,
+  "substantive_dashboard_metric_change": false,
+  "generated_timestamp_refreshed": true,
+  "dashboard_data_build_passed": true,
+  "dashboard_frontend_build_passed": true,
+  "current_phase_code": "combined_broad_pdf_text_layer_readiness_4961_completed_extraction_ready",
+  "next_phase": "four-lane bounded text extraction over readiness-approved retained sources",
+  "retained_source_count": 4961,
+  "readiness_reviewed_count": 4961,
+  "extraction_ready_count": 4051,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "global_analysis_readiness": false,
+  "dashboard_state_pushed": true
+}

@@ -1,0 +1,41 @@
+{
+  "tests": [
+    {
+      "command": ".venv/bin/python -m py_compile scripts/build_dashboard_data.py scripts/build_retained_source_storage_history_repair.py scripts/test_retained_source_storage_history_repair.py",
+      "status": "passed"
+    },
+    {
+      "command": ".venv/bin/python scripts/build_dashboard_data.py",
+      "status": "passed",
+      "result": "51 states/DC; 35589 municipalities; 6919 scout-covered; 13041 candidate rows"
+    },
+    {
+      "command": "npm --prefix docs/dashboard run build",
+      "status": "passed"
+    },
+    {
+      "command": ".venv/bin/python scripts/validate.py",
+      "status": "passed"
+    },
+    {
+      "command": ".venv/bin/python ingest/test_pipeline.py",
+      "status": "passed",
+      "test_count": 60,
+      "failure_count": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/test_retained_source_storage_history_repair.py",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git push",
+      "status": "passed",
+      "attempt": 1
+    }
+  ],
+  "all_passed": true
+}

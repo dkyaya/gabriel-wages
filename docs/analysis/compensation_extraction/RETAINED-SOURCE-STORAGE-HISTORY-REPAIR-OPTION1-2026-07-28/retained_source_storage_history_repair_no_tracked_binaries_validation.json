@@ -1,0 +1,9 @@
+{
+  "all_storage_guards_pass": true,
+  "blob_over_100mb_count_ahead_of_origin_main": 0,
+  "new_blob_bytes_ahead_of_origin_main": 98725389,
+  "new_blob_count_ahead_of_origin_main": 298,
+  "retained_source_blob_count_ahead_of_origin_main": 0,
+  "tracked_local_artifact_path_count": 0,
+  "tracked_operational_retained_path_count": 0
+}

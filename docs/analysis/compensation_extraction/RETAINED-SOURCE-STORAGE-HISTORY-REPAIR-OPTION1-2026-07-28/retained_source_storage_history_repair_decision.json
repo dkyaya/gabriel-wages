@@ -1,0 +1,23 @@
+{
+  "task_id": "RETAINED-SOURCE-STORAGE-HISTORY-REPAIR-OPTION1-THEN-ARTIFACT-STORAGE-STANDARD-2026-07-28",
+  "decision": "retained_source_storage_history_repair_completed_extraction_ready",
+  "recorded_at_utc": "2026-07-28T21:58:35Z",
+  "repair_commit": "52a9243df210ba0e40fea695062f48b9adf5817b",
+  "original_heavy_head": "d17549fe065c243d753167e5df4c7edba4e89209",
+  "unchanged_pushed_base": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "retained_sources_preserved_locally": true,
+  "retained_source_count": 4961,
+  "hash_validation_before_match_count": 4961,
+  "hash_validation_after_original_match_count": 4961,
+  "hash_validation_after_artifact_match_count": 4961,
+  "retained_binaries_tracked_on_main": 0,
+  "retained_binary_blobs_ahead_of_origin_before_repair": 4898,
+  "retained_binary_blobs_ahead_of_origin_after_repair": 0,
+  "lightweight_artifacts_preserved": true,
+  "option_2_future_standard_created": true,
+  "plain_push_succeeded": true,
+  "force_push_used": false,
+  "already_pushed_history_rewritten": false,
+  "global_analysis_readiness": false,
+  "next_stage": "four_lane_bounded_text_extraction_over_4051_readiness_approved_sources"
+}

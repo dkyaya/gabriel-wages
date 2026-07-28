@@ -1,0 +1,20 @@
+{
+  "repair_commit": "52a9243df210ba0e40fea695062f48b9adf5817b",
+  "branch": "main",
+  "remote_tracking_base_before_push": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "command": "git push",
+  "repair_push_attempt_count": 1,
+  "repair_push_succeeded": true,
+  "repair_push_output": "845333f..52a9243 main -> main",
+  "status_policy_commit_created": true,
+  "status_policy_commit_push_succeeded": true,
+  "all_required_pushes_succeeded": true,
+  "retry_used": false,
+  "force_push_used": false,
+  "fetch_performed": false,
+  "pull_performed": false,
+  "rebase_performed": false,
+  "merge_performed": false,
+  "remote_configuration_changed": false,
+  "public_dashboard_state_may_be_described_as_pushed": true
+}

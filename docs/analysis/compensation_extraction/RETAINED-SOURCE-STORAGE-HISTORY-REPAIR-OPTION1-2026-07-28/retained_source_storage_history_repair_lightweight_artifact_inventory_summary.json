@@ -1,0 +1,14 @@
+{
+  "all_inventory_paths_tracked": true,
+  "category_counts": {
+    "analysis_doc_or_manifest": 31,
+    "dashboard": 21,
+    "other_lightweight": 2,
+    "readiness_artifact": 126,
+    "script_or_test": 11,
+    "source_review_artifact": 114
+  },
+  "retained_binary_count": 0,
+  "total_bytes": 98779886,
+  "tracked_lightweight_artifact_count": 305
+}
