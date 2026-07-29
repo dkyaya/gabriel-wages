@@ -81,9 +81,15 @@ def main() -> int:
     source = RUNNER.read_text(encoding="utf-8").lower()
     check("no model/network/source imports", all(term not in source for term in ["import openai", "import requests", "urllib", "local_extracted_text", "local_retained_sources", "gabriel.codify"]))
     dashboard = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text(encoding="utf-8"))
-    check("dashboard current", dashboard["current_phase"].startswith("Global analysis readiness gate complete"))
+    check("dashboard current", dashboard["current_phase"].startswith((
+        "Global analysis readiness gate complete",
+        "Broad state 4 × 2,500 scout infrastructure prep complete",
+    )))
     check("dashboard flags", dashboard["global_readiness_gate_flags"] == expected and dashboard["global_analysis_readiness"] is False)
-    check("dashboard next", "2,500-target" in dashboard["next_task"] and dashboard["next_phase"] == "broad 4 × 2,500 scouting infrastructure preparation")
+    check("dashboard next", "2,500-target" in dashboard["next_task"] and dashboard["next_phase"] in {
+        "broad 4 × 2,500 scouting infrastructure preparation",
+        "live broad state 4 × 2,500 scouting",
+    })
     check("map stable", dashboard["current_scout_covered"] == 6919 and dashboard["dashboard_map_filter"] == "total_scout_coverage_only" and dashboard["map_data_date"] == "2026-07-27")
     app = (ROOT / "docs/dashboard/src/App.jsx").read_text(encoding="utf-8")
     check("readiness outside map", all(term in app for term in ["Collection readiness", "Mechanism readiness", "Wage-gap readiness", "Causal readiness", "Next planned stage"]))

@@ -1,0 +1,11 @@
+{
+  "cumulative_scout_covered_municipalities_before_wave": 6919,
+  "global_analysis_readiness": false,
+  "locked_scout_target_count": 10000,
+  "new_unique_municipalities_planned_count": 10000,
+  "planned_rows_added_to_actual_map": 0,
+  "projected_cumulative_scout_covered_municipalities_after_wave_if_all_parseable": 16919,
+  "unique_municipalities_planned_for_scout_count": 10000,
+  "unique_municipalities_previously_scout_covered_count": 0,
+  "unique_municipalities_targeted_count": 10000
+}

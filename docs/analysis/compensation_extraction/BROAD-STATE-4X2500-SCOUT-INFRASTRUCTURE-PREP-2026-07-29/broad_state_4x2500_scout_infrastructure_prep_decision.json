@@ -1,0 +1,24 @@
+{
+  "actual_scout_covered_before_wave": 6919,
+  "candidate_review_run": false,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "decision": "broad_state_4x2500_scout_infrastructure_prep_completed_live_ready",
+  "global_analysis_readiness": false,
+  "live_scout_ready_next": true,
+  "live_scout_run": false,
+  "master_locked_target_count": 10000,
+  "newly_planned_municipalities": 10000,
+  "planned_unique_municipalities": 10000,
+  "previously_scout_covered_included": 0,
+  "projected_cumulative_if_all_parseable": 16919,
+  "region_count": 4,
+  "shard_target_counts": {
+    "broad_4x2500_shard_001": 2500,
+    "broad_4x2500_shard_002": 2500,
+    "broad_4x2500_shard_003": 2500,
+    "broad_4x2500_shard_004": 2500
+  },
+  "source_family_query_family_count": 12,
+  "state_count": 43,
+  "task_id": "BROAD-STATE-4X2500-SCOUT-INFRASTRUCTURE-PREP-2026-07-29"
+}

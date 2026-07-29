@@ -1,0 +1,27 @@
+{
+  "actual_coverage_added": 0,
+  "actual_coverage_reconciles_to_6919": true,
+  "candidate_count_preserved": 13041,
+  "candidate_review_runs": 0,
+  "direct_sdk_calls": 0,
+  "external_smoke_calls": 0,
+  "extraction_rating_ingestion_codification_runs": 0,
+  "global_analysis_readiness": false,
+  "hosted_search_calls": 0,
+  "input_ledgers_present": true,
+  "master_count": 10000,
+  "master_equals_shard_union": true,
+  "passed": true,
+  "previously_covered_included": 0,
+  "shard_counts": {
+    "broad_4x2500_shard_001": 2500,
+    "broad_4x2500_shard_002": 2500,
+    "broad_4x2500_shard_003": 2500,
+    "broad_4x2500_shard_004": 2500
+  },
+  "source_document_accesses": 0,
+  "unique_municipality_count": 10000,
+  "url_opens": 0,
+  "verification_or_download_runs": 0,
+  "weak_duplicate_needs_review_included": 0
+}

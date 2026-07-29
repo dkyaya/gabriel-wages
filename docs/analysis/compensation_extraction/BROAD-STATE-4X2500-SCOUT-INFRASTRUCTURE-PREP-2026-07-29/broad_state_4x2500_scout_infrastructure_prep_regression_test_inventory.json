@@ -1,0 +1,24 @@
+{
+  "invariants": [
+    "actual_coverage_after_prep",
+    "actual_coverage_before",
+    "all_invariants_passed",
+    "controlled_shard_ids",
+    "downstream_stage_runs",
+    "each_shard_independently_runnable_resumable",
+    "global_analysis_readiness_false",
+    "live_calls",
+    "map_filter_contract",
+    "master_count",
+    "master_equals_union_of_shards",
+    "next_live_prompt_ready",
+    "quality_tiers_controlled",
+    "shard_counts",
+    "unique_municipalities",
+    "unique_target_ids",
+    "url_or_source_access",
+    "weak_duplicate_needs_review_included"
+  ],
+  "required_predecessor_tests": 4,
+  "test": "scripts/test_broad_state_4x2500_scout_infrastructure_prep.py"
+}

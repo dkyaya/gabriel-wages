@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "agenda_minutes_attachment": 832,
+    "arbitration_factfinding": 835,
+    "broad_pay_document_index": 832,
+    "budget_pay_plan": 835,
+    "cba_agreement": 833,
+    "civil_service_hr_pay": 834,
+    "compensation_classification_study": 833,
+    "labor_relations_index": 832,
+    "local_pay_policy": 832,
+    "mou_settlement": 834,
+    "personnel_policy": 832,
+    "salary_wage_schedule": 836
+  },
+  "planned_target_count": 10000,
+  "query_family_count": 12
+}

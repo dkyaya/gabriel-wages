@@ -1,0 +1,22 @@
+{
+  "broad_4x2500_shard_001": {
+    "actual_coverage_added": 0,
+    "planned_targets": 2500,
+    "planned_unique_municipalities": 2500
+  },
+  "broad_4x2500_shard_002": {
+    "actual_coverage_added": 0,
+    "planned_targets": 2500,
+    "planned_unique_municipalities": 2500
+  },
+  "broad_4x2500_shard_003": {
+    "actual_coverage_added": 0,
+    "planned_targets": 2500,
+    "planned_unique_municipalities": 2500
+  },
+  "broad_4x2500_shard_004": {
+    "actual_coverage_added": 0,
+    "planned_targets": 2500,
+    "planned_unique_municipalities": 2500
+  }
+}

@@ -149,6 +149,7 @@ def main() -> int:
     check("dashboard current operation", dashboard["current_phase"].startswith((
         "Combined broad rating ingestion/codification complete",
         "Global analysis readiness gate complete",
+        "Broad state 4 × 2,500 scout infrastructure prep complete",
     )))
     check("dashboard codification metrics", dashboard["rating_ingestion_queue_count"] == dashboard["rating_ingested_record_count"] == dashboard["rating_codified_record_count"] == 16947)
     check("dashboard gate", dashboard["global_readiness_gate_status"] in {

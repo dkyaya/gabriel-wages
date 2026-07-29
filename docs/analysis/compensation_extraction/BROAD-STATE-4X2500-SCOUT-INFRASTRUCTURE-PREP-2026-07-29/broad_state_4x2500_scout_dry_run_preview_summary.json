@@ -1,0 +1,12 @@
+{
+  "calls_made": 0,
+  "live_status": "not_run",
+  "planned_not_actual_coverage": true,
+  "preview_count": 10000,
+  "shard_counts": {
+    "broad_4x2500_shard_001": 2500,
+    "broad_4x2500_shard_002": 2500,
+    "broad_4x2500_shard_003": 2500,
+    "broad_4x2500_shard_004": 2500
+  }
+}

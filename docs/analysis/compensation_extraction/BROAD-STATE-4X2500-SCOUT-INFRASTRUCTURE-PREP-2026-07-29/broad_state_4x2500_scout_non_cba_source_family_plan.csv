@@ -1,0 +1,12 @@
+source_family_query_family,planned_target_count,expected_source_family_hints,sanitized_query_terms,is_cba_only,planning_status
+agenda_minutes_attachment,832,agenda_packet_or_minutes,council agenda minutes attached labor pay record,false,prepared_no_call
+arbitration_factfinding,835,arbitration_award; factfinding_report,arbitration award factfinding impasse report,false,prepared_no_call
+broad_pay_document_index,832,salary_ordinance; wage_schedule; budget_or_pay_plan; civil_service_or_hr_pay_plan,official municipal pay document source index,false,prepared_no_call
+budget_pay_plan,835,budget_or_pay_plan,municipal budget pay plan compensation plan,false,prepared_no_call
+civil_service_hr_pay,834,civil_service_or_hr_pay_plan,civil service HR pay plan classification,false,prepared_no_call
+compensation_classification_study,833,compensation_study; classification_study,compensation study classification study pay,false,prepared_no_call
+labor_relations_index,832,cba; mou_or_memorandum; arbitration_award; factfinding_report,official labor relations agreements awards index,false,prepared_no_call
+local_pay_policy,832,other_local_government_pay_policy,local government pay policy labor relations compensation,false,prepared_no_call
+mou_settlement,834,mou_or_memorandum; settlement_agreement,memorandum MOU settlement agreement labor,false,prepared_no_call
+personnel_policy,832,personnel_policy,personnel policy employee compensation wages,false,prepared_no_call
+salary_wage_schedule,836,salary_ordinance; wage_schedule,salary ordinance wage schedule compensation schedule,false,prepared_no_call

@@ -1661,6 +1661,14 @@ GLOBAL_ANALYSIS_READINESS_GATE_DIR = (
 GLOBAL_ANALYSIS_READINESS_GATE_DECISION_PATH = (
     GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_decision.json"
 )
+BROAD_STATE_4X2500_PREP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-SCOUT-INFRASTRUCTURE-PREP-2026-07-29"
+)
+BROAD_STATE_4X2500_PREP_DECISION_PATH = (
+    BROAD_STATE_4X2500_PREP_DIR / "broad_state_4x2500_scout_infrastructure_prep_decision.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5677,6 +5685,59 @@ def global_analysis_readiness_gate_status() -> tuple[bool, dict[str, Any]]:
     }
 
 
+def broad_state_4x2500_scout_infrastructure_prep_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only a complete no-call four-shard 10,000-target prep package."""
+    required = [
+        BROAD_STATE_4X2500_PREP_DECISION_PATH,
+        BROAD_STATE_4X2500_PREP_DIR / "broad_state_4x2500_scout_master_locked_queue_summary.json",
+        BROAD_STATE_4X2500_PREP_DIR / "broad_state_4x2500_scout_infrastructure_prep_invariant_checks.json",
+        BROAD_STATE_4X2500_PREP_DIR / "broad_state_4x2500_scout_no_call_preflight_checks.json",
+        BROAD_STATE_4X2500_PREP_DIR / "broad_state_4x2500_scout_infrastructure_prep_dashboard_update_summary.json",
+        BROAD_STATE_4X2500_PREP_DIR / "next_broad_state_4x2500_live_scout_prompt.md",
+    ]
+    required.extend(
+        BROAD_STATE_4X2500_PREP_DIR / f"broad_state_4x2500_scout_shard_{index:03d}_locked_queue_summary.json"
+        for index in range(1, 5)
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision, master, invariants, preflight, dashboard = (read_json(path) for path in required[:5])
+    shards = [read_json(path) for path in required[6:]]
+    expected_shards = [f"broad_4x2500_shard_{index:03d}" for index in range(1, 5)]
+    gates = (
+        decision.get("decision") == "broad_state_4x2500_scout_infrastructure_prep_completed_live_ready"
+        and decision.get("master_locked_target_count") == 10000
+        and decision.get("shard_target_counts") == {name: 2500 for name in expected_shards}
+        and decision.get("planned_unique_municipalities") == 10000
+        and decision.get("newly_planned_municipalities") == 10000
+        and decision.get("previously_scout_covered_included") == 0
+        and decision.get("actual_scout_covered_before_wave") == 6919
+        and decision.get("projected_cumulative_if_all_parseable") == 16919
+        and decision.get("live_scout_run") is False
+        and decision.get("global_analysis_readiness") is False
+        and master.get("locked_scout_target_count") == 10000
+        and master.get("unique_municipalities_targeted_count") == 10000
+        and all(row.get("locked_scout_target_count") == 2500 for row in shards)
+        and all(row.get("independently_runnable") is True and row.get("independently_resumable") is True for row in shards)
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("actual_coverage_after_prep") == 6919
+        and preflight.get("hosted_search_calls") == preflight.get("direct_sdk_calls") == 0
+        and dashboard.get("planned_rows_added_to_live_map") == 0
+        and dashboard.get("map_filter_contract") == "total_scout_coverage_only"
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 scout infrastructure prep package fails dashboard gates")
+    return True, {
+        **decision,
+        "region_counts": master.get("region_counts", {}),
+        "state_counts": master.get("state_counts", {}),
+        "source_family_query_families": master.get("source_family_query_families", {}),
+        "target_quality_tiers": master.get("target_quality_tiers", {}),
+        "matched_opportunity_count": master.get("matched_safety_non_safety_opportunity_count", 0),
+        "dashboard_result_path": "docs/analysis/broad_state_4x2500_scout_infrastructure_prep_result_2026-07-29.md",
+    }
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5767,13 +5828,41 @@ def build_reports_index_layer(
     broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
     broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
     global_gate_available, global_gate = global_analysis_readiness_gate_status()
+    broad_4x2500_prep_available, broad_4x2500_prep = broad_state_4x2500_scout_infrastructure_prep_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "broad-state-4x2500-scout-infrastructure-prep-2026-07-29",
+                    "title": "Broad State 4 × 2,500 Scout Infrastructure Preparation",
+                    "report_type": "Current no-call broad-scout infrastructure report",
+                    "date": "2026-07-29",
+                    "checkpoint": "10,000 unique planned municipalities; four locked 2,500-target shards",
+                    "summary": (
+                        "A full no-call, state-balanced, source-family-diverse 4 × 2,500 wave is locked. "
+                        "Actual coverage remains 6,919; the live wave is next and candidate review remains deferred."
+                    ),
+                    "tags": ["current", "broad scout", "4x2500", "dry run", "resumability"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + broad_4x2500_prep["dashboard_result_path"],
+                    "link_label": "Open current 4 × 2,500 infrastructure report",
+                    "scope_metrics": [
+                        {"label": "planned targets", "value": 10000},
+                        {"label": "planned shards", "value": 4},
+                        {"label": "actual scout coverage", "value": 6919},
+                    ],
+                }
+            ] if broad_4x2500_prep_available else []
+        ),
         *(
             [
                 {
                     "id": "global-analysis-readiness-gate-2026-07-28",
                     "title": "Global Analysis Readiness Gate Result",
-                    "report_type": "Current diagnostic readiness-gate report",
+                    "report_type": (
+                        "Historical diagnostic readiness-gate report"
+                        if broad_4x2500_prep_available else "Current diagnostic readiness-gate report"
+                    ),
                     "date": "2026-07-28",
                     "checkpoint": "16,947 codified reviewed; 312 quarantines excluded",
                     "summary": (
@@ -5781,8 +5870,8 @@ def build_reports_index_layer(
                         "wage-gap and causal readiness remain blocked. The project-wide readiness "
                         "boolean remains false and 4 × 2,500 scout infrastructure prep is next."
                     ),
-                    "tags": ["current", "readiness gate", "claim boundaries", "4x2500 scout prep"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if broad_4x2500_prep_available else "current", "readiness gate", "claim boundaries", "4x2500 scout prep"],
+                    "current": not broad_4x2500_prep_available, "historical": broad_4x2500_prep_available,
                     "href": repository_root_url + global_gate["dashboard_result_path"],
                     "link_label": "Open current readiness-gate report",
                     "scope_metrics": [
@@ -6297,7 +6386,7 @@ def build_reports_index_layer(
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
         "generated_at": metadata["generated_at"],
-        "data_vintage": "2026-07-28" if (
+        "data_vintage": "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
             source_download_available or candidate_review_available
         ) else "2026-07-27",
         "source_file": relative(REPORTS_INDEX_SOURCE_PATH),
@@ -8730,6 +8819,7 @@ def build_project_phase_summary(
     broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
     broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
     global_gate_available, global_gate = global_analysis_readiness_gate_status()
+    broad_4x2500_prep_available, broad_4x2500_prep = broad_state_4x2500_scout_infrastructure_prep_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8754,11 +8844,13 @@ def build_project_phase_summary(
     )
     return {
         **metadata,
-        "data_vintage": "2026-07-28" if (
+        "data_vintage": "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
             broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "global_analysis_readiness_gate_complete_broad_4x2500_scout_prep_transition"
+            "broad_state_4x2500_scout_infrastructure_prep_complete_live_transition"
+            if broad_4x2500_prep_available
+            else "global_analysis_readiness_gate_complete_broad_4x2500_scout_prep_transition"
             if global_gate_available
             else "combined_broad_rating_ingestion_codification_complete_global_gate_transition"
             if broad_codification_available
@@ -8791,7 +8883,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Global analysis readiness gate complete; broad 4 × 2,500 scouting infrastructure prep ready next"
+            "Broad state 4 × 2,500 scout infrastructure prep complete; four live lanes ready next"
+            if broad_4x2500_prep_available
+            else "Global analysis readiness gate complete; broad 4 × 2,500 scouting infrastructure prep ready next"
             if global_gate_available
             else "Combined broad rating ingestion/codification complete; dedicated global analysis readiness gate ready next"
             if broad_codification_available
@@ -8824,7 +8918,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            global_gate["decision"]
+            broad_4x2500_prep["decision"]
+            if broad_4x2500_prep_available
+            else global_gate["decision"]
             if global_gate_available
             else broad_codification["decision"]
             if broad_codification_available
@@ -8853,7 +8949,9 @@ def build_project_phase_summary(
             else tier_c_supplement["decision"]
         ),
         "current_evidence_status": (
-            "collection_ready_mechanism_and_quantitative_availability_partial_wage_gap_and_causal_blocked"
+            "broad_4x2500_dry_run_locked_live_not_run"
+            if broad_4x2500_prep_available
+            else "collection_ready_mechanism_and_quantitative_availability_partial_wage_gap_and_causal_blocked"
             if global_gate_available
             else "bounded_valid_rated_spans_ingested_and_codified_global_gate_pending"
             if broad_codification_available
@@ -8861,6 +8959,20 @@ def build_project_phase_summary(
         ),
         "global_analysis_readiness": False,
         "global_analysis_readiness_gate_available": global_gate_available,
+        "broad_state_4x2500_scout_infrastructure_prep_available": broad_4x2500_prep_available,
+        "broad_state_4x2500_scout_infrastructure_prep_decision": broad_4x2500_prep.get("decision") if broad_4x2500_prep_available else None,
+        "planned_scout_target_ceiling": broad_4x2500_prep.get("master_locked_target_count", 0) if broad_4x2500_prep_available else 10000,
+        "planned_scout_shard_count": 4,
+        "planned_scout_per_shard_ceiling": 2500,
+        "planned_scout_unique_municipality_count": broad_4x2500_prep.get("planned_unique_municipalities", 0) if broad_4x2500_prep_available else 0,
+        "newly_planned_scout_municipality_count": broad_4x2500_prep.get("newly_planned_municipalities", 0) if broad_4x2500_prep_available else 0,
+        "previously_covered_scout_municipalities_in_plan": broad_4x2500_prep.get("previously_scout_covered_included", 0) if broad_4x2500_prep_available else 0,
+        "projected_cumulative_scout_covered_if_all_parseable": broad_4x2500_prep.get("projected_cumulative_if_all_parseable", 0) if broad_4x2500_prep_available else 0,
+        "planned_scout_state_count": broad_4x2500_prep.get("state_count", 0) if broad_4x2500_prep_available else 0,
+        "planned_scout_region_count": broad_4x2500_prep.get("region_count", 0) if broad_4x2500_prep_available else 0,
+        "planned_scout_region_counts": broad_4x2500_prep.get("region_counts", {}) if broad_4x2500_prep_available else {},
+        "planned_scout_source_family_query_counts": broad_4x2500_prep.get("source_family_query_families", {}) if broad_4x2500_prep_available else {},
+        "planned_scout_target_quality_tiers": broad_4x2500_prep.get("target_quality_tiers", {}) if broad_4x2500_prep_available else {},
         "global_readiness_gate_decision": global_gate.get("decision") if global_gate_available else None,
         "global_readiness_gate_flags": global_gate.get("subflag_results", {}) if global_gate_available else {},
         "global_collection_readiness": global_gate.get("subflag_results", {}).get("global_collection_readiness") if global_gate_available else "not_applicable",
@@ -9127,7 +9239,9 @@ def build_project_phase_summary(
             else "not_ready"
         ),
         "current_report_title": (
-            "Global Analysis Readiness Gate Result"
+            "Broad State 4 × 2,500 Scout Infrastructure Preparation"
+            if broad_4x2500_prep_available
+            else "Global Analysis Readiness Gate Result"
             if global_gate_available
             else "Combined Broad Rated-Evidence Ingestion and Codification Result"
             if broad_codification_available
@@ -9149,7 +9263,9 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            global_gate["dashboard_result_path"]
+            broad_4x2500_prep["dashboard_result_path"]
+            if broad_4x2500_prep_available
+            else global_gate["dashboard_result_path"]
             if global_gate_available
             else broad_codification["dashboard_result_path"]
             if broad_codification_available
@@ -9172,7 +9288,9 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            global_gate["dashboard_result_path"]
+            broad_4x2500_prep["dashboard_result_path"]
+            if broad_4x2500_prep_available
+            else global_gate["dashboard_result_path"]
             if global_gate_available
             else broad_codification["dashboard_result_path"]
             if broad_codification_available
@@ -9201,7 +9319,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "prepare four isolated 2,500-target broad scouting lanes with geographic, source-family, and municipality coverage accounting"
+            "run four isolated live 2,500-target broad scout lanes with T+0/T+8/T+16/T+24 stagger, per-target checkpoints, and candidate review deferred"
+            if broad_4x2500_prep_available
+            else "prepare four isolated 2,500-target broad scouting lanes with geographic, source-family, and municipality coverage accounting"
             if global_gate_available
             else "run the dedicated global analysis readiness diagnostic gate; preserve corpus, matching, normalization, prevalence, and causal boundaries"
             if broad_codification_available
@@ -9287,7 +9407,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "broad 4 × 2,500 scouting infrastructure preparation"
+            "live broad state 4 × 2,500 scouting"
+            if broad_4x2500_prep_available
+            else "broad 4 × 2,500 scouting infrastructure preparation"
             if global_gate_available
             else "dedicated global analysis readiness diagnostic gate"
             if broad_codification_available
@@ -9312,6 +9434,15 @@ def build_project_phase_summary(
             else "broad state-by-state source scouting"
         ),
         "next_phase_sequence": (
+            [
+                "launch four isolated live lanes at T+0/T+8/T+16/T+24 with controlled overlap",
+                "validate each committed shard hash and checkpoint after every target",
+                "write only lane-local outputs; workers do not mutate dashboard/status files",
+                "merge outcomes once and count only unique committed parseable municipalities as actual coverage",
+                "defer candidate review until all shards finish or the user explicitly stops scouting",
+            ]
+            if broad_4x2500_prep_available
+            else
             [
                 "lock four independent 2,500-target scout queues with a 10,000-target ceiling",
                 "balance states, regions, source families, and municipality coverage gaps",

@@ -375,8 +375,29 @@ function App() {
               {projectPhaseSummary.global_analysis_readiness_gate_available && (
                 <MetricCard label="Top readiness blockers" value={formatNumber(projectPhaseSummary.global_readiness_top_blockers?.length)} note={(projectPhaseSummary.global_readiness_top_blockers ?? []).join(" · ")} />
               )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+              {projectPhaseSummary.global_analysis_readiness_gate_available && !projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
                 <MetricCard label="Next planned stage" value="4 × 2,500 prep" note="10,000-target ceiling; scouting infrastructure only" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="4 × 2,500 infrastructure" value="Live-ready" note="No live calls occurred during preparation" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="Planned scout target ceiling" value={formatNumber(projectPhaseSummary.planned_scout_target_ceiling)} note={`${formatNumber(projectPhaseSummary.planned_scout_shard_count)} locked shards · ${formatNumber(projectPhaseSummary.planned_scout_per_shard_ceiling)} each`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="Planned municipality coverage" value={formatNumber(projectPhaseSummary.planned_scout_unique_municipality_count)} note={`${formatNumber(projectPhaseSummary.newly_planned_scout_municipality_count)} new · ${formatNumber(projectPhaseSummary.previously_covered_scout_municipalities_in_plan)} already covered`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="All-parseable projection" value={formatNumber(projectPhaseSummary.projected_cumulative_scout_covered_if_all_parseable)} note="Projection only; actual map coverage remains 6,919" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="Planned geographic breadth" value={`${formatNumber(projectPhaseSummary.planned_scout_state_count)} states`} note={`${formatNumber(projectPhaseSummary.planned_scout_region_count)} regions · ${formatCountMap(projectPhaseSummary.planned_scout_region_counts)}`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="Source-family query families" value={formatNumber(Object.keys(projectPhaseSummary.planned_scout_source_family_query_counts ?? {}).length)} note={formatCountMap(projectPhaseSummary.planned_scout_source_family_query_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+                <MetricCard label="Next authorized stage" value="Live 4 × 2,500 scout" note="T+0/T+8/T+16/T+24; checkpoint after every target; candidate review deferred" />
               )}
               <MetricCard
                 label="Globally usable descriptive evidence"

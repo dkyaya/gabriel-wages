@@ -1,0 +1,25 @@
+{
+  "actual_coverage_after_prep": 6919,
+  "actual_coverage_before": 6919,
+  "all_invariants_passed": true,
+  "controlled_shard_ids": true,
+  "downstream_stage_runs": 0,
+  "each_shard_independently_runnable_resumable": true,
+  "global_analysis_readiness_false": true,
+  "live_calls": 0,
+  "map_filter_contract": "total_scout_coverage_only",
+  "master_count": 10000,
+  "master_equals_union_of_shards": true,
+  "next_live_prompt_ready": true,
+  "quality_tiers_controlled": true,
+  "shard_counts": {
+    "broad_4x2500_shard_001": 2500,
+    "broad_4x2500_shard_002": 2500,
+    "broad_4x2500_shard_003": 2500,
+    "broad_4x2500_shard_004": 2500
+  },
+  "unique_municipalities": 10000,
+  "unique_target_ids": 10000,
+  "url_or_source_access": 0,
+  "weak_duplicate_needs_review_included": 0
+}

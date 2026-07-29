@@ -1,0 +1,20 @@
+{
+  "actual_candidate_rows": 13041,
+  "actual_scout_covered_municipalities": 6919,
+  "current_operation": "broad_state_4x2500_scout_infrastructure_prep_complete",
+  "dashboard_updated": true,
+  "global_analysis_readiness": false,
+  "global_readiness_gate_status": "partial_diagnostic_only",
+  "map_data_date": "2026-07-27",
+  "map_filter_contract": "total_scout_coverage_only",
+  "newly_planned_municipalities_count": 10000,
+  "next_authorized_stage": "live_broad_state_4x2500_scout",
+  "planned_municipality_coverage_count": 10000,
+  "planned_per_shard_target_ceiling": 2500,
+  "planned_rows_added_to_live_map": 0,
+  "planned_scout_target_ceiling": 10000,
+  "planned_shard_count": 4,
+  "previously_covered_municipalities_included": 0,
+  "projected_cumulative_scout_covered_if_all_parseable": 16919,
+  "source_family_query_family_count": 12
+}

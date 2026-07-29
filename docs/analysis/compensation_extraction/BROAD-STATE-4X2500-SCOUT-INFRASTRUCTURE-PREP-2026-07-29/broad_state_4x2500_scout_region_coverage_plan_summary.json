@@ -1,0 +1,11 @@
+{
+  "actual_coverage_added": 0,
+  "counts": {
+    "Midwest": 4004,
+    "Northeast": 1881,
+    "South": 3461,
+    "West": 654
+  },
+  "planned_target_count": 10000,
+  "region_count": 4
+}
