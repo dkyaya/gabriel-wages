@@ -1,0 +1,27 @@
+{
+  "required_assertions": [
+    "rating_queue_count_exact",
+    "lane_counts_exact",
+    "master_equals_lane_union",
+    "only_positive_exact_spans_rated",
+    "ambiguous_no_span_error_excluded",
+    "exact_offsets_hashes_reconciled",
+    "model_input_bounded_no_full_text",
+    "raw_prompts_responses_not_saved",
+    "no_full_text_or_retained_binaries_tracked",
+    "no_predecessor_stage_reruns",
+    "no_ocr_rendering_ingestion_codification_statistics",
+    "quote_exactness_valid_rows",
+    "schema_valid_rows",
+    "forbidden_claim_scan_passed",
+    "valid_plus_quarantine_reconciles",
+    "downstream_artifacts_complete",
+    "staggered_overlap_achieved",
+    "map_total_scout_coverage_only",
+    "dashboard_metrics_updated",
+    "global_analysis_readiness_false",
+    "partial_outputs_cannot_masquerade_as_complete"
+  ],
+  "status": "passed",
+  "test_script": "scripts/test_combined_broad_exact_span_rating_17259.py"
+}

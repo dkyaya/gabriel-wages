@@ -1,0 +1,14 @@
+{
+  "ambiguous_no_span_error_rows": 0,
+  "global_analysis_readiness": false,
+  "id_order_sha256": "ed6068f8b03a93e73563dc5f3632aae61cfbb3aeeecdee25c24cf6b59f12bed1",
+  "lane_counts": {
+    "rating_lane_001": 4315,
+    "rating_lane_002": 4315,
+    "rating_lane_003": 4315,
+    "rating_lane_004": 4314
+  },
+  "locked_queue_count": 17259,
+  "master_equals_lane_union": true,
+  "only_positive_exact_spans": true
+}

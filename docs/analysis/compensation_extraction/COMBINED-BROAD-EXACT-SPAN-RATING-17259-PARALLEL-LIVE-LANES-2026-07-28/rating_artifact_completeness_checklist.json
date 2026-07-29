@@ -1,0 +1,25 @@
+{
+  "all_required_downstream_summary_inputs_complete": true,
+  "missing_derivable_artifacts": [],
+  "missing_non_derivable_artifacts": [],
+  "reconstructed_deterministically_from_valid_quarantine_results_ledgers": true,
+  "required_artifact_count": 16,
+  "required_artifacts": [
+    "mechanism_specific_rating_summaries.json",
+    "quantitative_label_rating_summaries.json",
+    "evidence_family_rating_summaries.json",
+    "claim_relevance_rating_summary.json",
+    "evidence_strength_rating_summary.json",
+    "direct_text_support_rating_summary.json",
+    "documentary_mechanism_support_rating_summary.json",
+    "quantitative_compensation_support_rating_summary.json",
+    "source_navigation_support_rating_summary.json",
+    "provisional_causal_candidate_support_rating_summary.json",
+    "direction_of_pressure_rating_summary.json",
+    "rating_input_valid_quarantine_reconciliation.json",
+    "combined_broad_exact_span_rating_17259_results_summary.json",
+    "combined_broad_exact_span_rating_17259_valid_ratings_summary.json",
+    "combined_broad_exact_span_rating_17259_quarantine_summary.json",
+    "combined_broad_exact_span_rating_17259_dashboard_update_summary.json"
+  ]
+}

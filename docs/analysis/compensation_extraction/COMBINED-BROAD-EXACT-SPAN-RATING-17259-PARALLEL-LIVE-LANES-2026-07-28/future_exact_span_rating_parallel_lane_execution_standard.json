@@ -1,0 +1,14 @@
+{
+  "bounded_retries": true,
+  "checkpoint_after_every_span": true,
+  "coordinator_only_shared_outputs": true,
+  "isolated_worker_outputs": true,
+  "lane_count": 4,
+  "raw_prompts_responses_saved": false,
+  "standard_starts_minutes": [
+    0,
+    8,
+    16,
+    24
+  ]
+}

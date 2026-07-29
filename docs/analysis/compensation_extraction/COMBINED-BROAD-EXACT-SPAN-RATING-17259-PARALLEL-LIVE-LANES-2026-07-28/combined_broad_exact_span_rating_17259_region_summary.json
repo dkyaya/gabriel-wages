@@ -1,0 +1,31 @@
+{
+  "dimension": "region",
+  "distinct_count": 4,
+  "rows": [
+    {
+      "claim_relevance_counts": "{\"context_only\": 2249, \"direct_text_claim\": 898, \"documentary_mechanism_claim\": 605, \"not_claim_ready\": 491, \"quantitative_compensation_claim\": 2391, \"source_navigation_claim\": 57}",
+      "evidence_strength_counts": "{\"moderate\": 1217, \"not_supported\": 825, \"strong\": 2007, \"weak\": 2642}",
+      "region": "Midwest",
+      "valid_rating_count": 6691
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 1393, \"direct_text_claim\": 507, \"documentary_mechanism_claim\": 345, \"not_claim_ready\": 305, \"quantitative_compensation_claim\": 1467, \"source_navigation_claim\": 34}",
+      "evidence_strength_counts": "{\"moderate\": 770, \"not_supported\": 502, \"strong\": 1112, \"weak\": 1667}",
+      "region": "Northeast",
+      "valid_rating_count": 4051
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 1155, \"direct_text_claim\": 365, \"documentary_mechanism_claim\": 209, \"not_claim_ready\": 256, \"quantitative_compensation_claim\": 990, \"source_navigation_claim\": 25}",
+      "evidence_strength_counts": "{\"moderate\": 535, \"not_supported\": 512, \"strong\": 755, \"weak\": 1198}",
+      "region": "South",
+      "valid_rating_count": 3000
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 1028, \"direct_text_claim\": 461, \"documentary_mechanism_claim\": 215, \"not_claim_ready\": 210, \"provisional_causal_candidate\": 1, \"quantitative_compensation_claim\": 1260, \"source_navigation_claim\": 30}",
+      "evidence_strength_counts": "{\"moderate\": 652, \"not_supported\": 360, \"strong\": 959, \"weak\": 1234}",
+      "region": "West",
+      "valid_rating_count": 3205
+    }
+  ],
+  "valid_rating_count": 16947
+}

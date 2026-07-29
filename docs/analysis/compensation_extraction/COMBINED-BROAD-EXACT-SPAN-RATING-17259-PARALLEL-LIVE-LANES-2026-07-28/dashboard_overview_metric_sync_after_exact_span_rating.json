@@ -1,0 +1,29 @@
+{
+  "backend": "huit_openai_responses_direct_sdk",
+  "claim_boundaries": "ratings are corpus-bounded; not ingested, codified, causal, representative, or globally analysis-ready",
+  "completed_lane_count": 4,
+  "current_operation": "live exact-span rating complete",
+  "dashboard_update_required": true,
+  "dashboard_update_status": "builder_sync_passed",
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "rating_lane_001": 4315,
+    "rating_lane_002": 4315,
+    "rating_lane_003": 4315,
+    "rating_lane_004": 4314
+  },
+  "live_model_api_request_attempt_count": 17474,
+  "map_filter_contract": "total_scout_coverage_only",
+  "metric_sync_passed": true,
+  "model": "gpt-5.4-nano",
+  "model_api_request_attempt_count": 17478,
+  "next_authorized_stage": "bounded exact-span rating summary review",
+  "preflight_model_api_request_attempt_count": 4,
+  "quarantine_count": 312,
+  "rating_attempted_count": 17259,
+  "rating_queue_count": 17259,
+  "task_id": "COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28",
+  "valid_plus_quarantine_count": 17259,
+  "valid_plus_quarantine_reconciles": true,
+  "valid_rating_count": 16947
+}

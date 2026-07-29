@@ -1,0 +1,8 @@
+{
+  "excluded_from_summary": true,
+  "quarantine_count": 312,
+  "reason_counts": {
+    "persistent_transport_or_strict_validation_failure": 47,
+    "strict_semantic_consistency_failure": 265
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-29T00:35:08Z",
+  "generated_at": "2026-07-29T02:51:55Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,8 +95,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "combined_broad_span_extraction_complete",
-  "source_review_phase": "combined_broad_3815_deterministic_span_parallel_lanes_completed",
+  "stage": "combined_broad_exact_span_rating_complete",
+  "source_review_phase": "combined_broad_17259_live_exact_span_rating_parallel_lanes_completed",
   "metadata_triage_complete": true,
   "metadata_triage_rows": 4726,
   "p1_rows": 1760,
@@ -110,7 +110,7 @@
   },
   "initial_source_review_states": 43,
   "initial_source_review_unique_municipalities": 95,
-  "source_review_live_status": "span_extraction_completed_all_four_lanes",
+  "source_review_live_status": "rating_completed_all_four_lanes",
   "bounded_live_source_review_path": "implemented_httpx_batch3_merged",
   "recommended_initial_live_concurrency": 4,
   "recommended_initial_timeout_seconds": 30,
@@ -118,9 +118,9 @@
   "recommended_initial_read_timeout_seconds": 20,
   "recommended_initial_max_redirects": 5,
   "recommended_initial_max_bytes": 26214400,
-  "next_scaling_decision": "bounded_exact_span_rating",
+  "next_scaling_decision": "bounded_exact_span_rating_summary_review",
   "content_download_status": "completed_unchanged",
-  "source_rating_status": "not_started",
+  "source_rating_status": "completed_valid_and_quarantine_reconciled",
   "extraction_readiness_status": "text_extraction_completed_span_queue_ready",
   "ingestion_status": "not_started",
   "codify_status": "not_started",
@@ -188,9 +188,9 @@
   "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
   "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "Exact spans are deterministic candidates only, not evidence ratings or claims.",
-    "No model/API analysis, ingestion, codification, wage normalization/comparison, or statistical work occurred.",
-    "Span counts do not establish wage differences, national prevalence, effects, or causation.",
+    "Ratings classify bounded exact spans and context only; quarantines are excluded from valid summaries.",
+    "Ratings are not ingestion, codification, wage normalization/comparison, statistical estimates, or causal proof.",
+    "Rating counts do not establish wage differences, national prevalence, effects, or representativeness.",
     "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false."
   ],
   "latest_source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
@@ -351,7 +351,7 @@
   "batch3_3x500_rows_merged": 1500,
   "batch3_3x500_artifact_saved_rows": 1480,
   "cumulative_total_artifact_bytes": 4502698363,
-  "next_recommendation": "bounded_exact_span_rating",
+  "next_recommendation": "bounded_exact_span_rating_summary_review",
   "batch3_durable_summary_source": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_summary.json",
   "source_review_queue_size": 5589,
   "source_review_download_attempted_count": 5589,
@@ -417,5 +417,82 @@
   "ambiguous_span_count": 915,
   "span_extraction_error_count": 0,
   "rating_candidate_count": 17259,
-  "combined_broad_span_extraction_result_path": "docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md"
+  "combined_broad_span_extraction_result_path": "docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md",
+  "rating_queue_size": 17259,
+  "rating_attempted_count": 17259,
+  "valid_rating_count": 16947,
+  "rating_quarantine_count": 312,
+  "rating_candidates_by_evidence_family": {
+    "non_base_compensation": 1582,
+    "qualitative_mechanism": 4695,
+    "quantitative_compensation": 10541,
+    "source_navigation_reference": 441
+  },
+  "valid_ratings_by_evidence_family": {
+    "non_base_compensation": 2213,
+    "not_supported": 728,
+    "qualitative_mechanism": 1734,
+    "quantitative_compensation": 8169,
+    "source_navigation_reference": 495,
+    "weak_or_not_compensation_relevant": 3608
+  },
+  "valid_ratings_by_mechanism_label": {
+    "automatic_raise_mechanism": 1227,
+    "bargaining_power_signal": 859,
+    "base_wage_direct_value": 2209,
+    "fiscal_constraint_signal": 288,
+    "gap_narrowing_signal": 315,
+    "implementation_or_retroactivity_advantage": 1431,
+    "market_or_comparability_pressure": 416,
+    "non_base_compensation_signal": 2425,
+    "non_safety_constraint_signal": 30,
+    "not_applicable": 750,
+    "parity_or_internal_equity_signal": 204,
+    "rank_or_specialization_premium": 203,
+    "safety_advantage_signal": 62,
+    "strike_or_no_strike_constraint": 636,
+    "unknown_or_needs_review": 4309,
+    "weak_or_no_claim_support": 1583
+  },
+  "valid_ratings_by_quantitative_label": {
+    "annual_salary": 176,
+    "classification_compensation_plan": 456,
+    "cola_cpi": 1007,
+    "contract_period": 756,
+    "effective_date": 2031,
+    "hourly_rate": 1571,
+    "not_applicable": 4557,
+    "other_quantitative_compensation": 582,
+    "pay_band_or_grade": 411,
+    "percentage_raise": 1731,
+    "premium_stipend_differential": 1083,
+    "retroactive_pay": 454,
+    "salary_schedule": 622,
+    "step_rank_grade": 331,
+    "unknown_quantitative_compensation": 842,
+    "wage_schedule": 337
+  },
+  "claim_relevance_summary": {
+    "context_only": 5825,
+    "direct_text_claim": 2231,
+    "documentary_mechanism_claim": 1374,
+    "not_claim_ready": 1262,
+    "provisional_causal_candidate": 1,
+    "quantitative_compensation_claim": 6108,
+    "source_navigation_claim": 146
+  },
+  "evidence_strength_summary": {
+    "moderate": 3174,
+    "not_supported": 2199,
+    "strong": 4833,
+    "weak": 6741
+  },
+  "direction_of_pressure_summary": {
+    "gap_narrowing": 185,
+    "neutral_or_unclear": 4092,
+    "non_safety_advantage": 360,
+    "not_applicable": 12252,
+    "safety_advantage": 58
+  },
+  "combined_broad_exact_span_rating_result_path": "docs/analysis/combined_broad_exact_span_rating_17259_result_2026-07-28.md"
 }

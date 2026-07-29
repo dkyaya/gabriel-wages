@@ -1,0 +1,115 @@
+{
+  "dimension": "source_family_hint",
+  "distinct_count": 18,
+  "rows": [
+    {
+      "claim_relevance_counts": "{\"context_only\": 393, \"direct_text_claim\": 141, \"documentary_mechanism_claim\": 77, \"not_claim_ready\": 83, \"quantitative_compensation_claim\": 544, \"source_navigation_claim\": 7}",
+      "evidence_strength_counts": "{\"moderate\": 191, \"not_supported\": 142, \"strong\": 414, \"weak\": 498}",
+      "source_family_hint": "agenda_packet_or_minutes",
+      "valid_rating_count": 1245
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 294, \"direct_text_claim\": 119, \"documentary_mechanism_claim\": 83, \"not_claim_ready\": 73, \"quantitative_compensation_claim\": 282, \"source_navigation_claim\": 2}",
+      "evidence_strength_counts": "{\"moderate\": 181, \"not_supported\": 112, \"strong\": 199, \"weak\": 361}",
+      "source_family_hint": "arbitration_award",
+      "valid_rating_count": 853
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 825, \"direct_text_claim\": 287, \"documentary_mechanism_claim\": 154, \"not_claim_ready\": 168, \"quantitative_compensation_claim\": 719, \"source_navigation_claim\": 31}",
+      "evidence_strength_counts": "{\"moderate\": 427, \"not_supported\": 339, \"strong\": 555, \"weak\": 863}",
+      "source_family_hint": "budget_or_pay_plan",
+      "valid_rating_count": 2184
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 1388, \"direct_text_claim\": 570, \"documentary_mechanism_claim\": 391, \"not_claim_ready\": 295, \"quantitative_compensation_claim\": 1412, \"source_navigation_claim\": 42}",
+      "evidence_strength_counts": "{\"moderate\": 817, \"not_supported\": 518, \"strong\": 1161, \"weak\": 1602}",
+      "source_family_hint": "cba",
+      "valid_rating_count": 4098
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 191, \"direct_text_claim\": 65, \"documentary_mechanism_claim\": 50, \"not_claim_ready\": 43, \"quantitative_compensation_claim\": 162, \"source_navigation_claim\": 2}",
+      "evidence_strength_counts": "{\"moderate\": 80, \"not_supported\": 70, \"strong\": 144, \"weak\": 219}",
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record",
+      "valid_rating_count": 513
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 322, \"direct_text_claim\": 104, \"documentary_mechanism_claim\": 55, \"not_claim_ready\": 82, \"quantitative_compensation_claim\": 284}",
+      "evidence_strength_counts": "{\"moderate\": 145, \"not_supported\": 168, \"strong\": 217, \"weak\": 317}",
+      "source_family_hint": "cba_or_budget_pay_plan_with_explicit_compensation_mechanism",
+      "valid_rating_count": 847
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 454, \"direct_text_claim\": 150, \"documentary_mechanism_claim\": 148, \"not_claim_ready\": 121, \"quantitative_compensation_claim\": 423, \"source_navigation_claim\": 14}",
+      "evidence_strength_counts": "{\"moderate\": 227, \"not_supported\": 208, \"strong\": 378, \"weak\": 497}",
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule",
+      "valid_rating_count": 1310
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 73, \"direct_text_claim\": 25, \"documentary_mechanism_claim\": 20, \"not_claim_ready\": 19, \"quantitative_compensation_claim\": 72, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 45, \"not_supported\": 35, \"strong\": 46, \"weak\": 84}",
+      "source_family_hint": "civil_service_or_hr_pay_plan",
+      "valid_rating_count": 210
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 66, \"direct_text_claim\": 15, \"documentary_mechanism_claim\": 16, \"not_claim_ready\": 2, \"quantitative_compensation_claim\": 39, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 27, \"not_supported\": 12, \"strong\": 27, \"weak\": 73}",
+      "source_family_hint": "classification_study",
+      "valid_rating_count": 139
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 206, \"direct_text_claim\": 78, \"documentary_mechanism_claim\": 45, \"not_claim_ready\": 32, \"quantitative_compensation_claim\": 218, \"source_navigation_claim\": 4}",
+      "evidence_strength_counts": "{\"moderate\": 117, \"not_supported\": 56, \"strong\": 181, \"weak\": 229}",
+      "source_family_hint": "collective_bargaining_agreement_or_moa_or_wage_schedule",
+      "valid_rating_count": 583
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 135, \"direct_text_claim\": 32, \"documentary_mechanism_claim\": 35, \"not_claim_ready\": 15, \"quantitative_compensation_claim\": 80, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 52, \"not_supported\": 41, \"strong\": 54, \"weak\": 151}",
+      "source_family_hint": "compensation_study",
+      "valid_rating_count": 298
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 14, \"direct_text_claim\": 7, \"documentary_mechanism_claim\": 7, \"not_claim_ready\": 11, \"quantitative_compensation_claim\": 26}",
+      "evidence_strength_counts": "{\"moderate\": 13, \"not_supported\": 10, \"strong\": 21, \"weak\": 21}",
+      "source_family_hint": "factfinding_report",
+      "valid_rating_count": 65
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 338, \"direct_text_claim\": 144, \"documentary_mechanism_claim\": 58, \"not_claim_ready\": 56, \"provisional_causal_candidate\": 1, \"quantitative_compensation_claim\": 434, \"source_navigation_claim\": 3}",
+      "evidence_strength_counts": "{\"moderate\": 207, \"not_supported\": 95, \"strong\": 322, \"weak\": 410}",
+      "source_family_hint": "mou_or_memorandum",
+      "valid_rating_count": 1034
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 137, \"direct_text_claim\": 77, \"documentary_mechanism_claim\": 32, \"not_claim_ready\": 31, \"quantitative_compensation_claim\": 220, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 94, \"not_supported\": 47, \"strong\": 179, \"weak\": 178}",
+      "source_family_hint": "other_local_government_pay_policy",
+      "valid_rating_count": 498
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 82, \"direct_text_claim\": 29, \"documentary_mechanism_claim\": 21, \"not_claim_ready\": 14, \"quantitative_compensation_claim\": 54, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 34, \"not_supported\": 16, \"strong\": 45, \"weak\": 106}",
+      "source_family_hint": "personnel_policy",
+      "valid_rating_count": 201
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 63, \"direct_text_claim\": 32, \"documentary_mechanism_claim\": 16, \"not_claim_ready\": 14, \"quantitative_compensation_claim\": 91, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 49, \"not_supported\": 14, \"strong\": 70, \"weak\": 84}",
+      "source_family_hint": "salary_ordinance",
+      "valid_rating_count": 217
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 79, \"direct_text_claim\": 10, \"documentary_mechanism_claim\": 9, \"not_claim_ready\": 16, \"quantitative_compensation_claim\": 44, \"source_navigation_claim\": 1}",
+      "evidence_strength_counts": "{\"moderate\": 20, \"not_supported\": 30, \"strong\": 38, \"weak\": 71}",
+      "source_family_hint": "unknown_or_needs_review",
+      "valid_rating_count": 159
+    },
+    {
+      "claim_relevance_counts": "{\"context_only\": 765, \"direct_text_claim\": 346, \"documentary_mechanism_claim\": 157, \"not_claim_ready\": 187, \"quantitative_compensation_claim\": 1004, \"source_navigation_claim\": 34}",
+      "evidence_strength_counts": "{\"moderate\": 448, \"not_supported\": 286, \"strong\": 782, \"weak\": 977}",
+      "source_family_hint": "wage_schedule",
+      "valid_rating_count": 2493
+    }
+  ],
+  "valid_rating_count": 16947
+}

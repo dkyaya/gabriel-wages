@@ -1,0 +1,7 @@
+{
+  "candidate_count": 9860,
+  "global_analysis_readiness": false,
+  "quarantine_excluded": 312,
+  "selection_rule": "valid rating; supported strength; claim relevance not context_only/not_claim_ready",
+  "valid_rating_source_count": 16947
+}

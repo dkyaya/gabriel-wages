@@ -1,0 +1,6 @@
+{
+  "current_operation": "live exact-span rating complete",
+  "global_analysis_readiness": false,
+  "guard_passed": true,
+  "stale_span_extraction_current_operation": false
+}

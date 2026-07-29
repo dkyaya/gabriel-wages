@@ -1,0 +1,12 @@
+{
+  "coordinator_validation_applied": true,
+  "elapsed_seconds": 2110.476,
+  "global_analysis_readiness": false,
+  "lane_id": "rating_lane_004",
+  "quarantine_count": 74,
+  "queue_count": 4314,
+  "rating_attempted_count": 4314,
+  "request_attempt_count": 4363,
+  "status": "completed",
+  "valid_rating_count": 4240
+}

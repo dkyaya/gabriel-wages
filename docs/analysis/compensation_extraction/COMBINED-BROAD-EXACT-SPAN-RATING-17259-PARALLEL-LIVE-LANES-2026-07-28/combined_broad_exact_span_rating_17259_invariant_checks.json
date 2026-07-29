@@ -1,0 +1,23 @@
+{
+  "ambiguous_no_span_error_excluded": true,
+  "dashboard_metrics_updated": true,
+  "downstream_artifacts_complete": true,
+  "exact_offsets_hashes_reconciled": true,
+  "forbidden_claim_scan_passed": true,
+  "global_analysis_readiness_false": true,
+  "lane_counts_exact": true,
+  "map_total_scout_coverage_only": true,
+  "master_equals_lane_union": true,
+  "model_input_bounded_no_full_text": true,
+  "no_full_text_or_retained_binaries_tracked": true,
+  "no_ocr_rendering_ingestion_codification_statistics": true,
+  "no_predecessor_stage_reruns": true,
+  "only_positive_exact_spans_rated": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "quote_exactness_valid_rows": true,
+  "rating_queue_count_exact": true,
+  "raw_prompts_responses_not_saved": true,
+  "schema_valid_rows": true,
+  "staggered_overlap_achieved": true,
+  "valid_plus_quarantine_reconciles": true
+}

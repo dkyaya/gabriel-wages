@@ -1,38 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-29T00:35:08Z",
+  "generated_at": "2026-07-29T02:51:55Z",
   "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "combined-broad-span-extraction-3815-2026-07-28",
-      "title": "Combined Broad Exact-Span Extraction Result",
-      "report_type": "Current deterministic exact-span report",
+      "id": "combined-broad-exact-span-rating-17259-2026-07-28",
+      "title": "Combined Broad Live Exact-Span Rating Result",
+      "report_type": "Current bounded live rating report",
       "date": "2026-07-28",
-      "checkpoint": "3,815 sources attempted; 17,259 exact candidates",
-      "summary": "Four isolated, standard-staggered lanes found deterministic exact candidate spans with validated offsets, hashes, and bounded context. No rating, model analysis, ingestion, wage comparison, or causal analysis occurred.",
+      "checkpoint": "17,259 attempted; 16,947 valid; 312 quarantined",
+      "summary": "Four isolated standard-staggered live lanes rated bounded exact spans. Strict quote/schema validation and downstream completeness gates passed; ratings remain corpus-bounded and not globally analysis-ready.",
       "tags": [
         "current",
-        "exact spans",
-        "deterministic",
+        "exact-span ratings",
+        "live lanes",
         "claim boundaries"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md",
-      "link_label": "Open current exact-span report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_exact_span_rating_17259_result_2026-07-28.md",
+      "link_label": "Open current exact-span rating report",
       "scope_metrics": [
         {
-          "label": "span queue",
-          "value": 3815
-        },
-        {
-          "label": "positive sources",
-          "value": 2721
-        },
-        {
-          "label": "rating candidates",
+          "label": "rating queue",
           "value": 17259
+        },
+        {
+          "label": "valid ratings",
+          "value": 16947
+        },
+        {
+          "label": "quarantine",
+          "value": 312
         }
       ]
     },
@@ -132,6 +132,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-span-extraction-3815-2026-07-28",
+      "title": "Combined Broad Exact-Span Extraction Result",
+      "report_type": "Historical deterministic exact-span report",
+      "date": "2026-07-28",
+      "checkpoint": "3,815 sources attempted; 17,259 exact candidates",
+      "summary": "Four isolated, standard-staggered lanes found deterministic exact candidate spans with validated offsets, hashes, and bounded context. No rating, model analysis, ingestion, wage comparison, or causal analysis occurred.",
+      "tags": [
+        "historical",
+        "exact spans",
+        "deterministic",
+        "claim boundaries"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md",
+      "link_label": "Open current exact-span report",
+      "scope_metrics": [
+        {
+          "label": "span queue",
+          "value": 3815
+        },
+        {
+          "label": "positive sources",
+          "value": 2721
+        },
+        {
+          "label": "rating candidates",
+          "value": 17259
         }
       ]
     },

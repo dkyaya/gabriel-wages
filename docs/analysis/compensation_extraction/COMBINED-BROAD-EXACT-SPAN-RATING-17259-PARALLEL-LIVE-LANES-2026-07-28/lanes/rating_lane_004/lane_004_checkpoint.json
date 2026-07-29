@@ -1,0 +1,9 @@
+{
+  "checkpointed_after_every_span": true,
+  "completed_count": 4314,
+  "lane_id": "rating_lane_004",
+  "last_checkpoint_sequence": 4314,
+  "remaining_count": 0,
+  "status": "completed",
+  "updated_at": "2026-07-29T02:51:19.326525+00:00"
+}

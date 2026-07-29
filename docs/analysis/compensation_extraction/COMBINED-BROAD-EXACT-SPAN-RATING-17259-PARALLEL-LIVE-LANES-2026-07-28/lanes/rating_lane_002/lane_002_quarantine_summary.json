@@ -1,0 +1,8 @@
+{
+  "lane_id": "rating_lane_002",
+  "quarantine_count": 76,
+  "reason_counts": {
+    "persistent_transport_or_strict_validation_failure": 9,
+    "strict_semantic_consistency_failure": 67
+  }
+}

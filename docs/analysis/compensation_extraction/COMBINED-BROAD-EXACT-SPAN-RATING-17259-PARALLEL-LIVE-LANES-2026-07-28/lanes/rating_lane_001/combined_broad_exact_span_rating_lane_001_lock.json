@@ -1,0 +1,8 @@
+{
+  "global_analysis_readiness": false,
+  "id_order_sha256": "df5c8440bad63b2e2bd758716cdb5b1a20b01014a3dfe82bddba5fb497699d7a",
+  "lane_id": "rating_lane_001",
+  "locked": true,
+  "locked_queue_count": 4315,
+  "source_manifest_sha256": "da3eebb296af17bb63e2a1ef40811a4f60abfede9c8926e9c7b3d0e2a400d4b5"
+}

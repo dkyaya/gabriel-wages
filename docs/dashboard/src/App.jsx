@@ -52,6 +52,14 @@ function routeFromHash() {
   };
 }
 
+function formatCountMap(value) {
+  return Object.entries(value ?? {})
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([label, count]) => `${label.replaceAll("_", " ")} ${formatNumber(count)}`)
+    .join(" · ") || "None";
+}
+
 function QueueTable({ rows, onSelect }) {
   return (
     <section className="panel queue-table-panel" aria-labelledby="queue-table-title">
@@ -150,8 +158,8 @@ function App() {
             <h1>Gabriel Wages project hub</h1>
             <p className="header-deck">
               Current operation: {projectPhaseSummary.current_phase}. The next authorized stage is
-              {" "}{projectPhaseSummary.next_task}. No evidence rating, ingestion, wage gaps, regressions,
-              treatment effects, population-prevalence estimates, or final causal findings are available.
+              {" "}{projectPhaseSummary.next_task}. Exact-span ratings remain bounded; no ingestion, wage gaps,
+              regressions, treatment effects, population-prevalence estimates, or final causal findings are available.
             </p>
           </div>
           <div className="header-status">
@@ -271,7 +279,47 @@ function App() {
               <MetricCard
                 label="Rating candidates"
                 value={formatNumber(projectPhaseSummary.span_rating_candidate_count)}
-                note="Validated exact spans only · rating has not started"
+                note={`${formatNumber(projectPhaseSummary.exact_span_rating_attempted_count)} attempted in live bounded rating`}
+              />
+              <MetricCard
+                label="Valid exact-span ratings"
+                value={formatNumber(projectPhaseSummary.exact_span_rating_valid_count)}
+                note={`${formatNumber(projectPhaseSummary.exact_span_rating_queue_size)} queued · ${formatNumber(projectPhaseSummary.exact_span_rating_quarantine_count)} quarantined and excluded`}
+              />
+              <MetricCard
+                label="Rating candidates by family"
+                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_candidate_evidence_family_counts ?? {}).reduce((sum, count) => sum + count, 0))}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_candidate_evidence_family_counts)}
+              />
+              <MetricCard
+                label="Rated evidence families"
+                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_evidence_family_counts ?? {}).reduce((sum, count) => sum + count, 0))}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_evidence_family_counts)}
+              />
+              <MetricCard
+                label="Rated mechanism labels"
+                value={formatNumber(Object.keys(projectPhaseSummary.exact_span_rating_mechanism_counts ?? {}).length)}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_mechanism_counts)}
+              />
+              <MetricCard
+                label="Rated quantitative labels"
+                value={formatNumber(Object.keys(projectPhaseSummary.exact_span_rating_quantitative_label_counts ?? {}).length)}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_quantitative_label_counts)}
+              />
+              <MetricCard
+                label="Claim relevance"
+                value={formatNumber(Object.keys(projectPhaseSummary.exact_span_rating_claim_relevance_counts ?? {}).length)}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_claim_relevance_counts)}
+              />
+              <MetricCard
+                label="Evidence strength"
+                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_evidence_strength_counts ?? {}).reduce((sum, count) => sum + count, 0))}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_evidence_strength_counts)}
+              />
+              <MetricCard
+                label="Direction of pressure"
+                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_direction_counts ?? {}).reduce((sum, count) => sum + count, 0))}
+                note={formatCountMap(projectPhaseSummary.exact_span_rating_direction_counts)}
               />
               <MetricCard
                 label="Global analysis readiness"
@@ -283,8 +331,8 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Extracted text remains a local, Git-ignored artifact. Exact spans are deterministic candidates only—not
-                ratings, ingestion, codification, quantitative comparison, population evidence, or causal conclusions.
+                Extracted text remains a local, Git-ignored artifact. Exact-span ratings are bounded documentary records—not
+                ingestion, codification, quantitative comparison, population evidence, or causal conclusions.
                 The Tier C memo remains a completed historical evidence artifact, not the current operation.
               </span>
             </div>

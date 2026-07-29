@@ -1,0 +1,25 @@
+{
+  "full_text_or_document_fields": [],
+  "input_count": 17259,
+  "model_api_calls": 0,
+  "model_input_fields": [
+    "span_extraction_id",
+    "span_text",
+    "bounded_context_before",
+    "bounded_context_after",
+    "source_title",
+    "source_family_hint",
+    "municipality",
+    "state",
+    "region",
+    "document_type_hint",
+    "evidence_family_input",
+    "mechanism_label_input",
+    "quantitative_label_input",
+    "claim_boundary"
+  ],
+  "passed": true,
+  "prepared_count": 17259,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0
+}

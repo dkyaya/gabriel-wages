@@ -1,0 +1,5 @@
+lane_id,elapsed_seconds,global_analysis_readiness,quarantine_count,queue_count,rating_attempted_count,request_attempt_count,status,valid_rating_count,coordinator_validation_applied
+rating_lane_001,1999.014,False,75,4315,4315,4375,completed,4240,True
+rating_lane_002,2214.215,False,76,4315,4315,4360,completed,4239,True
+rating_lane_003,2098.775,False,87,4315,4315,4376,completed,4228,True
+rating_lane_004,2110.476,False,74,4314,4314,4363,completed,4240,True

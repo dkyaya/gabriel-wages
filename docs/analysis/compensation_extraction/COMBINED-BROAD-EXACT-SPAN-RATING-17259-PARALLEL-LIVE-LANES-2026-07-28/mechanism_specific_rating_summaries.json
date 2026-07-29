@@ -1,0 +1,889 @@
+{
+  "by_value": {
+    "automatic_raise_mechanism": {
+      "claim_relevance_counts": {
+        "context_only": 72,
+        "direct_text_claim": 302,
+        "documentary_mechanism_claim": 54,
+        "not_claim_ready": 7,
+        "quantitative_compensation_claim": 792
+      },
+      "direct_text_support_counts": {
+        "moderate": 223,
+        "not_applicable": 2,
+        "not_supported": 5,
+        "strong": 882,
+        "weak": 115
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 21,
+        "neutral_or_unclear": 504,
+        "non_safety_advantage": 56,
+        "not_applicable": 645,
+        "safety_advantage": 1
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 296,
+        "not_applicable": 454,
+        "not_supported": 114,
+        "strong": 195,
+        "weak": 168
+      },
+      "evidence_strength_counts": {
+        "moderate": 309,
+        "not_supported": 1,
+        "strong": 729,
+        "weak": 188
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 1093,
+        "not_supported": 133,
+        "weak": 1
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 202,
+        "not_applicable": 29,
+        "not_supported": 21,
+        "strong": 862,
+        "weak": 113
+      },
+      "rating_count": 1227,
+      "source_navigation_support_counts": {
+        "moderate": 9,
+        "not_applicable": 1204,
+        "not_supported": 7,
+        "strong": 3,
+        "weak": 4
+      }
+    },
+    "bargaining_power_signal": {
+      "claim_relevance_counts": {
+        "context_only": 549,
+        "direct_text_claim": 49,
+        "documentary_mechanism_claim": 225,
+        "not_claim_ready": 21,
+        "quantitative_compensation_claim": 6,
+        "source_navigation_claim": 9
+      },
+      "direct_text_support_counts": {
+        "moderate": 159,
+        "not_supported": 58,
+        "strong": 101,
+        "weak": 541
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 346,
+        "non_safety_advantage": 6,
+        "not_applicable": 507
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 178,
+        "not_applicable": 6,
+        "not_supported": 82,
+        "strong": 34,
+        "weak": 559
+      },
+      "evidence_strength_counts": {
+        "moderate": 149,
+        "not_supported": 52,
+        "strong": 37,
+        "weak": 621
+      },
+      "provisional_causal_candidate_support_counts": {
+        "moderate": 1,
+        "not_applicable": 480,
+        "not_supported": 355,
+        "weak": 23
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 2,
+        "not_applicable": 770,
+        "not_supported": 68,
+        "strong": 10,
+        "weak": 9
+      },
+      "rating_count": 859,
+      "source_navigation_support_counts": {
+        "moderate": 32,
+        "not_applicable": 776,
+        "not_supported": 24,
+        "strong": 7,
+        "weak": 20
+      }
+    },
+    "base_wage_direct_value": {
+      "claim_relevance_counts": {
+        "context_only": 239,
+        "direct_text_claim": 485,
+        "documentary_mechanism_claim": 107,
+        "not_claim_ready": 24,
+        "quantitative_compensation_claim": 1336,
+        "source_navigation_claim": 18
+      },
+      "direct_text_support_counts": {
+        "moderate": 379,
+        "not_applicable": 30,
+        "not_supported": 39,
+        "strong": 1495,
+        "weak": 266
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 13,
+        "neutral_or_unclear": 377,
+        "non_safety_advantage": 50,
+        "not_applicable": 1767,
+        "safety_advantage": 2
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 427,
+        "not_applicable": 980,
+        "not_supported": 229,
+        "strong": 289,
+        "weak": 284
+      },
+      "evidence_strength_counts": {
+        "moderate": 548,
+        "not_supported": 12,
+        "strong": 1257,
+        "weak": 392
+      },
+      "provisional_causal_candidate_support_counts": {
+        "moderate": 1,
+        "not_applicable": 2022,
+        "not_supported": 185,
+        "weak": 1
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 357,
+        "not_applicable": 61,
+        "not_supported": 108,
+        "strong": 1408,
+        "weak": 275
+      },
+      "rating_count": 2209,
+      "source_navigation_support_counts": {
+        "moderate": 33,
+        "not_applicable": 2107,
+        "not_supported": 29,
+        "strong": 26,
+        "weak": 14
+      }
+    },
+    "fiscal_constraint_signal": {
+      "claim_relevance_counts": {
+        "context_only": 150,
+        "direct_text_claim": 37,
+        "documentary_mechanism_claim": 51,
+        "not_claim_ready": 5,
+        "quantitative_compensation_claim": 45
+      },
+      "direct_text_support_counts": {
+        "moderate": 65,
+        "not_supported": 21,
+        "strong": 69,
+        "weak": 133
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 3,
+        "neutral_or_unclear": 220,
+        "non_safety_advantage": 1,
+        "not_applicable": 64
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 69,
+        "not_applicable": 34,
+        "not_supported": 43,
+        "strong": 15,
+        "weak": 127
+      },
+      "evidence_strength_counts": {
+        "moderate": 77,
+        "not_supported": 11,
+        "strong": 27,
+        "weak": 173
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 189,
+        "not_supported": 95,
+        "weak": 4
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 35,
+        "not_applicable": 115,
+        "not_supported": 40,
+        "strong": 38,
+        "weak": 60
+      },
+      "rating_count": 288,
+      "source_navigation_support_counts": {
+        "not_applicable": 288
+      }
+    },
+    "gap_narrowing_signal": {
+      "claim_relevance_counts": {
+        "context_only": 98,
+        "direct_text_claim": 54,
+        "documentary_mechanism_claim": 13,
+        "not_claim_ready": 3,
+        "quantitative_compensation_claim": 147
+      },
+      "direct_text_support_counts": {
+        "moderate": 74,
+        "not_applicable": 2,
+        "not_supported": 8,
+        "strong": 104,
+        "weak": 127
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 53,
+        "neutral_or_unclear": 175,
+        "non_safety_advantage": 2,
+        "not_applicable": 85
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 31,
+        "not_applicable": 103,
+        "not_supported": 104,
+        "strong": 8,
+        "weak": 69
+      },
+      "evidence_strength_counts": {
+        "moderate": 65,
+        "not_supported": 1,
+        "strong": 77,
+        "weak": 172
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 251,
+        "not_supported": 64
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 68,
+        "not_applicable": 9,
+        "not_supported": 8,
+        "strong": 103,
+        "weak": 127
+      },
+      "rating_count": 315,
+      "source_navigation_support_counts": {
+        "moderate": 2,
+        "not_applicable": 309,
+        "not_supported": 2,
+        "weak": 2
+      }
+    },
+    "implementation_or_retroactivity_advantage": {
+      "claim_relevance_counts": {
+        "context_only": 243,
+        "direct_text_claim": 172,
+        "documentary_mechanism_claim": 86,
+        "not_claim_ready": 24,
+        "quantitative_compensation_claim": 903,
+        "source_navigation_claim": 3
+      },
+      "direct_text_support_counts": {
+        "moderate": 252,
+        "not_supported": 26,
+        "strong": 804,
+        "weak": 349
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 2,
+        "neutral_or_unclear": 406,
+        "non_safety_advantage": 25,
+        "not_applicable": 998
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 297,
+        "not_applicable": 319,
+        "not_supported": 260,
+        "strong": 184,
+        "weak": 371
+      },
+      "evidence_strength_counts": {
+        "moderate": 374,
+        "not_supported": 14,
+        "strong": 542,
+        "weak": 501
+      },
+      "provisional_causal_candidate_support_counts": {
+        "moderate": 1,
+        "not_applicable": 1147,
+        "not_supported": 272,
+        "weak": 11
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 283,
+        "not_applicable": 53,
+        "not_supported": 61,
+        "strong": 686,
+        "weak": 348
+      },
+      "rating_count": 1431,
+      "source_navigation_support_counts": {
+        "moderate": 10,
+        "not_applicable": 1405,
+        "not_supported": 6,
+        "strong": 6,
+        "weak": 4
+      }
+    },
+    "market_or_comparability_pressure": {
+      "claim_relevance_counts": {
+        "context_only": 154,
+        "direct_text_claim": 57,
+        "documentary_mechanism_claim": 124,
+        "not_claim_ready": 9,
+        "provisional_causal_candidate": 1,
+        "quantitative_compensation_claim": 70,
+        "source_navigation_claim": 1
+      },
+      "direct_text_support_counts": {
+        "moderate": 141,
+        "not_supported": 12,
+        "strong": 97,
+        "weak": 166
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 34,
+        "neutral_or_unclear": 324,
+        "non_safety_advantage": 15,
+        "not_applicable": 41,
+        "safety_advantage": 2
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 126,
+        "not_applicable": 44,
+        "not_supported": 40,
+        "strong": 25,
+        "weak": 181
+      },
+      "evidence_strength_counts": {
+        "moderate": 135,
+        "not_supported": 8,
+        "strong": 53,
+        "weak": 220
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 294,
+        "not_supported": 109,
+        "weak": 13
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 32,
+        "not_applicable": 232,
+        "not_supported": 34,
+        "strong": 59,
+        "weak": 59
+      },
+      "rating_count": 416,
+      "source_navigation_support_counts": {
+        "moderate": 7,
+        "not_applicable": 391,
+        "not_supported": 8,
+        "strong": 5,
+        "weak": 5
+      }
+    },
+    "non_base_compensation_signal": {
+      "claim_relevance_counts": {
+        "context_only": 693,
+        "direct_text_claim": 624,
+        "documentary_mechanism_claim": 268,
+        "not_claim_ready": 84,
+        "quantitative_compensation_claim": 754,
+        "source_navigation_claim": 2
+      },
+      "direct_text_support_counts": {
+        "moderate": 425,
+        "not_applicable": 1,
+        "not_supported": 69,
+        "strong": 1094,
+        "weak": 836
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 607,
+        "non_safety_advantage": 183,
+        "not_applicable": 1629,
+        "safety_advantage": 6
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 467,
+        "not_applicable": 459,
+        "not_supported": 270,
+        "strong": 306,
+        "weak": 923
+      },
+      "evidence_strength_counts": {
+        "moderate": 529,
+        "not_supported": 61,
+        "strong": 770,
+        "weak": 1065
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 1993,
+        "not_supported": 429,
+        "weak": 3
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 266,
+        "not_applicable": 67,
+        "not_supported": 407,
+        "strong": 858,
+        "weak": 827
+      },
+      "rating_count": 2425,
+      "source_navigation_support_counts": {
+        "moderate": 18,
+        "not_applicable": 2334,
+        "not_supported": 60,
+        "strong": 3,
+        "weak": 10
+      }
+    },
+    "non_safety_constraint_signal": {
+      "claim_relevance_counts": {
+        "context_only": 12,
+        "direct_text_claim": 9,
+        "documentary_mechanism_claim": 6,
+        "not_claim_ready": 1,
+        "quantitative_compensation_claim": 2
+      },
+      "direct_text_support_counts": {
+        "moderate": 6,
+        "not_applicable": 1,
+        "not_supported": 1,
+        "strong": 14,
+        "weak": 8
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 26,
+        "not_applicable": 4
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 10,
+        "not_applicable": 2,
+        "not_supported": 2,
+        "strong": 4,
+        "weak": 12
+      },
+      "evidence_strength_counts": {
+        "moderate": 12,
+        "not_supported": 2,
+        "strong": 5,
+        "weak": 11
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 21,
+        "not_supported": 9
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 3,
+        "not_applicable": 3,
+        "not_supported": 9,
+        "strong": 6,
+        "weak": 9
+      },
+      "rating_count": 30,
+      "source_navigation_support_counts": {
+        "not_applicable": 30
+      }
+    },
+    "not_applicable": {
+      "claim_relevance_counts": {
+        "context_only": 426,
+        "direct_text_claim": 4,
+        "not_claim_ready": 186,
+        "quantitative_compensation_claim": 122,
+        "source_navigation_claim": 12
+      },
+      "direct_text_support_counts": {
+        "moderate": 18,
+        "not_applicable": 55,
+        "not_supported": 462,
+        "strong": 109,
+        "weak": 106
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 17,
+        "not_applicable": 733
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 4,
+        "not_applicable": 335,
+        "not_supported": 385,
+        "strong": 8,
+        "weak": 18
+      },
+      "evidence_strength_counts": {
+        "moderate": 28,
+        "not_supported": 460,
+        "strong": 85,
+        "weak": 177
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 557,
+        "not_supported": 193
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 31,
+        "not_applicable": 92,
+        "not_supported": 433,
+        "strong": 86,
+        "weak": 108
+      },
+      "rating_count": 750,
+      "source_navigation_support_counts": {
+        "moderate": 22,
+        "not_applicable": 676,
+        "not_supported": 29,
+        "strong": 9,
+        "weak": 14
+      }
+    },
+    "parity_or_internal_equity_signal": {
+      "claim_relevance_counts": {
+        "context_only": 42,
+        "direct_text_claim": 61,
+        "documentary_mechanism_claim": 76,
+        "quantitative_compensation_claim": 24,
+        "source_navigation_claim": 1
+      },
+      "direct_text_support_counts": {
+        "moderate": 69,
+        "not_supported": 2,
+        "strong": 78,
+        "weak": 55
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 55,
+        "neutral_or_unclear": 132,
+        "non_safety_advantage": 2,
+        "not_applicable": 15
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 94,
+        "not_applicable": 17,
+        "not_supported": 8,
+        "strong": 17,
+        "weak": 68
+      },
+      "evidence_strength_counts": {
+        "moderate": 94,
+        "not_supported": 3,
+        "strong": 28,
+        "weak": 79
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 142,
+        "not_supported": 59,
+        "weak": 3
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 30,
+        "not_applicable": 106,
+        "not_supported": 10,
+        "strong": 24,
+        "weak": 34
+      },
+      "rating_count": 204,
+      "source_navigation_support_counts": {
+        "not_applicable": 198,
+        "not_supported": 2,
+        "strong": 1,
+        "weak": 3
+      }
+    },
+    "rank_or_specialization_premium": {
+      "claim_relevance_counts": {
+        "context_only": 42,
+        "direct_text_claim": 42,
+        "documentary_mechanism_claim": 21,
+        "not_claim_ready": 2,
+        "quantitative_compensation_claim": 95,
+        "source_navigation_claim": 1
+      },
+      "direct_text_support_counts": {
+        "moderate": 46,
+        "not_applicable": 5,
+        "not_supported": 5,
+        "strong": 84,
+        "weak": 63
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 1,
+        "neutral_or_unclear": 77,
+        "non_safety_advantage": 11,
+        "not_applicable": 113,
+        "safety_advantage": 1
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 39,
+        "not_applicable": 64,
+        "not_supported": 24,
+        "strong": 14,
+        "weak": 62
+      },
+      "evidence_strength_counts": {
+        "moderate": 45,
+        "not_supported": 4,
+        "strong": 76,
+        "weak": 78
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 174,
+        "not_supported": 28,
+        "weak": 1
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 39,
+        "not_applicable": 20,
+        "not_supported": 20,
+        "strong": 89,
+        "weak": 35
+      },
+      "rating_count": 203,
+      "source_navigation_support_counts": {
+        "moderate": 4,
+        "not_applicable": 191,
+        "not_supported": 5,
+        "strong": 1,
+        "weak": 2
+      }
+    },
+    "safety_advantage_signal": {
+      "claim_relevance_counts": {
+        "context_only": 30,
+        "direct_text_claim": 17,
+        "documentary_mechanism_claim": 9,
+        "quantitative_compensation_claim": 6
+      },
+      "direct_text_support_counts": {
+        "moderate": 14,
+        "not_supported": 8,
+        "strong": 21,
+        "weak": 19
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 11,
+        "non_safety_advantage": 1,
+        "not_applicable": 8,
+        "safety_advantage": 42
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 17,
+        "not_applicable": 8,
+        "not_supported": 12,
+        "strong": 4,
+        "weak": 21
+      },
+      "evidence_strength_counts": {
+        "moderate": 18,
+        "not_supported": 5,
+        "strong": 8,
+        "weak": 31
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 42,
+        "not_supported": 17,
+        "weak": 3
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 4,
+        "not_applicable": 33,
+        "not_supported": 12,
+        "strong": 7,
+        "weak": 6
+      },
+      "rating_count": 62,
+      "source_navigation_support_counts": {
+        "not_applicable": 62
+      }
+    },
+    "strike_or_no_strike_constraint": {
+      "claim_relevance_counts": {
+        "context_only": 245,
+        "direct_text_claim": 146,
+        "documentary_mechanism_claim": 224,
+        "not_claim_ready": 17,
+        "quantitative_compensation_claim": 4
+      },
+      "direct_text_support_counts": {
+        "moderate": 100,
+        "not_applicable": 1,
+        "not_supported": 28,
+        "strong": 327,
+        "weak": 180
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 65,
+        "not_applicable": 567,
+        "safety_advantage": 4
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 139,
+        "not_applicable": 21,
+        "not_supported": 56,
+        "strong": 219,
+        "weak": 201
+      },
+      "evidence_strength_counts": {
+        "moderate": 129,
+        "not_supported": 27,
+        "strong": 227,
+        "weak": 253
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 435,
+        "not_supported": 197,
+        "weak": 4
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 6,
+        "not_applicable": 528,
+        "not_supported": 73,
+        "strong": 4,
+        "weak": 25
+      },
+      "rating_count": 636,
+      "source_navigation_support_counts": {
+        "moderate": 3,
+        "not_applicable": 628,
+        "not_supported": 3,
+        "weak": 2
+      }
+    },
+    "unknown_or_needs_review": {
+      "claim_relevance_counts": {
+        "context_only": 1874,
+        "direct_text_claim": 167,
+        "documentary_mechanism_claim": 95,
+        "not_claim_ready": 345,
+        "quantitative_compensation_claim": 1738,
+        "source_navigation_claim": 90
+      },
+      "direct_text_support_counts": {
+        "moderate": 528,
+        "not_applicable": 67,
+        "not_supported": 1073,
+        "strong": 1213,
+        "weak": 1428
+      },
+      "direction_of_pressure_counts": {
+        "gap_narrowing": 3,
+        "neutral_or_unclear": 624,
+        "non_safety_advantage": 7,
+        "not_applicable": 3675
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 188,
+        "not_applicable": 1435,
+        "not_supported": 1753,
+        "strong": 68,
+        "weak": 865
+      },
+      "evidence_strength_counts": {
+        "moderate": 647,
+        "not_supported": 700,
+        "strong": 893,
+        "weak": 2069
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 3410,
+        "not_supported": 890,
+        "weak": 9
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 609,
+        "not_applicable": 161,
+        "not_supported": 880,
+        "strong": 1151,
+        "weak": 1508
+      },
+      "rating_count": 4309,
+      "source_navigation_support_counts": {
+        "moderate": 185,
+        "not_applicable": 3764,
+        "not_supported": 183,
+        "strong": 82,
+        "weak": 95
+      }
+    },
+    "weak_or_no_claim_support": {
+      "claim_relevance_counts": {
+        "context_only": 956,
+        "direct_text_claim": 5,
+        "documentary_mechanism_claim": 15,
+        "not_claim_ready": 534,
+        "quantitative_compensation_claim": 64,
+        "source_navigation_claim": 9
+      },
+      "direct_text_support_counts": {
+        "moderate": 28,
+        "not_applicable": 2,
+        "not_supported": 947,
+        "strong": 36,
+        "weak": 570
+      },
+      "direction_of_pressure_counts": {
+        "neutral_or_unclear": 181,
+        "non_safety_advantage": 1,
+        "not_applicable": 1401
+      },
+      "documentary_mechanism_support_counts": {
+        "moderate": 5,
+        "not_applicable": 47,
+        "not_supported": 1079,
+        "strong": 2,
+        "weak": 450
+      },
+      "evidence_strength_counts": {
+        "moderate": 15,
+        "not_supported": 838,
+        "strong": 19,
+        "weak": 711
+      },
+      "provisional_causal_candidate_support_counts": {
+        "not_applicable": 1057,
+        "not_supported": 525,
+        "weak": 1
+      },
+      "quantitative_compensation_support_counts": {
+        "moderate": 22,
+        "not_applicable": 737,
+        "not_supported": 600,
+        "strong": 30,
+        "weak": 194
+      },
+      "rating_count": 1583,
+      "source_navigation_support_counts": {
+        "moderate": 44,
+        "not_applicable": 1330,
+        "not_supported": 136,
+        "strong": 7,
+        "weak": 66
+      }
+    }
+  },
+  "counts": {
+    "automatic_raise_mechanism": 1227,
+    "bargaining_power_signal": 859,
+    "base_wage_direct_value": 2209,
+    "fiscal_constraint_signal": 288,
+    "gap_narrowing_signal": 315,
+    "implementation_or_retroactivity_advantage": 1431,
+    "market_or_comparability_pressure": 416,
+    "non_base_compensation_signal": 2425,
+    "non_safety_constraint_signal": 30,
+    "not_applicable": 750,
+    "parity_or_internal_equity_signal": 204,
+    "rank_or_specialization_premium": 203,
+    "safety_advantage_signal": 62,
+    "strike_or_no_strike_constraint": 636,
+    "unknown_or_needs_review": 4309,
+    "weak_or_no_claim_support": 1583
+  },
+  "dimension": "mechanism_label_rated",
+  "global_analysis_readiness": false,
+  "valid_rating_count": 16947
+}

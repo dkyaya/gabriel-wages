@@ -1,0 +1,39 @@
+{
+  "artifact_completeness_passed": true,
+  "backend": "huit_openai_responses_direct_sdk",
+  "completed_lane_count": 4,
+  "completion_status": "completed_bounded_live_exact_span_rating",
+  "dashboard_update_status": "builder_sync_passed",
+  "decision": "combined_broad_exact_span_rating_17259_completed_with_quarantine_summary_ready",
+  "global_analysis_readiness": false,
+  "lane_actual_start_offsets_minutes": {
+    "rating_lane_001": 0.0,
+    "rating_lane_002": 8.57,
+    "rating_lane_003": 16.36,
+    "rating_lane_004": 24.92
+  },
+  "lane_counts": {
+    "rating_lane_001": 4315,
+    "rating_lane_002": 4315,
+    "rating_lane_003": 4315,
+    "rating_lane_004": 4314
+  },
+  "live_model_api_request_attempt_count": 17474,
+  "map_filter_contract": "total_scout_coverage_only",
+  "model": "gpt-5.4-nano",
+  "model_api_request_attempt_count": 17478,
+  "municipality_coverage": 1572,
+  "preflight_model_api_request_attempt_count": 4,
+  "quarantine_count": 312,
+  "rating_attempted_count": 17259,
+  "rating_queue_count": 17259,
+  "region_coverage": 4,
+  "source_family_coverage": 18,
+  "staggered_overlap_achieved": true,
+  "state_coverage": 49,
+  "summary_review_ready_next": true,
+  "task_id": "COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28",
+  "valid_plus_quarantine_count": 17259,
+  "valid_plus_quarantine_reconciles": true,
+  "valid_rating_count": 16947
+}
