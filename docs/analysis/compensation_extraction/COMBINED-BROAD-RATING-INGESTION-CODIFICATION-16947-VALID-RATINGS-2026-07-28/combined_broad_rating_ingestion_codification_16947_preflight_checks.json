@@ -1,0 +1,30 @@
+{
+  "claim_readiness_assignments_present": true,
+  "dashboard_evidence_box_assignments_present": true,
+  "extraction_runs": 0,
+  "full_extracted_text_accesses": 0,
+  "global_analysis_readiness": false,
+  "lane_counts": [
+    4237,
+    4237,
+    4237,
+    4236
+  ],
+  "locked_queue_count": 16947,
+  "map_filter_contract": "total_scout_coverage_only",
+  "master_equals_lane_union": true,
+  "model_api_calls": 0,
+  "normalization_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "quarantine_count": 312,
+  "quarantines_excluded": true,
+  "rating_input_count": 17259,
+  "rating_summary_decision_confirmed": true,
+  "reconciles": true,
+  "render_runs": 0,
+  "rerating_runs": 0,
+  "rollback_safe_output_directory": true,
+  "source_document_accesses": 0,
+  "valid_rating_count": 16947
+}

@@ -1,38 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-29T03:26:44Z",
+  "generated_at": "2026-07-29T03:52:52Z",
   "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "combined-broad-exact-span-rating-summary-16947-2026-07-28",
-      "title": "Combined Broad Exact-Span Rating Summary Result",
-      "report_type": "Current bounded valid-rating summary report",
+      "id": "combined-broad-rating-ingestion-codification-16947-2026-07-28",
+      "title": "Combined Broad Rated-Evidence Ingestion and Codification Result",
+      "report_type": "Current bounded rated-evidence codification report",
       "date": "2026-07-28",
-      "checkpoint": "16,947 valid summarized; 312 quarantines excluded",
-      "summary": "Valid exact-span ratings are classified into mutually exclusive claim-readiness buckets and controlled evidence boxes. Ingestion/codification is next; global analysis readiness remains false.",
+      "checkpoint": "16,947 codified; 312 quarantines excluded",
+      "summary": "Valid rated spans are durable, lineaged analysis records with controlled readiness buckets, evidence boxes, and analysis layers. A dedicated global readiness diagnostic gate is next; global analysis readiness remains false.",
       "tags": [
         "current",
-        "rating summary",
-        "claim readiness",
-        "evidence filters"
+        "ingestion",
+        "codification",
+        "global readiness gate"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_exact_span_rating_summary_16947_result_2026-07-28.md",
-      "link_label": "Open current rating-summary report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_rating_ingestion_codification_16947_result_2026-07-28.md",
+      "link_label": "Open current ingestion/codification report",
       "scope_metrics": [
         {
-          "label": "valid summarized",
+          "label": "ingestion queue",
+          "value": 16947
+        },
+        {
+          "label": "codified records",
           "value": 16947
         },
         {
           "label": "quarantine excluded",
           "value": 312
-        },
-        {
-          "label": "evidence boxes",
-          "value": 12
         }
       ]
     },
@@ -132,6 +132,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-exact-span-rating-summary-16947-2026-07-28",
+      "title": "Combined Broad Exact-Span Rating Summary Result",
+      "report_type": "Historical bounded valid-rating summary report",
+      "date": "2026-07-28",
+      "checkpoint": "16,947 valid summarized; 312 quarantines excluded",
+      "summary": "Valid exact-span ratings are classified into mutually exclusive claim-readiness buckets and controlled evidence boxes. Ingestion/codification is next; global analysis readiness remains false.",
+      "tags": [
+        "historical",
+        "rating summary",
+        "claim readiness",
+        "evidence filters"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_exact_span_rating_summary_16947_result_2026-07-28.md",
+      "link_label": "Open current rating-summary report",
+      "scope_metrics": [
+        {
+          "label": "valid summarized",
+          "value": 16947
+        },
+        {
+          "label": "quarantine excluded",
+          "value": 312
+        },
+        {
+          "label": "evidence boxes",
+          "value": 12
         }
       ]
     },

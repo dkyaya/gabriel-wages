@@ -1,0 +1,8 @@
+{
+  "first_span_rating_id": "CBRATING-20260728-40b83de16af26fff578306be",
+  "lane_id": "ingestion_lane_002",
+  "last_span_rating_id": "CBRATING-20260728-807b2eb2fc465a11a9ea11b5",
+  "locked": true,
+  "queue_sha256": "0b7af4efac29a847b332427693623a72c4fb88d13574f62d1b3898ffca86d3f0",
+  "row_count": 4237
+}

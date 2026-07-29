@@ -1,0 +1,12 @@
+{
+  "category_count": 4,
+  "codified_record_count": 16947,
+  "counts": {
+    "Midwest": 6691,
+    "Northeast": 4051,
+    "South": 3000,
+    "West": 3205
+  },
+  "dimension": "region",
+  "global_analysis_readiness": false
+}

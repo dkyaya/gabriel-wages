@@ -87,6 +87,7 @@ def main() -> None:
             "exact-span extraction complete",
             "exact-span rating complete",
             "exact-span rating summary complete",
+            "rating ingestion/codification complete",
         )
     )
     future = (OUT / "next_combined_broad_exact_span_rating_prompt.md").read_text(encoding="utf-8")

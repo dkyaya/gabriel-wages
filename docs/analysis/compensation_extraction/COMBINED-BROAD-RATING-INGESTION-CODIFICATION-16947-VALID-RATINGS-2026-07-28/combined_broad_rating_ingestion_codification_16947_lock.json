@@ -1,0 +1,27 @@
+{
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_locked_queue.csv": "739c3150707c2c0ec3fa7f318f99329623bace5b8a96904e9ce7d8e1049fff07",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_quarantine.csv": "8d2bb48a5c1e40da680c4e9ab81c395c8fafee3eb6b9351d38c897a45f9f5751",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_quarantine_summary.json": "1d55906f35cec08145d70ac79ebda8e2fe37bcddd1b9bd945c6bc46f10f3fa73",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_valid_ratings.csv": "e2f36b86da8e127a4ca33d6d5cc833d5d086a146124c2405df2034240ddbed5d",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_valid_ratings_summary.json": "3f5850c47d96433ebb7bbc216d9e4163337c14d55ace42094f368cdf58fe6057",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/rating_artifact_completeness_checklist.json": "e786204ed00e660b3e84d13fd5ba152e617aaaa15f998d6ef46311c0b2b306cd",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/rating_input_valid_quarantine_reconciliation.json": "0dfb77e7deaed927dfd3f2188b6aee6f1d5f0b6c1008ad1dfbb003a40046ba8c",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_claim_readiness_buckets.csv": "c39fada444aecf77c5e029971d29b04b060ea2f7f52b964671f6aeeda1a5fa03",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_claim_readiness_buckets_summary.json": "c28c11359fd7a7872184445c2ae1823bf7bae1e0df8eb13c7b5908ee47504241",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_dashboard_evidence_box_assignments.csv": "6ab80378f5706d74fd59d393de483165492e6f7dc284a3280ac50c8022c5babe",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_dashboard_evidence_box_assignments_summary.json": "639bdb6123e7a6bddc5b8ecf7ef845e5418e093fbd62b1ed8824fe4cc684db9e",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_dashboard_update_summary.json": "debe224680093c93dcc0cd4f78e908ec1dfad01448d9f2a38d43115d85ac2b1b",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_decision.json": "5ff1eab0ae7268edb2fe55771049ccd084f62e8515b9e11dfae1221127d5602b",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_global_claim_readiness_diagnostic.json": "10da222cd1196279ad3d29670f53e00ae9a528f50a0c2611a760465f2b5cffce",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_global_readiness_gate_planning_note.md": "5303224d27d012317b86bcd3c906dac86ee68e7abe34ef01e3e746cd1df23d96",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_ingestion_codification_planning_note.md": "44648ad3ad317e57be05649983bd061d0975d447dfa8edf325e8340b4f60ef2a",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_input_reconciliation_summary.json": "355f3bdb9fe22bd30aac318efe3a518a8c6dbd4f212207e124602317725cf3cc",
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28/combined_broad_exact_span_rating_summary_16947_validation_2026-07-28.md": "3ec025f905bef93093b32d569d8a4b3e2fc157634b6fedf0bc66c2a82ee7c3eb"
+  },
+  "locked": true,
+  "master_equals_lane_union": true,
+  "queue_sha256": "d9545bef808432f56378c3039ed0acb49d944e223c1b5251d476f75aebfc832b",
+  "row_count": 16947,
+  "task_id": "COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28"
+}

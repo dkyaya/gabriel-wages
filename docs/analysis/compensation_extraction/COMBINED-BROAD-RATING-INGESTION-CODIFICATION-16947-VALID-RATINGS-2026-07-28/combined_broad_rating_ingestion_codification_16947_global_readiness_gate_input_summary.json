@@ -1,0 +1,19 @@
+{
+  "blocker_count": 5,
+  "claim_readiness_counts": {
+    "directional_hint_only": 597,
+    "global_descriptive_ready": 75,
+    "global_descriptive_ready_with_caveats": 284,
+    "local_context_only": 701,
+    "mechanism_summary_ready": 713,
+    "provisional_causal_hint_only": 80,
+    "quant_needs_normalization": 9625,
+    "source_navigation_only": 493,
+    "weak_or_not_supported": 4379
+  },
+  "codification_complete": true,
+  "dedicated_global_readiness_gate_ready_next": true,
+  "gate_input_record_count": 16947,
+  "global_analysis_readiness": false,
+  "quarantines_excluded": 312
+}

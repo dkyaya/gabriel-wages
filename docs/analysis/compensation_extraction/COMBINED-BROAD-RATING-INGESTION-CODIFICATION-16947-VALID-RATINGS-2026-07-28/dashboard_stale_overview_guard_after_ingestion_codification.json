@@ -1,0 +1,7 @@
+{
+  "current_operation": "combined_broad_rating_ingestion_codification_complete",
+  "global_analysis_readiness": false,
+  "map_filter_contract": "total_scout_coverage_only",
+  "passed": true,
+  "stale_rating_summary_operation_absent": true
+}

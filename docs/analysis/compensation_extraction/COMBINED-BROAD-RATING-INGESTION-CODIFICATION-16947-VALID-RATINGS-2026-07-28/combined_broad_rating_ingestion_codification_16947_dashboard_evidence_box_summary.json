@@ -1,0 +1,20 @@
+{
+  "codified_record_count": 16947,
+  "counts": {
+    "automatic_raise_cola_percentage_evidence": 1966,
+    "bargaining_dispute_resolution_evidence": 598,
+    "contract_timing_implementation_evidence": 2315,
+    "direct_base_wage_value_evidence": 1890,
+    "fiscal_constraint_evidence": 74,
+    "market_comparability_evidence": 153,
+    "non_base_compensation_evidence": 2259,
+    "quantitative_compensation_evidence": 1442,
+    "quarantined_excluded_material": 0,
+    "safety_non_safety_directional_hints": 677,
+    "source_navigation_references": 493,
+    "weak_context_not_supported_material": 5080
+  },
+  "evidence_filters_outside_map": true,
+  "global_analysis_readiness": false,
+  "map_filter_contract": "total_scout_coverage_only"
+}

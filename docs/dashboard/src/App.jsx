@@ -333,6 +333,27 @@ function App() {
                 value={formatNumber(projectPhaseSummary.rating_summary_claim_candidate_count)}
                 note={`${formatNumber(projectPhaseSummary.rating_summary_valid_count)} valid summarized · ${formatNumber(projectPhaseSummary.rating_summary_quarantine_excluded_count)} quarantines excluded`}
               />
+              {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
+                <MetricCard
+                  label="Ingestion / codification queue"
+                  value={formatNumber(projectPhaseSummary.rating_ingestion_queue_count)}
+                  note={`${formatNumber(projectPhaseSummary.rating_codification_quarantine_excluded_count)} quarantines excluded before ingestion`}
+                />
+              )}
+              {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
+                <MetricCard
+                  label="Ingested and codified records"
+                  value={formatNumber(projectPhaseSummary.rating_codified_record_count)}
+                  note={`${formatNumber(projectPhaseSummary.rating_ingested_record_count)} ingested · schema-stable bounded records`}
+                />
+              )}
+              {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
+                <MetricCard
+                  label="Global-readiness gate"
+                  value="Ready next"
+                  note="Diagnostic gate only; global analysis readiness remains false"
+                />
+              )}
               <MetricCard
                 label="Globally usable descriptive evidence"
                 value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.global_descriptive_ready)}
@@ -389,7 +410,10 @@ function App() {
             {projectPhaseSummary.combined_exact_span_rating_summary_available && (
               <div className="hub-caveat" role="note" aria-label="Rated evidence boxes and filters">
                 <strong>Rated evidence boxes and filters.</strong>
-                <span>{formatCountMap(projectPhaseSummary.rating_summary_evidence_box_counts)}</span>
+                <span>{formatCountMap(
+                  projectPhaseSummary.rating_codification_evidence_box_counts
+                  ?? projectPhaseSummary.rating_summary_evidence_box_counts
+                )}</span>
                 <div className="evidence-filter-controls" aria-label="Aggregate rated-evidence filter controls">
                   <label>
                     Evidence dimension

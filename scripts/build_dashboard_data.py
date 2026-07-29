@@ -1640,6 +1640,19 @@ COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIAGNOSTIC_PATH = (
     COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
     / "combined_broad_exact_span_rating_summary_16947_global_claim_readiness_diagnostic.json"
 )
+COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28"
+)
+COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DECISION_PATH = (
+    COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+    / "combined_broad_rating_ingestion_codification_16947_decision.json"
+)
+COMBINED_BROAD_RATING_INGESTION_CODIFICATION_RECORDS_PATH = (
+    COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+    / "combined_broad_rating_ingestion_codification_16947_codified_records.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5530,6 +5543,78 @@ def combined_broad_exact_span_rating_summary_status() -> tuple[bool, dict[str, A
     return True, payload
 
 
+def combined_broad_rating_ingestion_codification_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete 16,947-record codification package."""
+    required = (
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DECISION_PATH,
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_RECORDS_PATH,
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_locked_queue.csv",
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_claim_readiness_summary.json",
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_dashboard_evidence_box_summary.json",
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_analysis_layer_summary.json",
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_global_readiness_gate_input_summary.json",
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_invariant_checks.json",
+        COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
+        / "combined_broad_rating_ingestion_codification_16947_non_cba_codified_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DECISION_PATH)
+    records = read_csv(COMBINED_BROAD_RATING_INGESTION_CODIFICATION_RECORDS_PATH)
+    queue = read_csv(required[2])
+    readiness = read_json(required[3])
+    boxes = read_json(required[4])
+    layers = read_json(required[5])
+    gate = read_json(required[6])
+    invariants = read_json(required[7])
+    cba = read_json(required[8])
+    record_ids = {row.get("codified_record_id", "") for row in records}
+    rating_ids = {row.get("span_rating_id", "") for row in records}
+    gates = (
+        decision.get("decision")
+        == "combined_broad_rating_ingestion_codification_16947_completed_global_gate_ready"
+        and decision.get("valid_rating_ingestion_queue_count") == 16947
+        and decision.get("quarantine_excluded_count") == 312
+        and decision.get("completed_lane_count") == 4
+        and decision.get("lane_counts") == [4237, 4237, 4237, 4236]
+        and len(queue) == len(records) == len(record_ids) == len(rating_ids) == 16947
+        and all(row.get("ingestion_status") == "ingested" for row in records)
+        and all(row.get("codification_status") == "codified" for row in records)
+        and all(row.get("global_analysis_readiness") == "false" for row in records)
+        and readiness.get("primary_buckets_reconcile") is True
+        and sum(readiness.get("counts", {}).values()) == 16947
+        and sum(boxes.get("counts", {}).values()) == 16947
+        and layers.get("codified_record_count") == 16947
+        and gate.get("gate_input_record_count") == 16947
+        and gate.get("dedicated_global_readiness_gate_ready_next") is True
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("global_analysis_readiness_false") is True
+        and boxes.get("map_filter_contract") == "total_scout_coverage_only"
+        and decision.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("combined broad rating ingestion/codification package fails dashboard gates")
+    return True, {
+        **decision,
+        "claim_readiness_counts": readiness.get("counts", {}),
+        "evidence_box_counts": boxes.get("counts", {}),
+        "analysis_layer_counts": layers.get("primary_analysis_layer_counts", {}),
+        "global_readiness_gate_status": "ready_for_dedicated_diagnostic_gate",
+        "cba_composition_counts": {
+            "exact_cba": cba.get("exact_cba_codified_record_count", 0),
+            "non_cba_or_mixed": cba.get("non_cba_or_mixed_codified_record_count", 0),
+        },
+        "dashboard_result_path":
+        "docs/analysis/combined_broad_rating_ingestion_codification_16947_result_2026-07-28.md",
+    }
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5618,13 +5703,46 @@ def build_reports_index_layer(
     broad_span_available, broad_span = combined_broad_span_extraction_status()
     broad_rating_available, broad_rating = combined_broad_exact_span_rating_status()
     broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
+    broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "combined-broad-rating-ingestion-codification-16947-2026-07-28",
+                    "title": "Combined Broad Rated-Evidence Ingestion and Codification Result",
+                    "report_type": "Current bounded rated-evidence codification report",
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{broad_codification['codified_record_count']:,} codified; "
+                        f"{broad_codification['quarantine_excluded_count']:,} quarantines excluded"
+                    ),
+                    "summary": (
+                        "Valid rated spans are durable, lineaged analysis records with controlled "
+                        "readiness buckets, evidence boxes, and analysis layers. A dedicated global "
+                        "readiness diagnostic gate is next; global analysis readiness remains false."
+                    ),
+                    "tags": ["current", "ingestion", "codification", "global readiness gate"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + broad_codification["dashboard_result_path"],
+                    "link_label": "Open current ingestion/codification report",
+                    "scope_metrics": [
+                        {"label": "ingestion queue", "value": broad_codification["valid_rating_ingestion_queue_count"]},
+                        {"label": "codified records", "value": broad_codification["codified_record_count"]},
+                        {"label": "quarantine excluded", "value": broad_codification["quarantine_excluded_count"]},
+                    ],
+                }
+            ]
+            if broad_codification_available else []
+        ),
         *(
             [
                 {
                     "id": "combined-broad-exact-span-rating-summary-16947-2026-07-28",
                     "title": "Combined Broad Exact-Span Rating Summary Result",
-                    "report_type": "Current bounded valid-rating summary report",
+                    "report_type": (
+                        "Historical bounded valid-rating summary report"
+                        if broad_codification_available else "Current bounded valid-rating summary report"
+                    ),
                     "date": "2026-07-28",
                     "checkpoint": (
                         f"{broad_rating_summary['valid_rating_summary_count']:,} valid summarized; "
@@ -5635,8 +5753,8 @@ def build_reports_index_layer(
                         "buckets and controlled evidence boxes. Ingestion/codification is next; global "
                         "analysis readiness remains false."
                     ),
-                    "tags": ["current", "rating summary", "claim readiness", "evidence filters"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if broad_codification_available else "current", "rating summary", "claim readiness", "evidence filters"],
+                    "current": not broad_codification_available, "historical": broad_codification_available,
                     "href": repository_root_url + broad_rating_summary["dashboard_result_path"],
                     "link_label": "Open current rating-summary report",
                     "scope_metrics": [
@@ -8518,6 +8636,7 @@ def build_project_phase_summary(
     broad_span_available, broad_span = combined_broad_span_extraction_status()
     broad_rating_available, broad_rating = combined_broad_exact_span_rating_status()
     broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
+    broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8543,10 +8662,12 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-28" if (
-            broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
+            broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "combined_broad_exact_span_rating_summary_complete_ingestion_transition"
+            "combined_broad_rating_ingestion_codification_complete_global_gate_transition"
+            if broad_codification_available
+            else "combined_broad_exact_span_rating_summary_complete_ingestion_transition"
             if broad_rating_summary_available
             else "combined_broad_exact_span_rating_complete_summary_review_transition"
             if broad_rating_available
@@ -8575,7 +8696,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Combined broad exact-span rating summary complete; bounded ingestion and codification ready next"
+            "Combined broad rating ingestion/codification complete; dedicated global analysis readiness gate ready next"
+            if broad_codification_available
+            else "Combined broad exact-span rating summary complete; bounded ingestion and codification ready next"
             if broad_rating_summary_available
             else "Combined broad live exact-span rating complete; bounded valid-rating summary review ready next"
             if broad_rating_available
@@ -8604,7 +8727,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_rating_summary["decision"]
+            broad_codification["decision"]
+            if broad_codification_available
+            else broad_rating_summary["decision"]
             if broad_rating_summary_available
             else broad_rating["decision"]
             if broad_rating_available
@@ -8628,7 +8753,11 @@ def build_project_phase_summary(
             if broad_scout_completed
             else tier_c_supplement["decision"]
         ),
-        "current_evidence_status": "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
+        "current_evidence_status": (
+            "bounded_valid_rated_spans_ingested_and_codified_global_gate_pending"
+            if broad_codification_available
+            else "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only"
+        ),
         "global_analysis_readiness": False,
         "wage_gap_estimates_available": False,
         "final_causal_claims_available": False,
@@ -8849,8 +8978,14 @@ def build_project_phase_summary(
         "rating_summary_dashboard_filter_names": broad_rating_summary.get("dashboard_filter_names", []) if broad_rating_summary_available else [],
         "rating_summary_filter_catalog": (
             {
-                "claim_readiness_bucket": broad_rating_summary.get("claim_readiness_counts", {}),
-                "dashboard_evidence_box": broad_rating_summary.get("evidence_box_counts", {}),
+                "claim_readiness_bucket": (
+                    broad_codification.get("claim_readiness_counts", {})
+                    if broad_codification_available else broad_rating_summary.get("claim_readiness_counts", {})
+                ),
+                "dashboard_evidence_box": (
+                    broad_codification.get("evidence_box_counts", {})
+                    if broad_codification_available else broad_rating_summary.get("evidence_box_counts", {})
+                ),
                 "evidence_family": broad_rating.get("evidence_family_rated_counts", {}),
                 "claim_relevance": broad_rating.get("claim_relevance_counts", {}),
                 "evidence_strength": broad_rating.get("evidence_strength_counts", {}),
@@ -8865,8 +9000,19 @@ def build_project_phase_summary(
             if broad_rating_summary_available else {}
         ),
         "rating_summary_diagnostic_status": broad_rating_summary.get("diagnostic_status") if broad_rating_summary_available else None,
+        "combined_broad_rating_ingestion_codification_available": broad_codification_available,
+        "rating_ingestion_queue_count": broad_codification.get("valid_rating_ingestion_queue_count") if broad_codification_available else 0,
+        "rating_ingested_record_count": broad_codification.get("ingested_record_count") if broad_codification_available else 0,
+        "rating_codified_record_count": broad_codification.get("codified_record_count") if broad_codification_available else 0,
+        "rating_codification_quarantine_excluded_count": broad_codification.get("quarantine_excluded_count") if broad_codification_available else 0,
+        "rating_codification_claim_readiness_counts": broad_codification.get("claim_readiness_counts", {}) if broad_codification_available else {},
+        "rating_codification_evidence_box_counts": broad_codification.get("evidence_box_counts", {}) if broad_codification_available else {},
+        "rating_codification_analysis_layer_counts": broad_codification.get("analysis_layer_counts", {}) if broad_codification_available else {},
+        "global_readiness_gate_status": broad_codification.get("global_readiness_gate_status") if broad_codification_available else "not_ready",
         "current_report_title": (
-            "Combined Broad Exact-Span Rating Summary Result"
+            "Combined Broad Rated-Evidence Ingestion and Codification Result"
+            if broad_codification_available
+            else "Combined Broad Exact-Span Rating Summary Result"
             if broad_rating_summary_available
             else "Combined Broad Live Exact-Span Rating Result"
             if broad_rating_available
@@ -8884,7 +9030,9 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_rating_summary["dashboard_result_path"]
+            broad_codification["dashboard_result_path"]
+            if broad_codification_available
+            else broad_rating_summary["dashboard_result_path"]
             if broad_rating_summary_available
             else broad_rating["dashboard_result_path"]
             if broad_rating_available
@@ -8903,7 +9051,9 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_rating_summary["dashboard_result_path"]
+            broad_codification["dashboard_result_path"]
+            if broad_codification_available
+            else broad_rating_summary["dashboard_result_path"]
             if broad_rating_summary_available
             else broad_rating["dashboard_result_path"]
             if broad_rating_available
@@ -8928,7 +9078,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run bounded ingestion and codification over classified valid ratings; keep quarantines excluded and global readiness false"
+            "run the dedicated global analysis readiness diagnostic gate; preserve corpus, matching, normalization, prevalence, and causal boundaries"
+            if broad_codification_available
+            else "run bounded ingestion and codification over classified valid ratings; keep quarantines excluded and global readiness false"
             if broad_rating_summary_available
             else "run bounded rating summary review over valid exact-span ratings only; keep quarantines excluded"
             if broad_rating_available
@@ -9010,7 +9162,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "bounded ingestion and codification over classified valid ratings"
+            "dedicated global analysis readiness diagnostic gate"
+            if broad_codification_available
+            else "bounded ingestion and codification over classified valid ratings"
             if broad_rating_summary_available
             else "bounded exact-span rating summary review over valid ratings only"
             if broad_rating_available
@@ -9031,6 +9185,15 @@ def build_project_phase_summary(
             else "broad state-by-state source scouting"
         ),
         "next_phase_sequence": (
+            [
+                "verify the 16,947-record codified gate package and 312-row quarantine exclusion",
+                "diagnose source-family, geography, matching, normalization, and two-corpus blockers",
+                "do not normalize values, compare wages, estimate prevalence, or stake causal claims",
+                "keep evidence filters outside the total-scout-coverage-only map",
+                "keep global analysis readiness false unless a separately authorized gate clears every standard",
+            ]
+            if broad_codification_available
+            else
             [
                 "ingest only the 16,947 classified valid ratings; exclude all quarantines",
                 "preserve exact quote, lineage, provenance, and causal/discourse corpus separation",
@@ -9068,7 +9231,9 @@ def build_project_phase_summary(
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "combined_broad_exact_span_rating_summary_complete_ingestion_ready"
+            "combined_broad_rating_ingestion_codification_complete_global_gate_ready"
+            if broad_codification_available
+            else "combined_broad_exact_span_rating_summary_complete_ingestion_ready"
             if broad_rating_summary_available
             else "combined_broad_exact_span_rating_complete_summary_review_ready"
             if broad_rating_available

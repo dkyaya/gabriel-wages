@@ -1,0 +1,7 @@
+{
+  "global_analysis_readiness": false,
+  "lane_id": "ingestion_lane_002",
+  "quarantine_count": 0,
+  "queue_sha256": "0b7af4efac29a847b332427693623a72c4fb88d13574f62d1b3898ffca86d3f0",
+  "row_count": 4237
+}

@@ -131,7 +131,10 @@ def main() -> int:
     prompt = (OUT / "next_combined_broad_ingestion_codification_prompt.md").read_text(encoding="utf-8")
     check("future prompt boundaries", all(term in prompt for term in ["Exclude all 312 quarantines", "Do not normalize", "global analysis readiness true", "total-scout-coverage-only map", "reconstruct any fully derivable missing artifact"]))
     dashboard = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
-    check("dashboard current operation", dashboard["current_phase"].startswith("Combined broad exact-span rating summary complete"))
+    check("dashboard current operation", dashboard["current_phase"].startswith((
+        "Combined broad exact-span rating summary complete",
+        "Combined broad rating ingestion/codification complete",
+    )))
     check("dashboard metrics", dashboard["rating_summary_valid_count"] == 16947 and dashboard["rating_summary_quarantine_excluded_count"] == 312)
     check("dashboard map count stable", dashboard["current_scout_covered"] == 6919 and dashboard["map_data_date"] == "2026-07-27")
 

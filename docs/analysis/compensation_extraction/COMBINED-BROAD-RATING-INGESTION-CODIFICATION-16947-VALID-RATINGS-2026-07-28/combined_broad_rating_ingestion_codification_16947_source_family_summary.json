@@ -1,0 +1,26 @@
+{
+  "category_count": 18,
+  "codified_record_count": 16947,
+  "counts": {
+    "agenda_packet_or_minutes": 1245,
+    "arbitration_award": 853,
+    "budget_or_pay_plan": 2184,
+    "cba": 4098,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": 513,
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": 847,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": 1310,
+    "civil_service_or_hr_pay_plan": 210,
+    "classification_study": 139,
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": 583,
+    "compensation_study": 298,
+    "factfinding_report": 65,
+    "mou_or_memorandum": 1034,
+    "other_local_government_pay_policy": 498,
+    "personnel_policy": 201,
+    "salary_ordinance": 217,
+    "unknown_or_needs_review": 159,
+    "wage_schedule": 2493
+  },
+  "dimension": "source_family_hint",
+  "global_analysis_readiness": false
+}

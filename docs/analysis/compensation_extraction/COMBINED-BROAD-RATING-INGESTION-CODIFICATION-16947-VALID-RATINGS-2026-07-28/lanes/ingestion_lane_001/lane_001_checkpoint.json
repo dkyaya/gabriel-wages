@@ -1,0 +1,7 @@
+{
+  "checkpoint_every_row": true,
+  "complete": true,
+  "lane_id": "ingestion_lane_001",
+  "last_span_rating_id": "CBRATING-20260728-40b75b9d9e1d647487b3da0b",
+  "processed_count": 4237
+}

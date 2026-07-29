@@ -1,0 +1,61 @@
+{
+  "analysis_layer_counts": {
+    "automatic_raise_cola_percentage": 10,
+    "bargaining_dispute_resolution": 139,
+    "direct_base_wage_value": 29,
+    "fiscal_constraint": 18,
+    "implementation_timing": 5,
+    "local_context_only": 701,
+    "market_comparability": 43,
+    "mechanism_summary": 713,
+    "non_base_compensation": 87,
+    "provisional_causal_hint": 80,
+    "quantitative_compensation_availability": 28,
+    "quantitative_needs_normalization": 9625,
+    "safety_non_safety_directional_hint": 597,
+    "source_navigation": 493,
+    "weak_or_not_supported": 4379
+  },
+  "claim_readiness_counts": {
+    "directional_hint_only": 597,
+    "global_descriptive_ready": 75,
+    "global_descriptive_ready_with_caveats": 284,
+    "local_context_only": 701,
+    "mechanism_summary_ready": 713,
+    "provisional_causal_hint_only": 80,
+    "quant_needs_normalization": 9625,
+    "source_navigation_only": 493,
+    "weak_or_not_supported": 4379
+  },
+  "codified_record_count": 16947,
+  "completed_lane_count": 4,
+  "completion_status": "completed_bounded_rating_ingestion_codification",
+  "dashboard_evidence_box_counts": {
+    "automatic_raise_cola_percentage_evidence": 1966,
+    "bargaining_dispute_resolution_evidence": 598,
+    "contract_timing_implementation_evidence": 2315,
+    "direct_base_wage_value_evidence": 1890,
+    "fiscal_constraint_evidence": 74,
+    "market_comparability_evidence": 153,
+    "non_base_compensation_evidence": 2259,
+    "quantitative_compensation_evidence": 1442,
+    "quarantined_excluded_material": 0,
+    "safety_non_safety_directional_hints": 677,
+    "source_navigation_references": 493,
+    "weak_context_not_supported_material": 5080
+  },
+  "decision": "combined_broad_rating_ingestion_codification_16947_completed_global_gate_ready",
+  "global_analysis_readiness": false,
+  "global_readiness_gate_ready_next": true,
+  "ingested_record_count": 16947,
+  "lane_counts": [
+    4237,
+    4237,
+    4237,
+    4236
+  ],
+  "map_filter_contract": "total_scout_coverage_only",
+  "quarantine_excluded_count": 312,
+  "task_id": "COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28",
+  "valid_rating_ingestion_queue_count": 16947
+}

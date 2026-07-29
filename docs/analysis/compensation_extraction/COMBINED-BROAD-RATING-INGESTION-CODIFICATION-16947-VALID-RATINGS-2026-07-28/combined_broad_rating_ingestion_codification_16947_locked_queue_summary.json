@@ -1,0 +1,12 @@
+{
+  "lane_counts": {
+    "ingestion_lane_001": 4237,
+    "ingestion_lane_002": 4237,
+    "ingestion_lane_003": 4237,
+    "ingestion_lane_004": 4236
+  },
+  "quarantine_count": 0,
+  "queue_sha256": "d9545bef808432f56378c3039ed0acb49d944e223c1b5251d476f75aebfc832b",
+  "row_count": 16947,
+  "unique_span_rating_ids": 16947
+}

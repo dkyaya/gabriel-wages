@@ -1,0 +1,10 @@
+{
+  "codified_record_count": 4237,
+  "completed": true,
+  "error_count": 0,
+  "execution_mode": "concurrent_isolated_local_lane",
+  "global_analysis_readiness": false,
+  "lane_id": "ingestion_lane_002",
+  "queue_count": 4237,
+  "stagger_policy": "simultaneous short deterministic local transform; minute staggering not needed"
+}

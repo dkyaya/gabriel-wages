@@ -1,0 +1,5 @@
+region,codified_record_count,unique_source_count,unique_municipality_count,global_descriptive_candidate_count,global_analysis_readiness
+Midwest,6691,970,562,166,False
+Northeast,4051,644,371,106,False
+South,3000,637,427,43,False
+West,3205,462,314,44,False
