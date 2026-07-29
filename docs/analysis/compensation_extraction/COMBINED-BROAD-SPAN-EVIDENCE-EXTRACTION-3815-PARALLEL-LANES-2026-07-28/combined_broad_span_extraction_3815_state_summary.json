@@ -1,0 +1,449 @@
+{
+  "group_count": 49,
+  "groups": [
+    {
+      "ambiguous_source_count": 4,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 192,
+      "sources_with_positive_spans": 33,
+      "span_queue_source_count": 38,
+      "state": "AK"
+    },
+    {
+      "ambiguous_source_count": 22,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 7,
+      "positive_exact_span_count": 104,
+      "sources_with_positive_spans": 34,
+      "span_queue_source_count": 63,
+      "state": "AL"
+    },
+    {
+      "ambiguous_source_count": 14,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 6,
+      "positive_exact_span_count": 135,
+      "sources_with_positive_spans": 28,
+      "span_queue_source_count": 48,
+      "state": "AR"
+    },
+    {
+      "ambiguous_source_count": 22,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 272,
+      "sources_with_positive_spans": 39,
+      "span_queue_source_count": 63,
+      "state": "AZ"
+    },
+    {
+      "ambiguous_source_count": 15,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 1068,
+      "sources_with_positive_spans": 113,
+      "span_queue_source_count": 129,
+      "state": "CA"
+    },
+    {
+      "ambiguous_source_count": 12,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 212,
+      "sources_with_positive_spans": 40,
+      "span_queue_source_count": 54,
+      "state": "CO"
+    },
+    {
+      "ambiguous_source_count": 8,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 570,
+      "sources_with_positive_spans": 58,
+      "span_queue_source_count": 67,
+      "state": "CT"
+    },
+    {
+      "ambiguous_source_count": 18,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 58,
+      "sources_with_positive_spans": 19,
+      "span_queue_source_count": 41,
+      "state": "DE"
+    },
+    {
+      "ambiguous_source_count": 4,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 404,
+      "sources_with_positive_spans": 50,
+      "span_queue_source_count": 56,
+      "state": "FL"
+    },
+    {
+      "ambiguous_source_count": 27,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 238,
+      "sources_with_positive_spans": 52,
+      "span_queue_source_count": 83,
+      "state": "GA"
+    },
+    {
+      "ambiguous_source_count": 18,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 257,
+      "sources_with_positive_spans": 53,
+      "span_queue_source_count": 74,
+      "state": "IA"
+    },
+    {
+      "ambiguous_source_count": 28,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 5,
+      "positive_exact_span_count": 79,
+      "sources_with_positive_spans": 23,
+      "span_queue_source_count": 56,
+      "state": "ID"
+    },
+    {
+      "ambiguous_source_count": 31,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 1270,
+      "sources_with_positive_spans": 147,
+      "span_queue_source_count": 179,
+      "state": "IL"
+    },
+    {
+      "ambiguous_source_count": 44,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 330,
+      "sources_with_positive_spans": 64,
+      "span_queue_source_count": 110,
+      "state": "IN"
+    },
+    {
+      "ambiguous_source_count": 18,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 229,
+      "sources_with_positive_spans": 55,
+      "span_queue_source_count": 75,
+      "state": "KS"
+    },
+    {
+      "ambiguous_source_count": 13,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 9,
+      "positive_exact_span_count": 136,
+      "sources_with_positive_spans": 45,
+      "span_queue_source_count": 67,
+      "state": "KY"
+    },
+    {
+      "ambiguous_source_count": 41,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 109,
+      "sources_with_positive_spans": 36,
+      "span_queue_source_count": 80,
+      "state": "LA"
+    },
+    {
+      "ambiguous_source_count": 17,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 421,
+      "sources_with_positive_spans": 57,
+      "span_queue_source_count": 75,
+      "state": "MA"
+    },
+    {
+      "ambiguous_source_count": 18,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 73,
+      "sources_with_positive_spans": 24,
+      "span_queue_source_count": 46,
+      "state": "MD"
+    },
+    {
+      "ambiguous_source_count": 6,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 426,
+      "sources_with_positive_spans": 65,
+      "span_queue_source_count": 75,
+      "state": "ME"
+    },
+    {
+      "ambiguous_source_count": 10,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 1142,
+      "sources_with_positive_spans": 152,
+      "span_queue_source_count": 164,
+      "state": "MI"
+    },
+    {
+      "ambiguous_source_count": 11,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 674,
+      "sources_with_positive_spans": 86,
+      "span_queue_source_count": 99,
+      "state": "MN"
+    },
+    {
+      "ambiguous_source_count": 16,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 375,
+      "sources_with_positive_spans": 53,
+      "span_queue_source_count": 69,
+      "state": "MO"
+    },
+    {
+      "ambiguous_source_count": 8,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 5,
+      "positive_exact_span_count": 24,
+      "sources_with_positive_spans": 7,
+      "span_queue_source_count": 20,
+      "state": "MS"
+    },
+    {
+      "ambiguous_source_count": 38,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 6,
+      "positive_exact_span_count": 105,
+      "sources_with_positive_spans": 22,
+      "span_queue_source_count": 66,
+      "state": "MT"
+    },
+    {
+      "ambiguous_source_count": 24,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 494,
+      "sources_with_positive_spans": 72,
+      "span_queue_source_count": 100,
+      "state": "NC"
+    },
+    {
+      "ambiguous_source_count": 29,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 17,
+      "positive_exact_span_count": 53,
+      "sources_with_positive_spans": 24,
+      "span_queue_source_count": 70,
+      "state": "ND"
+    },
+    {
+      "ambiguous_source_count": 21,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 126,
+      "sources_with_positive_spans": 43,
+      "span_queue_source_count": 68,
+      "state": "NE"
+    },
+    {
+      "ambiguous_source_count": 5,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 353,
+      "sources_with_positive_spans": 54,
+      "span_queue_source_count": 60,
+      "state": "NH"
+    },
+    {
+      "ambiguous_source_count": 13,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 472,
+      "sources_with_positive_spans": 95,
+      "span_queue_source_count": 109,
+      "state": "NJ"
+    },
+    {
+      "ambiguous_source_count": 14,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 114,
+      "sources_with_positive_spans": 22,
+      "span_queue_source_count": 40,
+      "state": "NM"
+    },
+    {
+      "ambiguous_source_count": 0,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 189,
+      "sources_with_positive_spans": 15,
+      "span_queue_source_count": 15,
+      "state": "NV"
+    },
+    {
+      "ambiguous_source_count": 16,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 890,
+      "sources_with_positive_spans": 108,
+      "span_queue_source_count": 124,
+      "state": "NY"
+    },
+    {
+      "ambiguous_source_count": 26,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 5,
+      "positive_exact_span_count": 1473,
+      "sources_with_positive_spans": 141,
+      "span_queue_source_count": 172,
+      "state": "OH"
+    },
+    {
+      "ambiguous_source_count": 18,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 162,
+      "sources_with_positive_spans": 48,
+      "span_queue_source_count": 68,
+      "state": "OK"
+    },
+    {
+      "ambiguous_source_count": 13,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 284,
+      "sources_with_positive_spans": 41,
+      "span_queue_source_count": 58,
+      "state": "OR"
+    },
+    {
+      "ambiguous_source_count": 27,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 8,
+      "positive_exact_span_count": 460,
+      "sources_with_positive_spans": 126,
+      "span_queue_source_count": 161,
+      "state": "PA"
+    },
+    {
+      "ambiguous_source_count": 0,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 212,
+      "sources_with_positive_spans": 19,
+      "span_queue_source_count": 19,
+      "state": "RI"
+    },
+    {
+      "ambiguous_source_count": 30,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 6,
+      "positive_exact_span_count": 135,
+      "sources_with_positive_spans": 30,
+      "span_queue_source_count": 66,
+      "state": "SC"
+    },
+    {
+      "ambiguous_source_count": 21,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 10,
+      "positive_exact_span_count": 133,
+      "sources_with_positive_spans": 44,
+      "span_queue_source_count": 75,
+      "state": "SD"
+    },
+    {
+      "ambiguous_source_count": 24,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 210,
+      "sources_with_positive_spans": 46,
+      "span_queue_source_count": 73,
+      "state": "TN"
+    },
+    {
+      "ambiguous_source_count": 22,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 517,
+      "sources_with_positive_spans": 90,
+      "span_queue_source_count": 115,
+      "state": "TX"
+    },
+    {
+      "ambiguous_source_count": 13,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 126,
+      "sources_with_positive_spans": 29,
+      "span_queue_source_count": 44,
+      "state": "UT"
+    },
+    {
+      "ambiguous_source_count": 26,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 198,
+      "sources_with_positive_spans": 38,
+      "span_queue_source_count": 67,
+      "state": "VA"
+    },
+    {
+      "ambiguous_source_count": 25,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 309,
+      "sources_with_positive_spans": 63,
+      "span_queue_source_count": 89,
+      "state": "VT"
+    },
+    {
+      "ambiguous_source_count": 17,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 608,
+      "sources_with_positive_spans": 75,
+      "span_queue_source_count": 95,
+      "state": "WA"
+    },
+    {
+      "ambiguous_source_count": 26,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 759,
+      "sources_with_positive_spans": 111,
+      "span_queue_source_count": 139,
+      "state": "WI"
+    },
+    {
+      "ambiguous_source_count": 16,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 7,
+      "positive_exact_span_count": 58,
+      "sources_with_positive_spans": 20,
+      "span_queue_source_count": 43,
+      "state": "WV"
+    },
+    {
+      "ambiguous_source_count": 26,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 10,
+      "positive_exact_span_count": 21,
+      "sources_with_positive_spans": 12,
+      "span_queue_source_count": 48,
+      "state": "WY"
+    }
+  ],
+  "positive_exact_span_count": 17259,
+  "sources_with_positive_spans": 2721,
+  "span_queue_source_count": 3815
+}

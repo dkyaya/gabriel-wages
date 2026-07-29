@@ -1,0 +1,23 @@
+source_family_hint,span_queue_source_count,sources_with_positive_spans,positive_exact_span_count,no_span_or_weak_source_count,ambiguous_source_count,extraction_error_source_count
+agenda_packet_or_minutes,827,417,1272,83,327,0
+arbitration_award,120,114,867,0,6,0
+budget_or_pay_plan,520,373,2227,18,129,0
+cba,411,393,4179,3,15,0
+cba_or_arbitration_award_or_factfinding_or_impasse_record,67,63,524,3,1,0
+cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed),1,0,0,1,0,0
+cba_or_budget_pay_plan_with_explicit_compensation_mechanism,194,147,859,2,45,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule,272,208,1332,1,63,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index),1,0,0,0,1,0
+cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey),1,0,0,0,1,0
+civil_service_or_hr_pay_plan,85,54,213,7,24,0
+classification_study,25,18,145,0,7,0
+collective_bargaining_agreement_or_moa_or_wage_schedule,100,77,597,4,19,0
+compensation_study,54,44,307,0,10,0
+factfinding_report,8,8,65,0,0,0
+mou_or_memorandum,206,172,1048,3,31,0
+other_local_government_pay_policy,169,128,505,10,31,0
+personnel_policy,67,47,208,0,20,0
+salary_ordinance,120,57,222,13,50,0
+settlement_agreement,4,0,0,0,4,0
+unknown_or_needs_review,111,52,163,13,46,0
+wage_schedule,452,349,2526,18,85,0

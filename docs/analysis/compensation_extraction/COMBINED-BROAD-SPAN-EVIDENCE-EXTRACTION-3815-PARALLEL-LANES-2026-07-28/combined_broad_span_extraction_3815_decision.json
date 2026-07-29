@@ -1,0 +1,12 @@
+{
+  "all_four_lanes_complete": true,
+  "bounded_context_validation": "pass",
+  "dashboard_update_required": true,
+  "decided_at": "2026-07-29T00:35:03Z",
+  "decision": "combined_broad_span_extraction_3815_completed_rating_ready",
+  "exact_offset_hash_validation": "pass",
+  "global_analysis_readiness": false,
+  "positive_exact_spans_exist": true,
+  "rating_candidate_manifest_produced": true,
+  "task_id": "COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28"
+}

@@ -1,0 +1,3 @@
+# Combined broad deterministic span extraction — 3,815 sources
+
+Decision: `combined_broad_span_extraction_3815_completed_rating_ready`. Four staggered, overlapping lanes completed deterministic rule matching over all 3,815 extracted-ok artifacts. 2,721 sources produced 17,259 validated exact spans; 179 had no rule match, 915 were ambiguous, and 0 errored. Every candidate is verbatim with validated offsets and SHA-256, bounded context, and lineage. No rating, model/API, ingestion, codification, value normalization/comparison, statistical analysis, prevalence inference, or causal claim occurred. Global analysis readiness remains false.

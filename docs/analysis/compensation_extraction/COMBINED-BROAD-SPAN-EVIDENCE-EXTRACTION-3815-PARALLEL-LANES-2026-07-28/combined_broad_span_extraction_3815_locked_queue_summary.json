@@ -1,0 +1,11 @@
+{
+  "lane_counts": {
+    "span_lane_001": 954,
+    "span_lane_002": 954,
+    "span_lane_003": 954,
+    "span_lane_004": 953
+  },
+  "only_extracted_ok": true,
+  "queue_count": 3815,
+  "queue_identity_sha256": "d9f8168983f901013ec1a9774feea4cff080f4f2e6d9274d6558d6e70d459754"
+}

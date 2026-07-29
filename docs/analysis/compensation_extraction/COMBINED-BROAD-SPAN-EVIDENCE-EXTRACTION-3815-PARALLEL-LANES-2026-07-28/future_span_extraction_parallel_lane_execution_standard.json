@@ -1,0 +1,15 @@
+{
+  "checkpoint_after_every_source": true,
+  "controlled_overlap_required": true,
+  "coordinator_only_shared_writes": true,
+  "full_text_must_remain_ignored": true,
+  "independent_lane_count": 4,
+  "isolated_worker_outputs": true,
+  "partial_runs_cannot_claim_complete": true,
+  "standard_stagger_minutes": [
+    0,
+    8,
+    16,
+    24
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "group_count": 4,
+  "groups": [
+    {
+      "ambiguous_source_count": 271,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 50,
+      "positive_exact_span_count": 6821,
+      "region": "Midwest",
+      "sources_with_positive_spans": 973,
+      "span_queue_source_count": 1294
+    },
+    {
+      "ambiguous_source_count": 117,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 17,
+      "positive_exact_span_count": 4113,
+      "region": "Northeast",
+      "sources_with_positive_spans": 645,
+      "span_queue_source_count": 779
+    },
+    {
+      "ambiguous_source_count": 325,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 72,
+      "positive_exact_span_count": 3055,
+      "region": "South",
+      "sources_with_positive_spans": 639,
+      "span_queue_source_count": 1036
+    },
+    {
+      "ambiguous_source_count": 202,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 40,
+      "positive_exact_span_count": 3270,
+      "region": "West",
+      "sources_with_positive_spans": 464,
+      "span_queue_source_count": 706
+    }
+  ],
+  "positive_exact_span_count": 17259,
+  "sources_with_positive_spans": 2721,
+  "span_queue_source_count": 3815
+}

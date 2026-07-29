@@ -1,0 +1,5 @@
+region,span_queue_source_count,sources_with_positive_spans,positive_exact_span_count,no_span_or_weak_source_count,ambiguous_source_count,extraction_error_source_count
+Midwest,1294,973,6821,50,271,0
+Northeast,779,645,4113,17,117,0
+South,1036,639,3055,72,325,0
+West,706,464,3270,40,202,0

@@ -1,0 +1,17 @@
+{
+  "ambiguous_span_record_count": 159,
+  "complete": true,
+  "completed_count": 954,
+  "ended_at": "2026-07-29T00:26:57Z",
+  "lane_id": "span_lane_003",
+  "positive_exact_span_count": 4986,
+  "queue_count": 954,
+  "resume_relative_delay_seconds": 960,
+  "source_status_counts": {
+    "ambiguous_span": 159,
+    "no_span_or_weak": 13,
+    "span_extracted": 782
+  },
+  "standard_delay_seconds": 960,
+  "started_at": "2026-07-29T00:18:05Z"
+}

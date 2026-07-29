@@ -1,0 +1,67 @@
+{
+  "ambiguous_source_count": 915,
+  "ambiguous_span_count": 915,
+  "completed_lane_count": 4,
+  "evidence_family_counts": {
+    "non_base_compensation": 1582,
+    "qualitative_mechanism": 4695,
+    "quantitative_compensation": 10541,
+    "source_navigation_reference": 441
+  },
+  "extraction_error_count": 0,
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "span_lane_001": 954,
+    "span_lane_002": 954,
+    "span_lane_003": 954,
+    "span_lane_004": 953
+  },
+  "mechanism_label_counts": {
+    "automatic_raise_mechanism": 96,
+    "bargaining_power_signal": 2128,
+    "base_wage_direct_value": 964,
+    "fiscal_constraint_signal": 122,
+    "gap_narrowing_signal": 14,
+    "implementation_or_retroactivity_advantage": 73,
+    "market_or_comparability_pressure": 315,
+    "non_base_compensation_signal": 1582,
+    "non_safety_constraint_signal": 9,
+    "parity_or_internal_equity_signal": 101,
+    "rank_or_specialization_premium": 53,
+    "safety_advantage_signal": 308,
+    "strike_or_no_strike_constraint": 512,
+    "unknown_or_needs_rating": 10982
+  },
+  "no_span_or_weak_count": 179,
+  "non_base_compensation_span_count": 1582,
+  "positive_exact_span_count": 17259,
+  "qualitative_mechanism_span_count": 4695,
+  "quantitative_compensation_span_count": 10541,
+  "quantitative_label_counts": {
+    "annual_salary": 125,
+    "classification_compensation_plan": 886,
+    "cola_cpi": 1092,
+    "contract_period": 971,
+    "effective_date": 2117,
+    "hourly_rate": 1652,
+    "pay_band_or_grade": 455,
+    "percentage_raise": 1426,
+    "premium_stipend_differential": 1582,
+    "retroactive_pay": 472,
+    "salary_schedule": 677,
+    "step_rank_grade": 396,
+    "unknown_quantitative_compensation": 5136,
+    "wage_schedule": 272
+  },
+  "rating_candidate_count": 17259,
+  "source_navigation_reference_span_count": 441,
+  "source_status_counts": {
+    "ambiguous_span": 915,
+    "no_span_or_weak": 179,
+    "span_extracted": 2721
+  },
+  "sources_with_positive_spans": 2721,
+  "span_extraction_attempted_count": 3815,
+  "span_queue_count": 3815,
+  "task_id": "COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28"
+}

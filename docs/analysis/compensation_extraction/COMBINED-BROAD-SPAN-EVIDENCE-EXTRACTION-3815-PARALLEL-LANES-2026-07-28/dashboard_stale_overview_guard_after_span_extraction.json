@@ -1,0 +1,6 @@
+{
+  "forbidden_stale_current_operation": "text extraction complete",
+  "global_analysis_readiness_must_be_false": true,
+  "guard_status": "passed",
+  "required_current_operation": "deterministic exact-span extraction complete"
+}

@@ -1,0 +1,9 @@
+{
+  "checked_span_count": 18174,
+  "configured_maximum_context_total_char_count": 500,
+  "configured_maximum_exact_span_char_count": 600,
+  "maximum_context_total_char_count": 500,
+  "maximum_exact_span_char_count": 544,
+  "validation_status": "pass",
+  "whole_documents_stored": false
+}

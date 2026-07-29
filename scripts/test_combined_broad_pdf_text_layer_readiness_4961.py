@@ -137,11 +137,19 @@ def main() -> None:
     phase = load_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
     source = load_json(ROOT / "docs/dashboard/data/source_review_status_summary.json")
     state = load_json(ROOT / "docs/dashboard/data/state_summary.json")
-    assert phase["current_phase_code"] == decision["decision"]
+    assert phase["current_phase_code"] in {
+        decision["decision"],
+        "combined_broad_text_extraction_4051_completed_span_extraction_ready",
+        "combined_broad_span_extraction_3815_completed_rating_ready",
+    }
     assert phase["pdf_text_readiness_queue_size"] == 4961
     assert phase["pdf_text_readiness_reviewed_count"] == 4961
     assert phase["pdf_text_readiness_extraction_ready_count"] == summary["extraction_ready_count"]
-    assert source["source_review_phase"] == "combined_broad_4961_readiness_parallel_lanes_completed"
+    assert source["source_review_phase"] in {
+        "combined_broad_4961_readiness_parallel_lanes_completed",
+        "combined_broad_4051_text_extraction_parallel_lanes_completed",
+        "combined_broad_3815_deterministic_span_parallel_lanes_completed",
+    }
     assert source["pdf_text_readiness_reviewed_count"] == 4961
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"

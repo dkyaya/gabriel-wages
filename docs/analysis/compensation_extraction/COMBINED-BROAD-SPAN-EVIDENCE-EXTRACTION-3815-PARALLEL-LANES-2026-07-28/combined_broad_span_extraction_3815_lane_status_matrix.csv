@@ -1,0 +1,5 @@
+lane_id,locked_queue_count,completed_source_count,positive_exact_span_count,ambiguous_span_record_count,started_at,ended_at,actual_start_offset_seconds,required_start_offset_seconds,overlap_with_next_lane_seconds,status
+span_lane_001,954,954,4835,195,2026-07-29T00:02:05Z,2026-07-29T00:10:54Z,0,0,49,completed
+span_lane_002,954,954,5448,171,2026-07-29T00:10:05Z,2026-07-29T00:18:55Z,480,480,50,completed
+span_lane_003,954,954,4986,159,2026-07-29T00:18:05Z,2026-07-29T00:26:57Z,960,960,52,completed
+span_lane_004,953,953,1990,390,2026-07-29T00:26:05Z,2026-07-29T00:34:55Z,1440,1440,0,completed

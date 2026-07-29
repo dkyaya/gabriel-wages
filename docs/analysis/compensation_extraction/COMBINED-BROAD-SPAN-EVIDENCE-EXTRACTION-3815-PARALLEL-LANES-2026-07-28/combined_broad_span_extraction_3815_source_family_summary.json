@@ -1,0 +1,206 @@
+{
+  "group_count": 22,
+  "groups": [
+    {
+      "ambiguous_source_count": 327,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 83,
+      "positive_exact_span_count": 1272,
+      "source_family_hint": "agenda_packet_or_minutes",
+      "sources_with_positive_spans": 417,
+      "span_queue_source_count": 827
+    },
+    {
+      "ambiguous_source_count": 6,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 867,
+      "source_family_hint": "arbitration_award",
+      "sources_with_positive_spans": 114,
+      "span_queue_source_count": 120
+    },
+    {
+      "ambiguous_source_count": 129,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 18,
+      "positive_exact_span_count": 2227,
+      "source_family_hint": "budget_or_pay_plan",
+      "sources_with_positive_spans": 373,
+      "span_queue_source_count": 520
+    },
+    {
+      "ambiguous_source_count": 15,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 4179,
+      "source_family_hint": "cba",
+      "sources_with_positive_spans": 393,
+      "span_queue_source_count": 411
+    },
+    {
+      "ambiguous_source_count": 1,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 524,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record",
+      "sources_with_positive_spans": 63,
+      "span_queue_source_count": 67
+    },
+    {
+      "ambiguous_source_count": 0,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 0,
+      "source_family_hint": "cba_or_arbitration_award_or_factfinding_or_impasse_record (possible hosted contract/negotiation materials; not confirmed)",
+      "sources_with_positive_spans": 0,
+      "span_queue_source_count": 1
+    },
+    {
+      "ambiguous_source_count": 45,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 2,
+      "positive_exact_span_count": 859,
+      "source_family_hint": "cba_or_budget_pay_plan_with_explicit_compensation_mechanism",
+      "sources_with_positive_spans": 147,
+      "span_queue_source_count": 194
+    },
+    {
+      "ambiguous_source_count": 63,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 1,
+      "positive_exact_span_count": 1332,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule",
+      "sources_with_positive_spans": 208,
+      "span_queue_source_count": 272
+    },
+    {
+      "ambiguous_source_count": 1,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 0,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey participant/coverage index)",
+      "sources_with_positive_spans": 0,
+      "span_queue_source_count": 1
+    },
+    {
+      "ambiguous_source_count": 1,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 0,
+      "source_family_hint": "cba_or_compensation_study_or_classification_study_or_wage_schedule (state municipal wage & salary survey)",
+      "sources_with_positive_spans": 0,
+      "span_queue_source_count": 1
+    },
+    {
+      "ambiguous_source_count": 24,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 7,
+      "positive_exact_span_count": 213,
+      "source_family_hint": "civil_service_or_hr_pay_plan",
+      "sources_with_positive_spans": 54,
+      "span_queue_source_count": 85
+    },
+    {
+      "ambiguous_source_count": 7,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 145,
+      "source_family_hint": "classification_study",
+      "sources_with_positive_spans": 18,
+      "span_queue_source_count": 25
+    },
+    {
+      "ambiguous_source_count": 19,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 4,
+      "positive_exact_span_count": 597,
+      "source_family_hint": "collective_bargaining_agreement_or_moa_or_wage_schedule",
+      "sources_with_positive_spans": 77,
+      "span_queue_source_count": 100
+    },
+    {
+      "ambiguous_source_count": 10,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 307,
+      "source_family_hint": "compensation_study",
+      "sources_with_positive_spans": 44,
+      "span_queue_source_count": 54
+    },
+    {
+      "ambiguous_source_count": 0,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 65,
+      "source_family_hint": "factfinding_report",
+      "sources_with_positive_spans": 8,
+      "span_queue_source_count": 8
+    },
+    {
+      "ambiguous_source_count": 31,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 3,
+      "positive_exact_span_count": 1048,
+      "source_family_hint": "mou_or_memorandum",
+      "sources_with_positive_spans": 172,
+      "span_queue_source_count": 206
+    },
+    {
+      "ambiguous_source_count": 31,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 10,
+      "positive_exact_span_count": 505,
+      "source_family_hint": "other_local_government_pay_policy",
+      "sources_with_positive_spans": 128,
+      "span_queue_source_count": 169
+    },
+    {
+      "ambiguous_source_count": 20,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 208,
+      "source_family_hint": "personnel_policy",
+      "sources_with_positive_spans": 47,
+      "span_queue_source_count": 67
+    },
+    {
+      "ambiguous_source_count": 50,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 13,
+      "positive_exact_span_count": 222,
+      "source_family_hint": "salary_ordinance",
+      "sources_with_positive_spans": 57,
+      "span_queue_source_count": 120
+    },
+    {
+      "ambiguous_source_count": 4,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 0,
+      "positive_exact_span_count": 0,
+      "source_family_hint": "settlement_agreement",
+      "sources_with_positive_spans": 0,
+      "span_queue_source_count": 4
+    },
+    {
+      "ambiguous_source_count": 46,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 13,
+      "positive_exact_span_count": 163,
+      "source_family_hint": "unknown_or_needs_review",
+      "sources_with_positive_spans": 52,
+      "span_queue_source_count": 111
+    },
+    {
+      "ambiguous_source_count": 85,
+      "extraction_error_source_count": 0,
+      "no_span_or_weak_source_count": 18,
+      "positive_exact_span_count": 2526,
+      "source_family_hint": "wage_schedule",
+      "sources_with_positive_spans": 349,
+      "span_queue_source_count": 452
+    }
+  ],
+  "positive_exact_span_count": 17259,
+  "sources_with_positive_spans": 2721,
+  "span_queue_source_count": 3815
+}

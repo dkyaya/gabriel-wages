@@ -1,38 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-28T22:50:10Z",
+  "generated_at": "2026-07-29T00:35:08Z",
   "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "combined-broad-text-extraction-4051-2026-07-28",
-      "title": "Combined Broad Text Extraction Result",
-      "report_type": "Current bounded text-extraction report",
+      "id": "combined-broad-span-extraction-3815-2026-07-28",
+      "title": "Combined Broad Exact-Span Extraction Result",
+      "report_type": "Current deterministic exact-span report",
       "date": "2026-07-28",
-      "checkpoint": "4,051 extraction attempts; 3,815 extracted OK",
-      "summary": "Four isolated, staggered lanes extracted only machine-readable local text to ignored artifact storage. No OCR, rendering, span extraction, evidence rating, ingestion, wage analysis, or causal analysis occurred.",
+      "checkpoint": "3,815 sources attempted; 17,259 exact candidates",
+      "summary": "Four isolated, standard-staggered lanes found deterministic exact candidate spans with validated offsets, hashes, and bounded context. No rating, model analysis, ingestion, wage comparison, or causal analysis occurred.",
       "tags": [
         "current",
-        "text extraction",
-        "ignored artifacts",
+        "exact spans",
+        "deterministic",
         "claim boundaries"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_text_extraction_4051_result_2026-07-28.md",
-      "link_label": "Open current text-extraction report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md",
+      "link_label": "Open current exact-span report",
       "scope_metrics": [
         {
-          "label": "extraction queue",
-          "value": 4051
-        },
-        {
-          "label": "attempted",
-          "value": 4051
-        },
-        {
-          "label": "extracted OK",
+          "label": "span queue",
           "value": 3815
+        },
+        {
+          "label": "positive sources",
+          "value": 2721
+        },
+        {
+          "label": "rating candidates",
+          "value": 17259
         }
       ]
     },
@@ -132,6 +132,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-text-extraction-4051-2026-07-28",
+      "title": "Combined Broad Text Extraction Result",
+      "report_type": "Historical bounded text-extraction report",
+      "date": "2026-07-28",
+      "checkpoint": "4,051 extraction attempts; 3,815 extracted OK",
+      "summary": "Four isolated, staggered lanes extracted only machine-readable local text to ignored artifact storage. No OCR, rendering, span extraction, evidence rating, ingestion, wage analysis, or causal analysis occurred.",
+      "tags": [
+        "historical",
+        "text extraction",
+        "ignored artifacts",
+        "claim boundaries"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_text_extraction_4051_result_2026-07-28.md",
+      "link_label": "Open current text-extraction report",
+      "scope_metrics": [
+        {
+          "label": "extraction queue",
+          "value": 4051
+        },
+        {
+          "label": "attempted",
+          "value": 4051
+        },
+        {
+          "label": "extracted OK",
+          "value": 3815
         }
       ]
     },

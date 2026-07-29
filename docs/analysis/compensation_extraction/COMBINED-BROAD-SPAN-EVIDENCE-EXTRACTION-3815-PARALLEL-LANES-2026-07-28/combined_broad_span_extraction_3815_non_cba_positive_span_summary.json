@@ -1,0 +1,5 @@
+{
+  "all_source_with_positive_span_count": 2721,
+  "classification_rule": "source_family_hint is not exactly cba",
+  "non_cba_or_mixed_source_with_positive_span_count": 2328
+}

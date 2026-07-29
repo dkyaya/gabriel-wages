@@ -1,0 +1,2226 @@
+state,municipality,span_queue_source_count,sources_with_positive_spans,positive_exact_span_count,no_span_or_weak_source_count,ambiguous_source_count,extraction_error_source_count
+AK,Akutan,1,1,2,0,0,0
+AK,Aleknagik,1,0,0,0,1,0
+AK,Anaktuvuk Pass,1,1,2,0,0,0
+AK,Angoon,2,1,2,0,1,0
+AK,Atqasuk,1,1,10,0,0,0
+AK,Cordova,1,1,3,0,0,0
+AK,Delta Junction,2,2,15,0,0,0
+AK,Elim,1,1,7,0,0,0
+AK,False Pass,2,1,9,0,1,0
+AK,Fort Yukon,1,1,3,0,0,0
+AK,Gambell,1,1,9,0,0,0
+AK,Gustavus,1,1,4,0,0,0
+AK,Kachemak,1,1,1,0,0,0
+AK,Kake,1,1,7,0,0,0
+AK,King Cove,1,0,0,0,1,0
+AK,Kivalina,1,1,5,0,0,0
+AK,Kotlik,1,1,1,0,0,0
+AK,Kotzebue,1,1,5,0,0,0
+AK,Manokotak,1,1,4,0,0,0
+AK,Nome,2,2,26,0,0,0
+AK,Pilot Station,1,1,4,0,0,0
+AK,Point Hope,1,1,3,0,0,0
+AK,Quinhagak,1,1,5,0,0,0
+AK,Sand Point,3,3,19,0,0,0
+AK,Seward,1,1,16,0,0,0
+AK,Tanana,1,0,0,1,0,0
+AK,Teller,1,1,7,0,0,0
+AK,Togiak,2,2,4,0,0,0
+AK,Toksook Bay,1,1,3,0,0,0
+AK,White Mountain,1,1,13,0,0,0
+AK,Whittier,1,1,3,0,0,0
+AL,Alabaster,1,1,7,0,0,0
+AL,Andalusia,1,1,8,0,0,0
+AL,Anniston,3,3,6,0,0,0
+AL,Attalla,1,1,2,0,0,0
+AL,Calera,3,2,2,0,1,0
+AL,Chickasaw,2,0,0,1,1,0
+AL,Foley,1,1,8,0,0,0
+AL,Fort Payne,3,2,5,0,1,0
+AL,Gadsden,1,1,2,0,0,0
+AL,Glencoe,3,0,0,0,3,0
+AL,Gulf Shores,1,1,4,0,0,0
+AL,Hartselle,1,1,2,0,0,0
+AL,Irondale,2,2,7,0,0,0
+AL,Jasper,5,2,5,0,3,0
+AL,Lanett,1,0,0,0,1,0
+AL,Lincoln,1,0,0,1,0,0
+AL,Loxley,1,1,6,0,0,0
+AL,Margaret,3,2,3,0,1,0
+AL,Millbrook,1,0,0,0,1,0
+AL,Montevallo,1,0,0,0,1,0
+AL,Muscle Shoals,1,0,0,0,1,0
+AL,Oneonta,1,0,0,1,0,0
+AL,Ozark,1,1,2,0,0,0
+AL,Pell City,2,0,0,1,1,0
+AL,Pleasant Grove,2,0,0,2,0,0
+AL,Rainsville,4,0,0,1,3,0
+AL,Roanoke,1,1,1,0,0,0
+AL,Robertsdale,2,2,12,0,0,0
+AL,Satsuma,3,0,0,0,3,0
+AL,Scottsboro,1,1,5,0,0,0
+AL,Sheffield,1,1,2,0,0,0
+AL,Southside,3,2,2,0,1,0
+AL,Spanish Fort,1,1,3,0,0,0
+AL,Talladega,4,4,10,0,0,0
+AR,Batesville,1,1,1,0,0,0
+AR,Brookland,2,0,0,0,2,0
+AR,Cherokee Village,2,2,5,0,0,0
+AR,Crossett,2,1,5,0,1,0
+AR,Dardanelle,1,0,0,0,1,0
+AR,El Dorado,3,2,24,0,1,0
+AR,Farmington,1,1,4,0,0,0
+AR,Forrest City,1,1,2,0,0,0
+AR,Gosnell,1,0,0,1,0,0
+AR,Haskell,3,0,0,2,1,0
+AR,Helena-West Helena,1,1,2,0,0,0
+AR,Hot Springs,1,1,1,0,0,0
+AR,Johnson,2,2,3,0,0,0
+AR,Little Flock,1,0,0,1,0,0
+AR,Little Rock,3,3,39,0,0,0
+AR,Lonoke,3,1,1,0,2,0
+AR,Maumelle,1,1,6,0,0,0
+AR,Morrilton,1,1,1,0,0,0
+AR,Mountain Home,2,1,4,0,1,0
+AR,Newport,1,0,0,1,0,0
+AR,Ozark,1,1,2,0,0,0
+AR,Pea Ridge,1,1,3,0,0,0
+AR,Searcy,5,1,3,0,4,0
+AR,Siloam Springs,1,1,10,0,0,0
+AR,Tontitown,1,1,11,0,0,0
+AR,Vilonia,2,1,3,0,1,0
+AR,Warren,2,2,2,0,0,0
+AR,Wynne,2,1,3,1,0,0
+AZ,Apache Junction,1,1,2,0,0,0
+AZ,Bullhead City,1,1,7,0,0,0
+AZ,Carefree,1,1,3,0,0,0
+AZ,Cave Creek,1,0,0,0,1,0
+AZ,Clifton,2,1,1,0,1,0
+AZ,Coolidge,4,1,1,0,3,0
+AZ,Douglas,1,0,0,1,0,0
+AZ,Duncan,2,0,0,0,2,0
+AZ,Eagar,1,1,9,0,0,0
+AZ,El Mirage,2,2,30,0,0,0
+AZ,Fountain Hills,4,4,21,0,0,0
+AZ,Fredonia,2,0,0,0,2,0
+AZ,Holbrook,1,0,0,0,1,0
+AZ,Kingman,1,1,16,0,0,0
+AZ,Litchfield Park,2,1,1,0,1,0
+AZ,Miami,1,0,0,0,1,0
+AZ,Nogales,3,2,10,0,1,0
+AZ,Oro Valley,1,1,11,0,0,0
+AZ,Page,3,2,13,0,1,0
+AZ,Paradise Valley,1,1,6,0,0,0
+AZ,Patagonia,2,1,3,0,1,0
+AZ,Payson,1,1,12,0,0,0
+AZ,Phoenix,4,4,58,0,0,0
+AZ,Pima,2,0,0,0,2,0
+AZ,Pinetop-Lakeside,1,1,1,0,0,0
+AZ,Quartzsite,1,0,0,0,1,0
+AZ,Show Low,1,1,6,0,0,0
+AZ,Sierra Vista,1,0,0,1,0,0
+AZ,Somerton,3,3,18,0,0,0
+AZ,Springerville,2,2,10,0,0,0
+AZ,Star Valley,3,1,3,0,2,0
+AZ,Tucson,1,1,12,0,0,0
+AZ,Wellton,1,1,7,0,0,0
+AZ,Willcox,2,1,5,0,1,0
+AZ,Williams,3,2,6,0,1,0
+CA,Anderson,1,1,15,0,0,0
+CA,Artesia,1,1,2,0,0,0
+CA,Auburn,1,0,0,0,1,0
+CA,Avenal,4,1,5,0,3,0
+CA,Beaumont,1,1,10,0,0,0
+CA,Blythe,5,3,5,0,2,0
+CA,Burbank,1,1,16,0,0,0
+CA,Calimesa,2,1,3,0,1,0
+CA,Canyon Lake,1,1,13,0,0,0
+CA,Carpinteria,2,2,25,0,0,0
+CA,Ceres,1,1,1,0,0,0
+CA,Citrus Heights,1,0,0,0,1,0
+CA,Colusa,1,1,5,0,0,0
+CA,Concord,1,0,0,0,1,0
+CA,Corning,2,2,32,0,0,0
+CA,Coronado,6,6,63,0,0,0
+CA,Corte Madera,1,1,10,0,0,0
+CA,Covina,2,2,20,0,0,0
+CA,Crescent City,1,1,16,0,0,0
+CA,Exeter,1,1,1,0,0,0
+CA,Fairfax,1,1,16,0,0,0
+CA,Fillmore,1,1,10,0,0,0
+CA,Firebaugh,3,3,27,0,0,0
+CA,Fontana,1,0,0,0,1,0
+CA,Fortuna,1,1,13,0,0,0
+CA,Gardena,2,1,15,0,1,0
+CA,Gridley,1,1,16,0,0,0
+CA,Guadalupe,2,2,17,0,0,0
+CA,Hollister,1,1,10,0,0,0
+CA,Imperial Beach,1,1,1,0,0,0
+CA,Indio,2,2,8,0,0,0
+CA,Inglewood,2,2,8,0,0,0
+CA,Ione,1,1,15,0,0,0
+CA,Kingsburg,2,2,12,0,0,0
+CA,La Mesa,2,1,2,1,0,0
+CA,La Palma,2,2,18,0,0,0
+CA,Laguna Woods,1,1,5,0,0,0
+CA,Live Oak,1,1,14,0,0,0
+CA,Los Alamitos,1,1,16,0,0,0
+CA,Los Banos,2,2,21,0,0,0
+CA,Mendota,1,1,7,0,0,0
+CA,Mill Valley,1,1,2,0,0,0
+CA,Monterey Park,1,1,1,0,0,0
+CA,Moreno Valley,2,2,12,0,0,0
+CA,Morro Bay,2,2,32,0,0,0
+CA,Novato,1,1,15,0,0,0
+CA,Orinda,3,3,10,0,0,0
+CA,Orland,3,3,29,0,0,0
+CA,Oxnard,4,4,34,0,0,0
+CA,Pinole,4,4,49,0,0,0
+CA,Placerville,2,2,22,0,0,0
+CA,Redding,3,3,27,0,0,0
+CA,Rocklin,2,1,2,0,1,0
+CA,Rohnert Park,3,3,37,0,0,0
+CA,San Leandro,1,1,14,0,0,0
+CA,San Marino,3,3,43,0,0,0
+CA,San Ramon,1,1,7,0,0,0
+CA,Santa Monica,1,1,3,0,0,0
+CA,Santee,1,1,16,0,0,0
+CA,Sebastopol,5,5,42,0,0,0
+CA,Shasta Lake,1,1,3,0,0,0
+CA,Sierra Madre,3,3,34,0,0,0
+CA,Solana Beach,3,3,40,0,0,0
+CA,Sonoma,2,2,14,0,0,0
+CA,Sonora,4,3,42,0,1,0
+CA,South El Monte,1,0,0,0,1,0
+CA,Stockton,1,1,11,0,0,0
+CA,Tehachapi,2,1,11,0,1,0
+CA,Tiburon,1,1,7,0,0,0
+CA,Vallejo,1,1,16,0,0,0
+CO,Castle Pines,1,0,0,0,1,0
+CO,Castle Rock,1,0,0,0,1,0
+CO,Cañon City,3,3,26,0,0,0
+CO,Cherry Hills Village,2,1,4,0,1,0
+CO,Commerce City,1,1,6,0,0,0
+CO,Cortez,2,0,0,0,2,0
+CO,Elizabeth,1,1,1,0,0,0
+CO,Englewood,3,3,38,0,0,0
+CO,Evans,2,2,4,0,0,0
+CO,Federal Heights,1,1,2,0,0,0
+CO,Firestone,2,0,0,1,1,0
+CO,Florence,2,1,9,0,1,0
+CO,Fort Morgan,1,1,1,0,0,0
+CO,Frederick,1,1,1,0,0,0
+CO,Granby,1,1,13,0,0,0
+CO,Greenwood Village,1,1,1,0,0,0
+CO,Gypsum,1,1,5,0,0,0
+CO,Johnstown,1,1,3,0,0,0
+CO,Lafayette,2,1,2,1,0,0
+CO,Limon,1,1,8,0,0,0
+CO,Lone Tree,2,2,13,0,0,0
+CO,Manitou Springs,2,2,13,0,0,0
+CO,Mead,2,2,6,0,0,0
+CO,Montrose,1,1,6,0,0,0
+CO,Northglenn,3,3,3,0,0,0
+CO,Parker,1,1,3,0,0,0
+CO,Rifle,1,1,6,0,0,0
+CO,Snowmass Village,2,0,0,0,2,0
+CO,Superior,2,1,2,0,1,0
+CO,Timnath,2,1,1,0,1,0
+CO,Trinidad,3,3,29,0,0,0
+CO,Wellington,2,1,2,0,1,0
+CO,Woodland Park,1,1,4,0,0,0
+CT,Avon,1,1,15,0,0,0
+CT,Berlin,3,3,46,0,0,0
+CT,Brookfield,1,1,3,0,0,0
+CT,Cheshire,1,1,2,0,0,0
+CT,Colchester,1,1,11,0,0,0
+CT,Coventry,2,1,1,0,1,0
+CT,Cromwell,1,0,0,0,1,0
+CT,East Haddam,1,1,6,0,0,0
+CT,East Hartford,1,1,14,0,0,0
+CT,East Haven,1,1,2,0,0,0
+CT,East Lyme,3,3,48,0,0,0
+CT,East Windsor,1,0,0,0,1,0
+CT,Fairfield,2,2,32,0,0,0
+CT,Greenwich,3,3,48,0,0,0
+CT,Guilford,2,2,18,0,0,0
+CT,Killingly,2,2,4,0,0,0
+CT,Madison,1,1,3,0,0,0
+CT,Mansfield,1,1,6,0,0,0
+CT,New Canaan,3,3,46,0,0,0
+CT,New Milford,2,2,30,0,0,0
+CT,Newtown,2,2,26,0,0,0
+CT,North Branford,3,3,7,0,0,0
+CT,Orange,1,1,1,0,0,0
+CT,Plainfield,1,1,1,0,0,0
+CT,Plainville,2,2,32,0,0,0
+CT,Prospect,1,1,5,0,0,0
+CT,Ridgefield,1,0,0,0,1,0
+CT,Seymour,3,3,34,0,0,0
+CT,Simsbury,1,1,15,0,0,0
+CT,Southbury,2,0,0,0,2,0
+CT,Southington,1,1,16,0,0,0
+CT,Trumbull,1,1,3,0,0,0
+CT,Vernon,2,2,7,0,0,0
+CT,Wallingford,1,1,12,0,0,0
+CT,Watertown,3,3,7,0,0,0
+CT,Wilton,1,1,14,0,0,0
+CT,Winchester,2,2,27,0,0,0
+CT,Windsor,1,0,0,1,0,0
+CT,Windsor Locks,2,1,13,0,1,0
+CT,Wolcott,1,0,0,0,1,0
+CT,Woodbridge,1,1,2,0,0,0
+CT,Woodbury,1,1,13,0,0,0
+DE,Arden,3,0,0,0,3,0
+DE,Bellefonte,2,2,6,0,0,0
+DE,Blades,2,1,1,1,0,0
+DE,Bowers,1,0,0,1,0,0
+DE,Bridgeville,1,1,4,0,0,0
+DE,Camden,1,1,4,0,0,0
+DE,Cheswold,2,1,3,0,1,0
+DE,Delmar,4,3,5,0,1,0
+DE,Ellendale,1,0,0,0,1,0
+DE,Elsmere,2,1,1,1,0,0
+DE,Frederica,2,1,1,0,1,0
+DE,Greenwood,1,0,0,0,1,0
+DE,Henlopen Acres,1,1,6,0,0,0
+DE,Houston,2,0,0,0,2,0
+DE,Magnolia,3,0,0,0,3,0
+DE,Millville,3,2,2,0,1,0
+DE,Milton,1,0,0,0,1,0
+DE,Ocean View,2,1,16,0,1,0
+DE,Rehoboth Beach,2,2,4,0,0,0
+DE,South Bethany,3,1,3,1,1,0
+DE,Wyoming,2,1,2,0,1,0
+FL,Atlantic Beach,2,2,23,0,0,0
+FL,Bay Harbor Islands,1,1,1,0,0,0
+FL,Belle Isle,2,2,20,0,0,0
+FL,Belleview,1,1,3,0,0,0
+FL,Dade City,4,4,22,0,0,0
+FL,Daytona Beach Shores,1,1,1,0,0,0
+FL,Dundee,2,2,17,0,0,0
+FL,Flagler Beach,1,1,13,0,0,0
+FL,Fort Meade,1,1,14,0,0,0
+FL,Gulf Breeze,1,1,8,0,0,0
+FL,High Springs,2,1,5,0,1,0
+FL,Highland Beach,2,2,20,0,0,0
+FL,Indian Harbour Beach,1,1,14,0,0,0
+FL,Indian River Shores,3,3,13,0,0,0
+FL,Jupiter,1,0,0,1,0,0
+FL,LaBelle,2,2,9,0,0,0
+FL,Lake City,2,2,25,0,0,0
+FL,Lake Park,2,1,2,0,1,0
+FL,Lantana,1,1,15,0,0,0
+FL,Lighthouse Point,2,1,1,1,0,0
+FL,Marianna,1,1,1,0,0,0
+FL,Milton,1,1,6,0,0,0
+FL,Neptune Beach,2,2,29,0,0,0
+FL,Newberry,1,1,1,0,0,0
+FL,North Bay Village,1,1,8,0,0,0
+FL,North Palm Beach,3,3,32,0,0,0
+FL,Orange Park,1,1,11,0,0,0
+FL,Pahokee,1,1,1,0,0,0
+FL,Palm Beach,1,1,9,0,0,0
+FL,Tampa,2,2,32,0,0,0
+FL,Tequesta,1,1,13,0,0,0
+FL,Treasure Island,2,2,26,0,0,0
+FL,Wauchula,1,0,0,0,1,0
+FL,West Miami,1,1,2,0,0,0
+FL,West Park,1,1,6,0,0,0
+FL,Westlake,1,1,1,0,0,0
+FL,Wilton Manors,1,0,0,0,1,0
+GA,Acworth,3,0,0,0,3,0
+GA,Alpharetta,1,0,0,0,1,0
+GA,Americus,1,1,11,0,0,0
+GA,Austell,1,1,1,0,0,0
+GA,Brookhaven,1,1,4,0,0,0
+GA,Buford,1,1,5,0,0,0
+GA,Calhoun,1,1,3,0,0,0
+GA,Chamblee,1,1,5,0,0,0
+GA,Clarkston,4,2,11,0,2,0
+GA,Covington,2,0,0,0,2,0
+GA,Dalton,2,2,10,0,0,0
+GA,Decatur,2,2,6,0,0,0
+GA,Doraville,1,1,6,0,0,0
+GA,Dublin,2,2,2,0,0,0
+GA,East Point,1,1,2,0,0,0
+GA,Fairburn,1,0,0,0,1,0
+GA,Fayetteville,4,2,15,0,2,0
+GA,Flowery Branch,1,1,7,0,0,0
+GA,Forest Park,1,1,9,0,0,0
+GA,Fort Oglethorpe,2,2,12,0,0,0
+GA,Griffin,1,1,5,0,0,0
+GA,Grovetown,4,2,5,0,2,0
+GA,Holly Springs,1,0,0,1,0,0
+GA,Jefferson,2,0,0,0,2,0
+GA,Jesup,2,0,0,1,1,0
+GA,Johns Creek,1,1,15,0,0,0
+GA,Kingsland,1,1,1,0,0,0
+GA,Lilburn,1,0,0,0,1,0
+GA,Loganville,1,0,0,0,1,0
+GA,Mableton,3,2,9,0,1,0
+GA,McDonough,2,2,6,0,0,0
+GA,Milledgeville,1,0,0,0,1,0
+GA,Moultrie,3,2,8,0,1,0
+GA,Newnan,3,3,17,0,0,0
+GA,Perry,3,1,1,0,2,0
+GA,Port Wentworth,2,0,0,0,2,0
+GA,Powder Springs,3,3,6,0,0,0
+GA,Snellville,2,2,12,0,0,0
+GA,St. Marys,1,1,2,0,0,0
+GA,Stonecrest,2,2,16,0,0,0
+GA,Sugar Hill,1,0,0,1,0,0
+GA,Suwanee,2,2,18,0,0,0
+GA,Thomaston,1,0,0,1,0,0
+GA,Thomasville,2,2,3,0,0,0
+GA,Tifton,2,2,3,0,0,0
+GA,Valdosta,1,0,0,0,1,0
+GA,Waycross,1,1,2,0,0,0
+GA,Woodstock,1,0,0,0,1,0
+IA,Adel,1,1,5,0,0,0
+IA,Albia,3,2,3,1,0,0
+IA,Algona,1,1,4,0,0,0
+IA,Anamosa,2,2,7,0,0,0
+IA,Asbury,1,0,0,1,0,0
+IA,Carlisle,1,1,4,0,0,0
+IA,Carroll,2,2,16,0,0,0
+IA,Carter Lake,2,2,16,0,0,0
+IA,Chariton,1,1,2,0,0,0
+IA,Clarinda,2,1,3,0,1,0
+IA,Clarion,2,0,0,0,2,0
+IA,DeWitt,1,1,2,0,0,0
+IA,Denison,1,1,1,0,0,0
+IA,Eldridge,1,0,0,0,1,0
+IA,Emmetsburg,1,1,1,0,0,0
+IA,Estherville,1,1,6,0,0,0
+IA,Evansdale,1,1,16,0,0,0
+IA,Forest City,1,1,2,0,0,0
+IA,Fort Madison,2,1,7,0,1,0
+IA,Glenwood,1,1,2,0,0,0
+IA,Grundy Center,3,2,4,0,1,0
+IA,Hampton,1,1,2,0,0,0
+IA,Harlan,1,1,2,0,0,0
+IA,Hiawatha,2,2,2,0,0,0
+IA,Independence,1,1,4,0,0,0
+IA,Iowa Falls,1,1,1,0,0,0
+IA,Jefferson,1,1,7,0,0,0
+IA,Jesup,1,1,8,0,0,0
+IA,Keokuk,1,1,14,0,0,0
+IA,Maquoketa,1,0,0,1,0,0
+IA,Milford,3,0,0,0,3,0
+IA,Monticello,1,1,8,0,0,0
+IA,Mount Vernon,1,0,0,0,1,0
+IA,New Hampton,2,2,4,0,0,0
+IA,Oelwein,2,2,19,0,0,0
+IA,Polk City,2,2,30,0,0,0
+IA,Red Oak,2,2,10,0,0,0
+IA,Robins,1,1,4,0,0,0
+IA,Rock Rapids,1,1,2,0,0,0
+IA,Sergeant Bluff,1,1,5,0,0,0
+IA,Sheldon,1,1,16,0,0,0
+IA,Shenandoah,3,1,2,0,2,0
+IA,Sioux Center,2,2,4,0,0,0
+IA,Spirit Lake,1,0,0,0,1,0
+IA,Story City,3,3,6,0,0,0
+IA,Tiffin,1,0,0,0,1,0
+IA,Waukon,2,0,0,0,2,0
+IA,Waverly,1,0,0,0,1,0
+IA,Webster City,1,1,4,0,0,0
+IA,Winterset,2,1,2,0,1,0
+ID,American Falls,1,0,0,0,1,0
+ID,Arco,1,0,0,0,1,0
+ID,Athol,2,0,0,0,2,0
+ID,Blackfoot,1,0,0,0,1,0
+ID,Buhl,2,0,0,2,0,0
+ID,Clark Fork,1,0,0,1,0,0
+ID,Council,1,0,0,0,1,0
+ID,Driggs,1,1,1,0,0,0
+ID,Fruitland,3,0,0,0,3,0
+ID,Genesee,1,0,0,1,0,0
+ID,Grangeville,2,2,4,0,0,0
+ID,Hailey,1,1,1,0,0,0
+ID,Hauser,1,0,0,0,1,0
+ID,Hayden,1,1,2,0,0,0
+ID,Heyburn,2,1,1,0,1,0
+ID,Idaho Falls,1,1,10,0,0,0
+ID,Inkom,3,1,1,0,2,0
+ID,Jerome,3,3,16,0,0,0
+ID,Malad City,2,0,0,0,2,0
+ID,Meridian,1,1,1,0,0,0
+ID,Montpelier,1,1,1,0,0,0
+ID,New Meadows,2,2,5,0,0,0
+ID,Orofino,1,0,0,0,1,0
+ID,Payette,1,1,3,0,0,0
+ID,Ponderay,2,0,0,0,2,0
+ID,Post Falls,2,2,4,0,0,0
+ID,Preston,2,0,0,1,1,0
+ID,Rigby,1,0,0,0,1,0
+ID,Roberts,1,1,1,0,0,0
+ID,Sandpoint,2,1,16,0,1,0
+ID,Shelley,1,0,0,0,1,0
+ID,Shoshone,2,1,2,0,1,0
+ID,Sun Valley,1,1,7,0,0,0
+ID,Teton,2,1,3,0,1,0
+ID,Wallace,2,0,0,0,2,0
+ID,Weiser,2,0,0,0,2,0
+IL,Alsip,2,2,12,0,0,0
+IL,Alton,1,1,10,0,0,0
+IL,Barrington,1,1,5,0,0,0
+IL,Beach Park,2,2,6,0,0,0
+IL,Bellwood,4,4,15,0,0,0
+IL,Bloom,1,1,10,0,0,0
+IL,Bloomington City,1,1,3,0,0,0
+IL,Bourbonnais,1,1,2,0,0,0
+IL,Bradley,2,2,25,0,0,0
+IL,Bridgeview,1,1,15,0,0,0
+IL,Brookfield,5,5,44,0,0,0
+IL,Buffalo Grove,1,0,0,0,1,0
+IL,Burr Ridge,1,1,14,0,0,0
+IL,Calumet,1,1,2,0,0,0
+IL,Campton,1,0,0,0,1,0
+IL,Canton,1,1,16,0,0,0
+IL,Cary,1,1,11,0,0,0
+IL,Caseyville,1,1,4,0,0,0
+IL,Champaign City,1,1,2,0,0,0
+IL,Channahon,4,3,29,0,1,0
+IL,Charleston,7,6,73,0,1,0
+IL,Collinsville,1,1,9,0,0,0
+IL,Country Club Hills,5,5,12,0,0,0
+IL,Crest Hill,2,1,3,0,1,0
+IL,Crete,2,0,0,1,1,0
+IL,Dolton,1,1,16,0,0,0
+IL,Downers Grove,2,2,11,0,0,0
+IL,East St. Louis,1,0,0,0,1,0
+IL,Edwardsville,1,1,9,0,0,0
+IL,Effingham,2,2,22,0,0,0
+IL,Elgin,1,1,13,0,0,0
+IL,Elmwood Park,1,0,0,0,1,0
+IL,Fox Lake,3,3,6,0,0,0
+IL,Franklin Park,4,3,5,0,1,0
+IL,Freeport,1,1,1,0,0,0
+IL,Geneva,1,1,16,0,0,0
+IL,Glen Carbon,2,1,6,0,1,0
+IL,Hanover Park,1,1,10,0,0,0
+IL,Harlem,1,1,3,0,0,0
+IL,Harvey,3,3,21,0,0,0
+IL,Hickory Hills,1,1,1,0,0,0
+IL,Hinsdale,1,1,8,0,0,0
+IL,Huntley,3,3,48,0,0,0
+IL,Island Lake,2,0,0,0,2,0
+IL,Kewanee,2,2,31,0,0,0
+IL,La Grange,1,1,16,0,0,0
+IL,LaSalle,3,3,48,0,0,0
+IL,Lake Forest,3,3,42,0,0,0
+IL,Lake Zurich,1,0,0,0,1,0
+IL,Lemont,3,3,27,0,0,0
+IL,Limestone,1,0,0,0,1,0
+IL,Lindenhurst,3,3,46,0,0,0
+IL,Lisle,1,1,2,0,0,0
+IL,Little Rock,2,1,4,0,1,0
+IL,Macomb,1,1,9,0,0,0
+IL,Macomb City,1,0,0,0,1,0
+IL,Matteson,4,2,30,0,2,0
+IL,Midlothian,2,0,0,0,2,0
+IL,Minooka,2,1,3,0,1,0
+IL,Mokena,4,2,15,0,2,0
+IL,Montgomery,1,0,0,0,1,0
+IL,Morton,4,1,14,0,3,0
+IL,Mount Vernon,4,4,59,0,0,0
+IL,Palos,1,1,16,0,0,0
+IL,Peru,1,1,13,0,0,0
+IL,Plano,1,1,9,0,0,0
+IL,Pontiac,2,2,19,0,0,0
+IL,Prospect Heights,2,2,7,0,0,0
+IL,Quincy,1,1,5,0,0,0
+IL,Rich,1,1,15,0,0,0
+IL,Rochelle,2,2,28,0,0,0
+IL,Rock Island,1,1,12,0,0,0
+IL,Rockford,1,1,6,0,0,0
+IL,Rockton,3,2,2,0,1,0
+IL,Roscoe,2,2,10,0,0,0
+IL,Rutland,2,2,30,0,0,0
+IL,Shorewood,3,3,27,0,0,0
+IL,South Rock Island,1,1,2,0,0,0
+IL,St. Clair,1,1,12,0,0,0
+IL,Steger,3,3,4,0,0,0
+IL,Sterling,2,2,26,0,0,0
+IL,Streator,2,2,18,0,0,0
+IL,Swansea,1,0,0,0,1,0
+IL,Taylorville,1,1,6,0,0,0
+IL,Thornton,2,2,14,0,0,0
+IL,Tinley Park,1,1,5,0,0,0
+IL,Troy,4,3,12,0,1,0
+IL,Washington,2,1,4,0,1,0
+IL,Waterloo,3,3,9,0,0,0
+IL,Wauconda,3,3,22,0,0,0
+IL,Westchester,4,4,63,0,0,0
+IL,Wood River,1,1,10,0,0,0
+IN,Angola,2,2,6,0,0,0
+IN,Batesville,1,0,0,0,1,0
+IN,Beech Grove,2,2,18,0,0,0
+IN,Bloomington,1,1,16,0,0,0
+IN,Brazil,3,1,2,0,2,0
+IN,Carmel,1,1,8,0,0,0
+IN,Cedar Creek,1,1,2,0,0,0
+IN,Cedar Lake,5,3,16,0,2,0
+IN,Centre,1,1,1,0,0,0
+IN,Cumberland,2,2,9,0,0,0
+IN,Danville,3,3,8,0,0,0
+IN,Decatur,1,0,0,0,1,0
+IN,East Chicago,5,3,7,0,2,0
+IN,Edinburgh,1,0,0,0,1,0
+IN,Ellettsville,3,2,7,0,1,0
+IN,Fort Wayne,1,1,11,0,0,0
+IN,Frankfort,4,0,0,0,4,0
+IN,Franklin,1,1,7,0,0,0
+IN,Garrett,2,0,0,0,2,0
+IN,Greensburg,2,0,0,0,2,0
+IN,Hartford City,1,0,0,0,1,0
+IN,Highland,1,1,8,0,0,0
+IN,Huntertown,2,0,0,0,2,0
+IN,Huntingburg,1,1,1,0,0,0
+IN,Huntington,2,2,7,0,0,0
+IN,Indianapolis city (balance),2,2,32,0,0,0
+IN,Jasper,3,1,1,0,2,0
+IN,Kendallville,2,2,6,0,0,0
+IN,La Porte,1,1,1,0,0,0
+IN,Lawrence,1,0,0,0,1,0
+IN,Lebanon,1,1,7,0,0,0
+IN,Lowell,3,0,0,0,3,0
+IN,McCordsville,1,1,11,0,0,0
+IN,Munster,2,2,18,0,0,0
+IN,New Castle,5,5,32,0,0,0
+IN,New Whiteland,2,1,2,0,1,0
+IN,North Manchester,2,1,1,0,1,0
+IN,North Vernon,4,1,2,0,3,0
+IN,Peru,2,2,6,0,0,0
+IN,Pike,2,2,27,0,0,0
+IN,Plymouth,3,1,4,1,1,0
+IN,Portland,3,1,9,0,2,0
+IN,Princeton,1,0,0,0,1,0
+IN,Rensselaer,2,2,2,0,0,0
+IN,Schererville,2,2,3,0,0,0
+IN,St. John,1,0,0,1,0,0
+IN,Wabash,1,1,2,0,0,0
+IN,Warsaw,5,0,0,0,5,0
+IN,Wayne,2,2,4,0,0,0
+IN,Whitestown,2,2,17,0,0,0
+IN,Winfield,5,2,3,0,3,0
+IN,Yorktown,1,1,6,0,0,0
+KS,Andover,2,2,2,0,0,0
+KS,Anthony,2,2,2,0,0,0
+KS,Arkansas City,1,1,1,0,0,0
+KS,Augusta,2,2,19,0,0,0
+KS,Basehor,1,1,5,0,0,0
+KS,Baxter Springs,2,0,0,0,2,0
+KS,Bel Aire,2,1,5,0,1,0
+KS,Burlington,1,1,4,0,0,0
+KS,Chanute,2,1,1,0,1,0
+KS,Cheney,2,1,4,1,0,0
+KS,Clearwater,2,2,14,0,0,0
+KS,Coffeyville,2,2,32,0,0,0
+KS,Colby,3,3,6,0,0,0
+KS,Columbus,1,1,6,0,0,0
+KS,Council Grove,1,0,0,0,1,0
+KS,Edwardsville,3,2,3,0,1,0
+KS,Ellsworth,2,2,11,0,0,0
+KS,Eudora,2,0,0,0,2,0
+KS,Galena,1,0,0,0,1,0
+KS,Goodland,1,1,9,0,0,0
+KS,Great Bend,2,1,2,0,1,0
+KS,Halstead,1,1,3,0,0,0
+KS,Herington,1,1,4,0,0,0
+KS,Hillsboro,2,2,10,0,0,0
+KS,Hoisington,1,0,0,0,1,0
+KS,Kechi,1,1,5,0,0,0
+KS,Lansing,2,2,23,0,0,0
+KS,Louisburg,1,1,3,0,0,0
+KS,Maize,1,1,2,0,0,0
+KS,Marysville,4,1,1,0,3,0
+KS,McPherson,1,0,0,0,1,0
+KS,Mission,1,1,6,0,0,0
+KS,Mission Hills,2,2,4,0,0,0
+KS,Mulvane,1,1,3,0,0,0
+KS,Neodesha,1,1,3,0,0,0
+KS,Oakley,2,2,6,0,0,0
+KS,Osage City,2,2,7,0,0,0
+KS,Ottawa,3,3,12,0,0,0
+KS,Park City,1,1,1,0,0,0
+KS,Pratt,1,1,1,0,0,0
+KS,Seneca,4,3,6,0,1,0
+KS,Soldier,1,1,2,0,0,0
+KS,South Hutchinson,1,0,0,0,1,0
+KS,Spring Hill,1,0,0,1,0,0
+KS,Sterling,1,0,0,0,1,0
+KS,Wellington,1,1,1,0,0,0
+KY,Ashland,2,2,10,0,0,0
+KY,Bardstown,2,2,9,0,0,0
+KY,Bellevue,1,1,7,0,0,0
+KY,Benton,2,0,0,2,0,0
+KY,Brandenburg,1,1,2,0,0,0
+KY,Danville,1,1,8,0,0,0
+KY,Dayton,1,1,4,0,0,0
+KY,Flemingsburg,1,1,5,0,0,0
+KY,Fort Thomas,2,2,12,0,0,0
+KY,Fort Wright,2,1,1,0,1,0
+KY,Hurstbourne,1,0,0,0,1,0
+KY,Junction City,1,0,0,1,0,0
+KY,La Grange,1,0,0,1,0,0
+KY,Lawrenceburg,2,2,2,0,0,0
+KY,Leitchfield,1,1,2,0,0,0
+KY,London,1,1,5,0,0,0
+KY,Ludlow,1,1,3,0,0,0
+KY,Marion,2,0,0,0,2,0
+KY,Mayfield,2,0,0,0,2,0
+KY,Mount Washington,1,1,2,0,0,0
+KY,Newport,2,2,2,0,0,0
+KY,Oak Grove,1,1,1,0,0,0
+KY,Paris,2,2,2,0,0,0
+KY,Princeton,1,0,0,1,0,0
+KY,Radcliff,2,2,4,0,0,0
+KY,Russellville,1,1,2,0,0,0
+KY,Shelbyville,2,0,0,0,2,0
+KY,Shepherdsville,2,2,4,0,0,0
+KY,Shively,3,2,2,0,1,0
+KY,Simpsonville,2,1,2,0,1,0
+KY,Somerset,2,2,7,0,0,0
+KY,Springfield,1,1,4,0,0,0
+KY,St. Matthews,3,3,6,0,0,0
+KY,Stanford,2,0,0,1,1,0
+KY,Taylor Mill,1,1,3,0,0,0
+KY,Union,2,1,4,0,1,0
+KY,Vine Grove,3,1,4,2,0,0
+KY,Walton,2,2,5,0,0,0
+KY,Wilder,2,1,1,0,1,0
+KY,Williamstown,2,1,9,1,0,0
+KY,Wilmore,1,1,2,0,0,0
+LA,Abbeville,1,1,5,0,0,0
+LA,Abita Springs,2,0,0,0,2,0
+LA,Arcadia,2,2,10,0,0,0
+LA,Baker,1,0,0,1,0,0
+LA,Bastrop,2,1,2,0,1,0
+LA,Blanchard,1,1,1,0,0,0
+LA,Breaux Bridge,1,0,0,0,1,0
+LA,Brusly,1,1,3,0,0,0
+LA,Carencro,2,2,3,0,0,0
+LA,Church Point,2,1,5,0,1,0
+LA,Covington,2,1,2,0,1,0
+LA,Delcambre,1,1,3,0,0,0
+LA,Delhi,2,0,0,0,2,0
+LA,Denham Springs,2,0,0,0,2,0
+LA,Erath,2,1,1,0,1,0
+LA,Farmerville,1,1,4,0,0,0
+LA,Ferriday,1,1,7,0,0,0
+LA,Gramercy,1,1,3,0,0,0
+LA,Greenwood,2,2,6,0,0,0
+LA,Iowa,1,0,0,0,1,0
+LA,Jackson,1,1,2,0,0,0
+LA,Jeanerette,1,1,1,0,0,0
+LA,Jena,1,0,0,0,1,0
+LA,Kinder,1,1,1,0,0,0
+LA,Lake Arthur,2,1,1,0,1,0
+LA,Livingston,2,1,1,0,1,0
+LA,Maurice,1,1,2,0,0,0
+LA,New Llano,2,2,8,0,0,0
+LA,Patterson,2,1,2,0,1,0
+LA,Pearl River,2,0,0,0,2,0
+LA,Pineville,1,0,0,0,1,0
+LA,Plaquemine,1,0,0,0,1,0
+LA,Ponchatoula,3,3,5,0,0,0
+LA,Port Barre,5,0,0,0,5,0
+LA,Richwood,3,0,0,0,3,0
+LA,Springhill,2,0,0,0,2,0
+LA,St. Martinville,1,1,1,0,0,0
+LA,Sterlington,2,1,2,1,0,0
+LA,Vidalia,1,0,0,0,1,0
+LA,Ville Platte,2,0,0,0,2,0
+LA,Vinton,2,2,7,0,0,0
+LA,Vivian,3,0,0,1,2,0
+LA,Walker,2,1,5,0,1,0
+LA,Westwego,3,0,0,0,3,0
+LA,White Castle,1,0,0,0,1,0
+LA,Winnfield,1,1,7,0,0,0
+LA,Youngsville,1,1,9,0,0,0
+LA,Zachary,1,0,0,0,1,0
+MA,Abington,3,3,17,0,0,0
+MA,Auburn,2,0,0,0,2,0
+MA,Bedford,1,1,10,0,0,0
+MA,Belchertown,1,0,0,0,1,0
+MA,Bourne,1,1,2,0,0,0
+MA,Brookline,4,3,25,0,1,0
+MA,Burlington,1,1,2,0,0,0
+MA,Carver,1,1,7,0,0,0
+MA,Clinton,1,1,2,0,0,0
+MA,Danvers,3,3,44,0,0,0
+MA,Dartmouth,2,1,5,0,1,0
+MA,Duxbury,2,2,21,0,0,0
+MA,Easton,1,1,15,0,0,0
+MA,Fairhaven,2,2,27,0,0,0
+MA,Foxborough,1,1,2,0,0,0
+MA,Hanover,2,2,26,0,0,0
+MA,Harwich,1,1,14,0,0,0
+MA,Hopkinton,1,0,0,0,1,0
+MA,Ipswich,1,0,0,0,1,0
+MA,Ludlow,4,3,19,1,0,0
+MA,Marblehead,3,3,16,0,0,0
+MA,Middleborough,1,1,15,0,0,0
+MA,Milford,2,2,16,0,0,0
+MA,Millbury,1,1,2,0,0,0
+MA,Nantucket,1,1,4,0,0,0
+MA,North Reading,2,1,9,0,1,0
+MA,Northborough,1,1,16,0,0,0
+MA,Northbridge,3,0,0,0,3,0
+MA,Norwell,1,1,1,0,0,0
+MA,Oxford,3,2,11,0,1,0
+MA,Raynham,1,1,9,0,0,0
+MA,Rehoboth,1,0,0,0,1,0
+MA,Somerset,4,4,14,0,0,0
+MA,Spencer,2,2,3,0,0,0
+MA,Sudbury,2,2,27,0,0,0
+MA,Wareham,1,1,8,0,0,0
+MA,Westford,3,3,10,0,0,0
+MA,Westport,3,0,0,0,3,0
+MA,Yarmouth,5,4,22,0,1,0
+MD,Boonsboro,3,2,15,0,1,0
+MD,Cecilton,1,1,1,0,0,0
+MD,Church Hill,2,1,2,0,1,0
+MD,Denton,1,0,0,0,1,0
+MD,Edmonston,1,0,0,0,1,0
+MD,Emmitsburg,1,1,7,0,0,0
+MD,Fairmount Heights,1,0,0,0,1,0
+MD,Forest Heights,1,1,3,0,0,0
+MD,Friendsville,2,1,1,0,1,0
+MD,Glenarden,1,1,1,0,0,0
+MD,Kensington,1,1,6,0,0,0
+MD,Kitzmiller,3,0,0,2,1,0
+MD,Landover Hills,3,0,0,0,3,0
+MD,Lonaconing,2,0,0,1,1,0
+MD,New Market,3,0,0,0,3,0
+MD,North Chevy Chase,1,0,0,0,1,0
+MD,North East,1,1,4,0,0,0
+MD,Pittsville,1,1,1,0,0,0
+MD,Pocomoke City,1,1,2,0,0,0
+MD,Poolesville,1,1,4,0,0,0
+MD,Port Deposit,1,1,5,0,0,0
+MD,Preston,1,1,3,0,0,0
+MD,Queenstown,2,2,4,0,0,0
+MD,Rock Hall,1,0,0,0,1,0
+MD,Seat Pleasant,2,2,4,0,0,0
+MD,Sharpsburg,1,1,2,0,0,0
+MD,Sharptown,1,0,0,1,0,0
+MD,St. Michaels,1,1,2,0,0,0
+MD,University Park,2,1,2,0,1,0
+MD,Washington Grove,2,2,4,0,0,0
+MD,Westernport,1,0,0,0,1,0
+ME,Bar Harbor,2,2,9,0,0,0
+ME,Belgrade,1,1,6,0,0,0
+ME,Boothbay,1,1,1,0,0,0
+ME,Bridgton,1,1,13,0,0,0
+ME,Brunswick,3,3,38,0,0,0
+ME,Camden,3,3,18,0,0,0
+ME,Casco,1,1,9,0,0,0
+ME,Clinton,1,1,2,0,0,0
+ME,Dover-Foxcroft,1,0,0,1,0,0
+ME,Eastport,2,1,1,0,1,0
+ME,Eliot,2,2,5,0,0,0
+ME,Fairfield,2,2,17,0,0,0
+ME,Falmouth,2,2,32,0,0,0
+ME,Farmington,1,1,8,0,0,0
+ME,Fort Fairfield,1,1,3,0,0,0
+ME,Fort Kent,1,1,10,0,0,0
+ME,Glenburn,1,1,2,0,0,0
+ME,Gorham,2,2,27,0,0,0
+ME,Gray,2,2,18,0,0,0
+ME,Greene,1,1,2,0,0,0
+ME,Hallowell,1,1,6,0,0,0
+ME,Harpswell,1,1,12,0,0,0
+ME,Jay,1,1,1,0,0,0
+ME,Kennebunk,1,1,14,0,0,0
+ME,Kittery,1,0,0,0,1,0
+ME,Lebanon,1,1,4,0,0,0
+ME,Lincoln,2,2,13,0,0,0
+ME,Lisbon,3,3,24,0,0,0
+ME,Madawaska,2,2,6,0,0,0
+ME,Madison,2,1,3,0,1,0
+ME,Monmouth,1,1,1,0,0,0
+ME,North Berwick,1,1,7,0,0,0
+ME,North Yarmouth,1,1,8,0,0,0
+ME,Oakland,1,1,5,0,0,0
+ME,Orono,1,1,2,0,0,0
+ME,Orrington,1,1,3,0,0,0
+ME,Paris,3,1,2,1,1,0
+ME,Pittsfield,1,1,2,0,0,0
+ME,Poland,1,1,8,0,0,0
+ME,Rockport,2,2,18,0,0,0
+ME,Rumford,2,2,23,0,0,0
+ME,Scarborough,1,1,13,0,0,0
+ME,South Berwick,2,2,5,0,0,0
+ME,Turner,1,1,5,0,0,0
+ME,Warren,2,1,3,1,0,0
+ME,Waterboro,2,2,4,0,0,0
+ME,Winslow,1,1,9,0,0,0
+ME,Winterport,2,1,1,0,1,0
+ME,Wiscasset,3,1,3,1,1,0
+MI,Albion,1,1,12,0,0,0
+MI,Allegan,1,1,6,0,0,0
+MI,Allendale charter,1,1,3,0,0,0
+MI,Alma,1,1,6,0,0,0
+MI,Alpena,3,3,12,0,0,0
+MI,Antwerp,2,0,0,0,2,0
+MI,Belding,2,2,25,0,0,0
+MI,Benton charter,3,3,25,0,0,0
+MI,Beverly Hills,3,3,17,0,0,0
+MI,Big Rapids,1,1,8,0,0,0
+MI,Brighton,5,5,34,0,0,0
+MI,Brownstown charter,1,1,11,0,0,0
+MI,Cadillac,2,2,7,0,0,0
+MI,Caledonia,2,2,19,0,0,0
+MI,Center Line,1,1,7,0,0,0
+MI,Charlotte,2,2,7,0,0,0
+MI,Cheboygan,2,1,5,0,1,0
+MI,Chelsea,1,1,1,0,0,0
+MI,Coldwater,1,0,0,0,1,0
+MI,Commerce charter,3,3,33,0,0,0
+MI,Comstock charter,1,1,1,0,0,0
+MI,Coopersville,2,1,1,0,1,0
+MI,Davison,1,0,0,0,1,0
+MI,DeWitt,2,2,19,0,0,0
+MI,Delhi charter,2,1,2,1,0,0
+MI,Detroit,1,1,13,0,0,0
+MI,Dowagiac,1,1,16,0,0,0
+MI,East Grand Rapids,1,1,15,0,0,0
+MI,Eaton Rapids,1,1,9,0,0,0
+MI,Farmington,3,3,21,0,0,0
+MI,Flint,2,2,6,0,0,0
+MI,Frankenmuth,2,2,10,0,0,0
+MI,Fraser,1,0,0,0,1,0
+MI,Fruitport charter,2,2,5,0,0,0
+MI,Gaines charter,1,1,1,0,0,0
+MI,Garfield charter,1,1,4,0,0,0
+MI,Genesee charter,2,1,1,0,1,0
+MI,Gladstone,2,2,21,0,0,0
+MI,Grand Blanc,2,2,14,0,0,0
+MI,Grand Blanc charter,1,1,16,0,0,0
+MI,Grand Haven,1,1,1,0,0,0
+MI,Grand Haven charter,1,1,8,0,0,0
+MI,Grosse Pointe Farms,3,3,18,0,0,0
+MI,Grosse Pointe Park,2,2,12,0,0,0
+MI,Grosse Pointe Woods,1,1,8,0,0,0
+MI,Hamburg,1,1,7,0,0,0
+MI,Hancock,1,1,1,0,0,0
+MI,Harper Woods,1,1,13,0,0,0
+MI,Hartland,1,1,16,0,0,0
+MI,Hastings,3,3,13,0,0,0
+MI,Hazel Park,1,1,13,0,0,0
+MI,Highland Park,2,2,4,0,0,0
+MI,Highland charter,2,2,26,0,0,0
+MI,Howell,1,1,16,0,0,0
+MI,Huntington Woods,1,1,2,0,0,0
+MI,Huron charter,1,1,4,0,0,0
+MI,Independence charter,1,1,10,0,0,0
+MI,Iron Mountain,4,4,15,0,0,0
+MI,Ironwood,1,1,1,0,0,0
+MI,Kalamazoo charter,1,1,16,0,0,0
+MI,Kingsford,1,1,1,0,0,0
+MI,Lapeer,1,0,0,0,1,0
+MI,Ludington,1,1,7,0,0,0
+MI,Lyon charter,2,1,4,0,1,0
+MI,Macomb,1,1,7,0,0,0
+MI,Manistee,2,2,21,0,0,0
+MI,Marshall,2,2,24,0,0,0
+MI,Marysville,2,2,26,0,0,0
+MI,Mason,2,2,18,0,0,0
+MI,Melvindale,2,2,10,0,0,0
+MI,Milan,2,2,24,0,0,0
+MI,Milford,1,1,10,0,0,0
+MI,Mundy,2,2,6,0,0,0
+MI,Muskegon Heights,1,0,0,1,0,0
+MI,New Haven,2,2,17,0,0,0
+MI,Niles,3,3,35,0,0,0
+MI,Northville,2,2,5,0,0,0
+MI,Orion charter,3,3,22,0,0,0
+MI,Petoskey,2,2,30,0,0,0
+MI,Plymouth charter,2,2,11,0,0,0
+MI,Rockford,1,1,5,0,0,0
+MI,Saline,1,1,1,0,0,0
+MI,Scio,1,1,12,0,0,0
+MI,Springfield,1,1,11,0,0,0
+MI,Springfield charter,3,3,10,0,0,0
+MI,St. Clair,1,1,10,0,0,0
+MI,St. Johns,1,1,3,0,0,0
+MI,St. Louis,1,1,15,0,0,0
+MI,Sterling Heights,1,1,13,0,0,0
+MI,Sturgis,2,2,8,0,0,0
+MI,Swartz Creek,2,2,31,0,0,0
+MI,Van Buren charter,2,2,20,0,0,0
+MI,Walled Lake,3,3,29,0,0,0
+MI,Waterford charter,1,1,4,0,0,0
+MI,West Bloomfield charter,4,4,53,0,0,0
+MI,Woodhaven,3,3,18,0,0,0
+MI,Zeeland,1,1,4,0,0,0
+MN,Becker,3,3,25,0,0,0
+MN,Burnsville,1,1,8,0,0,0
+MN,Byron,1,1,8,0,0,0
+MN,Cannon Falls,1,0,0,0,1,0
+MN,Carver,1,1,12,0,0,0
+MN,Chaska,1,0,0,1,0,0
+MN,Chatfield,1,1,16,0,0,0
+MN,Chisholm,1,1,1,0,0,0
+MN,Cold Spring,1,1,5,0,0,0
+MN,Coon Rapids,2,2,8,0,0,0
+MN,Corcoran,1,0,0,1,0,0
+MN,Credit River,1,1,8,0,0,0
+MN,Detroit Lakes,2,2,25,0,0,0
+MN,Dilworth,2,2,9,0,0,0
+MN,East Bethel,1,1,2,0,0,0
+MN,East Grand Forks,1,1,16,0,0,0
+MN,Elko New Market,1,1,16,0,0,0
+MN,Fairmont,1,1,9,0,0,0
+MN,Glencoe,2,1,2,0,1,0
+MN,Hanover,2,2,9,0,0,0
+MN,Hermantown,2,2,15,0,0,0
+MN,International Falls,3,2,4,0,1,0
+MN,Inver Grove Heights,1,0,0,0,1,0
+MN,Isanti,2,2,28,0,0,0
+MN,Jordan,1,1,4,0,0,0
+MN,Kasson,1,1,15,0,0,0
+MN,La Crescent,1,1,9,0,0,0
+MN,Lake City,1,1,13,0,0,0
+MN,Litchfield,1,1,6,0,0,0
+MN,Lonsdale,4,3,5,0,1,0
+MN,Maple Grove,1,0,0,0,1,0
+MN,Mendota Heights,1,1,12,0,0,0
+MN,Minnetrista,1,1,16,0,0,0
+MN,Mora,2,2,24,0,0,0
+MN,Mound,1,1,1,0,0,0
+MN,Mounds View,1,1,6,0,0,0
+MN,New Prague,2,2,24,0,0,0
+MN,Orono,2,2,8,0,0,0
+MN,Park Rapids,1,1,13,0,0,0
+MN,Pine City,2,1,2,0,1,0
+MN,Pine Island,1,1,2,0,0,0
+MN,Pipestone,1,1,6,0,0,0
+MN,Redwood Falls,2,2,21,0,0,0
+MN,Rice Lake,1,1,7,0,0,0
+MN,Robbinsdale,2,2,17,0,0,0
+MN,Rogers,1,1,13,0,0,0
+MN,Sauk Centre,3,3,18,0,0,0
+MN,Sauk Rapids,2,2,20,0,0,0
+MN,Shakopee,1,1,10,0,0,0
+MN,Spring Lake Park,3,3,17,0,0,0
+MN,St. Charles,2,1,16,0,1,0
+MN,St. Francis,1,1,5,0,0,0
+MN,St. James,2,2,15,0,0,0
+MN,St. Paul Park,1,1,10,0,0,0
+MN,St. Peter,4,3,5,0,1,0
+MN,Staples,1,1,16,0,0,0
+MN,Thief River Falls,1,1,6,0,0,0
+MN,Virginia,3,3,31,0,0,0
+MN,Waconia,1,1,11,0,0,0
+MN,Waite Park,1,1,2,0,0,0
+MN,Watertown,2,0,0,0,2,0
+MN,Wyoming,1,1,8,0,0,0
+MN,Zimmerman,2,2,9,0,0,0
+MN,Zumbrota,2,2,25,0,0,0
+MO,Bellefontaine Neighbors,1,0,0,0,1,0
+MO,Berkeley,3,2,14,0,1,0
+MO,Black Jack,2,0,0,0,2,0
+MO,Brentwood,1,1,7,0,0,0
+MO,Cameron,2,2,12,0,0,0
+MO,Carthage,1,1,4,0,0,0
+MO,Caruthersville,1,0,0,0,1,0
+MO,Dardenne Prairie,1,1,2,0,0,0
+MO,Festus,4,2,10,0,2,0
+MO,Grain Valley,4,3,36,0,1,0
+MO,Harrisonville,1,1,14,0,0,0
+MO,Jackson,2,2,10,0,0,0
+MO,Joplin,1,1,2,0,0,0
+MO,Kansas City,1,1,2,0,0,0
+MO,Kennett,1,1,4,0,0,0
+MO,Liberty,2,2,5,0,0,0
+MO,Maplewood,1,1,9,0,0,0
+MO,Marshall,1,1,5,0,0,0
+MO,Mexico,2,2,15,0,0,0
+MO,Moberly,1,1,2,0,0,0
+MO,Neosho,2,2,11,0,0,0
+MO,Nixa,2,2,9,0,0,0
+MO,Odessa,1,0,0,0,1,0
+MO,Osage Beach,1,1,14,0,0,0
+MO,Overland,3,3,41,0,0,0
+MO,Pacific,2,2,10,0,0,0
+MO,Peculiar,1,1,12,0,0,0
+MO,Perryville,2,2,7,0,0,0
+MO,Platte City,2,2,22,0,0,0
+MO,Pleasant Hill,1,1,10,0,0,0
+MO,Polk,1,0,0,0,1,0
+MO,Poplar Bluff,2,2,13,0,0,0
+MO,Rogersville,1,1,1,0,0,0
+MO,Smithville,3,3,35,0,0,0
+MO,Springfield,1,1,1,0,0,0
+MO,St. John,1,0,0,0,1,0
+MO,Trenton,3,1,1,0,2,0
+MO,Warrensburg,2,0,0,0,2,0
+MO,Washington,1,1,6,0,0,0
+MO,Webb City,1,1,11,0,0,0
+MO,Wentzville,1,0,0,0,1,0
+MO,West Plains,1,1,4,0,0,0
+MO,Willard,1,1,14,0,0,0
+MS,Batesville,2,2,9,0,0,0
+MS,Booneville,4,0,0,1,3,0
+MS,Byhalia,1,1,1,0,0,0
+MS,Cleveland,2,0,0,0,2,0
+MS,Crystal Springs,1,0,0,0,1,0
+MS,D'Iberville,1,1,2,0,0,0
+MS,Florence,1,0,0,1,0,0
+MS,Lucedale,1,0,0,1,0,0
+MS,Pass Christian,2,2,6,0,0,0
+MS,Quitman,1,0,0,0,1,0
+MS,Water Valley,2,0,0,2,0,0
+MS,Waynesboro,2,1,6,0,1,0
+MT,Alberton,3,1,1,1,1,0
+MT,Bainville,2,0,0,0,2,0
+MT,Big Sandy,2,0,0,0,2,0
+MT,Boulder,1,1,1,0,0,0
+MT,Bridger,1,1,5,0,0,0
+MT,Broadus,2,1,1,0,1,0
+MT,Chester,2,0,0,0,2,0
+MT,Choteau,1,0,0,1,0,0
+MT,Circle,2,2,3,0,0,0
+MT,Colstrip,2,2,26,0,0,0
+MT,Culbertson,1,1,1,0,0,0
+MT,Cut Bank,1,0,0,0,1,0
+MT,Darby,2,0,0,0,2,0
+MT,Dutton,2,0,0,0,2,0
+MT,East Helena,3,1,2,0,2,0
+MT,Eureka,1,0,0,0,1,0
+MT,Fairfield,2,0,0,0,2,0
+MT,Fairview,1,0,0,0,1,0
+MT,Forsyth,2,1,1,0,1,0
+MT,Fort Benton,1,0,0,0,1,0
+MT,Froid,1,0,0,0,1,0
+MT,Fromberg,1,0,0,0,1,0
+MT,Glasgow,2,1,3,0,1,0
+MT,Harlowton,2,0,0,0,2,0
+MT,Hot Springs,3,1,1,0,2,0
+MT,Joliet,1,0,0,1,0,0
+MT,Libby,1,1,11,0,0,0
+MT,Lima,1,0,0,0,1,0
+MT,Malta,1,0,0,0,1,0
+MT,Medicine Lake,1,0,0,1,0,0
+MT,Philipsburg,1,0,0,0,1,0
+MT,Terry,3,1,1,0,2,0
+MT,Three Forks,2,2,4,0,0,0
+MT,Townsend,3,0,0,0,3,0
+MT,Twin Bridges,1,0,0,0,1,0
+MT,Valier,2,0,0,1,1,0
+MT,Walkerville,1,0,0,1,0,0
+MT,West Yellowstone,3,3,36,0,0,0
+MT,Whitehall,2,2,8,0,0,0
+NC,Aberdeen,1,1,4,0,0,0
+NC,Archdale,2,0,0,0,2,0
+NC,Asheboro,2,1,13,0,1,0
+NC,Belmont,2,2,15,0,0,0
+NC,Boone,1,1,9,0,0,0
+NC,Clemmons,4,2,13,2,0,0
+NC,Conover,1,1,8,0,0,0
+NC,Davidson,2,1,5,0,1,0
+NC,Elizabeth City,2,1,9,0,1,0
+NC,Elon,1,1,9,0,0,0
+NC,Fletcher,1,0,0,0,1,0
+NC,Forest City,3,2,11,0,1,0
+NC,Gibsonville,4,2,4,0,2,0
+NC,Graham,2,2,16,0,0,0
+NC,Harrisburg,2,1,11,0,1,0
+NC,Havelock,2,2,8,0,0,0
+NC,Hendersonville,3,2,17,0,1,0
+NC,Hope Mills,3,2,10,0,1,0
+NC,Kernersville,2,1,2,1,0,0
+NC,Kill Devil Hills,1,1,5,0,0,0
+NC,Knightdale,2,1,7,1,0,0
+NC,Laurinburg,2,1,10,0,1,0
+NC,Leland,3,1,2,0,2,0
+NC,Lenoir,2,2,15,0,0,0
+NC,Lewisville,1,1,14,0,0,0
+NC,Locust,1,1,6,0,0,0
+NC,Marion,2,0,0,0,2,0
+NC,Matthews,1,1,16,0,0,0
+NC,Mebane,1,1,12,0,0,0
+NC,Mills River,2,2,15,0,0,0
+NC,Mint Hill,2,2,6,0,0,0
+NC,Morehead City,1,1,2,0,0,0
+NC,Mount Holly,2,2,9,0,0,0
+NC,New Bern,1,1,15,0,0,0
+NC,Newton,2,2,7,0,0,0
+NC,Oxford,1,1,1,0,0,0
+NC,Pineville,1,1,3,0,0,0
+NC,Roanoke Rapids,3,1,9,0,2,0
+NC,Rockingham,1,0,0,0,1,0
+NC,Rolesville,3,3,34,0,0,0
+NC,Salisbury,3,3,5,0,0,0
+NC,Selma,2,2,25,0,0,0
+NC,Shelby,1,1,11,0,0,0
+NC,Smithfield,2,2,12,0,0,0
+NC,Southern Pines,3,1,8,0,2,0
+NC,Spring Lake,1,1,11,0,0,0
+NC,St. James,1,1,6,0,0,0
+NC,Stallings,3,3,13,0,0,0
+NC,Statesville,1,1,5,0,0,0
+NC,Thomasville,1,1,16,0,0,0
+NC,Unionville,1,1,4,0,0,0
+NC,Washington,2,2,14,0,0,0
+NC,Waxhaw,1,0,0,0,1,0
+NC,Waynesville,1,1,10,0,0,0
+NC,Weddington,1,0,0,0,1,0
+NC,Winterville,1,1,2,0,0,0
+ND,Apple Creek,1,0,0,0,1,0
+ND,Argusville,2,0,0,2,0,0
+ND,Beach,1,0,0,0,1,0
+ND,Berthold,1,0,0,0,1,0
+ND,Beulah,1,0,0,0,1,0
+ND,Burlington,1,1,2,0,0,0
+ND,Cando,1,0,0,0,1,0
+ND,Carrington,1,1,1,0,0,0
+ND,Center,2,1,1,1,0,0
+ND,Cooperstown,1,0,0,0,1,0
+ND,Drayton,1,0,0,1,0,0
+ND,Ellendale,2,1,1,1,0,0
+ND,Forman,1,0,0,1,0,0
+ND,Glen Ullin,1,1,1,0,0,0
+ND,Gwinner,1,0,0,1,0,0
+ND,Harvey,1,1,9,0,0,0
+ND,Hatton,1,0,0,1,0,0
+ND,Hazen,2,2,3,0,0,0
+ND,Hebron,2,1,1,0,1,0
+ND,Kenmare,1,1,1,0,0,0
+ND,Killdeer,2,0,0,0,2,0
+ND,Kindred,1,0,0,1,0,0
+ND,Lakota,2,2,7,0,0,0
+ND,Langdon,2,1,1,0,1,0
+ND,Leeds,3,1,1,1,1,0
+ND,Mayville,2,1,1,0,1,0
+ND,Milnor,1,0,0,0,1,0
+ND,Minto,1,1,4,0,0,0
+ND,Mohall,2,1,2,0,1,0
+ND,New England,2,1,1,0,1,0
+ND,New Rockford,1,0,0,0,1,0
+ND,New Salem,1,0,0,0,1,0
+ND,Park River,2,1,2,0,1,0
+ND,Reile's Acres,4,0,0,2,2,0
+ND,Richardton,3,0,0,2,1,0
+ND,Rolla,2,0,0,1,1,0
+ND,Stanley,1,1,4,0,0,0
+ND,Surrey,1,0,0,1,0,0
+ND,Tioga,4,2,3,1,1,0
+ND,Turtle Lake,1,0,0,0,1,0
+ND,Velva,1,0,0,0,1,0
+ND,Walhalla,1,1,4,0,0,0
+ND,Washburn,1,0,0,0,1,0
+ND,Watford City,1,0,0,0,1,0
+ND,Wilton,2,1,3,0,1,0
+ND,Wyndmere,1,0,0,0,1,0
+NE,Ainsworth,1,1,3,0,0,0
+NE,Albion,1,1,5,0,0,0
+NE,Alma,2,2,4,0,0,0
+NE,Atkinson,2,2,3,0,0,0
+NE,Bayard,3,1,2,0,2,0
+NE,Bennet,1,0,0,0,1,0
+NE,Bennington,3,1,1,0,2,0
+NE,Cambridge,1,1,1,0,0,0
+NE,Creighton,1,1,2,0,0,0
+NE,Crete,2,1,12,0,1,0
+NE,David City,2,2,3,0,0,0
+NE,Emerson,1,0,0,1,0,0
+NE,Fairbury,2,1,2,0,1,0
+NE,Falls City,2,1,3,0,1,0
+NE,Fort Calhoun,2,2,7,0,0,0
+NE,Geneva,2,2,8,0,0,0
+NE,Gordon,1,1,2,0,0,0
+NE,Gothenburg,1,0,0,1,0,0
+NE,Gretna,1,1,2,0,0,0
+NE,Lexington,1,0,0,0,1,0
+NE,Milford,2,2,2,0,0,0
+NE,Minden,4,4,17,0,0,0
+NE,North Bend,1,0,0,0,1,0
+NE,Ogallala,1,1,11,0,0,0
+NE,Pender,1,0,0,1,0,0
+NE,Pierce,1,1,4,0,0,0
+NE,Plainview,2,1,3,0,1,0
+NE,Plattsmouth,3,3,4,0,0,0
+NE,Randolph,1,1,3,0,0,0
+NE,Shelton,2,2,3,0,0,0
+NE,Sidney,2,0,0,0,2,0
+NE,Sutherland,2,1,4,0,1,0
+NE,Sutton,1,0,0,1,0,0
+NE,Syracuse,1,0,0,0,1,0
+NE,Tecumseh,2,0,0,0,2,0
+NE,Tilden,3,1,5,0,2,0
+NE,Valley,1,0,0,0,1,0
+NE,Wayne,3,3,8,0,0,0
+NE,Wilber,1,0,0,0,1,0
+NE,Wymore,2,2,2,0,0,0
+NH,Allenstown,1,1,8,0,0,0
+NH,Amherst,3,3,23,0,0,0
+NH,Barrington,4,4,39,0,0,0
+NH,Belmont,1,1,3,0,0,0
+NH,Boscawen,3,3,10,0,0,0
+NH,Brentwood,1,1,8,0,0,0
+NH,Bristol,1,0,0,0,1,0
+NH,Conway,1,1,15,0,0,0
+NH,Exeter,1,1,7,0,0,0
+NH,Farmington,1,1,1,0,0,0
+NH,Fremont,2,2,5,0,0,0
+NH,Grantham,3,3,14,0,0,0
+NH,Greenland,1,1,1,0,0,0
+NH,Hanover,3,2,5,1,0,0
+NH,Hillsborough,2,2,11,0,0,0
+NH,Hooksett,2,2,22,0,0,0
+NH,Jaffrey,3,3,8,0,0,0
+NH,Merrimack,3,3,39,0,0,0
+NH,New London,3,3,24,0,0,0
+NH,Newton,1,1,2,0,0,0
+NH,North Hampton,1,1,5,0,0,0
+NH,Northfield,2,1,8,0,1,0
+NH,Northwood,1,1,3,0,0,0
+NH,Nottingham,1,0,0,0,1,0
+NH,Ossipee,1,0,0,0,1,0
+NH,Plymouth,1,1,11,0,0,0
+NH,Rindge,2,2,6,0,0,0
+NH,Rye,1,1,16,0,0,0
+NH,Tamworth,2,2,6,0,0,0
+NH,Tilton,1,1,10,0,0,0
+NH,Weare,3,3,18,0,0,0
+NH,Windham,3,3,25,0,0,0
+NH,Wolfeboro,1,0,0,0,1,0
+NJ,Audubon,3,3,12,0,0,0
+NJ,Barrington,2,2,6,0,0,0
+NJ,Bellmawr,2,0,0,0,2,0
+NJ,Berkeley Heights,1,0,0,1,0,0
+NJ,Berlin,1,0,0,0,1,0
+NJ,Bogota,1,1,13,0,0,0
+NJ,Butler,2,2,7,0,0,0
+NJ,Chatham,1,1,1,0,0,0
+NJ,Cresskill,3,3,17,0,0,0
+NJ,Edison,2,2,6,0,0,0
+NJ,Freehold,4,4,30,0,0,0
+NJ,Glassboro,1,1,9,0,0,0
+NJ,Glen Ridge,2,2,10,0,0,0
+NJ,Glen Rock,3,3,26,0,0,0
+NJ,Hackettstown,1,1,2,0,0,0
+NJ,Haledon,1,1,5,0,0,0
+NJ,Hightstown,2,1,16,0,1,0
+NJ,Hillsdale,1,1,11,0,0,0
+NJ,Holmdel,2,2,12,0,0,0
+NJ,Keansburg,2,2,2,0,0,0
+NJ,Kinnelon,1,1,3,0,0,0
+NJ,Lakewood,1,1,1,0,0,0
+NJ,Leonia,1,1,5,0,0,0
+NJ,Lincoln Park,3,3,13,0,0,0
+NJ,Little Egg Harbor,3,2,2,0,1,0
+NJ,Long Branch,1,1,3,0,0,0
+NJ,Lyndhurst,1,1,2,0,0,0
+NJ,Marlboro,1,1,4,0,0,0
+NJ,Matawan,2,1,1,0,1,0
+NJ,Maywood,1,1,14,0,0,0
+NJ,Medford,2,2,2,0,0,0
+NJ,Middle,3,3,9,0,0,0
+NJ,Morris Plains,3,3,8,0,0,0
+NJ,Newton,2,2,5,0,0,0
+NJ,North Haledon,1,0,0,0,1,0
+NJ,Northfield,5,5,56,0,0,0
+NJ,Oakland,1,1,1,0,0,0
+NJ,Oceanport,1,1,1,0,0,0
+NJ,Oradell,3,3,4,0,0,0
+NJ,Park Ridge,2,2,7,0,0,0
+NJ,Paulsboro,1,1,1,0,0,0
+NJ,Pompton Lakes,1,1,6,0,0,0
+NJ,Ramsey,1,1,4,0,0,0
+NJ,River Edge,1,1,2,0,0,0
+NJ,Rockaway,2,2,20,0,0,0
+NJ,Runnemede,2,2,4,0,0,0
+NJ,Saddle Brook,2,1,4,0,1,0
+NJ,Salem,1,0,0,0,1,0
+NJ,South Amboy,1,0,0,0,1,0
+NJ,Stratford,2,2,6,0,0,0
+NJ,Toms River,1,1,8,0,0,0
+NJ,Trenton,1,1,11,0,0,0
+NJ,Ventnor City,1,1,15,0,0,0
+NJ,Vernon,1,1,1,0,0,0
+NJ,Verona,1,1,12,0,0,0
+NJ,Waldwick,1,1,4,0,0,0
+NJ,Washington,2,2,9,0,0,0
+NJ,Watchung,2,2,10,0,0,0
+NJ,West Deptford,1,0,0,0,1,0
+NJ,West Long Branch,1,1,2,0,0,0
+NJ,Wharton,2,2,7,0,0,0
+NJ,Wood-Ridge,2,1,2,0,1,0
+NJ,Woodbury,2,1,4,0,1,0
+NJ,Woolwich,1,1,4,0,0,0
+NJ,Wyckoff,1,1,10,0,0,0
+NM,Albuquerque,1,1,12,0,0,0
+NM,Angel Fire,1,1,14,0,0,0
+NM,Aztec,2,2,13,0,0,0
+NM,Bayard,1,1,4,0,0,0
+NM,Carrizozo,1,0,0,0,1,0
+NM,Cimarron,1,1,13,0,0,0
+NM,Cloudcroft,3,0,0,0,3,0
+NM,Columbus,2,2,3,0,0,0
+NM,Cuba,1,1,1,0,0,0
+NM,Eunice,2,0,0,0,2,0
+NM,Hatch,2,2,7,0,0,0
+NM,Hurley,2,0,0,0,2,0
+NM,Kirtland,1,1,2,0,0,0
+NM,Mesilla,2,0,0,1,1,0
+NM,Moriarty,1,1,5,0,0,0
+NM,Mosquero,2,0,0,0,2,0
+NM,Mountainair,1,1,7,0,0,0
+NM,Raton,2,2,2,0,0,0
+NM,Ruidoso Downs,1,1,4,0,0,0
+NM,San Ysidro,1,0,0,0,1,0
+NM,Taos Ski Valley,2,2,20,0,0,0
+NM,Tijeras,2,1,2,0,1,0
+NM,Tucumcari,2,1,2,0,1,0
+NM,Tularosa,1,1,3,0,0,0
+NM,Williamsburg,3,0,0,3,0,0
+NV,Caliente,1,1,1,0,0,0
+NV,Carlin,3,3,47,0,0,0
+NV,Ely,2,2,29,0,0,0
+NV,Las Vegas,3,3,48,0,0,0
+NV,Lovelock,1,1,10,0,0,0
+NV,Wells,1,1,6,0,0,0
+NV,West Wendover,2,2,31,0,0,0
+NV,Yerington,2,2,17,0,0,0
+NY,Airmont,1,1,1,0,0,0
+NY,Albion,2,2,22,0,0,0
+NY,Amherst,3,3,43,0,0,0
+NY,Amityville,1,1,10,0,0,0
+NY,Babylon,2,2,11,0,0,0
+NY,Bath,1,1,8,0,0,0
+NY,Beekman,1,1,5,0,0,0
+NY,Briarcliff Manor,2,2,4,0,0,0
+NY,Brockport,2,2,19,0,0,0
+NY,Brookhaven,2,2,32,0,0,0
+NY,Camillus,3,3,32,0,0,0
+NY,Canandaigua,2,2,23,0,0,0
+NY,Cicero,1,0,0,0,1,0
+NY,Croton-on-Hudson,1,1,16,0,0,0
+NY,De Witt,3,3,37,0,0,0
+NY,Dobbs Ferry,1,1,9,0,0,0
+NY,Dunkirk,1,1,14,0,0,0
+NY,East Aurora,1,1,7,0,0,0
+NY,East Rochester,1,1,2,0,0,0
+NY,Fairport,1,1,9,0,0,0
+NY,Farmingdale,1,0,0,0,1,0
+NY,Goshen,5,3,18,0,2,0
+NY,Grand Island,1,1,4,0,0,0
+NY,Great Neck,2,0,0,0,2,0
+NY,Hamburg,1,1,4,0,0,0
+NY,Hastings-on-Hudson,1,0,0,0,1,0
+NY,Herkimer,1,1,1,0,0,0
+NY,Hilton,3,2,19,0,1,0
+NY,Horseheads,2,2,14,0,0,0
+NY,Hudson,2,2,12,0,0,0
+NY,Hudson Falls,1,1,16,0,0,0
+NY,Johnstown,3,3,32,0,0,0
+NY,Lancaster,1,1,16,0,0,0
+NY,Lewiston,2,2,5,0,0,0
+NY,Lysander,1,1,16,0,0,0
+NY,Malone,1,1,8,0,0,0
+NY,Malverne,1,1,13,0,0,0
+NY,Manorhaven,1,0,0,0,1,0
+NY,Massena,1,1,12,0,0,0
+NY,Medina,2,2,29,0,0,0
+NY,Milton,1,1,1,0,0,0
+NY,Monroe,3,3,11,0,0,0
+NY,Monticello,1,1,4,0,0,0
+NY,Mount Kisco,2,2,15,0,0,0
+NY,New Hyde Park,1,0,0,0,1,0
+NY,New Paltz,2,2,4,0,0,0
+NY,Newark,1,1,14,0,0,0
+NY,Niagara Falls,1,1,2,0,0,0
+NY,North Hempstead,1,0,0,0,1,0
+NY,North Syracuse,1,1,6,0,0,0
+NY,Nyack,2,2,18,0,0,0
+NY,Ogdensburg,1,1,13,0,0,0
+NY,Oneida,5,5,13,0,0,0
+NY,Onondaga,2,2,30,0,0,0
+NY,Pelham,3,3,8,0,0,0
+NY,Port Jefferson,1,1,3,0,0,0
+NY,Port Jervis,4,3,38,0,1,0
+NY,Potsdam,1,1,6,0,0,0
+NY,Rensselaer,2,2,21,0,0,0
+NY,Salamanca,3,2,20,0,1,0
+NY,Saranac Lake,2,2,25,0,0,0
+NY,Scotia,1,1,1,0,0,0
+NY,Smithtown,1,1,1,0,0,0
+NY,Solvay,1,1,13,0,0,0
+NY,Somers,1,1,3,0,0,0
+NY,Suffern,4,4,27,0,0,0
+NY,Sullivan,1,1,9,0,0,0
+NY,Tarrytown,2,2,21,0,0,0
+NY,Tuckahoe,1,1,7,0,0,0
+NY,Victor,2,1,8,0,1,0
+NY,Wappingers Falls,2,1,1,0,1,0
+NY,Watervliet,2,2,24,0,0,0
+NY,Wheatfield,1,0,0,0,1,0
+OH,American,1,1,12,0,0,0
+OH,Anderson,4,4,38,0,0,0
+OH,Arcanum,2,1,3,0,1,0
+OH,Athens,1,1,9,0,0,0
+OH,Austintown,4,4,54,0,0,0
+OH,Baltimore,2,1,3,0,1,0
+OH,Batavia,2,2,25,0,0,0
+OH,Bath,4,4,48,0,0,0
+OH,Beavercreek,1,1,13,0,0,0
+OH,Bethel,2,1,1,0,1,0
+OH,Blue Ash,2,2,18,0,0,0
+OH,Boardman,3,3,42,0,0,0
+OH,Bradford,2,0,0,0,2,0
+OH,Bucyrus,1,1,12,0,0,0
+OH,Canfield,2,2,22,0,0,0
+OH,Chagrin Falls,2,2,10,0,0,0
+OH,Cincinnati,3,3,48,0,0,0
+OH,Cleveland,2,2,32,0,0,0
+OH,Colerain,1,1,13,0,0,0
+OH,Columbus Grove,1,0,0,1,0,0
+OH,Concord,2,2,24,0,0,0
+OH,Covington,2,1,3,1,0,0
+OH,Creston,1,1,4,0,0,0
+OH,Defiance,1,1,14,0,0,0
+OH,Dublin,1,1,1,0,0,0
+OH,Fairfield,1,1,4,0,0,0
+OH,Franklin,1,1,15,0,0,0
+OH,Fredericktown,1,1,5,0,0,0
+OH,Genoa,4,3,48,1,0,0
+OH,Gibsonburg,1,1,2,0,0,0
+OH,Goshen,2,2,20,0,0,0
+OH,Greenville,1,1,12,0,0,0
+OH,Hamilton,1,1,16,0,0,0
+OH,Harrison,3,3,33,0,0,0
+OH,Hebron,1,1,2,0,0,0
+OH,Jackson,4,4,38,0,0,0
+OH,Jefferson,2,2,31,0,0,0
+OH,Lake,4,4,25,0,0,0
+OH,Lawrence,1,1,5,0,0,0
+OH,Leipsic,2,1,1,0,1,0
+OH,Lemon,1,1,2,0,0,0
+OH,Liberty,3,3,26,0,0,0
+OH,Lisbon,2,0,0,1,1,0
+OH,Lynchburg,1,0,0,0,1,0
+OH,Mayfield,4,4,41,0,0,0
+OH,Miami,2,2,21,0,0,0
+OH,Middlefield,1,1,8,0,0,0
+OH,Mifflin,2,2,15,0,0,0
+OH,Monclova,3,3,25,0,0,0
+OH,Moreland Hills,2,1,2,0,1,0
+OH,Mount Healthy,1,1,15,0,0,0
+OH,New Concord,2,0,0,0,2,0
+OH,New Lebanon,1,0,0,0,1,0
+OH,New London,1,0,0,0,1,0
+OH,Newark,3,3,45,0,0,0
+OH,Norwich,2,2,28,0,0,0
+OH,Oakwood,1,1,12,0,0,0
+OH,Olmsted,2,2,23,0,0,0
+OH,Orange,1,1,16,0,0,0
+OH,Painesville,1,1,7,0,0,0
+OH,Paris,1,0,0,0,1,0
+OH,Perry,4,4,42,0,0,0
+OH,Perrysburg,1,1,9,0,0,0
+OH,Pierce,3,3,35,0,0,0
+OH,Piketon,1,0,0,0,1,0
+OH,Plymouth,3,2,6,0,1,0
+OH,Poland,2,2,32,0,0,0
+OH,Prairie,1,1,16,0,0,0
+OH,Richland,3,3,41,0,0,0
+OH,Roseville,1,1,10,0,0,0
+OH,Scioto,4,4,53,0,0,0
+OH,Seville,1,0,0,0,1,0
+OH,Sharon,1,1,9,0,0,0
+OH,Shelby,3,3,39,0,0,0
+OH,Spencerville,2,0,0,0,2,0
+OH,Symmes,1,0,0,0,1,0
+OH,Toledo,5,5,74,0,0,0
+OH,Twinsburg,6,6,69,0,0,0
+OH,Versailles,4,1,3,0,3,0
+OH,Washington,2,2,18,0,0,0
+OH,Waynesville,3,1,1,1,1,0
+OH,Weathersfield,2,2,14,0,0,0
+OH,West Lafayette,1,1,8,0,0,0
+OH,Williamsburg,1,0,0,0,1,0
+OH,Woodsfield,2,1,2,0,1,0
+OK,Alva,3,2,2,0,1,0
+OK,Bristow,3,2,5,0,1,0
+OK,Chickasha,1,1,6,0,0,0
+OK,Claremore,3,3,13,0,0,0
+OK,Cleveland,1,1,2,0,0,0
+OK,Collinsville,3,0,0,0,3,0
+OK,Del City,2,2,4,0,0,0
+OK,Durant,1,0,0,0,1,0
+OK,Elgin,3,1,2,0,2,0
+OK,Harrah,1,1,4,0,0,0
+OK,Henryetta,2,1,1,0,1,0
+OK,Hinton,1,0,0,0,1,0
+OK,Holdenville,1,0,0,1,0,0
+OK,Hugo,1,1,2,0,0,0
+OK,Jenks,1,1,16,0,0,0
+OK,Mannford,2,0,0,0,2,0
+OK,Marlow,2,2,2,0,0,0
+OK,McAlester,2,2,18,0,0,0
+OK,Mustang,2,1,2,0,1,0
+OK,Newcastle,2,2,18,0,0,0
+OK,Noble,3,3,3,0,0,0
+OK,Okemah,1,1,1,0,0,0
+OK,Okmulgee,2,2,2,0,0,0
+OK,Perry,2,2,4,0,0,0
+OK,Pocola,2,2,5,0,0,0
+OK,Ponca City,2,2,3,0,0,0
+OK,Purcell,2,1,1,0,1,0
+OK,Skiatook,1,1,2,0,0,0
+OK,Stilwell,2,1,5,1,0,0
+OK,Sulphur,1,0,0,0,1,0
+OK,Tahlequah,2,2,7,0,0,0
+OK,Tuttle,1,0,0,0,1,0
+OK,Warr Acres,1,0,0,0,1,0
+OK,Weatherford,4,3,10,0,1,0
+OK,Woodward,4,4,6,0,0,0
+OK,Yukon,1,1,16,0,0,0
+OR,Amity,1,1,3,0,0,0
+OR,Athena,2,0,0,0,2,0
+OR,Aumsville,1,1,1,0,0,0
+OR,Banks,2,2,7,0,0,0
+OR,Beaverton,1,1,2,0,0,0
+OR,Boardman,2,1,7,0,1,0
+OR,Canyonville,1,1,1,0,0,0
+OR,Clatskanie,2,2,7,0,0,0
+OR,Coburg,1,1,1,0,0,0
+OR,Coquille,1,1,6,0,0,0
+OR,Corvallis,1,0,0,0,1,0
+OR,Culver,1,1,1,0,0,0
+OR,Donald,2,1,8,1,0,0
+OR,Dundee,1,1,16,0,0,0
+OR,Elgin,4,2,5,0,2,0
+OR,Gearhart,1,0,0,0,1,0
+OR,Gold Beach,1,1,6,0,0,0
+OR,Junction City,2,2,14,0,0,0
+OR,La Pine,1,1,15,0,0,0
+OR,Lafayette,2,2,19,0,0,0
+OR,Lakeview,1,1,1,0,0,0
+OR,Lyons,1,1,3,0,0,0
+OR,Millersburg,2,2,8,0,0,0
+OR,Mount Angel,2,2,23,0,0,0
+OR,Myrtle Creek,2,2,27,0,0,0
+OR,North Plains,1,1,9,0,0,0
+OR,Nyssa,1,0,0,0,1,0
+OR,Oakridge,2,2,28,0,0,0
+OR,Phoenix,1,1,16,0,0,0
+OR,Port Orford,2,2,4,0,0,0
+OR,Rainier,1,1,16,0,0,0
+OR,Rockaway Beach,1,0,0,1,0,0
+OR,Rogue River,2,1,2,0,1,0
+OR,Shady Cove,1,0,0,0,1,0
+OR,Sheridan,1,1,11,0,0,0
+OR,Vale,2,0,0,1,1,0
+OR,Wallowa,2,0,0,1,1,0
+OR,Willamina,1,1,12,0,0,0
+OR,Winston,1,0,0,0,1,0
+OR,Yamhill,1,1,5,0,0,0
+PA,Adams,3,1,5,0,2,0
+PA,Ambler,1,1,2,0,0,0
+PA,Amity,1,0,0,0,1,0
+PA,Beaver Falls,1,0,0,1,0,0
+PA,Bellefonte,1,1,14,0,0,0
+PA,Bradford,2,2,5,0,0,0
+PA,Brentwood,1,1,1,0,0,0
+PA,Brookhaven,1,1,8,0,0,0
+PA,Buckingham,1,0,0,0,1,0
+PA,Butler,3,2,2,0,1,0
+PA,Camp Hill,1,1,3,0,0,0
+PA,Carnegie,2,2,2,0,0,0
+PA,Cecil,3,3,6,0,0,0
+PA,Clifton Heights,1,1,2,0,0,0
+PA,Collingdale,2,1,2,0,1,0
+PA,Concord,2,0,0,0,2,0
+PA,Connellsville,3,3,9,0,0,0
+PA,Conshohocken,1,1,2,0,0,0
+PA,Coolbaugh,1,1,1,0,0,0
+PA,Corry,2,2,4,0,0,0
+PA,Derry,1,1,6,0,0,0
+PA,Dickson City,1,0,0,1,0,0
+PA,Dormont,2,2,26,0,0,0
+PA,Doylestown,2,2,4,0,0,0
+PA,East Goshen,3,3,10,0,0,0
+PA,East Hempfield,2,1,1,0,1,0
+PA,East Whiteland,2,2,10,0,0,0
+PA,Economy,1,1,1,0,0,0
+PA,Edinboro,2,0,0,0,2,0
+PA,Exeter,1,1,2,0,0,0
+PA,Folcroft,1,0,0,0,1,0
+PA,Forest Hills,2,2,3,0,0,0
+PA,Forks,2,2,5,0,0,0
+PA,Franklin,2,2,3,0,0,0
+PA,Grove City,2,1,2,0,1,0
+PA,Hellertown,3,3,6,0,0,0
+PA,Hilltown,1,1,6,0,0,0
+PA,Jeannette,2,2,21,0,0,0
+PA,Latrobe,4,2,12,0,2,0
+PA,Lewistown,2,1,3,0,1,0
+PA,Lock Haven,4,3,26,0,1,0
+PA,Lower Moreland,1,1,2,0,0,0
+PA,Lower Paxton,1,1,16,0,0,0
+PA,Lower Salford,2,2,3,0,0,0
+PA,Manchester,1,0,0,0,1,0
+PA,Manor,1,1,3,0,0,0
+PA,Marple,1,0,0,1,0,0
+PA,Millersville,4,1,2,2,1,0
+PA,Milton,4,4,6,0,0,0
+PA,Monaca,1,1,11,0,0,0
+PA,Monessen,4,3,11,0,1,0
+PA,Mount Carmel,1,0,0,1,0,0
+PA,Mount Joy,2,2,10,0,0,0
+PA,Nazareth,2,2,4,0,0,0
+PA,New Brighton,3,3,32,0,0,0
+PA,North Whitehall,2,2,7,0,0,0
+PA,Oakmont,2,1,3,0,1,0
+PA,Palmerton,2,2,2,0,0,0
+PA,Pittston,2,2,2,0,0,0
+PA,Plumstead,1,1,2,0,0,0
+PA,Plymouth,2,2,6,0,0,0
+PA,Red Lion,2,2,4,0,0,0
+PA,Ridley,1,1,1,0,0,0
+PA,Ridley Park,1,0,0,1,0,0
+PA,Salisbury,1,1,1,0,0,0
+PA,Sayre,1,1,5,0,0,0
+PA,Scott,1,1,1,0,0,0
+PA,Selinsgrove,2,2,6,0,0,0
+PA,Sharon Hill,1,0,0,0,1,0
+PA,Shippensburg,2,1,1,0,1,0
+PA,Somerset,3,3,4,0,0,0
+PA,Souderton,1,1,2,0,0,0
+PA,South Park,3,3,5,0,0,0
+PA,Spring Garden,2,2,6,0,0,0
+PA,Springfield,1,1,6,0,0,0
+PA,Steelton,1,1,4,0,0,0
+PA,Stroudsburg,2,2,7,0,0,0
+PA,Swissvale,1,1,1,0,0,0
+PA,Tamaqua,3,3,13,0,0,0
+PA,Taylor,2,2,6,0,0,0
+PA,Towamencin,2,2,5,0,0,0
+PA,Upper Chichester,1,1,2,0,0,0
+PA,Upper Gwynedd,1,1,16,0,0,0
+PA,Upper Providence,1,0,0,0,1,0
+PA,Upper Saucon,1,1,2,0,0,0
+PA,Upper St. Clair,1,1,14,0,0,0
+PA,Warren,3,2,3,0,1,0
+PA,Washington,1,1,5,0,0,0
+PA,West Manchester,1,1,2,0,0,0
+PA,West View,1,0,0,1,0,0
+PA,White Oak,3,1,1,0,2,0
+RI,Coventry,2,2,29,0,0,0
+RI,East Greenwich,3,3,38,0,0,0
+RI,Foster,1,1,6,0,0,0
+RI,Glocester,2,2,24,0,0,0
+RI,Hopkinton,1,1,15,0,0,0
+RI,Jamestown,1,1,11,0,0,0
+RI,Narragansett,2,2,29,0,0,0
+RI,North Providence,1,1,3,0,0,0
+RI,Richmond,1,1,3,0,0,0
+RI,Scituate,1,1,3,0,0,0
+RI,Smithfield,1,1,15,0,0,0
+RI,Tiverton,1,1,16,0,0,0
+RI,West Greenwich,1,1,7,0,0,0
+RI,Westerly,1,1,13,0,0,0
+SC,Abbeville,2,0,0,0,2,0
+SC,Allendale,2,1,10,1,0,0
+SC,Anderson,1,1,16,0,0,0
+SC,Andrews,1,0,0,0,1,0
+SC,Barnwell,1,0,0,1,0,0
+SC,Beaufort,1,1,16,0,0,0
+SC,Bennettsville,3,2,3,0,1,0
+SC,Cayce,1,1,5,0,0,0
+SC,Clemson,1,0,0,0,1,0
+SC,Clinton,2,0,0,0,2,0
+SC,Clover,1,1,2,0,0,0
+SC,Conway,1,1,6,0,0,0
+SC,Florence,1,1,1,0,0,0
+SC,Forest Acres,1,1,1,0,0,0
+SC,Fort Mill,2,1,1,0,1,0
+SC,Gaffney,1,0,0,0,1,0
+SC,Honea Path,1,0,0,0,1,0
+SC,Inman,1,1,8,0,0,0
+SC,Isle of Palms,2,1,9,0,1,0
+SC,James Island,1,1,2,0,0,0
+SC,Kingstree,1,0,0,0,1,0
+SC,Lake City,1,0,0,0,1,0
+SC,Lancaster,2,2,7,0,0,0
+SC,Landrum,1,0,0,0,1,0
+SC,Laurens,1,0,0,0,1,0
+SC,Marion,1,0,0,1,0,0
+SC,Mauldin,2,1,4,0,1,0
+SC,Myrtle Beach,2,2,10,0,0,0
+SC,Orangeburg,5,3,11,0,2,0
+SC,Pickens,1,1,5,0,0,0
+SC,Ridgeland,2,0,0,0,2,0
+SC,South Congaree,2,0,0,0,2,0
+SC,Spartanburg,2,0,0,0,2,0
+SC,Springdale,2,0,0,0,2,0
+SC,Sumter,2,1,2,0,1,0
+SC,Surfside Beach,1,1,4,0,0,0
+SC,Tega Cay,1,0,0,0,1,0
+SC,Walterboro,1,0,0,1,0,0
+SC,West Columbia,5,3,5,2,0,0
+SC,Westminster,1,1,1,0,0,0
+SC,Williston,3,1,6,0,2,0
+SD,Alcester,1,1,3,0,0,0
+SD,Armour,1,0,0,1,0,0
+SD,Beresford,1,1,3,0,0,0
+SD,Britton,1,1,7,0,0,0
+SD,Castlewood,4,1,1,2,1,0
+SD,Centerville,1,1,1,0,0,0
+SD,Clark,1,1,3,0,0,0
+SD,Clear Lake,1,1,2,0,0,0
+SD,Colton,1,0,0,1,0,0
+SD,Crooks,2,2,8,0,0,0
+SD,De Smet,1,1,2,0,0,0
+SD,Deadwood,2,2,15,0,0,0
+SD,Dell Rapids,2,2,3,0,0,0
+SD,Edgemont,1,1,2,0,0,0
+SD,Elkton,2,0,0,0,2,0
+SD,Faulkton,2,0,0,0,2,0
+SD,Flandreau,3,1,2,0,2,0
+SD,Fort Pierre,2,2,5,0,0,0
+SD,Freeman,1,1,3,0,0,0
+SD,Garretson,2,2,13,0,0,0
+SD,Gregory,2,1,2,0,1,0
+SD,Hartford,1,1,6,0,0,0
+SD,Howard,1,0,0,1,0,0
+SD,Ipswich,1,0,0,1,0,0
+SD,Kadoka,4,3,4,1,0,0
+SD,Lake Norden,1,1,3,0,0,0
+SD,Lead,1,0,0,0,1,0
+SD,Lemmon,1,1,3,0,0,0
+SD,Lennox,1,0,0,1,0,0
+SD,Marion,2,2,3,0,0,0
+SD,Menno,1,1,2,0,0,0
+SD,Milbank,2,2,2,0,0,0
+SD,Mobridge,2,2,18,0,0,0
+SD,North Sioux City,1,0,0,0,1,0
+SD,Onida,1,0,0,1,0,0
+SD,Parkston,2,0,0,1,1,0
+SD,Philip,2,0,0,0,2,0
+SD,Plankinton,2,1,2,0,1,0
+SD,Redfield,2,1,2,0,1,0
+SD,Sisseton,1,1,3,0,0,0
+SD,Timber Lake,1,1,1,0,0,0
+SD,Valley Springs,2,0,0,0,2,0
+SD,Viborg,3,1,1,0,2,0
+SD,Wagner,1,1,2,0,0,0
+SD,Webster,1,1,2,0,0,0
+SD,Wessington Springs,2,0,0,0,2,0
+SD,Whitewood,1,1,2,0,0,0
+SD,Worthing,1,1,2,0,0,0
+TN,Alcoa,1,0,0,0,1,0
+TN,Ashland City,1,1,12,0,0,0
+TN,Athens,2,2,5,0,0,0
+TN,Bolivar,2,1,6,0,1,0
+TN,Brownsville,1,0,0,0,1,0
+TN,Church Hill,1,1,2,0,0,0
+TN,Columbia,1,1,9,0,0,0
+TN,Dayton,1,1,5,0,0,0
+TN,Dickson,1,1,4,0,0,0
+TN,East Ridge,2,1,9,0,1,0
+TN,Elizabethton,2,2,3,0,0,0
+TN,Fairview,1,1,7,0,0,0
+TN,Fayetteville,1,1,2,0,0,0
+TN,Goodlettsville,2,2,4,0,0,0
+TN,Harriman,1,1,15,0,0,0
+TN,Henderson,2,2,8,0,0,0
+TN,Huntingdon,2,2,12,0,0,0
+TN,Jefferson City,2,2,7,0,0,0
+TN,Lenoir City,1,1,2,0,0,0
+TN,Lewisburg,4,1,1,0,3,0
+TN,Lexington,2,1,1,0,1,0
+TN,Loudon,3,3,14,0,0,0
+TN,McKenzie,1,1,2,0,0,0
+TN,McMinnville,2,1,16,0,1,0
+TN,Medina,2,2,6,0,0,0
+TN,Millington,1,0,0,0,1,0
+TN,Mount Carmel,1,1,8,0,0,0
+TN,Munford,2,0,0,0,2,0
+TN,Newport,1,1,7,0,0,0
+TN,Nolensville,1,1,1,0,0,0
+TN,Oak Hill,1,0,0,0,1,0
+TN,Oliver Springs,1,0,0,0,1,0
+TN,Paris,2,1,2,0,1,0
+TN,Pigeon Forge,3,0,0,2,1,0
+TN,Portland,1,1,1,0,0,0
+TN,Rockwood,1,1,3,0,0,0
+TN,Savannah,1,0,0,0,1,0
+TN,Selmer,3,0,0,1,2,0
+TN,Sevierville,1,1,1,0,0,0
+TN,Signal Mountain,1,1,14,0,0,0
+TN,Smithville,1,1,7,0,0,0
+TN,Soddy-Daisy,5,2,4,0,3,0
+TN,Sparta,1,0,0,0,1,0
+TN,Sweetwater,2,1,1,0,1,0
+TN,White Bluff,1,1,2,0,0,0
+TN,White House,1,1,7,0,0,0
+TX,Abilene,1,0,0,0,1,0
+TX,Alamo,1,0,0,0,1,0
+TX,Alice,1,1,7,0,0,0
+TX,Alton,2,2,14,0,0,0
+TX,Alvin,3,3,43,0,0,0
+TX,Andrews,1,1,11,0,0,0
+TX,Angleton,1,1,8,0,0,0
+TX,Anna,1,0,0,0,1,0
+TX,Athens,2,2,14,0,0,0
+TX,Azle,4,4,37,0,0,0
+TX,Beeville,3,3,17,0,0,0
+TX,Belton,3,3,26,0,0,0
+TX,Benbrook,1,1,10,0,0,0
+TX,Big Spring,1,1,6,0,0,0
+TX,Boerne,1,1,2,0,0,0
+TX,Brenham,2,2,27,0,0,0
+TX,Brownwood,2,2,7,0,0,0
+TX,Cleveland,1,0,0,0,1,0
+TX,Corsicana,2,2,4,0,0,0
+TX,Dalhart,1,1,1,0,0,0
+TX,Del Rio,1,1,4,0,0,0
+TX,Denison,1,1,1,0,0,0
+TX,Dickinson,3,3,30,0,0,0
+TX,Donna,3,3,23,0,0,0
+TX,Ennis,4,3,7,0,1,0
+TX,Fair Oaks Ranch,1,1,9,0,0,0
+TX,Fate,1,0,0,0,1,0
+TX,Forney,3,2,4,0,1,0
+TX,Gainesville,1,0,0,0,1,0
+TX,Gatesville,1,1,4,0,0,0
+TX,Granbury,2,2,5,0,0,0
+TX,Humble,1,1,1,0,0,0
+TX,Hutto,2,1,4,1,0,0
+TX,Jacksonville,1,1,1,0,0,0
+TX,Kilgore,2,1,6,0,1,0
+TX,Kingsville,1,1,7,0,0,0
+TX,Lake Jackson,2,2,19,0,0,0
+TX,Lakeway,1,1,16,0,0,0
+TX,Leander,1,1,2,0,0,0
+TX,Live Oak,3,2,15,0,1,0
+TX,Lufkin,1,1,3,0,0,0
+TX,Lumberton,2,0,0,1,1,0
+TX,Manor,1,1,4,0,0,0
+TX,Mont Belvieu,1,1,1,0,0,0
+TX,Mount Pleasant,1,0,0,1,0,0
+TX,Orange,1,0,0,0,1,0
+TX,Palestine,3,2,4,0,1,0
+TX,Palmview,1,1,2,0,0,0
+TX,Pampa,1,1,8,0,0,0
+TX,Plainview,5,4,15,0,1,0
+TX,Port Neches,2,2,6,0,0,0
+TX,Rio Grande City,1,1,3,0,0,0
+TX,Robinson,1,1,3,0,0,0
+TX,Rosenberg,1,1,10,0,0,0
+TX,Royse City,1,1,8,0,0,0
+TX,Saginaw,2,2,5,0,0,0
+TX,Selma,2,2,8,0,0,0
+TX,Southlake,3,3,13,0,0,0
+TX,Stafford,3,0,0,0,3,0
+TX,Stephenville,1,1,1,0,0,0
+TX,Sulphur Springs,2,2,12,0,0,0
+TX,Tomball,3,2,4,0,1,0
+TX,Trophy Club,1,0,0,0,1,0
+TX,Uvalde,4,2,7,0,2,0
+TX,Waco,1,0,0,0,1,0
+TX,West University Place,1,1,8,0,0,0
+UT,Castle Dale,1,0,0,1,0,0
+UT,Enterprise,1,1,1,0,0,0
+UT,Ferron,1,1,2,0,0,0
+UT,Fillmore,1,0,0,1,0,0
+UT,Francis,1,1,3,0,0,0
+UT,Fruit Heights,1,1,5,0,0,0
+UT,Grantsville,2,2,22,0,0,0
+UT,Heber,1,0,0,0,1,0
+UT,Hyrum,1,1,1,0,0,0
+UT,Kanab,1,1,1,0,0,0
+UT,Mapleton,2,2,10,0,0,0
+UT,Midway,2,2,20,0,0,0
+UT,Millville,2,1,4,0,1,0
+UT,Mona,1,1,3,0,0,0
+UT,Naples,3,1,6,0,2,0
+UT,Nephi,1,1,2,0,0,0
+UT,Nibley,1,1,3,0,0,0
+UT,North Ogden,1,1,1,0,0,0
+UT,Panguitch,2,2,3,0,0,0
+UT,Parowan,2,1,2,0,1,0
+UT,Plain City,2,0,0,0,2,0
+UT,Pleasant View,2,1,1,0,1,0
+UT,River Heights,1,0,0,0,1,0
+UT,South Ogden,1,1,2,0,0,0
+UT,South Weber,2,2,10,0,0,0
+UT,Tremonton,1,1,9,0,0,0
+UT,Vineyard,1,0,0,0,1,0
+UT,Washington Terrace,1,1,5,0,0,0
+UT,West Bountiful,1,1,2,0,0,0
+UT,West Point,1,0,0,0,1,0
+UT,White City metro,1,1,8,0,0,0
+UT,Willard,2,0,0,0,2,0
+VA,Altavista,1,1,3,0,0,0
+VA,Amherst,2,2,13,0,0,0
+VA,Appomattox,2,1,1,0,1,0
+VA,Big Stone Gap,1,0,0,0,1,0
+VA,Bridgewater,3,0,0,0,3,0
+VA,Buena Vista,3,3,7,0,0,0
+VA,Chilhowie,2,1,1,0,1,0
+VA,Chincoteague,2,2,12,0,0,0
+VA,Christiansburg,2,1,3,0,1,0
+VA,Clifton Forge,2,1,1,0,1,0
+VA,Covington,2,2,6,0,0,0
+VA,Culpeper,3,2,11,0,1,0
+VA,Dumfries,1,1,5,0,0,0
+VA,Emporia,1,1,2,0,0,0
+VA,Exmore,2,1,2,0,1,0
+VA,Front Royal,2,1,2,0,1,0
+VA,Gate City,1,0,0,0,1,0
+VA,Glade Spring,1,0,0,0,1,0
+VA,Gordonsville,2,1,7,0,1,0
+VA,Gretna,3,0,0,1,2,0
+VA,Grottoes,3,2,4,0,1,0
+VA,Haymarket,1,0,0,1,0,0
+VA,Louisa,1,1,6,0,0,0
+VA,Lovettsville,2,2,21,0,0,0
+VA,Luray,5,2,6,1,2,0
+VA,Manassas Park,1,1,9,0,0,0
+VA,Martinsville,1,1,1,0,0,0
+VA,Narrows,2,0,0,0,2,0
+VA,Poquoson,1,0,0,0,1,0
+VA,Purcellville,2,2,31,0,0,0
+VA,Radford,1,0,0,0,1,0
+VA,Smithfield,1,1,11,0,0,0
+VA,South Hill,1,1,12,0,0,0
+VA,Timberville,2,1,2,0,1,0
+VA,Warrenton,1,0,0,0,1,0
+VA,Waverly,1,0,0,0,1,0
+VA,Waynesboro,1,1,6,0,0,0
+VA,Woodstock,1,1,4,0,0,0
+VA,Wytheville,1,1,9,0,0,0
+VT,Alburgh,2,1,1,0,1,0
+VT,Arlington,2,2,11,0,0,0
+VT,Barton,1,1,3,0,0,0
+VT,Bennington,3,3,18,0,0,0
+VT,Bradford,1,1,2,0,0,0
+VT,Brattleboro,2,2,7,0,0,0
+VT,Bristol,1,1,14,0,0,0
+VT,Castleton,1,1,2,0,0,0
+VT,Charlotte,1,1,4,0,0,0
+VT,Chester,4,4,10,0,0,0
+VT,Colchester,1,0,0,0,1,0
+VT,Derby,2,1,2,0,1,0
+VT,Enosburg Falls,1,0,0,0,1,0
+VT,Fair Haven,3,1,2,0,2,0
+VT,Fairfax,1,1,4,0,0,0
+VT,Ferrisburgh,2,2,3,0,0,0
+VT,Grand Isle,2,2,7,0,0,0
+VT,Hardwick,2,2,4,0,0,0
+VT,Hartland,1,1,3,0,0,0
+VT,Highgate,1,0,0,1,0,0
+VT,Hinesburg,2,1,1,0,1,0
+VT,Hyde Park,2,2,7,0,0,0
+VT,Johnson,1,1,6,0,0,0
+VT,Ludlow,6,3,5,0,3,0
+VT,Lyndon,2,1,1,0,1,0
+VT,Manchester,3,3,33,0,0,0
+VT,Middlebury,1,1,8,0,0,0
+VT,Norwich,2,2,23,0,0,0
+VT,Pittsford,3,1,1,0,2,0
+VT,Poultney,4,0,0,0,4,0
+VT,Pownal,1,1,3,0,0,0
+VT,Randolph,1,0,0,0,1,0
+VT,Richmond,2,2,5,0,0,0
+VT,Royalton,2,1,2,0,1,0
+VT,Shaftsbury,1,1,3,0,0,0
+VT,Shelburne,1,1,16,0,0,0
+VT,South Burlington,1,1,3,0,0,0
+VT,Springfield,2,2,15,0,0,0
+VT,St. Albans,2,2,8,0,0,0
+VT,St. Johnsbury,3,2,4,0,1,0
+VT,Swanton,4,2,6,0,2,0
+VT,Wells River,1,0,0,0,1,0
+VT,Westminster,1,0,0,0,1,0
+VT,Williston,4,4,43,0,0,0
+VT,Wilmington,1,1,3,0,0,0
+VT,Woodstock,2,1,16,0,1,0
+WA,Airway Heights,1,1,2,0,0,0
+WA,Asotin,1,1,2,0,0,0
+WA,Brewster,1,0,0,0,1,0
+WA,Bridgeport,2,0,0,0,2,0
+WA,Brier,1,1,10,0,0,0
+WA,Buckley,1,1,3,0,0,0
+WA,Carnation,1,1,2,0,0,0
+WA,Cashmere,1,1,10,0,0,0
+WA,Castle Rock,1,1,5,0,0,0
+WA,Clarkston,2,2,28,0,0,0
+WA,Cle Elum,2,2,7,0,0,0
+WA,Clyde Hill,2,2,21,0,0,0
+WA,Connell,2,0,0,2,0,0
+WA,Cosmopolis,1,1,1,0,0,0
+WA,Coupeville,2,2,12,0,0,0
+WA,DuPont,1,1,2,0,0,0
+WA,Eatonville,3,3,22,0,0,0
+WA,Everson,3,3,28,0,0,0
+WA,Fircrest,1,1,12,0,0,0
+WA,Forks,1,1,1,0,0,0
+WA,Gold Bar,2,1,5,0,1,0
+WA,Granite Falls,1,1,16,0,0,0
+WA,Hoquiam,2,2,32,0,0,0
+WA,Kettle Falls,2,0,0,0,2,0
+WA,La Center,3,3,4,0,0,0
+WA,Lacey,1,1,1,0,0,0
+WA,Lakewood,2,2,32,0,0,0
+WA,Leavenworth,2,2,32,0,0,0
+WA,Mabton,1,1,16,0,0,0
+WA,McCleary,1,1,10,0,0,0
+WA,Medical Lake,2,2,11,0,0,0
+WA,Medina,1,1,12,0,0,0
+WA,Montesano,3,1,3,0,2,0
+WA,Normandy Park,1,1,9,0,0,0
+WA,North Bend,1,1,2,0,0,0
+WA,North Bonneville,1,1,1,0,0,0
+WA,Ocean Shores,2,2,30,0,0,0
+WA,Omak,2,2,22,0,0,0
+WA,Oroville,3,0,0,0,3,0
+WA,Othello,2,1,2,0,1,0
+WA,Pacific,3,3,42,0,0,0
+WA,Raymond,1,1,7,0,0,0
+WA,Ritzville,1,0,0,0,1,0
+WA,Royal City,1,1,4,0,0,0
+WA,Snohomish,1,1,4,0,0,0
+WA,Soap Lake,2,1,1,0,1,0
+WA,Steilacoom,3,2,27,0,1,0
+WA,Stevenson,3,3,21,0,0,0
+WA,Tenino,2,2,4,0,0,0
+WA,Toppenish,1,1,14,0,0,0
+WA,Vancouver,5,5,48,0,0,0
+WA,Wapato,2,0,0,0,2,0
+WA,Warden,1,1,2,0,0,0
+WA,Winlock,1,0,0,1,0,0
+WA,Zillah,3,3,26,0,0,0
+WI,Algoma,1,1,2,0,0,0
+WI,Amery,2,2,9,0,0,0
+WI,Arcadia,2,2,20,0,0,0
+WI,Bayside,2,2,12,0,0,0
+WI,Belleville,3,2,19,1,0,0
+WI,Bloomer,2,2,7,0,0,0
+WI,Bloomfield,3,0,0,0,3,0
+WI,Boscobel,2,2,5,0,0,0
+WI,Brodhead,1,0,0,0,1,0
+WI,Chilton,1,1,16,0,0,0
+WI,Combined Locks,2,1,3,0,1,0
+WI,Cross Plains,1,1,2,0,0,0
+WI,Cuba City,1,1,14,0,0,0
+WI,De Pere,1,0,0,0,1,0
+WI,Delafield,5,5,30,0,0,0
+WI,Dodgeville,1,1,2,0,0,0
+WI,East Troy,1,1,2,0,0,0
+WI,Eau Claire,2,2,4,0,0,0
+WI,Ellsworth,3,0,0,0,3,0
+WI,Elm Grove,2,1,8,0,1,0
+WI,Evansville,2,1,16,0,1,0
+WI,Genoa City,1,1,4,0,0,0
+WI,Grand Chute,5,4,26,0,1,0
+WI,Hales Corners,3,3,23,0,0,0
+WI,Horicon,2,2,20,0,0,0
+WI,Howards Grove,3,0,0,1,2,0
+WI,Jackson,2,2,14,0,0,0
+WI,Jefferson,3,3,13,0,0,0
+WI,Johnson Creek,1,0,0,0,1,0
+WI,Kewaskum,1,1,2,0,0,0
+WI,Kiel,2,2,7,0,0,0
+WI,Kimberly,3,3,31,0,0,0
+WI,Ladysmith,3,1,2,0,2,0
+WI,Lake Hallie,2,0,0,0,2,0
+WI,Lancaster,1,1,3,0,0,0
+WI,Marshfield,3,3,36,0,0,0
+WI,Mauston,1,1,14,0,0,0
+WI,Mayville,1,0,0,0,1,0
+WI,Medford,3,3,16,0,0,0
+WI,Mosinee,1,1,15,0,0,0
+WI,New Richmond,1,1,5,0,0,0
+WI,North Fond du Lac,2,2,31,0,0,0
+WI,Oconomowoc,5,5,35,0,0,0
+WI,Oconto,3,3,25,0,0,0
+WI,Oconto Falls,2,2,6,0,0,0
+WI,Omro,1,1,2,0,0,0
+WI,Osceola,3,3,27,0,0,0
+WI,Peshtigo,2,1,2,0,1,0
+WI,Prairie du Chien,3,3,13,0,0,0
+WI,Prescott,2,2,20,0,0,0
+WI,Pulaski,2,2,8,0,0,0
+WI,Racine,1,1,14,0,0,0
+WI,Richland Center,2,1,2,0,1,0
+WI,Rothschild,2,2,32,0,0,0
+WI,Sauk City,3,0,0,0,3,0
+WI,Seymour,5,5,33,0,0,0
+WI,Sheboygan,2,2,7,0,0,0
+WI,Somers,2,2,13,0,0,0
+WI,Somerset,1,1,6,0,0,0
+WI,St. Francis,1,1,14,0,0,0
+WI,Tomahawk,1,1,11,0,0,0
+WI,Twin Lakes,2,1,1,0,1,0
+WI,Vernon,1,1,1,0,0,0
+WI,Viroqua,2,2,17,0,0,0
+WI,Waterloo,2,2,27,0,0,0
+WI,Waupaca,1,1,2,0,0,0
+WI,West Salem,3,3,7,0,0,0
+WI,Wisconsin Dells,1,1,1,0,0,0
+WV,Ansted,2,1,1,1,0,0
+WV,Athens,2,1,1,0,1,0
+WV,Barboursville,1,0,0,0,1,0
+WV,Belle,3,2,9,1,0,0
+WV,Benwood,1,1,1,0,0,0
+WV,Bridgeport,1,1,13,0,0,0
+WV,Buckhannon,3,1,1,0,2,0
+WV,Ceredo,1,1,4,0,0,0
+WV,Dunbar,1,1,1,0,0,0
+WV,Elkins,1,0,0,1,0,0
+WV,Fayetteville,3,3,4,0,0,0
+WV,Glen Dale,2,0,0,1,1,0
+WV,Glenville,1,1,1,0,0,0
+WV,Hinton,1,0,0,0,1,0
+WV,Kingwood,1,0,0,0,1,0
+WV,Lewisburg,2,2,6,0,0,0
+WV,Milton,1,0,0,0,1,0
+WV,Moorefield,1,1,1,0,0,0
+WV,Nitro,1,1,6,0,0,0
+WV,Parsons,2,0,0,1,1,0
+WV,Petersburg,2,0,0,0,2,0
+WV,Richwood,1,1,3,0,0,0
+WV,Shepherdstown,1,0,0,0,1,0
+WV,Shinnston,3,0,0,0,3,0
+WV,Star City,1,0,0,0,1,0
+WV,Vienna,1,1,4,0,0,0
+WV,White Sulphur Springs,2,0,0,2,0,0
+WV,Williamstown,1,1,2,0,0,0
+WY,Afton,1,0,0,0,1,0
+WY,Alpine,2,1,1,0,1,0
+WY,Bar Nunn,3,2,4,0,1,0
+WY,Buffalo,3,2,2,0,1,0
+WY,Byron,1,0,0,0,1,0
+WY,Clearmont,1,0,0,0,1,0
+WY,Diamondville,2,1,2,1,0,0
+WY,Douglas,1,0,0,1,0,0
+WY,Elk Mountain,2,0,0,0,2,0
+WY,Fort Laramie,1,0,0,0,1,0
+WY,Guernsey,3,0,0,1,2,0
+WY,Hulett,5,0,0,5,0,0
+WY,Kemmerer,3,2,4,0,1,0
+WY,Meeteetse,1,0,0,0,1,0
+WY,Moorcroft,1,1,1,0,0,0
+WY,Ranchester,2,0,0,1,1,0
+WY,Rock River,2,0,0,1,1,0
+WY,Shoshoni,2,0,0,0,2,0
+WY,Star Valley Ranch,1,1,1,0,0,0
+WY,Sundance,1,1,1,0,0,0
+WY,Superior,2,0,0,0,2,0
+WY,Thermopolis,3,1,5,0,2,0
+WY,Torrington,1,0,0,0,1,0
+WY,Wamsutter,2,0,0,0,2,0
+WY,Wheatland,1,0,0,0,1,0
+WY,Wright,1,0,0,0,1,0

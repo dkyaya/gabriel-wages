@@ -186,7 +186,7 @@ function App() {
               <MetricCard
                 label="Scout-covered municipalities"
                 value={formatNumber(projectPhaseSummary.current_scout_covered)}
-                note="Actual parseable scout outcomes only · map data date 2026-07-27"
+                note={`Actual parseable scout outcomes only · map data date ${projectPhaseSummary.map_data_date}`}
               />
               <MetricCard
                 label="Total candidate rows"
@@ -197,6 +197,11 @@ function App() {
                 label="Readiness reviewed"
                 value={formatNumber(projectPhaseSummary.pdf_text_readiness_reviewed_count)}
                 note={`${formatNumber(projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} technically ready of ${formatNumber(projectPhaseSummary.pdf_text_readiness_queue_size)} retained sources`}
+              />
+              <MetricCard
+                label="Retained sources"
+                value={formatNumber(projectPhaseSummary.source_review_download_retained_count)}
+                note={`${formatNumber(projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} extraction-ready · retained binaries remain outside Git`}
               />
               <MetricCard
                 label="Text extraction attempted"
@@ -228,6 +233,47 @@ function App() {
                 note={projectPhaseSummary.text_extraction_artifact_root}
               />
               <MetricCard
+                label="Span extraction attempted"
+                value={formatNumber(projectPhaseSummary.span_extraction_attempted_count)}
+                note={`${formatNumber(projectPhaseSummary.span_extraction_queue_size)} extracted-ok sources in the locked queue`}
+              />
+              <MetricCard
+                label="Positive exact spans"
+                value={formatNumber(projectPhaseSummary.span_positive_exact_count)}
+                note={`${formatNumber(projectPhaseSummary.span_sources_with_positive_count)} sources · candidates only, not rated`}
+              />
+              <MetricCard
+                label="Span families"
+                value={formatNumber(
+                  projectPhaseSummary.span_quantitative_compensation_count
+                  + projectPhaseSummary.span_qualitative_mechanism_count
+                )}
+                note={
+                  "Quantitative " + formatNumber(projectPhaseSummary.span_quantitative_compensation_count)
+                  + " · qualitative " + formatNumber(projectPhaseSummary.span_qualitative_mechanism_count)
+                  + " · navigation " + formatNumber(projectPhaseSummary.span_source_navigation_count)
+                  + " · non-base " + formatNumber(projectPhaseSummary.span_non_base_compensation_count)
+                }
+              />
+              <MetricCard
+                label="Span deferrals"
+                value={formatNumber(
+                  projectPhaseSummary.span_no_span_or_weak_count
+                  + projectPhaseSummary.span_ambiguous_count
+                  + projectPhaseSummary.span_extraction_error_count
+                )}
+                note={
+                  "No span/weak " + formatNumber(projectPhaseSummary.span_no_span_or_weak_count)
+                  + " · ambiguous " + formatNumber(projectPhaseSummary.span_ambiguous_count)
+                  + " · errors " + formatNumber(projectPhaseSummary.span_extraction_error_count)
+                }
+              />
+              <MetricCard
+                label="Rating candidates"
+                value={formatNumber(projectPhaseSummary.span_rating_candidate_count)}
+                note="Validated exact spans only · rating has not started"
+              />
+              <MetricCard
                 label="Global analysis readiness"
                 value="False"
                 note="No wage-gap, regression, treatment-effect, or final causal result"
@@ -237,8 +283,8 @@ function App() {
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Extracted text is a local, Git-ignored machine-readable artifact only. It is not an evidence span,
-                rating, ingestion, codification, quantitative comparison, population evidence, or a causal conclusion.
+                Extracted text remains a local, Git-ignored artifact. Exact spans are deterministic candidates only—not
+                ratings, ingestion, codification, quantitative comparison, population evidence, or causal conclusions.
                 The Tier C memo remains a completed historical evidence artifact, not the current operation.
               </span>
             </div>

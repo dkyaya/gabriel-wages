@@ -1,0 +1,16 @@
+{
+  "boundaries_checked": [
+    "no_rating",
+    "no_model_api",
+    "no_ingestion_codification",
+    "no_normalization_or_comparison",
+    "no_statistical_or_causal_work"
+  ],
+  "new_test": "scripts/test_combined_broad_span_extraction_3815.py",
+  "required_predecessor_tests": [
+    "scripts/test_combined_broad_text_extraction_4051.py",
+    "scripts/test_retained_source_storage_history_repair.py",
+    "scripts/test_combined_broad_pdf_text_layer_readiness_4961.py",
+    "scripts/test_dashboard_declutter_map_correction_tier_c_text_span_extraction.py"
+  ]
+}

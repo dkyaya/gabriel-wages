@@ -155,11 +155,17 @@ def main() -> None:
     phase = load_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
     source = load_json(ROOT / "docs/dashboard/data/source_review_status_summary.json")
     state = load_json(ROOT / "docs/dashboard/data/state_summary.json")
-    assert phase["current_phase_code"] == decision["decision"]
+    assert phase["current_phase_code"] in {
+        decision["decision"],
+        "combined_broad_span_extraction_3815_completed_rating_ready",
+    }
     assert phase["text_extraction_queue_size"] == 4051
     assert phase["text_extraction_attempted_count"] == 4051
     assert phase["text_extracted_ok_count"] == len(extracted_ok)
-    assert source["stage"] == "combined_broad_text_extraction_complete"
+    assert source["stage"] in {
+        "combined_broad_text_extraction_complete",
+        "combined_broad_span_extraction_complete",
+    }
     assert source["text_extraction_attempted_count"] == 4051
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
     assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"

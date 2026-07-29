@@ -1,0 +1,11 @@
+{
+  "canonical_key": [
+    "extraction_id",
+    "span_start_offset",
+    "span_end_offset"
+  ],
+  "canonical_positive_span_count": 17259,
+  "cross_source_deduplication": false,
+  "exact_duplicate_rule_hit_count": 1120,
+  "raw_rule_hit_count": 19009
+}

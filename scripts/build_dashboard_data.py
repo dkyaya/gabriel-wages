@@ -1566,6 +1566,32 @@ COMBINED_BROAD_TEXT_EXTRACTION_OK_PATH = (
     COMBINED_BROAD_TEXT_EXTRACTION_DIR
     / "combined_broad_text_extraction_4051_extracted_ok.csv"
 )
+COMBINED_BROAD_SPAN_EXTRACTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_DECISION_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_decision.json"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_INVARIANTS_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_invariant_checks.json"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_SUMMARY_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_results_summary.json"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_QUEUE_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_locked_queue.csv"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_RESULTS_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_results.csv"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_POSITIVE_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_positive_spans.csv"
+)
+COMBINED_BROAD_SPAN_EXTRACTION_RATING_PATH = (
+    COMBINED_BROAD_SPAN_EXTRACTION_DIR / "combined_broad_span_extraction_3815_rating_candidate_manifest.csv"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5243,6 +5269,62 @@ def combined_broad_text_extraction_status() -> tuple[bool, dict[str, Any]]:
     return True, payload
 
 
+def combined_broad_span_extraction_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed deterministic 3,815-source span extraction."""
+    required = (
+        COMBINED_BROAD_SPAN_EXTRACTION_DECISION_PATH,
+        COMBINED_BROAD_SPAN_EXTRACTION_INVARIANTS_PATH,
+        COMBINED_BROAD_SPAN_EXTRACTION_SUMMARY_PATH,
+        COMBINED_BROAD_SPAN_EXTRACTION_QUEUE_PATH,
+        COMBINED_BROAD_SPAN_EXTRACTION_RESULTS_PATH,
+        COMBINED_BROAD_SPAN_EXTRACTION_POSITIVE_PATH,
+        COMBINED_BROAD_SPAN_EXTRACTION_RATING_PATH,
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_SPAN_EXTRACTION_DECISION_PATH)
+    invariants = read_json(COMBINED_BROAD_SPAN_EXTRACTION_INVARIANTS_PATH)
+    summary = read_json(COMBINED_BROAD_SPAN_EXTRACTION_SUMMARY_PATH)
+    queue = read_csv(COMBINED_BROAD_SPAN_EXTRACTION_QUEUE_PATH)
+    results = read_csv(COMBINED_BROAD_SPAN_EXTRACTION_RESULTS_PATH)
+    positives = read_csv(COMBINED_BROAD_SPAN_EXTRACTION_POSITIVE_PATH)
+    rating = read_csv(COMBINED_BROAD_SPAN_EXTRACTION_RATING_PATH)
+    queue_ids = {row["span_queue_id"] for row in queue}
+    result_ids = {row["span_queue_id"] for row in results}
+    positive_ids = {row["span_extraction_id"] for row in positives}
+    rating_ids = {row["span_extraction_id"] for row in rating}
+    gates = (
+        decision.get("decision")
+        == "combined_broad_span_extraction_3815_completed_rating_ready"
+        and decision.get("all_four_lanes_complete") is True
+        and len(queue) == len(results) == len(queue_ids) == len(result_ids) == 3815
+        and queue_ids == result_ids
+        and summary.get("span_queue_count") == 3815
+        and summary.get("span_extraction_attempted_count") == 3815
+        and summary.get("completed_lane_count") == 4
+        and len(positives) == summary.get("positive_exact_span_count")
+        and len(rating) == summary.get("rating_candidate_count")
+        and positive_ids == rating_ids
+        and all(row.get("span_status") == "span_extracted" for row in rating)
+        and all(row.get("global_analysis_readiness") == "false" for row in results)
+        and all(row.get("global_analysis_readiness") == "false" for row in positives)
+        and invariants.get("all_passed") is True
+        and invariants.get("master_equals_lane_union") is True
+        and invariants.get("positive_exact_offsets_and_hashes_valid") is True
+        and invariants.get("bounded_context_valid") is True
+        and invariants.get("tracked_full_text_count") == 0
+        and invariants.get("tracked_retained_binary_count") == 0
+        and decision.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("combined broad span-extraction package fails dashboard gates")
+    payload = {**decision, **summary}
+    payload["dashboard_result_path"] = (
+        "docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md"
+    )
+    return True, payload
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5328,13 +5410,46 @@ def build_reports_index_layer(
     source_download_available, source_download = combined_broad_source_review_download_status()
     broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
     broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
+    broad_span_available, broad_span = combined_broad_span_extraction_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "combined-broad-span-extraction-3815-2026-07-28",
+                    "title": "Combined Broad Exact-Span Extraction Result",
+                    "report_type": "Current deterministic exact-span report",
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{broad_span['span_extraction_attempted_count']:,} sources attempted; "
+                        f"{broad_span['positive_exact_span_count']:,} exact candidates"
+                    ),
+                    "summary": (
+                        "Four isolated, standard-staggered lanes found deterministic exact candidate "
+                        "spans with validated offsets, hashes, and bounded context. No rating, model "
+                        "analysis, ingestion, wage comparison, or causal analysis occurred."
+                    ),
+                    "tags": ["current", "exact spans", "deterministic", "claim boundaries"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + broad_span["dashboard_result_path"],
+                    "link_label": "Open current exact-span report",
+                    "scope_metrics": [
+                        {"label": "span queue", "value": broad_span["span_queue_count"]},
+                        {"label": "positive sources", "value": broad_span["sources_with_positive_spans"]},
+                        {"label": "rating candidates", "value": broad_span["rating_candidate_count"]},
+                    ],
+                }
+            ]
+            if broad_span_available else []
+        ),
         *(
             [
                 {
                     "id": "combined-broad-text-extraction-4051-2026-07-28",
                     "title": "Combined Broad Text Extraction Result",
-                    "report_type": "Current bounded text-extraction report",
+                    "report_type": (
+                        "Historical bounded text-extraction report"
+                        if broad_span_available else "Current bounded text-extraction report"
+                    ),
                     "date": "2026-07-28",
                     "checkpoint": (
                         f"{broad_extraction['extraction_attempted_count']:,} extraction attempts; "
@@ -5345,9 +5460,9 @@ def build_reports_index_layer(
                         "to ignored artifact storage. No OCR, rendering, span extraction, evidence "
                         "rating, ingestion, wage analysis, or causal analysis occurred."
                     ),
-                    "tags": ["current", "text extraction", "ignored artifacts", "claim boundaries"],
-                    "current": True,
-                    "historical": False,
+                    "tags": ["historical" if broad_span_available else "current", "text extraction", "ignored artifacts", "claim boundaries"],
+                    "current": not broad_span_available,
+                    "historical": broad_span_available,
                     "href": repository_root_url + broad_extraction["dashboard_result_path"],
                     "link_label": "Open current text-extraction report",
                     "scope_metrics": [
@@ -8128,6 +8243,7 @@ def build_project_phase_summary(
     source_download_available, source_download = combined_broad_source_review_download_status()
     broad_readiness_available, broad_readiness = combined_broad_pdf_text_readiness_status()
     broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
+    broad_span_available, broad_span = combined_broad_span_extraction_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8153,10 +8269,12 @@ def build_project_phase_summary(
     return {
         **metadata,
         "data_vintage": "2026-07-28" if (
-            broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
+            broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "combined_broad_text_extraction_complete_span_extraction_transition"
+            "combined_broad_span_extraction_complete_rating_transition"
+            if broad_span_available
+            else "combined_broad_text_extraction_complete_span_extraction_transition"
             if broad_extraction_available
             else "combined_broad_pdf_text_readiness_complete_text_extraction_transition"
             if broad_readiness_available
@@ -8179,7 +8297,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Combined broad text extraction complete; deterministic verbatim span extraction ready next"
+            "Combined broad deterministic exact-span extraction complete; bounded exact-span rating ready next"
+            if broad_span_available
+            else "Combined broad text extraction complete; deterministic verbatim span extraction ready next"
             if broad_extraction_available
             else "Combined broad PDF/text-layer readiness complete; four-lane bounded text extraction ready next"
             if broad_readiness_available
@@ -8202,7 +8322,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_extraction["decision"]
+            broad_span["decision"]
+            if broad_span_available
+            else broad_extraction["decision"]
             if broad_extraction_available
             else broad_readiness["decision"]
             if broad_readiness_available
@@ -8405,8 +8527,23 @@ def build_project_phase_summary(
         "text_extraction_other_document_unsupported_count": broad_extraction.get("other_document_extraction_unsupported_count") if broad_extraction_available else 0,
         "text_extraction_error_count": broad_extraction.get("extraction_error_count") if broad_extraction_available else 0,
         "text_extraction_artifact_root": broad_extraction.get("artifact_root") if broad_extraction_available else None,
+        "combined_span_extraction_available": broad_span_available,
+        "span_extraction_queue_size": broad_span.get("span_queue_count") if broad_span_available else 0,
+        "span_extraction_attempted_count": broad_span.get("span_extraction_attempted_count") if broad_span_available else 0,
+        "span_sources_with_positive_count": broad_span.get("sources_with_positive_spans") if broad_span_available else 0,
+        "span_positive_exact_count": broad_span.get("positive_exact_span_count") if broad_span_available else 0,
+        "span_quantitative_compensation_count": broad_span.get("quantitative_compensation_span_count") if broad_span_available else 0,
+        "span_qualitative_mechanism_count": broad_span.get("qualitative_mechanism_span_count") if broad_span_available else 0,
+        "span_source_navigation_count": broad_span.get("source_navigation_reference_span_count") if broad_span_available else 0,
+        "span_non_base_compensation_count": broad_span.get("non_base_compensation_span_count") if broad_span_available else 0,
+        "span_no_span_or_weak_count": broad_span.get("no_span_or_weak_count") if broad_span_available else 0,
+        "span_ambiguous_count": broad_span.get("ambiguous_source_count") if broad_span_available else 0,
+        "span_extraction_error_count": broad_span.get("extraction_error_count") if broad_span_available else 0,
+        "span_rating_candidate_count": broad_span.get("rating_candidate_count") if broad_span_available else 0,
         "current_report_title": (
-            "Combined Broad Text Extraction Result"
+            "Combined Broad Exact-Span Extraction Result"
+            if broad_span_available
+            else "Combined Broad Text Extraction Result"
             if broad_extraction_available
             else "Combined Broad PDF and Text-Layer Readiness Result"
             if broad_readiness_available
@@ -8418,7 +8555,9 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_extraction["dashboard_result_path"]
+            broad_span["dashboard_result_path"]
+            if broad_span_available
+            else broad_extraction["dashboard_result_path"]
             if broad_extraction_available
             else broad_readiness["dashboard_result_path"]
             if broad_readiness_available
@@ -8431,7 +8570,9 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_extraction["dashboard_result_path"]
+            broad_span["dashboard_result_path"]
+            if broad_span_available
+            else broad_extraction["dashboard_result_path"]
             if broad_extraction_available
             else broad_readiness["dashboard_result_path"]
             if broad_readiness_available
@@ -8450,7 +8591,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run deterministic verbatim span/evidence extraction over extracted-ok text artifacts only"
+            "run separately authorized bounded exact-span rating over validated positive candidates only"
+            if broad_span_available
+            else "run deterministic verbatim span/evidence extraction over extracted-ok text artifacts only"
             if broad_extraction_available
             else "run four-lane bounded text extraction over readiness-approved retained sources only"
             if broad_readiness_available
@@ -8526,7 +8669,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "deterministic verbatim span/evidence extraction over extracted-ok text artifacts"
+            "bounded exact-span rating over validated positive candidate spans"
+            if broad_span_available
+            else "deterministic verbatim span/evidence extraction over extracted-ok text artifacts"
             if broad_extraction_available
             else "four-lane bounded text extraction over readiness-approved retained sources"
             if broad_readiness_available
@@ -8540,17 +8685,29 @@ def build_project_phase_summary(
             if verification_available
             else "broad state-by-state source scouting"
         ),
-        "next_phase_sequence": [
-            "lock only extracted-ok text artifacts after path, size, and SHA-256 validation",
-            "split the exact queue across four isolated staggered lanes",
-            "capture exact verbatim evidence spans without paraphrase or rating",
-            "exclude empty, low-density, bad-layer, noisy, unsupported, and error rows",
-            "merge lightweight span manifests while full text remains in ignored storage",
-        ],
+        "next_phase_sequence": (
+            [
+                "lock only validated positive exact spans; exclude ambiguous and no-span rows",
+                "split the exact rating queue across four isolated standard-staggered lanes",
+                "rate bounded exact spans without normalizing or comparing wage values",
+                "preserve valid, quarantine, and results ledgers plus post-rating completeness checks",
+                "update lightweight summaries while full text remains ignored and untracked",
+            ]
+            if broad_span_available
+            else [
+                "lock only extracted-ok text artifacts after path, size, and SHA-256 validation",
+                "split the exact queue across four isolated staggered lanes",
+                "capture exact verbatim evidence spans without paraphrase or rating",
+                "exclude empty, low-density, bad-layer, noisy, unsupported, and error rows",
+                "merge lightweight span manifests while full text remains in ignored storage",
+            ]
+        ),
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "combined_broad_text_extraction_complete_span_extraction_ready"
+            "combined_broad_span_extraction_complete_rating_ready"
+            if broad_span_available
+            else "combined_broad_text_extraction_complete_span_extraction_ready"
             if broad_extraction_available
             else "combined_broad_pdf_text_readiness_complete_text_extraction_ready"
             if broad_readiness_available
@@ -10379,6 +10536,38 @@ def build_source_review_status_summary(
                     "Extracted text is a local machine-readable artifact, not an evidence span or rating.",
                     "No OCR, rendering, span extraction, evidence rating, model analysis, ingestion, or codification occurred.",
                     "Extraction counts do not establish wage differences, national prevalence, effects, or causation.",
+                    "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
+                ],
+            }
+        )
+    broad_span_available, broad_span = combined_broad_span_extraction_status()
+    if broad_span_available:
+        payload.update(
+            {
+                "stage": "combined_broad_span_extraction_complete",
+                "source_review_phase": "combined_broad_3815_deterministic_span_parallel_lanes_completed",
+                "source_review_live_status": "span_extraction_completed_all_four_lanes",
+                "span_extraction_queue_size": broad_span["span_queue_count"],
+                "span_extraction_attempted_count": broad_span["span_extraction_attempted_count"],
+                "sources_with_positive_spans": broad_span["sources_with_positive_spans"],
+                "positive_exact_span_count": broad_span["positive_exact_span_count"],
+                "quantitative_compensation_span_count": broad_span["quantitative_compensation_span_count"],
+                "qualitative_mechanism_span_count": broad_span["qualitative_mechanism_span_count"],
+                "source_navigation_reference_span_count": broad_span["source_navigation_reference_span_count"],
+                "non_base_compensation_span_count": broad_span["non_base_compensation_span_count"],
+                "no_span_or_weak_count": broad_span["no_span_or_weak_count"],
+                "ambiguous_span_count": broad_span["ambiguous_source_count"],
+                "span_extraction_error_count": broad_span["extraction_error_count"],
+                "rating_candidate_count": broad_span["rating_candidate_count"],
+                "source_rating_status": "not_started",
+                "next_recommendation": "bounded_exact_span_rating",
+                "next_scaling_decision": "bounded_exact_span_rating",
+                "combined_broad_span_extraction_result_path": broad_span["dashboard_result_path"],
+                "global_analysis_readiness": False,
+                "caveats": [
+                    "Exact spans are deterministic candidates only, not evidence ratings or claims.",
+                    "No model/API analysis, ingestion, codification, wage normalization/comparison, or statistical work occurred.",
+                    "Span counts do not establish wage differences, national prevalence, effects, or causation.",
                     "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
                 ],
             }

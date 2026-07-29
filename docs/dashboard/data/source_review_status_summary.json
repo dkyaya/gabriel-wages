@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-28T22:50:10Z",
+  "generated_at": "2026-07-29T00:35:08Z",
   "data_vintage": "2026-07-27",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,8 +95,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "combined_broad_text_extraction_complete",
-  "source_review_phase": "combined_broad_4051_text_extraction_parallel_lanes_completed",
+  "stage": "combined_broad_span_extraction_complete",
+  "source_review_phase": "combined_broad_3815_deterministic_span_parallel_lanes_completed",
   "metadata_triage_complete": true,
   "metadata_triage_rows": 4726,
   "p1_rows": 1760,
@@ -110,7 +110,7 @@
   },
   "initial_source_review_states": 43,
   "initial_source_review_unique_municipalities": 95,
-  "source_review_live_status": "text_extraction_completed_all_four_lanes",
+  "source_review_live_status": "span_extraction_completed_all_four_lanes",
   "bounded_live_source_review_path": "implemented_httpx_batch3_merged",
   "recommended_initial_live_concurrency": 4,
   "recommended_initial_timeout_seconds": 30,
@@ -118,7 +118,7 @@
   "recommended_initial_read_timeout_seconds": 20,
   "recommended_initial_max_redirects": 5,
   "recommended_initial_max_bytes": 26214400,
-  "next_scaling_decision": "deterministic_verbatim_span_extraction",
+  "next_scaling_decision": "bounded_exact_span_rating",
   "content_download_status": "completed_unchanged",
   "source_rating_status": "not_started",
   "extraction_readiness_status": "text_extraction_completed_span_queue_ready",
@@ -188,9 +188,9 @@
   "pilot_manifest_source": "docs/analysis/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/source_review_pilot_manifest.json",
   "metadata_triage_summary_source": "docs/analysis/content_triage_ledgers/content_triage_summary_latest.json",
   "caveats": [
-    "Extracted text is a local machine-readable artifact, not an evidence span or rating.",
-    "No OCR, rendering, span extraction, evidence rating, model analysis, ingestion, or codification occurred.",
-    "Extraction counts do not establish wage differences, national prevalence, effects, or causation.",
+    "Exact spans are deterministic candidates only, not evidence ratings or claims.",
+    "No model/API analysis, ingestion, codification, wage normalization/comparison, or statistical work occurred.",
+    "Span counts do not establish wage differences, national prevalence, effects, or causation.",
     "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false."
   ],
   "latest_source_review_pilot_id": "SOURCE-REVIEW-PILOT1-150-2026-07-24",
@@ -351,7 +351,7 @@
   "batch3_3x500_rows_merged": 1500,
   "batch3_3x500_artifact_saved_rows": 1480,
   "cumulative_total_artifact_bytes": 4502698363,
-  "next_recommendation": "deterministic_verbatim_span_extraction",
+  "next_recommendation": "bounded_exact_span_rating",
   "batch3_durable_summary_source": "docs/analysis/source_review_ledgers/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/source_review_summary.json",
   "source_review_queue_size": 5589,
   "source_review_download_attempted_count": 5589,
@@ -404,5 +404,18 @@
   "other_document_extraction_unsupported_count": 0,
   "extraction_error_count": 0,
   "extracted_text_artifact_root": "artifacts/local_extracted_text/combined_broad_text_extraction_4051_2026-07-28",
-  "combined_broad_text_extraction_result_path": "docs/analysis/combined_broad_text_extraction_4051_result_2026-07-28.md"
+  "combined_broad_text_extraction_result_path": "docs/analysis/combined_broad_text_extraction_4051_result_2026-07-28.md",
+  "span_extraction_queue_size": 3815,
+  "span_extraction_attempted_count": 3815,
+  "sources_with_positive_spans": 2721,
+  "positive_exact_span_count": 17259,
+  "quantitative_compensation_span_count": 10541,
+  "qualitative_mechanism_span_count": 4695,
+  "source_navigation_reference_span_count": 441,
+  "non_base_compensation_span_count": 1582,
+  "no_span_or_weak_count": 179,
+  "ambiguous_span_count": 915,
+  "span_extraction_error_count": 0,
+  "rating_candidate_count": 17259,
+  "combined_broad_span_extraction_result_path": "docs/analysis/combined_broad_span_extraction_3815_result_2026-07-28.md"
 }
