@@ -132,6 +132,7 @@ def main() -> int:
     check("controlled buckets", {row["claim_readiness_bucket"] for row in records} <= BUCKETS and sum(readiness["counts"].values()) == 16947)
     check("controlled layers", {row["analysis_layer"] for row in records} <= LAYERS and set(layers["controlled_values"]) == LAYERS)
     check("controlled boxes", {row["dashboard_evidence_box"] for row in records} <= BOXES and set(boxes["counts"]) == BOXES and sum(boxes["counts"].values()) == 16947)
+    check("dashboard excluded box", sum(boxes["dashboard_display_counts"].values()) == 17259 and boxes["dashboard_display_counts"]["quarantined_excluded_material"] == 312)
     check("durable statuses", all(row["ingestion_status"] == "ingested" and row["codification_status"] == "codified" for row in records))
     check("claim boundaries", all(row["no_wage_gap_claim"] == row["no_final_causal_claim"] == "true" and row["global_analysis_readiness"] == "false" and row["causal_status"] == "not_causal_evidence" for row in records))
     check("quant boundary", all(row["normalization_status"] == "not_normalized" for row in records if row["needs_quant_normalization"] == "true"))

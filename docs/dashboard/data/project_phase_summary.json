@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-29T03:52:52Z",
+  "generated_at": "2026-07-29T03:56:23Z",
   "data_vintage": "2026-07-28",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -554,7 +554,7 @@
       "market_comparability_evidence": 153,
       "non_base_compensation_evidence": 2259,
       "quantitative_compensation_evidence": 1442,
-      "quarantined_excluded_material": 0,
+      "quarantined_excluded_material": 312,
       "safety_non_safety_directional_hints": 677,
       "source_navigation_references": 493,
       "weak_context_not_supported_material": 5080
@@ -733,7 +733,7 @@
     "market_comparability_evidence": 153,
     "non_base_compensation_evidence": 2259,
     "quantitative_compensation_evidence": 1442,
-    "quarantined_excluded_material": 0,
+    "quarantined_excluded_material": 312,
     "safety_non_safety_directional_hints": 677,
     "source_navigation_references": 493,
     "weak_context_not_supported_material": 5080

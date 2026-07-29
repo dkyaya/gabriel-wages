@@ -5590,6 +5590,8 @@ def combined_broad_rating_ingestion_codification_status() -> tuple[bool, dict[st
         and readiness.get("primary_buckets_reconcile") is True
         and sum(readiness.get("counts", {}).values()) == 16947
         and sum(boxes.get("counts", {}).values()) == 16947
+        and sum(boxes.get("dashboard_display_counts", {}).values()) == 17259
+        and boxes.get("dashboard_display_counts", {}).get("quarantined_excluded_material") == 312
         and layers.get("codified_record_count") == 16947
         and gate.get("gate_input_record_count") == 16947
         and gate.get("dedicated_global_readiness_gate_ready_next") is True
@@ -5603,7 +5605,7 @@ def combined_broad_rating_ingestion_codification_status() -> tuple[bool, dict[st
     return True, {
         **decision,
         "claim_readiness_counts": readiness.get("counts", {}),
-        "evidence_box_counts": boxes.get("counts", {}),
+        "evidence_box_counts": boxes.get("dashboard_display_counts", boxes.get("counts", {})),
         "analysis_layer_counts": layers.get("primary_analysis_layer_counts", {}),
         "global_readiness_gate_status": "ready_for_dedicated_diagnostic_gate",
         "cba_composition_counts": {

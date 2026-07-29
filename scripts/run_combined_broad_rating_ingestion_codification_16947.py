@@ -470,6 +470,8 @@ def build_outputs(target: Path) -> None:
         write_csv(target / f"combined_broad_rating_ingestion_codification_16947_{layer}.csv", subset, POINTER_FIELDS)
     bucket_counts = Counter(row["claim_readiness_bucket"] for row in codified)
     box_counts = Counter(row["dashboard_evidence_box"] for row in codified)
+    dashboard_box_counts = {box: box_counts.get(box, 0) for box in EVIDENCE_BOXES}
+    dashboard_box_counts["quarantined_excluded_material"] = EXPECTED_QUARANTINE
     primary_layer_counts = Counter(row["analysis_layer"] for row in codified)
     write_json(target / "combined_broad_rating_ingestion_codification_16947_analysis_layer_summary.json", {
         "codified_record_count": EXPECTED_VALID, "primary_analysis_layer_counts": dict(sorted(primary_layer_counts.items())),
@@ -483,6 +485,8 @@ def build_outputs(target: Path) -> None:
     })
     write_json(target / "combined_broad_rating_ingestion_codification_16947_dashboard_evidence_box_summary.json", {
         "codified_record_count": EXPECTED_VALID, "counts": {box: box_counts.get(box, 0) for box in EVIDENCE_BOXES},
+        "dashboard_display_counts": dashboard_box_counts,
+        "dashboard_display_count_including_excluded_references": EXPECTED_TOTAL,
         "evidence_filters_outside_map": True, "map_filter_contract": "total_scout_coverage_only",
         "global_analysis_readiness": False,
     })
@@ -565,7 +569,7 @@ def build_outputs(target: Path) -> None:
         "ingestion_queue_size": EXPECTED_VALID, "ingested_record_count": EXPECTED_VALID,
         "codified_record_count": EXPECTED_VALID, "quarantine_count": EXPECTED_QUARANTINE,
         "claim_readiness_counts": dict(sorted(bucket_counts.items())),
-        "dashboard_evidence_box_counts": {box: box_counts.get(box, 0) for box in EVIDENCE_BOXES},
+        "dashboard_evidence_box_counts": dashboard_box_counts,
         "map_filter_contract": "total_scout_coverage_only", "global_analysis_readiness": False,
     }
     write_json(target / "combined_broad_rating_ingestion_codification_16947_dashboard_update_summary.json", dashboard_summary)
@@ -625,7 +629,7 @@ def build_outputs(target: Path) -> None:
         "completed_lane_count": 4, "lane_counts": LANE_SIZES,
         "claim_readiness_counts": dict(sorted(bucket_counts.items())),
         "analysis_layer_counts": dict(sorted(primary_layer_counts.items())),
-        "dashboard_evidence_box_counts": {box: box_counts.get(box, 0) for box in EVIDENCE_BOXES},
+        "dashboard_evidence_box_counts": dashboard_box_counts,
         "global_readiness_gate_ready_next": True,
         "map_filter_contract": "total_scout_coverage_only",
         "global_analysis_readiness": False,
