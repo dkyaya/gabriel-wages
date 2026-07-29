@@ -1,0 +1,19 @@
+{
+  "all_invariants_passed": true,
+  "causal_did_not_pass": true,
+  "codified_count_exact": true,
+  "controlled_readiness_values": true,
+  "final_claims_written": false,
+  "global_analysis_readiness_false": true,
+  "map_filter_contract": "total_scout_coverage_only",
+  "model_api_calls": 0,
+  "next_stage_is_4x2500_scout_prep": true,
+  "normalization_or_comparison_runs": 0,
+  "overall_readiness_unambiguous": true,
+  "quarantine_excluded_count_exact": true,
+  "quarantine_leakage_count": 0,
+  "readiness_flags_are_map_filters": false,
+  "source_or_full_text_access": 0,
+  "wage_gap_did_not_pass": true,
+  "wage_gap_regression_treatment_effect_runs": 0
+}

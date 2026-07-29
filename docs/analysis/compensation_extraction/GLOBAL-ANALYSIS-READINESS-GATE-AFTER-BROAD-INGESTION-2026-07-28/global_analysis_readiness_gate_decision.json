@@ -1,0 +1,22 @@
+{
+  "codified_record_count_reviewed": 16947,
+  "decision": "global_analysis_readiness_gate_completed_with_partial_readiness_next_scout_prep_ready",
+  "final_claims_written": false,
+  "global_analysis_readiness": false,
+  "input_total_reconciled": 17259,
+  "map_filter_contract": "total_scout_coverage_only",
+  "next_stage": "broad_4x2500_scout_infrastructure_prep",
+  "next_stage_ready": true,
+  "overall_global_analysis_readiness": "partial_pass",
+  "overall_global_analysis_readiness_bool": false,
+  "quarantine_excluded_count": 312,
+  "subflag_results": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "task_id": "GLOBAL-ANALYSIS-READINESS-GATE-AFTER-BROAD-INGESTION-2026-07-28"
+}

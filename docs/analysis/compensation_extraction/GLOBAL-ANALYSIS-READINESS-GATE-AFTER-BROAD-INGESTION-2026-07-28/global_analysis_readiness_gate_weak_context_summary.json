@@ -1,0 +1,7 @@
+{
+  "dimension": "weak_context",
+  "excluded_from_global_candidates": true,
+  "global_analysis_readiness": false,
+  "record_count": 5080,
+  "weak_context_not_supported_count": 5080
+}

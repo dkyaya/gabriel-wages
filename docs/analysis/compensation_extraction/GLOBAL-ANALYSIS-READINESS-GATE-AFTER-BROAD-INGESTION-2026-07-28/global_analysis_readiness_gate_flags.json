@@ -1,0 +1,94 @@
+{
+  "codified_record_count_reviewed": 16947,
+  "controlled_values": [
+    "blocked_pending_matched_structure",
+    "blocked_pending_more_data",
+    "blocked_pending_normalization",
+    "blocked_pending_quality_repair",
+    "fail",
+    "not_applicable",
+    "partial_pass",
+    "pass"
+  ],
+  "decision": "global_analysis_readiness_gate_completed_with_partial_readiness_next_scout_prep_ready",
+  "final_claims_written": false,
+  "flags": [
+    {
+      "allowed_later": "bounded collection, source-family, geography, and evidence-availability summaries",
+      "basis": "16,947 codified records across 49 states, 4 regions, 18 source families and 2,713 unique retained sources; storage and lineage controls passed",
+      "blockers": "coverage is corpus-bounded, uneven, and not population-representative",
+      "boolean_pass": true,
+      "flag": "global_collection_readiness",
+      "narrow_scope": "broad lineaged collection corpus",
+      "next_requirement": "expand coverage through the 4 x 2,500 scout standard and preserve matched-unit discipline",
+      "readiness_value": "pass"
+    },
+    {
+      "allowed_later": "corpus-bounded mechanism availability and documentary-description summaries with caveats",
+      "basis": "713 mechanism-summary-ready records with controlled strength, labels, lineage, and separated weak/context material",
+      "blockers": "mechanism families are uneven and some categories are sparse; no causal interpretation is authorized",
+      "boolean_pass": false,
+      "flag": "global_mechanism_analysis_readiness",
+      "narrow_scope": "bounded descriptive mechanism summaries",
+      "next_requirement": "broaden source-family/geography balance and retain source-level caveats",
+      "readiness_value": "partial_pass"
+    },
+    {
+      "allowed_later": "bounded quantitative-evidence availability and coverage summaries only",
+      "basis": "10,382 records enter the overlapping availability layer and 10,109 are flagged as needing normalization",
+      "blockers": "units, periods, steps, ranks, grades, effective dates, and base/non-base distinctions are not normalized for comparison",
+      "boolean_pass": false,
+      "flag": "global_quantitative_evidence_readiness",
+      "narrow_scope": "quantitative evidence availability only",
+      "next_requirement": "construct a deterministic normalization layer before comparisons",
+      "readiness_value": "partial_pass"
+    },
+    {
+      "allowed_later": "none until normalization and matching gates pass",
+      "basis": "zero records were normalized or compared",
+      "blockers": "normalization and same-city, same-cycle safety/non-safety matched structure are incomplete",
+      "boolean_pass": false,
+      "flag": "global_wage_gap_analysis_readiness",
+      "narrow_scope": "comparative wage-gap analysis",
+      "next_requirement": "resolve units/cycles/base status and build one-row-per-unit-cycle matched comparisons",
+      "readiness_value": "blocked_pending_normalization"
+    },
+    {
+      "allowed_later": "none; provisional hints cannot be promoted to causal findings",
+      "basis": "80 provisional hints remain explicitly non-causal and no causal estimates were run",
+      "blockers": "matched structure, temporal ordering, confounding strategy, corpus separation, and design diagnostics are incomplete",
+      "boolean_pass": false,
+      "flag": "global_causal_analysis_readiness",
+      "narrow_scope": "causal analysis",
+      "next_requirement": "complete design-specific matched and temporal diagnostics before a causal gate",
+      "readiness_value": "blocked_pending_matched_structure"
+    },
+    {
+      "allowed_later": "only narrow corpus-bounded descriptive candidate classes after their dedicated review",
+      "basis": "collection passes and mechanism/quantitative availability partially pass, while wage-gap and causal gates remain blocked",
+      "blockers": "normalization, matched comparisons, representativeness, and causal-design requirements remain open",
+      "boolean_pass": false,
+      "flag": "overall_global_analysis_readiness",
+      "narrow_scope": "collection plus limited descriptive availability only",
+      "next_requirement": "continue collection via 4 x 2,500 scouting; legacy global_analysis_readiness stays false",
+      "readiness_value": "partial_pass"
+    }
+  ],
+  "global_analysis_readiness": false,
+  "input_total_reconciled": 17259,
+  "map_filter_contract": "total_scout_coverage_only",
+  "next_stage": "broad_4x2500_scout_infrastructure_prep",
+  "next_stage_ready": true,
+  "overall_global_analysis_readiness": "partial_pass",
+  "overall_global_analysis_readiness_bool": false,
+  "quarantine_excluded_count": 312,
+  "subflag_results": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "task_id": "GLOBAL-ANALYSIS-READINESS-GATE-AFTER-BROAD-INGESTION-2026-07-28"
+}

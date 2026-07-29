@@ -1,0 +1,31 @@
+{
+  "checkpoint_after_every_target": true,
+  "excluded_stages": [
+    "candidate_review",
+    "verification",
+    "download",
+    "extraction",
+    "rating",
+    "ingestion",
+    "codification"
+  ],
+  "lane_count": 4,
+  "post_rating_artifact_completeness_rule_required_in_future_rating_prompts": true,
+  "requirements": [
+    "broad_state_by_state_geographic_coverage",
+    "source_family_diversification",
+    "municipality_coverage_accounting",
+    "lane_isolation",
+    "resume_state",
+    "total_scout_coverage_only_map"
+  ],
+  "stagger_minutes": [
+    0,
+    8,
+    16,
+    24
+  ],
+  "standard": "future_broad_4x2500_scout_standard_v1",
+  "target_ceiling": 10000,
+  "targets_per_lane": 2500
+}

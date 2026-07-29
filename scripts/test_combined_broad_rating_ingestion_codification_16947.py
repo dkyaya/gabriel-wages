@@ -146,9 +146,15 @@ def main() -> int:
     check("future prompt boundaries", all(term in (OUT / "next_global_analysis_readiness_gate_prompt.md").read_text(encoding="utf-8") for term in ["16,947", "312", "Do not normalize", "total-scout-coverage-only map", "reconstruct it deterministically"]))
 
     dashboard = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
-    check("dashboard current operation", dashboard["current_phase"].startswith("Combined broad rating ingestion/codification complete"))
+    check("dashboard current operation", dashboard["current_phase"].startswith((
+        "Combined broad rating ingestion/codification complete",
+        "Global analysis readiness gate complete",
+    )))
     check("dashboard codification metrics", dashboard["rating_ingestion_queue_count"] == dashboard["rating_ingested_record_count"] == dashboard["rating_codified_record_count"] == 16947)
-    check("dashboard gate", dashboard["global_readiness_gate_status"] == "ready_for_dedicated_diagnostic_gate")
+    check("dashboard gate", dashboard["global_readiness_gate_status"] in {
+        "ready_for_dedicated_diagnostic_gate",
+        "completed_with_partial_readiness_next_scout_prep_ready",
+    })
     check("dashboard map stable", dashboard["current_scout_covered"] == 6919 and dashboard["map_data_date"] == "2026-07-27")
 
     with tempfile.TemporaryDirectory(prefix="rating-codification-16947-") as temporary:

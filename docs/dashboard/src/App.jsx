@@ -350,9 +350,33 @@ function App() {
               {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
                 <MetricCard
                   label="Global-readiness gate"
-                  value="Ready next"
-                  note="Diagnostic gate only; global analysis readiness remains false"
+                  value={projectPhaseSummary.global_analysis_readiness_gate_available ? "Complete" : "Ready next"}
+                  note={projectPhaseSummary.global_analysis_readiness_gate_available ? "Narrow partial diagnostic; legacy global readiness remains false" : "Diagnostic gate only; global analysis readiness remains false"}
                 />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Collection readiness" value={projectPhaseSummary.global_collection_readiness} note="Broad lineaged corpus; corpus-bounded and not population-representative" />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Mechanism readiness" value={projectPhaseSummary.global_mechanism_analysis_readiness} note="Bounded documentary description only; no causal interpretation" />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Quantitative evidence readiness" value={projectPhaseSummary.global_quantitative_evidence_readiness} note="Availability only; values remain unnormalized" />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Wage-gap readiness" value={projectPhaseSummary.global_wage_gap_analysis_readiness} note="Blocked until normalization and city × cycle × occupation matching pass" />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Causal readiness" value={projectPhaseSummary.global_causal_analysis_readiness} note="Blocked until matched structure and causal-design requirements pass" />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Overall readiness" value={projectPhaseSummary.overall_global_analysis_readiness} note="Narrow diagnostic status; global_analysis_readiness remains false" />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Top readiness blockers" value={formatNumber(projectPhaseSummary.global_readiness_top_blockers?.length)} note={(projectPhaseSummary.global_readiness_top_blockers ?? []).join(" · ")} />
+              )}
+              {projectPhaseSummary.global_analysis_readiness_gate_available && (
+                <MetricCard label="Next planned stage" value="4 × 2,500 prep" note="10,000-target ceiling; scouting infrastructure only" />
               )}
               <MetricCard
                 label="Globally usable descriptive evidence"

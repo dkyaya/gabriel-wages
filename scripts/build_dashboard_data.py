@@ -1653,6 +1653,14 @@ COMBINED_BROAD_RATING_INGESTION_CODIFICATION_RECORDS_PATH = (
     COMBINED_BROAD_RATING_INGESTION_CODIFICATION_DIR
     / "combined_broad_rating_ingestion_codification_16947_codified_records.csv"
 )
+GLOBAL_ANALYSIS_READINESS_GATE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "GLOBAL-ANALYSIS-READINESS-GATE-AFTER-BROAD-INGESTION-2026-07-28"
+)
+GLOBAL_ANALYSIS_READINESS_GATE_DECISION_PATH = (
+    GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_decision.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5617,6 +5625,58 @@ def combined_broad_rating_ingestion_codification_status() -> tuple[bool, dict[st
     }
 
 
+def global_analysis_readiness_gate_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the complete, bounded post-codification readiness gate."""
+    required = (
+        GLOBAL_ANALYSIS_READINESS_GATE_DECISION_PATH,
+        GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_flags.json",
+        GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_input_reconciliation_summary.json",
+        GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_blockers.json",
+        GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_dashboard_update_summary.json",
+        GLOBAL_ANALYSIS_READINESS_GATE_DIR / "global_analysis_readiness_gate_invariant_checks.json",
+        GLOBAL_ANALYSIS_READINESS_GATE_DIR / "next_broad_state_4x2500_scout_infrastructure_prep_prompt.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision, flags, reconciliation, blockers, dashboard, invariants = (
+        read_json(path) for path in required[:6]
+    )
+    expected_flags = {
+        "global_collection_readiness": "pass",
+        "global_mechanism_analysis_readiness": "partial_pass",
+        "global_quantitative_evidence_readiness": "partial_pass",
+        "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+        "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+        "overall_global_analysis_readiness": "partial_pass",
+    }
+    gates = (
+        decision.get("decision")
+        == "global_analysis_readiness_gate_completed_with_partial_readiness_next_scout_prep_ready"
+        and decision.get("codified_record_count_reviewed") == 16947
+        and decision.get("quarantine_excluded_count") == 312
+        and decision.get("subflag_results") == expected_flags
+        and decision.get("overall_global_analysis_readiness_bool") is False
+        and decision.get("global_analysis_readiness") is False
+        and reconciliation.get("reconciles") is True
+        and reconciliation.get("quarantine_leakage_count") == 0
+        and flags.get("subflag_results") == expected_flags
+        and blockers.get("blocker_count", 0) >= 5
+        and dashboard.get("map_filter_contract") == "total_scout_coverage_only"
+        and dashboard.get("readiness_flags_are_map_filters") is False
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("global_analysis_readiness_false") is True
+        and decision.get("next_stage_ready") is True
+    )
+    if not gates:
+        raise ValueError("global analysis readiness gate package fails dashboard gates")
+    return True, {
+        **decision,
+        "flags": flags.get("flags", []),
+        "top_blockers": [row.get("id") for row in blockers.get("blockers", [])[:5]],
+        "dashboard_result_path": "docs/analysis/global_analysis_readiness_gate_result_2026-07-28.md",
+    }
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5706,13 +5766,43 @@ def build_reports_index_layer(
     broad_rating_available, broad_rating = combined_broad_exact_span_rating_status()
     broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
     broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
+    global_gate_available, global_gate = global_analysis_readiness_gate_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "global-analysis-readiness-gate-2026-07-28",
+                    "title": "Global Analysis Readiness Gate Result",
+                    "report_type": "Current diagnostic readiness-gate report",
+                    "date": "2026-07-28",
+                    "checkpoint": "16,947 codified reviewed; 312 quarantines excluded",
+                    "summary": (
+                        "Collection passes; mechanism and quantitative availability partially pass; "
+                        "wage-gap and causal readiness remain blocked. The project-wide readiness "
+                        "boolean remains false and 4 × 2,500 scout infrastructure prep is next."
+                    ),
+                    "tags": ["current", "readiness gate", "claim boundaries", "4x2500 scout prep"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + global_gate["dashboard_result_path"],
+                    "link_label": "Open current readiness-gate report",
+                    "scope_metrics": [
+                        {"label": "codified reviewed", "value": global_gate["codified_record_count_reviewed"]},
+                        {"label": "quarantine excluded", "value": global_gate["quarantine_excluded_count"]},
+                        {"label": "next scout ceiling", "value": 10000},
+                    ],
+                }
+            ]
+            if global_gate_available else []
+        ),
         *(
             [
                 {
                     "id": "combined-broad-rating-ingestion-codification-16947-2026-07-28",
                     "title": "Combined Broad Rated-Evidence Ingestion and Codification Result",
-                    "report_type": "Current bounded rated-evidence codification report",
+                    "report_type": (
+                        "Historical bounded rated-evidence codification report"
+                        if global_gate_available else "Current bounded rated-evidence codification report"
+                    ),
                     "date": "2026-07-28",
                     "checkpoint": (
                         f"{broad_codification['codified_record_count']:,} codified; "
@@ -5723,8 +5813,8 @@ def build_reports_index_layer(
                         "readiness buckets, evidence boxes, and analysis layers. A dedicated global "
                         "readiness diagnostic gate is next; global analysis readiness remains false."
                     ),
-                    "tags": ["current", "ingestion", "codification", "global readiness gate"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if global_gate_available else "current", "ingestion", "codification", "global readiness gate"],
+                    "current": not global_gate_available, "historical": global_gate_available,
                     "href": repository_root_url + broad_codification["dashboard_result_path"],
                     "link_label": "Open current ingestion/codification report",
                     "scope_metrics": [
@@ -8639,6 +8729,7 @@ def build_project_phase_summary(
     broad_rating_available, broad_rating = combined_broad_exact_span_rating_status()
     broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
     broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
+    global_gate_available, global_gate = global_analysis_readiness_gate_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8667,7 +8758,9 @@ def build_project_phase_summary(
             broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "combined_broad_rating_ingestion_codification_complete_global_gate_transition"
+            "global_analysis_readiness_gate_complete_broad_4x2500_scout_prep_transition"
+            if global_gate_available
+            else "combined_broad_rating_ingestion_codification_complete_global_gate_transition"
             if broad_codification_available
             else "combined_broad_exact_span_rating_summary_complete_ingestion_transition"
             if broad_rating_summary_available
@@ -8698,7 +8791,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Combined broad rating ingestion/codification complete; dedicated global analysis readiness gate ready next"
+            "Global analysis readiness gate complete; broad 4 × 2,500 scouting infrastructure prep ready next"
+            if global_gate_available
+            else "Combined broad rating ingestion/codification complete; dedicated global analysis readiness gate ready next"
             if broad_codification_available
             else "Combined broad exact-span rating summary complete; bounded ingestion and codification ready next"
             if broad_rating_summary_available
@@ -8729,7 +8824,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_codification["decision"]
+            global_gate["decision"]
+            if global_gate_available
+            else broad_codification["decision"]
             if broad_codification_available
             else broad_rating_summary["decision"]
             if broad_rating_summary_available
@@ -8756,11 +8853,23 @@ def build_project_phase_summary(
             else tier_c_supplement["decision"]
         ),
         "current_evidence_status": (
-            "bounded_valid_rated_spans_ingested_and_codified_global_gate_pending"
+            "collection_ready_mechanism_and_quantitative_availability_partial_wage_gap_and_causal_blocked"
+            if global_gate_available
+            else "bounded_valid_rated_spans_ingested_and_codified_global_gate_pending"
             if broad_codification_available
             else "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only"
         ),
         "global_analysis_readiness": False,
+        "global_analysis_readiness_gate_available": global_gate_available,
+        "global_readiness_gate_decision": global_gate.get("decision") if global_gate_available else None,
+        "global_readiness_gate_flags": global_gate.get("subflag_results", {}) if global_gate_available else {},
+        "global_collection_readiness": global_gate.get("subflag_results", {}).get("global_collection_readiness") if global_gate_available else "not_applicable",
+        "global_mechanism_analysis_readiness": global_gate.get("subflag_results", {}).get("global_mechanism_analysis_readiness") if global_gate_available else "not_applicable",
+        "global_quantitative_evidence_readiness": global_gate.get("subflag_results", {}).get("global_quantitative_evidence_readiness") if global_gate_available else "not_applicable",
+        "global_wage_gap_analysis_readiness": global_gate.get("subflag_results", {}).get("global_wage_gap_analysis_readiness") if global_gate_available else "not_applicable",
+        "global_causal_analysis_readiness": global_gate.get("subflag_results", {}).get("global_causal_analysis_readiness") if global_gate_available else "not_applicable",
+        "overall_global_analysis_readiness": global_gate.get("overall_global_analysis_readiness") if global_gate_available else "fail",
+        "global_readiness_top_blockers": global_gate.get("top_blockers", []) if global_gate_available else [],
         "wage_gap_estimates_available": False,
         "final_causal_claims_available": False,
         "regression_or_treatment_effect_estimates_available": False,
@@ -9010,9 +9119,17 @@ def build_project_phase_summary(
         "rating_codification_claim_readiness_counts": broad_codification.get("claim_readiness_counts", {}) if broad_codification_available else {},
         "rating_codification_evidence_box_counts": broad_codification.get("evidence_box_counts", {}) if broad_codification_available else {},
         "rating_codification_analysis_layer_counts": broad_codification.get("analysis_layer_counts", {}) if broad_codification_available else {},
-        "global_readiness_gate_status": broad_codification.get("global_readiness_gate_status") if broad_codification_available else "not_ready",
+        "global_readiness_gate_status": (
+            "completed_with_partial_readiness_next_scout_prep_ready"
+            if global_gate_available
+            else broad_codification.get("global_readiness_gate_status")
+            if broad_codification_available
+            else "not_ready"
+        ),
         "current_report_title": (
-            "Combined Broad Rated-Evidence Ingestion and Codification Result"
+            "Global Analysis Readiness Gate Result"
+            if global_gate_available
+            else "Combined Broad Rated-Evidence Ingestion and Codification Result"
             if broad_codification_available
             else "Combined Broad Exact-Span Rating Summary Result"
             if broad_rating_summary_available
@@ -9032,7 +9149,9 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_codification["dashboard_result_path"]
+            global_gate["dashboard_result_path"]
+            if global_gate_available
+            else broad_codification["dashboard_result_path"]
             if broad_codification_available
             else broad_rating_summary["dashboard_result_path"]
             if broad_rating_summary_available
@@ -9053,7 +9172,9 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_codification["dashboard_result_path"]
+            global_gate["dashboard_result_path"]
+            if global_gate_available
+            else broad_codification["dashboard_result_path"]
             if broad_codification_available
             else broad_rating_summary["dashboard_result_path"]
             if broad_rating_summary_available
@@ -9080,7 +9201,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run the dedicated global analysis readiness diagnostic gate; preserve corpus, matching, normalization, prevalence, and causal boundaries"
+            "prepare four isolated 2,500-target broad scouting lanes with geographic, source-family, and municipality coverage accounting"
+            if global_gate_available
+            else "run the dedicated global analysis readiness diagnostic gate; preserve corpus, matching, normalization, prevalence, and causal boundaries"
             if broad_codification_available
             else "run bounded ingestion and codification over classified valid ratings; keep quarantines excluded and global readiness false"
             if broad_rating_summary_available
@@ -9164,7 +9287,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "dedicated global analysis readiness diagnostic gate"
+            "broad 4 × 2,500 scouting infrastructure preparation"
+            if global_gate_available
+            else "dedicated global analysis readiness diagnostic gate"
             if broad_codification_available
             else "bounded ingestion and codification over classified valid ratings"
             if broad_rating_summary_available
@@ -9187,6 +9312,15 @@ def build_project_phase_summary(
             else "broad state-by-state source scouting"
         ),
         "next_phase_sequence": (
+            [
+                "lock four independent 2,500-target scout queues with a 10,000-target ceiling",
+                "balance states, regions, source families, and municipality coverage gaps",
+                "encode T+0/T+8/T+16/T+24 starts and checkpoint/resume after every target",
+                "keep candidate review, verification, downloads, extraction, rating, ingestion, and codification out of scout prep",
+                "keep evidence/readiness filters outside the total-scout-coverage-only map",
+            ]
+            if global_gate_available
+            else
             [
                 "verify the 16,947-record codified gate package and 312-row quarantine exclusion",
                 "diagnose source-family, geography, matching, normalization, and two-corpus blockers",

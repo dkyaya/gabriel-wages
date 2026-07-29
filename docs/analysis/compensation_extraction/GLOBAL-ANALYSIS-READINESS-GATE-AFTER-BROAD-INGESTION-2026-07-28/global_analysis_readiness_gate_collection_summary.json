@@ -1,0 +1,14 @@
+{
+  "dimension": "collection",
+  "extracted_ok_count": 3815,
+  "global_analysis_readiness": false,
+  "positive_exact_span_count": 17259,
+  "readiness": "pass",
+  "record_count": 16947,
+  "region_count": 4,
+  "retained_source_count": 4961,
+  "source_family_count": 18,
+  "state_count": 49,
+  "unique_source_count": 2713,
+  "valid_rating_count": 16947
+}

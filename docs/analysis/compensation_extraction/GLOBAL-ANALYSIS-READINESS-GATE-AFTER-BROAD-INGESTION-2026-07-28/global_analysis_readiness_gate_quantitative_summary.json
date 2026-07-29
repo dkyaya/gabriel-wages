@@ -1,0 +1,9 @@
+{
+  "dimension": "quantitative",
+  "global_analysis_readiness": false,
+  "normalized_record_count": 0,
+  "quantitative_availability_count": 10382,
+  "quantitative_needs_normalization_count": 10109,
+  "readiness": "partial_pass",
+  "record_count": 10382
+}

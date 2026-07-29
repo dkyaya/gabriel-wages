@@ -134,6 +134,7 @@ def main() -> int:
     check("dashboard current operation", dashboard["current_phase"].startswith((
         "Combined broad exact-span rating summary complete",
         "Combined broad rating ingestion/codification complete",
+        "Global analysis readiness gate complete",
     )))
     check("dashboard metrics", dashboard["rating_summary_valid_count"] == 16947 and dashboard["rating_summary_quarantine_excluded_count"] == 312)
     check("dashboard map count stable", dashboard["current_scout_covered"] == 6919 and dashboard["map_data_date"] == "2026-07-27")

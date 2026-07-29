@@ -1,0 +1,5 @@
+input,expected,observed,included_in_gate,status
+codified_valid_evidence,16947,16947,true,pass
+quarantined_rating_outputs,312,312,false,pass
+rating_input_total,17259,17259,reconciliation_only,pass
+gate_input_manifest,16947,16947,true,pass

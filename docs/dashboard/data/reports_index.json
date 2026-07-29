@@ -1,38 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-29T03:52:52Z",
+  "generated_at": "2026-07-29T04:36:10Z",
   "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "combined-broad-rating-ingestion-codification-16947-2026-07-28",
-      "title": "Combined Broad Rated-Evidence Ingestion and Codification Result",
-      "report_type": "Current bounded rated-evidence codification report",
+      "id": "global-analysis-readiness-gate-2026-07-28",
+      "title": "Global Analysis Readiness Gate Result",
+      "report_type": "Current diagnostic readiness-gate report",
       "date": "2026-07-28",
-      "checkpoint": "16,947 codified; 312 quarantines excluded",
-      "summary": "Valid rated spans are durable, lineaged analysis records with controlled readiness buckets, evidence boxes, and analysis layers. A dedicated global readiness diagnostic gate is next; global analysis readiness remains false.",
+      "checkpoint": "16,947 codified reviewed; 312 quarantines excluded",
+      "summary": "Collection passes; mechanism and quantitative availability partially pass; wage-gap and causal readiness remain blocked. The project-wide readiness boolean remains false and 4 × 2,500 scout infrastructure prep is next.",
       "tags": [
         "current",
-        "ingestion",
-        "codification",
-        "global readiness gate"
+        "readiness gate",
+        "claim boundaries",
+        "4x2500 scout prep"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_rating_ingestion_codification_16947_result_2026-07-28.md",
-      "link_label": "Open current ingestion/codification report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/global_analysis_readiness_gate_result_2026-07-28.md",
+      "link_label": "Open current readiness-gate report",
       "scope_metrics": [
         {
-          "label": "ingestion queue",
-          "value": 16947
-        },
-        {
-          "label": "codified records",
+          "label": "codified reviewed",
           "value": 16947
         },
         {
           "label": "quarantine excluded",
           "value": 312
+        },
+        {
+          "label": "next scout ceiling",
+          "value": 10000
         }
       ]
     },
@@ -132,6 +132,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-rating-ingestion-codification-16947-2026-07-28",
+      "title": "Combined Broad Rated-Evidence Ingestion and Codification Result",
+      "report_type": "Historical bounded rated-evidence codification report",
+      "date": "2026-07-28",
+      "checkpoint": "16,947 codified; 312 quarantines excluded",
+      "summary": "Valid rated spans are durable, lineaged analysis records with controlled readiness buckets, evidence boxes, and analysis layers. A dedicated global readiness diagnostic gate is next; global analysis readiness remains false.",
+      "tags": [
+        "historical",
+        "ingestion",
+        "codification",
+        "global readiness gate"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_rating_ingestion_codification_16947_result_2026-07-28.md",
+      "link_label": "Open current ingestion/codification report",
+      "scope_metrics": [
+        {
+          "label": "ingestion queue",
+          "value": 16947
+        },
+        {
+          "label": "codified records",
+          "value": 16947
+        },
+        {
+          "label": "quarantine excluded",
+          "value": 312
         }
       ]
     },

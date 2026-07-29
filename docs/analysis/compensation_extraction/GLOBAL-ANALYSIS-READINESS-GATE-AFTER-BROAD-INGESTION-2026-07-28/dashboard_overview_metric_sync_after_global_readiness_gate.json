@@ -1,0 +1,34 @@
+{
+  "codified_record_count": 16947,
+  "current_operation": "global_analysis_readiness_gate_complete",
+  "dashboard_updated": true,
+  "extracted_ok_count": 3815,
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-27",
+  "map_filter_contract": "total_scout_coverage_only",
+  "next_authorized_stage": "broad_4x2500_scout_infrastructure_prep",
+  "positive_exact_span_count": 17259,
+  "quarantine_excluded_count": 312,
+  "readiness_flags": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "readiness_flags_are_map_filters": false,
+  "retained_source_count": 4961,
+  "scout_covered_municipalities": 6919,
+  "stale_ingestion_operation_present": false,
+  "synced": true,
+  "top_blockers": [
+    "normalization",
+    "matched_structure",
+    "causal_design",
+    "representativeness",
+    "source_family_geography_balance"
+  ],
+  "total_candidate_rows": 13041,
+  "valid_rating_count": 16947
+}

@@ -1,0 +1,23 @@
+{
+  "checks": [
+    "all_invariants_passed",
+    "causal_did_not_pass",
+    "codified_count_exact",
+    "controlled_readiness_values",
+    "final_claims_written",
+    "global_analysis_readiness_false",
+    "map_filter_contract",
+    "model_api_calls",
+    "next_stage_is_4x2500_scout_prep",
+    "normalization_or_comparison_runs",
+    "overall_readiness_unambiguous",
+    "quarantine_excluded_count_exact",
+    "quarantine_leakage_count",
+    "readiness_flags_are_map_filters",
+    "source_or_full_text_access",
+    "wage_gap_did_not_pass",
+    "wage_gap_regression_treatment_effect_runs"
+  ],
+  "predecessor_tests_required": 4,
+  "required_test": "scripts/test_global_analysis_readiness_gate.py"
+}

@@ -1,0 +1,55 @@
+{
+  "blocker_count": 6,
+  "blockers": [
+    {
+      "blocks": [
+        "global_wage_gap_analysis_readiness"
+      ],
+      "detail": "10,109 quantitative records need unit/period/rank/step/base-status normalization; zero were normalized.",
+      "id": "normalization",
+      "severity": "blocking"
+    },
+    {
+      "blocks": [
+        "global_wage_gap_analysis_readiness",
+        "global_causal_analysis_readiness"
+      ],
+      "detail": "Same-city, same-cycle safety/non-safety unit matching has not been constructed for these records.",
+      "id": "matched_structure",
+      "severity": "blocking"
+    },
+    {
+      "blocks": [
+        "global_causal_analysis_readiness"
+      ],
+      "detail": "Temporal ordering, confounding strategy, and design diagnostics are incomplete.",
+      "id": "causal_design",
+      "severity": "blocking"
+    },
+    {
+      "blocks": [
+        "population_prevalence_claims"
+      ],
+      "detail": "The 49-state corpus is broad but convenience-sourced and uneven; it is not a population sample.",
+      "id": "representativeness",
+      "severity": "caveat"
+    },
+    {
+      "blocks": [
+        "unqualified_global_mechanism_claims"
+      ],
+      "detail": "State, region, source-family, and exact-CBA composition are uneven.",
+      "id": "source_family_geography_balance",
+      "severity": "caveat"
+    },
+    {
+      "blocks": [
+        "unfiltered_descriptive_summaries"
+      ],
+      "detail": "5,080 dashboard records are weak, context-only, or unsupported and remain separated.",
+      "id": "weak_context_volume",
+      "severity": "caveat"
+    }
+  ],
+  "global_analysis_readiness": false
+}
