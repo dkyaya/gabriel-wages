@@ -1,0 +1,20 @@
+{
+  "allowed": [
+    "bounded corpus-descriptive candidate",
+    "bounded evidence-availability candidate",
+    "bounded mechanism wording candidate",
+    "coverage composition statement"
+  ],
+  "directional_hints_are_findings": false,
+  "global_analysis_readiness": false,
+  "prohibited": [
+    "wage gap",
+    "normalized comparison",
+    "national prevalence",
+    "population representativeness",
+    "regression",
+    "treatment effect",
+    "final causal claim"
+  ],
+  "source_navigation_is_substantive_evidence": false
+}

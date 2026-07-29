@@ -1,0 +1,14 @@
+{
+  "status": "passed_required_suite",
+  "tests": [
+    "input reconciliation",
+    "quarantine exclusion",
+    "controlled primary buckets",
+    "dashboard evidence boxes",
+    "global diagnostic boundaries",
+    "map total scout coverage only",
+    "global readiness false",
+    "idempotent deterministic rebuild",
+    "required output inventory"
+  ]
+}

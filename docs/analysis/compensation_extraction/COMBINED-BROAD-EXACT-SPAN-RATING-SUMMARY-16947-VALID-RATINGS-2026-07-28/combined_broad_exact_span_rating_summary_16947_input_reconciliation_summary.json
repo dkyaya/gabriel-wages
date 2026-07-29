@@ -1,0 +1,9 @@
+{
+  "global_analysis_readiness": false,
+  "quarantine_excluded_count": 312,
+  "quarantine_excluded_from_valid_statistics": true,
+  "rating_input_count": 17259,
+  "reconciles": true,
+  "valid_plus_quarantine": 17259,
+  "valid_rating_summary_count": 16947
+}

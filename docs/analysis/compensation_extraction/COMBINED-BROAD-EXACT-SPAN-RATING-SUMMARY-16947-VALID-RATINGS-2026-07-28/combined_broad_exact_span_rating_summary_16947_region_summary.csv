@@ -1,0 +1,5 @@
+region,valid_rating_count,unique_source_count,unique_municipality_count,strong_or_moderate_count,bucket_global_descriptive_ready,bucket_global_descriptive_ready_with_caveats,bucket_quant_needs_normalization,bucket_mechanism_summary_ready,bucket_source_navigation_only,bucket_local_context_only,bucket_weak_or_not_supported,bucket_directional_hint_only,bucket_provisional_causal_hint_only
+Midwest,6691,970,591,3224,26,140,3691,339,189,326,1696,252,32
+Northeast,4051,644,396,1882,19,87,2219,168,133,206,1069,129,21
+South,3000,637,445,1290,18,25,1694,84,74,77,898,115,15
+West,3205,462,316,1611,12,32,2021,122,97,92,716,101,12

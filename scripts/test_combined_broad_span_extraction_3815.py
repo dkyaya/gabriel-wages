@@ -81,7 +81,14 @@ def main() -> None:
     assert phase["global_analysis_readiness"] is False
     assert phase["span_extraction_queue_size"] == 3815
     assert phase["span_rating_candidate_count"] == len(positive)
-    assert "exact-span extraction complete" in phase["current_phase"].lower()
+    assert any(
+        marker in phase["current_phase"].lower()
+        for marker in (
+            "exact-span extraction complete",
+            "exact-span rating complete",
+            "exact-span rating summary complete",
+        )
+    )
     future = (OUT / "next_combined_broad_exact_span_rating_prompt.md").read_text(encoding="utf-8")
     assert "Post-rating artifact completeness rule" in future
     assert "Missing non-derivable artifacts fail closed" in future

@@ -1,0 +1,6 @@
+dimension,category,count,share_of_valid_ratings_pct
+direction_of_pressure,gap_narrowing,185,1.0916
+direction_of_pressure,neutral_or_unclear,4092,24.1459
+direction_of_pressure,non_safety_advantage,360,2.1243
+direction_of_pressure,not_applicable,12252,72.296
+direction_of_pressure,safety_advantage,58,0.3422

@@ -1,38 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-29T02:51:55Z",
+  "generated_at": "2026-07-29T03:26:44Z",
   "data_vintage": "2026-07-28",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "combined-broad-exact-span-rating-17259-2026-07-28",
-      "title": "Combined Broad Live Exact-Span Rating Result",
-      "report_type": "Current bounded live rating report",
+      "id": "combined-broad-exact-span-rating-summary-16947-2026-07-28",
+      "title": "Combined Broad Exact-Span Rating Summary Result",
+      "report_type": "Current bounded valid-rating summary report",
       "date": "2026-07-28",
-      "checkpoint": "17,259 attempted; 16,947 valid; 312 quarantined",
-      "summary": "Four isolated standard-staggered live lanes rated bounded exact spans. Strict quote/schema validation and downstream completeness gates passed; ratings remain corpus-bounded and not globally analysis-ready.",
+      "checkpoint": "16,947 valid summarized; 312 quarantines excluded",
+      "summary": "Valid exact-span ratings are classified into mutually exclusive claim-readiness buckets and controlled evidence boxes. Ingestion/codification is next; global analysis readiness remains false.",
       "tags": [
         "current",
-        "exact-span ratings",
-        "live lanes",
-        "claim boundaries"
+        "rating summary",
+        "claim readiness",
+        "evidence filters"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_exact_span_rating_17259_result_2026-07-28.md",
-      "link_label": "Open current exact-span rating report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_exact_span_rating_summary_16947_result_2026-07-28.md",
+      "link_label": "Open current rating-summary report",
       "scope_metrics": [
         {
-          "label": "rating queue",
-          "value": 17259
-        },
-        {
-          "label": "valid ratings",
+          "label": "valid summarized",
           "value": 16947
         },
         {
-          "label": "quarantine",
+          "label": "quarantine excluded",
           "value": 312
+        },
+        {
+          "label": "evidence boxes",
+          "value": 12
         }
       ]
     },
@@ -132,6 +132,38 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "combined-broad-exact-span-rating-17259-2026-07-28",
+      "title": "Combined Broad Live Exact-Span Rating Result",
+      "report_type": "Historical bounded live rating report",
+      "date": "2026-07-28",
+      "checkpoint": "17,259 attempted; 16,947 valid; 312 quarantined",
+      "summary": "Four isolated standard-staggered live lanes rated bounded exact spans. Strict quote/schema validation and downstream completeness gates passed; ratings remain corpus-bounded and not globally analysis-ready.",
+      "tags": [
+        "historical",
+        "exact-span ratings",
+        "live lanes",
+        "claim boundaries"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/combined_broad_exact_span_rating_17259_result_2026-07-28.md",
+      "link_label": "Open current exact-span rating report",
+      "scope_metrics": [
+        {
+          "label": "rating queue",
+          "value": 17259
+        },
+        {
+          "label": "valid ratings",
+          "value": 16947
+        },
+        {
+          "label": "quarantine",
+          "value": 312
         }
       ]
     },

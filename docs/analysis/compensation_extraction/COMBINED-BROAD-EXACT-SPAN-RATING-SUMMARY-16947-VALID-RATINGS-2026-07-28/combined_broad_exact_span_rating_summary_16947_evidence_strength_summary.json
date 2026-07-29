@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "moderate": 3174,
+    "not_supported": 2199,
+    "strong": 4833,
+    "weak": 6741
+  },
+  "dimension": "evidence_strength",
+  "global_analysis_readiness": false,
+  "valid_rating_count": 16947
+}

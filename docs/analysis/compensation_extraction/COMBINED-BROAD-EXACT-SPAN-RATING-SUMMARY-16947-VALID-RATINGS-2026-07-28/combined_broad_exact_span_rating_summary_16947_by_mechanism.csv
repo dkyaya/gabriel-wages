@@ -1,0 +1,17 @@
+dimension,category,count,share_of_valid_ratings_pct
+mechanism_label,automatic_raise_mechanism,1227,7.2402
+mechanism_label,bargaining_power_signal,859,5.0687
+mechanism_label,base_wage_direct_value,2209,13.0348
+mechanism_label,fiscal_constraint_signal,288,1.6994
+mechanism_label,gap_narrowing_signal,315,1.8587
+mechanism_label,implementation_or_retroactivity_advantage,1431,8.444
+mechanism_label,market_or_comparability_pressure,416,2.4547
+mechanism_label,non_base_compensation_signal,2425,14.3093
+mechanism_label,non_safety_constraint_signal,30,0.177
+mechanism_label,not_applicable,750,4.4256
+mechanism_label,parity_or_internal_equity_signal,204,1.2038
+mechanism_label,rank_or_specialization_premium,203,1.1979
+mechanism_label,safety_advantage_signal,62,0.3658
+mechanism_label,strike_or_no_strike_constraint,636,3.7529
+mechanism_label,unknown_or_needs_review,4309,25.4263
+mechanism_label,weak_or_no_claim_support,1583,9.3409

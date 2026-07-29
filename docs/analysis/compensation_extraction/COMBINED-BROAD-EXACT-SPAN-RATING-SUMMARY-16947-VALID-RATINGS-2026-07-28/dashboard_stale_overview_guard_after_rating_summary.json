@@ -1,0 +1,6 @@
+{
+  "expected_current_operation": "Combined broad exact-span rating summary complete; ingestion and codification ready next",
+  "global_analysis_readiness": false,
+  "map_filter_contract": "total_scout_coverage_only",
+  "stale_exact_span_rating_complete_operation_forbidden": true
+}

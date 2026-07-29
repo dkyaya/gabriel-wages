@@ -158,6 +158,9 @@ def main() -> None:
     assert phase["current_phase_code"] in {
         decision["decision"],
         "combined_broad_span_extraction_3815_completed_rating_ready",
+        "combined_broad_exact_span_rating_17259_completed_summary_ready",
+        "combined_broad_exact_span_rating_17259_completed_with_quarantine_summary_ready",
+        "combined_broad_exact_span_rating_summary_16947_completed_ingestion_ready",
     }
     assert phase["text_extraction_queue_size"] == 4051
     assert phase["text_extraction_attempted_count"] == 4051
@@ -165,6 +168,8 @@ def main() -> None:
     assert source["stage"] in {
         "combined_broad_text_extraction_complete",
         "combined_broad_span_extraction_complete",
+        "combined_broad_exact_span_rating_complete",
+        "combined_broad_exact_span_rating_summary_complete",
     }
     assert source["text_extraction_attempted_count"] == 4051
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"

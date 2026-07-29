@@ -105,6 +105,8 @@ function QueueTable({ rows, onSelect }) {
 function App() {
   const [route, setRoute] = useState(routeFromHash);
   const [navigationOpen, setNavigationOpen] = useState(false);
+  const [evidenceFilterDimension, setEvidenceFilterDimension] = useState("claim_readiness_bucket");
+  const [evidenceFilterValue, setEvidenceFilterValue] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => setRoute(routeFromHash());
@@ -119,6 +121,11 @@ function App() {
   const selectedQueue = candidateSummary.by_state.find((item) => item.state === selected.state);
   const currentReport = reportsIndex.reports.find((report) => report.current) ?? reportsIndex.reports[0];
   const currentReportHref = currentReport.href ?? REPORT_ASSETS[currentReport.id];
+  const evidenceFilterCatalog = projectPhaseSummary.rating_summary_filter_catalog ?? {};
+  const evidenceFilterOptions = evidenceFilterCatalog[evidenceFilterDimension] ?? {};
+  const evidenceFilterCount = evidenceFilterValue
+    ? evidenceFilterOptions[evidenceFilterValue] ?? 0
+    : Object.values(evidenceFilterOptions).reduce((sum, count) => sum + count, 0);
 
   function chooseState(code) {
     window.location.hash = `/state/${code}`;
@@ -322,17 +329,111 @@ function App() {
                 note={formatCountMap(projectPhaseSummary.exact_span_rating_direction_counts)}
               />
               <MetricCard
+                label="Claim-summary candidates"
+                value={formatNumber(projectPhaseSummary.rating_summary_claim_candidate_count)}
+                note={`${formatNumber(projectPhaseSummary.rating_summary_valid_count)} valid summarized · ${formatNumber(projectPhaseSummary.rating_summary_quarantine_excluded_count)} quarantines excluded`}
+              />
+              <MetricCard
+                label="Globally usable descriptive evidence"
+                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.global_descriptive_ready)}
+                note="Corpus-bounded candidates only; ingestion/codification still required"
+              />
+              <MetricCard
+                label="Usable with caveats"
+                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.global_descriptive_ready_with_caveats)}
+                note="Label, strength, direction, or corpus-composition caveats apply"
+              />
+              <MetricCard
+                label="Quantitative needs normalization"
+                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.quant_needs_normalization)}
+                note="Not wage-gap or cross-record comparison evidence"
+              />
+              <MetricCard
+                label="Mechanism-summary ready"
+                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.mechanism_summary_ready)}
+                note="Strong/moderate documentary mechanism wording; not causal evidence"
+              />
+              <MetricCard
+                label="Source-navigation only"
+                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.source_navigation_only)}
+                note="Useful for finding schedules or attachments; not standalone evidence"
+              />
+              <MetricCard
+                label="Weak, context, or unsupported"
+                value={formatNumber(
+                  (projectPhaseSummary.rating_summary_claim_readiness_counts?.weak_or_not_supported ?? 0)
+                  + (projectPhaseSummary.rating_summary_claim_readiness_counts?.local_context_only ?? 0)
+                )}
+                note="Excluded from bounded global descriptive candidates"
+              />
+              <MetricCard
+                label="Directional and provisional hints"
+                value={formatNumber(
+                  (projectPhaseSummary.rating_summary_claim_readiness_counts?.directional_hint_only ?? 0)
+                  + (projectPhaseSummary.rating_summary_claim_readiness_counts?.provisional_causal_hint_only ?? 0)
+                )}
+                note="Hints only; no global directional or causal finding"
+              />
+              <MetricCard
+                label="Dashboard evidence organization"
+                value={`${formatNumber(projectPhaseSummary.rating_summary_dashboard_evidence_box_count)} boxes`}
+                note={`${formatNumber(projectPhaseSummary.rating_summary_dashboard_filter_count)} controlled evidence filters outside the map`}
+              />
+              <MetricCard
                 label="Global analysis readiness"
                 value="False"
-                note="No wage-gap, regression, treatment-effect, or final causal result"
+                note={projectPhaseSummary.rating_summary_diagnostic_status ?? "No wage-gap, regression, treatment-effect, or final causal result"}
               />
             </div>
+
+            {projectPhaseSummary.combined_exact_span_rating_summary_available && (
+              <div className="hub-caveat" role="note" aria-label="Rated evidence boxes and filters">
+                <strong>Rated evidence boxes and filters.</strong>
+                <span>{formatCountMap(projectPhaseSummary.rating_summary_evidence_box_counts)}</span>
+                <div className="evidence-filter-controls" aria-label="Aggregate rated-evidence filter controls">
+                  <label>
+                    Evidence dimension
+                    <select
+                      value={evidenceFilterDimension}
+                      onChange={(event) => {
+                        setEvidenceFilterDimension(event.target.value);
+                        setEvidenceFilterValue("");
+                      }}
+                    >
+                      {Object.keys(evidenceFilterCatalog).map((dimension) => (
+                        <option key={dimension} value={dimension}>{dimension.replaceAll("_", " ")}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label>
+                    Category
+                    <select value={evidenceFilterValue} onChange={(event) => setEvidenceFilterValue(event.target.value)}>
+                      <option value="">All categories</option>
+                      {Object.entries(evidenceFilterOptions)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([label, count]) => (
+                          <option key={label} value={label}>{label.replaceAll("_", " ")} · {formatNumber(count)}</option>
+                        ))}
+                    </select>
+                  </label>
+                  <div className="evidence-filter-result" aria-live="polite">
+                    <span>Selected corpus-bounded records</span>
+                    <strong>{formatNumber(evidenceFilterCount)}</strong>
+                  </div>
+                </div>
+                <div className="tag-list" aria-label="Evidence filters outside the map">
+                  {(projectPhaseSummary.rating_summary_dashboard_filter_names ?? []).map((filterName) => (
+                    <span key={filterName}>{filterName.replaceAll("_", " ")}</span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="hub-caveat" role="note">
               <strong>Bounded evidence status only.</strong>
               <span>
-                Extracted text remains a local, Git-ignored artifact. Exact-span ratings are bounded documentary records—not
-                ingestion, codification, quantitative comparison, population evidence, or causal conclusions.
+                Extracted text remains a local, Git-ignored artifact. Rating-summary buckets are bounded documentary classifications—not
+                ingestion, codification, quantitative normalization/comparison, population evidence, directional findings, or causal conclusions.
                 The Tier C memo remains a completed historical evidence artifact, not the current operation.
               </span>
             </div>

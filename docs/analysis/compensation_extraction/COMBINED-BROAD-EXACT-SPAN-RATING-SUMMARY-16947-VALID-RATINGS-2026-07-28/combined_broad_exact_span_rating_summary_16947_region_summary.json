@@ -1,0 +1,72 @@
+{
+  "category_count": 4,
+  "dimension": "region",
+  "global_analysis_readiness": false,
+  "rows": [
+    {
+      "bucket_directional_hint_only": 252,
+      "bucket_global_descriptive_ready": 26,
+      "bucket_global_descriptive_ready_with_caveats": 140,
+      "bucket_local_context_only": 326,
+      "bucket_mechanism_summary_ready": 339,
+      "bucket_provisional_causal_hint_only": 32,
+      "bucket_quant_needs_normalization": 3691,
+      "bucket_source_navigation_only": 189,
+      "bucket_weak_or_not_supported": 1696,
+      "region": "Midwest",
+      "strong_or_moderate_count": 3224,
+      "unique_municipality_count": 591,
+      "unique_source_count": 970,
+      "valid_rating_count": 6691
+    },
+    {
+      "bucket_directional_hint_only": 129,
+      "bucket_global_descriptive_ready": 19,
+      "bucket_global_descriptive_ready_with_caveats": 87,
+      "bucket_local_context_only": 206,
+      "bucket_mechanism_summary_ready": 168,
+      "bucket_provisional_causal_hint_only": 21,
+      "bucket_quant_needs_normalization": 2219,
+      "bucket_source_navigation_only": 133,
+      "bucket_weak_or_not_supported": 1069,
+      "region": "Northeast",
+      "strong_or_moderate_count": 1882,
+      "unique_municipality_count": 396,
+      "unique_source_count": 644,
+      "valid_rating_count": 4051
+    },
+    {
+      "bucket_directional_hint_only": 115,
+      "bucket_global_descriptive_ready": 18,
+      "bucket_global_descriptive_ready_with_caveats": 25,
+      "bucket_local_context_only": 77,
+      "bucket_mechanism_summary_ready": 84,
+      "bucket_provisional_causal_hint_only": 15,
+      "bucket_quant_needs_normalization": 1694,
+      "bucket_source_navigation_only": 74,
+      "bucket_weak_or_not_supported": 898,
+      "region": "South",
+      "strong_or_moderate_count": 1290,
+      "unique_municipality_count": 445,
+      "unique_source_count": 637,
+      "valid_rating_count": 3000
+    },
+    {
+      "bucket_directional_hint_only": 101,
+      "bucket_global_descriptive_ready": 12,
+      "bucket_global_descriptive_ready_with_caveats": 32,
+      "bucket_local_context_only": 92,
+      "bucket_mechanism_summary_ready": 122,
+      "bucket_provisional_causal_hint_only": 12,
+      "bucket_quant_needs_normalization": 2021,
+      "bucket_source_navigation_only": 97,
+      "bucket_weak_or_not_supported": 716,
+      "region": "West",
+      "strong_or_moderate_count": 1611,
+      "unique_municipality_count": 316,
+      "unique_source_count": 462,
+      "valid_rating_count": 3205
+    }
+  ],
+  "valid_rating_count": 16947
+}

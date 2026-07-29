@@ -1,0 +1,7 @@
+dimension,category,count,share_of_valid_ratings_pct
+evidence_family,non_base_compensation,2213,13.0584
+evidence_family,not_supported,728,4.2957
+evidence_family,qualitative_mechanism,1734,10.2319
+evidence_family,quantitative_compensation,8169,48.2032
+evidence_family,source_navigation_reference,495,2.9209
+evidence_family,weak_or_not_compensation_relevant,3608,21.2899

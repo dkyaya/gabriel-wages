@@ -1,0 +1,5 @@
+dimension,category,count,share_of_valid_ratings_pct
+evidence_strength,moderate,3174,18.729
+evidence_strength,not_supported,2199,12.9757
+evidence_strength,strong,4833,28.5183
+evidence_strength,weak,6741,39.777

@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "context_only": 5825,
+    "direct_text_claim": 2231,
+    "documentary_mechanism_claim": 1374,
+    "not_claim_ready": 1262,
+    "provisional_causal_candidate": 1,
+    "quantitative_compensation_claim": 6108,
+    "source_navigation_claim": 146
+  },
+  "dimension": "claim_relevance",
+  "global_analysis_readiness": false,
+  "valid_rating_count": 16947
+}

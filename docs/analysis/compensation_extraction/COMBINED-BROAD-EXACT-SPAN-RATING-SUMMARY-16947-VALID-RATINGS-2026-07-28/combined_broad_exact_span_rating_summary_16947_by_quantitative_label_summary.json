@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "annual_salary": 176,
+    "classification_compensation_plan": 456,
+    "cola_cpi": 1007,
+    "contract_period": 756,
+    "effective_date": 2031,
+    "hourly_rate": 1571,
+    "not_applicable": 4557,
+    "other_quantitative_compensation": 582,
+    "pay_band_or_grade": 411,
+    "percentage_raise": 1731,
+    "premium_stipend_differential": 1083,
+    "retroactive_pay": 454,
+    "salary_schedule": 622,
+    "step_rank_grade": 331,
+    "unknown_quantitative_compensation": 842,
+    "wage_schedule": 337
+  },
+  "dimension": "quantitative_label",
+  "global_analysis_readiness": false,
+  "valid_rating_count": 16947
+}

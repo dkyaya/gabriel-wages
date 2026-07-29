@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "gap_narrowing": 185,
+    "neutral_or_unclear": 4092,
+    "non_safety_advantage": 360,
+    "not_applicable": 12252,
+    "safety_advantage": 58
+  },
+  "dimension": "direction_of_pressure",
+  "global_analysis_readiness": false,
+  "valid_rating_count": 16947
+}

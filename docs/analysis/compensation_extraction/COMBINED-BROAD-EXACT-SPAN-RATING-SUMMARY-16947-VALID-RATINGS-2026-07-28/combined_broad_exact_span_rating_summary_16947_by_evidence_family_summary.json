@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "non_base_compensation": 2213,
+    "not_supported": 728,
+    "qualitative_mechanism": 1734,
+    "quantitative_compensation": 8169,
+    "source_navigation_reference": 495,
+    "weak_or_not_compensation_relevant": 3608
+  },
+  "dimension": "evidence_family",
+  "global_analysis_readiness": false,
+  "valid_rating_count": 16947
+}

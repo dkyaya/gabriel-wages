@@ -1,0 +1,47 @@
+{
+  "evidence_boxes": [
+    "quantitative_compensation_evidence",
+    "direct_base_wage_value_evidence",
+    "non_base_compensation_evidence",
+    "contract_timing_implementation_evidence",
+    "automatic_raise_cola_percentage_increase_evidence",
+    "bargaining_dispute_resolution_evidence",
+    "market_comparability_evidence",
+    "fiscal_constraint_evidence",
+    "safety_non_safety_directional_hints",
+    "source_navigation_references",
+    "weak_context_not_supported_material",
+    "quarantined_excluded_material"
+  ],
+  "filters": [
+    "evidence_family",
+    "claim_readiness_bucket",
+    "claim_relevance",
+    "evidence_strength",
+    "mechanism_label",
+    "quantitative_label",
+    "direction_of_pressure",
+    "source_family",
+    "region",
+    "state",
+    "cba_vs_non_cba_mixed",
+    "base_vs_non_base_compensation",
+    "needs_normalization",
+    "mechanism_summary_ready",
+    "source_navigation_only",
+    "quarantined_excluded",
+    "global_descriptive_candidate",
+    "local_context_only"
+  ],
+  "global_analysis_readiness": false,
+  "guardrails": [
+    "filters do not alter the scout coverage map",
+    "counts are corpus-bounded",
+    "quarantines are excluded",
+    "quantitative records are not normalized",
+    "directional hints are not findings",
+    "global analysis readiness remains false"
+  ],
+  "location": "evidence controls and tables outside the map",
+  "map_filter_contract": "total_scout_coverage_only"
+}

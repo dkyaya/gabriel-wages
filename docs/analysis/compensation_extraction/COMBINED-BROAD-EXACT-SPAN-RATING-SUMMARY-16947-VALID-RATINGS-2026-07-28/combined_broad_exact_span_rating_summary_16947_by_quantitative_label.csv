@@ -1,0 +1,17 @@
+dimension,category,count,share_of_valid_ratings_pct
+quantitative_label,annual_salary,176,1.0385
+quantitative_label,classification_compensation_plan,456,2.6907
+quantitative_label,cola_cpi,1007,5.9421
+quantitative_label,contract_period,756,4.461
+quantitative_label,effective_date,2031,11.9844
+quantitative_label,hourly_rate,1571,9.2701
+quantitative_label,not_applicable,4557,26.8897
+quantitative_label,other_quantitative_compensation,582,3.4342
+quantitative_label,pay_band_or_grade,411,2.4252
+quantitative_label,percentage_raise,1731,10.2142
+quantitative_label,premium_stipend_differential,1083,6.3905
+quantitative_label,retroactive_pay,454,2.6789
+quantitative_label,salary_schedule,622,3.6703
+quantitative_label,step_rank_grade,331,1.9531
+quantitative_label,unknown_quantitative_compensation,842,4.9684
+quantitative_label,wage_schedule,337,1.9886

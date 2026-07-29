@@ -1,0 +1,36 @@
+{
+  "bounded_global_descriptive_candidates_after_ingestion": [
+    "Quantitative compensation",
+    "Non-base compensation",
+    "Direct base-wage/value evidence",
+    "Automatic raise, COLA, and percentage increase",
+    "Implementation and retroactivity",
+    "Bargaining and dispute resolution"
+  ],
+  "diagnostic_status": "pre_gate_complete_ingestion_codification_required",
+  "directional_global_finding_ready": false,
+  "global_analysis_readiness": false,
+  "next_steps": [
+    "ingest valid bounded records into durable separate causal/discourse-compatible structures",
+    "codify controlled mechanism and quantitative availability fields",
+    "deduplicate to source and future bargaining-unit/cycle analytical units",
+    "normalize quantitative values in a separately authorized phase",
+    "run matched city-cycle coverage audit",
+    "run dedicated global readiness gate"
+  ],
+  "quantitative_normalization_required": true,
+  "required_caveats": [
+    "collected-corpus denominator only",
+    "49-state coverage is not population representativeness",
+    "source-family and municipality skew",
+    "duplicate spans within sources",
+    "no normalized wage units or matched city-cycle analysis",
+    "neutral/not-applicable direction cannot be converted to a finding"
+  ],
+  "too_thin_or_non_directional": [
+    "Market and comparability",
+    "Fiscal constraint",
+    "Safety/non-safety directional hints",
+    "Source/navigation references"
+  ]
+}

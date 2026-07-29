@@ -1,0 +1,32 @@
+{
+  "claim_readiness_counts": {
+    "directional_hint_only": 597,
+    "global_descriptive_ready": 75,
+    "global_descriptive_ready_with_caveats": 284,
+    "local_context_only": 701,
+    "mechanism_summary_ready": 713,
+    "provisional_causal_hint_only": 80,
+    "quant_needs_normalization": 9625,
+    "source_navigation_only": 493,
+    "weak_or_not_supported": 4379
+  },
+  "claim_summary_candidate_count": 9860,
+  "evidence_box_counts": {
+    "automatic_raise_cola_percentage_increase_evidence": 1966,
+    "bargaining_dispute_resolution_evidence": 598,
+    "contract_timing_implementation_evidence": 2315,
+    "direct_base_wage_value_evidence": 1890,
+    "fiscal_constraint_evidence": 74,
+    "market_comparability_evidence": 153,
+    "non_base_compensation_evidence": 2259,
+    "quantitative_compensation_evidence": 1442,
+    "quarantined_excluded_material": 0,
+    "safety_non_safety_directional_hints": 677,
+    "source_navigation_references": 493,
+    "weak_context_not_supported_material": 5080
+  },
+  "global_analysis_readiness": false,
+  "map_metric": "total_scout_covered_municipalities",
+  "quarantine_count": 312,
+  "valid_rating_count": 16947
+}

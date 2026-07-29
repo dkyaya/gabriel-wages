@@ -1,0 +1,41 @@
+{
+  "claim_readiness_counts": {
+    "directional_hint_only": 597,
+    "global_descriptive_ready": 75,
+    "global_descriptive_ready_with_caveats": 284,
+    "local_context_only": 701,
+    "mechanism_summary_ready": 713,
+    "provisional_causal_hint_only": 80,
+    "quant_needs_normalization": 9625,
+    "source_navigation_only": 493,
+    "weak_or_not_supported": 4379
+  },
+  "claim_summary_candidate_count": 9860,
+  "completion_status": "completed_bounded_valid_rating_summary_review",
+  "dashboard_filters_implemented": true,
+  "decision": "combined_broad_exact_span_rating_summary_16947_completed_ingestion_ready",
+  "evidence_box_counts": {
+    "automatic_raise_cola_percentage_increase_evidence": 1966,
+    "bargaining_dispute_resolution_evidence": 598,
+    "contract_timing_implementation_evidence": 2315,
+    "direct_base_wage_value_evidence": 1890,
+    "fiscal_constraint_evidence": 74,
+    "market_comparability_evidence": 153,
+    "non_base_compensation_evidence": 2259,
+    "quantitative_compensation_evidence": 1442,
+    "quarantined_excluded_material": 0,
+    "safety_non_safety_directional_hints": 677,
+    "source_navigation_references": 493,
+    "weak_context_not_supported_material": 5080
+  },
+  "global_analysis_readiness": false,
+  "global_claim_readiness_diagnostic_status": "pre_gate_complete_ingestion_codification_required",
+  "global_gate_ready_now": false,
+  "ingestion_codification_ready_next": true,
+  "map_filter_contract": "total_scout_coverage_only",
+  "quarantine_excluded_count": 312,
+  "rating_input_count": 17259,
+  "reconciles": true,
+  "task_id": "COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28",
+  "valid_rating_summary_count": 16947
+}

@@ -1,0 +1,9 @@
+{
+  "claim_readiness_bucket": "directional_hint_only",
+  "count": 597,
+  "excluded_quarantine_count": 312,
+  "global_analysis_readiness": false,
+  "share_of_valid_ratings_pct": 3.5227,
+  "unique_municipality_count": 410,
+  "unique_source_count": 473
+}

@@ -126,6 +126,7 @@ def main() -> None:
         "combined_broad_span_extraction_3815_completed_rating_ready",
         "combined_broad_exact_span_rating_17259_completed_summary_ready",
         "combined_broad_exact_span_rating_17259_completed_with_quarantine_summary_ready",
+        "combined_broad_exact_span_rating_summary_16947_completed_ingestion_ready",
     }
     assert phase["tier_c_text_extracted_ok_count"] == 378
     assert phase["tier_c_positive_exact_span_count"] == 159

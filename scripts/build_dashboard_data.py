@@ -1615,6 +1615,31 @@ COMBINED_BROAD_EXACT_SPAN_RATING_VALID_PATH = (
 COMBINED_BROAD_EXACT_SPAN_RATING_QUARANTINE_PATH = (
     COMBINED_BROAD_EXACT_SPAN_RATING_DIR / "combined_broad_exact_span_rating_17259_quarantine.csv"
 )
+COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28"
+)
+COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DECISION_PATH = (
+    COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+    / "combined_broad_exact_span_rating_summary_16947_decision.json"
+)
+COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_BUCKETS_PATH = (
+    COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+    / "combined_broad_exact_span_rating_summary_16947_claim_readiness_buckets_summary.json"
+)
+COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_BOXES_PATH = (
+    COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+    / "combined_broad_exact_span_rating_summary_16947_dashboard_evidence_box_assignments_summary.json"
+)
+COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_RECONCILIATION_PATH = (
+    COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+    / "combined_broad_exact_span_rating_summary_16947_input_reconciliation_summary.json"
+)
+COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIAGNOSTIC_PATH = (
+    COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+    / "combined_broad_exact_span_rating_summary_16947_global_claim_readiness_diagnostic.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5403,6 +5428,108 @@ def combined_broad_exact_span_rating_status() -> tuple[bool, dict[str, Any]]:
     return True, payload
 
 
+def combined_broad_exact_span_rating_summary_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize only the reconciled valid-only 16,947-rating summary package."""
+    required = (
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DECISION_PATH,
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_BUCKETS_PATH,
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_BOXES_PATH,
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_RECONCILIATION_PATH,
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIAGNOSTIC_PATH,
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_dashboard_filter_plan.json",
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_invariant_checks.json",
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_source_family_summary.json",
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_state_summary.json",
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_region_summary.json",
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_non_cba_valid_rating_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision = read_json(COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DECISION_PATH)
+    buckets = read_json(COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_BUCKETS_PATH)
+    boxes = read_json(COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_BOXES_PATH)
+    reconciliation = read_json(COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_RECONCILIATION_PATH)
+    diagnostic = read_json(COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIAGNOSTIC_PATH)
+    filter_plan = read_json(
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_dashboard_filter_plan.json"
+    )
+    invariants = read_json(
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_invariant_checks.json"
+    )
+    source_family = read_json(
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_source_family_summary.json"
+    )
+    states = read_json(
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_state_summary.json"
+    )
+    regions = read_json(
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_region_summary.json"
+    )
+    cba = read_json(
+        COMBINED_BROAD_EXACT_SPAN_RATING_SUMMARY_DIR
+        / "combined_broad_exact_span_rating_summary_16947_non_cba_valid_rating_summary.json"
+    )
+    bucket_counts = buckets.get("counts", {})
+    valid_box_counts = boxes.get("valid_box_counts", {})
+    gates = (
+        decision.get("decision")
+        == "combined_broad_exact_span_rating_summary_16947_completed_ingestion_ready"
+        and decision.get("valid_rating_summary_count") == 16947
+        and decision.get("quarantine_excluded_count") == 312
+        and decision.get("rating_input_count") == 17259
+        and reconciliation.get("reconciles") is True
+        and reconciliation.get("quarantine_excluded_from_valid_statistics") is True
+        and sum(bucket_counts.values()) == 16947
+        and buckets.get("primary_buckets_reconcile") is True
+        and sum(valid_box_counts.values()) == 16947
+        and boxes.get("quarantine_assignment_count") == 312
+        and filter_plan.get("map_filter_contract") == "total_scout_coverage_only"
+        and diagnostic.get("diagnostic_status")
+        == "pre_gate_complete_ingestion_codification_required"
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("global_analysis_readiness_false") is True
+        and decision.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("combined broad exact-span rating summary package fails dashboard gates")
+    payload = {
+        **decision,
+        "claim_readiness_counts": bucket_counts,
+        "evidence_box_counts": valid_box_counts,
+        "dashboard_filter_count": len(filter_plan.get("filters", [])),
+        "dashboard_evidence_box_count": len(filter_plan.get("evidence_boxes", [])),
+        "dashboard_filter_names": filter_plan.get("filters", []),
+        "source_family_counts": {
+            row["source_family_hint"]: row["valid_rating_count"]
+            for row in source_family.get("rows", [])
+        },
+        "state_counts": {
+            row["state"]: row["valid_rating_count"] for row in states.get("rows", [])
+        },
+        "region_counts": {
+            row["region"]: row["valid_rating_count"] for row in regions.get("rows", [])
+        },
+        "cba_composition_counts": {
+            "exact_cba": cba.get("exact_cba_valid_rating_count", 0),
+            "non_cba_or_mixed": cba.get("non_cba_or_mixed_valid_rating_count", 0),
+        },
+        "diagnostic_status": diagnostic.get("diagnostic_status"),
+        "dashboard_result_path": "docs/analysis/combined_broad_exact_span_rating_summary_16947_result_2026-07-28.md",
+    }
+    return True, payload
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5490,13 +5617,46 @@ def build_reports_index_layer(
     broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
     broad_span_available, broad_span = combined_broad_span_extraction_status()
     broad_rating_available, broad_rating = combined_broad_exact_span_rating_status()
+    broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "combined-broad-exact-span-rating-summary-16947-2026-07-28",
+                    "title": "Combined Broad Exact-Span Rating Summary Result",
+                    "report_type": "Current bounded valid-rating summary report",
+                    "date": "2026-07-28",
+                    "checkpoint": (
+                        f"{broad_rating_summary['valid_rating_summary_count']:,} valid summarized; "
+                        f"{broad_rating_summary['quarantine_excluded_count']:,} quarantines excluded"
+                    ),
+                    "summary": (
+                        "Valid exact-span ratings are classified into mutually exclusive claim-readiness "
+                        "buckets and controlled evidence boxes. Ingestion/codification is next; global "
+                        "analysis readiness remains false."
+                    ),
+                    "tags": ["current", "rating summary", "claim readiness", "evidence filters"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + broad_rating_summary["dashboard_result_path"],
+                    "link_label": "Open current rating-summary report",
+                    "scope_metrics": [
+                        {"label": "valid summarized", "value": broad_rating_summary["valid_rating_summary_count"]},
+                        {"label": "quarantine excluded", "value": broad_rating_summary["quarantine_excluded_count"]},
+                        {"label": "evidence boxes", "value": broad_rating_summary["dashboard_evidence_box_count"]},
+                    ],
+                }
+            ]
+            if broad_rating_summary_available else []
+        ),
         *(
             [
                 {
                     "id": "combined-broad-exact-span-rating-17259-2026-07-28",
                     "title": "Combined Broad Live Exact-Span Rating Result",
-                    "report_type": "Current bounded live rating report",
+                    "report_type": (
+                        "Historical bounded live rating report"
+                        if broad_rating_summary_available else "Current bounded live rating report"
+                    ),
                     "date": "2026-07-28",
                     "checkpoint": (
                         f"{broad_rating['rating_attempted_count']:,} attempted; "
@@ -5508,8 +5668,8 @@ def build_reports_index_layer(
                         "Strict quote/schema validation and downstream completeness gates passed; "
                         "ratings remain corpus-bounded and not globally analysis-ready."
                     ),
-                    "tags": ["current", "exact-span ratings", "live lanes", "claim boundaries"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if broad_rating_summary_available else "current", "exact-span ratings", "live lanes", "claim boundaries"],
+                    "current": not broad_rating_summary_available, "historical": broad_rating_summary_available,
                     "href": repository_root_url + broad_rating["dashboard_result_path"],
                     "link_label": "Open current exact-span rating report",
                     "scope_metrics": [
@@ -8357,6 +8517,7 @@ def build_project_phase_summary(
     broad_extraction_available, broad_extraction = combined_broad_text_extraction_status()
     broad_span_available, broad_span = combined_broad_span_extraction_status()
     broad_rating_available, broad_rating = combined_broad_exact_span_rating_status()
+    broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8385,7 +8546,9 @@ def build_project_phase_summary(
             broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "combined_broad_exact_span_rating_complete_summary_review_transition"
+            "combined_broad_exact_span_rating_summary_complete_ingestion_transition"
+            if broad_rating_summary_available
+            else "combined_broad_exact_span_rating_complete_summary_review_transition"
             if broad_rating_available
             else "combined_broad_span_extraction_complete_rating_transition"
             if broad_span_available
@@ -8412,7 +8575,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Combined broad live exact-span rating complete; bounded valid-rating summary review ready next"
+            "Combined broad exact-span rating summary complete; bounded ingestion and codification ready next"
+            if broad_rating_summary_available
+            else "Combined broad live exact-span rating complete; bounded valid-rating summary review ready next"
             if broad_rating_available
             else "Combined broad deterministic exact-span extraction complete; bounded exact-span rating ready next"
             if broad_span_available
@@ -8439,7 +8604,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_rating["decision"]
+            broad_rating_summary["decision"]
+            if broad_rating_summary_available
+            else broad_rating["decision"]
             if broad_rating_available
             else broad_span["decision"]
             if broad_span_available
@@ -8671,8 +8838,37 @@ def build_project_phase_summary(
         "exact_span_rating_claim_relevance_counts": broad_rating.get("claim_relevance_counts", {}) if broad_rating_available else {},
         "exact_span_rating_evidence_strength_counts": broad_rating.get("evidence_strength_counts", {}) if broad_rating_available else {},
         "exact_span_rating_direction_counts": broad_rating.get("direction_of_pressure_counts", {}) if broad_rating_available else {},
+        "combined_exact_span_rating_summary_available": broad_rating_summary_available,
+        "rating_summary_valid_count": broad_rating_summary.get("valid_rating_summary_count") if broad_rating_summary_available else 0,
+        "rating_summary_quarantine_excluded_count": broad_rating_summary.get("quarantine_excluded_count") if broad_rating_summary_available else 0,
+        "rating_summary_claim_candidate_count": broad_rating_summary.get("claim_summary_candidate_count") if broad_rating_summary_available else 0,
+        "rating_summary_claim_readiness_counts": broad_rating_summary.get("claim_readiness_counts", {}) if broad_rating_summary_available else {},
+        "rating_summary_evidence_box_counts": broad_rating_summary.get("evidence_box_counts", {}) if broad_rating_summary_available else {},
+        "rating_summary_dashboard_filter_count": broad_rating_summary.get("dashboard_filter_count") if broad_rating_summary_available else 0,
+        "rating_summary_dashboard_evidence_box_count": broad_rating_summary.get("dashboard_evidence_box_count") if broad_rating_summary_available else 0,
+        "rating_summary_dashboard_filter_names": broad_rating_summary.get("dashboard_filter_names", []) if broad_rating_summary_available else [],
+        "rating_summary_filter_catalog": (
+            {
+                "claim_readiness_bucket": broad_rating_summary.get("claim_readiness_counts", {}),
+                "dashboard_evidence_box": broad_rating_summary.get("evidence_box_counts", {}),
+                "evidence_family": broad_rating.get("evidence_family_rated_counts", {}),
+                "claim_relevance": broad_rating.get("claim_relevance_counts", {}),
+                "evidence_strength": broad_rating.get("evidence_strength_counts", {}),
+                "mechanism_label": broad_rating.get("mechanism_label_rated_counts", {}),
+                "quantitative_label": broad_rating.get("quantitative_label_rated_counts", {}),
+                "direction_of_pressure": broad_rating.get("direction_of_pressure_counts", {}),
+                "source_family": broad_rating_summary.get("source_family_counts", {}),
+                "region": broad_rating_summary.get("region_counts", {}),
+                "state": broad_rating_summary.get("state_counts", {}),
+                "cba_vs_non_cba_mixed": broad_rating_summary.get("cba_composition_counts", {}),
+            }
+            if broad_rating_summary_available else {}
+        ),
+        "rating_summary_diagnostic_status": broad_rating_summary.get("diagnostic_status") if broad_rating_summary_available else None,
         "current_report_title": (
-            "Combined Broad Live Exact-Span Rating Result"
+            "Combined Broad Exact-Span Rating Summary Result"
+            if broad_rating_summary_available
+            else "Combined Broad Live Exact-Span Rating Result"
             if broad_rating_available
             else "Combined Broad Exact-Span Extraction Result"
             if broad_span_available
@@ -8688,7 +8884,9 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_rating["dashboard_result_path"]
+            broad_rating_summary["dashboard_result_path"]
+            if broad_rating_summary_available
+            else broad_rating["dashboard_result_path"]
             if broad_rating_available
             else broad_span["dashboard_result_path"]
             if broad_span_available
@@ -8705,7 +8903,9 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_rating["dashboard_result_path"]
+            broad_rating_summary["dashboard_result_path"]
+            if broad_rating_summary_available
+            else broad_rating["dashboard_result_path"]
             if broad_rating_available
             else broad_span["dashboard_result_path"]
             if broad_span_available
@@ -8728,7 +8928,9 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run bounded rating summary review over valid exact-span ratings only; keep quarantines excluded"
+            "run bounded ingestion and codification over classified valid ratings; keep quarantines excluded and global readiness false"
+            if broad_rating_summary_available
+            else "run bounded rating summary review over valid exact-span ratings only; keep quarantines excluded"
             if broad_rating_available
             else "run separately authorized bounded exact-span rating over validated positive candidates only"
             if broad_span_available
@@ -8808,7 +9010,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "bounded exact-span rating summary review over valid ratings only"
+            "bounded ingestion and codification over classified valid ratings"
+            if broad_rating_summary_available
+            else "bounded exact-span rating summary review over valid ratings only"
             if broad_rating_available
             else "bounded exact-span rating over validated positive candidate spans"
             if broad_span_available
@@ -8827,6 +9031,15 @@ def build_project_phase_summary(
             else "broad state-by-state source scouting"
         ),
         "next_phase_sequence": (
+            [
+                "ingest only the 16,947 classified valid ratings; exclude all quarantines",
+                "preserve exact quote, lineage, provenance, and causal/discourse corpus separation",
+                "codify controlled evidence and mechanism fields without wage normalization",
+                "deduplicate to source and future bargaining-unit/cycle analytical units",
+                "keep global readiness false until a separately authorized gate",
+            ]
+            if broad_rating_summary_available
+            else
             [
                 "lock the valid-rating ledger and exclude quarantines",
                 "verify every required downstream summary input exists",
@@ -8855,7 +9068,9 @@ def build_project_phase_summary(
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "combined_broad_exact_span_rating_complete_summary_review_ready"
+            "combined_broad_exact_span_rating_summary_complete_ingestion_ready"
+            if broad_rating_summary_available
+            else "combined_broad_exact_span_rating_complete_summary_review_ready"
             if broad_rating_available
             else "combined_broad_span_extraction_complete_rating_ready"
             if broad_span_available
@@ -10751,6 +10966,33 @@ def build_source_review_status_summary(
                     "Ratings classify bounded exact spans and context only; quarantines are excluded from valid summaries.",
                     "Ratings are not ingestion, codification, wage normalization/comparison, statistical estimates, or causal proof.",
                     "Rating counts do not establish wage differences, national prevalence, effects, or representativeness.",
+                    "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
+                ],
+            }
+        )
+    broad_rating_summary_available, broad_rating_summary = combined_broad_exact_span_rating_summary_status()
+    if broad_rating_summary_available:
+        payload.update(
+            {
+                "stage": "combined_broad_exact_span_rating_summary_complete",
+                "source_review_phase": "combined_broad_16947_valid_rating_summary_completed",
+                "source_review_live_status": "valid_rating_summary_completed_quarantine_excluded",
+                "valid_rating_summary_count": broad_rating_summary["valid_rating_summary_count"],
+                "rating_quarantine_excluded_count": broad_rating_summary["quarantine_excluded_count"],
+                "claim_summary_candidate_count": broad_rating_summary["claim_summary_candidate_count"],
+                "claim_readiness_counts": broad_rating_summary["claim_readiness_counts"],
+                "dashboard_evidence_box_counts": broad_rating_summary["evidence_box_counts"],
+                "dashboard_evidence_filter_count": broad_rating_summary["dashboard_filter_count"],
+                "mechanism_global_claim_readiness_diagnostic_status": broad_rating_summary["diagnostic_status"],
+                "source_rating_status": "summary_complete_ingestion_not_started",
+                "next_recommendation": "bounded_ingestion_codification",
+                "next_scaling_decision": "bounded_ingestion_codification",
+                "combined_broad_exact_span_rating_summary_result_path": broad_rating_summary["dashboard_result_path"],
+                "global_analysis_readiness": False,
+                "caveats": [
+                    "Claim-readiness counts are mutually exclusive primary classifications of valid ratings only.",
+                    "All 312 quarantines are excluded; source-navigation and weak/context material are not substantive global evidence.",
+                    "Quantitative values remain unnormalized and directional/provisional-causal labels remain hints only.",
                     "The dashboard map remains cumulative total scout coverage only and global analysis readiness remains false.",
                 ],
             }

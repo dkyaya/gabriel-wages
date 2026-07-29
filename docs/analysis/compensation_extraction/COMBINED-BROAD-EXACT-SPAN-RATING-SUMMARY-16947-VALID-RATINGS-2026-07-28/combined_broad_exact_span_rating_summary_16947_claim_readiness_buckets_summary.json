@@ -1,0 +1,28 @@
+{
+  "classification_precedence": [
+    "provisional_causal_hint_only",
+    "directional_hint_only",
+    "source_navigation_only",
+    "quant_needs_normalization",
+    "mechanism_summary_ready",
+    "weak_or_not_supported",
+    "local_context_only",
+    "global_descriptive_ready",
+    "global_descriptive_ready_with_caveats"
+  ],
+  "counts": {
+    "directional_hint_only": 597,
+    "global_descriptive_ready": 75,
+    "global_descriptive_ready_with_caveats": 284,
+    "local_context_only": 701,
+    "mechanism_summary_ready": 713,
+    "provisional_causal_hint_only": 80,
+    "quant_needs_normalization": 9625,
+    "source_navigation_only": 493,
+    "weak_or_not_supported": 4379
+  },
+  "global_analysis_readiness": false,
+  "primary_buckets_are_mutually_exclusive": true,
+  "primary_buckets_reconcile": true,
+  "valid_rating_count": 16947
+}
