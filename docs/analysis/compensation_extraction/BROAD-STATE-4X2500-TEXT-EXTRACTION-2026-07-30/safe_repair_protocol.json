@@ -1,0 +1,15 @@
+{
+  "repair_reason": "The first lane-001 pass used an over-broad repeated-character detector that treated fixed-width table separators as suspected bad text.",
+  "affected_lane": "text_extraction_lane_001",
+  "first_pass_completed_rows": 735,
+  "first_pass_results_accepted_for_merge": false,
+  "repair_action": "Removed only task-generated lane-001 results and text artifacts, then regenerated the full locked lane under the existing project-standard detector.",
+  "preserved_locked_queue": true,
+  "preserved_lane_queue_hash": "68458340df7e33fd0bdf678fc899bd731a4ac69ba2a72875e9cc871363ac79ed",
+  "old_rule": "40 or more repeated characters of any kind",
+  "corrected_rule": "80 or more repeated alphanumeric characters",
+  "fixed_width_whitespace_dash_underscore_rules_allowed": true,
+  "ocr_occurred": false,
+  "span_extraction_occurred": false,
+  "repair_timestamp": "2026-07-30T16:35:00Z"
+}

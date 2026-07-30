@@ -90,7 +90,25 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertEqual(phase["wage_gap_analysis_readiness"], "blocked_pending_normalization")
         self.assertEqual(phase["causal_analysis_readiness"], "blocked_pending_matched_structure")
-        self.assertIn("BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30", phase["next_task"])
+        extraction_summary_path = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.json"
+        )
+        if extraction_summary_path.exists():
+            extraction = json.loads(extraction_summary_path.read_text())
+            self.assertTrue(phase["broad_state_4x2500_text_extraction_available"])
+            self.assertEqual(phase["broad_state_4x2500_text_extraction_queue_count"], 2940)
+            self.assertEqual(
+                phase["broad_state_4x2500_text_extraction_ok_count"],
+                extraction["extraction_status_counts"]["extracted_ok"],
+            )
+            self.assertEqual(
+                phase["broad_state_4x2500_text_extraction_span_ready_count"],
+                extraction["span_extraction_ready_count"],
+            )
+            self.assertIn("BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30", phase["next_task"])
+        else:
+            self.assertIn("BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30", phase["next_task"])
 
     def test_pages_workflow_uses_actions_artifact_and_correct_base(self) -> None:
         workflow = (ROOT / ".github/workflows/deploy-dashboard.yml").read_text()

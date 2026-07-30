@@ -1,0 +1,26 @@
+{
+  "group_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_hint": {
+      "status_counts": {
+        "extracted_empty": 5,
+        "extracted_low_density": 2,
+        "extracted_ok": 388,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 400
+    },
+    "non_cba_or_other_hint": {
+      "status_counts": {
+        "extracted_empty": 9,
+        "extracted_low_density": 1,
+        "extracted_ok": 2407,
+        "extracted_suspected_bad_text": 30,
+        "html_noisy_or_boilerplate": 93
+      },
+      "total": 2540
+    }
+  },
+  "total_rows": 2940
+}

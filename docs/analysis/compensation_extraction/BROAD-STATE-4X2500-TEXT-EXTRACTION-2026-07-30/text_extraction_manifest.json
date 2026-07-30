@@ -1,0 +1,115 @@
+{
+  "approved_status_counts": {
+    "html_text_ready": 291,
+    "other_document_text_ready": 72,
+    "parse_text_pdf_ready": 2577
+  },
+  "artifact_root": "artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30",
+  "artifact_root_git_ignored": true,
+  "created_at": "2026-07-30T16:27:50Z",
+  "extraction_mode": "non_ocr_only",
+  "forbidden_actions": {
+    "codification": false,
+    "ingestion": false,
+    "ocr": false,
+    "rating": false,
+    "span_extraction": false
+  },
+  "input_rows": 2940,
+  "lane_manifests": {
+    "text_extraction_lane_001": {
+      "csv_sha256": "68458340df7e33fd0bdf678fc899bd731a4ac69ba2a72875e9cc871363ac79ed",
+      "jsonl_sha256": "580b57a944d7ca965e2ce05ea8b5fd17f6cd23a01f997244bb604401cceb09ef",
+      "priority_counts": {
+        "high_priority_verification_ready": 544,
+        "low_priority_verification_ready": 20,
+        "medium_priority_verification_ready": 171
+      },
+      "rows": 735,
+      "source_type_counts": {
+        "html_text_ready": 72,
+        "other_document_text_ready": 18,
+        "parse_text_pdf_ready": 645
+      },
+      "start_delay_seconds": 0
+    },
+    "text_extraction_lane_002": {
+      "csv_sha256": "77c41e03dcbcc68d93fd25c80c4845bf793dde7ddee430cb58a8954357daa38e",
+      "jsonl_sha256": "453a2ee9f21e407f2cca2c055ca2a44395ccce095966a77d53fc7a0fc50f84ac",
+      "priority_counts": {
+        "high_priority_verification_ready": 561,
+        "low_priority_verification_ready": 17,
+        "medium_priority_verification_ready": 157
+      },
+      "rows": 735,
+      "source_type_counts": {
+        "html_text_ready": 73,
+        "other_document_text_ready": 18,
+        "parse_text_pdf_ready": 644
+      },
+      "start_delay_seconds": 480
+    },
+    "text_extraction_lane_003": {
+      "csv_sha256": "942d04e2bc60cd1f7054aeceeb0b14b70c64b8fadf5e953a254f3e434a8d69fa",
+      "jsonl_sha256": "d915f1db74ed7f88f614c4f3afa2ad8da3eac2851fabbbb030cfb770624a1c25",
+      "priority_counts": {
+        "high_priority_verification_ready": 546,
+        "low_priority_verification_ready": 23,
+        "medium_priority_verification_ready": 166
+      },
+      "rows": 735,
+      "source_type_counts": {
+        "html_text_ready": 73,
+        "other_document_text_ready": 18,
+        "parse_text_pdf_ready": 644
+      },
+      "start_delay_seconds": 960
+    },
+    "text_extraction_lane_004": {
+      "csv_sha256": "61478af5d8688f785575bb17c251bf55b32641386b0cb6b85f31b4127e9783ae",
+      "jsonl_sha256": "ac5e59f6848e050a2cc8531e2859084cb89430496f46bc37dd317c12772c26d1",
+      "priority_counts": {
+        "high_priority_verification_ready": 555,
+        "low_priority_verification_ready": 22,
+        "medium_priority_verification_ready": 158
+      },
+      "rows": 735,
+      "source_type_counts": {
+        "html_text_ready": 73,
+        "other_document_text_ready": 18,
+        "parse_text_pdf_ready": 644
+      },
+      "start_delay_seconds": 1440
+    }
+  },
+  "locked_queue_csv_sha256": "27ae9be9d09512183483211d73f1359ed131a2894ae4add840bbe6f171eb95a7",
+  "locked_queue_jsonl_sha256": "96e572814de0268e48410e9cdd6f11fd7201c4811ebefbed630c3b24bfe35d25",
+  "smoke_preflight": {
+    "full_text_cleanup_completed": true,
+    "representative_rows": [
+      {
+        "character_count": 64248,
+        "method": "poppler_pdftotext_layout_utf8_non_ocr",
+        "readiness_id": "B4X2500RDY-20260730-38550f7068f1c5efb020",
+        "source_type": "parse_text_pdf_ready",
+        "status": "extracted_suspected_bad_text"
+      },
+      {
+        "character_count": 1865,
+        "method": "stdlib_htmlparser_visible_text_cleanup",
+        "readiness_id": "B4X2500RDY-20260730-6e00eab47c6c7e4060a5",
+        "source_type": "html_text_ready",
+        "status": "extracted_ok"
+      },
+      {
+        "character_count": 8862,
+        "method": "macos_textutil_non_ocr",
+        "readiness_id": "B4X2500RDY-20260730-81ede07cb642c8f351b8",
+        "source_type": "other_document_text_ready",
+        "status": "extracted_ok"
+      }
+    ],
+    "status": "passed"
+  },
+  "task_id": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30"
+}

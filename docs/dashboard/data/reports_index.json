@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T15:38:31Z",
+  "generated_at": "2026-07-30T17:00:52Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-pdf-text-readiness-2026-07-30",
-      "title": "Broad State 4 × 2,500 PDF/Text Readiness",
-      "report_type": "Current bounded retained-file technical-readiness result",
+      "id": "broad-state-4x2500-text-extraction-2026-07-30",
+      "title": "Broad State 4 × 2,500 Text Extraction",
+      "report_type": "Current bounded non-OCR text-extraction result",
       "date": "2026-07-30",
-      "checkpoint": "2,940 extraction-ready retained sources",
-      "summary": "All 3,672 retained sources received one bounded technical-readiness status across four lanes. No full text or OCR output was produced; four-lane text extraction is next.",
+      "checkpoint": "2,795 span-extraction-ready sources",
+      "summary": "All 2,940 readiness-approved sources received one non-OCR extraction outcome across four lanes. Full text remains in ignored local storage; exact span extraction is next.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "PDF readiness",
-        "text readiness"
+        "text extraction",
+        "non-OCR"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
-      "link_label": "Open current 4 × 2,500 PDF/text-readiness report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.md",
+      "link_label": "Open current 4 × 2,500 text-extraction report",
       "scope_metrics": [
         {
-          "label": "retained sources",
-          "value": 3672
-        },
-        {
-          "label": "extraction ready",
+          "label": "extraction queue",
           "value": 2940
         },
         {
-          "label": "OCR later",
-          "value": 601
+          "label": "extracted OK",
+          "value": 2795
+        },
+        {
+          "label": "span ready",
+          "value": 2795
         }
       ]
     },
@@ -69,6 +69,38 @@
         {
           "label": "candidate rows",
           "value": 7014
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-pdf-text-readiness-2026-07-30",
+      "title": "Broad State 4 × 2,500 PDF/Text Readiness",
+      "report_type": "Current bounded retained-file technical-readiness result",
+      "date": "2026-07-30",
+      "checkpoint": "2,940 extraction-ready retained sources",
+      "summary": "All 3,672 retained sources received one bounded technical-readiness status across four lanes. No full text or OCR output was produced; four-lane text extraction is next.",
+      "tags": [
+        "broad scout",
+        "4x2500",
+        "PDF readiness",
+        "text readiness"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
+      "link_label": "Open historical 4 × 2,500 PDF/text-readiness report",
+      "scope_metrics": [
+        {
+          "label": "retained sources",
+          "value": 3672
+        },
+        {
+          "label": "extraction ready",
+          "value": 2940
+        },
+        {
+          "label": "OCR later",
+          "value": 601
         }
       ]
     },

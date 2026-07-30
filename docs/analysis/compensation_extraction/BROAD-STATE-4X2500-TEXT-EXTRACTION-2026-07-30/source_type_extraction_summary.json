@@ -1,0 +1,32 @@
+{
+  "group_field": "primary_readiness_status",
+  "groups": {
+    "html_text_ready": {
+      "status_counts": {
+        "extracted_empty": 4,
+        "extracted_ok": 187,
+        "extracted_suspected_bad_text": 4,
+        "html_noisy_or_boilerplate": 96
+      },
+      "total": 291
+    },
+    "other_document_text_ready": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 70,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 72
+    },
+    "parse_text_pdf_ready": {
+      "status_counts": {
+        "extracted_empty": 9,
+        "extracted_low_density": 3,
+        "extracted_ok": 2538,
+        "extracted_suspected_bad_text": 27
+      },
+      "total": 2577
+    }
+  },
+  "total_rows": 2940
+}

@@ -1,0 +1,356 @@
+{
+  "regions": {
+    "Midwest": {
+      "status_counts": {
+        "extracted_empty": 9,
+        "extracted_ok": 1298,
+        "extracted_suspected_bad_text": 15,
+        "html_noisy_or_boilerplate": 39
+      },
+      "total": 1361
+    },
+    "Northeast": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_low_density": 2,
+        "extracted_ok": 743,
+        "extracted_suspected_bad_text": 4,
+        "html_noisy_or_boilerplate": 22
+      },
+      "total": 772
+    },
+    "South": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_ok": 606,
+        "extracted_suspected_bad_text": 13,
+        "html_noisy_or_boilerplate": 29
+      },
+      "total": 650
+    },
+    "West": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_low_density": 1,
+        "extracted_ok": 148,
+        "html_noisy_or_boilerplate": 6
+      },
+      "total": 157
+    }
+  },
+  "states": {
+    "AK": {
+      "status_counts": {
+        "extracted_ok": 11
+      },
+      "total": 11
+    },
+    "AL": {
+      "status_counts": {
+        "extracted_ok": 44,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 48
+    },
+    "AR": {
+      "status_counts": {
+        "extracted_ok": 20,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 24
+    },
+    "CA": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 40,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 42
+    },
+    "CO": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 20
+      },
+      "total": 21
+    },
+    "CT": {
+      "status_counts": {
+        "extracted_ok": 9
+      },
+      "total": 9
+    },
+    "FL": {
+      "status_counts": {
+        "extracted_ok": 41,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 42
+    },
+    "GA": {
+      "status_counts": {
+        "extracted_ok": 54,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 57
+    },
+    "IA": {
+      "status_counts": {
+        "extracted_ok": 108,
+        "extracted_suspected_bad_text": 3,
+        "html_noisy_or_boilerplate": 10
+      },
+      "total": 121
+    },
+    "ID": {
+      "status_counts": {
+        "extracted_ok": 13
+      },
+      "total": 13
+    },
+    "IL": {
+      "status_counts": {
+        "extracted_empty": 4,
+        "extracted_ok": 135,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 142
+    },
+    "IN": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 75,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 78
+    },
+    "KS": {
+      "status_counts": {
+        "extracted_ok": 127,
+        "html_noisy_or_boilerplate": 7
+      },
+      "total": 134
+    },
+    "KY": {
+      "status_counts": {
+        "extracted_ok": 51,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 56
+    },
+    "LA": {
+      "status_counts": {
+        "extracted_ok": 49,
+        "extracted_suspected_bad_text": 6,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 59
+    },
+    "MA": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 62
+      },
+      "total": 63
+    },
+    "MD": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "ME": {
+      "status_counts": {
+        "extracted_ok": 59,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 8
+      },
+      "total": 68
+    },
+    "MI": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 158,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 163
+    },
+    "MN": {
+      "status_counts": {
+        "extracted_ok": 140,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 145
+    },
+    "MO": {
+      "status_counts": {
+        "extracted_ok": 35,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 37
+    },
+    "MS": {
+      "status_counts": {
+        "extracted_ok": 2,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 3
+    },
+    "NC": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 139,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 6
+      },
+      "total": 147
+    },
+    "ND": {
+      "status_counts": {
+        "extracted_ok": 50,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 54
+    },
+    "NE": {
+      "status_counts": {
+        "extracted_empty": 3,
+        "extracted_ok": 74,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 80
+    },
+    "NH": {
+      "status_counts": {
+        "extracted_ok": 26,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 27
+    },
+    "NJ": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 204,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 5
+      },
+      "total": 211
+    },
+    "NY": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 205,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 6
+      },
+      "total": 214
+    },
+    "OH": {
+      "status_counts": {
+        "extracted_ok": 197,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 200
+    },
+    "OK": {
+      "status_counts": {
+        "extracted_ok": 33,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 34
+    },
+    "OR": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 18
+      },
+      "total": 19
+    },
+    "PA": {
+      "status_counts": {
+        "extracted_ok": 119,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 121
+    },
+    "SC": {
+      "status_counts": {
+        "extracted_ok": 14,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 16
+    },
+    "SD": {
+      "status_counts": {
+        "extracted_ok": 48,
+        "extracted_suspected_bad_text": 4,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 53
+    },
+    "TN": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 64,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 66
+    },
+    "TX": {
+      "status_counts": {
+        "extracted_ok": 64,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 65
+    },
+    "UT": {
+      "status_counts": {
+        "extracted_ok": 22,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 24
+    },
+    "VA": {
+      "status_counts": {
+        "extracted_ok": 14
+      },
+      "total": 14
+    },
+    "VT": {
+      "status_counts": {
+        "extracted_ok": 59
+      },
+      "total": 59
+    },
+    "WA": {
+      "status_counts": {
+        "extracted_ok": 24,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 27
+    },
+    "WI": {
+      "status_counts": {
+        "extracted_ok": 151,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 154
+    },
+    "WV": {
+      "status_counts": {
+        "extracted_ok": 15,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 17
+    }
+  },
+  "total_rows": 2940
+}

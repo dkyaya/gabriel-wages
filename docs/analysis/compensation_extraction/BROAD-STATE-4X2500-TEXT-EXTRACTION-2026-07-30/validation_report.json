@@ -1,0 +1,38 @@
+{
+  "all_checks_passed": false,
+  "checks": {
+    "01_input_count_2940": true,
+    "02_input_type_counts_exact": true,
+    "03_no_not_ready_rows": true,
+    "04_all_retained_sources_exist": true,
+    "05_retained_hashes_match": true,
+    "06_artifact_root_ignored": true,
+    "07_lane_rows_reconcile": true,
+    "08_lane_sizes_exact": true,
+    "09_one_lane_per_input": true,
+    "10_lane_hashes_match": true,
+    "11_one_controlled_status": true,
+    "12_merged_reconciles": true,
+    "13_artifact_manifest_reconciles": true,
+    "14_text_hashes_sizes_recorded": true,
+    "15_span_queue_eligible_only": true,
+    "16_no_ocr": true,
+    "17_no_span_extraction": true,
+    "18_no_rating_ingestion_codification": true,
+    "19_no_wage_gap_regression_causal_claims": true,
+    "20_dashboard_input_current": true,
+    "21_local_dashboard_build": true,
+    "22_local_dashboard_smoke": true,
+    "23_public_dashboard_smoke": false,
+    "24_map_scout_only": true,
+    "25_global_readiness_not_advanced": true,
+    "26_no_artifacts_tracked": true,
+    "27_staged_audit": true,
+    "28_large_file_audit": true
+  },
+  "core_checks_passed": true,
+  "final_checks_pending": [
+    "23_public_dashboard_smoke"
+  ],
+  "validated_at": "2026-07-30T17:03:27Z"
+}

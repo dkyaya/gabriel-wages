@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-30T15:38:31Z",
+  "generated_at": "2026-07-30T17:00:52Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_4x2500_pdf_text_readiness_complete",
-  "current_phase": "Broad state 4 × 2,500 PDF/text readiness complete; four-lane text extraction ready next",
-  "current_phase_code": "broad_state_4x2500_pdf_text_readiness_completed_text_extraction_ready",
-  "current_evidence_status": "broad_4x2500_pdf_text_readiness_complete_text_unextracted",
+  "stage": "broad_state_4x2500_text_extraction_complete",
+  "current_phase": "Broad state 4 × 2,500 text extraction complete; four-lane span extraction ready next",
+  "current_phase_code": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
+  "current_evidence_status": "broad_4x2500_text_extraction_complete_spans_unextracted",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -623,19 +623,19 @@
   "pdf_text_readiness_error_count": 0,
   "pdf_text_readiness_extraction_ready_count": 4051,
   "combined_text_extraction_available": true,
-  "text_extraction_queue_size": 4051,
-  "text_extraction_attempted_count": 4051,
-  "text_extracted_ok_count": 3815,
-  "text_extraction_pdf_extracted_ok_count": 3154,
-  "text_extraction_html_extracted_ok_count": 623,
-  "text_extraction_other_document_extracted_ok_count": 38,
-  "text_extraction_empty_too_short_count": 7,
-  "text_extraction_low_density_count": 8,
-  "text_extraction_bad_text_layer_count": 13,
-  "text_extraction_html_noisy_shell_count": 208,
+  "text_extraction_queue_size": 2940,
+  "text_extraction_attempted_count": 2940,
+  "text_extracted_ok_count": 2795,
+  "text_extraction_pdf_extracted_ok_count": 2538,
+  "text_extraction_html_extracted_ok_count": 187,
+  "text_extraction_other_document_extracted_ok_count": 70,
+  "text_extraction_empty_too_short_count": 14,
+  "text_extraction_low_density_count": 3,
+  "text_extraction_bad_text_layer_count": 32,
+  "text_extraction_html_noisy_shell_count": 96,
   "text_extraction_other_document_unsupported_count": 0,
   "text_extraction_error_count": 0,
-  "text_extraction_artifact_root": "artifacts/local_extracted_text/combined_broad_text_extraction_4051_2026-07-28",
+  "text_extraction_artifact_root": "artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30",
   "combined_span_extraction_available": true,
   "span_extraction_queue_size": 3815,
   "span_extraction_attempted_count": 3815,
@@ -1000,10 +1000,10 @@
     "weak_or_not_supported": 4379
   },
   "global_readiness_gate_status": "completed_with_partial_readiness_next_scout_prep_ready",
-  "current_report_title": "Broad State 4 × 2,500 PDF/Text Readiness",
-  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
-  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
-  "next_task": "run BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 over the exact readiness-approved queue in four independent staggered lanes",
+  "current_report_title": "Broad State 4 × 2,500 Text Extraction",
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.md",
+  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.md",
+  "next_task": "run BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30 over the exact span-extraction-ready queue in four independent staggered lanes",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,17 +1037,17 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "four-lane broad-state 4 × 2,500 text extraction",
+  "next_phase": "four-lane broad-state 4 × 2,500 span extraction",
   "next_phase_sequence": [
-    "lock only parse_text_pdf_ready, html_text_ready, and other_document_text_ready rows",
-    "split the exact extraction queue into four independent staggered lanes",
-    "checkpoint every source and retain extracted text only in ignored local artifact storage",
+    "lock only eligible extracted_ok rows from the span-extraction-ready queue",
+    "split the exact span queue into four independent staggered lanes",
+    "checkpoint every source and preserve exact source/page/offset lineage",
     "do not OCR, rate, ingest, codify, normalize wages, run regressions, or make causal claims",
-    "rebuild and visibly smoke-test the dashboard while preserving scout-only map coverage"
+    "rebuild and visibly smoke-test the local and public dashboard"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "broad_state_4x2500_pdf_text_readiness_complete_text_extraction_ready",
+  "last_updated_context": "broad_state_4x2500_text_extraction_complete_span_extraction_ready",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1190,5 +1190,494 @@
   },
   "actual_scout_covered_municipalities": 16887,
   "wage_gap_analysis_readiness": "blocked_pending_normalization",
-  "causal_analysis_readiness": "blocked_pending_matched_structure"
+  "causal_analysis_readiness": "blocked_pending_matched_structure",
+  "broad_state_4x2500_text_extraction_available": true,
+  "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
+  "broad_state_4x2500_text_extraction_queue_count": 2940,
+  "broad_state_4x2500_text_extraction_lane_counts": {
+    "text_extraction_lane_001": 735,
+    "text_extraction_lane_002": 735,
+    "text_extraction_lane_003": 735,
+    "text_extraction_lane_004": 735
+  },
+  "broad_state_4x2500_text_extraction_status_counts": {
+    "extracted_empty": 14,
+    "extracted_low_density": 3,
+    "extracted_ok": 2795,
+    "extracted_suspected_bad_text": 32,
+    "extraction_error": 0,
+    "hash_mismatch": 0,
+    "html_noisy_or_boilerplate": 96,
+    "source_file_missing": 0,
+    "unsupported_despite_readiness": 0
+  },
+  "broad_state_4x2500_text_extraction_ok_count": 2795,
+  "broad_state_4x2500_text_extraction_empty_count": 14,
+  "broad_state_4x2500_text_extraction_low_density_count": 3,
+  "broad_state_4x2500_text_extraction_bad_text_count": 32,
+  "broad_state_4x2500_text_extraction_html_noisy_count": 96,
+  "broad_state_4x2500_text_extraction_error_count": 0,
+  "broad_state_4x2500_text_extraction_span_ready_count": 2795,
+  "broad_state_4x2500_text_extraction_total_bytes": 182067064,
+  "broad_state_4x2500_text_extraction_by_source_family": {
+    "agenda_packet_or_minutes": {
+      "status_counts": {
+        "extracted_ok": 780,
+        "extracted_suspected_bad_text": 4,
+        "html_noisy_or_boilerplate": 36
+      },
+      "total": 820
+    },
+    "arbitration_award": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 115
+      },
+      "total": 116
+    },
+    "budget_or_pay_plan": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_ok": 360,
+        "extracted_suspected_bad_text": 6,
+        "html_noisy_or_boilerplate": 12
+      },
+      "total": 380
+    },
+    "cba": {
+      "status_counts": {
+        "extracted_empty": 5,
+        "extracted_low_density": 2,
+        "extracted_ok": 388,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 400
+    },
+    "civil_service_or_hr_pay_plan": {
+      "status_counts": {
+        "extracted_ok": 48,
+        "html_noisy_or_boilerplate": 5
+      },
+      "total": 53
+    },
+    "classification_study": {
+      "status_counts": {
+        "extracted_ok": 1
+      },
+      "total": 1
+    },
+    "compensation_study": {
+      "status_counts": {
+        "extracted_ok": 8
+      },
+      "total": 8
+    },
+    "factfinding_report": {
+      "status_counts": {
+        "extracted_ok": 16
+      },
+      "total": 16
+    },
+    "mou_or_memorandum": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 147,
+        "extracted_suspected_bad_text": 5,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 157
+    },
+    "other_local_government_pay_policy": {
+      "status_counts": {
+        "extracted_empty": 4,
+        "extracted_ok": 266,
+        "extracted_suspected_bad_text": 7,
+        "html_noisy_or_boilerplate": 16
+      },
+      "total": 293
+    },
+    "personnel_policy": {
+      "status_counts": {
+        "extracted_ok": 87,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 90
+    },
+    "salary_ordinance": {
+      "status_counts": {
+        "extracted_ok": 119,
+        "html_noisy_or_boilerplate": 8
+      },
+      "total": 127
+    },
+    "settlement_agreement": {
+      "status_counts": {
+        "extracted_ok": 7
+      },
+      "total": 7
+    },
+    "wage_schedule": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_ok": 453,
+        "extracted_suspected_bad_text": 8,
+        "html_noisy_or_boilerplate": 9
+      },
+      "total": 472
+    }
+  },
+  "broad_state_4x2500_text_extraction_by_state": {
+    "AK": {
+      "status_counts": {
+        "extracted_ok": 11
+      },
+      "total": 11
+    },
+    "AL": {
+      "status_counts": {
+        "extracted_ok": 44,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 48
+    },
+    "AR": {
+      "status_counts": {
+        "extracted_ok": 20,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 24
+    },
+    "CA": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 40,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 42
+    },
+    "CO": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 20
+      },
+      "total": 21
+    },
+    "CT": {
+      "status_counts": {
+        "extracted_ok": 9
+      },
+      "total": 9
+    },
+    "FL": {
+      "status_counts": {
+        "extracted_ok": 41,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 42
+    },
+    "GA": {
+      "status_counts": {
+        "extracted_ok": 54,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 57
+    },
+    "IA": {
+      "status_counts": {
+        "extracted_ok": 108,
+        "extracted_suspected_bad_text": 3,
+        "html_noisy_or_boilerplate": 10
+      },
+      "total": 121
+    },
+    "ID": {
+      "status_counts": {
+        "extracted_ok": 13
+      },
+      "total": 13
+    },
+    "IL": {
+      "status_counts": {
+        "extracted_empty": 4,
+        "extracted_ok": 135,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 142
+    },
+    "IN": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 75,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 78
+    },
+    "KS": {
+      "status_counts": {
+        "extracted_ok": 127,
+        "html_noisy_or_boilerplate": 7
+      },
+      "total": 134
+    },
+    "KY": {
+      "status_counts": {
+        "extracted_ok": 51,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 56
+    },
+    "LA": {
+      "status_counts": {
+        "extracted_ok": 49,
+        "extracted_suspected_bad_text": 6,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 59
+    },
+    "MA": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 62
+      },
+      "total": 63
+    },
+    "MD": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "ME": {
+      "status_counts": {
+        "extracted_ok": 59,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 8
+      },
+      "total": 68
+    },
+    "MI": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 158,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 163
+    },
+    "MN": {
+      "status_counts": {
+        "extracted_ok": 140,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 4
+      },
+      "total": 145
+    },
+    "MO": {
+      "status_counts": {
+        "extracted_ok": 35,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 37
+    },
+    "MS": {
+      "status_counts": {
+        "extracted_ok": 2,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 3
+    },
+    "NC": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 139,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 6
+      },
+      "total": 147
+    },
+    "ND": {
+      "status_counts": {
+        "extracted_ok": 50,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 54
+    },
+    "NE": {
+      "status_counts": {
+        "extracted_empty": 3,
+        "extracted_ok": 74,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 80
+    },
+    "NH": {
+      "status_counts": {
+        "extracted_ok": 26,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 27
+    },
+    "NJ": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 204,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 5
+      },
+      "total": 211
+    },
+    "NY": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 205,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 6
+      },
+      "total": 214
+    },
+    "OH": {
+      "status_counts": {
+        "extracted_ok": 197,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 200
+    },
+    "OK": {
+      "status_counts": {
+        "extracted_ok": 33,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 34
+    },
+    "OR": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 18
+      },
+      "total": 19
+    },
+    "PA": {
+      "status_counts": {
+        "extracted_ok": 119,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 121
+    },
+    "SC": {
+      "status_counts": {
+        "extracted_ok": 14,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 16
+    },
+    "SD": {
+      "status_counts": {
+        "extracted_ok": 48,
+        "extracted_suspected_bad_text": 4,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 53
+    },
+    "TN": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 64,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 66
+    },
+    "TX": {
+      "status_counts": {
+        "extracted_ok": 64,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 65
+    },
+    "UT": {
+      "status_counts": {
+        "extracted_ok": 22,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 24
+    },
+    "VA": {
+      "status_counts": {
+        "extracted_ok": 14
+      },
+      "total": 14
+    },
+    "VT": {
+      "status_counts": {
+        "extracted_ok": 59
+      },
+      "total": 59
+    },
+    "WA": {
+      "status_counts": {
+        "extracted_ok": 24,
+        "html_noisy_or_boilerplate": 3
+      },
+      "total": 27
+    },
+    "WI": {
+      "status_counts": {
+        "extracted_ok": 151,
+        "extracted_suspected_bad_text": 2,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 154
+    },
+    "WV": {
+      "status_counts": {
+        "extracted_ok": 15,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 17
+    }
+  },
+  "broad_state_4x2500_text_extraction_by_region": {
+    "Midwest": {
+      "status_counts": {
+        "extracted_empty": 9,
+        "extracted_ok": 1298,
+        "extracted_suspected_bad_text": 15,
+        "html_noisy_or_boilerplate": 39
+      },
+      "total": 1361
+    },
+    "Northeast": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_low_density": 2,
+        "extracted_ok": 743,
+        "extracted_suspected_bad_text": 4,
+        "html_noisy_or_boilerplate": 22
+      },
+      "total": 772
+    },
+    "South": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_ok": 606,
+        "extracted_suspected_bad_text": 13,
+        "html_noisy_or_boilerplate": 29
+      },
+      "total": 650
+    },
+    "West": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_low_density": 1,
+        "extracted_ok": 148,
+        "html_noisy_or_boilerplate": 6
+      },
+      "total": 157
+    }
+  }
 }

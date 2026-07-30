@@ -1,0 +1,92 @@
+{
+  "group_field": "possible_mechanism_hints",
+  "groups": {
+    "fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 42,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 43
+    },
+    "market_or_comparability_pressure": {
+      "status_counts": {
+        "extracted_ok": 10
+      },
+      "total": 10
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 16
+      },
+      "total": 16
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_empty": 4,
+        "extracted_ok": 1221,
+        "extracted_suspected_bad_text": 17,
+        "html_noisy_or_boilerplate": 40
+      },
+      "total": 1282
+    },
+    "non_safety_constraint_signal;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_empty": 2,
+        "extracted_ok": 86,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 89
+    },
+    "strike_or_no_strike_constraint": {
+      "status_counts": {
+        "extracted_low_density": 1,
+        "extracted_ok": 198,
+        "html_noisy_or_boilerplate": 2
+      },
+      "total": 201
+    },
+    "strike_or_no_strike_constraint;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 3
+      },
+      "total": 3
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 84,
+        "html_noisy_or_boilerplate": 1
+      },
+      "total": 85
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 2,
+        "extracted_suspected_bad_text": 1
+      },
+      "total": 3
+    },
+    "unknown": {
+      "status_counts": {
+        "extracted_empty": 8,
+        "extracted_low_density": 2,
+        "extracted_ok": 1129,
+        "extracted_suspected_bad_text": 13,
+        "html_noisy_or_boilerplate": 52
+      },
+      "total": 1204
+    }
+  },
+  "total_rows": 2940
+}

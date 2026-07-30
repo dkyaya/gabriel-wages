@@ -14,14 +14,20 @@ function decimal(value, digits = 1) {
 }
 
 export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
+  const latestExtraction = phase.broad_state_4x2500_text_extraction_available;
   const latestReadiness = phase.broad_state_4x2500_pdf_text_readiness_available;
   const latestSourceReview = phase.broad_state_4x2500_source_review_download_available;
   return (
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>{latestReadiness ? "Broad state 4 × 2,500 PDF/text readiness complete" : latestSourceReview ? "Broad state 4 × 2,500 source review/download complete" : phase.combined_pdf_text_readiness_available ? "Combined broad PDF/text-layer readiness complete" : phase.combined_source_review_download_available ? "Combined broad source review/download complete" : "Combined broad candidate review complete"}</h2>
-        {latestReadiness ? (
+        <h2>{latestExtraction ? "Broad state 4 × 2,500 text extraction complete" : latestReadiness ? "Broad state 4 × 2,500 PDF/text readiness complete" : latestSourceReview ? "Broad state 4 × 2,500 source review/download complete" : phase.combined_pdf_text_readiness_available ? "Combined broad PDF/text-layer readiness complete" : phase.combined_source_review_download_available ? "Combined broad source review/download complete" : "Combined broad candidate review complete"}</h2>
+        {latestExtraction ? (
+          <p>
+            All {formatNumber(phase.broad_state_4x2500_text_extraction_queue_count)} readiness-approved sources received one
+            non-OCR extraction outcome; {formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} are ready for exact span extraction.
+          </p>
+        ) : latestReadiness ? (
           <p>
             All {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_retained_count)} retained files received one
             technical-readiness status; {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} are approved for later non-OCR extraction.
@@ -61,7 +67,9 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       <article>
         <p className="eyebrow">Next authorized stage</p>
         <h2>{phase.next_phase}</h2>
-        <p>{latestReadiness
+        <p>{latestExtraction
+          ? "Use only the exact span-extraction-ready queue in four isolated lanes; OCR, rating, ingestion, codification, and analysis remain out of scope."
+          : latestReadiness
           ? "Use only the exact readiness-approved queue in four isolated text-extraction lanes; extracted text must remain outside Git, and OCR, rating, ingestion, codification, and analysis remain out of scope."
           : latestSourceReview
           ? "Use only this wave’s unique hashed retained local files in four PDF/text-readiness lanes; do not redownload, extract text, OCR, rate, ingest, codify, or treat retention as evidence."
@@ -77,6 +85,7 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
 
 export function ProjectPhasePanel({ phase }) {
   const progress = Math.min(100, Math.max(0, phase.progress_percentage));
+  const latestExtraction = phase.broad_state_4x2500_text_extraction_available;
   const latestReadiness = phase.broad_state_4x2500_pdf_text_readiness_available;
   const latestSourceReview = phase.broad_state_4x2500_source_review_download_available;
   return (
@@ -87,7 +96,9 @@ export function ProjectPhasePanel({ phase }) {
           <h2 id="project-phase-title">{phase.current_phase}</h2>
         </div>
         <StatusPill tone="verified">
-          {latestReadiness
+          {latestExtraction
+            ? `${formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} span-ready`
+            : latestReadiness
             ? `${formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} extraction-ready`
             : latestSourceReview
             ? `${formatNumber(phase.broad_state_4x2500_source_review_retained_count)} retained sources`
@@ -110,6 +121,9 @@ export function ProjectPhasePanel({ phase }) {
       </div>
 
       <div className="phase-metrics">
+        {latestExtraction && <div><span>Current extraction queue / extracted OK</span><strong>{formatNumber(phase.broad_state_4x2500_text_extraction_queue_count)} / {formatNumber(phase.broad_state_4x2500_text_extraction_ok_count)}</strong></div>}
+        {latestExtraction && <div><span>Span-extraction-ready</span><strong>{formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)}</strong></div>}
+        {latestExtraction && <div><span>Extracted text bytes</span><strong>{formatNumber(phase.broad_state_4x2500_text_extraction_total_bytes)}</strong></div>}
         {latestReadiness && <div><span>Current readiness reviewed / extraction-ready</span><strong>{formatNumber(phase.broad_state_4x2500_pdf_text_readiness_retained_count)} / {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)}</strong></div>}
         {latestReadiness && <div><span>Ready PDF / HTML / other</span><strong>{formatNumber(phase.broad_state_4x2500_pdf_text_readiness_parse_pdf_ready_count)} / {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_html_ready_count)} / {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_other_ready_count)}</strong></div>}
         {latestReadiness && <div><span>OCR later / oversized / locked</span><strong>{formatNumber(phase.broad_state_4x2500_pdf_text_readiness_ocr_later_count)} / {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_oversized_count)} / {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_locked_count)}</strong></div>}
@@ -148,7 +162,21 @@ export function ProjectPhasePanel({ phase }) {
           <p className="eyebrow">Current transition</p>
           <h3>{phase.next_phase}</h3>
         </div>
-        {latestSourceReview ? (
+        {latestExtraction ? (
+          <ol>
+            <li>Lock only the {formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} eligible extracted_ok sources</li>
+            <li>Use four independent span-extraction lanes with T+0/T+8/T+16/T+24 starts</li>
+            <li>Preserve exact source, page, offset, category, and extraction lineage</li>
+            <li>Keep OCR, rating, ingestion, codification, wage analysis, and causal claims out of scope</li>
+          </ol>
+        ) : latestReadiness ? (
+          <ol>
+            <li>Lock only the {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} readiness-approved retained files</li>
+            <li>Use four independent non-OCR text-extraction lanes with T+0/T+8/T+16/T+24 starts</li>
+            <li>Write full text only to ignored local artifact storage</li>
+            <li>Keep OCR, span extraction, rating, ingestion, codification, wage analysis, and causal claims out of scope</li>
+          </ol>
+        ) : latestSourceReview ? (
           <ol>
             <li>Lock only the {formatNumber(phase.broad_state_4x2500_source_review_retained_count)} unique hashed retained files from this wave</li>
             <li>Use four independent PDF/text-readiness lanes with T+0/T+8/T+16/T+24 starts</li>
@@ -2025,7 +2053,9 @@ export function VerificationPipeline({
           : `${verificationStatus.scheduled_pool_estimated_rounds} nominal rounds cover the scheduled pool; ${verificationStatus.full_backlog_estimated_rounds} cover every URL-bearing candidate row.`}
       </p>
       <p className="panel-note">
-        {phase.broad_state_4x2500_pdf_text_readiness_available
+        {phase.broad_state_4x2500_text_extraction_available
+          ? `Current next task: BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30 over exactly ${formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} extracted_ok sources in four staggered lanes; OCR and rating remain excluded.`
+          : phase.broad_state_4x2500_pdf_text_readiness_available
           ? `Current next task: BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 over exactly ${formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} readiness-approved retained files in four staggered lanes; OCR remains excluded.`
           : readiness.promotion_gate}
       </p>
@@ -2166,6 +2196,7 @@ export function MethodologyDefinitions() {
 }
 
 export function NextStepsPanel({ priority, phase }) {
+  const extractionComplete = phase.broad_state_4x2500_text_extraction_available;
   const readinessComplete = phase.broad_state_4x2500_pdf_text_readiness_available;
   const broadDownloadsComplete = phase.broad_state_4x2500_source_review_download_available;
   const downloadsComplete = broadDownloadsComplete || phase.combined_source_review_download_available;
@@ -2180,15 +2211,17 @@ export function NextStepsPanel({ priority, phase }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Next steps</p>
-          <h2 id="next-steps-title">{readinessComplete ? "Run four-lane text extraction over readiness-approved sources" : downloadsComplete ? "Run bounded PDF/text-layer readiness over retained local sources" : "Run bounded source review from the locked reviewed queue"}</h2>
+          <h2 id="next-steps-title">{extractionComplete ? "Run four-lane exact span extraction over eligible extracted text" : readinessComplete ? "Run four-lane text extraction over readiness-approved sources" : downloadsComplete ? "Run bounded PDF/text-layer readiness over retained local sources" : "Run bounded source review from the locked reviewed queue"}</h2>
         </div>
         <StatusPill tone="scout">PI-aligned strategy</StatusPill>
       </div>
       <div className="next-step-grid">
         <article className="recommended-step">
           <span>Immediate</span>
-          <h3>{readinessComplete ? "Authorize the exact readiness-approved extraction queue" : downloadsComplete ? "Authorize a bounded retained-file readiness pass" : "Authorize a bounded source-review/download wave"}</h3>
-          <p>{readinessComplete
+          <h3>{extractionComplete ? "Authorize the exact span-extraction-ready queue" : readinessComplete ? "Authorize the exact readiness-approved extraction queue" : downloadsComplete ? "Authorize a bounded retained-file readiness pass" : "Authorize a bounded source-review/download wave"}</h3>
+          <p>{extractionComplete
+            ? `Use only the ${formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} extracted_ok sources in four isolated lanes; preserve exact source lineage and keep OCR and rating excluded.`
+            : readinessComplete
             ? `Use only the ${formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} approved files in four isolated lanes; extracted text stays in ignored local storage and OCR remains excluded.`
             : downloadsComplete
             ? `Use only the ${formatNumber(retainedCount)} unique retained hashed local sources; revalidate path, size, and SHA-256 and do not access URLs or redownload.`
@@ -2209,7 +2242,7 @@ export function NextStepsPanel({ priority, phase }) {
       </div>
       <p className="panel-note">
         Historical discovery, verification, and candidate-review stages remain available above for provenance only. The current next task is
-        {readinessComplete ? " BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 in four staggered lanes" : downloadsComplete ? " a separately authorized retained-file PDF/text-layer readiness pass" : " a separately authorized bounded source-review/download wave"}; global analysis readiness remains false.
+        {extractionComplete ? " BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30 in four staggered lanes" : readinessComplete ? " BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 in four staggered lanes" : downloadsComplete ? " a separately authorized retained-file PDF/text-layer readiness pass" : " a separately authorized bounded source-review/download wave"}; global analysis readiness remains false.
       </p>
     </section>
   );

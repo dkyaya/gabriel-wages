@@ -418,7 +418,7 @@ function App() {
                 <MetricCard label="CBA hint concentration" value={`${((projectPhaseSummary.broad_state_4x2500_live_cba_concentration ?? 0) * 100).toFixed(1)}%`} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_non_cba_opportunity_count)} non-CBA or unresolved opportunities`} />
               )}
               {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Four-lane text extraction" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Four-lane PDF/text readiness" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Source review/download" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Readiness-approved local files only; no OCR, rating, ingestion, or codification" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Retained local files only; no URL access, extraction, or OCR" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Four lanes over reachable metadata outcomes; retained sources stay outside Git" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
+                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_text_extraction_available ? "Four-lane span extraction" : projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Four-lane text extraction" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Four-lane PDF/text readiness" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Source review/download" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_text_extraction_available ? "Exact text only; no OCR, rating, ingestion, codification, or analysis" : projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Readiness-approved local files only; no OCR, rating, ingestion, or codification" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Retained local files only; no URL access, extraction, or OCR" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Four lanes over reachable metadata outcomes; retained sources stay outside Git" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
               )}
               {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
                 <MetricCard label="Verification-ready queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verification_ready_queue_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_ready_priority_counts)} />
@@ -473,6 +473,18 @@ function App() {
               )}
               {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
                 <MetricCard label="Extraction-ready geography" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_state ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_region)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
+                <MetricCard label="Current text-extraction queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_queue_count)} note="Four independently checkpointed lanes of 735 sources" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
+                <MetricCard label="Extracted OK" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_ok_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_total_bytes)} local text bytes · full text outside Git`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
+                <MetricCard label="Extraction quality outcomes" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_queue_count - projectPhaseSummary.broad_state_4x2500_text_extraction_ok_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_text_extraction_status_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
+                <MetricCard label="Span-extraction-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_span_ready_count)} note="Eligible extracted_ok rows only; low-density and noisy rows excluded" />
               )}
               <MetricCard
                 label="Globally usable descriptive evidence"

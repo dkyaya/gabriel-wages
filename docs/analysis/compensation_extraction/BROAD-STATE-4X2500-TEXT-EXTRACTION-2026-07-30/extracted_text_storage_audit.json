@@ -1,0 +1,12 @@
+{
+  "all_paths_under_artifact_root": true,
+  "artifact_root": "artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30",
+  "counts_reconcile": true,
+  "git_ignored": true,
+  "manifest_artifact_count": 2940,
+  "manifest_bytes": 182067064,
+  "observed_bytes": 182067064,
+  "observed_text_file_count": 2940,
+  "passed": true,
+  "tracked_artifact_count": 0
+}

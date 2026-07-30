@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "build_command": "npm run build",
+  "working_directory": "docs/dashboard",
+  "builder_command": "python scripts/build_dashboard_data.py",
+  "dashboard_data_generated": true,
+  "vite_modules_transformed": 48,
+  "build_artifact_committed": false,
+  "deployment_mechanism": "GitHub Actions Pages artifact via .github/workflows/deploy-dashboard.yml",
+  "scout_coverage_municipalities": 16887,
+  "text_extraction_queue": 2940,
+  "extracted_ok": 2795,
+  "span_extraction_ready": 2795,
+  "completed_at": "2026-07-30T17:01:20Z"
+}

@@ -1,0 +1,27 @@
+{
+  "full_text_cleanup_completed": true,
+  "representative_rows": [
+    {
+      "character_count": 64248,
+      "method": "poppler_pdftotext_layout_utf8_non_ocr",
+      "readiness_id": "B4X2500RDY-20260730-38550f7068f1c5efb020",
+      "source_type": "parse_text_pdf_ready",
+      "status": "extracted_suspected_bad_text"
+    },
+    {
+      "character_count": 1865,
+      "method": "stdlib_htmlparser_visible_text_cleanup",
+      "readiness_id": "B4X2500RDY-20260730-6e00eab47c6c7e4060a5",
+      "source_type": "html_text_ready",
+      "status": "extracted_ok"
+    },
+    {
+      "character_count": 8862,
+      "method": "macos_textutil_non_ocr",
+      "readiness_id": "B4X2500RDY-20260730-81ede07cb642c8f351b8",
+      "source_type": "other_document_text_ready",
+      "status": "extracted_ok"
+    }
+  ],
+  "status": "passed"
+}

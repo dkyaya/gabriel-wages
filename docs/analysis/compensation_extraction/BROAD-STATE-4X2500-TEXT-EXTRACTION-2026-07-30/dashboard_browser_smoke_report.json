@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "controller": "Playwright MCP fallback after in-app browser discovery returned no available browser",
+  "url": "http://127.0.0.1:4173/gabriel-wages/?dashboard_smoke=20260730_text_extraction_local_final",
+  "page_title": "Municipal Labor Evidence Dashboard",
+  "visible_checks": {
+    "scout_coverage_16887": true,
+    "map_total_scout_coverage_only": true,
+    "retained_sources_3672": true,
+    "retained_pdf_html_other_3248_350_74": true,
+    "readiness_queue_2940": true,
+    "ocr_later_601": true,
+    "text_extraction_current": true,
+    "text_extraction_queue_2940": true,
+    "extracted_ok_2795": true,
+    "quality_problem_count_145": true,
+    "span_extraction_ready_2795": true,
+    "next_task_span_extraction": true,
+    "wage_gap_blocked_pending_normalization": true,
+    "causal_blocked_pending_matched_structure": true,
+    "global_readiness_not_fully_passed": true,
+    "current_report_points_to_text_extraction_summary": true,
+    "stale_readiness_only_transition_absent": true
+  },
+  "application_console_error_count": 0,
+  "screenshot": "dashboard_local_smoke_final.png",
+  "completed_at": "2026-07-30T17:02:25Z"
+}

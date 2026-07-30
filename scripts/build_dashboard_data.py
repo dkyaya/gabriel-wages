@@ -1700,6 +1700,11 @@ BROAD_STATE_4X2500_PDF_TEXT_READINESS_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30"
 )
+BROAD_STATE_4X2500_TEXT_EXTRACTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6158,6 +6163,79 @@ def broad_state_4x2500_pdf_text_readiness_status() -> tuple[bool, dict[str, Any]
     }
 
 
+def broad_state_4x2500_text_extraction_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed 2,940-source non-OCR extraction wave."""
+    directory = BROAD_STATE_4X2500_TEXT_EXTRACTION_DIR
+    required = (
+        directory / "text_extraction_summary.json",
+        directory / "text_extraction_manifest.json",
+        directory / "text_extraction_lane_distribution.json",
+        directory / "merged_text_extraction_results.csv",
+        directory / "extracted_text_manifest.csv",
+        directory / "span_extraction_ready_queue.csv",
+        directory / "span_extraction_ready_manifest.json",
+        directory / "extracted_text_storage_audit.json",
+        directory / "retained_source_hash_recheck_report.json",
+        directory / "forbidden_action_audit.json",
+        directory / "dashboard_status_input.json",
+        directory / "source_family_extraction_summary.json",
+        directory / "geography_extraction_summary.json",
+        directory / "cba_non_cba_extraction_summary.json",
+        directory / "mechanism_hint_extraction_summary.json",
+        directory / "text_extraction_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    summary, manifest, lanes, results, artifacts, span, span_manifest, storage, hashes, forbidden, dashboard, source_family, geography, cba, mechanism, _ = (
+        read_csv(path) if path.suffix == ".csv" else read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    )
+    statuses = summary.get("extraction_status_counts", {})
+    gates = (
+        summary.get("decision") == "broad_state_4x2500_text_extraction_completed_span_extraction_ready"
+        and summary.get("total_extraction_queue") == 2940
+        and summary.get("input_source_type_counts") == {
+            "parse_text_pdf_ready": 2577, "html_text_ready": 291, "other_document_text_ready": 72
+        }
+        and len(results) == len({row["extraction_id"] for row in results}) == 2940
+        and sum(as_int(value) for value in statuses.values()) == 2940
+        and len(artifacts) == summary.get("extracted_text_artifact_count")
+        and len(span) == summary.get("span_extraction_ready_count")
+        and all(row.get("extraction_status") == "extracted_ok" for row in span)
+        and span_manifest.get("rows") == len(span)
+        and lanes.get("total_rows") == 2940
+        and all(item.get("rows") == 735 for item in lanes.get("lanes", {}).values())
+        and hashes.get("all_hashes_match") is True
+        and storage.get("passed") is True
+        and forbidden.get("passed") is True
+        and dashboard.get("map_semantics") == "total_scout_coverage_only"
+        and dashboard.get("scout_coverage_municipalities") == 16887
+        and summary.get("ocr_occurred") is False
+        and summary.get("span_extraction_occurred") is False
+        and summary.get("global_analysis_readiness") == "partial_diagnostic_only_not_final"
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 text-extraction package fails dashboard gates")
+    extracted_ok_by_type = Counter(
+        row.get("primary_readiness_status") for row in results
+        if row.get("extraction_status") == "extracted_ok"
+    )
+    return True, {
+        **summary,
+        "extracted_ok_by_source_type": dict(extracted_ok_by_type),
+        "extraction_by_source_family": source_family.get("groups", {}),
+        "extraction_by_state": geography.get("states", {}),
+        "extraction_by_region": geography.get("regions", {}),
+        "extraction_by_cba_hint": cba.get("groups", {}),
+        "extraction_by_mechanism_hint": mechanism.get("groups", {}),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/"
+            "text_extraction_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6284,6 +6362,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_readiness_available, broad_4x2500_readiness = (
         broad_state_4x2500_pdf_text_readiness_status()
+    )
+    broad_4x2500_extraction_available, broad_4x2500_extraction = (
+        broad_state_4x2500_text_extraction_status()
     )
     published_reports = [
         *(
@@ -6942,6 +7023,33 @@ def build_reports_index_layer(
                 {"label": "retained sources", "value": broad_4x2500_readiness["retained_source_count"]},
                 {"label": "extraction ready", "value": broad_4x2500_readiness["text_extraction_ready_count"]},
                 {"label": "OCR later", "value": broad_4x2500_readiness["ocr_later_count"]},
+            ],
+        })
+    if broad_4x2500_extraction_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-pdf-text-readiness-2026-07-30":
+                report["link_label"] = "Open historical 4 × 2,500 PDF/text-readiness report"
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-text-extraction-2026-07-30",
+            "title": "Broad State 4 × 2,500 Text Extraction",
+            "report_type": "Current bounded non-OCR text-extraction result",
+            "date": "2026-07-30",
+            "checkpoint": f"{broad_4x2500_extraction['span_extraction_ready_count']:,} span-extraction-ready sources",
+            "summary": (
+                "All 2,940 readiness-approved sources received one non-OCR extraction outcome across four lanes. "
+                "Full text remains in ignored local storage; exact span extraction is next."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "text extraction", "non-OCR"],
+            "current": True, "historical": False,
+            "href": repository_root_url + broad_4x2500_extraction["dashboard_result_path"],
+            "link_label": "Open current 4 × 2,500 text-extraction report",
+            "scope_metrics": [
+                {"label": "extraction queue", "value": broad_4x2500_extraction["total_extraction_queue"]},
+                {"label": "extracted OK", "value": broad_4x2500_extraction["extraction_status_counts"].get("extracted_ok", 0)},
+                {"label": "span ready", "value": broad_4x2500_extraction["span_extraction_ready_count"]},
             ],
         })
     if live_available:
@@ -9446,6 +9554,9 @@ def build_project_phase_summary(
     broad_4x2500_readiness_available, broad_4x2500_readiness = (
         broad_state_4x2500_pdf_text_readiness_status()
     )
+    broad_4x2500_extraction_available, broad_4x2500_extraction = (
+        broad_state_4x2500_text_extraction_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -10354,6 +10465,63 @@ def build_project_phase_summary(
                 "rebuild and visibly smoke-test the dashboard while preserving scout-only map coverage",
             ],
             "last_updated_context": "broad_state_4x2500_pdf_text_readiness_complete_text_extraction_ready",
+            "dashboard_map_filter": "total_scout_coverage_only",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_matched_structure",
+        })
+    if broad_4x2500_extraction_available:
+        statuses = broad_4x2500_extraction["extraction_status_counts"]
+        by_type = broad_4x2500_extraction["extracted_ok_by_source_type"]
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_text_extraction_complete",
+            "current_phase": "Broad state 4 × 2,500 text extraction complete; four-lane span extraction ready next",
+            "current_phase_code": broad_4x2500_extraction["decision"],
+            "current_evidence_status": "broad_4x2500_text_extraction_complete_spans_unextracted",
+            "broad_state_4x2500_text_extraction_available": True,
+            "broad_state_4x2500_text_extraction_decision": broad_4x2500_extraction["decision"],
+            "broad_state_4x2500_text_extraction_queue_count": broad_4x2500_extraction["total_extraction_queue"],
+            "broad_state_4x2500_text_extraction_lane_counts": broad_4x2500_extraction["lane_counts"],
+            "broad_state_4x2500_text_extraction_status_counts": statuses,
+            "broad_state_4x2500_text_extraction_ok_count": statuses.get("extracted_ok", 0),
+            "broad_state_4x2500_text_extraction_empty_count": statuses.get("extracted_empty", 0),
+            "broad_state_4x2500_text_extraction_low_density_count": statuses.get("extracted_low_density", 0),
+            "broad_state_4x2500_text_extraction_bad_text_count": statuses.get("extracted_suspected_bad_text", 0),
+            "broad_state_4x2500_text_extraction_html_noisy_count": statuses.get("html_noisy_or_boilerplate", 0),
+            "broad_state_4x2500_text_extraction_error_count": statuses.get("extraction_error", 0),
+            "broad_state_4x2500_text_extraction_span_ready_count": broad_4x2500_extraction["span_extraction_ready_count"],
+            "broad_state_4x2500_text_extraction_total_bytes": broad_4x2500_extraction["extracted_text_total_bytes"],
+            "broad_state_4x2500_text_extraction_by_source_family": broad_4x2500_extraction["extraction_by_source_family"],
+            "broad_state_4x2500_text_extraction_by_state": broad_4x2500_extraction["extraction_by_state"],
+            "broad_state_4x2500_text_extraction_by_region": broad_4x2500_extraction["extraction_by_region"],
+            "text_extraction_queue_size": broad_4x2500_extraction["total_extraction_queue"],
+            "text_extraction_attempted_count": broad_4x2500_extraction["total_extraction_queue"],
+            "text_extracted_ok_count": statuses.get("extracted_ok", 0),
+            "text_extraction_pdf_extracted_ok_count": by_type.get("parse_text_pdf_ready", 0),
+            "text_extraction_html_extracted_ok_count": by_type.get("html_text_ready", 0),
+            "text_extraction_other_document_extracted_ok_count": by_type.get("other_document_text_ready", 0),
+            "text_extraction_empty_too_short_count": statuses.get("extracted_empty", 0),
+            "text_extraction_low_density_count": statuses.get("extracted_low_density", 0),
+            "text_extraction_bad_text_layer_count": statuses.get("extracted_suspected_bad_text", 0),
+            "text_extraction_html_noisy_shell_count": statuses.get("html_noisy_or_boilerplate", 0),
+            "text_extraction_other_document_unsupported_count": statuses.get("unsupported_despite_readiness", 0),
+            "text_extraction_error_count": statuses.get("extraction_error", 0),
+            "text_extraction_artifact_root": broad_4x2500_extraction["artifact_root"],
+            "current_report_title": "Broad State 4 × 2,500 Text Extraction",
+            "current_report_path": broad_4x2500_extraction["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_extraction["dashboard_result_path"],
+            "next_task": "run BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30 over the exact span-extraction-ready queue in four independent staggered lanes",
+            "next_phase": "four-lane broad-state 4 × 2,500 span extraction",
+            "next_phase_sequence": [
+                "lock only eligible extracted_ok rows from the span-extraction-ready queue",
+                "split the exact span queue into four independent staggered lanes",
+                "checkpoint every source and preserve exact source/page/offset lineage",
+                "do not OCR, rate, ingest, codify, normalize wages, run regressions, or make causal claims",
+                "rebuild and visibly smoke-test the local and public dashboard",
+            ],
+            "last_updated_context": "broad_state_4x2500_text_extraction_complete_span_extraction_ready",
             "dashboard_map_filter": "total_scout_coverage_only",
             "actual_scout_covered_municipalities": 16887,
             "global_analysis_readiness": False,

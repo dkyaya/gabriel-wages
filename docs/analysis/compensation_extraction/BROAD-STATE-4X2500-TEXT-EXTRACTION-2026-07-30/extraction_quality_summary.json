@@ -1,0 +1,16 @@
+{
+  "html_noisy_included_in_span_queue": 0,
+  "low_density_included_in_span_queue": 0,
+  "span_ready_policy": "extracted_ok_only",
+  "status_counts": {
+    "extracted_empty": 14,
+    "extracted_low_density": 3,
+    "extracted_ok": 2795,
+    "extracted_suspected_bad_text": 32,
+    "extraction_error": 0,
+    "hash_mismatch": 0,
+    "html_noisy_or_boilerplate": 96,
+    "source_file_missing": 0,
+    "unsupported_despite_readiness": 0
+  }
+}

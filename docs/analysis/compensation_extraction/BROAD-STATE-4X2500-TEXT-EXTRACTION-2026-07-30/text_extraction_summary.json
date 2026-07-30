@@ -1,0 +1,41 @@
+{
+  "artifact_root": "artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30",
+  "completed_at": "2026-07-30T17:00:42Z",
+  "decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
+  "extracted_text_artifact_count": 2940,
+  "extracted_text_total_bytes": 182067064,
+  "extraction_status_counts": {
+    "extracted_empty": 14,
+    "extracted_low_density": 3,
+    "extracted_ok": 2795,
+    "extracted_suspected_bad_text": 32,
+    "extraction_error": 0,
+    "hash_mismatch": 0,
+    "html_noisy_or_boilerplate": 96,
+    "source_file_missing": 0,
+    "unsupported_despite_readiness": 0
+  },
+  "global_analysis_readiness": "partial_diagnostic_only_not_final",
+  "input_source_type_counts": {
+    "html_text_ready": 291,
+    "other_document_text_ready": 72,
+    "parse_text_pdf_ready": 2577
+  },
+  "lane_counts": {
+    "text_extraction_lane_001": 735,
+    "text_extraction_lane_002": 735,
+    "text_extraction_lane_003": 735,
+    "text_extraction_lane_004": 735
+  },
+  "ocr_occurred": false,
+  "rating_ingestion_codification_occurred": false,
+  "span_extraction_occurred": false,
+  "span_extraction_ready_count": 2795,
+  "span_ready_eligible_statuses": [
+    "extracted_ok"
+  ],
+  "successful_or_text_bearing_count": 2940,
+  "task_id": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
+  "total_extraction_queue": 2940,
+  "unique_extracted_text_hashes": 2939
+}

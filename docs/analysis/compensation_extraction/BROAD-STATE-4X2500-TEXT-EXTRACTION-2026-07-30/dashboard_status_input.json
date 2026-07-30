@@ -1,0 +1,19 @@
+{
+  "causal_readiness": "blocked_pending_matched_structure",
+  "extracted_empty": 14,
+  "extracted_low_density": 3,
+  "extracted_ok": 2795,
+  "extracted_suspected_bad_text": 32,
+  "extracted_text_total_bytes": 182067064,
+  "extraction_error": 0,
+  "html_noisy_or_boilerplate": 96,
+  "map_semantics": "total_scout_coverage_only",
+  "next_task": "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30",
+  "overall_global_readiness": "partial_diagnostic_only_not_final",
+  "queue_size": 2940,
+  "scout_coverage_municipalities": 16887,
+  "span_extraction_ready": 2795,
+  "stage": "text_extraction_completed",
+  "task_id": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
+  "wage_gap_readiness": "blocked_pending_normalization"
+}

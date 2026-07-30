@@ -1,0 +1,33 @@
+{
+  "group_field": "priority_bucket",
+  "groups": {
+    "high_priority_verification_ready": {
+      "status_counts": {
+        "extracted_empty": 13,
+        "extracted_low_density": 3,
+        "extracted_ok": 2125,
+        "extracted_suspected_bad_text": 23,
+        "html_noisy_or_boilerplate": 42
+      },
+      "total": 2206
+    },
+    "low_priority_verification_ready": {
+      "status_counts": {
+        "extracted_ok": 71,
+        "extracted_suspected_bad_text": 1,
+        "html_noisy_or_boilerplate": 10
+      },
+      "total": 82
+    },
+    "medium_priority_verification_ready": {
+      "status_counts": {
+        "extracted_empty": 1,
+        "extracted_ok": 599,
+        "extracted_suspected_bad_text": 8,
+        "html_noisy_or_boilerplate": 44
+      },
+      "total": 652
+    }
+  },
+  "total_rows": 2940
+}

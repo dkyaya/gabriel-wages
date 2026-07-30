@@ -1,0 +1,11 @@
+{
+  "causal_claims_made": false,
+  "full_text_written_to_tracked_storage": false,
+  "global_readiness_advanced": false,
+  "ingestion_or_codification_occurred": false,
+  "ocr_occurred": false,
+  "passed": true,
+  "rating_occurred": false,
+  "span_extraction_occurred": false,
+  "wage_gap_or_regression_occurred": false
+}
