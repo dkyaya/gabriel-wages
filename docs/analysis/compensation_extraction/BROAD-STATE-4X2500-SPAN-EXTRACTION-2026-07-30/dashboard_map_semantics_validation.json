@@ -10,6 +10,7 @@
   "scout_covered_municipalities": 16887,
   "local_build_passed": true,
   "local_browser_smoke_passed": true,
-  "public_pages_smoke_status": "pending_after_commit_and_deployment",
-  "status": "local_visible_validation_passed_pending_public_pages"
+  "public_pages_deployed_commit": "6688a54ec46703cbba3874c60f8bc068b79f6ddf",
+  "public_pages_smoke_status": "public_pages_visible_current_passed",
+  "status": "local_and_public_visible_validation_passed"
 }

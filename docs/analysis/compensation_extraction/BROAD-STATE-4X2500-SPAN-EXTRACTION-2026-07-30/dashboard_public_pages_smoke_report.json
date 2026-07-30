@@ -1,7 +1,28 @@
 {
-  "checked_at": null,
+  "browser_controller": "Playwright MCP",
+  "checked_at": "2026-07-30T17:54:30Z",
+  "console_error_count": 0,
+  "deployed_commit": "6688a54ec46703cbba3874c60f8bc068b79f6ddf",
+  "deployment_mechanism": "GitHub Actions Pages artifact from .github/workflows/deploy-dashboard.yml",
+  "deployment_run_id": 30567892685,
+  "deployment_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30567892685",
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
-  "status": "public_pages_deployment_pending_after_local_repair",
-  "visible_checks": {},
-  "note": "Public validation will run after the span-extraction metadata and dashboard source/data commit deploys through GitHub Actions Pages."
+  "smoke_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_span_extraction_1754",
+  "status": "public_pages_visible_current_passed",
+  "visible_checks": {
+    "causal_readiness_blocked_pending_matched_structure": true,
+    "current_stage_span_extraction_complete": true,
+    "global_analysis_readiness_false": true,
+    "map_denominator_visible_for_available_geographies": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "map_rate_formula_visible": true,
+    "map_raw_scout_count_context_visible": true,
+    "next_task_span_rating": true,
+    "positive_span_sources_2268": true,
+    "scout_coverage_count_16887": true,
+    "span_candidates_19118": true,
+    "span_extraction_queue_2795": true,
+    "span_rating_ready_18612": true,
+    "wage_gap_readiness_blocked_pending_normalization": true
+  }
 }

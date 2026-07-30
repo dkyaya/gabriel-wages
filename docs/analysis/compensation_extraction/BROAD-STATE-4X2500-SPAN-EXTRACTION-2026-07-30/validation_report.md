@@ -28,6 +28,6 @@
 - PASS — 25_no_artifacts_tracked
 - PASS — 26_dashboard_local_build
 - PASS — 27_dashboard_local_browser_smoke
-- PENDING — 28_dashboard_public_smoke
+- PASS — 28_dashboard_public_smoke
 - PASS — 29_staged_file_audit
 - PASS — 30_large_file_audit
