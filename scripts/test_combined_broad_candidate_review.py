@@ -118,7 +118,7 @@ def main() -> None:
     assert "urllib.request" not in source and "urlopen" not in source
 
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
-    assert map_source.count('key: "total_scout_coverage_count"') == 1
+    assert map_source.count('key: "scout_coverage_rate"') == 1
     phase = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
     # The candidate-review test also guards that later broad-state phases advance
     # these cumulative dashboard totals without changing scout-only map semantics.

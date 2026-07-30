@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "arbitration_or_factfinding": 113,
+    "automatic_CPI_COLA_or_indexing": 395,
+    "classification_or_civil_service_rule": 1209,
+    "collective_bargaining_process": 1418,
+    "council_or_board_approval": 792,
+    "fiscal_constraint_or_budget_limit": 97,
+    "market_comparability": 118,
+    "non_safety_constraint_or_delay": 1,
+    "parity_or_internal_equity": 51,
+    "recruitment_or_retention": 795,
+    "retroactivity_or_implementation_timing": 383,
+    "safety_specific_priority_or_exception": 324,
+    "staffing_shortage_or_operational_pressure": 1476,
+    "strike_or_no_strike_constraint": 555,
+    "unknown_qualitative_mechanism": 66
+  },
+  "type_assignments": 7793
+}

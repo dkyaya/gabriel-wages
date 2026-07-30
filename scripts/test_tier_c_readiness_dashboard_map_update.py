@@ -99,7 +99,7 @@ def main() -> None:
     assert phase["tier_c_text_extraction_ready_count"] == 378
     assert phase["future_scout_default"] == "broad_state_by_state_geographic_and_source_family_diverse"
     assert phase["global_analysis_readiness"] is False
-    assert state_summary["metadata"]["map_data_date"] == "2026-07-27"
+    assert state_summary["metadata"]["map_data_date"] == "2026-07-30"
     assert state_summary["totals"]["tier_c_retained_sources"] == 463
     assert state_summary["totals"]["tier_c_text_extraction_ready_sources"] == 378
     assert dashboard_map["retained_source_count"] == 463

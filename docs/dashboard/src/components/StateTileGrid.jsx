@@ -16,7 +16,10 @@ export function StateTileGrid({ states, selectedCode, onSelect, metric, metricKe
     <div className="tile-map" aria-label={`US state tile-grid choropleth colored by ${metric.label}`}>
       {states.map((state) => {
         const [row, column] = TILE_POSITIONS[state.state] ?? [9, 1];
-        const value = state[metricKey] ?? 0;
+        const value = state[metricKey];
+        const detail = state.coverage_rate_status === "coverage_rate_unavailable"
+          ? "coverage rate unavailable"
+          : `${state.total_scout_coverage_count} of ${state.municipality_universe} eligible/known municipalities scout covered`;
         return (
           <button
             className={`state-tile metric-band-${valueBand(value, max)} ${state.state === selectedCode ? "selected" : ""}`}
@@ -24,8 +27,8 @@ export function StateTileGrid({ states, selectedCode, onSelect, metric, metricKe
             onClick={() => onSelect(state.state)}
             style={{ gridRow: row, gridColumn: column }}
             aria-pressed={state.state === selectedCode}
-            aria-label={`${state.state_name}: ${metric.label} ${metric.format(value)}`}
-            title={`${state.state_name}\n${metric.label}: ${metric.format(value)}`}
+            aria-label={`${state.state_name}: ${metric.label} ${metric.format(value)}; ${detail}`}
+            title={`${state.state_name}\n${metric.label}: ${metric.format(value)}\n${detail}`}
           >
             <span>{state.state}</span>
             <small>{metric.format(value)}</small>

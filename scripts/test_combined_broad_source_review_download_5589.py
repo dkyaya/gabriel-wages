@@ -150,7 +150,7 @@ def main() -> None:
     assert phase["dashboard_map_filter"] == "total_scout_coverage_only"
     assert phase["global_analysis_readiness"] is False
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
-    assert map_source.count('key: "total_scout_coverage_count"') == 1
+    assert map_source.count('key: "scout_coverage_rate"') == 1
     reports = read_json(ROOT / "docs/dashboard/data/reports_index.json")["reports"]
     current = [report for report in reports if report["current"]]
     assert len(current) == 1 and current[0]["id"] in {

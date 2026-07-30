@@ -1,0 +1,41 @@
+{
+  "group_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_hint": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 391,
+        "fiscal_or_budget_context": 3,
+        "market_or_comparability_context": 132,
+        "mixed_quantitative_qualitative": 60,
+        "non_base_compensation": 1671,
+        "qualitative_mechanism": 1542,
+        "quantitative_compensation": 1617,
+        "source_navigation_reference": 68,
+        "weak_or_unclear_compensation_reference": 4
+      },
+      "positive_source_count": 379,
+      "rating_ready_span_count": 5416,
+      "source_count": 388,
+      "span_candidate_count": 5488
+    },
+    "non_cba_or_other_hint": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 1123,
+        "fiscal_or_budget_context": 93,
+        "market_or_comparability_context": 760,
+        "mixed_quantitative_qualitative": 420,
+        "non_base_compensation": 2668,
+        "qualitative_mechanism": 2991,
+        "quantitative_compensation": 5141,
+        "source_navigation_reference": 97,
+        "weak_or_unclear_compensation_reference": 337
+      },
+      "positive_source_count": 1889,
+      "rating_ready_span_count": 13196,
+      "source_count": 2407,
+      "span_candidate_count": 13630
+    }
+  },
+  "total_sources": 2795,
+  "total_spans": 19118
+}

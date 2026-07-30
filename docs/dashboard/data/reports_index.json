@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T17:00:52Z",
+  "generated_at": "2026-07-30T17:49:26Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-text-extraction-2026-07-30",
-      "title": "Broad State 4 × 2,500 Text Extraction",
-      "report_type": "Current bounded non-OCR text-extraction result",
+      "id": "broad-state-4x2500-span-extraction-2026-07-30",
+      "title": "Broad State 4 × 2,500 Span Extraction",
+      "report_type": "Current bounded deterministic exact-span result",
       "date": "2026-07-30",
-      "checkpoint": "2,795 span-extraction-ready sources",
-      "summary": "All 2,940 readiness-approved sources received one non-OCR extraction outcome across four lanes. Full text remains in ignored local storage; exact span extraction is next.",
+      "checkpoint": "18,612 span-rating-ready candidates",
+      "summary": "All 2,795 extracted-ok sources received one deterministic span outcome across four lanes. Candidates are bounded verbatim substrings with validated offsets and hashes; rating is next.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "text extraction",
-        "non-OCR"
+        "exact spans",
+        "rating ready"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.md",
-      "link_label": "Open current 4 × 2,500 text-extraction report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_extraction_summary.md",
+      "link_label": "Open current 4 × 2,500 span-extraction report",
       "scope_metrics": [
         {
-          "label": "extraction queue",
-          "value": 2940
-        },
-        {
-          "label": "extracted OK",
+          "label": "span-source queue",
           "value": 2795
         },
         {
-          "label": "span ready",
-          "value": 2795
+          "label": "positive sources",
+          "value": 2268
+        },
+        {
+          "label": "rating ready",
+          "value": 18612
         }
       ]
     },
@@ -69,6 +69,38 @@
         {
           "label": "candidate rows",
           "value": 7014
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-text-extraction-2026-07-30",
+      "title": "Broad State 4 × 2,500 Text Extraction",
+      "report_type": "Current bounded non-OCR text-extraction result",
+      "date": "2026-07-30",
+      "checkpoint": "2,795 span-extraction-ready sources",
+      "summary": "All 2,940 readiness-approved sources received one non-OCR extraction outcome across four lanes. Full text remains in ignored local storage; exact span extraction is next.",
+      "tags": [
+        "broad scout",
+        "4x2500",
+        "text extraction",
+        "non-OCR"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.md",
+      "link_label": "Open historical 4 × 2,500 text-extraction report",
+      "scope_metrics": [
+        {
+          "label": "extraction queue",
+          "value": 2940
+        },
+        {
+          "label": "extracted OK",
+          "value": 2795
+        },
+        {
+          "label": "span ready",
+          "value": 2795
         }
       ]
     },

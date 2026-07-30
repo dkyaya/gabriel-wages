@@ -1,0 +1,11 @@
+{
+  "build_command": "npm run build",
+  "dashboard_app": "docs/dashboard",
+  "generated_at": "2026-07-30T17:50:00Z",
+  "github_pages_base_path": "/gabriel-wages/",
+  "output_directory": "docs/dashboard/dist",
+  "status": "passed",
+  "warnings": [
+    "Vite emitted its standard large-chunk advisory; the build completed successfully."
+  ]
+}

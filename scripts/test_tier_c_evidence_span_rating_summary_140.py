@@ -89,7 +89,7 @@ def main() -> None:
     )
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
-    assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"
+    assert state["metric_definition"]["map_color_metric"] == "scout_coverage_rate"
 
     future = (runner.OUTPUT_DIR / "next_tier_c_memo_supplement_prompt.md").read_text().casefold()
     for phrase in (

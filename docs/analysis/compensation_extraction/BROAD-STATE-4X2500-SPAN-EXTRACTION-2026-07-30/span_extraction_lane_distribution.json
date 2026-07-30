@@ -1,0 +1,30 @@
+{
+  "assignment": "deterministic source-type-stratified round-robin with exact hard caps",
+  "lanes": {
+    "span_extraction_lane_001": {
+      "csv_sha256": "086442f5442a816520a311227dcc159669197496a2a9f930d337f8f91f8dd16d",
+      "jsonl_sha256": "168e90247ab4ede95da3f4025189ba63872e070addfdc3c9c2424dc5b5747064",
+      "required_start_delay_seconds": 0,
+      "rows": 699
+    },
+    "span_extraction_lane_002": {
+      "csv_sha256": "7be3e03c4bc2cc6073e33d3fbef6e856524d825f7ccb0cd139c334dc5c0f65e6",
+      "jsonl_sha256": "8f10b2671cc176b154aa0c68a934b8094e9bdd5e43a0e2aade6cf20047d4e8f3",
+      "required_start_delay_seconds": 480,
+      "rows": 699
+    },
+    "span_extraction_lane_003": {
+      "csv_sha256": "7fb10d4777f2612166fe8bd33e05f048acd5eca84a51812de684d6de2aa17941",
+      "jsonl_sha256": "774372d159f7d927fbfabd9bd96520698e651ce876ea893a405c64bb944eaf4b",
+      "required_start_delay_seconds": 960,
+      "rows": 699
+    },
+    "span_extraction_lane_004": {
+      "csv_sha256": "d99ebec471c2e962403026c1a43448b462be9558c83f561a49c6c74ec936ffb8",
+      "jsonl_sha256": "91d6a193b2171a0e35c5ff7ed16f2f270b7da3d928507888e18f5c230972e271",
+      "required_start_delay_seconds": 1440,
+      "rows": 698
+    }
+  },
+  "total_rows": 2795
+}

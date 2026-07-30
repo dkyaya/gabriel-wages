@@ -1,0 +1,7 @@
+{
+  "checked_at": null,
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "status": "public_pages_deployment_pending_after_local_repair",
+  "visible_checks": {},
+  "note": "Public validation will run after the span-extraction metadata and dashboard source/data commit deploys through GitHub Actions Pages."
+}

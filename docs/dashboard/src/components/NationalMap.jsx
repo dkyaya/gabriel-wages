@@ -16,7 +16,7 @@ export function NationalMap({ states, selectedCode, onSelect, mapDataDate }) {
     <article className="panel map-panel no-print" aria-labelledby="national-map-title">
       <div className="section-heading map-heading">
         <div>
-          <p className="eyebrow">Total scout coverage · only map layer</p>
+          <p className="eyebrow">Scout coverage rate · only map layer</p>
           <h2 id="national-map-title">Where local source scouting has run</h2>
           <p className="quiet-label">Map data date: {mapDataDate}</p>
         </div>
@@ -25,22 +25,23 @@ export function NationalMap({ states, selectedCode, onSelect, mapDataDate }) {
           <button type="button" className={mapMode === "tile" ? "active" : ""} aria-pressed={mapMode === "tile"} onClick={() => setMapMode("tile")}>Tile grid</button>
         </div>
       </div>
-      <div className="map-status-note" role="note"><strong>Coverage map only.</strong> It shows total scout-covered municipalities. Mechanism, source-family, readiness, extraction, and rating details are reported outside the map. This does not establish national representativeness, wage differences, or causation.</div>
+      <div className="map-status-note" role="note"><strong>Scout-coverage map only.</strong> Color shows scout-covered municipalities divided by the eligible/known municipality universe. Raw covered and denominator counts remain context only. Mechanism, source-family, readiness, extraction, and rating details stay outside the map.</div>
       {map}
       <div className="map-legend" aria-label="Map color scale">
         <span>No scout coverage</span>
         {[1, 2, 3, 4].map((band) => <i className={`metric-band-${band}`} key={band} aria-hidden="true" />)}
-        <span>More scout-covered municipalities</span>
+        <span>Higher scout coverage rate</span>
       </div>
-      <p className="panel-note">{metric.caveat} Colors are scaled to the current maximum; labels give exact counts.</p>
+      <p className="panel-note">{metric.caveat} Rate = scout-covered municipalities ÷ eligible/known municipality universe. Missing denominators are shown as unavailable; no denominator is fabricated.</p>
       <details className="map-table-fallback">
-        <summary>View accessible total scout-coverage table</summary>
+        <summary>View accessible scout-coverage-rate table</summary>
         <div className="table-wrap compact-table-wrap"><table>
-          <thead><tr><th scope="col">State</th><th scope="col">Total scout coverage</th><th scope="col">Coverage status</th></tr></thead>
+          <thead><tr><th scope="col">State</th><th scope="col">Coverage rate</th><th scope="col">Scout covered / eligible-known</th><th scope="col">Coverage status</th></tr></thead>
           <tbody>{states.map((state) => <tr key={state.state}>
             <th scope="row"><button className="table-state-button" onClick={() => onSelect(state.state)}>{state.state_name}</button></th>
-            <td>{metric.format(state[metricKey] ?? 0)}</td>
-            <td>{state[metricKey] ? "Scout coverage recorded" : "No scout coverage recorded"}</td>
+            <td>{metric.format(state[metricKey])}</td>
+            <td>{state.municipality_universe ? `${state.total_scout_coverage_count.toLocaleString()} / ${state.municipality_universe.toLocaleString()}` : "Denominator unavailable"}</td>
+            <td>{state.coverage_rate_status === "coverage_rate_unavailable" ? "Coverage rate unavailable" : state.total_scout_coverage_count ? "Scout coverage recorded" : "No scout coverage recorded"}</td>
           </tr>)}</tbody>
         </table></div>
       </details>

@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "COLA_or_CPI_adjustment": 395,
+    "annual_salary": 132,
+    "certification_or_education_pay": 95,
+    "contract_year_or_fiscal_year": 570,
+    "effective_date": 1863,
+    "grade_or_payband": 248,
+    "hazard_or_specialty_pay": 27,
+    "hourly_rate": 1982,
+    "longevity_pay": 330,
+    "lump_sum_payment": 115,
+    "overtime_or_premium_reference": 2094,
+    "percentage_raise": 996,
+    "retroactive_payment": 51,
+    "salary_schedule": 458,
+    "shift_differential": 166,
+    "step_schedule": 519,
+    "stipend_or_allowance": 1548,
+    "wage_schedule": 214
+  },
+  "type_assignments": 11803
+}

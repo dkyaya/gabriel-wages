@@ -1,0 +1,239 @@
+{
+  "group_field": "source_family",
+  "groups": {
+    "agenda_packet_or_minutes": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 250,
+        "fiscal_or_budget_context": 4,
+        "market_or_comparability_context": 91,
+        "mixed_quantitative_qualitative": 58,
+        "non_base_compensation": 234,
+        "qualitative_mechanism": 312,
+        "quantitative_compensation": 926,
+        "source_navigation_reference": 5,
+        "weak_or_unclear_compensation_reference": 168
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 1875,
+      "source_count": 0,
+      "span_candidate_count": 2048
+    },
+    "arbitration_award": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 265,
+        "fiscal_or_budget_context": 37,
+        "market_or_comparability_context": 55,
+        "mixed_quantitative_qualitative": 52,
+        "non_base_compensation": 252,
+        "qualitative_mechanism": 211,
+        "quantitative_compensation": 412,
+        "source_navigation_reference": 7,
+        "weak_or_unclear_compensation_reference": 1
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 1284,
+      "source_count": 0,
+      "span_candidate_count": 1292
+    },
+    "budget_or_pay_plan": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 55,
+        "fiscal_or_budget_context": 13,
+        "market_or_comparability_context": 130,
+        "mixed_quantitative_qualitative": 109,
+        "non_base_compensation": 457,
+        "qualitative_mechanism": 673,
+        "quantitative_compensation": 1151,
+        "source_navigation_reference": 25,
+        "weak_or_unclear_compensation_reference": 30
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 2588,
+      "source_count": 0,
+      "span_candidate_count": 2643
+    },
+    "cba": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 391,
+        "fiscal_or_budget_context": 3,
+        "market_or_comparability_context": 132,
+        "mixed_quantitative_qualitative": 60,
+        "non_base_compensation": 1671,
+        "qualitative_mechanism": 1542,
+        "quantitative_compensation": 1617,
+        "source_navigation_reference": 68,
+        "weak_or_unclear_compensation_reference": 4
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 5416,
+      "source_count": 0,
+      "span_candidate_count": 5488
+    },
+    "civil_service_or_hr_pay_plan": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 27,
+        "fiscal_or_budget_context": 1,
+        "market_or_comparability_context": 36,
+        "mixed_quantitative_qualitative": 18,
+        "non_base_compensation": 85,
+        "qualitative_mechanism": 136,
+        "quantitative_compensation": 121,
+        "source_navigation_reference": 1,
+        "weak_or_unclear_compensation_reference": 4
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 424,
+      "source_count": 0,
+      "span_candidate_count": 429
+    },
+    "classification_study": {
+      "evidence_category_counts": {
+        "market_or_comparability_context": 2
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 2,
+      "source_count": 0,
+      "span_candidate_count": 2
+    },
+    "compensation_study": {
+      "evidence_category_counts": {
+        "market_or_comparability_context": 9,
+        "mixed_quantitative_qualitative": 6,
+        "non_base_compensation": 11,
+        "qualitative_mechanism": 20,
+        "quantitative_compensation": 25,
+        "source_navigation_reference": 4,
+        "weak_or_unclear_compensation_reference": 1
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 71,
+      "source_count": 0,
+      "span_candidate_count": 76
+    },
+    "factfinding_report": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 37,
+        "fiscal_or_budget_context": 1,
+        "market_or_comparability_context": 12,
+        "mixed_quantitative_qualitative": 9,
+        "non_base_compensation": 27,
+        "qualitative_mechanism": 43,
+        "quantitative_compensation": 73,
+        "source_navigation_reference": 3
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 202,
+      "source_count": 0,
+      "span_candidate_count": 205
+    },
+    "mou_or_memorandum": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 170,
+        "fiscal_or_budget_context": 6,
+        "market_or_comparability_context": 39,
+        "mixed_quantitative_qualitative": 27,
+        "non_base_compensation": 252,
+        "qualitative_mechanism": 187,
+        "quantitative_compensation": 421,
+        "source_navigation_reference": 5,
+        "weak_or_unclear_compensation_reference": 13
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 1102,
+      "source_count": 0,
+      "span_candidate_count": 1120
+    },
+    "other_local_government_pay_policy": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 56,
+        "fiscal_or_budget_context": 6,
+        "market_or_comparability_context": 141,
+        "mixed_quantitative_qualitative": 34,
+        "non_base_compensation": 285,
+        "qualitative_mechanism": 466,
+        "quantitative_compensation": 464,
+        "source_navigation_reference": 7,
+        "weak_or_unclear_compensation_reference": 45
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 1452,
+      "source_count": 0,
+      "span_candidate_count": 1504
+    },
+    "personnel_policy": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 23,
+        "fiscal_or_budget_context": 4,
+        "market_or_comparability_context": 78,
+        "mixed_quantitative_qualitative": 13,
+        "non_base_compensation": 247,
+        "qualitative_mechanism": 189,
+        "quantitative_compensation": 103,
+        "source_navigation_reference": 3,
+        "weak_or_unclear_compensation_reference": 5
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 657,
+      "source_count": 0,
+      "span_candidate_count": 665
+    },
+    "salary_ordinance": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 39,
+        "fiscal_or_budget_context": 1,
+        "market_or_comparability_context": 8,
+        "mixed_quantitative_qualitative": 3,
+        "non_base_compensation": 135,
+        "qualitative_mechanism": 53,
+        "quantitative_compensation": 172,
+        "source_navigation_reference": 3,
+        "weak_or_unclear_compensation_reference": 26
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 411,
+      "source_count": 0,
+      "span_candidate_count": 440
+    },
+    "settlement_agreement": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 9,
+        "fiscal_or_budget_context": 2,
+        "market_or_comparability_context": 2,
+        "mixed_quantitative_qualitative": 1,
+        "non_base_compensation": 5,
+        "qualitative_mechanism": 6,
+        "quantitative_compensation": 12
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 37,
+      "source_count": 0,
+      "span_candidate_count": 37
+    },
+    "unknown": {
+      "evidence_category_counts": {},
+      "positive_source_count": 2268,
+      "rating_ready_span_count": 0,
+      "source_count": 2795,
+      "span_candidate_count": 0
+    },
+    "wage_schedule": {
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 192,
+        "fiscal_or_budget_context": 18,
+        "market_or_comparability_context": 157,
+        "mixed_quantitative_qualitative": 90,
+        "non_base_compensation": 678,
+        "qualitative_mechanism": 695,
+        "quantitative_compensation": 1261,
+        "source_navigation_reference": 34,
+        "weak_or_unclear_compensation_reference": 44
+      },
+      "positive_source_count": 0,
+      "rating_ready_span_count": 3091,
+      "source_count": 0,
+      "span_candidate_count": 3169
+    }
+  },
+  "total_sources": 2795,
+  "total_spans": 19118
+}

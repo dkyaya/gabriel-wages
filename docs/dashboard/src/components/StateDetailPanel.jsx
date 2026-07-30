@@ -7,7 +7,7 @@ export function StateDetailPanel({ state, queue, onOpenReport }) {
     <aside className="panel state-panel" aria-live="polite" aria-labelledby="state-panel-title">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Selected state · total scout coverage</p>
+          <p className="eyebrow">Selected state · scout coverage rate</p>
           <h2 id="state-panel-title">{state.state_name}</h2>
         </div>
         <button className="report-button no-print" onClick={onOpenReport}>Open historical state report</button>
@@ -22,13 +22,13 @@ export function StateDetailPanel({ state, queue, onOpenReport }) {
       </div>
 
       <div className="state-metrics">
+        <div><span>Scout coverage rate</span><strong>{state.coverage_rate_status === "coverage_rate_unavailable" ? "Unavailable" : formatPercent(state.scout_coverage_rate)}</strong></div>
         <div><span>Scout-covered</span><strong>{formatNumber(state.total_scout_coverage_count)}</strong></div>
-        <div><span>Municipal universe</span><strong>{formatNumber(state.municipality_universe)}</strong></div>
-        <div><span>Scout coverage rate</span><strong>{formatPercent(state.scout_coverage_rate)}</strong></div>
+        <div><span>Eligible/known universe</span><strong>{state.coverage_rate_status === "coverage_rate_unavailable" ? "Unavailable" : formatNumber(state.municipality_universe)}</strong></div>
         <div><span>Candidate-positive</span><strong>{formatNumber(state.candidate_positive_count)}</strong></div>
       </div>
 
-      <p className="state-narrative">These counts locate scout activity only; they do not establish national representativeness, wage differences, or causation.</p>
+      <p className="state-narrative">The map uses scout-covered ÷ eligible/known municipalities. Raw counts remain context only; this does not establish evidence strength, wage differences, or causation.</p>
       <dl className="state-detail-list">
         <div><dt>Scout covered</dt><dd>{formatNumber(state.total_scout_coverage_count)}</dd></div>
         <div><dt>Candidate rows</dt><dd>{formatNumber(state.candidate_rows)}</dd></div>

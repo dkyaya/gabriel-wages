@@ -39,7 +39,10 @@ function geometryPath(geometry, code) {
 
 function stateLabel(state, metric, metricKey) {
   if (!state) return "No dashboard data available";
-  return `${state.state_name}: ${metric.label} ${metric.format(state[metricKey] ?? 0)}`;
+  if (state.coverage_rate_status === "coverage_rate_unavailable") {
+    return `${state.state_name}: coverage rate unavailable; ${state.total_scout_coverage_count ?? 0} scout-covered municipalities; eligible/known denominator unavailable`;
+  }
+  return `${state.state_name}: ${metric.label} ${metric.format(state[metricKey])}; ${state.total_scout_coverage_count} of ${state.municipality_universe} eligible/known municipalities scout covered`;
 }
 
 export function USChoroplethMap({ states, selectedCode, onSelect, metric, metricKey, max }) {
@@ -96,7 +99,7 @@ export function USChoroplethMap({ states, selectedCode, onSelect, metric, metric
     <div className="geographic-map-wrap">
       <div className="map-hover-label" aria-live="polite">
         <strong>{activeState?.state_name ?? activeCode}</strong>
-        <span>{activeState ? `${metric.label}: ${metric.format(activeState[metricKey] ?? 0)}` : "No dashboard data available"}</span>
+        <span>{activeState ? stateLabel(activeState, metric, metricKey) : "No dashboard data available"}</span>
       </div>
       <svg
         className="geographic-map"
@@ -114,12 +117,12 @@ export function USChoroplethMap({ states, selectedCode, onSelect, metric, metric
           const code = feature.properties.STUSPS;
           const state = stateByCode.get(code);
           const hasData = Boolean(state);
-          const value = state?.[metricKey] ?? 0;
+          const value = state?.[metricKey];
           return (
             <path
               key={code}
               d={pathByCode.get(code)}
-              className={`geo-state metric-band-${hasData ? valueBand(value, max) : 0} ${code === selectedCode ? "selected" : ""} ${hasData ? "" : "missing-data"}`}
+              className={`geo-state metric-band-${hasData ? valueBand(value, max) : 0} ${code === selectedCode ? "selected" : ""} ${hasData && state?.coverage_rate_status !== "coverage_rate_unavailable" ? "" : "missing-data"}`}
               role="button"
               tabIndex={hasData ? 0 : -1}
               aria-pressed={hasData ? code === selectedCode : undefined}
@@ -138,7 +141,7 @@ export function USChoroplethMap({ states, selectedCode, onSelect, metric, metric
         <text className="map-inset-label" x="48" y="460">ALASKA</text>
         <text className="map-inset-label" x="338" y="488">HAWAII</text>
         <circle
-          className={`dc-map-marker metric-band-${valueBand(stateByCode.get("DC")?.[metricKey] ?? 0, max)} ${selectedCode === "DC" ? "selected" : ""}`}
+          className={`dc-map-marker metric-band-${valueBand(stateByCode.get("DC")?.[metricKey], max)} ${selectedCode === "DC" ? "selected" : ""}`}
           cx="755"
           cy="197"
           r="5"
@@ -159,7 +162,7 @@ export function USChoroplethMap({ states, selectedCode, onSelect, metric, metric
         <text className="dc-label" x="783" y="181" aria-hidden="true">DC</text>
       </svg>
       <p className="geographic-map-caption">
-        Local Census boundaries; Alaska and Hawaii use insets. Hover or focus a state for its exact total scout-coverage count.
+        Local Census boundaries; Alaska and Hawaii use insets. Hover or focus a state for the coverage rate plus exact raw covered and eligible/known counts.
       </p>
     </div>
   );

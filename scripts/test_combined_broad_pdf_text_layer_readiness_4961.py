@@ -155,13 +155,13 @@ def main() -> None:
     }
     assert source["pdf_text_readiness_reviewed_count"] == 4961
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
-    assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"
+    assert state["metric_definition"]["map_color_metric"] == "scout_coverage_rate"
     assert phase["dashboard_map_filter"] == "total_scout_coverage_only"
     assert phase["global_analysis_readiness"] is False
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
     map_ui = (ROOT / "docs/dashboard/src/components/NationalMap.jsx").read_text(encoding="utf-8")
     assert map_source.count('key: "') == 1
-    assert 'key: "total_scout_coverage_count"' in map_source
+    assert 'key: "scout_coverage_rate"' in map_source
     assert "<select" not in map_ui and "metric-select" not in map_ui
     app = (ROOT / "docs/dashboard/src/App.jsx").read_text(encoding="utf-8")
     assert "Current operation:" in app and "Readiness reviewed" in app

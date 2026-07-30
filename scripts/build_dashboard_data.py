@@ -1705,6 +1705,11 @@ BROAD_STATE_4X2500_TEXT_EXTRACTION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30"
 )
+BROAD_STATE_4X2500_SPAN_EXTRACTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6236,6 +6241,84 @@ def broad_state_4x2500_text_extraction_status() -> tuple[bool, dict[str, Any]]:
     }
 
 
+def broad_state_4x2500_span_extraction_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed 2,795-source deterministic span wave."""
+    directory = BROAD_STATE_4X2500_SPAN_EXTRACTION_DIR
+    required = (
+        directory / "span_extraction_summary.json",
+        directory / "span_extraction_manifest.json",
+        directory / "span_extraction_lane_distribution.json",
+        directory / "merged_span_extraction_source_results.csv",
+        directory / "span_candidates.csv",
+        directory / "span_rating_ready_queue.csv",
+        directory / "span_rating_ready_manifest.json",
+        directory / "source_level_span_summary.json",
+        directory / "evidence_category_summary.json",
+        directory / "mechanism_attribute_summary.json",
+        directory / "quant_span_type_summary.json",
+        directory / "qualitative_mechanism_type_summary.json",
+        directory / "source_family_span_summary.json",
+        directory / "geography_span_summary.json",
+        directory / "cba_non_cba_span_summary.json",
+        directory / "extracted_text_hash_recheck_report.json",
+        directory / "forbidden_action_audit.json",
+        directory / "dashboard_status_input.json",
+        directory / "span_extraction_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    loaded = [
+        read_csv(path) if path.suffix == ".csv" else read_json(path)
+        if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    (summary, manifest, lanes, results, spans, rating, rating_manifest,
+     source_status, evidence, mechanisms, quant_types, qual_types,
+     source_family, geography, cba, hashes, forbidden, dashboard, _) = loaded
+    statuses = summary.get("source_status_counts", {})
+    categories = summary.get("evidence_category_counts", {})
+    gates = (
+        summary.get("decision") == "broad_state_4x2500_span_extraction_completed_rating_ready"
+        and summary.get("span_extraction_queue_size") == 2795
+        and len(results) == len({row["span_queue_id"] for row in results}) == 2795
+        and sum(as_int(value) for value in statuses.values()) == 2795
+        and len(spans) == summary.get("total_span_candidate_count")
+        and len(rating) == summary.get("span_rating_ready_count") == rating_manifest.get("rows")
+        and lanes.get("total_rows") == 2795
+        and {name: item.get("rows") for name, item in lanes.get("lanes", {}).items()}
+        == {"span_extraction_lane_001": 699, "span_extraction_lane_002": 699,
+            "span_extraction_lane_003": 699, "span_extraction_lane_004": 698}
+        and hashes.get("all_hashes_match") is True
+        and forbidden.get("passed") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("scout_coverage_municipalities") == 16887
+        and summary.get("ocr_occurred") is False
+        and summary.get("rating_occurred") is False
+        and summary.get("ingestion_or_codification_occurred") is False
+        and summary.get("wage_normalization_occurred") is False
+        and summary.get("global_analysis_readiness") == "partial_diagnostic_only_not_final"
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 span-extraction package fails dashboard gates")
+    return True, {
+        **summary,
+        "source_status_counts": statuses,
+        "evidence_category_counts": categories,
+        "mechanism_attribute_counts": mechanisms.get("counts", {}),
+        "quant_span_type_counts": quant_types.get("counts", {}),
+        "qualitative_mechanism_type_counts": qual_types.get("counts", {}),
+        "span_by_source_family": source_family.get("groups", {}),
+        "span_by_state": geography.get("states", {}),
+        "span_by_region": geography.get("regions", {}),
+        "span_by_cba_hint": cba.get("groups", {}),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/"
+            "span_extraction_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6365,6 +6448,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_extraction_available, broad_4x2500_extraction = (
         broad_state_4x2500_text_extraction_status()
+    )
+    broad_4x2500_span_available, broad_4x2500_span = (
+        broad_state_4x2500_span_extraction_status()
     )
     published_reports = [
         *(
@@ -7052,6 +7138,33 @@ def build_reports_index_layer(
                 {"label": "span ready", "value": broad_4x2500_extraction["span_extraction_ready_count"]},
             ],
         })
+    if broad_4x2500_span_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-text-extraction-2026-07-30":
+                report["link_label"] = "Open historical 4 × 2,500 text-extraction report"
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-span-extraction-2026-07-30",
+            "title": "Broad State 4 × 2,500 Span Extraction",
+            "report_type": "Current bounded deterministic exact-span result",
+            "date": "2026-07-30",
+            "checkpoint": f"{broad_4x2500_span['span_rating_ready_count']:,} span-rating-ready candidates",
+            "summary": (
+                "All 2,795 extracted-ok sources received one deterministic span outcome across four lanes. "
+                "Candidates are bounded verbatim substrings with validated offsets and hashes; rating is next."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "exact spans", "rating ready"],
+            "current": True, "historical": False,
+            "href": repository_root_url + broad_4x2500_span["dashboard_result_path"],
+            "link_label": "Open current 4 × 2,500 span-extraction report",
+            "scope_metrics": [
+                {"label": "span-source queue", "value": broad_4x2500_span["span_extraction_queue_size"]},
+                {"label": "positive sources", "value": broad_4x2500_span["positive_span_source_count"]},
+                {"label": "rating ready", "value": broad_4x2500_span["span_rating_ready_count"]},
+            ],
+        })
     if live_available:
         published_reports.insert(
             1,
@@ -7271,7 +7384,8 @@ def build_state_summary(
                 "municipality_universe": universe,
                 "total_scout_coverage_count": covered,
                 "scout_coverage_count": covered,
-                "scout_coverage_rate": percent(covered, universe),
+                "scout_coverage_rate": percent(covered, universe) if universe else None,
+                "coverage_rate_status": "available" if universe else "coverage_rate_unavailable",
                 "candidate_positive_count": candidate_positive,
                 "no_candidate_count": no_candidate,
                 "failed_scout_municipality_count": failure_only,
@@ -7312,9 +7426,12 @@ def build_state_summary(
                 "tier_c_deferred_or_review_count": as_int(tier_c.get("tier_c_deferred_or_review_count")),
                 "tier_c_region": tier_c.get("derived_region") or None,
                 "map_color_metric": {
-                    "field": "total_scout_coverage_count",
-                    "value": covered,
-                    "scale": "state_total_scout_covered_municipality_count",
+                    "field": "scout_coverage_rate",
+                    "value": percent(covered, universe) if universe else None,
+                    "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+                    "raw_scout_covered_count_context": covered,
+                    "eligible_known_municipality_denominator_context": universe if universe else None,
+                    "coverage_rate_status": "available" if universe else "coverage_rate_unavailable",
                 },
                 "short_state_narrative": narrative,
                 "printable_report_data": {
@@ -7340,9 +7457,9 @@ def build_state_summary(
     return {
         "metadata": {
             **metadata,
-            "map_data_date": tier_c_map_date["map_data_date"],
-            "current_map_layer": "total_scout_coverage_only",
-            "current_map_layer_boundary": "Total local scout coverage only; not national representativeness and not a wage or causal result.",
+            "map_data_date": "2026-07-30" if broad_4x2500_live_available else tier_c_map_date["map_data_date"],
+            "current_map_layer": "scout_coverage_rate_only",
+            "current_map_layer_boundary": "Local scout coverage rate only; raw covered and eligible/known denominator counts are context, not alternative map filters or analytical results.",
             "global_analysis_readiness": False,
             "broad_state_source_scout_included": broad_completed,
             "broad_state_source_scout_decision": broad_decision.get("decision") if broad_completed else None,
@@ -7373,7 +7490,11 @@ def build_state_summary(
                 "coverage ledger plus any completed, committed broad-wave overlay recognized by "
                 "the dashboard's fail-closed package gate."
             ),
-            "map_color_metric": "total_scout_coverage_count",
+            "scout_coverage_rate": (
+                "Scout-covered municipalities divided by the eligible/known municipal-government universe "
+                "from docs/analysis/national_municipality_universe.csv. Missing denominators remain unavailable."
+            ),
+            "map_color_metric": "scout_coverage_rate",
         },
         "totals": {
             "states_and_dc": len(states),
@@ -9557,6 +9678,9 @@ def build_project_phase_summary(
     broad_4x2500_extraction_available, broad_4x2500_extraction = (
         broad_state_4x2500_text_extraction_status()
     )
+    broad_4x2500_span_available, broad_4x2500_span = (
+        broad_state_4x2500_span_extraction_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -9839,7 +9963,7 @@ def build_project_phase_summary(
         "tier_c_octet_stream_count": tier_c_readiness["octet_stream_count"],
         "map_data_date": tier_c_readiness["map_data_date"],
         "dashboard_map_includes_latest_tier_c_numbers": tier_c_readiness["dashboard_map_updated"],
-        "dashboard_map_filter": "total_scout_coverage_only",
+        "dashboard_map_filter": "scout_coverage_rate_only",
         "tier_c_text_extraction_queue_count": text_span["text_extraction_queue_count"],
         "tier_c_text_extracted_ok_count": text_span["extraction_status_counts"]["extracted_ok"],
         "tier_c_span_extraction_queue_count": text_span["span_extraction_queue_count"],
@@ -10465,7 +10589,7 @@ def build_project_phase_summary(
                 "rebuild and visibly smoke-test the dashboard while preserving scout-only map coverage",
             ],
             "last_updated_context": "broad_state_4x2500_pdf_text_readiness_complete_text_extraction_ready",
-            "dashboard_map_filter": "total_scout_coverage_only",
+            "dashboard_map_filter": "scout_coverage_rate_only",
             "actual_scout_covered_municipalities": 16887,
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "blocked_pending_normalization",
@@ -10522,7 +10646,59 @@ def build_project_phase_summary(
                 "rebuild and visibly smoke-test the local and public dashboard",
             ],
             "last_updated_context": "broad_state_4x2500_text_extraction_complete_span_extraction_ready",
-            "dashboard_map_filter": "total_scout_coverage_only",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_matched_structure",
+        })
+    if broad_4x2500_span_available:
+        statuses = broad_4x2500_span["source_status_counts"]
+        categories = broad_4x2500_span["evidence_category_counts"]
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_span_extraction_complete",
+            "current_phase": "Broad state 4 × 2,500 span extraction complete; four-lane span rating ready next",
+            "current_phase_code": broad_4x2500_span["decision"],
+            "current_evidence_status": "broad_4x2500_span_extraction_complete_spans_unrated",
+            "broad_state_4x2500_span_extraction_available": True,
+            "broad_state_4x2500_span_extraction_decision": broad_4x2500_span["decision"],
+            "broad_state_4x2500_span_extraction_queue_count": broad_4x2500_span["span_extraction_queue_size"],
+            "broad_state_4x2500_span_extraction_lane_counts": broad_4x2500_span["lane_counts"],
+            "broad_state_4x2500_span_extraction_status_counts": statuses,
+            "broad_state_4x2500_span_positive_source_count": broad_4x2500_span["positive_span_source_count"],
+            "broad_state_4x2500_span_no_relevant_source_count": broad_4x2500_span["no_relevant_span_source_count"],
+            "broad_state_4x2500_span_weak_source_count": broad_4x2500_span["weak_or_ambiguous_source_count"],
+            "broad_state_4x2500_span_unusable_error_count": broad_4x2500_span["text_unusable_or_error_count"],
+            "broad_state_4x2500_span_candidate_count": broad_4x2500_span["total_span_candidate_count"],
+            "broad_state_4x2500_span_rating_ready_count": broad_4x2500_span["span_rating_ready_count"],
+            "broad_state_4x2500_span_evidence_category_counts": categories,
+            "broad_state_4x2500_span_quantitative_count": categories.get("quantitative_compensation", 0),
+            "broad_state_4x2500_span_qualitative_count": categories.get("qualitative_mechanism", 0),
+            "broad_state_4x2500_span_mixed_count": categories.get("mixed_quantitative_qualitative", 0),
+            "broad_state_4x2500_span_non_base_count": categories.get("non_base_compensation", 0),
+            "broad_state_4x2500_span_navigation_count": categories.get("source_navigation_reference", 0),
+            "broad_state_4x2500_span_mechanism_attribute_counts": broad_4x2500_span["mechanism_attribute_counts"],
+            "broad_state_4x2500_span_quant_type_counts": broad_4x2500_span["quant_span_type_counts"],
+            "broad_state_4x2500_span_qual_type_counts": broad_4x2500_span["qualitative_mechanism_type_counts"],
+            "broad_state_4x2500_span_by_source_family": broad_4x2500_span["span_by_source_family"],
+            "broad_state_4x2500_span_by_state": broad_4x2500_span["span_by_state"],
+            "broad_state_4x2500_span_by_region": broad_4x2500_span["span_by_region"],
+            "current_report_title": "Broad State 4 × 2,500 Span Extraction",
+            "current_report_path": broad_4x2500_span["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_span["dashboard_result_path"],
+            "next_task": "run BROAD-STATE-4X2500-SPAN-RATING-2026-07-30 over the exact span-rating-ready queue in four independent staggered lanes",
+            "next_phase": "four-lane broad-state 4 × 2,500 span rating",
+            "next_phase_sequence": [
+                "lock only eligible exact candidates from span_rating_ready_queue",
+                "use four independent checkpointed rating lanes if backend limits support them",
+                "preserve verbatim spans, offsets, hashes, provenance, and valid/quarantine separation",
+                "do not OCR, ingest/codify, normalize wages, run regressions, or make final causal claims",
+                "keep the dashboard map on scout coverage rate and repeat local/public smoke validation",
+            ],
+            "last_updated_context": "broad_state_4x2500_span_extraction_complete_rating_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "blocked_pending_normalization",

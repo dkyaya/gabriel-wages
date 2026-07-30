@@ -1,0 +1,15 @@
+{
+  "csv_sha256": "2bb7c6a62d087f3c53b4b1d629f4455f50c5e73fbc57ed94a0823a41c9c8761e",
+  "eligible_categories": [
+    "bargaining_or_arbitration_context",
+    "fiscal_or_budget_context",
+    "market_or_comparability_context",
+    "mixed_quantitative_qualitative",
+    "non_base_compensation",
+    "qualitative_mechanism",
+    "quantitative_compensation"
+  ],
+  "jsonl_sha256": "4aee268e37122daec6316a01d23bfc1243b44fd5bc57190ed025078163a545e0",
+  "rows": 18612,
+  "weak_or_navigation_rows_included": 0
+}

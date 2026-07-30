@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1.0",
-    "generated_at": "2026-07-30T17:00:52Z",
+    "generated_at": "2026-07-30T17:49:26Z",
     "data_vintage": "2026-07-27",
     "source_files": [
       "docs/analysis/national_scout_coverage_state.csv",
@@ -96,9 +96,9 @@
       "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
       "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
     ],
-    "map_data_date": "2026-07-27",
-    "current_map_layer": "total_scout_coverage_only",
-    "current_map_layer_boundary": "Total local scout coverage only; not national representativeness and not a wage or causal result.",
+    "map_data_date": "2026-07-30",
+    "current_map_layer": "scout_coverage_rate_only",
+    "current_map_layer_boundary": "Local scout coverage rate only; raw covered and eligible/known denominator counts are context, not alternative map filters or analytical results.",
     "global_analysis_readiness": false,
     "broad_state_source_scout_included": true,
     "broad_state_source_scout_decision": "broad_state_by_state_source_scout_completed_candidate_review_ready",
@@ -119,7 +119,8 @@
   "metric_definition": {
     "evidence_readiness_score": "Operational dashboard triage score: 20 points for any parseable coverage, up to 20 for candidate-positive share, up to 20 for high-priority lead volume, up to 30 for likely matched-set lead volume, and 10 for prior claim-registry context. It is not evidence strength and cannot make a state claim-ready.",
     "total_scout_coverage_count": "Count of municipalities with a parseable local scout outcome in the canonical coverage ledger plus any completed, committed broad-wave overlay recognized by the dashboard's fail-closed package gate.",
-    "map_color_metric": "total_scout_coverage_count"
+    "scout_coverage_rate": "Scout-covered municipalities divided by the eligible/known municipal-government universe from docs/analysis/national_municipality_universe.csv. Missing denominators remain unavailable.",
+    "map_color_metric": "scout_coverage_rate"
   },
   "totals": {
     "states_and_dc": 51,
@@ -147,6 +148,7 @@
       "total_scout_coverage_count": 149,
       "scout_coverage_count": 149,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 72,
       "no_candidate_count": 77,
       "failed_scout_municipality_count": 0,
@@ -175,9 +177,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 149,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 149,
+        "eligible_known_municipality_denominator_context": 149,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "149 of 149 municipal governments have parseable scout outcomes; 72 are candidate-positive, 77 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -212,6 +217,7 @@
       "total_scout_coverage_count": 448,
       "scout_coverage_count": 448,
       "scout_coverage_rate": 96.7603,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 151,
       "no_candidate_count": 297,
       "failed_scout_municipality_count": 0,
@@ -240,9 +246,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 448,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 96.7603,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 448,
+        "eligible_known_municipality_denominator_context": 463,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "448 of 463 municipal governments have parseable scout outcomes; 151 are candidate-positive, 297 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -277,6 +286,7 @@
       "total_scout_coverage_count": 447,
       "scout_coverage_count": 447,
       "scout_coverage_rate": 89.2216,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 123,
       "no_candidate_count": 324,
       "failed_scout_municipality_count": 1,
@@ -305,9 +315,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 447,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 89.2216,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 447,
+        "eligible_known_municipality_denominator_context": 501,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "447 of 501 municipal governments have parseable scout outcomes; 123 are candidate-positive, 324 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -342,6 +355,7 @@
       "total_scout_coverage_count": 91,
       "scout_coverage_count": 91,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 71,
       "no_candidate_count": 20,
       "failed_scout_municipality_count": 1,
@@ -370,9 +384,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 91,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 91,
+        "eligible_known_municipality_denominator_context": 91,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "91 of 91 municipal governments have parseable scout outcomes; 71 are candidate-positive, 20 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -407,6 +424,7 @@
       "total_scout_coverage_count": 483,
       "scout_coverage_count": 483,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 454,
       "no_candidate_count": 29,
       "failed_scout_municipality_count": 7,
@@ -435,9 +453,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 483,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 483,
+        "eligible_known_municipality_denominator_context": 483,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "483 of 483 municipal governments have parseable scout outcomes; 454 are candidate-positive, 29 returned parseable empty lists, and 101 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -472,6 +493,7 @@
       "total_scout_coverage_count": 271,
       "scout_coverage_count": 271,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 131,
       "no_candidate_count": 140,
       "failed_scout_municipality_count": 0,
@@ -500,9 +522,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 271,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 271,
+        "eligible_known_municipality_denominator_context": 271,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "271 of 271 municipal governments have parseable scout outcomes; 131 are candidate-positive, 140 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -537,6 +562,7 @@
       "total_scout_coverage_count": 178,
       "scout_coverage_count": 178,
       "scout_coverage_rate": 99.4413,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 140,
       "no_candidate_count": 38,
       "failed_scout_municipality_count": 1,
@@ -565,9 +591,12 @@
       "tier_c_deferred_or_review_count": 2,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 178,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 99.4413,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 178,
+        "eligible_known_municipality_denominator_context": 179,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "178 of 179 municipal governments have parseable scout outcomes; 140 are candidate-positive, 38 returned parseable empty lists, and 16 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -602,6 +631,7 @@
       "total_scout_coverage_count": 1,
       "scout_coverage_count": 1,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 1,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
@@ -630,9 +660,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 1,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 1,
+        "eligible_known_municipality_denominator_context": 1,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "1 of 1 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -667,6 +700,7 @@
       "total_scout_coverage_count": 56,
       "scout_coverage_count": 56,
       "scout_coverage_rate": 98.2456,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 33,
       "no_candidate_count": 23,
       "failed_scout_municipality_count": 1,
@@ -695,9 +729,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 56,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 98.2456,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 56,
+        "eligible_known_municipality_denominator_context": 57,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "56 of 57 municipal governments have parseable scout outcomes; 33 are candidate-positive, 23 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -732,6 +769,7 @@
       "total_scout_coverage_count": 410,
       "scout_coverage_count": 410,
       "scout_coverage_rate": 99.7567,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 258,
       "no_candidate_count": 152,
       "failed_scout_municipality_count": 4,
@@ -760,9 +798,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 410,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 99.7567,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 410,
+        "eligible_known_municipality_denominator_context": 411,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "410 of 411 municipal governments have parseable scout outcomes; 258 are candidate-positive, 152 returned parseable empty lists, and 33 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -797,6 +838,7 @@
       "total_scout_coverage_count": 440,
       "scout_coverage_count": 440,
       "scout_coverage_rate": 81.9367,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 219,
       "no_candidate_count": 221,
       "failed_scout_municipality_count": 1,
@@ -825,9 +867,12 @@
       "tier_c_deferred_or_review_count": 4,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 440,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 81.9367,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 440,
+        "eligible_known_municipality_denominator_context": 537,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "440 of 537 municipal governments have parseable scout outcomes; 219 are candidate-positive, 221 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -862,6 +907,7 @@
       "total_scout_coverage_count": 1,
       "scout_coverage_count": 1,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 1,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
@@ -890,9 +936,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 1,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 1,
+        "eligible_known_municipality_denominator_context": 1,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "1 of 1 municipal governments have parseable scout outcomes; 1 are candidate-positive, 0 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -927,6 +976,7 @@
       "total_scout_coverage_count": 467,
       "scout_coverage_count": 467,
       "scout_coverage_rate": 49.7338,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 278,
       "no_candidate_count": 189,
       "failed_scout_municipality_count": 1,
@@ -955,9 +1005,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 467,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 49.7338,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 467,
+        "eligible_known_municipality_denominator_context": 939,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "467 of 939 municipal governments have parseable scout outcomes; 278 are candidate-positive, 189 returned parseable empty lists, and 16 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -992,6 +1045,7 @@
       "total_scout_coverage_count": 198,
       "scout_coverage_count": 198,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 86,
       "no_candidate_count": 112,
       "failed_scout_municipality_count": 0,
@@ -1020,9 +1074,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 198,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 198,
+        "eligible_known_municipality_denominator_context": 198,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "198 of 198 municipal governments have parseable scout outcomes; 86 are candidate-positive, 112 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1057,6 +1114,7 @@
       "total_scout_coverage_count": 547,
       "scout_coverage_count": 547,
       "scout_coverage_rate": 20.1177,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 447,
       "no_candidate_count": 100,
       "failed_scout_municipality_count": 8,
@@ -1085,9 +1143,12 @@
       "tier_c_deferred_or_review_count": 7,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 547,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 20.1177,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 547,
+        "eligible_known_municipality_denominator_context": 2719,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "547 of 2,719 municipal governments have parseable scout outcomes; 447 are candidate-positive, 100 returned parseable empty lists, and 55 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1122,6 +1183,7 @@
       "total_scout_coverage_count": 462,
       "scout_coverage_count": 462,
       "scout_coverage_rate": 29.4455,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 248,
       "no_candidate_count": 214,
       "failed_scout_municipality_count": 5,
@@ -1150,9 +1212,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 462,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 29.4455,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 462,
+        "eligible_known_municipality_denominator_context": 1569,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "462 of 1,569 municipal governments have parseable scout outcomes; 248 are candidate-positive, 214 returned parseable empty lists, and 9 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1187,6 +1252,7 @@
       "total_scout_coverage_count": 453,
       "scout_coverage_count": 453,
       "scout_coverage_rate": 24.6866,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 250,
       "no_candidate_count": 203,
       "failed_scout_municipality_count": 2,
@@ -1215,9 +1281,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 453,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 24.6866,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 453,
+        "eligible_known_municipality_denominator_context": 1835,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "453 of 1,835 municipal governments have parseable scout outcomes; 250 are candidate-positive, 203 returned parseable empty lists, and 5 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1252,6 +1321,7 @@
       "total_scout_coverage_count": 411,
       "scout_coverage_count": 411,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 174,
       "no_candidate_count": 237,
       "failed_scout_municipality_count": 0,
@@ -1280,9 +1350,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 411,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 411,
+        "eligible_known_municipality_denominator_context": 411,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "411 of 411 municipal governments have parseable scout outcomes; 174 are candidate-positive, 237 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1317,6 +1390,7 @@
       "total_scout_coverage_count": 304,
       "scout_coverage_count": 304,
       "scout_coverage_rate": 99.6721,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 155,
       "no_candidate_count": 149,
       "failed_scout_municipality_count": 1,
@@ -1345,9 +1419,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 304,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 99.6721,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 304,
+        "eligible_known_municipality_denominator_context": 305,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "304 of 305 municipal governments have parseable scout outcomes; 155 are candidate-positive, 149 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1382,6 +1459,7 @@
       "total_scout_coverage_count": 350,
       "scout_coverage_count": 350,
       "scout_coverage_rate": 99.7151,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 312,
       "no_candidate_count": 38,
       "failed_scout_municipality_count": 1,
@@ -1416,9 +1494,12 @@
       "tier_c_deferred_or_review_count": 5,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 350,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 99.7151,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 350,
+        "eligible_known_municipality_denominator_context": 351,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "350 of 351 municipal governments have parseable scout outcomes; 312 are candidate-positive, 38 returned parseable empty lists, and 31 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1453,6 +1534,7 @@
       "total_scout_coverage_count": 157,
       "scout_coverage_count": 157,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 90,
       "no_candidate_count": 67,
       "failed_scout_municipality_count": 0,
@@ -1481,9 +1563,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 157,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 157,
+        "eligible_known_municipality_denominator_context": 157,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "157 of 157 municipal governments have parseable scout outcomes; 90 are candidate-positive, 67 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1518,6 +1603,7 @@
       "total_scout_coverage_count": 450,
       "scout_coverage_count": 450,
       "scout_coverage_rate": 93.361,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 221,
       "no_candidate_count": 229,
       "failed_scout_municipality_count": 1,
@@ -1546,9 +1632,12 @@
       "tier_c_deferred_or_review_count": 2,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 450,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 93.361,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 450,
+        "eligible_known_municipality_denominator_context": 482,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "450 of 482 municipal governments have parseable scout outcomes; 221 are candidate-positive, 229 returned parseable empty lists, and 7 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1583,6 +1672,7 @@
       "total_scout_coverage_count": 502,
       "scout_coverage_count": 502,
       "scout_coverage_rate": 28.3136,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 366,
       "no_candidate_count": 136,
       "failed_scout_municipality_count": 2,
@@ -1611,9 +1701,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 502,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 28.3136,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 502,
+        "eligible_known_municipality_denominator_context": 1773,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "502 of 1,773 municipal governments have parseable scout outcomes; 366 are candidate-positive, 136 returned parseable empty lists, and 29 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1648,6 +1741,7 @@
       "total_scout_coverage_count": 507,
       "scout_coverage_count": 507,
       "scout_coverage_rate": 19.2776,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 346,
       "no_candidate_count": 161,
       "failed_scout_municipality_count": 4,
@@ -1676,9 +1770,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 507,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 19.2776,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 507,
+        "eligible_known_municipality_denominator_context": 2630,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "507 of 2,630 municipal governments have parseable scout outcomes; 346 are candidate-positive, 161 returned parseable empty lists, and 12 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1713,6 +1810,7 @@
       "total_scout_coverage_count": 477,
       "scout_coverage_count": 477,
       "scout_coverage_rate": 39.1947,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 247,
       "no_candidate_count": 230,
       "failed_scout_municipality_count": 2,
@@ -1741,9 +1839,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 477,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 39.1947,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 477,
+        "eligible_known_municipality_denominator_context": 1217,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "477 of 1,217 municipal governments have parseable scout outcomes; 247 are candidate-positive, 230 returned parseable empty lists, and 6 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1778,6 +1879,7 @@
       "total_scout_coverage_count": 299,
       "scout_coverage_count": 299,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 41,
       "no_candidate_count": 258,
       "failed_scout_municipality_count": 0,
@@ -1806,9 +1908,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 299,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 299,
+        "eligible_known_municipality_denominator_context": 299,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "299 of 299 municipal governments have parseable scout outcomes; 41 are candidate-positive, 258 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1843,6 +1948,7 @@
       "total_scout_coverage_count": 127,
       "scout_coverage_count": 127,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 73,
       "no_candidate_count": 54,
       "failed_scout_municipality_count": 0,
@@ -1871,9 +1977,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 127,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 127,
+        "eligible_known_municipality_denominator_context": 127,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "127 of 127 municipal governments have parseable scout outcomes; 73 are candidate-positive, 54 returned parseable empty lists, and 6 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1908,6 +2017,7 @@
       "total_scout_coverage_count": 451,
       "scout_coverage_count": 451,
       "scout_coverage_rate": 82.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 293,
       "no_candidate_count": 158,
       "failed_scout_municipality_count": 0,
@@ -1936,9 +2046,12 @@
       "tier_c_deferred_or_review_count": 6,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 451,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 82.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 451,
+        "eligible_known_municipality_denominator_context": 550,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "451 of 550 municipal governments have parseable scout outcomes; 293 are candidate-positive, 158 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -1973,6 +2086,7 @@
       "total_scout_coverage_count": 441,
       "scout_coverage_count": 441,
       "scout_coverage_rate": 26.5983,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 130,
       "no_candidate_count": 311,
       "failed_scout_municipality_count": 0,
@@ -2001,9 +2115,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 441,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 26.5983,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 441,
+        "eligible_known_municipality_denominator_context": 1658,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "441 of 1,658 municipal governments have parseable scout outcomes; 130 are candidate-positive, 311 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2038,6 +2155,7 @@
       "total_scout_coverage_count": 446,
       "scout_coverage_count": 446,
       "scout_coverage_rate": 51.9208,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 184,
       "no_candidate_count": 262,
       "failed_scout_municipality_count": 0,
@@ -2066,9 +2184,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 446,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 51.9208,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 446,
+        "eligible_known_municipality_denominator_context": 859,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "446 of 859 municipal governments have parseable scout outcomes; 184 are candidate-positive, 262 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2103,6 +2224,7 @@
       "total_scout_coverage_count": 234,
       "scout_coverage_count": 234,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 142,
       "no_candidate_count": 92,
       "failed_scout_municipality_count": 0,
@@ -2131,9 +2253,12 @@
       "tier_c_deferred_or_review_count": 3,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 234,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 234,
+        "eligible_known_municipality_denominator_context": 234,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "234 of 234 municipal governments have parseable scout outcomes; 142 are candidate-positive, 92 returned parseable empty lists, and 6 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2168,6 +2293,7 @@
       "total_scout_coverage_count": 507,
       "scout_coverage_count": 507,
       "scout_coverage_rate": 89.8936,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 462,
       "no_candidate_count": 45,
       "failed_scout_municipality_count": 2,
@@ -2198,9 +2324,12 @@
       "tier_c_deferred_or_review_count": 9,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 507,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 89.8936,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 507,
+        "eligible_known_municipality_denominator_context": 564,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "507 of 564 municipal governments have parseable scout outcomes; 462 are candidate-positive, 45 returned parseable empty lists, and 7 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2235,6 +2364,7 @@
       "total_scout_coverage_count": 105,
       "scout_coverage_count": 105,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 60,
       "no_candidate_count": 45,
       "failed_scout_municipality_count": 0,
@@ -2263,9 +2393,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 105,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 105,
+        "eligible_known_municipality_denominator_context": 105,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "105 of 105 municipal governments have parseable scout outcomes; 60 are candidate-positive, 45 returned parseable empty lists, and 6 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2300,6 +2433,7 @@
       "total_scout_coverage_count": 19,
       "scout_coverage_count": 19,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 19,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 1,
@@ -2328,9 +2462,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 19,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 19,
+        "eligible_known_municipality_denominator_context": 19,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "19 of 19 municipal governments have parseable scout outcomes; 19 are candidate-positive, 0 returned parseable empty lists, and 7 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2365,6 +2502,7 @@
       "total_scout_coverage_count": 498,
       "scout_coverage_count": 498,
       "scout_coverage_rate": 32.6986,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 408,
       "no_candidate_count": 90,
       "failed_scout_municipality_count": 3,
@@ -2393,9 +2531,12 @@
       "tier_c_deferred_or_review_count": 11,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 498,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 32.6986,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 498,
+        "eligible_known_municipality_denominator_context": 1523,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "498 of 1,523 municipal governments have parseable scout outcomes; 408 are candidate-positive, 90 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2430,6 +2571,7 @@
       "total_scout_coverage_count": 758,
       "scout_coverage_count": 758,
       "scout_coverage_rate": 33.9454,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 552,
       "no_candidate_count": 206,
       "failed_scout_municipality_count": 3,
@@ -2463,9 +2605,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 758,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 33.9454,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 758,
+        "eligible_known_municipality_denominator_context": 2233,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "758 of 2,233 municipal governments have parseable scout outcomes; 552 are candidate-positive, 206 returned parseable empty lists, and 134 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2500,6 +2645,7 @@
       "total_scout_coverage_count": 446,
       "scout_coverage_count": 446,
       "scout_coverage_rate": 75.5932,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 160,
       "no_candidate_count": 286,
       "failed_scout_municipality_count": 0,
@@ -2528,9 +2674,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 446,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 75.5932,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 446,
+        "eligible_known_municipality_denominator_context": 590,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "446 of 590 municipal governments have parseable scout outcomes; 160 are candidate-positive, 286 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2565,6 +2714,7 @@
       "total_scout_coverage_count": 240,
       "scout_coverage_count": 240,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 170,
       "no_candidate_count": 70,
       "failed_scout_municipality_count": 0,
@@ -2593,9 +2743,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 240,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 240,
+        "eligible_known_municipality_denominator_context": 240,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "240 of 240 municipal governments have parseable scout outcomes; 170 are candidate-positive, 70 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2630,6 +2783,7 @@
       "total_scout_coverage_count": 507,
       "scout_coverage_count": 507,
       "scout_coverage_rate": 19.8279,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 359,
       "no_candidate_count": 148,
       "failed_scout_municipality_count": 2,
@@ -2660,9 +2814,12 @@
       "tier_c_deferred_or_review_count": 14,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 507,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 19.8279,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 507,
+        "eligible_known_municipality_denominator_context": 2557,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "507 of 2,557 municipal governments have parseable scout outcomes; 359 are candidate-positive, 148 returned parseable empty lists, and 11 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2697,6 +2854,7 @@
       "total_scout_coverage_count": 39,
       "scout_coverage_count": 39,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 39,
       "no_candidate_count": 0,
       "failed_scout_municipality_count": 0,
@@ -2725,9 +2883,12 @@
       "tier_c_deferred_or_review_count": 6,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 39,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 39,
+        "eligible_known_municipality_denominator_context": 39,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "39 of 39 municipal governments have parseable scout outcomes; 39 are candidate-positive, 0 returned parseable empty lists, and 8 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2762,6 +2923,7 @@
       "total_scout_coverage_count": 271,
       "scout_coverage_count": 271,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 102,
       "no_candidate_count": 169,
       "failed_scout_municipality_count": 0,
@@ -2790,9 +2952,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 271,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 271,
+        "eligible_known_municipality_denominator_context": 271,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "271 of 271 municipal governments have parseable scout outcomes; 102 are candidate-positive, 169 returned parseable empty lists, and 0 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2827,6 +2992,7 @@
       "total_scout_coverage_count": 449,
       "scout_coverage_count": 449,
       "scout_coverage_rate": 37.2614,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 144,
       "no_candidate_count": 305,
       "failed_scout_municipality_count": 1,
@@ -2855,9 +3021,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 449,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 37.2614,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 449,
+        "eligible_known_municipality_denominator_context": 1205,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "449 of 1,205 municipal governments have parseable scout outcomes; 144 are candidate-positive, 305 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2892,6 +3061,7 @@
       "total_scout_coverage_count": 345,
       "scout_coverage_count": 345,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 163,
       "no_candidate_count": 182,
       "failed_scout_municipality_count": 0,
@@ -2920,9 +3090,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 345,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 345,
+        "eligible_known_municipality_denominator_context": 345,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "345 of 345 municipal governments have parseable scout outcomes; 163 are candidate-positive, 182 returned parseable empty lists, and 2 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -2957,6 +3130,7 @@
       "total_scout_coverage_count": 534,
       "scout_coverage_count": 534,
       "scout_coverage_rate": 43.6275,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 334,
       "no_candidate_count": 200,
       "failed_scout_municipality_count": 0,
@@ -2992,9 +3166,12 @@
       "tier_c_deferred_or_review_count": 6,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 534,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 43.6275,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 534,
+        "eligible_known_municipality_denominator_context": 1224,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "534 of 1,224 municipal governments have parseable scout outcomes; 334 are candidate-positive, 200 returned parseable empty lists, and 15 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3029,6 +3206,7 @@
       "total_scout_coverage_count": 255,
       "scout_coverage_count": 255,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 176,
       "no_candidate_count": 79,
       "failed_scout_municipality_count": 0,
@@ -3057,9 +3235,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 255,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 255,
+        "eligible_known_municipality_denominator_context": 255,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "255 of 255 municipal governments have parseable scout outcomes; 176 are candidate-positive, 79 returned parseable empty lists, and 4 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3094,6 +3275,7 @@
       "total_scout_coverage_count": 227,
       "scout_coverage_count": 227,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 127,
       "no_candidate_count": 100,
       "failed_scout_municipality_count": 0,
@@ -3122,9 +3304,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "South",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 227,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 227,
+        "eligible_known_municipality_denominator_context": 227,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "227 of 227 municipal governments have parseable scout outcomes; 127 are candidate-positive, 100 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3159,6 +3344,7 @@
       "total_scout_coverage_count": 274,
       "scout_coverage_count": 274,
       "scout_coverage_rate": 99.2754,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 150,
       "no_candidate_count": 124,
       "failed_scout_municipality_count": 2,
@@ -3187,9 +3373,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "Northeast",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 274,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 99.2754,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 274,
+        "eligible_known_municipality_denominator_context": 276,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "274 of 276 municipal governments have parseable scout outcomes; 150 are candidate-positive, 124 returned parseable empty lists, and 3 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3224,6 +3413,7 @@
       "total_scout_coverage_count": 280,
       "scout_coverage_count": 280,
       "scout_coverage_rate": 99.6441,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 217,
       "no_candidate_count": 63,
       "failed_scout_municipality_count": 3,
@@ -3252,9 +3442,12 @@
       "tier_c_deferred_or_review_count": 1,
       "tier_c_region": "West",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 280,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 99.6441,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 280,
+        "eligible_known_municipality_denominator_context": 281,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "280 of 281 municipal governments have parseable scout outcomes; 217 are candidate-positive, 63 returned parseable empty lists, and 21 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3289,6 +3482,7 @@
       "total_scout_coverage_count": 546,
       "scout_coverage_count": 546,
       "scout_coverage_rate": 29.5295,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 386,
       "no_candidate_count": 160,
       "failed_scout_municipality_count": 7,
@@ -3317,9 +3511,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": "Midwest",
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 546,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 29.5295,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 546,
+        "eligible_known_municipality_denominator_context": 1849,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "546 of 1,849 municipal governments have parseable scout outcomes; 386 are candidate-positive, 160 returned parseable empty lists, and 22 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3354,6 +3551,7 @@
       "total_scout_coverage_count": 230,
       "scout_coverage_count": 230,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 81,
       "no_candidate_count": 149,
       "failed_scout_municipality_count": 0,
@@ -3382,9 +3580,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 230,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 230,
+        "eligible_known_municipality_denominator_context": 230,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "230 of 230 municipal governments have parseable scout outcomes; 81 are candidate-positive, 149 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {
@@ -3419,6 +3620,7 @@
       "total_scout_coverage_count": 99,
       "scout_coverage_count": 99,
       "scout_coverage_rate": 100.0,
+      "coverage_rate_status": "available",
       "candidate_positive_count": 51,
       "no_candidate_count": 48,
       "failed_scout_municipality_count": 0,
@@ -3447,9 +3649,12 @@
       "tier_c_deferred_or_review_count": 0,
       "tier_c_region": null,
       "map_color_metric": {
-        "field": "total_scout_coverage_count",
-        "value": 99,
-        "scale": "state_total_scout_covered_municipality_count"
+        "field": "scout_coverage_rate",
+        "value": 100.0,
+        "scale": "state_scout_covered_divided_by_eligible_known_municipality_universe",
+        "raw_scout_covered_count_context": 99,
+        "eligible_known_municipality_denominator_context": 99,
+        "coverage_rate_status": "available"
       },
       "short_state_narrative": "99 of 99 municipal governments have parseable scout outcomes; 51 are candidate-positive, 48 returned parseable empty lists, and 1 have likely police/fire/non-safety lead groups. All national-queue leads remain unverified unless separately documented.",
       "printable_report_data": {

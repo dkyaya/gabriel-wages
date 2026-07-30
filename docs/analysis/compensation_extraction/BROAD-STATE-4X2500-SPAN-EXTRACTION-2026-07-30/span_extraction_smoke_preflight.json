@@ -1,0 +1,29 @@
+{
+  "full_text_persisted": false,
+  "ocr_used": false,
+  "rating_or_api_used": false,
+  "representative_rows": [
+    {
+      "candidate_spans": 18,
+      "extraction_id": "B4X2500TXT-20260730-6a6c2cbea202c213c9ea",
+      "source_type": "pdf",
+      "status": "pass",
+      "text_characters": 64248
+    },
+    {
+      "candidate_spans": 0,
+      "extraction_id": "B4X2500TXT-20260730-c8bb14b70418f8a580e4",
+      "source_type": "html",
+      "status": "pass",
+      "text_characters": 1865
+    },
+    {
+      "candidate_spans": 0,
+      "extraction_id": "B4X2500TXT-20260730-7a75cb71da6a2cb58ceb",
+      "source_type": "other_document",
+      "status": "pass",
+      "text_characters": 8862
+    }
+  ],
+  "status": "passed"
+}

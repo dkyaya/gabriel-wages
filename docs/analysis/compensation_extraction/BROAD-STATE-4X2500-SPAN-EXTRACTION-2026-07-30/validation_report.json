@@ -1,0 +1,41 @@
+{
+  "all_checks_passed": false,
+  "checks": {
+    "01_input_count_2795": true,
+    "02_all_text_files_exist": true,
+    "03_text_hashes_match": true,
+    "04_text_root_git_ignored": true,
+    "05_lane_rows_reconcile": true,
+    "06_lane_sizes_exact": true,
+    "07_one_lane_per_source": true,
+    "08_lane_hashes_match": true,
+    "08b_required_stagger_starts": true,
+    "09_one_primary_status": true,
+    "10_merged_sources_reconcile": true,
+    "11_span_required_lineage": true,
+    "12_span_evidence_category": true,
+    "13_bounded_exact_spans": true,
+    "14_positive_paraphrases": true,
+    "15_rating_queue_eligible_only": true,
+    "16_no_ocr": true,
+    "17_no_rating": true,
+    "18_no_ingestion_codification": true,
+    "19_no_normalization_or_analytic_claims": true,
+    "20_dashboard_span_status_current": true,
+    "21_map_primary_metric_rate": true,
+    "22_map_raw_count_context_only": true,
+    "23_map_scout_only_substance": true,
+    "24_global_readiness_not_advanced": true,
+    "25_no_artifacts_tracked": true,
+    "26_dashboard_local_build": true,
+    "27_dashboard_local_browser_smoke": true,
+    "28_dashboard_public_smoke": false,
+    "29_staged_file_audit": true,
+    "30_large_file_audit": true
+  },
+  "core_checks_passed": true,
+  "pending_checks": [
+    "28_dashboard_public_smoke"
+  ],
+  "validated_at": "2026-07-30T17:51:57Z"
+}

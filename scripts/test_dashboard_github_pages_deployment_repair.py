@@ -86,7 +86,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         }
         for field, value in expected.items():
             self.assertEqual(phase[field], value)
-        self.assertEqual(phase["dashboard_map_filter"], "total_scout_coverage_only")
+        self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertEqual(phase["wage_gap_analysis_readiness"], "blocked_pending_normalization")
         self.assertEqual(phase["causal_analysis_readiness"], "blocked_pending_matched_structure")
@@ -106,7 +106,19 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 phase["broad_state_4x2500_text_extraction_span_ready_count"],
                 extraction["span_extraction_ready_count"],
             )
-            self.assertIn("BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30", phase["next_task"])
+            span_summary_path = (
+                ROOT / "docs/analysis/compensation_extraction/"
+                "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_extraction_summary.json"
+            )
+            if span_summary_path.exists():
+                span = json.loads(span_summary_path.read_text())
+                self.assertTrue(phase["broad_state_4x2500_span_extraction_available"])
+                self.assertEqual(phase["broad_state_4x2500_span_extraction_queue_count"], 2795)
+                self.assertEqual(phase["broad_state_4x2500_span_candidate_count"], span["total_span_candidate_count"])
+                self.assertEqual(phase["broad_state_4x2500_span_rating_ready_count"], span["span_rating_ready_count"])
+                self.assertIn("BROAD-STATE-4X2500-SPAN-RATING-2026-07-30", phase["next_task"])
+            else:
+                self.assertIn("BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30", phase["next_task"])
         else:
             self.assertIn("BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30", phase["next_task"])
 

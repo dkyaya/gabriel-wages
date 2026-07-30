@@ -1,0 +1,22 @@
+{
+  "denominator_role": "tooltip_card_table_context_only",
+  "denominator_source": "docs/analysis/national_municipality_universe.csv",
+  "denominator_source_choice": "Authoritative documented project municipality universe already consumed by the dashboard builder; it supplies state/DC municipalities_in_universe and reconciles to 35,589.",
+  "eligible_known_municipality_universe_total": 35589,
+  "formula": "scout_covered_municipalities / eligible_or_known_municipality_universe",
+  "missing_denominator_policy": "coverage_rate_unavailable_no_fabrication",
+  "primary_map_metric": "scout_coverage_rate",
+  "prohibited_map_filters": [
+    "candidate",
+    "source_family",
+    "evidence",
+    "mechanism",
+    "readiness"
+  ],
+  "raw_scout_count_role": "tooltip_card_table_context_only",
+  "scout_covered_municipalities_total": 16887,
+  "local_build_passed": true,
+  "local_browser_smoke_passed": true,
+  "public_pages_smoke_status": "pending_after_commit_and_deployment",
+  "status": "implemented_and_locally_validated_pending_public_pages"
+}

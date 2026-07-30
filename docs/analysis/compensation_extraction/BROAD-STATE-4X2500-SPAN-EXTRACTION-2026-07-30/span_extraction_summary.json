@@ -1,0 +1,197 @@
+{
+  "completed_at": "2026-07-30T17:49:16Z",
+  "decision": "broad_state_4x2500_span_extraction_completed_rating_ready",
+  "evidence_category_counts": {
+    "bargaining_or_arbitration_context": 1514,
+    "fiscal_or_budget_context": 96,
+    "market_or_comparability_context": 892,
+    "mixed_quantitative_qualitative": 480,
+    "non_base_compensation": 4339,
+    "not_compensation_relevant": 0,
+    "qualitative_mechanism": 4533,
+    "quantitative_compensation": 6758,
+    "source_navigation_reference": 165,
+    "weak_or_unclear_compensation_reference": 341
+  },
+  "global_analysis_readiness": "partial_diagnostic_only_not_final",
+  "ingestion_or_codification_occurred": false,
+  "lane_counts": {
+    "span_extraction_lane_001": 699,
+    "span_extraction_lane_002": 699,
+    "span_extraction_lane_003": 699,
+    "span_extraction_lane_004": 698
+  },
+  "mixed_quantitative_qualitative_span_count": 480,
+  "no_relevant_span_source_count": 184,
+  "non_base_compensation_span_count": 4339,
+  "ocr_occurred": false,
+  "positive_span_source_count": 2268,
+  "qualitative_mechanism_span_count": 4533,
+  "quantitative_compensation_span_count": 6758,
+  "rating_occurred": false,
+  "source_navigation_reference_span_count": 165,
+  "source_status_counts": {
+    "no_relevant_spans_found": 184,
+    "positive_spans_found": 2268,
+    "span_extraction_error": 0,
+    "text_unusable_for_span_extraction": 0,
+    "weak_or_ambiguous_spans_only": 343
+  },
+  "span_extraction_queue_size": 2795,
+  "span_rating_ready_count": 18612,
+  "task_id": "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30",
+  "text_unusable_or_error_count": 0,
+  "top_mechanism_attributes": [
+    [
+      "non_base_compensation_signal",
+      4315
+    ],
+    [
+      "base_wage_direct_value",
+      2777
+    ],
+    [
+      "implementation_or_retroactivity_advantage",
+      2245
+    ],
+    [
+      "bargaining_power_signal",
+      1529
+    ],
+    [
+      "automatic_raise_mechanism",
+      1446
+    ],
+    [
+      "market_or_comparability_pressure",
+      913
+    ],
+    [
+      "rank_or_specialization_premium",
+      788
+    ],
+    [
+      "strike_or_no_strike_constraint",
+      555
+    ],
+    [
+      "weak_or_no_claim_support",
+      341
+    ],
+    [
+      "safety_advantage_signal",
+      324
+    ],
+    [
+      "fiscal_constraint_signal",
+      97
+    ],
+    [
+      "parity_or_internal_equity_signal",
+      48
+    ]
+  ],
+  "top_qualitative_mechanism_types": [
+    [
+      "staffing_shortage_or_operational_pressure",
+      1476
+    ],
+    [
+      "collective_bargaining_process",
+      1418
+    ],
+    [
+      "classification_or_civil_service_rule",
+      1209
+    ],
+    [
+      "recruitment_or_retention",
+      795
+    ],
+    [
+      "council_or_board_approval",
+      792
+    ],
+    [
+      "strike_or_no_strike_constraint",
+      555
+    ],
+    [
+      "automatic_CPI_COLA_or_indexing",
+      395
+    ],
+    [
+      "retroactivity_or_implementation_timing",
+      383
+    ],
+    [
+      "safety_specific_priority_or_exception",
+      324
+    ],
+    [
+      "market_comparability",
+      118
+    ],
+    [
+      "arbitration_or_factfinding",
+      113
+    ],
+    [
+      "fiscal_constraint_or_budget_limit",
+      97
+    ]
+  ],
+  "top_quantitative_span_types": [
+    [
+      "overtime_or_premium_reference",
+      2094
+    ],
+    [
+      "hourly_rate",
+      1982
+    ],
+    [
+      "effective_date",
+      1863
+    ],
+    [
+      "stipend_or_allowance",
+      1548
+    ],
+    [
+      "percentage_raise",
+      996
+    ],
+    [
+      "contract_year_or_fiscal_year",
+      570
+    ],
+    [
+      "step_schedule",
+      519
+    ],
+    [
+      "salary_schedule",
+      458
+    ],
+    [
+      "COLA_or_CPI_adjustment",
+      395
+    ],
+    [
+      "longevity_pay",
+      330
+    ],
+    [
+      "grade_or_payband",
+      248
+    ],
+    [
+      "wage_schedule",
+      214
+    ]
+  ],
+  "total_span_candidate_count": 19118,
+  "wage_normalization_occurred": false,
+  "weak_or_ambiguous_source_count": 343
+}

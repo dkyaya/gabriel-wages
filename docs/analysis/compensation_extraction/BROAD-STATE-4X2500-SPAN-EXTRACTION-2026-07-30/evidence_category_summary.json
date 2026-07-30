@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "bargaining_or_arbitration_context": 1514,
+    "fiscal_or_budget_context": 96,
+    "market_or_comparability_context": 892,
+    "mixed_quantitative_qualitative": 480,
+    "non_base_compensation": 4339,
+    "qualitative_mechanism": 4533,
+    "quantitative_compensation": 6758,
+    "source_navigation_reference": 165,
+    "weak_or_unclear_compensation_reference": 341
+  },
+  "total_spans": 19118
+}

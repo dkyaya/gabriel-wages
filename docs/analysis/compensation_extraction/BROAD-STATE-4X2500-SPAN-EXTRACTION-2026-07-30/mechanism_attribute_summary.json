@@ -1,0 +1,19 @@
+{
+  "attribute_assignments": 15382,
+  "counts": {
+    "automatic_raise_mechanism": 1446,
+    "bargaining_power_signal": 1529,
+    "base_wage_direct_value": 2777,
+    "fiscal_constraint_signal": 97,
+    "gap_narrowing_signal": 3,
+    "implementation_or_retroactivity_advantage": 2245,
+    "market_or_comparability_pressure": 913,
+    "non_base_compensation_signal": 4315,
+    "non_safety_constraint_signal": 1,
+    "parity_or_internal_equity_signal": 48,
+    "rank_or_specialization_premium": 788,
+    "safety_advantage_signal": 324,
+    "strike_or_no_strike_constraint": 555,
+    "weak_or_no_claim_support": 341
+  }
+}

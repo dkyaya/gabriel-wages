@@ -86,8 +86,8 @@ def main() -> None:
     state = json.loads((ROOT / "docs/dashboard/data/state_summary.json").read_text())
     phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
-    assert state["metadata"]["map_data_date"] == "2026-07-27"
-    assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"
+    assert state["metadata"]["map_data_date"] == "2026-07-30"
+    assert state["metric_definition"]["map_color_metric"] == "scout_coverage_rate"
     broad_decision_path = (
         ROOT
         / "docs/analysis/compensation_extraction/"
@@ -138,7 +138,7 @@ def main() -> None:
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text()
     map_ui = (ROOT / "docs/dashboard/src/components/NationalMap.jsx").read_text()
     app = (ROOT / "docs/dashboard/src/App.jsx").read_text()
-    assert map_source.count('key: "') == 1 and 'key: "total_scout_coverage_count"' in map_source
+    assert map_source.count('key: "') == 1 and 'key: "scout_coverage_rate"' in map_source
     assert "<select" not in map_ui and "metric-select" not in map_ui
     assert "Map data date:" in map_ui
     for forbidden in ("tier_c_retained_source_count", "mechanism", "source family", "readiness only"):

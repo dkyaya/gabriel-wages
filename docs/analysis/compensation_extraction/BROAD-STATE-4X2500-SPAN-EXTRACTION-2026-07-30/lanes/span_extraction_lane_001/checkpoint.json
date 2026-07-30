@@ -1,0 +1,17 @@
+{
+  "completed_count": 699,
+  "ended_at": "2026-07-30T17:24:34Z",
+  "lane": "span_extraction_lane_001",
+  "queue_count": 699,
+  "rating_eligible_span_count": 4763,
+  "required_start_delay_seconds": 0,
+  "source_status_counts": {
+    "no_relevant_spans_found": 46,
+    "positive_spans_found": 570,
+    "weak_or_ambiguous_spans_only": 83
+  },
+  "span_candidate_count": 4886,
+  "started_at": "2026-07-30T17:24:10Z",
+  "status": "completed",
+  "terminal": true
+}

@@ -1,0 +1,8 @@
+{
+  "status_counts": {
+    "no_relevant_spans_found": 184,
+    "positive_spans_found": 2268,
+    "weak_or_ambiguous_spans_only": 343
+  },
+  "total_sources": 2795
+}

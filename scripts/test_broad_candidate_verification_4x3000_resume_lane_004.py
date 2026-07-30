@@ -99,7 +99,7 @@ def main() -> None:
         assert decision["completed_lane_count"] == 4
 
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
-    assert map_source.count('key: "total_scout_coverage_count"') == 1
+    assert map_source.count('key: "scout_coverage_rate"') == 1
     assert "verification" not in map_source.casefold()
     phase = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
     assert phase["dashboard_map_filter"] == "total_scout_coverage_only"

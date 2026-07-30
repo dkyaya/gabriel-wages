@@ -60,7 +60,9 @@ export function AnalysisReadinessPanel({ data, phase }) {
             <li>Causal readiness remains blocked pending matched structure.</li>
             <li>Final causal and national prevalence claims remain unavailable.</li>
           </ul>
-          <p>{phase.broad_state_4x2500_text_extraction_available
+          <p>{phase.broad_state_4x2500_span_extraction_available
+            ? `The next authorized task is BROAD-STATE-4X2500-SPAN-RATING-2026-07-30 over exactly ${formatNumber(phase.broad_state_4x2500_span_rating_ready_count)} eligible exact candidates. OCR, ingestion, codification, normalization, and analysis remain excluded.`
+            : phase.broad_state_4x2500_text_extraction_available
             ? `The next authorized task is BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30 over exactly ${formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} extracted_ok sources in four staggered lanes. OCR and rating remain excluded.`
             : phase.broad_state_4x2500_pdf_text_readiness_available
             ? `The next authorized task is BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 over exactly ${formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} readiness-approved files in four staggered lanes. OCR remains excluded.`
@@ -69,7 +71,9 @@ export function AnalysisReadinessPanel({ data, phase }) {
       </div>
 
       <p className="panel-note">
-        {phase.broad_state_4x2500_text_extraction_available ? (
+        {phase.broad_state_4x2500_span_extraction_available ? (
+          <>The four-lane broad-state span wave is complete over {formatNumber(phase.broad_state_4x2500_span_extraction_queue_count)} extracted-ok sources. It produced {formatNumber(phase.broad_state_4x2500_span_candidate_count)} bounded exact candidates and placed {formatNumber(phase.broad_state_4x2500_span_rating_ready_count)} eligible candidates in the next rating queue. These candidates are unrated and unnormalized; no OCR, ingestion, codification, wage-gap analysis, or causal analysis occurred.</>
+        ) : phase.broad_state_4x2500_text_extraction_available ? (
           <>The four-lane broad state scout, verification, source-review/download, readiness, and non-OCR text-extraction waves are complete. Extraction processed {formatNumber(phase.broad_state_4x2500_text_extraction_queue_count)} approved files and placed {formatNumber(phase.broad_state_4x2500_text_extraction_span_ready_count)} extracted_ok outputs in the next exact-span queue. Full text remains outside Git; no OCR, span extraction, rating, ingestion, codification, wage-gap analysis, or causal analysis occurred.</>
         ) : phase.broad_state_4x2500_pdf_text_readiness_available ? (
           <>The four-lane broad state scout, verification, source-review/download, and PDF/text-readiness waves are complete. Readiness classified {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_retained_count)} retained files and approved {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} for later non-OCR text extraction. No full text was persisted during readiness, and no OCR, rating, ingestion, codification, wage-gap analysis, or causal analysis occurred.</>

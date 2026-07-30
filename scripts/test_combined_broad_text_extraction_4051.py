@@ -173,13 +173,13 @@ def main() -> None:
     }
     assert source["text_extraction_attempted_count"] == 4051
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
-    assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"
+    assert state["metric_definition"]["map_color_metric"] == "scout_coverage_rate"
     assert phase["dashboard_map_filter"] == "total_scout_coverage_only"
     assert phase["global_analysis_readiness"] is False
     map_metrics = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
     map_ui = (ROOT / "docs/dashboard/src/components/NationalMap.jsx").read_text(encoding="utf-8")
     assert map_metrics.count('key: "') == 1
-    assert 'key: "total_scout_coverage_count"' in map_metrics
+    assert 'key: "scout_coverage_rate"' in map_metrics
     assert "<select" not in map_ui and "metric-select" not in map_ui
     app = (ROOT / "docs/dashboard/src/App.jsx").read_text(encoding="utf-8")
     assert "Text extraction attempted" in app

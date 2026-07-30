@@ -101,7 +101,7 @@ def main() -> None:
     assert "response.content" not in source
     asyncio.run(probe_smoke(module))
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
-    assert map_source.count('key: "total_scout_coverage_count"') == 1
+    assert map_source.count('key: "scout_coverage_rate"') == 1
     assert "verification" not in map_source.casefold()
     decision_path = OUTPUT / "broad_candidate_verification_4x3000_decision.json"
     if decision_path.is_file():

@@ -1,0 +1,22 @@
+{
+  "browser_controller": "Playwright MCP fallback after the in-app browser runtime reported that no browser was available",
+  "checked_at": "2026-07-30T17:50:00Z",
+  "console_error_count": 0,
+  "local_url": "http://127.0.0.1:4173/gabriel-wages/?dashboard_smoke=20260730_span_extraction_final_1749",
+  "status": "passed",
+  "visible_checks": {
+    "causal_readiness_blocked_pending_matched_structure": true,
+    "current_report_points_to_span_extraction_summary": true,
+    "global_analysis_readiness_false": true,
+    "map_denominator_context_visible": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "map_raw_scout_count_context_visible": true,
+    "next_task_span_rating": true,
+    "positive_span_sources_2268": true,
+    "scout_coverage_count_16887": true,
+    "span_candidates_19118": true,
+    "span_extraction_queue_2795": true,
+    "span_rating_ready_18612": true,
+    "wage_gap_readiness_blocked_pending_normalization": true
+  }
+}

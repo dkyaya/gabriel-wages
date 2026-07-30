@@ -486,6 +486,18 @@ function App() {
               {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
                 <MetricCard label="Span-extraction-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_span_ready_count)} note="Eligible extracted_ok rows only; low-density and noisy rows excluded" />
               )}
+              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
+                <MetricCard label="Current span-extraction queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_extraction_queue_count)} note="Four independently checkpointed lanes of 699 / 699 / 699 / 698 sources" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
+                <MetricCard label="Positive span sources" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_positive_source_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_span_extraction_status_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
+                <MetricCard label="Bounded exact span candidates" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_candidate_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_span_evidence_category_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
+                <MetricCard label="Span-rating-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_rating_ready_count)} note="Eligible categories only; weak and navigation-only spans excluded" />
+              )}
               <MetricCard
                 label="Globally usable descriptive evidence"
                 value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.global_descriptive_ready)}

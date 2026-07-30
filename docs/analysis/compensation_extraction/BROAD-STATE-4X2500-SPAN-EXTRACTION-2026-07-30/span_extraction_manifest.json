@@ -1,0 +1,46 @@
+{
+  "completed_at": "2026-07-30T17:49:16Z",
+  "completion_status": "completed",
+  "decision": "broad_state_4x2500_span_extraction_completed_rating_ready",
+  "exact_offset_hash_validation": "passed",
+  "input_rows": 2795,
+  "lane_manifests": {
+    "span_extraction_lane_001": {
+      "csv_sha256": "086442f5442a816520a311227dcc159669197496a2a9f930d337f8f91f8dd16d",
+      "jsonl_sha256": "168e90247ab4ede95da3f4025189ba63872e070addfdc3c9c2424dc5b5747064",
+      "required_start_delay_seconds": 0,
+      "rows": 699
+    },
+    "span_extraction_lane_002": {
+      "csv_sha256": "7be3e03c4bc2cc6073e33d3fbef6e856524d825f7ccb0cd139c334dc5c0f65e6",
+      "jsonl_sha256": "8f10b2671cc176b154aa0c68a934b8094e9bdd5e43a0e2aade6cf20047d4e8f3",
+      "required_start_delay_seconds": 480,
+      "rows": 699
+    },
+    "span_extraction_lane_003": {
+      "csv_sha256": "7fb10d4777f2612166fe8bd33e05f048acd5eca84a51812de684d6de2aa17941",
+      "jsonl_sha256": "774372d159f7d927fbfabd9bd96520698e651ce876ea893a405c64bb944eaf4b",
+      "required_start_delay_seconds": 960,
+      "rows": 699
+    },
+    "span_extraction_lane_004": {
+      "csv_sha256": "d99ebec471c2e962403026c1a43448b462be9558c83f561a49c6c74ec936ffb8",
+      "jsonl_sha256": "91d6a193b2171a0e35c5ff7ed16f2f270b7da3d928507888e18f5c230972e271",
+      "required_start_delay_seconds": 1440,
+      "rows": 698
+    }
+  },
+  "locked_csv_sha256": "6412ca6387d15b8028e5505be63a13238751f0211fca15bda57e82d615045ef8",
+  "locked_jsonl_sha256": "ffc9e8f82e32753041797166d7819e7b27b097a0cce15986bddab2e619465f3b",
+  "maximum_span_characters": 800,
+  "maximum_spans_per_source": 18,
+  "merged_source_csv_sha256": "094c68ca3995dac5ea5c8f50bc215b9f9bfc4c62506d0a7cf2512b909ec19689",
+  "merged_source_rows": 2795,
+  "prepared_at": "2026-07-30T17:24:02Z",
+  "rating_or_api_used": false,
+  "span_candidate_rows": 19118,
+  "span_candidates_csv_sha256": "6205ce3bf034a786e7fd3a4480939fa28eb59d99b791f042eb00c6f1c791969d",
+  "span_rating_ready_csv_sha256": "2bb7c6a62d087f3c53b4b1d629f4455f50c5e73fbc57ed94a0823a41c9c8761e",
+  "span_rating_ready_rows": 18612,
+  "task_id": "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30"
+}

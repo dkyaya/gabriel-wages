@@ -1,0 +1,15 @@
+{
+  "candidate_source_evidence_mechanism_readiness_filters_present": false,
+  "denominator_preserved_as_context": true,
+  "eligible_known_municipality_universe": 35589,
+  "map_remains_scout_coverage_only": true,
+  "missing_denominator_is_unavailable": true,
+  "primary_color_metric": "scout_coverage_rate",
+  "raw_count_is_primary_metric": false,
+  "raw_count_preserved_as_context": true,
+  "scout_covered_municipalities": 16887,
+  "local_build_passed": true,
+  "local_browser_smoke_passed": true,
+  "public_pages_smoke_status": "pending_after_commit_and_deployment",
+  "status": "local_visible_validation_passed_pending_public_pages"
+}

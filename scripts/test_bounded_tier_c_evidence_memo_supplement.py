@@ -102,7 +102,7 @@ def main() -> None:
     )
     assert phase["global_analysis_readiness"] is False
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"
-    assert state["metric_definition"]["map_color_metric"] == "total_scout_coverage_count"
+    assert state["metric_definition"]["map_color_metric"] == "scout_coverage_rate"
 
     source = RUNNER_PATH.read_text(encoding="utf-8").casefold()
     for forbidden in ("requests.get", "httpx", "urllib.request", "pytesseract", "pdf2image", "gabriel.codify"):
