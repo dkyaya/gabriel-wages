@@ -1,5 +1,5 @@
 {
-  "all_checks_passed": false,
+  "all_checks_passed": true,
   "checks": {
     "01_input_count_18612": true,
     "02_lane_counts_exact": true,
@@ -26,15 +26,13 @@
     "23_map_coverage_rate": true,
     "24_dashboard_build": true,
     "25_local_browser_smoke": true,
-    "26_public_dashboard_smoke": false,
+    "26_public_dashboard_smoke": true,
     "27_global_readiness_not_advanced": true,
     "28_no_source_or_text_artifacts_tracked": true,
     "29_staged_audit": true,
     "30_large_file_audit": true
   },
   "core_checks_passed": true,
-  "pending_checks": [
-    "26_public_dashboard_smoke"
-  ],
-  "validated_at": "2026-07-30T19:24:07.819587Z"
+  "pending_checks": [],
+  "validated_at": "2026-07-30T19:28:27.870590Z"
 }

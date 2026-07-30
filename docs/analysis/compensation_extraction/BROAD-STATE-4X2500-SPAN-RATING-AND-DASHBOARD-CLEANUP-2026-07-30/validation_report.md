@@ -1,7 +1,7 @@
 # Validation report
 
 Core checks passed: **true**
-All checks passed: **false**
+All checks passed: **true**
 
 - PASS — 01_input_count_18612
 - PASS — 02_lane_counts_exact
@@ -28,7 +28,7 @@ All checks passed: **false**
 - PASS — 23_map_coverage_rate
 - PASS — 24_dashboard_build
 - PASS — 25_local_browser_smoke
-- PENDING — 26_public_dashboard_smoke
+- PASS — 26_public_dashboard_smoke
 - PASS — 27_global_readiness_not_advanced
 - PASS — 28_no_source_or_text_artifacts_tracked
 - PASS — 29_staged_audit
