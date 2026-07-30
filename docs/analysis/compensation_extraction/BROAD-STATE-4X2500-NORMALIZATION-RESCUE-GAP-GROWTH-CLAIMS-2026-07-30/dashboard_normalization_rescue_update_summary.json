@@ -19,5 +19,5 @@
   "status": "local_dashboard_visible_current_passed",
   "build_passed": true,
   "local_browser_smoke_passed": true,
-  "public_pages_smoke_status": "pending_commit_push_deployment"
+  "public_pages_smoke_status": "public_pages_visible_current_passed"
 }

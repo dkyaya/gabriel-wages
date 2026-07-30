@@ -40,7 +40,7 @@ Core checks passed: **true**
 - `36_map_rate`: **true**
 - `37_dashboard_build`: **true**
 - `38_local_browser`: **true**
-- `39_public_browser`: **false**
+- `39_public_browser`: **true**
 - `40_global_not_advanced`: **true**
 - `41_no_payloads_tracked`: **true**
 - `42_staged_audit`: **true**
