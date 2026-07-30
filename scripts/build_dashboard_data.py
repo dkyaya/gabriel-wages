@@ -1685,6 +1685,11 @@ BROAD_STATE_4X2500_REVIEW_DIR = (
 BROAD_STATE_4X2500_REVIEW_DECISION_PATH = (
     BROAD_STATE_4X2500_REVIEW_DIR / "final_decision.json"
 )
+BROAD_STATE_4X2500_VERIFICATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-VERIFICATION-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5859,6 +5864,59 @@ def broad_state_4x2500_candidate_review_status() -> tuple[bool, dict[str, Any]]:
     }
 
 
+def broad_state_4x2500_verification_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed HEAD-only verification wave without map effects."""
+    required = (
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "verification_summary.json",
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "verification_manifest.json",
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "verification_lane_distribution.json",
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "source_review_ready_manifest.json",
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "validation_report.json",
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "forbidden_action_audit.json",
+        BROAD_STATE_4X2500_VERIFICATION_DIR / "verification_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    summary, manifest, lanes, ready, validation, forbidden, _ = (
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    )
+    expected = "broad_state_4x2500_verification_completed_source_review_ready"
+    priority = summary.get("priority_counts_verified", {})
+    lane_counts = summary.get("lane_counts", {})
+    gates = (
+        summary.get("decision") == expected
+        and summary.get("verification_status") == "completed"
+        and summary.get("verification_queue_count") == 5768
+        and summary.get("completed_verification_rows") == 5768
+        and priority == {
+            "high_priority_verification_ready": 4281,
+            "medium_priority_verification_ready": 1352,
+            "low_priority_verification_ready": 135,
+        }
+        and lane_counts == {f"verification_lane_{index:03d}": 1442 for index in range(1, 5)}
+        and manifest.get("queue_row_count") == 5768
+        and lanes.get("exact_target_distribution_passed") is True
+        and ready.get("queue_row_count") == summary.get("source_review_ready_count")
+        and validation.get("validation_passed") is True
+        and forbidden.get("passed") is True
+        and summary.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and summary.get("dashboard_scout_covered_municipalities") == 16887
+        and summary.get("global_analysis_readiness") is False
+        and summary.get("documents_downloaded") == 0
+        and summary.get("source_documents_inspected") == 0
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 verification package fails dashboard gates")
+    return True, {
+        **summary,
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-VERIFICATION-2026-07-30/verification_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -5979,21 +6037,46 @@ def build_reports_index_layer(
     broad_4x2500_prep_available, broad_4x2500_prep = broad_state_4x2500_scout_infrastructure_prep_status()
     broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
     broad_4x2500_review_available, broad_4x2500_review = broad_state_4x2500_candidate_review_status()
+    broad_4x2500_verify_available, broad_4x2500_verify = broad_state_4x2500_verification_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "broad-state-4x2500-verification-2026-07-30",
+                    "title": "Broad State 4 × 2,500 Verification",
+                    "report_type": "Current HEAD-only verification result",
+                    "date": "2026-07-30",
+                    "checkpoint": f"{broad_4x2500_verify['source_review_ready_count']:,} source-review-ready locators",
+                    "summary": (
+                        "All 5,768 high-, medium-, and low-priority candidates received one terminal "
+                        "HEAD-only metadata outcome across four lanes. Source review/download is ready next."
+                    ),
+                    "tags": ["current", "broad scout", "4x2500", "verification", "source review ready"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + broad_4x2500_verify["dashboard_result_path"],
+                    "link_label": "Open current 4 × 2,500 verification report",
+                    "scope_metrics": [
+                        {"label": "verified rows", "value": broad_4x2500_verify["completed_verification_rows"]},
+                        {"label": "source-review ready", "value": broad_4x2500_verify["source_review_ready_count"]},
+                        {"label": "blocked / timeout", "value": broad_4x2500_verify["blocked_or_timeout_count"]},
+                    ],
+                }
+            ] if broad_4x2500_verify_available else []
+        ),
         *(
             [
                 {
                     "id": "broad-state-4x2500-candidate-review-2026-07-30",
                     "title": "Broad State 4 × 2,500 Candidate Review",
-                    "report_type": "Current metadata-only candidate-review result",
+                    "report_type": "Historical metadata-only candidate-review result" if broad_4x2500_verify_available else "Current metadata-only candidate-review result",
                     "date": "2026-07-30",
                     "checkpoint": f"{broad_4x2500_review['verification_ready_queue_count']:,} verification-ready candidates",
                     "summary": (
                         "All finalized live-scout candidates received exactly one local metadata-only bucket. "
                         "Four-lane reachability verification is ready next; no URL was opened in review."
                     ),
-                    "tags": ["current", "broad scout", "4x2500", "candidate review", "verification ready"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if broad_4x2500_verify_available else "current", "broad scout", "4x2500", "candidate review", "verification ready"],
+                    "current": not broad_4x2500_verify_available, "historical": broad_4x2500_verify_available,
                     "href": repository_root_url + broad_4x2500_review["dashboard_result_path"],
                     "link_label": "Open current 4 × 2,500 candidate-review report",
                     "scope_metrics": [
@@ -9050,6 +9133,7 @@ def build_project_phase_summary(
     broad_4x2500_prep_available, broad_4x2500_prep = broad_state_4x2500_scout_infrastructure_prep_status()
     broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
     broad_4x2500_review_available, broad_4x2500_review = broad_state_4x2500_candidate_review_status()
+    broad_4x2500_verify_available, broad_4x2500_verify = broad_state_4x2500_verification_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -9081,7 +9165,9 @@ def build_project_phase_summary(
             broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "broad_state_4x2500_candidate_review_complete_verification_transition"
+            "broad_state_4x2500_verification_complete_source_review_download_transition"
+            if broad_4x2500_verify_available
+            else "broad_state_4x2500_candidate_review_complete_verification_transition"
             if broad_4x2500_review_available
             else "broad_state_4x2500_live_scout_complete_candidate_review_transition"
             if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
@@ -9122,7 +9208,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Broad state 4 × 2,500 candidate review complete; four-lane verification ready next"
+            "Broad state 4 × 2,500 verification complete; four-lane source review/download ready next"
+            if broad_4x2500_verify_available
+            else "Broad state 4 × 2,500 candidate review complete; four-lane verification ready next"
             if broad_4x2500_review_available
             else "Broad state 4 × 2,500 live scout complete; deterministic candidate review ready next"
             if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
@@ -9163,7 +9251,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_4x2500_review["decision"]
+            broad_4x2500_verify["decision"]
+            if broad_4x2500_verify_available
+            else broad_4x2500_review["decision"]
             if broad_4x2500_review_available
             else broad_4x2500_live["decision"]
             if broad_4x2500_live_available
@@ -9198,7 +9288,9 @@ def build_project_phase_summary(
             else tier_c_supplement["decision"]
         ),
         "current_evidence_status": (
-            "broad_4x2500_candidate_review_complete_verification_ready_unverified_metadata_only"
+            "broad_4x2500_verification_complete_source_review_download_ready_metadata_only"
+            if broad_4x2500_verify_available
+            else "broad_4x2500_candidate_review_complete_verification_ready_unverified_metadata_only"
             if broad_4x2500_review_available
             else "broad_4x2500_live_complete_candidate_review_deferred"
             if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
@@ -9214,6 +9306,17 @@ def build_project_phase_summary(
         ),
         "global_analysis_readiness": False,
         "global_analysis_readiness_gate_available": global_gate_available,
+        "broad_state_4x2500_verification_available": broad_4x2500_verify_available,
+        "broad_state_4x2500_verification_decision": broad_4x2500_verify.get("decision") if broad_4x2500_verify_available else None,
+        "broad_state_4x2500_verified_row_count": broad_4x2500_verify.get("completed_verification_rows", 0) if broad_4x2500_verify_available else 0,
+        "broad_state_4x2500_source_review_ready_count": broad_4x2500_verify.get("source_review_ready_count", 0) if broad_4x2500_verify_available else 0,
+        "broad_state_4x2500_verification_terminal_status_counts": broad_4x2500_verify.get("terminal_status_counts", {}) if broad_4x2500_verify_available else {},
+        "broad_state_4x2500_verification_priority_counts": broad_4x2500_verify.get("priority_counts_verified", {}) if broad_4x2500_verify_available else {},
+        "broad_state_4x2500_verification_lane_counts": broad_4x2500_verify.get("lane_counts", {}) if broad_4x2500_verify_available else {},
+        "broad_state_4x2500_verification_unavailable_count": broad_4x2500_verify.get("unavailable_count", 0) if broad_4x2500_verify_available else 0,
+        "broad_state_4x2500_verification_blocked_timeout_count": broad_4x2500_verify.get("blocked_or_timeout_count", 0) if broad_4x2500_verify_available else 0,
+        "broad_state_4x2500_verification_duplicate_count": broad_4x2500_verify.get("duplicate_final_locator_count", 0) if broad_4x2500_verify_available else 0,
+        "broad_state_4x2500_verification_error_count": broad_4x2500_verify.get("verification_error_or_malformed_count", 0) if broad_4x2500_verify_available else 0,
         "broad_state_4x2500_scout_infrastructure_prep_available": broad_4x2500_prep_available,
         "broad_state_4x2500_scout_infrastructure_prep_decision": broad_4x2500_prep.get("decision") if broad_4x2500_prep_available else None,
         "broad_state_4x2500_live_scout_available": broad_4x2500_live_available,
@@ -9700,7 +9803,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "four-lane broad-state 4 × 2,500 candidate verification"
+            "four-lane broad-state 4 × 2,500 source review/download"
+            if broad_4x2500_verify_available
+            else "four-lane broad-state 4 × 2,500 candidate verification"
             if broad_4x2500_review_available
             else "deterministic combined broad candidate review"
             if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4

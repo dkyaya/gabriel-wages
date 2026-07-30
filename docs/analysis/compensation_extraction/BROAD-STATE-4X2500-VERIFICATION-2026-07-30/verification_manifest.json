@@ -1,0 +1,95 @@
+{
+  "candidate_id_set_sha256": "5b8a8419b5493b7474f3b9d91f04beb2c246ecaaa1278e08677b1fc5158a7527",
+  "completed_at": "2026-07-30T12:10:15Z",
+  "completed_verification_rows": 5768,
+  "created_at": "2026-07-30T11:25:37Z",
+  "decision": "broad_state_4x2500_verification_completed_source_review_ready",
+  "documents_downloaded": 0,
+  "duplicate_suppression_lineage_preserved": true,
+  "execution_status": "completed",
+  "input_paths": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_summary.json": "a143fe6801bfb129d69cbe3749dab8531bb8e1ffc2bb962d2d64c57dbad79c57",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/duplicate_suppression_summary.json": "fc71e3eb5fb807c50566412360f7cbef8a0c2c3a63cf18fda8bfd0b3ef15aa77",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/verification_ready_queue.csv": "78072024d599dab15003c0a26377515ace2256f2b2d4afb04d73fc25fd5b086f",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/verification_ready_queue_manifest.json": "3bafb33a3ebec2cdad4af289b3f95d05d772855502f9bfb967c2873977b86b66"
+  },
+  "lane_distribution": {
+    "verification_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1071,
+        "low_priority_verification_ready": 33,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 1442
+    },
+    "verification_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 1442
+    },
+    "verification_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 1442
+    },
+    "verification_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 1442
+    }
+  },
+  "lane_hashes": {
+    "verification_lane_001": {
+      "csv_sha256": "0ca87043b4207615225e8d46ef96cb65db04c38eeaee6ae03e1ebf3962420c54",
+      "jsonl_sha256": "726c869a7eeb477306f5045ffa611218a50ef225364bb73378ef6e69043543ae"
+    },
+    "verification_lane_002": {
+      "csv_sha256": "88c364a3333b399c6f997b0c45f17de8a524f708a51b62726c88bb710deb048b",
+      "jsonl_sha256": "b342692d746b4ab4d49da463f2cc79e5b8f67e30b455871b90933727bb9d62fc"
+    },
+    "verification_lane_003": {
+      "csv_sha256": "228ec0105b90853478f4e2240cf179b46046b130d9a482c98eb715c2533f6cc7",
+      "jsonl_sha256": "a30d7fb51ab68107a7c80afffcf8e581c993d297208194eff5f16ca18fa84012"
+    },
+    "verification_lane_004": {
+      "csv_sha256": "8b53d510df159ab7d356a6ab1fee2b9b311b2011494c0a478ca9781a0849907c",
+      "jsonl_sha256": "6e84b44c7e339d395ebeb51361a178128e0e247c0a3218bdf8fbe01b16f73e04"
+    }
+  },
+  "locked_queue_csv_sha256": "0a10b0bbf105d2af6d212f92a40ebeb6392c12803251631aefe664e261d080fb",
+  "locked_queue_jsonl_sha256": "9bf1247044dc635788844f6bb772cf29784d052348dfd6a0591fad804d2aaeb0",
+  "merged_results_csv_sha256": "41f9ef14a273bb4ddf45288389489bd16369ce734c3b2fee968b1d5df55c5842",
+  "merged_results_jsonl_sha256": "364dcc453e9016f5754deb8b5c8aa7e75efc05e6518fb6140585614809d623cf",
+  "network_requests": 0,
+  "preflight_head": "83752800124c7f5fcb83f1d2324a75451dcf3807",
+  "priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "queue_row_count": 5768,
+  "response_bodies_saved": 0,
+  "source_review_ready_count": 3950,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "terminal_status_counts": {
+    "blocked_or_forbidden": 946,
+    "duplicate_final_locator": 4,
+    "reachable": 3756,
+    "reachable_with_redirect": 194,
+    "timeout": 4,
+    "unavailable": 864
+  }
+}

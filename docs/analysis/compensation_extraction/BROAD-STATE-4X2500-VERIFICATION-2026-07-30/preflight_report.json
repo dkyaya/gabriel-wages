@@ -1,0 +1,69 @@
+{
+  "all_required_fields_present": true,
+  "deterministic_preflight_passed": true,
+  "downloads_planned": 0,
+  "duplicate_suppression_lineage_preserved": true,
+  "forbidden_downstream_work_planned": 0,
+  "lane_distribution": {
+    "verification_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1071,
+        "low_priority_verification_ready": 33,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 1442
+    },
+    "verification_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 1442
+    },
+    "verification_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 1442
+    },
+    "verification_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 1442
+    }
+  },
+  "network_smoke_downloads": 0,
+  "network_smoke_http_responses": 3,
+  "network_smoke_passed": true,
+  "network_smoke_priority_coverage": [
+    "high_priority_verification_ready",
+    "low_priority_verification_ready",
+    "medium_priority_verification_ready"
+  ],
+  "network_smoke_response_bodies_saved": 0,
+  "network_smoke_rows": 3,
+  "network_smoke_source_families": [
+    "agenda_packet_or_minutes",
+    "budget_or_pay_plan",
+    "other_local_government_pay_policy"
+  ],
+  "non_verification_bucket_rows": 0,
+  "one_priority_bucket_per_row": true,
+  "priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "queue_count": 5768,
+  "response_bodies_planned": 0
+}

@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T11:11:24Z",
+  "generated_at": "2026-07-30T12:10:24Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-candidate-review-2026-07-30",
-      "title": "Broad State 4 × 2,500 Candidate Review",
-      "report_type": "Current metadata-only candidate-review result",
+      "id": "broad-state-4x2500-verification-2026-07-30",
+      "title": "Broad State 4 × 2,500 Verification",
+      "report_type": "Current HEAD-only verification result",
       "date": "2026-07-30",
-      "checkpoint": "5,768 verification-ready candidates",
-      "summary": "All finalized live-scout candidates received exactly one local metadata-only bucket. Four-lane reachability verification is ready next; no URL was opened in review.",
+      "checkpoint": "3,950 source-review-ready locators",
+      "summary": "All 5,768 high-, medium-, and low-priority candidates received one terminal HEAD-only metadata outcome across four lanes. Source review/download is ready next.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "candidate review",
-        "verification ready"
+        "verification",
+        "source review ready"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_summary.md",
-      "link_label": "Open current 4 × 2,500 candidate-review report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/verification_summary.md",
+      "link_label": "Open current 4 × 2,500 verification report",
       "scope_metrics": [
         {
-          "label": "reviewed candidates",
-          "value": 9072
-        },
-        {
-          "label": "verification ready",
+          "label": "verified rows",
           "value": 5768
         },
         {
-          "label": "repair queue",
-          "value": 518
+          "label": "source-review ready",
+          "value": 3950
+        },
+        {
+          "label": "blocked / timeout",
+          "value": 950
         }
       ]
     },
@@ -133,6 +133,39 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-candidate-review-2026-07-30",
+      "title": "Broad State 4 × 2,500 Candidate Review",
+      "report_type": "Historical metadata-only candidate-review result",
+      "date": "2026-07-30",
+      "checkpoint": "5,768 verification-ready candidates",
+      "summary": "All finalized live-scout candidates received exactly one local metadata-only bucket. Four-lane reachability verification is ready next; no URL was opened in review.",
+      "tags": [
+        "historical",
+        "broad scout",
+        "4x2500",
+        "candidate review",
+        "verification ready"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_summary.md",
+      "link_label": "Open current 4 × 2,500 candidate-review report",
+      "scope_metrics": [
+        {
+          "label": "reviewed candidates",
+          "value": 9072
+        },
+        {
+          "label": "verification ready",
+          "value": 5768
+        },
+        {
+          "label": "repair queue",
+          "value": 518
         }
       ]
     },

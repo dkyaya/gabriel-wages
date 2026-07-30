@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "dashboard_actual_coverage_unchanged_16887": true,
+    "dashboard_map_scout_coverage_only": true,
+    "dashboard_verification_counts_reconcile": true,
+    "every_row_in_exactly_one_lane": true,
+    "global_readiness_not_advanced": true,
+    "input_queue_count_5768": true,
+    "lane_counts_exact_1442_each": true,
+    "lane_hashes_match_manifests": true,
+    "lane_priority_distributions_exact": true,
+    "merged_rows_reconcile_5768": true,
+    "no_binary_or_full_body_artifacts_in_output": true,
+    "no_extraction_ocr_rating_ingestion_codification": true,
+    "no_non_verification_bucket_entered": true,
+    "no_response_bodies_stored": true,
+    "no_source_files_downloaded": true,
+    "no_wage_gap_regression_final_causal_claims": true,
+    "one_terminal_status_per_completed_row": true,
+    "priority_counts_exact": true,
+    "source_review_ready_eligible_only": true,
+    "source_review_ready_subset_of_merged": true
+  },
+  "forbidden_output_files": [],
+  "merged_count": 5768,
+  "queue_count": 5768,
+  "source_review_ready_count": 3950,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "terminal_status_counts": {
+    "blocked_or_forbidden": 946,
+    "duplicate_final_locator": 4,
+    "reachable": 3756,
+    "reachable_with_redirect": 194,
+    "timeout": 4,
+    "unavailable": 864
+  },
+  "validated_at": "2026-07-30T12:11:43Z",
+  "validation_passed": true
+}

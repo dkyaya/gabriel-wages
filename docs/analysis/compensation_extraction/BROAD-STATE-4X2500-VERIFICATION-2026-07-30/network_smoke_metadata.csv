@@ -1,0 +1,4 @@
+verification_row_id,priority_bucket,source_family_hint,source_domain,verification_status,http_status_code,error_class,response_body_saved,raw_headers_saved,downloaded
+B4X2500V-20260730-00001,high_priority_verification_ready,budget_or_pay_plan,ccalaska.com,reachable,200,,false,false,false
+B4X2500V-20260730-00004,medium_priority_verification_ready,other_local_government_pay_policy,cityofkasaan.org,reachable,200,,false,false,false
+B4X2500V-20260730-00043,low_priority_verification_ready,agenda_packet_or_minutes,drive.google.com,reachable,200,,false,false,false

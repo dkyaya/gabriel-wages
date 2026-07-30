@@ -1,0 +1,16 @@
+{
+  "all_rows_from_locked_verification_queue": true,
+  "csv_sha256": "97c6cd076e7dcf99de78fdb338392406814ab08433ab778b4d775059ea7dfb97",
+  "documents_downloaded": 0,
+  "eligible_terminal_statuses": [
+    "reachable",
+    "reachable_with_redirect"
+  ],
+  "jsonl_sha256": "d324df6c2f900cb5b7082095b2edcfef0a3ac316377f542bc940f95c6580d198",
+  "queue_row_count": 3950,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "terminal_status_counts": {
+    "reachable": 3756,
+    "reachable_with_redirect": 194
+  }
+}

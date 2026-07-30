@@ -1,0 +1,15 @@
+{
+  "checkpoint_frequency": "after_every_row",
+  "csv_sha256": "228ec0105b90853478f4e2240cf179b46046b130d9a482c98eb715c2533f6cc7",
+  "jsonl_sha256": "a30d7fb51ab68107a7c80afffcf8e581c993d297208194eff5f16ca18fa84012",
+  "lane_id": "verification_lane_003",
+  "priority_counts": {
+    "high_priority_verification_ready": 1070,
+    "low_priority_verification_ready": 34,
+    "medium_priority_verification_ready": 338
+  },
+  "scheduled_stagger_minutes": 16,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "total_rows": 1442,
+  "verification_method": "HEAD_metadata_only"
+}

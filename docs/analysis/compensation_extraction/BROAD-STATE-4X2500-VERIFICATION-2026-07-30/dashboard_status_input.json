@@ -1,0 +1,30 @@
+{
+  "decision": "broad_state_4x2500_verification_completed_source_review_ready",
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "verification_lane_001": 1442,
+    "verification_lane_002": 1442,
+    "verification_lane_003": 1442,
+    "verification_lane_004": 1442
+  },
+  "map_filter": "total_scout_coverage_only",
+  "next_stage": "four_lane_source_review_download",
+  "priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "scout_covered_municipalities": 16887,
+  "source_review_ready_count": 3950,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "terminal_status_counts": {
+    "blocked_or_forbidden": 946,
+    "duplicate_final_locator": 4,
+    "reachable": 3756,
+    "reachable_with_redirect": 194,
+    "timeout": 4,
+    "unavailable": 864
+  },
+  "verification_queue_count": 5768,
+  "verified_row_count": 5768
+}

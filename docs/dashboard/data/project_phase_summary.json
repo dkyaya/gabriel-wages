@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-30T11:11:24Z",
+  "generated_at": "2026-07-30T12:10:24Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,12 +95,39 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_4x2500_candidate_review_complete_verification_transition",
-  "current_phase": "Broad state 4 × 2,500 candidate review complete; four-lane verification ready next",
-  "current_phase_code": "broad_state_4x2500_live_scout_finalized_candidate_review_completed_verification_ready",
-  "current_evidence_status": "broad_4x2500_candidate_review_complete_verification_ready_unverified_metadata_only",
+  "stage": "broad_state_4x2500_verification_complete_source_review_download_transition",
+  "current_phase": "Broad state 4 × 2,500 verification complete; four-lane source review/download ready next",
+  "current_phase_code": "broad_state_4x2500_verification_completed_source_review_ready",
+  "current_evidence_status": "broad_4x2500_verification_complete_source_review_download_ready_metadata_only",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
+  "broad_state_4x2500_verification_available": true,
+  "broad_state_4x2500_verification_decision": "broad_state_4x2500_verification_completed_source_review_ready",
+  "broad_state_4x2500_verified_row_count": 5768,
+  "broad_state_4x2500_source_review_ready_count": 3950,
+  "broad_state_4x2500_verification_terminal_status_counts": {
+    "blocked_or_forbidden": 946,
+    "duplicate_final_locator": 4,
+    "reachable": 3756,
+    "reachable_with_redirect": 194,
+    "timeout": 4,
+    "unavailable": 864
+  },
+  "broad_state_4x2500_verification_priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "broad_state_4x2500_verification_lane_counts": {
+    "verification_lane_001": 1442,
+    "verification_lane_002": 1442,
+    "verification_lane_003": 1442,
+    "verification_lane_004": 1442
+  },
+  "broad_state_4x2500_verification_unavailable_count": 864,
+  "broad_state_4x2500_verification_blocked_timeout_count": 950,
+  "broad_state_4x2500_verification_duplicate_count": 4,
+  "broad_state_4x2500_verification_error_count": 0,
   "broad_state_4x2500_scout_infrastructure_prep_available": true,
   "broad_state_4x2500_scout_infrastructure_prep_decision": "broad_state_4x2500_scout_infrastructure_prep_completed_live_ready",
   "broad_state_4x2500_live_scout_available": true,
@@ -897,7 +924,7 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "four-lane broad-state 4 × 2,500 candidate verification",
+  "next_phase": "four-lane broad-state 4 × 2,500 source review/download",
   "next_phase_sequence": [
     "launch four isolated live lanes at T+0/T+8/T+16/T+24 with controlled overlap",
     "validate each committed shard hash and checkpoint after every target",

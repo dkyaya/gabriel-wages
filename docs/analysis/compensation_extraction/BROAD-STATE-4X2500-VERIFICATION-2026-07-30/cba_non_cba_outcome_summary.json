@@ -1,0 +1,29 @@
+{
+  "grouping_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_hint": {
+      "source_review_ready": 589,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 104,
+        "duplicate_final_locator": 1,
+        "reachable": 568,
+        "reachable_with_redirect": 21,
+        "unavailable": 245
+      },
+      "total": 939
+    },
+    "non_cba_or_other_hint": {
+      "source_review_ready": 3361,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 842,
+        "duplicate_final_locator": 3,
+        "reachable": 3188,
+        "reachable_with_redirect": 173,
+        "timeout": 4,
+        "unavailable": 619
+      },
+      "total": 4829
+    }
+  },
+  "total_rows": 5768
+}

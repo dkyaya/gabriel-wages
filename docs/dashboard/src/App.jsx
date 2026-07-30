@@ -418,7 +418,7 @@ function App() {
                 <MetricCard label="CBA hint concentration" value={`${((projectPhaseSummary.broad_state_4x2500_live_cba_concentration ?? 0) * 100).toFixed(1)}%`} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_non_cba_opportunity_count)} non-CBA or unresolved opportunities`} />
               )}
               {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD/GET metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
+                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_verification_available ? "Source review/download" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_verification_available ? "Four lanes over reachable metadata outcomes; retained sources stay outside Git" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
               )}
               {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
                 <MetricCard label="Verification-ready queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verification_ready_queue_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_ready_priority_counts)} />
@@ -428,6 +428,15 @@ function App() {
               )}
               {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
                 <MetricCard label="Review repair queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_candidate_review_repair_queue_count)} note="Retained outside verification until metadata repair; scout coverage is unchanged" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_verification_available && (
+                <MetricCard label="Verification completed" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verified_row_count)} note={`4 × 1,442 lanes · ${formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_priority_counts)}`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_verification_available && (
+                <MetricCard label="Source-review-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_ready_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_terminal_status_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_verification_available && (
+                <MetricCard label="Verification exceptions" value={formatNumber((projectPhaseSummary.broad_state_4x2500_verification_unavailable_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_verification_blocked_timeout_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_verification_duplicate_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_verification_error_count ?? 0))} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_unavailable_count)} unavailable · ${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_blocked_timeout_count)} blocked/timeout · ${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_duplicate_count)} duplicate · ${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_error_count)} error`} />
               )}
               <MetricCard
                 label="Globally usable descriptive evidence"

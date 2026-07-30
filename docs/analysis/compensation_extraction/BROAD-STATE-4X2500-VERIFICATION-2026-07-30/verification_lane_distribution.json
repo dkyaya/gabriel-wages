@@ -1,0 +1,48 @@
+{
+  "exact_target_distribution_passed": true,
+  "lane_distribution": {
+    "verification_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1071,
+        "low_priority_verification_ready": 33,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 1442
+    },
+    "verification_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 1442
+    },
+    "verification_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 1442
+    },
+    "verification_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 1442
+    }
+  },
+  "priority_interleaving": "stable proportional merge",
+  "priority_totals": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "total_rows": 5768
+}

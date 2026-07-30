@@ -1,0 +1,181 @@
+{
+  "blocked_or_timeout_count": 950,
+  "codification_runs": 0,
+  "completed_verification_rows": 5768,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "dashboard_scout_covered_municipalities": 16887,
+  "decision": "broad_state_4x2500_verification_completed_source_review_ready",
+  "documents_downloaded": 0,
+  "duplicate_final_locator_count": 4,
+  "final_causal_claims": 0,
+  "global_analysis_readiness": false,
+  "global_readiness_flags_preserved": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "ingestion_runs": 0,
+  "lane_counts": {
+    "verification_lane_001": 1442,
+    "verification_lane_002": 1442,
+    "verification_lane_003": 1442,
+    "verification_lane_004": 1442
+  },
+  "lane_summaries": {
+    "verification_lane_001": {
+      "actual_started_at": "2026-07-30T11:27:11Z",
+      "checkpoint_frequency": "after_every_row",
+      "completed_at": "2026-07-30T11:46:32Z",
+      "completed_rows": 1442,
+      "downloads": 0,
+      "lane_id": "verification_lane_001",
+      "locked_rows": 1442,
+      "priority_counts": {
+        "high_priority_verification_ready": 1071,
+        "low_priority_verification_ready": 33,
+        "medium_priority_verification_ready": 338
+      },
+      "raw_headers_saved": 0,
+      "remaining_rows": 0,
+      "response_bodies_saved": 0,
+      "resumed_completed_rows": 0,
+      "scheduled_stagger_minutes": 0,
+      "scheduled_start_at": "2026-07-30T11:27:11Z",
+      "source_reviews": 0,
+      "status": "completed",
+      "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 219,
+        "reachable": 964,
+        "reachable_with_redirect": 50,
+        "timeout": 3,
+        "unavailable": 206
+      },
+      "verification_method": "HEAD_metadata_only"
+    },
+    "verification_lane_002": {
+      "actual_started_at": "2026-07-30T11:35:11Z",
+      "checkpoint_frequency": "after_every_row",
+      "completed_at": "2026-07-30T11:54:16Z",
+      "completed_rows": 1442,
+      "downloads": 0,
+      "lane_id": "verification_lane_002",
+      "locked_rows": 1442,
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "raw_headers_saved": 0,
+      "remaining_rows": 0,
+      "response_bodies_saved": 0,
+      "resumed_completed_rows": 0,
+      "scheduled_stagger_minutes": 8,
+      "scheduled_start_at": "2026-07-30T11:35:11Z",
+      "source_reviews": 0,
+      "status": "completed",
+      "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 243,
+        "reachable": 945,
+        "reachable_with_redirect": 46,
+        "timeout": 1,
+        "unavailable": 207
+      },
+      "verification_method": "HEAD_metadata_only"
+    },
+    "verification_lane_003": {
+      "actual_started_at": "2026-07-30T11:43:11Z",
+      "checkpoint_frequency": "after_every_row",
+      "completed_at": "2026-07-30T12:02:02Z",
+      "completed_rows": 1442,
+      "downloads": 0,
+      "lane_id": "verification_lane_003",
+      "locked_rows": 1442,
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "raw_headers_saved": 0,
+      "remaining_rows": 0,
+      "response_bodies_saved": 0,
+      "resumed_completed_rows": 0,
+      "scheduled_stagger_minutes": 16,
+      "scheduled_start_at": "2026-07-30T11:43:11Z",
+      "source_reviews": 0,
+      "status": "completed",
+      "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 245,
+        "reachable": 908,
+        "reachable_with_redirect": 51,
+        "unavailable": 238
+      },
+      "verification_method": "HEAD_metadata_only"
+    },
+    "verification_lane_004": {
+      "actual_started_at": "2026-07-30T11:51:11Z",
+      "checkpoint_frequency": "after_every_row",
+      "completed_at": "2026-07-30T12:10:05Z",
+      "completed_rows": 1442,
+      "downloads": 0,
+      "lane_id": "verification_lane_004",
+      "locked_rows": 1442,
+      "priority_counts": {
+        "high_priority_verification_ready": 1070,
+        "low_priority_verification_ready": 34,
+        "medium_priority_verification_ready": 338
+      },
+      "raw_headers_saved": 0,
+      "remaining_rows": 0,
+      "response_bodies_saved": 0,
+      "resumed_completed_rows": 0,
+      "scheduled_stagger_minutes": 24,
+      "scheduled_start_at": "2026-07-30T11:51:11Z",
+      "source_reviews": 0,
+      "status": "completed",
+      "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 239,
+        "reachable": 939,
+        "reachable_with_redirect": 51,
+        "unavailable": 213
+      },
+      "verification_method": "HEAD_metadata_only"
+    }
+  },
+  "next_task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30",
+  "ocr_runs": 0,
+  "priority_counts_verified": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "rating_runs": 0,
+  "raw_headers_saved": 0,
+  "regressions": 0,
+  "response_bodies_saved": 0,
+  "source_documents_inspected": 0,
+  "source_review_ready_count": 3950,
+  "source_reviews": 0,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "terminal_status_counts": {
+    "blocked_or_forbidden": 946,
+    "duplicate_final_locator": 4,
+    "reachable": 3756,
+    "reachable_with_redirect": 194,
+    "timeout": 4,
+    "unavailable": 864
+  },
+  "text_extractions": 0,
+  "unavailable_count": 864,
+  "verification_error_or_malformed_count": 0,
+  "verification_method": "HEAD_metadata_only",
+  "verification_queue_count": 5768,
+  "verification_status": "completed",
+  "wage_gap_calculations": 0
+}

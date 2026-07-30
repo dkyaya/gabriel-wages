@@ -1,0 +1,9 @@
+{
+  "decision": "broad_state_4x2500_verification_completed_source_review_ready",
+  "documents_downloaded": 0,
+  "finalized_at": "2026-07-30T12:10:15Z",
+  "global_analysis_readiness": false,
+  "source_review_download_ready_next": true,
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "verification_completed": true
+}

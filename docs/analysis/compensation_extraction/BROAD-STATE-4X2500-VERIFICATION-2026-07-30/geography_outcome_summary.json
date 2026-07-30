@@ -1,0 +1,468 @@
+{
+  "region": {
+    "grouping_field": "region",
+    "groups": {
+      "Midwest": {
+        "source_review_ready": 1728,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 339,
+          "duplicate_final_locator": 3,
+          "reachable": 1665,
+          "reachable_with_redirect": 63,
+          "unavailable": 262
+        },
+        "total": 2332
+      },
+      "Northeast": {
+        "source_review_ready": 1058,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 377,
+          "duplicate_final_locator": 1,
+          "reachable": 978,
+          "reachable_with_redirect": 80,
+          "timeout": 2,
+          "unavailable": 409
+        },
+        "total": 1847
+      },
+      "South": {
+        "source_review_ready": 893,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 158,
+          "reachable": 851,
+          "reachable_with_redirect": 42,
+          "unavailable": 141
+        },
+        "total": 1192
+      },
+      "West": {
+        "source_review_ready": 271,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 72,
+          "reachable": 262,
+          "reachable_with_redirect": 9,
+          "timeout": 2,
+          "unavailable": 52
+        },
+        "total": 397
+      }
+    },
+    "total_rows": 5768
+  },
+  "state": {
+    "grouping_field": "state",
+    "groups": {
+      "AK": {
+        "source_review_ready": 11,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 2,
+          "reachable": 11,
+          "unavailable": 1
+        },
+        "total": 14
+      },
+      "AL": {
+        "source_review_ready": 72,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 10,
+          "reachable": 71,
+          "reachable_with_redirect": 1,
+          "unavailable": 5
+        },
+        "total": 87
+      },
+      "AR": {
+        "source_review_ready": 36,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 6,
+          "reachable": 32,
+          "reachable_with_redirect": 4,
+          "unavailable": 4
+        },
+        "total": 46
+      },
+      "CA": {
+        "source_review_ready": 52,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 28,
+          "reachable": 48,
+          "reachable_with_redirect": 4,
+          "timeout": 2,
+          "unavailable": 43
+        },
+        "total": 125
+      },
+      "CO": {
+        "source_review_ready": 38,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 22,
+          "reachable": 38,
+          "unavailable": 1
+        },
+        "total": 61
+      },
+      "CT": {
+        "source_review_ready": 16,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 2,
+          "reachable": 16,
+          "unavailable": 16
+        },
+        "total": 34
+      },
+      "FL": {
+        "source_review_ready": 56,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 8,
+          "reachable": 56,
+          "unavailable": 11
+        },
+        "total": 75
+      },
+      "GA": {
+        "source_review_ready": 94,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 12,
+          "reachable": 86,
+          "reachable_with_redirect": 8,
+          "unavailable": 7
+        },
+        "total": 113
+      },
+      "IA": {
+        "source_review_ready": 146,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 12,
+          "reachable": 145,
+          "reachable_with_redirect": 1,
+          "unavailable": 25
+        },
+        "total": 183
+      },
+      "ID": {
+        "source_review_ready": 18,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 4,
+          "reachable": 18
+        },
+        "total": 22
+      },
+      "IL": {
+        "source_review_ready": 213,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 59,
+          "reachable": 203,
+          "reachable_with_redirect": 10,
+          "unavailable": 91
+        },
+        "total": 363
+      },
+      "IN": {
+        "source_review_ready": 137,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 22,
+          "duplicate_final_locator": 1,
+          "reachable": 134,
+          "reachable_with_redirect": 3,
+          "unavailable": 11
+        },
+        "total": 171
+      },
+      "KS": {
+        "source_review_ready": 150,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 17,
+          "reachable": 139,
+          "reachable_with_redirect": 11,
+          "unavailable": 6
+        },
+        "total": 173
+      },
+      "KY": {
+        "source_review_ready": 85,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 23,
+          "reachable": 84,
+          "reachable_with_redirect": 1,
+          "unavailable": 7
+        },
+        "total": 115
+      },
+      "LA": {
+        "source_review_ready": 69,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 5,
+          "reachable": 68,
+          "reachable_with_redirect": 1,
+          "unavailable": 2
+        },
+        "total": 76
+      },
+      "MA": {
+        "source_review_ready": 91,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 31,
+          "reachable": 84,
+          "reachable_with_redirect": 7,
+          "unavailable": 217
+        },
+        "total": 339
+      },
+      "MD": {
+        "source_review_ready": 3,
+        "terminal_status_counts": {
+          "reachable": 3
+        },
+        "total": 3
+      },
+      "ME": {
+        "source_review_ready": 91,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 12,
+          "duplicate_final_locator": 1,
+          "reachable": 89,
+          "reachable_with_redirect": 2,
+          "unavailable": 11
+        },
+        "total": 115
+      },
+      "MI": {
+        "source_review_ready": 200,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 21,
+          "reachable": 197,
+          "reachable_with_redirect": 3,
+          "unavailable": 23
+        },
+        "total": 244
+      },
+      "MN": {
+        "source_review_ready": 176,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 25,
+          "reachable": 160,
+          "reachable_with_redirect": 16,
+          "unavailable": 28
+        },
+        "total": 229
+      },
+      "MO": {
+        "source_review_ready": 59,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 107,
+          "reachable": 52,
+          "reachable_with_redirect": 7,
+          "unavailable": 4
+        },
+        "total": 170
+      },
+      "MS": {
+        "source_review_ready": 9,
+        "terminal_status_counts": {
+          "reachable": 9,
+          "unavailable": 1
+        },
+        "total": 10
+      },
+      "NC": {
+        "source_review_ready": 181,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 19,
+          "reachable": 173,
+          "reachable_with_redirect": 8,
+          "unavailable": 29
+        },
+        "total": 229
+      },
+      "ND": {
+        "source_review_ready": 61,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 11,
+          "reachable": 60,
+          "reachable_with_redirect": 1,
+          "unavailable": 6
+        },
+        "total": 78
+      },
+      "NE": {
+        "source_review_ready": 100,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 6,
+          "duplicate_final_locator": 2,
+          "reachable": 96,
+          "reachable_with_redirect": 4,
+          "unavailable": 5
+        },
+        "total": 113
+      },
+      "NH": {
+        "source_review_ready": 37,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 2,
+          "reachable": 33,
+          "reachable_with_redirect": 4,
+          "unavailable": 8
+        },
+        "total": 47
+      },
+      "NJ": {
+        "source_review_ready": 310,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 169,
+          "reachable": 299,
+          "reachable_with_redirect": 11,
+          "unavailable": 90
+        },
+        "total": 569
+      },
+      "NY": {
+        "source_review_ready": 266,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 65,
+          "reachable": 221,
+          "reachable_with_redirect": 45,
+          "timeout": 1,
+          "unavailable": 43
+        },
+        "total": 375
+      },
+      "OH": {
+        "source_review_ready": 247,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 27,
+          "reachable": 246,
+          "reachable_with_redirect": 1,
+          "unavailable": 21
+        },
+        "total": 295
+      },
+      "OK": {
+        "source_review_ready": 51,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 19,
+          "reachable": 43,
+          "reachable_with_redirect": 8,
+          "unavailable": 2
+        },
+        "total": 72
+      },
+      "OR": {
+        "source_review_ready": 21,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 8,
+          "reachable": 19,
+          "reachable_with_redirect": 2,
+          "unavailable": 1
+        },
+        "total": 30
+      },
+      "PA": {
+        "source_review_ready": 161,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 95,
+          "reachable": 154,
+          "reachable_with_redirect": 7,
+          "timeout": 1,
+          "unavailable": 15
+        },
+        "total": 272
+      },
+      "SC": {
+        "source_review_ready": 27,
+        "terminal_status_counts": {
+          "reachable": 27
+        },
+        "total": 27
+      },
+      "SD": {
+        "source_review_ready": 59,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 4,
+          "reachable": 58,
+          "reachable_with_redirect": 1,
+          "unavailable": 6
+        },
+        "total": 69
+      },
+      "TN": {
+        "source_review_ready": 71,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 6,
+          "reachable": 69,
+          "reachable_with_redirect": 2,
+          "unavailable": 4
+        },
+        "total": 81
+      },
+      "TX": {
+        "source_review_ready": 92,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 46,
+          "reachable": 85,
+          "reachable_with_redirect": 7,
+          "unavailable": 64
+        },
+        "total": 202
+      },
+      "UT": {
+        "source_review_ready": 88,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 1,
+          "reachable": 87,
+          "reachable_with_redirect": 1,
+          "unavailable": 1
+        },
+        "total": 90
+      },
+      "VA": {
+        "source_review_ready": 24,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 4,
+          "reachable": 23,
+          "reachable_with_redirect": 1,
+          "unavailable": 5
+        },
+        "total": 33
+      },
+      "VT": {
+        "source_review_ready": 86,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 1,
+          "reachable": 82,
+          "reachable_with_redirect": 4,
+          "unavailable": 9
+        },
+        "total": 96
+      },
+      "WA": {
+        "source_review_ready": 43,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 7,
+          "reachable": 41,
+          "reachable_with_redirect": 2,
+          "unavailable": 5
+        },
+        "total": 55
+      },
+      "WI": {
+        "source_review_ready": 180,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 28,
+          "reachable": 175,
+          "reachable_with_redirect": 5,
+          "unavailable": 36
+        },
+        "total": 244
+      },
+      "WV": {
+        "source_review_ready": 23,
+        "terminal_status_counts": {
+          "reachable": 22,
+          "reachable_with_redirect": 1
+        },
+        "total": 23
+      }
+    },
+    "total_rows": 5768
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "checkpoint_frequency": "after_every_row",
+  "checkpointed_at": "2026-07-30T11:46:32Z",
+  "completed_rows": 1442,
+  "downloads": 0,
+  "lane_id": "verification_lane_001",
+  "last_verification_row_id": "B4X2500V-20260730-01442",
+  "locked_rows": 1442,
+  "queue_sha256": "0ca87043b4207615225e8d46ef96cb65db04c38eeaee6ae03e1ebf3962420c54",
+  "remaining_rows": 0,
+  "response_bodies_saved": 0,
+  "status": "completed",
+  "task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30"
+}
