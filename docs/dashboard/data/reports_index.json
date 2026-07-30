@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T13:11:10Z",
+  "generated_at": "2026-07-30T15:05:48Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-source-review-download-2026-07-30",
-      "title": "Broad State 4 × 2,500 Source Review / Download",
-      "report_type": "Current bounded source-review/download result",
+      "id": "broad-state-4x2500-pdf-text-readiness-2026-07-30",
+      "title": "Broad State 4 × 2,500 PDF/Text Readiness",
+      "report_type": "Current bounded retained-file technical-readiness result",
       "date": "2026-07-30",
-      "checkpoint": "3,672 unique retained sources",
-      "summary": "All 3,950 source-review-ready locators received one terminal outcome across four lanes. Eligible payloads are retained only in ignored local storage; PDF/text readiness is next.",
+      "checkpoint": "2,940 extraction-ready retained sources",
+      "summary": "All 3,672 retained sources received one bounded technical-readiness status across four lanes. No full text or OCR output was produced; four-lane text extraction is next.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "source review",
-        "retained sources"
+        "PDF readiness",
+        "text readiness"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_download_summary.md",
-      "link_label": "Open current 4 × 2,500 source-review report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
+      "link_label": "Open current 4 × 2,500 PDF/text-readiness report",
       "scope_metrics": [
-        {
-          "label": "reviewed locators",
-          "value": 3950
-        },
         {
           "label": "retained sources",
           "value": 3672
         },
         {
-          "label": "retained PDFs",
-          "value": 3248
+          "label": "extraction ready",
+          "value": 2940
+        },
+        {
+          "label": "OCR later",
+          "value": 601
         }
       ]
     },
@@ -73,6 +73,38 @@
       ]
     },
     {
+      "id": "broad-state-4x2500-source-review-download-2026-07-30",
+      "title": "Broad State 4 × 2,500 Source Review / Download",
+      "report_type": "Current bounded source-review/download result",
+      "date": "2026-07-30",
+      "checkpoint": "3,672 unique retained sources",
+      "summary": "All 3,950 source-review-ready locators received one terminal outcome across four lanes. Eligible payloads were retained only in ignored local storage; the subsequent PDF/text-readiness stage is complete.",
+      "tags": [
+        "broad scout",
+        "4x2500",
+        "source review",
+        "retained sources"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_download_summary.md",
+      "link_label": "Open historical 4 × 2,500 source-review report",
+      "scope_metrics": [
+        {
+          "label": "reviewed locators",
+          "value": 3950
+        },
+        {
+          "label": "retained sources",
+          "value": 3672
+        },
+        {
+          "label": "retained PDFs",
+          "value": 3248
+        }
+      ]
+    },
+    {
       "id": "broad-state-4x1000-scout-dry-run-prep-2026-07-27",
       "title": "Broad State 4x1000 Scout Dry-Run Preparation",
       "report_type": "Current discovery planning report",
@@ -86,7 +118,7 @@
         "resumability"
       ],
       "current": false,
-      "historical": false,
+      "historical": true,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_state_4x1000_scout_dry_run_prep_result_2026-07-27.md",
       "link_label": "Open 4x1000 dry-run planning report",
       "scope_metrics": [
@@ -118,7 +150,7 @@
         "candidate review"
       ],
       "current": false,
-      "historical": false,
+      "historical": true,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/broad_state_by_state_source_scout_wave_result_2026-07-27.md",
       "link_label": "Open broad scout operations report",
       "scope_metrics": [
@@ -534,7 +566,6 @@
       "checkpoint": "5,589 source-review-ready candidates from 9,065 reviewed rows",
       "summary": "The current operation completed local metadata triage and locked a later source-review queue. No URLs were opened and no documents were downloaded, source-reviewed, extracted, rated, ingested, or codified.",
       "tags": [
-        "current",
         "candidate review",
         "metadata only",
         "claim boundaries"
@@ -604,7 +635,7 @@
         "completed evidence artifact"
       ],
       "current": false,
-      "historical": false,
+      "historical": true,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md",
       "link_label": "Open current memo supplement",
       "scope_metrics": [
@@ -636,7 +667,7 @@
         "claim boundaries"
       ],
       "current": false,
-      "historical": false,
+      "historical": true,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26/bounded_internal_mechanism_linkage_claim_memo.md",
       "link_label": "Open parent evidence memo",
       "scope_metrics": [
@@ -668,7 +699,7 @@
         "current operations"
       ],
       "current": false,
-      "historical": false,
+      "historical": true,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/dashboard_deployment_fix_and_tier_c_source_review_download_556_result_2026-07-27.md",
       "link_label": "Open Tier C source-review report",
       "scope_metrics": [
@@ -700,7 +731,7 @@
         "broad scouting strategy"
       ],
       "current": false,
-      "historical": false,
+      "historical": true,
       "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/tier_c_readiness_dashboard_map_update_result_2026-07-27.md",
       "link_label": "Open Tier C readiness/map report",
       "scope_metrics": [

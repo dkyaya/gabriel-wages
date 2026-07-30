@@ -1,0 +1,13 @@
+{
+  "file_size_bands": {
+    "100_kib_to_1_mib": 1810,
+    "1_to_5_mib": 742,
+    "5_to_20_mib": 285,
+    "over_20_mib": 39,
+    "under_100_kib": 796
+  },
+  "maximum_bytes": 75442983,
+  "minimum_bytes": 26,
+  "retained_bytes": 6557753939,
+  "retained_source_count": 3672
+}

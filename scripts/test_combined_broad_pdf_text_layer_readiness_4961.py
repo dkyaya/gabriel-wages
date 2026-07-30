@@ -141,6 +141,8 @@ def main() -> None:
         decision["decision"],
         "combined_broad_text_extraction_4051_completed_span_extraction_ready",
         "combined_broad_span_extraction_3815_completed_rating_ready",
+        "broad_state_4x2500_source_review_download_completed_pdf_readiness_ready",
+        "broad_state_4x2500_pdf_text_readiness_completed_text_extraction_ready",
     }
     assert phase["pdf_text_readiness_queue_size"] == 4961
     assert phase["pdf_text_readiness_reviewed_count"] == 4961
@@ -149,6 +151,7 @@ def main() -> None:
         "combined_broad_4961_readiness_parallel_lanes_completed",
         "combined_broad_4051_text_extraction_parallel_lanes_completed",
         "combined_broad_3815_deterministic_span_parallel_lanes_completed",
+        "combined_broad_16947_valid_rating_summary_completed",
     }
     assert source["pdf_text_readiness_reviewed_count"] == 4961
     assert state["metadata"]["current_map_layer"] == "total_scout_coverage_only"

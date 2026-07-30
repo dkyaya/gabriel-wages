@@ -1,0 +1,42 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 3,
+  "group_field": "source_type",
+  "retained_source_count": 3672,
+  "rows": [
+    {
+      "not_ready_count": 59,
+      "readiness_status_counts": {
+        "html_text_ready": 291,
+        "needs_manual_review": 14,
+        "shell_or_navigation_only": 45
+      },
+      "retained_source_count": 350,
+      "source_type": "html",
+      "text_extraction_ready_count": 291
+    },
+    {
+      "not_ready_count": 2,
+      "readiness_status_counts": {
+        "needs_manual_review": 2,
+        "other_document_text_ready": 72
+      },
+      "retained_source_count": 74,
+      "source_type": "other_document",
+      "text_extraction_ready_count": 72
+    },
+    {
+      "not_ready_count": 671,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 17,
+        "ocr_later": 601,
+        "oversized_defer": 53,
+        "parse_text_pdf_ready": 2577
+      },
+      "retained_source_count": 3248,
+      "source_type": "pdf",
+      "text_extraction_ready_count": 2577
+    }
+  ],
+  "text_extraction_ready_count": 2940
+}

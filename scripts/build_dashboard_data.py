@@ -1695,6 +1695,11 @@ BROAD_STATE_4X2500_SOURCE_REVIEW_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30"
 )
+BROAD_STATE_4X2500_PDF_TEXT_READINESS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6019,6 +6024,89 @@ def broad_state_4x2500_source_review_download_status() -> tuple[bool, dict[str, 
     }
 
 
+def broad_state_4x2500_pdf_text_readiness_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed 3,672-source local-only readiness wave."""
+    directory = BROAD_STATE_4X2500_PDF_TEXT_READINESS_DIR
+    required = (
+        directory / "pdf_text_readiness_summary.json",
+        directory / "pdf_text_readiness_manifest.json",
+        directory / "readiness_lane_distribution.json",
+        directory / "merged_pdf_text_readiness_results.csv",
+        directory / "text_extraction_ready_queue.csv",
+        directory / "text_extraction_ready_manifest.json",
+        directory / "retained_source_hash_recheck_report.json",
+        directory / "forbidden_action_audit.json",
+        directory / "dashboard_status_input.json",
+        directory / "source_family_readiness_summary.json",
+        directory / "geography_readiness_summary.json",
+        directory / "cba_non_cba_readiness_summary.json",
+        directory / "mechanism_hint_readiness_summary.json",
+        directory / "pdf_text_readiness_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    summary, manifest, lanes, results, ready, ready_manifest, hashes, forbidden, dashboard, source_family, geography, cba, mechanism, _ = (
+        read_csv(path) if path.suffix == ".csv" else read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    )
+    status_counts = summary.get("primary_readiness_status_counts", {})
+    ready_statuses = {"parse_text_pdf_ready", "html_text_ready", "other_document_text_ready"}
+    result_ids = {row["source_review_download_id"] for row in results}
+    ready_ids = {row["source_review_download_id"] for row in ready}
+    gates = (
+        summary.get("final_decision") == "broad_state_4x2500_pdf_text_readiness_completed_text_extraction_ready"
+        and summary.get("retained_source_count") == 3672
+        and summary.get("retained_pdf_count") == 3248
+        and summary.get("retained_html_count") == 350
+        and summary.get("retained_other_document_count") == 74
+        and summary.get("lane_distribution") == {f"readiness_lane_{index:03d}": 918 for index in range(1, 5)}
+        and len(results) == len(result_ids) == 3672
+        and sum(as_int(value) for value in status_counts.values()) == 3672
+        and len(ready) == len(ready_ids) == summary.get("text_extraction_ready_count")
+        and all(row.get("primary_readiness_status") in ready_statuses for row in ready)
+        and ready_manifest.get("row_count") == len(ready)
+        and manifest.get("retained_source_count") == 3672
+        and lanes.get("total") == 3672
+        and hashes.get("hash_mismatch_or_missing_count") == 0
+        and forbidden.get("audit_status") == "passed"
+        and dashboard.get("dashboard_map_filter") == "total_scout_coverage_only"
+        and dashboard.get("total_scout_coverage_municipalities") == 16887
+        and summary.get("full_text_persisted_count") == 0
+        and summary.get("ocr_run_count") == 0
+        and summary.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 PDF/text readiness package fails dashboard gates")
+    return True, {
+        **summary,
+        "readiness_by_source_family": {
+            row["source_family_hint"]: row["text_extraction_ready_count"]
+            for row in source_family.get("rows", [])
+        },
+        "readiness_by_state": {
+            row["state"]: row["text_extraction_ready_count"]
+            for row in geography.get("rows", [])
+        },
+        "readiness_by_region": {
+            row["region"]: row["text_extraction_ready_count"]
+            for row in geography.get("region_summary", [])
+        },
+        "readiness_by_cba_hint": {
+            row["cba_non_cba_hint"]: row["text_extraction_ready_count"]
+            for row in cba.get("rows", [])
+        },
+        "readiness_by_mechanism_hint": {
+            row["possible_mechanism_hints"]: row["text_extraction_ready_count"]
+            for row in mechanism.get("rows", [])
+        },
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/"
+            "pdf_text_readiness_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6142,6 +6230,9 @@ def build_reports_index_layer(
     broad_4x2500_verify_available, broad_4x2500_verify = broad_state_4x2500_verification_status()
     broad_4x2500_source_review_available, broad_4x2500_source_review = (
         broad_state_4x2500_source_review_download_status()
+    )
+    broad_4x2500_readiness_available, broad_4x2500_readiness = (
+        broad_state_4x2500_pdf_text_readiness_status()
     )
     published_reports = [
         *(
@@ -6771,6 +6862,37 @@ def build_reports_index_layer(
                 ],
             },
         )
+    if broad_4x2500_readiness_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-source-review-download-2026-07-30":
+                report["link_label"] = "Open historical 4 × 2,500 source-review report"
+                report["summary"] = (
+                    "All 3,950 source-review-ready locators received one terminal outcome across four lanes. "
+                    "Eligible payloads were retained only in ignored local storage; the subsequent PDF/text-readiness stage is complete."
+                )
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-pdf-text-readiness-2026-07-30",
+            "title": "Broad State 4 × 2,500 PDF/Text Readiness",
+            "report_type": "Current bounded retained-file technical-readiness result",
+            "date": "2026-07-30",
+            "checkpoint": f"{broad_4x2500_readiness['text_extraction_ready_count']:,} extraction-ready retained sources",
+            "summary": (
+                "All 3,672 retained sources received one bounded technical-readiness status across four lanes. "
+                "No full text or OCR output was produced; four-lane text extraction is next."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "PDF readiness", "text readiness"],
+            "current": True, "historical": False,
+            "href": repository_root_url + broad_4x2500_readiness["dashboard_result_path"],
+            "link_label": "Open current 4 × 2,500 PDF/text-readiness report",
+            "scope_metrics": [
+                {"label": "retained sources", "value": broad_4x2500_readiness["retained_source_count"]},
+                {"label": "extraction ready", "value": broad_4x2500_readiness["text_extraction_ready_count"]},
+                {"label": "OCR later", "value": broad_4x2500_readiness["ocr_later_count"]},
+            ],
+        })
     if live_available:
         published_reports.insert(
             1,
@@ -6802,7 +6924,7 @@ def build_reports_index_layer(
             },
         )
 
-    return {
+    payload = {
         "schema_version": source_index.get("schema_version", "1.0.0"),
         "generated_at": metadata["generated_at"],
         "data_vintage": "2026-07-30" if broad_4x2500_review_available else "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
@@ -6817,6 +6939,7 @@ def build_reports_index_layer(
             "treatment effect, national prevalence result, or final causal finding."
         ),
     }
+    return payload
 
 
 def split_semicolon(value: str) -> list[str]:
@@ -9269,6 +9392,9 @@ def build_project_phase_summary(
     broad_4x2500_source_review_available, broad_4x2500_source_review = (
         broad_state_4x2500_source_review_download_status()
     )
+    broad_4x2500_readiness_available, broad_4x2500_readiness = (
+        broad_state_4x2500_pdf_text_readiness_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -9294,7 +9420,7 @@ def build_project_phase_summary(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
         / "targeted_tier_c_verification_geographic_region_coverage_summary.json"
     )
-    return {
+    payload = {
         **metadata,
         "data_vintage": "2026-07-30" if broad_4x2500_review_available else "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
             broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
@@ -10132,6 +10258,58 @@ def build_project_phase_summary(
             "Global analysis readiness remains false.",
         ],
     }
+    if broad_4x2500_readiness_available:
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_pdf_text_readiness_complete",
+            "current_phase": "Broad state 4 × 2,500 PDF/text readiness complete; four-lane text extraction ready next",
+            "current_phase_code": broad_4x2500_readiness["final_decision"],
+            "current_evidence_status": "broad_4x2500_pdf_text_readiness_complete_text_unextracted",
+            "broad_state_4x2500_pdf_text_readiness_available": True,
+            "broad_state_4x2500_pdf_text_readiness_decision": broad_4x2500_readiness["final_decision"],
+            "broad_state_4x2500_pdf_text_readiness_retained_count": broad_4x2500_readiness["retained_source_count"],
+            "broad_state_4x2500_pdf_text_readiness_pdf_count": broad_4x2500_readiness["retained_pdf_count"],
+            "broad_state_4x2500_pdf_text_readiness_html_count": broad_4x2500_readiness["retained_html_count"],
+            "broad_state_4x2500_pdf_text_readiness_other_count": broad_4x2500_readiness["retained_other_document_count"],
+            "broad_state_4x2500_pdf_text_readiness_lane_distribution": broad_4x2500_readiness["lane_distribution"],
+            "broad_state_4x2500_pdf_text_readiness_status_counts": broad_4x2500_readiness["primary_readiness_status_counts"],
+            "broad_state_4x2500_pdf_text_readiness_parse_pdf_ready_count": broad_4x2500_readiness["parse_text_pdf_ready_count"],
+            "broad_state_4x2500_pdf_text_readiness_html_ready_count": broad_4x2500_readiness["html_text_ready_count"],
+            "broad_state_4x2500_pdf_text_readiness_other_ready_count": broad_4x2500_readiness["other_document_text_ready_count"],
+            "broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count": broad_4x2500_readiness["text_extraction_ready_count"],
+            "broad_state_4x2500_pdf_text_readiness_ocr_later_count": broad_4x2500_readiness["ocr_later_count"],
+            "broad_state_4x2500_pdf_text_readiness_oversized_count": broad_4x2500_readiness["oversized_defer_count"],
+            "broad_state_4x2500_pdf_text_readiness_locked_count": broad_4x2500_readiness["encrypted_or_locked_count"],
+            "broad_state_4x2500_pdf_text_readiness_corrupt_count": broad_4x2500_readiness["corrupt_or_broken_count"],
+            "broad_state_4x2500_pdf_text_readiness_shell_count": broad_4x2500_readiness["shell_or_navigation_only_count"],
+            "broad_state_4x2500_pdf_text_readiness_needs_review_count": broad_4x2500_readiness["needs_manual_review_count"],
+            "broad_state_4x2500_pdf_text_readiness_unsupported_count": broad_4x2500_readiness["unsupported_file_type_count"],
+            "broad_state_4x2500_pdf_text_readiness_error_count": broad_4x2500_readiness["readiness_error_count"],
+            "broad_state_4x2500_pdf_text_readiness_by_source_family": broad_4x2500_readiness["readiness_by_source_family"],
+            "broad_state_4x2500_pdf_text_readiness_by_state": broad_4x2500_readiness["readiness_by_state"],
+            "broad_state_4x2500_pdf_text_readiness_by_region": broad_4x2500_readiness["readiness_by_region"],
+            "broad_state_4x2500_pdf_text_readiness_by_cba_hint": broad_4x2500_readiness["readiness_by_cba_hint"],
+            "broad_state_4x2500_pdf_text_readiness_by_mechanism_hint": broad_4x2500_readiness["readiness_by_mechanism_hint"],
+            "current_report_title": "Broad State 4 × 2,500 PDF/Text Readiness",
+            "current_report_path": broad_4x2500_readiness["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_readiness["dashboard_result_path"],
+            "next_task": "run BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 over the exact readiness-approved queue in four independent staggered lanes",
+            "next_phase": "four-lane broad-state 4 × 2,500 text extraction",
+            "next_phase_sequence": [
+                "lock only parse_text_pdf_ready, html_text_ready, and other_document_text_ready rows",
+                "split the exact extraction queue into four independent staggered lanes",
+                "checkpoint every source and retain extracted text only in ignored local artifact storage",
+                "do not OCR, rate, ingest, codify, normalize wages, run regressions, or make causal claims",
+                "rebuild and visibly smoke-test the dashboard while preserving scout-only map coverage",
+            ],
+            "last_updated_context": "broad_state_4x2500_pdf_text_readiness_complete_text_extraction_ready",
+            "dashboard_map_filter": "total_scout_coverage_only",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_matched_structure",
+        })
+    return payload
 
 
 def build_parallel_scout_status(
@@ -12028,6 +12206,49 @@ def build_pdf_readiness_status_summary(
     *, metadata: dict[str, Any]
 ) -> dict[str, Any]:
     """Build the local-only PDF-readiness collection status."""
+
+    latest_available, latest = broad_state_4x2500_pdf_text_readiness_status()
+    if latest_available:
+        return {
+            **metadata,
+            "pdf_readiness_phase": "broad_state_4x2500_3672_completed",
+            "latest_pdf_readiness_round_id": "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30",
+            "pdf_readiness_merge_status": "coordinator_merged",
+            "source_review_rows_available": 3950,
+            "retained_source_count": latest["retained_source_count"],
+            "retained_pdf_artifacts_available": latest["retained_pdf_count"],
+            "retained_html_artifacts_available": latest["retained_html_count"],
+            "retained_other_document_artifacts_available": latest["retained_other_document_count"],
+            "pdf_readiness_rows_merged": latest["retained_pdf_count"],
+            "readiness_reviewed_count": latest["retained_source_count"],
+            "readiness_status_counts": latest["primary_readiness_status_counts"],
+            "parse_text_layer_later_rows": latest["parse_text_pdf_ready_count"],
+            "html_text_later_rows": latest["html_text_ready_count"],
+            "other_document_text_later_rows": latest["other_document_text_ready_count"],
+            "ocr_later_rows": latest["ocr_later_count"],
+            "oversized_rows": latest["oversized_defer_count"],
+            "corrupt_or_unreadable_rows": latest["corrupt_or_broken_count"],
+            "encrypted_or_locked_rows": latest["encrypted_or_locked_count"],
+            "shell_or_navigation_only_rows": latest["shell_or_navigation_only_count"],
+            "unsupported_rows": latest["unsupported_file_type_count"],
+            "needs_review_rows": latest["needs_manual_review_count"],
+            "readiness_error_rows": latest["readiness_error_count"],
+            "extraction_ready_rows": latest["text_extraction_ready_count"],
+            "technical_readiness_status": "complete_for_all_retained_sources",
+            "next_recommendation": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
+            "ingestion_status": "not_started", "codify_status": "not_started",
+            "wage_extraction_status": "not_started",
+            "wage_gap_analysis_status": "blocked_pending_normalization",
+            "causal_analysis_status": "blocked_pending_matched_structure",
+            "summary_source": relative(BROAD_STATE_4X2500_PDF_TEXT_READINESS_DIR / "pdf_text_readiness_summary.json"),
+            "dashboard_map_filter": "total_scout_coverage_only",
+            "global_analysis_readiness": False,
+            "caveats": [
+                "Readiness is technical local-file parseability only and is not durable text extraction.",
+                "No OCR, rendering, evidence extraction/rating, ingestion, codification, or wage analysis occurred.",
+                "Readiness does not establish population prevalence, wage differences, effects, or causation.",
+            ],
+        }
 
     broad_available, broad = combined_broad_pdf_text_readiness_status()
     if broad_available:

@@ -60,15 +60,18 @@ export function AnalysisReadinessPanel({ data, phase }) {
             <li>Causal readiness remains blocked pending matched structure.</li>
             <li>Final causal and national prevalence claims remain unavailable.</li>
           </ul>
-          <p>{data.promotion_gate}</p>
+          <p>{phase.broad_state_4x2500_pdf_text_readiness_available
+            ? `The next authorized task is BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30 over exactly ${formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} readiness-approved files in four staggered lanes. OCR remains excluded.`
+            : data.promotion_gate}</p>
         </div>
       </div>
 
       <p className="panel-note">
-        The four-lane broad state scout and 5,768-row verification wave are complete. The current
-        4 × 2,500 source-review/download wave reviewed {formatNumber(phase.broad_state_4x2500_source_review_queue_count)} locators
-        and retained {formatNumber(phase.broad_state_4x2500_source_review_retained_count)} unique hashed files in ignored local storage.
-        PDF/text readiness is next; no text extraction, OCR, rating, ingestion, codification, wage-gap analysis, or causal analysis occurred.
+        {phase.broad_state_4x2500_pdf_text_readiness_available ? (
+          <>The four-lane broad state scout, verification, source-review/download, and PDF/text-readiness waves are complete. Readiness classified {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_retained_count)} retained files and approved {formatNumber(phase.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} for later non-OCR text extraction. No full text was persisted during readiness, and no OCR, rating, ingestion, codification, wage-gap analysis, or causal analysis occurred.</>
+        ) : (
+          <>The four-lane broad state scout and 5,768-row verification wave are complete. The current 4 × 2,500 source-review/download wave reviewed {formatNumber(phase.broad_state_4x2500_source_review_queue_count)} locators and retained {formatNumber(phase.broad_state_4x2500_source_review_retained_count)} unique hashed files in ignored local storage. PDF/text readiness is next; no text extraction, OCR, rating, ingestion, codification, wage-gap analysis, or causal analysis occurred.</>
+        )}
       </p>
 
       <details>

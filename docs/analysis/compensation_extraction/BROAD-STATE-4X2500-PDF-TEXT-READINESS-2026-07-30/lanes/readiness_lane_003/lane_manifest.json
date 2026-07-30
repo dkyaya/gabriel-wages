@@ -1,0 +1,19 @@
+{
+  "csv_sha256": "d5264da296cce96ce2d77282add11d5ac73de9dbe2d4a92ee00175b2c3198a3f",
+  "id_set_sha256": "5e8bc848460eded51e7e242257f067a363188753fac52b996db4d9aa476d1806",
+  "jsonl_sha256": "0f7315fc5ed6632db8b5bdf692ee688dcf6fd573bcb7143067fea49877710085",
+  "lane_id": "readiness_lane_003",
+  "priority_counts": {
+    "high_priority_verification_ready": 700,
+    "low_priority_verification_ready": 38,
+    "medium_priority_verification_ready": 180
+  },
+  "row_count": 918,
+  "source_type_counts": {
+    "html": 86,
+    "other_document": 23,
+    "pdf": 809
+  },
+  "stagger_seconds": 960,
+  "task_id": "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30"
+}

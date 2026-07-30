@@ -1,0 +1,611 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 42,
+  "group_field": "state",
+  "region_summary": [
+    {
+      "not_ready_count": 307,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 6,
+        "html_text_ready": 141,
+        "needs_manual_review": 7,
+        "ocr_later": 239,
+        "other_document_text_ready": 39,
+        "oversized_defer": 30,
+        "parse_text_pdf_ready": 1181,
+        "shell_or_navigation_only": 25
+      },
+      "region": "Midwest",
+      "retained_source_count": 1668,
+      "text_extraction_ready_count": 1361
+    },
+    {
+      "not_ready_count": 210,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 6,
+        "html_text_ready": 52,
+        "needs_manual_review": 2,
+        "ocr_later": 188,
+        "other_document_text_ready": 4,
+        "oversized_defer": 5,
+        "parse_text_pdf_ready": 716,
+        "shell_or_navigation_only": 9
+      },
+      "region": "Northeast",
+      "retained_source_count": 982,
+      "text_extraction_ready_count": 772
+    },
+    {
+      "not_ready_count": 174,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 5,
+        "html_text_ready": 80,
+        "needs_manual_review": 4,
+        "ocr_later": 142,
+        "other_document_text_ready": 24,
+        "oversized_defer": 15,
+        "parse_text_pdf_ready": 546,
+        "shell_or_navigation_only": 8
+      },
+      "region": "South",
+      "retained_source_count": 824,
+      "text_extraction_ready_count": 650
+    },
+    {
+      "not_ready_count": 41,
+      "readiness_status_counts": {
+        "html_text_ready": 18,
+        "needs_manual_review": 3,
+        "ocr_later": 32,
+        "other_document_text_ready": 5,
+        "oversized_defer": 3,
+        "parse_text_pdf_ready": 134,
+        "shell_or_navigation_only": 3
+      },
+      "region": "West",
+      "retained_source_count": 198,
+      "text_extraction_ready_count": 157
+    }
+  ],
+  "retained_source_count": 3672,
+  "rows": [
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 11
+      },
+      "retained_source_count": 11,
+      "state": "AK",
+      "text_extraction_ready_count": 11
+    },
+    {
+      "not_ready_count": 21,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 12,
+        "needs_manual_review": 1,
+        "ocr_later": 18,
+        "other_document_text_ready": 5,
+        "parse_text_pdf_ready": 31,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 69,
+      "state": "AL",
+      "text_extraction_ready_count": 48
+    },
+    {
+      "not_ready_count": 11,
+      "readiness_status_counts": {
+        "html_text_ready": 6,
+        "ocr_later": 11,
+        "parse_text_pdf_ready": 18
+      },
+      "retained_source_count": 35,
+      "state": "AR",
+      "text_extraction_ready_count": 24
+    },
+    {
+      "not_ready_count": 7,
+      "readiness_status_counts": {
+        "html_text_ready": 1,
+        "ocr_later": 4,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 41,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 49,
+      "state": "CA",
+      "text_extraction_ready_count": 42
+    },
+    {
+      "not_ready_count": 8,
+      "readiness_status_counts": {
+        "html_text_ready": 5,
+        "needs_manual_review": 2,
+        "ocr_later": 5,
+        "parse_text_pdf_ready": 16,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 29,
+      "state": "CO",
+      "text_extraction_ready_count": 21
+    },
+    {
+      "not_ready_count": 6,
+      "readiness_status_counts": {
+        "html_text_ready": 1,
+        "ocr_later": 6,
+        "parse_text_pdf_ready": 8
+      },
+      "retained_source_count": 15,
+      "state": "CT",
+      "text_extraction_ready_count": 9
+    },
+    {
+      "not_ready_count": 10,
+      "readiness_status_counts": {
+        "ocr_later": 7,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 42,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 52,
+      "state": "FL",
+      "text_extraction_ready_count": 42
+    },
+    {
+      "not_ready_count": 12,
+      "readiness_status_counts": {
+        "html_text_ready": 5,
+        "ocr_later": 9,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 52,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 69,
+      "state": "GA",
+      "text_extraction_ready_count": 57
+    },
+    {
+      "not_ready_count": 23,
+      "readiness_status_counts": {
+        "html_text_ready": 13,
+        "ocr_later": 10,
+        "other_document_text_ready": 8,
+        "oversized_defer": 4,
+        "parse_text_pdf_ready": 100,
+        "shell_or_navigation_only": 9
+      },
+      "retained_source_count": 144,
+      "state": "IA",
+      "text_extraction_ready_count": 121
+    },
+    {
+      "not_ready_count": 4,
+      "readiness_status_counts": {
+        "html_text_ready": 3,
+        "ocr_later": 3,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 10
+      },
+      "retained_source_count": 17,
+      "state": "ID",
+      "text_extraction_ready_count": 13
+    },
+    {
+      "not_ready_count": 51,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 6,
+        "needs_manual_review": 1,
+        "ocr_later": 41,
+        "oversized_defer": 7,
+        "parse_text_pdf_ready": 136
+      },
+      "retained_source_count": 193,
+      "state": "IL",
+      "text_extraction_ready_count": 142
+    },
+    {
+      "not_ready_count": 55,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 6,
+        "ocr_later": 49,
+        "oversized_defer": 4,
+        "parse_text_pdf_ready": 72
+      },
+      "retained_source_count": 133,
+      "state": "IN",
+      "text_extraction_ready_count": 78
+    },
+    {
+      "not_ready_count": 13,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 38,
+        "ocr_later": 9,
+        "other_document_text_ready": 4,
+        "parse_text_pdf_ready": 92,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 147,
+      "state": "KS",
+      "text_extraction_ready_count": 134
+    },
+    {
+      "not_ready_count": 27,
+      "readiness_status_counts": {
+        "html_text_ready": 8,
+        "ocr_later": 24,
+        "other_document_text_ready": 4,
+        "parse_text_pdf_ready": 44,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 83,
+      "state": "KY",
+      "text_extraction_ready_count": 56
+    },
+    {
+      "not_ready_count": 7,
+      "readiness_status_counts": {
+        "html_text_ready": 17,
+        "needs_manual_review": 2,
+        "ocr_later": 5,
+        "other_document_text_ready": 1,
+        "parse_text_pdf_ready": 41
+      },
+      "retained_source_count": 66,
+      "state": "LA",
+      "text_extraction_ready_count": 59
+    },
+    {
+      "not_ready_count": 19,
+      "readiness_status_counts": {
+        "html_text_ready": 5,
+        "needs_manual_review": 1,
+        "ocr_later": 15,
+        "parse_text_pdf_ready": 58,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 82,
+      "state": "MA",
+      "text_extraction_ready_count": 63
+    },
+    {
+      "not_ready_count": 1,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 3,
+      "state": "MD",
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 21,
+      "readiness_status_counts": {
+        "html_text_ready": 11,
+        "needs_manual_review": 1,
+        "ocr_later": 17,
+        "other_document_text_ready": 1,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 56,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 89,
+      "state": "ME",
+      "text_extraction_ready_count": 68
+    },
+    {
+      "not_ready_count": 29,
+      "readiness_status_counts": {
+        "html_text_ready": 15,
+        "needs_manual_review": 1,
+        "ocr_later": 24,
+        "oversized_defer": 3,
+        "parse_text_pdf_ready": 148,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 192,
+      "state": "MI",
+      "text_extraction_ready_count": 163
+    },
+    {
+      "not_ready_count": 31,
+      "readiness_status_counts": {
+        "html_text_ready": 8,
+        "needs_manual_review": 1,
+        "ocr_later": 29,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 137
+      },
+      "retained_source_count": 176,
+      "state": "MN",
+      "text_extraction_ready_count": 145
+    },
+    {
+      "not_ready_count": 18,
+      "readiness_status_counts": {
+        "html_text_ready": 7,
+        "needs_manual_review": 1,
+        "ocr_later": 14,
+        "other_document_text_ready": 5,
+        "parse_text_pdf_ready": 25,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 55,
+      "state": "MO",
+      "text_extraction_ready_count": 37
+    },
+    {
+      "not_ready_count": 6,
+      "readiness_status_counts": {
+        "html_text_ready": 1,
+        "ocr_later": 6,
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 9,
+      "state": "MS",
+      "text_extraction_ready_count": 3
+    },
+    {
+      "not_ready_count": 23,
+      "readiness_status_counts": {
+        "html_text_ready": 10,
+        "ocr_later": 21,
+        "other_document_text_ready": 6,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 131
+      },
+      "retained_source_count": 170,
+      "state": "NC",
+      "text_extraction_ready_count": 147
+    },
+    {
+      "not_ready_count": 5,
+      "readiness_status_counts": {
+        "html_text_ready": 6,
+        "ocr_later": 2,
+        "other_document_text_ready": 1,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 47,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 59,
+      "state": "ND",
+      "text_extraction_ready_count": 54
+    },
+    {
+      "not_ready_count": 15,
+      "readiness_status_counts": {
+        "html_text_ready": 18,
+        "ocr_later": 12,
+        "other_document_text_ready": 8,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 54,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 95,
+      "state": "NE",
+      "text_extraction_ready_count": 80
+    },
+    {
+      "not_ready_count": 9,
+      "readiness_status_counts": {
+        "html_text_ready": 2,
+        "ocr_later": 9,
+        "parse_text_pdf_ready": 25
+      },
+      "retained_source_count": 36,
+      "state": "NH",
+      "text_extraction_ready_count": 27
+    },
+    {
+      "not_ready_count": 84,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 12,
+        "ocr_later": 80,
+        "other_document_text_ready": 1,
+        "parse_text_pdf_ready": 198,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 295,
+      "state": "NJ",
+      "text_extraction_ready_count": 211
+    },
+    {
+      "not_ready_count": 21,
+      "readiness_status_counts": {
+        "html_text_ready": 10,
+        "ocr_later": 19,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 204
+      },
+      "retained_source_count": 235,
+      "state": "NY",
+      "text_extraction_ready_count": 214
+    },
+    {
+      "not_ready_count": 45,
+      "readiness_status_counts": {
+        "html_text_ready": 9,
+        "needs_manual_review": 2,
+        "ocr_later": 34,
+        "other_document_text_ready": 4,
+        "oversized_defer": 5,
+        "parse_text_pdf_ready": 187,
+        "shell_or_navigation_only": 4
+      },
+      "retained_source_count": 245,
+      "state": "OH",
+      "text_extraction_ready_count": 200
+    },
+    {
+      "not_ready_count": 13,
+      "readiness_status_counts": {
+        "html_text_ready": 2,
+        "ocr_later": 10,
+        "other_document_text_ready": 3,
+        "oversized_defer": 3,
+        "parse_text_pdf_ready": 29
+      },
+      "retained_source_count": 47,
+      "state": "OK",
+      "text_extraction_ready_count": 34
+    },
+    {
+      "not_ready_count": 2,
+      "readiness_status_counts": {
+        "html_text_ready": 2,
+        "needs_manual_review": 1,
+        "ocr_later": 1,
+        "other_document_text_ready": 4,
+        "parse_text_pdf_ready": 13
+      },
+      "retained_source_count": 21,
+      "state": "OR",
+      "text_extraction_ready_count": 19
+    },
+    {
+      "not_ready_count": 29,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 5,
+        "html_text_ready": 7,
+        "ocr_later": 22,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 114,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 150,
+      "state": "PA",
+      "text_extraction_ready_count": 121
+    },
+    {
+      "not_ready_count": 10,
+      "readiness_status_counts": {
+        "html_text_ready": 4,
+        "needs_manual_review": 1,
+        "ocr_later": 8,
+        "parse_text_pdf_ready": 12,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 26,
+      "state": "SC",
+      "text_extraction_ready_count": 16
+    },
+    {
+      "not_ready_count": 3,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 8,
+        "ocr_later": 2,
+        "other_document_text_ready": 3,
+        "parse_text_pdf_ready": 42
+      },
+      "retained_source_count": 56,
+      "state": "SD",
+      "text_extraction_ready_count": 53
+    },
+    {
+      "not_ready_count": 4,
+      "readiness_status_counts": {
+        "ocr_later": 4,
+        "parse_text_pdf_ready": 66
+      },
+      "retained_source_count": 70,
+      "state": "TN",
+      "text_extraction_ready_count": 66
+    },
+    {
+      "not_ready_count": 14,
+      "readiness_status_counts": {
+        "html_text_ready": 8,
+        "ocr_later": 7,
+        "oversized_defer": 7,
+        "parse_text_pdf_ready": 57
+      },
+      "retained_source_count": 79,
+      "state": "TX",
+      "text_extraction_ready_count": 65
+    },
+    {
+      "not_ready_count": 5,
+      "readiness_status_counts": {
+        "html_text_ready": 4,
+        "ocr_later": 4,
+        "parse_text_pdf_ready": 20,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 29,
+      "state": "UT",
+      "text_extraction_ready_count": 24
+    },
+    {
+      "not_ready_count": 10,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 3,
+        "ocr_later": 7,
+        "other_document_text_ready": 3,
+        "parse_text_pdf_ready": 11
+      },
+      "retained_source_count": 24,
+      "state": "VA",
+      "text_extraction_ready_count": 14
+    },
+    {
+      "not_ready_count": 21,
+      "readiness_status_counts": {
+        "html_text_ready": 4,
+        "ocr_later": 20,
+        "other_document_text_ready": 2,
+        "parse_text_pdf_ready": 53,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 80,
+      "state": "VT",
+      "text_extraction_ready_count": 59
+    },
+    {
+      "not_ready_count": 15,
+      "readiness_status_counts": {
+        "html_text_ready": 3,
+        "ocr_later": 15,
+        "other_document_text_ready": 1,
+        "parse_text_pdf_ready": 23
+      },
+      "retained_source_count": 42,
+      "state": "WA",
+      "text_extraction_ready_count": 27
+    },
+    {
+      "not_ready_count": 19,
+      "readiness_status_counts": {
+        "html_text_ready": 7,
+        "needs_manual_review": 1,
+        "ocr_later": 13,
+        "other_document_text_ready": 6,
+        "oversized_defer": 4,
+        "parse_text_pdf_ready": 141,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 173,
+      "state": "WI",
+      "text_extraction_ready_count": 154
+    },
+    {
+      "not_ready_count": 5,
+      "readiness_status_counts": {
+        "html_text_ready": 7,
+        "ocr_later": 5,
+        "other_document_text_ready": 2,
+        "parse_text_pdf_ready": 8
+      },
+      "retained_source_count": 22,
+      "state": "WV",
+      "text_extraction_ready_count": 17
+    }
+  ],
+  "text_extraction_ready_count": 2940
+}

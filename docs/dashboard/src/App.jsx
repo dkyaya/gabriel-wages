@@ -210,13 +210,13 @@ function App() {
               />
               <MetricCard
                 label="Readiness reviewed"
-                value={formatNumber(projectPhaseSummary.pdf_text_readiness_reviewed_count)}
-                note={`${formatNumber(projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} technically ready of ${formatNumber(projectPhaseSummary.pdf_text_readiness_queue_size)} retained sources`}
+                value={formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_retained_count : projectPhaseSummary.pdf_text_readiness_reviewed_count)}
+                note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count : projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} technically ready of ${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_retained_count : projectPhaseSummary.pdf_text_readiness_queue_size)} retained sources`}
               />
               <MetricCard
                 label="Retained sources"
-                value={formatNumber(projectPhaseSummary.source_review_download_retained_count)}
-                note={`${formatNumber(projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} extraction-ready · retained binaries remain outside Git`}
+                value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_download_available ? projectPhaseSummary.broad_state_4x2500_source_review_retained_count : projectPhaseSummary.source_review_download_retained_count)}
+                note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count : projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} extraction-ready · retained binaries remain outside Git`}
               />
               <MetricCard
                 label="Text extraction attempted"
@@ -418,7 +418,7 @@ function App() {
                 <MetricCard label="CBA hint concentration" value={`${((projectPhaseSummary.broad_state_4x2500_live_cba_concentration ?? 0) * 100).toFixed(1)}%`} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_non_cba_opportunity_count)} non-CBA or unresolved opportunities`} />
               )}
               {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Four-lane PDF/text readiness" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Source review/download" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Retained local files only; no URL access, extraction, or OCR" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Four lanes over reachable metadata outcomes; retained sources stay outside Git" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
+                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Four-lane text extraction" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Four-lane PDF/text readiness" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Source review/download" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Readiness-approved local files only; no OCR, rating, ingestion, or codification" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Retained local files only; no URL access, extraction, or OCR" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Four lanes over reachable metadata outcomes; retained sources stay outside Git" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
               )}
               {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
                 <MetricCard label="Verification-ready queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verification_ready_queue_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_ready_priority_counts)} />
@@ -458,6 +458,21 @@ function App() {
               )}
               {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
                 <MetricCard label="Retained mechanism hints" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_mechanism_hint ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_mechanism_hint)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
+                <MetricCard label="PDF/text readiness completed" value={formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_retained_count)} note="Four independently checkpointed lanes of 918 retained sources" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
+                <MetricCard label="Text-extraction-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_parse_pdf_ready_count)} PDF · ${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_html_ready_count)} HTML · ${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_other_ready_count)} other`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
+                <MetricCard label="Readiness deferrals" value={formatNumber((projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_ocr_later_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_oversized_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_locked_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_corrupt_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_shell_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_needs_review_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_unsupported_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_error_count ?? 0))} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_status_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
+                <MetricCard label="Extraction-ready source families" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_source_family ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_source_family)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
+                <MetricCard label="Extraction-ready geography" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_state ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_region)} />
               )}
               <MetricCard
                 label="Globally usable descriptive evidence"

@@ -1,0 +1,22 @@
+{
+  "all_files_exist_and_hash_match": true,
+  "artifact_root_ignored": true,
+  "current_head": "26d44f268dc4197138f50f83ab95036ddd9156c5",
+  "lane_distribution": {
+    "readiness_lane_001": 918,
+    "readiness_lane_002": 918,
+    "readiness_lane_003": 918,
+    "readiness_lane_004": 918
+  },
+  "lane_union_reconciles": true,
+  "no_retained_binaries_staged_or_tracked": true,
+  "repo_root": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages",
+  "retained_source_count": 3672,
+  "retained_type_counts": {
+    "html": 350,
+    "other_document": 74,
+    "pdf": 3248
+  },
+  "smoke_passed": true,
+  "status": "passed"
+}

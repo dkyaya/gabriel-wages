@@ -1,0 +1,151 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 12,
+  "group_field": "possible_mechanism_hints",
+  "retained_source_count": 3672,
+  "rows": [
+    {
+      "not_ready_count": 8,
+      "possible_mechanism_hints": "fiscal_constraint_signal",
+      "readiness_status_counts": {
+        "html_text_ready": 3,
+        "ocr_later": 7,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 40
+      },
+      "retained_source_count": 51,
+      "text_extraction_ready_count": 43
+    },
+    {
+      "not_ready_count": 3,
+      "possible_mechanism_hints": "market_or_comparability_pressure",
+      "readiness_status_counts": {
+        "html_text_ready": 2,
+        "ocr_later": 3,
+        "parse_text_pdf_ready": 8
+      },
+      "retained_source_count": 13,
+      "text_extraction_ready_count": 10
+    },
+    {
+      "not_ready_count": 3,
+      "possible_mechanism_hints": "market_or_comparability_pressure;non_safety_constraint_signal",
+      "readiness_status_counts": {
+        "html_text_ready": 2,
+        "ocr_later": 3,
+        "parse_text_pdf_ready": 14
+      },
+      "retained_source_count": 19,
+      "text_extraction_ready_count": 16
+    },
+    {
+      "not_ready_count": 0,
+      "possible_mechanism_hints": "market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal",
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 2,
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 371,
+      "possible_mechanism_hints": "non_safety_constraint_signal",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 6,
+        "html_text_ready": 119,
+        "needs_manual_review": 6,
+        "ocr_later": 303,
+        "other_document_text_ready": 37,
+        "oversized_defer": 29,
+        "parse_text_pdf_ready": 1126,
+        "shell_or_navigation_only": 27
+      },
+      "retained_source_count": 1653,
+      "text_extraction_ready_count": 1282
+    },
+    {
+      "not_ready_count": 14,
+      "possible_mechanism_hints": "non_safety_constraint_signal;fiscal_constraint_signal",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 4,
+        "needs_manual_review": 1,
+        "ocr_later": 11,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 85
+      },
+      "retained_source_count": 103,
+      "text_extraction_ready_count": 89
+    },
+    {
+      "not_ready_count": 314,
+      "possible_mechanism_hints": "none_or_unknown",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 7,
+        "html_text_ready": 139,
+        "needs_manual_review": 8,
+        "ocr_later": 262,
+        "other_document_text_ready": 35,
+        "oversized_defer": 20,
+        "parse_text_pdf_ready": 1030,
+        "shell_or_navigation_only": 17
+      },
+      "retained_source_count": 1518,
+      "text_extraction_ready_count": 1204
+    },
+    {
+      "not_ready_count": 14,
+      "possible_mechanism_hints": "strike_or_no_strike_constraint",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 3,
+        "html_text_ready": 13,
+        "needs_manual_review": 1,
+        "ocr_later": 8,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 188
+      },
+      "retained_source_count": 215,
+      "text_extraction_ready_count": 201
+    },
+    {
+      "not_ready_count": 0,
+      "possible_mechanism_hints": "strike_or_no_strike_constraint;fiscal_constraint_signal",
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 3
+      },
+      "retained_source_count": 3,
+      "text_extraction_ready_count": 3
+    },
+    {
+      "not_ready_count": 0,
+      "possible_mechanism_hints": "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal",
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 2,
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 5,
+      "possible_mechanism_hints": "strike_or_no_strike_constraint;non_safety_constraint_signal",
+      "readiness_status_counts": {
+        "html_text_ready": 9,
+        "ocr_later": 4,
+        "parse_text_pdf_ready": 76,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 90,
+      "text_extraction_ready_count": 85
+    },
+    {
+      "not_ready_count": 0,
+      "possible_mechanism_hints": "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal",
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 3
+      },
+      "retained_source_count": 3,
+      "text_extraction_ready_count": 3
+    }
+  ],
+  "text_extraction_ready_count": 2940
+}

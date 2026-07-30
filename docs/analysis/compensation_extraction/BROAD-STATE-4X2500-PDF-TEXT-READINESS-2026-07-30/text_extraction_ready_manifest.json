@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-07-30T14:52:29Z",
+  "csv_sha256": "bb24a80bc259c5e7125e21309ef0ab6f8feb444d28348ad363e89eaef3e06a07",
+  "eligible_statuses": [
+    "html_text_ready",
+    "other_document_text_ready",
+    "parse_text_pdf_ready"
+  ],
+  "full_text_extracted": false,
+  "global_analysis_readiness": false,
+  "id_set_sha256": "22ec639eb4e8045d6bc64c69d48469ef371879152ce7cd12e81b6cfb6ca38a13",
+  "jsonl_sha256": "13f5057548a1d36e6879fcb9fa49a9ac7946c8fe70b353cc07dcaeb0e719ed99",
+  "ocr_included": false,
+  "row_count": 2940,
+  "status_counts": {
+    "html_text_ready": 291,
+    "other_document_text_ready": 72,
+    "parse_text_pdf_ready": 2577
+  },
+  "task_id": "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30"
+}

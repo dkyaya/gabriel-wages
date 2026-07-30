@@ -1,0 +1,14 @@
+{
+  "all_files_exist": true,
+  "all_paths_inside_ignored_artifact_root": true,
+  "artifact_root": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30",
+  "artifact_root_git_ignored": true,
+  "checked_at": "2026-07-30T14:27:48Z",
+  "failure_rows": [],
+  "files_checked": 3672,
+  "hash_match_count": 3672,
+  "hash_mismatch_or_missing_count": 0,
+  "observed_retained_bytes": 6557753939,
+  "recorded_retained_bytes": 6557753939,
+  "unique_recorded_hashes": 3672
+}

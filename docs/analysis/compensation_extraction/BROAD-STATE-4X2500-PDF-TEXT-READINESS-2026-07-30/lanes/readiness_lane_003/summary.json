@@ -1,0 +1,30 @@
+{
+  "checkpoint_after_every_source": true,
+  "completed_at": "2026-07-30T14:44:25Z",
+  "completed_count": 918,
+  "full_text_persisted_count": 0,
+  "integrity_fail_count": 0,
+  "lane_id": "readiness_lane_003",
+  "locked_queue_count": 918,
+  "ocr_run_count": 0,
+  "process_started_at": "2026-07-30T14:28:05Z",
+  "readiness_status_counts": {
+    "encrypted_or_locked": 5,
+    "html_text_ready": 72,
+    "needs_manual_review": 3,
+    "ocr_later": 161,
+    "other_document_text_ready": 23,
+    "oversized_defer": 15,
+    "parse_text_pdf_ready": 628,
+    "shell_or_navigation_only": 11
+  },
+  "remaining_count": 0,
+  "source_type_counts": {
+    "html": 86,
+    "other_document": 23,
+    "pdf": 809
+  },
+  "stagger_seconds": 960,
+  "status": "completed",
+  "work_started_at": "2026-07-30T14:44:05Z"
+}

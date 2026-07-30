@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "checked_at": "2026-07-30T15:07:00Z",
+  "controller": "Playwright MCP",
+  "preferred_browser_runtime": {
+    "controller": "in-app Browser plugin",
+    "status": "unavailable",
+    "diagnostic": "The browser runtime reported `No browser is available`; the one permitted browser-list diagnostic returned an empty list.",
+    "fallback": "Playwright MCP"
+  },
+  "local_url": "http://127.0.0.1:4173/gabriel-wages/?smoke=final2",
+  "build_status": "passed",
+  "page_title": "Municipal Labor Evidence Dashboard",
+  "console_error_count": 0,
+  "console_warning_count": 0,
+  "visible_checks": {
+    "dashboard_loaded": true,
+    "map_scope": "total_scout_coverage_only",
+    "scout_covered_municipalities": 16887,
+    "current_stage": "broad_state_4x2500_pdf_text_readiness_complete",
+    "retained_source_count": 3672,
+    "retained_pdf_count": 3248,
+    "retained_html_count": 350,
+    "retained_other_document_count": 74,
+    "text_extraction_ready_count": 2940,
+    "parse_text_pdf_ready_count": 2577,
+    "html_text_ready_count": 291,
+    "other_document_text_ready_count": 72,
+    "ocr_later_count": 601,
+    "oversized_defer_count": 53,
+    "encrypted_or_locked_count": 17,
+    "corrupt_or_broken_count": 0,
+    "shell_or_navigation_only_count": 45,
+    "needs_manual_review_count": 16,
+    "unsupported_file_type_count": 0,
+    "readiness_error_count": 0,
+    "next_task": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
+    "global_readiness_fully_passed": false,
+    "wage_gap_readiness": "blocked_pending_normalization",
+    "causal_readiness": "blocked_pending_matched_structure",
+    "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
+    "stale_prior_stage_only_text_absent": true
+  },
+  "repairs_verified": [
+    "Replaced stale source-review-stage wording that said PDF/text readiness was still next.",
+    "Replaced the stale historical 378-file extraction queue with this wave's 2,940-source current extraction-ready queue.",
+    "Pointed the current evidence/report action to the finalized PDF/text readiness summary.",
+    "Preserved total-scout-coverage-only map semantics and all global readiness blockers."
+  ],
+  "screenshot": "tmp/broad_state_4x2500_pdf_text_readiness_2026-07-30_logs/dashboard-pdf-text-readiness-smoke.png",
+  "notes": [
+    "The local Vite preview initially required an approved out-of-sandbox bind because the restricted sandbox denied the loopback listener.",
+    "The browser smoke inspected rendered visible UI, not only dashboard JSON."
+  ]
+}

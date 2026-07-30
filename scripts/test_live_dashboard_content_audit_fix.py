@@ -67,11 +67,15 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "bounded_tier_c_rating_summary_and_documentary_colocation_scaffolds_only",
             "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
             "broad_4x2500_source_review_download_complete_retained_files_unextracted",
+            "broad_4x2500_pdf_text_readiness_complete_text_unextracted",
         })
         self.assertTrue(self.phase["broad_state_4x2500_source_review_download_available"])
         self.assertEqual(self.phase["broad_state_4x2500_source_review_queue_count"], 3950)
         self.assertEqual(self.phase["broad_state_4x2500_source_review_retained_count"], 3672)
         self.assertTrue(self.phase["pdf_text_layer_readiness_ready_next"])
+        self.assertTrue(self.phase["broad_state_4x2500_pdf_text_readiness_available"])
+        self.assertEqual(self.phase["broad_state_4x2500_pdf_text_readiness_retained_count"], 3672)
+        self.assertEqual(self.phase["broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count"], 2940)
         self.assertFalse(self.phase["global_analysis_readiness"])
         self.assertFalse(self.phase["wage_gap_estimates_available"])
         self.assertFalse(self.phase["final_causal_claims_available"])
@@ -79,8 +83,14 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
     def test_current_report_is_latest_and_old_report_is_historical(self) -> None:
         current = [report for report in self.reports["reports"] if report["current"]]
         self.assertEqual(len(current), 1)
-        self.assertEqual(current[0]["id"], "broad-state-4x2500-source-review-download-2026-07-30")
-        self.assertIn("BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD", current[0]["href"])
+        self.assertIn(current[0]["id"], {
+            "broad-state-4x2500-source-review-download-2026-07-30",
+            "broad-state-4x2500-pdf-text-readiness-2026-07-30",
+        })
+        self.assertTrue(
+            "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD" in current[0]["href"]
+            or "BROAD-STATE-4X2500-PDF-TEXT-READINESS" in current[0]["href"]
+        )
         parent = next(report for report in self.reports["reports"] if report["id"] == "bounded-mechanism-linkage-memo-2026-07-26")
         self.assertFalse(parent["current"])
         old = next(report for report in self.reports["reports"] if report["id"] == "pi-source-discovery-2026-07-22")
@@ -113,6 +123,7 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "Source-review queue",
             "Unique retained sources",
             "Four-lane PDF/text readiness",
+            "Four-lane text extraction",
             "Total scout coverage",
             "Historical candidate queue",
             "valid ratings were summarized",
@@ -127,9 +138,11 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         for phrase in (
             "source review/download complete",
             "unique source files were retained and hashed outside Git",
-            "Open current 4 × 2,500 source-review report",
+            "Open current 4 × 2,500 PDF/text-readiness report",
             "Historical candidate queue",
             "Four-lane PDF/text readiness",
+            "Four-lane text extraction",
+            "readiness-approved files",
         ):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)

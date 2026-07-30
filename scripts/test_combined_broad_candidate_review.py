@@ -120,8 +120,10 @@ def main() -> None:
     map_source = (ROOT / "docs/dashboard/src/components/mapMetrics.js").read_text(encoding="utf-8")
     assert map_source.count('key: "total_scout_coverage_count"') == 1
     phase = read_json(ROOT / "docs/dashboard/data/project_phase_summary.json")
-    assert phase["current_scout_covered"] == 6919
-    assert phase["current_candidate_queue_rows"] == 13041
+    # The candidate-review test also guards that later broad-state phases advance
+    # these cumulative dashboard totals without changing scout-only map semantics.
+    assert phase["current_scout_covered"] in {6919, 16887}
+    assert phase["current_candidate_queue_rows"] in {13041, 23018}
     assert phase["dashboard_map_filter"] == "total_scout_coverage_only"
     assert phase["global_analysis_readiness"] is False
     assert phase["candidate_review_universe_size"] == 9065
@@ -133,11 +135,13 @@ def main() -> None:
         "candidate review complete" in phase["current_phase"].casefold()
         or "source review/download complete" in phase["current_phase"].casefold()
         or "pdf/text-layer readiness complete" in phase["current_phase"].casefold()
+        or "pdf/text readiness complete" in phase["current_phase"].casefold()
     )
     assert (
         "source-review/download" in phase["next_task"].casefold()
         or "pdf/text-layer readiness" in phase["next_task"].casefold()
         or "text extraction" in phase["next_task"].casefold()
+        or "text-extraction" in phase["next_task"].casefold()
     )
     assert "tier c memo supplement" not in phase["current_phase"].casefold()
     reports = read_json(ROOT / "docs/dashboard/data/reports_index.json")["reports"]
@@ -147,6 +151,8 @@ def main() -> None:
         "combined-broad-candidate-review-2026-07-28",
         "combined-broad-source-review-download-5589-2026-07-28",
         "combined-broad-pdf-text-readiness-4961-2026-07-28",
+        "broad-state-4x2500-source-review-download-2026-07-30",
+        "broad-state-4x2500-pdf-text-readiness-2026-07-30",
     }
     frontend = (ROOT / "docs/dashboard/src/components/ProjectHubSections.jsx").read_text(encoding="utf-8")
     assert "Combined broad candidate review complete" in frontend

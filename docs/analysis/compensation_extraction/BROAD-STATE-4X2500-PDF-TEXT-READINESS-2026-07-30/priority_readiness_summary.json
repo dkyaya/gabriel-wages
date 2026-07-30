@@ -1,0 +1,56 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 3,
+  "group_field": "priority_bucket",
+  "retained_source_count": 3672,
+  "rows": [
+    {
+      "not_ready_count": 518,
+      "priority_bucket": "high_priority_verification_ready",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 13,
+        "html_text_ready": 144,
+        "needs_manual_review": 7,
+        "ocr_later": 442,
+        "other_document_text_ready": 22,
+        "oversized_defer": 43,
+        "parse_text_pdf_ready": 2040,
+        "shell_or_navigation_only": 13
+      },
+      "retained_source_count": 2724,
+      "text_extraction_ready_count": 2206
+    },
+    {
+      "not_ready_count": 26,
+      "priority_bucket": "low_priority_verification_ready",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 24,
+        "needs_manual_review": 3,
+        "ocr_later": 16,
+        "other_document_text_ready": 14,
+        "parse_text_pdf_ready": 44,
+        "shell_or_navigation_only": 6
+      },
+      "retained_source_count": 108,
+      "text_extraction_ready_count": 82
+    },
+    {
+      "not_ready_count": 188,
+      "priority_bucket": "medium_priority_verification_ready",
+      "readiness_status_counts": {
+        "encrypted_or_locked": 3,
+        "html_text_ready": 123,
+        "needs_manual_review": 6,
+        "ocr_later": 143,
+        "other_document_text_ready": 36,
+        "oversized_defer": 10,
+        "parse_text_pdf_ready": 493,
+        "shell_or_navigation_only": 26
+      },
+      "retained_source_count": 840,
+      "text_extraction_ready_count": 652
+    }
+  ],
+  "text_extraction_ready_count": 2940
+}

@@ -88,6 +88,7 @@ def main() -> int:
         "Broad state 4 × 2,500 candidate review complete",
         "Broad state 4 × 2,500 verification complete",
         "Broad state 4 × 2,500 source review/download complete",
+        "Broad state 4 × 2,500 PDF/text readiness complete",
     )))
     check("dashboard flags", dashboard["global_readiness_gate_flags"] == expected and dashboard["global_analysis_readiness"] is False)
     check("dashboard next", ("2,500-target" in dashboard["next_task"] or "BROAD-STATE-4X2500-" in dashboard["next_task"]) and dashboard["next_phase"] in {
@@ -97,6 +98,7 @@ def main() -> int:
         "four-lane broad-state 4 × 2,500 candidate verification",
         "four-lane broad-state 4 × 2,500 source review/download",
         "four-lane broad-state 4 × 2,500 PDF/text readiness",
+        "four-lane broad-state 4 × 2,500 text extraction",
     })
     expected_coverage = 16887 if dashboard.get("broad_state_4x2500_candidate_review_available") else 6919
     check("map stable", dashboard["current_scout_covered"] == expected_coverage and dashboard["dashboard_map_filter"] == "total_scout_coverage_only" and dashboard["map_data_date"] == "2026-07-27")

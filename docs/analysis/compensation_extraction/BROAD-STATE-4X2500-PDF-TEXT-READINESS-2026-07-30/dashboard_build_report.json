@@ -1,0 +1,15 @@
+{
+  "build_command": "pnpm build",
+  "build_output_directory": "docs/dashboard/dist",
+  "built_at": "2026-07-30T15:05:00Z",
+  "dashboard_base_path": "/gabriel-wages/",
+  "errors": [],
+  "map_scope": "total_scout_coverage_only",
+  "retained_source_count": 3672,
+  "status": "passed",
+  "text_extraction_ready_count": 2940,
+  "transformed_module_count": 48,
+  "warnings": [
+    "Vite reported a non-blocking JavaScript chunk-size advisory; the production build completed successfully."
+  ]
+}

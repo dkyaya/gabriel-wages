@@ -1,0 +1,18 @@
+{
+  "audit_status": "passed",
+  "codification_runs": 0,
+  "final_causal_claims": 0,
+  "full_text_artifacts_persisted": 0,
+  "full_text_extraction_runs": 0,
+  "global_readiness_advanced": false,
+  "image_pdf_processing_runs": 0,
+  "ingestion_runs": 0,
+  "model_or_gabriel_calls": 0,
+  "network_requests": 0,
+  "ocr_runs": 0,
+  "rating_runs": 0,
+  "regressions": 0,
+  "task_id": "BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30",
+  "treatment_effect_claims": 0,
+  "wage_gap_calculations": 0
+}

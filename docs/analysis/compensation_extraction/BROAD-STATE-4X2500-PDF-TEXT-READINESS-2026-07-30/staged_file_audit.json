@@ -1,0 +1,657 @@
+{
+  "aggregate_staged_bytes": 105437905,
+  "audit_status": "passed",
+  "audited_at": "2026-07-30T15:09:43Z",
+  "forbidden_file_count": 0,
+  "forbidden_files": [],
+  "full_text_or_ocr_artifacts_staged": false,
+  "large_file_audit_status": "passed",
+  "large_file_count": 0,
+  "large_file_threshold_bytes": 26214400,
+  "large_files": [],
+  "largest_staged_file_bytes": 11207479,
+  "retained_artifact_paths_staged_or_tracked": false,
+  "staged_file_count": 128,
+  "staged_files": [
+    {
+      "path": "docs/analysis/broad_state_4x2500_pdf_text_readiness_dashboard_status_note_2026-07-30.md",
+      "size_bytes": 276,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/broad_state_4x2500_pdf_text_readiness_result_2026-07-30.md",
+      "size_bytes": 363,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/cba_non_cba_readiness_summary.json",
+      "size_bytes": 1085,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/corrupt_or_broken_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/corrupt_or_broken_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/dashboard_browser_smoke_report.json",
+      "size_bytes": 2604,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/dashboard_browser_smoke_report.md",
+      "size_bytes": 1781,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/dashboard_build_report.json",
+      "size_bytes": 490,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/dashboard_status_input.json",
+      "size_bytes": 1340,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/dashboard_status_update_summary.md",
+      "size_bytes": 303,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/encrypted_or_locked_queue.csv",
+      "size_bytes": 26294,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/encrypted_or_locked_queue.jsonl",
+      "size_bytes": 51473,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/file_size_summary.json",
+      "size_bytes": 273,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/final_decision.json",
+      "size_bytes": 362,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/forbidden_action_audit.json",
+      "size_bytes": 492,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/geography_readiness_summary.json",
+      "size_bytes": 16177,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/html_text_ready_queue.csv",
+      "size_bytes": 412991,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/html_text_ready_queue.jsonl",
+      "size_bytes": 863748,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_001/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_001/lane_manifest.json",
+      "size_bytes": 654,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_001/results.csv",
+      "size_bytes": 1374625,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_001/results.jsonl",
+      "size_bytes": 2799154,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_001/resume_state.json",
+      "size_bytes": 319,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_001/summary.json",
+      "size_bytes": 791,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_002/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_002/lane_manifest.json",
+      "size_bytes": 656,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_002/results.csv",
+      "size_bytes": 1381532,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_002/results.jsonl",
+      "size_bytes": 2806095,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_002/resume_state.json",
+      "size_bytes": 321,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_002/summary.json",
+      "size_bytes": 793,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_003/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_003/lane_manifest.json",
+      "size_bytes": 656,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_003/results.csv",
+      "size_bytes": 1376588,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_003/results.jsonl",
+      "size_bytes": 2801081,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_003/resume_state.json",
+      "size_bytes": 321,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_003/summary.json",
+      "size_bytes": 794,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_004/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_004/lane_manifest.json",
+      "size_bytes": 657,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_004/results.csv",
+      "size_bytes": 1376648,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_004/results.jsonl",
+      "size_bytes": 2801149,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_004/resume_state.json",
+      "size_bytes": 322,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/lanes/readiness_lane_004/summary.json",
+      "size_bytes": 795,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/mechanism_hint_readiness_summary.json",
+      "size_bytes": 4686,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/merged_pdf_text_readiness_results.csv",
+      "size_bytes": 5505742,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/merged_pdf_text_readiness_results.jsonl",
+      "size_bytes": 11207479,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/needs_manual_review_queue.csv",
+      "size_bytes": 24012,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/needs_manual_review_queue.jsonl",
+      "size_bytes": 47647,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/next_task.md",
+      "size_bytes": 506,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/ocr_later_queue.csv",
+      "size_bytes": 887225,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/ocr_later_queue.jsonl",
+      "size_bytes": 1819584,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/other_document_text_ready_queue.csv",
+      "size_bytes": 112656,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/other_document_text_ready_queue.jsonl",
+      "size_bytes": 223291,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/oversized_defer_queue.csv",
+      "size_bytes": 79109,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/oversized_defer_queue.jsonl",
+      "size_bytes": 160208,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/page_count_summary.json",
+      "size_bytes": 320,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/parse_text_pdf_ready_queue.csv",
+      "size_bytes": 3906664,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/parse_text_pdf_ready_queue.jsonl",
+      "size_bytes": 7907527,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_manifest.json",
+      "size_bytes": 3755,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.json",
+      "size_bytes": 1940,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
+      "size_bytes": 793,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/preflight_report.json",
+      "size_bytes": 628,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/priority_readiness_summary.json",
+      "size_bytes": 1650,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_error_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_error_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_001_queue.csv",
+      "size_bytes": 1068792,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_001_queue.jsonl",
+      "size_bytes": 1798085,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_001_results.csv",
+      "size_bytes": 1374625,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_001_results.jsonl",
+      "size_bytes": 2799154,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_002_queue.csv",
+      "size_bytes": 1075569,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_002_queue.jsonl",
+      "size_bytes": 1804896,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_002_results.csv",
+      "size_bytes": 1381532,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_002_results.jsonl",
+      "size_bytes": 2806095,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_003_queue.csv",
+      "size_bytes": 1071161,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_003_queue.jsonl",
+      "size_bytes": 1800418,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_003_results.csv",
+      "size_bytes": 1376588,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_003_results.jsonl",
+      "size_bytes": 2801081,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_004_queue.csv",
+      "size_bytes": 1071303,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_004_queue.jsonl",
+      "size_bytes": 1800568,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_004_results.csv",
+      "size_bytes": 1376648,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_004_results.jsonl",
+      "size_bytes": 2801149,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_distribution.json",
+      "size_bytes": 2780,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_lane_distribution.md",
+      "size_bytes": 341,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_locked_queue.csv",
+      "size_bytes": 4284998,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_locked_queue.jsonl",
+      "size_bytes": 7203967,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/readiness_smoke_preflight.json",
+      "size_bytes": 1203,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/retained_source_hash_recheck_report.json",
+      "size_bytes": 495,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/shell_or_navigation_only_queue.csv",
+      "size_bytes": 65310,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/shell_or_navigation_only_queue.jsonl",
+      "size_bytes": 134001,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/source_family_readiness_summary.json",
+      "size_bytes": 5561,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/source_type_readiness_summary.json",
+      "size_bytes": 1075,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/staged_file_audit.json",
+      "size_bytes": 23565,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/text_extraction_ready_manifest.json",
+      "size_bytes": 718,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/text_extraction_ready_queue.csv",
+      "size_bytes": 4429877,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/text_extraction_ready_queue.jsonl",
+      "size_bytes": 8994566,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/unsupported_file_type_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/unsupported_file_type_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/validation_report.json",
+      "size_bytes": 1457,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/validation_report.md",
+      "size_bytes": 1205,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/dashboard/data/analysis_readiness.json",
+      "size_bytes": 36433,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/candidate_queue_summary.json",
+      "size_bytes": 27834,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/content_triage_status_summary.json",
+      "size_bytes": 15708,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/coverage_funnel.json",
+      "size_bytes": 12676,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/parallel_scout_status.json",
+      "size_bytes": 13422,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
+      "size_bytes": 12684,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/priority_summary.json",
+      "size_bytes": 11853,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/project_phase_summary.json",
+      "size_bytes": 53547,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/reports_index.json",
+      "size_bytes": 29340,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/scout_operations_summary.json",
+      "size_bytes": 12964,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/scout_runtime_trends.json",
+      "size_bytes": 14022,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/scout_yield_by_state.json",
+      "size_bytes": 51681,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/source_review_status_summary.json",
+      "size_bytes": 27241,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/state_priority_summary.json",
+      "size_bytes": 39561,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/state_summary.json",
+      "size_bytes": 153892,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
+      "size_bytes": 56812,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/text_table_detection_status_summary.json",
+      "size_bytes": 12889,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/top_priority_targets.json",
+      "size_bytes": 217464,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/verification_status_summary.json",
+      "size_bytes": 15288,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/src/App.jsx",
+      "size_bytes": 47152,
+      "suffix": ".jsx"
+    },
+    {
+      "path": "docs/dashboard/src/components/AnalysisReadinessPanel.jsx",
+      "size_bytes": 4968,
+      "suffix": ".jsx"
+    },
+    {
+      "path": "docs/dashboard/src/components/ProjectHubSections.jsx",
+      "size_bytes": 147680,
+      "suffix": ".jsx"
+    },
+    {
+      "path": "scripts/build_broad_state_4x2500_pdf_text_readiness_relay.py",
+      "size_bytes": 7112,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/build_dashboard_data.py",
+      "size_bytes": 949731,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/run_broad_state_4x2500_pdf_text_readiness.py",
+      "size_bytes": 58154,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_broad_state_4x2500_pdf_text_readiness.py",
+      "size_bytes": 5000,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_combined_broad_candidate_review.py",
+      "size_bytes": 8804,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_combined_broad_pdf_text_layer_readiness_4961.py",
+      "size_bytes": 10678,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_global_analysis_readiness_gate.py",
+      "size_bytes": 9021,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_live_dashboard_content_audit_fix.py",
+      "size_bytes": 11407,
+      "suffix": ".py"
+    }
+  ]
+}
