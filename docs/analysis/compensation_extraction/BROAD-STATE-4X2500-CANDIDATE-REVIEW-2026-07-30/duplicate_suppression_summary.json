@@ -1,0 +1,32 @@
+{
+  "duplicate_matching_method": "exact local canonical locator only; no network checks",
+  "duplicate_rows_excluded_from_verification_ready_queue": true,
+  "duplicate_rows_retained_in_review_results_for_lineage": true,
+  "duplicates_by_prior_input": {
+    "docs/analysis/compensation_extraction/COMBINED-BROAD-CANDIDATE-REVIEW-AFTER-4X3000-VERIFICATION-2026-07-28/combined_broad_candidate_review_universe.csv": 54,
+    "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_deduped_review.csv": 92,
+    "docs/analysis/verification_ledgers/verified_source_routing_ledger_latest.csv": 2
+  },
+  "likely_duplicate_prior_source_count": 148,
+  "prior_input_manifests": [
+    {
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-CANDIDATE-REVIEW-AFTER-4X3000-VERIFICATION-2026-07-28/combined_broad_candidate_review_universe.csv",
+      "row_count": 9065,
+      "sha256": "37254e4f7e6c1c9805b8e4320c3a35a758c03b860bb7a4825fe7e243830b66b9",
+      "unique_locators_first_added": 9036
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_deduped_review.csv",
+      "row_count": 4225,
+      "sha256": "e7f615ec6169c4dc4b7bc094cfffd5dc93ed55a89ea37b052402cecf85143298",
+      "unique_locators_first_added": 2707
+    },
+    {
+      "path": "docs/analysis/verification_ledgers/verified_source_routing_ledger_latest.csv",
+      "row_count": 4726,
+      "sha256": "831f40dacf3f0362d5c3c81cb2e59c4d3da502187c94672e381d355ae79f5499",
+      "unique_locators_first_added": 4357
+    }
+  ],
+  "unique_prior_locators": 16100
+}

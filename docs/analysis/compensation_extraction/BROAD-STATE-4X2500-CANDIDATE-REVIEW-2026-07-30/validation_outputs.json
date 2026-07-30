@@ -1,0 +1,15 @@
+{
+  "all_final_commands_passed": true,
+  "dashboard_actual_scout_coverage": 16887,
+  "dashboard_cumulative_raw_candidate_rows": 23018,
+  "dashboard_production_build": "passed_with_existing_chunk_size_advisory",
+  "finalization_review_validation_gate_count": 13,
+  "finalization_review_validation_status": "passed",
+  "global_readiness_regression": "20_of_20_passed",
+  "ingestion_regression": "60_of_60_passed",
+  "queue_lock_validation": "passed",
+  "repository_schema_validation": "passed",
+  "scout_regression": "passed",
+  "worker_process_audit": "no_matching_workers",
+  "forbidden_action_count": 0
+}

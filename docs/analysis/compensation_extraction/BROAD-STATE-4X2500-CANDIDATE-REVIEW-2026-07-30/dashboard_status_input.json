@@ -1,0 +1,29 @@
+{
+  "actual_scout_coverage_increment": 9968,
+  "bucket_counts": {
+    "high_priority_verification_ready": 4281,
+    "likely_duplicate_prior_source": 148,
+    "likely_non_source_or_navigation_only": 2638,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352,
+    "repair_needed": 518
+  },
+  "candidate_review_completed": true,
+  "global_analysis_readiness": false,
+  "global_readiness_flags": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "map_filter": "total_scout_coverage_only",
+  "next_stage": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "verification_ready_priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "verification_ready_queue_count": 5768
+}

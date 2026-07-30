@@ -1,0 +1,157 @@
+{
+  "metadata_hints_only": true,
+  "reviewed_source_family_count": 15,
+  "source_families": {
+    "agenda_packet_or_minutes": {
+      "by_bucket": {
+        "high_priority_verification_ready": 384,
+        "likely_duplicate_prior_source": 10,
+        "likely_non_source_or_navigation_only": 1298,
+        "low_priority_verification_ready": 121,
+        "medium_priority_verification_ready": 685,
+        "repair_needed": 16
+      },
+      "reviewed": 2514,
+      "verification_ready": 1190
+    },
+    "arbitration_award": {
+      "by_bucket": {
+        "high_priority_verification_ready": 151,
+        "likely_duplicate_prior_source": 9,
+        "likely_non_source_or_navigation_only": 7,
+        "repair_needed": 2
+      },
+      "reviewed": 169,
+      "verification_ready": 151
+    },
+    "budget_or_pay_plan": {
+      "by_bucket": {
+        "high_priority_verification_ready": 624,
+        "likely_duplicate_prior_source": 4,
+        "likely_non_source_or_navigation_only": 463,
+        "medium_priority_verification_ready": 132,
+        "repair_needed": 17
+      },
+      "reviewed": 1240,
+      "verification_ready": 756
+    },
+    "cba": {
+      "by_bucket": {
+        "high_priority_verification_ready": 900,
+        "likely_duplicate_prior_source": 72,
+        "likely_non_source_or_navigation_only": 114,
+        "medium_priority_verification_ready": 39,
+        "repair_needed": 7
+      },
+      "reviewed": 1132,
+      "verification_ready": 939
+    },
+    "civil_service_or_hr_pay_plan": {
+      "by_bucket": {
+        "high_priority_verification_ready": 86,
+        "likely_duplicate_prior_source": 4,
+        "likely_non_source_or_navigation_only": 97,
+        "medium_priority_verification_ready": 15,
+        "repair_needed": 7
+      },
+      "reviewed": 209,
+      "verification_ready": 101
+    },
+    "classification_study": {
+      "by_bucket": {
+        "high_priority_verification_ready": 2,
+        "likely_non_source_or_navigation_only": 5
+      },
+      "reviewed": 7,
+      "verification_ready": 2
+    },
+    "compensation_study": {
+      "by_bucket": {
+        "high_priority_verification_ready": 20,
+        "likely_non_source_or_navigation_only": 17,
+        "repair_needed": 1
+      },
+      "reviewed": 38,
+      "verification_ready": 20
+    },
+    "factfinding_report": {
+      "by_bucket": {
+        "high_priority_verification_ready": 18,
+        "likely_duplicate_prior_source": 4,
+        "likely_non_source_or_navigation_only": 2,
+        "repair_needed": 2
+      },
+      "reviewed": 26,
+      "verification_ready": 18
+    },
+    "mou_or_memorandum": {
+      "by_bucket": {
+        "high_priority_verification_ready": 341,
+        "likely_duplicate_prior_source": 13,
+        "likely_non_source_or_navigation_only": 94,
+        "medium_priority_verification_ready": 19,
+        "repair_needed": 4
+      },
+      "reviewed": 471,
+      "verification_ready": 360
+    },
+    "other_local_government_pay_policy": {
+      "by_bucket": {
+        "high_priority_verification_ready": 445,
+        "likely_duplicate_prior_source": 10,
+        "low_priority_verification_ready": 14,
+        "medium_priority_verification_ready": 363
+      },
+      "reviewed": 832,
+      "verification_ready": 822
+    },
+    "personnel_policy": {
+      "by_bucket": {
+        "high_priority_verification_ready": 148,
+        "likely_non_source_or_navigation_only": 52,
+        "medium_priority_verification_ready": 9,
+        "repair_needed": 2
+      },
+      "reviewed": 211,
+      "verification_ready": 157
+    },
+    "salary_ordinance": {
+      "by_bucket": {
+        "high_priority_verification_ready": 279,
+        "likely_duplicate_prior_source": 6,
+        "likely_non_source_or_navigation_only": 172,
+        "medium_priority_verification_ready": 32,
+        "repair_needed": 5
+      },
+      "reviewed": 494,
+      "verification_ready": 311
+    },
+    "settlement_agreement": {
+      "by_bucket": {
+        "high_priority_verification_ready": 9,
+        "likely_non_source_or_navigation_only": 3
+      },
+      "reviewed": 12,
+      "verification_ready": 9
+    },
+    "unknown_or_needs_review": {
+      "by_bucket": {
+        "repair_needed": 440
+      },
+      "reviewed": 440,
+      "verification_ready": 0
+    },
+    "wage_schedule": {
+      "by_bucket": {
+        "high_priority_verification_ready": 874,
+        "likely_duplicate_prior_source": 16,
+        "likely_non_source_or_navigation_only": 314,
+        "medium_priority_verification_ready": 58,
+        "repair_needed": 15
+      },
+      "reviewed": 1277,
+      "verification_ready": 932
+    }
+  },
+  "verification_ready_source_family_count": 14
+}

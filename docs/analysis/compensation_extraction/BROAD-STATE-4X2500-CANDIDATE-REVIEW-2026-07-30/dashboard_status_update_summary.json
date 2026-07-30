@@ -1,0 +1,25 @@
+{
+  "actual_total_scout_coverage": 16887,
+  "dashboard_data_vintage": "2026-07-30",
+  "failed_or_unparseable_outcomes_excluded_from_map": 32,
+  "finalized_candidate_count": 9072,
+  "global_analysis_readiness": false,
+  "global_readiness_flags": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "map_filter": "total_scout_coverage_only",
+  "new_parseable_completed_outcomes_added_to_map": 9968,
+  "planned_or_incomplete_outcomes_excluded_from_map": true,
+  "priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "status": "candidate_review_complete_verification_ready",
+  "verification_ready_queue_count": 5768
+}

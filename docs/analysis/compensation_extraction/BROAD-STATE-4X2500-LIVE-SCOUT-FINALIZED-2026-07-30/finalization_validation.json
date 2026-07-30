@@ -1,0 +1,19 @@
+{
+  "all_validation_gates_passed": true,
+  "gates": {
+    "accepted_outcomes_unique_and_complete": true,
+    "candidate_merge_dedupe_reconcile": true,
+    "candidate_review_bucket_counts_reconcile": true,
+    "dashboard_actual_coverage_accounting_valid": true,
+    "global_readiness_not_advanced": true,
+    "lane_terminal_endpoints_reached": true,
+    "master_and_shard_hashes_match": true,
+    "no_forbidden_downstream_work": true,
+    "one_primary_bucket_per_candidate": true,
+    "parseable_failed_reconcile": true,
+    "verification_ready_lineage_valid": true,
+    "verification_ready_schema_valid": true,
+    "worker_processes_no_longer_active": true
+  },
+  "status": "passed"
+}

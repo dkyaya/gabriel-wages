@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "check": "master_and_shard_queue_locks_reconcile",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_001_checkpoint_parseable_and_ordered",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_001_accepted_targets_unique_and_not_rerun",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_001_checkpoint_counts_reconcile",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_001_incomplete_targets_have_checkpoint_resume_state",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_002_checkpoint_parseable_and_ordered",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_002_accepted_targets_unique_and_not_rerun",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_002_checkpoint_counts_reconcile",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_002_incomplete_targets_have_checkpoint_resume_state",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_003_checkpoint_parseable_and_ordered",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_003_accepted_targets_unique_and_not_rerun",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_003_checkpoint_counts_reconcile",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_003_incomplete_targets_have_checkpoint_resume_state",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_004_checkpoint_parseable_and_ordered",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_004_accepted_targets_unique_and_not_rerun",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_004_checkpoint_counts_reconcile",
+      "passed": true
+    },
+    {
+      "check": "scout_lane_004_incomplete_targets_have_checkpoint_resume_state",
+      "passed": true
+    },
+    {
+      "check": "active_resume2_workers_have_no_terminal_exit_marker",
+      "passed": true
+    },
+    {
+      "check": "no_forbidden_downstream_stage_or_source_document_artifact",
+      "passed": true
+    },
+    {
+      "check": "dashboard_planned_targets_not_added_to_actual_coverage",
+      "passed": true
+    },
+    {
+      "check": "dashboard_in_progress_targets_not_added_before_lane_commit",
+      "passed": true
+    },
+    {
+      "check": "dashboard_map_remains_total_scout_coverage_only",
+      "passed": true
+    },
+    {
+      "check": "global_analysis_readiness_remains_false",
+      "passed": true
+    }
+  ],
+  "decision": "broad_state_4x2500_live_scout_crash_recovery_workers_still_running_monitoring",
+  "status": "passed"
+}

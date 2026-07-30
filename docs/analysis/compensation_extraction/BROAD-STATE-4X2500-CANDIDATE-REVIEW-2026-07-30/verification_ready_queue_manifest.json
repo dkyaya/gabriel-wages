@@ -1,0 +1,29 @@
+{
+  "all_required_fields_present": true,
+  "all_rows_from_finalized_scout_universe": true,
+  "documents_downloaded": 0,
+  "network_verification_performed": false,
+  "next_task_id": "BROAD-STATE-4X2500-VERIFICATION-2026-07-30",
+  "priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "queue_row_count": 5768,
+  "queue_sha256": "78072024d599dab15003c0a26377515ace2256f2b2d4afb04d73fc25fd5b086f",
+  "required_fields": [
+    "candidate_id",
+    "source_locator_or_url",
+    "municipality",
+    "state",
+    "source_family_hint",
+    "priority_bucket",
+    "scout_target_id",
+    "lane_id",
+    "search_query_family",
+    "discovery_run_id"
+  ],
+  "source_finalized_candidate_sha256": "8a990e1c36e70a6861cf886db20edc0aca7ccabc8466c99f5dc09f417cb4adc6",
+  "task_id": "BROAD-STATE-4X2500-LIVE-SCOUT-FINALIZE-AND-CANDIDATE-REVIEW-2026-07-30",
+  "verification_status": "not_verified"
+}

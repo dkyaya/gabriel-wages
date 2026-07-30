@@ -1,0 +1,20 @@
+{
+  "candidate_count": 9977,
+  "completed_lane_count": 4,
+  "completed_lanes": [
+    "scout_lane_001",
+    "scout_lane_002",
+    "scout_lane_003",
+    "scout_lane_004"
+  ],
+  "decision": "broad_state_4x2500_live_scout_completed_candidate_review_ready",
+  "deduped_candidate_count": 9072,
+  "failed_or_stopped_parses": 32,
+  "global_analysis_readiness": false,
+  "locked_target_count": 10000,
+  "parseable_municipality_outcomes": 9968,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "review_eligible_candidate_count": 9072,
+  "terminal_target_outcome_count": 10000
+}

@@ -1,0 +1,40 @@
+{
+  "bucket_counts": {
+    "high_priority_verification_ready": 4281,
+    "likely_duplicate_prior_source": 148,
+    "likely_non_source_or_navigation_only": 2638,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352,
+    "repair_needed": 518
+  },
+  "created_at": "2026-07-30T11:11:22.675923+00:00",
+  "input_finalized_candidates": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-FINALIZED-2026-07-30/finalized_candidate_rows.csv",
+  "input_row_count": 9072,
+  "input_sha256": "8a990e1c36e70a6861cf886db20edc0aca7ccabc8466c99f5dc09f417cb4adc6",
+  "metadata_only": true,
+  "output_review_results": "candidate_review_results.csv",
+  "output_verification_queue": "verification_ready_queue.csv",
+  "prior_duplicate_inputs": [
+    {
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-CANDIDATE-REVIEW-AFTER-4X3000-VERIFICATION-2026-07-28/combined_broad_candidate_review_universe.csv",
+      "row_count": 9065,
+      "sha256": "37254e4f7e6c1c9805b8e4320c3a35a758c03b860bb7a4825fe7e243830b66b9",
+      "unique_locators_first_added": 9036
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26/targeted_scouting_four_lane_candidate_deduped_review.csv",
+      "row_count": 4225,
+      "sha256": "e7f615ec6169c4dc4b7bc094cfffd5dc93ed55a89ea37b052402cecf85143298",
+      "unique_locators_first_added": 2707
+    },
+    {
+      "path": "docs/analysis/verification_ledgers/verified_source_routing_ledger_latest.csv",
+      "row_count": 4726,
+      "sha256": "831f40dacf3f0362d5c3c81cb2e59c4d3da502187c94672e381d355ae79f5499",
+      "unique_locators_first_added": 4357
+    }
+  ],
+  "reviewed_row_count": 9072,
+  "task_id": "BROAD-STATE-4X2500-LIVE-SCOUT-FINALIZE-AND-CANDIDATE-REVIEW-2026-07-30",
+  "verification_ready_row_count": 5768
+}

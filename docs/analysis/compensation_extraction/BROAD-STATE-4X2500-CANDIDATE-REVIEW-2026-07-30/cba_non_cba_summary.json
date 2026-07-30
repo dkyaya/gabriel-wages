@@ -1,0 +1,12 @@
+{
+  "classification_basis": "source_family_hint equals cba versus all other or unresolved families",
+  "reviewed": {
+    "cba_hint": 1132,
+    "non_cba_or_other_hint": 7940
+  },
+  "unverified_metadata_only": true,
+  "verification_ready": {
+    "cba_hint": 939,
+    "non_cba_or_other_hint": 4829
+  }
+}

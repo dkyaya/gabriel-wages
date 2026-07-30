@@ -1,0 +1,22 @@
+{
+  "all_invariants_passed": true,
+  "candidate_review_zero": true,
+  "completed_targets_not_rerun": true,
+  "coordinator_merge_after_workers": true,
+  "dashboard_map_total_scout_coverage_only": true,
+  "downloads_source_review_zero": true,
+  "extraction_rating_ingestion_codification_statistics_zero": true,
+  "four_isolated_controlled_lanes": true,
+  "global_analysis_readiness_false": true,
+  "incomplete_lanes_have_resume_states": true,
+  "master_and_shard_locks_revalidated": true,
+  "master_equals_completed_lane_union": true,
+  "only_parseable_completed_outcomes_counted_as_coverage": true,
+  "overlap_attempted": true,
+  "partial_outputs_cannot_masquerade_as_complete": true,
+  "planned_incomplete_unparseable_excluded_from_coverage": true,
+  "source_document_inspection_zero": true,
+  "stagger_offsets_recorded": true,
+  "verification_zero": true,
+  "workers_cross_lane_reads_or_writes_zero": true
+}

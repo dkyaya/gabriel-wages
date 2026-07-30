@@ -1,0 +1,18 @@
+{
+  "audit_status": "passed",
+  "audit_scope": "staged files for BROAD-STATE-4X2500 live-scout finalization and candidate review",
+  "binary_numstat_entries": 0,
+  "candidate_source_binaries_staged": 0,
+  "corpus_or_full_extracted_text_paths_staged": 0,
+  "downloaded_pdf_doc_spreadsheet_presentation_image_audio_video_archive_executable_files_staged": 0,
+  "files_over_50_mb": 0,
+  "largest_staged_file_bytes": 26560323,
+  "largest_staged_file_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_results.jsonl",
+  "retained_source_artifacts_staged": 0,
+  "staged_metadata_before_audit_artifacts_mib": 176.9,
+  "staged_path_count_before_audit_artifacts": 149,
+  "unrelated_untracked_paths_excluded": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "package-lock.json"
+  ]
+}

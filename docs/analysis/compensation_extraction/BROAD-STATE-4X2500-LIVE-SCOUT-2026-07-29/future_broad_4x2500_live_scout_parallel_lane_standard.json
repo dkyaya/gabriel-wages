@@ -1,0 +1,14 @@
+{
+  "candidate_review_in_scout": false,
+  "checkpoint_after_each_target": true,
+  "controlled_overlap_required": true,
+  "coordinator_only_dashboard_updates": true,
+  "lane_count": 4,
+  "stagger_offsets_minutes": {
+    "scout_lane_001": 0,
+    "scout_lane_002": 8,
+    "scout_lane_003": 16,
+    "scout_lane_004": 24
+  },
+  "targets_per_lane": 2500
+}

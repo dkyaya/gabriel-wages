@@ -1669,6 +1669,22 @@ BROAD_STATE_4X2500_PREP_DIR = (
 BROAD_STATE_4X2500_PREP_DECISION_PATH = (
     BROAD_STATE_4X2500_PREP_DIR / "broad_state_4x2500_scout_infrastructure_prep_decision.json"
 )
+BROAD_STATE_4X2500_LIVE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29"
+)
+BROAD_STATE_4X2500_LIVE_DECISION_PATH = (
+    BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_decision.json"
+)
+BROAD_STATE_4X2500_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30"
+)
+BROAD_STATE_4X2500_REVIEW_DECISION_PATH = (
+    BROAD_STATE_4X2500_REVIEW_DIR / "final_decision.json"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5738,6 +5754,138 @@ def broad_state_4x2500_scout_infrastructure_prep_status() -> tuple[bool, dict[st
     }
 
 
+def broad_state_4x2500_live_scout_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize a complete or checkpoint-safe partial 4 x 2,500 live package."""
+    required = (
+        BROAD_STATE_4X2500_LIVE_DECISION_PATH,
+        BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_results_summary.json",
+        BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_candidate_summary.json",
+        BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_municipality_coverage_summary.json",
+        BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_source_family_candidate_summary.json",
+        BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_invariant_checks.json",
+        BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_dashboard_update_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision, results, candidates, coverage, source_family, invariants, dashboard = (
+        read_json(path) for path in required
+    )
+    completed = as_int(decision.get("completed_lane_count"))
+    allowed_decisions = {
+        "broad_state_4x2500_live_scout_completed_candidate_review_ready",
+        "broad_state_4x2500_live_scout_partial_lanes_completed_resume_ready",
+    }
+    gates = (
+        decision.get("decision") in allowed_decisions
+        and 1 <= completed <= 4
+        and results.get("completed_lane_count") == completed
+        and results.get("terminal_target_outcome_count") == completed * 2500
+        and results.get("parseable_municipality_outcomes", 0)
+        + results.get("failed_or_stopped_parses", 0)
+        == results.get("terminal_target_outcome_count")
+        and candidates.get("candidate_count") == results.get("candidate_count")
+        and candidates.get("deduped_candidate_count") == results.get("deduped_candidate_count")
+        and candidates.get("candidate_review_performed") is False
+        and coverage.get("new_scout_covered_municipalities")
+        == results.get("parseable_municipality_outcomes")
+        and coverage.get("cumulative_scout_covered_municipalities_before_wave") == 6919
+        and coverage.get("cumulative_scout_covered_municipalities_after_committed_outcomes")
+        == 6919 + results.get("parseable_municipality_outcomes", 0)
+        and source_family.get("deduped_candidate_count") == results.get("deduped_candidate_count")
+        and invariants.get("all_invariants_passed") is True
+        and invariants.get("only_parseable_completed_outcomes_counted_as_coverage") is True
+        and invariants.get("candidate_review_zero") is True
+        and dashboard.get("map_filter") == "total_scout_coverage_only"
+        and dashboard.get("global_analysis_readiness") is False
+        and decision.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 live scout package fails dashboard gates")
+    return True, {
+        **decision,
+        "new_candidate_rows": candidates.get("candidate_count", 0),
+        "deduped_candidate_count": candidates.get("deduped_candidate_count", 0),
+        "candidate_review_queue_size": candidates.get("review_eligible_candidate_count", 0),
+        "source_family_distribution": source_family.get("source_family_distribution", {}),
+        "dashboard_result_path": "docs/analysis/broad_state_4x2500_live_scout_result_2026-07-29.md",
+    }
+
+
+def broad_state_4x2500_candidate_review_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the finalized local metadata review and verification queue."""
+    required = (
+        BROAD_STATE_4X2500_REVIEW_DECISION_PATH,
+        BROAD_STATE_4X2500_REVIEW_DIR / "candidate_review_summary.json",
+        BROAD_STATE_4X2500_REVIEW_DIR / "candidate_review_bucket_counts.json",
+        BROAD_STATE_4X2500_REVIEW_DIR / "verification_ready_queue_manifest.json",
+        BROAD_STATE_4X2500_REVIEW_DIR / "candidate_review_validation.json",
+        BROAD_STATE_4X2500_REVIEW_DIR / "dashboard_status_input.json",
+        BROAD_STATE_4X2500_REVIEW_DIR / "candidate_review_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    decision, summary, buckets, queue, validation, dashboard, _ = (
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    )
+    expected = "broad_state_4x2500_live_scout_finalized_candidate_review_completed_verification_ready"
+    priority_counts = summary.get("verification_ready_priority_counts", {})
+    gates = (
+        decision.get("decision") == expected
+        and decision.get("scout_finalization_passed") is True
+        and decision.get("candidate_review_completed") is True
+        and decision.get("verification_performed") is False
+        and summary.get("candidate_review_status") == "completed"
+        and summary.get("finalized_candidate_count") == 9072
+        and summary.get("reviewed_candidate_count") == 9072
+        and sum(buckets.get("bucket_counts", {}).values()) == 9072
+        and queue.get("queue_row_count") == summary.get("verification_ready_queue_count")
+        and sum(priority_counts.values()) == summary.get("verification_ready_queue_count")
+        and validation.get("all_validation_gates_passed") is True
+        and dashboard.get("map_filter") == "total_scout_coverage_only"
+        and dashboard.get("global_analysis_readiness") is False
+        and summary.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 candidate-review package fails dashboard gates")
+    return True, {
+        **summary,
+        "decision": expected,
+        "bucket_counts": buckets.get("bucket_counts", {}),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_summary.md"
+        ),
+    }
+
+
+def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
+    """Return actual per-state 4x2500 outcomes; never include planned rows."""
+    available, status = broad_state_4x2500_live_scout_status()
+    if not available:
+        return {}
+    outcomes = read_csv(BROAD_STATE_4X2500_LIVE_DIR / "broad_state_4x2500_live_scout_results.csv")
+    overlay: dict[str, dict[str, int]] = defaultdict(
+        lambda: {"parseable": 0, "candidate_positive": 0, "no_candidate": 0, "failed": 0, "candidate_rows": 0}
+    )
+    for row in outcomes:
+        state = row["state"]
+        candidate_count = as_int(row.get("candidate_count"))
+        if row.get("parse_status") == "parseable":
+            overlay[state]["parseable"] += 1
+            overlay[state]["candidate_positive" if candidate_count else "no_candidate"] += 1
+        else:
+            overlay[state]["failed"] += 1
+        overlay[state]["candidate_rows"] += candidate_count
+    if (
+        sum(item["parseable"] for item in overlay.values()) != status["new_scout_covered_municipalities"]
+        or sum(item["failed"] for item in overlay.values()) != status["failed_or_stopped_parses"]
+        or sum(item["candidate_rows"] for item in overlay.values()) != status["candidate_count"]
+    ):
+        raise ValueError("4x2500 live state overlay does not reconcile to finalized scout status")
+    return dict(overlay)
+
+
 def build_reports_index_layer(
     *, source_index: dict[str, Any], metadata: dict[str, Any]
 ) -> dict[str, Any]:
@@ -5829,21 +5977,77 @@ def build_reports_index_layer(
     broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
     global_gate_available, global_gate = global_analysis_readiness_gate_status()
     broad_4x2500_prep_available, broad_4x2500_prep = broad_state_4x2500_scout_infrastructure_prep_status()
+    broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
+    broad_4x2500_review_available, broad_4x2500_review = broad_state_4x2500_candidate_review_status()
     published_reports = [
+        *(
+            [
+                {
+                    "id": "broad-state-4x2500-candidate-review-2026-07-30",
+                    "title": "Broad State 4 × 2,500 Candidate Review",
+                    "report_type": "Current metadata-only candidate-review result",
+                    "date": "2026-07-30",
+                    "checkpoint": f"{broad_4x2500_review['verification_ready_queue_count']:,} verification-ready candidates",
+                    "summary": (
+                        "All finalized live-scout candidates received exactly one local metadata-only bucket. "
+                        "Four-lane reachability verification is ready next; no URL was opened in review."
+                    ),
+                    "tags": ["current", "broad scout", "4x2500", "candidate review", "verification ready"],
+                    "current": True, "historical": False,
+                    "href": repository_root_url + broad_4x2500_review["dashboard_result_path"],
+                    "link_label": "Open current 4 × 2,500 candidate-review report",
+                    "scope_metrics": [
+                        {"label": "reviewed candidates", "value": broad_4x2500_review["reviewed_candidate_count"]},
+                        {"label": "verification ready", "value": broad_4x2500_review["verification_ready_queue_count"]},
+                        {"label": "repair queue", "value": broad_4x2500_review["repair_queue_count"]},
+                    ],
+                }
+            ] if broad_4x2500_review_available else []
+        ),
+        *(
+            [
+                {
+                    "id": "broad-state-4x2500-live-scout-2026-07-29",
+                    "title": "Broad State 4 × 2,500 Live Scout",
+                    "report_type": "Historical live broad-scout result" if broad_4x2500_review_available else "Current live broad-scout result",
+                    "date": "2026-07-29",
+                    "checkpoint": f"{broad_4x2500_live['completed_lane_count']} of 4 lanes complete",
+                    "summary": (
+                        f"Committed completed lanes add {broad_4x2500_live['new_scout_covered_municipalities']:,} "
+                        "parseable municipalities to actual coverage. Candidate review is complete and "
+                        "verification is ready next." if broad_4x2500_review_available else
+                        "parseable municipalities to actual coverage. Candidate review remains deferred "
+                        "until the full wave completes or the user explicitly stops scouting."
+                    ),
+                    "tags": ["historical" if broad_4x2500_review_available else "current", "broad scout", "4x2500", "live", "resumability"],
+                    "current": not broad_4x2500_review_available, "historical": broad_4x2500_review_available,
+                    "href": repository_root_url + broad_4x2500_live["dashboard_result_path"],
+                    "link_label": "Open current 4 × 2,500 live-scout report",
+                    "scope_metrics": [
+                        {"label": "completed lanes", "value": broad_4x2500_live["completed_lane_count"]},
+                        {"label": "parseable municipalities", "value": broad_4x2500_live["new_scout_covered_municipalities"]},
+                        {"label": "candidate rows", "value": broad_4x2500_live["candidate_count"]},
+                    ],
+                }
+            ] if broad_4x2500_live_available else []
+        ),
         *(
             [
                 {
                     "id": "broad-state-4x2500-scout-infrastructure-prep-2026-07-29",
                     "title": "Broad State 4 × 2,500 Scout Infrastructure Preparation",
-                    "report_type": "Current no-call broad-scout infrastructure report",
+                    "report_type": (
+                        "Historical no-call broad-scout infrastructure report"
+                        if broad_4x2500_live_available else "Current no-call broad-scout infrastructure report"
+                    ),
                     "date": "2026-07-29",
                     "checkpoint": "10,000 unique planned municipalities; four locked 2,500-target shards",
                     "summary": (
                         "A full no-call, state-balanced, source-family-diverse 4 × 2,500 wave is locked. "
                         "Actual coverage remains 6,919; the live wave is next and candidate review remains deferred."
                     ),
-                    "tags": ["current", "broad scout", "4x2500", "dry run", "resumability"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if broad_4x2500_live_available else "current", "broad scout", "4x2500", "dry run", "resumability"],
+                    "current": not broad_4x2500_live_available, "historical": broad_4x2500_live_available,
                     "href": repository_root_url + broad_4x2500_prep["dashboard_result_path"],
                     "link_label": "Open current 4 × 2,500 infrastructure report",
                     "scope_metrics": [
@@ -6386,7 +6590,7 @@ def build_reports_index_layer(
     return {
         "schema_version": source_index.get("schema_version", "1.0.0"),
         "generated_at": metadata["generated_at"],
-        "data_vintage": "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
+        "data_vintage": "2026-07-30" if broad_4x2500_review_available else "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
             source_download_available or candidate_review_available
         ) else "2026-07-27",
         "source_file": relative(REPORTS_INDEX_SOURCE_PATH),
@@ -6463,6 +6667,8 @@ def build_state_summary(
     broad_completed, broad_decision = broad_state_source_scout_status()
     prep_completed, prep_decision = broad_state_4x1000_dry_run_prep_status()
     live_available, live_decision = broad_state_4x1000_live_scout_status()
+    broad_4x2500_live_available, broad_4x2500_live_decision = broad_state_4x2500_live_scout_status()
+    broad_4x2500_by_state = broad_state_4x2500_live_state_overlay()
     broad_by_state: dict[str, dict[str, str]] = {}
     live_by_state: dict[str, dict[str, str]] = {}
     if broad_completed:
@@ -6504,21 +6710,22 @@ def build_state_summary(
         universe = as_int(row["municipalities_in_universe"])
         broad = broad_by_state.get(state, {})
         live = live_by_state.get(state, {})
+        live_4x2500 = broad_4x2500_by_state.get(state, {})
         covered = as_int(row["municipalities_scouted"]) + as_int(
             broad.get("parseable_new_municipality_count")
-        ) + as_int(live.get("parseable_municipality_count"))
+        ) + as_int(live.get("parseable_municipality_count")) + as_int(live_4x2500.get("parseable"))
         candidate_positive = as_int(row["municipalities_scouted_with_candidates"]) + as_int(
             broad.get("candidate_positive_new_municipality_count")
-        ) + as_int(live.get("candidate_positive_municipality_count"))
+        ) + as_int(live.get("candidate_positive_municipality_count")) + as_int(live_4x2500.get("candidate_positive"))
         no_candidate = as_int(row["municipalities_scouted_no_candidates"]) + as_int(
             broad.get("no_candidate_new_municipality_count")
-        ) + as_int(live.get("no_candidate_municipality_count"))
+        ) + as_int(live.get("no_candidate_municipality_count")) + as_int(live_4x2500.get("no_candidate"))
         failure_only = as_int(row["municipalities_scout_attempt_failed_connection"]) + as_int(
             broad.get("failed_or_stopped_target_count")
-        ) + as_int(live.get("failed_or_stopped_target_count"))
+        ) + as_int(live.get("failed_or_stopped_target_count")) + as_int(live_4x2500.get("failed"))
         candidate_rows = as_int(row["candidate_rows_total"]) + as_int(
             broad.get("candidate_row_count")
-        ) + as_int(live.get("candidate_count"))
+        ) + as_int(live.get("candidate_count")) + as_int(live_4x2500.get("candidate_rows"))
         likely_sets = as_int(row["municipalities_with_likely_triad"])
         high_priority = as_int(row["high_priority_candidate_rows"])
         tier_c = tier_c_by_state.get(state, {})
@@ -6651,6 +6858,10 @@ def build_state_summary(
             "broad_state_4x1000_live_decision": live_decision.get("decision") if live_available else None,
             "broad_state_4x1000_live_completed_shard_count": live_decision.get("completed_shard_count") if live_available else 0,
             "broad_state_4x1000_live_parseable_municipalities_added_to_map": live_decision.get("new_scout_covered_municipalities") if live_available else 0,
+            "broad_state_4x2500_live_included": broad_4x2500_live_available,
+            "broad_state_4x2500_live_decision": broad_4x2500_live_decision.get("decision") if broad_4x2500_live_available else None,
+            "broad_state_4x2500_live_parseable_municipalities_added_to_map": broad_4x2500_live_decision.get("new_scout_covered_municipalities") if broad_4x2500_live_available else 0,
+            "broad_state_4x2500_failed_or_unparseable_excluded_from_map": broad_4x2500_live_decision.get("failed_or_stopped_parses") if broad_4x2500_live_available else 0,
         },
         "metric_definition": {
             "evidence_readiness_score": (
@@ -6784,6 +6995,14 @@ def build_coverage_funnel(
     metadata: dict[str, Any],
 ) -> dict[str, Any]:
     total = lambda field: sum(as_int(row[field]) for row in state_rows)
+    overlay = broad_state_4x2500_live_state_overlay()
+    overlay_total = lambda field: sum(item[field] for item in overlay.values())
+    broad_available, _ = broad_state_source_scout_status()
+    prior_broad = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH) if broad_available else []
+    prior_live_available, _ = broad_state_4x1000_live_scout_status()
+    prior_live = read_csv(BROAD_STATE_4X1000_LIVE_STATE_COVERAGE_PATH) if prior_live_available else []
+    prior_broad_total = lambda field: sum(as_int(row.get(field)) for row in prior_broad)
+    prior_live_total = lambda field: sum(as_int(row.get(field)) for row in prior_live)
     return {
         "metadata": metadata,
         "current_funnel": [
@@ -6796,13 +7015,13 @@ def build_coverage_funnel(
             {
                 "stage": "scout_covered",
                 "label": "Parseable scout-covered municipalities",
-                "value": total("municipalities_scouted"),
+                "value": total("municipalities_scouted") + prior_broad_total("parseable_new_municipality_count") + prior_live_total("parseable_municipality_count") + overlay_total("parseable"),
                 "status": "current",
             },
             {
                 "stage": "candidate_positive",
                 "label": "Candidate-positive municipalities",
-                "value": total("municipalities_scouted_with_candidates"),
+                "value": total("municipalities_scouted_with_candidates") + prior_broad_total("candidate_positive_new_municipality_count") + prior_live_total("candidate_positive_municipality_count") + overlay_total("candidate_positive"),
                 "status": "current_unverified",
             },
             {
@@ -6853,7 +7072,7 @@ def build_coverage_funnel(
         "separate_failure_accounting": {
             "failure_only_municipalities": total(
                 "municipalities_scout_attempt_failed_connection"
-            ),
+            ) + prior_broad_total("failed_or_stopped_target_count") + prior_live_total("failed_or_stopped_target_count") + overlay_total("failed"),
             "connection_failed_attempts_excluded_from_coverage": total(
                 "connection_failed_attempts_excluded_from_coverage"
             ),
@@ -6876,6 +7095,17 @@ def build_analysis_readiness(
     metadata: dict[str, Any],
 ) -> dict[str, Any]:
     total = lambda field: sum(as_int(row[field]) for row in state_rows)
+    broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
+    broad_4x2500_overlay = broad_state_4x2500_live_state_overlay()
+    discovery_covered = 6_919 + (
+        as_int(broad_4x2500_live.get("new_scout_covered_municipalities")) if broad_4x2500_live_available else 0
+    )
+    discovery_candidates = 13_041 + (
+        as_int(broad_4x2500_live.get("candidate_count")) if broad_4x2500_live_available else 0
+    )
+    discovery_positive = 5_168 + sum(
+        item["candidate_positive"] for item in broad_4x2500_overlay.values()
+    )
     claim_statuses = Counter(row.get("claim_status", "unknown") for row in claim_rows)
     report_ready = Counter(row.get("report_ready", "unknown") for row in claim_rows)
     hypothesis_support = Counter(
@@ -7399,11 +7629,9 @@ def build_analysis_readiness(
             ],
         },
         "source_discovery_readiness": {
-            "municipalities_scout_covered": total("municipalities_scouted"),
-            "candidate_rows": len(queue_rows),
-            "candidate_positive_municipalities": total(
-                "municipalities_scouted_with_candidates"
-            ),
+            "municipalities_scout_covered": discovery_covered,
+            "candidate_rows": discovery_candidates,
+            "candidate_positive_municipalities": discovery_positive,
             "likely_matched_set_leads": total("municipalities_with_likely_triad"),
             "assessment": "ready_for_PI_facing_discovery_status_reporting",
         },
@@ -8820,6 +9048,8 @@ def build_project_phase_summary(
     broad_codification_available, broad_codification = combined_broad_rating_ingestion_codification_status()
     global_gate_available, global_gate = global_analysis_readiness_gate_status()
     broad_4x2500_prep_available, broad_4x2500_prep = broad_state_4x2500_scout_infrastructure_prep_status()
+    broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
+    broad_4x2500_review_available, broad_4x2500_review = broad_state_4x2500_candidate_review_status()
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -8833,6 +9063,9 @@ def build_project_phase_summary(
     if live_available:
         covered += as_int(live.get("new_scout_covered_municipalities"))
         failure_only += as_int(live.get("failed_or_stopped_parses"))
+    if broad_4x2500_live_available:
+        covered += as_int(broad_4x2500_live.get("new_scout_covered_municipalities"))
+        failure_only += as_int(broad_4x2500_live.get("failed_or_stopped_parses"))
     remaining = max(SCOUT_CHECKPOINT_TARGET - covered, 0)
     mechanism = read_json(
         TARGETED_TIER_C_VERIFICATION_FROM_MEMO_GAPS_DIR
@@ -8844,11 +9077,17 @@ def build_project_phase_summary(
     )
     return {
         **metadata,
-        "data_vintage": "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
+        "data_vintage": "2026-07-30" if broad_4x2500_review_available else "2026-07-29" if broad_4x2500_prep_available else "2026-07-28" if (
             broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "broad_state_4x2500_scout_infrastructure_prep_complete_live_transition"
+            "broad_state_4x2500_candidate_review_complete_verification_transition"
+            if broad_4x2500_review_available
+            else "broad_state_4x2500_live_scout_complete_candidate_review_transition"
+            if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
+            else "broad_state_4x2500_live_scout_partial_resume_transition"
+            if broad_4x2500_live_available
+            else "broad_state_4x2500_scout_infrastructure_prep_complete_live_transition"
             if broad_4x2500_prep_available
             else "global_analysis_readiness_gate_complete_broad_4x2500_scout_prep_transition"
             if global_gate_available
@@ -8883,7 +9122,13 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Broad state 4 × 2,500 scout infrastructure prep complete; four live lanes ready next"
+            "Broad state 4 × 2,500 candidate review complete; four-lane verification ready next"
+            if broad_4x2500_review_available
+            else "Broad state 4 × 2,500 live scout complete; deterministic candidate review ready next"
+            if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
+            else f"Broad state 4 × 2,500 live scout partial: {broad_4x2500_live.get('completed_lane_count', 0)} of 4 lanes complete; resume incomplete lanes"
+            if broad_4x2500_live_available
+            else "Broad state 4 × 2,500 scout infrastructure prep complete; four live lanes ready next"
             if broad_4x2500_prep_available
             else "Global analysis readiness gate complete; broad 4 × 2,500 scouting infrastructure prep ready next"
             if global_gate_available
@@ -8918,7 +9163,11 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_4x2500_prep["decision"]
+            broad_4x2500_review["decision"]
+            if broad_4x2500_review_available
+            else broad_4x2500_live["decision"]
+            if broad_4x2500_live_available
+            else broad_4x2500_prep["decision"]
             if broad_4x2500_prep_available
             else global_gate["decision"]
             if global_gate_available
@@ -8949,7 +9198,13 @@ def build_project_phase_summary(
             else tier_c_supplement["decision"]
         ),
         "current_evidence_status": (
-            "broad_4x2500_dry_run_locked_live_not_run"
+            "broad_4x2500_candidate_review_complete_verification_ready_unverified_metadata_only"
+            if broad_4x2500_review_available
+            else "broad_4x2500_live_complete_candidate_review_deferred"
+            if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
+            else "broad_4x2500_live_partial_resume_candidate_review_deferred"
+            if broad_4x2500_live_available
+            else "broad_4x2500_dry_run_locked_live_not_run"
             if broad_4x2500_prep_available
             else "collection_ready_mechanism_and_quantitative_availability_partial_wage_gap_and_causal_blocked"
             if global_gate_available
@@ -8961,6 +9216,24 @@ def build_project_phase_summary(
         "global_analysis_readiness_gate_available": global_gate_available,
         "broad_state_4x2500_scout_infrastructure_prep_available": broad_4x2500_prep_available,
         "broad_state_4x2500_scout_infrastructure_prep_decision": broad_4x2500_prep.get("decision") if broad_4x2500_prep_available else None,
+        "broad_state_4x2500_live_scout_available": broad_4x2500_live_available,
+        "broad_state_4x2500_live_scout_decision": broad_4x2500_live.get("decision") if broad_4x2500_live_available else None,
+        "broad_state_4x2500_live_completed_lane_count": broad_4x2500_live.get("completed_lane_count", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_new_parseable_municipalities": broad_4x2500_live.get("new_scout_covered_municipalities", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_failed_or_stopped_parses": broad_4x2500_live.get("failed_or_stopped_parses", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_candidate_count": broad_4x2500_live.get("candidate_count", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_deduped_candidate_count": broad_4x2500_live.get("deduped_candidate_count", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_candidate_review_queue_size": broad_4x2500_live.get("candidate_review_queue_size", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_source_family_distribution": broad_4x2500_live.get("source_family_distribution", {}) if broad_4x2500_live_available else {},
+        "broad_state_4x2500_live_cba_concentration": broad_4x2500_live.get("cba_concentration", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_live_non_cba_opportunity_count": broad_4x2500_live.get("non_cba_opportunity_count", 0) if broad_4x2500_live_available else 0,
+        "broad_state_4x2500_candidate_review_available": broad_4x2500_review_available,
+        "broad_state_4x2500_candidate_review_decision": broad_4x2500_review.get("decision") if broad_4x2500_review_available else None,
+        "broad_state_4x2500_reviewed_candidate_count": broad_4x2500_review.get("reviewed_candidate_count", 0) if broad_4x2500_review_available else 0,
+        "broad_state_4x2500_verification_ready_queue_count": broad_4x2500_review.get("verification_ready_queue_count", 0) if broad_4x2500_review_available else 0,
+        "broad_state_4x2500_verification_ready_priority_counts": broad_4x2500_review.get("verification_ready_priority_counts", {}) if broad_4x2500_review_available else {},
+        "broad_state_4x2500_candidate_review_bucket_counts": broad_4x2500_review.get("bucket_counts", {}) if broad_4x2500_review_available else {},
+        "broad_state_4x2500_candidate_review_repair_queue_count": broad_4x2500_review.get("repair_queue_count", 0) if broad_4x2500_review_available else 0,
         "planned_scout_target_ceiling": broad_4x2500_prep.get("master_locked_target_count", 0) if broad_4x2500_prep_available else 10000,
         "planned_scout_shard_count": 4,
         "planned_scout_per_shard_ceiling": 2500,
@@ -9239,7 +9512,11 @@ def build_project_phase_summary(
             else "not_ready"
         ),
         "current_report_title": (
-            "Broad State 4 × 2,500 Scout Infrastructure Preparation"
+            "Broad State 4 × 2,500 Candidate Review"
+            if broad_4x2500_review_available
+            else "Broad State 4 × 2,500 Live Scout"
+            if broad_4x2500_live_available
+            else "Broad State 4 × 2,500 Scout Infrastructure Preparation"
             if broad_4x2500_prep_available
             else "Global Analysis Readiness Gate Result"
             if global_gate_available
@@ -9263,7 +9540,11 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_4x2500_prep["dashboard_result_path"]
+            broad_4x2500_review["dashboard_result_path"]
+            if broad_4x2500_review_available
+            else broad_4x2500_live["dashboard_result_path"]
+            if broad_4x2500_live_available
+            else broad_4x2500_prep["dashboard_result_path"]
             if broad_4x2500_prep_available
             else global_gate["dashboard_result_path"]
             if global_gate_available
@@ -9288,7 +9569,11 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_4x2500_prep["dashboard_result_path"]
+            broad_4x2500_review["dashboard_result_path"]
+            if broad_4x2500_review_available
+            else broad_4x2500_live["dashboard_result_path"]
+            if broad_4x2500_live_available
+            else broad_4x2500_prep["dashboard_result_path"]
             if broad_4x2500_prep_available
             else global_gate["dashboard_result_path"]
             if global_gate_available
@@ -9319,7 +9604,13 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run four isolated live 2,500-target broad scout lanes with T+0/T+8/T+16/T+24 stagger, per-target checkpoints, and candidate review deferred"
+            "run BROAD-STATE-4X2500-VERIFICATION-2026-07-30 over the full verification-ready queue in four independent staggered lanes"
+            if broad_4x2500_review_available
+            else "run deterministic combined candidate review over the committed 4 × 2,500 live-scout review queue"
+            if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
+            else "resume only incomplete broad 4 × 2,500 live-scout lanes; preserve completed targets and defer candidate review"
+            if broad_4x2500_live_available
+            else "run four isolated live 2,500-target broad scout lanes with T+0/T+8/T+16/T+24 stagger, per-target checkpoints, and candidate review deferred"
             if broad_4x2500_prep_available
             else "prepare four isolated 2,500-target broad scouting lanes with geographic, source-family, and municipality coverage accounting"
             if global_gate_available
@@ -9368,7 +9659,9 @@ def build_project_phase_summary(
             remaining / COORDINATED_WAVE_SIZE
         ),
         "current_candidate_queue_rows": (
-            len(queue_rows) + as_int(broad_scout.get("candidate_count")) + as_int(live.get("candidate_count"))
+            13041 + as_int(broad_4x2500_live.get("candidate_count"))
+            if broad_4x2500_live_available
+            else len(queue_rows) + as_int(broad_scout.get("candidate_count")) + as_int(live.get("candidate_count"))
             if broad_scout_completed else len(queue_rows)
         ),
         "current_candidate_positive_municipalities": positive,
@@ -9407,7 +9700,13 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "live broad state 4 × 2,500 scouting"
+            "four-lane broad-state 4 × 2,500 candidate verification"
+            if broad_4x2500_review_available
+            else "deterministic combined broad candidate review"
+            if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
+            else "resume incomplete broad state 4 × 2,500 live scout lanes"
+            if broad_4x2500_live_available
+            else "live broad state 4 × 2,500 scouting"
             if broad_4x2500_prep_available
             else "broad 4 × 2,500 scouting infrastructure preparation"
             if global_gate_available

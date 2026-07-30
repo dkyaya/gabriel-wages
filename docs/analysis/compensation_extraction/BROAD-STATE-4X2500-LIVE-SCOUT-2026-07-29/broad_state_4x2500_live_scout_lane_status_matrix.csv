@@ -1,0 +1,5 @@
+lane_id,shard_id,scheduled_start_offset_minutes,actual_started_at,completed_at,lane_status,terminal_target_count,parseable_count,failed_count,candidate_count
+scout_lane_001,broad_4x2500_shard_001,0,2026-07-29T01:21:55.342030-04:00,2026-07-30T01:00:23.506104-04:00,completed,2500,2491,9,2494
+scout_lane_002,broad_4x2500_shard_002,8,2026-07-29T01:29:55.386375-04:00,2026-07-30T01:11:56.433744-04:00,completed,2500,2492,8,2445
+scout_lane_003,broad_4x2500_shard_003,16,2026-07-29T01:37:55.454555-04:00,2026-07-30T01:06:24.910229-04:00,completed,2500,2492,8,2516
+scout_lane_004,broad_4x2500_shard_004,24,2026-07-29T01:45:55.430141-04:00,2026-07-30T01:18:57.502441-04:00,completed,2500,2493,7,2522

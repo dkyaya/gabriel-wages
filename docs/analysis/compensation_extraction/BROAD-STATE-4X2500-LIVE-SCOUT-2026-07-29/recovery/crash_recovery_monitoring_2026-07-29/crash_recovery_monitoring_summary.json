@@ -1,0 +1,224 @@
+{
+  "accepted_target_rerun_detected": false,
+  "active_worker_count": 4,
+  "candidate_count": 8096,
+  "checkpoints_advancing_observed_externally": true,
+  "completed_lane_count": 0,
+  "dashboard": {
+    "accounting_note": "Workers do not mutate shared dashboard accounting. Only parseable outcomes from coordinator-committed completed lanes may be added; no lane was complete at this snapshot.",
+    "current_scout_covered": 6919,
+    "current_wave_parseable_added_to_dashboard": 0,
+    "global_analysis_readiness": false,
+    "map_layer": "total_scout_coverage_only",
+    "planned_targets_added_to_actual_coverage": 0,
+    "update_status": "deferred_while_workers_active_no_completed_lane_commit"
+  },
+  "decision": "broad_state_4x2500_live_scout_crash_recovery_workers_still_running_monitoring",
+  "downstream_stage_validation": {
+    "candidate_review_performed": false,
+    "coordinator_candidate_review_queue_exists": false,
+    "downloads_or_source_document_inspection_performed": false,
+    "extraction_rating_ingestion_codification_performed": false,
+    "forbidden_downstream_artifacts": [],
+    "source_document_artifacts_in_live_output": [],
+    "verification_performed": false
+  },
+  "duplicate_workers_launched_by_recovery_audit": false,
+  "failed_count": 32,
+  "integrity_validation_passed": true,
+  "lanes": [
+    {
+      "accepted_completed_outcome_count": 1992,
+      "accepted_target_rerun_detected": false,
+      "candidate_count": 2047,
+      "checkpoint_counts_reconcile": true,
+      "checkpoint_resume_state_exists": true,
+      "checkpoint_updated_at": "2026-07-29T21:51:02.586254-04:00",
+      "duplicate_target_ids_in_sanitized_logs": [],
+      "explicit_post_finalize_resume_state_exists": false,
+      "failed_count": 9,
+      "global_analysis_readiness": false,
+      "integrity_valid": true,
+      "lane_id": "scout_lane_001",
+      "lane_status": "in_progress",
+      "last_completed_scout_target_id": "B4X2500-20260729-01992",
+      "next_unaccepted_scout_target_id": "B4X2500-20260729-01993",
+      "parseable_count": 1983,
+      "partial_in_flight_action": "owned_by_live_worker_do_not_discard_or_retry",
+      "partial_in_flight_target_directory_exists": true,
+      "sanitized_logs_inspected": [
+        "scout_lane_001.log",
+        "scout_lane_001_resume2.log"
+      ],
+      "shard_id": "broad_4x2500_shard_001",
+      "unexpected_attempt_directories": [],
+      "worker_active": true
+    },
+    {
+      "accepted_completed_outcome_count": 1951,
+      "accepted_target_rerun_detected": false,
+      "candidate_count": 1962,
+      "checkpoint_counts_reconcile": true,
+      "checkpoint_resume_state_exists": true,
+      "checkpoint_updated_at": "2026-07-29T21:50:56.002714-04:00",
+      "duplicate_target_ids_in_sanitized_logs": [],
+      "explicit_post_finalize_resume_state_exists": false,
+      "failed_count": 8,
+      "global_analysis_readiness": false,
+      "integrity_valid": true,
+      "lane_id": "scout_lane_002",
+      "lane_status": "in_progress",
+      "last_completed_scout_target_id": "B4X2500-20260729-04451",
+      "next_unaccepted_scout_target_id": "B4X2500-20260729-04452",
+      "parseable_count": 1943,
+      "partial_in_flight_action": "owned_by_live_worker_do_not_discard_or_retry",
+      "partial_in_flight_target_directory_exists": true,
+      "sanitized_logs_inspected": [
+        "scout_lane_002.log",
+        "scout_lane_002_resume2.log"
+      ],
+      "shard_id": "broad_4x2500_shard_002",
+      "unexpected_attempt_directories": [],
+      "worker_active": true
+    },
+    {
+      "accepted_completed_outcome_count": 1972,
+      "accepted_target_rerun_detected": false,
+      "candidate_count": 2049,
+      "checkpoint_counts_reconcile": true,
+      "checkpoint_resume_state_exists": true,
+      "checkpoint_updated_at": "2026-07-29T21:51:04.041838-04:00",
+      "duplicate_target_ids_in_sanitized_logs": [],
+      "explicit_post_finalize_resume_state_exists": false,
+      "failed_count": 8,
+      "global_analysis_readiness": false,
+      "integrity_valid": true,
+      "lane_id": "scout_lane_003",
+      "lane_status": "in_progress",
+      "last_completed_scout_target_id": "B4X2500-20260729-06972",
+      "next_unaccepted_scout_target_id": "B4X2500-20260729-06973",
+      "parseable_count": 1964,
+      "partial_in_flight_action": "owned_by_live_worker_do_not_discard_or_retry",
+      "partial_in_flight_target_directory_exists": true,
+      "sanitized_logs_inspected": [
+        "scout_lane_003.log",
+        "scout_lane_003_resume1.log",
+        "scout_lane_003_resume2.log"
+      ],
+      "shard_id": "broad_4x2500_shard_003",
+      "unexpected_attempt_directories": [],
+      "worker_active": true
+    },
+    {
+      "accepted_completed_outcome_count": 1949,
+      "accepted_target_rerun_detected": false,
+      "candidate_count": 2038,
+      "checkpoint_counts_reconcile": true,
+      "checkpoint_resume_state_exists": true,
+      "checkpoint_updated_at": "2026-07-29T21:50:50.944072-04:00",
+      "duplicate_target_ids_in_sanitized_logs": [],
+      "explicit_post_finalize_resume_state_exists": false,
+      "failed_count": 7,
+      "global_analysis_readiness": false,
+      "integrity_valid": true,
+      "lane_id": "scout_lane_004",
+      "lane_status": "in_progress",
+      "last_completed_scout_target_id": "B4X2500-20260729-09449",
+      "next_unaccepted_scout_target_id": "B4X2500-20260729-09450",
+      "parseable_count": 1942,
+      "partial_in_flight_action": "owned_by_live_worker_do_not_discard_or_retry",
+      "partial_in_flight_target_directory_exists": true,
+      "sanitized_logs_inspected": [
+        "scout_lane_004.log",
+        "scout_lane_004_resume1.log",
+        "scout_lane_004_resume2.log"
+      ],
+      "shard_id": "broad_4x2500_shard_004",
+      "unexpected_attempt_directories": [],
+      "worker_active": true
+    }
+  ],
+  "live_workers_were_still_running": true,
+  "next_task_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29/recovery/crash_recovery_monitoring_2026-07-29/next_task.md",
+  "parseable_count": 7832,
+  "queue_lock_validation": {
+    "master_actual_sha256": "7317c9d59d71ee1401bf0e659e1107a499b0870b667736e3e2c1c9c7e96a6462",
+    "master_count": 10000,
+    "master_equals_shard_union": true,
+    "master_expected_sha256": "7317c9d59d71ee1401bf0e659e1107a499b0870b667736e3e2c1c9c7e96a6462",
+    "master_hash_matches": true,
+    "master_target_ids_unique": true,
+    "shards": {
+      "broad_4x2500_shard_001": {
+        "actual_sha256": "55e458199a9d48f5900288afeee9036768c9238e8fa8886d004f7c60d6eb0948",
+        "count": 2500,
+        "expected_sha256": "55e458199a9d48f5900288afeee9036768c9238e8fa8886d004f7c60d6eb0948",
+        "hash_matches": true
+      },
+      "broad_4x2500_shard_002": {
+        "actual_sha256": "d021c34ef725ebbb701338155b55c6b356563b56b37130a83c6e285c43dc0b0a",
+        "count": 2500,
+        "expected_sha256": "d021c34ef725ebbb701338155b55c6b356563b56b37130a83c6e285c43dc0b0a",
+        "hash_matches": true
+      },
+      "broad_4x2500_shard_003": {
+        "actual_sha256": "c165aff243bba74f4ee478c9c0a8315c1585c52580708ac84fc06938cfed5145",
+        "count": 2500,
+        "expected_sha256": "c165aff243bba74f4ee478c9c0a8315c1585c52580708ac84fc06938cfed5145",
+        "hash_matches": true
+      },
+      "broad_4x2500_shard_004": {
+        "actual_sha256": "aa205e18c3326d6577970dc3c07bac26c216afce8df0c002f9e2434dde641f31",
+        "count": 2500,
+        "expected_sha256": "aa205e18c3326d6577970dc3c07bac26c216afce8df0c002f9e2434dde641f31",
+        "hash_matches": true
+      }
+    }
+  },
+  "resume_launched_by_recovery_audit": false,
+  "resume_occurred_before_recovery_audit": true,
+  "snapshot_at": "2026-07-29T21:51:08.828652-04:00",
+  "task_id": "BROAD-STATE-4X2500-LIVE-SCOUT-CRASH-RECOVERY-AUDIT-AND-RESUME-2026-07-29",
+  "tmp_log_audit": {
+    "active_resume2_exit_markers_absent": true,
+    "historical_exit_markers": {
+      "scout_lane_001.exit": 1,
+      "scout_lane_002.exit": 1,
+      "scout_lane_003.exit": 1,
+      "scout_lane_003_resume1.exit": 1,
+      "scout_lane_004.exit": 1,
+      "scout_lane_004_resume1.exit": 1
+    },
+    "interpretation": "Historical exit code 1 markers are fail-closed transport-instability stops. Resume2 has no exit marker while its four workers remain active.",
+    "log_directory_exists": true
+  },
+  "total_accepted_outcomes_recovered": 7864,
+  "validation_check_count": 23,
+  "validation_failed_check_count": 0,
+  "workers": {
+    "scout_lane_001": {
+      "alive": true,
+      "host_ps_observed_active": true,
+      "local_signal_probe": null,
+      "pid": 53924
+    },
+    "scout_lane_002": {
+      "alive": true,
+      "host_ps_observed_active": true,
+      "local_signal_probe": null,
+      "pid": 53925
+    },
+    "scout_lane_003": {
+      "alive": true,
+      "host_ps_observed_active": true,
+      "local_signal_probe": null,
+      "pid": 53927
+    },
+    "scout_lane_004": {
+      "alive": true,
+      "host_ps_observed_active": true,
+      "local_signal_probe": null,
+      "pid": 53929
+    }
+  }
+}

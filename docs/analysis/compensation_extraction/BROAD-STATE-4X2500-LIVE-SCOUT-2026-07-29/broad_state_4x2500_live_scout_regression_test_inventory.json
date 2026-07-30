@@ -1,0 +1,9 @@
+{
+  "predecessor_suites": [
+    "scripts/test_broad_state_4x2500_scout_infrastructure_prep.py",
+    "scripts/test_global_analysis_readiness_gate.py",
+    "scripts/test_combined_broad_rating_ingestion_codification_16947.py",
+    "scripts/test_dashboard_declutter_map_correction_tier_c_text_span_extraction.py"
+  ],
+  "suite": "scripts/test_broad_state_4x2500_live_scout.py"
+}

@@ -84,13 +84,18 @@ def main() -> int:
     check("dashboard current", dashboard["current_phase"].startswith((
         "Global analysis readiness gate complete",
         "Broad state 4 × 2,500 scout infrastructure prep complete",
+        "Broad state 4 × 2,500 live scout complete",
+        "Broad state 4 × 2,500 candidate review complete",
     )))
     check("dashboard flags", dashboard["global_readiness_gate_flags"] == expected and dashboard["global_analysis_readiness"] is False)
-    check("dashboard next", "2,500-target" in dashboard["next_task"] and dashboard["next_phase"] in {
+    check("dashboard next", ("2,500-target" in dashboard["next_task"] or "BROAD-STATE-4X2500-VERIFICATION" in dashboard["next_task"]) and dashboard["next_phase"] in {
         "broad 4 × 2,500 scouting infrastructure preparation",
         "live broad state 4 × 2,500 scouting",
+        "deterministic combined broad candidate review",
+        "four-lane broad-state 4 × 2,500 candidate verification",
     })
-    check("map stable", dashboard["current_scout_covered"] == 6919 and dashboard["dashboard_map_filter"] == "total_scout_coverage_only" and dashboard["map_data_date"] == "2026-07-27")
+    expected_coverage = 16887 if dashboard.get("broad_state_4x2500_candidate_review_available") else 6919
+    check("map stable", dashboard["current_scout_covered"] == expected_coverage and dashboard["dashboard_map_filter"] == "total_scout_coverage_only" and dashboard["map_data_date"] == "2026-07-27")
     app = (ROOT / "docs/dashboard/src/App.jsx").read_text(encoding="utf-8")
     check("readiness outside map", all(term in app for term in ["Collection readiness", "Mechanism readiness", "Wage-gap readiness", "Causal readiness", "Next planned stage"]))
     with tempfile.TemporaryDirectory(prefix="global-gate-") as temp:

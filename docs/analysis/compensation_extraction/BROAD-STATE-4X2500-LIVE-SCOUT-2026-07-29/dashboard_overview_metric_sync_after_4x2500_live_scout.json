@@ -1,0 +1,16 @@
+{
+  "candidate_review_queue_size": 9072,
+  "candidate_rows_before_wave": 13041,
+  "completed_lane_count": 4,
+  "current_total_candidate_rows": 23018,
+  "current_total_scout_covered_municipalities": 16887,
+  "dashboard_updated": true,
+  "decision": "broad_state_4x2500_live_scout_completed_candidate_review_ready",
+  "deduped_candidate_count": 9072,
+  "global_analysis_readiness": false,
+  "map_data_date": "2026-07-29",
+  "map_filter": "total_scout_coverage_only",
+  "new_candidate_rows": 9977,
+  "new_parseable_municipalities": 9968,
+  "scout_covered_before_wave": 6919
+}

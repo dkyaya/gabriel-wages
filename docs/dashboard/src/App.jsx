@@ -378,26 +378,56 @@ function App() {
               {projectPhaseSummary.global_analysis_readiness_gate_available && !projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
                 <MetricCard label="Next planned stage" value="4 × 2,500 prep" note="10,000-target ceiling; scouting infrastructure only" />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="4 × 2,500 infrastructure" value="Live-ready" note="No live calls occurred during preparation" />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="Planned scout target ceiling" value={formatNumber(projectPhaseSummary.planned_scout_target_ceiling)} note={`${formatNumber(projectPhaseSummary.planned_scout_shard_count)} locked shards · ${formatNumber(projectPhaseSummary.planned_scout_per_shard_ceiling)} each`} />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="Planned municipality coverage" value={formatNumber(projectPhaseSummary.planned_scout_unique_municipality_count)} note={`${formatNumber(projectPhaseSummary.newly_planned_scout_municipality_count)} new · ${formatNumber(projectPhaseSummary.previously_covered_scout_municipalities_in_plan)} already covered`} />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="All-parseable projection" value={formatNumber(projectPhaseSummary.projected_cumulative_scout_covered_if_all_parseable)} note="Projection only; actual map coverage remains 6,919" />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="Planned geographic breadth" value={`${formatNumber(projectPhaseSummary.planned_scout_state_count)} states`} note={`${formatNumber(projectPhaseSummary.planned_scout_region_count)} regions · ${formatCountMap(projectPhaseSummary.planned_scout_region_counts)}`} />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="Source-family query families" value={formatNumber(Object.keys(projectPhaseSummary.planned_scout_source_family_query_counts ?? {}).length)} note={formatCountMap(projectPhaseSummary.planned_scout_source_family_query_counts)} />
               )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
+              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
                 <MetricCard label="Next authorized stage" value="Live 4 × 2,500 scout" note="T+0/T+8/T+16/T+24; checkpoint after every target; candidate review deferred" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="4 × 2,500 live scout lanes" value={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_completed_lane_count)} / 4`} note="Only completed-lane outcomes enter coordinator and dashboard accounting" />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="New parseable municipalities" value={formatNumber(projectPhaseSummary.broad_state_4x2500_live_new_parseable_municipalities)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_failed_or_stopped_parses)} failed/stopped · actual map coverage only`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="Live scout candidates" value={formatNumber(projectPhaseSummary.broad_state_4x2500_live_candidate_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_deduped_candidate_count)} deduplicated locators`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="Finalized candidate universe" value={formatNumber(projectPhaseSummary.broad_state_4x2500_live_candidate_review_queue_size)} note={projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Every finalized row received one metadata-only review bucket" : "Review has not run; all rows remain unverified"} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="Live source-family hints" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_live_source_family_distribution ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_live_source_family_distribution)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="CBA hint concentration" value={`${((projectPhaseSummary.broad_state_4x2500_live_cba_concentration ?? 0) * 100).toFixed(1)}%`} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_non_cba_opportunity_count)} non-CBA or unresolved opportunities`} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
+                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD/GET metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
+                <MetricCard label="Verification-ready queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verification_ready_queue_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_ready_priority_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
+                <MetricCard label="Candidate-review buckets" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_candidate_review_bucket_counts ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_candidate_review_bucket_counts)} />
+              )}
+              {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
+                <MetricCard label="Review repair queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_candidate_review_repair_queue_count)} note="Retained outside verification until metadata repair; scout coverage is unchanged" />
               )}
               <MetricCard
                 label="Globally usable descriptive evidence"

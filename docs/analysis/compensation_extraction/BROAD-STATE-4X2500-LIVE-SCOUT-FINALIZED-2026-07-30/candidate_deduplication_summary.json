@@ -1,0 +1,11 @@
+{
+  "convention": "exact project normalized_locator; suppress prior-seen locators, current-wave repeats, and empty locators; keep first discovery lineage",
+  "exclusion_categories_can_overlap": true,
+  "finalized_deduped_candidate_rows": 9072,
+  "finalized_locators_unique": true,
+  "raw_candidate_rows": 9977,
+  "raw_rows_marked_current_wave_duplicate": 648,
+  "raw_rows_marked_prior_seen": 170,
+  "raw_rows_with_empty_normalized_locator": 117,
+  "total_excluded": 905
+}

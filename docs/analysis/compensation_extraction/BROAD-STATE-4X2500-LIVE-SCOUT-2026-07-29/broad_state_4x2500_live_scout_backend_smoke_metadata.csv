@@ -1,0 +1,4 @@
+call_number,diagnostic_name,web_search_enabled,status,passed,model,elapsed_seconds,response_id_present,response_text_present,token_usage_present,web_search_source_count,credential_values_logged
+1,no_search_control,False,passed,True,gpt-5.4-nano,1.142,True,True,True,0,False
+2,hosted_search_trivial_public_query,True,passed,True,gpt-5.4-nano,4.958,True,True,True,34,False
+3,hosted_search_municipality_style_query,True,passed,True,gpt-5.4-nano,11.356,True,True,True,38,False

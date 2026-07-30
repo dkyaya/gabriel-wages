@@ -1,0 +1,68 @@
+{
+  "actual_coverage_before_wave": 6919,
+  "all_live_status_not_run": true,
+  "all_municipalities_unique": true,
+  "all_target_ids_unique": true,
+  "candidate_review_permitted": false,
+  "controlled_lanes": [
+    "scout_lane_001",
+    "scout_lane_002",
+    "scout_lane_003",
+    "scout_lane_004"
+  ],
+  "controlled_overlap_required": true,
+  "controlled_shards": [
+    "broad_4x2500_shard_001",
+    "broad_4x2500_shard_002",
+    "broad_4x2500_shard_003",
+    "broad_4x2500_shard_004"
+  ],
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "disallowed_quality_target_count": 0,
+  "download_or_source_inspection_permitted": false,
+  "external_smoke_calls_attempted": 3,
+  "external_smoke_gate_status": "passed",
+  "extraction_rating_ingestion_codification_permitted": false,
+  "global_analysis_readiness": false,
+  "master_equals_four_shard_union": true,
+  "master_locked_target_count": 10000,
+  "master_queue_sha256": "7317c9d59d71ee1401bf0e659e1107a499b0870b667736e3e2c1c9c7e96a6462",
+  "predecessor_decision": "broad_state_4x2500_scout_infrastructure_prep_completed_live_ready",
+  "prior_scout_covered_target_count": 0,
+  "raw_prompts_or_responses_persisted": false,
+  "shard_counts": {
+    "broad_4x2500_shard_001": 2500,
+    "broad_4x2500_shard_002": 2500,
+    "broad_4x2500_shard_003": 2500,
+    "broad_4x2500_shard_004": 2500
+  },
+  "shard_hashes": {
+    "broad_4x2500_shard_001": "55e458199a9d48f5900288afeee9036768c9238e8fa8886d004f7c60d6eb0948",
+    "broad_4x2500_shard_002": "d021c34ef725ebbb701338155b55c6b356563b56b37130a83c6e285c43dc0b0a",
+    "broad_4x2500_shard_003": "c165aff243bba74f4ee478c9c0a8315c1585c52580708ac84fc06938cfed5145",
+    "broad_4x2500_shard_004": "aa205e18c3326d6577970dc3c07bac26c216afce8df0c002f9e2434dde641f31"
+  },
+  "source_family_query_counts": {
+    "agenda_minutes_attachment": 832,
+    "arbitration_factfinding": 835,
+    "broad_pay_document_index": 832,
+    "budget_pay_plan": 835,
+    "cba_agreement": 833,
+    "civil_service_hr_pay": 834,
+    "compensation_classification_study": 833,
+    "labor_relations_index": 832,
+    "local_pay_policy": 832,
+    "mou_settlement": 834,
+    "personnel_policy": 832,
+    "salary_wage_schedule": 836
+  },
+  "stagger_offsets_minutes": {
+    "scout_lane_001": 0,
+    "scout_lane_002": 8,
+    "scout_lane_003": 16,
+    "scout_lane_004": 24
+  },
+  "status": "passed",
+  "transport_diagnosis_category": "A",
+  "verification_permitted": false
+}

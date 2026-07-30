@@ -1,0 +1,22 @@
+{
+  "scout_lane_001": {
+    "lane_status": "completed",
+    "parseable_count": 2491,
+    "shard_id": "broad_4x2500_shard_001"
+  },
+  "scout_lane_002": {
+    "lane_status": "completed",
+    "parseable_count": 2492,
+    "shard_id": "broad_4x2500_shard_002"
+  },
+  "scout_lane_003": {
+    "lane_status": "completed",
+    "parseable_count": 2492,
+    "shard_id": "broad_4x2500_shard_003"
+  },
+  "scout_lane_004": {
+    "lane_status": "completed",
+    "parseable_count": 2493,
+    "shard_id": "broad_4x2500_shard_004"
+  }
+}

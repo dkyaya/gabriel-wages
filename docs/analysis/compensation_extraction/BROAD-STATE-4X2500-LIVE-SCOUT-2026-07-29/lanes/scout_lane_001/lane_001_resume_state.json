@@ -1,0 +1,9 @@
+{
+  "completed_lane_must_not_be_rerun": true,
+  "completed_target_count": 2500,
+  "lane_id": "scout_lane_001",
+  "last_completed_scout_target_id": "B4X2500-20260729-02500",
+  "resume_from_committed_checkpoint_only": true,
+  "resume_required": false,
+  "shard_id": "broad_4x2500_shard_001"
+}

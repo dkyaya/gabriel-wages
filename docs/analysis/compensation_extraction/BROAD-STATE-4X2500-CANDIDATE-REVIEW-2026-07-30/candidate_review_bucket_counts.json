@@ -1,0 +1,13 @@
+{
+  "bucket_counts": {
+    "high_priority_verification_ready": 4281,
+    "likely_duplicate_prior_source": 148,
+    "likely_non_source_or_navigation_only": 2638,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352,
+    "repair_needed": 518
+  },
+  "counts_reconcile": true,
+  "finalized_candidate_count": 9072,
+  "one_primary_bucket_per_candidate": true
+}

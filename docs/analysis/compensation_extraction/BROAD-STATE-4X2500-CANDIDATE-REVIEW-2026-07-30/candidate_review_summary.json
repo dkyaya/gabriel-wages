@@ -1,0 +1,45 @@
+{
+  "bucket_counts": {
+    "high_priority_verification_ready": 4281,
+    "likely_duplicate_prior_source": 148,
+    "likely_non_source_or_navigation_only": 2638,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352,
+    "repair_needed": 518
+  },
+  "candidate_review_method": "deterministic local metadata/title/snippet/URL-shape review only",
+  "candidate_review_status": "completed",
+  "codification_runs": 0,
+  "dashboard_map_filter": "total_scout_coverage_only",
+  "decision": "broad_state_4x2500_live_scout_finalized_candidate_review_completed_verification_ready",
+  "documents_downloaded": 0,
+  "final_causal_claims": 0,
+  "finalized_candidate_count": 9072,
+  "global_analysis_readiness": false,
+  "global_readiness_flags_preserved": {
+    "global_causal_analysis_readiness": "blocked_pending_matched_structure",
+    "global_collection_readiness": "pass",
+    "global_mechanism_analysis_readiness": "partial_pass",
+    "global_quantitative_evidence_readiness": "partial_pass",
+    "global_wage_gap_analysis_readiness": "blocked_pending_normalization",
+    "overall_global_analysis_readiness": "partial_pass"
+  },
+  "ingestion_runs": 0,
+  "network_requests": 0,
+  "rating_runs": 0,
+  "regressions": 0,
+  "repair_queue_count": 518,
+  "reviewed_candidate_count": 9072,
+  "source_documents_inspected": 0,
+  "task_id": "BROAD-STATE-4X2500-LIVE-SCOUT-FINALIZE-AND-CANDIDATE-REVIEW-2026-07-30",
+  "text_extractions": 0,
+  "urls_opened": 0,
+  "verification_ready_next": true,
+  "verification_ready_priority_counts": {
+    "high_priority_verification_ready": 4281,
+    "low_priority_verification_ready": 135,
+    "medium_priority_verification_ready": 1352
+  },
+  "verification_ready_queue_count": 5768,
+  "wage_gap_calculations": 0
+}
