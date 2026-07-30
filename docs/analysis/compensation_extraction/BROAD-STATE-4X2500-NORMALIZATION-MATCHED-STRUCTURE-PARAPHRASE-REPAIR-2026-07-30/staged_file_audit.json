@@ -1,11 +1,9 @@
 {
-  "audited_at": "2026-07-30T22:13:13Z",
+  "audited_at": "2026-07-30T22:14:03Z",
   "forbidden_staged_files": [],
   "passed": true,
-  "staged_file_count": 3,
+  "staged_file_count": 1,
   "staged_files": [
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/dashboard_public_pages_smoke_report.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/dashboard_public_smoke.png",
     "scripts/build_broad_state_4x2500_normalization_matching_paraphrase_repair_relay.py"
   ]
 }

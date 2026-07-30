@@ -42,7 +42,7 @@ def main() -> int:
         raise SystemExit("relay requires passing staged and large-file audits")
 
     changed = subprocess.run(
-        ["git", "diff-tree", "--no-commit-id", "--name-only", "-r", args.commit],
+        ["git", "diff", "--name-only", f"{INPUT_HEAD}..{args.commit}"],
         cwd=ROOT, capture_output=True, text=True, check=True,
     ).stdout.splitlines()
     relay_status = {
