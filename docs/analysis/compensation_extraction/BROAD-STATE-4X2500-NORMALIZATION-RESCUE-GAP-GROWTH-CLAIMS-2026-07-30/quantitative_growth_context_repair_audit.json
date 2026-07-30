@@ -1,5 +1,5 @@
 {
-  "context_repaired_record_count": 0,
+  "context_repaired_record_count": 12,
   "first_pass_mechanism_record_count": 3769,
   "known_false_positive_classes_removed": [
     "health-insurance or healthcare cost changes",

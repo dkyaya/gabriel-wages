@@ -2,7 +2,7 @@
 
 - `task_id`: BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30
 - `decision`: broad_state_4x2500_normalization_rescue_gap_growth_completed_pi_report_ready
-- `generated_at`: 2026-07-30T23:26:00.292010Z
+- `generated_at`: 2026-07-30T23:32:35.205240Z
 - `partial_input_count`: 1,563
 - `mechanism_only_input_count`: 3,769
 - `combined_rescue_count`: 5,332
@@ -11,8 +11,8 @@
 - `rescued_near_gap_ready_count`: 185
 - `still_partial_count`: 214
 - `downgraded_partial_count`: 1,074
-- `quantitative_growth_mechanism_supported_count`: 423
-- `quantitative_growth_mechanism_claim_count`: 96
+- `quantitative_growth_mechanism_supported_count`: 416
+- `quantitative_growth_mechanism_claim_count`: 95
 - `current_bounded_wage_differential_candidate_count`: 4
 - `current_bounded_growth_mechanism_comparison_candidate_count`: 1
 - `current_directional_documentary_hint_count`: 4

@@ -102,8 +102,6 @@ The source-grounded Boiling Springs, NC record directly identifies a COLA CPI me
 
 The source-grounded Montgomery, TX record directly identifies a percentage raise mechanism of 10% for police in 2022. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.
 
-The source-grounded Medford, MN record directly identifies a retroactive or lump sum mechanism of $35.07 for clerical admin in 2022. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.
-
 The source-grounded Sand City, CA record directly identifies a percentage raise mechanism of 3% for police in 2024. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.
 
 The source-grounded Turtlecreek, OH record directly identifies a percentage raise mechanism of 40% for fire in 2023. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.

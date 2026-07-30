@@ -242,10 +242,6 @@ The source-grounded Montgomery, TX record directly identifies a percentage raise
 
 ## quantitative_growth_mechanism_claim
 
-The source-grounded Medford, MN record directly identifies a retroactive or lump sum mechanism of $35.07 for clerical admin in 2022. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.
-
-## quantitative_growth_mechanism_claim
-
 The source-grounded Sand City, CA record directly identifies a percentage raise mechanism of 3% for police in 2024. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.
 
 ## quantitative_growth_mechanism_claim

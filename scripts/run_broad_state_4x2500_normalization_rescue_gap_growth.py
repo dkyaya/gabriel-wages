@@ -216,9 +216,13 @@ def numeric_growth(row: dict[str, Any]) -> tuple[bool, str, float | None, str, s
         if step_match or "step_schedule" in quant and re.search(r"\bstep\b", text, re.I):
             return True, "step_schedule", float(percent), "percent", "source_reported_step_schedule_growth_supported"
         return True, "percentage_raise", float(percent), "percent", "source_reported_percentage_growth_supported"
-    dollar = re.search(r"\b(?:increase|raise|bonus|lump[- ]sum|retroactive)[^$\n]{0,50}\$\s*([\d,]+(?:\.\d+)?)", text, re.I)
+    dollar = re.search(
+        r"\b(?:increase|raise)(?:d)?\s+(?:by|of)\s*\$\s*([\d,]+(?:\.\d+)?)"
+        r"|\b(?:bonus|lump[- ]sum|retroactive(?:\s+payment)?)\b[^$\n]{0,50}\$\s*([\d,]+(?:\.\d+)?)",
+        text, re.I,
+    )
     if dollar:
-        value = float(dollar.group(1).replace(",", ""))
+        value = float(next(group for group in dollar.groups() if group is not None).replace(",", ""))
         return True, "retroactive_or_lump_sum", value, "dollars", "source_reported_retroactive_or_lump_sum_growth_supported"
     if row.get("parsed_lump_sum") is not None:
         return True, "retroactive_or_lump_sum", float(row["parsed_lump_sum"]), "dollars", "source_reported_retroactive_or_lump_sum_growth_supported"

@@ -798,20 +798,6 @@
     },
     {
       "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
-      "claim_id": "B4X2500GROWTHCLAIM-a8ba491d8e2b976c70d64708",
-      "claim_text": "The source-grounded Medford, MN record directly identifies a retroactive or lump sum mechanism of $35.07 for clerical admin in 2022. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
-      "claim_type": "quantitative_growth_mechanism_claim",
-      "mechanism_type": "retroactive_or_lump_sum",
-      "municipality": "Medford",
-      "period": "2022",
-      "source_id": "B4X2500LIVE-20260729-003053",
-      "span_id": "B4X2500SPAN-20260730-e8c9aedcc743d699a3db6728",
-      "state": "MN",
-      "unit": "dollars",
-      "value": 35.07
-    },
-    {
-      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
       "claim_id": "B4X2500GROWTHCLAIM-5c8decdbe26f2b4f1d4ab739",
       "claim_text": "The source-grounded Sand City, CA record directly identifies a percentage raise mechanism of 3% for police in 2024. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
       "claim_type": "quantitative_growth_mechanism_claim",
@@ -1532,5 +1518,5 @@
       "prohibited_claim_warning": "Do not phrase as a current wage differential."
     }
   ],
-  "count": 120
+  "count": 119
 }

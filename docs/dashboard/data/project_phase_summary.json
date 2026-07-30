@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-30T23:23:44Z",
+  "generated_at": "2026-07-30T23:32:36Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -6083,13 +6083,13 @@
   "partial_repair_input_count": 1563,
   "mechanism_only_repair_input_count": 3769,
   "partial_records_repaired_count": 275,
-  "mechanism_only_records_upgraded_count": 423,
+  "mechanism_only_records_upgraded_count": 416,
   "rescued_full_normalization_count": 11,
   "rescued_gap_claim_ready_count": 0,
   "rescued_near_gap_ready_count": 185,
   "current_bounded_wage_differential_candidate_count": 4,
   "current_bounded_growth_mechanism_comparison_candidate_count": 1,
-  "quantitatively_supported_growth_mechanism_claim_count": 96,
+  "quantitatively_supported_growth_mechanism_claim_count": 95,
   "future_gap_potential_only_count": 15,
   "rescue_repaired_example_count": 35,
   "rescue_downgraded_or_unrepaired_example_count": 0

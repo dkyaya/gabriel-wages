@@ -10,7 +10,7 @@
   "final_causal_claim_made": false,
   "final_wage_gap_estimate_claimed": false,
   "future_gap_potential_only_count": 15,
-  "generated_at": "2026-07-30T23:26:00.292010Z",
+  "generated_at": "2026-07-30T23:32:35.205240Z",
   "global_analysis_readiness": false,
   "lane_counts": {
     "rescue_lane_001": 1333,
@@ -21,10 +21,10 @@
   "mechanism_only_input_count": 3769,
   "mechanism_status_counts": {
     "downgraded_unusable": 2128,
-    "mechanism_with_no_quant_value": 1218,
+    "mechanism_with_no_quant_value": 1225,
     "source_reported_cola_cpi_growth_supported": 49,
     "source_reported_percentage_growth_supported": 336,
-    "source_reported_retroactive_or_lump_sum_growth_supported": 9,
+    "source_reported_retroactive_or_lump_sum_growth_supported": 2,
     "source_reported_step_schedule_growth_supported": 29
   },
   "national_or_population_prevalence_claimed": false,
@@ -37,8 +37,8 @@
     "rescued_near_gap_ready": 185,
     "still_partial": 214
   },
-  "quantitative_growth_mechanism_claim_count": 96,
-  "quantitative_growth_mechanism_supported_count": 423,
+  "quantitative_growth_mechanism_claim_count": 95,
+  "quantitative_growth_mechanism_supported_count": 416,
   "regression_or_treatment_effect_run": false,
   "repaired_example_count": 35,
   "rescued_full_normalization_count": 11,
