@@ -25,6 +25,6 @@
 - PASS — 26_no_artifacts_tracked
 - PASS — 21_local_dashboard_build
 - PASS — 22_local_dashboard_smoke
-- PENDING — 23_public_dashboard_smoke
+- PASS — 23_public_dashboard_smoke
 - PASS — 27_staged_audit
 - PASS — 28_large_file_audit

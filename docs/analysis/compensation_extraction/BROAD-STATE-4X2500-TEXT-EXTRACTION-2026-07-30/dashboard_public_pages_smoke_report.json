@@ -1,0 +1,30 @@
+{
+  "status": "public_pages_visible_current_passed",
+  "public_pages_url": "https://dkyaya.github.io/gabriel-wages/",
+  "cache_busted_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_text_extraction_1706",
+  "deployment_workflow": ".github/workflows/deploy-dashboard.yml",
+  "deployment_mechanism": "GitHub Actions Pages artifact",
+  "deployment_run_id": 30564310685,
+  "deployment_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30564310685",
+  "deployed_commit": "2c453796b2a90e65c10c5445ae749334947253ca",
+  "workflow_build_conclusion": "success",
+  "workflow_deploy_conclusion": "success",
+  "visible_checks": {
+    "scout_coverage_16887": true,
+    "map_total_scout_coverage_only": true,
+    "text_extraction_current": true,
+    "text_extraction_queue_2940": true,
+    "extracted_ok_2795": true,
+    "quality_problem_count_145": true,
+    "span_extraction_ready_2795": true,
+    "extracted_text_bytes_182067064": true,
+    "next_task_span_extraction": true,
+    "wage_gap_blocked_pending_normalization": true,
+    "causal_blocked_pending_matched_structure": true,
+    "global_readiness_not_fully_passed": true,
+    "current_report_points_to_text_extraction_summary": true
+  },
+  "application_console_error_count": 0,
+  "screenshot": "dashboard_public_pages_smoke.png",
+  "completed_at": "2026-07-30T17:06:45Z"
+}

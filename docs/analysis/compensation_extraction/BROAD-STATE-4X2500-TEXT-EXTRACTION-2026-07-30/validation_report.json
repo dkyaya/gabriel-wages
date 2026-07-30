@@ -1,5 +1,5 @@
 {
-  "all_checks_passed": false,
+  "all_checks_passed": true,
   "checks": {
     "01_input_count_2940": true,
     "02_input_type_counts_exact": true,
@@ -23,7 +23,7 @@
     "20_dashboard_input_current": true,
     "21_local_dashboard_build": true,
     "22_local_dashboard_smoke": true,
-    "23_public_dashboard_smoke": false,
+    "23_public_dashboard_smoke": true,
     "24_map_scout_only": true,
     "25_global_readiness_not_advanced": true,
     "26_no_artifacts_tracked": true,
@@ -31,8 +31,6 @@
     "28_large_file_audit": true
   },
   "core_checks_passed": true,
-  "final_checks_pending": [
-    "23_public_dashboard_smoke"
-  ],
-  "validated_at": "2026-07-30T17:03:27Z"
+  "final_checks_pending": [],
+  "validated_at": "2026-07-30T17:08:01Z"
 }
