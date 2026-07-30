@@ -1,0 +1,68 @@
+{
+  "count": 9,
+  "statements": [
+    {
+      "cycle_period": "2018-2021",
+      "municipality": "Alburtis",
+      "state": "PA",
+      "statement": "In Alburtis, PA (2018-2021), the current source-grounded comparison pairs a police base-wage record at $33.57 per hour with a clerical admin base-wage record at $11.22 per hour. On the current normalized basis, the bounded documentary difference is $22.35 hourly (+199.20% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 1"
+    },
+    {
+      "cycle_period": "2024",
+      "municipality": "Cammack Village",
+      "state": "AR",
+      "statement": "In Cammack Village, AR (2024), the current source-grounded comparison pairs a police base-wage record at $25.00 per hour with a clerical admin base-wage record at $20.00 per hour. On the current normalized basis, the bounded documentary difference is $5.00 hourly (+25.00% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 1"
+    },
+    {
+      "cycle_period": "2023-2024",
+      "municipality": "Canastota",
+      "state": "NY",
+      "statement": "In Canastota, NY (2023-2024), the current source-grounded comparison pairs a police base-wage record at $23.91 per hour with a other base-wage record at $24.82 per hour. On the current normalized basis, the bounded documentary difference is $-0.91 hourly (-3.67% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 1"
+    },
+    {
+      "cycle_period": "2024",
+      "municipality": "Shreve",
+      "state": "OH",
+      "statement": "In Shreve, OH (2024), the current source-grounded comparison pairs a police base-wage record at $22.00 per hour with a clerical admin base-wage record at $16.00 per hour. On the current normalized basis, the bounded documentary difference is $6.00 hourly (+37.50% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 1"
+    },
+    {
+      "cycle_period": "2022",
+      "municipality": "Mechanicsville",
+      "state": "IA",
+      "statement": "In Mechanicsville, IA (2022), the current source-grounded record reports a 10% increase for full-time employees but expressly excludes the police officer; a separate record reports 3% for part-time library and ambulance employees. This supports a bounded local documentary contrast between an explicit police exclusion and non-safety growth terms. It does not establish a police growth rate, final wage-gap estimate, national pattern, population prevalence, or causal effect, and it requires final manual validation.",
+      "tier": "Tier 2"
+    },
+    {
+      "cycle_period": "2023",
+      "municipality": "Battle Lake",
+      "state": "MN",
+      "statement": "In Battle Lake, MN (2023), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 3"
+    },
+    {
+      "cycle_period": "2022",
+      "municipality": "Cheltenham",
+      "state": "PA",
+      "statement": "In Cheltenham, PA (2022), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 3"
+    },
+    {
+      "cycle_period": "2021",
+      "municipality": "Stanhope",
+      "state": "NJ",
+      "statement": "In Stanhope, NJ (2021), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 3"
+    },
+    {
+      "cycle_period": "2017",
+      "municipality": "Westfield",
+      "state": "NY",
+      "statement": "In Westfield, NY (2017), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "tier": "Tier 3"
+    }
+  ]
+}

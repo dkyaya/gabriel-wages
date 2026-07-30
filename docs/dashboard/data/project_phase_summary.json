@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-30T22:04:44Z",
+  "generated_at": "2026-07-30T23:23:44Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_4x2500_normalization_matching_complete",
-  "current_phase": "Normalization and matched structure complete",
-  "current_phase_code": "broad_state_4x2500_normalization_matching_paraphrase_repair_completed_pi_report_ready",
-  "current_evidence_status": "normalized_matched_documentary_structure_pi_report_ready",
+  "stage": "broad_state_4x2500_normalization_rescue_gap_growth_complete",
+  "current_phase": "Normalization rescue and bounded claims complete",
+  "current_phase_code": "broad_state_4x2500_normalization_rescue_gap_growth_completed_pi_report_ready",
+  "current_evidence_status": "bounded_local_documentary_comparisons_and_quantitative_growth_mechanisms_ready_for_pi_report",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1000,9 +1000,9 @@
     "weak_or_not_supported": 4379
   },
   "global_readiness_gate_status": "completed_with_partial_readiness_next_scout_prep_ready",
-  "current_report_title": "Broad State 4 × 2,500 Normalized and Matched Evidence",
-  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/normalization_matching_paraphrase_repair_summary.md",
-  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/normalization_matching_paraphrase_repair_summary.md",
+  "current_report_title": "Broad State 4 × 2,500 Normalization Rescue and Bounded Claims",
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/normalization_rescue_gap_growth_summary.md",
+  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/normalization_rescue_gap_growth_summary.md",
   "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
@@ -1037,16 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "PI-facing report drafting from repaired, normalized, and matched documentary evidence",
+  "next_phase": "PI-facing report drafting from bounded local documentary comparisons and quantitative growth mechanisms",
   "next_phase_sequence": [
-    "use repaired source-grounded paraphrases and updated careful claims",
-    "report normalization and matched-structure readiness without presenting final wage gaps",
-    "emphasize documentary mechanisms and limitations rather than pipeline operations",
-    "do not make regression, treatment-effect, population-prevalence, or final causal claims"
+    "use only source-grounded rescue claims and repaired examples",
+    "label every local differential as bounded and requiring final manual validation",
+    "do not present national, prevalence, regression, treatment-effect, or causal conclusions"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "broad_state_4x2500_normalization_matching_complete_pi_report_ready",
+  "last_updated_context": "broad_state_4x2500_normalization_rescue_gap_growth_complete_pi_report_ready",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1188,7 +1187,7 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 16887,
-  "wage_gap_analysis_readiness": "blocked_pending_normalization",
+  "wage_gap_analysis_readiness": "bounded_local_documentary_candidates_require_final_manual_validation",
   "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
@@ -6079,5 +6078,19 @@
   "cycle_to_cycle_growth_readiness_candidate_count": 141,
   "repaired_example_count": 48,
   "downgraded_or_unrepaired_example_count": 12,
-  "updated_careful_claim_count": 18
+  "updated_careful_claim_count": 18,
+  "broad_state_4x2500_normalization_rescue_available": true,
+  "partial_repair_input_count": 1563,
+  "mechanism_only_repair_input_count": 3769,
+  "partial_records_repaired_count": 275,
+  "mechanism_only_records_upgraded_count": 423,
+  "rescued_full_normalization_count": 11,
+  "rescued_gap_claim_ready_count": 0,
+  "rescued_near_gap_ready_count": 185,
+  "current_bounded_wage_differential_candidate_count": 4,
+  "current_bounded_growth_mechanism_comparison_candidate_count": 1,
+  "quantitatively_supported_growth_mechanism_claim_count": 96,
+  "future_gap_potential_only_count": 15,
+  "rescue_repaired_example_count": 35,
+  "rescue_downgraded_or_unrepaired_example_count": 0
 }

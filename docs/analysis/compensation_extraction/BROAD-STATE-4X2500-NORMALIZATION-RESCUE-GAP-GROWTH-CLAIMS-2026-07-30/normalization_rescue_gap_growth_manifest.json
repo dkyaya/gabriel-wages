@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-07-30T23:26:00.292245Z",
+  "decision": "broad_state_4x2500_normalization_rescue_gap_growth_completed_pi_report_ready",
+  "input_commit": "940cb65b657fbb4b0efe91761fe4ad0de60763a5",
+  "input_queue_sha256": "1855ca7d5c2a79938368f0b632db21402a92b7659cefd6263a5e3ec69ee89ac3",
+  "output_summary": {
+    "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+    "combined_rescue_count": 5332,
+    "current_bounded_growth_mechanism_comparison_candidate_count": 1,
+    "current_bounded_wage_differential_candidate_count": 4,
+    "current_directional_documentary_hint_count": 4,
+    "decision": "broad_state_4x2500_normalization_rescue_gap_growth_completed_pi_report_ready",
+    "downgraded_or_unrepaired_example_count": 0,
+    "downgraded_partial_count": 1074,
+    "final_causal_claim_made": false,
+    "final_wage_gap_estimate_claimed": false,
+    "future_gap_potential_only_count": 15,
+    "generated_at": "2026-07-30T23:26:00.292010Z",
+    "global_analysis_readiness": false,
+    "lane_counts": {
+      "rescue_lane_001": 1333,
+      "rescue_lane_002": 1333,
+      "rescue_lane_003": 1333,
+      "rescue_lane_004": 1333
+    },
+    "mechanism_only_input_count": 3769,
+    "mechanism_status_counts": {
+      "downgraded_unusable": 2128,
+      "mechanism_with_no_quant_value": 1218,
+      "source_reported_cola_cpi_growth_supported": 49,
+      "source_reported_percentage_growth_supported": 336,
+      "source_reported_retroactive_or_lump_sum_growth_supported": 9,
+      "source_reported_step_schedule_growth_supported": 29
+    },
+    "national_or_population_prevalence_claimed": false,
+    "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+    "partial_input_count": 1563,
+    "partial_status_counts": {
+      "downgraded_unusable": 1074,
+      "rescued_full_normalization": 11,
+      "rescued_manual_review_needed": 79,
+      "rescued_near_gap_ready": 185,
+      "still_partial": 214
+    },
+    "quantitative_growth_mechanism_claim_count": 96,
+    "quantitative_growth_mechanism_supported_count": 423,
+    "regression_or_treatment_effect_run": false,
+    "repaired_example_count": 35,
+    "rescued_full_normalization_count": 11,
+    "rescued_gap_claim_ready_count": 0,
+    "rescued_near_gap_ready_count": 185,
+    "still_partial_count": 214,
+    "task_id": "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30",
+    "wage_gap_analysis_readiness": "bounded_local_documentary_candidates_require_final_manual_validation"
+  },
+  "task_id": "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30"
+}

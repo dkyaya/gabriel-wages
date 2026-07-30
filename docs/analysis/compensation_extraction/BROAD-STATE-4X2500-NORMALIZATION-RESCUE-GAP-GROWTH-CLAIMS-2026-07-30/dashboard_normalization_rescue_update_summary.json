@@ -1,0 +1,23 @@
+{
+  "clean_dashboard_structure_preserved": true,
+  "current_bounded_growth_mechanism_comparison_candidate_count": 1,
+  "current_bounded_wage_differential_candidate_count": 4,
+  "current_stage": "Normalization rescue and gap/growth claim strengthening complete",
+  "eligible_municipality_universe": 35589,
+  "future_gap_potential_only_count": 15,
+  "gap_claim_ready_count": 0,
+  "global_analysis_readiness": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "mechanism_only_records_upgraded_count": 423,
+  "national_coverage_rate": 47.45,
+  "near_gap_ready_count": 185,
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "partial_records_repaired_count": 275,
+  "quantitatively_supported_growth_mechanism_claim_count": 96,
+  "rescued_full_normalization_count": 11,
+  "scout_covered_municipalities": 16887,
+  "status": "local_dashboard_visible_current_passed",
+  "build_passed": true,
+  "local_browser_smoke_passed": true,
+  "public_pages_smoke_status": "pending_commit_push_deployment"
+}

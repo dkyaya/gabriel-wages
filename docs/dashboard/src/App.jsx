@@ -120,7 +120,7 @@ function App() {
           <section className="pi-status-strip" id="current-status" aria-label="Current project status">
             <div><span>Current stage</span><strong>{projectPhaseSummary.current_phase}</strong></div>
             <div><span>Next task</span><strong>{projectPhaseSummary.next_task}</strong></div>
-            <div><span>Claim boundary</span><strong>Descriptive evidence only · wage-gap and causal analysis blocked</strong></div>
+            <div><span>Claim boundary</span><strong>Bounded local documentary evidence only · final, national, and causal claims blocked</strong></div>
             <div><span>Data current</span><strong>{projectPhaseSummary.data_vintage}</strong></div>
           </section>
 
@@ -141,19 +141,19 @@ function App() {
           <section className="pi-section" aria-labelledby="evidence-title">
             <div className="pi-section-heading">
               <div>
-                <p className="eyebrow">Current comparison-ready evidence</p>
-                <h2 id="evidence-title">Normalized values and bounded same-city cycle structures</h2>
+                <p className="eyebrow">Current bounded evidence</p>
+                <h2 id="evidence-title">Normalization rescue and source-grounded local comparisons</h2>
               </div>
-              <p>Raw values remain intact. These structures support report drafting and bounded review—not final wage-gap or causal conclusions.</p>
+              <p>Raw values remain intact. Local documentary comparisons require final manual validation and are not final or national wage-gap estimates.</p>
             </div>
             <div className="pi-evidence-grid">
-              <article><span>Valid, codified evidence</span><strong>{formatNumber(countFor("codified_record_count"))}</strong><p>{formatNumber(countFor("rating_quarantine_count"))} quarantined ratings remain excluded</p></article>
-              <article><span>Normalized quantitative records</span><strong>{formatNumber(countFor("normalized_quantitative_record_count"))}</strong><p>{formatNumber(countFor("normalization_full_count"))} full · {formatNumber(countFor("normalization_partial_count"))} partial · {formatNumber(countFor("normalization_mechanism_only_count"))} mechanism only</p></article>
-              <article><span>Matched municipality cycles</span><strong>{formatNumber(countFor("matched_safety_non_safety_cycle_candidate_count"))}</strong><p>{formatNumber(countFor("matched_cycle_strong_count"))} strong · {formatNumber(countFor("matched_cycle_moderate_count"))} moderate · {formatNumber(countFor("matched_cycle_weak_count"))} weak · {formatNumber(countFor("matched_cycle_incomplete_count"))} incomplete</p></article>
-              <article><span>Source-grounded report examples</span><strong>{formatNumber(countFor("repaired_example_count"))}</strong><p>{formatNumber(countFor("downgraded_or_unrepaired_example_count"))} downgraded · {formatNumber(countFor("updated_careful_claim_count"))} updated careful claims</p></article>
+              <article><span>Partial records rescued</span><strong>{formatNumber(countFor("partial_records_repaired_count"))}</strong><p>{formatNumber(countFor("rescued_full_normalization_count"))} fully normalized · {formatNumber(countFor("rescued_gap_claim_ready_count"))} gap-claim ready · {formatNumber(countFor("rescued_near_gap_ready_count"))} near-ready</p></article>
+              <article><span>Quantitative growth mechanisms</span><strong>{formatNumber(countFor("quantitatively_supported_growth_mechanism_claim_count"))}</strong><p>Source-reported percentages, COLA/CPI, schedules, or retroactive and lump-sum values</p></article>
+              <article><span>Bounded local comparisons</span><strong>{formatNumber(countFor("current_bounded_wage_differential_candidate_count"))}</strong><p>{formatNumber(countFor("current_bounded_growth_mechanism_comparison_candidate_count"))} matched growth-mechanism comparisons</p></article>
+              <article><span>Source-grounded report examples</span><strong>{formatNumber(countFor("rescue_repaired_example_count"))}</strong><p>{formatNumber(countFor("future_gap_potential_only_count"))} matched cycles remain future-potential only</p></article>
             </div>
-            {countFor("comparable_normalized_wage_candidate_count") > 0 && (
-              <p className="pi-inline-note"><strong>{formatNumber(countFor("comparable_normalized_wage_candidate_count"))}</strong> comparison candidates and <strong>{formatNumber(countFor("cycle_to_cycle_growth_readiness_candidate_count"))}</strong> cycle-to-cycle candidates are structured for bounded review only; no final differences or growth estimates were calculated.</p>
+            {countFor("current_bounded_wage_differential_candidate_count") > 0 && (
+              <p className="pi-inline-note"><strong>{formatNumber(countFor("current_bounded_wage_differential_candidate_count"))}</strong> matched municipality-cycle candidates support current bounded documentary differences. They are local evidence requiring final manual validation—not final, national, prevalence, or causal estimates.</p>
             )}
           </section>
 
@@ -185,8 +185,8 @@ function App() {
               <h2 id="boundary-title">Careful mechanism claims, with explicit limits</h2>
             </div>
             <div className="pi-boundary-grid">
-              <article><StatusPill tone="scout">Allowed</StatusPill><h3>Careful documentary mechanism claims</h3><p>Use source-grounded examples and describe normalization or matched-structure readiness within this processed corpus.</p></article>
-              <article><StatusPill tone="future">Blocked</StatusPill><h3>Final wage-gap estimates</h3><p>Normalization is partial and candidate pairings still require bounded review and explicit analytic authorization.</p></article>
+              <article><StatusPill tone="scout">Allowed</StatusPill><h3>Bounded local documentary claims</h3><p>State what validated same-city-cycle records currently show, with values, groups, periods, assumptions, and final-manual-validation caveats.</p></article>
+              <article><StatusPill tone="future">Blocked</StatusPill><h3>Final or national wage-gap estimates</h3><p>Current candidates are source-grounded local comparisons—not final estimates, representative samples, or population prevalence.</p></article>
               <article><StatusPill tone="future">Blocked</StatusPill><h3>Causal and prevalence claims</h3><p>Matched documentary structures do not supply a causal design; corpus frequencies are not population prevalence.</p></article>
             </div>
             <p className="pi-cola-note">COLA/CPI language may be discussed as a contract mechanism. Analyst-side cost-of-living adjustment has not been performed.</p>

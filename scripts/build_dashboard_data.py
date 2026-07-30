@@ -1725,6 +1725,11 @@ BROAD_STATE_4X2500_NORMALIZATION_MATCHING_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30"
 )
+BROAD_STATE_4X2500_NORMALIZATION_RESCUE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6542,6 +6547,64 @@ def broad_state_4x2500_normalization_matching_status() -> tuple[bool, dict[str, 
     }
 
 
+def broad_state_4x2500_normalization_rescue_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize targeted partial/mechanism rescue and bounded local claims."""
+    directory = BROAD_STATE_4X2500_NORMALIZATION_RESCUE_DIR
+    required = (
+        directory / "normalization_rescue_gap_growth_summary.json",
+        directory / "partial_repair_summary.json",
+        directory / "mechanism_only_repair_summary.json",
+        directory / "bounded_gap_evidence_summary.json",
+        directory / "quantitative_growth_mechanism_claims.json",
+        directory / "rescue_paraphrase_quality_validation_report.json",
+        directory / "dashboard_normalization_rescue_update_summary.json",
+        directory / "forbidden_action_audit.json",
+        directory / "normalization_rescue_gap_growth_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    (summary, partial, mechanism, gap, growth_claims, paraphrases,
+     dashboard, forbidden, _) = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    gates = (
+        summary.get("decision")
+        == "broad_state_4x2500_normalization_rescue_gap_growth_completed_pi_report_ready"
+        and summary.get("partial_input_count") == partial.get("input_count") == 1_563
+        and summary.get("mechanism_only_input_count") == mechanism.get("input_count") == 3_769
+        and summary.get("combined_rescue_count") == 5_332
+        and set(summary.get("lane_counts", {}).values()) == {1_333}
+        and partial.get("reconciles") is True
+        and mechanism.get("reconciles") is True
+        and gap.get("final_wage_gap_estimates_claimed") is False
+        and gap.get("national_estimates_claimed") is False
+        and growth_claims.get("count")
+        == summary.get("quantitative_growth_mechanism_claim_count")
+        and paraphrases.get("passed") is True
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and summary.get("global_analysis_readiness") is False
+        and summary.get("final_wage_gap_estimate_claimed") is False
+        and summary.get("national_or_population_prevalence_claimed") is False
+        and summary.get("final_causal_claim_made") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 normalization rescue package fails dashboard gates")
+    return True, {
+        **summary,
+        "partial_records_repaired_count": dashboard.get("partial_records_repaired_count", 0),
+        "mechanism_only_records_upgraded_count": dashboard.get("mechanism_only_records_upgraded_count", 0),
+        "quantitatively_supported_growth_mechanism_claim_count": growth_claims.get("count", 0),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/"
+            "normalization_rescue_gap_growth_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6683,6 +6746,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_normalization_available, broad_4x2500_normalization = (
         broad_state_4x2500_normalization_matching_status()
+    )
+    broad_4x2500_rescue_available, broad_4x2500_rescue = (
+        broad_state_4x2500_normalization_rescue_status()
     )
     published_reports = [
         *(
@@ -7485,6 +7551,38 @@ def build_reports_index_layer(
                 {"label": "normalized records", "value": broad_4x2500_normalization["normalized_quantitative_record_count"]},
                 {"label": "matched cycles", "value": broad_4x2500_normalization["matched_safety_non_safety_cycle_candidate_count"]},
                 {"label": "repaired examples", "value": broad_4x2500_normalization["repaired_example_count"]},
+            ],
+        })
+    if broad_4x2500_rescue_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-normalization-matched-structure-paraphrase-repair-2026-07-30":
+                report["link_label"] = "Open historical normalization and matching report"
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-normalization-rescue-gap-growth-claims-2026-07-30",
+            "title": "Broad State 4 × 2,500 Normalization Rescue and Bounded Claims",
+            "report_type": "Current targeted normalization rescue and bounded local documentary claim result",
+            "date": "2026-07-30",
+            "checkpoint": (
+                f"{broad_4x2500_rescue['current_bounded_wage_differential_candidate_count']:,} "
+                "bounded local wage-differential candidates"
+            ),
+            "summary": (
+                "Partial and mechanism-only normalization records received a targeted four-lane rescue. "
+                "The resulting source-grounded local comparisons and quantitative growth mechanisms "
+                "require final manual validation and are not final, national, prevalence, or causal estimates."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "normalization rescue", "bounded local evidence"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_rescue["dashboard_result_path"],
+            "link_label": "Open current normalization rescue evidence report",
+            "scope_metrics": [
+                {"label": "partial records repaired", "value": broad_4x2500_rescue["partial_records_repaired_count"]},
+                {"label": "quantitative growth mechanisms", "value": broad_4x2500_rescue["quantitatively_supported_growth_mechanism_claim_count"]},
+                {"label": "bounded local comparisons", "value": broad_4x2500_rescue["current_bounded_wage_differential_candidate_count"]},
             ],
         })
     if live_available:
@@ -10012,6 +10110,9 @@ def build_project_phase_summary(
     broad_4x2500_normalization_available, broad_4x2500_normalization = (
         broad_state_4x2500_normalization_matching_status()
     )
+    broad_4x2500_rescue_available, broad_4x2500_rescue = (
+        broad_state_4x2500_normalization_rescue_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11173,6 +11274,45 @@ def build_project_phase_summary(
             "actual_scout_covered_municipalities": 16887,
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if broad_4x2500_rescue_available:
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_normalization_rescue_gap_growth_complete",
+            "current_phase": "Normalization rescue and bounded claims complete",
+            "current_phase_code": broad_4x2500_rescue["decision"],
+            "current_evidence_status": "bounded_local_documentary_comparisons_and_quantitative_growth_mechanisms_ready_for_pi_report",
+            "broad_state_4x2500_normalization_rescue_available": True,
+            "partial_repair_input_count": broad_4x2500_rescue["partial_input_count"],
+            "mechanism_only_repair_input_count": broad_4x2500_rescue["mechanism_only_input_count"],
+            "partial_records_repaired_count": broad_4x2500_rescue["partial_records_repaired_count"],
+            "mechanism_only_records_upgraded_count": broad_4x2500_rescue["mechanism_only_records_upgraded_count"],
+            "rescued_full_normalization_count": broad_4x2500_rescue["rescued_full_normalization_count"],
+            "rescued_gap_claim_ready_count": broad_4x2500_rescue["rescued_gap_claim_ready_count"],
+            "rescued_near_gap_ready_count": broad_4x2500_rescue["rescued_near_gap_ready_count"],
+            "current_bounded_wage_differential_candidate_count": broad_4x2500_rescue["current_bounded_wage_differential_candidate_count"],
+            "current_bounded_growth_mechanism_comparison_candidate_count": broad_4x2500_rescue["current_bounded_growth_mechanism_comparison_candidate_count"],
+            "quantitatively_supported_growth_mechanism_claim_count": broad_4x2500_rescue["quantitatively_supported_growth_mechanism_claim_count"],
+            "future_gap_potential_only_count": broad_4x2500_rescue["future_gap_potential_only_count"],
+            "rescue_repaired_example_count": broad_4x2500_rescue["repaired_example_count"],
+            "rescue_downgraded_or_unrepaired_example_count": broad_4x2500_rescue["downgraded_or_unrepaired_example_count"],
+            "current_report_title": "Broad State 4 × 2,500 Normalization Rescue and Bounded Claims",
+            "current_report_path": broad_4x2500_rescue["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_rescue["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+            "next_phase": "PI-facing report drafting from bounded local documentary comparisons and quantitative growth mechanisms",
+            "next_phase_sequence": [
+                "use only source-grounded rescue claims and repaired examples",
+                "label every local differential as bounded and requiring final manual validation",
+                "do not present national, prevalence, regression, treatment-effect, or causal conclusions",
+            ],
+            "last_updated_context": "broad_state_4x2500_normalization_rescue_gap_growth_complete_pi_report_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_local_documentary_candidates_require_final_manual_validation",
             "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
         })
     return payload

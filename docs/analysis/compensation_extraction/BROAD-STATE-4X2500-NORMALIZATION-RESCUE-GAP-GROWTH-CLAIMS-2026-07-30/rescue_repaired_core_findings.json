@@ -1,0 +1,147 @@
+{
+  "count": 11,
+  "findings": [
+    {
+      "candidate_id": "B4X2500GAP-41d42064465db4099b779674",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-8ea55990e20b847de97bb75b",
+      "claim_text": "In Alburtis, PA (2018-2021), the current source-grounded comparison pairs a police base-wage record at $33.57 per hour with a clerical admin base-wage record at $11.22 per hour. On the current normalized basis, the bounded documentary difference is $22.35 hourly (+199.20% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GAP-4193e4d9ff2676c7d2680e77",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-94acaccf45c1f3065c32bf71",
+      "claim_text": "In Cammack Village, AR (2024), the current source-grounded comparison pairs a police base-wage record at $25.00 per hour with a clerical admin base-wage record at $20.00 per hour. On the current normalized basis, the bounded documentary difference is $5.00 hourly (+25.00% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GAP-498d2fdd8da985bf2455ab27",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-ffebc4ae168e300de2dd4c81",
+      "claim_text": "In Canastota, NY (2023-2024), the current source-grounded comparison pairs a police base-wage record at $23.91 per hour with a other base-wage record at $24.82 per hour. On the current normalized basis, the bounded documentary difference is $-0.91 hourly (-3.67% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GAP-a27c57fde6a6f134fcd6ff7d",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-795eca150f8bc4c7410b959f",
+      "claim_text": "In Shreve, OH (2024), the current source-grounded comparison pairs a police base-wage record at $22.00 per hour with a clerical admin base-wage record at $16.00 per hour. On the current normalized basis, the bounded documentary difference is $6.00 hourly (+37.50% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GROWTHCMP-43f9647fa71a303eb671bc14",
+      "claim_id": "B4X2500GAPCLAIM-8fb62c7ae8196b562659a247",
+      "claim_text": "In Mechanicsville, IA (2022), the current source-grounded record reports a 10% increase for full-time employees but expressly excludes the police officer; a separate record reports 3% for part-time library and ambulance employees. This supports a bounded local documentary contrast between an explicit police exclusion and non-safety growth terms. It does not establish a police growth rate, final wage-gap estimate, national pattern, population prevalence, or causal effect, and it requires final manual validation.",
+      "claim_type": "current_bounded_growth_mechanism_comparison_claim"
+    },
+    {
+      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
+      "claim_id": "B4X2500GROWTHCLAIM-1f9cbf949deac19c0ce20b83",
+      "claim_text": "The source-grounded Howland, OH record directly identifies a percentage raise mechanism of 2% for police in 2021. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
+      "claim_type": "quantitative_growth_mechanism_claim",
+      "mechanism_type": "percentage_raise",
+      "municipality": "Howland",
+      "period": "2021",
+      "source_id": "B4X2500LIVE-20260729-003285",
+      "span_id": "B4X2500SPAN-20260730-6d50bf65cddd0561f0c54e6e",
+      "state": "OH",
+      "unit": "percent",
+      "value": 2.0
+    },
+    {
+      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
+      "claim_id": "B4X2500GROWTHCLAIM-03ac871a89dac2eb6722a807",
+      "claim_text": "The source-grounded Coleraine, MN record directly identifies a percentage raise mechanism of 5% for police in 2024. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
+      "claim_type": "quantitative_growth_mechanism_claim",
+      "mechanism_type": "percentage_raise",
+      "municipality": "Coleraine",
+      "period": "2024",
+      "source_id": "B4X2500LIVE-20260729-005492",
+      "span_id": "B4X2500SPAN-20260730-0127dc927345ad7d17972193",
+      "state": "MN",
+      "unit": "percent",
+      "value": 5.0
+    },
+    {
+      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
+      "claim_id": "B4X2500GROWTHCLAIM-27df486203241975efc92285",
+      "claim_text": "The source-grounded Bath, OH record directly identifies a step schedule mechanism of 2.25% for police in 2021. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
+      "claim_type": "quantitative_growth_mechanism_claim",
+      "mechanism_type": "step_schedule",
+      "municipality": "Bath",
+      "period": "2021",
+      "source_id": "B4X2500LIVE-20260729-000768",
+      "span_id": "B4X2500SPAN-20260730-88e78d65356be1166306b10e",
+      "state": "OH",
+      "unit": "percent",
+      "value": 2.25
+    },
+    {
+      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
+      "claim_id": "B4X2500GROWTHCLAIM-0842e033e3343b19f9234887",
+      "claim_text": "The source-grounded Bass Lake, WI record directly identifies a percentage raise mechanism of 31% for clerical admin in 2024. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
+      "claim_type": "quantitative_growth_mechanism_claim",
+      "mechanism_type": "percentage_raise",
+      "municipality": "Bass Lake",
+      "period": "2024",
+      "source_id": "B4X2500LIVE-20260729-008390",
+      "span_id": "B4X2500SPAN-20260730-6b042ac8df4c9cb1d1cf7b32",
+      "state": "WI",
+      "unit": "percent",
+      "value": 31.0
+    },
+    {
+      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
+      "claim_id": "B4X2500GROWTHCLAIM-0988c68d90929f8dd1df1f54",
+      "claim_text": "The source-grounded Bass Lake, WI record directly identifies a percentage raise mechanism of 3% for clerical admin in 2024. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
+      "claim_type": "quantitative_growth_mechanism_claim",
+      "mechanism_type": "percentage_raise",
+      "municipality": "Bass Lake",
+      "period": "2024",
+      "source_id": "B4X2500LIVE-20260729-008390",
+      "span_id": "B4X2500SPAN-20260730-a357f85b3e887534e99c971a",
+      "state": "WI",
+      "unit": "percent",
+      "value": 3.0
+    },
+    {
+      "caveat": "Source-reported mechanism only; not an analyst-computed wage gap, national estimate, prevalence claim, or causal effect.",
+      "claim_id": "B4X2500GROWTHCLAIM-2b18e7cc47a8c3ee17c97570",
+      "claim_text": "The source-grounded Biscayne Park, FL record directly identifies a percentage raise mechanism of 1% for police in 2020. This is quantitatively supported wage-growth mechanism evidence within the current documentary record, not a national estimate, population prevalence statement, or final causal claim.",
+      "claim_type": "quantitative_growth_mechanism_claim",
+      "mechanism_type": "percentage_raise",
+      "municipality": "Biscayne Park",
+      "period": "2020",
+      "source_id": "B4X2500LIVE-20260729-009256",
+      "span_id": "B4X2500SPAN-20260730-7c11d5a4866599cf9ccc29fc",
+      "state": "FL",
+      "unit": "percent",
+      "value": 1.0
+    }
+  ]
+}

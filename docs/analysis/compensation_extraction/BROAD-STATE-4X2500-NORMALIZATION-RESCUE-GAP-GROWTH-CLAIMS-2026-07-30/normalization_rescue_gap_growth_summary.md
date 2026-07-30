@@ -1,0 +1,29 @@
+# Normalization rescue, bounded gap, and growth claims
+
+- `task_id`: BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30
+- `decision`: broad_state_4x2500_normalization_rescue_gap_growth_completed_pi_report_ready
+- `generated_at`: 2026-07-30T23:26:00.292010Z
+- `partial_input_count`: 1,563
+- `mechanism_only_input_count`: 3,769
+- `combined_rescue_count`: 5,332
+- `rescued_full_normalization_count`: 11
+- `rescued_gap_claim_ready_count`: 0
+- `rescued_near_gap_ready_count`: 185
+- `still_partial_count`: 214
+- `downgraded_partial_count`: 1,074
+- `quantitative_growth_mechanism_supported_count`: 423
+- `quantitative_growth_mechanism_claim_count`: 96
+- `current_bounded_wage_differential_candidate_count`: 4
+- `current_bounded_growth_mechanism_comparison_candidate_count`: 1
+- `current_directional_documentary_hint_count`: 4
+- `future_gap_potential_only_count`: 15
+- `repaired_example_count`: 35
+- `downgraded_or_unrepaired_example_count`: 0
+- `final_wage_gap_estimate_claimed`: 0
+- `national_or_population_prevalence_claimed`: 0
+- `regression_or_treatment_effect_run`: 0
+- `final_causal_claim_made`: 0
+- `global_analysis_readiness`: 0
+- `wage_gap_analysis_readiness`: bounded_local_documentary_candidates_require_final_manual_validation
+- `causal_analysis_readiness`: blocked_pending_stronger_causal_design
+- `next_task`: BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30

@@ -1,0 +1,9 @@
+{
+  "accepted_completed_count": 1333,
+  "lane": "rescue_lane_002",
+  "post_merge_quantitative_context_repair_applied": true,
+  "post_merge_quantitative_context_repair_basis": "bounded deterministic compensation-context false-positive audit; no source rerun",
+  "post_merge_quantitative_context_repair_count": 0,
+  "terminal": true,
+  "updated_at": "2026-07-30T23:04:36.082048Z"
+}

@@ -1,0 +1,57 @@
+{
+  "claims": [
+    {
+      "candidate_id": "B4X2500GAP-41d42064465db4099b779674",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-8ea55990e20b847de97bb75b",
+      "claim_text": "In Alburtis, PA (2018-2021), the current source-grounded comparison pairs a police base-wage record at $33.57 per hour with a clerical admin base-wage record at $11.22 per hour. On the current normalized basis, the bounded documentary difference is $22.35 hourly (+199.20% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GAP-4193e4d9ff2676c7d2680e77",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-94acaccf45c1f3065c32bf71",
+      "claim_text": "In Cammack Village, AR (2024), the current source-grounded comparison pairs a police base-wage record at $25.00 per hour with a clerical admin base-wage record at $20.00 per hour. On the current normalized basis, the bounded documentary difference is $5.00 hourly (+25.00% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GAP-498d2fdd8da985bf2455ab27",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-ffebc4ae168e300de2dd4c81",
+      "claim_text": "In Canastota, NY (2023-2024), the current source-grounded comparison pairs a police base-wage record at $23.91 per hour with a other base-wage record at $24.82 per hour. On the current normalized basis, the bounded documentary difference is $-0.91 hourly (-3.67% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    },
+    {
+      "candidate_id": "B4X2500GAP-a27c57fde6a6f134fcd6ff7d",
+      "caveats": [
+        "bounded local documentary evidence",
+        "same municipality-cycle candidate",
+        "exact-span group labels",
+        "role/rank/hours/schedule-position equivalence not established",
+        "requires final manual validation"
+      ],
+      "claim_id": "B4X2500GAPCLAIM-795eca150f8bc4c7410b959f",
+      "claim_text": "In Shreve, OH (2024), the current source-grounded comparison pairs a police base-wage record at $22.00 per hour with a clerical admin base-wage record at $16.00 per hour. On the current normalized basis, the bounded documentary difference is $6.00 hourly (+37.50% relative to the non-safety value). Role, rank, hours, and schedule-position equivalence have not been established. This requires final manual validation and is not a final or national wage-gap estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_bounded_wage_differential_claim"
+    }
+  ],
+  "count": 4
+}

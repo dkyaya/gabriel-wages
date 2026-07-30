@@ -1,0 +1,134 @@
+{
+  "count": 19,
+  "findings": [
+    {
+      "candidate_id": "B4X2500DIR-f69188a9c212c497e619737c",
+      "claim_id": "B4X2500GAPCLAIM-a24bbfd40514f834a5341c5f",
+      "claim_text": "In Battle Lake, MN (2023), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_directional_documentary_hint_claim"
+    },
+    {
+      "candidate_id": "B4X2500DIR-8089ae2aed0f5c2a339a111a",
+      "claim_id": "B4X2500GAPCLAIM-21396f96ce8d8ba56a50495e",
+      "claim_text": "In Cheltenham, PA (2022), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_directional_documentary_hint_claim"
+    },
+    {
+      "candidate_id": "B4X2500DIR-2ec759be0403794febc8e709",
+      "claim_id": "B4X2500GAPCLAIM-49da5846341d9fb870656e63",
+      "claim_text": "In Stanhope, NJ (2021), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_directional_documentary_hint_claim"
+    },
+    {
+      "candidate_id": "B4X2500DIR-1fbdcadcd8d5cb98d6f09ca7",
+      "claim_id": "B4X2500GAPCLAIM-32982936f2d34d007efefe27",
+      "claim_text": "In Westfield, NY (2017), the matched municipality-cycle candidate contains explicit safety and non-safety documentary records plus a rated non safety advantage hint. Current evidence supports a bounded local directional statement, but no numeric gap can be calculated and final manual validation is required. This is not a national estimate, population prevalence statement, or causal claim.",
+      "claim_type": "current_directional_documentary_hint_claim"
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-fdd4cf777f6ac7ad61574b33",
+      "claim_id": "B4X2500GAPCLAIM-7aadb7acacf4b22e30499e8f",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-1820b9e3cdd2669783a54a72",
+      "claim_id": "B4X2500GAPCLAIM-458128482d3c376f1ceff089",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-318d621dc7c7b57267654561",
+      "claim_id": "B4X2500GAPCLAIM-5ae891ef82b5e1fe58844558",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-7fc9abac3b5e3dde281ef994",
+      "claim_id": "B4X2500GAPCLAIM-5eb505437c850ab151fee102",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-55f276fed472c99e1f67fa5f",
+      "claim_id": "B4X2500GAPCLAIM-c0c46ac8d0074a6fcb31c4e7",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-79d0a4c11e992ad687669273",
+      "claim_id": "B4X2500GAPCLAIM-3b98b4f2424c97577312cd8d",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-0fa7e29e30bff390e5ab2761",
+      "claim_id": "B4X2500GAPCLAIM-4976fbc161475168d1a4eed3",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-a502e65f5cecd3788203cb99",
+      "claim_id": "B4X2500GAPCLAIM-ed3c0a7ceeb3c925db203700",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-02f370d9d3995844dcc4e9c5",
+      "claim_id": "B4X2500GAPCLAIM-46a2c929a5ad246b062a1701",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-aff1ab3c1d26e89179345520",
+      "claim_id": "B4X2500GAPCLAIM-438a6997433a31d4140510f0",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-0045549480f8266f0267646d",
+      "claim_id": "B4X2500GAPCLAIM-7637545f6cdb82bf45b154c6",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-3eae2a6f4f8c5f5e2fead61d",
+      "claim_id": "B4X2500GAPCLAIM-92194e871c535d9bd3d083a6",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-fa71c909b78719845f229e4b",
+      "claim_id": "B4X2500GAPCLAIM-deb0887f409208eb58320024",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-8b4177ee3ce3c3ba787309e3",
+      "claim_id": "B4X2500GAPCLAIM-0ecccb2bd6a5b96535b53765",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    },
+    {
+      "candidate_id": "B4X2500FUTUREGAP-553cdd3d2f6900b82ab81ab7",
+      "claim_id": "B4X2500GAPCLAIM-00efd95c53d947c9062d84c1",
+      "claim_text": "Both explicit safety and non-safety records are present, but current pay-basis, value, or mechanism fields do not support a bounded differential statement.",
+      "claim_type": "future_gap_potential_claim",
+      "prohibited_claim_warning": "Do not phrase as a current wage differential."
+    }
+  ]
+}

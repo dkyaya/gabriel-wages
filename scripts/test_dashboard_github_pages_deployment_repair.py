@@ -88,7 +88,13 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             self.assertEqual(phase[field], value)
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
-        self.assertEqual(phase["wage_gap_analysis_readiness"], "blocked_pending_normalization")
+        self.assertIn(
+            phase["wage_gap_analysis_readiness"],
+            {
+                "blocked_pending_normalization",
+                "bounded_local_documentary_candidates_require_final_manual_validation",
+            },
+        )
         self.assertIn(
             phase["causal_analysis_readiness"],
             {"blocked_pending_matched_structure", "blocked_pending_stronger_causal_design"},
@@ -158,7 +164,25 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                 phase["matched_safety_non_safety_cycle_candidate_count"],
                                 normalization["matched_safety_non_safety_cycle_candidate_count"],
                             )
-                            self.assertEqual(phase["current_phase"], "Normalization and matched structure complete")
+                            rescue_summary_path = (
+                                ROOT / "docs/analysis/compensation_extraction/"
+                                "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/"
+                                "normalization_rescue_gap_growth_summary.json"
+                            )
+                            if rescue_summary_path.exists():
+                                rescue = json.loads(rescue_summary_path.read_text())
+                                self.assertTrue(phase["broad_state_4x2500_normalization_rescue_available"])
+                                self.assertEqual(
+                                    phase["current_phase"],
+                                    "Normalization rescue and bounded claims complete",
+                                )
+                                self.assertEqual(
+                                    phase["current_bounded_wage_differential_candidate_count"],
+                                    rescue["current_bounded_wage_differential_candidate_count"],
+                                )
+                                self.assertFalse(phase["global_analysis_readiness"])
+                            else:
+                                self.assertEqual(phase["current_phase"], "Normalization and matched structure complete")
                             self.assertEqual(
                                 phase["next_task"],
                                 "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",

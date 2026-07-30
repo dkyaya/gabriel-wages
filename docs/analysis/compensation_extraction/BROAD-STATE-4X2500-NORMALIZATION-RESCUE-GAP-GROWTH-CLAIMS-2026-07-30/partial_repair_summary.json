@@ -1,0 +1,11 @@
+{
+  "input_count": 1563,
+  "reconciles": true,
+  "status_counts": {
+    "downgraded_unusable": 1074,
+    "rescued_full_normalization": 11,
+    "rescued_manual_review_needed": 79,
+    "rescued_near_gap_ready": 185,
+    "still_partial": 214
+  }
+}
