@@ -40,6 +40,7 @@ jobs:
       - name: Regenerate dashboard JSON
         run: |
           python -m py_compile scripts/build_dashboard_data.py
+          python scripts/test_dashboard_github_pages_deployment_repair.py
           python scripts/build_dashboard_data.py
 
       - name: Set up Node.js

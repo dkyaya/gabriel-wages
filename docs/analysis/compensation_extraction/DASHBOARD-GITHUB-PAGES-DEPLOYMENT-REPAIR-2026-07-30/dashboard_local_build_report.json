@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "built_at": "2026-07-30T15:47:00Z",
+  "build_command": "npm run build",
+  "transformed_modules": 48,
+  "javascript_bundle": "docs/dashboard/dist/assets/index-DlvfuJ3E.js",
+  "javascript_bundle_bytes": 804070,
+  "clean_export_regeneration_status": "passed",
+  "clean_export_dependency_install_status": "passed",
+  "clean_export_production_build_status": "passed",
+  "clean_export_retained_binary_count": 0,
+  "errors": [],
+  "warnings": [
+    "Vite emitted a non-blocking chunk-size advisory."
+  ]
+}

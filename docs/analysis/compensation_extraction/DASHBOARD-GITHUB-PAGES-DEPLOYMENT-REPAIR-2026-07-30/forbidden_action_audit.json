@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "text_extraction_runs": 0,
+  "full_text_artifacts_created": 0,
+  "ocr_runs": 0,
+  "span_extraction_runs": 0,
+  "rating_runs": 0,
+  "ingestion_runs": 0,
+  "codification_runs": 0,
+  "source_downloads": 0,
+  "source_review_runs": 0,
+  "wage_gap_calculations": 0,
+  "regressions": 0,
+  "treatment_effect_claims": 0,
+  "final_causal_claims": 0,
+  "global_readiness_advanced": false,
+  "force_pushes": 0,
+  "history_rewrites": 0,
+  "remote_changes": 0
+}

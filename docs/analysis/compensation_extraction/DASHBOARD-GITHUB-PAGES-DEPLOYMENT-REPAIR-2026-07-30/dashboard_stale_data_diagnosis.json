@@ -1,0 +1,19 @@
+{
+  "status": "root_cause_confirmed",
+  "stale_public_dashboard_confirmed": true,
+  "local_source_data_current": true,
+  "local_build_current": true,
+  "local_rendered_ui_current": true,
+  "public_rendered_ui_current_before_repair": false,
+  "cache_or_service_worker_primary_cause": false,
+  "stale_current_report_pointer_primary_cause": false,
+  "base_path_or_asset_path_primary_cause": false,
+  "pages_serving_branch_folder_mismatch": false,
+  "github_actions_deployment_failed": true,
+  "failing_run_id": 30555371198,
+  "failing_step": "Regenerate dashboard JSON",
+  "exception": "ValueError: combined broad source-review/download package fails dashboard gates",
+  "root_cause": "The builder coupled public metadata generation to physical existence of intentionally Git-ignored historical retained binaries.",
+  "public_stale_commit": "845333f19e9b0814d546696885a4e22adcbf0fb9",
+  "public_stale_phase": "Combined broad candidate review complete; bounded source review/download ready next"
+}

@@ -1,0 +1,8 @@
+{
+  "audited_at": "2026-07-30T15:51:15.108997Z",
+  "large_file_count": 0,
+  "large_files": [],
+  "largest_staged_file_bytes": 951715,
+  "status": "passed",
+  "threshold_bytes": 26214400
+}

@@ -1,0 +1,23 @@
+{
+  "status": "local_passed_public_pending_repair_deployment",
+  "validated_values": {
+    "scout_covered_municipalities": 16887,
+    "source_review_queue": 3950,
+    "retained_sources": 3672,
+    "retained_pdfs": 3248,
+    "retained_html": 350,
+    "retained_other": 74,
+    "text_extraction_ready": 2940,
+    "parse_text_pdf_ready": 2577,
+    "html_text_ready": 291,
+    "other_document_text_ready": 72,
+    "ocr_later": 601
+  },
+  "local_visible": true,
+  "public_visible": false,
+  "map_scope": "total_scout_coverage_only",
+  "next_task": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
+  "wage_gap_readiness": "blocked_pending_normalization",
+  "causal_readiness": "blocked_pending_matched_structure",
+  "global_readiness_fully_passed": false
+}

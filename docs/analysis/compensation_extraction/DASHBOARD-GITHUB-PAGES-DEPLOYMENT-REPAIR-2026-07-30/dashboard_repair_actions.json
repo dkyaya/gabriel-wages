@@ -1,0 +1,17 @@
+{
+  "status": "implemented_locally",
+  "actions": [
+    "Decoupled clean-checkout dashboard metadata generation from intentionally Git-ignored retained binaries.",
+    "Preserved strict durable manifest path, size, SHA-256, source-ID, and hash uniqueness checks.",
+    "Preserved physical file existence and size checks whenever local retained storage is present.",
+    "Added a clean-checkout regression test to the Pages workflow before dashboard regeneration.",
+    "Documented the local-only retained-file gate behavior in dashboard deployment documentation.",
+    "Rebuilt dashboard JSON and the Vite production bundle locally and in an exported clean checkout.",
+    "Completed a rendered local Playwright smoke check."
+  ],
+  "broad_redesign_performed": false,
+  "map_semantics_changed": false,
+  "remotes_changed": false,
+  "history_rewritten": false,
+  "force_push_used": false
+}

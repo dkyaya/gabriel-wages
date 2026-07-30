@@ -1,0 +1,16 @@
+{
+  "status": "public_pages_still_stale_repair_needed",
+  "checked_at": "2026-07-30T15:48:22Z",
+  "phase": "pre_repair_push",
+  "url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_pre_repair_1549",
+  "controller": "Playwright MCP",
+  "page_loaded": true,
+  "visible_scout_coverage": 6919,
+  "visible_data_vintage": "2026-07-28",
+  "latest_numbers_visibly_public": false,
+  "required_2026_07_30_values_present": false,
+  "console_errors": [
+    "Non-substantive missing favicon.ico (404)."
+  ],
+  "diagnosis": "The public site is serving the last successful July 28 deployment because all later Pages workflows failed before artifact upload."
+}

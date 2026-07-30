@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "checked_at": "2026-07-30T15:48:15Z",
+  "url": "http://127.0.0.1:4173/gabriel-wages/?dashboard_smoke=20260730_local_repair",
+  "controller": "Playwright MCP",
+  "preferred_browser_runtime_status": "unavailable_no_browser_instances",
+  "page_title": "Municipal Labor Evidence Dashboard",
+  "console_errors": 0,
+  "console_warnings": 0,
+  "all_required_visible_checks_passed": true,
+  "visible_values": {
+    "scout_covered_municipalities": 16887,
+    "source_review_queue": 3950,
+    "retained_sources": 3672,
+    "retained_pdfs": 3248,
+    "retained_html": 350,
+    "retained_other": 74,
+    "text_extraction_ready": 2940,
+    "parse_text_pdf_ready": 2577,
+    "html_text_ready": 291,
+    "other_document_text_ready": 72,
+    "ocr_later": 601
+  },
+  "map_scope": "total_scout_coverage_only",
+  "next_task": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
+  "wage_gap_readiness": "blocked_pending_normalization",
+  "causal_readiness": "blocked_pending_matched_structure",
+  "global_readiness_fully_passed": false,
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md"
+}

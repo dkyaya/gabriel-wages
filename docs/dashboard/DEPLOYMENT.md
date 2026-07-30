@@ -108,6 +108,15 @@ The workflow is `.github/workflows/deploy-dashboard.yml`. It:
 
 It uses GitHub's official Pages actions and the workflow-provided `GITHUB_TOKEN` permissions. It does not reference a user-defined secret.
 
+The dashboard builder validates durable retained-source manifests in the clean
+checkout without requiring Git-ignored retained binaries. Manifest paths must
+remain inside the declared retained-source directory, hashes must be valid and
+unique, and recorded sizes must be positive. When those ignored files are
+available in a local checkout, the same gate additionally verifies that every
+file exists and matches its recorded size. The Pages workflow runs the focused
+deployment regression test before regenerating JSON so a future local-only file
+dependency fails before the production build.
+
 ## Enable Pages with GitHub Actions
 
 After the future repository exists and this commit is on GitHub:

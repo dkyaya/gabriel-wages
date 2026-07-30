@@ -5173,6 +5173,63 @@ def combined_broad_candidate_review_status() -> tuple[bool, dict[str, Any]]:
     return True, decision
 
 
+def validate_git_ignored_retained_manifest(
+    manifest: list[dict[str, str]],
+    *,
+    retained_root: Path,
+    repository_root: Path = ROOT,
+) -> dict[str, Any]:
+    """Validate durable retained-file metadata without requiring ignored binaries.
+
+    GitHub Pages builds run from a clean checkout, while retained source files are
+    intentionally Git-ignored.  The durable manifest must therefore be sufficient
+    for a metadata-only dashboard build.  When the retained directory is available
+    locally, this gate still verifies every physical file and its recorded size.
+    """
+    retained_root = retained_root.resolve()
+    local_files_checked = retained_root.is_dir()
+    metadata_valid = True
+    local_files_valid = True
+    source_ids: set[str] = set()
+    hashes: set[str] = set()
+
+    for row in manifest:
+        source_id = row.get("source_review_download_id", "")
+        retained_hash = row.get("retained_file_sha256", "").casefold()
+        retained_size = as_int(row.get("retained_file_size_bytes"))
+        retained_path_value = row.get("retained_file_path", "")
+        retained_path = (repository_root / retained_path_value).resolve()
+
+        row_metadata_valid = (
+            bool(source_id)
+            and source_id not in source_ids
+            and len(retained_hash) == 64
+            and all(character in "0123456789abcdef" for character in retained_hash)
+            and retained_hash not in hashes
+            and retained_size > 0
+            and retained_path.is_relative_to(retained_root)
+        )
+        if not row_metadata_valid:
+            metadata_valid = False
+        source_ids.add(source_id)
+        hashes.add(retained_hash)
+
+        if local_files_checked and not (
+            retained_path.is_file()
+            and retained_path.stat().st_size == retained_size
+        ):
+            local_files_valid = False
+
+    return {
+        "manifest_metadata_valid": metadata_valid,
+        "manifest_row_count": len(manifest),
+        "unique_source_id_count": len(source_ids),
+        "unique_hash_count": len(hashes),
+        "local_files_checked": local_files_checked,
+        "local_files_valid_when_present": local_files_valid,
+    }
+
+
 def combined_broad_source_review_download_status() -> tuple[bool, dict[str, Any]]:
     """Recognize the completed 5,589-row bounded source-review/download wave."""
     required = (
@@ -5198,17 +5255,10 @@ def combined_broad_source_review_download_status() -> tuple[bool, dict[str, Any]
     results = read_csv(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_RESULTS_PATH)
     manifest = read_csv(COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_MANIFEST_PATH)
     retained_root = (COMBINED_BROAD_SOURCE_REVIEW_DOWNLOAD_DIR / "retained_sources").resolve()
-    retained_paths_valid = True
-    for row in manifest:
-        path = (ROOT / row["retained_file_path"]).resolve()
-        if not (
-            path.is_file()
-            and path.is_relative_to(retained_root)
-            and path.stat().st_size == as_int(row["retained_file_size_bytes"])
-            and len(row["retained_file_sha256"]) == 64
-        ):
-            retained_paths_valid = False
-            break
+    retained_storage = validate_git_ignored_retained_manifest(
+        manifest,
+        retained_root=retained_root,
+    )
     status_counts = decision.get("status_counts", {})
     retained_count = as_int(decision.get("retained_source_count"))
     excluded_count = as_int(excluded_summary.get("excluded_or_deferred_count"))
@@ -5233,7 +5283,8 @@ def combined_broad_source_review_download_status() -> tuple[bool, dict[str, Any]
         and retained_count + excluded_count == 5589
         and retained_summary.get("retained_source_count") == retained_count
         and len(manifest) == retained_count
-        and retained_paths_valid
+        and retained_storage["manifest_metadata_valid"]
+        and retained_storage["local_files_valid_when_present"]
         and summary.get("attempted_source_review_download_count") == 5589
         and decision.get("candidate_review_reruns") == 0
         and decision.get("verification_reruns") == 0

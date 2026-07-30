@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "audited_at": "2026-07-30T15:48:59Z",
+  "repository": "dkyaya/gabriel-wages",
+  "public_pages_url": "https://dkyaya.github.io/gabriel-wages/",
+  "pages_build_type": "workflow",
+  "pages_source_branch": "main",
+  "pages_source_path": "/",
+  "https_enforced": true,
+  "mechanism": "github_actions_pages_artifact",
+  "workflow": ".github/workflows/deploy-dashboard.yml",
+  "workflow_trigger": "push to main affecting dashboard/workflow/builder inputs or workflow_dispatch",
+  "dashboard_app": "docs/dashboard",
+  "data_builder": "python scripts/build_dashboard_data.py",
+  "dependency_install": "npm ci",
+  "build_command": "npm run build",
+  "preview_command": "npm run preview -- --host 127.0.0.1 --port 4173",
+  "production_base_path": "/gabriel-wages/",
+  "artifact_path": "docs/dashboard/dist",
+  "upload_action": "actions/upload-pages-artifact@v4",
+  "deploy_action": "actions/deploy-pages@v4",
+  "committed_dist_required": false
+}

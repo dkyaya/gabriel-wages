@@ -1,0 +1,6 @@
+{
+  "status": "pending_public_deployment_validation",
+  "passed_count": 20,
+  "check_count": 21,
+  "pending_check": "public_pages_visible_smoke_passed"
+}
