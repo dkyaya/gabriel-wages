@@ -1,0 +1,12 @@
+{
+  "all_conversions_explicitly_assumption_tagged": true,
+  "counts": {
+    "document_specific": 102,
+    "not_applicable": 1785,
+    "not_safe_to_annualize": 7985,
+    "standard_2080_hours": 1676
+  },
+  "final_comparison_claims_made": false,
+  "raw_values_overwritten": false,
+  "standard_2080_conversion_count": 1676
+}

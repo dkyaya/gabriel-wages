@@ -1,0 +1,811 @@
+{
+  "claims": [
+    {
+      "allowed_claim_level": "supporting careful mechanism claim",
+      "average_strength_score": 2.066,
+      "careful_claim_text": "Within the processed rated corpus, COLA/CPI and inflation-indexing language appears as a recurring contract mechanism for scheduled wage adjustment.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "This describes rated contract language; it does not establish national prevalence, comparative wage effects, or causality.",
+      "claim_id": "B4X2500-CLAIM-20260730-007",
+      "claim_key": "cola_cpi",
+      "claim_title": "COLA/CPI language is a recurring contract mechanism",
+      "context_only_count": 168,
+      "direction_distribution": {
+        "gap_narrowing": 6,
+        "neutral_or_general": 277,
+        "non_safety_advantage": 31,
+        "not_applicable": 80
+      },
+      "evidence_basis_summary": "Derived from 394 schema-valid rated spans matching the controlled cola_cpi definition.",
+      "evidence_quality_distribution": {
+        "high": 91,
+        "moderate": 186,
+        "very_high": 117
+      },
+      "excluded_count": 18,
+      "finding_classification": "supporting finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 5,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "automatic_wage_growth",
+      "median_strength_score": 2.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 208,
+      "normalization_support_record_count": 394,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Within the processed rated corpus, COLA/CPI and inflation-indexing language appears as a recurring contract mechanism for scheduled wage adjustment.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 0,
+      "representative_paraphrases": [
+        "The Northfield, MI bounded span states “Pensions bridged B-4, freeze COLA as of 12/31/18.” and is retained as automatic wage growth evidence. Missing unit, value, or period fields remain explicitly blocker-tagged. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Sparta, MI bounded span states “The new hangar leases containing language for the new annual CPI adjustment that were sent out in December” and is retained as automatic wage growth evidence. Missing unit, value, or period fields remain explicitly blocker-tagged. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Altamont, NY evidence identifies a 3% COLA/CPI adjustment for the 2022 period for the documented municipal unit. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-00acc4f9cdf9e3f0a3c8acd9",
+          "paraphrase": "The Northfield, MI bounded span states “Pensions bridged B-4, freeze COLA as of 12/31/18.” and is retained as automatic wage growth evidence. Missing unit, value, or period fields remain explicitly blocker-tagged. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bounded_excerpt_specific",
+          "span_id": "B4X2500SPAN-20260730-52b109fac108797c9735cb17"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-02ca506a043f61ac107ae1b8",
+          "paraphrase": "The Sparta, MI bounded span states “The new hangar leases containing language for the new annual CPI adjustment that were sent out in December” and is retained as automatic wage growth evidence. Missing unit, value, or period fields remain explicitly blocker-tagged. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bounded_excerpt_specific",
+          "span_id": "B4X2500SPAN-20260730-2ebe522c44f4cd62fc018732"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-030d74343618f5c9b3e053a0",
+          "paraphrase": "The Altamont, NY evidence identifies a 3% COLA/CPI adjustment for the 2022 period for the documented municipal unit. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-2f526d5afe62af7308c4db2e"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Northfield, MI bounded span states “Pensions bridged B-4, freeze COLA as of 12/31/18.” and is retained as automatic wage growth evidence. Missing unit, value, or period fields remain explicitly blocker-tagged. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Sparta, MI bounded span states “The new hangar leases containing language for the new annual CPI adjustment that were sent out in December” and is retained as automatic wage growth evidence. Missing unit, value, or period fields remain explicitly blocker-tagged. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Altamont, NY evidence identifies a 3% COLA/CPI adjustment for the 2022 period for the documented municipal unit. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 0,
+      "top_regions": [
+        [
+          "Midwest",
+          148
+        ],
+        [
+          "South",
+          107
+        ],
+        [
+          "Northeast",
+          87
+        ],
+        [
+          "West",
+          52
+        ]
+      ],
+      "top_source_families": [
+        [
+          "budget_or_pay_plan",
+          103
+        ],
+        [
+          "wage_schedule",
+          73
+        ],
+        [
+          "agenda_packet_or_minutes",
+          49
+        ],
+        [
+          "arbitration_award",
+          41
+        ],
+        [
+          "cba",
+          34
+        ]
+      ],
+      "top_states": [
+        [
+          "NC",
+          44
+        ],
+        [
+          "NY",
+          41
+        ],
+        [
+          "MN",
+          35
+        ],
+        [
+          "MI",
+          27
+        ],
+        [
+          "WI",
+          26
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "COLA/CPI and inflation-indexing language supplies source-reported wage-growth mechanism evidence; it is not an analyst-side cost-of-living adjustment and does not establish a comparative effect.",
+      "valid_rating_count": 394
+    },
+    {
+      "allowed_claim_level": "supporting careful mechanism claim",
+      "average_strength_score": 2.406,
+      "careful_claim_text": "Among valid rated spans, across-the-board percentage and growth values provide recurring documentary evidence of scheduled compensation changes.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "This describes rated contract language; it does not establish national prevalence, comparative wage effects, or causality.",
+      "claim_id": "B4X2500-CLAIM-20260730-008",
+      "claim_key": "percentage_increases",
+      "claim_title": "Across-the-board percentage increases recur in compensation language",
+      "context_only_count": 350,
+      "direction_distribution": {
+        "gap_narrowing": 12,
+        "neutral_or_general": 880,
+        "non_safety_advantage": 70,
+        "not_applicable": 419
+      },
+      "evidence_basis_summary": "Derived from 1,381 schema-valid rated spans matching the controlled percentage_increases definition.",
+      "evidence_quality_distribution": {
+        "high": 397,
+        "moderate": 433,
+        "very_high": 551
+      },
+      "excluded_count": 83,
+      "finding_classification": "supporting finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 36,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "automatic_wage_growth",
+      "median_strength_score": 2.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 948,
+      "normalization_support_record_count": 994,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Among valid rated spans, across-the-board percentage and growth values provide recurring documentary evidence of scheduled compensation changes.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 0,
+      "representative_paraphrases": [
+        "The Magnolia, OH evidence identifies a 10% percentage raise for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Wilmington, IL evidence identifies a 2.5% percentage raise for the 2020 period for the documented municipal unit. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Evans, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-e10690c7ec45a2d9fb1f582e",
+          "paraphrase": "The Magnolia, OH evidence identifies a 10% percentage raise for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-f25522c474b68b0f58758394"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-00af1a96ddcd4b8590d7f2e1",
+          "paraphrase": "The Wilmington, IL evidence identifies a 2.5% percentage raise for the 2020 period for the documented municipal unit. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-da31d80765032e4e7230c5a7"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-01dd9ead02639ba613fa6dfd",
+          "paraphrase": "The Evans, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-7abdccd6c9d8d4b10b10c49c"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Magnolia, OH evidence identifies a 10% percentage raise for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Wilmington, IL evidence identifies a 2.5% percentage raise for the 2020 period for the documented municipal unit. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Evans, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 0,
+      "top_regions": [
+        [
+          "Midwest",
+          602
+        ],
+        [
+          "Northeast",
+          375
+        ],
+        [
+          "South",
+          305
+        ],
+        [
+          "West",
+          99
+        ]
+      ],
+      "top_source_families": [
+        [
+          "budget_or_pay_plan",
+          287
+        ],
+        [
+          "agenda_packet_or_minutes",
+          241
+        ],
+        [
+          "cba",
+          234
+        ],
+        [
+          "wage_schedule",
+          198
+        ],
+        [
+          "arbitration_award",
+          163
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          187
+        ],
+        [
+          "NC",
+          136
+        ],
+        [
+          "OH",
+          126
+        ],
+        [
+          "MI",
+          119
+        ],
+        [
+          "MN",
+          104
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Source-reported percentage increases recur as scheduled compensation changes, but their comparison requires aligned units, effective periods, and bargaining cycles.",
+      "valid_rating_count": 1381
+    },
+    {
+      "allowed_claim_level": "supporting careful mechanism claim",
+      "average_strength_score": 1.237,
+      "careful_claim_text": "Rank, step, grade, specialization, and classification structures recur in report-usable evidence and provide plausible channels for wage progression within bargaining units.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Cross-unit comparison requires alignment of ranks, grades, steps, occupations, and effective periods.",
+      "claim_id": "B4X2500-CLAIM-20260730-009",
+      "claim_key": "step_schedule_progression",
+      "claim_title": "Step and schedule progression provide structured wage paths",
+      "context_only_count": 643,
+      "direction_distribution": {
+        "gap_narrowing": 6,
+        "neutral_or_general": 629,
+        "non_safety_advantage": 30,
+        "not_applicable": 763,
+        "safety_advantage": 1
+      },
+      "evidence_basis_summary": "Derived from 1,429 schema-valid rated spans matching the controlled step_schedule_progression definition.",
+      "evidence_quality_distribution": {
+        "high": 381,
+        "moderate": 734,
+        "very_high": 314
+      },
+      "excluded_count": 91,
+      "finding_classification": "supporting finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 38,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "rank_step_specialization_classification",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 695,
+      "normalization_support_record_count": 1188,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Rank, step, grade, specialization, and classification structures recur in report-usable evidence and provide plausible channels for wage progression within bargaining units.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 0,
+      "representative_paraphrases": [
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-0ec9db4cb1e375f6e074332d",
+          "paraphrase": "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-a7a49d5d67acce4980bef393"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-1e54ddb5c2cb25adab09adaa",
+          "paraphrase": "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-fb12f7d3deeda3161633fd8b"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-28e8c27e5d88ee9723e2ed31",
+          "paraphrase": "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "currency_specific",
+          "span_id": "B4X2500SPAN-20260730-3a46653d487c8bfc6620d0ec"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 0,
+      "top_regions": [
+        [
+          "Midwest",
+          576
+        ],
+        [
+          "Northeast",
+          404
+        ],
+        [
+          "South",
+          312
+        ],
+        [
+          "West",
+          137
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          415
+        ],
+        [
+          "wage_schedule",
+          397
+        ],
+        [
+          "budget_or_pay_plan",
+          307
+        ],
+        [
+          "arbitration_award",
+          107
+        ],
+        [
+          "mou_or_memorandum",
+          51
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          261
+        ],
+        [
+          "OH",
+          159
+        ],
+        [
+          "NC",
+          143
+        ],
+        [
+          "MN",
+          124
+        ],
+        [
+          "IL",
+          107
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Step, grade, and wage-schedule records document structured pay progression within units and provide comparison candidates only where pay basis, period, and classification alignment can be reviewed.",
+      "valid_rating_count": 1429
+    },
+    {
+      "allowed_claim_level": "supporting careful mechanism claim",
+      "average_strength_score": 1.592,
+      "careful_claim_text": "Rated evidence identifies bargaining, arbitration, factfinding, settlement, and strike/no-strike language as plausible institutional channels shaping municipal compensation terms in some documents.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "The evidence identifies documentary mechanisms, not treatment effects or proof that dispute resolution raises wages.",
+      "claim_id": "B4X2500-CLAIM-20260730-010",
+      "claim_key": "bargaining_arbitration",
+      "claim_title": "Bargaining and dispute resolution are plausible institutional mechanisms",
+      "context_only_count": 1241,
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 853,
+        "non_safety_advantage": 7,
+        "not_applicable": 853,
+        "safety_advantage": 2
+      },
+      "evidence_basis_summary": "Derived from 1,716 schema-valid rated spans matching the controlled bargaining_arbitration definition.",
+      "evidence_quality_distribution": {
+        "high": 205,
+        "moderate": 1241,
+        "very_high": 270
+      },
+      "excluded_count": 0,
+      "finding_classification": "supporting finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 1,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "bargaining_dispute_resolution",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 13,
+      "normalization_support_record_count": 11,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Rated evidence identifies bargaining, arbitration, factfinding, settlement, and strike/no-strike language as plausible institutional channels shaping municipal compensation terms in some documents.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 264,
+      "representative_paraphrases": [
+        "The McKees Rocks, PA evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2022 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Cheltenham, PA evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2022 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Tupper Lake, NY evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-230597cc82d388d83f88717b",
+          "paraphrase": "The McKees Rocks, PA evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2022 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bargaining_specific",
+          "span_id": "B4X2500SPAN-20260730-7f7bb1fd757a7045ca6da582"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-494abc27cef4d06b228e259b",
+          "paraphrase": "The Cheltenham, PA evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2022 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bargaining_specific",
+          "span_id": "B4X2500SPAN-20260730-99627100d46405d4a20310ed"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-7f09066bcc5cadbc8e1f98e2",
+          "paraphrase": "The Tupper Lake, NY evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bargaining_specific",
+          "span_id": "B4X2500SPAN-20260730-fcb668a50662253561a99282"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The McKees Rocks, PA evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2022 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Cheltenham, PA evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2022 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Tupper Lake, NY evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 198,
+      "top_regions": [
+        [
+          "Midwest",
+          1005
+        ],
+        [
+          "Northeast",
+          602
+        ],
+        [
+          "South",
+          64
+        ],
+        [
+          "West",
+          45
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          746
+        ],
+        [
+          "wage_schedule",
+          238
+        ],
+        [
+          "agenda_packet_or_minutes",
+          207
+        ],
+        [
+          "arbitration_award",
+          187
+        ],
+        [
+          "mou_or_memorandum",
+          118
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          397
+        ],
+        [
+          "NJ",
+          186
+        ],
+        [
+          "NY",
+          184
+        ],
+        [
+          "IL",
+          172
+        ],
+        [
+          "MI",
+          165
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Bargaining, arbitration, factfinding, and settlement provisions supply source-grounded institutional context for how compensation terms are negotiated or implemented in some municipal documents.",
+      "valid_rating_count": 1716
+    },
+    {
+      "allowed_claim_level": "supporting careful mechanism claim",
+      "average_strength_score": 2.539,
+      "careful_claim_text": "Strike and no-strike provisions recur in the rated bargaining context and are plausible institutional constraints on wage-setting processes.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "The evidence identifies documentary mechanisms, not treatment effects or proof that dispute resolution raises wages.",
+      "claim_id": "B4X2500-CLAIM-20260730-011",
+      "claim_key": "strike_constraints",
+      "claim_title": "Strike and no-strike constraints form part of bargaining context",
+      "context_only_count": 195,
+      "direction_distribution": {
+        "neutral_or_general": 95,
+        "not_applicable": 455,
+        "safety_advantage": 1
+      },
+      "evidence_basis_summary": "Derived from 551 schema-valid rated spans matching the controlled strike_constraints definition.",
+      "evidence_quality_distribution": {
+        "high": 108,
+        "moderate": 196,
+        "very_high": 247
+      },
+      "excluded_count": 1,
+      "finding_classification": "supporting finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 0,
+      "matched_structure_support_status": "no_matched_candidate_or_not_applicable",
+      "mechanism_cluster": "bargaining_dispute_resolution",
+      "median_strength_score": 2.0,
+      "normalization_dependency": false,
+      "normalization_needed_count": 0,
+      "normalization_support_record_count": 0,
+      "normalization_support_status": "not_applicable_or_insufficient",
+      "original_claim_text": "Strike and no-strike provisions recur in the rated bargaining context and are plausible institutional constraints on wage-setting processes.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 247,
+      "representative_paraphrases": [
+        "The Hazen, AR evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Saybrook, OH evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2019 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Butler, OH evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-000a55fa28cfa517c8b66cc9",
+          "paraphrase": "The Hazen, AR evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bargaining_specific",
+          "span_id": "B4X2500SPAN-20260730-c333a13bd0d2b6cb6dc73010"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-00b34936b29e2a56fcd38099",
+          "paraphrase": "The Saybrook, OH evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2019 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bargaining_specific",
+          "span_id": "B4X2500SPAN-20260730-b9a33d8bff947c2be401aa77"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-00cc73b98e3d352744907f69",
+          "paraphrase": "The Butler, OH evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "bargaining_specific",
+          "span_id": "B4X2500SPAN-20260730-e21e7e174edadbf7a8396901"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Hazen, AR evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Saybrook, OH evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms for the 2019 period, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Butler, OH evidence links the documented municipal unit to bargaining, arbitration, settlement, or strike/no-strike terms, providing institutional wage-setting context without establishing an effect. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 108,
+      "top_regions": [
+        [
+          "Midwest",
+          451
+        ],
+        [
+          "Northeast",
+          75
+        ],
+        [
+          "South",
+          18
+        ],
+        [
+          "West",
+          7
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          451
+        ],
+        [
+          "wage_schedule",
+          81
+        ],
+        [
+          "mou_or_memorandum",
+          6
+        ],
+        [
+          "arbitration_award",
+          4
+        ],
+        [
+          "budget_or_pay_plan",
+          3
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          286
+        ],
+        [
+          "IL",
+          92
+        ],
+        [
+          "MI",
+          56
+        ],
+        [
+          "NY",
+          36
+        ],
+        [
+          "NJ",
+          23
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Strike and no-strike provisions document institutional constraints surrounding wage-setting processes; they do not by themselves establish the direction or magnitude of a compensation effect.",
+      "valid_rating_count": 551
+    },
+    {
+      "allowed_claim_level": "supporting careful mechanism claim",
+      "average_strength_score": 1.374,
+      "careful_claim_text": "Within the processed rated corpus, market comparability, recruitment, retention, staffing shortages, and competing-jurisdiction language appear as candidate explanations for compensation changes.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "These are local documentary justifications and cannot be generalized to all municipalities.",
+      "claim_id": "B4X2500-CLAIM-20260730-012",
+      "claim_key": "market_staffing",
+      "claim_title": "Market and staffing pressures appear as compensation justifications",
+      "context_only_count": 307,
+      "direction_distribution": {
+        "gap_narrowing": 12,
+        "neutral_or_general": 278,
+        "non_safety_advantage": 36,
+        "not_applicable": 70,
+        "safety_advantage": 2
+      },
+      "evidence_basis_summary": "Derived from 398 schema-valid rated spans matching the controlled market_staffing definition.",
+      "evidence_quality_distribution": {
+        "high": 62,
+        "moderate": 307,
+        "very_high": 29
+      },
+      "excluded_count": 0,
+      "finding_classification": "supporting finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 1,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "market_staffing_pressure",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 16,
+      "normalization_support_record_count": 9,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Within the processed rated corpus, market comparability, recruitment, retention, staffing shortages, and competing-jurisdiction language appear as candidate explanations for compensation changes.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 19,
+      "representative_paraphrases": [
+        "The Bernards, NJ evidence invokes market comparability, recruitment, retention, or staffing pressure for the 2023 period as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Greenwich, NJ evidence invokes market comparability, recruitment, retention, or staffing pressure for the 2024 period as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Brewster, MA evidence invokes market comparability, recruitment, retention, or staffing pressure as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-181fd8fc275e83921095533f",
+          "paraphrase": "The Bernards, NJ evidence invokes market comparability, recruitment, retention, or staffing pressure for the 2023 period as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "market_specific",
+          "span_id": "B4X2500SPAN-20260730-4d2b070fb4597f5b851f4db3"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-0a6fa8a65945231055a7c9d0",
+          "paraphrase": "The Greenwich, NJ evidence invokes market comparability, recruitment, retention, or staffing pressure for the 2024 period as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "market_specific",
+          "span_id": "B4X2500SPAN-20260730-8ac3f78a328af42d869032c8"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-0bd211037c7bdf0e4c94c54b",
+          "paraphrase": "The Brewster, MA evidence invokes market comparability, recruitment, retention, or staffing pressure as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "market_specific",
+          "span_id": "B4X2500SPAN-20260730-d31f35bc6bfa16c9ffe536cb"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Bernards, NJ evidence invokes market comparability, recruitment, retention, or staffing pressure for the 2023 period as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Greenwich, NJ evidence invokes market comparability, recruitment, retention, or staffing pressure for the 2024 period as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Brewster, MA evidence invokes market comparability, recruitment, retention, or staffing pressure as a stated compensation justification for the documented unit. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 56,
+      "top_regions": [
+        [
+          "Midwest",
+          172
+        ],
+        [
+          "Northeast",
+          114
+        ],
+        [
+          "South",
+          91
+        ],
+        [
+          "West",
+          21
+        ]
+      ],
+      "top_source_families": [
+        [
+          "wage_schedule",
+          64
+        ],
+        [
+          "budget_or_pay_plan",
+          62
+        ],
+        [
+          "arbitration_award",
+          60
+        ],
+        [
+          "cba",
+          57
+        ],
+        [
+          "agenda_packet_or_minutes",
+          46
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          47
+        ],
+        [
+          "WI",
+          41
+        ],
+        [
+          "OH",
+          38
+        ],
+        [
+          "NC",
+          28
+        ],
+        [
+          "MN",
+          26
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Market-comparability, recruitment, retention, staffing-shortage, and competing-jurisdiction language appears as a stated compensation justification in a bounded subset of source-grounded evidence.",
+      "valid_rating_count": 398
+    }
+  ],
+  "count": 6
+}

@@ -89,7 +89,10 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertEqual(phase["wage_gap_analysis_readiness"], "blocked_pending_normalization")
-        self.assertEqual(phase["causal_analysis_readiness"], "blocked_pending_matched_structure")
+        self.assertIn(
+            phase["causal_analysis_readiness"],
+            {"blocked_pending_matched_structure", "blocked_pending_stronger_causal_design"},
+        )
         extraction_summary_path = (
             ROOT / "docs/analysis/compensation_extraction/"
             "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/text_extraction_summary.json"
@@ -142,14 +145,33 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                             phase["careful_claim_candidate_count"],
                             ingest["careful_claim_candidate_count"],
                         )
-                        self.assertEqual(
-                            phase["current_phase"],
-                            "Rating ingestion/codification complete",
+                        normalization_summary_path = (
+                            ROOT / "docs/analysis/compensation_extraction/"
+                            "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/"
+                            "normalization_matching_paraphrase_repair_summary.json"
                         )
-                        self.assertEqual(
-                            phase["next_task"],
-                            "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30",
-                        )
+                        if normalization_summary_path.exists():
+                            normalization = json.loads(normalization_summary_path.read_text())
+                            self.assertTrue(phase["broad_state_4x2500_normalization_matching_available"])
+                            self.assertEqual(phase["normalized_quantitative_record_count"], 11548)
+                            self.assertEqual(
+                                phase["matched_safety_non_safety_cycle_candidate_count"],
+                                normalization["matched_safety_non_safety_cycle_candidate_count"],
+                            )
+                            self.assertEqual(phase["current_phase"], "Normalization and matched structure complete")
+                            self.assertEqual(
+                                phase["next_task"],
+                                "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+                            )
+                        else:
+                            self.assertEqual(
+                                phase["current_phase"],
+                                "Rating ingestion/codification complete",
+                            )
+                            self.assertEqual(
+                                phase["next_task"],
+                                "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30",
+                            )
                     else:
                         self.assertEqual(
                             phase["next_task"],

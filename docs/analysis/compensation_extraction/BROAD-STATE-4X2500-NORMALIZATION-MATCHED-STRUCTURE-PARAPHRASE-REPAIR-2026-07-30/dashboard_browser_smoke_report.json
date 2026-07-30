@@ -1,0 +1,23 @@
+{
+  "browser_controller": "Playwright MCP fallback after the in-app browser runtime reported zero available browsers",
+  "build_passed": true,
+  "card_count": 4,
+  "clean_dashboard_structure_preserved": true,
+  "console_error_count": 0,
+  "current_report_points_to_latest_summary": true,
+  "current_stage": "Normalization and matched structure complete",
+  "map_primary_metric": "scout_coverage_rate",
+  "matched_safety_non_safety_cycle_candidate_count_visible": 65,
+  "national_coverage_rate_visible": "47.45%",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "normalized_quantitative_record_count_visible": 11548,
+  "raw_scout_count_context_only": true,
+  "repaired_example_count_visible": 48,
+  "scout_covered_municipalities_visible": 16887,
+  "status": "local_browser_visible_current_passed",
+  "technical_details_collapsed_by_default": true,
+  "tested_url": "http://127.0.0.1:4173/gabriel-wages/?dashboard_smoke=20260730_normalization_matching_local",
+  "wage_gap_readiness_blocked": true,
+  "causal_readiness_blocked": true,
+  "global_readiness_fully_passed": false
+}

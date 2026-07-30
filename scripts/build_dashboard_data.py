@@ -1720,6 +1720,11 @@ BROAD_STATE_4X2500_RATING_INGEST_CODIFY_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30"
 )
+BROAD_STATE_4X2500_NORMALIZATION_MATCHING_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6467,6 +6472,76 @@ def broad_state_4x2500_rating_ingest_codify_status() -> tuple[bool, dict[str, An
     }
 
 
+def broad_state_4x2500_normalization_matching_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize normalized evidence, bounded matching, and source-grounded example repair."""
+    directory = BROAD_STATE_4X2500_NORMALIZATION_MATCHING_DIR
+    required = (
+        directory / "normalization_matching_paraphrase_repair_summary.json",
+        directory / "normalized_quantitative_records_manifest.json",
+        directory / "municipality_cycle_groups_summary.json",
+        directory / "matched_cycle_summary.json",
+        directory / "comparable_normalized_wage_summary.json",
+        directory / "growth_readiness_summary.json",
+        directory / "paraphrase_repair_audit.json",
+        directory / "updated_careful_claim_candidates.json",
+        directory / "pages_smoke_status_reconciliation.json",
+        directory / "dashboard_normalization_matching_update_summary.json",
+        directory / "forbidden_action_audit.json",
+        directory / "normalization_matching_paraphrase_repair_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    (summary, normalized_manifest, groups, matches, comparisons, growth, paraphrases,
+     claims, pages, dashboard, forbidden, _) = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    status_counts = summary.get("normalization_status_counts", {})
+    gates = (
+        summary.get("decision")
+        == "broad_state_4x2500_normalization_matching_paraphrase_repair_completed_pi_report_ready"
+        and summary.get("valid_rating_input_count") == 18_554
+        and summary.get("quarantine_count") == 58
+        and summary.get("normalized_quantitative_record_count") == 11_548
+        and normalized_manifest.get("row_count") == 11_548
+        and sum(status_counts.values()) == 11_548
+        and groups.get("municipality_cycle_group_count") == summary.get("municipality_cycle_group_count")
+        and matches.get("matched_safety_non_safety_cycle_candidate_count")
+        == summary.get("matched_safety_non_safety_cycle_candidate_count")
+        and comparisons.get("comparable_normalized_wage_candidate_count")
+        == summary.get("comparable_normalized_wage_candidate_count")
+        and comparisons.get("final_wage_gap_estimates_calculated") is False
+        and growth.get("cycle_to_cycle_growth_readiness_candidate_count")
+        == summary.get("cycle_to_cycle_growth_readiness_candidate_count")
+        and growth.get("analyst_growth_estimates_calculated") is False
+        and paraphrases.get("generic_patterns_remaining_in_repaired_examples") == 0
+        and paraphrases.get("fabrication_detected") is False
+        and claims.get("count") == summary.get("updated_careful_claim_count") == 18
+        and pages.get("classification") == "report_aggregation_enum_bug"
+        and pages.get("actual_public_failure") is False
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and summary.get("global_analysis_readiness") is False
+        and summary.get("final_wage_gap_estimates_calculated") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 normalization/matching package fails dashboard gates")
+    return True, {
+        **summary,
+        "normalization_status_counts": status_counts,
+        "municipality_cycle_readiness_counts": groups.get("readiness_counts", {}),
+        "match_quality_counts": matches.get("match_quality_counts", {}),
+        "comparison_readiness_counts": comparisons.get("readiness_counts", {}),
+        "growth_readiness_status_counts": growth.get("status_counts", {}),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/"
+            "normalization_matching_paraphrase_repair_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6605,6 +6680,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_ingest_available, broad_4x2500_ingest = (
         broad_state_4x2500_rating_ingest_codify_status()
+    )
+    broad_4x2500_normalization_available, broad_4x2500_normalization = (
+        broad_state_4x2500_normalization_matching_status()
     )
     published_reports = [
         *(
@@ -7375,6 +7453,38 @@ def build_reports_index_layer(
                 {"label": "codified records", "value": broad_4x2500_ingest["codified_record_count"]},
                 {"label": "careful claims", "value": broad_4x2500_ingest["careful_claim_candidate_count"]},
                 {"label": "core candidates", "value": finding_counts.get("core finding candidate", 0)},
+            ],
+        })
+    if broad_4x2500_normalization_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-rating-ingest-codify-pi-evidence-2026-07-30":
+                report["link_label"] = "Open historical codified PI-evidence report"
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-normalization-matched-structure-paraphrase-repair-2026-07-30",
+            "title": "Broad State 4 × 2,500 Normalized and Matched Evidence",
+            "report_type": "Current bounded normalization, matching, and PI-example repair result",
+            "date": "2026-07-30",
+            "checkpoint": (
+                f"{broad_4x2500_normalization['matched_safety_non_safety_cycle_candidate_count']:,} "
+                "matched municipality-cycle candidates"
+            ),
+            "summary": (
+                "Raw values are preserved alongside explicit normalization assumptions. "
+                "Same-municipality, 2014–2024 safety/non-safety structures and source-grounded "
+                "PI examples are ready for report drafting; final wage-gap and causal claims remain blocked."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "normalization", "matched structure", "PI report"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_normalization["dashboard_result_path"],
+            "link_label": "Open current normalized and matched evidence report",
+            "scope_metrics": [
+                {"label": "normalized records", "value": broad_4x2500_normalization["normalized_quantitative_record_count"]},
+                {"label": "matched cycles", "value": broad_4x2500_normalization["matched_safety_non_safety_cycle_candidate_count"]},
+                {"label": "repaired examples", "value": broad_4x2500_normalization["repaired_example_count"]},
             ],
         })
     if live_available:
@@ -9899,6 +10009,9 @@ def build_project_phase_summary(
     broad_4x2500_ingest_available, broad_4x2500_ingest = (
         broad_state_4x2500_rating_ingest_codify_status()
     )
+    broad_4x2500_normalization_available, broad_4x2500_normalization = (
+        broad_state_4x2500_normalization_matching_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11013,6 +11126,54 @@ def build_project_phase_summary(
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "blocked_pending_normalization",
             "causal_analysis_readiness": "blocked_pending_matched_structure",
+        })
+    if broad_4x2500_normalization_available:
+        statuses = broad_4x2500_normalization["normalization_status_counts"]
+        matches = broad_4x2500_normalization["match_quality_counts"]
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_normalization_matching_complete",
+            "current_phase": "Normalization and matched structure complete",
+            "current_phase_code": broad_4x2500_normalization["decision"],
+            "current_evidence_status": "normalized_matched_documentary_structure_pi_report_ready",
+            "broad_state_4x2500_normalization_matching_available": True,
+            "normalized_quantitative_record_count": broad_4x2500_normalization["normalized_quantitative_record_count"],
+            "normalization_status_counts": statuses,
+            "normalization_full_count": statuses.get("normalization_full", 0),
+            "normalization_partial_count": statuses.get("normalization_partial", 0),
+            "normalization_mechanism_only_count": statuses.get("normalization_mechanism_only", 0),
+            "normalization_unusable_count": statuses.get("normalization_unusable", 0),
+            "normalization_deferred_manual_review_count": statuses.get("normalization_deferred_manual_review", 0),
+            "municipality_cycle_group_count": broad_4x2500_normalization["municipality_cycle_group_count"],
+            "matched_safety_non_safety_cycle_candidate_count": broad_4x2500_normalization["matched_safety_non_safety_cycle_candidate_count"],
+            "match_quality_counts": matches,
+            "matched_cycle_strong_count": matches.get("strong", 0),
+            "matched_cycle_moderate_count": matches.get("moderate", 0),
+            "matched_cycle_weak_count": matches.get("weak", 0),
+            "matched_cycle_incomplete_count": matches.get("incomplete", 0),
+            "comparable_normalized_wage_candidate_count": broad_4x2500_normalization["comparable_normalized_wage_candidate_count"],
+            "cycle_to_cycle_growth_readiness_candidate_count": broad_4x2500_normalization["cycle_to_cycle_growth_readiness_candidate_count"],
+            "repaired_example_count": broad_4x2500_normalization["repaired_example_count"],
+            "downgraded_or_unrepaired_example_count": broad_4x2500_normalization["downgraded_or_unrepaired_example_count"],
+            "updated_careful_claim_count": broad_4x2500_normalization["updated_careful_claim_count"],
+            "current_report_title": "Broad State 4 × 2,500 Normalized and Matched Evidence",
+            "current_report_path": broad_4x2500_normalization["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_normalization["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+            "next_phase": "PI-facing report drafting from repaired, normalized, and matched documentary evidence",
+            "next_phase_sequence": [
+                "use repaired source-grounded paraphrases and updated careful claims",
+                "report normalization and matched-structure readiness without presenting final wage gaps",
+                "emphasize documentary mechanisms and limitations rather than pipeline operations",
+                "do not make regression, treatment-effect, population-prevalence, or final causal claims",
+            ],
+            "last_updated_context": "broad_state_4x2500_normalization_matching_complete_pi_report_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
         })
     return payload
 

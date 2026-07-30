@@ -1,0 +1,35 @@
+{
+  "clean_dashboard_structure_preserved": true,
+  "codified_record_count": 18554,
+  "comparable_candidate_count": 303,
+  "current_stage": "Normalization/matched structure complete",
+  "downgraded_example_count": 12,
+  "eligible_municipality_universe": 35589,
+  "global_analysis_readiness": false,
+  "growth_readiness_candidate_count": 141,
+  "map_primary_metric": "scout_coverage_rate",
+  "match_quality_counts": {
+    "incomplete": 23,
+    "moderate": 14,
+    "strong": 14,
+    "weak": 14
+  },
+  "matched_cycle_candidate_count": 65,
+  "municipality_cycle_group_count": 2712,
+  "national_coverage_rate": 0.474501,
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "normalization_status_counts": {
+    "normalization_deferred_manual_review": 720,
+    "normalization_full": 672,
+    "normalization_mechanism_only": 3769,
+    "normalization_partial": 1563,
+    "normalization_unusable": 4824
+  },
+  "normalized_quantitative_record_count": 11548,
+  "quarantine_count": 58,
+  "repaired_example_count": 48,
+  "scout_covered_municipalities": 16887,
+  "status": "ready_for_dashboard_build",
+  "updated_careful_claim_count": 18,
+  "valid_rating_count": 18554
+}

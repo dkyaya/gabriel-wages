@@ -1,0 +1,10 @@
+{
+  "authoritative_file": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/dashboard_public_pages_smoke_report.json",
+  "current_public_status": "public_pages_visible_current_passed",
+  "passed_status_values": [
+    "public_pages_visible_current_passed"
+  ],
+  "public_pages_visible_current": true,
+  "schema_version": "1.0.0",
+  "validation_corroboration": "validation_report.json checks.30_public_browser"
+}

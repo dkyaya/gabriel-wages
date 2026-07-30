@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "normalization_deferred_manual_review": 720,
+    "normalization_full": 672,
+    "normalization_mechanism_only": 3769,
+    "normalization_partial": 1563,
+    "normalization_unusable": 4824
+  },
+  "total": 11548
+}

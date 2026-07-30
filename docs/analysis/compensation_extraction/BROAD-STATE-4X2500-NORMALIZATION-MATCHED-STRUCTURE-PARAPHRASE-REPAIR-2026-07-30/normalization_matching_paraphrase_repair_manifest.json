@@ -1,0 +1,107 @@
+{
+  "created_at": "2026-07-30T22:04:42Z",
+  "decision": "broad_state_4x2500_normalization_matching_paraphrase_repair_completed_pi_report_ready",
+  "input_commit": "3c3bb2ac01b0d069b79484f4facd92d096410cb8",
+  "input_files": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/careful_claim_candidates.json": "31834debb519a512fd9f74161e7e743e0dc1519d3b249f2e6a597df2a00846eb",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.jsonl": "53853a335f02f9186e309400a3bc0e46da74ab69c1cf62d2eda376336dd81584",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings_manifest.json": "344af80cb35bf41b2e3e87c477a79e42d993c20c5f327e132502493d2a1df916",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/dashboard_public_pages_smoke_report.json": "18e1a3dcfc9733a82fd6e7592bf41c25506387ab2ae936a72817f91f42f97bdc",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/quarantine_exclusion_summary.json": "33ba8e06be2d5156e859ef7bc5a7319c76d6821b6a7e8fe88916fdc06c154d20",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/report_ready_examples.jsonl": "78fcee2a445a0e1b53c97fc0a7f911016775d3f4756b3a1a93e2452f498650f7",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/validation_report.json": "e0acf7858f50764f438257ba2c6350ae1e2222deae7ace1d07fa24caec11d871",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.jsonl": "c9684ea522e393b41e004752dbabba73ecd528d43d5fcd69b8cbad6e8cb6015c",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.jsonl": "dc55d78b11e123771348326c6a2d361a23a070c220d6fb275605ef8251aee73a"
+  },
+  "output_summary": {
+    "analyst_growth_estimates_calculated": false,
+    "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+    "comparable_normalized_wage_candidate_count": 303,
+    "comparison_readiness_counts": {
+      "needs_manual_review": 87,
+      "not_ready": 189,
+      "ready_for_bounded_review": 27
+    },
+    "comparison_type_counts": {
+      "base_wage_level_candidate": 87,
+      "mechanism_context_pair": 146,
+      "non_base_component_candidate": 51,
+      "percentage_growth_candidate": 19
+    },
+    "cost_of_living_adjustment_performed": false,
+    "cycle_confidence_counts": {
+      "high": 296,
+      "low": 742,
+      "moderate": 1674
+    },
+    "cycle_to_cycle_growth_readiness_candidate_count": 141,
+    "decision": "broad_state_4x2500_normalization_matching_paraphrase_repair_completed_pi_report_ready",
+    "downgraded_or_unrepaired_example_count": 12,
+    "final_wage_gap_estimates_calculated": false,
+    "forbidden_actions_avoided": true,
+    "generated_at": "2026-07-30T22:04:42Z",
+    "global_analysis_readiness": false,
+    "growth_readiness_status_counts": {
+      "not_ready": 85,
+      "partial": 44,
+      "ready_for_bounded_review": 12
+    },
+    "hourly_annual_assumption_counts": {
+      "document_specific": 102,
+      "not_applicable": 1785,
+      "not_safe_to_annualize": 7985,
+      "standard_2080_hours": 1676
+    },
+    "match_quality_counts": {
+      "incomplete": 23,
+      "moderate": 14,
+      "strong": 14,
+      "weak": 14
+    },
+    "matched_report_use_counts": {
+      "context_only": 23,
+      "normalization_needed": 28,
+      "report_ready_structure": 14
+    },
+    "matched_safety_non_safety_cycle_candidate_count": 65,
+    "municipality_cycle_group_count": 2712,
+    "municipality_cycle_readiness_counts": {
+      "missing_non_safety_evidence": 1020,
+      "missing_safety_evidence": 322,
+      "safety_non_safety_evidence_present": 93,
+      "unit_classification_incomplete": 1277
+    },
+    "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+    "normalization_blocker_counts": {
+      "annual_equivalent_uses_standard_2080_assumption": 1676,
+      "base_nonbase_unresolved": 7266,
+      "cycle_outside_2014_2024_observation_window": 2989,
+      "cycle_partially_outside_2014_2024_observation_window": 436,
+      "effective_period_or_cycle_unresolved": 3999,
+      "non_compensation_numeric_context": 116,
+      "occupation_or_unit_unresolved": 5908,
+      "pay_basis_unresolved": 7944,
+      "rank_step_grade_unresolved": 678,
+      "safety_category_unresolved": 5908
+    },
+    "normalization_manual_review_count": 720,
+    "normalization_mechanism_only_count": 3769,
+    "normalization_status_counts": {
+      "normalization_deferred_manual_review": 720,
+      "normalization_full": 672,
+      "normalization_mechanism_only": 3769,
+      "normalization_partial": 1563,
+      "normalization_unusable": 4824
+    },
+    "normalized_quantitative_record_count": 11548,
+    "pages_mismatch_reconciled": true,
+    "quarantine_count": 58,
+    "raw_values_preserved": true,
+    "repaired_example_count": 48,
+    "task_id": "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30",
+    "updated_careful_claim_count": 18,
+    "valid_rating_input_count": 18554,
+    "wage_gap_analysis_readiness": "blocked_pending_additional_review_and_authorization"
+  },
+  "task_id": "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30"
+}

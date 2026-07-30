@@ -1,0 +1,814 @@
+{
+  "claims": [
+    {
+      "allowed_claim_level": "core careful mechanism claim",
+      "average_strength_score": 1.646,
+      "careful_claim_text": "Within the processed rated corpus, non-base compensation appears as a substantial compensation channel through longevity, shift, hazard, specialty, certification, education, stipend, allowance, and premium-pay provisions.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "These components require separate classification from base pay before comparative compensation analysis.",
+      "claim_id": "B4X2500-CLAIM-20260730-001",
+      "claim_key": "non_base_compensation",
+      "claim_title": "Non-base compensation is a distinct compensation-growth channel",
+      "context_only_count": 2476,
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 1842,
+        "non_safety_advantage": 345,
+        "not_applicable": 1497,
+        "safety_advantage": 33
+      },
+      "evidence_basis_summary": "Derived from 3,718 schema-valid rated spans matching the controlled non_base_compensation definition.",
+      "evidence_quality_distribution": {
+        "high": 660,
+        "moderate": 2476,
+        "very_high": 582
+      },
+      "excluded_count": 0,
+      "finding_classification": "core finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 107,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "non_base_compensation",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 1170,
+      "normalization_support_record_count": 4373,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Within the processed rated corpus, non-base compensation appears as a substantial compensation channel through longevity, shift, hazard, specialty, certification, education, stipend, allowance, and premium-pay provisions.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 30,
+      "representative_paraphrases": [
+        "The Bath, OH span identifies a one-time or lump-sum payment of $1,200.00 for the police for the 2021 period, documenting a non-base compensation channel that must remain separate from recurring base pay. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Saybrook, OH span identifies a stipend or allowance of $300.00 for the fire for the 2019 period, documenting compensation outside the base wage schedule. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Franklin, MI span identifies a stipend or allowance of $3,500.00 for the police for the 2018 period, documenting compensation outside the base wage schedule. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-0277b6567826578a1ae5692a",
+          "paraphrase": "The Bath, OH span identifies a one-time or lump-sum payment of $1,200.00 for the police for the 2021 period, documenting a non-base compensation channel that must remain separate from recurring base pay. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "lump_sum_specific",
+          "span_id": "B4X2500SPAN-20260730-8d915b8244b3963dd58c01ea"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-04627adda2174949db5064a5",
+          "paraphrase": "The Saybrook, OH span identifies a stipend or allowance of $300.00 for the fire for the 2019 period, documenting compensation outside the base wage schedule. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "stipend_specific",
+          "span_id": "B4X2500SPAN-20260730-5e602c1b93179ca55d0c2cdf"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-10a9b22fcae61649a8b0d01b",
+          "paraphrase": "The Franklin, MI span identifies a stipend or allowance of $3,500.00 for the police for the 2018 period, documenting compensation outside the base wage schedule. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "stipend_specific",
+          "span_id": "B4X2500SPAN-20260730-e6c673358ba677253f846e51"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Bath, OH span identifies a one-time or lump-sum payment of $1,200.00 for the police for the 2021 period, documenting a non-base compensation channel that must remain separate from recurring base pay. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Saybrook, OH span identifies a stipend or allowance of $300.00 for the fire for the 2019 period, documenting compensation outside the base wage schedule. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Franklin, MI span identifies a stipend or allowance of $3,500.00 for the police for the 2018 period, documenting compensation outside the base wage schedule. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 42,
+      "top_regions": [
+        [
+          "Midwest",
+          1788
+        ],
+        [
+          "Northeast",
+          1221
+        ],
+        [
+          "South",
+          529
+        ],
+        [
+          "West",
+          180
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          1360
+        ],
+        [
+          "wage_schedule",
+          564
+        ],
+        [
+          "budget_or_pay_plan",
+          416
+        ],
+        [
+          "other_local_government_pay_policy",
+          243
+        ],
+        [
+          "arbitration_award",
+          235
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          635
+        ],
+        [
+          "NY",
+          507
+        ],
+        [
+          "NJ",
+          320
+        ],
+        [
+          "MI",
+          311
+        ],
+        [
+          "MN",
+          266
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Within the processed rated corpus, source-grounded provisions for longevity, shifts, overtime, hazard or specialty work, certification or education, stipends, allowances, and lump-sum payments document non-base compensation as a distinct channel of realized pay growth; the normalized layer keeps these components separate from base wages.",
+      "valid_rating_count": 3718
+    },
+    {
+      "allowed_claim_level": "core careful mechanism claim",
+      "average_strength_score": 1.452,
+      "careful_claim_text": "The processed rated corpus contains a substantial pool of direct compensation values and wage schedules that is potentially useful for quantitative analysis after normalization.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Hourly/annual units, base/non-base status, occupation, rank, step, effective period, and municipality-cycle alignment remain unresolved.",
+      "claim_id": "B4X2500-CLAIM-20260730-002",
+      "claim_key": "base_wage_values",
+      "claim_title": "Direct base-wage and schedule evidence is quantitatively promising",
+      "context_only_count": 4419,
+      "direction_distribution": {
+        "gap_narrowing": 22,
+        "neutral_or_general": 4705,
+        "non_safety_advantage": 513,
+        "not_applicable": 6330,
+        "safety_advantage": 40
+      },
+      "evidence_basis_summary": "Derived from 11,610 schema-valid rated spans matching the controlled base_wage_values definition.",
+      "evidence_quality_distribution": {
+        "high": 2449,
+        "moderate": 6034,
+        "very_high": 3127
+      },
+      "excluded_count": 1615,
+      "finding_classification": "core finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 133,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "quantitative_base_wage_needs_normalization",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 5533,
+      "normalization_support_record_count": 2541,
+      "normalization_support_status": "supported",
+      "original_claim_text": "The processed rated corpus contains a substantial pool of direct compensation values and wage schedules that is potentially useful for quantitative analysis after normalization.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 27,
+      "representative_paraphrases": [
+        "The Eden, VT span specifies clerical admin compensation at $18.50 per hour for the 2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Brookline, VT span specifies police compensation at $51.00 per hour for the 2017 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Alburtis, PA span specifies police compensation at $11.22 per hour for the 2018-2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-005eff7ba38a94a67800766d",
+          "paraphrase": "The Eden, VT span specifies clerical admin compensation at $18.50 per hour for the 2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "hourly_rate_specific",
+          "span_id": "B4X2500SPAN-20260730-7a826364e9968e454ff13a14"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-008259af793ffa5cde23f7ed",
+          "paraphrase": "The Brookline, VT span specifies police compensation at $51.00 per hour for the 2017 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "hourly_rate_specific",
+          "span_id": "B4X2500SPAN-20260730-404c7b2e14b083be2f3a27c3"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-0136525c07176db9f65505d3",
+          "paraphrase": "The Alburtis, PA span specifies police compensation at $11.22 per hour for the 2018-2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "hourly_rate_specific",
+          "span_id": "B4X2500SPAN-20260730-50b3433423788130ba8ade41"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Eden, VT span specifies clerical admin compensation at $18.50 per hour for the 2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Brookline, VT span specifies police compensation at $51.00 per hour for the 2017 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Alburtis, PA span specifies police compensation at $11.22 per hour for the 2018-2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 16,
+      "top_regions": [
+        [
+          "Midwest",
+          5341
+        ],
+        [
+          "Northeast",
+          3498
+        ],
+        [
+          "South",
+          2063
+        ],
+        [
+          "West",
+          708
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          3360
+        ],
+        [
+          "wage_schedule",
+          2033
+        ],
+        [
+          "budget_or_pay_plan",
+          1716
+        ],
+        [
+          "agenda_packet_or_minutes",
+          1219
+        ],
+        [
+          "other_local_government_pay_policy",
+          788
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          1560
+        ],
+        [
+          "NY",
+          1556
+        ],
+        [
+          "MI",
+          877
+        ],
+        [
+          "NJ",
+          825
+        ],
+        [
+          "MN",
+          765
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "The normalized evidence layer contains source-reported wage and salary values with preserved pay bases and explicit conversion assumptions, creating a structured review pool while leaving unresolved rank, unit, and cycle comparisons blocker-tagged.",
+      "valid_rating_count": 11610
+    },
+    {
+      "allowed_claim_level": "core careful mechanism claim",
+      "average_strength_score": 2.012,
+      "careful_claim_text": "Rated evidence frequently identifies implementation dates, retroactivity, settlement timing, and delayed payment as mechanisms that can affect when negotiated wage gains are realized.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Timing language is not a normalized measure of realized growth and does not by itself establish a safety/non-safety difference.",
+      "claim_id": "B4X2500-CLAIM-20260730-003",
+      "claim_key": "implementation_retroactivity",
+      "claim_title": "Implementation timing and retroactivity shape realized timing",
+      "context_only_count": 858,
+      "direction_distribution": {
+        "gap_narrowing": 2,
+        "neutral_or_general": 993,
+        "non_safety_advantage": 90,
+        "not_applicable": 1143,
+        "safety_advantage": 2
+      },
+      "evidence_basis_summary": "Derived from 2,230 schema-valid rated spans matching the controlled implementation_retroactivity definition.",
+      "evidence_quality_distribution": {
+        "high": 925,
+        "moderate": 858,
+        "very_high": 447
+      },
+      "excluded_count": 0,
+      "finding_classification": "core finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 62,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "timing_implementation",
+      "median_strength_score": 2.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 1148,
+      "normalization_support_record_count": 1915,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Rated evidence frequently identifies implementation dates, retroactivity, settlement timing, and delayed payment as mechanisms that can affect when negotiated wage gains are realized.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 90,
+      "representative_paraphrases": [
+        "The Florida, NY evidence describes implementation, effective-date, or retroactivity terms for the 2024 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Moravia, IA evidence describes implementation, effective-date, or retroactivity terms for the 2024 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Putnam, MI evidence describes implementation, effective-date, or retroactivity terms for the 2023 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-1ac93a6b34a286bac088a76a",
+          "paraphrase": "The Florida, NY evidence describes implementation, effective-date, or retroactivity terms for the 2024 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "implementation_specific",
+          "span_id": "B4X2500SPAN-20260730-16fc61b135356021c624801e"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-2ac4fd42da32ac7d117b034c",
+          "paraphrase": "The Moravia, IA evidence describes implementation, effective-date, or retroactivity terms for the 2024 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "implementation_specific",
+          "span_id": "B4X2500SPAN-20260730-04ee85bfa8b724bbd5d203d8"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-46a24cc9124b5639b9d3b352",
+          "paraphrase": "The Putnam, MI evidence describes implementation, effective-date, or retroactivity terms for the 2023 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "implementation_specific",
+          "span_id": "B4X2500SPAN-20260730-3ae324bd707279c8b02333ce"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Florida, NY evidence describes implementation, effective-date, or retroactivity terms for the 2024 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Moravia, IA evidence describes implementation, effective-date, or retroactivity terms for the 2024 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Putnam, MI evidence describes implementation, effective-date, or retroactivity terms for the 2023 period, making payment timing a document-specific compensation mechanism candidate. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 134,
+      "top_regions": [
+        [
+          "Midwest",
+          1055
+        ],
+        [
+          "Northeast",
+          778
+        ],
+        [
+          "South",
+          284
+        ],
+        [
+          "West",
+          113
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          761
+        ],
+        [
+          "wage_schedule",
+          339
+        ],
+        [
+          "agenda_packet_or_minutes",
+          211
+        ],
+        [
+          "budget_or_pay_plan",
+          189
+        ],
+        [
+          "arbitration_award",
+          189
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          399
+        ],
+        [
+          "OH",
+          356
+        ],
+        [
+          "MI",
+          202
+        ],
+        [
+          "NJ",
+          201
+        ],
+        [
+          "MN",
+          135
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Source-grounded effective dates, retroactivity clauses, delayed implementation, and settlement-timing terms document implementation timing as a plausible mechanism affecting when negotiated compensation is realized within the recorded units.",
+      "valid_rating_count": 2230
+    },
+    {
+      "allowed_claim_level": "core careful mechanism claim",
+      "average_strength_score": 2.574,
+      "careful_claim_text": "Within the processed rated corpus, automatic wage-growth provisions—including scheduled increases, percentage raises, and indexed adjustments—form a recurring documentary mechanism.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "This describes rated contract language; it does not establish national prevalence, comparative wage effects, or causality.",
+      "claim_id": "B4X2500-CLAIM-20260730-004",
+      "claim_key": "automatic_raises",
+      "claim_title": "Automatic raises recur as a documentary wage-growth mechanism",
+      "context_only_count": 379,
+      "direction_distribution": {
+        "gap_narrowing": 12,
+        "neutral_or_general": 930,
+        "non_safety_advantage": 81,
+        "not_applicable": 408
+      },
+      "evidence_basis_summary": "Derived from 1,431 schema-valid rated spans matching the controlled automatic_raises definition.",
+      "evidence_quality_distribution": {
+        "high": 440,
+        "moderate": 379,
+        "very_high": 612
+      },
+      "excluded_count": 0,
+      "finding_classification": "core finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 64,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "automatic_wage_growth",
+      "median_strength_score": 2.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 1007,
+      "normalization_support_record_count": 1899,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Within the processed rated corpus, automatic wage-growth provisions—including scheduled increases, percentage raises, and indexed adjustments—form a recurring documentary mechanism.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 27,
+      "representative_paraphrases": [
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-0ec9db4cb1e375f6e074332d",
+          "paraphrase": "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-a7a49d5d67acce4980bef393"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-1e54ddb5c2cb25adab09adaa",
+          "paraphrase": "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-fb12f7d3deeda3161633fd8b"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-28e8c27e5d88ee9723e2ed31",
+          "paraphrase": "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "currency_specific",
+          "span_id": "B4X2500SPAN-20260730-3a46653d487c8bfc6620d0ec"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 18,
+      "top_regions": [
+        [
+          "Midwest",
+          644
+        ],
+        [
+          "Northeast",
+          399
+        ],
+        [
+          "South",
+          283
+        ],
+        [
+          "West",
+          105
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          295
+        ],
+        [
+          "budget_or_pay_plan",
+          266
+        ],
+        [
+          "agenda_packet_or_minutes",
+          225
+        ],
+        [
+          "wage_schedule",
+          217
+        ],
+        [
+          "arbitration_award",
+          170
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          203
+        ],
+        [
+          "OH",
+          163
+        ],
+        [
+          "MI",
+          127
+        ],
+        [
+          "NC",
+          126
+        ],
+        [
+          "MN",
+          107
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Source-reported COLA/CPI terms, percentage increases, scheduled raises, and step progression document recurring automatic wage-growth mechanisms within the processed rated corpus.",
+      "valid_rating_count": 1431
+    },
+    {
+      "allowed_claim_level": "core careful mechanism claim",
+      "average_strength_score": 2.427,
+      "careful_claim_text": "Rank, step, grade, specialization, and classification structures recur in report-usable evidence and provide plausible channels for wage progression within bargaining units.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Cross-unit comparison requires alignment of ranks, grades, steps, occupations, and effective periods.",
+      "claim_id": "B4X2500-CLAIM-20260730-005",
+      "claim_key": "rank_specialization",
+      "claim_title": "Rank, step, specialization, and classification structures support progression",
+      "context_only_count": 211,
+      "direction_distribution": {
+        "gap_narrowing": 4,
+        "neutral_or_general": 425,
+        "non_safety_advantage": 32,
+        "not_applicable": 289,
+        "safety_advantage": 13
+      },
+      "evidence_basis_summary": "Derived from 763 schema-valid rated spans matching the controlled rank_specialization definition.",
+      "evidence_quality_distribution": {
+        "high": 266,
+        "moderate": 211,
+        "very_high": 286
+      },
+      "excluded_count": 0,
+      "finding_classification": "core finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 23,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "rank_step_specialization_classification",
+      "median_strength_score": 2.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 544,
+      "normalization_support_record_count": 785,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Rank, step, grade, specialization, and classification structures recur in report-usable evidence and provide plausible channels for wage progression within bargaining units.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 3,
+      "representative_paraphrases": [
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-0ec9db4cb1e375f6e074332d",
+          "paraphrase": "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-a7a49d5d67acce4980bef393"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-1e54ddb5c2cb25adab09adaa",
+          "paraphrase": "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "percentage_growth_specific",
+          "span_id": "B4X2500SPAN-20260730-fb12f7d3deeda3161633fd8b"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-28e8c27e5d88ee9723e2ed31",
+          "paraphrase": "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "currency_specific",
+          "span_id": "B4X2500SPAN-20260730-3a46653d487c8bfc6620d0ec"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Colma, CA evidence identifies a 5% step progression for the 2021 period for the police. This is source-reported growth-mechanism evidence and requires cycle alignment before comparison. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Gonzales, CA span contains a source-reported compensation amount of $17,278.19 for the police for the 2024 period. Its pay basis or base/non-base status remains flagged where unresolved. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 5,
+      "top_regions": [
+        [
+          "Midwest",
+          345
+        ],
+        [
+          "South",
+          190
+        ],
+        [
+          "Northeast",
+          184
+        ],
+        [
+          "West",
+          44
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          238
+        ],
+        [
+          "wage_schedule",
+          166
+        ],
+        [
+          "budget_or_pay_plan",
+          162
+        ],
+        [
+          "arbitration_award",
+          53
+        ],
+        [
+          "agenda_packet_or_minutes",
+          37
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          127
+        ],
+        [
+          "NY",
+          99
+        ],
+        [
+          "NC",
+          84
+        ],
+        [
+          "MN",
+          61
+        ],
+        [
+          "MI",
+          58
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Wage schedules and premium provisions organized by rank, step, grade, or specialization document structured progression channels, while cross-unit comparison remains limited to explicitly aligned candidate records.",
+      "valid_rating_count": 763
+    },
+    {
+      "allowed_claim_level": "core careful mechanism claim",
+      "average_strength_score": 1.446,
+      "careful_claim_text": "The processed rated corpus contains a substantial pool of direct compensation values and wage schedules that is potentially useful for quantitative analysis after normalization.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Hourly/annual units, base/non-base status, occupation, rank, step, effective period, and municipality-cycle alignment remain unresolved.",
+      "claim_id": "B4X2500-CLAIM-20260730-006",
+      "claim_key": "quantitative_normalization",
+      "claim_title": "Quantitative evidence requires normalization before comparison",
+      "context_only_count": 4400,
+      "direction_distribution": {
+        "gap_narrowing": 22,
+        "neutral_or_general": 4681,
+        "non_safety_advantage": 509,
+        "not_applicable": 6296,
+        "safety_advantage": 40
+      },
+      "evidence_basis_summary": "Derived from 11,548 schema-valid rated spans matching the controlled quantitative_normalization definition.",
+      "evidence_quality_distribution": {
+        "high": 2427,
+        "moderate": 6015,
+        "very_high": 3106
+      },
+      "excluded_count": 1615,
+      "finding_classification": "core finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 373,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "quantitative_base_wage_needs_normalization",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 5533,
+      "normalization_support_record_count": 11548,
+      "normalization_support_status": "supported",
+      "original_claim_text": "The processed rated corpus contains a substantial pool of direct compensation values and wage schedules that is potentially useful for quantitative analysis after normalization.",
+      "pi_report_placement": "Findings",
+      "recommended_pi_report_placement": "Findings",
+      "report_ready_count": 0,
+      "representative_paraphrases": [
+        "The Eden, VT span specifies clerical admin compensation at $18.50 per hour for the 2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Brookline, VT span specifies police compensation at $51.00 per hour for the 2017 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Alburtis, PA span specifies police compensation at $11.22 per hour for the 2018-2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-005eff7ba38a94a67800766d",
+          "paraphrase": "The Eden, VT span specifies clerical admin compensation at $18.50 per hour for the 2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "hourly_rate_specific",
+          "span_id": "B4X2500SPAN-20260730-7a826364e9968e454ff13a14"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-008259af793ffa5cde23f7ed",
+          "paraphrase": "The Brookline, VT span specifies police compensation at $51.00 per hour for the 2017 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "hourly_rate_specific",
+          "span_id": "B4X2500SPAN-20260730-404c7b2e14b083be2f3a27c3"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-0136525c07176db9f65505d3",
+          "paraphrase": "The Alburtis, PA span specifies police compensation at $11.22 per hour for the 2018-2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "hourly_rate_specific",
+          "span_id": "B4X2500SPAN-20260730-50b3433423788130ba8ade41"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Eden, VT span specifies clerical admin compensation at $18.50 per hour for the 2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Brookline, VT span specifies police compensation at $51.00 per hour for the 2017 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Alburtis, PA span specifies police compensation at $11.22 per hour for the 2018-2021 period. The hourly value is preserved, while any annual equivalent uses an explicit 2,080-hour review assumption. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 0,
+      "top_regions": [
+        [
+          "Midwest",
+          5313
+        ],
+        [
+          "Northeast",
+          3476
+        ],
+        [
+          "South",
+          2054
+        ],
+        [
+          "West",
+          705
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          3341
+        ],
+        [
+          "wage_schedule",
+          2023
+        ],
+        [
+          "budget_or_pay_plan",
+          1705
+        ],
+        [
+          "agenda_packet_or_minutes",
+          1216
+        ],
+        [
+          "other_local_government_pay_policy",
+          783
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          1553
+        ],
+        [
+          "NY",
+          1543
+        ],
+        [
+          "MI",
+          874
+        ],
+        [
+          "NJ",
+          820
+        ],
+        [
+          "MN",
+          759
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Quantitative spans can be separated into fully normalized, partially normalized, mechanism-only, deferred, and unusable records; only explicitly assumption-tagged structures are advanced to bounded comparison review.",
+      "valid_rating_count": 11548
+    }
+  ],
+  "count": 6
+}

@@ -70,7 +70,9 @@ def main() -> None:
         "dashboard_map_primary_metric": "scout_coverage_rate",
         "dashboard_local_build_passed": read_json("dashboard_local_build_report.json")["status"] == "passed",
         "dashboard_local_browser_passed": read_json("dashboard_browser_smoke_report.json")["status"] == "passed",
-        "dashboard_public_pages_passed": read_json("dashboard_public_pages_smoke_report.json")["status"] == "passed",
+        "dashboard_public_pages_status": read_json("dashboard_public_pages_smoke_report.json")["status"],
+        "dashboard_public_pages_passed": read_json("dashboard_public_pages_smoke_report.json")["status"]
+        == "public_pages_visible_current_passed",
         "forbidden_actions_avoided": read_json("forbidden_action_audit.json")["passed"],
         "pi_evidence_base_format": "verified CSV table set; XLSX omitted because the required artifact-tool dependency loader was unavailable",
         "blockers_or_uncertainties": [

@@ -1,0 +1,15 @@
+{
+  "actions": [
+    {
+      "bounded": true,
+      "change": "accept controlled public-smoke passed enum",
+      "file": "scripts/build_broad_state_4x2500_rating_ingest_codify_pi_evidence_relay.py"
+    },
+    {
+      "bounded": true,
+      "change": "carry full public status enum plus derived boolean",
+      "file": "new relay builder"
+    }
+  ],
+  "public_failure_hidden": false
+}

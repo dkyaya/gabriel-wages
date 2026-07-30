@@ -1,0 +1,14 @@
+{
+  "match_quality_counts": {
+    "incomplete": 23,
+    "moderate": 14,
+    "strong": 14,
+    "weak": 14
+  },
+  "matched_safety_non_safety_cycle_candidate_count": 65,
+  "report_use_counts": {
+    "context_only": 23,
+    "normalization_needed": 28,
+    "report_ready_structure": 14
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "cost_of_living_adjustment_performed": false,
+  "created_at": "2026-07-30T22:04:40Z",
+  "csv_sha256": "12fa91dbb13f4b87d440c35d34955c3246829afb721e1555b24e82aaa176c596",
+  "input_sha256": "53853a335f02f9186e309400a3bc0e46da74ab69c1cf62d2eda376336dd81584",
+  "jsonl_sha256": "b104c09157bfdf5192cc5cbd71c0320c5f451644b42c879f9af62e45e279891e",
+  "raw_values_preserved": true,
+  "row_count": 11548,
+  "task_id": "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30",
+  "valid_codified_only": true
+}

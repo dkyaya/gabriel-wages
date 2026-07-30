@@ -1,0 +1,6 @@
+{
+  "comparison_rows_reference_matched_cycles": true,
+  "group_records_reconcile": true,
+  "matched_candidates_have_both_safety_and_non_safety": true,
+  "no_final_gap_or_growth_estimates": true
+}

@@ -1,0 +1,90 @@
+{
+  "analyst_growth_estimates_calculated": false,
+  "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+  "comparable_normalized_wage_candidate_count": 303,
+  "comparison_readiness_counts": {
+    "needs_manual_review": 87,
+    "not_ready": 189,
+    "ready_for_bounded_review": 27
+  },
+  "comparison_type_counts": {
+    "base_wage_level_candidate": 87,
+    "mechanism_context_pair": 146,
+    "non_base_component_candidate": 51,
+    "percentage_growth_candidate": 19
+  },
+  "cost_of_living_adjustment_performed": false,
+  "cycle_confidence_counts": {
+    "high": 296,
+    "low": 742,
+    "moderate": 1674
+  },
+  "cycle_to_cycle_growth_readiness_candidate_count": 141,
+  "decision": "broad_state_4x2500_normalization_matching_paraphrase_repair_completed_pi_report_ready",
+  "downgraded_or_unrepaired_example_count": 12,
+  "final_wage_gap_estimates_calculated": false,
+  "forbidden_actions_avoided": true,
+  "generated_at": "2026-07-30T22:04:42Z",
+  "global_analysis_readiness": false,
+  "growth_readiness_status_counts": {
+    "not_ready": 85,
+    "partial": 44,
+    "ready_for_bounded_review": 12
+  },
+  "hourly_annual_assumption_counts": {
+    "document_specific": 102,
+    "not_applicable": 1785,
+    "not_safe_to_annualize": 7985,
+    "standard_2080_hours": 1676
+  },
+  "match_quality_counts": {
+    "incomplete": 23,
+    "moderate": 14,
+    "strong": 14,
+    "weak": 14
+  },
+  "matched_report_use_counts": {
+    "context_only": 23,
+    "normalization_needed": 28,
+    "report_ready_structure": 14
+  },
+  "matched_safety_non_safety_cycle_candidate_count": 65,
+  "municipality_cycle_group_count": 2712,
+  "municipality_cycle_readiness_counts": {
+    "missing_non_safety_evidence": 1020,
+    "missing_safety_evidence": 322,
+    "safety_non_safety_evidence_present": 93,
+    "unit_classification_incomplete": 1277
+  },
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "normalization_blocker_counts": {
+    "annual_equivalent_uses_standard_2080_assumption": 1676,
+    "base_nonbase_unresolved": 7266,
+    "cycle_outside_2014_2024_observation_window": 2989,
+    "cycle_partially_outside_2014_2024_observation_window": 436,
+    "effective_period_or_cycle_unresolved": 3999,
+    "non_compensation_numeric_context": 116,
+    "occupation_or_unit_unresolved": 5908,
+    "pay_basis_unresolved": 7944,
+    "rank_step_grade_unresolved": 678,
+    "safety_category_unresolved": 5908
+  },
+  "normalization_manual_review_count": 720,
+  "normalization_mechanism_only_count": 3769,
+  "normalization_status_counts": {
+    "normalization_deferred_manual_review": 720,
+    "normalization_full": 672,
+    "normalization_mechanism_only": 3769,
+    "normalization_partial": 1563,
+    "normalization_unusable": 4824
+  },
+  "normalized_quantitative_record_count": 11548,
+  "pages_mismatch_reconciled": true,
+  "quarantine_count": 58,
+  "raw_values_preserved": true,
+  "repaired_example_count": 48,
+  "task_id": "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30",
+  "updated_careful_claim_count": 18,
+  "valid_rating_input_count": 18554,
+  "wage_gap_analysis_readiness": "blocked_pending_additional_review_and_authorization"
+}

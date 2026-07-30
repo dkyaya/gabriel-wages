@@ -1,0 +1,15 @@
+{
+  "cycle_confidence_counts": {
+    "high": 296,
+    "low": 742,
+    "moderate": 1674
+  },
+  "municipality_cycle_group_count": 2712,
+  "readiness_counts": {
+    "missing_non_safety_evidence": 1020,
+    "missing_safety_evidence": 322,
+    "safety_non_safety_evidence_present": 93,
+    "unit_classification_incomplete": 1277
+  },
+  "record_count": 11548
+}

@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "base": 3542,
+    "mixed": 17,
+    "non_base": 4356,
+    "unclear": 3633
+  },
+  "unresolved_rows_blocker_tagged": true
+}

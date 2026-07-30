@@ -1,0 +1,9 @@
+{
+  "analyst_growth_estimates_calculated": false,
+  "cycle_to_cycle_growth_readiness_candidate_count": 141,
+  "status_counts": {
+    "not_ready": 85,
+    "partial": 44,
+    "ready_for_bounded_review": 12
+  }
+}

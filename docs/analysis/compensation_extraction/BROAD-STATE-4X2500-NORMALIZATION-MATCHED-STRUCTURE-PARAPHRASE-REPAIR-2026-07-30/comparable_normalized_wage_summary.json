@@ -1,0 +1,15 @@
+{
+  "comparable_normalized_wage_candidate_count": 303,
+  "comparison_type_counts": {
+    "base_wage_level_candidate": 87,
+    "mechanism_context_pair": 146,
+    "non_base_component_candidate": 51,
+    "percentage_growth_candidate": 19
+  },
+  "final_wage_gap_estimates_calculated": false,
+  "readiness_counts": {
+    "needs_manual_review": 87,
+    "not_ready": 189,
+    "ready_for_bounded_review": 27
+  }
+}

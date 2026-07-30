@@ -1,0 +1,21 @@
+{
+  "confidence_counts": {
+    "high": 672,
+    "low": 5544,
+    "moderate": 5332
+  },
+  "no_final_wage_gap_estimates": true,
+  "pay_basis_counts": {
+    "annual": 66,
+    "daily": 29,
+    "hourly": 1497,
+    "lump_sum": 20,
+    "mixed": 166,
+    "monthly": 57,
+    "percentage": 1375,
+    "premium": 104,
+    "stipend": 286,
+    "unknown": 7944,
+    "weekly": 4
+  }
+}

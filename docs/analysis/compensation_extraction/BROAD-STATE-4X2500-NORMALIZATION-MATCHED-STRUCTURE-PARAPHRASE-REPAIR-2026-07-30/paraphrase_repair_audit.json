@@ -1,0 +1,14 @@
+{
+  "downgraded_or_unrepaired_example_count": 12,
+  "fabrication_detected": false,
+  "generic_claim_examples_detected": 35,
+  "generic_patterns_remaining_in_repaired_examples": 0,
+  "generic_report_examples_detected": 56,
+  "raw_original_text_preserved": true,
+  "repaired_report_ready_example_count": 48,
+  "scanned_claim_representative_paraphrases": 36,
+  "scanned_report_ready_examples": 60,
+  "source_grounded_to_bounded_span": true,
+  "total_example_surfaces_scanned": 96,
+  "updated_claim_count": 18
+}

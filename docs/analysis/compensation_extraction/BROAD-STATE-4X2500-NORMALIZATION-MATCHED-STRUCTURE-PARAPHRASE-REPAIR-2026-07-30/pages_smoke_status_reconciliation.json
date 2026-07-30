@@ -1,0 +1,14 @@
+{
+  "actual_public_failure": false,
+  "authoritative_status_source": "dashboard_public_pages_smoke_report.json status enum, corroborated by validation_report check 30 and workflow/browser evidence",
+  "classification": "report_aggregation_enum_bug",
+  "classified_at": "2026-07-30T22:04:38Z",
+  "mismatch_present": true,
+  "public_smoke_status": "public_pages_visible_current_passed",
+  "relay_dashboard_public_pages_passed": false,
+  "relay_public_pages_visible_current": true,
+  "relay_status_path": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/relay_status.json",
+  "repair": "Accept the controlled passed enum when aggregating relay status; preserve the full enum and validation corroboration.",
+  "root_cause": "The prior relay builder compared the public-smoke enum to the literal 'passed'. The durable smoke status is 'public_pages_visible_current_passed', so a successful smoke was serialized as false in one derived relay boolean.",
+  "validation_check_30_public_browser": true
+}

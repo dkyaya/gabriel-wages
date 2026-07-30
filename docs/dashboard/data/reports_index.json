@@ -1,39 +1,40 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T21:17:40Z",
+  "generated_at": "2026-07-30T22:04:44Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-rating-ingest-codify-pi-evidence-2026-07-30",
-      "title": "Broad State 4 × 2,500 Codified PI Evidence",
-      "report_type": "Current valid-only codified documentary evidence result",
+      "id": "broad-state-4x2500-normalization-matched-structure-paraphrase-repair-2026-07-30",
+      "title": "Broad State 4 × 2,500 Normalized and Matched Evidence",
+      "report_type": "Current bounded normalization, matching, and PI-example repair result",
       "date": "2026-07-30",
-      "checkpoint": "18,554 codified valid ratings",
-      "summary": "All schema-valid ratings are ingested into a lineage-preserving codified layer; quarantines remain excluded. Careful mechanism claims are prepared for PI review, while normalization, matching, wage-gap, prevalence, and causal analysis remain blocked.",
+      "checkpoint": "65 matched municipality-cycle candidates",
+      "summary": "Raw values are preserved alongside explicit normalization assumptions. Same-municipality, 2014–2024 safety/non-safety structures and source-grounded PI examples are ready for report drafting; final wage-gap and causal claims remain blocked.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "codified evidence",
-        "PI claims"
+        "normalization",
+        "matched structure",
+        "PI report"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/rating_ingest_codify_summary.md",
-      "link_label": "Open current codified PI-evidence report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/normalization_matching_paraphrase_repair_summary.md",
+      "link_label": "Open current normalized and matched evidence report",
       "scope_metrics": [
         {
-          "label": "codified records",
-          "value": 18554
+          "label": "normalized records",
+          "value": 11548
         },
         {
-          "label": "careful claims",
-          "value": 18
+          "label": "matched cycles",
+          "value": 65
         },
         {
-          "label": "core candidates",
-          "value": 6
+          "label": "repaired examples",
+          "value": 48
         }
       ]
     },
@@ -69,6 +70,38 @@
         {
           "label": "candidate rows",
           "value": 7014
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-rating-ingest-codify-pi-evidence-2026-07-30",
+      "title": "Broad State 4 × 2,500 Codified PI Evidence",
+      "report_type": "Current valid-only codified documentary evidence result",
+      "date": "2026-07-30",
+      "checkpoint": "18,554 codified valid ratings",
+      "summary": "All schema-valid ratings are ingested into a lineage-preserving codified layer; quarantines remain excluded. Careful mechanism claims are prepared for PI review, while normalization, matching, wage-gap, prevalence, and causal analysis remain blocked.",
+      "tags": [
+        "broad scout",
+        "4x2500",
+        "codified evidence",
+        "PI claims"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/rating_ingest_codify_summary.md",
+      "link_label": "Open historical codified PI-evidence report",
+      "scope_metrics": [
+        {
+          "label": "codified records",
+          "value": 18554
+        },
+        {
+          "label": "careful claims",
+          "value": 18
+        },
+        {
+          "label": "core candidates",
+          "value": 6
         }
       ]
     },

@@ -1,0 +1,532 @@
+{
+  "claims": [
+    {
+      "allowed_claim_level": "context careful mechanism claim",
+      "average_strength_score": 1.531,
+      "careful_claim_text": "Some rated evidence documents fiscal limits, appropriation requirements, governance approvals, and internal-equity considerations as constraints or decision points in municipal compensation setting.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "This is a bounded documentary pattern and does not prove that fiscal constraints suppress any occupation's wages.",
+      "claim_id": "B4X2500-CLAIM-20260730-013",
+      "claim_key": "fiscal_governance",
+      "claim_title": "Fiscal and governance language provides bounded constraint evidence",
+      "context_only_count": 182,
+      "direction_distribution": {
+        "gap_narrowing": 14,
+        "neutral_or_general": 247,
+        "non_safety_advantage": 2,
+        "not_applicable": 23
+      },
+      "evidence_basis_summary": "Derived from 286 schema-valid rated spans matching the controlled fiscal_governance definition.",
+      "evidence_quality_distribution": {
+        "high": 80,
+        "moderate": 182,
+        "very_high": 24
+      },
+      "excluded_count": 0,
+      "finding_classification": "context finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 0,
+      "matched_structure_support_status": "no_matched_candidate_or_not_applicable",
+      "mechanism_cluster": "fiscal_governance_constraints",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 24,
+      "normalization_support_record_count": 1,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Some rated evidence documents fiscal limits, appropriation requirements, governance approvals, and internal-equity considerations as constraints or decision points in municipal compensation setting.",
+      "pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "report_ready_count": 16,
+      "representative_paraphrases": [
+        "The Lima, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration for the 2024 period. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Greece, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Buchanan, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-61c7a05503fbf5bd6921cccb",
+          "paraphrase": "The Lima, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration for the 2024 period. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "fiscal_specific",
+          "span_id": "B4X2500SPAN-20260730-2c35d3915f94d9776a5a7256"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-62e7d9141c1db13e8deb7e9e",
+          "paraphrase": "The Greece, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "fiscal_specific",
+          "span_id": "B4X2500SPAN-20260730-0bbc074ca9af0d2ad3c03280"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-957c77f4a79e3f3771a16a02",
+          "paraphrase": "The Buchanan, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "fiscal_specific",
+          "span_id": "B4X2500SPAN-20260730-8fe7ef03425c23389cd02d47"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Lima, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration for the 2024 period. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Greece, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Buchanan, NY evidence records a budget, appropriation, or governance constraint affecting compensation consideration. It supplies fiscal context without establishing that the constraint caused a wage outcome. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 64,
+      "top_regions": [
+        [
+          "Northeast",
+          118
+        ],
+        [
+          "South",
+          80
+        ],
+        [
+          "Midwest",
+          71
+        ],
+        [
+          "West",
+          17
+        ]
+      ],
+      "top_source_families": [
+        [
+          "budget_or_pay_plan",
+          77
+        ],
+        [
+          "arbitration_award",
+          47
+        ],
+        [
+          "cba",
+          32
+        ],
+        [
+          "wage_schedule",
+          32
+        ],
+        [
+          "other_local_government_pay_policy",
+          22
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          66
+        ],
+        [
+          "NC",
+          27
+        ],
+        [
+          "TX",
+          22
+        ],
+        [
+          "OH",
+          18
+        ],
+        [
+          "MI",
+          17
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Budget, appropriation, council or board approval, and fiscal-constraint language supplies source-grounded governance context without proving that fiscal limits caused a wage outcome.",
+      "valid_rating_count": 286
+    },
+    {
+      "allowed_claim_level": "context careful mechanism claim",
+      "average_strength_score": 0.987,
+      "careful_claim_text": "Some valid rated spans contain documentary directionality consistent with safety advantage; the pattern is suggestive and not a wage-gap estimate.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Directional tags are suggestive documentary hints only; matched city-cycle structure and normalized pay evidence are required before gap claims.",
+      "claim_id": "B4X2500-CLAIM-20260730-014",
+      "claim_key": "safety_advantage_hints",
+      "claim_title": "Some spans provide safety-advantage directional hints",
+      "context_only_count": 34,
+      "direction_distribution": {
+        "safety_advantage": 78
+      },
+      "evidence_basis_summary": "Derived from 78 schema-valid rated spans matching the controlled safety_advantage_hints definition.",
+      "evidence_quality_distribution": {
+        "high": 23,
+        "moderate": 34,
+        "very_high": 21
+      },
+      "excluded_count": 0,
+      "finding_classification": "context finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 0,
+      "matched_structure_support_status": "no_matched_candidate_or_not_applicable",
+      "mechanism_cluster": "safety_non_safety_directional_hints",
+      "median_strength_score": 1.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 27,
+      "normalization_support_record_count": 40,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Some valid rated spans contain documentary directionality consistent with safety advantage; the pattern is suggestive and not a wage-gap estimate.",
+      "pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "report_ready_count": 7,
+      "representative_paraphrases": [
+        "The Medford, MN bounded evidence for the 2022 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Green, IN bounded evidence for the 2018 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Norfolk, MA bounded evidence for the 2021 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-3a413a6d40e51a17e8a2b3cb",
+          "paraphrase": "The Medford, MN bounded evidence for the 2022 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-7c00fd010c380208d8ced5f5"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-73c58fbccc24964cf89362e0",
+          "paraphrase": "The Green, IN bounded evidence for the 2018 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-bf5779a6dcbe3516ac2f0c17"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-74d70bd4adc1e6f64f4a8d56",
+          "paraphrase": "The Norfolk, MA bounded evidence for the 2021 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-4711d392d449f275fdefdbee"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Medford, MN bounded evidence for the 2022 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Green, IN bounded evidence for the 2018 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Norfolk, MA bounded evidence for the 2021 period carries a rated safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 10,
+      "top_regions": [
+        [
+          "Midwest",
+          41
+        ],
+        [
+          "Northeast",
+          24
+        ],
+        [
+          "South",
+          9
+        ],
+        [
+          "West",
+          4
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          28
+        ],
+        [
+          "wage_schedule",
+          10
+        ],
+        [
+          "agenda_packet_or_minutes",
+          10
+        ],
+        [
+          "mou_or_memorandum",
+          8
+        ],
+        [
+          "other_local_government_pay_policy",
+          6
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          12
+        ],
+        [
+          "MN",
+          10
+        ],
+        [
+          "MI",
+          8
+        ],
+        [
+          "NY",
+          7
+        ],
+        [
+          "MA",
+          6
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "A bounded subset of rated spans contains documentary directionality consistent with a safety advantage; matched structures identify review candidates but do not establish a final safety/non-safety wage difference.",
+      "valid_rating_count": 78
+    },
+    {
+      "allowed_claim_level": "context careful mechanism claim",
+      "average_strength_score": 0.039,
+      "careful_claim_text": "Some valid rated spans contain documentary directionality consistent with non safety advantage; the pattern is suggestive and not a wage-gap estimate.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Directional tags are suggestive documentary hints only; matched city-cycle structure and normalized pay evidence are required before gap claims.",
+      "claim_id": "B4X2500-CLAIM-20260730-015",
+      "claim_key": "non_safety_advantage_hints",
+      "claim_title": "Some spans provide non-safety-advantage directional hints",
+      "context_only_count": 134,
+      "direction_distribution": {
+        "non_safety_advantage": 637
+      },
+      "evidence_basis_summary": "Derived from 637 schema-valid rated spans matching the controlled non_safety_advantage_hints definition.",
+      "evidence_quality_distribution": {
+        "high": 208,
+        "moderate": 134,
+        "very_high": 295
+      },
+      "excluded_count": 0,
+      "finding_classification": "context finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 10,
+      "matched_structure_support_status": "candidate_structure_present",
+      "mechanism_cluster": "safety_non_safety_directional_hints",
+      "median_strength_score": 0.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 404,
+      "normalization_support_record_count": 509,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Some valid rated spans contain documentary directionality consistent with non safety advantage; the pattern is suggestive and not a wage-gap estimate.",
+      "pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "report_ready_count": 42,
+      "representative_paraphrases": [
+        "The Monongahela, PA bounded evidence for the 2024 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Porter, IN bounded evidence for the 2024 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Golden Beach, FL bounded evidence for the 2022 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-16b411a84a9ad59f718191e7",
+          "paraphrase": "The Monongahela, PA bounded evidence for the 2024 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-93aefd7364e8e52e7639b4ec"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-1d42724c329cfff1cd2236c3",
+          "paraphrase": "The Porter, IN bounded evidence for the 2024 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-496d526c37e78d153246ef75"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-25a2cc9e38dbe676211e0aef",
+          "paraphrase": "The Golden Beach, FL bounded evidence for the 2022 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-13fc148817524c3b88e8d70c"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Monongahela, PA bounded evidence for the 2024 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Porter, IN bounded evidence for the 2024 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Golden Beach, FL bounded evidence for the 2022 period carries a rated non safety advantage directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 57,
+      "top_regions": [
+        [
+          "Midwest",
+          300
+        ],
+        [
+          "Northeast",
+          211
+        ],
+        [
+          "South",
+          82
+        ],
+        [
+          "West",
+          44
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          215
+        ],
+        [
+          "wage_schedule",
+          90
+        ],
+        [
+          "budget_or_pay_plan",
+          65
+        ],
+        [
+          "agenda_packet_or_minutes",
+          65
+        ],
+        [
+          "arbitration_award",
+          60
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          99
+        ],
+        [
+          "OH",
+          89
+        ],
+        [
+          "NJ",
+          58
+        ],
+        [
+          "MI",
+          58
+        ],
+        [
+          "MN",
+          53
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "Some rated spans contain documentary directionality consistent with a non-safety advantage; these hints remain source-specific and are not population or wage-gap estimates.",
+      "valid_rating_count": 637
+    },
+    {
+      "allowed_claim_level": "context careful mechanism claim",
+      "average_strength_score": 0.244,
+      "careful_claim_text": "Some valid rated spans contain documentary directionality consistent with gap narrowing; the pattern is suggestive and not a wage-gap estimate.",
+      "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
+      "caveats": "Directional tags are suggestive documentary hints only; matched city-cycle structure and normalized pay evidence are required before gap claims.",
+      "claim_id": "B4X2500-CLAIM-20260730-016",
+      "claim_key": "gap_narrowing_hints",
+      "claim_title": "A small set of spans provides gap-narrowing hints",
+      "context_only_count": 13,
+      "direction_distribution": {
+        "gap_narrowing": 45
+      },
+      "evidence_basis_summary": "Derived from 45 schema-valid rated spans matching the controlled gap_narrowing_hints definition.",
+      "evidence_quality_distribution": {
+        "high": 18,
+        "moderate": 13,
+        "very_high": 14
+      },
+      "excluded_count": 0,
+      "finding_classification": "context finding candidate",
+      "forbidden_claim_warning": "Do not convert this corpus-bounded documentary claim into a final wage-gap, treatment-effect, causal, national, or population-prevalence claim.",
+      "matched_structure_support_record_count": 0,
+      "matched_structure_support_status": "no_matched_candidate_or_not_applicable",
+      "mechanism_cluster": "safety_non_safety_directional_hints",
+      "median_strength_score": 0.0,
+      "normalization_dependency": true,
+      "normalization_needed_count": 16,
+      "normalization_support_record_count": 22,
+      "normalization_support_status": "supported",
+      "original_claim_text": "Some valid rated spans contain documentary directionality consistent with gap narrowing; the pattern is suggestive and not a wage-gap estimate.",
+      "pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "report_ready_count": 5,
+      "representative_paraphrases": [
+        "The Evans, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Red Springs, NC bounded evidence for the 2022 period carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Cheektowaga, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "stronger_example_references": [
+        {
+          "normalized_record_id": "B4X2500NORM-01dd9ead02639ba613fa6dfd",
+          "paraphrase": "The Evans, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-7abdccd6c9d8d4b10b10c49c"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-1144951689e6e121c5c83c4b",
+          "paraphrase": "The Red Springs, NC bounded evidence for the 2022 period carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-7b1428cd12981fdfca156fbc"
+        },
+        {
+          "normalized_record_id": "B4X2500NORM-14cb54b2ab0a9146e3591601",
+          "paraphrase": "The Cheektowaga, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+          "reason_code": "direction_specific",
+          "span_id": "B4X2500SPAN-20260730-5f9728edb2381a5a05323a6e"
+        }
+      ],
+      "stronger_paraphrase_examples": [
+        "The Evans, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Red Springs, NC bounded evidence for the 2022 period carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate.",
+        "The Cheektowaga, NY bounded evidence carries a rated gap narrowing directional hint. It is retained as source-specific comparison context and not as a final wage difference. It remains a source-specific documentary example, not a wage-gap or causal estimate."
+      ],
+      "supporting_example_count": 11,
+      "top_regions": [
+        [
+          "Northeast",
+          17
+        ],
+        [
+          "Midwest",
+          17
+        ],
+        [
+          "South",
+          8
+        ],
+        [
+          "West",
+          3
+        ]
+      ],
+      "top_source_families": [
+        [
+          "arbitration_award",
+          16
+        ],
+        [
+          "budget_or_pay_plan",
+          8
+        ],
+        [
+          "agenda_packet_or_minutes",
+          5
+        ],
+        [
+          "cba",
+          5
+        ],
+        [
+          "other_local_government_pay_policy",
+          3
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          10
+        ],
+        [
+          "WI",
+          7
+        ],
+        [
+          "NJ",
+          3
+        ],
+        [
+          "GA",
+          3
+        ],
+        [
+          "NC",
+          3
+        ]
+      ],
+      "update_reason": "Added normalized/matched-structure status and replaced generic examples with bounded source-grounded paraphrases.",
+      "updated_claim_text": "A small source-grounded subset contains directionality consistent with gap narrowing; the evidence is retained for matched review and not treated as a final comparative result.",
+      "valid_rating_count": 45
+    }
+  ],
+  "count": 4
+}

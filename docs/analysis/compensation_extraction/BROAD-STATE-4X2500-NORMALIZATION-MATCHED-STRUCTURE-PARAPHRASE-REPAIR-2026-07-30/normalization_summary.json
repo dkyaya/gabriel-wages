@@ -1,0 +1,33 @@
+{
+  "blocker_counts": {
+    "annual_equivalent_uses_standard_2080_assumption": 1676,
+    "base_nonbase_unresolved": 7266,
+    "cycle_outside_2014_2024_observation_window": 2989,
+    "cycle_partially_outside_2014_2024_observation_window": 436,
+    "effective_period_or_cycle_unresolved": 3999,
+    "non_compensation_numeric_context": 116,
+    "occupation_or_unit_unresolved": 5908,
+    "pay_basis_unresolved": 7944,
+    "rank_step_grade_unresolved": 678,
+    "safety_category_unresolved": 5908
+  },
+  "cost_of_living_adjustment_performed": false,
+  "final_wage_gap_estimates_calculated": false,
+  "hourly_annual_assumption_counts": {
+    "document_specific": 102,
+    "not_applicable": 1785,
+    "not_safe_to_annualize": 7985,
+    "standard_2080_hours": 1676
+  },
+  "manual_review_count": 720,
+  "mechanism_only_count": 3769,
+  "normalized_quantitative_record_count": 11548,
+  "raw_values_preserved": true,
+  "status_counts": {
+    "normalization_deferred_manual_review": 720,
+    "normalization_full": 672,
+    "normalization_mechanism_only": 3769,
+    "normalization_partial": 1563,
+    "normalization_unusable": 4824
+  }
+}

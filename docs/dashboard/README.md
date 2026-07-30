@@ -10,18 +10,18 @@ The main page answers six questions:
 
 1. What is the current project stage?
 2. How much geographic scout coverage exists, measured as a rate?
-3. How much valid rated evidence has been codified, and how much is quarantined?
-4. Which documentary wage-growth mechanisms are strongest after codification?
+3. How much quantitative evidence is normalized, and how much same-city/cycle matching is structurally available?
+4. Which documentary wage-growth mechanisms remain strongest after normalization and matching?
 5. What careful claims are allowed, and what analyses remain blocked?
 6. What is the one next task?
 
-The current stage is valid-only rating ingestion/codification and PI-evidence preparation. The next task is `BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30`. The codified layer supports careful documentary mechanism claims, not normalized wage comparisons, national prevalence, or causal conclusions. Wage-gap estimates remain blocked pending normalization; causal analysis remains blocked pending matched city-cycle structure.
+The current stage is bounded quantitative normalization, same-municipality/cycle structure, and source-grounded PI-example repair. The next task is `BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30`. Raw compensation values remain preserved beside normalized fields, and matching is restricted to documentary comparison candidates in the 2014–2024 observation window. These structures support careful mechanism reporting and bounded review—not final wage-gap, national-prevalence, or causal conclusions.
 
 The main information architecture is deliberately narrow:
 
 - one status strip;
 - one scout-coverage-rate map;
-- four current codified-evidence figures;
+- four current normalized/matched-evidence figures;
 - one compact mechanism preview;
 - one claim-boundary panel; and
 - one collapsed technical-audit disclosure.
@@ -42,8 +42,8 @@ Candidate, source-family, evidence, mechanism, readiness, extraction, and rating
 
 ## Claim boundaries
 
-- Allowed: careful, corpus-scoped documentary mechanism claims about raises, COLA/CPI clauses, bargaining, comparability, timing, non-base compensation, and related rated evidence.
-- Not yet allowed: normalized wage comparisons or wage-gap estimates.
+- Allowed: careful, corpus-scoped documentary mechanism claims and descriptive statements about normalization or matched-structure readiness.
+- Not yet allowed: final wage comparisons or wage-gap estimates; candidate pairings still require bounded review and explicit analytic authorization.
 - Not yet allowed: regressions, treatment effects, national prevalence, or final causal claims.
 - COLA/CPI may be discussed as a contract mechanism. Analyst-side cost-of-living normalization has not been performed.
 
