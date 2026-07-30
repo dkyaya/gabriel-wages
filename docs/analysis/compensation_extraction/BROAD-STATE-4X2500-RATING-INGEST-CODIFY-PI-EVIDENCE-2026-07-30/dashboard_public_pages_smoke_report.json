@@ -1,3 +1,34 @@
 {
-  "status": "pending_commit_push_deployment"
+  "status": "public_pages_visible_current_passed",
+  "validated_at": "2026-07-30T21:24:35Z",
+  "public_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_ingest_codify_227e488",
+  "deployment_mechanism": "GitHub Actions Pages artifact",
+  "workflow_run_id": 30583074779,
+  "workflow_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30583074779",
+  "deployment_commit": "227e4887563bac7f066dc8d8f513793dca96431b",
+  "workflow_conclusion": "success",
+  "browser_controller": "Playwright MCP",
+  "console_error_count": 0,
+  "checks": {
+    "dashboard_loaded": true,
+    "cleaned_main_view_visible": true,
+    "current_stage_ingestion_codification_complete": true,
+    "next_task_normalization_matched_structure": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "raw_scout_count_context_only": true,
+    "national_coverage_rate_47_45_percent": true,
+    "valid_rating_count_18554": true,
+    "quarantine_count_58": true,
+    "codified_record_count_18554": true,
+    "careful_claim_count_18": true,
+    "mechanism_preview_visible": true,
+    "wage_gap_readiness_blocked": true,
+    "causal_readiness_blocked": true,
+    "global_readiness_not_fully_passed": true,
+    "technical_details_collapsed_by_default": true,
+    "current_report_pointer_current": true,
+    "no_stale_prior_stage_guidance": true
+  },
+  "main_view_metric_card_count": 4,
+  "screenshot": "dashboard_public_pages_smoke.png"
 }

@@ -18,7 +18,7 @@
   "normalization_needed_count": 11548,
   "quarantine_count": 58,
   "scout_covered_municipalities": 16887,
-  "status": "local_dashboard_validated",
+  "status": "public_dashboard_validated",
   "top_mechanism_clusters": [
     {
       "average_strength_score": 1.285,

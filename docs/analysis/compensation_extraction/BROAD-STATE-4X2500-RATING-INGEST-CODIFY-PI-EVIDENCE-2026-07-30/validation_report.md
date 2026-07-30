@@ -1,7 +1,7 @@
 # Validation report
 
 Core checks passed: **true**
-All checks passed: **false**
+All checks passed: **true**
 
 | Check | Passed |
 |---|---|
@@ -34,7 +34,7 @@ All checks passed: **false**
 | 27_map_coverage_rate | True |
 | 28_dashboard_build | True |
 | 29_local_browser | True |
-| 30_public_browser | False |
+| 30_public_browser | True |
 | 31_global_not_advanced | True |
 | 32_no_source_payloads_tracked | True |
 | 33_staged_audit | True |

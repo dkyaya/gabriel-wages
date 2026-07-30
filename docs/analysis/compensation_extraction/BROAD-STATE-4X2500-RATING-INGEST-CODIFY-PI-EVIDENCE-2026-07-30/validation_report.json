@@ -1,5 +1,5 @@
 {
-  "all_checks_passed": false,
+  "all_checks_passed": true,
   "checks": {
     "01_valid_input_18554": true,
     "02_quarantine_58": true,
@@ -30,15 +30,13 @@
     "27_map_coverage_rate": true,
     "28_dashboard_build": true,
     "29_local_browser": true,
-    "30_public_browser": false,
+    "30_public_browser": true,
     "31_global_not_advanced": true,
     "32_no_source_payloads_tracked": true,
     "33_staged_audit": true,
     "34_large_audit": true
   },
   "core_checks_passed": true,
-  "pending_checks": [
-    "30_public_browser"
-  ],
-  "validated_at": "2026-07-30T21:21:05.691315Z"
+  "pending_checks": [],
+  "validated_at": "2026-07-30T21:33:34.610877Z"
 }
