@@ -1,216 +1,71 @@
 {
-  "aggregate_staged_bytes": 1944656,
-  "audited_at": "2026-07-30T15:51:15.108890Z",
+  "aggregate_staged_bytes": 154094,
+  "audited_at": "2026-07-30T15:55:39.964573Z",
   "forbidden_file_count": 0,
   "forbidden_files": [],
   "full_text_ocr_or_browser_cache_staged": false,
   "retained_sources_staged_or_tracked": false,
-  "staged_file_count": 41,
+  "staged_file_count": 12,
   "staged_files": [
     {
-      "path": ".github/workflows/deploy-dashboard.yml",
-      "size_bytes": 2131,
-      "suffix": ".yml"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_deployment_config_audit.json",
-      "size_bytes": 961,
-      "suffix": ".json"
-    },
-    {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_local_browser_smoke_report.json",
-      "size_bytes": 1186,
+      "size_bytes": 1233,
       "suffix": ".json"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_local_build_report.json",
-      "size_bytes": 525,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_local_current.png",
-      "size_bytes": 141297,
-      "suffix": ".png"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_pages_repair_manifest.json",
-      "size_bytes": 503,
+      "size_bytes": 764,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_pages_repair_summary.json",
-      "size_bytes": 1042,
+      "size_bytes": 1259,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_pages_repair_summary.md",
-      "size_bytes": 1056,
+      "size_bytes": 1538,
       "suffix": ".md"
     },
     {
+      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_public_current.png",
+      "size_bytes": 141297,
+      "suffix": ".png"
+    },
+    {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_public_pages_smoke_report.json",
-      "size_bytes": 665,
+      "size_bytes": 1664,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_repair_actions.json",
-      "size_bytes": 889,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_stale_data_diagnosis.json",
-      "size_bytes": 994,
+      "size_bytes": 1148,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/dashboard_visibility_validation.json",
-      "size_bytes": 751,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/forbidden_action_audit.json",
-      "size_bytes": 474,
+      "size_bytes": 794,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/large_file_audit.json",
-      "size_bytes": 97,
+      "size_bytes": 188,
       "suffix": ".json"
     },
     {
-      "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/next_task.md",
-      "size_bytes": 427,
-      "suffix": ".md"
-    },
-    {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/staged_file_audit.json",
-      "size_bytes": 96,
+      "size_bytes": 1952,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/validation_report.json",
-      "size_bytes": 154,
+      "size_bytes": 1231,
       "suffix": ".json"
     },
     {
       "path": "docs/analysis/compensation_extraction/DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30/validation_report.md",
-      "size_bytes": 220,
+      "size_bytes": 1026,
       "suffix": ".md"
-    },
-    {
-      "path": "docs/dashboard/DEPLOYMENT.md",
-      "size_bytes": 8422,
-      "suffix": ".md"
-    },
-    {
-      "path": "docs/dashboard/data/analysis_readiness.json",
-      "size_bytes": 36433,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/candidate_queue_summary.json",
-      "size_bytes": 27834,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/content_triage_status_summary.json",
-      "size_bytes": 15708,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/coverage_funnel.json",
-      "size_bytes": 12676,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/parallel_scout_status.json",
-      "size_bytes": 13422,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
-      "size_bytes": 12684,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/priority_summary.json",
-      "size_bytes": 11853,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/project_phase_summary.json",
-      "size_bytes": 53547,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/reports_index.json",
-      "size_bytes": 29340,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/scout_operations_summary.json",
-      "size_bytes": 12964,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/scout_runtime_trends.json",
-      "size_bytes": 14022,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/scout_yield_by_state.json",
-      "size_bytes": 51681,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/source_review_status_summary.json",
-      "size_bytes": 27241,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/state_priority_summary.json",
-      "size_bytes": 39561,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/state_summary.json",
-      "size_bytes": 153892,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
-      "size_bytes": 56812,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/text_table_detection_status_summary.json",
-      "size_bytes": 12889,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/top_priority_targets.json",
-      "size_bytes": 217464,
-      "suffix": ".json"
-    },
-    {
-      "path": "docs/dashboard/data/verification_status_summary.json",
-      "size_bytes": 15288,
-      "suffix": ".json"
-    },
-    {
-      "path": "scripts/build_dashboard_data.py",
-      "size_bytes": 951715,
-      "suffix": ".py"
-    },
-    {
-      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
-      "size_bytes": 5147,
-      "suffix": ".py"
-    },
-    {
-      "path": "scripts/validate_dashboard_github_pages_deployment_repair.py",
-      "size_bytes": 10593,
-      "suffix": ".py"
     }
   ],
   "status": "passed"

@@ -1,6 +1,6 @@
 {
   "task_id": "DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30",
-  "status": "repair_implemented_public_deployment_pending",
+  "status": "completed_public_pages_current",
   "public_pages_url": "https://dkyaya.github.io/gabriel-wages/",
   "deployment_mechanism": "github_actions_pages_artifact",
   "root_cause": "The Pages workflow regenerated dashboard JSON in a clean checkout, but a historical source-review dashboard gate required 4,961 intentionally Git-ignored retained binaries to exist. Regeneration failed before Node/Vite, so recent pushes never produced a Pages artifact and the public site remained on the 2026-07-28 deployment.",
@@ -10,7 +10,10 @@
   "latest_failed_pre_repair_commit": "4f2317e9002beddbfc8839ba03862f454b44f87c",
   "local_build_passed": true,
   "local_browser_smoke_passed": true,
-  "public_pages_smoke_passed": false,
-  "latest_numbers_visibly_public": false,
-  "final_decision": null
+  "successful_repair_commit": "35933347c376cf99c988f893f4501366a1a98295",
+  "successful_pages_run_id": 30558746863,
+  "successful_pages_deployment_id": 5677961309,
+  "public_pages_smoke_passed": true,
+  "latest_numbers_visibly_public": true,
+  "final_decision": "dashboard_github_pages_deployment_repair_completed_public_pages_current"
 }

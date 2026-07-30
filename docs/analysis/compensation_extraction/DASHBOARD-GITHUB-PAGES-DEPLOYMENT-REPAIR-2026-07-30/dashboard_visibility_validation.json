@@ -1,5 +1,5 @@
 {
-  "status": "local_passed_public_pending_repair_deployment",
+  "status": "local_and_public_visible_current_passed",
   "validated_values": {
     "scout_covered_municipalities": 16887,
     "source_review_queue": 3950,
@@ -14,7 +14,8 @@
     "ocr_later": 601
   },
   "local_visible": true,
-  "public_visible": false,
+  "public_visible": true,
+  "stale_pre_repair_state_absent_publicly": true,
   "map_scope": "total_scout_coverage_only",
   "next_task": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30",
   "wage_gap_readiness": "blocked_pending_normalization",

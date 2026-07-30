@@ -26,5 +26,6 @@
   "wage_gap_readiness": "blocked_pending_normalization",
   "causal_readiness": "blocked_pending_matched_structure",
   "global_readiness_fully_passed": false,
-  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md"
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30/pdf_text_readiness_summary.md",
+  "screenshot": "dashboard_local_current.png"
 }

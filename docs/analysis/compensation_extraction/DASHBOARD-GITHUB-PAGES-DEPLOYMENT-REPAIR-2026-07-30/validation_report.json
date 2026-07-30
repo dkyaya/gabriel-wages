@@ -1,6 +1,31 @@
 {
-  "status": "pending_public_deployment_validation",
-  "passed_count": 20,
   "check_count": 21,
-  "pending_check": "public_pages_visible_smoke_passed"
+  "checks": {
+    "01_latest_dashboard_values_exist_locally": true,
+    "02_local_dashboard_build_passed": true,
+    "03_local_browser_smoke_passed": true,
+    "04_pages_deployment_mechanism_identified": true,
+    "05_public_pages_url_identified": true,
+    "06_public_pages_visible_smoke_passed": true,
+    "07_dashboard_map_scout_only": true,
+    "08_scout_coverage_16887": true,
+    "09_source_review_queue_3950": true,
+    "10_retained_sources_3672": true,
+    "11_text_extraction_ready_2940": true,
+    "12_ocr_later_601": true,
+    "13_next_task_text_extraction": true,
+    "14_global_readiness_not_advanced": true,
+    "15_wage_gap_blocked": true,
+    "16_causal_readiness_blocked": true,
+    "17_no_extraction_ocr_rating_ingestion_codification": true,
+    "18_no_wage_gap_regression_causal_claims": true,
+    "19_no_forbidden_files_staged_or_tracked": true,
+    "20_staged_file_audit_passed": true,
+    "21_large_file_audit_passed": true
+  },
+  "final_decision": "dashboard_github_pages_deployment_repair_completed_public_pages_current",
+  "passed_count": 21,
+  "status": "passed",
+  "task_id": "DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30",
+  "validated_at": "2026-07-30T15:56:27.887790Z"
 }

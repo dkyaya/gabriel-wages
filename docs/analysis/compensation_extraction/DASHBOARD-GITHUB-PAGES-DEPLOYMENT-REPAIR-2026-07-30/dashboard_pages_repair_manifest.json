@@ -4,10 +4,15 @@
   "head_before": "4f2317e9002beddbfc8839ba03862f454b44f87c",
   "public_pages_url": "https://dkyaya.github.io/gabriel-wages/",
   "deployment_mechanism": "github_actions_pages_artifact",
+  "repair_commit": "35933347c376cf99c988f893f4501366a1a98295",
+  "successful_pages_run_id": 30558746863,
+  "successful_pages_deployment_id": 5677961309,
   "repair_scope": [
     "clean-checkout dashboard metadata gate",
     "Pages workflow regression test",
     "local and public rendered smoke validation"
   ],
+  "local_screenshot": "dashboard_local_current.png",
+  "public_screenshot": "dashboard_public_current.png",
   "forbidden_downstream_work_authorized": false
 }
