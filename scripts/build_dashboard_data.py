@@ -1715,6 +1715,11 @@ BROAD_STATE_4X2500_SPAN_RATING_CLEANUP_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30"
 )
+BROAD_STATE_4X2500_RATING_INGEST_CODIFY_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6401,6 +6406,67 @@ def broad_state_4x2500_span_rating_cleanup_status() -> tuple[bool, dict[str, Any
     }
 
 
+def broad_state_4x2500_rating_ingest_codify_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the valid-only codified rating and PI-evidence layer."""
+    directory = BROAD_STATE_4X2500_RATING_INGEST_CODIFY_DIR
+    required = (
+        directory / "rating_ingest_codify_summary.json",
+        directory / "rating_ingest_codify_manifest.json",
+        directory / "codified_valid_ratings_manifest.json",
+        directory / "mechanism_cluster_summary.json",
+        directory / "careful_claim_candidates.json",
+        directory / "quarantine_exclusion_summary.json",
+        directory / "causal_boundary_codified_summary.json",
+        directory / "dashboard_ingestion_update_summary.json",
+        directory / "forbidden_action_audit.json",
+        directory / "rating_ingest_codify_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    (summary, manifest, codified_manifest, mechanisms, claims, quarantine,
+     causal, dashboard, forbidden, _) = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    gates = (
+        summary.get("decision")
+        == "broad_state_4x2500_rating_ingest_codify_completed_normalization_matching_ready"
+        and summary.get("valid_rating_input_count") == 18_554
+        and summary.get("quarantine_count") == 58
+        and summary.get("rating_total") == 18_612
+        and summary.get("codified_record_count") == 18_554
+        and codified_manifest.get("row_count") == 18_554
+        and codified_manifest.get("quarantine_included") is False
+        and quarantine.get("row_count") == 58
+        and quarantine.get("excluded_from_codified_valid_ratings") is True
+        and mechanisms.get("primary_counts_reconcile") is True
+        and claims.get("count") == summary.get("careful_claim_candidate_count") == 18
+        and causal.get("causal_claim_allowed_true") == 0
+        and causal.get("population_prevalence_claim_allowed_true") == 0
+        and causal.get("national_prevalence_claim_allowed_true") == 0
+        and causal.get("global_analysis_readiness") is False
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and forbidden.get("wage_normalization_occurred") is False
+        and forbidden.get("matched_city_cycle_structure_built") is False
+        and forbidden.get("rating_rerun_occurred") is False
+        and summary.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 rating ingestion/codification package fails dashboard gates")
+    return True, {
+        **summary,
+        "mechanism_clusters": mechanisms.get("clusters", {}),
+        "careful_claims": claims.get("claims", []),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/"
+            "rating_ingest_codify_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6536,6 +6602,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_rating_available, broad_4x2500_rating = (
         broad_state_4x2500_span_rating_cleanup_status()
+    )
+    broad_4x2500_ingest_available, broad_4x2500_ingest = (
+        broad_state_4x2500_rating_ingest_codify_status()
     )
     published_reports = [
         *(
@@ -7276,6 +7345,36 @@ def build_reports_index_layer(
                 {"label": "rating queue", "value": broad_4x2500_rating["rating_queue_size"]},
                 {"label": "valid ratings", "value": broad_4x2500_rating["valid_rating_count"]},
                 {"label": "quarantine", "value": broad_4x2500_rating["quarantine_rating_count"]},
+            ],
+        })
+    if broad_4x2500_ingest_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-span-rating-dashboard-cleanup-2026-07-30":
+                report["link_label"] = "Open historical 4 × 2,500 span-rating report"
+        finding_counts = broad_4x2500_ingest["finding_classification_counts"]
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-rating-ingest-codify-pi-evidence-2026-07-30",
+            "title": "Broad State 4 × 2,500 Codified PI Evidence",
+            "report_type": "Current valid-only codified documentary evidence result",
+            "date": "2026-07-30",
+            "checkpoint": f"{broad_4x2500_ingest['codified_record_count']:,} codified valid ratings",
+            "summary": (
+                "All schema-valid ratings are ingested into a lineage-preserving codified layer; "
+                "quarantines remain excluded. Careful mechanism claims are prepared for PI review, "
+                "while normalization, matching, wage-gap, prevalence, and causal analysis remain blocked."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "codified evidence", "PI claims"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_ingest["dashboard_result_path"],
+            "link_label": "Open current codified PI-evidence report",
+            "scope_metrics": [
+                {"label": "codified records", "value": broad_4x2500_ingest["codified_record_count"]},
+                {"label": "careful claims", "value": broad_4x2500_ingest["careful_claim_candidate_count"]},
+                {"label": "core candidates", "value": finding_counts.get("core finding candidate", 0)},
             ],
         })
     if live_available:
@@ -9797,6 +9896,9 @@ def build_project_phase_summary(
     broad_4x2500_rating_available, broad_4x2500_rating = (
         broad_state_4x2500_span_rating_cleanup_status()
     )
+    broad_4x2500_ingest_available, broad_4x2500_ingest = (
+        broad_state_4x2500_rating_ingest_codify_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -10858,6 +10960,53 @@ def build_project_phase_summary(
                 "do not calculate wage gaps, regressions, population prevalence, or final causal claims",
             ],
             "last_updated_context": "broad_state_4x2500_span_rating_complete_ingestion_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_matched_structure",
+        })
+    if broad_4x2500_ingest_available:
+        usability = broad_4x2500_ingest["report_usability_counts"]
+        finding_counts = broad_4x2500_ingest["finding_classification_counts"]
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_rating_ingest_codify_complete",
+            "current_phase": "Rating ingestion/codification complete",
+            "current_phase_code": broad_4x2500_ingest["decision"],
+            "current_evidence_status": "codified_documentary_evidence_ready_for_normalization_matching",
+            "broad_state_4x2500_rating_ingest_codify_available": True,
+            "broad_state_4x2500_rating_ingest_codify_decision": broad_4x2500_ingest["decision"],
+            "rating_valid_count": broad_4x2500_ingest["valid_rating_input_count"],
+            "rating_quarantine_count": broad_4x2500_ingest["quarantine_count"],
+            "codified_record_count": broad_4x2500_ingest["codified_record_count"],
+            "careful_claim_candidate_count": broad_4x2500_ingest["careful_claim_candidate_count"],
+            "careful_claim_core_count": finding_counts.get("core finding candidate", 0),
+            "careful_claim_supporting_count": finding_counts.get("supporting finding candidate", 0),
+            "careful_claim_context_count": finding_counts.get("context finding candidate", 0),
+            "careful_claim_limit_exclusion_count": (
+                finding_counts.get("limitation only", 0) + finding_counts.get("exclude", 0)
+            ),
+            "rating_report_ready_count": usability.get("pi_report_core_finding_ready", 0),
+            "rating_supporting_count": usability.get("pi_report_supporting_example", 0),
+            "rating_context_count": usability.get("pi_report_context_only", 0),
+            "rating_normalization_needed_count": usability.get("downstream_normalization_needed", 0),
+            "rating_excluded_count": usability.get("exclude_from_report", 0),
+            "broad_state_4x2500_ingested_mechanism_clusters": broad_4x2500_ingest["mechanism_clusters"],
+            "broad_state_4x2500_careful_claims": broad_4x2500_ingest["careful_claims"],
+            "current_report_title": "Broad State 4 × 2,500 Codified PI Evidence",
+            "current_report_path": broad_4x2500_ingest["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_ingest["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30",
+            "next_phase": "quantitative normalization and matched city-cycle structure",
+            "next_phase_sequence": [
+                "preserve raw compensation values while adding normalized fields",
+                "align pay units, base/non-base status, occupations, ranks, steps, effective periods, and cycles",
+                "construct matched safety/non-safety city-cycle structures only where evidence supports them",
+                "do not run final wage-gap, regression, prevalence, treatment-effect, or causal analysis",
+            ],
+            "last_updated_context": "broad_state_4x2500_rating_ingest_codify_complete_normalization_matching_ready",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,

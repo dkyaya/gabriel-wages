@@ -1,0 +1,1034 @@
+{
+  "careful_claim_candidate_count": 18,
+  "claim_relevance_counts": {
+    "direct_quantitative_claim_support": 6454,
+    "directional_hint_only": 430,
+    "mechanism_summary_support": 6509,
+    "weak_or_not_supported": 5161
+  },
+  "codified_record_count": 18554,
+  "decision": "broad_state_4x2500_rating_ingest_codify_completed_normalization_matching_ready",
+  "directionality_counts": {
+    "gap_narrowing": 45,
+    "neutral_or_general": 6830,
+    "non_safety_advantage": 637,
+    "not_applicable": 10964,
+    "safety_advantage": 78
+  },
+  "finding_classification_counts": {
+    "context finding candidate": 4,
+    "core finding candidate": 6,
+    "exclude": 1,
+    "limitation only": 1,
+    "supporting finding candidate": 6
+  },
+  "generated_at": "2026-07-30T21:14:42.534036Z",
+  "global_analysis_readiness": false,
+  "matched_city_cycle_structure_built": false,
+  "mechanism_clusters": {
+    "automatic_wage_growth": {
+      "average_strength_score": 1.377,
+      "careful_claim_text": "Within the processed rated corpus, automatic wage-growth provisions—including scheduled increases, percentage raises, and indexed adjustments—form a recurring documentary mechanism.",
+      "causal_claim_allowed": false,
+      "caveat": "This describes rated contract language; it does not establish national prevalence, comparative wage effects, or causality.",
+      "context_count": 876,
+      "core_count": 27,
+      "direction_distribution": {
+        "gap_narrowing": 17,
+        "neutral_or_general": 1426,
+        "non_safety_advantage": 102,
+        "not_applicable": 1130,
+        "safety_advantage": 1
+      },
+      "evidence_quality_distribution": {
+        "high": 759,
+        "moderate": 1032,
+        "very_high": 885
+      },
+      "excluded_count": 156,
+      "median_strength_score": 1.0,
+      "normalization_count": 1599,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 1312,
+      "report_ready_count": 45,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 2676,
+      "supporting_count": 18,
+      "title": "Automatic wage-growth mechanisms",
+      "top_regions": [
+        [
+          "Midwest",
+          1163
+        ],
+        [
+          "Northeast",
+          772
+        ],
+        [
+          "South",
+          498
+        ],
+        [
+          "West",
+          243
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          653
+        ],
+        [
+          "wage_schedule",
+          575
+        ],
+        [
+          "budget_or_pay_plan",
+          494
+        ],
+        [
+          "agenda_packet_or_minutes",
+          280
+        ],
+        [
+          "arbitration_award",
+          271
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          444
+        ],
+        [
+          "OH",
+          290
+        ],
+        [
+          "MN",
+          226
+        ],
+        [
+          "NC",
+          216
+        ],
+        [
+          "MI",
+          193
+        ]
+      ]
+    },
+    "bargaining_dispute_resolution": {
+      "average_strength_score": 1.285,
+      "careful_claim_text": "Rated evidence identifies bargaining, arbitration, factfinding, settlement, and strike/no-strike language as plausible institutional channels shaping municipal compensation terms in some documents.",
+      "causal_claim_allowed": false,
+      "caveat": "The evidence identifies documentary mechanisms, not treatment effects or proof that dispute resolution raises wages.",
+      "context_count": 1241,
+      "core_count": 264,
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 914,
+        "non_safety_advantage": 7,
+        "not_applicable": 1202,
+        "safety_advantage": 2
+      },
+      "evidence_quality_distribution": {
+        "high": 205,
+        "moderate": 1651,
+        "very_high": 270
+      },
+      "excluded_count": 410,
+      "median_strength_score": 1.0,
+      "normalization_count": 13,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 1645,
+      "report_ready_count": 462,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 2126,
+      "supporting_count": 198,
+      "title": "Bargaining and dispute-resolution mechanisms",
+      "top_regions": [
+        [
+          "Midwest",
+          1193
+        ],
+        [
+          "Northeast",
+          789
+        ],
+        [
+          "South",
+          90
+        ],
+        [
+          "West",
+          54
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          859
+        ],
+        [
+          "wage_schedule",
+          278
+        ],
+        [
+          "arbitration_award",
+          276
+        ],
+        [
+          "agenda_packet_or_minutes",
+          257
+        ],
+        [
+          "mou_or_memorandum",
+          180
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          445
+        ],
+        [
+          "NY",
+          258
+        ],
+        [
+          "NJ",
+          239
+        ],
+        [
+          "IL",
+          199
+        ],
+        [
+          "WI",
+          189
+        ]
+      ]
+    },
+    "fiscal_governance_constraints": {
+      "average_strength_score": 0.416,
+      "careful_claim_text": "Some rated evidence documents fiscal limits, appropriation requirements, governance approvals, and internal-equity considerations as constraints or decision points in municipal compensation setting.",
+      "causal_claim_allowed": false,
+      "caveat": "This is a bounded documentary pattern and does not prove that fiscal constraints suppress any occupation's wages.",
+      "context_count": 320,
+      "core_count": 27,
+      "direction_distribution": {
+        "gap_narrowing": 15,
+        "neutral_or_general": 355,
+        "non_safety_advantage": 6,
+        "not_applicable": 678
+      },
+      "evidence_quality_distribution": {
+        "high": 99,
+        "moderate": 920,
+        "very_high": 35
+      },
+      "excluded_count": 600,
+      "median_strength_score": 0.0,
+      "normalization_count": 24,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 219,
+      "report_ready_count": 110,
+      "representative_paraphrases": [
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 1054,
+      "supporting_count": 83,
+      "title": "Fiscal and governance constraints",
+      "top_regions": [
+        [
+          "South",
+          368
+        ],
+        [
+          "Midwest",
+          355
+        ],
+        [
+          "Northeast",
+          171
+        ],
+        [
+          "West",
+          160
+        ]
+      ],
+      "top_source_families": [
+        [
+          "budget_or_pay_plan",
+          247
+        ],
+        [
+          "wage_schedule",
+          177
+        ],
+        [
+          "other_local_government_pay_policy",
+          143
+        ],
+        [
+          "agenda_packet_or_minutes",
+          135
+        ],
+        [
+          "cba",
+          92
+        ]
+      ],
+      "top_states": [
+        [
+          "MN",
+          114
+        ],
+        [
+          "NC",
+          92
+        ],
+        [
+          "TX",
+          91
+        ],
+        [
+          "NY",
+          76
+        ],
+        [
+          "MI",
+          52
+        ]
+      ]
+    },
+    "market_staffing_pressure": {
+      "average_strength_score": 0.228,
+      "careful_claim_text": "Within the processed rated corpus, market comparability, recruitment, retention, staffing shortages, and competing-jurisdiction language appear as candidate explanations for compensation changes.",
+      "causal_claim_allowed": false,
+      "caveat": "These are local documentary justifications and cannot be generalized to all municipalities.",
+      "context_count": 514,
+      "core_count": 23,
+      "direction_distribution": {
+        "gap_narrowing": 13,
+        "neutral_or_general": 528,
+        "non_safety_advantage": 38,
+        "not_applicable": 1820,
+        "safety_advantage": 5
+      },
+      "evidence_quality_distribution": {
+        "high": 69,
+        "moderate": 2302,
+        "very_high": 33
+      },
+      "excluded_count": 1788,
+      "median_strength_score": 0.0,
+      "normalization_count": 16,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 356,
+      "report_ready_count": 86,
+      "representative_paraphrases": [
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context."
+      ],
+      "supported_record_count": 2404,
+      "supporting_count": 63,
+      "title": "Market and staffing pressure mechanisms",
+      "top_regions": [
+        [
+          "Midwest",
+          1094
+        ],
+        [
+          "South",
+          611
+        ],
+        [
+          "Northeast",
+          555
+        ],
+        [
+          "West",
+          144
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          600
+        ],
+        [
+          "wage_schedule",
+          406
+        ],
+        [
+          "budget_or_pay_plan",
+          352
+        ],
+        [
+          "other_local_government_pay_policy",
+          340
+        ],
+        [
+          "agenda_packet_or_minutes",
+          215
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          312
+        ],
+        [
+          "NC",
+          162
+        ],
+        [
+          "NY",
+          152
+        ],
+        [
+          "TN",
+          150
+        ],
+        [
+          "MN",
+          139
+        ]
+      ]
+    },
+    "non_base_compensation": {
+      "average_strength_score": 1.646,
+      "careful_claim_text": "Within the processed rated corpus, non-base compensation appears as a substantial compensation channel through longevity, shift, hazard, specialty, certification, education, stipend, allowance, and premium-pay provisions.",
+      "causal_claim_allowed": false,
+      "caveat": "These components require separate classification from base pay before comparative compensation analysis.",
+      "context_count": 2476,
+      "core_count": 30,
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 1842,
+        "non_safety_advantage": 345,
+        "not_applicable": 1497,
+        "safety_advantage": 33
+      },
+      "evidence_quality_distribution": {
+        "high": 660,
+        "moderate": 2476,
+        "very_high": 582
+      },
+      "excluded_count": 0,
+      "median_strength_score": 1.0,
+      "normalization_count": 1170,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 3718,
+      "report_ready_count": 72,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 3718,
+      "supporting_count": 42,
+      "title": "Non-base compensation mechanisms",
+      "top_regions": [
+        [
+          "Midwest",
+          1788
+        ],
+        [
+          "Northeast",
+          1221
+        ],
+        [
+          "South",
+          529
+        ],
+        [
+          "West",
+          180
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          1360
+        ],
+        [
+          "wage_schedule",
+          564
+        ],
+        [
+          "budget_or_pay_plan",
+          416
+        ],
+        [
+          "other_local_government_pay_policy",
+          243
+        ],
+        [
+          "arbitration_award",
+          235
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          635
+        ],
+        [
+          "NY",
+          507
+        ],
+        [
+          "NJ",
+          320
+        ],
+        [
+          "MI",
+          311
+        ],
+        [
+          "MN",
+          266
+        ]
+      ]
+    },
+    "quantitative_base_wage_needs_normalization": {
+      "average_strength_score": 1.452,
+      "careful_claim_text": "The processed rated corpus contains a substantial pool of direct compensation values and wage schedules that is potentially useful for quantitative analysis after normalization.",
+      "causal_claim_allowed": false,
+      "caveat": "Hourly/annual units, base/non-base status, occupation, rank, step, effective period, and municipality-cycle alignment remain unresolved.",
+      "context_count": 4419,
+      "core_count": 27,
+      "direction_distribution": {
+        "gap_narrowing": 22,
+        "neutral_or_general": 4705,
+        "non_safety_advantage": 513,
+        "not_applicable": 6330,
+        "safety_advantage": 40
+      },
+      "evidence_quality_distribution": {
+        "high": 2449,
+        "moderate": 6034,
+        "very_high": 3127
+      },
+      "excluded_count": 1615,
+      "median_strength_score": 1.0,
+      "normalization_count": 5533,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 2593,
+      "report_ready_count": 43,
+      "representative_paraphrases": [
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 11610,
+      "supporting_count": 16,
+      "title": "Quantitative base-wage evidence needing normalization",
+      "top_regions": [
+        [
+          "Midwest",
+          5341
+        ],
+        [
+          "Northeast",
+          3498
+        ],
+        [
+          "South",
+          2063
+        ],
+        [
+          "West",
+          708
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          3360
+        ],
+        [
+          "wage_schedule",
+          2033
+        ],
+        [
+          "budget_or_pay_plan",
+          1716
+        ],
+        [
+          "agenda_packet_or_minutes",
+          1219
+        ],
+        [
+          "other_local_government_pay_policy",
+          788
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          1560
+        ],
+        [
+          "NY",
+          1556
+        ],
+        [
+          "MI",
+          877
+        ],
+        [
+          "NJ",
+          825
+        ],
+        [
+          "MN",
+          765
+        ]
+      ]
+    },
+    "rank_step_specialization_classification": {
+      "average_strength_score": 2.427,
+      "careful_claim_text": "Rank, step, grade, specialization, and classification structures recur in report-usable evidence and provide plausible channels for wage progression within bargaining units.",
+      "causal_claim_allowed": false,
+      "caveat": "Cross-unit comparison requires alignment of ranks, grades, steps, occupations, and effective periods.",
+      "context_count": 211,
+      "core_count": 3,
+      "direction_distribution": {
+        "gap_narrowing": 4,
+        "neutral_or_general": 425,
+        "non_safety_advantage": 32,
+        "not_applicable": 289,
+        "safety_advantage": 13
+      },
+      "evidence_quality_distribution": {
+        "high": 266,
+        "moderate": 211,
+        "very_high": 286
+      },
+      "excluded_count": 0,
+      "median_strength_score": 2.0,
+      "normalization_count": 544,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 710,
+      "report_ready_count": 8,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 763,
+      "supporting_count": 5,
+      "title": "Rank, step, specialization, and classification mechanisms",
+      "top_regions": [
+        [
+          "Midwest",
+          345
+        ],
+        [
+          "South",
+          190
+        ],
+        [
+          "Northeast",
+          184
+        ],
+        [
+          "West",
+          44
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          238
+        ],
+        [
+          "wage_schedule",
+          166
+        ],
+        [
+          "budget_or_pay_plan",
+          162
+        ],
+        [
+          "arbitration_award",
+          53
+        ],
+        [
+          "agenda_packet_or_minutes",
+          37
+        ]
+      ],
+      "top_states": [
+        [
+          "OH",
+          127
+        ],
+        [
+          "NY",
+          99
+        ],
+        [
+          "NC",
+          84
+        ],
+        [
+          "MN",
+          61
+        ],
+        [
+          "MI",
+          58
+        ]
+      ]
+    },
+    "safety_non_safety_directional_hints": {
+      "average_strength_score": 1.735,
+      "careful_claim_text": "A minority of valid ratings provides directional hints consistent with safety advantage, non-safety advantage, or gap narrowing, while most ratings are neutral/general or not directionally applicable.",
+      "causal_claim_allowed": false,
+      "caveat": "Directional tags are suggestive documentary hints only; matched city-cycle structure and normalized pay evidence are required before gap claims.",
+      "context_count": 153,
+      "core_count": 44,
+      "direction_distribution": {
+        "gap_narrowing": 6,
+        "neutral_or_general": 123,
+        "non_safety_advantage": 13,
+        "not_applicable": 62,
+        "safety_advantage": 41
+      },
+      "evidence_quality_distribution": {
+        "high": 51,
+        "moderate": 153,
+        "very_high": 41
+      },
+      "excluded_count": 0,
+      "median_strength_score": 1.0,
+      "normalization_count": 9,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 125,
+      "report_ready_count": 83,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 245,
+      "supporting_count": 39,
+      "title": "Safety vs non-safety directional hints",
+      "top_regions": [
+        [
+          "Midwest",
+          101
+        ],
+        [
+          "Northeast",
+          101
+        ],
+        [
+          "South",
+          32
+        ],
+        [
+          "West",
+          11
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          89
+        ],
+        [
+          "arbitration_award",
+          39
+        ],
+        [
+          "wage_schedule",
+          31
+        ],
+        [
+          "other_local_government_pay_policy",
+          16
+        ],
+        [
+          "personnel_policy",
+          13
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          70
+        ],
+        [
+          "OH",
+          36
+        ],
+        [
+          "MN",
+          15
+        ],
+        [
+          "IL",
+          14
+        ],
+        [
+          "MI",
+          13
+        ]
+      ]
+    },
+    "timing_implementation": {
+      "average_strength_score": 1.853,
+      "careful_claim_text": "Rated evidence frequently identifies implementation dates, retroactivity, settlement timing, and delayed payment as mechanisms that can affect when negotiated wage gains are realized.",
+      "causal_claim_allowed": false,
+      "caveat": "Timing language is not a normalized measure of realized growth and does not by itself establish a safety/non-safety difference.",
+      "context_count": 911,
+      "core_count": 90,
+      "direction_distribution": {
+        "gap_narrowing": 2,
+        "neutral_or_general": 1058,
+        "non_safety_advantage": 101,
+        "not_applicable": 1258,
+        "safety_advantage": 2
+      },
+      "evidence_quality_distribution": {
+        "high": 963,
+        "moderate": 989,
+        "very_high": 469
+      },
+      "excluded_count": 78,
+      "median_strength_score": 2.0,
+      "normalization_count": 1208,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 2212,
+      "report_ready_count": 224,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 2421,
+      "supporting_count": 134,
+      "title": "Timing and implementation mechanisms",
+      "top_regions": [
+        [
+          "Midwest",
+          1147
+        ],
+        [
+          "Northeast",
+          833
+        ],
+        [
+          "South",
+          325
+        ],
+        [
+          "West",
+          116
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          828
+        ],
+        [
+          "wage_schedule",
+          362
+        ],
+        [
+          "agenda_packet_or_minutes",
+          239
+        ],
+        [
+          "budget_or_pay_plan",
+          204
+        ],
+        [
+          "arbitration_award",
+          203
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          427
+        ],
+        [
+          "OH",
+          403
+        ],
+        [
+          "MI",
+          214
+        ],
+        [
+          "NJ",
+          209
+        ],
+        [
+          "MN",
+          144
+        ]
+      ]
+    },
+    "weak_context_exclusion": {
+      "average_strength_score": 0.233,
+      "careful_claim_text": "A material portion of ratings is context-only, weak, or excluded, reinforcing the need to separate documentary context from claim-ready evidence.",
+      "causal_claim_allowed": false,
+      "caveat": "Excluded and quarantined evidence must not be used as support unless separately repaired and revalidated.",
+      "context_count": 1435,
+      "core_count": 2,
+      "direction_distribution": {
+        "neutral_or_general": 1177,
+        "non_safety_advantage": 2,
+        "not_applicable": 5465
+      },
+      "evidence_quality_distribution": {
+        "high": 33,
+        "moderate": 6596,
+        "very_high": 15
+      },
+      "excluded_count": 5161,
+      "median_strength_score": 0.0,
+      "normalization_count": 40,
+      "normalization_dependency": true,
+      "population_prevalence_claim_allowed": false,
+      "primary_record_count": 5664,
+      "report_ready_count": 8,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supported_record_count": 6644,
+      "supporting_count": 6,
+      "title": "Weak, context, and exclusion layer",
+      "top_regions": [
+        [
+          "Midwest",
+          2657
+        ],
+        [
+          "South",
+          1772
+        ],
+        [
+          "Northeast",
+          1753
+        ],
+        [
+          "West",
+          462
+        ]
+      ],
+      "top_source_families": [
+        [
+          "cba",
+          1698
+        ],
+        [
+          "budget_or_pay_plan",
+          1148
+        ],
+        [
+          "wage_schedule",
+          1091
+        ],
+        [
+          "other_local_government_pay_policy",
+          672
+        ],
+        [
+          "agenda_packet_or_minutes",
+          635
+        ]
+      ],
+      "top_states": [
+        [
+          "NY",
+          698
+        ],
+        [
+          "OH",
+          694
+        ],
+        [
+          "NC",
+          529
+        ],
+        [
+          "MN",
+          401
+        ],
+        [
+          "MI",
+          355
+        ]
+      ]
+    }
+  },
+  "next_task": "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30",
+  "normalization_blocker_counts": {
+    "base_vs_non_base_classification": 4328,
+    "effective_period_alignment": 3787,
+    "hourly_vs_annual_unit": 2101,
+    "municipality_cycle_alignment": 11548,
+    "nominal_vs_real_deferred": 11548,
+    "occupation_unit_alignment": 11548,
+    "rank_step_grade_alignment": 1429
+  },
+  "normalization_performed": false,
+  "ocr_occurred": false,
+  "quantitative_readiness": {
+    "base_vs_non_base_clear": 11069,
+    "effective_period_present": 2478,
+    "normalization_needed": 11548,
+    "percentage_or_growth_value_present": 1381,
+    "quantitative_value_present": 11548,
+    "rank_step_grade_present": 1429,
+    "raw_wage_or_comp_value_present": 3514,
+    "unit_or_group_present": 18554
+  },
+  "quarantine_count": 58,
+  "quarantine_included_as_valid": false,
+  "rating_rerun_occurred": false,
+  "rating_total": 18612,
+  "report_usability_counts": {
+    "downstream_normalization_needed": 5533,
+    "exclude_from_report": 5161,
+    "pi_report_context_only": 6860,
+    "pi_report_core_finding_ready": 472,
+    "pi_report_supporting_example": 528
+  },
+  "source_access_occurred": false,
+  "task_id": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30",
+  "valid_rating_input_count": 18554,
+  "wage_gap_or_regression_occurred": false
+}

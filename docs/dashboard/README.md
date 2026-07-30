@@ -10,18 +10,18 @@ The main page answers six questions:
 
 1. What is the current project stage?
 2. How much geographic scout coverage exists, measured as a rate?
-3. How much valid rated evidence is available, and how much is quarantined?
-4. Which documentary wage-growth mechanisms are most prominent after rating?
-5. What descriptive claims are allowed, and what analyses remain blocked?
+3. How much valid rated evidence has been codified, and how much is quarantined?
+4. Which documentary wage-growth mechanisms are strongest after codification?
+5. What careful claims are allowed, and what analyses remain blocked?
 6. What is the one next task?
 
-The current stage is broad-state exact-span rating. The next task is `BROAD-STATE-4X2500-RATING-INGEST-CODIFY-2026-07-30`. Rated spans remain documentary measurements until downstream ingestion/codification. Wage-gap estimates remain blocked pending normalization; causal analysis remains blocked pending matched city-cycle structure; corpus frequencies are not national prevalence.
+The current stage is valid-only rating ingestion/codification and PI-evidence preparation. The next task is `BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30`. The codified layer supports careful documentary mechanism claims, not normalized wage comparisons, national prevalence, or causal conclusions. Wage-gap estimates remain blocked pending normalization; causal analysis remains blocked pending matched city-cycle structure.
 
 The main information architecture is deliberately narrow:
 
 - one status strip;
 - one scout-coverage-rate map;
-- four current rating-state figures;
+- four current codified-evidence figures;
 - one compact mechanism preview;
 - one claim-boundary panel; and
 - one collapsed technical-audit disclosure.
@@ -42,7 +42,7 @@ Candidate, source-family, evidence, mechanism, readiness, extraction, and rating
 
 ## Claim boundaries
 
-- Allowed: bounded descriptive summaries of documentary mechanisms such as raises, COLA/CPI clauses, bargaining, comparability, timing, and non-base compensation.
+- Allowed: careful, corpus-scoped documentary mechanism claims about raises, COLA/CPI clauses, bargaining, comparability, timing, non-base compensation, and related rated evidence.
 - Not yet allowed: normalized wage comparisons or wage-gap estimates.
 - Not yet allowed: regressions, treatment effects, national prevalence, or final causal claims.
 - COLA/CPI may be discussed as a contract mechanism. Analyst-side cost-of-living normalization has not been performed.
@@ -92,4 +92,4 @@ The GitHub Pages workflow is `.github/workflows/deploy-dashboard.yml`. It regene
 - Generated dashboard data: `data/*.json`
 - Data builder: `../../scripts/build_dashboard_data.py`
 
-The builder does not open source locators, download documents, extract text, OCR, rate spans, ingest/codify evidence, normalize wages, or run analysis. Those are separate authorized stages with their own durable artifacts and gates.
+The builder does not open source locators, download documents, extract text, OCR, rerate spans, normalize wages, build matched panels, or run wage-gap/causal analysis. It reads only bounded metadata and summary artifacts from already authorized stages.

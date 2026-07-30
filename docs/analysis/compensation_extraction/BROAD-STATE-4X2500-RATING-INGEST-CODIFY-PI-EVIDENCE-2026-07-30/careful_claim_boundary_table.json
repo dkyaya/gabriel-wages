@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "claim_class": "careful_mechanism_description",
+      "prohibited_language": "X causes wage growth.",
+      "required_condition": "Retain corpus scope and documentary caveat.",
+      "safe_language": "Within the processed rated corpus, rated evidence suggests a plausible mechanism.",
+      "status": "allowed"
+    },
+    {
+      "claim_class": "corpus_count_comparison",
+      "prohibited_language": "X is nationally more common than Y.",
+      "required_condition": "Do not imply population prevalence.",
+      "safe_language": "Among valid rated spans, X appears more often than Y.",
+      "status": "allowed"
+    },
+    {
+      "claim_class": "directional_hint",
+      "prohibited_language": "The safety wage gap is X.",
+      "required_condition": "Matched city-cycle and normalization remain pending.",
+      "safe_language": "Some rated evidence is consistent with a local directional hint.",
+      "status": "allowed_with_caveat"
+    },
+    {
+      "claim_class": "wage_gap_or_normalized_comparison",
+      "prohibited_language": "Safety workers earn X percent more.",
+      "required_condition": "Separate normalization/matching authorization and validation.",
+      "safe_language": "Quantitative evidence requires normalization before wage-gap estimation.",
+      "status": "prohibited"
+    },
+    {
+      "claim_class": "causal_or_treatment_effect",
+      "prohibited_language": "Arbitration causes higher safety wage growth.",
+      "required_condition": "A separately validated causal design.",
+      "safe_language": "Documentary evidence identifies a plausible mechanism.",
+      "status": "prohibited"
+    },
+    {
+      "claim_class": "national_or_population_prevalence",
+      "prohibited_language": "Most municipalities use this mechanism.",
+      "required_condition": "A representative sampling and weighting design.",
+      "safe_language": "Within the processed rated corpus, the mechanism recurs.",
+      "status": "prohibited"
+    }
+  ]
+}

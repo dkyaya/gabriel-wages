@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "downstream_normalization_needed": 5533,
+    "exclude_from_report": 5161,
+    "pi_report_context_only": 6860,
+    "pi_report_core_finding_ready": 472,
+    "pi_report_supporting_example": 528
+  },
+  "reconciles": true,
+  "valid_record_count": 18554
+}

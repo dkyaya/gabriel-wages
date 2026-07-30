@@ -1,0 +1,52 @@
+{
+  "groups": {
+    "cba_hint": {
+      "average_evidence_quality": 2.58,
+      "claim_relevance_counts": {
+        "direct_quantitative_claim_support": 1604,
+        "directional_hint_only": 139,
+        "mechanism_summary_support": 2318,
+        "weak_or_not_supported": 1336
+      },
+      "direction_counts": {
+        "gap_narrowing": 5,
+        "neutral_or_general": 1880,
+        "non_safety_advantage": 215,
+        "not_applicable": 3269,
+        "safety_advantage": 28
+      },
+      "report_usability_counts": {
+        "downstream_normalization_needed": 1532,
+        "exclude_from_report": 1336,
+        "pi_report_context_only": 2024,
+        "pi_report_core_finding_ready": 297,
+        "pi_report_supporting_example": 208
+      },
+      "valid_rating_count": 5397
+    },
+    "non_cba_or_other_hint": {
+      "average_evidence_quality": 2.53,
+      "claim_relevance_counts": {
+        "direct_quantitative_claim_support": 4850,
+        "directional_hint_only": 291,
+        "mechanism_summary_support": 4191,
+        "weak_or_not_supported": 3825
+      },
+      "direction_counts": {
+        "gap_narrowing": 40,
+        "neutral_or_general": 4950,
+        "non_safety_advantage": 422,
+        "not_applicable": 7695,
+        "safety_advantage": 50
+      },
+      "report_usability_counts": {
+        "downstream_normalization_needed": 4001,
+        "exclude_from_report": 3825,
+        "pi_report_context_only": 4836,
+        "pi_report_core_finding_ready": 175,
+        "pi_report_supporting_example": 320
+      },
+      "valid_rating_count": 13157
+    }
+  }
+}

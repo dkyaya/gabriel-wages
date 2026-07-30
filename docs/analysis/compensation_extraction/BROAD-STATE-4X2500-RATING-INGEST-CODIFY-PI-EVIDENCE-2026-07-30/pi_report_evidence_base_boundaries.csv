@@ -1,0 +1,7 @@
+claim_class,prohibited_language,required_condition,safe_language,status
+careful_mechanism_description,X causes wage growth.,Retain corpus scope and documentary caveat.,"Within the processed rated corpus, rated evidence suggests a plausible mechanism.",allowed
+corpus_count_comparison,X is nationally more common than Y.,Do not imply population prevalence.,"Among valid rated spans, X appears more often than Y.",allowed
+directional_hint,The safety wage gap is X.,Matched city-cycle and normalization remain pending.,Some rated evidence is consistent with a local directional hint.,allowed_with_caveat
+wage_gap_or_normalized_comparison,Safety workers earn X percent more.,Separate normalization/matching authorization and validation.,Quantitative evidence requires normalization before wage-gap estimation.,prohibited
+causal_or_treatment_effect,Arbitration causes higher safety wage growth.,A separately validated causal design.,Documentary evidence identifies a plausible mechanism.,prohibited
+national_or_population_prevalence,Most municipalities use this mechanism.,A representative sampling and weighting design.,"Within the processed rated corpus, the mechanism recurs.",prohibited

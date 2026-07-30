@@ -1,0 +1,15 @@
+{
+  "careful_claim_count": 18,
+  "claim_boundary": "careful documentary mechanism claims only; no normalization, matching, wage-gap, regression, prevalence, treatment-effect, or final causal claims",
+  "codified_count": 18554,
+  "created_at": "2026-07-30T21:14:42.534036Z",
+  "input_files": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_quarantine.jsonl": "6b345df28d8660033d9f7b52e5a2845093107fd6943f8c8c72ee73484f274920",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.jsonl": "dc55d78b11e123771348326c6a2d361a23a070c220d6fb275605ef8251aee73a"
+  },
+  "quarantine_count": 58,
+  "quarantine_excluded": true,
+  "schema_version": "broad_state_4x2500_codified_rating_v1",
+  "task_id": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30",
+  "valid_input_count": 18554
+}

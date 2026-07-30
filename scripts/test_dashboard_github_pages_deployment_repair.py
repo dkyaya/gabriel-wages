@@ -127,10 +127,34 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                     self.assertEqual(phase["broad_state_4x2500_span_rating_queue_count"], 18612)
                     self.assertEqual(phase["rating_valid_count"], rating["valid_rating_count"])
                     self.assertEqual(phase["rating_quarantine_count"], rating["quarantine_rating_count"])
-                    self.assertEqual(
-                        phase["next_task"],
-                        "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-2026-07-30",
+                    ingest_summary_path = (
+                        ROOT / "docs/analysis/compensation_extraction/"
+                        "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/"
+                        "rating_ingest_codify_summary.json"
                     )
+                    if ingest_summary_path.exists():
+                        ingest = json.loads(ingest_summary_path.read_text())
+                        self.assertTrue(phase["broad_state_4x2500_rating_ingest_codify_available"])
+                        self.assertEqual(phase["rating_valid_count"], 18554)
+                        self.assertEqual(phase["rating_quarantine_count"], 58)
+                        self.assertEqual(phase["codified_record_count"], 18554)
+                        self.assertEqual(
+                            phase["careful_claim_candidate_count"],
+                            ingest["careful_claim_candidate_count"],
+                        )
+                        self.assertEqual(
+                            phase["current_phase"],
+                            "Rating ingestion/codification complete",
+                        )
+                        self.assertEqual(
+                            phase["next_task"],
+                            "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-2026-07-30",
+                        )
+                    else:
+                        self.assertEqual(
+                            phase["next_task"],
+                            "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-2026-07-30",
+                        )
                 else:
                     self.assertIn("BROAD-STATE-4X2500-SPAN-RATING-2026-07-30", phase["next_task"])
             else:

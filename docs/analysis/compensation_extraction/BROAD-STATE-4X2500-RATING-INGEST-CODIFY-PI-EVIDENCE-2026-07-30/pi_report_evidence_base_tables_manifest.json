@@ -1,0 +1,31 @@
+{
+  "format": "csv_set",
+  "reason": "required artifact-tool dependency loader unavailable in the runtime",
+  "tables": {
+    "pi_report_evidence_base_boundaries.csv": {
+      "row_count": 6,
+      "sha256": "d38a4b181941560619af91e426befd58979112e6c1bc7e9102a814d64110de7c"
+    },
+    "pi_report_evidence_base_claims.csv": {
+      "row_count": 18,
+      "sha256": "17df9532690e61085fe180d1b0cc3d4d590082cad579b6cd65c5b8450fa6ccc4"
+    },
+    "pi_report_evidence_base_directionality.csv": {
+      "row_count": 5,
+      "sha256": "02d1ba3d592324143090d7a8219b14aea7f9381d0224038fa365edffb77d4443"
+    },
+    "pi_report_evidence_base_mechanism_clusters.csv": {
+      "row_count": 10,
+      "sha256": "915388ec86cba2af888d0dcefb3f7a5451fd613a33a9305aef7ef17ea17ebd41"
+    },
+    "pi_report_evidence_base_normalization.csv": {
+      "row_count": 7,
+      "sha256": "213b91cabb053c99a70f73c2726921d610bba1a713e5865f699a133829608e46"
+    },
+    "pi_report_evidence_base_overview.csv": {
+      "row_count": 5,
+      "sha256": "d42d0961fc5d564ccd9f912979ed5c120d942072bf0defc83cf6ed0483bf3401"
+    }
+  },
+  "xlsx_feasible": false
+}

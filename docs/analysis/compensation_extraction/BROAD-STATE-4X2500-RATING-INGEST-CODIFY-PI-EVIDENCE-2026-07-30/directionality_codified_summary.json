@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "gap_narrowing": 45,
+    "neutral_or_general": 6830,
+    "non_safety_advantage": 637,
+    "not_applicable": 10964,
+    "safety_advantage": 78
+  },
+  "reconciles": true,
+  "valid_record_count": 18554
+}

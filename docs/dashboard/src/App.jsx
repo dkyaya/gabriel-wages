@@ -28,11 +28,20 @@ function dominantDirection(counts = {}) {
 }
 
 function mechanismRows() {
-  const source = projectPhaseSummary.broad_state_4x2500_mechanism_summaries ?? {};
+  const source = projectPhaseSummary.broad_state_4x2500_ingested_mechanism_clusters
+    ?? projectPhaseSummary.broad_state_4x2500_mechanism_summaries
+    ?? {};
   return Object.entries(source)
-    .filter(([name]) => !["weak_or_no_claim_support", "weak_or_no_claim_support_strength"].includes(name))
+    .filter(
+      ([name]) =>
+        ![
+          "weak_or_no_claim_support",
+          "weak_or_no_claim_support_strength",
+          "weak_context_exclusion",
+        ].includes(name),
+    )
     .map(([name, item]) => ({ name, ...item }))
-    .sort((a, b) => (b.report_ready_count ?? 0) - (a.report_ready_count ?? 0))
+    .sort((a, b) => (b.supported_record_count ?? b.report_ready_count ?? 0) - (a.supported_record_count ?? a.report_ready_count ?? 0))
     .slice(0, 6);
 }
 
@@ -132,16 +141,16 @@ function App() {
           <section className="pi-section" aria-labelledby="evidence-title">
             <div className="pi-section-heading">
               <div>
-                <p className="eyebrow">Current rated evidence</p>
-                <h2 id="evidence-title">One validated rating outcome per exact span</h2>
+                <p className="eyebrow">Current codified evidence</p>
+                <h2 id="evidence-title">One lineage-preserving record per valid rating</h2>
               </div>
-              <p>Ratings support evidence triage and report preparation. They are not yet ingested or codified findings.</p>
+              <p>Careful documentary claims are prepared for PI review; quantitative comparison and causal analysis remain blocked.</p>
             </div>
             <div className="pi-evidence-grid">
               <article><span>Valid ratings</span><strong>{formatNumber(countFor("rating_valid_count"))}</strong><p>Schema-valid documentary ratings</p></article>
-              <article><span>Quarantine</span><strong>{formatNumber(countFor("rating_quarantine_count"))}</strong><p>Excluded from downstream use pending repair</p></article>
-              <article><span>Core + supporting</span><strong>{formatNumber(countFor("rating_report_ready_count") + countFor("rating_supporting_count"))}</strong><p>{formatNumber(countFor("rating_report_ready_count"))} core · {formatNumber(countFor("rating_supporting_count"))} supporting</p></article>
-              <article><span>Context + excluded</span><strong>{formatNumber(countFor("rating_context_count") + countFor("rating_excluded_count"))}</strong><p>{formatNumber(countFor("rating_context_count"))} context · {formatNumber(countFor("rating_excluded_count"))} excluded</p></article>
+              <article><span>Quarantine</span><strong>{formatNumber(countFor("rating_quarantine_count"))}</strong><p>Preserved as exclusions; never codified as valid evidence</p></article>
+              <article><span>Codified records</span><strong>{formatNumber(countFor("codified_record_count"))}</strong><p>Identity, lineage, strength, usability, and claim boundaries retained</p></article>
+              <article><span>Careful claim candidates</span><strong>{formatNumber(countFor("careful_claim_candidate_count"))}</strong><p>{formatNumber(countFor("careful_claim_core_count"))} core · {formatNumber(countFor("careful_claim_supporting_count"))} supporting · {formatNumber(countFor("careful_claim_context_count"))} context · {formatNumber(countFor("careful_claim_limit_exclusion_count"))} limits</p></article>
             </div>
             {countFor("rating_normalization_needed_count") > 0 && (
               <p className="pi-inline-note"><strong>{formatNumber(countFor("rating_normalization_needed_count"))}</strong> valid ratings are routed to downstream normalization before quantitative comparison.</p>
@@ -152,16 +161,16 @@ function App() {
             <div className="pi-section-heading">
               <div>
                 <p className="eyebrow">Mechanism findings preview</p>
-                <h2 id="mechanisms-title">Strongest rated documentary signals</h2>
+                <h2 id="mechanisms-title">Strongest codified documentary clusters</h2>
               </div>
               <p>Ranked for PI review; counts describe this processed corpus, not national prevalence.</p>
             </div>
             {mechanisms.length ? (
               <div className="table-wrap pi-mechanism-table"><table>
-                <thead><tr><th scope="col">Mechanism</th><th scope="col">Report-ready</th><th scope="col">Mean / median strength</th><th scope="col">Dominant direction</th><th scope="col">Boundary</th></tr></thead>
+                <thead><tr><th scope="col">Mechanism</th><th scope="col">Codified evidence</th><th scope="col">Mean / median strength</th><th scope="col">Dominant direction</th><th scope="col">Boundary</th></tr></thead>
                 <tbody>{mechanisms.map((item) => <tr key={item.name}>
-                  <th scope="row">{label(item.name.replace(/_strength$/, ""))}</th>
-                  <td>{formatNumber(item.report_ready_count)}</td>
+                  <th scope="row">{item.title ?? label(item.name.replace(/_strength$/, ""))}</th>
+                  <td>{formatNumber(item.supported_record_count ?? item.report_ready_count)}</td>
                   <td>{Number(item.average_strength_score ?? 0).toFixed(2)} / {item.median_strength_score ?? 0} (0–4)</td>
                   <td>{dominantDirection(item.direction_distribution)}</td>
                   <td>Documentary pattern; no causal or prevalence claim</td>
@@ -173,10 +182,10 @@ function App() {
           <section className="pi-section pi-boundary-section" aria-labelledby="boundary-title">
             <div>
               <p className="eyebrow">What can be said now</p>
-              <h2 id="boundary-title">Mechanism descriptions, with explicit limits</h2>
+              <h2 id="boundary-title">Careful mechanism claims, with explicit limits</h2>
             </div>
             <div className="pi-boundary-grid">
-              <article><StatusPill tone="scout">Allowed</StatusPill><h3>Descriptive documentary summaries</h3><p>Discuss how contracts and local documents describe raises, bargaining, timing, market pressure, and non-base compensation.</p></article>
+              <article><StatusPill tone="scout">Allowed</StatusPill><h3>Careful documentary mechanism claims</h3><p>Describe recurring mechanisms and compare counts within the processed rated corpus, with source and claim-boundary caveats.</p></article>
               <article><StatusPill tone="future">Blocked</StatusPill><h3>Wage-gap estimates</h3><p>Blocked pending normalization across pay units, ranks, effective dates, cycles, and base versus premium compensation.</p></article>
               <article><StatusPill tone="future">Blocked</StatusPill><h3>Causal and prevalence claims</h3><p>Blocked pending matched city-cycle structure; corpus frequencies are not population prevalence.</p></article>
             </div>
@@ -186,10 +195,10 @@ function App() {
           <details className="pi-technical-details">
             <summary>Technical audit and stage history</summary>
             <div className="pi-technical-grid">
-              <div><span>Rating queue</span><strong>{formatNumber(countFor("broad_state_4x2500_span_rating_queue_count"))}</strong></div>
-              <div><span>Rating lanes</span><strong>4 × 4,653</strong></div>
-              <div><span>Span candidates rated</span><strong>{formatNumber(countFor("broad_state_4x2500_span_rating_queue_count"))}</strong></div>
-              <div><span>Source texts entering span extraction</span><strong>{formatNumber(projectPhaseSummary.broad_state_4x2500_span_extraction_queue_count ?? 0)}</strong></div>
+              <div><span>Valid ratings</span><strong>{formatNumber(countFor("rating_valid_count"))}</strong></div>
+              <div><span>Quarantine exclusions</span><strong>{formatNumber(countFor("rating_quarantine_count"))}</strong></div>
+              <div><span>Codified records</span><strong>{formatNumber(countFor("codified_record_count"))}</strong></div>
+              <div><span>Normalization lane</span><strong>{formatNumber(countFor("rating_normalization_needed_count"))}</strong></div>
               <div><span>Scout-covered municipalities</span><strong>{formatNumber(totals.scout_covered_municipalities)}</strong></div>
               <div><span>Map denominator</span><strong>{formatNumber(totals.municipality_universe)}</strong></div>
             </div>

@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "base_vs_non_base_clear": 11069,
+    "effective_period_present": 2478,
+    "normalization_needed": 11548,
+    "percentage_or_growth_value_present": 1381,
+    "quantitative_value_present": 11548,
+    "rank_step_grade_present": 1429,
+    "raw_wage_or_comp_value_present": 3514,
+    "unit_or_group_present": 18554
+  },
+  "valid_record_count": 18554
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "validated_at": "2026-07-30T21:19:17Z",
+  "dashboard_app": "docs/dashboard",
+  "build_command": "npm run build",
+  "builder_command": "python scripts/build_dashboard_data.py",
+  "pages_base_path": "/gabriel-wages/",
+  "vite_version": "8.1.5",
+  "transformed_modules": 26,
+  "output_index": "docs/dashboard/dist/index.html",
+  "committed_dist_required": false,
+  "github_pages_mechanism": "GitHub Actions Pages artifact",
+  "warnings": [],
+  "errors": []
+}

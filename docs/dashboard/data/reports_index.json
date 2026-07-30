@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T19:20:01Z",
+  "generated_at": "2026-07-30T21:17:40Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-span-rating-dashboard-cleanup-2026-07-30",
-      "title": "Broad State 4 × 2,500 Span Rating",
-      "report_type": "Current bounded span-rating and PI-dashboard result",
+      "id": "broad-state-4x2500-rating-ingest-codify-pi-evidence-2026-07-30",
+      "title": "Broad State 4 × 2,500 Codified PI Evidence",
+      "report_type": "Current valid-only codified documentary evidence result",
       "date": "2026-07-30",
-      "checkpoint": "18,554 valid rated spans",
-      "summary": "All 18,612 locked exact-span candidates received one terminal rating outcome. Valid and quarantine ledgers remain separate; ingestion/codification is next.",
+      "checkpoint": "18,554 codified valid ratings",
+      "summary": "All schema-valid ratings are ingested into a lineage-preserving codified layer; quarantines remain excluded. Careful mechanism claims are prepared for PI review, while normalization, matching, wage-gap, prevalence, and causal analysis remain blocked.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "span rating",
-        "PI dashboard"
+        "codified evidence",
+        "PI claims"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/span_rating_summary.md",
-      "link_label": "Open current 4 × 2,500 span-rating report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/rating_ingest_codify_summary.md",
+      "link_label": "Open current codified PI-evidence report",
       "scope_metrics": [
         {
-          "label": "rating queue",
-          "value": 18612
-        },
-        {
-          "label": "valid ratings",
+          "label": "codified records",
           "value": 18554
         },
         {
-          "label": "quarantine",
-          "value": 58
+          "label": "careful claims",
+          "value": 18
+        },
+        {
+          "label": "core candidates",
+          "value": 6
         }
       ]
     },
@@ -69,6 +69,38 @@
         {
           "label": "candidate rows",
           "value": 7014
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-span-rating-dashboard-cleanup-2026-07-30",
+      "title": "Broad State 4 × 2,500 Span Rating",
+      "report_type": "Current bounded span-rating and PI-dashboard result",
+      "date": "2026-07-30",
+      "checkpoint": "18,554 valid rated spans",
+      "summary": "All 18,612 locked exact-span candidates received one terminal rating outcome. Valid and quarantine ledgers remain separate; ingestion/codification is next.",
+      "tags": [
+        "broad scout",
+        "4x2500",
+        "span rating",
+        "PI dashboard"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/span_rating_summary.md",
+      "link_label": "Open historical 4 × 2,500 span-rating report",
+      "scope_metrics": [
+        {
+          "label": "rating queue",
+          "value": 18612
+        },
+        {
+          "label": "valid ratings",
+          "value": 18554
+        },
+        {
+          "label": "quarantine",
+          "value": 58
         }
       ]
     },

@@ -1,0 +1,9 @@
+{
+  "csv_sha256": "0b7c88dbbc1d60b83902f147985fb970bb2ceaab624d231b7c237ec7cadbd960",
+  "full_text_included": false,
+  "jsonl_sha256": "53853a335f02f9186e309400a3bc0e46da74ab69c1cf62d2eda376336dd81584",
+  "quarantine_included": false,
+  "row_count": 18554,
+  "schema_version": "broad_state_4x2500_codified_rating_v1",
+  "valid_rating_input_sha256": "dc55d78b11e123771348326c6a2d361a23a070c220d6fb275605ef8251aee73a"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "validated_at": "2026-07-30T21:19:17Z",
+  "url": "http://127.0.0.1:4173/gabriel-wages/?dashboard_smoke=20260730_ingest_codify_local_v2",
+  "browser_controller": "Playwright MCP fallback after in-app browser discovery returned no available browsers",
+  "build_status": "passed",
+  "production_build": "passed",
+  "console_error_count": 0,
+  "checks": {
+    "dashboard_loaded": true,
+    "cleaned_main_view_preserved": true,
+    "top_status_strip_visible": true,
+    "current_stage_ingestion_codification_complete": true,
+    "next_task_normalization_matched_structure": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "raw_scout_count_context_only": true,
+    "national_coverage_rate_47_45_percent": true,
+    "valid_rating_count_18554": true,
+    "quarantine_count_58": true,
+    "codified_record_count_18554": true,
+    "careful_claim_count_18": true,
+    "claim_breakdown_6_core_6_supporting_4_context_2_limits": true,
+    "normalization_lane_count_5533": true,
+    "top_mechanism_clusters_visible": true,
+    "wage_gap_readiness_blocked": true,
+    "causal_readiness_blocked": true,
+    "global_readiness_not_fully_passed": true,
+    "technical_details_collapsed_by_default": true,
+    "current_report_pointer_current": true,
+    "no_stale_prior_stage_guidance": true
+  },
+  "main_view_metric_card_count": 4,
+  "map_presentation_controls": [
+    "Geographic map",
+    "Tile grid"
+  ],
+  "current_report": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/rating_ingest_codify_summary.md",
+  "screenshot": "dashboard_local_smoke.png"
+}

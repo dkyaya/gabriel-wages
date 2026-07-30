@@ -1,0 +1,16 @@
+{
+  "final_causal_claim_made": false,
+  "global_readiness_advanced": false,
+  "matched_city_cycle_structure_built": false,
+  "national_or_population_prevalence_claim_made": false,
+  "ocr_occurred": false,
+  "passed": true,
+  "quarantine_ingested_as_valid": false,
+  "rating_rerun_occurred": false,
+  "regression_or_treatment_effect_occurred": false,
+  "source_payload_or_full_text_written": false,
+  "source_review_or_download_occurred": false,
+  "text_extraction_occurred": false,
+  "wage_gap_calculation_occurred": false,
+  "wage_normalization_occurred": false
+}

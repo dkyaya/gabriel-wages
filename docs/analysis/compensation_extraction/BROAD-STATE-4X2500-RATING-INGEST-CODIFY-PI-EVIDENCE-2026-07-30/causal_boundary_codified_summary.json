@@ -1,0 +1,10 @@
+{
+  "causal_claim_allowed_true": 0,
+  "causal_readiness": "blocked_pending_matched_structure",
+  "global_analysis_readiness": false,
+  "local_documentary_mechanism_claims_allowed": true,
+  "national_prevalence_claim_allowed_true": 0,
+  "population_prevalence_claim_allowed_true": 0,
+  "valid_record_count": 18554,
+  "wage_gap_readiness": "blocked_pending_normalization"
+}

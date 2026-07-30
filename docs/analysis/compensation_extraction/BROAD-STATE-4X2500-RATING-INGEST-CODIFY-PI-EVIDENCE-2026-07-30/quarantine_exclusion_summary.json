@@ -1,0 +1,8 @@
+{
+  "excluded_from_codified_valid_ratings": true,
+  "input_sha256": "6b345df28d8660033d9f7b52e5a2845093107fd6943f8c8c72ee73484f274920",
+  "reason_counts": {
+    "persistent_transport_or_strict_schema_exact_quote_failure": 58
+  },
+  "row_count": 58
+}

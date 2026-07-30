@@ -1,0 +1,11 @@
+cluster,title,primary_record_count,supported_record_count,report_ready_count,core_count,supporting_count,context_count,normalization_count,excluded_count,average_strength_score,median_strength_score
+automatic_wage_growth,Automatic wage-growth mechanisms,1312,2676,45,27,18,876,1599,156,1.377,1.0
+bargaining_dispute_resolution,Bargaining and dispute-resolution mechanisms,1645,2126,462,264,198,1241,13,410,1.285,1.0
+market_staffing_pressure,Market and staffing pressure mechanisms,356,2404,86,23,63,514,16,1788,0.228,0.0
+timing_implementation,Timing and implementation mechanisms,2212,2421,224,90,134,911,1208,78,1.853,2.0
+non_base_compensation,Non-base compensation mechanisms,3718,3718,72,30,42,2476,1170,0,1.646,1.0
+rank_step_specialization_classification,"Rank, step, specialization, and classification mechanisms",710,763,8,3,5,211,544,0,2.427,2.0
+fiscal_governance_constraints,Fiscal and governance constraints,219,1054,110,27,83,320,24,600,0.416,0.0
+safety_non_safety_directional_hints,Safety vs non-safety directional hints,125,245,83,44,39,153,9,0,1.735,1.0
+quantitative_base_wage_needs_normalization,Quantitative base-wage evidence needing normalization,2593,11610,43,27,16,4419,5533,1615,1.452,1.0
+weak_context_exclusion,"Weak, context, and exclusion layer",5664,6644,8,2,6,1435,40,5161,0.233,0.0
