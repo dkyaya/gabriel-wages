@@ -1,0 +1,66 @@
+{
+  "all_required_lineage_present": true,
+  "artifact_root_git_ignored": true,
+  "deterministic_preflight_passed": true,
+  "eligible_statuses_only": true,
+  "lane_distribution": {
+    "source_review_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 230
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 988
+    },
+    "source_review_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 230
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 988
+    },
+    "source_review_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 229
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 987
+    },
+    "source_review_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 229
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 987
+    }
+  },
+  "network_smoke_http_responses": 3,
+  "network_smoke_passed": true,
+  "network_smoke_priority_coverage": [
+    "high_priority_verification_ready",
+    "low_priority_verification_ready",
+    "medium_priority_verification_ready"
+  ],
+  "network_smoke_rows": 3,
+  "network_smoke_source_families": [
+    "agenda_packet_or_minutes",
+    "budget_or_pay_plan",
+    "other_local_government_pay_policy"
+  ],
+  "priority_counts": {
+    "high_priority_verification_ready": 2920,
+    "low_priority_verification_ready": 112,
+    "medium_priority_verification_ready": 918
+  },
+  "queue_rows": 3950,
+  "retained_binaries_staged_before_run": 0,
+  "smoke_retained_files_written": 0,
+  "storage_sanity_passed": true
+}

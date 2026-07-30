@@ -1,0 +1,151 @@
+{
+  "grouping_field": "possible_mechanism_hints",
+  "groups": {
+    "fiscal_constraint_signal": {
+      "not_retained": 5,
+      "retained": 51,
+      "retained_bytes": 123851482,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 1,
+        "duplicate_retained_source": 1,
+        "likely_non_source_or_navigation_only": 1,
+        "restricted_or_login_required": 2,
+        "retained_html": 3,
+        "retained_pdf": 48
+      },
+      "total": 56
+    },
+    "market_or_comparability_pressure": {
+      "not_retained": 2,
+      "retained": 13,
+      "retained_bytes": 6775078,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 1,
+        "restricted_or_login_required": 1,
+        "retained_html": 2,
+        "retained_pdf": 11
+      },
+      "total": 15
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal": {
+      "not_retained": 4,
+      "retained": 19,
+      "retained_bytes": 18223288,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 3,
+        "retained_html": 2,
+        "retained_pdf": 17,
+        "unavailable_on_download": 1
+      },
+      "total": 23
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "not_retained": 0,
+      "retained": 2,
+      "retained_bytes": 4797283,
+      "terminal_status_counts": {
+        "retained_pdf": 2
+      },
+      "total": 2
+    },
+    "non_safety_constraint_signal": {
+      "not_retained": 124,
+      "retained": 1653,
+      "retained_bytes": 2877929995,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 11,
+        "duplicate_retained_source": 59,
+        "oversized_defer": 1,
+        "restricted_or_login_required": 32,
+        "retained_html": 152,
+        "retained_other_document": 37,
+        "retained_pdf": 1464,
+        "unavailable_on_download": 21
+      },
+      "total": 1777
+    },
+    "non_safety_constraint_signal;fiscal_constraint_signal": {
+      "not_retained": 3,
+      "retained": 103,
+      "retained_bytes": 223731652,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 1,
+        "restricted_or_login_required": 2,
+        "retained_html": 5,
+        "retained_pdf": 98
+      },
+      "total": 106
+    },
+    "strike_or_no_strike_constraint": {
+      "not_retained": 12,
+      "retained": 215,
+      "retained_bytes": 243328427,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 4,
+        "restricted_or_login_required": 5,
+        "retained_html": 14,
+        "retained_pdf": 201,
+        "unavailable_on_download": 3
+      },
+      "total": 227
+    },
+    "strike_or_no_strike_constraint;fiscal_constraint_signal": {
+      "not_retained": 1,
+      "retained": 3,
+      "retained_bytes": 19926203,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 1,
+        "retained_pdf": 3
+      },
+      "total": 4
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal": {
+      "not_retained": 0,
+      "retained": 2,
+      "retained_bytes": 292388,
+      "terminal_status_counts": {
+        "retained_pdf": 2
+      },
+      "total": 2
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal": {
+      "not_retained": 7,
+      "retained": 90,
+      "retained_bytes": 81640592,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 6,
+        "restricted_or_login_required": 1,
+        "retained_html": 10,
+        "retained_pdf": 80
+      },
+      "total": 97
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "not_retained": 1,
+      "retained": 3,
+      "retained_bytes": 1364387,
+      "terminal_status_counts": {
+        "restricted_or_login_required": 1,
+        "retained_pdf": 3
+      },
+      "total": 4
+    },
+    "unknown": {
+      "not_retained": 119,
+      "retained": 1518,
+      "retained_bytes": 2955893164,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 16,
+        "duplicate_retained_source": 43,
+        "oversized_defer": 1,
+        "restricted_or_login_required": 36,
+        "retained_html": 162,
+        "retained_other_document": 37,
+        "retained_pdf": 1319,
+        "unavailable_on_download": 23
+      },
+      "total": 1637
+    }
+  },
+  "total_rows": 3950
+}

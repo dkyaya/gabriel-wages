@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T12:10:24Z",
+  "generated_at": "2026-07-30T13:11:10Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-verification-2026-07-30",
-      "title": "Broad State 4 × 2,500 Verification",
-      "report_type": "Current HEAD-only verification result",
+      "id": "broad-state-4x2500-source-review-download-2026-07-30",
+      "title": "Broad State 4 × 2,500 Source Review / Download",
+      "report_type": "Current bounded source-review/download result",
       "date": "2026-07-30",
-      "checkpoint": "3,950 source-review-ready locators",
-      "summary": "All 5,768 high-, medium-, and low-priority candidates received one terminal HEAD-only metadata outcome across four lanes. Source review/download is ready next.",
+      "checkpoint": "3,672 unique retained sources",
+      "summary": "All 3,950 source-review-ready locators received one terminal outcome across four lanes. Eligible payloads are retained only in ignored local storage; PDF/text readiness is next.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "verification",
-        "source review ready"
+        "source review",
+        "retained sources"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/verification_summary.md",
-      "link_label": "Open current 4 × 2,500 verification report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_download_summary.md",
+      "link_label": "Open current 4 × 2,500 source-review report",
       "scope_metrics": [
         {
-          "label": "verified rows",
-          "value": 5768
-        },
-        {
-          "label": "source-review ready",
+          "label": "reviewed locators",
           "value": 3950
         },
         {
-          "label": "blocked / timeout",
-          "value": 950
+          "label": "retained sources",
+          "value": 3672
+        },
+        {
+          "label": "retained PDFs",
+          "value": 3248
         }
       ]
     },
@@ -133,6 +133,39 @@
         {
           "label": "candidate rows",
           "value": 1301
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-verification-2026-07-30",
+      "title": "Broad State 4 × 2,500 Verification",
+      "report_type": "Historical HEAD-only verification result",
+      "date": "2026-07-30",
+      "checkpoint": "3,950 source-review-ready locators",
+      "summary": "All 5,768 high-, medium-, and low-priority candidates received one terminal HEAD-only metadata outcome across four lanes. Source review/download is ready next.",
+      "tags": [
+        "historical",
+        "broad scout",
+        "4x2500",
+        "verification",
+        "source review ready"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/verification_summary.md",
+      "link_label": "Open historical 4 × 2,500 verification report",
+      "scope_metrics": [
+        {
+          "label": "verified rows",
+          "value": 5768
+        },
+        {
+          "label": "source-review ready",
+          "value": 3950
+        },
+        {
+          "label": "blocked / timeout",
+          "value": 950
         }
       ]
     },

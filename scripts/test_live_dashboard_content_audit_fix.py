@@ -54,7 +54,7 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(self.scope["files_opened_or_parsed"], 0)
 
     def test_dashboard_current_contract(self) -> None:
-        self.assertEqual(self.phase["data_vintage"], "2026-07-27")
+        self.assertEqual(self.phase["data_vintage"], "2026-07-30")
         self.assertEqual(self.phase["tier_c_verified_source_lead_count"], 556)
         self.assertEqual(self.phase["tier_c_retained_downloaded_source_count"], 463)
         self.assertEqual(self.phase["memo_scope"]["exact_same_source_linked_pair_count"], 268)
@@ -66,17 +66,21 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
             "bounded_exact_span_ratings_and_documentary_colocation_scaffolds_only",
             "bounded_tier_c_rating_summary_and_documentary_colocation_scaffolds_only",
             "bounded_tier_c_documentary_memo_supplement_and_colocation_scaffolds_only",
+            "broad_4x2500_source_review_download_complete_retained_files_unextracted",
         })
+        self.assertTrue(self.phase["broad_state_4x2500_source_review_download_available"])
+        self.assertEqual(self.phase["broad_state_4x2500_source_review_queue_count"], 3950)
+        self.assertEqual(self.phase["broad_state_4x2500_source_review_retained_count"], 3672)
         self.assertTrue(self.phase["pdf_text_layer_readiness_ready_next"])
         self.assertFalse(self.phase["global_analysis_readiness"])
         self.assertFalse(self.phase["wage_gap_estimates_available"])
         self.assertFalse(self.phase["final_causal_claims_available"])
 
-    def test_current_report_is_memo_and_old_report_is_historical(self) -> None:
+    def test_current_report_is_latest_and_old_report_is_historical(self) -> None:
         current = [report for report in self.reports["reports"] if report["current"]]
         self.assertEqual(len(current), 1)
-        self.assertEqual(current[0]["id"], "bounded-tier-c-evidence-memo-supplement-2026-07-27")
-        self.assertIn("BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT", current[0]["href"])
+        self.assertEqual(current[0]["id"], "broad-state-4x2500-source-review-download-2026-07-30")
+        self.assertIn("BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD", current[0]["href"])
         parent = next(report for report in self.reports["reports"] if report["id"] == "bounded-mechanism-linkage-memo-2026-07-26")
         self.assertFalse(parent["current"])
         old = next(report for report in self.reports["reports"] if report["id"] == "pi-source-discovery-2026-07-22")
@@ -105,13 +109,14 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         ):
             self.assertNotIn(phrase, source)
         for phrase in (
-            "Current bounded evidence and retained-source status",
-            "bounded Tier C evidence-memo supplement",
-            "Broad state-by-state source scouting",
+            "Current source-pipeline readiness status",
+            "Source-review queue",
+            "Unique retained sources",
+            "Four-lane PDF/text readiness",
             "Total scout coverage",
             "Historical candidate queue",
             "valid ratings were summarized",
-            "Scout coverage is operational discovery metadata",
+            "This is the dashboard’s only map layer",
         ):
             self.assertIn(phrase, source)
 
@@ -120,11 +125,11 @@ class LiveDashboardContentAuditFixTests(unittest.TestCase):
         self.assertEqual(len(bundles), 1)
         bundle = bundles[0].read_text(encoding="utf-8")
         for phrase in (
-            "Tier C evidence memo supplement complete",
-            "140 valid aggregate ratings",
-            "Open current memo supplement",
+            "source review/download complete",
+            "unique source files were retained and hashed outside Git",
+            "Open current 4 × 2,500 source-review report",
             "Historical candidate queue",
-            "Broad state-by-state source scouting",
+            "Four-lane PDF/text readiness",
         ):
             self.assertIn(phrase, bundle)
         self.assertNotIn("Authorize the first scaled verification round", bundle)

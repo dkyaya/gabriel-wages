@@ -1,0 +1,12 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30",
+  "artifact_root_git_ignored": true,
+  "audited_at": "2026-07-30T13:04:59Z",
+  "duplicate_retained_hashes": 118,
+  "manifest_retained_count": 3672,
+  "part_files": 0,
+  "passed": true,
+  "retained_bytes": 6557753939,
+  "retained_file_count": 3672,
+  "unique_retained_hashes": 3672
+}

@@ -1,0 +1,38 @@
+{
+  "grouping_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_hint": {
+      "not_retained": 38,
+      "retained": 551,
+      "retained_bytes": 1973464234,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 18,
+        "duplicate_retained_source": 3,
+        "restricted_or_login_required": 10,
+        "retained_html": 22,
+        "retained_other_document": 3,
+        "retained_pdf": 526,
+        "unavailable_on_download": 7
+      },
+      "total": 589
+    },
+    "non_cba_or_other_hint": {
+      "not_retained": 240,
+      "retained": 3121,
+      "retained_bytes": 4584289705,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 11,
+        "duplicate_retained_source": 115,
+        "likely_non_source_or_navigation_only": 1,
+        "oversized_defer": 2,
+        "restricted_or_login_required": 70,
+        "retained_html": 328,
+        "retained_other_document": 71,
+        "retained_pdf": 2722,
+        "unavailable_on_download": 41
+      },
+      "total": 3361
+    }
+  },
+  "total_rows": 3950
+}

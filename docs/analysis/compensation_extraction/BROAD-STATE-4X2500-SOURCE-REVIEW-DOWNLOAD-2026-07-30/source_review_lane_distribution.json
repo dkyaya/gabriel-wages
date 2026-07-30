@@ -1,0 +1,48 @@
+{
+  "exact_lane_distribution_passed": true,
+  "lane_distribution": {
+    "source_review_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 230
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 988
+    },
+    "source_review_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 230
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 988
+    },
+    "source_review_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 229
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 987
+    },
+    "source_review_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 229
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 987
+    }
+  },
+  "priority_totals": {
+    "high_priority_verification_ready": 2920,
+    "low_priority_verification_ready": 112,
+    "medium_priority_verification_ready": 918
+  },
+  "stable_priority_interleaving": true,
+  "total_rows": 3950
+}

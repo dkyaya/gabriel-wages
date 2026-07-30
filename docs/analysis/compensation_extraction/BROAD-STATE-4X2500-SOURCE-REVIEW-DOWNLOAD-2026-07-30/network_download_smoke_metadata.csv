@@ -1,0 +1,4 @@
+source_review_download_id,priority_bucket,source_family_hint,http_status,bytes_read,content_type,transport_error_type,retained_file_written
+B4X2500SRD-20260730-e6a08d78cc5f671a5832,high_priority_verification_ready,budget_or_pay_plan,206,4096,application/pdf,,false
+B4X2500SRD-20260730-dceaf6532f4a936175ce,medium_priority_verification_ready,other_local_government_pay_policy,206,4096,application/pdf,,false
+B4X2500SRD-20260730-bfecfc88062d1795ebb6,low_priority_verification_ready,agenda_packet_or_minutes,206,4096,text/html,,false

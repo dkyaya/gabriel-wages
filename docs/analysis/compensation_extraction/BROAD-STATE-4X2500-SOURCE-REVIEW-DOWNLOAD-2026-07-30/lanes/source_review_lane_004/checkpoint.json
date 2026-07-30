@@ -1,0 +1,11 @@
+{
+  "checkpoint_frequency": "after_every_row",
+  "checkpointed_at": "2026-07-30T13:04:44Z",
+  "completed_rows": 987,
+  "lane_id": "source_review_lane_004",
+  "locked_rows": 987,
+  "queue_sha256": "c6256ae5ac56173c287f312ad4bdd2f6765e03dc2c9316ef5cfcaf76e1026a5a",
+  "remaining_rows": 0,
+  "status": "completed",
+  "task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30"
+}

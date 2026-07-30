@@ -1,0 +1,15 @@
+{
+  "codification_runs": 0,
+  "final_causal_claims": 0,
+  "full_text_artifacts_created": 0,
+  "ingestion_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "rating_runs": 0,
+  "regressions": 0,
+  "retained_payloads_in_git_output_directory": 0,
+  "retained_payloads_in_ignored_artifact_storage_only": true,
+  "text_extractions": 0,
+  "treatment_effect_claims": 0,
+  "wage_gap_calculations": 0
+}

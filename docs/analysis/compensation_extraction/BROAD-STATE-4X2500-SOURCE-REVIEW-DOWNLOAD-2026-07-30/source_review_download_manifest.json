@@ -1,0 +1,96 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30",
+  "artifact_root_git_ignored": true,
+  "completed_at": "2026-07-30T13:04:59Z",
+  "completed_rows": 3950,
+  "created_at": "2026-07-30T12:32:23Z",
+  "decision": "broad_state_4x2500_source_review_download_completed_pdf_readiness_ready",
+  "execution_status": "completed",
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/source_review_ready_manifest.json": "cd783da64964c872ad36d4bd544f33969ede9c33e7cf7508d3ec411a325d59dd",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/source_review_ready_queue.csv": "97c6cd076e7dcf99de78fdb338392406814ab08433ab778b4d775059ea7dfb97",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/source_review_ready_queue.jsonl": "d324df6c2f900cb5b7082095b2edcfef0a3ac316377f542bc940f95c6580d198",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/verification_summary.json": "328fd1d419fdb2e6849e5c9fe37fab60d4260dccfb3fba48f767546fc201f01f"
+  },
+  "lane_distribution": {
+    "source_review_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 230
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 988
+    },
+    "source_review_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 230
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 988
+    },
+    "source_review_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 229
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 987
+    },
+    "source_review_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 730,
+        "low_priority_verification_ready": 28,
+        "medium_priority_verification_ready": 229
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 987
+    }
+  },
+  "lane_hashes": {
+    "source_review_lane_001": {
+      "csv_sha256": "0a5a3254ff57d0e0c4413f8d5da25c0df3d6beb1f29f679da55f05e379bc4120",
+      "jsonl_sha256": "ae656acac0135b98dcd5847f42067d71ac92e8926db4092a0377687c822c482b"
+    },
+    "source_review_lane_002": {
+      "csv_sha256": "66148e8c7f01d91f169f84f7d4e90c0cc2e81cc1347ffddc7f21fbe75712396f",
+      "jsonl_sha256": "4cbcfb13a9fadc855847c157f302952ec5eeec27cbb515a9faa67a3d6ebc08bf"
+    },
+    "source_review_lane_003": {
+      "csv_sha256": "1680755f56838d4d18a5bb159799fe83dff9efbcf3e3c2b3be6f838c1031840e",
+      "jsonl_sha256": "0c278a95fb3cea040ffa985e5a0a54c3757b030be4f626c6fe6d05f789b80ada"
+    },
+    "source_review_lane_004": {
+      "csv_sha256": "c6256ae5ac56173c287f312ad4bdd2f6765e03dc2c9316ef5cfcaf76e1026a5a",
+      "jsonl_sha256": "cde4e6fd9d11819be0dbb903d582383a2c841644b35cee571c08077ac3165c99"
+    }
+  },
+  "maximum_file_bytes": 78643200,
+  "network_requests": 0,
+  "preflight_head": "079d27295952006b5fbcfd7df17e222b08979d62",
+  "priority_counts": {
+    "high_priority_verification_ready": 2920,
+    "low_priority_verification_ready": 112,
+    "medium_priority_verification_ready": 918
+  },
+  "queue_csv_sha256": "1060c090da948b84491605ff2b1bd8d9d5b672adbd98265b651f51313b8d9ded",
+  "queue_jsonl_sha256": "f8924d4b031d2129d42f4359b9426109e196b8ac74b2edad33a6894c64c2e44a",
+  "queue_rows": 3950,
+  "retained_bytes": 6557753939,
+  "retained_source_count": 3672,
+  "task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30",
+  "terminal_status_counts": {
+    "broken_or_corrupt": 29,
+    "duplicate_retained_source": 118,
+    "likely_non_source_or_navigation_only": 1,
+    "oversized_defer": 2,
+    "restricted_or_login_required": 80,
+    "retained_html": 350,
+    "retained_other_document": 74,
+    "retained_pdf": 3248,
+    "unavailable_on_download": 48
+  }
+}

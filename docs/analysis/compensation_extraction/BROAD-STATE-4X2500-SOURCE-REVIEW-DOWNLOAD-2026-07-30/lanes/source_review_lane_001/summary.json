@@ -1,0 +1,35 @@
+{
+  "actual_started_at": "2026-07-30T12:34:09Z",
+  "checkpoint_frequency": "after_every_row",
+  "codification_runs": 0,
+  "completed_at": "2026-07-30T12:42:03Z",
+  "completed_rows": 988,
+  "extraction_runs": 0,
+  "ingestion_runs": 0,
+  "lane_id": "source_review_lane_001",
+  "locked_rows": 988,
+  "maximum_concurrency": 2,
+  "ocr_runs": 0,
+  "priority_counts": {
+    "high_priority_verification_ready": 730,
+    "low_priority_verification_ready": 28,
+    "medium_priority_verification_ready": 230
+  },
+  "rating_runs": 0,
+  "remaining_rows": 0,
+  "resumed_completed_rows": 0,
+  "retained_bytes": 1567477710,
+  "retained_count": 948,
+  "scheduled_stagger_minutes": 0,
+  "scheduled_start_at": "2026-07-30T12:34:09.462527Z",
+  "status": "completed",
+  "task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30",
+  "terminal_status_counts": {
+    "broken_or_corrupt": 8,
+    "restricted_or_login_required": 22,
+    "retained_html": 108,
+    "retained_other_document": 27,
+    "retained_pdf": 813,
+    "unavailable_on_download": 10
+  }
+}

@@ -1,0 +1,586 @@
+{
+  "region": {
+    "grouping_field": "region",
+    "groups": {
+      "Midwest": {
+        "not_retained": 60,
+        "retained": 1668,
+        "retained_bytes": 3201872150,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 1,
+          "duplicate_retained_source": 17,
+          "likely_non_source_or_navigation_only": 1,
+          "oversized_defer": 2,
+          "restricted_or_login_required": 25,
+          "retained_html": 171,
+          "retained_other_document": 41,
+          "retained_pdf": 1456,
+          "unavailable_on_download": 14
+        },
+        "total": 1728
+      },
+      "Northeast": {
+        "not_retained": 76,
+        "retained": 982,
+        "retained_bytes": 1319995366,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 25,
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 30,
+          "retained_html": 63,
+          "retained_other_document": 4,
+          "retained_pdf": 915,
+          "unavailable_on_download": 20
+        },
+        "total": 1058
+      },
+      "South": {
+        "not_retained": 69,
+        "retained": 824,
+        "retained_bytes": 1589543618,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 3,
+          "duplicate_retained_source": 33,
+          "restricted_or_login_required": 21,
+          "retained_html": 92,
+          "retained_other_document": 24,
+          "retained_pdf": 708,
+          "unavailable_on_download": 12
+        },
+        "total": 893
+      },
+      "West": {
+        "not_retained": 73,
+        "retained": 198,
+        "retained_bytes": 446342805,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 67,
+          "restricted_or_login_required": 4,
+          "retained_html": 24,
+          "retained_other_document": 5,
+          "retained_pdf": 169,
+          "unavailable_on_download": 2
+        },
+        "total": 271
+      }
+    },
+    "total_rows": 3950
+  },
+  "state": {
+    "grouping_field": "state",
+    "groups": {
+      "AK": {
+        "not_retained": 0,
+        "retained": 11,
+        "retained_bytes": 10710089,
+        "terminal_status_counts": {
+          "retained_pdf": 11
+        },
+        "total": 11
+      },
+      "AL": {
+        "not_retained": 3,
+        "retained": 69,
+        "retained_bytes": 35034700,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 3,
+          "retained_html": 14,
+          "retained_other_document": 5,
+          "retained_pdf": 50
+        },
+        "total": 72
+      },
+      "AR": {
+        "not_retained": 1,
+        "retained": 35,
+        "retained_bytes": 43140039,
+        "terminal_status_counts": {
+          "retained_html": 6,
+          "retained_pdf": 29,
+          "unavailable_on_download": 1
+        },
+        "total": 36
+      },
+      "CA": {
+        "not_retained": 3,
+        "retained": 49,
+        "retained_bytes": 195756528,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 1,
+          "retained_html": 2,
+          "retained_pdf": 47,
+          "unavailable_on_download": 1
+        },
+        "total": 52
+      },
+      "CO": {
+        "not_retained": 9,
+        "retained": 29,
+        "retained_bytes": 43427266,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 7,
+          "restricted_or_login_required": 1,
+          "retained_html": 8,
+          "retained_pdf": 21,
+          "unavailable_on_download": 1
+        },
+        "total": 38
+      },
+      "CT": {
+        "not_retained": 1,
+        "retained": 15,
+        "retained_bytes": 35974506,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 1,
+          "retained_html": 1,
+          "retained_pdf": 14
+        },
+        "total": 16
+      },
+      "FL": {
+        "not_retained": 4,
+        "retained": 52,
+        "retained_bytes": 186863906,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 3,
+          "retained_html": 1,
+          "retained_pdf": 51
+        },
+        "total": 56
+      },
+      "GA": {
+        "not_retained": 25,
+        "retained": 69,
+        "retained_bytes": 131233318,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 19,
+          "restricted_or_login_required": 4,
+          "retained_html": 7,
+          "retained_pdf": 62,
+          "unavailable_on_download": 2
+        },
+        "total": 94
+      },
+      "IA": {
+        "not_retained": 2,
+        "retained": 144,
+        "retained_bytes": 214447830,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 1,
+          "retained_html": 22,
+          "retained_other_document": 8,
+          "retained_pdf": 114,
+          "unavailable_on_download": 1
+        },
+        "total": 146
+      },
+      "ID": {
+        "not_retained": 1,
+        "retained": 17,
+        "retained_bytes": 81453061,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 1,
+          "retained_html": 3,
+          "retained_pdf": 14
+        },
+        "total": 18
+      },
+      "IL": {
+        "not_retained": 20,
+        "retained": 193,
+        "retained_bytes": 455184069,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 1,
+          "duplicate_retained_source": 6,
+          "oversized_defer": 1,
+          "restricted_or_login_required": 6,
+          "retained_html": 7,
+          "retained_pdf": 186,
+          "unavailable_on_download": 6
+        },
+        "total": 213
+      },
+      "IN": {
+        "not_retained": 4,
+        "retained": 133,
+        "retained_bytes": 108677364,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 2,
+          "retained_html": 6,
+          "retained_pdf": 127,
+          "unavailable_on_download": 2
+        },
+        "total": 137
+      },
+      "KS": {
+        "not_retained": 3,
+        "retained": 147,
+        "retained_bytes": 58901731,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 1,
+          "retained_html": 41,
+          "retained_other_document": 4,
+          "retained_pdf": 102,
+          "unavailable_on_download": 1
+        },
+        "total": 150
+      },
+      "KY": {
+        "not_retained": 2,
+        "retained": 83,
+        "retained_bytes": 81033397,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 2,
+          "retained_html": 11,
+          "retained_other_document": 4,
+          "retained_pdf": 68
+        },
+        "total": 85
+      },
+      "LA": {
+        "not_retained": 3,
+        "retained": 66,
+        "retained_bytes": 110392101,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 3,
+          "retained_html": 19,
+          "retained_other_document": 1,
+          "retained_pdf": 46
+        },
+        "total": 69
+      },
+      "MA": {
+        "not_retained": 9,
+        "retained": 82,
+        "retained_bytes": 105923275,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 9,
+          "retained_html": 9,
+          "retained_pdf": 73
+        },
+        "total": 91
+      },
+      "MD": {
+        "not_retained": 0,
+        "retained": 3,
+        "retained_bytes": 717447,
+        "terminal_status_counts": {
+          "retained_pdf": 3
+        },
+        "total": 3
+      },
+      "ME": {
+        "not_retained": 2,
+        "retained": 89,
+        "retained_bytes": 204298570,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 2,
+          "retained_html": 13,
+          "retained_other_document": 1,
+          "retained_pdf": 75
+        },
+        "total": 91
+      },
+      "MI": {
+        "not_retained": 8,
+        "retained": 192,
+        "retained_bytes": 547594919,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 2,
+          "restricted_or_login_required": 4,
+          "retained_html": 17,
+          "retained_pdf": 175,
+          "unavailable_on_download": 2
+        },
+        "total": 200
+      },
+      "MN": {
+        "not_retained": 0,
+        "retained": 176,
+        "retained_bytes": 429733241,
+        "terminal_status_counts": {
+          "retained_html": 9,
+          "retained_pdf": 167
+        },
+        "total": 176
+      },
+      "MO": {
+        "not_retained": 4,
+        "retained": 55,
+        "retained_bytes": 50514380,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 2,
+          "restricted_or_login_required": 1,
+          "retained_html": 11,
+          "retained_other_document": 5,
+          "retained_pdf": 39,
+          "unavailable_on_download": 1
+        },
+        "total": 59
+      },
+      "MS": {
+        "not_retained": 0,
+        "retained": 9,
+        "retained_bytes": 9304240,
+        "terminal_status_counts": {
+          "retained_html": 1,
+          "retained_pdf": 8
+        },
+        "total": 9
+      },
+      "NC": {
+        "not_retained": 11,
+        "retained": 170,
+        "retained_bytes": 277584822,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 1,
+          "duplicate_retained_source": 3,
+          "restricted_or_login_required": 4,
+          "retained_html": 10,
+          "retained_other_document": 6,
+          "retained_pdf": 154,
+          "unavailable_on_download": 3
+        },
+        "total": 181
+      },
+      "ND": {
+        "not_retained": 2,
+        "retained": 59,
+        "retained_bytes": 147675691,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "oversized_defer": 1,
+          "retained_html": 8,
+          "retained_other_document": 1,
+          "retained_pdf": 50
+        },
+        "total": 61
+      },
+      "NE": {
+        "not_retained": 5,
+        "retained": 95,
+        "retained_bytes": 110479311,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 4,
+          "retained_html": 20,
+          "retained_other_document": 8,
+          "retained_pdf": 67
+        },
+        "total": 100
+      },
+      "NH": {
+        "not_retained": 1,
+        "retained": 36,
+        "retained_bytes": 63014315,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 1,
+          "retained_html": 2,
+          "retained_pdf": 34
+        },
+        "total": 37
+      },
+      "NJ": {
+        "not_retained": 15,
+        "retained": 295,
+        "retained_bytes": 323801536,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 8,
+          "retained_html": 15,
+          "retained_other_document": 1,
+          "retained_pdf": 279,
+          "unavailable_on_download": 7
+        },
+        "total": 310
+      },
+      "NY": {
+        "not_retained": 31,
+        "retained": 235,
+        "retained_bytes": 314676434,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 25,
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 3,
+          "retained_html": 10,
+          "retained_pdf": 225,
+          "unavailable_on_download": 2
+        },
+        "total": 266
+      },
+      "OH": {
+        "not_retained": 2,
+        "retained": 245,
+        "retained_bytes": 796273315,
+        "terminal_status_counts": {
+          "likely_non_source_or_navigation_only": 1,
+          "retained_html": 13,
+          "retained_other_document": 6,
+          "retained_pdf": 226,
+          "unavailable_on_download": 1
+        },
+        "total": 247
+      },
+      "OK": {
+        "not_retained": 4,
+        "retained": 47,
+        "retained_bytes": 140115093,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 1,
+          "retained_html": 2,
+          "retained_other_document": 3,
+          "retained_pdf": 42,
+          "unavailable_on_download": 2
+        },
+        "total": 51
+      },
+      "OR": {
+        "not_retained": 0,
+        "retained": 21,
+        "retained_bytes": 28404139,
+        "terminal_status_counts": {
+          "retained_html": 3,
+          "retained_other_document": 4,
+          "retained_pdf": 14
+        },
+        "total": 21
+      },
+      "PA": {
+        "not_retained": 11,
+        "retained": 150,
+        "retained_bytes": 170894589,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 4,
+          "retained_html": 8,
+          "retained_pdf": 142,
+          "unavailable_on_download": 7
+        },
+        "total": 161
+      },
+      "SC": {
+        "not_retained": 1,
+        "retained": 26,
+        "retained_bytes": 11626846,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "retained_html": 6,
+          "retained_pdf": 20
+        },
+        "total": 27
+      },
+      "SD": {
+        "not_retained": 3,
+        "retained": 56,
+        "retained_bytes": 26120169,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "restricted_or_login_required": 2,
+          "retained_html": 8,
+          "retained_other_document": 3,
+          "retained_pdf": 45
+        },
+        "total": 59
+      },
+      "TN": {
+        "not_retained": 1,
+        "retained": 70,
+        "retained_bytes": 78709238,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 1,
+          "retained_pdf": 70
+        },
+        "total": 71
+      },
+      "TX": {
+        "not_retained": 13,
+        "retained": 79,
+        "retained_bytes": 450869891,
+        "terminal_status_counts": {
+          "broken_or_corrupt": 2,
+          "duplicate_retained_source": 5,
+          "restricted_or_login_required": 3,
+          "retained_html": 8,
+          "retained_pdf": 71,
+          "unavailable_on_download": 3
+        },
+        "total": 92
+      },
+      "UT": {
+        "not_retained": 59,
+        "retained": 29,
+        "retained_bytes": 18598915,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 58,
+          "restricted_or_login_required": 1,
+          "retained_html": 5,
+          "retained_pdf": 24
+        },
+        "total": 88
+      },
+      "VA": {
+        "not_retained": 0,
+        "retained": 24,
+        "retained_bytes": 27900087,
+        "terminal_status_counts": {
+          "retained_other_document": 3,
+          "retained_pdf": 21
+        },
+        "total": 24
+      },
+      "VT": {
+        "not_retained": 6,
+        "retained": 80,
+        "retained_bytes": 101412141,
+        "terminal_status_counts": {
+          "restricted_or_login_required": 2,
+          "retained_html": 5,
+          "retained_other_document": 2,
+          "retained_pdf": 73,
+          "unavailable_on_download": 4
+        },
+        "total": 86
+      },
+      "WA": {
+        "not_retained": 1,
+        "retained": 42,
+        "retained_bytes": 67992807,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 1,
+          "retained_html": 3,
+          "retained_other_document": 1,
+          "retained_pdf": 38
+        },
+        "total": 43
+      },
+      "WI": {
+        "not_retained": 7,
+        "retained": 173,
+        "retained_bytes": 256270130,
+        "terminal_status_counts": {
+          "duplicate_retained_source": 3,
+          "restricted_or_login_required": 4,
+          "retained_html": 9,
+          "retained_other_document": 6,
+          "retained_pdf": 158
+        },
+        "total": 180
+      },
+      "WV": {
+        "not_retained": 1,
+        "retained": 22,
+        "retained_bytes": 5018493,
+        "terminal_status_counts": {
+          "retained_html": 7,
+          "retained_other_document": 2,
+          "retained_pdf": 13,
+          "unavailable_on_download": 1
+        },
+        "total": 23
+      }
+    },
+    "total_rows": 3950
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30",
+  "artifact_root_git_ignored": true,
+  "available_bytes_before_run": 90316824576,
+  "known_content_length_rows": 3371,
+  "maximum_file_bytes": 78643200,
+  "minimum_free_bytes_required": 21474836480,
+  "projected_retained_bytes": 7447515820,
+  "storage_sanity_passed": true
+}

@@ -1,0 +1,143 @@
+{
+  "ahead_history_object_entries_before_commit": 0,
+  "audited_at": "2026-07-30T13:14:44Z",
+  "forbidden_binary_extensions_staged": [],
+  "full_source_bodies_or_extracted_text_staged": [],
+  "largest_staged_files": [
+    {
+      "bytes": 14030089,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/merged_source_review_results.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 13189793,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/retained_source_manifest.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 11708509,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/retained_pdf_manifest.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 7533252,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/merged_source_review_results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 7002338,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_locked_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 4019372,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/retained_source_manifest.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 3933415,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_locked_queue.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 3575106,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/retained_pdf_manifest.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 3516183,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_001_results.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 3511842,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_002_results.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 3502465,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_004_results.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 3499599,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_003_results.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 1898544,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/lanes/source_review_lane_001/results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1896705,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/lanes/source_review_lane_002/results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1892148,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_001_results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1887894,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/lanes/source_review_lane_004/results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1887767,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_002_results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1884037,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/lanes/source_review_lane_003/results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1879982,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_004_results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1877138,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_003_results.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 1755862,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_001_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 1754088,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_002_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 1748419,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_004_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 1743969,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/source_review_lane_003_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "bytes": 1410989,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/retained_source_manifest.sha256.json",
+      "suffix": ".json"
+    }
+  ],
+  "note": "The audit itself is generated after examining the staged proposal and is staged only after this report passes.",
+  "origin_main": "079d27295952006b5fbcfd7df17e222b08979d62",
+  "passed": true,
+  "precommit_head": "079d27295952006b5fbcfd7df17e222b08979d62",
+  "projected_new_commit_metadata_only": true,
+  "retained_artifact_paths_staged": [],
+  "retained_artifact_paths_tracked": [],
+  "staged_aggregate_bytes": 111732552,
+  "staged_file_count": 117,
+  "violations": []
+}

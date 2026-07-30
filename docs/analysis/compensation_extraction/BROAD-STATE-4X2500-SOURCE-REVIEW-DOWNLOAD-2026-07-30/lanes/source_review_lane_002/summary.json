@@ -1,0 +1,37 @@
+{
+  "actual_started_at": "2026-07-30T12:42:09Z",
+  "checkpoint_frequency": "after_every_row",
+  "codification_runs": 0,
+  "completed_at": "2026-07-30T12:52:18Z",
+  "completed_rows": 988,
+  "extraction_runs": 0,
+  "ingestion_runs": 0,
+  "lane_id": "source_review_lane_002",
+  "locked_rows": 988,
+  "maximum_concurrency": 2,
+  "ocr_runs": 0,
+  "priority_counts": {
+    "high_priority_verification_ready": 730,
+    "low_priority_verification_ready": 28,
+    "medium_priority_verification_ready": 230
+  },
+  "rating_runs": 0,
+  "remaining_rows": 0,
+  "resumed_completed_rows": 976,
+  "resume_started_at": "2026-07-30T12:49:48Z",
+  "safe_resume_reason": "bounded redirect-chain exception handler repaired; resumed only 12 incomplete rows",
+  "retained_bytes": 1484932585,
+  "retained_count": 950,
+  "scheduled_stagger_minutes": 8,
+  "scheduled_start_at": "2026-07-30T12:42:09.462527Z",
+  "status": "completed",
+  "task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30",
+  "terminal_status_counts": {
+    "broken_or_corrupt": 4,
+    "restricted_or_login_required": 23,
+    "retained_html": 113,
+    "retained_other_document": 15,
+    "retained_pdf": 822,
+    "unavailable_on_download": 11
+  }
+}

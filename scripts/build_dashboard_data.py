@@ -1690,6 +1690,11 @@ BROAD_STATE_4X2500_VERIFICATION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-VERIFICATION-2026-07-30"
 )
+BROAD_STATE_4X2500_SOURCE_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -5917,6 +5922,103 @@ def broad_state_4x2500_verification_status() -> tuple[bool, dict[str, Any]]:
     }
 
 
+def broad_state_4x2500_source_review_download_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed 3,950-row source-review/download wave."""
+    required = (
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "source_review_download_summary.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "source_review_download_manifest.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "source_review_lane_distribution.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "retained_source_storage_audit.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "validation_report.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "forbidden_action_audit.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "dashboard_status_input.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "priority_source_review_summary.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "source_family_source_review_summary.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "geography_source_review_summary.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "cba_non_cba_source_review_summary.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "mechanism_hint_source_review_summary.json",
+        BROAD_STATE_4X2500_SOURCE_REVIEW_DIR / "source_review_download_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    summary, manifest, lanes, storage, validation, forbidden, dashboard, priority, source_family, geography, cba, mechanism, _ = (
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    )
+    expected = "broad_state_4x2500_source_review_download_completed_pdf_readiness_ready"
+    retained_total = sum(
+        summary.get(key, 0)
+        for key in (
+            "retained_pdf_count",
+            "retained_html_count",
+            "retained_other_document_count",
+        )
+    )
+    gates = (
+        summary.get("decision") == expected
+        and summary.get("source_review_status") == "completed"
+        and summary.get("source_review_queue_count") == 3950
+        and summary.get("completed_source_review_rows") == 3950
+        and summary.get("lane_counts") == {
+            "source_review_lane_001": 988,
+            "source_review_lane_002": 988,
+            "source_review_lane_003": 987,
+            "source_review_lane_004": 987,
+        }
+        and retained_total == summary.get("retained_source_count")
+        and manifest.get("execution_status") == "completed"
+        and manifest.get("completed_rows") == 3950
+        and lanes.get("total_rows") == 3950
+        and lanes.get("exact_lane_distribution_passed") is True
+        and storage.get("passed") is True
+        and storage.get("artifact_root_git_ignored") is True
+        and validation.get("validation_passed") is True
+        and forbidden.get("passed") is True
+        and dashboard.get("map_filter") == "total_scout_coverage_only"
+        and dashboard.get("scout_covered_municipalities") == 16887
+        and dashboard.get("global_analysis_readiness") is False
+        and summary.get("global_analysis_readiness") is False
+        and summary.get("extraction_runs") == 0
+        and summary.get("ocr_runs") == 0
+        and summary.get("rating_runs") == 0
+        and summary.get("ingestion_runs") == 0
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 source-review/download package fails dashboard gates")
+    return True, {
+        **summary,
+        "retained_by_priority": {
+            key: value.get("retained", 0)
+            for key, value in priority.get("groups", {}).items()
+        },
+        "retained_by_source_family": {
+            key: value.get("retained", 0)
+            for key, value in source_family.get("groups", {}).items()
+        },
+        "retained_by_state": {
+            key: value.get("retained", 0)
+            for key, value in geography.get("state", {}).get("groups", {}).items()
+        },
+        "retained_by_region": {
+            key: value.get("retained", 0)
+            for key, value in geography.get("region", {}).get("groups", {}).items()
+        },
+        "retained_by_cba_hint": {
+            key: value.get("retained", 0)
+            for key, value in cba.get("groups", {}).items()
+        },
+        "retained_by_mechanism_hint": {
+            key: value.get("retained", 0)
+            for key, value in mechanism.get("groups", {}).items()
+        },
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/"
+            "source_review_download_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6038,23 +6140,53 @@ def build_reports_index_layer(
     broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
     broad_4x2500_review_available, broad_4x2500_review = broad_state_4x2500_candidate_review_status()
     broad_4x2500_verify_available, broad_4x2500_verify = broad_state_4x2500_verification_status()
+    broad_4x2500_source_review_available, broad_4x2500_source_review = (
+        broad_state_4x2500_source_review_download_status()
+    )
     published_reports = [
+        *(
+            [
+                {
+                    "id": "broad-state-4x2500-source-review-download-2026-07-30",
+                    "title": "Broad State 4 × 2,500 Source Review / Download",
+                    "report_type": "Current bounded source-review/download result",
+                    "date": "2026-07-30",
+                    "checkpoint": f"{broad_4x2500_source_review['retained_source_count']:,} unique retained sources",
+                    "summary": (
+                        "All 3,950 source-review-ready locators received one terminal outcome across "
+                        "four lanes. Eligible payloads are retained only in ignored local storage; "
+                        "PDF/text readiness is next."
+                    ),
+                    "tags": ["current", "broad scout", "4x2500", "source review", "retained sources"],
+                    "current": True,
+                    "historical": False,
+                    "href": repository_root_url + broad_4x2500_source_review["dashboard_result_path"],
+                    "link_label": "Open current 4 × 2,500 source-review report",
+                    "scope_metrics": [
+                        {"label": "reviewed locators", "value": broad_4x2500_source_review["source_review_queue_count"]},
+                        {"label": "retained sources", "value": broad_4x2500_source_review["retained_source_count"]},
+                        {"label": "retained PDFs", "value": broad_4x2500_source_review["retained_pdf_count"]},
+                    ],
+                }
+            ] if broad_4x2500_source_review_available else []
+        ),
         *(
             [
                 {
                     "id": "broad-state-4x2500-verification-2026-07-30",
                     "title": "Broad State 4 × 2,500 Verification",
-                    "report_type": "Current HEAD-only verification result",
+                    "report_type": "Historical HEAD-only verification result" if broad_4x2500_source_review_available else "Current HEAD-only verification result",
                     "date": "2026-07-30",
                     "checkpoint": f"{broad_4x2500_verify['source_review_ready_count']:,} source-review-ready locators",
                     "summary": (
                         "All 5,768 high-, medium-, and low-priority candidates received one terminal "
                         "HEAD-only metadata outcome across four lanes. Source review/download is ready next."
                     ),
-                    "tags": ["current", "broad scout", "4x2500", "verification", "source review ready"],
-                    "current": True, "historical": False,
+                    "tags": ["historical" if broad_4x2500_source_review_available else "current", "broad scout", "4x2500", "verification", "source review ready"],
+                    "current": not broad_4x2500_source_review_available,
+                    "historical": broad_4x2500_source_review_available,
                     "href": repository_root_url + broad_4x2500_verify["dashboard_result_path"],
-                    "link_label": "Open current 4 × 2,500 verification report",
+                    "link_label": "Open historical 4 × 2,500 verification report" if broad_4x2500_source_review_available else "Open current 4 × 2,500 verification report",
                     "scope_metrics": [
                         {"label": "verified rows", "value": broad_4x2500_verify["completed_verification_rows"]},
                         {"label": "source-review ready", "value": broad_4x2500_verify["source_review_ready_count"]},
@@ -9134,6 +9266,9 @@ def build_project_phase_summary(
     broad_4x2500_live_available, broad_4x2500_live = broad_state_4x2500_live_scout_status()
     broad_4x2500_review_available, broad_4x2500_review = broad_state_4x2500_candidate_review_status()
     broad_4x2500_verify_available, broad_4x2500_verify = broad_state_4x2500_verification_status()
+    broad_4x2500_source_review_available, broad_4x2500_source_review = (
+        broad_state_4x2500_source_review_download_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -9165,7 +9300,9 @@ def build_project_phase_summary(
             broad_codification_available or broad_rating_available or broad_span_available or broad_extraction_available or broad_readiness_available or source_download_available or candidate_review_available or verification_available
         ) else "2026-07-27",
         "stage": (
-            "broad_state_4x2500_verification_complete_source_review_download_transition"
+            "broad_state_4x2500_source_review_download_complete_pdf_text_readiness_transition"
+            if broad_4x2500_source_review_available
+            else "broad_state_4x2500_verification_complete_source_review_download_transition"
             if broad_4x2500_verify_available
             else "broad_state_4x2500_candidate_review_complete_verification_transition"
             if broad_4x2500_review_available
@@ -9208,7 +9345,9 @@ def build_project_phase_summary(
             else "bounded_tier_c_evidence_memo_supplement_complete_broad_scout_transition"
         ),
         "current_phase": (
-            "Broad state 4 × 2,500 verification complete; four-lane source review/download ready next"
+            "Broad state 4 × 2,500 source review/download complete; four-lane PDF/text readiness ready next"
+            if broad_4x2500_source_review_available
+            else "Broad state 4 × 2,500 verification complete; four-lane source review/download ready next"
             if broad_4x2500_verify_available
             else "Broad state 4 × 2,500 candidate review complete; four-lane verification ready next"
             if broad_4x2500_review_available
@@ -9251,7 +9390,9 @@ def build_project_phase_summary(
             else "Tier C evidence memo supplement complete; broad state-by-state scouting ready next"
         ),
         "current_phase_code": (
-            broad_4x2500_verify["decision"]
+            broad_4x2500_source_review["decision"]
+            if broad_4x2500_source_review_available
+            else broad_4x2500_verify["decision"]
             if broad_4x2500_verify_available
             else broad_4x2500_review["decision"]
             if broad_4x2500_review_available
@@ -9288,7 +9429,9 @@ def build_project_phase_summary(
             else tier_c_supplement["decision"]
         ),
         "current_evidence_status": (
-            "broad_4x2500_verification_complete_source_review_download_ready_metadata_only"
+            "broad_4x2500_source_review_download_complete_retained_files_unextracted"
+            if broad_4x2500_source_review_available
+            else "broad_4x2500_verification_complete_source_review_download_ready_metadata_only"
             if broad_4x2500_verify_available
             else "broad_4x2500_candidate_review_complete_verification_ready_unverified_metadata_only"
             if broad_4x2500_review_available
@@ -9306,6 +9449,22 @@ def build_project_phase_summary(
         ),
         "global_analysis_readiness": False,
         "global_analysis_readiness_gate_available": global_gate_available,
+        "broad_state_4x2500_source_review_download_available": broad_4x2500_source_review_available,
+        "broad_state_4x2500_source_review_download_decision": broad_4x2500_source_review.get("decision") if broad_4x2500_source_review_available else None,
+        "broad_state_4x2500_source_review_queue_count": broad_4x2500_source_review.get("source_review_queue_count", 0) if broad_4x2500_source_review_available else 0,
+        "broad_state_4x2500_source_review_retained_count": broad_4x2500_source_review.get("retained_source_count", 0) if broad_4x2500_source_review_available else 0,
+        "broad_state_4x2500_source_review_retained_pdf_count": broad_4x2500_source_review.get("retained_pdf_count", 0) if broad_4x2500_source_review_available else 0,
+        "broad_state_4x2500_source_review_retained_html_count": broad_4x2500_source_review.get("retained_html_count", 0) if broad_4x2500_source_review_available else 0,
+        "broad_state_4x2500_source_review_retained_other_count": broad_4x2500_source_review.get("retained_other_document_count", 0) if broad_4x2500_source_review_available else 0,
+        "broad_state_4x2500_source_review_retained_bytes": broad_4x2500_source_review.get("retained_byte_total", 0) if broad_4x2500_source_review_available else 0,
+        "broad_state_4x2500_source_review_terminal_status_counts": broad_4x2500_source_review.get("terminal_status_counts", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_priority_counts": broad_4x2500_source_review.get("priority_counts", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_retained_by_priority": broad_4x2500_source_review.get("retained_by_priority", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_retained_by_source_family": broad_4x2500_source_review.get("retained_by_source_family", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_retained_by_state": broad_4x2500_source_review.get("retained_by_state", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_retained_by_region": broad_4x2500_source_review.get("retained_by_region", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_retained_by_cba_hint": broad_4x2500_source_review.get("retained_by_cba_hint", {}) if broad_4x2500_source_review_available else {},
+        "broad_state_4x2500_source_review_retained_by_mechanism_hint": broad_4x2500_source_review.get("retained_by_mechanism_hint", {}) if broad_4x2500_source_review_available else {},
         "broad_state_4x2500_verification_available": broad_4x2500_verify_available,
         "broad_state_4x2500_verification_decision": broad_4x2500_verify.get("decision") if broad_4x2500_verify_available else None,
         "broad_state_4x2500_verified_row_count": broad_4x2500_verify.get("completed_verification_rows", 0) if broad_4x2500_verify_available else 0,
@@ -9615,7 +9774,11 @@ def build_project_phase_summary(
             else "not_ready"
         ),
         "current_report_title": (
-            "Broad State 4 × 2,500 Candidate Review"
+            "Broad State 4 × 2,500 Source Review / Download"
+            if broad_4x2500_source_review_available
+            else "Broad State 4 × 2,500 Verification"
+            if broad_4x2500_verify_available
+            else "Broad State 4 × 2,500 Candidate Review"
             if broad_4x2500_review_available
             else "Broad State 4 × 2,500 Live Scout"
             if broad_4x2500_live_available
@@ -9643,7 +9806,11 @@ def build_project_phase_summary(
             if verification_available else "Bounded Tier C Evidence Memo Supplement"
         ),
         "current_report_path": (
-            broad_4x2500_review["dashboard_result_path"]
+            broad_4x2500_source_review["dashboard_result_path"]
+            if broad_4x2500_source_review_available
+            else broad_4x2500_verify["dashboard_result_path"]
+            if broad_4x2500_verify_available
+            else broad_4x2500_review["dashboard_result_path"]
             if broad_4x2500_review_available
             else broad_4x2500_live["dashboard_result_path"]
             if broad_4x2500_live_available
@@ -9672,7 +9839,11 @@ def build_project_phase_summary(
             else "docs/analysis/compensation_extraction/BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27/bounded_tier_c_evidence_memo_supplement.md"
         ),
         "current_operational_report_path": (
-            broad_4x2500_review["dashboard_result_path"]
+            broad_4x2500_source_review["dashboard_result_path"]
+            if broad_4x2500_source_review_available
+            else broad_4x2500_verify["dashboard_result_path"]
+            if broad_4x2500_verify_available
+            else broad_4x2500_review["dashboard_result_path"]
             if broad_4x2500_review_available
             else broad_4x2500_live["dashboard_result_path"]
             if broad_4x2500_live_available
@@ -9707,7 +9878,11 @@ def build_project_phase_summary(
             else "docs/analysis/bounded_tier_c_evidence_memo_supplement_result_2026-07-27.md"
         ),
         "next_task": (
-            "run BROAD-STATE-4X2500-VERIFICATION-2026-07-30 over the full verification-ready queue in four independent staggered lanes"
+            "run BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30 over retained sources only in four independent staggered lanes"
+            if broad_4x2500_source_review_available
+            else "run BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30 over the full source-review-ready queue in four independent staggered lanes"
+            if broad_4x2500_verify_available
+            else "run BROAD-STATE-4X2500-VERIFICATION-2026-07-30 over the full verification-ready queue in four independent staggered lanes"
             if broad_4x2500_review_available
             else "run deterministic combined candidate review over the committed 4 × 2,500 live-scout review queue"
             if broad_4x2500_live_available and broad_4x2500_live.get("completed_lane_count") == 4
@@ -9803,7 +9978,9 @@ def build_project_phase_summary(
             "balance; use mechanism-targeted scouting only as secondary gap-filling."
         ),
         "next_phase": (
-            "four-lane broad-state 4 × 2,500 source review/download"
+            "four-lane broad-state 4 × 2,500 PDF/text readiness"
+            if broad_4x2500_source_review_available
+            else "four-lane broad-state 4 × 2,500 source review/download"
             if broad_4x2500_verify_available
             else "four-lane broad-state 4 × 2,500 candidate verification"
             if broad_4x2500_review_available
@@ -9838,6 +10015,15 @@ def build_project_phase_summary(
             else "broad state-by-state source scouting"
         ),
         "next_phase_sequence": (
+            [
+                "lock only the 3,672 unique retained hashed local sources",
+                "split retained-file readiness across four independent staggered lanes",
+                "classify PDF, HTML, and other-document text-layer readiness without extracting text",
+                "defer OCR, rating, ingestion, codification, wage-gap work, and causal analysis",
+                "rebuild and visibly smoke-test the dashboard while preserving scout-only map coverage",
+            ]
+            if broad_4x2500_source_review_available
+            else
             [
                 "launch four isolated live lanes at T+0/T+8/T+16/T+24 with controlled overlap",
                 "validate each committed shard hash and checkpoint after every target",
@@ -9902,7 +10088,9 @@ def build_project_phase_summary(
         "regressions_status": "Deferred",
         "last_updated_commit": CURRENT_SOURCE_ACCOUNTING_COMMIT,
         "last_updated_context": (
-            "combined_broad_rating_ingestion_codification_complete_global_gate_ready"
+            "broad_state_4x2500_source_review_download_complete_pdf_text_readiness_ready"
+            if broad_4x2500_source_review_available
+            else "combined_broad_rating_ingestion_codification_complete_global_gate_ready"
             if broad_codification_available
             else "combined_broad_exact_span_rating_summary_complete_ingestion_ready"
             if broad_rating_summary_available

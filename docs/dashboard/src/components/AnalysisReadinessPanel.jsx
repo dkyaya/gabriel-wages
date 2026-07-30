@@ -56,6 +56,8 @@ export function AnalysisReadinessPanel({ data, phase }) {
             <li>The parent memo and Tier C supplement report bounded documentary and same-source co-location scaffolds only.</li>
             <li>{formatNumber(phase.tier_c_text_extracted_ok_count)} Tier C text artifacts were processed into exact spans; {formatNumber(phase.tier_c_rating_summary_valid_count)} valid ratings were summarized and {formatNumber(phase.tier_c_rating_summary_quarantine_excluded_count)} quarantines remain excluded.</li>
             <li>No normalized wage comparison, descriptive wage gap, regression, or treatment effect is available.</li>
+            <li>Wage-gap readiness remains blocked pending normalization.</li>
+            <li>Causal readiness remains blocked pending matched structure.</li>
             <li>Final causal and national prevalence claims remain unavailable.</li>
           </ul>
           <p>{data.promotion_gate}</p>
@@ -63,10 +65,10 @@ export function AnalysisReadinessPanel({ data, phase }) {
       </div>
 
       <p className="panel-note">
-        The four-lane broad state scout is complete. The bounded locator-verification wave is
-        {phase.verification_all_lanes_completed ? " complete" : " partial, with one lane resume required"}. The next operational step is
-        {phase.verification_all_lanes_completed ? " one separately authorized combined candidate review" : " a bounded resume of the incomplete verification lane"} over preserved discovery and verification metadata.
-        Reachability is not source review or evidence and does not make the project globally analysis-ready.
+        The four-lane broad state scout and 5,768-row verification wave are complete. The current
+        4 × 2,500 source-review/download wave reviewed {formatNumber(phase.broad_state_4x2500_source_review_queue_count)} locators
+        and retained {formatNumber(phase.broad_state_4x2500_source_review_retained_count)} unique hashed files in ignored local storage.
+        PDF/text readiness is next; no text extraction, OCR, rating, ingestion, codification, wage-gap analysis, or causal analysis occurred.
       </p>
 
       <details>

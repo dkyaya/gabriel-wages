@@ -1,0 +1,8 @@
+{
+  "decision": "broad_state_4x2500_source_review_download_completed_pdf_readiness_ready",
+  "finalized_at": "2026-07-30T13:04:59Z",
+  "global_analysis_readiness": false,
+  "pdf_text_readiness_ready_next": true,
+  "source_review_download_completed": true,
+  "task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30"
+}

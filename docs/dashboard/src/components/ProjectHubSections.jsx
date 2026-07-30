@@ -14,12 +14,18 @@ function decimal(value, digits = 1) {
 }
 
 export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
+  const latestSourceReview = phase.broad_state_4x2500_source_review_download_available;
   return (
     <section className="project-orientation" aria-label="Collected current and forthcoming project status">
       <article>
         <p className="eyebrow">Current operation</p>
-        <h2>{phase.combined_pdf_text_readiness_available ? "Combined broad PDF/text-layer readiness complete" : phase.combined_source_review_download_available ? "Combined broad source review/download complete" : "Combined broad candidate review complete"}</h2>
-        {phase.combined_pdf_text_readiness_available ? (
+        <h2>{latestSourceReview ? "Broad state 4 × 2,500 source review/download complete" : phase.combined_pdf_text_readiness_available ? "Combined broad PDF/text-layer readiness complete" : phase.combined_source_review_download_available ? "Combined broad source review/download complete" : "Combined broad candidate review complete"}</h2>
+        {latestSourceReview ? (
+          <p>
+            All {formatNumber(phase.broad_state_4x2500_source_review_queue_count)} locked locators reached a terminal
+            outcome; {formatNumber(phase.broad_state_4x2500_source_review_retained_count)} unique source files were retained and hashed outside Git.
+          </p>
+        ) : phase.combined_pdf_text_readiness_available ? (
           <p>
             All {formatNumber(phase.pdf_text_readiness_reviewed_count)} retained sources were reviewed across four
             staggered lanes; {formatNumber(phase.pdf_text_readiness_extraction_ready_count)} are technically approved
@@ -49,7 +55,9 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
       <article>
         <p className="eyebrow">Next authorized stage</p>
         <h2>{phase.next_phase}</h2>
-        <p>{phase.combined_pdf_text_readiness_available
+        <p>{latestSourceReview
+          ? "Use only this wave’s unique hashed retained local files in four PDF/text-readiness lanes; do not redownload, extract text, OCR, rate, ingest, codify, or treat retention as evidence."
+          : phase.combined_pdf_text_readiness_available
           ? "Use only readiness-approved manifests in four isolated text-extraction lanes; do not admit deferred rows or treat extracted text as rated, ingested, causal, or globally analysis-ready."
           : phase.combined_source_review_download_available
           ? "Use only hashed retained local files in a separately authorized PDF/text-layer readiness pass; do not redownload or treat retention as evidence."
@@ -61,6 +69,7 @@ export function ProjectOrientation({ totals, priorityTotals, report, phase }) {
 
 export function ProjectPhasePanel({ phase }) {
   const progress = Math.min(100, Math.max(0, phase.progress_percentage));
+  const latestSourceReview = phase.broad_state_4x2500_source_review_download_available;
   return (
     <section className="panel hub-section phase-panel" id="project-phase" aria-labelledby="project-phase-title">
       <div className="section-heading">
@@ -69,7 +78,9 @@ export function ProjectPhasePanel({ phase }) {
           <h2 id="project-phase-title">{phase.current_phase}</h2>
         </div>
         <StatusPill tone="verified">
-          {phase.combined_pdf_text_readiness_available
+          {latestSourceReview
+            ? `${formatNumber(phase.broad_state_4x2500_source_review_retained_count)} retained sources`
+            : phase.combined_pdf_text_readiness_available
             ? `${formatNumber(phase.pdf_text_readiness_reviewed_count)} readiness-reviewed`
             : phase.combined_source_review_download_available
             ? `${formatNumber(phase.source_review_download_retained_count)} retained sources`
@@ -88,6 +99,8 @@ export function ProjectPhasePanel({ phase }) {
       </div>
 
       <div className="phase-metrics">
+        {latestSourceReview && <div><span>Current source-review queue</span><strong>{formatNumber(phase.broad_state_4x2500_source_review_queue_count)}</strong></div>}
+        {latestSourceReview && <div><span>Current retained PDF / HTML / other</span><strong>{formatNumber(phase.broad_state_4x2500_source_review_retained_pdf_count)} / {formatNumber(phase.broad_state_4x2500_source_review_retained_html_count)} / {formatNumber(phase.broad_state_4x2500_source_review_retained_other_count)}</strong></div>}
         <div><span>Scout-covered municipalities</span><strong>{formatNumber(phase.current_scout_covered)}</strong></div>
         <div><span>Total candidate rows</span><strong>{formatNumber(phase.current_candidate_queue_rows)}</strong></div>
         <div><span>Verification queue</span><strong>{formatNumber(phase.verification_queue_size)}</strong></div>
@@ -121,7 +134,14 @@ export function ProjectPhasePanel({ phase }) {
           <p className="eyebrow">Current transition</p>
           <h3>{phase.next_phase}</h3>
         </div>
-        {phase.combined_pdf_text_readiness_available ? (
+        {latestSourceReview ? (
+          <ol>
+            <li>Lock only the {formatNumber(phase.broad_state_4x2500_source_review_retained_count)} unique hashed retained files from this wave</li>
+            <li>Use four independent PDF/text-readiness lanes with T+0/T+8/T+16/T+24 starts</li>
+            <li>Classify PDF, HTML, and other-document readiness without extracting full text or running OCR</li>
+            <li>Keep rating, ingestion, codification, wage analysis, and causal claims out of scope</li>
+          </ol>
+        ) : phase.combined_pdf_text_readiness_available ? (
           <ol>
             <li>Lock only parse-layer, HTML-text, and other-document-text approved identities</li>
             <li>Use four isolated extraction workers with T+0/T+8/T+16/T+24 starts</li>
@@ -2124,7 +2144,14 @@ export function MethodologyDefinitions() {
 }
 
 export function NextStepsPanel({ priority, phase }) {
-  const downloadsComplete = phase.combined_source_review_download_available;
+  const broadDownloadsComplete = phase.broad_state_4x2500_source_review_download_available;
+  const downloadsComplete = broadDownloadsComplete || phase.combined_source_review_download_available;
+  const retainedCount = broadDownloadsComplete
+    ? phase.broad_state_4x2500_source_review_retained_count
+    : phase.source_review_download_retained_count;
+  const reviewedCount = broadDownloadsComplete
+    ? phase.broad_state_4x2500_source_review_queue_count
+    : phase.source_review_download_attempted_count;
   return (
     <section className="panel hub-section next-steps-panel" id="next-steps" aria-labelledby="next-steps-title">
       <div className="section-heading">
@@ -2139,7 +2166,7 @@ export function NextStepsPanel({ priority, phase }) {
           <span>Immediate</span>
           <h3>{downloadsComplete ? "Authorize a bounded retained-file readiness pass" : "Authorize a bounded source-review/download wave"}</h3>
           <p>{downloadsComplete
-            ? `Use only the ${formatNumber(phase.source_review_download_retained_count)} unique retained hashed local sources; revalidate path, size, and SHA-256 and do not access URLs or redownload.`
+            ? `Use only the ${formatNumber(retainedCount)} unique retained hashed local sources; revalidate path, size, and SHA-256 and do not access URLs or redownload.`
             : `Use only the locked ${formatNumber(phase.source_review_ready_count)}-row queue, beginning with ${formatNumber(phase.source_review_ready_high_count)} high-priority candidates while preserving geography and source-family diversity.`}</p>
         </article>
         <article>
@@ -2149,9 +2176,9 @@ export function NextStepsPanel({ priority, phase }) {
         </article>
         <article>
           <span>{downloadsComplete ? "Completed source review/download" : "Completed candidate review"}</span>
-          <h3>{formatNumber(downloadsComplete ? phase.source_review_download_attempted_count : phase.candidate_review_universe_size)} rows</h3>
+          <h3>{formatNumber(downloadsComplete ? reviewedCount : phase.candidate_review_universe_size)} rows</h3>
           <p>{downloadsComplete
-            ? `${formatNumber(phase.source_review_download_retained_count)} unique files were retained and hashed. No text, tables, spans, evidence, or analytical quantities were extracted.`
+            ? `${formatNumber(retainedCount)} unique files were retained and hashed (${formatNumber(phase.broad_state_4x2500_source_review_retained_pdf_count)} PDF, ${formatNumber(phase.broad_state_4x2500_source_review_retained_html_count)} HTML, ${formatNumber(phase.broad_state_4x2500_source_review_retained_other_count)} other). No text, tables, spans, evidence, or analytical quantities were extracted.`
             : "The review used only committed snippets, candidate metadata, and verification results. No source URLs or document contents were opened."}</p>
         </article>
       </div>

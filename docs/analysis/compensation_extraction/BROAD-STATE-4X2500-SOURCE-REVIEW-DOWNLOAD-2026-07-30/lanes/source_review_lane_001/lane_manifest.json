@@ -1,0 +1,15 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_001",
+  "checkpoint_frequency": "after_every_row",
+  "csv_sha256": "0a5a3254ff57d0e0c4413f8d5da25c0df3d6beb1f29f679da55f05e379bc4120",
+  "jsonl_sha256": "ae656acac0135b98dcd5847f42067d71ac92e8926db4092a0377687c822c482b",
+  "lane_id": "source_review_lane_001",
+  "priority_counts": {
+    "high_priority_verification_ready": 730,
+    "low_priority_verification_ready": 28,
+    "medium_priority_verification_ready": 230
+  },
+  "scheduled_stagger_minutes": 0,
+  "task_id": "BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30",
+  "total_rows": 988
+}

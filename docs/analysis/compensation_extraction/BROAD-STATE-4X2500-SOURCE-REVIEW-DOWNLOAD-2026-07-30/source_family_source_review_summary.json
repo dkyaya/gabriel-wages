@@ -1,0 +1,188 @@
+{
+  "grouping_field": "source_family_hint",
+  "groups": {
+    "agenda_packet_or_minutes": {
+      "not_retained": 65,
+      "retained": 946,
+      "retained_bytes": 826796357,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 33,
+        "restricted_or_login_required": 20,
+        "retained_html": 129,
+        "retained_other_document": 32,
+        "retained_pdf": 785,
+        "unavailable_on_download": 12
+      },
+      "total": 1011
+    },
+    "arbitration_award": {
+      "not_retained": 2,
+      "retained": 123,
+      "retained_bytes": 80908078,
+      "terminal_status_counts": {
+        "restricted_or_login_required": 2,
+        "retained_html": 3,
+        "retained_pdf": 120
+      },
+      "total": 125
+    },
+    "budget_or_pay_plan": {
+      "not_retained": 44,
+      "retained": 458,
+      "retained_bytes": 895767064,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 2,
+        "duplicate_retained_source": 26,
+        "oversized_defer": 1,
+        "restricted_or_login_required": 10,
+        "retained_html": 40,
+        "retained_other_document": 13,
+        "retained_pdf": 405,
+        "unavailable_on_download": 5
+      },
+      "total": 502
+    },
+    "cba": {
+      "not_retained": 38,
+      "retained": 551,
+      "retained_bytes": 1973464234,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 18,
+        "duplicate_retained_source": 3,
+        "restricted_or_login_required": 10,
+        "retained_html": 22,
+        "retained_other_document": 3,
+        "retained_pdf": 526,
+        "unavailable_on_download": 7
+      },
+      "total": 589
+    },
+    "civil_service_or_hr_pay_plan": {
+      "not_retained": 5,
+      "retained": 60,
+      "retained_bytes": 74938264,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 1,
+        "duplicate_retained_source": 2,
+        "retained_html": 12,
+        "retained_other_document": 3,
+        "retained_pdf": 45,
+        "unavailable_on_download": 2
+      },
+      "total": 65
+    },
+    "classification_study": {
+      "not_retained": 1,
+      "retained": 1,
+      "retained_bytes": 134628,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 1,
+        "retained_pdf": 1
+      },
+      "total": 2
+    },
+    "compensation_study": {
+      "not_retained": 3,
+      "retained": 8,
+      "retained_bytes": 12799527,
+      "terminal_status_counts": {
+        "restricted_or_login_required": 2,
+        "retained_pdf": 8,
+        "unavailable_on_download": 1
+      },
+      "total": 11
+    },
+    "factfinding_report": {
+      "not_retained": 0,
+      "retained": 17,
+      "retained_bytes": 26676766,
+      "terminal_status_counts": {
+        "retained_pdf": 17
+      },
+      "total": 17
+    },
+    "mou_or_memorandum": {
+      "not_retained": 18,
+      "retained": 201,
+      "retained_bytes": 666537650,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 4,
+        "duplicate_retained_source": 1,
+        "oversized_defer": 1,
+        "restricted_or_login_required": 7,
+        "retained_html": 17,
+        "retained_other_document": 1,
+        "retained_pdf": 183,
+        "unavailable_on_download": 5
+      },
+      "total": 219
+    },
+    "other_local_government_pay_policy": {
+      "not_retained": 37,
+      "retained": 430,
+      "retained_bytes": 620849020,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 25,
+        "likely_non_source_or_navigation_only": 1,
+        "restricted_or_login_required": 8,
+        "retained_html": 53,
+        "retained_other_document": 10,
+        "retained_pdf": 367,
+        "unavailable_on_download": 3
+      },
+      "total": 467
+    },
+    "personnel_policy": {
+      "not_retained": 2,
+      "retained": 109,
+      "retained_bytes": 172008562,
+      "terminal_status_counts": {
+        "restricted_or_login_required": 2,
+        "retained_html": 14,
+        "retained_other_document": 2,
+        "retained_pdf": 93
+      },
+      "total": 111
+    },
+    "salary_ordinance": {
+      "not_retained": 9,
+      "retained": 183,
+      "retained_bytes": 176993066,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 2,
+        "restricted_or_login_required": 2,
+        "retained_html": 21,
+        "retained_other_document": 4,
+        "retained_pdf": 158,
+        "unavailable_on_download": 5
+      },
+      "total": 192
+    },
+    "settlement_agreement": {
+      "not_retained": 0,
+      "retained": 7,
+      "retained_bytes": 5477607,
+      "terminal_status_counts": {
+        "retained_html": 1,
+        "retained_pdf": 6
+      },
+      "total": 7
+    },
+    "wage_schedule": {
+      "not_retained": 54,
+      "retained": 578,
+      "retained_bytes": 1024403116,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 4,
+        "duplicate_retained_source": 25,
+        "restricted_or_login_required": 17,
+        "retained_html": 38,
+        "retained_other_document": 6,
+        "retained_pdf": 534,
+        "unavailable_on_download": 8
+      },
+      "total": 632
+    }
+  },
+  "total_rows": 3950
+}
