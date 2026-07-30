@@ -1,0 +1,29 @@
+{
+  "condensed": [
+    {
+      "original_elements": ["valid_rating_card", "quarantine_card", "report_ready_card", "supporting_card", "context_card", "excluded_card", "normalization_needed_card"],
+      "new_element": "four-cell current rated evidence panel plus one normalization note",
+      "clarity_gain": "Makes valid versus quarantined and usable versus contextual evidence legible without seven competing cards."
+    },
+    {
+      "original_elements": ["all mechanism attribute counters", "directionality counters", "quality counters"],
+      "new_element": "six-row ranked mechanism preview",
+      "clarity_gain": "Surfaces the strongest report-oriented mechanism groups while preserving full distributions in the report."
+    },
+    {
+      "original_elements": ["global readiness warning", "wage-gap warning", "causal warning", "COLA warning", "multiple limitations blocks"],
+      "new_element": "single three-column claim boundary panel and one COLA note",
+      "clarity_gain": "States what is allowed and blocked once, in language a PI can scan."
+    },
+    {
+      "original_elements": ["lane cards", "validation counters", "stage history", "source counts", "readiness counts", "extraction counts", "span counts"],
+      "new_element": "collapsed technical audit",
+      "clarity_gain": "Keeps provenance and audit detail discoverable without making it the dashboard hierarchy."
+    },
+    {
+      "original_elements": ["national raw scout count headline", "map raw-count metric", "state raw-count cards"],
+      "new_element": "coverage-rate headline and map with numerator/denominator context",
+      "clarity_gain": "Uses the corrected rate metric while retaining raw counts only where they explain the rate."
+    }
+  ]
+}

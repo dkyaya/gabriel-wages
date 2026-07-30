@@ -116,7 +116,23 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 self.assertEqual(phase["broad_state_4x2500_span_extraction_queue_count"], 2795)
                 self.assertEqual(phase["broad_state_4x2500_span_candidate_count"], span["total_span_candidate_count"])
                 self.assertEqual(phase["broad_state_4x2500_span_rating_ready_count"], span["span_rating_ready_count"])
-                self.assertIn("BROAD-STATE-4X2500-SPAN-RATING-2026-07-30", phase["next_task"])
+                rating_summary_path = (
+                    ROOT / "docs/analysis/compensation_extraction/"
+                    "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/"
+                    "span_rating_summary.json"
+                )
+                if rating_summary_path.exists():
+                    rating = json.loads(rating_summary_path.read_text())
+                    self.assertTrue(phase["broad_state_4x2500_span_rating_available"])
+                    self.assertEqual(phase["broad_state_4x2500_span_rating_queue_count"], 18612)
+                    self.assertEqual(phase["rating_valid_count"], rating["valid_rating_count"])
+                    self.assertEqual(phase["rating_quarantine_count"], rating["quarantine_rating_count"])
+                    self.assertEqual(
+                        phase["next_task"],
+                        "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-2026-07-30",
+                    )
+                else:
+                    self.assertIn("BROAD-STATE-4X2500-SPAN-RATING-2026-07-30", phase["next_task"])
             else:
                 self.assertIn("BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30", phase["next_task"])
         else:

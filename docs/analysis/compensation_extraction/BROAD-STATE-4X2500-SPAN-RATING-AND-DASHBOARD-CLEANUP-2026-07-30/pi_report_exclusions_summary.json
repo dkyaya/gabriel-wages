@@ -1,0 +1,6 @@
+{
+  "boundaries": "bounded documentary span rating only; not ingested or codified; no wage normalization, wage-gap, regression, population-prevalence, treatment-effect, or final causal claim; global analysis readiness remains false",
+  "context_only_valid_count": 6860,
+  "exclude_from_report_valid_count": 5161,
+  "quarantine_count": 58
+}

@@ -1,0 +1,13 @@
+{
+  "blocker_counts": {
+    "base_vs_non_base_classification": 4328,
+    "effective_period_alignment": 3787,
+    "hourly_vs_annual_unit": 2101,
+    "municipality_cycle_alignment": 11548,
+    "nominal_vs_real_deferred": 11548,
+    "occupation_unit_alignment": 11548,
+    "rank_step_grade_alignment": 1429
+  },
+  "normalization_performed": false,
+  "valid_rating_count": 18554
+}

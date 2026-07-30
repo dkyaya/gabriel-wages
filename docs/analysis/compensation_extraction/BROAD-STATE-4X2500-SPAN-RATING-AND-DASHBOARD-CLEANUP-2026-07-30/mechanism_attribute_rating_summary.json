@@ -1,0 +1,121 @@
+{
+  "automatic_raise_mechanism": {
+    "positive_strength_count": 1431,
+    "strength_distribution": {
+      "1": 379,
+      "2": 437,
+      "3": 29,
+      "4": 586
+    }
+  },
+  "bargaining_power_signal": {
+    "positive_strength_count": 1135,
+    "strength_distribution": {
+      "1": 1017,
+      "2": 95,
+      "3": 1,
+      "4": 22
+    }
+  },
+  "base_wage_direct_value": {
+    "positive_strength_count": 2687,
+    "strength_distribution": {
+      "1": 621,
+      "2": 459,
+      "3": 37,
+      "4": 1570
+    }
+  },
+  "fiscal_constraint_signal": {
+    "positive_strength_count": 188,
+    "strength_distribution": {
+      "1": 128,
+      "2": 47,
+      "4": 13
+    }
+  },
+  "gap_narrowing_signal": {
+    "positive_strength_count": 12,
+    "strength_distribution": {
+      "1": 8,
+      "2": 3,
+      "4": 1
+    }
+  },
+  "implementation_or_retroactivity_advantage": {
+    "positive_strength_count": 2230,
+    "strength_distribution": {
+      "1": 858,
+      "2": 925,
+      "3": 9,
+      "4": 438
+    }
+  },
+  "market_or_comparability_pressure": {
+    "positive_strength_count": 398,
+    "strength_distribution": {
+      "1": 307,
+      "2": 62,
+      "4": 29
+    }
+  },
+  "non_base_compensation_signal": {
+    "positive_strength_count": 3718,
+    "strength_distribution": {
+      "1": 2476,
+      "2": 660,
+      "3": 3,
+      "4": 579
+    }
+  },
+  "non_safety_constraint_signal": {
+    "positive_strength_count": 43,
+    "strength_distribution": {
+      "1": 40,
+      "2": 3
+    }
+  },
+  "parity_or_internal_equity_signal": {
+    "positive_strength_count": 99,
+    "strength_distribution": {
+      "1": 55,
+      "2": 33,
+      "4": 11
+    }
+  },
+  "rank_or_specialization_premium": {
+    "positive_strength_count": 763,
+    "strength_distribution": {
+      "1": 211,
+      "2": 265,
+      "3": 37,
+      "4": 250
+    }
+  },
+  "safety_advantage_signal": {
+    "positive_strength_count": 192,
+    "strength_distribution": {
+      "1": 106,
+      "2": 40,
+      "3": 6,
+      "4": 40
+    }
+  },
+  "strike_or_no_strike_constraint": {
+    "positive_strength_count": 587,
+    "strength_distribution": {
+      "1": 230,
+      "2": 109,
+      "4": 248
+    }
+  },
+  "weak_or_no_claim_support": {
+    "positive_strength_count": 1479,
+    "strength_distribution": {
+      "1": 1435,
+      "2": 29,
+      "3": 2,
+      "4": 13
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "bounded_attempts": 2,
+  "completed_at": "2026-07-30T18:54:23.526645Z",
+  "elapsed_seconds": 2335.95,
+  "input_count": 4653,
+  "lane_id": "rating_lane_001",
+  "parallel_requests": 8,
+  "quarantine_count": 18,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "request_attempt_count": 4772,
+  "started_at": "2026-07-30T18:15:27.627560Z",
+  "status": "completed",
+  "valid_count": 4635
+}

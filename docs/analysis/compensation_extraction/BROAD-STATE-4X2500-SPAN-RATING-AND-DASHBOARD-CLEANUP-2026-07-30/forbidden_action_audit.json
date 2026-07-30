@@ -1,0 +1,12 @@
+{
+  "final_causal_claim_occurred": false,
+  "ingestion_or_codification_occurred": false,
+  "ocr_occurred": false,
+  "passed": true,
+  "raw_prompts_or_responses_saved": false,
+  "secrets_logged": false,
+  "source_download_occurred": false,
+  "text_extraction_rerun": false,
+  "wage_gap_or_regression_occurred": false,
+  "wage_normalization_occurred": false
+}

@@ -1,0 +1,197 @@
+{
+  "clusters": [
+    {
+      "average_strength_score": 2.147,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "automatic_wage_growth_mechanisms",
+      "core_finding_candidate_count": 30,
+      "direction_distribution": {
+        "gap_narrowing": 18,
+        "neutral_or_general": 1576,
+        "non_safety_advantage": 114,
+        "not_applicable": 1209,
+        "safety_advantage": 13
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 2847,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supporting_example_count": 23,
+      "valid_rating_count": 2930
+    },
+    {
+      "average_strength_score": 1.592,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "bargaining_and_dispute_resolution",
+      "core_finding_candidate_count": 264,
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 853,
+        "non_safety_advantage": 7,
+        "not_applicable": 853,
+        "safety_advantage": 2
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 42,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supporting_example_count": 198,
+      "valid_rating_count": 1716
+    },
+    {
+      "average_strength_score": 1.374,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "market_and_staffing_pressure",
+      "core_finding_candidate_count": 19,
+      "direction_distribution": {
+        "gap_narrowing": 12,
+        "neutral_or_general": 278,
+        "non_safety_advantage": 36,
+        "not_applicable": 70,
+        "safety_advantage": 2
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 25,
+      "representative_paraphrases": [
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context."
+      ],
+      "supporting_example_count": 56,
+      "valid_rating_count": 398
+    },
+    {
+      "average_strength_score": 1.953,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "timing_and_implementation",
+      "core_finding_candidate_count": 90,
+      "direction_distribution": {
+        "gap_narrowing": 2,
+        "neutral_or_general": 1055,
+        "non_safety_advantage": 101,
+        "not_applicable": 1249,
+        "safety_advantage": 2
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 2049,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supporting_example_count": 134,
+      "valid_rating_count": 2409
+    },
+    {
+      "average_strength_score": 1.32,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "non_base_compensation",
+      "core_finding_candidate_count": 30,
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 2006,
+        "non_safety_advantage": 345,
+        "not_applicable": 2269,
+        "safety_advantage": 39
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 4486,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supporting_example_count": 42,
+      "valid_rating_count": 4660
+    },
+    {
+      "average_strength_score": 1.457,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "fiscal_and_governance_constraints",
+      "core_finding_candidate_count": 8,
+      "direction_distribution": {
+        "neutral_or_general": 166,
+        "non_safety_advantage": 2,
+        "not_applicable": 20
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 42,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage provides fiscal or budget context that may constrain wage setting.",
+        "The passage provides fiscal or budget context that may constrain wage setting.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage provides fiscal or budget context that may constrain wage setting."
+      ],
+      "supporting_example_count": 37,
+      "valid_rating_count": 188
+    },
+    {
+      "average_strength_score": 1.716,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "safety_vs_non_safety_directional_hints",
+      "core_finding_candidate_count": 52,
+      "direction_distribution": {
+        "gap_narrowing": 20,
+        "neutral_or_general": 203,
+        "non_safety_advantage": 13,
+        "not_applicable": 65,
+        "safety_advantage": 41
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 63,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage references market, comparison, recruitment, or retention context."
+      ],
+      "supporting_example_count": 65,
+      "valid_rating_count": 342
+    },
+    {
+      "average_strength_score": 2.656,
+      "cannot_claim": "No normalized wage gap, population prevalence, treatment effect, or final causal conclusion.",
+      "cluster": "quantitative_base_wage_evidence_needing_normalization",
+      "core_finding_candidate_count": 27,
+      "direction_distribution": {
+        "gap_narrowing": 9,
+        "neutral_or_general": 1219,
+        "non_safety_advantage": 119,
+        "not_applicable": 2248,
+        "safety_advantage": 3
+      },
+      "evidence_status": "candidate input for ingestion/codification and PI review; not a final finding",
+      "normalization_needed_count": 3536,
+      "representative_paraphrases": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "supporting_example_count": 16,
+      "valid_rating_count": 3598
+    }
+  ],
+  "global_analysis_readiness": false,
+  "status": "candidate_findings_not_final",
+  "title": "PI-report candidate findings from bounded span ratings"
+}

@@ -1,0 +1,21 @@
+{
+  "backend": "huit_openai_responses_direct_sdk",
+  "claim_boundary": "bounded documentary span rating only; not ingested or codified; no wage normalization, wage-gap, regression, population-prevalence, treatment-effect, or final causal claim; global analysis readiness remains false",
+  "created_at": "2026-07-30T18:13:51.611841Z",
+  "full_text_supplied": false,
+  "lane_counts": {
+    "rating_lane_001": 4653,
+    "rating_lane_002": 4653,
+    "rating_lane_003": 4653,
+    "rating_lane_004": 4653
+  },
+  "locked": true,
+  "locked_queue_sha256": "edf4eef1e15c2db7ed3c406f3042a58d0914cac4fc9883424ae476843615aa00",
+  "model": "gpt-5.4-nano",
+  "model_input_scope": "one exact span plus limited descriptors and controlled labels",
+  "rating_queue_size": 18612,
+  "raw_prompts_saved": false,
+  "raw_responses_saved": false,
+  "source_queue_sha256": "2bb7c6a62d087f3c53b4b1d629f4455f50c5e73fbc57ed94a0823a41c9c8761e",
+  "task_id": "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30"
+}

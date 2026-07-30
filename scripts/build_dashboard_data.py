@@ -1710,6 +1710,11 @@ BROAD_STATE_4X2500_SPAN_EXTRACTION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30"
 )
+BROAD_STATE_4X2500_SPAN_RATING_CLEANUP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6319,6 +6324,83 @@ def broad_state_4x2500_span_extraction_status() -> tuple[bool, dict[str, Any]]:
     }
 
 
+def broad_state_4x2500_span_rating_cleanup_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed 18,612-span rating and PI-dashboard cleanup wave."""
+    directory = BROAD_STATE_4X2500_SPAN_RATING_CLEANUP_DIR
+    required = (
+        directory / "span_rating_summary.json",
+        directory / "span_rating_manifest.json",
+        directory / "span_rating_lane_distribution.json",
+        directory / "rating_valid_ledger_manifest.json",
+        directory / "rating_quarantine_ledger_manifest.json",
+        directory / "rating_schema_validation_report.json",
+        directory / "report_usability_summary.json",
+        directory / "claim_relevance_summary.json",
+        directory / "directionality_summary.json",
+        directory / "quantitative_readiness_summary.json",
+        directory / "normalization_blocker_summary.json",
+        directory / "causal_boundary_summary.json",
+        directory / "mechanism_specific_rating_summaries.json",
+        directory / "forbidden_action_audit.json",
+        directory / "span_rating_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    (summary, manifest, lanes, valid_manifest, quarantine_manifest, schema,
+     usability, relevance, direction, quantitative, normalization, causal,
+     mechanisms, forbidden, _) = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    lane_counts = {
+        name: item.get("row_count") for name, item in lanes.get("lanes", {}).items()
+    }
+    gates = (
+        summary.get("decision")
+        == "broad_state_4x2500_span_rating_dashboard_cleanup_completed_ingestion_ready"
+        and summary.get("rating_queue_size") == 18_612
+        and summary.get("valid_rating_count") + summary.get("quarantine_rating_count") == 18_612
+        and valid_manifest.get("row_count") == summary.get("valid_rating_count")
+        and quarantine_manifest.get("row_count") == summary.get("quarantine_rating_count")
+        and lanes.get("expected_total") == 18_612
+        and lane_counts == {
+            "rating_lane_001": 4_653,
+            "rating_lane_002": 4_653,
+            "rating_lane_003": 4_653,
+            "rating_lane_004": 4_653,
+        }
+        and schema.get("valid_plus_quarantine_reconciles") is True
+        and schema.get("valid_schema_passed") is True
+        and usability.get("reconciles") is True
+        and causal.get("causal_claim_allowed_true") == 0
+        and causal.get("population_prevalence_claim_allowed_true") == 0
+        and causal.get("national_prevalence_claim_allowed_true") == 0
+        and causal.get("global_analysis_readiness") is False
+        and forbidden.get("passed") is True
+        and forbidden.get("ocr_occurred") is False
+        and forbidden.get("ingestion_or_codification_occurred") is False
+        and forbidden.get("wage_normalization_occurred") is False
+        and summary.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 span-rating package fails dashboard gates")
+    return True, {
+        **summary,
+        "lane_counts": lane_counts,
+        "report_usability_counts": usability.get("counts", {}),
+        "claim_relevance_counts": relevance.get("counts", {}),
+        "directionality_counts": direction.get("counts", {}),
+        "quantitative_readiness": quantitative,
+        "normalization_blocker_counts": normalization.get("blocker_counts", {}),
+        "mechanism_summaries": mechanisms.get("mechanisms", []),
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/"
+            "span_rating_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6451,6 +6533,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_span_available, broad_4x2500_span = (
         broad_state_4x2500_span_extraction_status()
+    )
+    broad_4x2500_rating_available, broad_4x2500_rating = (
+        broad_state_4x2500_span_rating_cleanup_status()
     )
     published_reports = [
         *(
@@ -7163,6 +7248,34 @@ def build_reports_index_layer(
                 {"label": "span-source queue", "value": broad_4x2500_span["span_extraction_queue_size"]},
                 {"label": "positive sources", "value": broad_4x2500_span["positive_span_source_count"]},
                 {"label": "rating ready", "value": broad_4x2500_span["span_rating_ready_count"]},
+            ],
+        })
+    if broad_4x2500_rating_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+            if report.get("id") == "broad-state-4x2500-span-extraction-2026-07-30":
+                report["link_label"] = "Open historical 4 × 2,500 span-extraction report"
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-span-rating-dashboard-cleanup-2026-07-30",
+            "title": "Broad State 4 × 2,500 Span Rating",
+            "report_type": "Current bounded span-rating and PI-dashboard result",
+            "date": "2026-07-30",
+            "checkpoint": f"{broad_4x2500_rating['valid_rating_count']:,} valid rated spans",
+            "summary": (
+                "All 18,612 locked exact-span candidates received one terminal rating outcome. "
+                "Valid and quarantine ledgers remain separate; ingestion/codification is next."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "span rating", "PI dashboard"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_rating["dashboard_result_path"],
+            "link_label": "Open current 4 × 2,500 span-rating report",
+            "scope_metrics": [
+                {"label": "rating queue", "value": broad_4x2500_rating["rating_queue_size"]},
+                {"label": "valid ratings", "value": broad_4x2500_rating["valid_rating_count"]},
+                {"label": "quarantine", "value": broad_4x2500_rating["quarantine_rating_count"]},
             ],
         })
     if live_available:
@@ -9681,6 +9794,9 @@ def build_project_phase_summary(
     broad_4x2500_span_available, broad_4x2500_span = (
         broad_state_4x2500_span_extraction_status()
     )
+    broad_4x2500_rating_available, broad_4x2500_rating = (
+        broad_state_4x2500_span_rating_cleanup_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -10697,6 +10813,51 @@ def build_project_phase_summary(
                 "keep the dashboard map on scout coverage rate and repeat local/public smoke validation",
             ],
             "last_updated_context": "broad_state_4x2500_span_extraction_complete_rating_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "blocked_pending_normalization",
+            "causal_analysis_readiness": "blocked_pending_matched_structure",
+        })
+    if broad_4x2500_rating_available:
+        usability = broad_4x2500_rating["report_usability_counts"]
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_span_rating_complete",
+            "current_phase": "Span rating complete",
+            "current_phase_code": broad_4x2500_rating["decision"],
+            "current_evidence_status": "rated_documentary_evidence_pending_ingestion_codification",
+            "broad_state_4x2500_span_rating_available": True,
+            "broad_state_4x2500_span_rating_queue_count": broad_4x2500_rating["rating_queue_size"],
+            "broad_state_4x2500_span_rating_valid_count": broad_4x2500_rating["valid_rating_count"],
+            "broad_state_4x2500_span_rating_quarantine_count": broad_4x2500_rating["quarantine_rating_count"],
+            "broad_state_4x2500_span_rating_lane_counts": broad_4x2500_rating["lane_counts"],
+            "broad_state_4x2500_report_usability_counts": usability,
+            "broad_state_4x2500_claim_relevance_counts": broad_4x2500_rating["claim_relevance_counts"],
+            "broad_state_4x2500_directionality_counts": broad_4x2500_rating["directionality_counts"],
+            "broad_state_4x2500_quantitative_readiness": broad_4x2500_rating["quantitative_readiness"],
+            "broad_state_4x2500_normalization_blocker_counts": broad_4x2500_rating["normalization_blocker_counts"],
+            "broad_state_4x2500_mechanism_summaries": broad_4x2500_rating["mechanism_summaries"],
+            "rating_valid_count": broad_4x2500_rating["valid_rating_count"],
+            "rating_quarantine_count": broad_4x2500_rating["quarantine_rating_count"],
+            "rating_report_ready_count": usability.get("pi_report_core_finding_ready", 0),
+            "rating_supporting_count": usability.get("pi_report_supporting_example", 0),
+            "rating_context_count": usability.get("pi_report_context_only", 0),
+            "rating_normalization_needed_count": usability.get("downstream_normalization_needed", 0),
+            "rating_excluded_count": usability.get("exclude_from_report", 0),
+            "current_report_title": "Broad State 4 × 2,500 Span Rating",
+            "current_report_path": broad_4x2500_rating["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_rating["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-2026-07-30",
+            "next_phase": "rating ingestion/codification and PI-report evidence preparation",
+            "next_phase_sequence": [
+                "ingest and codify only schema-valid ratings while preserving quarantine exclusions",
+                "produce mechanism-cluster and claim-boundary tables for PI review",
+                "keep wage values unnormalized unless separately authorized",
+                "do not calculate wage gaps, regressions, population prevalence, or final causal claims",
+            ],
+            "last_updated_context": "broad_state_4x2500_span_rating_complete_ingestion_ready",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,

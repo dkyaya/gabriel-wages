@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "built_at": "2026-07-30T19:20:00Z",
+  "dashboard_app": "docs/dashboard",
+  "build_command": "npm run build",
+  "artifact_directory": "docs/dashboard/dist",
+  "artifact_committed": false,
+  "deployment_convention": "GitHub Actions Pages artifact deployment",
+  "result": "Vite production build completed successfully",
+  "bundle_summary": {
+    "javascript_bytes": 439150,
+    "console_or_build_errors": 0
+  }
+}

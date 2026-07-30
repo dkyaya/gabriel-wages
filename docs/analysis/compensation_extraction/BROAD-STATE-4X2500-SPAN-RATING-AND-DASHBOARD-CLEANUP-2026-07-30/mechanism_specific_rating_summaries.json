@@ -1,0 +1,542 @@
+{
+  "generated_at": "2026-07-30T19:19:35.471804Z",
+  "mechanisms": {
+    "COLA_CPI_inflation_indexed_growth": {
+      "average_strength_score": 2.066,
+      "causal_claims_prohibited": true,
+      "caveats": "COLA/CPI is rated as a contract wage-growth mechanism, not an analyst-side cost-of-living normalization.",
+      "direction_distribution": {
+        "gap_narrowing": 6,
+        "neutral_or_general": 277,
+        "non_safety_advantage": 31,
+        "not_applicable": 80
+      },
+      "evidence_quality_distribution": {
+        "2": 186,
+        "3": 91,
+        "4": 117
+      },
+      "high_quality_count": 208,
+      "median_strength_score": 2.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 208,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 208,
+        "exclude_from_report": 18,
+        "pi_report_context_only": 168
+      },
+      "representative_paraphrase_examples": [
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review."
+      ],
+      "valid_rating_count": 394
+    },
+    "automatic_raise_mechanism": {
+      "average_strength_score": 2.574,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 12,
+        "neutral_or_general": 930,
+        "non_safety_advantage": 81,
+        "not_applicable": 408
+      },
+      "evidence_quality_distribution": {
+        "2": 379,
+        "3": 440,
+        "4": 612
+      },
+      "high_quality_count": 1052,
+      "median_strength_score": 2,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 1052,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 1007,
+        "pi_report_context_only": 379,
+        "pi_report_core_finding_ready": 27,
+        "pi_report_supporting_example": 18
+      },
+      "representative_paraphrase_examples": [
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review."
+      ],
+      "valid_rating_count": 1431
+    },
+    "bargaining_power_signal": {
+      "average_strength_score": 1.144,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 741,
+        "non_safety_advantage": 7,
+        "not_applicable": 385,
+        "safety_advantage": 1
+      },
+      "evidence_quality_distribution": {
+        "2": 1017,
+        "3": 96,
+        "4": 22
+      },
+      "high_quality_count": 118,
+      "median_strength_score": 1,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 118,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 12,
+        "pi_report_context_only": 1017,
+        "pi_report_core_finding_ready": 17,
+        "pi_report_supporting_example": 89
+      },
+      "representative_paraphrase_examples": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage references bargaining, impasse, factfinding, or arbitration context.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage references bargaining, impasse, factfinding, or arbitration context."
+      ],
+      "valid_rating_count": 1135
+    },
+    "base_wage_direct_value": {
+      "average_strength_score": 2.951,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 5,
+        "neutral_or_general": 801,
+        "non_safety_advantage": 92,
+        "not_applicable": 1787,
+        "safety_advantage": 2
+      },
+      "evidence_quality_distribution": {
+        "2": 621,
+        "3": 465,
+        "4": 1601
+      },
+      "high_quality_count": 2066,
+      "median_strength_score": 4,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 2066,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 2023,
+        "pi_report_context_only": 621,
+        "pi_report_core_finding_ready": 27,
+        "pi_report_supporting_example": 16
+      },
+      "representative_paraphrase_examples": [
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "valid_rating_count": 2687
+    },
+    "fiscal_constraint_signal": {
+      "average_strength_score": 1.457,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "neutral_or_general": 166,
+        "non_safety_advantage": 2,
+        "not_applicable": 20
+      },
+      "evidence_quality_distribution": {
+        "2": 128,
+        "3": 47,
+        "4": 13
+      },
+      "high_quality_count": 60,
+      "median_strength_score": 1.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 60,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 15,
+        "pi_report_context_only": 128,
+        "pi_report_core_finding_ready": 8,
+        "pi_report_supporting_example": 37
+      },
+      "representative_paraphrase_examples": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage provides fiscal or budget context that may constrain wage setting.",
+        "The passage provides fiscal or budget context that may constrain wage setting.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review."
+      ],
+      "valid_rating_count": 188
+    },
+    "gap_narrowing_signal": {
+      "average_strength_score": 1.5,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 6,
+        "neutral_or_general": 6
+      },
+      "evidence_quality_distribution": {
+        "2": 8,
+        "3": 3,
+        "4": 1
+      },
+      "high_quality_count": 4,
+      "median_strength_score": 1.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 4,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 3,
+        "pi_report_context_only": 8,
+        "pi_report_supporting_example": 1
+      },
+      "representative_paraphrase_examples": [
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "valid_rating_count": 12
+    },
+    "implementation_or_retroactivity_advantage": {
+      "average_strength_score": 2.012,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 2,
+        "neutral_or_general": 993,
+        "non_safety_advantage": 90,
+        "not_applicable": 1143,
+        "safety_advantage": 2
+      },
+      "evidence_quality_distribution": {
+        "2": 858,
+        "3": 925,
+        "4": 447
+      },
+      "high_quality_count": 1372,
+      "median_strength_score": 2.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 1372,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 1148,
+        "pi_report_context_only": 858,
+        "pi_report_core_finding_ready": 90,
+        "pi_report_supporting_example": 134
+      },
+      "representative_paraphrase_examples": [
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review."
+      ],
+      "valid_rating_count": 2230
+    },
+    "market_or_comparability_pressure": {
+      "average_strength_score": 1.374,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 12,
+        "neutral_or_general": 278,
+        "non_safety_advantage": 36,
+        "not_applicable": 70,
+        "safety_advantage": 2
+      },
+      "evidence_quality_distribution": {
+        "2": 307,
+        "3": 62,
+        "4": 29
+      },
+      "high_quality_count": 91,
+      "median_strength_score": 1.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 91,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 16,
+        "pi_report_context_only": 307,
+        "pi_report_core_finding_ready": 19,
+        "pi_report_supporting_example": 56
+      },
+      "representative_paraphrase_examples": [
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review."
+      ],
+      "valid_rating_count": 398
+    },
+    "non_base_compensation_signal": {
+      "average_strength_score": 1.646,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 1,
+        "neutral_or_general": 1842,
+        "non_safety_advantage": 345,
+        "not_applicable": 1497,
+        "safety_advantage": 33
+      },
+      "evidence_quality_distribution": {
+        "2": 2476,
+        "3": 660,
+        "4": 582
+      },
+      "high_quality_count": 1242,
+      "median_strength_score": 1.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 1242,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 1170,
+        "pi_report_context_only": 2476,
+        "pi_report_core_finding_ready": 30,
+        "pi_report_supporting_example": 42
+      },
+      "representative_paraphrase_examples": [
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage references a non-base compensation component for later review.",
+        "The passage references a non-base compensation component for later review.",
+        "The passage references a non-base compensation component for later review.",
+        "The passage references a non-base compensation component for later review."
+      ],
+      "valid_rating_count": 3718
+    },
+    "non_safety_constraint_signal": {
+      "average_strength_score": 1.07,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "neutral_or_general": 30,
+        "non_safety_advantage": 2,
+        "not_applicable": 11
+      },
+      "evidence_quality_distribution": {
+        "2": 40,
+        "3": 3
+      },
+      "high_quality_count": 3,
+      "median_strength_score": 1,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 3,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 1,
+        "pi_report_context_only": 40,
+        "pi_report_supporting_example": 2
+      },
+      "representative_paraphrase_examples": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage references a non-base compensation component for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage references a non-base compensation component for later review."
+      ],
+      "valid_rating_count": 43
+    },
+    "parity_or_internal_equity_signal": {
+      "average_strength_score": 1.667,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 14,
+        "neutral_or_general": 82,
+        "not_applicable": 3
+      },
+      "evidence_quality_distribution": {
+        "2": 55,
+        "3": 33,
+        "4": 11
+      },
+      "high_quality_count": 44,
+      "median_strength_score": 1,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 44,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 9,
+        "pi_report_context_only": 55,
+        "pi_report_core_finding_ready": 8,
+        "pi_report_supporting_example": 27
+      },
+      "representative_paraphrase_examples": [
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage references market, comparison, recruitment, or retention context.",
+        "The passage references a non-base compensation component for later review."
+      ],
+      "valid_rating_count": 99
+    },
+    "rank_or_specialization_premium": {
+      "average_strength_score": 2.427,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "gap_narrowing": 4,
+        "neutral_or_general": 425,
+        "non_safety_advantage": 32,
+        "not_applicable": 289,
+        "safety_advantage": 13
+      },
+      "evidence_quality_distribution": {
+        "2": 211,
+        "3": 266,
+        "4": 286
+      },
+      "high_quality_count": 552,
+      "median_strength_score": 2,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 552,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 544,
+        "pi_report_context_only": 211,
+        "pi_report_core_finding_ready": 3,
+        "pi_report_supporting_example": 5
+      },
+      "representative_paraphrase_examples": [
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review."
+      ],
+      "valid_rating_count": 763
+    },
+    "safety_advantage_signal": {
+      "average_strength_score": 1.896,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "neutral_or_general": 89,
+        "non_safety_advantage": 11,
+        "not_applicable": 51,
+        "safety_advantage": 41
+      },
+      "evidence_quality_distribution": {
+        "2": 106,
+        "3": 46,
+        "4": 40
+      },
+      "high_quality_count": 86,
+      "median_strength_score": 1.0,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 86,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 5,
+        "pi_report_context_only": 106,
+        "pi_report_core_finding_ready": 44,
+        "pi_report_supporting_example": 37
+      },
+      "representative_paraphrase_examples": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage references a non-base compensation component for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "valid_rating_count": 192
+    },
+    "strike_or_no_strike_constraint": {
+      "average_strength_score": 2.453,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "neutral_or_general": 117,
+        "not_applicable": 469,
+        "safety_advantage": 1
+      },
+      "evidence_quality_distribution": {
+        "2": 230,
+        "3": 109,
+        "4": 248
+      },
+      "high_quality_count": 357,
+      "median_strength_score": 2,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 357,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 1,
+        "pi_report_context_only": 230,
+        "pi_report_core_finding_ready": 247,
+        "pi_report_supporting_example": 109
+      },
+      "representative_paraphrase_examples": [
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
+        "The passage describes a possible wage-setting or employment-rule mechanism for later review."
+      ],
+      "valid_rating_count": 587
+    },
+    "weak_or_no_claim_support": {
+      "average_strength_score": 1.049,
+      "causal_claims_prohibited": true,
+      "caveats": "Corpus-bounded documentary ratings; no population prevalence, normalized comparison, or causal claim.",
+      "direction_distribution": {
+        "neutral_or_general": 642,
+        "non_safety_advantage": 2,
+        "not_applicable": 835
+      },
+      "evidence_quality_distribution": {
+        "2": 1435,
+        "3": 29,
+        "4": 15
+      },
+      "high_quality_count": 44,
+      "median_strength_score": 1,
+      "normalization_needed_before_quantitative_comparison": true,
+      "pi_report_role": "core_or_supporting_candidate",
+      "quarantine_count_with_input_attribute": 0,
+      "report_ready_count": 44,
+      "report_usability_distribution": {
+        "downstream_normalization_needed": 40,
+        "pi_report_context_only": 1435,
+        "pi_report_supporting_example": 4
+      },
+      "representative_paraphrase_examples": [
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage combines a raw compensation term with possible wage-setting context for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review.",
+        "The passage records a raw compensation amount, schedule, percentage, or timing term for later review."
+      ],
+      "valid_rating_count": 1479
+    }
+  },
+  "quarantine_ledger_count": 58,
+  "reconstructible_from_ledgers": true,
+  "valid_ledger_count": 18554
+}

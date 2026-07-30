@@ -1,0 +1,7 @@
+{
+  "audited_at": "2026-07-30T19:24:14.562353Z",
+  "large_staged_files": [],
+  "passed": true,
+  "source_payload_paths_prohibited_separately": true,
+  "threshold_bytes": 99614720
+}

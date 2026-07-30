@@ -1,0 +1,9 @@
+{
+  "input_count": 18612,
+  "quarantine_count": 58,
+  "quarantine_reasons_complete": true,
+  "unique_rating_ids": 18612,
+  "valid_count": 18554,
+  "valid_plus_quarantine_reconciles": true,
+  "valid_schema_passed": true
+}

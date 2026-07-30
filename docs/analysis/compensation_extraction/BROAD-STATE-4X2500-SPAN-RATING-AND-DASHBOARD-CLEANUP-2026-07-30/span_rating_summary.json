@@ -1,0 +1,177 @@
+{
+  "claim_relevance_counts": {
+    "direct_quantitative_claim_support": 6454,
+    "directional_hint_only": 430,
+    "mechanism_summary_support": 6509,
+    "weak_or_not_supported": 5161
+  },
+  "completed_at": "2026-07-30T19:19:36.366395Z",
+  "decision": "broad_state_4x2500_span_rating_dashboard_cleanup_completed_ingestion_ready",
+  "directionality_counts": {
+    "gap_narrowing": 45,
+    "neutral_or_general": 6830,
+    "non_safety_advantage": 637,
+    "not_applicable": 10964,
+    "safety_advantage": 78
+  },
+  "global_analysis_readiness": false,
+  "lane_counts": {
+    "rating_lane_001": 4653,
+    "rating_lane_002": 4653,
+    "rating_lane_003": 4653,
+    "rating_lane_004": 4653
+  },
+  "lane_start_schedule_minutes": [
+    0,
+    8,
+    16,
+    24
+  ],
+  "lane_summaries": {
+    "rating_lane_001": {
+      "bounded_attempts": 2,
+      "completed_at": "2026-07-30T18:54:23.526645Z",
+      "elapsed_seconds": 2335.95,
+      "input_count": 4653,
+      "lane_id": "rating_lane_001",
+      "parallel_requests": 8,
+      "quarantine_count": 18,
+      "raw_prompts_saved": 0,
+      "raw_responses_saved": 0,
+      "request_attempt_count": 4772,
+      "started_at": "2026-07-30T18:15:27.627560Z",
+      "status": "completed",
+      "valid_count": 4635
+    },
+    "rating_lane_002": {
+      "bounded_attempts": 2,
+      "completed_at": "2026-07-30T19:03:20.332188Z",
+      "elapsed_seconds": 2285.42,
+      "input_count": 4653,
+      "lane_id": "rating_lane_002",
+      "parallel_requests": 8,
+      "quarantine_count": 14,
+      "raw_prompts_saved": 0,
+      "raw_responses_saved": 0,
+      "request_attempt_count": 4750,
+      "started_at": "2026-07-30T18:25:14.970722Z",
+      "status": "completed",
+      "valid_count": 4639
+    },
+    "rating_lane_003": {
+      "bounded_attempts": 2,
+      "completed_at": "2026-07-30T19:14:02.923836Z",
+      "elapsed_seconds": 2446.086,
+      "input_count": 4653,
+      "lane_id": "rating_lane_003",
+      "parallel_requests": 8,
+      "quarantine_count": 9,
+      "raw_prompts_saved": 0,
+      "raw_responses_saved": 0,
+      "request_attempt_count": 4743,
+      "started_at": "2026-07-30T18:33:16.895442Z",
+      "status": "completed",
+      "valid_count": 4644
+    },
+    "rating_lane_004": {
+      "bounded_attempts": 2,
+      "completed_at": "2026-07-30T19:19:28.287144Z",
+      "elapsed_seconds": 2291.943,
+      "input_count": 4653,
+      "lane_id": "rating_lane_004",
+      "parallel_requests": 8,
+      "quarantine_count": 17,
+      "raw_prompts_saved": 0,
+      "raw_responses_saved": 0,
+      "request_attempt_count": 4755,
+      "started_at": "2026-07-30T18:41:16.369202Z",
+      "status": "completed",
+      "valid_count": 4636
+    }
+  },
+  "maximum_safe_parallel_requests": 32,
+  "next_task": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-2026-07-30",
+  "no_ingestion_codification": true,
+  "no_ocr": true,
+  "no_wage_normalization_or_analysis": true,
+  "normalization_blocker_counts": {
+    "base_vs_non_base_classification": 4328,
+    "effective_period_alignment": 3787,
+    "hourly_vs_annual_unit": 2101,
+    "municipality_cycle_alignment": 11548,
+    "nominal_vs_real_deferred": 11548,
+    "occupation_unit_alignment": 11548,
+    "rank_step_grade_alignment": 1429
+  },
+  "parallel_requests_per_active_lane": 8,
+  "quarantine_rating_count": 58,
+  "rating_queue_size": 18612,
+  "report_usability_counts": {
+    "downstream_normalization_needed": 5533,
+    "exclude_from_report": 5161,
+    "pi_report_context_only": 6860,
+    "pi_report_core_finding_ready": 472,
+    "pi_report_supporting_example": 528
+  },
+  "request_attempt_count": 19020,
+  "task_id": "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30",
+  "top_mechanism_counts": [
+    [
+      "non_base_compensation_signal",
+      3718
+    ],
+    [
+      "base_wage_direct_value",
+      2687
+    ],
+    [
+      "implementation_or_retroactivity_advantage",
+      2230
+    ],
+    [
+      "weak_or_no_claim_support",
+      1479
+    ],
+    [
+      "automatic_raise_mechanism",
+      1431
+    ],
+    [
+      "bargaining_power_signal",
+      1135
+    ],
+    [
+      "rank_or_specialization_premium",
+      763
+    ],
+    [
+      "strike_or_no_strike_constraint",
+      587
+    ],
+    [
+      "market_or_comparability_pressure",
+      398
+    ],
+    [
+      "safety_advantage_signal",
+      192
+    ],
+    [
+      "fiscal_constraint_signal",
+      188
+    ],
+    [
+      "parity_or_internal_equity_signal",
+      99
+    ],
+    [
+      "non_safety_constraint_signal",
+      43
+    ],
+    [
+      "gap_narrowing_signal",
+      12
+    ]
+  ],
+  "valid_rating_count": 18554
+}

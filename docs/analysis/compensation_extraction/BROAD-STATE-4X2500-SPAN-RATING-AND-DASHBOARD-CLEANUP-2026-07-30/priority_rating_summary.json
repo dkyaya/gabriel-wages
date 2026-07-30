@@ -1,0 +1,76 @@
+{
+  "dimension": "priority_bucket",
+  "groups": {
+    "high_priority_verification_ready": {
+      "average_evidence_quality": 2.545,
+      "average_support_strength": 1.458,
+      "claim_relevance_counts": {
+        "direct_quantitative_claim_support": 5785,
+        "directional_hint_only": 401,
+        "mechanism_summary_support": 6061,
+        "weak_or_not_supported": 4597
+      },
+      "direction_counts": {
+        "gap_narrowing": 42,
+        "neutral_or_general": 6177,
+        "non_safety_advantage": 592,
+        "not_applicable": 9964,
+        "safety_advantage": 69
+      },
+      "report_usability_counts": {
+        "downstream_normalization_needed": 4994,
+        "exclude_from_report": 4597,
+        "pi_report_context_only": 6297,
+        "pi_report_core_finding_ready": 458,
+        "pi_report_supporting_example": 498
+      },
+      "valid_rating_count": 16844
+    },
+    "low_priority_verification_ready": {
+      "average_evidence_quality": 2.522,
+      "average_support_strength": 1.444,
+      "claim_relevance_counts": {
+        "direct_quantitative_claim_support": 33,
+        "mechanism_summary_support": 32,
+        "weak_or_not_supported": 25
+      },
+      "direction_counts": {
+        "neutral_or_general": 44,
+        "non_safety_advantage": 3,
+        "not_applicable": 43
+      },
+      "report_usability_counts": {
+        "downstream_normalization_needed": 27,
+        "exclude_from_report": 25,
+        "pi_report_context_only": 36,
+        "pi_report_supporting_example": 2
+      },
+      "valid_rating_count": 90
+    },
+    "medium_priority_verification_ready": {
+      "average_evidence_quality": 2.541,
+      "average_support_strength": 1.404,
+      "claim_relevance_counts": {
+        "direct_quantitative_claim_support": 636,
+        "directional_hint_only": 29,
+        "mechanism_summary_support": 416,
+        "weak_or_not_supported": 539
+      },
+      "direction_counts": {
+        "gap_narrowing": 3,
+        "neutral_or_general": 609,
+        "non_safety_advantage": 42,
+        "not_applicable": 957,
+        "safety_advantage": 9
+      },
+      "report_usability_counts": {
+        "downstream_normalization_needed": 512,
+        "exclude_from_report": 539,
+        "pi_report_context_only": 527,
+        "pi_report_core_finding_ready": 14,
+        "pi_report_supporting_example": 28
+      },
+      "valid_rating_count": 1620
+    }
+  }
+}

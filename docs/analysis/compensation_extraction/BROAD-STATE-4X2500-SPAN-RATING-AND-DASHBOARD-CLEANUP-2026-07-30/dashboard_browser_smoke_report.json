@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checked_at": "2026-07-30T19:21:00Z",
+  "url": "http://127.0.0.1:4173/gabriel-wages/?dashboard_smoke=20260730_span_rating_cleanup_final_1520",
+  "controller": "Playwright MCP fallback after the in-app browser runtime reported no browser available",
+  "console_errors": 0,
+  "visible_checks": {
+    "dashboard_loaded": true,
+    "simplified_pi_main_view": true,
+    "current_stage_span_rating_complete": true,
+    "next_task_rating_ingest_codify": true,
+    "scout_coverage_rate_is_map_metric": true,
+    "raw_coverage_context_16887_of_35589": true,
+    "valid_ratings_18554": true,
+    "quarantine_58": true,
+    "core_472_and_supporting_528": true,
+    "context_6860_and_excluded_5161": true,
+    "normalization_routed_5533": true,
+    "mechanism_preview_visible": true,
+    "wage_gap_blocked_pending_normalization": true,
+    "causal_claims_blocked_pending_matched_structure": true,
+    "technical_audit_collapsed_by_default": true,
+    "current_report_link_points_to_rating_summary": true
+  },
+  "screenshot": "dashboard_local_smoke.png",
+  "notes": "The main view contains one status strip, the scout-coverage-rate map, one current-evidence summary, one ranked mechanism preview, one compact claim-boundary panel, and a collapsed technical audit."
+}

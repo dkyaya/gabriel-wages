@@ -1,0 +1,10 @@
+{
+  "quarantine_after_bounded_attempts": 58,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "request_attempt_count": 19020,
+  "valid_by_attempt": {
+    "1": 18204,
+    "2": 350
+  }
+}

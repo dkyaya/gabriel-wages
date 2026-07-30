@@ -1,0 +1,47 @@
+{
+  "main_view": [
+    {
+      "order": 1,
+      "component": "top_status_strip",
+      "purpose": "Current stage, one next task, current claim boundary, and data vintage"
+    },
+    {
+      "order": 2,
+      "component": "geographic_coverage_panel",
+      "purpose": "National and state scout coverage rate with raw numerator and denominator as context"
+    },
+    {
+      "order": 3,
+      "component": "current_rated_evidence_panel",
+      "purpose": "Valid, quarantine, core/supporting, and context/excluded rating outcomes"
+    },
+    {
+      "order": 4,
+      "component": "mechanism_preview",
+      "purpose": "Six highest-volume report-ready documentary mechanism signals with strength, direction, and caveat"
+    },
+    {
+      "order": 5,
+      "component": "claim_boundary_panel",
+      "purpose": "Plain-language allowed and blocked claim classes"
+    }
+  ],
+  "secondary_view": [
+    {
+      "component": "technical_audit_disclosure",
+      "default_state": "collapsed",
+      "contents": "lane, queue, prior-stage, storage, and validation context"
+    },
+    {
+      "component": "current_evidence_report_link",
+      "contents": "full ledgers, summaries, schemas, validation, and lineage"
+    }
+  ],
+  "map_contract": {
+    "primary_metric": "scout_coverage_rate",
+    "formula": "scout_covered_municipalities / eligible_or_known_municipality_universe",
+    "raw_count_role": "context_only",
+    "missing_denominator": "coverage_rate_unavailable",
+    "prohibited_map_dimensions": ["candidate", "source", "evidence", "mechanism", "readiness", "rating"]
+  }
+}

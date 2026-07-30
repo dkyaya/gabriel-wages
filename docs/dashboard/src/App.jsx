@@ -1,112 +1,61 @@
 import { useEffect, useMemo, useState } from "react";
 import stateSummary from "../data/state_summary.json";
 import candidateSummary from "../data/candidate_queue_summary.json";
-import coverageFunnel from "../data/coverage_funnel.json";
-import analysisReadiness from "../data/analysis_readiness.json";
-import prioritySummary from "../data/priority_summary.json";
-import statePrioritySummary from "../data/state_priority_summary.json";
-import scoutOperations from "../data/scout_operations_summary.json";
-import scoutRuntimeTrends from "../data/scout_runtime_trends.json";
-import scoutYieldByState from "../data/scout_yield_by_state.json";
 import projectPhaseSummary from "../data/project_phase_summary.json";
-import parallelScoutStatus from "../data/parallel_scout_status.json";
-import verificationStatus from "../data/verification_status_summary.json";
-import contentTriageStatus from "../data/content_triage_status_summary.json";
-import sourceReviewStatus from "../data/source_review_status_summary.json";
-import pdfReadinessStatus from "../data/pdf_readiness_status_summary.json";
-import textTableDetectionStatus from "../data/text_table_detection_status_summary.json";
-import textTableCalibrationStatus from "../data/text_table_calibration_status_summary.json";
 import reportsIndex from "../data/reports_index.json";
-import piProgressReportPdf from "../reports/pi_progress_report_source_discovery_2026-07-22.pdf?url";
-import { AnalysisReadinessPanel } from "./components/AnalysisReadinessPanel.jsx";
-import { CandidateQueueCards } from "./components/CandidateQueueCards.jsx";
-import { CoverageFunnel } from "./components/CoverageFunnel.jsx";
-import { DataLimitations } from "./components/DataLimitations.jsx";
 import { NationalMap } from "./components/NationalMap.jsx";
 import { PrintableStateReport } from "./components/PrintableStateReport.jsx";
-import { ProjectNavigation } from "./components/ProjectNavigation.jsx";
-import {
-  MethodologyDefinitions,
-  NextStepsPanel,
-  PriorityTiersPanel,
-  ProjectPhasePanel,
-  ProjectOrientation,
-  ReportsLibrary,
-  ScoutOperationsPanel,
-  StateYieldPanel,
-  VerificationPipeline,
-} from "./components/ProjectHubSections.jsx";
-import { StateDetailPanel } from "./components/StateDetailPanel.jsx";
-import { MetricCard, StatusPill, formatNumber } from "./components/ui.jsx";
+import { StatusPill, formatNumber, formatPercent } from "./components/ui.jsx";
 
 const DEFAULT_STATE = "CA";
-const REPORT_ASSETS = {
-  "pi-source-discovery-2026-07-22": piProgressReportPdf,
-};
 
 function routeFromHash() {
   const match = window.location.hash.match(/^#\/state\/([A-Z]{2})(\/report)?$/);
-  return {
-    state: match?.[1] ?? DEFAULT_STATE,
-    view: match?.[2] ? "report" : "dashboard",
-  };
+  return { state: match?.[1] ?? DEFAULT_STATE, view: match?.[2] ? "report" : "dashboard" };
 }
 
-function formatCountMap(value) {
-  return Object.entries(value ?? {})
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([label, count]) => `${label.replaceAll("_", " ")} ${formatNumber(count)}`)
-    .join(" · ") || "None";
+function label(value) {
+  return String(value ?? "").replaceAll("_", " ");
 }
 
-function QueueTable({ rows, onSelect }) {
+function countFor(key) {
+  return projectPhaseSummary[key] ?? 0;
+}
+
+function dominantDirection(counts = {}) {
+  const ranked = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  return ranked[0] ? label(ranked[0][0]) : "No rated direction";
+}
+
+function mechanismRows() {
+  const source = projectPhaseSummary.broad_state_4x2500_mechanism_summaries ?? {};
+  return Object.entries(source)
+    .filter(([name]) => !["weak_or_no_claim_support", "weak_or_no_claim_support_strength"].includes(name))
+    .map(([name, item]) => ({ name, ...item }))
+    .sort((a, b) => (b.report_ready_count ?? 0) - (a.report_ready_count ?? 0))
+    .slice(0, 6);
+}
+
+function CompactStateContext({ state, onOpenReport }) {
+  const unavailable = state.coverage_rate_status === "coverage_rate_unavailable";
   return (
-    <section className="panel queue-table-panel" aria-labelledby="queue-table-title">
-      <div className="section-heading">
-        <div>
-          <p className="eyebrow">Historical queue by state</p>
-          <h2 id="queue-table-title">Where the archived discovery queue was concentrated</h2>
-        </div>
-        <span className="quiet-label">Scheduling workload, not source quality</span>
+    <aside className="pi-state-context" aria-live="polite">
+      <div>
+        <p className="eyebrow">Selected geography</p>
+        <h3>{state.state_name}</h3>
       </div>
-      <div className="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">State</th>
-              <th scope="col">Candidate rows</th>
-              <th scope="col">Municipalities</th>
-              <th scope="col">High priority</th>
-              <th scope="col">Likely sets</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((state) => (
-              <tr key={state.state}>
-                <th scope="row">
-                  <button className="table-state-button" onClick={() => onSelect(state.state)}>
-                    {state.state_name}
-                  </button>
-                </th>
-                <td>{formatNumber(state.candidate_rows)}</td>
-                <td>{formatNumber(state.municipalities_with_queue_rows)}</td>
-                <td>{formatNumber(state.high_priority_rows)}</td>
-                <td>{formatNumber(state.likely_matched_set_municipalities)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <dl>
+        <div><dt>Scout coverage rate</dt><dd>{unavailable ? "Unavailable" : formatPercent(state.scout_coverage_rate)}</dd></div>
+        <div><dt>Coverage context</dt><dd>{unavailable ? "Denominator unavailable" : `${formatNumber(state.total_scout_coverage_count)} / ${formatNumber(state.municipality_universe)}`}</dd></div>
+      </dl>
+      <p>Coverage describes where scouting ran. It does not measure evidence quality, wage differences, or causation.</p>
+      <button className="text-button" type="button" onClick={onOpenReport}>Open historical state detail</button>
+    </aside>
   );
 }
 
 function App() {
   const [route, setRoute] = useState(routeFromHash);
-  const [navigationOpen, setNavigationOpen] = useState(false);
-  const [evidenceFilterDimension, setEvidenceFilterDimension] = useState("claim_readiness_bucket");
-  const [evidenceFilterValue, setEvidenceFilterValue] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => setRoute(routeFromHash());
@@ -120,26 +69,15 @@ function App() {
   );
   const selectedQueue = candidateSummary.by_state.find((item) => item.state === selected.state);
   const currentReport = reportsIndex.reports.find((report) => report.current) ?? reportsIndex.reports[0];
-  const currentReportHref = currentReport.href ?? REPORT_ASSETS[currentReport.id];
-  const evidenceFilterCatalog = projectPhaseSummary.rating_summary_filter_catalog ?? {};
-  const evidenceFilterOptions = evidenceFilterCatalog[evidenceFilterDimension] ?? {};
-  const evidenceFilterCount = evidenceFilterValue
-    ? evidenceFilterOptions[evidenceFilterValue] ?? 0
-    : Object.values(evidenceFilterOptions).reduce((sum, count) => sum + count, 0);
+  const mechanisms = mechanismRows();
+  const totals = stateSummary.totals;
+  const nationalRate = totals.municipality_universe
+    ? (totals.scout_covered_municipalities / totals.municipality_universe) * 100
+    : null;
 
   function chooseState(code) {
     window.location.hash = `/state/${code}`;
     setRoute({ state: code, view: "dashboard" });
-  }
-
-  function openReport() {
-    window.location.hash = `/state/${selected.state}/report`;
-    setRoute({ state: selected.state, view: "report" });
-  }
-
-  function navigateToSection(id) {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    setNavigationOpen(false);
   }
 
   if (route.view === "report") {
@@ -154,542 +92,114 @@ function App() {
     );
   }
 
-  const totals = stateSummary.totals;
   return (
     <>
-      <a className="skip-link" href="#overview">Skip to project overview</a>
-      <div className="app-shell">
-        <header className="site-header no-print">
+      <a className="skip-link" href="#current-status">Skip to current project status</a>
+      <div className="app-shell pi-dashboard-shell">
+        <header className="pi-header no-print">
           <div>
-            <p className="eyebrow">HBS municipal labor evidence project</p>
-            <h1>Gabriel Wages project hub</h1>
-            <p className="header-deck">
-              Current operation: {projectPhaseSummary.current_phase}. The next authorized stage is
-              {" "}{projectPhaseSummary.next_task}. Exact-span ratings remain bounded; no ingestion, wage gaps,
-              regressions, treatment effects, population-prevalence estimates, or final causal findings are available.
-            </p>
+            <p className="eyebrow">Gabriel Wages · current evidence state</p>
+            <h1>How municipal wages are set and changed</h1>
+            <p className="pi-deck">A cross-occupation evidence project focused on documentary wage-growth mechanisms within cities and bargaining cycles.</p>
           </div>
-          <div className="header-status">
-            <StatusPill tone="scout">{projectPhaseSummary.current_phase}</StatusPill>
-            <span>Data vintage {projectPhaseSummary.data_vintage}</span>
-            <a href={currentReportHref} target="_blank" rel="noreferrer">
-              {currentReport.link_label ?? "Open current evidence memo"}
-            </a>
-          </div>
+          <a className="primary-report-link" href={currentReport?.href} target="_blank" rel="noreferrer">
+            Open current evidence report
+          </a>
         </header>
 
-        <ProjectNavigation
-          open={navigationOpen}
-          onToggle={() => setNavigationOpen((value) => !value)}
-          onNavigate={navigateToSection}
-        />
-
         <main>
-          <section className="overview-section" id="overview" aria-labelledby="overview-title">
-            <div className="overview-heading">
+          <section className="pi-status-strip" id="current-status" aria-label="Current project status">
+            <div><span>Current stage</span><strong>{projectPhaseSummary.current_phase}</strong></div>
+            <div><span>Next task</span><strong>{projectPhaseSummary.next_task}</strong></div>
+            <div><span>Claim boundary</span><strong>Descriptive evidence only · wage-gap and causal analysis blocked</strong></div>
+            <div><span>Data current</span><strong>{projectPhaseSummary.data_vintage}</strong></div>
+          </section>
+
+          <section className="pi-section" aria-labelledby="coverage-title">
+            <div className="pi-section-heading">
               <div>
-                <p className="eyebrow">Overview</p>
-                <h2 id="overview-title">Current source-pipeline readiness status</h2>
+                <p className="eyebrow">Geographic scout coverage</p>
+                <h2 id="coverage-title">{nationalRate === null ? "Coverage rate unavailable" : `${formatPercent(nationalRate)} national coverage rate`}</h2>
               </div>
-                <div className="checkpoint-label">
-                  <span>Next authorized stage</span>
-                  <strong>{projectPhaseSummary.next_phase}</strong>
-                </div>
+              <p><strong>{formatNumber(totals.scout_covered_municipalities)}</strong> scout-covered municipalities of <strong>{formatNumber(totals.municipality_universe)}</strong> eligible or known municipalities.</p>
             </div>
-
-            <div className="headline-grid" aria-label="National headline metrics">
-              <MetricCard
-                label="Scout-covered municipalities"
-                value={formatNumber(projectPhaseSummary.current_scout_covered)}
-                note={`Actual parseable scout outcomes only · map data date ${projectPhaseSummary.map_data_date}`}
-              />
-              <MetricCard
-                label="Total candidate rows"
-                value={formatNumber(projectPhaseSummary.current_candidate_queue_rows)}
-                note={`${formatNumber(projectPhaseSummary.broad_state_4x1000_live_candidate_count)} new · ${formatNumber(projectPhaseSummary.broad_state_4x1000_live_deduped_candidate_count)} deduplicated in the 4x1000 wave`}
-              />
-              <MetricCard
-                label="Readiness reviewed"
-                value={formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_retained_count : projectPhaseSummary.pdf_text_readiness_reviewed_count)}
-                note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count : projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} technically ready of ${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_retained_count : projectPhaseSummary.pdf_text_readiness_queue_size)} retained sources`}
-              />
-              <MetricCard
-                label="Retained sources"
-                value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_download_available ? projectPhaseSummary.broad_state_4x2500_source_review_retained_count : projectPhaseSummary.source_review_download_retained_count)}
-                note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count : projectPhaseSummary.pdf_text_readiness_extraction_ready_count)} extraction-ready · retained binaries remain outside Git`}
-              />
-              <MetricCard
-                label="Text extraction attempted"
-                value={formatNumber(projectPhaseSummary.text_extraction_attempted_count)}
-                note={`${formatNumber(projectPhaseSummary.text_extracted_ok_count)} extracted OK · PDF ${formatNumber(projectPhaseSummary.text_extraction_pdf_extracted_ok_count)} · HTML ${formatNumber(projectPhaseSummary.text_extraction_html_extracted_ok_count)} · other ${formatNumber(projectPhaseSummary.text_extraction_other_document_extracted_ok_count)}`}
-              />
-              <MetricCard
-                label="Extraction quality deferrals"
-                value={formatNumber(
-                  projectPhaseSummary.text_extraction_empty_too_short_count
-                  + projectPhaseSummary.text_extraction_low_density_count
-                  + projectPhaseSummary.text_extraction_bad_text_layer_count
-                  + projectPhaseSummary.text_extraction_html_noisy_shell_count
-                  + projectPhaseSummary.text_extraction_other_document_unsupported_count
-                  + projectPhaseSummary.text_extraction_error_count
-                )}
-                note={
-                  "Empty/short " + formatNumber(projectPhaseSummary.text_extraction_empty_too_short_count)
-                  + " · low density " + formatNumber(projectPhaseSummary.text_extraction_low_density_count)
-                  + " · bad layer " + formatNumber(projectPhaseSummary.text_extraction_bad_text_layer_count)
-                  + " · HTML noisy " + formatNumber(projectPhaseSummary.text_extraction_html_noisy_shell_count)
-                  + " · unsupported " + formatNumber(projectPhaseSummary.text_extraction_other_document_unsupported_count)
-                  + " · errors " + formatNumber(projectPhaseSummary.text_extraction_error_count)
-                }
-              />
-              <MetricCard
-                label="Extracted text storage"
-                value="Git-ignored"
-                note={projectPhaseSummary.text_extraction_artifact_root}
-              />
-              <MetricCard
-                label="Span extraction attempted"
-                value={formatNumber(projectPhaseSummary.span_extraction_attempted_count)}
-                note={`${formatNumber(projectPhaseSummary.span_extraction_queue_size)} extracted-ok sources in the locked queue`}
-              />
-              <MetricCard
-                label="Positive exact spans"
-                value={formatNumber(projectPhaseSummary.span_positive_exact_count)}
-                note={`${formatNumber(projectPhaseSummary.span_sources_with_positive_count)} sources · candidates only, not rated`}
-              />
-              <MetricCard
-                label="Span families"
-                value={formatNumber(
-                  projectPhaseSummary.span_quantitative_compensation_count
-                  + projectPhaseSummary.span_qualitative_mechanism_count
-                )}
-                note={
-                  "Quantitative " + formatNumber(projectPhaseSummary.span_quantitative_compensation_count)
-                  + " · qualitative " + formatNumber(projectPhaseSummary.span_qualitative_mechanism_count)
-                  + " · navigation " + formatNumber(projectPhaseSummary.span_source_navigation_count)
-                  + " · non-base " + formatNumber(projectPhaseSummary.span_non_base_compensation_count)
-                }
-              />
-              <MetricCard
-                label="Span deferrals"
-                value={formatNumber(
-                  projectPhaseSummary.span_no_span_or_weak_count
-                  + projectPhaseSummary.span_ambiguous_count
-                  + projectPhaseSummary.span_extraction_error_count
-                )}
-                note={
-                  "No span/weak " + formatNumber(projectPhaseSummary.span_no_span_or_weak_count)
-                  + " · ambiguous " + formatNumber(projectPhaseSummary.span_ambiguous_count)
-                  + " · errors " + formatNumber(projectPhaseSummary.span_extraction_error_count)
-                }
-              />
-              <MetricCard
-                label="Rating candidates"
-                value={formatNumber(projectPhaseSummary.span_rating_candidate_count)}
-                note={`${formatNumber(projectPhaseSummary.exact_span_rating_attempted_count)} attempted in live bounded rating`}
-              />
-              <MetricCard
-                label="Valid exact-span ratings"
-                value={formatNumber(projectPhaseSummary.exact_span_rating_valid_count)}
-                note={`${formatNumber(projectPhaseSummary.exact_span_rating_queue_size)} queued · ${formatNumber(projectPhaseSummary.exact_span_rating_quarantine_count)} quarantined and excluded`}
-              />
-              <MetricCard
-                label="Rating candidates by family"
-                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_candidate_evidence_family_counts ?? {}).reduce((sum, count) => sum + count, 0))}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_candidate_evidence_family_counts)}
-              />
-              <MetricCard
-                label="Rated evidence families"
-                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_evidence_family_counts ?? {}).reduce((sum, count) => sum + count, 0))}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_evidence_family_counts)}
-              />
-              <MetricCard
-                label="Rated mechanism labels"
-                value={formatNumber(Object.keys(projectPhaseSummary.exact_span_rating_mechanism_counts ?? {}).length)}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_mechanism_counts)}
-              />
-              <MetricCard
-                label="Rated quantitative labels"
-                value={formatNumber(Object.keys(projectPhaseSummary.exact_span_rating_quantitative_label_counts ?? {}).length)}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_quantitative_label_counts)}
-              />
-              <MetricCard
-                label="Claim relevance"
-                value={formatNumber(Object.keys(projectPhaseSummary.exact_span_rating_claim_relevance_counts ?? {}).length)}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_claim_relevance_counts)}
-              />
-              <MetricCard
-                label="Evidence strength"
-                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_evidence_strength_counts ?? {}).reduce((sum, count) => sum + count, 0))}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_evidence_strength_counts)}
-              />
-              <MetricCard
-                label="Direction of pressure"
-                value={formatNumber(Object.values(projectPhaseSummary.exact_span_rating_direction_counts ?? {}).reduce((sum, count) => sum + count, 0))}
-                note={formatCountMap(projectPhaseSummary.exact_span_rating_direction_counts)}
-              />
-              <MetricCard
-                label="Claim-summary candidates"
-                value={formatNumber(projectPhaseSummary.rating_summary_claim_candidate_count)}
-                note={`${formatNumber(projectPhaseSummary.rating_summary_valid_count)} valid summarized · ${formatNumber(projectPhaseSummary.rating_summary_quarantine_excluded_count)} quarantines excluded`}
-              />
-              {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
-                <MetricCard
-                  label="Ingestion / codification queue"
-                  value={formatNumber(projectPhaseSummary.rating_ingestion_queue_count)}
-                  note={`${formatNumber(projectPhaseSummary.rating_codification_quarantine_excluded_count)} quarantines excluded before ingestion`}
-                />
-              )}
-              {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
-                <MetricCard
-                  label="Ingested and codified records"
-                  value={formatNumber(projectPhaseSummary.rating_codified_record_count)}
-                  note={`${formatNumber(projectPhaseSummary.rating_ingested_record_count)} ingested · schema-stable bounded records`}
-                />
-              )}
-              {projectPhaseSummary.combined_broad_rating_ingestion_codification_available && (
-                <MetricCard
-                  label="Global-readiness gate"
-                  value={projectPhaseSummary.global_analysis_readiness_gate_available ? "Complete" : "Ready next"}
-                  note={projectPhaseSummary.global_analysis_readiness_gate_available ? "Narrow partial diagnostic; legacy global readiness remains false" : "Diagnostic gate only; global analysis readiness remains false"}
-                />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Collection readiness" value={projectPhaseSummary.global_collection_readiness} note="Broad lineaged corpus; corpus-bounded and not population-representative" />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Mechanism readiness" value={projectPhaseSummary.global_mechanism_analysis_readiness} note="Bounded documentary description only; no causal interpretation" />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Quantitative evidence readiness" value={projectPhaseSummary.global_quantitative_evidence_readiness} note="Availability only; values remain unnormalized" />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Wage-gap readiness" value={projectPhaseSummary.global_wage_gap_analysis_readiness} note="Blocked until normalization and city × cycle × occupation matching pass" />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Causal readiness" value={projectPhaseSummary.global_causal_analysis_readiness} note="Blocked until matched structure and causal-design requirements pass" />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Overall readiness" value={projectPhaseSummary.overall_global_analysis_readiness} note="Narrow diagnostic status; global_analysis_readiness remains false" />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && (
-                <MetricCard label="Top readiness blockers" value={formatNumber(projectPhaseSummary.global_readiness_top_blockers?.length)} note={(projectPhaseSummary.global_readiness_top_blockers ?? []).join(" · ")} />
-              )}
-              {projectPhaseSummary.global_analysis_readiness_gate_available && !projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && (
-                <MetricCard label="Next planned stage" value="4 × 2,500 prep" note="10,000-target ceiling; scouting infrastructure only" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="4 × 2,500 infrastructure" value="Live-ready" note="No live calls occurred during preparation" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Planned scout target ceiling" value={formatNumber(projectPhaseSummary.planned_scout_target_ceiling)} note={`${formatNumber(projectPhaseSummary.planned_scout_shard_count)} locked shards · ${formatNumber(projectPhaseSummary.planned_scout_per_shard_ceiling)} each`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Planned municipality coverage" value={formatNumber(projectPhaseSummary.planned_scout_unique_municipality_count)} note={`${formatNumber(projectPhaseSummary.newly_planned_scout_municipality_count)} new · ${formatNumber(projectPhaseSummary.previously_covered_scout_municipalities_in_plan)} already covered`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="All-parseable projection" value={formatNumber(projectPhaseSummary.projected_cumulative_scout_covered_if_all_parseable)} note="Projection only; actual map coverage remains 6,919" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Planned geographic breadth" value={`${formatNumber(projectPhaseSummary.planned_scout_state_count)} states`} note={`${formatNumber(projectPhaseSummary.planned_scout_region_count)} regions · ${formatCountMap(projectPhaseSummary.planned_scout_region_counts)}`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Source-family query families" value={formatNumber(Object.keys(projectPhaseSummary.planned_scout_source_family_query_counts ?? {}).length)} note={formatCountMap(projectPhaseSummary.planned_scout_source_family_query_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_scout_infrastructure_prep_available && !projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Next authorized stage" value="Live 4 × 2,500 scout" note="T+0/T+8/T+16/T+24; checkpoint after every target; candidate review deferred" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="4 × 2,500 live scout lanes" value={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_completed_lane_count)} / 4`} note="Only completed-lane outcomes enter coordinator and dashboard accounting" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="New parseable municipalities" value={formatNumber(projectPhaseSummary.broad_state_4x2500_live_new_parseable_municipalities)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_failed_or_stopped_parses)} failed/stopped · actual map coverage only`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Live scout candidates" value={formatNumber(projectPhaseSummary.broad_state_4x2500_live_candidate_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_deduped_candidate_count)} deduplicated locators`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Finalized candidate universe" value={formatNumber(projectPhaseSummary.broad_state_4x2500_live_candidate_review_queue_size)} note={projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Every finalized row received one metadata-only review bucket" : "Review has not run; all rows remain unverified"} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Live source-family hints" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_live_source_family_distribution ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_live_source_family_distribution)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="CBA hint concentration" value={`${((projectPhaseSummary.broad_state_4x2500_live_cba_concentration ?? 0) * 100).toFixed(1)}%`} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_live_non_cba_opportunity_count)} non-CBA or unresolved opportunities`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_live_scout_available && (
-                <MetricCard label="Next authorized stage" value={projectPhaseSummary.broad_state_4x2500_text_extraction_available ? "Four-lane span extraction" : projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Four-lane text extraction" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Four-lane PDF/text readiness" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Source review/download" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Four-lane verification" : projectPhaseSummary.broad_state_4x2500_live_completed_lane_count === 4 ? "Candidate review" : "Resume live lanes"} note={projectPhaseSummary.broad_state_4x2500_text_extraction_available ? "Exact text only; no OCR, rating, ingestion, codification, or analysis" : projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available ? "Readiness-approved local files only; no OCR, rating, ingestion, or codification" : projectPhaseSummary.broad_state_4x2500_source_review_download_available ? "Retained local files only; no URL access, extraction, or OCR" : projectPhaseSummary.broad_state_4x2500_verification_available ? "Four lanes over reachable metadata outcomes; retained sources stay outside Git" : projectPhaseSummary.broad_state_4x2500_candidate_review_available ? "Verify the full queue with HEAD metadata checks only" : "No verification, download, extraction, rating, or ingestion in candidate review"} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
-                <MetricCard label="Verification-ready queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verification_ready_queue_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_ready_priority_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
-                <MetricCard label="Candidate-review buckets" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_candidate_review_bucket_counts ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_candidate_review_bucket_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_candidate_review_available && (
-                <MetricCard label="Review repair queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_candidate_review_repair_queue_count)} note="Retained outside verification until metadata repair; scout coverage is unchanged" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_verification_available && (
-                <MetricCard label="Verification completed" value={formatNumber(projectPhaseSummary.broad_state_4x2500_verified_row_count)} note={`4 × 1,442 lanes · ${formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_priority_counts)}`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_verification_available && (
-                <MetricCard label="Source-review-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_ready_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_verification_terminal_status_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_verification_available && (
-                <MetricCard label="Verification exceptions" value={formatNumber((projectPhaseSummary.broad_state_4x2500_verification_unavailable_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_verification_blocked_timeout_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_verification_duplicate_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_verification_error_count ?? 0))} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_unavailable_count)} unavailable · ${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_blocked_timeout_count)} blocked/timeout · ${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_duplicate_count)} duplicate · ${formatNumber(projectPhaseSummary.broad_state_4x2500_verification_error_count)} error`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Source-review queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_queue_count)} note="Four lanes: 988 · 988 · 987 · 987" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Unique retained sources" value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_retained_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_retained_pdf_count)} PDF · ${formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_retained_html_count)} HTML · ${formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_retained_other_count)} other`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Source-review outcomes" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_source_review_terminal_status_counts ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_source_review_terminal_status_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Retained source families" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_source_family ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_source_family)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Retained geography" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_state ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_state)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Retained CBA / non-CBA hints" value={formatNumber(projectPhaseSummary.broad_state_4x2500_source_review_retained_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_cba_hint)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_source_review_download_available && (
-                <MetricCard label="Retained mechanism hints" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_mechanism_hint ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_source_review_retained_by_mechanism_hint)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
-                <MetricCard label="PDF/text readiness completed" value={formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_retained_count)} note="Four independently checkpointed lanes of 918 retained sources" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
-                <MetricCard label="Text-extraction-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_parse_pdf_ready_count)} PDF · ${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_html_ready_count)} HTML · ${formatNumber(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_other_ready_count)} other`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
-                <MetricCard label="Readiness deferrals" value={formatNumber((projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_ocr_later_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_oversized_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_locked_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_corrupt_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_shell_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_needs_review_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_unsupported_count ?? 0) + (projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_error_count ?? 0))} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_status_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
-                <MetricCard label="Extraction-ready source families" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_source_family ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_source_family)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_available && (
-                <MetricCard label="Extraction-ready geography" value={formatNumber(Object.keys(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_state ?? {}).length)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_pdf_text_readiness_by_region)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
-                <MetricCard label="Current text-extraction queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_queue_count)} note="Four independently checkpointed lanes of 735 sources" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
-                <MetricCard label="Extracted OK" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_ok_count)} note={`${formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_total_bytes)} local text bytes · full text outside Git`} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
-                <MetricCard label="Extraction quality outcomes" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_queue_count - projectPhaseSummary.broad_state_4x2500_text_extraction_ok_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_text_extraction_status_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_text_extraction_available && (
-                <MetricCard label="Span-extraction-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_text_extraction_span_ready_count)} note="Eligible extracted_ok rows only; low-density and noisy rows excluded" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
-                <MetricCard label="Current span-extraction queue" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_extraction_queue_count)} note="Four independently checkpointed lanes of 699 / 699 / 699 / 698 sources" />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
-                <MetricCard label="Positive span sources" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_positive_source_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_span_extraction_status_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
-                <MetricCard label="Bounded exact span candidates" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_candidate_count)} note={formatCountMap(projectPhaseSummary.broad_state_4x2500_span_evidence_category_counts)} />
-              )}
-              {projectPhaseSummary.broad_state_4x2500_span_extraction_available && (
-                <MetricCard label="Span-rating-ready" value={formatNumber(projectPhaseSummary.broad_state_4x2500_span_rating_ready_count)} note="Eligible categories only; weak and navigation-only spans excluded" />
-              )}
-              <MetricCard
-                label="Globally usable descriptive evidence"
-                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.global_descriptive_ready)}
-                note="Corpus-bounded candidates only; ingestion/codification still required"
-              />
-              <MetricCard
-                label="Usable with caveats"
-                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.global_descriptive_ready_with_caveats)}
-                note="Label, strength, direction, or corpus-composition caveats apply"
-              />
-              <MetricCard
-                label="Quantitative needs normalization"
-                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.quant_needs_normalization)}
-                note="Not wage-gap or cross-record comparison evidence"
-              />
-              <MetricCard
-                label="Mechanism-summary ready"
-                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.mechanism_summary_ready)}
-                note="Strong/moderate documentary mechanism wording; not causal evidence"
-              />
-              <MetricCard
-                label="Source-navigation only"
-                value={formatNumber(projectPhaseSummary.rating_summary_claim_readiness_counts?.source_navigation_only)}
-                note="Useful for finding schedules or attachments; not standalone evidence"
-              />
-              <MetricCard
-                label="Weak, context, or unsupported"
-                value={formatNumber(
-                  (projectPhaseSummary.rating_summary_claim_readiness_counts?.weak_or_not_supported ?? 0)
-                  + (projectPhaseSummary.rating_summary_claim_readiness_counts?.local_context_only ?? 0)
-                )}
-                note="Excluded from bounded global descriptive candidates"
-              />
-              <MetricCard
-                label="Directional and provisional hints"
-                value={formatNumber(
-                  (projectPhaseSummary.rating_summary_claim_readiness_counts?.directional_hint_only ?? 0)
-                  + (projectPhaseSummary.rating_summary_claim_readiness_counts?.provisional_causal_hint_only ?? 0)
-                )}
-                note="Hints only; no global directional or causal finding"
-              />
-              <MetricCard
-                label="Dashboard evidence organization"
-                value={`${formatNumber(projectPhaseSummary.rating_summary_dashboard_evidence_box_count)} boxes`}
-                note={`${formatNumber(projectPhaseSummary.rating_summary_dashboard_filter_count)} controlled evidence filters outside the map`}
-              />
-              <MetricCard
-                label="Global analysis readiness"
-                value="False"
-                note={projectPhaseSummary.rating_summary_diagnostic_status ?? "No wage-gap, regression, treatment-effect, or final causal result"}
-              />
+            <div className="pi-map-grid">
+              <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} mapDataDate={projectPhaseSummary.map_data_date} />
+              <CompactStateContext state={selected} onOpenReport={() => { window.location.hash = `/state/${selected.state}/report`; setRoute({ state: selected.state, view: "report" }); }} />
             </div>
+          </section>
 
-            {projectPhaseSummary.combined_exact_span_rating_summary_available && (
-              <div className="hub-caveat" role="note" aria-label="Rated evidence boxes and filters">
-                <strong>Rated evidence boxes and filters.</strong>
-                <span>{formatCountMap(
-                  projectPhaseSummary.rating_codification_evidence_box_counts
-                  ?? projectPhaseSummary.rating_summary_evidence_box_counts
-                )}</span>
-                <div className="evidence-filter-controls" aria-label="Aggregate rated-evidence filter controls">
-                  <label>
-                    Evidence dimension
-                    <select
-                      value={evidenceFilterDimension}
-                      onChange={(event) => {
-                        setEvidenceFilterDimension(event.target.value);
-                        setEvidenceFilterValue("");
-                      }}
-                    >
-                      {Object.keys(evidenceFilterCatalog).map((dimension) => (
-                        <option key={dimension} value={dimension}>{dimension.replaceAll("_", " ")}</option>
-                      ))}
-                    </select>
-                  </label>
-                  <label>
-                    Category
-                    <select value={evidenceFilterValue} onChange={(event) => setEvidenceFilterValue(event.target.value)}>
-                      <option value="">All categories</option>
-                      {Object.entries(evidenceFilterOptions)
-                        .sort((a, b) => b[1] - a[1])
-                        .map(([label, count]) => (
-                          <option key={label} value={label}>{label.replaceAll("_", " ")} · {formatNumber(count)}</option>
-                        ))}
-                    </select>
-                  </label>
-                  <div className="evidence-filter-result" aria-live="polite">
-                    <span>Selected corpus-bounded records</span>
-                    <strong>{formatNumber(evidenceFilterCount)}</strong>
-                  </div>
-                </div>
-                <div className="tag-list" aria-label="Evidence filters outside the map">
-                  {(projectPhaseSummary.rating_summary_dashboard_filter_names ?? []).map((filterName) => (
-                    <span key={filterName}>{filterName.replaceAll("_", " ")}</span>
-                  ))}
-                </div>
+          <section className="pi-section" aria-labelledby="evidence-title">
+            <div className="pi-section-heading">
+              <div>
+                <p className="eyebrow">Current rated evidence</p>
+                <h2 id="evidence-title">One validated rating outcome per exact span</h2>
               </div>
+              <p>Ratings support evidence triage and report preparation. They are not yet ingested or codified findings.</p>
+            </div>
+            <div className="pi-evidence-grid">
+              <article><span>Valid ratings</span><strong>{formatNumber(countFor("rating_valid_count"))}</strong><p>Schema-valid documentary ratings</p></article>
+              <article><span>Quarantine</span><strong>{formatNumber(countFor("rating_quarantine_count"))}</strong><p>Excluded from downstream use pending repair</p></article>
+              <article><span>Core + supporting</span><strong>{formatNumber(countFor("rating_report_ready_count") + countFor("rating_supporting_count"))}</strong><p>{formatNumber(countFor("rating_report_ready_count"))} core · {formatNumber(countFor("rating_supporting_count"))} supporting</p></article>
+              <article><span>Context + excluded</span><strong>{formatNumber(countFor("rating_context_count") + countFor("rating_excluded_count"))}</strong><p>{formatNumber(countFor("rating_context_count"))} context · {formatNumber(countFor("rating_excluded_count"))} excluded</p></article>
+            </div>
+            {countFor("rating_normalization_needed_count") > 0 && (
+              <p className="pi-inline-note"><strong>{formatNumber(countFor("rating_normalization_needed_count"))}</strong> valid ratings are routed to downstream normalization before quantitative comparison.</p>
             )}
-
-            <div className="hub-caveat" role="note">
-              <strong>Bounded evidence status only.</strong>
-              <span>
-                Extracted text remains a local, Git-ignored artifact. Rating-summary buckets are bounded documentary classifications—not
-                ingestion, codification, quantitative normalization/comparison, population evidence, directional findings, or causal conclusions.
-                The Tier C memo remains a completed historical evidence artifact, not the current operation.
-              </span>
-            </div>
-
-            <ProjectOrientation
-              totals={totals}
-              priorityTotals={prioritySummary.totals}
-              report={currentReport}
-              phase={projectPhaseSummary}
-            />
           </section>
 
-          <section className="hub-section-group" id="geography" aria-label="Coverage map and state status">
-            <div className="hub-section-intro">
-              <p className="eyebrow">Total scout coverage</p>
-              <h2>A simple answer to “where have we scouted?”</h2>
-              <p>This is the dashboard’s only map layer. Tier C, mechanism, source-family, readiness, extraction, and rating details live in pipeline cards and reports below.</p>
+          <section className="pi-section" aria-labelledby="mechanisms-title">
+            <div className="pi-section-heading">
+              <div>
+                <p className="eyebrow">Mechanism findings preview</p>
+                <h2 id="mechanisms-title">Strongest rated documentary signals</h2>
+              </div>
+              <p>Ranked for PI review; counts describe this processed corpus, not national prevalence.</p>
             </div>
-            <div className="map-and-panel">
-              <NationalMap states={stateSummary.states} selectedCode={selected.state} onSelect={chooseState} mapDataDate={stateSummary.metadata.map_data_date} />
-              <StateDetailPanel state={selected} queue={selectedQueue} onOpenReport={openReport} />
-            </div>
+            {mechanisms.length ? (
+              <div className="table-wrap pi-mechanism-table"><table>
+                <thead><tr><th scope="col">Mechanism</th><th scope="col">Report-ready</th><th scope="col">Mean / median strength</th><th scope="col">Dominant direction</th><th scope="col">Boundary</th></tr></thead>
+                <tbody>{mechanisms.map((item) => <tr key={item.name}>
+                  <th scope="row">{label(item.name.replace(/_strength$/, ""))}</th>
+                  <td>{formatNumber(item.report_ready_count)}</td>
+                  <td>{Number(item.average_strength_score ?? 0).toFixed(2)} / {item.median_strength_score ?? 0} (0–4)</td>
+                  <td>{dominantDirection(item.direction_distribution)}</td>
+                  <td>Documentary pattern; no causal or prevalence claim</td>
+                </tr>)}</tbody>
+              </table></div>
+            ) : <p className="pi-empty-state">Rating summaries are not available yet.</p>}
           </section>
 
-          <ProjectPhasePanel phase={projectPhaseSummary} />
-
-          <VerificationPipeline
-            candidateSummary={candidateSummary}
-            readiness={analysisReadiness}
-            phase={projectPhaseSummary}
-            verificationStatus={verificationStatus}
-            contentTriageStatus={contentTriageStatus}
-            sourceReviewStatus={sourceReviewStatus}
-            pdfReadinessStatus={pdfReadinessStatus}
-            textTableDetectionStatus={textTableDetectionStatus}
-            textTableCalibrationStatus={textTableCalibrationStatus}
-          />
-
-          <ReportsLibrary reportsIndex={reportsIndex} reportAssets={REPORT_ASSETS} />
-
-          <AnalysisReadinessPanel data={analysisReadiness} phase={projectPhaseSummary} />
-
-          <NextStepsPanel priority={prioritySummary} phase={projectPhaseSummary} />
-
-          <details className="historical-archive" id="historical-archive">
-            <summary>
-              <span>Historical pipeline archive</span>
-              <small>Priority tiers, scouting operations, archived candidate queue, and state yield</small>
-            </summary>
-            <div className="historical-archive-content">
-              <PriorityTiersPanel priority={prioritySummary} statePriority={statePrioritySummary} />
-              <ScoutOperationsPanel operations={scoutOperations} runtime={scoutRuntimeTrends} parallelStatus={parallelScoutStatus} />
-              <section className="hub-section-group" id="candidate-queue" aria-labelledby="candidate-queue-title">
-                <div className="hub-section-intro">
-                  <p className="eyebrow">Historical candidate queue</p>
-                  <h2 id="candidate-queue-title">Archived source-discovery inventory</h2>
-                  <p>These counts document the earlier discovery pipeline; they are not the current text/span scope.</p>
-                </div>
-                <div className="two-column"><CoverageFunnel data={coverageFunnel} /><CandidateQueueCards data={candidateSummary} /></div>
-                <QueueTable rows={candidateSummary.by_state} onSelect={chooseState} />
-              </section>
-              <StateYieldPanel yieldData={scoutYieldByState} operations={scoutOperations} />
+          <section className="pi-section pi-boundary-section" aria-labelledby="boundary-title">
+            <div>
+              <p className="eyebrow">What can be said now</p>
+              <h2 id="boundary-title">Mechanism descriptions, with explicit limits</h2>
             </div>
+            <div className="pi-boundary-grid">
+              <article><StatusPill tone="scout">Allowed</StatusPill><h3>Descriptive documentary summaries</h3><p>Discuss how contracts and local documents describe raises, bargaining, timing, market pressure, and non-base compensation.</p></article>
+              <article><StatusPill tone="future">Blocked</StatusPill><h3>Wage-gap estimates</h3><p>Blocked pending normalization across pay units, ranks, effective dates, cycles, and base versus premium compensation.</p></article>
+              <article><StatusPill tone="future">Blocked</StatusPill><h3>Causal and prevalence claims</h3><p>Blocked pending matched city-cycle structure; corpus frequencies are not population prevalence.</p></article>
+            </div>
+            <p className="pi-cola-note">COLA/CPI language may be discussed as a contract mechanism. Analyst-side cost-of-living adjustment has not been performed.</p>
+          </section>
+
+          <details className="pi-technical-details">
+            <summary>Technical audit and stage history</summary>
+            <div className="pi-technical-grid">
+              <div><span>Rating queue</span><strong>{formatNumber(countFor("broad_state_4x2500_span_rating_queue_count"))}</strong></div>
+              <div><span>Rating lanes</span><strong>4 × 4,653</strong></div>
+              <div><span>Span candidates rated</span><strong>{formatNumber(countFor("broad_state_4x2500_span_rating_queue_count"))}</strong></div>
+              <div><span>Source texts entering span extraction</span><strong>{formatNumber(projectPhaseSummary.broad_state_4x2500_span_extraction_queue_count ?? 0)}</strong></div>
+              <div><span>Scout-covered municipalities</span><strong>{formatNumber(totals.scout_covered_municipalities)}</strong></div>
+              <div><span>Map denominator</span><strong>{formatNumber(totals.municipality_universe)}</strong></div>
+            </div>
+            <p>Detailed lane reconciliation, schemas, quarantine reasons, source-family summaries, and validation outputs are in the linked current report. Retained source files and full extracted text remain outside Git.</p>
           </details>
-
-          <MethodologyDefinitions />
-
-          <DataLimitations
-            metadata={{
-              ...stateSummary.metadata,
-              generated_at: projectPhaseSummary.generated_at,
-              data_vintage: projectPhaseSummary.data_vintage,
-            }}
-            metricDefinition={stateSummary.metric_definition.evidence_readiness_score}
-          />
         </main>
 
         <footer>
-          <div>
-            <p>Generated {projectPhaseSummary.generated_at}. Current project data vintage {projectPhaseSummary.data_vintage}.</p>
-            <p>{projectPhaseSummary.current_phase}. Global analysis readiness remains false.</p>
-          </div>
-          <div className="footer-links">
-            <button type="button" onClick={() => navigateToSection("overview")}>Back to overview</button>
-            <a href={currentReportHref} target="_blank" rel="noreferrer">
-              {currentReport.link_label ?? currentReport.title}
-            </a>
-          </div>
+          <div><p><strong>Gabriel Wages</strong></p><p>Collection readiness passed; mechanism and quantitative readiness remain partial.</p></div>
+          <div className="footer-links"><a href="https://github.com/dkyaya/gabriel-wages" target="_blank" rel="noreferrer">Repository</a></div>
         </footer>
       </div>
     </>

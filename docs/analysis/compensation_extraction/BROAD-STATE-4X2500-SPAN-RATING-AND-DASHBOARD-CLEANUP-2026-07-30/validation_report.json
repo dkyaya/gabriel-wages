@@ -1,0 +1,40 @@
+{
+  "all_checks_passed": false,
+  "checks": {
+    "01_input_count_18612": true,
+    "02_lane_counts_exact": true,
+    "03_lane_union_reconciles": true,
+    "04_one_lane_per_span": true,
+    "05_lane_hashes_match": true,
+    "06_valid_quarantine_reconcile": true,
+    "07_valid_schema": true,
+    "08_quarantine_reasons": true,
+    "09_rating_ids_unique": true,
+    "10_span_ids_unique": true,
+    "11_lineage_preserved": true,
+    "12_no_final_causal_claims": true,
+    "13_no_wage_gap_regression_claims": true,
+    "14_no_normalization": true,
+    "15_no_ocr": true,
+    "16_no_ingestion_codification": true,
+    "17_mechanism_json_reconciles": true,
+    "18_mechanism_md_exists": true,
+    "19_pi_findings_exist": true,
+    "20_summary_buckets_reconcile": true,
+    "21_dashboard_cleanup_artifacts": true,
+    "22_dashboard_simplified": true,
+    "23_map_coverage_rate": true,
+    "24_dashboard_build": true,
+    "25_local_browser_smoke": true,
+    "26_public_dashboard_smoke": false,
+    "27_global_readiness_not_advanced": true,
+    "28_no_source_or_text_artifacts_tracked": true,
+    "29_staged_audit": true,
+    "30_large_file_audit": true
+  },
+  "core_checks_passed": true,
+  "pending_checks": [
+    "26_public_dashboard_smoke"
+  ],
+  "validated_at": "2026-07-30T19:24:07.819587Z"
+}

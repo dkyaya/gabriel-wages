@@ -1,0 +1,21 @@
+{
+  "task_id": "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30",
+  "audience": "PI or project lead reviewing current evidence state",
+  "passed": true,
+  "main_view_questions_supported": [
+    "current_project_stage",
+    "geographic_scout_coverage_rate",
+    "current_rated_evidence_state",
+    "emerging_mechanism_clusters",
+    "current_claim_boundaries",
+    "one_next_task"
+  ],
+  "top_level_metric_groups": 4,
+  "map_primary_metric": "scout_coverage_rate",
+  "map_secondary_filters": [],
+  "technical_detail_default": "collapsed",
+  "duplicate_next_task_mentions": 0,
+  "duplicate_claim_boundary_panels": 0,
+  "engineering_validation_counters_on_main_view": 0,
+  "notes": "The main page is evidence-oriented. Operational reconciliation remains available in one collapsed technical audit and the linked current report."
+}

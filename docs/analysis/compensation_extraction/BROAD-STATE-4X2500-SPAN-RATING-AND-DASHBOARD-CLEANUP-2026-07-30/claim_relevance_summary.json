@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "direct_quantitative_claim_support": 6454,
+    "directional_hint_only": 430,
+    "mechanism_summary_support": 6509,
+    "weak_or_not_supported": 5161
+  },
+  "valid_rating_count": 18554
+}

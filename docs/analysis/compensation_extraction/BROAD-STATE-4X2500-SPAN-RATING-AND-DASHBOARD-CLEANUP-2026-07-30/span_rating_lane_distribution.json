@@ -1,0 +1,286 @@
+{
+  "all_lanes_terminal": true,
+  "every_input_in_exactly_one_lane": true,
+  "expected_total": 18612,
+  "lane_counts": {
+    "rating_lane_001": 4653,
+    "rating_lane_002": 4653,
+    "rating_lane_003": 4653,
+    "rating_lane_004": 4653
+  },
+  "lane_result_counts": {
+    "rating_lane_001": {
+      "quarantine": 18,
+      "terminal_total": 4653,
+      "valid": 4635
+    },
+    "rating_lane_002": {
+      "quarantine": 14,
+      "terminal_total": 4653,
+      "valid": 4639
+    },
+    "rating_lane_003": {
+      "quarantine": 9,
+      "terminal_total": 4653,
+      "valid": 4644
+    },
+    "rating_lane_004": {
+      "quarantine": 17,
+      "terminal_total": 4653,
+      "valid": 4636
+    }
+  },
+  "lanes": {
+    "rating_lane_001": {
+      "cba_non_cba_counts": {
+        "cba_hint": 1353,
+        "non_cba_or_other_hint": 3300
+      },
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 379,
+        "fiscal_or_budget_context": 24,
+        "market_or_comparability_context": 223,
+        "mixed_quantitative_qualitative": 120,
+        "non_base_compensation": 1085,
+        "qualitative_mechanism": 1133,
+        "quantitative_compensation": 1689
+      },
+      "mechanism_attribute_counts": {
+        "automatic_raise_mechanism": 349,
+        "bargaining_power_signal": 384,
+        "base_wage_direct_value": 697,
+        "fiscal_constraint_signal": 25,
+        "gap_narrowing_signal": 1,
+        "implementation_or_retroactivity_advantage": 555,
+        "market_or_comparability_pressure": 231,
+        "non_base_compensation_signal": 1079,
+        "non_safety_constraint_signal": 1,
+        "parity_or_internal_equity_signal": 7,
+        "rank_or_specialization_premium": 216,
+        "safety_advantage_signal": 79,
+        "strike_or_no_strike_constraint": 145
+      },
+      "priority_bucket_counts": {
+        "high_priority_verification_ready": 4222,
+        "low_priority_verification_ready": 22,
+        "medium_priority_verification_ready": 409
+      },
+      "queue_sha256": "7d7cbafc3ca64eed5e73f52b3da9af060ff4902d06d4570267483ebcab043fde",
+      "region_counts": {
+        "Midwest": 2098,
+        "Northeast": 1403,
+        "South": 871,
+        "West": 281
+      },
+      "row_count": 4653,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 468,
+        "arbitration_award": 319,
+        "budget_or_pay_plan": 650,
+        "cba": 1353,
+        "civil_service_or_hr_pay_plan": 106,
+        "compensation_study": 18,
+        "factfinding_report": 52,
+        "mou_or_memorandum": 274,
+        "other_local_government_pay_policy": 363,
+        "personnel_policy": 164,
+        "salary_ordinance": 104,
+        "settlement_agreement": 8,
+        "wage_schedule": 774
+      },
+      "source_type_counts": {
+        "html": 127,
+        "other_document": 19,
+        "pdf": 4507
+      }
+    },
+    "rating_lane_002": {
+      "cba_non_cba_counts": {
+        "cba_hint": 1354,
+        "non_cba_or_other_hint": 3299
+      },
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 379,
+        "fiscal_or_budget_context": 24,
+        "market_or_comparability_context": 223,
+        "mixed_quantitative_qualitative": 120,
+        "non_base_compensation": 1084,
+        "qualitative_mechanism": 1134,
+        "quantitative_compensation": 1689
+      },
+      "mechanism_attribute_counts": {
+        "automatic_raise_mechanism": 388,
+        "bargaining_power_signal": 381,
+        "base_wage_direct_value": 685,
+        "fiscal_constraint_signal": 24,
+        "gap_narrowing_signal": 1,
+        "implementation_or_retroactivity_advantage": 542,
+        "market_or_comparability_pressure": 228,
+        "non_base_compensation_signal": 1076,
+        "parity_or_internal_equity_signal": 12,
+        "rank_or_specialization_premium": 197,
+        "safety_advantage_signal": 75,
+        "strike_or_no_strike_constraint": 131
+      },
+      "priority_bucket_counts": {
+        "high_priority_verification_ready": 4225,
+        "low_priority_verification_ready": 23,
+        "medium_priority_verification_ready": 405
+      },
+      "queue_sha256": "593d9bf91380620f4d6bc349c8e9371a396af3dde3b7e7c0b526c16d1968f52e",
+      "region_counts": {
+        "Midwest": 2096,
+        "Northeast": 1405,
+        "South": 869,
+        "West": 283
+      },
+      "row_count": 4653,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 467,
+        "arbitration_award": 321,
+        "budget_or_pay_plan": 647,
+        "cba": 1354,
+        "civil_service_or_hr_pay_plan": 106,
+        "compensation_study": 18,
+        "factfinding_report": 51,
+        "mou_or_memorandum": 275,
+        "other_local_government_pay_policy": 363,
+        "personnel_policy": 165,
+        "salary_ordinance": 103,
+        "settlement_agreement": 9,
+        "wage_schedule": 774
+      },
+      "source_type_counts": {
+        "html": 141,
+        "other_document": 29,
+        "pdf": 4483
+      }
+    },
+    "rating_lane_003": {
+      "cba_non_cba_counts": {
+        "cba_hint": 1355,
+        "non_cba_or_other_hint": 3298
+      },
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 378,
+        "fiscal_or_budget_context": 24,
+        "market_or_comparability_context": 223,
+        "mixed_quantitative_qualitative": 120,
+        "non_base_compensation": 1085,
+        "qualitative_mechanism": 1133,
+        "quantitative_compensation": 1690
+      },
+      "mechanism_attribute_counts": {
+        "automatic_raise_mechanism": 363,
+        "bargaining_power_signal": 380,
+        "base_wage_direct_value": 691,
+        "fiscal_constraint_signal": 24,
+        "implementation_or_retroactivity_advantage": 573,
+        "market_or_comparability_pressure": 226,
+        "non_base_compensation_signal": 1081,
+        "parity_or_internal_equity_signal": 16,
+        "rank_or_specialization_premium": 193,
+        "safety_advantage_signal": 89,
+        "strike_or_no_strike_constraint": 132
+      },
+      "priority_bucket_counts": {
+        "high_priority_verification_ready": 4224,
+        "low_priority_verification_ready": 23,
+        "medium_priority_verification_ready": 406
+      },
+      "queue_sha256": "098b6d15edbb3e99a3ba53cc16d2f6da42390468eec94902d7d2aa46f2fa9bc6",
+      "region_counts": {
+        "Midwest": 2090,
+        "Northeast": 1405,
+        "South": 874,
+        "West": 284
+      },
+      "row_count": 4653,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 470,
+        "arbitration_award": 323,
+        "budget_or_pay_plan": 645,
+        "cba": 1355,
+        "civil_service_or_hr_pay_plan": 106,
+        "classification_study": 1,
+        "compensation_study": 17,
+        "factfinding_report": 50,
+        "mou_or_memorandum": 277,
+        "other_local_government_pay_policy": 363,
+        "personnel_policy": 164,
+        "salary_ordinance": 102,
+        "settlement_agreement": 10,
+        "wage_schedule": 770
+      },
+      "source_type_counts": {
+        "html": 130,
+        "other_document": 18,
+        "pdf": 4505
+      }
+    },
+    "rating_lane_004": {
+      "cba_non_cba_counts": {
+        "cba_hint": 1354,
+        "non_cba_or_other_hint": 3299
+      },
+      "evidence_category_counts": {
+        "bargaining_or_arbitration_context": 378,
+        "fiscal_or_budget_context": 24,
+        "market_or_comparability_context": 223,
+        "mixed_quantitative_qualitative": 120,
+        "non_base_compensation": 1085,
+        "qualitative_mechanism": 1133,
+        "quantitative_compensation": 1690
+      },
+      "mechanism_attribute_counts": {
+        "automatic_raise_mechanism": 346,
+        "bargaining_power_signal": 384,
+        "base_wage_direct_value": 704,
+        "fiscal_constraint_signal": 24,
+        "gap_narrowing_signal": 1,
+        "implementation_or_retroactivity_advantage": 575,
+        "market_or_comparability_pressure": 228,
+        "non_base_compensation_signal": 1079,
+        "parity_or_internal_equity_signal": 13,
+        "rank_or_specialization_premium": 182,
+        "safety_advantage_signal": 81,
+        "strike_or_no_strike_constraint": 147
+      },
+      "priority_bucket_counts": {
+        "high_priority_verification_ready": 4224,
+        "low_priority_verification_ready": 22,
+        "medium_priority_verification_ready": 407
+      },
+      "queue_sha256": "2ca4dbfe12d535253af62f76e2c5dfb4bd599c92480560850cf038aac0cbf3f0",
+      "region_counts": {
+        "Midwest": 2096,
+        "Northeast": 1403,
+        "South": 874,
+        "West": 280
+      },
+      "row_count": 4653,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 470,
+        "arbitration_award": 321,
+        "budget_or_pay_plan": 646,
+        "cba": 1354,
+        "civil_service_or_hr_pay_plan": 106,
+        "classification_study": 1,
+        "compensation_study": 18,
+        "factfinding_report": 49,
+        "mou_or_memorandum": 276,
+        "other_local_government_pay_policy": 363,
+        "personnel_policy": 164,
+        "salary_ordinance": 102,
+        "settlement_agreement": 10,
+        "wage_schedule": 773
+      },
+      "source_type_counts": {
+        "html": 131,
+        "other_document": 15,
+        "pdf": 4507
+      }
+    }
+  },
+  "total_rows": 18612
+}

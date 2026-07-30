@@ -1,0 +1,16 @@
+{
+  "removed": [
+    {"element": "project_navigation_section_index", "reason": "The simplified page is short enough to scan without a technical section menu.", "disposition": "deleted", "replacement": null},
+    {"element": "candidate_queue_cards_and_state_queue_table", "reason": "Historical discovery workload does not answer the current PI evidence questions.", "disposition": "moved_to_linked_reports", "replacement": "current evidence report"},
+    {"element": "coverage_funnel", "reason": "Repeated historical stage volumes and competed with current rated evidence.", "disposition": "moved_to_collapsed_details", "replacement": "technical audit disclosure"},
+    {"element": "analysis_readiness_matrix", "reason": "Repeated readiness warnings at engineering granularity.", "disposition": "condensed", "replacement": "three-item claim boundary panel"},
+    {"element": "priority_tier_and_state_priority_panels", "reason": "Discovery scheduling detail is stale for the current rating stage.", "disposition": "deleted_from_main_view", "replacement": null},
+    {"element": "scout_operations_runtime_and_yield_panels", "reason": "Operational diagnostics are not PI-facing current evidence.", "disposition": "moved_to_linked_reports", "replacement": "technical audit disclosure and reports"},
+    {"element": "verification_source_review_readiness_extraction_stage_cards", "reason": "Showing every prior stage as an equal card created a wall of counters.", "disposition": "condensed", "replacement": "one current rated evidence panel"},
+    {"element": "rating_filter_controls", "reason": "Interactive engineering filters obscured the main evidence narrative and never belonged on the map.", "disposition": "deleted_from_main_view", "replacement": "ranked mechanism preview"},
+    {"element": "reports_library", "reason": "A library of historical artifacts diluted the current report pointer.", "disposition": "deleted_from_main_view", "replacement": "single current evidence report link"},
+    {"element": "methodology_definition_wall", "reason": "Long definitions dominated the page.", "disposition": "moved_to_linked_reports", "replacement": "short inline map and claim-boundary language"},
+    {"element": "repeated_next_steps_panels", "reason": "Multiple next-task mentions caused status ambiguity.", "disposition": "deleted", "replacement": "one top-strip next task"},
+    {"element": "candidate_source_mechanism_readiness_map_filters", "reason": "The map is exclusively about scout coverage rate.", "disposition": "deleted", "replacement": "geographic/tile presentation toggle only"}
+  ]
+}

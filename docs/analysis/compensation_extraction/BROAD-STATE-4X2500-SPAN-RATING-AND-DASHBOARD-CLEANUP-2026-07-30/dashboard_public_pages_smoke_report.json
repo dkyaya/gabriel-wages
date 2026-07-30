@@ -1,0 +1,10 @@
+{
+  "status": "public_pages_deployment_pending_after_local_repair",
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "checked_at": "2026-07-30T19:21:00Z",
+  "local_cleanup_validated": true,
+  "deployment_pending": true,
+  "visible_current_numbers": false,
+  "reason": "The cleanup and current rating data have passed local production-build and browser validation but have not yet been committed and deployed.",
+  "forbidden_claims_advanced": false
+}
