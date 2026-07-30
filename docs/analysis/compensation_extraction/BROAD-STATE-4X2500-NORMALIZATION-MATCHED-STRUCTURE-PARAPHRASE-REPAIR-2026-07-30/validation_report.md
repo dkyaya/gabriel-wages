@@ -1,7 +1,7 @@
 # Validation report
 
 Core checks passed: **true**
-All checks passed: **false**
+All checks passed: **true**
 
 - `01_codified_valid_input_18554`: **true**
 - `02_quarantine_58_excluded`: **true**
@@ -33,7 +33,7 @@ All checks passed: **false**
 - `28_map_coverage_rate`: **true**
 - `29_dashboard_build`: **true**
 - `30_local_browser`: **true**
-- `31_public_browser`: **false**
+- `31_public_browser`: **true**
 - `32_global_not_advanced`: **true**
 - `33_no_ocr`: **true**
 - `34_no_source_review_download`: **true**

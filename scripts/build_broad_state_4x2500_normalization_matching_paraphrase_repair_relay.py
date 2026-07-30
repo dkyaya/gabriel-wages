@@ -106,9 +106,10 @@ def main() -> int:
         "validation_report.json", "validation_report.md", "forbidden_action_audit.json",
         "staged_file_audit.json", "large_file_audit.json", "next_task.md",
     ]
-    screenshot = OUTPUT / "dashboard_local_smoke.png"
-    if screenshot.exists():
-        include.append(screenshot.name)
+    for screenshot_name in ("dashboard_local_smoke.png", "dashboard_public_smoke.png"):
+        screenshot = OUTPUT / screenshot_name
+        if screenshot.exists():
+            include.append(screenshot.name)
     archive = TMP / f"broad_state_4x2500_normalization_matching_paraphrase_repair_relay_2026-07-30_{args.commit}.zip"
     with tempfile.TemporaryDirectory(dir=TMP, prefix="normalization_matching_relay_") as stage_text:
         stage = Path(stage_text)
