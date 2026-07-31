@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-31T17:27:30Z",
+  "generated_at": "2026-07-31T17:35:47Z",
   "data_vintage": "2026-07-31",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -97,7 +97,7 @@
   ],
   "stage": "broad_state_wage_growth_continuity_review_complete",
   "current_phase": "Wage-growth continuity review complete",
-  "current_phase_code": "broad_state_wage_growth_continuity_review_completed_local_ready_public_pending",
+  "current_phase_code": "broad_state_wage_growth_continuity_review_completed_weekend_scout_prep_ready",
   "current_evidence_status": "reviewed_mechanism_specific_growth_continuity_claim",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,

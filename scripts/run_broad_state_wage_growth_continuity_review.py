@@ -614,6 +614,16 @@ def finalize(public: bool) -> None:
         data["validation_passed"] = passed
         data["public_pages_passed"] = public_passed
         write_json(OUTPUT / name, data)
+    if public:
+        dashboard_summary = read_json(OUTPUT / "dashboard_growth_module_update_summary.json")
+        dashboard_summary.update({
+            "status": "dashboard_review_current_public_static_validated" if public_passed else "dashboard_public_validation_needs_repair",
+            "public_pages_static_current_passed": pages.get("public_pages_static_current_passed") is True,
+            "public_pages_visible_current_passed": pages.get("public_pages_visible_current_passed") is True,
+            "public_browser_controller_status": pages.get("browser_controller_status"),
+            "deployment_workflow_run_id": pages.get("deployment_workflow_run_id"),
+        })
+        write_json(OUTPUT / "dashboard_growth_module_update_summary.json", dashboard_summary)
     if not passed:
         raise SystemExit("review validation failed")
 

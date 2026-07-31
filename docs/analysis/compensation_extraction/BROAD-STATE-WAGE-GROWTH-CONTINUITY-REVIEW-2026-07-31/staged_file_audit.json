@@ -1,263 +1,133 @@
 {
   "passed": true,
-  "staged_file_count": 51,
+  "staged_file_count": 25,
   "prohibited_payload_count": 0,
   "prohibited_paths": [],
   "files": [
     {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/claim_a_b_evaluation.json",
-      "size_bytes": 2641,
-      "sha256": "cf539ad2e17861deeb4f43073879212ffb2b2c1d250247b7c398a0eb32dbe7ed"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/claim_a_b_evaluation.md",
-      "size_bytes": 1130,
-      "sha256": "8b55ad96809e8eb73889aa634a7c8522c05664d80a2947e76052c1b9feeee903"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/continuity_layer_integrity_review.json",
-      "size_bytes": 2604,
-      "sha256": "08a6fd65a12144b442bb22dd734291b3f6bf56d6d62b5858672c50ee90164f22"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/continuity_layer_integrity_review.md",
-      "size_bytes": 943,
-      "sha256": "af728747cb10514ab7d344e169cb621dbee810be9e0e7b3e5b047febc9b208c1"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/dashboard_browser_smoke_report.json",
-      "size_bytes": 874,
-      "sha256": "484bf9b566f972f81759aa42802ed8bca56046539d4a11ba03a5689cc8fd51f3"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/dashboard_growth_module_review.json",
-      "size_bytes": 1583,
-      "sha256": "de4a5dd48ddd9e4bd6f91768b946ce0c92c27d5138f1f4bf7fec6787be18ab49"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/dashboard_growth_module_review.md",
-      "size_bytes": 432,
-      "sha256": "6a84195d6b9151d7e1e08427502ef55fb31bb7b9841c54710b752c94b7956da7"
-    },
-    {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/dashboard_growth_module_update_summary.json",
-      "size_bytes": 1906,
-      "sha256": "fca5bad4e52965278da16b2c270b69a8ca142a551e5130b457218073e0f1a0ee"
+      "size_bytes": 2098,
+      "sha256": "d43cba28a0f5dd7f321ab28a6a2554139272bbbdec8e3a298d2d8a536ff9a509"
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/dashboard_public_pages_smoke_report.json",
-      "size_bytes": 186,
-      "sha256": "b2639fb23495e14eb14bb8566b522835cd8df3d29cc2ee1c1d1075dc19f7d67f"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/forbidden_action_audit.json",
-      "size_bytes": 437,
-      "sha256": "23ba431739e1a2f1ec1b606ff37c9607e7ca74cd305d06eeaafdfba05123c787"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/large_file_audit.json",
-      "size_bytes": 92,
-      "sha256": "6ad24999318b9133a3677a4f2743324cca250bb3a51b5283f2fd2895b5f8d453"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/mechanism_by_unit_growth_interpretation.csv",
-      "size_bytes": 3997,
-      "sha256": "ba689eec1c8b4d22ea3ae36de6c407cad36cd64a89a88fef4e118401d49a272e"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/mechanism_by_unit_growth_interpretation.json",
-      "size_bytes": 16302,
-      "sha256": "3ac99f2ffb5a6822dc4bb8d8c080c1baabebc36f65f19ae2a43cb44a5ae68bf7"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/mechanism_by_unit_growth_interpretation.md",
-      "size_bytes": 1245,
-      "sha256": "038f51bda96c246bcf34c36b9d3305ca80037001bce1ca94144b6f6da11df2c8"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/next_task.md",
-      "size_bytes": 440,
-      "sha256": "328f230018fa976709170d7ab8f26277eeb228bc6fad18b1324e4e2dea9d0fac"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/recommended_growth_continuity_claim.md",
-      "size_bytes": 652,
-      "sha256": "639fac9b24757711da095dcb0f436e915728461b968a330cdb8fccb0df83869f"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/staged_file_audit.json",
-      "size_bytes": 11764,
-      "sha256": "6089b655d5e24a81ec1d02711bfa26e9ac042d52409036ed843c0e8295ba12d5"
+      "size_bytes": 1759,
+      "sha256": "eaf01bc0c234de2738af85f2910d30f0729a01ad7c2904b46209b505ceed7475"
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/validation_report.json",
-      "size_bytes": 1382,
-      "sha256": "11713aeeb03104801626fdd20a85bf4574c8426674a00a56d5a1f7bb1a34a957"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/validation_report.md",
-      "size_bytes": 1157,
-      "sha256": "436cb47a33de709dd474caf97ab3d18b91ce0231d0303c3c2cf6a0a463146072"
+      "size_bytes": 1380,
+      "sha256": "1354c66e6248043182a46a2c2d665623230db16490d2702249d6bfcbf62037fd"
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/wage_growth_continuity_review_manifest.json",
-      "size_bytes": 976,
-      "sha256": "33c2c56342c75818c98e2b86d96d17ffb3f8504dac7794868ce3bd8f4f2246b4"
+      "size_bytes": 973,
+      "sha256": "53fdde51392272f293b2e259b63c11069d0c1f1a736f7587ce5c25ef1a2dc088"
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/wage_growth_continuity_review_summary.json",
-      "size_bytes": 1802,
-      "sha256": "f1ff1d9dabeb7cda640a0a349d46788682fb9966e4163461bf84a929f72c2830"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/wage_growth_continuity_review_summary.md",
-      "size_bytes": 886,
-      "sha256": "2d56e74bb8f3fc1b04f1cb1582da100a7f8cafc6db876486f3e7b5b77662136f"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/weekend_remaining_municipality_scout_plan.json",
-      "size_bytes": 3979,
-      "sha256": "cda87b9b6bd29bdf3ec3989488c693a77a8204d3af98c4b85d8973036bd0faa5"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/weekend_remaining_municipality_scout_plan.md",
-      "size_bytes": 762,
-      "sha256": "56676056314f66dbd0ef54b972eeafe11475efd95ebbe40eded6342d0ebc6aa7"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/weekend_scout_next_task_recommendation.md",
-      "size_bytes": 313,
-      "sha256": "36429e3dfdb010bf683cb95b333f9772157af0cc47cfe568d73016e8a8592664"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/weighting_method_review.json",
-      "size_bytes": 4511,
-      "sha256": "e259107b3ba78459e0300e4b77531d3f8395e3ddbd4ad68dc973177d8e9ae9b1"
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/weighting_method_review.md",
-      "size_bytes": 624,
-      "sha256": "454177b1a2376ba42feeb24589f385ea7da70615590ca5e4ddfb14c146d43c34"
+      "size_bytes": 1799,
+      "sha256": "a1a8d814f25144fa11e497628e6ff6e12ce41469207fb0f7c60b7c471b386626"
     },
     {
       "path": "docs/dashboard/data/analysis_readiness.json",
       "size_bytes": 36433,
-      "sha256": "6dd847db9b4c48ac236e46e3f6684d9142fbe53b6a431e23e5e1a8bcad519a91"
+      "sha256": "4dc7b17ac289221405a395e5ec70cea3f09111041c9ce6fe63461b8933e93f5d"
     },
     {
       "path": "docs/dashboard/data/candidate_queue_summary.json",
       "size_bytes": 27834,
-      "sha256": "09845a04852b3d1161dd8c4f753bbdae57e2753c399773a96bb88d52dace3b1a"
+      "sha256": "cfa55d8ee017f0a747dd017609b0171ef72d1ce47f56a9222f083ec31e689bc8"
     },
     {
       "path": "docs/dashboard/data/content_triage_status_summary.json",
       "size_bytes": 15708,
-      "sha256": "6e2599575606ac5e4d4fefb4b88ad6b13a31ac8356545a5ab7381f455afa35c9"
+      "sha256": "442b7706233144b9cc82162a9bb618481b30af7a6a62bc69707809991bf1f5a6"
     },
     {
       "path": "docs/dashboard/data/coverage_funnel.json",
       "size_bytes": 12676,
-      "sha256": "8ba1aad9713656a4a5a1161cc1b080ae0c6d6dc82a7e850189439c4731fba028"
+      "sha256": "cbf9bc9ec9f46e885faf1898d421415c0aa3c8a4b1bf7d8710b9b674bc26a1e1"
     },
     {
       "path": "docs/dashboard/data/parallel_scout_status.json",
       "size_bytes": 13422,
-      "sha256": "7523d6ef6fa91b510d35f22a362682d067f2ec1327667ae35673c39a8ea5f965"
+      "sha256": "4859dd2ddcb05c8c9ee16c8e6f5bb597bccf0d281db85fd835be5a1b78315b7c"
     },
     {
       "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
       "size_bytes": 12684,
-      "sha256": "0c48ab61bef1aea248657b9539302307412c7e97ef578ba183efd1d7d0faa35c"
+      "sha256": "18c7852da1f40406bfbe7bbcf0b4a43e3df5d441ef6c2dafc4efdd1ec6836427"
     },
     {
       "path": "docs/dashboard/data/priority_summary.json",
       "size_bytes": 11853,
-      "sha256": "abc972ec3f5a4e8254af386e0285302b75f243812b5fd09c2ddb8a6c78e23056"
+      "sha256": "dbb90dabbf78742ac2c51ed5e4ecf75032e6832b2d6291a81a6a7634743d120d"
     },
     {
       "path": "docs/dashboard/data/project_phase_summary.json",
-      "size_bytes": 205621,
-      "sha256": "6937e96cf908b8c0172caada2f4f4a20d018e354d1e737940463b35ce7a0f6a7"
+      "size_bytes": 205619,
+      "sha256": "1699e75941c69b507b6e57cda494d4c38ea7c4638b6fe4408420d9dbe9bb4214"
     },
     {
       "path": "docs/dashboard/data/reports_index.json",
       "size_bytes": 42538,
-      "sha256": "b6434f089b9977233d6e07b49b812f470a7a0c36234a1351e659f25d4b97e3b8"
+      "sha256": "70eb837b69f5ac4a5e87bd5a3875a9265620858047f88a626ea20a2effb18dab"
     },
     {
       "path": "docs/dashboard/data/scout_operations_summary.json",
       "size_bytes": 12964,
-      "sha256": "031bccfa4198e499592e99b9189075930ffecd1942a279b2c5bff8879b67d610"
+      "sha256": "6f3f4fd5ce4094fba44a3c313767cf339ab8dd64e408a0814866184261d975ab"
     },
     {
       "path": "docs/dashboard/data/scout_runtime_trends.json",
       "size_bytes": 14022,
-      "sha256": "15ac34d90dfa4da9862ff18c8ccf1f46bce6ec38099d458766bc99e3fe36a105"
+      "sha256": "91608f4849237b1cfd0c6643851008d0f45dd3772bf8244b5e1f94ffd5aa69c6"
     },
     {
       "path": "docs/dashboard/data/scout_yield_by_state.json",
       "size_bytes": 51681,
-      "sha256": "292b5a5f33f432f79eef1dc1e5bdd9709a6cf9edc589e1d96d4bc4bdce6318ae"
+      "sha256": "b37747973ebb39730c0a52ba93a4c26d79539a30012ba654a76b81b8dce78120"
     },
     {
       "path": "docs/dashboard/data/source_review_status_summary.json",
       "size_bytes": 27241,
-      "sha256": "a2da2e551ce5e42511e32cdb0cddd3f2acccb8c5633205064ace0b557155e6cf"
+      "sha256": "fe3b2e49149c96e8d0444a103705597386d32d6818c4c364fe723f2169a15758"
     },
     {
       "path": "docs/dashboard/data/state_priority_summary.json",
       "size_bytes": 39561,
-      "sha256": "80ee175147776cd0bccafa0c5c38dc31839a0ecf38a7409c97b70d79e20af912"
+      "sha256": "5f1722d780560acccbb90ff8e993edaa2ddfbee5f506a1e6ec27c68a2019a991"
     },
     {
       "path": "docs/dashboard/data/state_summary.json",
       "size_bytes": 165323,
-      "sha256": "d11326070b5cf5b5ed55e21b8714293d05c11558d0683a9a3b555c21386ed784"
+      "sha256": "7c37744f960aee36a03cb5c631abc960b48c83a139ab39d17eeb915b378a3532"
     },
     {
       "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
       "size_bytes": 56812,
-      "sha256": "2fdc9d4ff5ed873281a984884c13f06939a6ebbc2960ac82d3b439d4f566dc04"
+      "sha256": "d8058f4a504bb3f3fde7dd662cb978297302368c323ef5fabb713c84aa8a34ef"
     },
     {
       "path": "docs/dashboard/data/text_table_detection_status_summary.json",
       "size_bytes": 12889,
-      "sha256": "ddb50bd487f06c7d530a2d674e49d240b0ca4398f127abdf003084d135f6a6e0"
+      "sha256": "b77460b41513d9c557ed98c23505b4f6c1bb219c17d60a9ea8924b02a88a123d"
     },
     {
       "path": "docs/dashboard/data/top_priority_targets.json",
       "size_bytes": 217464,
-      "sha256": "3fbebd0e8012475a69d5f2aa5fedee29fd50b3d09dd8c0d4d1811c6144934b3a"
+      "sha256": "fbf73921d4a40f84fc40430c3f47bb2e721923c06acd230166add11101bcd22c"
     },
     {
       "path": "docs/dashboard/data/verification_status_summary.json",
       "size_bytes": 15288,
-      "sha256": "c60b2d1c5cda7504d93a24cf3c8f3c9aa3e6a3db548d6a10799aea950885e499"
-    },
-    {
-      "path": "docs/dashboard/data/wage_growth_continuity.json",
-      "size_bytes": 33134,
-      "sha256": "1302c76e417173471c87af86246975740246993cb05cc65deed6a0b25a07721e"
-    },
-    {
-      "path": "docs/dashboard/src/App.jsx",
-      "size_bytes": 18240,
-      "sha256": "4a3e0bf8500e6e8d915819f359eba9d5a284e1f8fa5103d8f3c1a7d0b850ba9e"
-    },
-    {
-      "path": "scripts/build_dashboard_data.py",
-      "size_bytes": 1052310,
-      "sha256": "fd214abdfba32a26666e268668327e25f2b408798f7d27395c3f3554e119ef7c"
+      "sha256": "f6330f352ad6d24ea3c477cdb64d7d129629abcd9194154498679b0ebebc87a5"
     },
     {
       "path": "scripts/run_broad_state_wage_growth_continuity_review.py",
-      "size_bytes": 46383,
-      "sha256": "9ed631b5ba39d367eeeea4d9d615df8a0a27b275c9944f8202265ebae45d53b0"
-    },
-    {
-      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
-      "size_bytes": 21571,
-      "sha256": "4a5b2633ea573bb37b2e9060a365884527af0ac7b4d90870dedd74e35d404b41"
+      "size_bytes": 47158,
+      "sha256": "5c284ea021467734f3e1d4cfbfe5cfdae3b20c3f012104de33016713625aef94"
     }
   ]
 }

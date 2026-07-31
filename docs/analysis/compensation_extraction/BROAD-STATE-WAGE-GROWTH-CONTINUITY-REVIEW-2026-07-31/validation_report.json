@@ -1,6 +1,6 @@
 {
   "task_id": "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
-  "decision": "broad_state_wage_growth_continuity_review_completed_local_ready_public_pending",
+  "decision": "broad_state_wage_growth_continuity_review_completed_weekend_scout_prep_ready",
   "passed": true,
   "checks": {
     "01_computed_count_reconciles": true,

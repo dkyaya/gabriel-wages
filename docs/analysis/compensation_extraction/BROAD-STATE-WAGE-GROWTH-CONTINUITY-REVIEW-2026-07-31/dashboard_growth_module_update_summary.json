@@ -1,5 +1,5 @@
 {
-  "status": "local_dashboard_build_and_static_smoke_passed",
+  "status": "dashboard_review_current_public_static_validated",
   "clean_structure_preserved": true,
   "module_location": "existing_mechanism_preview_panel",
   "recommended_claim": "Within the processed normalized corpus, safety-side growth evidence is more numerous, but unit-cycle-weighted rates do not show a uniform safety advantage. Step progression currently leans safety/police (7.44% versus 2.75% for non-safety), while across-the-board raises are mixed (fire 6.32%, non-safety 6.06%, police 4.02%) and COLA/CPI cross-side comparisons remain too small to resolve. The strongest current interpretation is mechanism- and cycle-specific divergence, not a general safety wage-growth premium.",
@@ -32,5 +32,9 @@
   "browser_controller_status": "unavailable",
   "current_stage": "Wage-growth continuity review complete",
   "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31",
-  "final_pi_report_link_preserved": true
+  "final_pi_report_link_preserved": true,
+  "public_pages_static_current_passed": true,
+  "public_pages_visible_current_passed": false,
+  "public_browser_controller_status": "unavailable",
+  "deployment_workflow_run_id": 30651466130
 }

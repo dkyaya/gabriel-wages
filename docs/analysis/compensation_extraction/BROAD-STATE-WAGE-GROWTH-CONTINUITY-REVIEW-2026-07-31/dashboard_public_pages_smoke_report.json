@@ -1,6 +1,35 @@
 {
-  "status": "pending_after_local_validation",
+  "status": "public_pages_static_current_passed_browser_unavailable",
+  "checked_at": "2026-07-31T17:34:47Z",
+  "public_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260731_growth_continuity_review_20260731T1734Z",
+  "deployment_workflow_run_id": 30651466130,
+  "deployment_workflow_head_sha": "c601ecde1ad8d9bf2489f58c385cb8698a4c8c84",
+  "deployment_workflow_conclusion": "success",
   "public_pages_visible_current_passed": false,
-  "public_pages_static_current_passed": false,
-  "browser_controller_status": "pending"
+  "public_pages_static_current_passed": true,
+  "browser_controller_status": "unavailable",
+  "browser_controller_note": "The in-app browser runtime reported no available browser, so public validation is static and HTTP-based rather than a visual browser pass.",
+  "http_checks": {
+    "dashboard_index_http_200": true,
+    "current_javascript_bundle_http_200": true,
+    "final_pi_report_pdf_http_200": true,
+    "final_pi_report_content_type": "application/pdf"
+  },
+  "bundle_checks": {
+    "current_stage_present": true,
+    "next_task_present": true,
+    "growth_continuity_module_present": true,
+    "recommended_claim_present": true,
+    "unit_cycle_weighting_and_small_n_label_present": true,
+    "map_metric_scout_coverage_rate_present": true,
+    "scout_covered_count_16887_present": true,
+    "eligible_universe_35589_present": true,
+    "final_pi_report_link_present": true,
+    "global_readiness_not_advanced": true
+  },
+  "coverage_rate_validation": "The deployed bundle contains scout_coverage_rate plus the 16,887 numerator and 35,589 denominator; 16,887 / 35,589 = 47.45% when rounded to two decimals.",
+  "limitations": [
+    "No claim of public visual-browser validation is made.",
+    "Dashboard JSON is bundled at build time rather than served as standalone public JSON paths."
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "task_id": "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
-  "decision": "broad_state_wage_growth_continuity_review_completed_local_ready_public_pending",
+  "decision": "broad_state_wage_growth_continuity_review_completed_weekend_scout_prep_ready",
   "generated_at": "2026-07-31T16:54:31Z",
   "head_before": "5c2c23fae31589def35f604402df569e3599057d",
   "computed_cycle_to_cycle_growth_count": 16,
@@ -25,7 +25,7 @@
   "wage_gap_readiness": false,
   "causal_readiness": false,
   "validation_passed": true,
-  "public_pages_passed": false,
+  "public_pages_passed": true,
   "continuity_integrity_review_passed": true,
   "claim_a_status": "partially_supported",
   "claim_b_status": "supported_with_mechanism_specific_refinement",
