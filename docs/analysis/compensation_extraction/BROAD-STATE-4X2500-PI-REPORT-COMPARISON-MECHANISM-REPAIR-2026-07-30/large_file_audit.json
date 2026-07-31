@@ -3,84 +3,32 @@
   "large_files": [],
   "largest_staged_files": [
     {
-      "bytes": 3315444,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/bargaining_dispute_pressure_audit.json"
-    },
-    {
-      "bytes": 1781700,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/bargaining_dispute_pressure_audit.csv"
-    },
-    {
-      "bytes": 1032383,
-      "path": "scripts/build_dashboard_data.py"
-    },
-    {
-      "bytes": 752132,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/market_staffing_pressure_audit.json"
-    },
-    {
-      "bytes": 400808,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/market_staffing_pressure_audit.csv"
-    },
-    {
-      "bytes": 217464,
-      "path": "docs/dashboard/data/top_priority_targets.json"
-    },
-    {
-      "bytes": 204047,
-      "path": "docs/dashboard/data/project_phase_summary.json"
-    },
-    {
-      "bytes": 165323,
-      "path": "docs/dashboard/data/state_summary.json"
-    },
-    {
-      "bytes": 68858,
+      "bytes": 69207,
       "path": "scripts/run_broad_state_4x2500_pi_report_comparison_mechanism_repair.py"
     },
     {
-      "bytes": 56812,
-      "path": "docs/dashboard/data/text_table_calibration_status_summary.json"
+      "bytes": 1385,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/validation_report.json"
     },
     {
-      "bytes": 51681,
-      "path": "docs/dashboard/data/scout_yield_by_state.json"
+      "bytes": 1266,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/dashboard_public_pages_smoke_report.json"
     },
     {
-      "bytes": 50852,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/pi_report_draft_v2_2026-07-30.docx"
+      "bytes": 1144,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/validation_report.md"
     },
     {
-      "bytes": 41260,
-      "path": "docs/dashboard/data/reports_index.json"
+      "bytes": 1023,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/dashboard_report_v2_link_update_summary.json"
     },
     {
-      "bytes": 39561,
-      "path": "docs/dashboard/data/state_priority_summary.json"
+      "bytes": 1007,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/large_file_audit.json"
     },
     {
-      "bytes": 36433,
-      "path": "docs/dashboard/data/analysis_readiness.json"
-    },
-    {
-      "bytes": 30676,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/pi_report_draft_v2_2026-07-30.md"
-    },
-    {
-      "bytes": 27834,
-      "path": "docs/dashboard/data/candidate_queue_summary.json"
-    },
-    {
-      "bytes": 27539,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/lane_003_bargaining_market_pressure_audit.json"
-    },
-    {
-      "bytes": 27241,
-      "path": "docs/dashboard/data/source_review_status_summary.json"
-    },
-    {
-      "bytes": 18033,
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/lane_002_timing_growth_mechanism_audit.json"
+      "bytes": 286,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/staged_file_audit.json"
     }
   ],
   "passed": true,

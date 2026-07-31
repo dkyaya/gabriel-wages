@@ -1,7 +1,20 @@
 {
-  "cache_busting_url": null,
-  "deployment_status": "pending_initial_push",
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "cache_busting_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_pi_report_v2_20260730T2206EDT",
+  "current_report_link_in_deployed_bundle": true,
+  "current_stage_in_deployed_bundle": true,
+  "deployment_commit": "1eb6fd88bde73184281bb89b59bbeff7d93d0548",
+  "deployment_run_id": 30597972415,
+  "deployment_status": "success",
+  "final_or_national_wage_gap_claim_shown": false,
+  "global_analysis_readiness": false,
+  "map_primary_metric_in_deployed_bundle": "scout_coverage_rate",
+  "next_task_in_deployed_bundle": "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
+  "public_html_http_status": 200,
+  "public_pages_static_current_passed": true,
   "public_pages_visible_current_passed": false,
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
-  "status": "public_validation_pending"
+  "scout_covered_count_in_deployed_bundle": 16887,
+  "status": "public_deployment_and_static_bundle_smoke_passed_visual_browser_unavailable",
+  "visual_validation_limitation": "The browser-control skill had no available browser instances. The GitHub Pages deployment succeeded and cache-busted HTML plus the deployed JavaScript bundle were inspected directly; no visual-browser pass is claimed."
 }

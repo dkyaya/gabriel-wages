@@ -10,5 +10,8 @@
   "local_browser_controller_status": "browser_controller_unavailable_no_browser_instances",
   "local_build_passed": true,
   "local_http_static_smoke_passed": true,
-  "status": "dashboard_v2_link_update_local_validated_public_pending"
+  "public_pages_deployment_run_id": 30597972415,
+  "public_pages_static_current_passed": true,
+  "public_pages_visual_browser_status": "browser_controller_unavailable_no_browser_instances",
+  "status": "dashboard_v2_link_update_local_and_public_static_validated"
 }
