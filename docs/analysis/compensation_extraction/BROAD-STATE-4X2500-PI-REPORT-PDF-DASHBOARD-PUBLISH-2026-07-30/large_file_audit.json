@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-07-31T03:52:22.406946Z",
+  "audited_at": "2026-07-31T03:53:24.637563Z",
   "passed": true,
   "threshold_bytes": 25000000,
   "large_file_count": 0,
@@ -7,31 +7,15 @@
   "largest_staged_files": [
     {
       "path": "scripts/run_broad_state_4x2500_pi_report_pdf_dashboard_publish.py",
-      "bytes": 48061
+      "bytes": 48066
     },
     {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/report_publish_manifest.json",
-      "bytes": 1963
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/dashboard_public_pages_smoke_report.json",
-      "bytes": 1301
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/validation_report.json",
-      "bytes": 1207
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/report_pdf_visual_or_static_validation.json",
+      "bytes": 3325
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/large_file_audit.json",
-      "bytes": 1199
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/validation_report.md",
-      "bytes": 1139
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/dashboard_report_link_update_summary.json",
-      "bytes": 898
+      "bytes": 488
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30/staged_file_audit.json",

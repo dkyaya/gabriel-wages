@@ -48,13 +48,13 @@
   "sample_page_numbers": {
     "executive_summary": 2,
     "findings": 4,
-    "bounded_table": 2,
+    "bounded_table": 7,
     "final_page": 9
   },
   "sample_render_paths": {
     "executive_summary": "tmp/pdfs/pi_report_final_2026-07-30/page-02.png",
     "findings": "tmp/pdfs/pi_report_final_2026-07-30/page-04.png",
-    "bounded_table": "tmp/pdfs/pi_report_final_2026-07-30/page-02.png",
+    "bounded_table": "tmp/pdfs/pi_report_final_2026-07-30/page-07.png",
     "final_page": "tmp/pdfs/pi_report_final_2026-07-30/page-09.png"
   },
   "manual_visual_inspection_passed": true,
@@ -91,7 +91,7 @@
     "sample_page_numbers": {
       "executive_summary": 2,
       "findings": 4,
-      "bounded_table": 2,
+      "bounded_table": 7,
       "final_page": 9
     },
     "checks": {

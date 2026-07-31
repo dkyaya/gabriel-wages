@@ -677,7 +677,7 @@ def validate_pdf(pdf_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     for label, needle in (
         ("executive_summary", "1. Executive Summary"),
         ("findings", "4. Findings"),
-        ("bounded_table", "Shreve, Ohio"),
+        ("bounded_table", "Mechanism reading"),
         ("final_page", "7. Recommended Next Steps"),
     ):
         index = next(
