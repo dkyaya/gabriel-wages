@@ -1,7 +1,7 @@
 {
-  "audited_at": "2026-07-31T02:43:37.829365Z",
+  "audited_at": "2026-07-31T02:45:02.013694Z",
   "passed": true,
-  "staged_file_count": 7,
+  "staged_file_count": 5,
   "prohibited_payload_count": 0,
   "prohibited_paths": [],
   "preexisting_untracked_excluded": [

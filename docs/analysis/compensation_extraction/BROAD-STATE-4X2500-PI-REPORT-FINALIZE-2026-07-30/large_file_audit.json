@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-07-31T02:43:37.829650Z",
+  "audited_at": "2026-07-31T02:45:02.013934Z",
   "passed": true,
   "threshold_bytes": 25000000,
   "large_file_count": 0,
@@ -7,27 +7,19 @@
   "largest_staged_files": [
     {
       "path": "scripts/run_broad_state_4x2500_pi_report_finalize.py",
-      "bytes": 45503
+      "bytes": 45717
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/validation_report.json",
       "bytes": 1909
     },
     {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/validation_report.md",
-      "bytes": 1566
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/dashboard_public_pages_smoke_report.json",
-      "bytes": 1178
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/pi_report_final_docx_structural_validation_2026-07-30.json",
+      "bytes": 940
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/large_file_audit.json",
-      "bytes": 961
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/dashboard_final_report_link_update_summary.json",
-      "bytes": 925
+      "bytes": 636
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/staged_file_audit.json",

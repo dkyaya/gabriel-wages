@@ -362,7 +362,11 @@ def finalize_docx(report: str) -> dict:
         ),
         "table_geometry": geometry,
         "table_geometry_passed": bool(geometry) and all(row["passed"] for row in geometry),
-        "legacy_structural_audit": structural,
+        "supplemental_style_profile": {
+            "design_preset": structural.get("design_preset"),
+            "header_pattern": structural.get("header_pattern"),
+            "placeholder_text_present": structural.get("placeholder_text_present"),
+        },
         "visual_render_status": "unavailable_soffice_missing",
         "visual_render_note": (
             "The canonical render_docx.py workflow was attempted and failed because LibreOffice/soffice "
