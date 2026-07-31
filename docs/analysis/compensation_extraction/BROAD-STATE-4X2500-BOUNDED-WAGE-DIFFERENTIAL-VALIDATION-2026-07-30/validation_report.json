@@ -1,5 +1,5 @@
 {
-  "all_checks_passed": false,
+  "all_checks_passed": true,
   "checks": {
     "01_input_count_4": true,
     "02_expected_municipalities": true,
@@ -25,7 +25,7 @@
     "22_map_rate": true,
     "23_dashboard_build": true,
     "24_local_browser": true,
-    "25_public_browser": false,
+    "25_public_browser": true,
     "26_global_not_advanced": true,
     "27_no_payloads_tracked": true,
     "28_staged_audit": true,
@@ -34,8 +34,6 @@
     "summary_reconciles": true
   },
   "core_checks_passed": true,
-  "pending_checks": [
-    "25_public_browser"
-  ],
-  "validated_at": "2026-07-31T00:16:34.948487Z"
+  "pending_checks": [],
+  "validated_at": "2026-07-31T00:20:32.187568Z"
 }

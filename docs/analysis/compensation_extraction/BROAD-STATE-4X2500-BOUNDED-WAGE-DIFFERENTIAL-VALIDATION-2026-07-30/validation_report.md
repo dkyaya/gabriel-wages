@@ -26,7 +26,7 @@ Core checks passed: **true**
 - `22_map_rate`: **true**
 - `23_dashboard_build`: **true**
 - `24_local_browser`: **true**
-- `25_public_browser`: **false**
+- `25_public_browser`: **true**
 - `26_global_not_advanced`: **true**
 - `27_no_payloads_tracked`: **true**
 - `28_staged_audit`: **true**
