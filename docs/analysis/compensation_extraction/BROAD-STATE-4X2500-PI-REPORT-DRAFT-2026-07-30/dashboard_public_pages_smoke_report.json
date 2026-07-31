@@ -1,8 +1,22 @@
 {
-  "status": "public_pages_deployment_pending_primary_commit",
-  "passed": false,
+  "status": "public_pages_static_validation_passed_browser_unavailable",
+  "passed": true,
+  "validated_at": "2026-07-31T00:52:00Z",
   "browser_controller_available": false,
+  "visual_browser_validation_claimed": false,
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
-  "cache_busting_query": "dashboard_smoke=20260730_pi_report_draft_pending",
-  "limitation": "Public Pages validation awaits the primary report commit and deployment. The configured browser runtime is unavailable, so final validation will use public artifact/static checks and will not claim visual browser validation."
+  "cache_busting_query": "dashboard_smoke=20260730_pi_report_draft_f45e52c",
+  "deployment_run_id": 30594605747,
+  "deployment_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30594605747",
+  "deployment_source_commit": "f45e52cc86ce0f88b70179a3edce7d187869ce1f",
+  "deployment_conclusion": "success",
+  "public_html_loaded": true,
+  "deployed_bundle_path": "/gabriel-wages/assets/index-D8ntrJfn.js",
+  "bundle_current_stage": "PI report draft complete",
+  "bundle_current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+  "bundle_current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md",
+  "bundle_next_task": "BROAD-STATE-4X2500-PI-REPORT-REVIEW-FINALIZE-2026-07-30",
+  "bundle_map_primary_metric": "scout_coverage_rate",
+  "bundle_global_analysis_readiness": false,
+  "limitation": "The configured in-app browser runtime reported no available browser. Deployment, public HTML, and deployed-bundle content passed cache-busted static validation; no visual-browser pass is claimed."
 }

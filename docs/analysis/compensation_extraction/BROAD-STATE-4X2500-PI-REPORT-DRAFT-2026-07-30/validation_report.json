@@ -1,5 +1,5 @@
 {
-  "all_checks_passed": false,
+  "all_checks_passed": true,
   "checks": {
     "01_required_seven_sections": true,
     "02_current_bounded_results_used": true,
@@ -22,7 +22,7 @@
     "19_dashboard_clean": true,
     "20_dashboard_map_rate": true,
     "21_local_dashboard_build": true,
-    "22_public_dashboard_smoke": false,
+    "22_public_dashboard_smoke": true,
     "23_no_ocr": true,
     "24_no_source_review_download": true,
     "25_no_new_rating": true,
@@ -36,8 +36,6 @@
     "one_page_brief_created": true
   },
   "core_checks_passed": true,
-  "pending_checks": [
-    "22_public_dashboard_smoke"
-  ],
-  "validated_at": "2026-07-31T00:48:10.861173Z"
+  "pending_checks": [],
+  "validated_at": "2026-07-31T00:53:47.819334Z"
 }

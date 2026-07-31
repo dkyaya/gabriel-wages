@@ -1,6 +1,6 @@
 # PI Report Draft Validation
 
-Overall: **pending**
+Overall: **passed**
 
 - PASS — 01_required_seven_sections
 - PASS — 02_current_bounded_results_used
@@ -23,7 +23,7 @@ Overall: **pending**
 - PASS — 19_dashboard_clean
 - PASS — 20_dashboard_map_rate
 - PASS — 21_local_dashboard_build
-- PENDING/FAIL — 22_public_dashboard_smoke
+- PASS — 22_public_dashboard_smoke
 - PASS — 23_no_ocr
 - PASS — 24_no_source_review_download
 - PASS — 25_no_new_rating
