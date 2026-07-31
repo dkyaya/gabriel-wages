@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "current_evidence": "1,528 resolved safety spans versus 226 non-safety spans; 1,964 additional spans remain side-unclear.",
+      "limit": "No matched total-compensation estimator; the distribution is evidence coverage, not prevalence.",
+      "mechanism": "Non-base compensation",
+      "pathway": "Longevity, shift, hazard, specialty, certification, stipend, allowance, and overtime-related provisions add compensation outside base schedules.",
+      "pressure_direction": "Upward safety total-compensation pressure; potentially gap-widening",
+      "side_conclusion": "Safety-heavy among resolved records; non-safety examples confirmed"
+    },
+    {
+      "current_evidence": "2,687 direct value signals; 661 explicit schedule tags; six schedule-tagged spans fully normalized; one validated and three conditional local comparisons.",
+      "limit": "Entry/top/unlabeled rates, rank, employment status, and bargaining scope must match.",
+      "mechanism": "Base schedules and listed rates",
+      "pathway": "A municipality can assign different base-rate levels and progression ladders to occupations in the same period.",
+      "pressure_direction": "Observed safety advantage in Shreve/Cammack; non-safety advantage in Canastota",
+      "side_conclusion": "Mixed"
+    },
+    {
+      "current_evidence": "The audit distinguishes recurring base increases, retroactive base payments, one-time lump sums, delayed implementation, and unresolved payment form.",
+      "limit": "Few same-city, same-cycle safety/non-safety timing pairs survive exact-role review.",
+      "mechanism": "Implementation, retroactivity, and payment form",
+      "pathway": "Earlier effective dates and retroactivity preserve foregone pay; delayed implementation postpones cash realization; recurring base changes feed future schedules.",
+      "pressure_direction": "Timing/realization effect; recurring increases compound, lump sums do not",
+      "side_conclusion": "Safety-heavy documentary layer; comparative sign not established"
+    },
+    {
+      "current_evidence": "The rescue produced 416 quantitative mechanism records, but the report-use audit removes misclassified insurance, occupation, and proposal fragments before comparison.",
+      "limit": "A percentage in a source is not necessarily an enacted wage increase; payer, base, period, and recurrence must be verified.",
+      "mechanism": "Automatic raises, COLA/CPI, and steps",
+      "pathway": "A scheduled percentage, index rule, or step increase mechanically raises the covered schedule between effective periods.",
+      "pressure_direction": "Upward pressure on the covered side; gap direction depends on the paired unit's rule",
+      "side_conclusion": "Safety-heavy audited claim layer, with fire and non-safety counterexamples"
+    },
+    {
+      "current_evidence": "1,716 audited spans: 77 direct wage-linked, 1,578 context, 61 false positives. Safety 714, non-safety 292, mixed 39, unclear 671.",
+      "limit": "Institutional presence does not identify the sign or size of a wage effect.",
+      "mechanism": "Bargaining and dispute resolution",
+      "pathway": "Collective bargaining sets terms; interest arbitration/factfinding resolves impasse; settlement fixes value and timing; grievance arbitration usually enforces existing terms; strike rules alter leverage.",
+      "pressure_direction": "Potential upward or constraining pressure depending demands, offers, award, and settlement",
+      "side_conclusion": "Safety-heavy in volume; direct wage-linked evidence remains mixed/unclear"
+    },
+    {
+      "current_evidence": "Canastota's Year 1 police rate is below its code-enforcement rate, while higher police steps could reverse the contrast; Alburtis shows how command rank can inflate a nominal gap.",
+      "limit": "A police entry step is not equivalent to an unlabeled, actual, or maximum non-safety rate.",
+      "mechanism": "Rank, step, specialization, and classification",
+      "pathway": "Separate ladders change both starting pay and the speed/ceiling of progression.",
+      "pressure_direction": "Can widen or narrow listed-rate differences depending schedule location",
+      "side_conclusion": "Mixed"
+    },
+    {
+      "current_evidence": "Among 83 direct wage-pressure spans, 33 are safety, four non-safety, and 46 unclear. Brewster dispatch is a strong non-safety example.",
+      "limit": "51 rated-positive false positives were removed; rationale does not prove realized staffing or wage effects.",
+      "mechanism": "Market, recruitment, retention, and staffing",
+      "pathway": "Employers raise base pay, add market adjustments, bonuses, or stipends, or revise schedules to recruit or retain workers.",
+      "pressure_direction": "Upward pressure on the occupation targeted by a market adjustment or retention response",
+      "side_conclusion": "Safety-heavy among resolved direct spans, but present on both sides"
+    },
+    {
+      "current_evidence": "Shreve is PI-usable; Cammack and Canastota are conditional; Alburtis is limits-only.",
+      "limit": "Named-position documentary contrasts are not final wage-gap estimates.",
+      "mechanism": "Bounded local listed-rate differentials",
+      "pathway": "Ordinances and schedules encode occupation-specific base-rate outcomes; they show where a differential exists but not which upstream mechanism produced it.",
+      "pressure_direction": "Safety advantage in Shreve/Cammack/Alburtis; non-safety advantage in Canastota",
+      "side_conclusion": "Mixed"
+    }
+  ]
+}

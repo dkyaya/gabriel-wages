@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "combined_safety": 9,
+      "fire": 280,
+      "layer": "non-base compensation",
+      "mixed": 0,
+      "non_safety": 226,
+      "police": 1239,
+      "unclear": 1964
+    },
+    {
+      "combined_safety": 714,
+      "fire": "",
+      "layer": "bargaining/dispute",
+      "mixed": 39,
+      "non_safety": 292,
+      "police": "",
+      "unclear": 671
+    },
+    {
+      "combined_safety": 121,
+      "fire": "",
+      "layer": "market/staffing",
+      "mixed": 9,
+      "non_safety": 43,
+      "police": "",
+      "unclear": 228
+    }
+  ]
+}

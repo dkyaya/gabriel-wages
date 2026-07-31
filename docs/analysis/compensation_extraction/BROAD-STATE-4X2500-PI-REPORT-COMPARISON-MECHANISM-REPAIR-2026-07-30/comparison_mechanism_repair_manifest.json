@@ -1,0 +1,21 @@
+{
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "decision": "broad_state_4x2500_pi_report_comparison_mechanism_repair_completed_finalize_ready",
+  "docx_created": true,
+  "generated_at": "2026-07-31T02:00:37.011091Z",
+  "global_analysis_readiness": false,
+  "head_before": "0639bff1081b85ffc5698e7dc1063e65c1191369",
+  "lane_artifacts_complete": true,
+  "lane_count": 4,
+  "report_claim_count": 16,
+  "report_sections": [
+    "Executive Summary",
+    "Processed Evidence Base",
+    "Codified Evidence Categories",
+    "Findings",
+    "Limits",
+    "Current Scout Wave Status",
+    "Recommended Next Steps"
+  ],
+  "task_id": "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30"
+}

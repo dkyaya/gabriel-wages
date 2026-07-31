@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "preexisting_untracked_excluded": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "package-lock.json"
+  ],
+  "prohibited_paths": [],
+  "prohibited_payload_count": 0,
+  "staged_file_count": 83
+}

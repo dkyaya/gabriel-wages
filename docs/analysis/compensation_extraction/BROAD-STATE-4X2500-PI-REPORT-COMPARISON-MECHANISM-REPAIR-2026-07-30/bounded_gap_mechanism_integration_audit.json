@@ -1,0 +1,33 @@
+{
+  "candidate_count": 4,
+  "pi_usable": 1,
+  "conditional": 3,
+  "mechanism_conclusions": [
+    {
+      "candidate": "Shreve, OH",
+      "mechanism": "ordinance-based base-rate differentiation",
+      "direction": "safety-side upward wage pressure / gap-widening outcome-side contrast",
+      "causal_attribution_allowed": false
+    },
+    {
+      "candidate": "Cammack Village, AR",
+      "mechanism": "authorized maximum-rate differentiation",
+      "direction": "potential safety-side gap-widening ceiling",
+      "causal_attribution_allowed": false
+    },
+    {
+      "candidate": "Canastota, NY",
+      "mechanism": "entry-step and occupational schedule-location selection",
+      "direction": "non-safety advantage for the selected positions / counterexample",
+      "causal_attribution_allowed": false
+    },
+    {
+      "candidate": "Alburtis, PA",
+      "mechanism": "command-rank and bargaining-status confounding",
+      "direction": "limits-only; nominal safety advantage is not a bargaining-unit comparison",
+      "causal_attribution_allowed": false
+    }
+  ],
+  "final_wage_gap_estimate_claimed": false,
+  "national_prevalence_claimed": false
+}

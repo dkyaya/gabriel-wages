@@ -1,0 +1,6 @@
+boundary,status,specific reason
+Final wage-gap estimate,Not authorized/not produced,One PI-usable and three conditional local comparisons do not form a cross-city estimator.
+National/population prevalence,Not supported,The source pipeline is not a probability sample and more than half of several mechanism layers are side-unclear.
+Causal effect,Not supported,Mechanism spans identify pathways without counterfactual identification.
+Cost-of-living adjustment,Not performed,COLA/CPI language is contractual mechanism evidence only.
+Role/schedule comparability,Material limitation,"Entry/top/unlabeled values, rank, work status, and bargaining scope remain unresolved in many candidate pairs."

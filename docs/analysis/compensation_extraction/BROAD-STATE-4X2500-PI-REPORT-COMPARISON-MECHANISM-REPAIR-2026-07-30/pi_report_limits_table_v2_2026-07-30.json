@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "boundary": "Final wage-gap estimate",
+      "specific reason": "One PI-usable and three conditional local comparisons do not form a cross-city estimator.",
+      "status": "Not authorized/not produced"
+    },
+    {
+      "boundary": "National/population prevalence",
+      "specific reason": "The source pipeline is not a probability sample and more than half of several mechanism layers are side-unclear.",
+      "status": "Not supported"
+    },
+    {
+      "boundary": "Causal effect",
+      "specific reason": "Mechanism spans identify pathways without counterfactual identification.",
+      "status": "Not supported"
+    },
+    {
+      "boundary": "Cost-of-living adjustment",
+      "specific reason": "COLA/CPI language is contractual mechanism evidence only.",
+      "status": "Not performed"
+    },
+    {
+      "boundary": "Role/schedule comparability",
+      "specific reason": "Entry/top/unlabeled values, rank, work status, and bargaining scope remain unresolved in many candidate pairs.",
+      "status": "Material limitation"
+    }
+  ]
+}

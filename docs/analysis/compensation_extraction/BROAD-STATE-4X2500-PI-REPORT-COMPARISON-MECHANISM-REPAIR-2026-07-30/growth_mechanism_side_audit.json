@@ -1,0 +1,117 @@
+{
+  "audit_date": "2026-07-30",
+  "layers": {
+    "implementation_positive_strength_2230": {
+      "expected_total": 2230,
+      "audited_side_totals": {
+        "police": 795,
+        "fire": 218,
+        "combined_safety": 1,
+        "non_safety": 273,
+        "unclear": 943
+      },
+      "audited_mechanism_totals": {
+        "recurring_base_increase_or_schedule_timing": 85,
+        "retroactive_payment_candidate": 118,
+        "delayed_or_conditional_implementation": 5,
+        "one_time_lump_sum": 0,
+        "unclear_or_generic_effective_date": 2022
+      }
+    },
+    "growth_supported_416": {
+      "expected_total": 416,
+      "audited_side_totals": {
+        "police": 124,
+        "fire": 38,
+        "combined_safety": 1,
+        "non_safety": 64,
+        "unclear": 189
+      },
+      "audited_mechanism_totals": {
+        "recurring_base_or_schedule_increase": 162,
+        "one_time_lump_sum": 3,
+        "retroactive_payment": 3,
+        "delayed_or_conditional_implementation": 2,
+        "unclear_or_not_recurring_base_growth": 246
+      },
+      "reported_mechanism_totals": {
+        "percentage_raise": 336,
+        "COLA_CPI": 49,
+        "step_schedule": 29,
+        "retroactive_or_lump_sum": 2
+      }
+    },
+    "claim_candidates_95": {
+      "expected_total": 95,
+      "audited_side_totals": {
+        "police": 63,
+        "fire": 15,
+        "combined_safety": 0,
+        "non_safety": 14,
+        "unclear": 3
+      },
+      "audited_mechanism_totals": {
+        "recurring_base_or_schedule_increase": 72,
+        "one_time_lump_sum": 0,
+        "retroactive_payment": 2,
+        "delayed_or_conditional_implementation": 2,
+        "unclear_or_not_recurring_base_growth": 19
+      },
+      "usable_mechanism_records": 76,
+      "usable_unique_municipalities": 45
+    }
+  },
+  "rows": [
+    {"layer": "implementation_positive_strength_2230", "audited_side": "combined_safety", "mechanism_bucket": "unclear_or_generic_effective_date", "record_count": 1},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "fire", "mechanism_bucket": "recurring_base_increase_or_schedule_timing", "record_count": 7},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "fire", "mechanism_bucket": "retroactive_payment_candidate", "record_count": 10},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "fire", "mechanism_bucket": "unclear_or_generic_effective_date", "record_count": 201},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "non_safety", "mechanism_bucket": "recurring_base_increase_or_schedule_timing", "record_count": 12},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "non_safety", "mechanism_bucket": "retroactive_payment_candidate", "record_count": 6},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "non_safety", "mechanism_bucket": "unclear_or_generic_effective_date", "record_count": 255},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "police", "mechanism_bucket": "recurring_base_increase_or_schedule_timing", "record_count": 23},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "police", "mechanism_bucket": "retroactive_payment_candidate", "record_count": 65},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "police", "mechanism_bucket": "delayed_or_conditional_implementation", "record_count": 2},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "police", "mechanism_bucket": "unclear_or_generic_effective_date", "record_count": 705},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "unclear", "mechanism_bucket": "recurring_base_increase_or_schedule_timing", "record_count": 43},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "unclear", "mechanism_bucket": "retroactive_payment_candidate", "record_count": 37},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "unclear", "mechanism_bucket": "delayed_or_conditional_implementation", "record_count": 3},
+    {"layer": "implementation_positive_strength_2230", "audited_side": "unclear", "mechanism_bucket": "unclear_or_generic_effective_date", "record_count": 860},
+    {"layer": "growth_supported_416", "audited_side": "combined_safety", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 1},
+    {"layer": "growth_supported_416", "audited_side": "fire", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 14},
+    {"layer": "growth_supported_416", "audited_side": "fire", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 24},
+    {"layer": "growth_supported_416", "audited_side": "non_safety", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 24},
+    {"layer": "growth_supported_416", "audited_side": "non_safety", "mechanism_bucket": "one_time_lump_sum", "record_count": 1},
+    {"layer": "growth_supported_416", "audited_side": "non_safety", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 39},
+    {"layer": "growth_supported_416", "audited_side": "police", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 58},
+    {"layer": "growth_supported_416", "audited_side": "police", "mechanism_bucket": "retroactive_payment", "record_count": 2},
+    {"layer": "growth_supported_416", "audited_side": "police", "mechanism_bucket": "delayed_or_conditional_implementation", "record_count": 2},
+    {"layer": "growth_supported_416", "audited_side": "police", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 62},
+    {"layer": "growth_supported_416", "audited_side": "unclear", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 66},
+    {"layer": "growth_supported_416", "audited_side": "unclear", "mechanism_bucket": "one_time_lump_sum", "record_count": 2},
+    {"layer": "growth_supported_416", "audited_side": "unclear", "mechanism_bucket": "retroactive_payment", "record_count": 1},
+    {"layer": "growth_supported_416", "audited_side": "unclear", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 120},
+    {"layer": "claim_candidates_95", "audited_side": "fire", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 9},
+    {"layer": "claim_candidates_95", "audited_side": "fire", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 6},
+    {"layer": "claim_candidates_95", "audited_side": "non_safety", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 13},
+    {"layer": "claim_candidates_95", "audited_side": "non_safety", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 1},
+    {"layer": "claim_candidates_95", "audited_side": "police", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 48},
+    {"layer": "claim_candidates_95", "audited_side": "police", "mechanism_bucket": "retroactive_payment", "record_count": 2},
+    {"layer": "claim_candidates_95", "audited_side": "police", "mechanism_bucket": "delayed_or_conditional_implementation", "record_count": 2},
+    {"layer": "claim_candidates_95", "audited_side": "police", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 11},
+    {"layer": "claim_candidates_95", "audited_side": "unclear", "mechanism_bucket": "recurring_base_or_schedule_increase", "record_count": 2},
+    {"layer": "claim_candidates_95", "audited_side": "unclear", "mechanism_bucket": "unclear_or_not_recurring_base_growth", "record_count": 1}
+  ],
+  "reconciliation": {
+    "implementation_positive_strength_2230_rows_sum": 2230,
+    "growth_supported_416_rows_sum": 416,
+    "claim_candidates_95_rows_sum": 95,
+    "all_layers_reconcile": true
+  },
+  "interpretation": [
+    "Side is the documented unit side, not the rating direction bucket.",
+    "Recurring wage growth, one-time payments, retroactivity, and delayed implementation are separate channels.",
+    "Counts are record counts and may include overlapping spans; they are not municipality prevalence measures.",
+    "No result is a final wage-gap estimate or causal effect."
+  ]
+}

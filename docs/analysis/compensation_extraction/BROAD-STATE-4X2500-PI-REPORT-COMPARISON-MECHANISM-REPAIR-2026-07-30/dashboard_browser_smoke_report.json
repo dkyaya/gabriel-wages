@@ -1,0 +1,19 @@
+{
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "browser_visible_smoke_passed": false,
+  "clean_dashboard_structure_preserved": true,
+  "current_phase": "PI report v2 comparison/mechanism repair complete",
+  "current_report_link_points_to_v2": true,
+  "dashboard_build_command": "python scripts/build_dashboard_data.py",
+  "dashboard_build_passed": true,
+  "dashboard_test_command": "python scripts/test_dashboard_github_pages_deployment_repair.py",
+  "dashboard_tests_passed": true,
+  "global_analysis_readiness": false,
+  "local_http_status": 200,
+  "local_http_static_smoke_passed": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
+  "raw_scout_count_context_only": true,
+  "static_smoke_passed": true,
+  "technical_details_collapsed_by_default": true
+}

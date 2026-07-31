@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-31T00:39:19Z",
+  "generated_at": "2026-07-31T02:00:02Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_4x2500_pi_report_draft_complete",
-  "current_phase": "PI report draft complete",
-  "current_phase_code": "broad_state_4x2500_pi_report_draft_completed_review_ready",
-  "current_evidence_status": "pi_facing_mechanism_report_draft_review_ready",
+  "stage": "broad_state_4x2500_pi_report_comparison_mechanism_repair_complete",
+  "current_phase": "PI report v2 comparison/mechanism repair complete",
+  "current_phase_code": "broad_state_4x2500_pi_report_comparison_mechanism_repair_completed_finalize_ready",
+  "current_evidence_status": "side_direction_and_pressure_pathways_audited_finalize_ready",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1000,10 +1000,10 @@
     "weak_or_not_supported": 4379
   },
   "global_readiness_gate_status": "completed_with_partial_readiness_next_scout_prep_ready",
-  "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
-  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md",
-  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md",
-  "next_task": "BROAD-STATE-4X2500-PI-REPORT-REVIEW-FINALIZE-2026-07-30",
+  "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages — Revised v2",
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/pi_report_draft_v2_2026-07-30.md",
+  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/pi_report_draft_v2_2026-07-30.md",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Human review, final bounded-comparison validation, and PI report polish",
+  "next_phase": "Final PI review and report finalization",
   "next_phase_sequence": [
-    "review the report's substantive ordering and PI-meeting usefulness",
-    "complete candidate-specific validation before analytic use of local wage differences",
-    "preserve final, national, prevalence, regression, treatment-effect, policy-effect, and causal boundaries"
+    "review side-direction and pressure-pathway conclusions",
+    "confirm corrected growth and market examples",
+    "preserve local-documentary, prevalence, regression, treatment-effect, policy-effect, and causal boundaries"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "broad_state_4x2500_pi_report_draft_complete_review_ready",
+  "last_updated_context": "broad_state_4x2500_pi_report_v2_comparison_mechanism_repair_complete_finalize_ready",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -6102,5 +6102,8 @@
   "pi_report_careful_claim_count": 18,
   "pi_report_substantive_or_context_claim_count": 16,
   "pi_report_quantitative_growth_example_count": 6,
-  "pi_report_bounded_wage_example_count": 4
+  "pi_report_bounded_wage_example_count": 4,
+  "broad_state_4x2500_pi_report_v2_available": true,
+  "pi_report_v2_claim_count": 16,
+  "pi_report_v2_all_nine_critiques_answered": true
 }

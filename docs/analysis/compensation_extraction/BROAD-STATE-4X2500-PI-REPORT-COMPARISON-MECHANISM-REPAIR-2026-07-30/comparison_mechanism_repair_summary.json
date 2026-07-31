@@ -1,0 +1,17 @@
+{
+  "all_nine_critiques_answered": true,
+  "bounded_candidate_status": {
+    "conditional": 3,
+    "pi_usable": 1,
+    "rejected": 0
+  },
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "decision": "broad_state_4x2500_pi_report_comparison_mechanism_repair_completed_finalize_ready",
+  "fire_growth_examples_found": true,
+  "generated_at": "2026-07-31T02:00:37.010874Z",
+  "global_analysis_readiness": false,
+  "non_safety_growth_examples_found": true,
+  "non_safety_nonbase_examples_found": true,
+  "report_claim_count": 16,
+  "task_id": "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30"
+}

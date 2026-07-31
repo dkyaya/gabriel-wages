@@ -1,0 +1,11 @@
+{
+  "design_preset": "standard_business_brief",
+  "header_pattern": "editorial_cover_without_decorative_rule",
+  "paragraph_count": 76,
+  "passed": true,
+  "section_count": 1,
+  "table_count": 3,
+  "visual_render_limitation": "The canonical DOCX renderer was invoked but could not convert the document because LibreOffice/soffice is not installed. Structural OOXML, content, table, and placeholder checks passed.",
+  "visual_render_passed": false,
+  "visual_render_status": "render_unavailable_libreoffice_soffice_missing"
+}

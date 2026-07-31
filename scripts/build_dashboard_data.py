@@ -1740,6 +1740,11 @@ BROAD_STATE_4X2500_PI_REPORT_DRAFT_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30"
 )
+BROAD_STATE_4X2500_PI_REPORT_COMPARISON_MECHANISM_REPAIR_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6706,6 +6711,50 @@ def broad_state_4x2500_pi_report_draft_status() -> tuple[bool, dict[str, Any]]:
     }
 
 
+def broad_state_4x2500_pi_report_comparison_mechanism_repair_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the side-direction and comparison-mechanism repaired PI report."""
+    directory = BROAD_STATE_4X2500_PI_REPORT_COMPARISON_MECHANISM_REPAIR_DIR
+    required = (
+        directory / "comparison_mechanism_repair_manifest.json",
+        directory / "comparison_mechanism_repair_summary.json",
+        directory / "pi_report_draft_v2_2026-07-30.md",
+        directory / "user_critique_response_memo.json",
+        directory / "forbidden_action_audit.json",
+        directory / "dashboard_report_v2_link_update_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, _, critique, forbidden, dashboard = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    gates = (
+        manifest.get("decision")
+        == "broad_state_4x2500_pi_report_comparison_mechanism_repair_completed_finalize_ready"
+        and manifest.get("lane_count") == 4
+        and manifest.get("lane_artifacts_complete") is True
+        and manifest.get("report_claim_count") == 16
+        and manifest.get("docx_created") is True
+        and summary.get("all_nine_critiques_answered") is True
+        and critique.get("all_nine_answered") is True
+        and forbidden.get("passed") is True
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and manifest.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 PI report comparison/mechanism repair fails dashboard gates")
+    return True, {
+        **manifest,
+        **summary,
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30/"
+            "pi_report_draft_v2_2026-07-30.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6856,6 +6905,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_pi_report_available, broad_4x2500_pi_report = (
         broad_state_4x2500_pi_report_draft_status()
+    )
+    broad_4x2500_pi_report_v2_available, broad_4x2500_pi_report_v2 = (
+        broad_state_4x2500_pi_report_comparison_mechanism_repair_status()
     )
     published_reports = [
         *(
@@ -7747,6 +7799,34 @@ def build_reports_index_layer(
                 {"label": "careful claims integrated", "value": broad_4x2500_pi_report["careful_claim_candidates_integrated"]},
                 {"label": "quantitative growth examples", "value": broad_4x2500_pi_report["quantitative_growth_claims_used"]},
                 {"label": "bounded local comparisons", "value": broad_4x2500_pi_report["bounded_wage_examples_used"]},
+            ],
+        })
+    if broad_4x2500_pi_report_v2_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-pi-report-comparison-mechanism-repair-2026-07-30",
+            "title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages — Revised v2",
+            "report_type": "Current PI-facing comparison and mechanism report",
+            "date": "2026-07-30",
+            "checkpoint": "All nine critiques answered; 16 comparative claims",
+            "summary": (
+                "Revised findings state the side and wage-pressure direction of each major mechanism, "
+                "use current bounded comparisons, correct growth-example and market false positives, "
+                "and operationalize position/schedule-location matching. Final and national wage-gap, "
+                "prevalence, regression, treatment-effect, policy-effect, and causal conclusions remain blocked."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "PI report", "comparison", "mechanisms"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_pi_report_v2["dashboard_result_path"],
+            "link_label": "Open revised PI-facing comparison and mechanism report",
+            "scope_metrics": [
+                {"label": "comparative claims", "value": broad_4x2500_pi_report_v2["report_claim_count"]},
+                {"label": "bounded local comparisons", "value": 4},
+                {"label": "critique points answered", "value": 9},
             ],
         })
     if live_available:
@@ -10283,6 +10363,9 @@ def build_project_phase_summary(
     broad_4x2500_pi_report_available, broad_4x2500_pi_report = (
         broad_state_4x2500_pi_report_draft_status()
     )
+    broad_4x2500_pi_report_v2_available, broad_4x2500_pi_report_v2 = (
+        broad_state_4x2500_pi_report_comparison_mechanism_repair_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11539,6 +11622,34 @@ def build_project_phase_summary(
                 "preserve final, national, prevalence, regression, treatment-effect, policy-effect, and causal boundaries",
             ],
             "last_updated_context": "broad_state_4x2500_pi_report_draft_complete_review_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_local_documentary_examples_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if broad_4x2500_pi_report_v2_available:
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_pi_report_comparison_mechanism_repair_complete",
+            "current_phase": "PI report v2 comparison/mechanism repair complete",
+            "current_phase_code": broad_4x2500_pi_report_v2["decision"],
+            "current_evidence_status": "side_direction_and_pressure_pathways_audited_finalize_ready",
+            "broad_state_4x2500_pi_report_v2_available": True,
+            "pi_report_v2_claim_count": broad_4x2500_pi_report_v2["report_claim_count"],
+            "pi_report_v2_all_nine_critiques_answered": broad_4x2500_pi_report_v2["all_nine_critiques_answered"],
+            "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages — Revised v2",
+            "current_report_path": broad_4x2500_pi_report_v2["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_pi_report_v2["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
+            "next_phase": "Final PI review and report finalization",
+            "next_phase_sequence": [
+                "review side-direction and pressure-pathway conclusions",
+                "confirm corrected growth and market examples",
+                "preserve local-documentary, prevalence, regression, treatment-effect, policy-effect, and causal boundaries",
+            ],
+            "last_updated_context": "broad_state_4x2500_pi_report_v2_comparison_mechanism_repair_complete_finalize_ready",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,

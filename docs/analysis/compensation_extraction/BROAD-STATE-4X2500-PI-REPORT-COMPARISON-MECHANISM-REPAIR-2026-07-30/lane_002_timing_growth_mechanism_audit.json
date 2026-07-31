@@ -1,0 +1,354 @@
+{
+  "task_lane": "lane_002_timing_growth_mechanism_audit",
+  "audit_date": "2026-07-30",
+  "scope": {
+    "implementation_or_retroactivity_positive_strength_records": 2230,
+    "quantitatively_supported_growth_records": 416,
+    "quantitative_growth_claim_candidates": 95
+  },
+  "source_of_truth_note": {
+    "issue": "The nominal quantitative_growth_mechanism_supported_records CSV and JSONL files are empty.",
+    "reconstruction": {
+      "source_reported_percentage_growth_supported": 336,
+      "source_reported_cola_cpi_growth_supported": 49,
+      "source_reported_step_schedule_growth_supported": 29,
+      "source_reported_retroactive_or_lump_sum_growth_supported": 2,
+      "total": 416
+    },
+    "status": "reconciled_from_disjoint_subtype files"
+  },
+  "methodology": {
+    "side_assignment": "Exact raw unit label takes precedence, followed by an unambiguous unit-specific source title. Mixed or generic municipal material remains unclear.",
+    "mechanism_assignment": {
+      "recurring_base_or_schedule_increase": "Exact text links a percentage or amount to wage, salary, base pay, hourly pay, COLA, or a wage/step schedule.",
+      "one_time_lump_sum": "Exact text identifies a one-time payment, lump sum, stipend, or bonus rather than recurring base growth.",
+      "retroactive_payment": "Exact text identifies retroactive wage or back-pay implementation.",
+      "delayed_or_conditional_implementation": "Exact text makes the pay change contingent on ratification, approval, or a later implementation event.",
+      "unclear_or_not_recurring_base_growth": "The percentage or amount concerns insurance contribution, tax, budget, utility rate, premium/assignment relation, or lacks enough context to establish recurring wage growth."
+    },
+    "claim_boundary": "All conclusions are bounded documentary mechanism statements. They are not national prevalence estimates, final wage-gap estimates, or causal effects."
+  },
+  "implementation_or_retroactivity_layer": {
+    "record_count": 2230,
+    "original_strength_distribution": {
+      "1": 858,
+      "2": 925,
+      "3": 9,
+      "4": 438
+    },
+    "report_usability_distribution": {
+      "downstream_normalization_needed": 1148,
+      "pi_report_context_only": 858,
+      "pi_report_supporting_example": 134,
+      "pi_report_core_finding_ready": 90
+    },
+    "original_direction_distribution": {
+      "not_applicable": 1143,
+      "neutral_or_general": 993,
+      "non_safety_advantage": 90,
+      "safety_advantage": 2,
+      "gap_narrowing": 2
+    },
+    "audited_side_distribution": {
+      "police": 795,
+      "fire": 218,
+      "combined_safety": 1,
+      "non_safety": 273,
+      "unclear": 943
+    },
+    "audited_mechanism_distribution": {
+      "recurring_base_increase_or_schedule_timing": 85,
+      "retroactive_payment_candidate": 118,
+      "delayed_or_conditional_implementation": 5,
+      "one_time_lump_sum": 0,
+      "unclear_or_generic_effective_date": 2022
+    },
+    "side_by_mechanism": [
+      {"side": "combined_safety", "mechanism": "unclear_or_generic_effective_date", "count": 1},
+      {"side": "fire", "mechanism": "recurring_base_increase_or_schedule_timing", "count": 7},
+      {"side": "fire", "mechanism": "retroactive_payment_candidate", "count": 10},
+      {"side": "fire", "mechanism": "unclear_or_generic_effective_date", "count": 201},
+      {"side": "non_safety", "mechanism": "recurring_base_increase_or_schedule_timing", "count": 12},
+      {"side": "non_safety", "mechanism": "retroactive_payment_candidate", "count": 6},
+      {"side": "non_safety", "mechanism": "unclear_or_generic_effective_date", "count": 255},
+      {"side": "police", "mechanism": "recurring_base_increase_or_schedule_timing", "count": 23},
+      {"side": "police", "mechanism": "retroactive_payment_candidate", "count": 65},
+      {"side": "police", "mechanism": "delayed_or_conditional_implementation", "count": 2},
+      {"side": "police", "mechanism": "unclear_or_generic_effective_date", "count": 705},
+      {"side": "unclear", "mechanism": "recurring_base_increase_or_schedule_timing", "count": 43},
+      {"side": "unclear", "mechanism": "retroactive_payment_candidate", "count": 37},
+      {"side": "unclear", "mechanism": "delayed_or_conditional_implementation", "count": 3},
+      {"side": "unclear", "mechanism": "unclear_or_generic_effective_date", "count": 860}
+    ],
+    "conclusion": "The 2230 pre-rating implementation/retroactivity signals are dominated by generic effective-date or unclear timing context: 2022 records, or 90.7 percent. They must not be described as 2230 realized retroactive-pay mechanisms."
+  },
+  "growth_supported_layer": {
+    "record_count": 416,
+    "reported_mechanism_distribution": {
+      "percentage_raise": 336,
+      "COLA_CPI": 49,
+      "step_schedule": 29,
+      "retroactive_or_lump_sum": 2
+    },
+    "inherited_side_distribution": {
+      "police": 137,
+      "fire": 22,
+      "non_safety": 30,
+      "combined_safety": 0,
+      "unclear": 227
+    },
+    "audited_side_distribution": {
+      "police": 124,
+      "fire": 38,
+      "non_safety": 64,
+      "combined_safety": 1,
+      "unclear": 189
+    },
+    "side_labels_changed": 68,
+    "base_nonbase_distribution": {
+      "base": 31,
+      "non_base": 13,
+      "unclear": 372
+    },
+    "claim_ready_distribution": {
+      "true": 96,
+      "false": 320
+    },
+    "claim_count_after_exception_exclusion": 95,
+    "excluded_claim_ready_exception": {
+      "municipality": "Mechanicsville",
+      "span_id": "B4X2500SPAN-20260730-5fc69410b42dcb41f90c64e2",
+      "reason": "The 10 percent term expressly excludes the police officer and cannot support a police growth claim."
+    },
+    "audited_mechanism_distribution": {
+      "recurring_base_or_schedule_increase": 162,
+      "one_time_lump_sum": 3,
+      "retroactive_payment": 3,
+      "delayed_or_conditional_implementation": 2,
+      "unclear_or_not_recurring_base_growth": 246
+    },
+    "side_by_reported_mechanism": [
+      {"side": "combined_safety", "mechanism": "percentage_raise", "count": 1},
+      {"side": "fire", "mechanism": "COLA_CPI", "count": 4},
+      {"side": "fire", "mechanism": "percentage_raise", "count": 34},
+      {"side": "non_safety", "mechanism": "COLA_CPI", "count": 2},
+      {"side": "non_safety", "mechanism": "percentage_raise", "count": 54},
+      {"side": "non_safety", "mechanism": "step_schedule", "count": 8},
+      {"side": "police", "mechanism": "COLA_CPI", "count": 14},
+      {"side": "police", "mechanism": "percentage_raise", "count": 96},
+      {"side": "police", "mechanism": "step_schedule", "count": 14},
+      {"side": "unclear", "mechanism": "COLA_CPI", "count": 29},
+      {"side": "unclear", "mechanism": "percentage_raise", "count": 151},
+      {"side": "unclear", "mechanism": "retroactive_or_lump_sum", "count": 2},
+      {"side": "unclear", "mechanism": "step_schedule", "count": 7}
+    ],
+    "side_by_audited_mechanism": [
+      {"side": "combined_safety", "mechanism": "unclear_or_not_recurring_base_growth", "count": 1},
+      {"side": "fire", "mechanism": "recurring_base_or_schedule_increase", "count": 14},
+      {"side": "fire", "mechanism": "unclear_or_not_recurring_base_growth", "count": 24},
+      {"side": "non_safety", "mechanism": "recurring_base_or_schedule_increase", "count": 24},
+      {"side": "non_safety", "mechanism": "one_time_lump_sum", "count": 1},
+      {"side": "non_safety", "mechanism": "unclear_or_not_recurring_base_growth", "count": 39},
+      {"side": "police", "mechanism": "recurring_base_or_schedule_increase", "count": 58},
+      {"side": "police", "mechanism": "retroactive_payment", "count": 2},
+      {"side": "police", "mechanism": "delayed_or_conditional_implementation", "count": 2},
+      {"side": "police", "mechanism": "unclear_or_not_recurring_base_growth", "count": 62},
+      {"side": "unclear", "mechanism": "recurring_base_or_schedule_increase", "count": 66},
+      {"side": "unclear", "mechanism": "one_time_lump_sum", "count": 2},
+      {"side": "unclear", "mechanism": "retroactive_payment", "count": 1},
+      {"side": "unclear", "mechanism": "unclear_or_not_recurring_base_growth", "count": 120}
+    ],
+    "specific_timing_examples": {
+      "one_time_lump_sum": [
+        "New Castle: 1.5 percent lump sum with full retroactivity",
+        "Brimfield: 5 percent one-time stipend",
+        "Chester: 25 percent one-time lump sum after ten years; not recurring wage growth"
+      ],
+      "retroactive_payment": [
+        "Watsontown police: 2.5 percent salary increase applied retroactively",
+        "Sand City police: retroactive pay for July through December 2024, followed by a 3 percent July 2025 term",
+        "Sandstone: 4 percent contract increase with back pay"
+      ],
+      "delayed_or_conditional_implementation": [
+        "Biscayne Park police: 1 percent pay adjustment implemented only after ratification",
+        "Sand City police: 4 percent salary increase after Council approval"
+      ]
+    }
+  },
+  "claim_candidate_layer": {
+    "record_count": 95,
+    "audited_side_distribution": {
+      "police": 63,
+      "fire": 15,
+      "non_safety": 14,
+      "combined_safety": 0,
+      "unclear": 3
+    },
+    "reported_mechanism_by_side": [
+      {"side": "fire", "mechanism": "COLA_CPI", "count": 2},
+      {"side": "fire", "mechanism": "percentage_raise", "count": 13},
+      {"side": "non_safety", "mechanism": "COLA_CPI", "count": 1},
+      {"side": "non_safety", "mechanism": "percentage_raise", "count": 10},
+      {"side": "non_safety", "mechanism": "step_schedule", "count": 3},
+      {"side": "police", "mechanism": "COLA_CPI", "count": 12},
+      {"side": "police", "mechanism": "percentage_raise", "count": 39},
+      {"side": "police", "mechanism": "step_schedule", "count": 12},
+      {"side": "unclear", "mechanism": "COLA_CPI", "count": 1},
+      {"side": "unclear", "mechanism": "percentage_raise", "count": 2}
+    ],
+    "audited_mechanism_distribution": {
+      "recurring_base_or_schedule_increase": 72,
+      "one_time_lump_sum": 0,
+      "retroactive_payment": 2,
+      "delayed_or_conditional_implementation": 2,
+      "unclear_or_not_recurring_base_growth": 19
+    },
+    "usable_record_count": 76,
+    "usable_unique_municipality_count": 45,
+    "side_by_audited_mechanism": [
+      {"side": "fire", "mechanism": "recurring_base_or_schedule_increase", "count": 9},
+      {"side": "fire", "mechanism": "unclear_or_not_recurring_base_growth", "count": 6},
+      {"side": "non_safety", "mechanism": "recurring_base_or_schedule_increase", "count": 13},
+      {"side": "non_safety", "mechanism": "unclear_or_not_recurring_base_growth", "count": 1},
+      {"side": "police", "mechanism": "recurring_base_or_schedule_increase", "count": 48},
+      {"side": "police", "mechanism": "retroactive_payment", "count": 2},
+      {"side": "police", "mechanism": "delayed_or_conditional_implementation", "count": 2},
+      {"side": "police", "mechanism": "unclear_or_not_recurring_base_growth", "count": 11},
+      {"side": "unclear", "mechanism": "recurring_base_or_schedule_increase", "count": 2},
+      {"side": "unclear", "mechanism": "unclear_or_not_recurring_base_growth", "count": 1}
+    ],
+    "deduplication_warning": "The 95 rows include nested or overlapping spans. Record counts are not unique mechanism or contract counts."
+  },
+  "named_municipality_contexts": [
+    {
+      "municipality": "Howland",
+      "state": "OH",
+      "unit_context": "Police; Road Department/public works; fire insurance-contribution references",
+      "mechanism": "Police 2 percent base-wage increase for 2021-2022; Road Department 3 percent hourly increase for 2021-2022 and 2 percent for 2022-2023",
+      "recurring_or_one_time": "recurring",
+      "period": "2021-2023",
+      "comparison_presence": "Overlapping police and non-safety recurring wage mechanisms are present. The 5 and 7 percent fire claim records are insurance employee shares, not firefighter wage raises.",
+      "report_conclusion": "Bounded same-municipality police/non-safety mechanism contrast; not a final matched growth estimate."
+    },
+    {
+      "municipality": "Coleraine",
+      "state": "MN",
+      "unit_context": "Police / LELS",
+      "mechanism": "5 percent wage increase",
+      "recurring_or_one_time": "recurring",
+      "period": "effective January 1, 2024",
+      "comparison_presence": "No comparable fire or non-safety growth record in the audited 416/95 layer.",
+      "report_conclusion": "Strong police recurring-growth example, not a cross-occupation comparison."
+    },
+    {
+      "municipality": "Sunrise Beach",
+      "state": "MO",
+      "unit_context": "Police pay scale",
+      "mechanism": "1.5 percent step percentage described as essentially a COLA",
+      "recurring_or_one_time": "recurring step/COLA schedule mechanism",
+      "period": "2024",
+      "comparison_presence": "No comparable fire or non-safety growth mechanism in the audited 416 layer.",
+      "report_conclusion": "Quantitatively supported police growth mechanism, not a matched comparison."
+    },
+    {
+      "municipality": "Phippsburg",
+      "state": "ME",
+      "unit_context": "Assessing Agent; one additional unit-unclear budget row",
+      "mechanism": "3.2 percent COLA for the Assessing Agent; a separate 3.2/8.7 percent fragment lacks a reliable row header",
+      "recurring_or_one_time": "recurring for the Assessing Agent; unclear for the second fragment",
+      "period": "budget-cycle context, exact comparison period incomplete",
+      "comparison_presence": "No validated police/fire growth mechanism in the audited layer.",
+      "report_conclusion": "Relabel the clean evidence as non-safety; exclude inherited police interpretation."
+    },
+    {
+      "municipality": "Bath",
+      "state": "OH",
+      "unit_context": "Police factfinding",
+      "mechanism": "Employer proposals of 4 percent in 2022 and 3.5 percent in 2023 versus union/pattern terms of 2.25 and 2 percent, with a first-step issue",
+      "recurring_or_one_time": "proposed recurring wage terms, not confirmed implementation",
+      "period": "2022-2023",
+      "comparison_presence": "No comparable fire or non-safety percentage-growth mechanism in the audited layer.",
+      "report_conclusion": "Quantitative bargaining-position evidence; do not label the proposed values as implemented raises."
+    },
+    {
+      "municipality": "Tonka Bay",
+      "state": "MN",
+      "unit_context": "Teamsters Local 320 Maintenance Employees",
+      "mechanism": "Salary schedule reports a 2.75 percent increase over 2019; another fragment includes 2.75 and 3.5 percent with ambiguous year alignment",
+      "recurring_or_one_time": "recurring schedule evidence",
+      "period": "2023 schedule with earlier-year comparison; later fragment year alignment uncertain",
+      "comparison_presence": "No comparable police or fire growth mechanism in the audited layer.",
+      "report_conclusion": "Relabel all three inherited police candidates as non-safety maintenance evidence and retain a year-alignment caveat."
+    }
+  ],
+  "strongest_examples": {
+    "fire": [
+      {
+        "municipality": "Marion Township",
+        "state": "OH",
+        "unit": "IAFF / fire",
+        "mechanism": "General wage increases of 1.75 percent in 2018, 1.85 percent in 2019, 2.75 percent in 2021, and 3.25 percent in 2022",
+        "status": "strong recurring implemented schedule example"
+      },
+      {
+        "municipality": "Olmsted Township",
+        "state": "OH",
+        "unit": "fire",
+        "mechanism": "Factfinding proposals of 3 percent in 2016, 3 percent in 2017, and 2 percent in 2018",
+        "status": "proposal evidence, not confirmed implementation"
+      },
+      {
+        "municipality": "Turtlecreek",
+        "state": "OH",
+        "unit": "fire",
+        "mechanism": "Proposed 3 percent 2025 wage-scale term",
+        "status": "proposal/reopener evidence, not confirmed implementation"
+      }
+    ],
+    "non_safety": [
+      {
+        "municipality": "Howland",
+        "state": "OH",
+        "unit": "Road Department",
+        "mechanism": "3 percent hourly-wage increase for 2021-2022 and 2 percent for 2022-2023",
+        "status": "strong recurring example"
+      },
+      {
+        "municipality": "Goodrich",
+        "state": "MI",
+        "unit": "DPW Supervisor",
+        "mechanism": "16.5 percent hourly-wage adjustment beginning July 1",
+        "status": "strong unit-specific adjustment example"
+      },
+      {
+        "municipality": "Yale",
+        "state": "MI",
+        "unit": "clerical/DPW",
+        "mechanism": "3 percent wage increase",
+        "status": "strong recurring non-safety example"
+      },
+      {
+        "municipality": "Tonka Bay",
+        "state": "MN",
+        "unit": "Maintenance Employees",
+        "mechanism": "2.75 percent salary-schedule increase over 2019, with a later ambiguous 2.75/3.5 percent fragment",
+        "status": "non-safety schedule evidence with year-alignment caveat"
+      }
+    ]
+  },
+  "side_direction_conclusions": [
+    "Recurring quantitative growth evidence exists on police, fire, and non-safety sides; it is not unique to public safety.",
+    "The 95-claim layer contains 48 police, 9 fire, 13 non-safety, and 2 unclear recurring-base-or-schedule records after substantive review.",
+    "Marion Township supplies a clear firefighter recurring-growth example, while Howland Road Department supplies a clear non-safety example.",
+    "Howland provides the strongest named same-municipality police/non-safety mechanism contrast, but it is not a final matched growth estimate.",
+    "Phippsburg and Tonka Bay inherited police labels are unsupported and must be corrected to non-safety or unclear.",
+    "One-time, retroactive, and delayed implementation records must remain separate from recurring base growth."
+  ],
+  "forbidden_actions": {
+    "ocr": false,
+    "new_download": false,
+    "new_rating": false,
+    "new_text_extraction": false,
+    "dashboard_modified": false
+  }
+}

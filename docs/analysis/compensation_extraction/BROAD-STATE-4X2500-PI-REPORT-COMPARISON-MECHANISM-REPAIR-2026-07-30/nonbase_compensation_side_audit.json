@@ -1,0 +1,261 @@
+{
+  "task_id": "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30",
+  "lane_id": "lane_001_nonbase_wage_schedule_audit",
+  "status": "completed",
+  "universe": {
+    "valid_rating_count": 18554,
+    "non_base_compensation_signal_count": 3718,
+    "direct_base_wage_value_signal_count": 2687,
+    "nonbase_and_direct_value_overlap_count": 153,
+    "explicit_schedule_tagged_subset_count": 661
+  },
+  "definitions": {
+    "non_base_compensation_signal": "Schema-valid rating rows with non_base_compensation_signal_strength greater than zero.",
+    "direct_base_wage_value_signal": "Schema-valid rating rows with base_wage_direct_value_strength greater than zero. This is a direct value/schedule signal universe, not a count of complete wage schedules.",
+    "explicit_schedule_tagged_subset": "Direct-base-value signal rows whose controlled quant_span_types include salary_schedule, wage_schedule, step_schedule, or grade_or_payband.",
+    "side_assignment": "Join by span_id to normalized_quantitative_records. Preserve police, fire, combined_safety, and non_safety exactly. Map mixed, unclear, missing, or non-unique side assignments to unclear. No free-text side inference was used for aggregate counts.",
+    "reason_for_conservative_side_assignment": "A unit-specific title can coexist with a town-wide table or a span for another occupation. Using only the controlled normalized side field avoids converting source-title hints into false side labels. Selected examples were separately checked against their exact spans and source titles."
+  },
+  "side_counts": {
+    "non_base_compensation_signal": {
+      "total": 3718,
+      "police": 1239,
+      "fire": 280,
+      "combined_safety": 9,
+      "non_safety": 226,
+      "unclear": 1964,
+      "resolved_side_count": 1754,
+      "resolved_safety_count": 1528,
+      "resolved_safety_share_pct": 87.12,
+      "resolved_non_safety_share_pct": 12.88,
+      "unclear_share_pct": 52.82
+    },
+    "direct_base_wage_value_signal": {
+      "total": 2687,
+      "police": 802,
+      "fire": 123,
+      "combined_safety": 4,
+      "non_safety": 319,
+      "unclear": 1439,
+      "resolved_side_count": 1248,
+      "resolved_safety_count": 929,
+      "resolved_safety_share_pct": 74.44,
+      "resolved_non_safety_share_pct": 25.56,
+      "unclear_share_pct": 53.55
+    },
+    "explicit_schedule_tagged_subset": {
+      "total": 661,
+      "police": 263,
+      "fire": 23,
+      "combined_safety": 0,
+      "non_safety": 35,
+      "unclear": 340,
+      "resolved_side_count": 321,
+      "resolved_safety_count": 286,
+      "resolved_safety_share_pct": 89.1,
+      "resolved_non_safety_share_pct": 10.9,
+      "unclear_share_pct": 51.44
+    }
+  },
+  "nonbase_component_tag_counts_by_side": {
+    "police": {
+      "stipend_or_allowance": 438,
+      "overtime_or_premium_reference": 449,
+      "longevity_pay": 108,
+      "shift_differential": 106,
+      "lump_sum_payment": 53,
+      "certification_or_education_pay": 37,
+      "hazard_or_specialty_pay": 3
+    },
+    "fire": {
+      "stipend_or_allowance": 120,
+      "overtime_or_premium_reference": 97,
+      "longevity_pay": 31,
+      "lump_sum_payment": 16,
+      "certification_or_education_pay": 6,
+      "shift_differential": 5
+    },
+    "combined_safety": {
+      "stipend_or_allowance": 5,
+      "overtime_or_premium_reference": 3,
+      "lump_sum_payment": 1
+    },
+    "non_safety": {
+      "stipend_or_allowance": 109,
+      "overtime_or_premium_reference": 83,
+      "longevity_pay": 13,
+      "lump_sum_payment": 7,
+      "shift_differential": 6,
+      "certification_or_education_pay": 3
+    },
+    "unclear": {
+      "overtime_or_premium_reference": 725,
+      "stipend_or_allowance": 714,
+      "longevity_pay": 157,
+      "shift_differential": 41,
+      "certification_or_education_pay": 39,
+      "lump_sum_payment": 36,
+      "hazard_or_specialty_pay": 5
+    },
+    "note": "Tags are multi-label and therefore do not sum to span totals."
+  },
+  "schedule_tag_counts_by_side": {
+    "police": {
+      "salary_schedule": 150,
+      "wage_schedule": 96,
+      "step_schedule": 14,
+      "grade_or_payband": 3
+    },
+    "fire": {
+      "salary_schedule": 5,
+      "wage_schedule": 11,
+      "step_schedule": 7,
+      "grade_or_payband": 0
+    },
+    "combined_safety": {
+      "salary_schedule": 0,
+      "wage_schedule": 0,
+      "step_schedule": 0,
+      "grade_or_payband": 0
+    },
+    "non_safety": {
+      "salary_schedule": 11,
+      "wage_schedule": 22,
+      "step_schedule": 2,
+      "grade_or_payband": 0
+    },
+    "unclear": {
+      "salary_schedule": 253,
+      "wage_schedule": 68,
+      "step_schedule": 13,
+      "grade_or_payband": 7
+    },
+    "note": "Controlled schedule tags are multi-label. One unclear-side row carries more than one schedule tag, so component tags sum to 662 while the unique-row total remains 661."
+  },
+  "normalization_reconciliation": {
+    "non_base_compensation_signal": {
+      "normalized_record_count": 3544,
+      "without_normalized_record_count": 174,
+      "normalization_full": 140,
+      "normalization_partial": 400,
+      "normalization_mechanism_only": 93,
+      "normalization_deferred_manual_review": 39,
+      "normalization_unusable": 2872,
+      "rescue_full_upgrade_count": 0,
+      "rescue_near_gap_ready_count": 4,
+      "effective_full_after_rescue": 140
+    },
+    "direct_base_wage_value_signal": {
+      "normalized_record_count": 2625,
+      "without_normalized_record_count": 62,
+      "normalization_full": 533,
+      "normalization_partial": 1155,
+      "normalization_mechanism_only": 55,
+      "normalization_deferred_manual_review": 267,
+      "normalization_unusable": 615,
+      "rescue_full_upgrade_count": 10,
+      "rescue_near_gap_ready_count": 168,
+      "effective_full_after_rescue": 543
+    },
+    "explicit_schedule_tagged_subset": {
+      "normalized_record_count": 661,
+      "normalization_full": 6,
+      "normalization_partial": 6,
+      "normalization_mechanism_only": 25,
+      "normalization_deferred_manual_review": 24,
+      "normalization_unusable": 600,
+      "rescue_full_upgrade_count": 0,
+      "rescue_near_gap_ready_count": 1,
+      "effective_full_after_rescue": 6
+    }
+  },
+  "strongest_source_grounded_nonbase_examples": [
+    {
+      "side": "police",
+      "span_id": "B4X2500SPAN-20260730-8c5861439e8ac3181864697d",
+      "municipality": "Old Tappan",
+      "state": "NJ",
+      "source_title": "Ordinance 1233-23 — police salary ordinance for 2019-2022",
+      "exact_span_text": "SECTION 4: All Police Personnel covered by collective bargaining agreement will be entitled to shift differential equal to 5% of their gross annual salary.",
+      "quant_span_types": ["shift_differential"],
+      "normalization_status": "normalization_mechanism_only",
+      "report_use": "Quantitatively specific police non-base mechanism example; document-specific, not prevalence evidence."
+    },
+    {
+      "side": "fire",
+      "span_id": "B4X2500SPAN-20260730-7f0facd836bc8d6c88e189b4",
+      "municipality": "Miami",
+      "state": "OH",
+      "source_title": "Collective Bargaining Agreement (IAFF Local 3906) — Firefighters",
+      "exact_span_text": "Longevity Pay- Hourly Difference-- $1.00 per hour for every 5 years of continuous active",
+      "quant_span_types": ["hourly_rate", "longevity_pay"],
+      "normalization_status": "normalization_partial",
+      "report_use": "Quantitatively specific firefighter longevity-pay example; period and complete eligibility language still need context."
+    },
+    {
+      "side": "combined_safety",
+      "span_id": "B4X2500SPAN-20260730-8af014e1a8d6f2fbc2fffed0",
+      "municipality": "South Zanesville",
+      "state": "OH",
+      "source_title": "Regular Village Council Meeting Minutes (March 3, 2025)",
+      "exact_span_text": "allowance for Part time police and Assistant fire chief to receive $350.00 a year, and",
+      "quant_span_types": ["stipend_or_allowance"],
+      "normalization_status": "normalization_full",
+      "report_use": "Combined police/fire allowance example; minutes context and operative wording should accompany any quotation."
+    },
+    {
+      "side": "non_safety",
+      "span_id": "B4X2500SPAN-20260730-c9b1d0e00d82065f6e0089cc",
+      "municipality": "Port Huron charter",
+      "state": "MI",
+      "source_title": "Port Huron Township Clerical - Contract Settlements",
+      "exact_span_text": "Employees who opt out of health insurance coverage receive a significant boost in their Opt-Out Stipend from the Employer, from $175 per pay period to $400 per pay period.",
+      "quant_span_types": ["stipend_or_allowance"],
+      "normalization_status": "normalization_partial",
+      "report_use": "Direct proof that non-safety non-base examples exist; use as a clerical-unit opt-out-stipend example, not as a base-wage increase."
+    }
+  ],
+  "strongest_source_grounded_schedule_examples": [
+    {
+      "side": "police",
+      "span_id": "B4X2500SPAN-20260730-8822dec9f69a9cbd2733b33a",
+      "municipality": "Cohasset",
+      "state": "MA",
+      "source_title": "Police Patrol/Sergeant CBA, July 1, 2022-June 30, 2025",
+      "exact_span_text": "STEP 1 STEP 2 STEP 3 STEP 4 STEP 5 STEP 6; 1-Jul-22 Under 1 YR 1YR to 2YR 2YR to 3YR 3YR to 8YR 8YR to 27YR 27+ YR; PATROLMEN $61,634.71 $62,990.68 $64,376.47 $66,436,52 $67,765.25 $71,153.51",
+      "normalization_status": "normalization_deferred_manual_review",
+      "report_use": "Shows why schedule location matters: the same patrol classification has six tenure-defined steps. One stored amount also has a punctuation/extraction anomaly requiring source-local confirmation."
+    },
+    {
+      "side": "fire",
+      "span_id": "B4X2500SPAN-20260730-919f97fed25e111bc6d9c7e5",
+      "municipality": "Berlin",
+      "state": "OH",
+      "source_title": "2024-2026 Agreement Between Berlin Township and IAFF Local 5225",
+      "exact_span_text": "Category Step 1 Step 2 Step 3; Hourly Rate $23.05 $23.93 $24.85",
+      "normalization_status": "normalization_full",
+      "report_use": "Fully normalized fire step-schedule example, but any comparison still must identify the matching category and step."
+    },
+    {
+      "side": "combined_safety",
+      "report_use": "No controlled-side combined-safety row appears in the 661-row explicit schedule-tagged subset; do not manufacture an example."
+    },
+    {
+      "side": "non_safety",
+      "span_id": "B4X2500SPAN-20260730-d634e79e0e5385637a066d40",
+      "municipality": "Mayer",
+      "state": "MN",
+      "source_title": "City of Mayer / Operating Engineers Local 49 agreement, August 1, 2024-July 31, 2026",
+      "exact_span_text": "Scott Theisen – Public Works Utilities Operator Step 3 at $29.24 per hour",
+      "normalization_status": "normalization_full",
+      "report_use": "Fully normalized non-safety position-and-step example; a valid cross-occupation pairing would require a safety record at a defensibly comparable schedule location."
+    }
+  ],
+  "conclusions": {
+    "non_safety_nonbase_examples_exist": true,
+    "answer": "Yes. The controlled normalized side field identifies 226 non-safety non-base spans across 100 sources and 96 municipality-state combinations. Exact examples include clerical opt-out stipends, public-works shift differentials, boot/clothing allowances, longevity pay, and certification stipends.",
+    "safety_heavy_or_mixed": "Mixed, but safety-heavy among side-resolved rows. Police, fire, and combined-safety account for 1,528 of 1,754 side-resolved non-base spans (87.12%). Because 1,964 of 3,718 rows (52.82%) are side-unclear, this is a property of the resolved evidence layer, not a corpus-wide prevalence estimate.",
+    "report_language_repair": "Use '3,718 valid rated non-base signals' rather than implying 3,718 complete, side-coded provisions. Use '2,687 direct base-wage/value signals, including 661 explicitly schedule-tagged spans' rather than '2,687 wage schedules.'",
+    "prevalence_boundary": "The processed queue is selected and more than half of each signal universe is side-unclear. No national or population prevalence conclusion is supported."
+  }
+}

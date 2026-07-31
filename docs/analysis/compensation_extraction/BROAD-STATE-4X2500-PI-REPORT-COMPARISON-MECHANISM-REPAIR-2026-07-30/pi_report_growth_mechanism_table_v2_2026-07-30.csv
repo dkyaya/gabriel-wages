@@ -1,0 +1,11 @@
+disposition,mechanism,period,place,side
+retain,5% wage increase,2024,"Coleraine, MN",police
+retain with context,1.5% step percentage described as COLA,2024,"Sunrise Beach, MO",police
+retain,"IAFF agreement: 1.75%, 1.85%, 2.75%, and 3.25% general wage increases across agreement years",2018–2022,"Marion Township, OH",fire
+retain with action-status caveat,31% market correction,2024,"Bass Lake, WI",non-safety clerical
+retain as bounded mechanism contrast,Overlapping source-reported wage provisions: police 2% versus road department 3%,2021–2022,"Howland, OH",police versus non-safety road department
+retain with period caveat,16.5% DPW supervisor hourly-wage adjustment,beginning July 1; year not resolved in bounded span,"Goodrich, MI",non-safety public works
+retain with period caveat,3% wage increase,period not resolved in bounded span,"Yale, MI",non-safety clerical/public works
+retain only after correcting prior police misclassification,3.2% COLA,2023,"Phippsburg, ME",non-safety assessing agent
+retain only after correcting prior police label; period caveat,Schedule states 2.75% increase; year alignment is ambiguous,schedule references 2023 and 2019,"Tonka Bay, MN",non-safety maintenance
+context only—not a confirmed implemented raise,2.25%/2% pattern offer plus first-step issue,2021,"Bath, OH",police bargaining context

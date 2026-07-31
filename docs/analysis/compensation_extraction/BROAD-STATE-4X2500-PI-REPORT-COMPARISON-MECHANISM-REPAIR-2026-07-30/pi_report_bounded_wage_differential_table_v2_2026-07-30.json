@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "caveat": "Part-time status aligns, but duties, experience, schedule, and qualifications do not.",
+      "difference": "+$6.00/hour (+37.5%)",
+      "mechanism_read": "Same ordinance assigns a higher base rate to the police position.",
+      "municipality_state": "Shreve, OH",
+      "non_safety_value": "$16.00/hour \u2014 part-time utility clerk",
+      "period": "2024",
+      "safety_value": "$22.00/hour \u2014 part-time police officer",
+      "status": "PI-usable supporting example"
+    },
+    {
+      "caveat": "Maximum authorized\u2014not confirmed actual\u2014rates; enactment fields require confirmation.",
+      "difference": "+$5.00/hour (+25.0%)",
+      "mechanism_read": "Authorized pay ceilings favor the patrol position.",
+      "municipality_state": "Cammack Village, AR",
+      "non_safety_value": "$20.00/hour maximum \u2014 administrative assistant",
+      "period": "2024",
+      "safety_value": "$25.00/hour maximum \u2014 part-time patrolman",
+      "status": "Conditional/manual review"
+    },
+    {
+      "caveat": "Year 1 police step versus a single rate with no matched tenure label.",
+      "difference": "\u2212$0.91/hour (\u22123.67%)",
+      "mechanism_read": "The selected entry location does not favor police and shows schedule-location sensitivity.",
+      "municipality_state": "Canastota, NY",
+      "non_safety_value": "$24.82/hour \u2014 Code Enforcement Officer",
+      "period": "2023\u20132024",
+      "safety_value": "$23.91/hour \u2014 Police Officer Year 1",
+      "status": "Conditional counterexample"
+    },
+    {
+      "caveat": "Chief was outside the police bargaining unit; role, rank, hours, and schedule location do not match.",
+      "difference": "+$22.35/hour (+199.2%)",
+      "mechanism_read": "Command-rank and ordinance rate-setting, not a bargaining-unit comparison.",
+      "municipality_state": "Alburtis, PA",
+      "non_safety_value": "$11.22/hour \u2014 Administrative Assistant",
+      "period": "Jan.\u2013Jun. 2018",
+      "safety_value": "$33.57/hour \u2014 Chief of Police",
+      "status": "Limits/appendix only"
+    }
+  ]
+}

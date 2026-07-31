@@ -1,0 +1,48 @@
+{
+  "lane": "lane_004",
+  "audit_scope": "matched position/schedule-location optimization and bounded wage-differential mechanism integration",
+  "municipality_cycle_groups": 2712,
+  "matched_safety_non_safety_cycles": 65,
+  "comparable_normalized_wage_candidates": 303,
+  "upstream_ready_for_bounded_review": 27,
+  "upstream_needs_manual_review": 87,
+  "upstream_not_ready": 189,
+  "near_gap_ready_records": 185,
+  "rescued_records_ready_for_matching": 11,
+  "candidate_level_validation": {
+    "validated_pi_report_usable": 1,
+    "validated_with_caveats_manual_review": 3,
+    "rejected": 0
+  },
+  "main_conclusion": "Matching has been run and supports narrow bounded comparisons, but structural flags do not substitute for exact occupation, role, schedule-location, legal-status, and bargaining-unit validation.",
+  "strongest_current_example": {
+    "municipality": "Shreve",
+    "state": "OH",
+    "period": "2024",
+    "safety_position": "part-time police officer",
+    "safety_hourly_rate": 22.0,
+    "non_safety_position": "part-time utility clerk",
+    "non_safety_hourly_rate": 16.0,
+    "difference": 6.0,
+    "percent_difference_relative_to_non_safety": 37.5,
+    "mechanism_interpretation": "The salary ordinance assigns a higher base hourly rate to the police position; upstream bargaining, scarcity, job-content, and political-priority pathways are not separately identified."
+  },
+  "conditional_examples": [
+    {
+      "municipality": "Cammack Village",
+      "state": "AR",
+      "interpretation": "Safety-side authorized maximum is 25 percent higher, but actual pay and enactment remain unconfirmed."
+    },
+    {
+      "municipality": "Canastota",
+      "state": "NY",
+      "interpretation": "The police Year 1 entry step is 3.67 percent below the code-enforcement rate, showing that direction changes with schedule location and occupational comparator."
+    },
+    {
+      "municipality": "Alburtis",
+      "state": "PA",
+      "interpretation": "The command-rank comparison is limits-only because the Chief was outside the police bargaining unit."
+    }
+  ],
+  "forbidden_actions_avoided": true
+}

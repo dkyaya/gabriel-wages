@@ -1,0 +1,636 @@
+{
+  "task_id": "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30",
+  "lane_id": "lane_003",
+  "scope": "Bargaining/dispute-resolution and market/staffing-pressure evidence audit",
+  "bargaining_dispute": {
+    "audit_scope": "All 1,716 valid rated spans with bargaining-power or strike/no-strike strength above zero.",
+    "input_record_count": 1716,
+    "bargaining_strength_positive_count": 1135,
+    "strike_strength_positive_count": 587,
+    "both_strengths_positive_count": 6,
+    "audit_disposition_counts": {
+      "documentary_context_only": 1578,
+      "exclude_false_positive": 61,
+      "report_usable_direct": 77
+    },
+    "side_counts": {
+      "mixed": 39,
+      "non_safety": 292,
+      "safety": 714,
+      "unclear": 671
+    },
+    "side_by_audit_disposition": {
+      "documentary_context_only": {
+        "mixed": 36,
+        "non_safety": 274,
+        "safety": 677,
+        "unclear": 591
+      },
+      "exclude_false_positive": {
+        "non_safety": 7,
+        "safety": 11,
+        "unclear": 43
+      },
+      "report_usable_direct": {
+        "mixed": 3,
+        "non_safety": 11,
+        "safety": 26,
+        "unclear": 37
+      }
+    },
+    "side_by_primary_subtype": {
+      "arbitration_unspecified": {
+        "non_safety": 1,
+        "safety": 2,
+        "unclear": 1
+      },
+      "collective_bargaining": {
+        "mixed": 19,
+        "non_safety": 134,
+        "safety": 302,
+        "unclear": 390
+      },
+      "factfinding": {
+        "mixed": 1,
+        "non_safety": 5,
+        "safety": 11,
+        "unclear": 9
+      },
+      "general_bargaining_or_dispute_context": {
+        "mixed": 1,
+        "non_safety": 8,
+        "safety": 27,
+        "unclear": 52
+      },
+      "grievance_arbitration": {
+        "safety": 1,
+        "unclear": 4
+      },
+      "interest_arbitration": {
+        "mixed": 3,
+        "non_safety": 3,
+        "safety": 64,
+        "unclear": 41
+      },
+      "settlement": {
+        "mixed": 3,
+        "non_safety": 23,
+        "safety": 25,
+        "unclear": 41
+      },
+      "strike_or_no_strike": {
+        "mixed": 12,
+        "non_safety": 118,
+        "safety": 282,
+        "unclear": 133
+      }
+    },
+    "primary_subtype_counts": {
+      "arbitration_unspecified": 4,
+      "collective_bargaining": 845,
+      "factfinding": 26,
+      "general_bargaining_or_dispute_context": 88,
+      "grievance_arbitration": 5,
+      "interest_arbitration": 111,
+      "settlement": 92,
+      "strike_or_no_strike": 545
+    },
+    "all_subtype_tag_counts": {
+      "arbitration_unspecified": 29,
+      "collective_bargaining": 1411,
+      "factfinding": 26,
+      "general_bargaining_or_dispute_context": 88,
+      "grievance_arbitration": 5,
+      "interest_arbitration": 112,
+      "settlement": 96,
+      "strike_or_no_strike": 552
+    },
+    "rating_direction_counts": {
+      "gap_narrowing": 1,
+      "neutral_or_general": 853,
+      "non_safety_advantage": 7,
+      "not_applicable": 853,
+      "safety_advantage": 2
+    },
+    "strongest_examples_by_subtype": {
+      "arbitration_unspecified": [
+        {
+          "municipality": "East Hampton",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-4f7f9f57974fae20f0b87596",
+          "side_classification": "safety",
+          "exact_span_text": "The Union originally proposed a 16% salary increase",
+          "wage_pressure_pathway": "arbitration is referenced, but the bounded span does not establish whether it is interest or grievance arbitration"
+        }
+      ],
+      "collective_bargaining": [
+        {
+          "municipality": "Adams",
+          "state": "MN",
+          "span_id": "B4X2500SPAN-20260730-31197f2f45c791f77e7b3e37",
+          "side_classification": "non_safety",
+          "exact_span_text": "The clerk negotiated a 2.5% salary increase for the city workers, the same increase as last year.",
+          "wage_pressure_pathway": "bilateral negotiation can set base wages, non-base compensation, and implementation timing"
+        },
+        {
+          "municipality": "Delanco",
+          "state": "NJ",
+          "span_id": "B4X2500SPAN-20260730-6f70a54403c7a191b4de226f",
+          "side_classification": "unclear",
+          "exact_span_text": "additional and/or overtime compensation shall be paid as provided for in the collective bargaining agreement.",
+          "wage_pressure_pathway": "bilateral negotiation can set base wages, non-base compensation, and implementation timing"
+        },
+        {
+          "municipality": "Mount Arlington",
+          "state": "NJ",
+          "span_id": "B4X2500SPAN-20260730-8b631b24d6c9d280abc7c84a",
+          "side_classification": "unclear",
+          "exact_span_text": "Chief Green shall be entitled to medical benefits on the same terms as provided in the Collective Bargaining Agreement between the Borough of Mount Arlington and the FOP Lodge 78, set forth at",
+          "wage_pressure_pathway": "bilateral negotiation can set base wages, non-base compensation, and implementation timing"
+        },
+        {
+          "municipality": "Mount Zion",
+          "state": "IL",
+          "span_id": "B4X2500SPAN-20260730-3f2113173711e1a9995da2b2",
+          "side_classification": "unclear",
+          "exact_span_text": "* Salary set by collective bargaining agreement",
+          "wage_pressure_pathway": "bilateral negotiation can set base wages, non-base compensation, and implementation timing"
+        },
+        {
+          "municipality": "Riverton",
+          "state": "IL",
+          "span_id": "B4X2500SPAN-20260730-02a0508f44784660a2dd7328",
+          "side_classification": "unclear",
+          "exact_span_text": "to will be retroactive to March 1st, 2024 if negotiations are not concluded prior to that time.",
+          "wage_pressure_pathway": "bilateral negotiation can set base wages, non-base compensation, and implementation timing"
+        }
+      ],
+      "factfinding": [
+        {
+          "municipality": "Fallsburg",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-c585a8cb611fa6731d926e7a",
+          "side_classification": "safety",
+          "exact_span_text": "Fact-Finding Report, including a rationalized salary schedule,",
+          "wage_pressure_pathway": "neutral factfinding can frame comparability and settlement options during an impasse"
+        }
+      ],
+      "general_bargaining_or_dispute_context": [
+        {
+          "municipality": "Laingsburg",
+          "state": "MI",
+          "span_id": "B4X2500SPAN-20260730-d92aed04ed00405e2b765b96",
+          "side_classification": "safety",
+          "exact_span_text": "benefits while processing grievances, attending negotiation sessions or grievance hearings",
+          "wage_pressure_pathway": "the record provides general bargaining/dispute context but does not identify a precise wage-setting pathway"
+        },
+        {
+          "municipality": "Tupper Lake",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-fcb668a50662253561a99282",
+          "side_classification": "safety",
+          "exact_span_text": "the Union proposal of a 12.8% increase is not justified by either the cost",
+          "wage_pressure_pathway": "the record provides general bargaining/dispute context but does not identify a precise wage-setting pathway"
+        }
+      ],
+      "grievance_arbitration": [],
+      "interest_arbitration": [
+        {
+          "municipality": "Clay",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-ab3ffd656abd80c6cebb6d68",
+          "side_classification": "safety",
+          "exact_span_text": "alone which would provide a 4.54% increase for the bargaining",
+          "wage_pressure_pathway": "third-party impasse resolution can determine or recommend prospective compensation terms"
+        },
+        {
+          "municipality": "Harrison",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-a5555990efa28b6c71d39dff",
+          "side_classification": "safety",
+          "exact_span_text": "The Town, in turn, offered and argued in favor of a 5.5% salary increase ef­",
+          "wage_pressure_pathway": "third-party impasse resolution can determine or recommend prospective compensation terms"
+        },
+        {
+          "municipality": "Irvington",
+          "state": "NJ",
+          "span_id": "B4X2500SPAN-20260730-675f9c362289869f426ef60d",
+          "side_classification": "unclear",
+          "exact_span_text": "Authorize Payment for Salary Increases Based Upon in Interest Arbitration Award to",
+          "wage_pressure_pathway": "third-party impasse resolution can determine or recommend prospective compensation terms"
+        },
+        {
+          "municipality": "Ossining",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-c80b460bf658df33e76530dd",
+          "side_classification": "safety",
+          "exact_span_text": "Union Demand : If one year 9% increase",
+          "wage_pressure_pathway": "third-party impasse resolution can determine or recommend prospective compensation terms"
+        },
+        {
+          "municipality": "East Fishkill",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-9293e56b10a1f95374afe03d",
+          "side_classification": "safety",
+          "exact_span_text": "Negotiations may be reopened for salaries.",
+          "wage_pressure_pathway": "third-party impasse resolution can determine or recommend prospective compensation terms"
+        }
+      ],
+      "settlement": [
+        {
+          "municipality": "Brewster",
+          "state": "MA",
+          "span_id": "B4X2500SPAN-20260730-66668d042c2382dba6e7396c",
+          "side_classification": "non_safety",
+          "exact_span_text": "The United Federation of Police Officers noted that the settlement demonstrates the value of a strong experienced union negotiator, a collaborative effort in negotiations and a shared focus on responsible solutions that benefit employees, employers, and the public alike.",
+          "wage_pressure_pathway": "a negotiated or adjudicated outcome is translated into wage terms, effective dates, or retroactivity"
+        },
+        {
+          "municipality": "Lumberton",
+          "state": "NJ",
+          "span_id": "B4X2500SPAN-20260730-f978e571e986c5c86aa32072",
+          "side_classification": "safety",
+          "exact_span_text": "the Township of Lumberton below the rank of Lieutenant for the purposes of collective bargaining, settlement of grievances, rates of pay, hours of work, fringe benefits, working",
+          "wage_pressure_pathway": "a negotiated or adjudicated outcome is translated into wage terms, effective dates, or retroactivity"
+        },
+        {
+          "municipality": "Deer River",
+          "state": "MN",
+          "span_id": "B4X2500SPAN-20260730-13d8117f814fca868830e4e0",
+          "side_classification": "unclear",
+          "exact_span_text": "Council meetings in negotiations or disputes without the loss of pay.",
+          "wage_pressure_pathway": "a negotiated or adjudicated outcome is translated into wage terms, effective dates, or retroactivity"
+        },
+        {
+          "municipality": "East Greenbush",
+          "state": "NY",
+          "span_id": "B4X2500SPAN-20260730-190cf37a888360c71ab9bc7f",
+          "side_classification": "safety",
+          "exact_span_text": "subjectiveness upon which salaries are often based in the case of collective bargaining",
+          "wage_pressure_pathway": "a negotiated or adjudicated outcome is translated into wage terms, effective dates, or retroactivity"
+        },
+        {
+          "municipality": "Stone Harbor",
+          "state": "NJ",
+          "span_id": "B4X2500SPAN-20260730-f15bbe298fae4ca311011011",
+          "side_classification": "non_safety",
+          "exact_span_text": "salary, in accordance with the PBA Collective Bargaining Agreement which provides that an",
+          "wage_pressure_pathway": "a negotiated or adjudicated outcome is translated into wage terms, effective dates, or retroactivity"
+        }
+      ],
+      "strike_or_no_strike": [
+        {
+          "municipality": "Miami",
+          "state": "OH",
+          "span_id": "B4X2500SPAN-20260730-2286b3215f39c7be37f1f45d",
+          "side_classification": "safety",
+          "exact_span_text": "the penalties contained in Section 4 retroactive to the date the unauthorized strike commences.",
+          "wage_pressure_pathway": "strike, no-strike, work-stoppage, or lockout rules shape bargaining leverage and constraints without identifying a wage direction"
+        }
+      ]
+    }
+  },
+  "market_staffing": {
+    "audit_scope": "All 398 valid rated market/comparability-positive spans plus three targeted Bernards/Greenwich pre-rating candidates needed to audit examples named in the prior PI draft.",
+    "rated_positive_input_count": 398,
+    "targeted_named_place_pre_rating_count": 3,
+    "total_audit_record_count": 401,
+    "audit_disposition_counts": {
+      "documentary_context_only": 264,
+      "exclude_false_positive": 54,
+      "report_usable_direct": 83
+    },
+    "rated_positive_disposition_counts": {
+      "documentary_context_only": 264,
+      "exclude_false_positive": 51,
+      "report_usable_direct": 83
+    },
+    "side_counts": {
+      "mixed": 9,
+      "non_safety": 43,
+      "safety": 121,
+      "unclear": 228
+    },
+    "rated_positive_side_by_audit_disposition": {
+      "documentary_context_only": {
+        "mixed": 8,
+        "non_safety": 32,
+        "safety": 77,
+        "unclear": 147
+      },
+      "exclude_false_positive": {
+        "mixed": 1,
+        "non_safety": 6,
+        "safety": 11,
+        "unclear": 33
+      },
+      "report_usable_direct": {
+        "non_safety": 4,
+        "safety": 33,
+        "unclear": 46
+      }
+    },
+    "side_by_primary_subtype": {
+      "competing_jurisdiction": {
+        "unclear": 1
+      },
+      "general_market_or_staffing_context": {
+        "mixed": 1,
+        "non_safety": 1,
+        "safety": 10,
+        "unclear": 21
+      },
+      "market_comparability": {
+        "mixed": 5,
+        "non_safety": 11,
+        "safety": 53,
+        "unclear": 52
+      },
+      "recruitment": {
+        "mixed": 3,
+        "non_safety": 10,
+        "safety": 28,
+        "unclear": 77
+      },
+      "retention": {
+        "non_safety": 21,
+        "safety": 29,
+        "unclear": 77
+      },
+      "staffing_shortage": {
+        "safety": 1
+      }
+    },
+    "primary_subtype_counts": {
+      "competing_jurisdiction": 1,
+      "general_market_or_staffing_context": 33,
+      "market_comparability": 121,
+      "recruitment": 118,
+      "retention": 127,
+      "staffing_shortage": 1
+    },
+    "all_subtype_tag_counts": {
+      "competing_jurisdiction": 2,
+      "general_market_or_staffing_context": 33,
+      "market_comparability": 122,
+      "recruitment": 118,
+      "retention": 161,
+      "staffing_shortage": 10
+    },
+    "rating_direction_counts": {
+      "gap_narrowing": 12,
+      "neutral_or_general": 278,
+      "non_safety_advantage": 36,
+      "not_applicable": 73,
+      "safety_advantage": 2
+    },
+    "named_place_review": {
+      "Bernards": {
+        "record_count": 2,
+        "audit_disposition_counts": {
+          "exclude_false_positive": 2
+        },
+        "records": [
+          {
+            "span_id": "B4X2500SPAN-20260730-4d2b070fb4597f5b851f4db3",
+            "state": "NJ",
+            "exact_span_text": "Document Imager/Records Retention Clerk $19.00 - $26.00 / Hour",
+            "rating_strength": 4,
+            "audit_disposition": "exclude_false_positive",
+            "conclusion": "not labor-market pressure evidence; exclude"
+          },
+          {
+            "span_id": "B4X2500SPAN-20260730-587b9abe06e0969729bf94cd",
+            "state": "NJ",
+            "exact_span_text": "and regardless of any limitation on the period required for retention of public records, the Floodplain",
+            "rating_strength": 0,
+            "audit_disposition": "exclude_false_positive",
+            "conclusion": "not labor-market pressure evidence; exclude"
+          }
+        ]
+      },
+      "Greenwich": {
+        "record_count": 2,
+        "audit_disposition_counts": {
+          "exclude_false_positive": 2
+        },
+        "records": [
+          {
+            "span_id": "B4X2500SPAN-20260730-7ca5a518c6bd63b4c782f75f",
+            "state": "NJ",
+            "exact_span_text": "a permanent pool (a retention basin), or be planted mainly with wetland vegetation",
+            "rating_strength": 0,
+            "audit_disposition": "exclude_false_positive",
+            "conclusion": "not labor-market pressure evidence; exclude"
+          },
+          {
+            "span_id": "B4X2500SPAN-20260730-8ac3f78a328af42d869032c8",
+            "state": "NJ",
+            "exact_span_text": "50 percent of the shoreline and to include a stormwater runoff retention",
+            "rating_strength": 0,
+            "audit_disposition": "exclude_false_positive",
+            "conclusion": "not labor-market pressure evidence; exclude"
+          }
+        ]
+      },
+      "Brewster": {
+        "record_count": 1,
+        "audit_disposition_counts": {
+          "report_usable_direct": 1
+        },
+        "records": [
+          {
+            "span_id": "B4X2500SPAN-20260730-d31f35bc6bfa16c9ffe536cb",
+            "state": "MA",
+            "exact_span_text": "Under the terms of the settlement, the labor contract provides for 19.4 percent base pay increases over three years is intended to better reflect the responsibilities and demands of the profession, support retention and recruitment, and strengthen the long-term stability of the dispatch operations in Brewster.",
+            "rating_strength": 2,
+            "audit_disposition": "report_usable_direct",
+            "conclusion": "usable market/staffing example"
+          }
+        ]
+      }
+    },
+    "strongest_other_examples": [
+      {
+        "municipality": "Gilbert",
+        "state": "SC",
+        "span_id": "B4X2500SPAN-20260730-5a432cd60e91fa98e56f2c1f",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "retention",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "Councilman Sanders made a motion to give our four employees a 3 percent retention bonus.",
+        "wage_pressure_pathway": "turnover or retention concerns are offered as a justification for changing compensation"
+      },
+      {
+        "municipality": "Leverett",
+        "state": "MA",
+        "span_id": "B4X2500SPAN-20260730-e307a7c9190c5f4dbb35c2b0",
+        "side_classification": "unclear",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "shall be based upon compensation for similar positions in comparable municipalities as obtained",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Lincoln",
+        "state": "VT",
+        "span_id": "B4X2500SPAN-20260730-2c8ecc865f79ca8e0f46f6a0",
+        "side_classification": "unclear",
+        "primary_mechanism_subtype": "retention",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "MOTION by Ken, 2nd by Tim to provide a 1.5% salary increase for the office staff as a retention",
+        "wage_pressure_pathway": "turnover or retention concerns are offered as a justification for changing compensation"
+      },
+      {
+        "municipality": "Mantorville",
+        "state": "MN",
+        "span_id": "B4X2500SPAN-20260730-d23e56248b20d2d491f1d556",
+        "side_classification": "unclear",
+        "primary_mechanism_subtype": "recruitment",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "Engineer pay by $5/hour as recommended to try to attract new candidates to the job opening.",
+        "wage_pressure_pathway": "difficulty attracting qualified personnel is offered as a justification for changing compensation"
+      },
+      {
+        "municipality": "Merrimac",
+        "state": "MA",
+        "span_id": "B4X2500SPAN-20260730-a0d32669957b1a64f3778157",
+        "side_classification": "unclear",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "An external equity salary adjustment or market adjustment may be made to adjust a salary to the",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Osakis",
+        "state": "MN",
+        "span_id": "B4X2500SPAN-20260730-af396fa62f0cbe46ee1406bd",
+        "side_classification": "unclear",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "2026 5% general wage increase and 5% market adjustment.",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Sherburn",
+        "state": "MN",
+        "span_id": "B4X2500SPAN-20260730-32bf509730c78c6a49fc0d83",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "2026: Effective 1/1/2026- 3.00% Wage Increase, and 7.00% Market Adjustment (I 0%)",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Sherburn",
+        "state": "MN",
+        "span_id": "B4X2500SPAN-20260730-912a9de6e521ee157d0b7b59",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "2027: Effective l/1/2027- 3.00% Wage Increase, and 6.00% Market Adjustment (9.00%)",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Sherburn",
+        "state": "MN",
+        "span_id": "B4X2500SPAN-20260730-92a1736abf6b7958f533d767",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "2025- Effective 1/1/2025, 3.00% Wage Increase, and 8.00% Market Adjustment (I 1.00%)",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "South Glens Falls",
+        "state": "NY",
+        "span_id": "B4X2500SPAN-20260730-fdeec7f8e252c059567017b1",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "costly and that the salaries paid to the police are, on average, higher than the salaries paid to comparable police forces.",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Stone Harbor",
+        "state": "NJ",
+        "span_id": "B4X2500SPAN-20260730-166dfefb91b163e374485c3b",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "recruitment",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "to provide a competitive wage order to attract and retain qualified individuals.",
+        "wage_pressure_pathway": "difficulty attracting qualified personnel is offered as a justification for changing compensation"
+      },
+      {
+        "municipality": "Village of Grosse Pointe Shores",
+        "state": "MI",
+        "span_id": "B4X2500SPAN-20260730-a036cb506f6375e6d8e68848",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "retention",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "Signing Bonus: $1,500 retention stipend, effective Date of Award",
+        "wage_pressure_pathway": "turnover or retention concerns are offered as a justification for changing compensation"
+      },
+      {
+        "municipality": "West Milwaukee",
+        "state": "WI",
+        "span_id": "B4X2500SPAN-20260730-3dedc710009da66bb313591c",
+        "side_classification": "unclear",
+        "primary_mechanism_subtype": "market_comparability",
+        "strength": 4,
+        "evidence_quality_score": 4,
+        "exact_span_text": "of disputes is the wage paid to similar workers in comparable communities.",
+        "wage_pressure_pathway": "external wage benchmarks or comparable jurisdictions are used to frame compensation decisions"
+      },
+      {
+        "municipality": "Brewster",
+        "state": "MA",
+        "span_id": "B4X2500SPAN-20260730-d31f35bc6bfa16c9ffe536cb",
+        "side_classification": "non_safety",
+        "primary_mechanism_subtype": "recruitment",
+        "strength": 2,
+        "evidence_quality_score": 3,
+        "exact_span_text": "Under the terms of the settlement, the labor contract provides for 19.4 percent base pay increases over three years is intended to better reflect the responsibilities and demands of the profession, support retention and recruitment, and strengthen the long-term stability of the dispatch operations in Brewster.",
+        "wage_pressure_pathway": "difficulty attracting qualified personnel is offered as a justification for changing compensation"
+      },
+      {
+        "municipality": "Bristol",
+        "state": "IN",
+        "span_id": "B4X2500SPAN-20260730-4f7c9656b9640cc8c2bf3654",
+        "side_classification": "safety",
+        "primary_mechanism_subtype": "recruitment",
+        "strength": 2,
+        "evidence_quality_score": 3,
+        "exact_span_text": "The Police Department offers a recruitment/hiring bonus to qualified police applicants who are",
+        "wage_pressure_pathway": "difficulty attracting qualified personnel is offered as a justification for changing compensation"
+      }
+    ]
+  },
+  "side_direction_conclusions": [
+    "Bargaining and dispute-resolution mechanisms occur on safety, non-safety, mixed, and unclear sides; mechanism presence does not identify the sign or magnitude of a wage effect.",
+    "Interest arbitration/factfinding, grievance arbitration, settlements, collective bargaining, and strike/no-strike constraints have distinct wage-pressure pathways and must not be collapsed into a single causal mechanism.",
+    "Market/staffing rationales appear on multiple sides. Brewster police dispatchers provide a strong non-safety recruitment/retention example; Bernards records retention and Greenwich stormwater retention are false positives and should be removed.",
+    "No audited distribution supports a nationally representative, prevalence, safety-advantage, wage-gap, treatment-effect, or causal claim."
+  ],
+  "forbidden_actions": {
+    "ocr": false,
+    "new_download": false,
+    "new_rating": false,
+    "new_text_extraction": false,
+    "dashboard_modified": false,
+    "causal_claim": false,
+    "national_prevalence_claim": false
+  }
+}

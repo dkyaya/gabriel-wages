@@ -1,0 +1,8 @@
+tier,pair_or_record_count,unit,definition,current_report_use,next_action
+position_schedule_comparable,1,validated candidate,"Candidate-level validation confirms municipality-cycle, pay basis, base status, safety/non-safety labels, employment status, and a defensible schedule-location comparison","Supporting bounded local documentary comparison","Final substantive review"
+conditional_specific_blocker,3,validated candidates,"Source-grounded values align sufficiently for a qualified comparison but enactment, actual-versus-maximum, schedule location, role, or bargaining status remains unresolved","Qualified supporting, counterexample, or limits use","Repair named candidate-specific blocker"
+structurally_compatible_candidate_review,27,candidate pairs,"All four upstream coded compatibility flags pass; exact occupation and schedule-location validation not yet complete","Candidate-review queue, not pooled analysis","Exact-span role and schedule audit"
+moderate_manual_review,87,candidate pairs,"Moderate normalization quality with at least one comparison dimension requiring manual review","Structure/context only","Repair pay basis, period, schedule location, or base status"
+not_ready,189,candidate pairs,"Core comparison fields are unresolved or incompatible","Exclude from value comparison","Additional normalization or exclusion"
+near_gap_ready_rescue,185,records,"Focused rescue resolved several fields but one explicit blocker remains","Prioritized repair queue","Link counterpart and repair named field"
+ready_for_matching_rescue,11,records,"Focused rescue produced records ready to seek a safety/non-safety counterpart","Matching input","Pair within municipality-cycle and validate"

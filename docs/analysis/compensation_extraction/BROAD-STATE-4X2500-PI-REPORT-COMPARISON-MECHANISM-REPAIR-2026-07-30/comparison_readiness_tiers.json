@@ -1,0 +1,47 @@
+{
+  "tiers": [
+    {
+      "tier": "position_schedule_comparable",
+      "count": 1,
+      "unit": "validated candidate",
+      "report_use": "supporting bounded local documentary comparison"
+    },
+    {
+      "tier": "conditional_specific_blocker",
+      "count": 3,
+      "unit": "validated candidates",
+      "report_use": "qualified supporting, counterexample, or limits use"
+    },
+    {
+      "tier": "structurally_compatible_candidate_review",
+      "count": 27,
+      "unit": "candidate pairs",
+      "report_use": "candidate-review queue, not pooled analysis"
+    },
+    {
+      "tier": "moderate_manual_review",
+      "count": 87,
+      "unit": "candidate pairs",
+      "report_use": "structure/context only"
+    },
+    {
+      "tier": "not_ready",
+      "count": 189,
+      "unit": "candidate pairs",
+      "report_use": "exclude from value comparison"
+    },
+    {
+      "tier": "near_gap_ready_rescue",
+      "count": 185,
+      "unit": "records",
+      "report_use": "prioritized repair queue"
+    },
+    {
+      "tier": "ready_for_matching_rescue",
+      "count": 11,
+      "unit": "records",
+      "report_use": "matching input"
+    }
+  ],
+  "note": "Tier counts use different units and are not additive across rows. Candidate-level validation is the promotion gate."
+}

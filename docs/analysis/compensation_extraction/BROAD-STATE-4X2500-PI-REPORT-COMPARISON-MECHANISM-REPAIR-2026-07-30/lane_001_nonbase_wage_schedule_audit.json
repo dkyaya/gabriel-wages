@@ -1,0 +1,195 @@
+{
+  "task_id": "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30",
+  "lane_id": "lane_001_nonbase_wage_schedule_audit",
+  "status": "completed",
+  "scope": "Existing valid rated, codified, normalized, rescue, bounded-comparison, and PI-report artifacts only.",
+  "source_artifacts": [
+    "BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.jsonl",
+    "BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.jsonl",
+    "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.jsonl",
+    "BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/normalized_quantitative_records.jsonl",
+    "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/merged_normalization_rescue_results.jsonl",
+    "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/merged_bounded_wage_differential_validation_results.jsonl",
+    "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/comparability_validation_report.json",
+    "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md"
+  ],
+  "reconciled_counts": {
+    "valid_ratings": 18554,
+    "non_base_compensation_signals": 3718,
+    "direct_base_wage_value_signals": 2687,
+    "explicit_schedule_tagged_spans": 661,
+    "nonbase_non_safety_side_confirmed": 226,
+    "nonbase_side_unclear": 1964,
+    "direct_value_non_safety_side_confirmed": 319,
+    "direct_value_side_unclear": 1439,
+    "schedule_non_safety_side_confirmed": 35,
+    "schedule_side_unclear": 340
+  },
+  "normalization_support_now": {
+    "direct_base_wage_value_signals": {
+      "total": 2687,
+      "normalized_records": 2625,
+      "normalization_full": 533,
+      "normalization_partial": 1155,
+      "normalization_mechanism_only": 55,
+      "normalization_deferred_manual_review": 267,
+      "normalization_unusable": 615,
+      "without_normalized_record": 62,
+      "rescue_full_upgrades": 10,
+      "rescue_near_gap_ready": 168,
+      "effective_full_after_rescue": 543,
+      "interpretation": "The direct-value layer is quantitatively promising. It contains 533 fully normalized signals in the pre-rescue ledger, and rescue adds 10 full upgrades for an effective 543; another 168 are near-gap-ready. A direct-value signal does not itself establish schedule position or cross-occupation comparability."
+    },
+    "explicit_schedule_tagged_spans": {
+      "total": 661,
+      "normalization_full": 6,
+      "normalization_partial": 6,
+      "normalization_mechanism_only": 25,
+      "normalization_deferred_manual_review": 24,
+      "normalization_unusable": 600,
+      "rescue_full_upgrades": 0,
+      "rescue_near_gap_ready": 1,
+      "effective_full_after_rescue": 6,
+      "interpretation": "Most explicit schedule-tagged spans are headings, fragments, or incomplete schedule references. Rescue adds one near-gap-ready schedule span but no full upgrade. The report must not treat 661 schedule tags as 661 comparison-ready schedules."
+    },
+    "non_base_compensation_signals": {
+      "total": 3718,
+      "normalized_records": 3544,
+      "normalization_full": 140,
+      "normalization_partial": 400,
+      "normalization_mechanism_only": 93,
+      "normalization_deferred_manual_review": 39,
+      "normalization_unusable": 2872,
+      "without_normalized_record": 174,
+      "rescue_full_upgrades": 0,
+      "rescue_near_gap_ready": 4,
+      "effective_full_after_rescue": 140,
+      "interpretation": "The non-base layer strongly supports a documentary mechanism claim. Rescue adds four near-gap-ready records but no full upgrades; it is not yet a quantitative total-compensation comparison layer."
+    }
+  },
+  "bounded_comparison_support_now": {
+    "candidate_count": 4,
+    "validated_pi_report_usable": 1,
+    "validated_with_caveats_manual_review": 3,
+    "rejected": 0,
+    "candidate_summary": [
+      {
+        "municipality": "Shreve",
+        "state": "OH",
+        "status": "validated_pi_report_usable",
+        "support_now": "Same operative ordinance and hourly basis: part-time police $22.00/hour versus part-time utility clerk $16.00/hour, a bounded local documentary difference of $6.00/hour or 37.5%.",
+        "limit": "Named-position comparison; duties, experience, schedules, job requirements, and hours equivalence remain unmatched."
+      },
+      {
+        "municipality": "Cammack Village",
+        "state": "AR",
+        "status": "validated_with_caveats_manual_review",
+        "support_now": "Same 2024 schedule lists a part-time patrolman maximum of $25.00/hour and administrative-assistant maximum of $20.00/hour.",
+        "limit": "Authorized maxima, not established actual wages; enactment and occupational comparability require manual review."
+      },
+      {
+        "municipality": "Canastota",
+        "state": "NY",
+        "status": "validated_with_caveats_manual_review",
+        "support_now": "Same 2023-2024 schedule lists Police Officer Year 1 at $23.91/hour and Code Enforcement Officer at $24.82/hour, a bounded listed-rate contrast of -$0.91/hour or -3.67%.",
+        "limit": "A police entry step is not shown to match the non-safety position's tenure or schedule location."
+      },
+      {
+        "municipality": "Alburtis",
+        "state": "PA",
+        "status": "validated_with_caveats_manual_review",
+        "support_now": "The January-June 2018 overlap shows Chief of Police $33.57/hour and Administrative Assistant $11.22/hour.",
+        "limit": "Chief was outside the bargaining unit; role, rank, hours, and schedule position are not comparable. Limits/appendix only."
+      }
+    ],
+    "claim_boundary": "These are bounded local documentary position-rate statements. They do not support a final wage-gap estimate, cross-city average, national prevalence statement, regression, treatment effect, or causal claim."
+  },
+  "position_and_schedule_location_comparability_rules": [
+    {
+      "rule_id": "WS-COMP-01",
+      "rule": "Same municipality and overlapping effective period",
+      "required_evidence": "Both values must be operative in the same city and overlapping contract, fiscal, or calendar period. A broad document cycle cannot substitute for the actual rate window."
+    },
+    {
+      "rule_id": "WS-COMP-02",
+      "rule": "Same compensation concept",
+      "required_evidence": "Compare base with base or the same identified non-base component with that component. Do not mix salary, maximum authorization, total compensation, overtime, stipend, allowance, or premium values."
+    },
+    {
+      "rule_id": "WS-COMP-03",
+      "rule": "Compatible pay basis",
+      "required_evidence": "Hourly-to-hourly or annual-to-annual is preferred. A conversion requires explicit work hours or a separately flagged and defensible assumption; source-reported values remain preserved."
+    },
+    {
+      "rule_id": "WS-COMP-04",
+      "rule": "Position and occupation identified",
+      "required_evidence": "Both records need explicit occupation/classification labels and a clear police, fire, or non-safety assignment. Broad department or town-wide headings are insufficient."
+    },
+    {
+      "rule_id": "WS-COMP-05",
+      "rule": "Schedule-location alignment",
+      "required_evidence": "Match entry with entry, top with top, or the same tenure/step/grade/pay-band concept. A Year 1 officer may not be compared unqualified with an unlabeled or maximum non-safety rate."
+    },
+    {
+      "rule_id": "WS-COMP-06",
+      "rule": "Rank and responsibility alignment",
+      "required_evidence": "Chief, captain, supervisor, specialist, and line-worker rates are not interchangeable. If rank/responsibility is unmatched, retain only a named-position documentary contrast."
+    },
+    {
+      "rule_id": "WS-COMP-07",
+      "rule": "Employment-status and work-year alignment",
+      "required_evidence": "Full-time, part-time, seasonal, temporary, salaried-exempt, and hourly/non-exempt positions require like-status pairing or an explicit limitation. Workweek/work-year differences must be known before annualization."
+    },
+    {
+      "rule_id": "WS-COMP-08",
+      "rule": "Operative-status confirmation",
+      "required_evidence": "Confirm that an ordinance, schedule, award, or agreement was enacted, effective, and not merely proposed. Maximum ranges must be labeled as authorized maxima, not actual pay."
+    },
+    {
+      "rule_id": "WS-COMP-09",
+      "rule": "Bargaining-unit scope",
+      "required_evidence": "For the core design, identify each bargaining unit separately. A chief outside the unit, a town-wide ordinance line, or a discourse source may illustrate a local rate but does not become a matched unit-cycle row."
+    },
+    {
+      "rule_id": "WS-COMP-10",
+      "rule": "Non-base component symmetry",
+      "required_evidence": "A base-wage pairing is incomplete for total-compensation interpretation unless longevity, shift, hazard, certification, uniform, overtime-related, stipend, and allowance components are either aligned or explicitly excluded."
+    }
+  ],
+  "report_repairs_required": [
+    {
+      "current_or_risky_language": "2,687 direct wage schedules",
+      "safe_replacement": "2,687 direct base-wage/value signals, including 661 explicitly schedule-tagged spans; only six schedule-tagged spans are fully normalized in the current ledger.",
+      "reason": "The 2,687 count is driven by base_wage_direct_value_strength, not a complete-schedule validator."
+    },
+    {
+      "current_or_risky_language": "Non-base compensation is a safety-specific channel",
+      "safe_replacement": "Non-base compensation appears in both safety and non-safety records. Among side-resolved signals the evidence is safety-heavy, but more than half of the signal universe is side-unclear.",
+      "reason": "There are 226 controlled non-safety signals, while 1,964 of 3,718 are side-unclear."
+    },
+    {
+      "current_or_risky_language": "The corpus shows the safety/non-safety non-base gap",
+      "safe_replacement": "The current corpus documents non-base mechanisms on both sides, but it does not yet provide a matched total-compensation gap because component, period, and schedule-location alignment remain incomplete.",
+      "reason": "Only 140 non-base signals are fully normalized, and no matched total-compensation estimator was run."
+    }
+  ],
+  "final_conclusions": [
+    "Non-safety non-base examples exist and are source-grounded; the evidence is not safety-only.",
+    "The resolved non-base evidence is safety-heavy, but the 52.82% unclear-side share prevents a corpus-wide or prevalence conclusion.",
+    "Direct wage/value evidence is abundant, but the report must distinguish signals, schedule tags, fully normalized schedule rows, and comparison-ready matched records.",
+    "Current normalization supports mechanism descriptions and a small number of bounded position-rate examples, not a final safety/non-safety wage or total-compensation gap.",
+    "Position and schedule location—not municipality and year alone—must govern future pair construction."
+  ],
+  "forbidden_actions_audit": {
+    "ocr_performed": false,
+    "new_download_performed": false,
+    "new_source_review_performed": false,
+    "new_text_extraction_performed": false,
+    "new_rating_performed": false,
+    "quarantined_rating_ingested": false,
+    "final_wage_gap_estimate_created": false,
+    "national_or_population_prevalence_claim_created": false,
+    "regression_or_treatment_effect_run": false,
+    "causal_claim_created": false
+  }
+}
