@@ -97,7 +97,7 @@
   ],
   "stage": "broad_state_4x2500_mechanism_attributed_wage_growth_continuity_complete",
   "current_phase": "Mechanism-attributed wage-growth continuity complete",
-  "current_phase_code": "broad_state_4x2500_wage_growth_continuity_completed_local_ready_public_pending",
+  "current_phase_code": "broad_state_4x2500_wage_growth_continuity_completed_dashboard_ready",
   "current_evidence_status": "computed_and_source_reported_growth_weighted_with_tier_sensitivity",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,

@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "staged_file_count": 55,
+  "staged_file_count": 6,
   "prohibited_payload_count": 0,
   "prohibited_paths": [],
   "preexisting_untracked_excluded": [
@@ -9,224 +9,28 @@
   ],
   "staged_files": [
     {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/chronological_growth_candidate_ledger.csv",
-      "size_bytes": 343343
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/chronological_growth_candidate_ledger.jsonl",
-      "size_bytes": 661020
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/computed_cycle_to_cycle_growth_records.csv",
-      "size_bytes": 18868
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/computed_cycle_to_cycle_growth_records.jsonl",
-      "size_bytes": 35817
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_browser_smoke_report.json",
-      "size_bytes": 1429
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_browser_smoke_report.md",
-      "size_bytes": 654
-    },
-    {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_growth_module_update_summary.json",
-      "size_bytes": 405
+      "size_bytes": 638
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_public_pages_smoke_report.json",
-      "size_bytes": 483
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_wage_growth_chart_data.json",
-      "size_bytes": 32355
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_wage_growth_chart_summary.md",
-      "size_bytes": 248
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_wage_growth_claim_summary.json",
-      "size_bytes": 4460
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/dashboard_wage_growth_claim_summary.md",
-      "size_bytes": 585
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/forbidden_action_audit.json",
-      "size_bytes": 567
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_matched_cycle_only.csv",
-      "size_bytes": 3357
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_matched_cycle_only.json",
-      "size_bytes": 8959
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_municipality_cycle_weighted.csv",
-      "size_bytes": 27186
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_municipality_cycle_weighted.json",
-      "size_bytes": 74842
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_record_weighted.csv",
-      "size_bytes": 26037
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_record_weighted.json",
-      "size_bytes": 73681
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_sensitivity_summary.json",
-      "size_bytes": 47529
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_sensitivity_summary.md",
-      "size_bytes": 279
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_unit_cycle_weighted.csv",
-      "size_bytes": 26420
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_unit_cycle_weighted.json",
-      "size_bytes": 74068
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_calculation_audit.json",
-      "size_bytes": 315
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_calculation_audit.md",
-      "size_bytes": 194
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_continuity_claim_audit.json",
-      "size_bytes": 139
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_continuity_claim_audit.md",
-      "size_bytes": 210
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_record_exclusions.csv",
-      "size_bytes": 100810
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_record_exclusions.jsonl",
-      "size_bytes": 153393
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/large_file_audit.json",
-      "size_bytes": 98
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/matching_tier_audit.json",
-      "size_bytes": 526
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/matching_tier_audit.md",
-      "size_bytes": 230
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_attributed_growth_records.csv",
-      "size_bytes": 343343
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_attributed_growth_records.jsonl",
-      "size_bytes": 661020
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_attribution_summary.json",
-      "size_bytes": 566
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_attribution_summary.md",
-      "size_bytes": 240
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_growth_claim_candidates.json",
-      "size_bytes": 4460
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_growth_claim_candidates.md",
-      "size_bytes": 1089
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/next_task.md",
-      "size_bytes": 306
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/source_reported_growth_rate_records.csv",
-      "size_bytes": 313027
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/source_reported_growth_rate_records.jsonl",
-      "size_bytes": 625203
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/staged_file_audit.json",
-      "size_bytes": 10799
+      "size_bytes": 1626
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/validation_report.json",
-      "size_bytes": 1376
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/validation_report.md",
-      "size_bytes": 124
+      "size_bytes": 1389
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/wage_growth_continuity_manifest.json",
-      "size_bytes": 1617
+      "size_bytes": 1739
     },
     {
       "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/wage_growth_continuity_summary.json",
-      "size_bytes": 1147
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/wage_growth_continuity_summary.md",
-      "size_bytes": 1758
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/weighting_method_audit.json",
-      "size_bytes": 379
-    },
-    {
-      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/weighting_method_audit.md",
-      "size_bytes": 225
+      "size_bytes": 1165
     },
     {
       "path": "docs/dashboard/data/project_phase_summary.json",
-      "size_bytes": 204807
-    },
-    {
-      "path": "docs/dashboard/data/wage_growth_continuity.json",
-      "size_bytes": 32355
-    },
-    {
-      "path": "docs/dashboard/src/App.jsx",
-      "size_bytes": 18147
-    },
-    {
-      "path": "docs/dashboard/src/styles.css",
-      "size_bytes": 46904
-    },
-    {
-      "path": "scripts/build_dashboard_data.py",
-      "size_bytes": 1047527
-    },
-    {
-      "path": "scripts/run_broad_state_4x2500_wage_growth_continuity.py",
-      "size_bytes": 60479
+      "size_bytes": 204796
     }
   ]
 }

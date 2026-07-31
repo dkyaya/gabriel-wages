@@ -1,6 +1,6 @@
 {
   "task_id": "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31",
-  "decision": "broad_state_4x2500_wage_growth_continuity_completed_local_ready_public_pending",
+  "decision": "broad_state_4x2500_wage_growth_continuity_completed_dashboard_ready",
   "generated_at": "2026-07-31T14:47:51Z",
   "head_before": "30ea71276af07e1ffb0778cfc4cb943b01917055",
   "normalized_input_count": 11548,

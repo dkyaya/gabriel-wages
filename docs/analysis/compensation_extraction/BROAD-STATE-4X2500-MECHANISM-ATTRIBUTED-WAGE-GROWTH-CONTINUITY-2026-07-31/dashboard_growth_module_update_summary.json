@@ -1,9 +1,14 @@
 {
-  "status": "dashboard_data_ready_ui_build_pending",
+  "status": "dashboard_module_deployed_public_static_validated",
   "chart_title": "Mechanism-attributed wage growth in the processed corpus",
   "dashboard_data_path": "docs/dashboard/data/wage_growth_continuity.json",
   "default_weighting_method": "unit_cycle_weighted_average",
   "clean_dashboard_structure_preserved": true,
   "map_primary_metric": "scout_coverage_rate",
-  "current_report_link_preserved": true
+  "current_report_link_preserved": true,
+  "local_build_passed": true,
+  "local_static_smoke_passed": true,
+  "public_static_smoke_passed": true,
+  "public_visual_smoke": "browser_controller_unavailable_not_claimed",
+  "deployment_workflow_run_id": 30640804951
 }
