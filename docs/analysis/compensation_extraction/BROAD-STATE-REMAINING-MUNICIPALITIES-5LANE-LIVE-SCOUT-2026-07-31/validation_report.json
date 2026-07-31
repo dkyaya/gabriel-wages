@@ -30,10 +30,10 @@
     "28_dashboard_browser_unavailable_honestly_recorded": true,
     "29_final_pi_report_link_intact": true,
     "30_wage_growth_module_intact": true,
-    "31_dashboard_public_validation_pending_post_push": true
+    "31_dashboard_public_static_validation_passed": true
   },
   "decision": "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
   "live_backend_preflight_passed": false,
   "passed": true,
-  "status": "safe_preflight_stop_validated_public_pages_pending_post_push"
+  "status": "safe_preflight_stop_fully_validated"
 }

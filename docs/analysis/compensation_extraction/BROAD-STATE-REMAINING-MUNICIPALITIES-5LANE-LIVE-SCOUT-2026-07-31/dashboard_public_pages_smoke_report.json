@@ -1,9 +1,21 @@
 {
-  "status": "pending_commit_push_and_pages_deployment",
-  "checked_at_utc": null,
+  "status": "passed_static_public_validation",
+  "checked_at_utc": "2026-07-31T19:17:06Z",
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
-  "cache_busting_query": null,
+  "cache_busting_query": "?dashboard_smoke=20260731_remaining_live_scout_a7f4cdc1_1909",
+  "deployment_workflow_run_id": 30657727199,
+  "deployed_commit": "a7f4cdc17c680b7f40e90095697fba8491f76e32",
   "visual_browser_validation_claimed": false,
-  "checks": {},
-  "limitation": "Public Pages validation must run after the safe preflight-stop package is committed, pushed, and deployed."
+  "checks": {
+    "dashboard_http_200": true,
+    "deployment_workflow_success": true,
+    "preflight_failed_stage_present": true,
+    "zero_targets_consumed_present": true,
+    "map_scout_coverage_rate_present": true,
+    "final_pi_report_link_present": true,
+    "final_pi_report_pdf_http_200": true,
+    "wage_growth_continuity_module_present": true,
+    "processed_corpus_caveat_present": true
+  },
+  "limitation": "The in-app browser runtime was unavailable. Public validation used the deployed HTML and JavaScript bundle plus direct HTTP checks; no visual-browser pass is claimed."
 }
