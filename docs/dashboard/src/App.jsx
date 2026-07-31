@@ -112,7 +112,7 @@ function App() {
             <p className="pi-deck">A cross-occupation evidence project focused on documentary wage-growth mechanisms within cities and bargaining cycles.</p>
           </div>
           <a className="primary-report-link" href={currentReport?.href} target="_blank" rel="noreferrer">
-            Open current evidence report
+            {currentReport?.link_label ?? "Open current evidence report"}
           </a>
         </header>
 

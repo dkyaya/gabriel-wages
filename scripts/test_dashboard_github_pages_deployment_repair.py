@@ -216,6 +216,23 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                     phase["next_task"],
                                                     "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
                                                 )
+                                                published_pdf = (
+                                                    ROOT
+                                                    / "docs/dashboard/public/reports/"
+                                                    "pi_report_final_2026-07-30/"
+                                                    "pi_report_final_2026-07-30.pdf"
+                                                )
+                                                if published_pdf.exists():
+                                                    self.assertTrue(
+                                                        phase[
+                                                            "broad_state_4x2500_pi_report_pdf_published"
+                                                        ]
+                                                    )
+                                                    self.assertEqual(
+                                                        phase["current_report_path"],
+                                                        "reports/pi_report_final_2026-07-30/"
+                                                        "pi_report_final_2026-07-30.pdf",
+                                                    )
                                             else:
                                                 self.assertEqual(
                                                     phase["current_phase"],

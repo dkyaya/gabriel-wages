@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-31T02:28:32Z",
+  "generated_at": "2026-07-31T03:45:18Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -1001,8 +1001,8 @@
   },
   "global_readiness_gate_status": "completed_with_partial_readiness_next_scout_prep_ready",
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
-  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/pi_report_final_2026-07-30.md",
-  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/pi_report_final_2026-07-30.md",
+  "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "next_task": "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
@@ -6109,5 +6109,9 @@
   "broad_state_4x2500_pi_report_final_available": true,
   "pi_report_final_claim_count": 16,
   "pi_report_final_number_crosscheck_passed": true,
-  "pi_report_final_forbidden_claim_audit_passed": true
+  "pi_report_final_forbidden_claim_audit_passed": true,
+  "broad_state_4x2500_pi_report_pdf_published": true,
+  "current_report_markdown_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.md",
+  "current_report_format": "polished_crimson_pdf",
+  "current_report_publication_status": "dashboard_public_asset_ready"
 }

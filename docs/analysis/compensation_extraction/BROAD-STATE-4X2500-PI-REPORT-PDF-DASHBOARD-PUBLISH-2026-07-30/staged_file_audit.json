@@ -1,0 +1,12 @@
+{
+  "audited_at": "2026-07-31T03:47:36.318524Z",
+  "passed": true,
+  "staged_file_count": 38,
+  "prohibited_payload_count": 0,
+  "prohibited_paths": [],
+  "allowed_published_pdf": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "preexisting_untracked_excluded": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "package-lock.json"
+  ]
+}

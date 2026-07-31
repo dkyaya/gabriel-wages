@@ -1,0 +1,19 @@
+{
+  "built_at": "2026-07-31T03:44:20.637043Z",
+  "source_path": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.md",
+  "output_path": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "output_bytes": 86986,
+  "output_sha256": "28b0aba9713d877dfe9b96906a98da78e3762894e6efcbbeffac8062e9d1664a",
+  "style": {
+    "style_name": "Gabriel Wages PI-report crimson",
+    "crimson_hex": "#A51C30",
+    "green_accents_used": false,
+    "serif_font": "PI-Georgia",
+    "serif_bold_font": "PI-Georgia-Bold",
+    "sans_font": "PI-Arial",
+    "sans_bold_font": "PI-Arial-Bold",
+    "page_size": "US Letter",
+    "bookmarks_requested": true
+  },
+  "substantive_report_text_changed": false
+}

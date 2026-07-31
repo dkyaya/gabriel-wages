@@ -1750,6 +1750,19 @@ BROAD_STATE_4X2500_PI_REPORT_FINALIZE_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30"
 )
+BROAD_STATE_4X2500_PI_REPORT_PDF_PUBLISH_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30"
+)
+BROAD_STATE_4X2500_PI_REPORT_PUBLIC_DIR = (
+    ROOT
+    / "docs"
+    / "dashboard"
+    / "public"
+    / "reports"
+    / "pi_report_final_2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6807,6 +6820,44 @@ def broad_state_4x2500_pi_report_finalize_status() -> tuple[bool, dict[str, Any]
     }
 
 
+def broad_state_4x2500_pi_report_pdf_publish_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the validated public crimson PDF without changing report claims."""
+    directory = BROAD_STATE_4X2500_PI_REPORT_PDF_PUBLISH_DIR
+    public_directory = BROAD_STATE_4X2500_PI_REPORT_PUBLIC_DIR
+    required = (
+        directory / "report_source_validation.json",
+        directory / "report_pdf_build_report.json",
+        directory / "report_pdf_visual_or_static_validation.json",
+        directory / "forbidden_action_audit.json",
+        public_directory / "pi_report_final_2026-07-30.pdf",
+        public_directory / "pi_report_final_2026-07-30.md",
+        public_directory / "pi_report_final_2026-07-30_manifest.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    source = read_json(directory / "report_source_validation.json")
+    visual = read_json(directory / "report_pdf_visual_or_static_validation.json")
+    forbidden = read_json(directory / "forbidden_action_audit.json")
+    manifest = read_json(
+        public_directory / "pi_report_final_2026-07-30_manifest.json"
+    )
+    static = visual.get("static_validation", {})
+    gates = (
+        source.get("passed") is True
+        and static.get("static_validation_passed") is True
+        and visual.get("manual_visual_inspection_passed") is True
+        and manifest.get("crimson_style") is True
+        and manifest.get("green_style") is False
+        and manifest.get("substantive_analysis_changed") is False
+        and manifest.get("dashboard_pdf_href")
+        == "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf"
+        and forbidden.get("passed") is True
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 final PI report PDF publication fails gates")
+    return True, manifest
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6963,6 +7014,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_pi_report_final_available, broad_4x2500_pi_report_final = (
         broad_state_4x2500_pi_report_finalize_status()
+    )
+    broad_4x2500_pi_report_pdf_available, broad_4x2500_pi_report_pdf = (
+        broad_state_4x2500_pi_report_pdf_publish_status()
     )
     published_reports = [
         *(
@@ -7904,8 +7958,17 @@ def build_reports_index_layer(
             "tags": ["current", "broad scout", "4x2500", "PI report", "final", "send ready"],
             "current": True,
             "historical": False,
-            "href": repository_root_url + broad_4x2500_pi_report_final["dashboard_result_path"],
-            "link_label": "Open final PI-facing research report",
+            "href": (
+                broad_4x2500_pi_report_pdf["dashboard_pdf_href"]
+                if broad_4x2500_pi_report_pdf_available
+                else repository_root_url
+                + broad_4x2500_pi_report_final["dashboard_result_path"]
+            ),
+            "link_label": (
+                "Open final PI report PDF"
+                if broad_4x2500_pi_report_pdf_available
+                else "Open final PI-facing research report"
+            ),
             "scope_metrics": [
                 {"label": "comparative claims", "value": broad_4x2500_pi_report_final["final_claim_count"]},
                 {"label": "bounded local comparisons", "value": 4},
@@ -10452,6 +10515,9 @@ def build_project_phase_summary(
     broad_4x2500_pi_report_final_available, broad_4x2500_pi_report_final = (
         broad_state_4x2500_pi_report_finalize_status()
     )
+    broad_4x2500_pi_report_pdf_available, broad_4x2500_pi_report_pdf = (
+        broad_state_4x2500_pi_report_pdf_publish_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11771,6 +11837,19 @@ def build_project_phase_summary(
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "bounded_local_documentary_examples_only_final_estimation_blocked",
             "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if broad_4x2500_pi_report_pdf_available:
+        payload.update({
+            "broad_state_4x2500_pi_report_pdf_published": True,
+            "current_report_path": broad_4x2500_pi_report_pdf["dashboard_pdf_href"],
+            "current_report_markdown_path": broad_4x2500_pi_report_pdf[
+                "dashboard_markdown_href"
+            ],
+            "current_operational_report_path": broad_4x2500_pi_report_pdf[
+                "dashboard_pdf_href"
+            ],
+            "current_report_format": "polished_crimson_pdf",
+            "current_report_publication_status": "dashboard_public_asset_ready",
         })
     return payload
 

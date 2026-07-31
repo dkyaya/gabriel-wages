@@ -1,0 +1,14 @@
+{
+  "status": "dashboard_link_updated_local_build_and_static_smoke_passed",
+  "current_stage": "PI report final complete",
+  "report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+  "dashboard_pdf_href": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "dashboard_markdown_href": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.md",
+  "current_report_button_label": "Open final PI report PDF",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
+  "clean_dashboard_structure_preserved": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "raw_scout_count_context_only": true,
+  "dashboard_build_passed": true,
+  "local_static_smoke_passed": true
+}

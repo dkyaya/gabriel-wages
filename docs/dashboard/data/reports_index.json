@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-31T02:28:32Z",
+  "generated_at": "2026-07-31T03:45:18Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
@@ -21,8 +21,8 @@
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/pi_report_final_2026-07-30.md",
-      "link_label": "Open final PI-facing research report",
+      "href": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+      "link_label": "Open final PI report PDF",
       "scope_metrics": [
         {
           "label": "comparative claims",

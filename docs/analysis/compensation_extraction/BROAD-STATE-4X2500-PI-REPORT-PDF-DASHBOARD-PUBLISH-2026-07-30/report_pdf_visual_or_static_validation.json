@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-07-31T03:44:31.132909Z",
+  "status": "rendered_sample_pages_visually_inspected_passed",
+  "rendering": {
+    "renderer": "pdftoppm",
+    "render_dpi": 125,
+    "rendered_page_count": 9,
+    "render_directory": "tmp/pdfs/pi_report_final_2026-07-30",
+    "page_image_dimensions": {
+      "page-1.png": [
+        1063,
+        1375
+      ],
+      "page-2.png": [
+        1063,
+        1375
+      ],
+      "page-3.png": [
+        1063,
+        1375
+      ],
+      "page-4.png": [
+        1063,
+        1375
+      ],
+      "page-5.png": [
+        1063,
+        1375
+      ],
+      "page-6.png": [
+        1063,
+        1375
+      ],
+      "page-7.png": [
+        1063,
+        1375
+      ],
+      "page-8.png": [
+        1063,
+        1375
+      ],
+      "page-9.png": [
+        1063,
+        1375
+      ]
+    }
+  },
+  "sample_page_numbers": {
+    "executive_summary": 2,
+    "findings": 4,
+    "bounded_table": 2,
+    "final_page": 9
+  },
+  "sample_render_paths": {
+    "executive_summary": "tmp/pdfs/pi_report_final_2026-07-30/page-02.png",
+    "findings": "tmp/pdfs/pi_report_final_2026-07-30/page-04.png",
+    "bounded_table": "tmp/pdfs/pi_report_final_2026-07-30/page-02.png",
+    "final_page": "tmp/pdfs/pi_report_final_2026-07-30/page-09.png"
+  },
+  "manual_visual_inspection_passed": true,
+  "visual_checks": {
+    "cover_crimson_and_not_green": true,
+    "findings_page_readable": true,
+    "table_page_readable": true,
+    "final_page_readable": true,
+    "no_obvious_clipping_or_overlap": true
+  },
+  "static_validation": {
+    "checked_at": "2026-07-31T03:44:20.999723Z",
+    "pdf_path": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+    "pdf_bytes": 86986,
+    "pdf_sha256": "28b0aba9713d877dfe9b96906a98da78e3762894e6efcbbeffac8062e9d1664a",
+    "page_count": 9,
+    "is_encrypted": false,
+    "pdf_metadata": {
+      "/Author": "Gabriel Wages Research Project",
+      "/CreationDate": "D:20000101000000+00'00'",
+      "/Creator": "scripts/run_broad_state_4x2500_pi_report_pdf_dashboard_publish.py",
+      "/Keywords": "",
+      "/ModDate": "D:20000101000000+00'00'",
+      "/Producer": "ReportLab PDF Library - (opensource)",
+      "/Subject": "Final PI-facing report on public-safety and municipal wage-growth mechanisms",
+      "/Title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+      "/Trapped": "/False"
+    },
+    "outline_or_bookmarks_present": true,
+    "detected_table_count": 5,
+    "out_of_bounds_character_count": 0,
+    "crimson_color_operator_count": 23,
+    "green_color_operator_count": 0,
+    "sample_page_numbers": {
+      "executive_summary": 2,
+      "findings": 4,
+      "bounded_table": 2,
+      "final_page": 9
+    },
+    "checks": {
+      "file_exists": true,
+      "nonzero_size": true,
+      "structurally_opened": true,
+      "not_encrypted": true,
+      "more_than_one_page": true,
+      "expected_title_present": true,
+      "seven_sections_present": true,
+      "no_prompt_or_task_text": true,
+      "claim_boundary_note_present": true,
+      "crimson_graphics_detected": true,
+      "green_graphics_not_detected": true,
+      "tables_detected": true,
+      "no_out_of_bounds_text": true,
+      "pypdf_pdfplumber_page_counts_match": true
+    },
+    "static_validation_passed": true
+  }
+}

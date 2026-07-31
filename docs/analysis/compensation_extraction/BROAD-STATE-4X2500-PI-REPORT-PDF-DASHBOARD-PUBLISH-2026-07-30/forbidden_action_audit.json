@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-07-31T03:44:22.543198Z",
+  "passed": true,
+  "ocr_occurred": false,
+  "download_occurred": false,
+  "source_review_occurred": false,
+  "text_or_span_extraction_occurred": false,
+  "rating_occurred": false,
+  "ingestion_or_codification_occurred": false,
+  "normalization_or_matching_occurred": false,
+  "regression_or_treatment_effect_occurred": false,
+  "substantive_analysis_changed": false,
+  "global_readiness_advanced": false
+}

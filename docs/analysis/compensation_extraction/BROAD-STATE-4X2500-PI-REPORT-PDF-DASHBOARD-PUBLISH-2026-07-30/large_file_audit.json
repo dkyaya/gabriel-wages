@@ -1,0 +1,69 @@
+{
+  "audited_at": "2026-07-31T03:47:36.318591Z",
+  "passed": true,
+  "threshold_bytes": 25000000,
+  "large_file_count": 0,
+  "large_files": [],
+  "largest_staged_files": [
+    {
+      "path": "scripts/build_dashboard_data.py",
+      "bytes": 1042379
+    },
+    {
+      "path": "docs/dashboard/data/top_priority_targets.json",
+      "bytes": 217464
+    },
+    {
+      "path": "docs/dashboard/data/project_phase_summary.json",
+      "bytes": 204218
+    },
+    {
+      "path": "docs/dashboard/data/state_summary.json",
+      "bytes": 165323
+    },
+    {
+      "path": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+      "bytes": 86986
+    },
+    {
+      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
+      "bytes": 56812
+    },
+    {
+      "path": "docs/dashboard/data/scout_yield_by_state.json",
+      "bytes": 51681
+    },
+    {
+      "path": "scripts/run_broad_state_4x2500_pi_report_pdf_dashboard_publish.py",
+      "bytes": 47575
+    },
+    {
+      "path": "docs/dashboard/data/reports_index.json",
+      "bytes": 42538
+    },
+    {
+      "path": "docs/dashboard/data/state_priority_summary.json",
+      "bytes": 39561
+    },
+    {
+      "path": "docs/dashboard/data/analysis_readiness.json",
+      "bytes": 36433
+    },
+    {
+      "path": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.md",
+      "bytes": 30387
+    },
+    {
+      "path": "docs/dashboard/data/candidate_queue_summary.json",
+      "bytes": 27834
+    },
+    {
+      "path": "docs/dashboard/data/source_review_status_summary.json",
+      "bytes": 27241
+    },
+    {
+      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
+      "bytes": 18596
+    }
+  ]
+}

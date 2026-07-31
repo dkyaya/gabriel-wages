@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-07-31T03:44:20.587925Z",
+  "source_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/pi_report_final_2026-07-30.md",
+  "source_sha256": "ecf5b762781c6892060e731bff47e8307571b7dbfb990ed9bfaf1322de08eacc",
+  "source_bytes": 30387,
+  "checks": {
+    "source_exists": true,
+    "expected_title_present": true,
+    "seven_sections_present": true,
+    "not_prompt_or_task_file": true,
+    "finalization_decision_send_ready": true,
+    "number_crosscheck_passed": true,
+    "forbidden_claim_audit_passed": true
+  },
+  "passed": true
+}
