@@ -95,6 +95,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "bounded_local_documentary_candidates_require_final_manual_validation",
                 "bounded_local_documentary_validation_complete_final_estimation_blocked",
                 "bounded_local_documentary_examples_only_final_estimation_blocked",
+                "bounded_growth_continuity_only_final_estimation_blocked",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -208,14 +209,29 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                             )
                                             if pi_report_final_path.exists():
                                                 self.assertTrue(phase["broad_state_4x2500_pi_report_final_available"])
-                                                self.assertEqual(phase["current_phase"], "PI report final complete")
+                                                growth_continuity_path = (
+                                                    ROOT / "docs/analysis/compensation_extraction/"
+                                                    "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-"
+                                                    "CONTINUITY-2026-07-31/wage_growth_continuity_manifest.json"
+                                                )
+                                                if growth_continuity_path.exists():
+                                                    self.assertEqual(
+                                                        phase["current_phase"],
+                                                        "Mechanism-attributed wage-growth continuity complete",
+                                                    )
+                                                    self.assertEqual(
+                                                        phase["next_task"],
+                                                        "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
+                                                    )
+                                                else:
+                                                    self.assertEqual(phase["current_phase"], "PI report final complete")
+                                                    self.assertEqual(
+                                                        phase["next_task"],
+                                                        "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
+                                                    )
                                                 self.assertEqual(phase["pi_report_final_claim_count"], 16)
                                                 self.assertTrue(phase["pi_report_final_number_crosscheck_passed"])
                                                 self.assertTrue(phase["pi_report_final_forbidden_claim_audit_passed"])
-                                                self.assertEqual(
-                                                    phase["next_task"],
-                                                    "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
-                                                )
                                                 published_pdf = (
                                                     ROOT
                                                     / "docs/dashboard/public/reports/"
