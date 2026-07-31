@@ -1,15 +1,11 @@
 {
-  "audited_at": "2026-07-31T00:20:32.146486Z",
+  "audited_at": "2026-07-31T00:22:33.567747Z",
   "forbidden_staged_files": [],
   "passed": true,
-  "staged_file_count": 7,
+  "staged_file_count": 3,
   "staged_files": [
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/dashboard_bounded_gap_validation_update_summary.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/dashboard_public_pages_smoke_report.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/dashboard_public_smoke.png",
     "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/large_file_audit.json",
     "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/staged_file_audit.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/validation_report.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/validation_report.md"
+    "scripts/build_broad_state_4x2500_bounded_wage_differential_validation_relay.py"
   ]
 }
