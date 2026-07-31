@@ -142,18 +142,18 @@ function App() {
             <div className="pi-section-heading">
               <div>
                 <p className="eyebrow">Current bounded evidence</p>
-                <h2 id="evidence-title">Normalization rescue and source-grounded local comparisons</h2>
+                <h2 id="evidence-title">Source-grounded local comparisons after focused validation</h2>
               </div>
               <p>Raw values remain intact. Local documentary comparisons require final manual validation and are not final or national wage-gap estimates.</p>
             </div>
             <div className="pi-evidence-grid">
               <article><span>Partial records rescued</span><strong>{formatNumber(countFor("partial_records_repaired_count"))}</strong><p>{formatNumber(countFor("rescued_full_normalization_count"))} fully normalized · {formatNumber(countFor("rescued_gap_claim_ready_count"))} gap-claim ready · {formatNumber(countFor("rescued_near_gap_ready_count"))} near-ready</p></article>
               <article><span>Quantitative growth mechanisms</span><strong>{formatNumber(countFor("quantitatively_supported_growth_mechanism_claim_count"))}</strong><p>Source-reported percentages, COLA/CPI, schedules, or retroactive and lump-sum values</p></article>
-              <article><span>Bounded local comparisons</span><strong>{formatNumber(countFor("current_bounded_wage_differential_candidate_count"))}</strong><p>{formatNumber(countFor("current_bounded_growth_mechanism_comparison_candidate_count"))} matched growth-mechanism comparisons</p></article>
+              <article><span>Validated bounded comparisons</span><strong>{formatNumber(countFor("validated_bounded_wage_differential_candidate_count"))}</strong><p>{formatNumber(countFor("conditional_bounded_wage_differential_candidate_count"))} conditional · {formatNumber(countFor("rejected_bounded_wage_differential_candidate_count"))} rejected</p></article>
               <article><span>Source-grounded report examples</span><strong>{formatNumber(countFor("rescue_repaired_example_count"))}</strong><p>{formatNumber(countFor("future_gap_potential_only_count"))} matched cycles remain future-potential only</p></article>
             </div>
-            {countFor("current_bounded_wage_differential_candidate_count") > 0 && (
-              <p className="pi-inline-note"><strong>{formatNumber(countFor("current_bounded_wage_differential_candidate_count"))}</strong> matched municipality-cycle candidates support current bounded documentary differences. They are local evidence requiring final manual validation—not final, national, prevalence, or causal estimates.</p>
+            {countFor("bounded_validation_input_candidate_count") > 0 && (
+              <p className="pi-inline-note"><strong>{formatNumber(countFor("validated_bounded_wage_differential_candidate_count"))}</strong> candidate validates as a supporting bounded documentary comparison; <strong>{formatNumber(countFor("conditional_bounded_wage_differential_candidate_count"))}</strong> require candidate-specific manual review. None is a final, national, prevalence, policy-effect, or causal estimate.</p>
             )}
           </section>
 

@@ -1,0 +1,58 @@
+{
+  "all_calculations_confirmed": true,
+  "candidate_count": 4,
+  "rows": [
+    {
+      "calculation_check_status": "passed_recalculated_from_source_grounded_values",
+      "candidate_id": "B4X2500GAP-41d42064465db4099b779674",
+      "matches": true,
+      "municipality": "Alburtis",
+      "non_safety_value": 11.22,
+      "recalculated_difference": 22.35,
+      "recalculated_percent": 199.2,
+      "reported_difference": 22.35,
+      "reported_percent": 199.2,
+      "safety_value": 33.57,
+      "state": "PA"
+    },
+    {
+      "calculation_check_status": "confirmed_25_minus_20_equals_5_and_5_divided_by_20_equals_25_percent",
+      "candidate_id": "B4X2500GAP-4193e4d9ff2676c7d2680e77",
+      "matches": true,
+      "municipality": "Cammack Village",
+      "non_safety_value": 20.0,
+      "recalculated_difference": 5.0,
+      "recalculated_percent": 25.0,
+      "reported_difference": 5.0,
+      "reported_percent": 25.0,
+      "safety_value": 25.0,
+      "state": "AR"
+    },
+    {
+      "calculation_check_status": "passed_recalculated",
+      "candidate_id": "B4X2500GAP-498d2fdd8da985bf2455ab27",
+      "matches": true,
+      "municipality": "Canastota",
+      "non_safety_value": 24.82,
+      "recalculated_difference": -0.91,
+      "recalculated_percent": -3.67,
+      "reported_difference": -0.91,
+      "reported_percent": -3.67,
+      "safety_value": 23.91,
+      "state": "NY"
+    },
+    {
+      "calculation_check_status": "confirmed_22_minus_16_equals_6_and_6_divided_by_16_equals_37_5_percent",
+      "candidate_id": "B4X2500GAP-a27c57fde6a6f134fcd6ff7d",
+      "matches": true,
+      "municipality": "Shreve",
+      "non_safety_value": 16.0,
+      "recalculated_difference": 6.0,
+      "recalculated_percent": 37.5,
+      "reported_difference": 6.0,
+      "reported_percent": 37.5,
+      "safety_value": 22.0,
+      "state": "OH"
+    }
+  ]
+}

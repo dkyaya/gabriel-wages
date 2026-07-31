@@ -93,8 +93,12 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             {
                 "blocked_pending_normalization",
                 "bounded_local_documentary_candidates_require_final_manual_validation",
+                "bounded_local_documentary_validation_complete_final_estimation_blocked",
             },
         )
+        self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
+        self.assertEqual(phase["conditional_bounded_wage_differential_candidate_count"], 3)
+        self.assertEqual(phase["rejected_bounded_wage_differential_candidate_count"], 0)
         self.assertIn(
             phase["causal_analysis_readiness"],
             {"blocked_pending_matched_structure", "blocked_pending_stronger_causal_design"},
@@ -172,10 +176,19 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                             if rescue_summary_path.exists():
                                 rescue = json.loads(rescue_summary_path.read_text())
                                 self.assertTrue(phase["broad_state_4x2500_normalization_rescue_available"])
-                                self.assertEqual(
-                                    phase["current_phase"],
-                                    "Normalization rescue and bounded claims complete",
+                                bounded_validation_path = (
+                                    ROOT / "docs/analysis/compensation_extraction/"
+                                    "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/"
+                                    "bounded_wage_differential_validation_summary.json"
                                 )
+                                if bounded_validation_path.exists():
+                                    self.assertTrue(phase["broad_state_4x2500_bounded_wage_validation_available"])
+                                    self.assertEqual(phase["current_phase"], "Bounded wage-differential validation complete")
+                                else:
+                                    self.assertEqual(
+                                        phase["current_phase"],
+                                        "Normalization rescue and bounded claims complete",
+                                    )
                                 self.assertEqual(
                                     phase["current_bounded_wage_differential_candidate_count"],
                                     rescue["current_bounded_wage_differential_candidate_count"],

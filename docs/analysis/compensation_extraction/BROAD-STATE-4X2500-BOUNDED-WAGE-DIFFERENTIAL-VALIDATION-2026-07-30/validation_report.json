@@ -1,0 +1,41 @@
+{
+  "all_checks_passed": false,
+  "checks": {
+    "01_input_count_4": true,
+    "02_expected_municipalities": true,
+    "03_each_candidate_one_lane": true,
+    "04_each_lane_completed": true,
+    "05_one_final_status": true,
+    "06_values_source_grounded_or_rejected": true,
+    "07_pay_basis_valid_or_rejected": true,
+    "08_period_valid_or_rejected": true,
+    "09_base_status_valid_or_rejected": true,
+    "10_group_classification_valid_or_rejected": true,
+    "11_calculations_confirmed": true,
+    "12_statements_specific": true,
+    "13_no_final_gap": true,
+    "14_no_prevalence": true,
+    "15_no_regression": true,
+    "16_no_final_causal": true,
+    "17_no_ocr": true,
+    "18_no_new_download": true,
+    "19_no_new_rating": true,
+    "20_raw_values_preserved": true,
+    "21_dashboard_clean": true,
+    "22_map_rate": true,
+    "23_dashboard_build": true,
+    "24_local_browser": true,
+    "25_public_browser": false,
+    "26_global_not_advanced": true,
+    "27_no_payloads_tracked": true,
+    "28_staged_audit": true,
+    "29_large_audit": true,
+    "claim_language_boundary": true,
+    "summary_reconciles": true
+  },
+  "core_checks_passed": true,
+  "pending_checks": [
+    "25_public_browser"
+  ],
+  "validated_at": "2026-07-31T00:16:34.948487Z"
+}

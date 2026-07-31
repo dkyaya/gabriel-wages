@@ -1,39 +1,39 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-30T23:32:36Z",
+  "generated_at": "2026-07-31T00:14:00Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
-      "id": "broad-state-4x2500-normalization-rescue-gap-growth-claims-2026-07-30",
-      "title": "Broad State 4 × 2,500 Normalization Rescue and Bounded Claims",
-      "report_type": "Current targeted normalization rescue and bounded local documentary claim result",
+      "id": "broad-state-4x2500-bounded-wage-differential-validation-2026-07-30",
+      "title": "Broad State 4 × 2,500 Bounded Wage-Differential Validation",
+      "report_type": "Current focused source-grounded validation of four bounded local comparisons",
       "date": "2026-07-30",
-      "checkpoint": "4 bounded local wage-differential candidates",
-      "summary": "Partial and mechanism-only normalization records received a targeted four-lane rescue. The resulting source-grounded local comparisons and quantitative growth mechanisms require final manual validation and are not final, national, prevalence, or causal estimates.",
+      "checkpoint": "1 validated; 3 conditional",
+      "summary": "All four local documentary candidates were independently traced to retained sources and exact spans. One is PI-usable as a supporting example and three require candidate-specific manual review; none is a final, national, prevalence, policy-effect, or causal estimate.",
       "tags": [
         "current",
         "broad scout",
         "4x2500",
-        "normalization rescue",
-        "bounded local evidence"
+        "bounded wage validation",
+        "PI report"
       ],
       "current": true,
       "historical": false,
-      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/normalization_rescue_gap_growth_summary.md",
-      "link_label": "Open current normalization rescue evidence report",
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/bounded_wage_differential_validation_summary.md",
+      "link_label": "Open current bounded wage-validation report",
       "scope_metrics": [
         {
-          "label": "partial records repaired",
-          "value": 275
+          "label": "validated supporting comparisons",
+          "value": 1
         },
         {
-          "label": "quantitative growth mechanisms",
-          "value": 95
+          "label": "conditional/manual review",
+          "value": 3
         },
         {
-          "label": "bounded local comparisons",
-          "value": 4
+          "label": "rejected",
+          "value": 0
         }
       ]
     },
@@ -69,6 +69,38 @@
         {
           "label": "candidate rows",
           "value": 7014
+        }
+      ]
+    },
+    {
+      "id": "broad-state-4x2500-normalization-rescue-gap-growth-claims-2026-07-30",
+      "title": "Broad State 4 × 2,500 Normalization Rescue and Bounded Claims",
+      "report_type": "Current targeted normalization rescue and bounded local documentary claim result",
+      "date": "2026-07-30",
+      "checkpoint": "4 bounded local wage-differential candidates",
+      "summary": "Partial and mechanism-only normalization records received a targeted four-lane rescue. The resulting source-grounded local comparisons and quantitative growth mechanisms require final manual validation and are not final, national, prevalence, or causal estimates.",
+      "tags": [
+        "broad scout",
+        "4x2500",
+        "normalization rescue",
+        "bounded local evidence"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "https://github.com/dkyaya/gabriel-wages/blob/main/docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/normalization_rescue_gap_growth_summary.md",
+      "link_label": "Open current normalization rescue evidence report",
+      "scope_metrics": [
+        {
+          "label": "partial records repaired",
+          "value": 275
+        },
+        {
+          "label": "quantitative growth mechanisms",
+          "value": 95
+        },
+        {
+          "label": "bounded local comparisons",
+          "value": 4
         }
       ]
     },

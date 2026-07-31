@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-07-31T00:12:50.411592Z",
+  "decision": "broad_state_4x2500_bounded_wage_differential_validation_completed_pi_report_ready",
+  "input_head": "74c87c7836b6ce4a277df076db288791b06feaf1",
+  "lane_files": {
+    "validation_lane_001_alburtis_results.json": "f46f7c14fd530fd5f6c7d6a57b7d684ee6f4af8c741b850af91854ce8cd14e0e",
+    "validation_lane_002_cammack_village_results.json": "243336f418dda1b55fb75606860ce51b06a4b4ba98f22c1cf197f1ef8baf0664",
+    "validation_lane_003_canastota_results.json": "822961ecf24aa9aec3714b182f9422c9de824255c95d3e97287157a4a8ae13c3",
+    "validation_lane_004_shreve_results.json": "d6f77c853a914f7c1d090c0edfa7f12ee34cdaffb73cc9789de171faac720c3d"
+  },
+  "locked_queue_sha256": "2ce1acbbb56b97c0b5647794f8f240cc5566e156e46a2b5f37336f15d4fe345d",
+  "summary": {
+    "calculation_correction_count": 0,
+    "candidate_results": [
+      {
+        "difference": 22.35,
+        "municipality": "Alburtis",
+        "percent_relative_to_non_safety": 199.2,
+        "report_usability": "use_only_in_limits_or_appendix",
+        "state": "PA",
+        "validation_status": "validated_with_caveats_manual_review"
+      },
+      {
+        "difference": 5.0,
+        "municipality": "Cammack Village",
+        "percent_relative_to_non_safety": 25.0,
+        "report_usability": "use_as_supporting_example",
+        "state": "AR",
+        "validation_status": "validated_with_caveats_manual_review"
+      },
+      {
+        "difference": -0.91,
+        "municipality": "Canastota",
+        "percent_relative_to_non_safety": -3.67,
+        "report_usability": "use_as_supporting_example",
+        "state": "NY",
+        "validation_status": "validated_with_caveats_manual_review"
+      },
+      {
+        "difference": 6.0,
+        "municipality": "Shreve",
+        "percent_relative_to_non_safety": 37.5,
+        "report_usability": "use_as_supporting_example",
+        "state": "OH",
+        "validation_status": "validated_pi_report_usable"
+      }
+    ],
+    "conditional_manual_review_count": 3,
+    "decision": "broad_state_4x2500_bounded_wage_differential_validation_completed_pi_report_ready",
+    "downgraded_or_rejected_count": 0,
+    "final_causal_claim_made": false,
+    "final_wage_gap_estimate_claimed": false,
+    "generated_at": "2026-07-31T00:12:50.411315Z",
+    "global_analysis_readiness": false,
+    "input_candidate_count": 4,
+    "lane_distribution": {
+      "validation_lane_001": 1,
+      "validation_lane_002": 1,
+      "validation_lane_003": 1,
+      "validation_lane_004": 1
+    },
+    "national_or_population_prevalence_claimed": false,
+    "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+    "regression_or_treatment_effect_run": false,
+    "substantive_interpretation_correction_count": 3,
+    "task_id": "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30",
+    "validated_pi_report_usable_count": 1
+  },
+  "task_id": "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30"
+}

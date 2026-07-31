@@ -1,0 +1,15 @@
+{
+  "clean_dashboard_structure_preserved": true,
+  "conditional_manual_review_count": 3,
+  "current_stage": "Bounded wage-differential validation complete",
+  "downgraded_or_rejected_count": 0,
+  "final_wage_gap_estimate_claimed": false,
+  "global_analysis_readiness": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "status": "local_dashboard_visible_current_passed",
+  "build_passed": true,
+  "local_browser_smoke_passed": true,
+  "public_pages_smoke_status": "pending_commit_push_deployment",
+  "validated_pi_report_usable_count": 1
+}

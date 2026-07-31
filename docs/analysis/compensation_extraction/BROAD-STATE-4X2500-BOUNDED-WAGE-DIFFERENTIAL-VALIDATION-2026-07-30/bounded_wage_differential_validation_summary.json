@@ -1,0 +1,57 @@
+{
+  "calculation_correction_count": 0,
+  "candidate_results": [
+    {
+      "difference": 22.35,
+      "municipality": "Alburtis",
+      "percent_relative_to_non_safety": 199.2,
+      "report_usability": "use_only_in_limits_or_appendix",
+      "state": "PA",
+      "validation_status": "validated_with_caveats_manual_review"
+    },
+    {
+      "difference": 5.0,
+      "municipality": "Cammack Village",
+      "percent_relative_to_non_safety": 25.0,
+      "report_usability": "use_as_supporting_example",
+      "state": "AR",
+      "validation_status": "validated_with_caveats_manual_review"
+    },
+    {
+      "difference": -0.91,
+      "municipality": "Canastota",
+      "percent_relative_to_non_safety": -3.67,
+      "report_usability": "use_as_supporting_example",
+      "state": "NY",
+      "validation_status": "validated_with_caveats_manual_review"
+    },
+    {
+      "difference": 6.0,
+      "municipality": "Shreve",
+      "percent_relative_to_non_safety": 37.5,
+      "report_usability": "use_as_supporting_example",
+      "state": "OH",
+      "validation_status": "validated_pi_report_usable"
+    }
+  ],
+  "conditional_manual_review_count": 3,
+  "decision": "broad_state_4x2500_bounded_wage_differential_validation_completed_pi_report_ready",
+  "downgraded_or_rejected_count": 0,
+  "final_causal_claim_made": false,
+  "final_wage_gap_estimate_claimed": false,
+  "generated_at": "2026-07-31T00:12:50.411315Z",
+  "global_analysis_readiness": false,
+  "input_candidate_count": 4,
+  "lane_distribution": {
+    "validation_lane_001": 1,
+    "validation_lane_002": 1,
+    "validation_lane_003": 1,
+    "validation_lane_004": 1
+  },
+  "national_or_population_prevalence_claimed": false,
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "regression_or_treatment_effect_run": false,
+  "substantive_interpretation_correction_count": 3,
+  "task_id": "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30",
+  "validated_pi_report_usable_count": 1
+}

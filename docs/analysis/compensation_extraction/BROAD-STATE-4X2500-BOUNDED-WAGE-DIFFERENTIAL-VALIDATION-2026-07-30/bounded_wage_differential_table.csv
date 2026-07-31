@@ -1,0 +1,5 @@
+caveat_level,difference,municipality,non_safety_group,non_safety_value,pay_basis,percent_relative_to_non_safety,period,report_usability,safety_group,safety_value,state,validation_status
+heavy,22.35,Alburtis,Administrative Assistant; non-uniformed clerical/administrative municipal position,11.22,hourly,199.2,2018-01-01 through 2018-06-30 overlapping rate window; source ordinance and police award cycle labeled 2018-2021,use_only_in_limits_or_appendix,"Chief of Police; safety/police position, explicitly outside the police bargaining unit at the time of the ordinance",33.57,PA,validated_with_caveats_manual_review
+heavy,5.0,Cammack Village,Administrative Assistant (clerical/admin),20.0,hourly,25.0,2024,use_as_supporting_example,Part Time Patrolman (police),25.0,AR,validated_with_caveats_manual_review
+heavy,-0.91,Canastota,Code Enforcement Officer,24.82,hourly,-3.67,2023-2024,use_as_supporting_example,"Police Officer step plan, Year 1, for officers hired after 1999",23.91,NY,validated_with_caveats_manual_review
+moderate,6.0,Shreve,part-time utility clerk,16.0,hourly,37.5,2024,use_as_supporting_example,part-time police officers,22.0,OH,validated_pi_report_usable

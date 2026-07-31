@@ -10,18 +10,18 @@ The main page answers six questions:
 
 1. What is the current project stage?
 2. How much geographic scout coverage exists, measured as a rate?
-3. What did the targeted normalization rescue yield, including bounded local comparisons and quantitative growth mechanisms?
+3. Which bounded local comparisons survived focused source-grounded validation, and which remain conditional?
 4. Which documentary wage-growth mechanisms remain strongest after normalization and matching?
 5. What careful claims are allowed, and what analyses remain blocked?
 6. What is the one next task?
 
-The current stage is targeted normalization rescue and bounded gap/growth claim strengthening. The next task is `BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30`. Raw compensation values remain preserved beside rescued fields, and matching is restricted to source-grounded documentary comparison candidates in the 2014–2024 observation window. Where matched evidence is sufficiently specific, the dashboard reports bounded local documentary differences that require final manual validation—not final or national wage-gap estimates, population-prevalence findings, or causal conclusions.
+The current stage is focused bounded wage-differential validation. The next task is `BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30`. All four candidate comparisons were traced to retained sources and exact spans: one validates as a PI-report supporting example, while three remain conditional on candidate-specific manual, legal, or substantive review. Raw compensation values remain preserved, and none of these results is a final or national wage-gap estimate, population-prevalence finding, policy-effect result, or causal conclusion.
 
 The main information architecture is deliberately narrow:
 
 - one status strip;
 - one scout-coverage-rate map;
-- four current rescue and bounded-evidence figures;
+- four current evidence figures, including one validated and three conditional bounded comparisons;
 - one compact mechanism preview;
 - one claim-boundary panel; and
 - one collapsed technical-audit disclosure.

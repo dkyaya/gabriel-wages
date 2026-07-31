@@ -1,0 +1,65 @@
+{
+  "count": 4,
+  "rows": [
+    {
+      "caveat_level": "heavy",
+      "difference": 22.35,
+      "municipality": "Alburtis",
+      "non_safety_group": "Administrative Assistant; non-uniformed clerical/administrative municipal position",
+      "non_safety_value": 11.22,
+      "pay_basis": "hourly",
+      "percent_relative_to_non_safety": 199.2,
+      "period": "2018-01-01 through 2018-06-30 overlapping rate window; source ordinance and police award cycle labeled 2018-2021",
+      "report_usability": "use_only_in_limits_or_appendix",
+      "safety_group": "Chief of Police; safety/police position, explicitly outside the police bargaining unit at the time of the ordinance",
+      "safety_value": 33.57,
+      "state": "PA",
+      "validation_status": "validated_with_caveats_manual_review"
+    },
+    {
+      "caveat_level": "heavy",
+      "difference": 5.0,
+      "municipality": "Cammack Village",
+      "non_safety_group": "Administrative Assistant (clerical/admin)",
+      "non_safety_value": 20.0,
+      "pay_basis": "hourly",
+      "percent_relative_to_non_safety": 25.0,
+      "period": "2024",
+      "report_usability": "use_as_supporting_example",
+      "safety_group": "Part Time Patrolman (police)",
+      "safety_value": 25.0,
+      "state": "AR",
+      "validation_status": "validated_with_caveats_manual_review"
+    },
+    {
+      "caveat_level": "heavy",
+      "difference": -0.91,
+      "municipality": "Canastota",
+      "non_safety_group": "Code Enforcement Officer",
+      "non_safety_value": 24.82,
+      "pay_basis": "hourly",
+      "percent_relative_to_non_safety": -3.67,
+      "period": "2023-2024",
+      "report_usability": "use_as_supporting_example",
+      "safety_group": "Police Officer step plan, Year 1, for officers hired after 1999",
+      "safety_value": 23.91,
+      "state": "NY",
+      "validation_status": "validated_with_caveats_manual_review"
+    },
+    {
+      "caveat_level": "moderate",
+      "difference": 6.0,
+      "municipality": "Shreve",
+      "non_safety_group": "part-time utility clerk",
+      "non_safety_value": 16.0,
+      "pay_basis": "hourly",
+      "percent_relative_to_non_safety": 37.5,
+      "period": "2024",
+      "report_usability": "use_as_supporting_example",
+      "safety_group": "part-time police officers",
+      "safety_value": 22.0,
+      "state": "OH",
+      "validation_status": "validated_pi_report_usable"
+    }
+  ]
+}

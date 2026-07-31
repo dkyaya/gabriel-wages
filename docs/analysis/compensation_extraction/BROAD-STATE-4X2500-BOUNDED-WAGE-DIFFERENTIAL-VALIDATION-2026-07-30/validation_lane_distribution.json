@@ -1,0 +1,27 @@
+{
+  "all_lanes_start_immediately": true,
+  "lanes": {
+    "validation_lane_001": {
+      "count": 1,
+      "municipality": "Alburtis",
+      "state": "PA"
+    },
+    "validation_lane_002": {
+      "count": 1,
+      "municipality": "Cammack Village",
+      "state": "AR"
+    },
+    "validation_lane_003": {
+      "count": 1,
+      "municipality": "Canastota",
+      "state": "NY"
+    },
+    "validation_lane_004": {
+      "count": 1,
+      "municipality": "Shreve",
+      "state": "OH"
+    }
+  },
+  "one_candidate_per_lane": true,
+  "total": 4
+}

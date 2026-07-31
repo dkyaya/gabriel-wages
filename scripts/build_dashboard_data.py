@@ -1730,6 +1730,11 @@ BROAD_STATE_4X2500_NORMALIZATION_RESCUE_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30"
 )
+BROAD_STATE_4X2500_BOUNDED_WAGE_VALIDATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6605,6 +6610,54 @@ def broad_state_4x2500_normalization_rescue_status() -> tuple[bool, dict[str, An
     }
 
 
+def broad_state_4x2500_bounded_wage_validation_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the focused four-candidate documentary wage validation."""
+    directory = BROAD_STATE_4X2500_BOUNDED_WAGE_VALIDATION_DIR
+    required = (
+        directory / "bounded_wage_differential_validation_summary.json",
+        directory / "bounded_wage_differential_calculation_audit.json",
+        directory / "source_lineage_validation_report.json",
+        directory / "comparability_validation_report.json",
+        directory / "dashboard_bounded_gap_validation_update_summary.json",
+        directory / "forbidden_action_audit.json",
+        directory / "bounded_wage_differential_validation_summary.md",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    summary, calculation, lineage, comparability, dashboard, forbidden, _ = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    gates = (
+        summary.get("decision")
+        == "broad_state_4x2500_bounded_wage_differential_validation_completed_pi_report_ready"
+        and summary.get("input_candidate_count") == 4
+        and summary.get("validated_pi_report_usable_count") == 1
+        and summary.get("conditional_manual_review_count") == 3
+        and summary.get("downgraded_or_rejected_count") == 0
+        and calculation.get("all_calculations_confirmed") is True
+        and lineage.get("all_candidates_have_source_and_span_lineage") is True
+        and sum(comparability.get("status_counts", {}).values()) == 4
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and summary.get("global_analysis_readiness") is False
+        and summary.get("final_wage_gap_estimate_claimed") is False
+        and summary.get("national_or_population_prevalence_claimed") is False
+        and summary.get("final_causal_claim_made") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 bounded wage validation fails dashboard gates")
+    return True, {
+        **summary,
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/"
+            "bounded_wage_differential_validation_summary.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6749,6 +6802,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_rescue_available, broad_4x2500_rescue = (
         broad_state_4x2500_normalization_rescue_status()
+    )
+    broad_4x2500_bounded_validation_available, broad_4x2500_bounded_validation = (
+        broad_state_4x2500_bounded_wage_validation_status()
     )
     published_reports = [
         *(
@@ -7583,6 +7639,36 @@ def build_reports_index_layer(
                 {"label": "partial records repaired", "value": broad_4x2500_rescue["partial_records_repaired_count"]},
                 {"label": "quantitative growth mechanisms", "value": broad_4x2500_rescue["quantitatively_supported_growth_mechanism_claim_count"]},
                 {"label": "bounded local comparisons", "value": broad_4x2500_rescue["current_bounded_wage_differential_candidate_count"]},
+            ],
+        })
+    if broad_4x2500_bounded_validation_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-bounded-wage-differential-validation-2026-07-30",
+            "title": "Broad State 4 × 2,500 Bounded Wage-Differential Validation",
+            "report_type": "Current focused source-grounded validation of four bounded local comparisons",
+            "date": "2026-07-30",
+            "checkpoint": (
+                f"{broad_4x2500_bounded_validation['validated_pi_report_usable_count']:,} validated; "
+                f"{broad_4x2500_bounded_validation['conditional_manual_review_count']:,} conditional"
+            ),
+            "summary": (
+                "All four local documentary candidates were independently traced to retained sources and exact spans. "
+                "One is PI-usable as a supporting example and three require candidate-specific manual review; none is a "
+                "final, national, prevalence, policy-effect, or causal estimate."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "bounded wage validation", "PI report"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_bounded_validation["dashboard_result_path"],
+            "link_label": "Open current bounded wage-validation report",
+            "scope_metrics": [
+                {"label": "validated supporting comparisons", "value": broad_4x2500_bounded_validation["validated_pi_report_usable_count"]},
+                {"label": "conditional/manual review", "value": broad_4x2500_bounded_validation["conditional_manual_review_count"]},
+                {"label": "rejected", "value": broad_4x2500_bounded_validation["downgraded_or_rejected_count"]},
             ],
         })
     if live_available:
@@ -10113,6 +10199,9 @@ def build_project_phase_summary(
     broad_4x2500_rescue_available, broad_4x2500_rescue = (
         broad_state_4x2500_normalization_rescue_status()
     )
+    broad_4x2500_bounded_validation_available, broad_4x2500_bounded_validation = (
+        broad_state_4x2500_bounded_wage_validation_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11313,6 +11402,37 @@ def build_project_phase_summary(
             "actual_scout_covered_municipalities": 16887,
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "bounded_local_documentary_candidates_require_final_manual_validation",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if broad_4x2500_bounded_validation_available:
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_bounded_wage_differential_validation_complete",
+            "current_phase": "Bounded wage-differential validation complete",
+            "current_phase_code": broad_4x2500_bounded_validation["decision"],
+            "current_evidence_status": "one_validated_supporting_comparison_three_conditional_manual_review",
+            "broad_state_4x2500_bounded_wage_validation_available": True,
+            "bounded_validation_input_candidate_count": broad_4x2500_bounded_validation["input_candidate_count"],
+            "validated_bounded_wage_differential_candidate_count": broad_4x2500_bounded_validation["validated_pi_report_usable_count"],
+            "conditional_bounded_wage_differential_candidate_count": broad_4x2500_bounded_validation["conditional_manual_review_count"],
+            "rejected_bounded_wage_differential_candidate_count": broad_4x2500_bounded_validation["downgraded_or_rejected_count"],
+            "current_report_title": "Broad State 4 × 2,500 Bounded Wage-Differential Validation",
+            "current_report_path": broad_4x2500_bounded_validation["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_bounded_validation["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+            "next_phase": "PI-facing report drafting with one validated and three conditional bounded local documentary comparisons",
+            "next_phase_sequence": [
+                "use Shreve as a supporting bounded local documentary comparison",
+                "use Cammack Village and Canastota only with their candidate-specific heavy caveats",
+                "keep Alburtis in limits or appendix unless bargaining-unit and role comparability are resolved",
+                "do not present final, national, prevalence, policy-effect, treatment-effect, or causal conclusions",
+            ],
+            "last_updated_context": "broad_state_4x2500_bounded_wage_differential_validation_complete_pi_report_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_local_documentary_validation_complete_final_estimation_blocked",
             "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
         })
     return payload

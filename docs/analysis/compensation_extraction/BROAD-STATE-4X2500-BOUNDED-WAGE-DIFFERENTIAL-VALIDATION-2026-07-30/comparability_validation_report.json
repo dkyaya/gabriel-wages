@@ -1,0 +1,75 @@
+{
+  "candidate_count": 4,
+  "rows": [
+    {
+      "candidate_id": "B4X2500GAP-41d42064465db4099b779674",
+      "caveat_level": "heavy",
+      "caveats": [
+        "The defensible comparison window is January 1-June 30, 2018, not the entire 2018-2021 police award cycle.",
+        "The police-side observation is the Chief of Police, whom the ordinance explicitly identifies as removed from the police bargaining unit.",
+        "The non-safety side is an Administrative Assistant position rate, not a separately verified non-safety bargaining-unit contract record.",
+        "Role, rank, duties, work schedule, full-time status, and hours equivalence are not established.",
+        "The 199.2% figure is an arithmetic contrast between two documented position rates and must not be interpreted as an Alburtis bargaining-unit wage-gap estimate.",
+        "Manual/legal/substantive review is required before any analytic use beyond an appendix-level documentary illustration."
+      ],
+      "confidence": "moderate",
+      "municipality": "Alburtis",
+      "report_usability": "use_only_in_limits_or_appendix",
+      "validation_status": "validated_with_caveats_manual_review",
+      "why_usable_or_not": "The exact values, hourly basis, regular/base character, and overlapping January-June 2018 period are source-grounded, and the arithmetic is correct. The comparison is usable only as a heavily qualified local documentary position-rate illustration because it does not satisfy the project's matched bargaining-unit unit of observation and lacks role/rank/hours comparability."
+    },
+    {
+      "candidate_id": "B4X2500GAP-4193e4d9ff2676c7d2680e77",
+      "caveat_level": "heavy",
+      "caveats": [
+        "Ordinance 23-06 expressly labels the entries as maximum annual salaries and maximum hourly rates, not necessarily the employees' actual paid wages.",
+        "Section 2 states that the Mayor shall set each employee's actual salary and that it may be lower than the listed maximum.",
+        "The retained source is a December 12, 2023 council packet; the displayed ordinance copy has blank adoption and approval fields, so enactment should be confirmed before analytic use.",
+        "The comparison pairs a part-time patrol position with an administrative-assistant position and does not establish equivalence in duties, tenure, experience, hiring requirements, hours, or schedule placement.",
+        "The listed schedule excludes fringe benefits and citizen-donation amounts, so it is not a total-compensation comparison.",
+        "This is bounded local documentary evidence about authorized maximum hourly rates, not a final wage-gap estimate, nationally representative result, population-prevalence statement, or causal finding."
+      ],
+      "confidence": "moderate",
+      "municipality": "Cammack Village",
+      "report_usability": "use_as_supporting_example",
+      "validation_status": "validated_with_caveats_manual_review",
+      "why_usable_or_not": "The two values are visually and textually confirmed on the same retained PDF page, in the same 2024 maximum salary schedule, with explicit hourly units, clear police and clerical/admin labels, and no conversion. The $5.00 and 25.0% calculations are correct. The evidence can therefore support a conditional PI-report example about a difference in listed maximum hourly rates. It cannot support an unqualified actual-wage differential because the ordinance says actual pay may be lower, the packet copy's enactment status is not established by the retained page, and the occupations are not substantively matched."
+    },
+    {
+      "candidate_id": "B4X2500GAP-498d2fdd8da985bf2455ab27",
+      "caveat_level": "heavy",
+      "caveats": [
+        "The police value is specifically the Year 1 entry step for officers hired after 1999, while the Code Enforcement Officer line provides a single listed rate with no tenure, step, or experience label.",
+        "The source establishes common municipality, cycle, page, hourly pay basis, and schedule-listed wage status, but it does not establish comparable tenure, experience, duties, qualifications, hours, full-time status, or schedule position.",
+        "The upstream normalized Code Enforcement Officer record was incorrectly tagged as police; this validation corrects the candidate interpretation from the verbatim source line but does not overwrite the raw upstream record.",
+        "The negative $0.91/hour documentary difference pertains only to these two specifically listed schedule values and must not be generalized to police and non-safety employees in Canastota.",
+        "This is bounded local documentary evidence, not a final wage-gap estimate, and is not nationally representative.",
+        "Substantive/manual validation of occupational and schedule-position comparability is required before analytic use beyond a qualified supporting example."
+      ],
+      "confidence": "moderate",
+      "municipality": "Canastota",
+      "report_usability": "use_as_supporting_example",
+      "validation_status": "validated_with_caveats_manual_review",
+      "why_usable_or_not": "The values, hourly units, 2023-2024 cycle, municipal identity, safety/non-safety labels, source hashes, and arithmetic all validate directly against the same retained salary-schedule page. The candidate therefore supports a precisely bounded statement about two source-listed rates. It is not suitable for a main wage-gap finding because a Year 1 police step is not demonstrated to be substantively comparable to the single Code Enforcement Officer rate."
+    },
+    {
+      "candidate_id": "B4X2500GAP-a27c57fde6a6f134fcd6ff7d",
+      "caveat_level": "moderate",
+      "caveats": [
+        "The comparison is between a group-wide part-time police rate and the rate for one part-time utility-clerk position.",
+        "The ordinance does not establish equivalence in duties, experience, schedule, or hiring requirements across the two occupations.",
+        "The utility-clerk line caps work at 28 hours; the police line does not state an hours cap on the same page.",
+        "The comparison is a bounded local documentary rate difference, not a final wage-gap estimate or a nationally representative result."
+      ],
+      "confidence": "high",
+      "municipality": "Shreve",
+      "report_usability": "use_as_supporting_example",
+      "validation_status": "validated_pi_report_usable",
+      "why_usable_or_not": "Both values are visually confirmed in the same operative 2024 municipal ordinance, both are explicit hourly base rates for part-time positions, the safety and non-safety classifications are clear, and no conversion is required. The source supports a bounded local documentary comparison, with occupational and work-schedule caveats."
+    }
+  ],
+  "status_counts": {
+    "validated_pi_report_usable": 1,
+    "validated_with_caveats_manual_review": 3
+  }
+}

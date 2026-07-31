@@ -1,0 +1,188 @@
+{
+  "lane_id": "validation_lane_001",
+  "lane_status": "completed",
+  "completed_at": "2026-07-31T00:07:15Z",
+  "candidate_id": "B4X2500GAP-41d42064465db4099b779674",
+  "matched_cycle_id": "B4X2500RESCUEMATCH-f61c4d17be542d02d024e0f4",
+  "municipality": "Alburtis",
+  "state": "PA",
+  "period_cycle": "2018-01-01 through 2018-06-30 overlapping rate window; source ordinance and police award cycle labeled 2018-2021",
+  "original_candidate_period_cycle": "2018-2021",
+  "period_correction": "The broad 2018-2021 label is not the defensible comparison window. The $11.22 administrative-assistant rate applies only through June 30, 2018, while the $33.57 Chief of Police rate applies for 2018 and is retroactive to January 1, 2018. The supported overlap is January 1 through June 30, 2018.",
+  "safety_record_id": "B4X2500NORM-0ae57b8e37ee4d9cf7984343",
+  "non_safety_record_id": "B4X2500NORM-9c28dedf7c3ff5548a7b659b",
+  "safety_codified_record_id": "B4X2500COD-20260730-0da8f4e22e0f8535d35b5efd",
+  "non_safety_codified_record_id": "B4X2500COD-20260730-bf452c7e2affbee8c1dfb2e1",
+  "safety_rating_id": "B4X2500-RATING-20260730-0739d86628290f66adebef22",
+  "non_safety_rating_id": "B4X2500-RATING-20260730-795d31d970d6d5ecfd1cedc8",
+  "safety_span_id": "B4X2500SPAN-20260730-1c467faa4f0dcfb2d3674e90",
+  "non_safety_span_id": "B4X2500SPAN-20260730-769a5f23e80f4d062a9dca25",
+  "source_id": "B4X2500LIVE-20260729-004033",
+  "retained_source_id": "B4X2500SRD-20260730-6ddfdb5fcb55a74977c0",
+  "extraction_id": "B4X2500TXT-20260730-a7728e27d6a354107235",
+  "safety_unit_group": "Chief of Police; safety/police position, explicitly outside the police bargaining unit at the time of the ordinance",
+  "non_safety_unit_group": "Administrative Assistant; non-uniformed clerical/administrative municipal position",
+  "safety_value_raw_text": "The rate of compensation of the Chief of Police for the year 2018 shall be $33.57 per hour.",
+  "non_safety_value_raw_text": "The rate of compensation of the Administrative Assistant for the year 2018 shall be $11.22 per hour through June 30, 2018 and $11.33 per hour from and after July 1, 2018.",
+  "safety_parsed_value": 33.57,
+  "non_safety_parsed_value": 11.22,
+  "pay_basis": "hourly",
+  "annualization_assumption": "none; direct hourly-to-hourly comparison",
+  "base_or_non_base_comparison_type": "regular/base hourly compensation rates; neither selected value is described as a premium, stipend, allowance, or other non-base component",
+  "effective_period_evidence": {
+    "safety": "The ordinance states $33.57 per hour for 2018 and separately makes subsection 11-104.1(d) retroactive to January 1, 2018.",
+    "non_safety": "The ordinance states $11.22 per hour through June 30, 2018 and $11.33 per hour from and after July 1, 2018.",
+    "supported_overlap": "2018-01-01 through 2018-06-30",
+    "same_period_supported": true
+  },
+  "source_lineage_summary": "Both values trace to Alburtis Ordinance No. 546, PDF page 4, downloaded from the municipal codified-ordinance site. The retained PDF is B4X2500SRD-20260730-6ddfdb5fcb55a74977c0 (SHA-256 e1071e681d9ca1aa6ba1e9b73ce02084c3ca6e2f196868d861000ca11ea151d4), linked through scout target B4X2500-20260729-03846, verification row B4X2500V-20260730-04057, readiness row B4X2500RDY-20260730-49b270db104d6d876965, and extraction B4X2500TXT-20260730-a7728e27d6a354107235.",
+  "span_lineage_summary": "The administrative-assistant span is at extracted-text offsets 5014-5137 (line 109, paragraph 16); the Chief of Police span is at offsets 5545-5638 (line 120, paragraph 17). Both appear on retained PDF page 4. The extracted artifact SHA-256 cffa692bf9e166ad4d61c214b06f578c1af09a133c6ffc285b2432077af2df32 matches its manifest.",
+  "source_locator": "https://www.alburtis.org/codifiedord/pdf/ord%20546.pdf",
+  "retained_source_local_path": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_002/B4X2500SRD-20260730-6ddfdb5fcb55a74977c0.pdf",
+  "extracted_text_local_path": "artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30/text_extraction_lane_003/B4X2500TXT-20260730-a7728e27d6a354107235.txt",
+  "value_difference": 22.35,
+  "percent_difference_relative_to_non_safety": 199.2,
+  "calculation_check_status": "passed_recalculated_from_source_grounded_values",
+  "calculation_audit": {
+    "difference_formula": "33.57 - 11.22",
+    "unrounded_difference": 22.35,
+    "reported_difference": 22.35,
+    "percent_formula": "(33.57 - 11.22) / 11.22 * 100",
+    "unrounded_percent": 199.19786096256684,
+    "reported_percent": 199.2,
+    "value_correction_required": false,
+    "calculation_correction_required": false,
+    "period_label_correction_required": true
+  },
+  "municipality_cycle_match_assessment": "The values are in the same ordinance and overlap for January-June 2018, so they support a same-municipality, same-subperiod documentary position-rate comparison. They are not a matched pair of safety and non-safety bargaining-unit contracts: the ordinance expressly states that the Chief of Police had been removed from the police bargaining unit, and the administrative-assistant provision is a municipal position rate.",
+  "comparability_assessment": {
+    "values_source_grounded": true,
+    "pay_basis_compatible": true,
+    "effective_period_overlap": true,
+    "safety_non_safety_classification_clear": true,
+    "base_nonbase_classification_clear": true,
+    "role_rank_schedule_position_equivalent": false,
+    "matched_bargaining_unit_contracts": false,
+    "hours_or_full_time_status_equivalent": false,
+    "bounded_position_rate_comparison_supported": true,
+    "analytic_wage_gap_use_supported": false
+  },
+  "validation_status": "validated_with_caveats_manual_review",
+  "validation_confidence": "moderate",
+  "report_usability": "use_only_in_limits_or_appendix",
+  "caveat_level": "heavy",
+  "caveats": [
+    "The defensible comparison window is January 1-June 30, 2018, not the entire 2018-2021 police award cycle.",
+    "The police-side observation is the Chief of Police, whom the ordinance explicitly identifies as removed from the police bargaining unit.",
+    "The non-safety side is an Administrative Assistant position rate, not a separately verified non-safety bargaining-unit contract record.",
+    "Role, rank, duties, work schedule, full-time status, and hours equivalence are not established.",
+    "The 199.2% figure is an arithmetic contrast between two documented position rates and must not be interpreted as an Alburtis bargaining-unit wage-gap estimate.",
+    "Manual/legal/substantive review is required before any analytic use beyond an appendix-level documentary illustration."
+  ],
+  "why_usable_or_not": "The exact values, hourly basis, regular/base character, and overlapping January-June 2018 period are source-grounded, and the arithmetic is correct. The comparison is usable only as a heavily qualified local documentary position-rate illustration because it does not satisfy the project's matched bargaining-unit unit of observation and lacks role/rank/hours comparability.",
+  "bounded_pi_report_statement": "Alburtis Ordinance No. 546 provides bounded local documentary evidence that, during the overlapping January-June 2018 window, the Chief of Police rate was $33.57 per hour and the Administrative Assistant rate was $11.22 per hour. On the current normalized basis, the arithmetic difference is $22.35 per hour, or 199.2% relative to the administrative-assistant rate. This is a current source-grounded comparison of two municipal position rates—not a final wage-gap estimate or a matched bargaining-unit comparison—and it is not nationally representative; the Chief's exclusion from the bargaining unit and unresolved role, schedule, hours, and position equivalence require manual/legal/substantive validation before analytic use.",
+  "pi_report_one_sentence": "Alburtis Ordinance No. 546 supplies bounded local documentary evidence that the Chief of Police rate ($33.57/hour) exceeded the Administrative Assistant rate ($11.22/hour) by $22.35/hour, or 199.2%, during their overlapping January-June 2018 window, but this is a position-rate illustration requiring manual validation—not a final wage-gap estimate or matched bargaining-unit comparison.",
+  "pi_report_two_to_three_sentence": "For January through June 2018, Alburtis Ordinance No. 546 records a $33.57 hourly rate for the Chief of Police and an $11.22 hourly rate for the Administrative Assistant. On the current normalized basis, that is a $22.35 hourly arithmetic difference, or 199.2% relative to the administrative-assistant rate. The ordinance also states that the Chief had been removed from the police bargaining unit, so this bounded local documentary evidence belongs only in a limits or appendix discussion unless manual/legal/substantive review establishes a defensible analytic use; it is not a final wage-gap estimate and is not nationally representative.",
+  "table_ready_version": "Alburtis, PA | Jan-Jun 2018 | Chief of Police $33.57/hr | Administrative Assistant $11.22/hr | +$22.35/hr (+199.2%) | conditional documentary position-rate comparison; not matched bargaining units",
+  "caveat_text": "Same ordinance and overlapping period, but not matched bargaining-unit contracts: the Chief was outside the police bargaining unit, and role/rank/hours/schedule equivalence with the Administrative Assistant is unverified. Use only as bounded local documentary evidence after manual/legal/substantive validation, not as a final wage-gap estimate.",
+  "short_table_label": "Alburtis 2018 position-rate contrast (conditional)",
+  "forbidden_claim_warning": "Do not state that the Alburtis wage gap is 199.2%, that safety workers in Alburtis generally earned 199.2% more, that the comparison is representative, or that bargaining caused the difference. The evidence supports only a bounded, January-June 2018 documentary contrast between the named positions.",
+  "evidence_inspected": [
+    {
+      "artifact": "current_bounded_wage_differential_candidates.csv/jsonl",
+      "purpose": "Candidate identity, linked normalized records, proposed values, period, and calculation"
+    },
+    {
+      "artifact": "normalized_quantitative_records.csv/jsonl",
+      "purpose": "Raw span preservation, parsed values, units, group classification, cycle metadata, and lineage"
+    },
+    {
+      "artifact": "comparable_normalized_wage_candidates.csv/jsonl and rescued_comparable_normalized_wage_candidates.csv/jsonl",
+      "purpose": "Prior comparability blockers and rescue promotion basis"
+    },
+    {
+      "artifact": "merged_span_ratings_valid.jsonl and codified_valid_ratings.jsonl",
+      "purpose": "Rating/codification identity, exactness, evidence quality, claim boundaries, and span lineage"
+    },
+    {
+      "artifact": "span_candidates.jsonl",
+      "purpose": "Exact bounded span text and character/line/paragraph locations"
+    },
+    {
+      "artifact": "extracted_text_manifest.jsonl and bounded extracted-text context around offsets 4300-5950",
+      "purpose": "Hash-verified local context establishing the July 1 administrative rate change, police retroactivity, and source structure"
+    },
+    {
+      "artifact": "retained_source_manifest.jsonl and retained PDF page 4",
+      "purpose": "Municipal-source provenance, retained-file hash, direct non-OCR source-local verification, and PDF page location"
+    }
+  ],
+  "checkpoint_steps": [
+    {
+      "step": 1,
+      "name": "candidate_lock_and_assignment",
+      "status": "completed",
+      "result": "Validated only Alburtis candidate B4X2500GAP-41d42064465db4099b779674 in validation_lane_001."
+    },
+    {
+      "step": 2,
+      "name": "normalized_record_trace",
+      "status": "completed",
+      "result": "Both linked normalized records located; raw values and raw span text preserved."
+    },
+    {
+      "step": 3,
+      "name": "rating_span_lineage_trace",
+      "status": "completed",
+      "result": "Both records traced through codified, valid rating, exact span, extraction, readiness, verification, scout, and source-review IDs."
+    },
+    {
+      "step": 4,
+      "name": "extracted_text_hash_and_context_check",
+      "status": "completed",
+      "result": "Extracted artifact exists; SHA-256 matches manifest; bounded context confirms values and overlapping subperiod."
+    },
+    {
+      "step": 5,
+      "name": "retained_source_hash_and_page_check",
+      "status": "completed",
+      "result": "Retained 52-page PDF exists; SHA-256 matches manifest; both provisions verified without OCR on PDF page 4."
+    },
+    {
+      "step": 6,
+      "name": "pay_basis_base_group_period_validation",
+      "status": "completed",
+      "result": "Direct hourly regular/base rates; clear police/non-safety positions; supported overlap narrowed to January-June 2018."
+    },
+    {
+      "step": 7,
+      "name": "calculation_recheck",
+      "status": "completed",
+      "result": "$22.35/hour and 199.20% calculations confirmed; no value correction, period-label correction required."
+    },
+    {
+      "step": 8,
+      "name": "comparability_and_claim_boundary_review",
+      "status": "completed",
+      "result": "Position-rate contrast supported, but matched bargaining-unit comparison and role/rank/hours equivalence not established."
+    },
+    {
+      "step": 9,
+      "name": "final_lane_disposition",
+      "status": "completed",
+      "result": "validated_with_caveats_manual_review; moderate confidence; use only in limits or appendix; heavy caveats."
+    }
+  ],
+  "forbidden_actions_audit": {
+    "ocr_performed": false,
+    "new_source_download_performed": false,
+    "new_source_review_performed": false,
+    "new_text_extraction_stage_performed": false,
+    "new_rating_performed": false,
+    "scope_broadened_beyond_linked_alburtis_records": false,
+    "raw_values_overwritten": false,
+    "final_wage_gap_claim_made": false,
+    "national_or_population_prevalence_claim_made": false,
+    "causal_claim_made": false
+  }
+}
