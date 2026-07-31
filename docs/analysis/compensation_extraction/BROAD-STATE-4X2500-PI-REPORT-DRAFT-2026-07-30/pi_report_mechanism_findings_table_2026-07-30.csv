@@ -1,0 +1,11 @@
+mechanism_key,mechanism,rated_signal_count,average_strength_score,median_strength_score,finding_level,report_interpretation,causal_claim_allowed,national_prevalence_claim_allowed
+non_base_compensation,Non-base compensation,3718,1.646,1.0,Core,"Premiums, longevity, stipends, differentials, and specialty pay are distinct channels that base-wage comparisons can miss.",False,False
+quantitative_base_wage_needs_normalization,Direct base-wage evidence,2687,1.452,1.0,Core,"Direct values and schedules are abundant, but pay basis, period, unit, rank, and base/non-base alignment remain essential.",False,False
+timing_implementation,Implementation and retroactivity,2230,1.853,2.0,Core,"Effective dates, delayed implementation, and retroactive payments can change when negotiated gains are realized.",False,False
+automatic_wage_growth,Automatic raises and indexing,1431,1.377,1.0,Core,"Scheduled percentage increases, COLA/CPI clauses, and step progression provide documentable growth rules.",False,False
+bargaining_dispute_resolution,Bargaining and dispute resolution,1135,1.285,1.0,Supporting,"Bargaining, arbitration, factfinding, settlements, and strike constraints are plausible institutional channels, not causal estimates.",False,False
+rank_step_specialization_classification,"Rank, step, specialization, classification",763,2.427,2.0,Core,Structured ladders and classifications shape progression and complicate cross-occupation comparisons.,False,False
+strike_or_no_strike,Strike/no-strike constraints,587,2.539,2.0,Supporting,Work-stoppage constraints form part of institutional bargaining context.,False,False
+market_staffing_pressure,Market and staffing pressure,398,1.374,1.0,Supporting,"Comparability, recruitment, retention, and staffing language appear as stated compensation justifications.",False,False
+safety_advantage,Safety-advantage hints,192,0.987,1.0,Context,"Some spans point toward a safety-side advantage, but directional evidence is sparse and uneven.",False,False
+fiscal_governance_constraints,Fiscal and governance constraints,188,1.531,1.0,Context,"Budget, appropriation, and approval language documents constraints without identifying effects.",False,False

@@ -1,0 +1,44 @@
+{
+  "design_preset": "standard_business_brief",
+  "header_pattern": "editorial_cover_without_decorative_rule",
+  "key_phrases_present": {
+    "Bounded local wage-differential evidence exists": true,
+    "Codified Evidence Categories": true,
+    "Current Scout Wave Status": true,
+    "Executive Summary": true,
+    "Non-base compensation is a major compensation channel": true,
+    "Processed Evidence Base": true,
+    "Recommended Next Steps": true
+  },
+  "paragraph_count": 80,
+  "passed": true,
+  "placeholder_text_present": false,
+  "section_count": 1,
+  "table_count": 3,
+  "table_geometry": [
+    {
+      "columns": 3,
+      "expected_width_dxa": 9360,
+      "grid_width_dxa": 9360,
+      "passed": true,
+      "table": 1
+    },
+    {
+      "columns": 3,
+      "expected_width_dxa": 9360,
+      "grid_width_dxa": 9360,
+      "passed": true,
+      "table": 2
+    },
+    {
+      "columns": 6,
+      "expected_width_dxa": 9360,
+      "grid_width_dxa": 9360,
+      "passed": true,
+      "table": 3
+    }
+  ],
+  "visual_render_limitation": "The canonical DOCX renderer could not run because LibreOffice/soffice is not installed. The document received structural OOXML, style, content, and fixed-table-geometry checks instead.",
+  "visual_render_passed": false,
+  "visual_render_status": "render_unavailable_libreoffice_soffice_missing"
+}

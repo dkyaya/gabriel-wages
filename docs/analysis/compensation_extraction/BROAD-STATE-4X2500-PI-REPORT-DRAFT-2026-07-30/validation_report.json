@@ -1,0 +1,43 @@
+{
+  "all_checks_passed": false,
+  "checks": {
+    "01_required_seven_sections": true,
+    "02_current_bounded_results_used": true,
+    "03_no_rejected_candidate_used": true,
+    "04_alburtis_limits_appendix_only": true,
+    "05_shreve_cleanest_supporting": true,
+    "06_cammack_canastota_caveated": true,
+    "07_no_final_wage_gap": true,
+    "08_no_national_prevalence": true,
+    "09_no_final_causal": true,
+    "10_no_regression_treatment_claim": true,
+    "11_no_col_adjustment_claim": true,
+    "12_cola_contract_distinction": true,
+    "13_growth_mechanism_evidence": true,
+    "14_mechanism_findings": true,
+    "15_normalization_matching_limits": true,
+    "16_scout_status_not_focus": true,
+    "17_recommended_next_steps": true,
+    "18_no_internal_task_relay_prompt_language": true,
+    "19_dashboard_clean": true,
+    "20_dashboard_map_rate": true,
+    "21_local_dashboard_build": true,
+    "22_public_dashboard_smoke": false,
+    "23_no_ocr": true,
+    "24_no_source_review_download": true,
+    "25_no_new_rating": true,
+    "26_no_text_extraction": true,
+    "27_no_payloads_staged": true,
+    "28_staged_audit": true,
+    "29_large_file_audit": true,
+    "claim_audit_passed": true,
+    "docx_created": true,
+    "executive_summary_created": true,
+    "one_page_brief_created": true
+  },
+  "core_checks_passed": true,
+  "pending_checks": [
+    "22_public_dashboard_smoke"
+  ],
+  "validated_at": "2026-07-31T00:48:10.861173Z"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-31T00:14:00Z",
+  "generated_at": "2026-07-31T00:39:19Z",
   "data_vintage": "2026-07-30",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_4x2500_bounded_wage_differential_validation_complete",
-  "current_phase": "Bounded wage-differential validation complete",
-  "current_phase_code": "broad_state_4x2500_bounded_wage_differential_validation_completed_pi_report_ready",
-  "current_evidence_status": "one_validated_supporting_comparison_three_conditional_manual_review",
+  "stage": "broad_state_4x2500_pi_report_draft_complete",
+  "current_phase": "PI report draft complete",
+  "current_phase_code": "broad_state_4x2500_pi_report_draft_completed_review_ready",
+  "current_evidence_status": "pi_facing_mechanism_report_draft_review_ready",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1000,10 +1000,10 @@
     "weak_or_not_supported": 4379
   },
   "global_readiness_gate_status": "completed_with_partial_readiness_next_scout_prep_ready",
-  "current_report_title": "Broad State 4 × 2,500 Bounded Wage-Differential Validation",
-  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/bounded_wage_differential_validation_summary.md",
-  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30/bounded_wage_differential_validation_summary.md",
-  "next_task": "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+  "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md",
+  "current_operational_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-REVIEW-FINALIZE-2026-07-30",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,16 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "PI-facing report drafting with one validated and three conditional bounded local documentary comparisons",
+  "next_phase": "Human review, final bounded-comparison validation, and PI report polish",
   "next_phase_sequence": [
-    "use Shreve as a supporting bounded local documentary comparison",
-    "use Cammack Village and Canastota only with their candidate-specific heavy caveats",
-    "keep Alburtis in limits or appendix unless bargaining-unit and role comparability are resolved",
-    "do not present final, national, prevalence, policy-effect, treatment-effect, or causal conclusions"
+    "review the report's substantive ordering and PI-meeting usefulness",
+    "complete candidate-specific validation before analytic use of local wage differences",
+    "preserve final, national, prevalence, regression, treatment-effect, policy-effect, and causal boundaries"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "broad_state_4x2500_bounded_wage_differential_validation_complete_pi_report_ready",
+  "last_updated_context": "broad_state_4x2500_pi_report_draft_complete_review_ready",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1188,7 +1187,7 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 16887,
-  "wage_gap_analysis_readiness": "bounded_local_documentary_validation_complete_final_estimation_blocked",
+  "wage_gap_analysis_readiness": "bounded_local_documentary_examples_only_final_estimation_blocked",
   "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
@@ -6098,5 +6097,10 @@
   "bounded_validation_input_candidate_count": 4,
   "validated_bounded_wage_differential_candidate_count": 1,
   "conditional_bounded_wage_differential_candidate_count": 3,
-  "rejected_bounded_wage_differential_candidate_count": 0
+  "rejected_bounded_wage_differential_candidate_count": 0,
+  "broad_state_4x2500_pi_report_draft_available": true,
+  "pi_report_careful_claim_count": 18,
+  "pi_report_substantive_or_context_claim_count": 16,
+  "pi_report_quantitative_growth_example_count": 6,
+  "pi_report_bounded_wage_example_count": 4
 }

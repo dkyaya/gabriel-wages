@@ -1,0 +1,36 @@
+{
+  "finding_section_unqualified_hits": [],
+  "occurrences": [
+    {
+      "allowed_boundary_use": true,
+      "context": "pus does not yet support a final safety-versus-non-safety wage-gap estimate, a nationally representative prevalence statement, a regression or treatment-effect result, or a final causal claim. Directional ratings a",
+      "in_findings": false,
+      "term": "representative"
+    },
+    {
+      "allowed_boundary_use": true,
+      "context": " the normalized basis shown. They are not final wage-gap estimates and are not nationally representative.  | Municipality / period | Safety-side value | Non-safety-side value | Difference | Status | Principal cavea",
+      "in_findings": true,
+      "term": "representative"
+    },
+    {
+      "allowed_boundary_use": true,
+      "context": "ery, public availability, reachability, retention, extraction, and rating filters prevent representative-sample interpretation. 4. **No regression or treatment-effect result.** No such model was run for this report",
+      "in_findings": false,
+      "term": "representative"
+    }
+  ],
+  "passed": true,
+  "terms_checked": [
+    "causes",
+    "proves",
+    "nationally common",
+    "most municipalities",
+    "representative",
+    "the wage gap is",
+    "final estimate",
+    "dominant national mechanism",
+    "treatment effect",
+    "regression shows"
+  ]
+}

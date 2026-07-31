@@ -1735,6 +1735,11 @@ BROAD_STATE_4X2500_BOUNDED_WAGE_VALIDATION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30"
 )
+BROAD_STATE_4X2500_PI_REPORT_DRAFT_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6658,6 +6663,49 @@ def broad_state_4x2500_bounded_wage_validation_status() -> tuple[bool, dict[str,
     }
 
 
+def broad_state_4x2500_pi_report_draft_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the PI-facing report draft and its claim-boundary audits."""
+    directory = BROAD_STATE_4X2500_PI_REPORT_DRAFT_DIR
+    required = (
+        directory / "pi_report_draft_manifest.json",
+        directory / "pi_report_draft_2026-07-30.md",
+        directory / "pi_report_executive_summary_2026-07-30.md",
+        directory / "pi_report_one_page_brief_2026-07-30.md",
+        directory / "pi_report_claim_audit_2026-07-30.json",
+        directory / "forbidden_action_audit.json",
+        directory / "pi_report_dashboard_link_update_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, _, _, _, claim_audit, forbidden, dashboard = [
+        read_json(path) if path.suffix == ".json" else path.read_text(encoding="utf-8")
+        for path in required
+    ]
+    gates = (
+        manifest.get("decision") == "broad_state_4x2500_pi_report_draft_completed_review_ready"
+        and manifest.get("careful_claim_candidates_integrated") == 18
+        and manifest.get("substantive_or_context_claims_integrated") == 16
+        and manifest.get("bounded_wage_examples_used") == 4
+        and manifest.get("quantitative_growth_claims_used") == 6
+        and manifest.get("docx_created") is True
+        and claim_audit.get("passed") is True
+        and forbidden.get("passed") is True
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and manifest.get("global_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 PI report draft fails dashboard gates")
+    return True, {
+        **manifest,
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/"
+            "pi_report_draft_2026-07-30.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6805,6 +6853,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_bounded_validation_available, broad_4x2500_bounded_validation = (
         broad_state_4x2500_bounded_wage_validation_status()
+    )
+    broad_4x2500_pi_report_available, broad_4x2500_pi_report = (
+        broad_state_4x2500_pi_report_draft_status()
     )
     published_reports = [
         *(
@@ -7669,6 +7720,33 @@ def build_reports_index_layer(
                 {"label": "validated supporting comparisons", "value": broad_4x2500_bounded_validation["validated_pi_report_usable_count"]},
                 {"label": "conditional/manual review", "value": broad_4x2500_bounded_validation["conditional_manual_review_count"]},
                 {"label": "rejected", "value": broad_4x2500_bounded_validation["downgraded_or_rejected_count"]},
+            ],
+        })
+    if broad_4x2500_pi_report_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-pi-report-draft-2026-07-30",
+            "title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+            "report_type": "Current PI-facing evidence report draft",
+            "date": "2026-07-30",
+            "checkpoint": "18 careful claim candidates integrated; 4 bounded local comparisons",
+            "summary": (
+                "Findings-led PI draft synthesizing rated mechanism evidence, quantitative growth rules, "
+                "and one validated plus three conditional bounded local documentary comparisons. Final, "
+                "national, prevalence, regression, treatment-effect, policy-effect, and causal claims remain blocked."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "PI report", "mechanism findings"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_pi_report["dashboard_result_path"],
+            "link_label": "Open current PI-facing evidence report draft",
+            "scope_metrics": [
+                {"label": "careful claims integrated", "value": broad_4x2500_pi_report["careful_claim_candidates_integrated"]},
+                {"label": "quantitative growth examples", "value": broad_4x2500_pi_report["quantitative_growth_claims_used"]},
+                {"label": "bounded local comparisons", "value": broad_4x2500_pi_report["bounded_wage_examples_used"]},
             ],
         })
     if live_available:
@@ -10202,6 +10280,9 @@ def build_project_phase_summary(
     broad_4x2500_bounded_validation_available, broad_4x2500_bounded_validation = (
         broad_state_4x2500_bounded_wage_validation_status()
     )
+    broad_4x2500_pi_report_available, broad_4x2500_pi_report = (
+        broad_state_4x2500_pi_report_draft_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11433,6 +11514,36 @@ def build_project_phase_summary(
             "actual_scout_covered_municipalities": 16887,
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "bounded_local_documentary_validation_complete_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if broad_4x2500_pi_report_available:
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_pi_report_draft_complete",
+            "current_phase": "PI report draft complete",
+            "current_phase_code": broad_4x2500_pi_report["decision"],
+            "current_evidence_status": "pi_facing_mechanism_report_draft_review_ready",
+            "broad_state_4x2500_pi_report_draft_available": True,
+            "pi_report_careful_claim_count": broad_4x2500_pi_report["careful_claim_candidates_integrated"],
+            "pi_report_substantive_or_context_claim_count": broad_4x2500_pi_report["substantive_or_context_claims_integrated"],
+            "pi_report_quantitative_growth_example_count": broad_4x2500_pi_report["quantitative_growth_claims_used"],
+            "pi_report_bounded_wage_example_count": broad_4x2500_pi_report["bounded_wage_examples_used"],
+            "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+            "current_report_path": broad_4x2500_pi_report["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_pi_report["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-PI-REPORT-REVIEW-FINALIZE-2026-07-30",
+            "next_phase": "Human review, final bounded-comparison validation, and PI report polish",
+            "next_phase_sequence": [
+                "review the report's substantive ordering and PI-meeting usefulness",
+                "complete candidate-specific validation before analytic use of local wage differences",
+                "preserve final, national, prevalence, regression, treatment-effect, policy-effect, and causal boundaries",
+            ],
+            "last_updated_context": "broad_state_4x2500_pi_report_draft_complete_review_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_local_documentary_examples_only_final_estimation_blocked",
             "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
         })
     return payload

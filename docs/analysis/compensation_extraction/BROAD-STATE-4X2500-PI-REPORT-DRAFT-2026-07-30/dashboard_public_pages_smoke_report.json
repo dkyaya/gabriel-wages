@@ -1,0 +1,8 @@
+{
+  "status": "public_pages_deployment_pending_primary_commit",
+  "passed": false,
+  "browser_controller_available": false,
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "cache_busting_query": "dashboard_smoke=20260730_pi_report_draft_pending",
+  "limitation": "Public Pages validation awaits the primary report commit and deployment. The configured browser runtime is unavailable, so final validation will use public artifact/static checks and will not claim visual browser validation."
+}

@@ -1,0 +1,11 @@
+limit,status,report_treatment
+Final wage-gap estimation,Blocked,Only bounded local documentary comparisons are presented; no analytic wage-gap estimate is reported.
+Causal inference,Blocked,The evidence identifies plausible mechanisms but does not establish treatment effects or causal effects.
+National/population prevalence,Blocked,The processed corpus is not treated as a representative probability sample of municipalities.
+Regression analysis,Not performed,No regression or treatment-effect model was run.
+Cost-of-living adjustment,Not performed,COLA/CPI appears only as source-reported contract language; no analyst-side COL adjustment was made.
+OCR-later documents,Excluded,601 retained sources remain deferred for OCR and are outside this report's evidence base.
+Role/rank/step comparability,Material blocker,"Rank, tenure, step, duties, hours, and qualifications remain unresolved in many candidate comparisons."
+Normalization,Incomplete,"Many quantitative records remain partial, mechanism-only, deferred, or unusable for wage-level comparison."
+Bounded comparisons,Manual review required,Even the cleanest local comparison needs final substantive review before analytic use.
+Selection filters,Interpretive limit,"Search, reachability, retention, extraction, rating, and normalization gates shape the observed evidence."

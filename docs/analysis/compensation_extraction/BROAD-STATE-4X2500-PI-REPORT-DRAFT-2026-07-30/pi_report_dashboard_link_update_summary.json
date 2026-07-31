@@ -1,0 +1,16 @@
+{
+  "clean_dashboard_structure_preserved": true,
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_draft_2026-07-30.md",
+  "current_report_title": "Broad State 4x2500 PI-Facing Evidence Report Draft",
+  "current_stage": "PI report draft complete",
+  "final_wage_gap_or_causal_claim_shown": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-REVIEW-FINALIZE-2026-07-30",
+  "raw_scout_count_context_only": true,
+  "build_passed": true,
+  "browser_controller_available": false,
+  "current_report_link_static_validation_passed": true,
+  "local_static_smoke_passed": true,
+  "public_pages_smoke_status": "pending_primary_commit_and_deployment",
+  "status": "local_static_validation_passed_browser_unavailable"
+}

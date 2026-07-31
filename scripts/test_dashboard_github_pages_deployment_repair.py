@@ -94,6 +94,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "blocked_pending_normalization",
                 "bounded_local_documentary_candidates_require_final_manual_validation",
                 "bounded_local_documentary_validation_complete_final_estimation_blocked",
+                "bounded_local_documentary_examples_only_final_estimation_blocked",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -183,7 +184,21 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                 )
                                 if bounded_validation_path.exists():
                                     self.assertTrue(phase["broad_state_4x2500_bounded_wage_validation_available"])
-                                    self.assertEqual(phase["current_phase"], "Bounded wage-differential validation complete")
+                                    pi_report_path = (
+                                        ROOT / "docs/analysis/compensation_extraction/"
+                                        "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/"
+                                        "pi_report_draft_manifest.json"
+                                    )
+                                    if pi_report_path.exists():
+                                        self.assertTrue(phase["broad_state_4x2500_pi_report_draft_available"])
+                                        self.assertEqual(phase["current_phase"], "PI report draft complete")
+                                        self.assertEqual(phase["pi_report_careful_claim_count"], 18)
+                                        self.assertEqual(
+                                            phase["next_task"],
+                                            "BROAD-STATE-4X2500-PI-REPORT-REVIEW-FINALIZE-2026-07-30",
+                                        )
+                                    else:
+                                        self.assertEqual(phase["current_phase"], "Bounded wage-differential validation complete")
                                 else:
                                     self.assertEqual(
                                         phase["current_phase"],
@@ -196,10 +211,11 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                 self.assertFalse(phase["global_analysis_readiness"])
                             else:
                                 self.assertEqual(phase["current_phase"], "Normalization and matched structure complete")
-                            self.assertEqual(
-                                phase["next_task"],
-                                "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
-                            )
+                            if not phase.get("broad_state_4x2500_pi_report_draft_available"):
+                                self.assertEqual(
+                                    phase["next_task"],
+                                    "BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30",
+                                )
                         else:
                             self.assertEqual(
                                 phase["current_phase"],
