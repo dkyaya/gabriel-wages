@@ -1,13 +1,10 @@
 {
-  "audited_at": "2026-07-31T00:53:55.770877Z",
+  "audited_at": "2026-07-31T00:55:00.523969Z",
   "forbidden_staged_files": [],
   "passed": true,
-  "staged_file_count": 5,
+  "staged_file_count": 2,
   "staged_files": [
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/dashboard_public_pages_smoke_report.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/pi_report_dashboard_link_update_summary.json",
     "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/validation_report.json",
-    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30/validation_report.md",
-    "scripts/run_broad_state_4x2500_pi_report_draft.py"
+    "scripts/build_broad_state_4x2500_pi_report_draft_relay.py"
   ]
 }
