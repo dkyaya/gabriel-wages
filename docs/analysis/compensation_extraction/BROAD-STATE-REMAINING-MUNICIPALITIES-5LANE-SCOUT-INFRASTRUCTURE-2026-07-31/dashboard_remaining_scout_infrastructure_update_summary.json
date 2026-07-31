@@ -30,6 +30,11 @@
     "scout_lane_005": 3740
   },
   "planned_rows_added_to_map": 0,
+  "public_deployment_head_sha": "ed2ce05c4f8215dda0cb808987959711d59fc9b9",
+  "public_deployment_status": "github_pages_workflow_succeeded",
+  "public_deployment_workflow_id": 30654374945,
+  "public_static_workflow_validation_passed": true,
+  "public_visual_validation_status": "not_run_task_prohibits_opening_urls",
   "remaining_unscouted_eligible_municipalities": 18702,
   "status": "local_build_static_smoke_passed",
   "wage_growth_continuity_module_preserved": true

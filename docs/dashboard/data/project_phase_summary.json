@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-31T18:13:29Z",
+  "generated_at": "2026-07-31T18:20:43Z",
   "data_vintage": "2026-07-31",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -97,7 +97,7 @@
   ],
   "stage": "broad_state_remaining_municipalities_5lane_scout_infrastructure_ready",
   "current_phase": "Remaining-municipality 5-lane scout infrastructure ready",
-  "current_phase_code": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_local_ready_public_pending",
+  "current_phase_code": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_live_ready",
   "current_evidence_status": "locked_no_call_remaining_municipality_queue_ready",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,

@@ -6,7 +6,7 @@
     "broad_state_source_wave_parseable": 486,
     "canonical_parseable_coverage": 2436
   },
-  "decision": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_local_ready_public_pending",
+  "decision": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_live_ready",
   "eligible_municipality_universe_count": 35589,
   "five_by_4000_capped": true,
   "generated_at": "2026-07-31T18:04:17Z",
@@ -24,7 +24,7 @@
   "map_primary_metric": "scout_coverage_rate",
   "master_queue_sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
   "one_already_canonical_unscouted_target_flagged": true,
-  "public_pages_passed": false,
+  "public_pages_passed": true,
   "remaining_by_region": {
     "Midwest": 14431,
     "Northeast": 3168,

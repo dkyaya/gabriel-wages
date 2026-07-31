@@ -39,7 +39,7 @@
     "37_local_smoke": true,
     "38_public_deployment": true
   },
-  "decision": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_local_ready_public_pending",
+  "decision": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_live_ready",
   "passed": true,
   "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31"
 }
