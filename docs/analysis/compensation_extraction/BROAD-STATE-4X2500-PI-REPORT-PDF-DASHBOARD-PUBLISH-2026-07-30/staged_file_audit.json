@@ -1,7 +1,7 @@
 {
-  "audited_at": "2026-07-31T03:47:36.318524Z",
+  "audited_at": "2026-07-31T03:52:22.406866Z",
   "passed": true,
-  "staged_file_count": 38,
+  "staged_file_count": 8,
   "prohibited_payload_count": 0,
   "prohibited_paths": [],
   "allowed_published_pdf": "docs/dashboard/public/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",

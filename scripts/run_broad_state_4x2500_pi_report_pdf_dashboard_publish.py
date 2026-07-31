@@ -945,13 +945,14 @@ def smoke_public(
     bundle = bundle_path.read_text(encoding="utf-8", errors="replace")
     reader = PdfReader(str(pdf_path))
     public_pdf_text = "\n".join(page.extract_text() or "" for page in reader.pages)
+    normalized_public_pdf_text = re.sub(r"\s+", " ", public_pdf_text)
     checks = {
         "public_html_loaded": '<div id="root"></div>' in html_text,
         "current_stage_final": "PI report final complete" in bundle,
         "current_report_pdf_href": PUBLIC_PDF_HREF in bundle,
         "current_report_button_label": "Open final PI report PDF" in bundle,
         "public_pdf_downloaded": pdf_path.is_file() and pdf_path.stat().st_size > 0,
-        "public_pdf_expected_title": TITLE in public_pdf_text,
+        "public_pdf_expected_title": TITLE in normalized_public_pdf_text,
         "public_pdf_more_than_one_page": len(reader.pages) > 1,
         "map_primary_metric_scout_coverage_rate": "scout_coverage_rate" in bundle,
         "clean_dashboard_structure": "Technical audit and stage history" in bundle,
@@ -984,6 +985,18 @@ def smoke_public(
         }
     )
     write_json(summary_path, summary)
+    manifest_path = OUTPUT / "report_publish_manifest.json"
+    manifest = read_json(manifest_path)
+    manifest.update(
+        {
+            "decision": DECISION,
+            "public_pages_static_current_passed": payload[
+                "public_pages_static_current_passed"
+            ],
+            "public_pdf_url": payload["public_pdf_url"],
+        }
+    )
+    write_json(manifest_path, manifest)
     if not payload["public_pages_static_current_passed"]:
         raise RuntimeError(f"Public dashboard smoke failed: {checks}")
 

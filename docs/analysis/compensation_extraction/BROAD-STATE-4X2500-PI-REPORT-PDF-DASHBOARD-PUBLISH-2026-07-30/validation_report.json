@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-07-31T03:52:00.351082Z",
+  "passed": true,
+  "checks": {
+    "01_true_final_markdown_found": true,
+    "02_source_not_prompt": true,
+    "03_crimson_pdf_created_from_true_source": true,
+    "04_pdf_in_dashboard_public_directory": true,
+    "05_markdown_copy_in_dashboard_public_directory": true,
+    "06_public_manifest_exists": true,
+    "07_pdf_expected_title": true,
+    "08_pdf_seven_sections": true,
+    "09_pdf_has_no_prompt_text": true,
+    "10_pdf_crimson_not_green": true,
+    "11_dashboard_current_report_points_to_pdf": true,
+    "12_dashboard_not_old_or_stale": true,
+    "13_dashboard_clean_structure_preserved": true,
+    "14_dashboard_map_scout_coverage_rate": true,
+    "15_local_dashboard_build_passed": true,
+    "16_local_smoke_passed_or_honest": true,
+    "17_public_pages_passed_or_honest": true,
+    "18_no_analysis_changed": true,
+    "19_no_ocr": true,
+    "20_no_download": true,
+    "21_no_source_review": true,
+    "22_no_text_or_span_extraction": true,
+    "23_no_rating": true,
+    "24_no_normalization_or_matching": true,
+    "25_no_forbidden_payloads_staged": true,
+    "26_staged_file_audit_passes": true,
+    "27_large_file_audit_passes": true
+  }
+}

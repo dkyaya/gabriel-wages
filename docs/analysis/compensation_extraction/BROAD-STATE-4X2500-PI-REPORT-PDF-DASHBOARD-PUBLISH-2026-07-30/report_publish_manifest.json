@@ -1,7 +1,7 @@
 {
   "task_id": "BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30",
   "generated_at": "2026-07-31T03:44:22.542165Z",
-  "decision": "broad_state_4x2500_pi_report_pdf_dashboard_publish_completed_local_ready_public_pending",
+  "decision": "broad_state_4x2500_pi_report_pdf_dashboard_publish_completed_public_ready",
   "head_before": "28e1e84ecfa37092c8c8f705bd81c9de2dd49edb",
   "schema_version": "1.0.0",
   "title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
@@ -24,5 +24,7 @@
   "current_stage": "PI report final complete",
   "next_task": "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
   "map_primary_metric": "scout_coverage_rate",
-  "global_analysis_readiness": false
+  "global_analysis_readiness": false,
+  "public_pages_static_current_passed": true,
+  "public_pdf_url": "https://dkyaya.github.io/gabriel-wages/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf"
 }

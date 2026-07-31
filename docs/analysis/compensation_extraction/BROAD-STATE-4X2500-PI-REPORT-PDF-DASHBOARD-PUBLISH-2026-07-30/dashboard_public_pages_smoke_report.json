@@ -1,3 +1,27 @@
 {
-  "status": "pending_push_and_deployment"
+  "checked_at": "2026-07-31T03:51:42.526506Z",
+  "status": "public_pages_static_current_passed_browser_controller_unavailable",
+  "url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_final_pdf_publish_1785469847",
+  "public_pdf_url": "https://dkyaya.github.io/gabriel-wages/reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "deployment_workflow_run_id": 30602481496,
+  "deployment_workflow_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30602481496",
+  "deployed_head_sha": "bf8b7d402f980bd888c68692d946ed27a8d59fca",
+  "deployment_status": "completed_success",
+  "public_pages_static_current_passed": true,
+  "public_pages_visible_current_passed": false,
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "visual_browser_smoke_passed": false,
+  "clean_dashboard_structure_preserved": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "checks": {
+    "public_html_loaded": true,
+    "current_stage_final": true,
+    "current_report_pdf_href": true,
+    "current_report_button_label": true,
+    "public_pdf_downloaded": true,
+    "public_pdf_expected_title": true,
+    "public_pdf_more_than_one_page": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "clean_dashboard_structure": true
+  }
 }
