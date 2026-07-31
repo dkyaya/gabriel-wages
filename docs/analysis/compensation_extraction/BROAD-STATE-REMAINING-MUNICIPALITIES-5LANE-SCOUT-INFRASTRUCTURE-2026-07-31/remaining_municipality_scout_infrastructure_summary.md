@@ -1,0 +1,3 @@
+# Remaining-Municipality Five-Lane Scout Infrastructure
+
+The authoritative 35,589-municipality universe and four disjoint covered ledgers reconcile to 16,887 scout-covered and **18,702 remaining eligible unscouted municipalities**. The entire remaining universe is locked into five deterministic, disjoint lanes of 3,741 / 3,741 / 3,740 / 3,740 / 3,740 targets. Twelve broad source families and eight growth-continuity query hints rotate across all lanes without turning the queue into a mechanism-only search. Every queue and manifest is hashed, and atomic per-municipality checkpoint/resume scaffolding is prepared. No live search or downstream operation ran.

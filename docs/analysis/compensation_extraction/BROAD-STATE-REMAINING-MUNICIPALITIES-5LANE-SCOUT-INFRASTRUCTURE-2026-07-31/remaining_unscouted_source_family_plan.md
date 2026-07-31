@@ -1,0 +1,3 @@
+# Remaining-Unscouted Source-Family Plan
+
+The queue rotates twelve broad source families separately within every lane. CBA/agreement discovery is one family, not the queue default. Non-CBA pay schedules, ordinances, budgets, classification plans, personnel/HR records, agenda packets, arbitration/factfinding records, local pay policy, and broad employee-compensation indexes remain represented. Eight secondary query hints rotate growth-continuity concepts without converting the broad scout into a mechanism-only search. Causal and discourse candidates must remain routed to separate downstream corpora.

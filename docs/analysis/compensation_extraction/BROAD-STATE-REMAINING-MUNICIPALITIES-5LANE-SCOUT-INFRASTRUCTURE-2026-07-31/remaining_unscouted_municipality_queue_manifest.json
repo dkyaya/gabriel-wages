@@ -1,0 +1,30 @@
+{
+  "covered_overlap_count": 0,
+  "covered_union_count": 16887,
+  "durable_exclusion_flag_count": 1,
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29/broad_state_4x2500_live_scout_results.csv": "659d53368a5cf15b48a290ccfd144df38f1f27f41374d34338509537b8a5bbc5",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_master_results.csv": "7773039c02bd2b31472e2c9342401762be8d9169e769e8d731d2c6a5013aca67",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_results.csv": "855d061e09090cb364342847684426137b437e3422d604b0906d8ce08157044e",
+    "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv": "3aa0903987c909e36a23ce4654667ffc3e1083f67aa44657f86a36ba670aa3c0",
+    "docs/analysis/national_municipality_universe.csv": "cf7af977846a7bb3386dbdfa0d92c5f25c53126c47068f254a9dc304fc7cc4bd",
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv": "2339ecc448f0252a5a1d533e458688d7b9e8359a5b6af013784fef4f6847e96c"
+  },
+  "lane_counts": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "live_status": "not_run",
+  "locked": true,
+  "manifest_payload_sha256": "8ff01c9ce352268f53ac9994f5e8eee78b277d40dbf73a627ee6e0f540dc04a3",
+  "queue_csv": "remaining_unscouted_municipality_queue.csv",
+  "queue_csv_sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
+  "queue_jsonl": "remaining_unscouted_municipality_queue.jsonl",
+  "queue_jsonl_sha256": "4b58ebf009990301577e48950f17ffec9d612c2d3ed19589c12ed9ec873836c9",
+  "target_count": 18702,
+  "unique_municipality_count": 18702,
+  "unique_target_count": 18702
+}

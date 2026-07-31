@@ -1,0 +1,342 @@
+{
+  "files": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/authoritative_coverage_reconciliation.json",
+      "sha256": "54b61a6825178d10489da36a06b2ee446c497cc9831611b85fee4d1ca09a13be",
+      "size_bytes": 2228
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/authoritative_coverage_reconciliation.md",
+      "sha256": "3a28c5d2530569fd72d3e068f05ca561f4eb743771e0498b7831332bdba7c113",
+      "size_bytes": 504
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/dashboard_remaining_scout_infrastructure_update_summary.json",
+      "sha256": "4463f9e12a0dba812c5de77fad1b003ee5a88352edd004d97ea383dbc5536068",
+      "size_bytes": 1197
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/forbidden_action_audit.json",
+      "sha256": "aa2152d060ad3b7ef3ce0182a9b3986315670ac498512f13d7119b69b730fb24",
+      "size_bytes": 495
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/large_file_audit.json",
+      "sha256": "b6459265e12459d8d1e835e5d74b05b86c2de28649531a423c1c2b94b997231f",
+      "size_bytes": 92
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/live_scout_launch_plan.json",
+      "sha256": "3a80e0e3d93ac6d0014c3589cbec1c0a412874b139b8b1a006f28fb460c0e66b",
+      "size_bytes": 1288
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/live_scout_launch_plan.md",
+      "sha256": "76fc2067fcf2a12c5caebca7d78858f6aa5de19eebc0f1f1537b8dc4032e34a8",
+      "size_bytes": 603
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/live_scout_validation_plan.md",
+      "sha256": "d8b8ca0fa64fb567e7c1e75fe5bff4c8e429a44196b19f8b3b7f6236d7707c6a",
+      "size_bytes": 556
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/next_task.md",
+      "sha256": "712e991947dfb6b0cdaecae2246c60db18a1688122d1bc57ce57597d2df9e18c",
+      "size_bytes": 880
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/queue_validation_detail.json",
+      "sha256": "26ecd263f9945c604350013a6e3fe6e34b5af4c0eccda827fb59a19f66df7721",
+      "size_bytes": 1255
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_municipality_scout_infrastructure_manifest.json",
+      "sha256": "fcc7b025493311a945abc16fedeb341ed9476fb17d9fc04200e97d321ef945f2",
+      "size_bytes": 1005
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_municipality_scout_infrastructure_summary.json",
+      "sha256": "d805bb46e07a8bd085b985400c5961d510f7884611fb21084ffea7d96533f0b5",
+      "size_bytes": 2333
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_municipality_scout_infrastructure_summary.md",
+      "sha256": "986c895ef13310df265b6747e49fa905ff2148d1f3d3e93582143d9e93e8e9be",
+      "size_bytes": 662
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_municipality_queue.csv",
+      "sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
+      "size_bytes": 12203166
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_municipality_queue.jsonl",
+      "sha256": "4b58ebf009990301577e48950f17ffec9d612c2d3ed19589c12ed9ec873836c9",
+      "size_bytes": 24415033
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_municipality_queue.sha256.json",
+      "sha256": "51fffe5d39f8b7af9df7e65c77875fc8161d219399570f36c4f3864a3c3ffc49",
+      "size_bytes": 2409
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_municipality_queue_manifest.json",
+      "sha256": "c93952028ff3ef7ea186bfbc94996398c8fbccd9979ac78c69f64f80711ef006",
+      "size_bytes": 1886
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_source_family_plan.json",
+      "sha256": "91a85bea8f7804ba91d3651b21bc68062e53af75aa4def02b5e4ee6202cb923d",
+      "size_bytes": 5706
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_source_family_plan.md",
+      "sha256": "7d9ef88572c03189bdee239535faa0574a41697b96e330fd6fe8ed68da28a8b1",
+      "size_bytes": 606
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_state_region_summary.csv",
+      "sha256": "8021ded993ddc63e35f62c9e00252bef348b54c62edee65a956c33f1d72c362d",
+      "size_bytes": 1072
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/remaining_unscouted_state_region_summary.json",
+      "sha256": "fb2c79c1e73d6313a6096ac3f58fbbba1432436657fcd5ec39ddac9de7ad3d6b",
+      "size_bytes": 3295
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_001_manifest.json",
+      "sha256": "0775d56864aba10795204cf27e38a2af80705473f316a603b18460db22937d0a",
+      "size_bytes": 1564
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_001_queue.csv",
+      "sha256": "784fd9f23141d70fbdcf93ffec16d44e2a97469cacc3923d01b96aacb534844a",
+      "size_bytes": 2441766
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_001_queue.jsonl",
+      "sha256": "b50542289e614afc82a04ef6f64f58c1b44a8b1d188791d1c608b4002b7af2b1",
+      "size_bytes": 4884100
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_002_manifest.json",
+      "sha256": "33cd06154f974f9d3c33c83d4b3e0603978f6a7acfc5bedf7f4e51431795de7a",
+      "size_bytes": 1549
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_002_queue.csv",
+      "sha256": "8b5c17dcd6cbd934abe5e6e78c66b5edbf28e564dbe79a1e77d5a8121b8cd96f",
+      "size_bytes": 2441542
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_002_queue.jsonl",
+      "sha256": "9e2e4799d819009f8bb2b9ddc3b1ae338013368f64cb8144b6b252b489c1abaa",
+      "size_bytes": 4883876
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_003_manifest.json",
+      "sha256": "fdfb7d0d857dd81cbadfed3b9912c1b9df00d683a7ae16e6aee7df50a05df2b5",
+      "size_bytes": 1550
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_003_queue.csv",
+      "sha256": "cb16760d2760ec7857d2d1e9c78fd4a5c0e97adacdc0acc761ec7abc02a470ae",
+      "size_bytes": 2441362
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_003_queue.jsonl",
+      "sha256": "dca363f79f374dd10c61bc4476c43ff4eb1aa239bad3c281a72f70760befcb0c",
+      "size_bytes": 4883043
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_004_manifest.json",
+      "sha256": "bb280935af9866c5d1b80f31826ba1c73c38eea51549c185bada56ba347006d5",
+      "size_bytes": 1537
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_004_queue.csv",
+      "sha256": "1b0a7623d41780467b09b9aa1946932956fdc5c41c10f9ceefdb3c7823577857",
+      "size_bytes": 2440778
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_004_queue.jsonl",
+      "sha256": "4a32d2f6841b3c9bd745903497e4449ba2bbe4b72f8bdfb7d9c8207e5a97de7c",
+      "size_bytes": 4882459
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_005_manifest.json",
+      "sha256": "18b86113089da97af96a5562782e4dcdc1e0eb03963d7a73d3e9f1368de95508",
+      "size_bytes": 1537
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_005_queue.csv",
+      "sha256": "d3c491a8326dcb13dc053e34cc5605986e73c02f7d1e7dfc9153f1540108a1e8",
+      "size_bytes": 2439874
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_005_queue.jsonl",
+      "sha256": "d2bb968d9150e22152bbece3eade7b7d80fbfc4163be74df14325f9f8ede5f8e",
+      "size_bytes": 4881555
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_distribution.json",
+      "sha256": "1d13f456bd7d3fca25cd5452ab1ab04fb4977fe5e3bc7072e9c5c5ee9ced998b",
+      "size_bytes": 7412
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_distribution.md",
+      "sha256": "490ada9eb69c50516c91bfdae136f464ceecc8f3315973471801b6b7ad51a386",
+      "size_bytes": 505
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_lane_hashes.json",
+      "sha256": "7011f23c8b253aa78ccd90340a7e2636156975877d069a50cfaec1010da83278",
+      "size_bytes": 2038
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/scout_resume_checkpoint_scaffold.json",
+      "sha256": "5b6bcd4898a7f3e9c197bb2b7b18680cb78bc32fc5385da9bdd72a2432258964",
+      "size_bytes": 2312
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/staged_file_audit.json",
+      "sha256": "b0e6f9ff28e6896ff0f42ad72b40964195dd6f28b0941a91deae07318f1bae3b",
+      "size_bytes": 16912
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/validation_report.json",
+      "sha256": "e19c724308a4b210e1a7045f225a17d6f90d3430ef62882cd17572150687bcfb",
+      "size_bytes": 1596
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31/validation_report.md",
+      "sha256": "ef5818989dc14b1a9952b92ed34be6562fe5184988da4e36e32108cb9a173104",
+      "size_bytes": 1315
+    },
+    {
+      "path": "docs/dashboard/data/analysis_readiness.json",
+      "sha256": "ef1ce4aa07519314a91edb6425dc6a3f272a77d3e82b7a08476197eebcc711b9",
+      "size_bytes": 36433
+    },
+    {
+      "path": "docs/dashboard/data/candidate_queue_summary.json",
+      "sha256": "afbbcecb10771ac9d14f90952d02aecb5022229f82fdee2af5edf3b14f954c4b",
+      "size_bytes": 27834
+    },
+    {
+      "path": "docs/dashboard/data/content_triage_status_summary.json",
+      "sha256": "49c9f40db41247f6fce48e9509c18bc050ddbcc3b3fdf03437cc4b013444ea3f",
+      "size_bytes": 15708
+    },
+    {
+      "path": "docs/dashboard/data/coverage_funnel.json",
+      "sha256": "5ff74bc638adb9f4fe877ea528196c682b39d6017fc0a820ea0118b2b3cc29aa",
+      "size_bytes": 12676
+    },
+    {
+      "path": "docs/dashboard/data/parallel_scout_status.json",
+      "sha256": "3f28809b275ae9fb6d581c6470dae0c7288e83c63c69c811bf9e6740f26c5dc1",
+      "size_bytes": 13422
+    },
+    {
+      "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
+      "sha256": "feb57bf6a05e2674a5066a635071ef426da4f551448fc421745566c9773b145c",
+      "size_bytes": 12684
+    },
+    {
+      "path": "docs/dashboard/data/priority_summary.json",
+      "sha256": "168b58ce1a434ef0d57a2d950b8fa17be09530411751ba1e2a32284f035d6a9e",
+      "size_bytes": 11853
+    },
+    {
+      "path": "docs/dashboard/data/project_phase_summary.json",
+      "sha256": "474a98518e2aac60fdc2685b8f3341bc68859195ffd98e0ed0d5266ecd3bd220",
+      "size_bytes": 205931
+    },
+    {
+      "path": "docs/dashboard/data/reports_index.json",
+      "sha256": "00b892317034fa67561b6e51b4291becd0dae27ac78f296de4eb4c11b42e36d8",
+      "size_bytes": 42538
+    },
+    {
+      "path": "docs/dashboard/data/scout_operations_summary.json",
+      "sha256": "c60919915a3a0eb880518a033d749653cd51945670087a802fc25db3b6ccf5c9",
+      "size_bytes": 12964
+    },
+    {
+      "path": "docs/dashboard/data/scout_runtime_trends.json",
+      "sha256": "83189a5df2f907e40b2992d0ed8169f10930dcb62ed83bf705e4f8cf19ca68f0",
+      "size_bytes": 14022
+    },
+    {
+      "path": "docs/dashboard/data/scout_yield_by_state.json",
+      "sha256": "ac4f623f27a7fd80627fe7497efc0ed3cbf96a9210ecbab44cc8bc33592ac1ef",
+      "size_bytes": 51681
+    },
+    {
+      "path": "docs/dashboard/data/source_review_status_summary.json",
+      "sha256": "45190a0d1529c224722e73932738993d630d9c18f43ca05cd176a339b31a8959",
+      "size_bytes": 27241
+    },
+    {
+      "path": "docs/dashboard/data/state_priority_summary.json",
+      "sha256": "4cb80aa1113c9792e6379122a3cde1eb606554d24d05c855a8851a9beeacf57c",
+      "size_bytes": 39561
+    },
+    {
+      "path": "docs/dashboard/data/state_summary.json",
+      "sha256": "a4dbfa37d91c60c1cee7d69b8abf0723cadc9e6335c0c8b4cac12ddcd0b1f346",
+      "size_bytes": 165323
+    },
+    {
+      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
+      "sha256": "5fb6120351ca244a84bc933855fa18a8f2480786cbb4562cea07a86cd6e690ba",
+      "size_bytes": 56812
+    },
+    {
+      "path": "docs/dashboard/data/text_table_detection_status_summary.json",
+      "sha256": "46d0cb537a1adad98ee9feb926453b577a0eb5fb4ba876cb22ec43a1a70700dc",
+      "size_bytes": 12889
+    },
+    {
+      "path": "docs/dashboard/data/top_priority_targets.json",
+      "sha256": "fbbfdb0a2a8bae62e0c76ac7e524372a578401eb8dd3dd880da8ea4fb765b061",
+      "size_bytes": 217464
+    },
+    {
+      "path": "docs/dashboard/data/verification_status_summary.json",
+      "sha256": "25e3b4b17e448ab35a9fdc815d8db71ed76ccbe6c3213283d458b2c67d3e440e",
+      "size_bytes": 15288
+    },
+    {
+      "path": "docs/dashboard/src/App.jsx",
+      "sha256": "f18b82169b3d42721513a4abb3f97b34908fae0c235728b089301ea0d10c9082",
+      "size_bytes": 18562
+    },
+    {
+      "path": "scripts/build_dashboard_data.py",
+      "sha256": "96ba797c2fea62bad9f39a5795cc63d5ec172183acf7f26018858e9bf781936d",
+      "size_bytes": 1057507
+    },
+    {
+      "path": "scripts/prepare_remaining_municipality_5lane_scout.py",
+      "sha256": "ee4cb7547263704332996e83efda8441c62451fbdbfd0ea6168daf685449fe0a",
+      "size_bytes": 44399
+    },
+    {
+      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
+      "sha256": "a00132dc3655f7237165d64f751d7a609c0f0e877466a2ebc5c243b56e064981",
+      "size_bytes": 23465
+    },
+    {
+      "path": "scripts/validate_remaining_municipality_5lane_scout.py",
+      "sha256": "0d2c1d7451dc0cd59988baa02ef861114e705d13dcc0cdaa7accb33e6c6d34f3",
+      "size_bytes": 958
+    }
+  ],
+  "passed": true,
+  "prohibited_paths": [],
+  "staged_file_count": 67
+}

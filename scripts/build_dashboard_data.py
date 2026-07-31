@@ -1773,6 +1773,11 @@ BROAD_STATE_WAGE_GROWTH_CONTINUITY_REVIEW_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31"
 )
+BROAD_STATE_REMAINING_5LANE_SCOUT_INFRASTRUCTURE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6962,6 +6967,67 @@ def broad_state_wage_growth_continuity_review_status() -> tuple[bool, dict[str, 
     return True, manifest
 
 
+def broad_state_remaining_5lane_scout_infrastructure_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize a validated no-call queue over the remaining eligible universe."""
+    directory = BROAD_STATE_REMAINING_5LANE_SCOUT_INFRASTRUCTURE_DIR
+    required = (
+        directory / "remaining_municipality_scout_infrastructure_manifest.json",
+        directory / "authoritative_coverage_reconciliation.json",
+        directory / "remaining_unscouted_municipality_queue_manifest.json",
+        directory / "scout_lane_distribution.json",
+        directory / "scout_lane_hashes.json",
+        directory / "scout_resume_checkpoint_scaffold.json",
+        directory / "queue_validation_detail.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest = read_json(required[0])
+    coverage = read_json(required[1])
+    queue = read_json(required[2])
+    distribution = read_json(required[3])
+    validation = read_json(required[6])
+    forbidden = read_json(required[7])
+    expected_sizes = {
+        "scout_lane_001": 3741,
+        "scout_lane_002": 3741,
+        "scout_lane_003": 3740,
+        "scout_lane_004": 3740,
+        "scout_lane_005": 3740,
+    }
+    gates = (
+        manifest.get("decision")
+        in {
+            "preliminary_infrastructure_ready_validation_pending",
+            "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_local_ready_public_pending",
+            "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_live_ready",
+        }
+        and manifest.get("eligible_municipality_universe_count") == 35589
+        and manifest.get("scout_covered_municipality_count") == 16887
+        and manifest.get("remaining_unscouted_eligible_municipality_count") == 18702
+        and manifest.get("lane_sizes") == expected_sizes
+        and manifest.get("live_scout_run") is False
+        and manifest.get("map_primary_metric") == "scout_coverage_rate"
+        and coverage.get("eligible_municipality_universe_count") == 35589
+        and coverage.get("authoritative_scout_covered_union_count") == 16887
+        and coverage.get("remaining_unscouted_eligible_count") == 18702
+        and queue.get("target_count") == 18702
+        and {
+            lane: details.get("target_count")
+            for lane, details in distribution.get("lanes", {}).items()
+        }
+        == expected_sizes
+        and validation.get("passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("live_scout_runs") == 0
+        and forbidden.get("hosted_search_calls") == 0
+        and forbidden.get("url_opens") == 0
+    )
+    if not gates:
+        raise ValueError("remaining-municipality five-lane scout infrastructure fails dashboard gates")
+    return True, manifest
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -10634,6 +10700,9 @@ def build_project_phase_summary(
     growth_continuity_review_available, growth_continuity_review = (
         broad_state_wage_growth_continuity_review_status()
     )
+    remaining_5lane_infrastructure_available, remaining_5lane_infrastructure = (
+        broad_state_remaining_5lane_scout_infrastructure_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12035,6 +12104,36 @@ def build_project_phase_summary(
                 "validate checkpoint/resume and staggered launch infrastructure before live authorization",
             ],
             "last_updated_context": "wage_growth_continuity_review_complete_weekend_scout_prep_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_5lane_infrastructure_available:
+        lane_sizes = remaining_5lane_infrastructure["lane_sizes"]
+        payload.update({
+            "data_vintage": "2026-07-31",
+            "stage": "broad_state_remaining_municipalities_5lane_scout_infrastructure_ready",
+            "current_phase": "Remaining-municipality 5-lane scout infrastructure ready",
+            "current_phase_code": remaining_5lane_infrastructure["decision"],
+            "current_evidence_status": "locked_no_call_remaining_municipality_queue_ready",
+            "remaining_municipality_5lane_scout_infrastructure_available": True,
+            "remaining_unscouted_eligible_municipality_count": 18702,
+            "planned_remaining_scout_lane_sizes": [
+                lane_sizes[f"scout_lane_{index:03d}"] for index in range(1, 6)
+            ],
+            "planned_remaining_scout_lane_count": 5,
+            "planned_scout_strategy": "broad_source_family_and_geography_balanced_no_live_calls",
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31",
+            "next_phase": "Run the locked remaining-municipality queue in five checkpointed lanes",
+            "next_phase_sequence": [
+                "launch only after explicit live-scout authorization",
+                "stagger five lanes at T+0, T+8, T+16, T+24, and T+32 minutes",
+                "checkpoint after every municipality and resume only incomplete rows",
+            ],
+            "last_updated_context": "remaining_municipality_5lane_scout_infrastructure_ready_live_not_run",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,

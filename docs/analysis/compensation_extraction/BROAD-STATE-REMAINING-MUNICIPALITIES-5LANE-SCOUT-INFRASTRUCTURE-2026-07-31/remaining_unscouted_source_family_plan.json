@@ -1,0 +1,164 @@
+{
+  "causal_and_discourse_routing_remains_separate": true,
+  "cba_only_concentration": 0.08336006844187788,
+  "family_definitions": [
+    {
+      "family": "cba_agreement",
+      "source_corpus_routing_hint": "causal",
+      "terms": "collective bargaining agreement labor contract"
+    },
+    {
+      "family": "mou_memorandum_settlement",
+      "source_corpus_routing_hint": "causal",
+      "terms": "memorandum MOU settlement labor agreement"
+    },
+    {
+      "family": "wage_salary_schedule",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "wage schedule salary schedule employee pay"
+    },
+    {
+      "family": "salary_pay_ordinance",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "salary ordinance pay ordinance compensation"
+    },
+    {
+      "family": "budget_pay_plan",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "municipal budget pay plan compensation"
+    },
+    {
+      "family": "compensation_classification_plan",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "compensation classification plan job grades"
+    },
+    {
+      "family": "personnel_policy",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "personnel policy employee wages compensation"
+    },
+    {
+      "family": "civil_service_hr",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "civil service HR pay classification"
+    },
+    {
+      "family": "agenda_minutes_packet",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "council agenda minutes packet labor pay"
+    },
+    {
+      "family": "arbitration_factfinding_labor_relations",
+      "source_corpus_routing_hint": "causal",
+      "terms": "interest arbitration factfinding labor relations award"
+    },
+    {
+      "family": "local_pay_policy_payroll",
+      "source_corpus_routing_hint": "causal_or_pay_record",
+      "terms": "local pay policy payroll wage rates"
+    },
+    {
+      "family": "broad_pay_employee_compensation_index",
+      "source_corpus_routing_hint": "discovery_route_separate_corpora",
+      "terms": "employee compensation labor pay documents index"
+    }
+  ],
+  "growth_continuity_hints": [
+    "cycle wage schedules prior current",
+    "percentage raise across the board",
+    "COLA CPI wage increase",
+    "step schedule progression grades",
+    "retroactive wage implementation effective date",
+    "longevity shift specialty non-base pay",
+    "bargaining settlement factfinding terms",
+    "market recruitment retention pay review"
+  ],
+  "lane_source_family_counts": {
+    "scout_lane_001": {
+      "agenda_minutes_packet": 312,
+      "arbitration_factfinding_labor_relations": 311,
+      "broad_pay_employee_compensation_index": 311,
+      "budget_pay_plan": 312,
+      "cba_agreement": 312,
+      "civil_service_hr": 312,
+      "compensation_classification_plan": 312,
+      "local_pay_policy_payroll": 311,
+      "mou_memorandum_settlement": 312,
+      "personnel_policy": 312,
+      "salary_pay_ordinance": 312,
+      "wage_salary_schedule": 312
+    },
+    "scout_lane_002": {
+      "agenda_minutes_packet": 312,
+      "arbitration_factfinding_labor_relations": 312,
+      "broad_pay_employee_compensation_index": 312,
+      "budget_pay_plan": 312,
+      "cba_agreement": 311,
+      "civil_service_hr": 312,
+      "compensation_classification_plan": 312,
+      "local_pay_policy_payroll": 312,
+      "mou_memorandum_settlement": 311,
+      "personnel_policy": 312,
+      "salary_pay_ordinance": 312,
+      "wage_salary_schedule": 311
+    },
+    "scout_lane_003": {
+      "agenda_minutes_packet": 312,
+      "arbitration_factfinding_labor_relations": 312,
+      "broad_pay_employee_compensation_index": 312,
+      "budget_pay_plan": 311,
+      "cba_agreement": 312,
+      "civil_service_hr": 312,
+      "compensation_classification_plan": 311,
+      "local_pay_policy_payroll": 312,
+      "mou_memorandum_settlement": 312,
+      "personnel_policy": 312,
+      "salary_pay_ordinance": 311,
+      "wage_salary_schedule": 311
+    },
+    "scout_lane_004": {
+      "agenda_minutes_packet": 311,
+      "arbitration_factfinding_labor_relations": 312,
+      "broad_pay_employee_compensation_index": 312,
+      "budget_pay_plan": 312,
+      "cba_agreement": 312,
+      "civil_service_hr": 311,
+      "compensation_classification_plan": 311,
+      "local_pay_policy_payroll": 312,
+      "mou_memorandum_settlement": 312,
+      "personnel_policy": 311,
+      "salary_pay_ordinance": 312,
+      "wage_salary_schedule": 312
+    },
+    "scout_lane_005": {
+      "agenda_minutes_packet": 311,
+      "arbitration_factfinding_labor_relations": 311,
+      "broad_pay_employee_compensation_index": 311,
+      "budget_pay_plan": 312,
+      "cba_agreement": 312,
+      "civil_service_hr": 312,
+      "compensation_classification_plan": 312,
+      "local_pay_policy_payroll": 311,
+      "mou_memorandum_settlement": 312,
+      "personnel_policy": 312,
+      "salary_pay_ordinance": 312,
+      "wage_salary_schedule": 312
+    }
+  },
+  "non_cba_discovery_preserved": true,
+  "overall_source_family_counts": {
+    "agenda_minutes_packet": 1558,
+    "arbitration_factfinding_labor_relations": 1558,
+    "broad_pay_employee_compensation_index": 1558,
+    "budget_pay_plan": 1559,
+    "cba_agreement": 1559,
+    "civil_service_hr": 1559,
+    "compensation_classification_plan": 1558,
+    "local_pay_policy_payroll": 1558,
+    "mou_memorandum_settlement": 1559,
+    "personnel_policy": 1559,
+    "salary_pay_ordinance": 1559,
+    "wage_salary_schedule": 1558
+  },
+  "strategy": "broad source-family discovery with growth-continuity hints; not mechanism-only"
+}

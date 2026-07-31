@@ -1,0 +1,3 @@
+# Live Scout Launch Plan
+
+No live command was executed here. In the next authorized task, first adapt the proven 4×2,500 runner to the new immutable five-lane paths and variable lane sizes, then revalidate every master/lane hash and run the separately authorized metadata-only transport gate. Start lanes at T+0, T+8, T+16, T+24, and T+32 minutes. Each lane writes only its isolated checkpoint tree, checkpoints after every municipality, skips accepted targets, and fails closed on hash or checkpoint corruption. Candidate review and every downstream research stage remain outside the live-scout task.

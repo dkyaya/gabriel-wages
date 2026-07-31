@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "covered_overlap_zero": true,
+    "eligible_only": true,
+    "lane_counts_exact": true,
+    "lane_disjoint": true,
+    "lane_union_exact": true,
+    "master_count": true,
+    "master_csv_hash": true,
+    "master_jsonl_hash": true,
+    "municipality_ids_unique": true,
+    "one_durable_flag": true,
+    "readiness_false": true,
+    "remaining_set_exact": true,
+    "scout_lane_001_csv_hash": true,
+    "scout_lane_001_identity": true,
+    "scout_lane_001_jsonl_hash": true,
+    "scout_lane_002_csv_hash": true,
+    "scout_lane_002_identity": true,
+    "scout_lane_002_jsonl_hash": true,
+    "scout_lane_003_csv_hash": true,
+    "scout_lane_003_identity": true,
+    "scout_lane_003_jsonl_hash": true,
+    "scout_lane_004_csv_hash": true,
+    "scout_lane_004_identity": true,
+    "scout_lane_004_jsonl_hash": true,
+    "scout_lane_005_csv_hash": true,
+    "scout_lane_005_identity": true,
+    "scout_lane_005_jsonl_hash": true,
+    "source_families_complete": true,
+    "statuses_no_call": true,
+    "target_ids_unique": true
+  },
+  "lane_counts": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "passed": true,
+  "target_count": 18702
+}

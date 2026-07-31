@@ -1,0 +1,32 @@
+{
+  "authoritative_scout_covered_union_count": 16887,
+  "covered_component_counts": {
+    "broad_4x1000_parseable": 3997,
+    "broad_4x2500_parseable": 9968,
+    "broad_state_source_wave_parseable": 486,
+    "canonical_parseable_coverage": 2436
+  },
+  "covered_component_pairwise_overlap_counts": {
+    "broad_4x1000_parseable__broad_4x2500_parseable": 0,
+    "broad_state_source_wave_parseable__broad_4x1000_parseable": 0,
+    "broad_state_source_wave_parseable__broad_4x2500_parseable": 0,
+    "canonical_parseable_coverage__broad_4x1000_parseable": 0,
+    "canonical_parseable_coverage__broad_4x2500_parseable": 0,
+    "canonical_parseable_coverage__broad_state_source_wave_parseable": 0
+  },
+  "covered_ids_outside_universe": 0,
+  "difference_from_prior_review_count": 0,
+  "durable_exclusion_handling": "One remaining municipality (Wayland, MA) is already canonical but not scout-covered; it is retained and explicitly flagged rather than silently removed.",
+  "eligible_municipality_universe_count": 35589,
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29/broad_state_4x2500_live_scout_results.csv": "659d53368a5cf15b48a290ccfd144df38f1f27f41374d34338509537b8a5bbc5",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_master_results.csv": "7773039c02bd2b31472e2c9342401762be8d9169e769e8d731d2c6a5013aca67",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_results.csv": "855d061e09090cb364342847684426137b437e3422d604b0906d8ce08157044e",
+    "docs/analysis/national_municipality_priority_tiers_2026-07-22.csv": "3aa0903987c909e36a23ce4654667ffc3e1083f67aa44657f86a36ba670aa3c0",
+    "docs/analysis/national_municipality_universe.csv": "cf7af977846a7bb3386dbdfa0d92c5f25c53126c47068f254a9dc304fc7cc4bd",
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv": "2339ecc448f0252a5a1d533e458688d7b9e8359a5b6af013784fef4f6847e96c"
+  },
+  "queue_covered_overlap_count": 0,
+  "reconciliation_formula": "35,589 - 16,887 = 18,702",
+  "remaining_unscouted_eligible_count": 18702
+}

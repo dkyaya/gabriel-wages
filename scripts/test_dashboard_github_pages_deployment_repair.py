@@ -221,15 +221,36 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                         "wage_growth_continuity_review_manifest.json"
                                                     )
                                                     if growth_review_path.exists():
-                                                        self.assertEqual(
-                                                            phase["current_phase"],
-                                                            "Wage-growth continuity review complete",
-                                                        )
-                                                        self.assertEqual(
-                                                            phase["next_task"],
+                                                        remaining_infrastructure_path = (
+                                                            ROOT / "docs/analysis/compensation_extraction/"
                                                             "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
-                                                            "SCOUT-INFRASTRUCTURE-2026-07-31",
+                                                            "SCOUT-INFRASTRUCTURE-2026-07-31/"
+                                                            "remaining_municipality_scout_infrastructure_manifest.json"
                                                         )
+                                                        if remaining_infrastructure_path.exists():
+                                                            self.assertEqual(
+                                                                phase["current_phase"],
+                                                                "Remaining-municipality 5-lane scout infrastructure ready",
+                                                            )
+                                                            self.assertEqual(
+                                                                phase["next_task"],
+                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                                "LIVE-SCOUT-2026-07-31",
+                                                            )
+                                                            self.assertEqual(
+                                                                phase["planned_remaining_scout_lane_sizes"],
+                                                                [3741, 3741, 3740, 3740, 3740],
+                                                            )
+                                                        else:
+                                                            self.assertEqual(
+                                                                phase["current_phase"],
+                                                                "Wage-growth continuity review complete",
+                                                            )
+                                                            self.assertEqual(
+                                                                phase["next_task"],
+                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                                "SCOUT-INFRASTRUCTURE-2026-07-31",
+                                                            )
                                                         self.assertEqual(
                                                             phase["remaining_unscouted_eligible_municipality_count"],
                                                             18702,

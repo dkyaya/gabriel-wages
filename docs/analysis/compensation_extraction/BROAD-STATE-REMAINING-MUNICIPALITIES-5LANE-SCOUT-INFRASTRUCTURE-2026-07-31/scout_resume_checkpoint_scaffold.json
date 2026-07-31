@@ -1,0 +1,61 @@
+{
+  "accepted_target_rerun_prohibited": true,
+  "atomic_write_required": true,
+  "checkpoint_after_every_municipality": true,
+  "checkpoint_corruption_rule": "fail closed and stop the affected lane",
+  "checkpoint_schema_version": "1.0",
+  "lanes": {
+    "scout_lane_001": {
+      "completed_target_count": 0,
+      "lane_id": "scout_lane_001",
+      "lane_status": "not_started",
+      "last_accepted_target_id": null,
+      "next_lane_sequence": 1,
+      "queue_csv_sha256": "784fd9f23141d70fbdcf93ffec16d44e2a97469cacc3923d01b96aacb534844a",
+      "scheduled_start_offset_minutes": 0,
+      "target_count": 3741
+    },
+    "scout_lane_002": {
+      "completed_target_count": 0,
+      "lane_id": "scout_lane_002",
+      "lane_status": "not_started",
+      "last_accepted_target_id": null,
+      "next_lane_sequence": 1,
+      "queue_csv_sha256": "8b5c17dcd6cbd934abe5e6e78c66b5edbf28e564dbe79a1e77d5a8121b8cd96f",
+      "scheduled_start_offset_minutes": 8,
+      "target_count": 3741
+    },
+    "scout_lane_003": {
+      "completed_target_count": 0,
+      "lane_id": "scout_lane_003",
+      "lane_status": "not_started",
+      "last_accepted_target_id": null,
+      "next_lane_sequence": 1,
+      "queue_csv_sha256": "cb16760d2760ec7857d2d1e9c78fd4a5c0e97adacdc0acc761ec7abc02a470ae",
+      "scheduled_start_offset_minutes": 16,
+      "target_count": 3740
+    },
+    "scout_lane_004": {
+      "completed_target_count": 0,
+      "lane_id": "scout_lane_004",
+      "lane_status": "not_started",
+      "last_accepted_target_id": null,
+      "next_lane_sequence": 1,
+      "queue_csv_sha256": "1b0a7623d41780467b09b9aa1946932956fdc5c41c10f9ceefdb3c7823577857",
+      "scheduled_start_offset_minutes": 24,
+      "target_count": 3740
+    },
+    "scout_lane_005": {
+      "completed_target_count": 0,
+      "lane_id": "scout_lane_005",
+      "lane_status": "not_started",
+      "last_accepted_target_id": null,
+      "next_lane_sequence": 1,
+      "queue_csv_sha256": "d3c491a8326dcb13dc053e34cc5605986e73c02f7d1e7dfc9153f1540108a1e8",
+      "scheduled_start_offset_minutes": 32,
+      "target_count": 3740
+    }
+  },
+  "resume_rule": "resume only the next unaccepted target in the same lane after revalidating the locked queue hash",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
+}

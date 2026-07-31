@@ -1,0 +1,42 @@
+# Validation Report
+
+Overall: **passed**.
+
+- PASS — 01_eligible_universe_reconciled
+- PASS — 02_covered_union_reconciled
+- PASS — 03_remaining_count_reconciled
+- PASS — 04_prior_count_difference_zero
+- PASS — 05_covered_excluded
+- PASS — 06_eligible_only
+- PASS — 07_unique_target_ids
+- PASS — 08_unique_municipality_ids
+- PASS — 09_lane_union_exact
+- PASS — 10_lanes_disjoint
+- PASS — 11_lane_sizes_balanced
+- PASS — 12_expected_lane_sizes
+- PASS — 13_state_region_documented
+- PASS — 14_source_family_documented
+- PASS — 15_queue_lane_hashes_exist
+- PASS — 16_checkpoint_scaffold_exists
+- PASS — 17_launch_plan_not_executed
+- PASS — 18_no_hosted_search
+- PASS — 19_no_url_open
+- PASS — 20_no_candidate_review
+- PASS — 21_no_verification
+- PASS — 22_no_download
+- PASS — 23_no_source_review
+- PASS — 24_no_ocr
+- PASS — 25_no_extraction
+- PASS — 26_no_rating
+- PASS — 27_no_ingestion_codification
+- PASS — 28_no_normalization_matching
+- PASS — 29_dashboard_clean
+- PASS — 30_map_scout_coverage_rate
+- PASS — 31_report_link_intact
+- PASS — 32_growth_module_intact
+- PASS — 33_no_prohibited_payloads
+- PASS — 34_staged_file_audit
+- PASS — 35_large_file_audit
+- PASS — 36_dashboard_build
+- PASS — 37_local_smoke
+- PASS — 38_public_deployment

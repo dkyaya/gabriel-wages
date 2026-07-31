@@ -1,0 +1,26 @@
+{
+  "candidate_review_in_live_task": false,
+  "downstream_stages_in_live_task": false,
+  "lane_commands_planned_not_executed": {
+    "scout_lane_001": ".venv/bin/python scripts/run_broad_state_remaining_5lane_live_scout.py --run-lane 1",
+    "scout_lane_002": ".venv/bin/python scripts/run_broad_state_remaining_5lane_live_scout.py --run-lane 2",
+    "scout_lane_003": ".venv/bin/python scripts/run_broad_state_remaining_5lane_live_scout.py --run-lane 3",
+    "scout_lane_004": ".venv/bin/python scripts/run_broad_state_remaining_5lane_live_scout.py --run-lane 4",
+    "scout_lane_005": ".venv/bin/python scripts/run_broad_state_remaining_5lane_live_scout.py --run-lane 5"
+  },
+  "live_run_performed": false,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31",
+  "preconditions": [
+    "revalidate master and lane hashes",
+    "adapt the prior 4x2500 live runner to this five-lane directory without changing the locked queue",
+    "run a separately authorized metadata-only transport preflight",
+    "confirm isolated lane output/checkpoint directories and atomic per-target checkpoints"
+  ],
+  "stagger_offsets_minutes": {
+    "scout_lane_001": 0,
+    "scout_lane_002": 8,
+    "scout_lane_003": 16,
+    "scout_lane_004": 24,
+    "scout_lane_005": 32
+  }
+}

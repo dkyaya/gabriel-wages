@@ -1,0 +1,36 @@
+{
+  "actual_scout_coverage_unchanged": 16887,
+  "browser_controller_status": "not_run_task_prohibits_opening_urls",
+  "checks": {
+    "build_exists": true,
+    "coverage_unchanged": true,
+    "current_stage": true,
+    "global_readiness_false": true,
+    "growth_module_bundle": true,
+    "growth_module_source": true,
+    "lane_sizes": true,
+    "map_metric": true,
+    "next_task": true,
+    "remaining_count": true,
+    "report_link": true,
+    "technical_details_collapsed": true
+  },
+  "current_stage": "remaining-municipality 5-lane scout infrastructure ready",
+  "dashboard_build_passed": true,
+  "final_pi_report_link_preserved": true,
+  "live_scout_run": false,
+  "local_static_smoke_passed": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31",
+  "planned_lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "planned_rows_added_to_map": 0,
+  "remaining_unscouted_eligible_municipalities": 18702,
+  "status": "local_build_static_smoke_passed",
+  "wage_growth_continuity_module_preserved": true
+}

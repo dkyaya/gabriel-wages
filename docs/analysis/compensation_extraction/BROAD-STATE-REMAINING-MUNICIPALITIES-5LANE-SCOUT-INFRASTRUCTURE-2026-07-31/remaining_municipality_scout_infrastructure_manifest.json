@@ -1,0 +1,26 @@
+{
+  "causal_readiness": false,
+  "decision": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_local_ready_public_pending",
+  "eligible_municipality_universe_count": 35589,
+  "generated_at": "2026-07-31T18:04:17Z",
+  "global_analysis_readiness": false,
+  "head_before": "83c44b7b789607e82bc2bc349aaf8614fdbab6b2",
+  "lane_count": 5,
+  "lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "live_scout_run": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "master_queue_sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
+  "public_pages_passed": false,
+  "remaining_unscouted_eligible_municipality_count": 18702,
+  "scout_covered_municipality_count": 16887,
+  "source_family_count": 12,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31",
+  "validation_passed": true,
+  "wage_gap_readiness": false
+}
