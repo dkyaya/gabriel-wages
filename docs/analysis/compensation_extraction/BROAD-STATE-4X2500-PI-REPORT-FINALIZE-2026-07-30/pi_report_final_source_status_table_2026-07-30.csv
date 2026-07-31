@@ -1,0 +1,13 @@
+stage,count,note
+Scout coverage,"16,887 municipalities","47.45% of 35,589 eligible/known municipality universe"
+4x2500 scout wave,"10,000 terminal outcomes","9,968 parseable; 32 failed/unparseable"
+Candidate formation,"9,977 raw / 9,072 deduped","5,768 verification-ready"
+Verification,"5,768 reviewed","3,950 reachable/source-review-ready"
+Source review/download,"3,672 retained","3,248 PDF; 350 HTML; 74 other"
+Text readiness,"2,940 ready","2,577 PDF; 291 HTML; 72 other; 601 OCR-later"
+Text extraction,"2,795 clean/span-ready",145 quality/problem rows
+Span extraction,"19,118 candidates","18,612 rating-ready"
+Span rating,"18,554 valid",58 quarantined and excluded
+Normalization,"11,548 quantitative records","672 full; 1,563 partial; 3,769 mechanism-only; 720 deferred; 4,824 unusable"
+Matched structure,"2,712 municipality-cycle groups",65 safety/non-safety candidates; 303 comparable wage candidates; 141 growth-readiness candidates
+Focused rescue/validation,416 quantitative growth records,"4 bounded comparisons: 1 PI-usable, 3 conditional"

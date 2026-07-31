@@ -1,0 +1,281 @@
+{
+  "generated_at": "2026-07-31T02:28:31.166466Z",
+  "passed": true,
+  "check_count": 39,
+  "failed_checks": [],
+  "checks": [
+    {
+      "label": "scout-covered municipalities",
+      "expected": 16887,
+      "observed": 16887,
+      "source": "dashboard coverage source",
+      "passed": true
+    },
+    {
+      "label": "eligible municipality universe",
+      "expected": 35589,
+      "observed": 35589,
+      "source": "national_municipality_universe.csv",
+      "passed": true
+    },
+    {
+      "label": "national scout coverage rate",
+      "expected": 47.45,
+      "observed": 47.45,
+      "source": "derived from coverage numerator/denominator",
+      "passed": true
+    },
+    {
+      "label": "valid ratings",
+      "expected": 18554,
+      "observed": 18554,
+      "source": "span_rating_summary.json",
+      "passed": true
+    },
+    {
+      "label": "quarantines",
+      "expected": 58,
+      "observed": 58,
+      "source": "span_rating_summary.json",
+      "passed": true
+    },
+    {
+      "label": "careful claim candidates",
+      "expected": 18,
+      "observed": 18,
+      "source": "rating_ingest_codify_summary.json",
+      "passed": true
+    },
+    {
+      "label": "core finding ready",
+      "expected": 472,
+      "observed": 472,
+      "source": "report_usability_summary.json",
+      "passed": true
+    },
+    {
+      "label": "supporting examples",
+      "expected": 528,
+      "observed": 528,
+      "source": "report_usability_summary.json",
+      "passed": true
+    },
+    {
+      "label": "context only",
+      "expected": 6860,
+      "observed": 6860,
+      "source": "report_usability_summary.json",
+      "passed": true
+    },
+    {
+      "label": "downstream normalization needed",
+      "expected": 5533,
+      "observed": 5533,
+      "source": "report_usability_summary.json",
+      "passed": true
+    },
+    {
+      "label": "exclude from report",
+      "expected": 5161,
+      "observed": 5161,
+      "source": "report_usability_summary.json",
+      "passed": true
+    },
+    {
+      "label": "normalized quantitative records",
+      "expected": 11548,
+      "observed": 11548,
+      "source": "normalization_summary.json",
+      "passed": true
+    },
+    {
+      "label": "quantitatively supported growth records",
+      "expected": 416,
+      "observed": 416,
+      "source": "normalization_rescue_gap_growth_summary.json",
+      "passed": true
+    },
+    {
+      "label": "quantitative growth claims",
+      "expected": 95,
+      "observed": 95,
+      "source": "normalization_rescue_gap_growth_summary.json",
+      "passed": true
+    },
+    {
+      "label": "bounded candidates",
+      "expected": 4,
+      "observed": 4,
+      "source": "bounded_wage_differential_validation_summary.json",
+      "passed": true
+    },
+    {
+      "label": "PI-usable bounded candidates",
+      "expected": 1,
+      "observed": 1,
+      "source": "bounded_wage_differential_validation_summary.json",
+      "passed": true
+    },
+    {
+      "label": "conditional bounded candidates",
+      "expected": 3,
+      "observed": 3,
+      "source": "bounded_wage_differential_validation_summary.json",
+      "passed": true
+    },
+    {
+      "label": "rejected bounded candidates",
+      "expected": 0,
+      "observed": 0,
+      "source": "bounded_wage_differential_validation_summary.json",
+      "passed": true
+    },
+    {
+      "label": "non-base police",
+      "expected": 1239,
+      "observed": 1239,
+      "source": "nonbase_compensation_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "non-base fire",
+      "expected": 280,
+      "observed": 280,
+      "source": "nonbase_compensation_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "non-base combined_safety",
+      "expected": 9,
+      "observed": 9,
+      "source": "nonbase_compensation_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "non-base non_safety",
+      "expected": 226,
+      "observed": 226,
+      "source": "nonbase_compensation_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "non-base unclear",
+      "expected": 1964,
+      "observed": 1964,
+      "source": "nonbase_compensation_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "growth-claim police",
+      "expected": 63,
+      "observed": 63,
+      "source": "growth_mechanism_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "growth-claim fire",
+      "expected": 15,
+      "observed": 15,
+      "source": "growth_mechanism_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "growth-claim non_safety",
+      "expected": 14,
+      "observed": 14,
+      "source": "growth_mechanism_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "growth-claim unclear",
+      "expected": 3,
+      "observed": 3,
+      "source": "growth_mechanism_side_audit.json",
+      "passed": true
+    },
+    {
+      "label": "bargaining/strike safety",
+      "expected": 714,
+      "observed": 714,
+      "source": "bargaining_dispute_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "bargaining/strike non_safety",
+      "expected": 292,
+      "observed": 292,
+      "source": "bargaining_dispute_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "bargaining/strike mixed",
+      "expected": 39,
+      "observed": 39,
+      "source": "bargaining_dispute_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "bargaining/strike unclear",
+      "expected": 671,
+      "observed": 671,
+      "source": "bargaining_dispute_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "direct market/staffing safety",
+      "expected": 33,
+      "observed": 33,
+      "source": "market_staffing_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "direct market/staffing non_safety",
+      "expected": 4,
+      "observed": 4,
+      "source": "market_staffing_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "direct market/staffing unclear",
+      "expected": 46,
+      "observed": 46,
+      "source": "market_staffing_pressure_audit.json",
+      "passed": true
+    },
+    {
+      "label": "comparison tier position_schedule_comparable",
+      "expected": 1,
+      "observed": 1,
+      "source": "comparison_readiness_tiers.json",
+      "passed": true
+    },
+    {
+      "label": "comparison tier conditional_specific_blocker",
+      "expected": 3,
+      "observed": 3,
+      "source": "comparison_readiness_tiers.json",
+      "passed": true
+    },
+    {
+      "label": "comparison tier structurally_compatible_candidate_review",
+      "expected": 27,
+      "observed": 27,
+      "source": "comparison_readiness_tiers.json",
+      "passed": true
+    },
+    {
+      "label": "comparison tier moderate_manual_review",
+      "expected": 87,
+      "observed": 87,
+      "source": "comparison_readiness_tiers.json",
+      "passed": true
+    },
+    {
+      "label": "comparison tier not_ready",
+      "expected": 189,
+      "observed": 189,
+      "source": "comparison_readiness_tiers.json",
+      "passed": true
+    }
+  ]
+}

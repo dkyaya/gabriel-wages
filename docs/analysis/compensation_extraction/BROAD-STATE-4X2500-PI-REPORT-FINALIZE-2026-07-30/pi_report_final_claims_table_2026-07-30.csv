@@ -1,0 +1,17 @@
+claim_id,topic,report_level,side,pressure,claim
+V2-C01,Non-base compensation,core,safety,gap-widening pressure,"Resolved records are safety-heavy, while 226 non-safety examples demonstrate that the channel is not unique to safety."
+V2-C02,Non-base counterevidence,supporting,non-safety,upward non-safety pressure,Port Huron clerical opt-out stipends show that non-safety units also use material non-base channels.
+V2-C03,Listed-rate comparison,core,mixed,mixed,Normalization supports a narrow set of current bounded comparisons rather than only future comparison potential.
+V2-C04,Shreve,supporting,safety,safety-side listed-rate advantage,The same 2024 ordinance lists part-time police $6/hour above a part-time utility clerk.
+V2-C05,Canastota counterexample,supporting,non-safety,non-safety-side listed-rate advantage,The Year 1 police rate is $0.91/hour below the code-enforcement rate.
+V2-C06,Timing,core,unclear,timing/realization,"Recurring base increases, retroactivity, one-time payments, and delay have different wage-path implications."
+V2-C07,Automatic growth,core,safety-heavy,upward covered-unit pressure,Audited source-reported raises and step/index rules quantify wage-growth channels after false-positive removal.
+V2-C08,Bargaining,core,safety-heavy volume/mixed sign,upward or constraining,"Bargaining, impasse resolution, and settlements can set the level and timing of compensation."
+V2-C09,Interest arbitration,supporting,safety-heavy,award-dependent,Interest arbitration can determine prospective compensation; grievance arbitration normally enforces existing terms and is analytically distinct.
+V2-C10,Rank/step,core,mixed,gap-widening or narrowing,"Schedule location can reverse a listed-rate contrast, so entry/top and tenure alignment are analytic requirements."
+V2-C11,Market/staffing,core,safety-heavy resolved/mixed overall,upward targeted-unit pressure,"Direct wage-pressure records lean safety, but Brewster provides a strong non-safety recruitment/retention case."
+V2-C12,False-positive repair,limit,none,none,Bernards records-retention and Greenwich stormwater-retention spans are excluded from labor-market findings.
+V2-C13,Comparison method,core,mixed,measurement discipline,Nine substantive gates plus source validation operationalize position/schedule-location matching.
+V2-C14,Matched structure,context,mixed,comparison readiness,"Matching was run, but only one candidate is currently PI-usable after exact-role validation."
+V2-C15,Directional record,context,mixed,mixed,The four local comparisons contain both safety- and non-safety-favoring contrasts.
+V2-C16,Claim boundary,limit,none,none,"The evidence supports local documentary and mechanism claims, not a final or national wage-gap estimate or a causal conclusion."

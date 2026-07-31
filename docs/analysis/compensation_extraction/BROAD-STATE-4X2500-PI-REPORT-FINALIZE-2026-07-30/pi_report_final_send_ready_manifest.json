@@ -1,0 +1,33 @@
+{
+  "task_id": "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
+  "decision": "broad_state_4x2500_pi_report_finalize_completed_send_ready",
+  "generated_at": "2026-07-31T02:28:31.266253Z",
+  "head_before": "a8b7458a96a81ecc5c91d98403d778ef2d23b2ab",
+  "report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+  "report_sections": [
+    "Executive Summary",
+    "Processed Evidence Base",
+    "Codified Evidence Categories",
+    "Findings",
+    "Limits",
+    "Current Scout Wave Status",
+    "Recommended Next Steps"
+  ],
+  "final_claim_count": 16,
+  "careful_claim_candidate_count_crosschecked": 18,
+  "bounded_candidate_status": {
+    "pi_usable": 1,
+    "conditional": 3,
+    "rejected": 0
+  },
+  "docx_created": true,
+  "docx_structurally_valid": true,
+  "docx_visual_render_status": "unavailable_soffice_missing",
+  "docx_design_preset": "standard_business_brief",
+  "docx_header_pattern": "editorial_cover_without_decorative_rule",
+  "number_crosscheck_passed": true,
+  "forbidden_claim_audit_passed": true,
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "global_analysis_readiness": false,
+  "next_task": "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30"
+}

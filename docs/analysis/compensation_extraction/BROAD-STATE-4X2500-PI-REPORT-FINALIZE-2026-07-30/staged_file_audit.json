@@ -1,0 +1,11 @@
+{
+  "audited_at": "2026-07-31T02:38:14.043694Z",
+  "passed": true,
+  "staged_file_count": 60,
+  "prohibited_payload_count": 0,
+  "prohibited_paths": [],
+  "preexisting_untracked_excluded": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "package-lock.json"
+  ]
+}

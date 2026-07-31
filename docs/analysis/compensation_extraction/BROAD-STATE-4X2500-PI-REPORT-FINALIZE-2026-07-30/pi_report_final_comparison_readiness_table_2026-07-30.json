@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "blocker": "No final estimator or role-equivalence claim",
+      "count": 1,
+      "label": "Position/schedule-location comparable",
+      "tier": "1",
+      "unit": "validated candidate",
+      "use": "Bounded local statement after source and calculation review"
+    },
+    {
+      "blocker": "Maximum/entry/rank/bargaining-status mismatch",
+      "count": 3,
+      "label": "Conditional named-position comparison",
+      "tier": "2",
+      "unit": "validated candidates",
+      "use": "Supporting/counterexample/limits with explicit candidate caveat"
+    },
+    {
+      "blocker": "Structural flags include false occupation classifications",
+      "count": 27,
+      "label": "Structurally compatible pairs",
+      "tier": "3",
+      "unit": "candidate pairs",
+      "use": "Exact-role validation queue"
+    },
+    {
+      "blocker": "One or more comparability gates unresolved",
+      "count": 87,
+      "label": "Manual-review pairs",
+      "tier": "4",
+      "unit": "candidate pairs",
+      "use": "Targeted position/step/period repair"
+    },
+    {
+      "blocker": "Low normalization quality or incompatible fields",
+      "count": 189,
+      "label": "Not comparison-ready",
+      "tier": "5",
+      "unit": "candidate pairs",
+      "use": "Mechanism context only or exclude"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "affirmative Findings section only; limits language is permitted",
+  "forbidden_finding_hits": {},
+  "hard_boundaries": {
+    "final_wage_gap_estimate": false,
+    "national_or_population_prevalence": false,
+    "final_causal_claim": false,
+    "regression_or_treatment_effect": false,
+    "analyst_side_cost_of_living_adjustment": false
+  }
+}

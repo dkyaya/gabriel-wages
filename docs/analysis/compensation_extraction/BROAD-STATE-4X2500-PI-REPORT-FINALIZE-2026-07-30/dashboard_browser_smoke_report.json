@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-07-31T02:37:24.124173Z",
+  "status": "local_static_and_http_smoke_passed_browser_controller_unavailable",
+  "url": "http://127.0.0.1:4173/gabriel-wages/",
+  "dashboard_build_passed": true,
+  "local_http_passed": true,
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "visual_browser_smoke_passed": false,
+  "static_smoke_passed": true,
+  "clean_dashboard_structure_preserved": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "raw_scout_count_context_only": true,
+  "current_report_path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/pi_report_final_2026-07-30.md",
+  "checks": {
+    "http_200": true,
+    "vite_shell_loaded": true,
+    "dashboard_build_passed": true,
+    "current_stage_final": true,
+    "next_task_send_package": true,
+    "current_report_points_to_final": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "raw_scout_count_context_only": true,
+    "national_coverage_context_present": true,
+    "global_readiness_false": true,
+    "wage_gap_final_estimation_blocked": true,
+    "causal_readiness_blocked": true,
+    "technical_details_collapsed": true,
+    "only_scout_map_metric_declared": true,
+    "one_current_report": true,
+    "current_report_href_final": true
+  }
+}

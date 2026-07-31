@@ -1,0 +1,65 @@
+{
+  "row_count": 12,
+  "rows": [
+    {
+      "stage": "Scout coverage",
+      "count": "16,887 municipalities",
+      "note": "47.45% of 35,589 eligible/known municipality universe"
+    },
+    {
+      "stage": "4x2500 scout wave",
+      "count": "10,000 terminal outcomes",
+      "note": "9,968 parseable; 32 failed/unparseable"
+    },
+    {
+      "stage": "Candidate formation",
+      "count": "9,977 raw / 9,072 deduped",
+      "note": "5,768 verification-ready"
+    },
+    {
+      "stage": "Verification",
+      "count": "5,768 reviewed",
+      "note": "3,950 reachable/source-review-ready"
+    },
+    {
+      "stage": "Source review/download",
+      "count": "3,672 retained",
+      "note": "3,248 PDF; 350 HTML; 74 other"
+    },
+    {
+      "stage": "Text readiness",
+      "count": "2,940 ready",
+      "note": "2,577 PDF; 291 HTML; 72 other; 601 OCR-later"
+    },
+    {
+      "stage": "Text extraction",
+      "count": "2,795 clean/span-ready",
+      "note": "145 quality/problem rows"
+    },
+    {
+      "stage": "Span extraction",
+      "count": "19,118 candidates",
+      "note": "18,612 rating-ready"
+    },
+    {
+      "stage": "Span rating",
+      "count": "18,554 valid",
+      "note": "58 quarantined and excluded"
+    },
+    {
+      "stage": "Normalization",
+      "count": "11,548 quantitative records",
+      "note": "672 full; 1,563 partial; 3,769 mechanism-only; 720 deferred; 4,824 unusable"
+    },
+    {
+      "stage": "Matched structure",
+      "count": "2,712 municipality-cycle groups",
+      "note": "65 safety/non-safety candidates; 303 comparable wage candidates; 141 growth-readiness candidates"
+    },
+    {
+      "stage": "Focused rescue/validation",
+      "count": "416 quantitative growth records",
+      "note": "4 bounded comparisons: 1 PI-usable, 3 conditional"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checked_at": null,
+  "status": "pending_post_push_pages_deployment",
+  "url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_pi_report_final_pending",
+  "public_pages_static_current_passed": false,
+  "public_pages_visible_current_passed": false,
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "visual_browser_smoke_passed": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "clean_dashboard_structure_preserved": true,
+  "checks": {}
+}

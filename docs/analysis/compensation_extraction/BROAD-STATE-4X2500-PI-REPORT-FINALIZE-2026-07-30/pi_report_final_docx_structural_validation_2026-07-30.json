@@ -1,0 +1,74 @@
+{
+  "file_exists": true,
+  "bytes": 51209,
+  "zip_integrity": true,
+  "paragraph_count": 73,
+  "table_count": 3,
+  "heading_count": 16,
+  "seven_sections_present": true,
+  "table_geometry": [
+    {
+      "table": 1,
+      "width_dxa": 9360,
+      "passed": true
+    },
+    {
+      "table": 2,
+      "width_dxa": 9360,
+      "passed": true
+    },
+    {
+      "table": 3,
+      "width_dxa": 9360,
+      "passed": true
+    }
+  ],
+  "table_geometry_passed": true,
+  "legacy_structural_audit": {
+    "passed": false,
+    "visual_render_status": "render_unavailable_libreoffice_soffice_missing",
+    "visual_render_passed": false,
+    "visual_render_limitation": "The canonical DOCX renderer could not run because LibreOffice/soffice is not installed. The document received structural OOXML, style, content, and fixed-table-geometry checks instead.",
+    "design_preset": "standard_business_brief",
+    "header_pattern": "editorial_cover_without_decorative_rule",
+    "paragraph_count": 73,
+    "table_count": 3,
+    "section_count": 1,
+    "key_phrases_present": {
+      "Executive Summary": true,
+      "Processed Evidence Base": true,
+      "Codified Evidence Categories": true,
+      "Non-base compensation is a major compensation channel": false,
+      "Bounded local wage-differential evidence exists": false,
+      "Current Scout Wave Status": true,
+      "Recommended Next Steps": true
+    },
+    "table_geometry": [
+      {
+        "table": 1,
+        "columns": 4,
+        "grid_width_dxa": 9360,
+        "expected_width_dxa": 9360,
+        "passed": true
+      },
+      {
+        "table": 2,
+        "columns": 8,
+        "grid_width_dxa": 9360,
+        "expected_width_dxa": 9360,
+        "passed": true
+      },
+      {
+        "table": 3,
+        "columns": 6,
+        "grid_width_dxa": 9360,
+        "expected_width_dxa": 9360,
+        "passed": true
+      }
+    ],
+    "placeholder_text_present": false
+  },
+  "visual_render_status": "unavailable_soffice_missing",
+  "visual_render_note": "The canonical render_docx.py workflow was attempted and failed because LibreOffice/soffice is not installed. Structural OOXML, headings, table geometry, and ZIP integrity were validated.",
+  "passed": true
+}

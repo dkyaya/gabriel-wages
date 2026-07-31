@@ -1,0 +1,132 @@
+{
+  "claims": [
+    {
+      "claim": "Resolved records are safety-heavy, while 226 non-safety examples demonstrate that the channel is not unique to safety.",
+      "claim_id": "V2-C01",
+      "pressure": "gap-widening pressure",
+      "report_level": "core",
+      "side": "safety",
+      "topic": "Non-base compensation"
+    },
+    {
+      "claim": "Port Huron clerical opt-out stipends show that non-safety units also use material non-base channels.",
+      "claim_id": "V2-C02",
+      "pressure": "upward non-safety pressure",
+      "report_level": "supporting",
+      "side": "non-safety",
+      "topic": "Non-base counterevidence"
+    },
+    {
+      "claim": "Normalization supports a narrow set of current bounded comparisons rather than only future comparison potential.",
+      "claim_id": "V2-C03",
+      "pressure": "mixed",
+      "report_level": "core",
+      "side": "mixed",
+      "topic": "Listed-rate comparison"
+    },
+    {
+      "claim": "The same 2024 ordinance lists part-time police $6/hour above a part-time utility clerk.",
+      "claim_id": "V2-C04",
+      "pressure": "safety-side listed-rate advantage",
+      "report_level": "supporting",
+      "side": "safety",
+      "topic": "Shreve"
+    },
+    {
+      "claim": "The Year 1 police rate is $0.91/hour below the code-enforcement rate.",
+      "claim_id": "V2-C05",
+      "pressure": "non-safety-side listed-rate advantage",
+      "report_level": "supporting",
+      "side": "non-safety",
+      "topic": "Canastota counterexample"
+    },
+    {
+      "claim": "Recurring base increases, retroactivity, one-time payments, and delay have different wage-path implications.",
+      "claim_id": "V2-C06",
+      "pressure": "timing/realization",
+      "report_level": "core",
+      "side": "unclear",
+      "topic": "Timing"
+    },
+    {
+      "claim": "Audited source-reported raises and step/index rules quantify wage-growth channels after false-positive removal.",
+      "claim_id": "V2-C07",
+      "pressure": "upward covered-unit pressure",
+      "report_level": "core",
+      "side": "safety-heavy",
+      "topic": "Automatic growth"
+    },
+    {
+      "claim": "Bargaining, impasse resolution, and settlements can set the level and timing of compensation.",
+      "claim_id": "V2-C08",
+      "pressure": "upward or constraining",
+      "report_level": "core",
+      "side": "safety-heavy volume/mixed sign",
+      "topic": "Bargaining"
+    },
+    {
+      "claim": "Interest arbitration can determine prospective compensation; grievance arbitration normally enforces existing terms and is analytically distinct.",
+      "claim_id": "V2-C09",
+      "pressure": "award-dependent",
+      "report_level": "supporting",
+      "side": "safety-heavy",
+      "topic": "Interest arbitration"
+    },
+    {
+      "claim": "Schedule location can reverse a listed-rate contrast, so entry/top and tenure alignment are analytic requirements.",
+      "claim_id": "V2-C10",
+      "pressure": "gap-widening or narrowing",
+      "report_level": "core",
+      "side": "mixed",
+      "topic": "Rank/step"
+    },
+    {
+      "claim": "Direct wage-pressure records lean safety, but Brewster provides a strong non-safety recruitment/retention case.",
+      "claim_id": "V2-C11",
+      "pressure": "upward targeted-unit pressure",
+      "report_level": "core",
+      "side": "safety-heavy resolved/mixed overall",
+      "topic": "Market/staffing"
+    },
+    {
+      "claim": "Bernards records-retention and Greenwich stormwater-retention spans are excluded from labor-market findings.",
+      "claim_id": "V2-C12",
+      "pressure": "none",
+      "report_level": "limit",
+      "side": "none",
+      "topic": "False-positive repair"
+    },
+    {
+      "claim": "Nine substantive gates plus source validation operationalize position/schedule-location matching.",
+      "claim_id": "V2-C13",
+      "pressure": "measurement discipline",
+      "report_level": "core",
+      "side": "mixed",
+      "topic": "Comparison method"
+    },
+    {
+      "claim": "Matching was run, but only one candidate is currently PI-usable after exact-role validation.",
+      "claim_id": "V2-C14",
+      "pressure": "comparison readiness",
+      "report_level": "context",
+      "side": "mixed",
+      "topic": "Matched structure"
+    },
+    {
+      "claim": "The four local comparisons contain both safety- and non-safety-favoring contrasts.",
+      "claim_id": "V2-C15",
+      "pressure": "mixed",
+      "report_level": "context",
+      "side": "mixed",
+      "topic": "Directional record"
+    },
+    {
+      "claim": "The evidence supports local documentary and mechanism claims, not a final or national wage-gap estimate or a causal conclusion.",
+      "claim_id": "V2-C16",
+      "pressure": "none",
+      "report_level": "limit",
+      "side": "none",
+      "topic": "Claim boundary"
+    }
+  ]
+}

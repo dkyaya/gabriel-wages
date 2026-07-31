@@ -1745,6 +1745,11 @@ BROAD_STATE_4X2500_PI_REPORT_COMPARISON_MECHANISM_REPAIR_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30"
 )
+BROAD_STATE_4X2500_PI_REPORT_FINALIZE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6755,6 +6760,53 @@ def broad_state_4x2500_pi_report_comparison_mechanism_repair_status() -> tuple[b
     }
 
 
+def broad_state_4x2500_pi_report_finalize_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the send-ready PI report and final claim/number audits."""
+    directory = BROAD_STATE_4X2500_PI_REPORT_FINALIZE_DIR
+    required = (
+        directory / "pi_report_final_send_ready_manifest.json",
+        directory / "pi_report_final_2026-07-30.md",
+        directory / "pi_report_final_2026-07-30.docx",
+        directory / "pi_report_final_number_crosscheck_2026-07-30.json",
+        directory / "pi_report_final_forbidden_claims_audit_2026-07-30.json",
+        directory / "pi_report_final_docx_structural_validation_2026-07-30.json",
+        directory / "forbidden_action_audit.json",
+        directory / "dashboard_final_report_link_update_summary.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest = read_json(directory / "pi_report_final_send_ready_manifest.json")
+    numbers = read_json(directory / "pi_report_final_number_crosscheck_2026-07-30.json")
+    claims = read_json(directory / "pi_report_final_forbidden_claims_audit_2026-07-30.json")
+    docx = read_json(directory / "pi_report_final_docx_structural_validation_2026-07-30.json")
+    forbidden = read_json(directory / "forbidden_action_audit.json")
+    dashboard = read_json(directory / "dashboard_final_report_link_update_summary.json")
+    gates = (
+        manifest.get("decision") == "broad_state_4x2500_pi_report_finalize_completed_send_ready"
+        and manifest.get("final_claim_count") == 16
+        and manifest.get("careful_claim_candidate_count_crosschecked") == 18
+        and manifest.get("docx_created") is True
+        and manifest.get("docx_structurally_valid") is True
+        and numbers.get("passed") is True
+        and claims.get("passed") is True
+        and docx.get("passed") is True
+        and forbidden.get("passed") is True
+        and dashboard.get("clean_dashboard_structure_preserved") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and manifest.get("global_analysis_readiness") is False
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 final PI report fails dashboard gates")
+    return True, {
+        **manifest,
+        "dashboard_result_path": (
+            "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/"
+            "pi_report_final_2026-07-30.md"
+        ),
+    }
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -6908,6 +6960,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_pi_report_v2_available, broad_4x2500_pi_report_v2 = (
         broad_state_4x2500_pi_report_comparison_mechanism_repair_status()
+    )
+    broad_4x2500_pi_report_final_available, broad_4x2500_pi_report_final = (
+        broad_state_4x2500_pi_report_finalize_status()
     )
     published_reports = [
         *(
@@ -7827,6 +7882,34 @@ def build_reports_index_layer(
                 {"label": "comparative claims", "value": broad_4x2500_pi_report_v2["report_claim_count"]},
                 {"label": "bounded local comparisons", "value": 4},
                 {"label": "critique points answered", "value": 9},
+            ],
+        })
+    if broad_4x2500_pi_report_final_available:
+        for report in published_reports:
+            report["current"] = False
+            report["historical"] = True
+            report["tags"] = [tag for tag in report.get("tags", []) if tag != "current"]
+        published_reports.insert(0, {
+            "id": "broad-state-4x2500-pi-report-final-2026-07-30",
+            "title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+            "report_type": "Final send-ready PI-facing research report",
+            "date": "2026-07-30",
+            "checkpoint": "16 comparative claims; all requested headline numbers cross-checked",
+            "summary": (
+                "Final findings state the side and wage-pressure direction of each major mechanism, "
+                "retain non-safety counterevidence, and use one validated plus three conditional bounded "
+                "local comparisons. Final and national wage-gap, prevalence, regression, treatment-effect, "
+                "policy-effect, and causal conclusions remain blocked."
+            ),
+            "tags": ["current", "broad scout", "4x2500", "PI report", "final", "send ready"],
+            "current": True,
+            "historical": False,
+            "href": repository_root_url + broad_4x2500_pi_report_final["dashboard_result_path"],
+            "link_label": "Open final PI-facing research report",
+            "scope_metrics": [
+                {"label": "comparative claims", "value": broad_4x2500_pi_report_final["final_claim_count"]},
+                {"label": "bounded local comparisons", "value": 4},
+                {"label": "PI-usable comparisons", "value": 1},
             ],
         })
     if live_available:
@@ -10366,6 +10449,9 @@ def build_project_phase_summary(
     broad_4x2500_pi_report_v2_available, broad_4x2500_pi_report_v2 = (
         broad_state_4x2500_pi_report_comparison_mechanism_repair_status()
     )
+    broad_4x2500_pi_report_final_available, broad_4x2500_pi_report_final = (
+        broad_state_4x2500_pi_report_finalize_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11650,6 +11736,35 @@ def build_project_phase_summary(
                 "preserve local-documentary, prevalence, regression, treatment-effect, policy-effect, and causal boundaries",
             ],
             "last_updated_context": "broad_state_4x2500_pi_report_v2_comparison_mechanism_repair_complete_finalize_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_local_documentary_examples_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if broad_4x2500_pi_report_final_available:
+        payload.update({
+            "data_vintage": "2026-07-30",
+            "stage": "broad_state_4x2500_pi_report_final_complete",
+            "current_phase": "PI report final complete",
+            "current_phase_code": broad_4x2500_pi_report_final["decision"],
+            "current_evidence_status": "send_ready_pi_report_claims_and_numbers_validated",
+            "broad_state_4x2500_pi_report_final_available": True,
+            "pi_report_final_claim_count": broad_4x2500_pi_report_final["final_claim_count"],
+            "pi_report_final_number_crosscheck_passed": broad_4x2500_pi_report_final["number_crosscheck_passed"],
+            "pi_report_final_forbidden_claim_audit_passed": broad_4x2500_pi_report_final["forbidden_claim_audit_passed"],
+            "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
+            "current_report_path": broad_4x2500_pi_report_final["dashboard_result_path"],
+            "current_operational_report_path": broad_4x2500_pi_report_final["dashboard_result_path"],
+            "next_task": "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
+            "next_phase": "PI report send/review with the PI",
+            "next_phase_sequence": [
+                "assemble the final report, one-page brief, and optional appendix",
+                "prepare a concise message for the PI",
+                "do not alter the analysis unless a substantive revision is requested",
+            ],
+            "last_updated_context": "broad_state_4x2500_pi_report_final_complete_send_ready",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,

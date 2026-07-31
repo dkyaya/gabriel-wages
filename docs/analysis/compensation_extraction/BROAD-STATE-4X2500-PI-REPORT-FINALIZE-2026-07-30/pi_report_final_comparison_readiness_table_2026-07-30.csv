@@ -1,0 +1,6 @@
+tier,label,count,unit,use,blocker
+1,Position/schedule-location comparable,1,validated candidate,Bounded local statement after source and calculation review,No final estimator or role-equivalence claim
+2,Conditional named-position comparison,3,validated candidates,Supporting/counterexample/limits with explicit candidate caveat,Maximum/entry/rank/bargaining-status mismatch
+3,Structurally compatible pairs,27,candidate pairs,Exact-role validation queue,Structural flags include false occupation classifications
+4,Manual-review pairs,87,candidate pairs,Targeted position/step/period repair,One or more comparability gates unresolved
+5,Not comparison-ready,189,candidate pairs,Mechanism context only or exclude,Low normalization quality or incompatible fields

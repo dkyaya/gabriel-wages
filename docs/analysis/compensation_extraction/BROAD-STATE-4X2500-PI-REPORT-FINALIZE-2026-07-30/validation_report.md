@@ -1,0 +1,43 @@
+# Final PI Report Validation
+
+Overall: **pending**.
+
+- PASS — 01_final_report_exists
+- PASS — 02_final_executive_summary_exists
+- PASS — 03_final_one_page_brief_exists
+- PASS — 04_final_appendix_exists
+- PASS — 05_seven_sections_present
+- PASS — 06_number_crosscheck_passed
+- PASS — 07_v2_side_direction_preserved
+- PASS — 08_wage_pressure_pathways_explained
+- PASS — 09_nonbase_non_safety_and_safety_heavy
+- PASS — 10_growth_safety_heavy_not_exclusive
+- PASS — 11_bargaining_institutions_separated
+- PASS — 12_market_leans_safety_with_counterexample
+- PASS — 13_rank_step_comparability_explained
+- PASS — 14_shreve_used_appropriately
+- PASS — 15_cammack_canastota_caveated
+- PASS — 16_alburtis_limits_only
+- PASS — 17_comparison_tiers_present
+- PASS — 18_no_final_wage_gap_estimate
+- PASS — 19_no_national_prevalence_claim
+- PASS — 20_no_final_causal_claim
+- PASS — 21_no_regression_treatment_claim
+- PASS — 22_no_cost_of_living_adjustment_claim
+- PASS — 23_no_internal_jargon
+- PASS — 24_forbidden_claim_audit
+- PASS — 25_docx_structurally_valid
+- PASS — 26_dashboard_clean_if_updated
+- PASS — 27_dashboard_map_scout_rate
+- PASS — 28_local_dashboard_build
+- PENDING/FAIL — 29_public_dashboard_smoke
+- PASS — 30_no_ocr
+- PASS — 31_no_download
+- PASS — 32_no_source_review
+- PASS — 33_no_rating
+- PASS — 34_no_text_extraction
+- PASS — 35_no_normalization_matching
+- PASS — 36_no_forbidden_payloads_staged
+- PASS — 37_staged_file_audit
+- PASS — 38_large_file_audit
+- PASS — bounded_table_four_rows

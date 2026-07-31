@@ -199,16 +199,32 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                         )
                                         if pi_report_v2_path.exists():
                                             self.assertTrue(phase["broad_state_4x2500_pi_report_v2_available"])
-                                            self.assertEqual(
-                                                phase["current_phase"],
-                                                "PI report v2 comparison/mechanism repair complete",
-                                            )
                                             self.assertEqual(phase["pi_report_v2_claim_count"], 16)
                                             self.assertTrue(phase["pi_report_v2_all_nine_critiques_answered"])
-                                            self.assertEqual(
-                                                phase["next_task"],
-                                                "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
+                                            pi_report_final_path = (
+                                                ROOT / "docs/analysis/compensation_extraction/"
+                                                "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30/"
+                                                "pi_report_final_send_ready_manifest.json"
                                             )
+                                            if pi_report_final_path.exists():
+                                                self.assertTrue(phase["broad_state_4x2500_pi_report_final_available"])
+                                                self.assertEqual(phase["current_phase"], "PI report final complete")
+                                                self.assertEqual(phase["pi_report_final_claim_count"], 16)
+                                                self.assertTrue(phase["pi_report_final_number_crosscheck_passed"])
+                                                self.assertTrue(phase["pi_report_final_forbidden_claim_audit_passed"])
+                                                self.assertEqual(
+                                                    phase["next_task"],
+                                                    "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
+                                                )
+                                            else:
+                                                self.assertEqual(
+                                                    phase["current_phase"],
+                                                    "PI report v2 comparison/mechanism repair complete",
+                                                )
+                                                self.assertEqual(
+                                                    phase["next_task"],
+                                                    "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
+                                                )
                                         else:
                                             self.assertEqual(phase["current_phase"], "PI report draft complete")
                                             self.assertEqual(

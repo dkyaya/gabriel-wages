@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "disposition": "retain",
+      "mechanism": "5% wage increase",
+      "period": "2024",
+      "place": "Coleraine, MN",
+      "side": "police"
+    },
+    {
+      "disposition": "retain with context",
+      "mechanism": "1.5% step percentage described as COLA",
+      "period": "2024",
+      "place": "Sunrise Beach, MO",
+      "side": "police"
+    },
+    {
+      "disposition": "retain",
+      "mechanism": "IAFF agreement: 1.75%, 1.85%, 2.75%, and 3.25% general wage increases across agreement years",
+      "period": "2018\u20132022",
+      "place": "Marion Township, OH",
+      "side": "fire"
+    },
+    {
+      "disposition": "retain with action-status caveat",
+      "mechanism": "31% market correction",
+      "period": "2024",
+      "place": "Bass Lake, WI",
+      "side": "non-safety clerical"
+    },
+    {
+      "disposition": "retain as bounded mechanism contrast",
+      "mechanism": "Overlapping source-reported wage provisions: police 2% versus road department 3%",
+      "period": "2021\u20132022",
+      "place": "Howland, OH",
+      "side": "police versus non-safety road department"
+    },
+    {
+      "disposition": "retain with period caveat",
+      "mechanism": "16.5% DPW supervisor hourly-wage adjustment",
+      "period": "beginning July 1; year not resolved in bounded span",
+      "place": "Goodrich, MI",
+      "side": "non-safety public works"
+    },
+    {
+      "disposition": "retain with period caveat",
+      "mechanism": "3% wage increase",
+      "period": "period not resolved in bounded span",
+      "place": "Yale, MI",
+      "side": "non-safety clerical/public works"
+    },
+    {
+      "disposition": "retain only after correcting prior police misclassification",
+      "mechanism": "3.2% COLA",
+      "period": "2023",
+      "place": "Phippsburg, ME",
+      "side": "non-safety assessing agent"
+    },
+    {
+      "disposition": "retain only after correcting prior police label; period caveat",
+      "mechanism": "Schedule states 2.75% increase; year alignment is ambiguous",
+      "period": "schedule references 2023 and 2019",
+      "place": "Tonka Bay, MN",
+      "side": "non-safety maintenance"
+    },
+    {
+      "disposition": "context only\u2014not a confirmed implemented raise",
+      "mechanism": "2.25%/2% pattern offer plus first-step issue",
+      "period": "2021",
+      "place": "Bath, OH",
+      "side": "police bargaining context"
+    }
+  ]
+}
