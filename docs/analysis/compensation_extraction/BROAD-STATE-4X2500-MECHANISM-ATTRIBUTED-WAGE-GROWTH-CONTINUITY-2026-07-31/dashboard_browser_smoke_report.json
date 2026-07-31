@@ -1,0 +1,23 @@
+{
+  "task_id": "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31",
+  "dashboard_build_passed": true,
+  "local_smoke_passed": true,
+  "validation_mode": "production_build_plus_local_preview_and_deployed_bundle_static_inspection",
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "browser_controller_detail": "The in-app browser runtime reported that no browser instance was available. The required browser troubleshooting lookup also could not load because the installed plugin documentation path was unavailable. No standalone browser surface was substituted.",
+  "local_preview_url": "http://127.0.0.1:4173/gabriel-wages/",
+  "local_preview_http_passed": true,
+  "chart_module_visible_in_bundle": true,
+  "chart_title": "Mechanism-attributed wage growth in the processed corpus",
+  "weighting_method_visible": "unit_cycle_weighted_average",
+  "small_n_threshold_visible": 3,
+  "processed_corpus_caveat_visible": true,
+  "clean_dashboard_structure_preserved": true,
+  "module_location": "mechanism_preview_panel",
+  "technical_details_collapsed_by_default": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "raw_scout_count_context_only": true,
+  "current_report_link_preserved": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "forbidden_dashboard_claim_count": 0,
+  "console_error_check": "not_available_without_browser_controller"
+}

@@ -1,0 +1,70 @@
+{
+  "preferred_claim": "Claim B",
+  "claim_a": {
+    "support_status": "partially_supported",
+    "claim": "The processed corpus shows safety-side growth evidence clustering around automatic raises, COLA/CPI provisions, and step schedules, while non-safety growth records appear less frequent or lower in the current normalized layer.",
+    "evidence_basis": {
+      "eligible_source_reported_counts": {
+        "COLA_CPI|all_safety": 18,
+        "COLA_CPI|non_safety": 1,
+        "COLA_CPI|unclear": 24,
+        "across_the_board_percentage_raise|all_safety": 62,
+        "across_the_board_percentage_raise|non_safety": 11,
+        "across_the_board_percentage_raise|unclear": 31,
+        "step_schedule_progression|all_safety": 11,
+        "step_schedule_progression|non_safety": 3,
+        "step_schedule_progression|unclear": 3
+      },
+      "paired_mechanism_growth_differences": [
+        {
+          "mechanism": "across_the_board_percentage_raise",
+          "safety_mean": 4.654255,
+          "non_safety_mean": 6.055556,
+          "difference": -1.401301,
+          "safety_n": 47,
+          "non_safety_n": 9
+        },
+        {
+          "mechanism": "step_schedule_progression",
+          "safety_mean": 7.444444,
+          "non_safety_mean": 2.75,
+          "difference": 4.694444,
+          "safety_n": 9,
+          "non_safety_n": 3
+        }
+      ]
+    },
+    "caveat": "The result is limited to the processed normalized corpus; only two cross-side mechanism cells clear the display threshold, and non-safety COLA/CPI remains insufficient-observation.",
+    "better_revised_wording": "Within the processed normalized corpus, eligible safety-side growth records are more numerous than non-safety records, but the two cross-side mechanisms that clear the three-unit-cycle display threshold point in different directions: the safety-side unit-cycle mean is lower for across-the-board raises and higher for step progression. The weighted rate layer therefore supports mechanism- and cycle-specific heterogeneity rather than a uniform safety-side growth advantage; non-safety COLA/CPI evidence remains too sparse for a displayed comparison."
+  },
+  "claim_b": {
+    "support_status": "supported",
+    "claim": "The normalized growth layer does not show a consistent safety-side growth advantage; instead, growth rates are mixed across units and driven more by local cycle structure than safety status alone.",
+    "evidence_basis": {
+      "paired_mechanisms": 2,
+      "safety_higher": 1,
+      "safety_lower": 1,
+      "paired_mechanism_growth_differences": [
+        {
+          "mechanism": "across_the_board_percentage_raise",
+          "safety_mean": 4.654255,
+          "non_safety_mean": 6.055556,
+          "difference": -1.401301,
+          "safety_n": 47,
+          "non_safety_n": 9
+        },
+        {
+          "mechanism": "step_schedule_progression",
+          "safety_mean": 7.444444,
+          "non_safety_mean": 2.75,
+          "difference": 4.694444,
+          "safety_n": 9,
+          "non_safety_n": 3
+        }
+      ]
+    },
+    "caveat": "Claim B is supported by opposite-signed cross-side differences in the two currently displayable mechanisms, but only two mechanism comparisons clear the threshold and the result is not nationally representative.",
+    "better_revised_wording": "Within the processed normalized corpus, eligible safety-side growth records are more numerous than non-safety records, but the two cross-side mechanisms that clear the three-unit-cycle display threshold point in different directions: the safety-side unit-cycle mean is lower for across-the-board raises and higher for step progression. The weighted rate layer therefore supports mechanism- and cycle-specific heterogeneity rather than a uniform safety-side growth advantage; non-safety COLA/CPI evidence remains too sparse for a displayed comparison."
+  },
+  "revised_synthesis": "Within the processed normalized corpus, eligible safety-side growth records are more numerous than non-safety records, but the two cross-side mechanisms that clear the three-unit-cycle display threshold point in different directions: the safety-side unit-cycle mean is lower for across-the-board raises and higher for step progression. The weighted rate layer therefore supports mechanism- and cycle-specific heterogeneity rather than a uniform safety-side growth advantage; non-safety COLA/CPI evidence remains too sparse for a displayed comparison."
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "methods": [
+    "record_weighted_average",
+    "municipality_cycle_weighted_average",
+    "unit_cycle_weighted_average",
+    "matched_cycle_only_average"
+  ],
+  "dashboard_default": "unit_cycle_weighted_average",
+  "record_weighted_use": "technical diagnostic only",
+  "small_n_threshold": 3,
+  "municipality_cycle_and_unit_cycle_collapse_applied": true
+}

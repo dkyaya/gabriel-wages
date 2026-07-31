@@ -1,0 +1,9 @@
+{
+  "status": "pending_after_local_validation",
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "cache_busting_query": "dashboard_smoke=20260731_growth_continuity_pending",
+  "public_pages_visible_current_passed": false,
+  "public_pages_static_current_passed": false,
+  "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "note": "Public validation runs only after the implementation commit is pushed and Pages deployment completes."
+}

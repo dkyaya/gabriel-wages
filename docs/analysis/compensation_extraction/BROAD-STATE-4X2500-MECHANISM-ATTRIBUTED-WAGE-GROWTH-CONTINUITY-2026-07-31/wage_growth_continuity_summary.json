@@ -1,0 +1,32 @@
+{
+  "task_id": "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31",
+  "decision": "broad_state_4x2500_wage_growth_continuity_completed_local_ready_public_pending",
+  "generated_at": "2026-07-31T14:47:51Z",
+  "head_before": "30ea71276af07e1ffb0778cfc4cb943b01917055",
+  "normalized_input_count": 11548,
+  "valid_codified_input_count": 18554,
+  "quarantine_exclusion_count": 58,
+  "computed_cycle_to_cycle_growth_count": 16,
+  "source_reported_growth_count": 416,
+  "source_reported_recurring_rate_eligible_count": 164,
+  "mechanism_attributed_growth_count": 432,
+  "growth_exclusion_count": 504,
+  "match_tier_counts": {
+    "defensible_unit_level_match": 7,
+    "exact_position_schedule_match": 3,
+    "strong_named_position_match": 6
+  },
+  "dashboard_default_weighting_method": "unit_cycle_weighted_average",
+  "dashboard_default_computed_tiers": [
+    1,
+    2
+  ],
+  "claim_a_status": "partially_supported",
+  "claim_b_status": "supported",
+  "preferred_claim": "Claim B",
+  "map_primary_metric": "scout_coverage_rate",
+  "global_analysis_readiness": false,
+  "wage_gap_readiness": false,
+  "causal_readiness": false,
+  "validation_passed": true
+}

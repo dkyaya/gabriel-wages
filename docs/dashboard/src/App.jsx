@@ -3,6 +3,7 @@ import stateSummary from "../data/state_summary.json";
 import candidateSummary from "../data/candidate_queue_summary.json";
 import projectPhaseSummary from "../data/project_phase_summary.json";
 import reportsIndex from "../data/reports_index.json";
+import wageGrowthContinuity from "../data/wage_growth_continuity.json";
 import { NationalMap } from "./components/NationalMap.jsx";
 import { PrintableStateReport } from "./components/PrintableStateReport.jsx";
 import { StatusPill, formatNumber, formatPercent } from "./components/ui.jsx";
@@ -43,6 +44,70 @@ function mechanismRows() {
     .map(([name, item]) => ({ name, ...item }))
     .sort((a, b) => (b.supported_record_count ?? b.report_ready_count ?? 0) - (a.supported_record_count ?? a.report_ready_count ?? 0))
     .slice(0, 6);
+}
+
+function GrowthContinuityModule() {
+  const grouped = useMemo(() => {
+    const buckets = new Map();
+    for (const row of wageGrowthContinuity.overall ?? []) {
+      if (row.display_status !== "displayable") continue;
+      if (!buckets.has(row.mechanism)) buckets.set(row.mechanism, { mechanism: row.mechanism });
+      buckets.get(row.mechanism)[row.unit_type] = row;
+    }
+    return [...buckets.values()].sort((a, b) => {
+      const countA = (a.all_safety?.count_records ?? 0) + (a.non_safety?.count_records ?? 0);
+      const countB = (b.all_safety?.count_records ?? 0) + (b.non_safety?.count_records ?? 0);
+      return countB - countA;
+    });
+  }, []);
+  const maximum = Math.max(1, ...grouped.flatMap((item) => [item.all_safety?.mean_growth_percent ?? 0, item.non_safety?.mean_growth_percent ?? 0]));
+
+  return (
+    <div className="growth-continuity-module" aria-labelledby="growth-continuity-title">
+      <div className="growth-continuity-head">
+        <div>
+          <p className="eyebrow">Derived growth continuity</p>
+          <h3 id="growth-continuity-title">{wageGrowthContinuity.title}</h3>
+        </div>
+        <p><strong>Default:</strong> unit-cycle weighted · computed Tier 1+2 plus eligible source-reported rates</p>
+      </div>
+      <div className="growth-bars" role="img" aria-label="Average growth by mechanism for all safety and non-safety unit-cycles">
+        {grouped.map((item) => (
+          <div className="growth-row" key={item.mechanism}>
+            <div className="growth-mechanism-label">{label(item.mechanism)}</div>
+            <div className="growth-series">
+              {item.all_safety ? <div className="growth-bar-line">
+                <span>Safety</span><div className="growth-track"><i className="growth-bar growth-bar-safety" style={{ width: `${Math.max(3, (item.all_safety.mean_growth_percent / maximum) * 100)}%` }} /></div>
+                <strong>{Number(item.all_safety.mean_growth_percent).toFixed(2)}%</strong><small>n={item.all_safety.count_records}</small>
+              </div> : <div className="growth-bar-line growth-insufficient"><span>Safety</span><em>insufficient observations</em></div>}
+              {item.non_safety ? <div className="growth-bar-line">
+                <span>Non-safety</span><div className="growth-track"><i className="growth-bar growth-bar-nonsafety" style={{ width: `${Math.max(3, (item.non_safety.mean_growth_percent / maximum) * 100)}%` }} /></div>
+                <strong>{Number(item.non_safety.mean_growth_percent).toFixed(2)}%</strong><small>n={item.non_safety.count_records}</small>
+              </div> : <div className="growth-bar-line growth-insufficient"><span>Non-safety</span><em>insufficient observations</em></div>}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="growth-claim"><strong>Current weighted pattern:</strong> {wageGrowthContinuity.claim_evaluation?.revised_synthesis}</p>
+      <p className="growth-caveat">{wageGrowthContinuity.caveat}</p>
+      <details className="growth-details">
+        <summary>Time series, sensitivity, and evidence-route details</summary>
+        <div className="growth-detail-grid">
+          <div><span>Computed cycle pairs</span><strong>{formatNumber(wageGrowthContinuity.computed_cycle_to_cycle_record_count)}</strong></div>
+          <div><span>Source-reported records audited</span><strong>{formatNumber(wageGrowthContinuity.source_reported_record_count)}</strong></div>
+          <div><span>Recurring source rates eligible</span><strong>{formatNumber(wageGrowthContinuity.source_reported_recurring_rate_eligible_count)}</strong></div>
+          <div><span>Minimum series point</span><strong>{formatNumber(wageGrowthContinuity.small_n_threshold)} unit-cycles</strong></div>
+        </div>
+        <div className="table-wrap growth-time-table"><table>
+          <thead><tr><th>Year</th><th>Mechanism</th><th>Side</th><th>Unit-cycle mean</th><th>n</th></tr></thead>
+          <tbody>{(wageGrowthContinuity.time_series ?? []).slice(0, 18).map((row) => <tr key={`${row.year}-${row.mechanism}-${row.unit_type}`}>
+            <td>{row.year}</td><td>{label(row.mechanism)}</td><td>{label(row.unit_type)}</td><td>{Number(row.mean_growth_percent).toFixed(2)}%</td><td>{row.count_records}</td>
+          </tr>)}</tbody>
+        </table></div>
+        <p>Tier sensitivity is preserved in the linked technical artifacts. Tier 3 unit-level pairs never enter this default view.</p>
+      </details>
+    </div>
+  );
 }
 
 function CompactStateContext({ state, onOpenReport }) {
@@ -165,6 +230,7 @@ function App() {
               </div>
               <p>Ranked for PI review; counts describe this processed corpus, not national prevalence.</p>
             </div>
+            <GrowthContinuityModule />
             {mechanisms.length ? (
               <div className="table-wrap pi-mechanism-table"><table>
                 <thead><tr><th scope="col">Mechanism</th><th scope="col">Codified evidence</th><th scope="col">Mean / median strength</th><th scope="col">Dominant direction</th><th scope="col">Boundary</th></tr></thead>

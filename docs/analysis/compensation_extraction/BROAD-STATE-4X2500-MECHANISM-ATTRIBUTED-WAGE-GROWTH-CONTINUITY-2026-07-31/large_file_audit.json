@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "threshold_bytes": 10000000,
+  "large_file_count": 0,
+  "large_files": []
+}

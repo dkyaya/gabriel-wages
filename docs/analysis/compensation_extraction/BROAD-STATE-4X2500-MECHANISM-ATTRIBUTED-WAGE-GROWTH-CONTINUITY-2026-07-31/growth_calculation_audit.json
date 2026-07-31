@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "computed_record_count": 16,
+  "formula": "(later_value - prior_value) / prior_value * 100",
+  "annualized_formula": "((later_value / prior_value) ** (1 / cycle_gap_years) - 1) * 100",
+  "multi_year_records_use_annualized_rate_in_weighted_summaries": true,
+  "raw_values_overwritten": false
+}

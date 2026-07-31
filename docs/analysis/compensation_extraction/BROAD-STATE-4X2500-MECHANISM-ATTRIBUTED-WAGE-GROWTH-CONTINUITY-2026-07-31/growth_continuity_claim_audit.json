@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "claim_a": "partially_supported",
+  "claim_b": "supported",
+  "preferred": "Claim B",
+  "forbidden_claim_count": 0
+}

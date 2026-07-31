@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "ocr_occurred": false,
+  "new_download_occurred": false,
+  "source_review_occurred": false,
+  "text_extraction_occurred": false,
+  "rating_occurred": false,
+  "new_normalization_or_matching_occurred": false,
+  "quarantined_evidence_ingested": false,
+  "raw_values_overwritten": false,
+  "cost_of_living_adjustment_performed": false,
+  "regression_or_treatment_effect_run": false,
+  "final_causal_claim_made": false,
+  "national_or_population_claim_made": false,
+  "final_wage_gap_estimate_created": false,
+  "global_readiness_advanced": false
+}

@@ -1763,6 +1763,11 @@ BROAD_STATE_4X2500_PI_REPORT_PUBLIC_DIR = (
     / "reports"
     / "pi_report_final_2026-07-30"
 )
+BROAD_STATE_4X2500_WAGE_GROWTH_CONTINUITY_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6858,6 +6863,48 @@ def broad_state_4x2500_pi_report_pdf_publish_status() -> tuple[bool, dict[str, A
     return True, manifest
 
 
+def broad_state_4x2500_wage_growth_continuity_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the derived mechanism-attributed wage-growth layer."""
+    directory = BROAD_STATE_4X2500_WAGE_GROWTH_CONTINUITY_DIR
+    required = (
+        directory / "wage_growth_continuity_manifest.json",
+        directory / "dashboard_wage_growth_chart_data.json",
+        directory / "growth_calculation_audit.json",
+        directory / "matching_tier_audit.json",
+        directory / "weighting_method_audit.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest = read_json(directory / "wage_growth_continuity_manifest.json")
+    calculation = read_json(directory / "growth_calculation_audit.json")
+    matching = read_json(directory / "matching_tier_audit.json")
+    weighting = read_json(directory / "weighting_method_audit.json")
+    forbidden = read_json(directory / "forbidden_action_audit.json")
+    gates = (
+        manifest.get("decision")
+        in {
+            "broad_state_4x2500_wage_growth_continuity_completed_local_ready_public_pending",
+            "broad_state_4x2500_wage_growth_continuity_completed_dashboard_ready",
+        }
+        and manifest.get("computed_cycle_to_cycle_growth_count", 0) > 0
+        and manifest.get("source_reported_growth_count") == 416
+        and manifest.get("mechanism_attributed_growth_count", 0)
+        == manifest.get("computed_cycle_to_cycle_growth_count", 0) + 416
+        and manifest.get("dashboard_default_weighting_method")
+        == "unit_cycle_weighted_average"
+        and manifest.get("map_primary_metric") == "scout_coverage_rate"
+        and manifest.get("global_analysis_readiness") is False
+        and calculation.get("passed") is True
+        and matching.get("passed") is True
+        and weighting.get("passed") is True
+        and forbidden.get("passed") is True
+    )
+    if not gates:
+        raise ValueError("broad 4x2500 wage-growth continuity fails dashboard gates")
+    return True, manifest
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -7017,6 +7064,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_pi_report_pdf_available, broad_4x2500_pi_report_pdf = (
         broad_state_4x2500_pi_report_pdf_publish_status()
+    )
+    broad_4x2500_growth_continuity_available, broad_4x2500_growth_continuity = (
+        broad_state_4x2500_wage_growth_continuity_status()
     )
     published_reports = [
         *(
@@ -10518,6 +10568,9 @@ def build_project_phase_summary(
     broad_4x2500_pi_report_pdf_available, broad_4x2500_pi_report_pdf = (
         broad_state_4x2500_pi_report_pdf_publish_status()
     )
+    broad_4x2500_growth_continuity_available, broad_4x2500_growth_continuity = (
+        broad_state_4x2500_wage_growth_continuity_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11850,6 +11903,50 @@ def build_project_phase_summary(
             ],
             "current_report_format": "polished_crimson_pdf",
             "current_report_publication_status": "dashboard_public_asset_ready",
+        })
+    if broad_4x2500_growth_continuity_available:
+        payload.update({
+            "data_vintage": "2026-07-31",
+            "stage": "broad_state_4x2500_mechanism_attributed_wage_growth_continuity_complete",
+            "current_phase": "Mechanism-attributed wage-growth continuity complete",
+            "current_phase_code": broad_4x2500_growth_continuity["decision"],
+            "current_evidence_status": "computed_and_source_reported_growth_weighted_with_tier_sensitivity",
+            "wage_growth_continuity_available": True,
+            "computed_cycle_to_cycle_growth_count": broad_4x2500_growth_continuity[
+                "computed_cycle_to_cycle_growth_count"
+            ],
+            "source_reported_growth_record_count": broad_4x2500_growth_continuity[
+                "source_reported_growth_count"
+            ],
+            "source_reported_recurring_rate_eligible_count": broad_4x2500_growth_continuity[
+                "source_reported_recurring_rate_eligible_count"
+            ],
+            "mechanism_attributed_growth_record_count": broad_4x2500_growth_continuity[
+                "mechanism_attributed_growth_count"
+            ],
+            "wage_growth_dashboard_weighting_method": broad_4x2500_growth_continuity[
+                "dashboard_default_weighting_method"
+            ],
+            "wage_growth_claim_a_status": broad_4x2500_growth_continuity[
+                "claim_a_status"
+            ],
+            "wage_growth_claim_b_status": broad_4x2500_growth_continuity[
+                "claim_b_status"
+            ],
+            "next_task": "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
+            "next_phase": "Review the weighted continuity layer and target remaining small-n mechanisms",
+            "next_phase_sequence": [
+                "inspect Tier 1, Tier 1+2, and Tier 1+2+3 sensitivity",
+                "review source-reported recurring-growth eligibility and small-n cells",
+                "plan targeted future coverage without advancing national, final-gap, or causal readiness",
+            ],
+            "last_updated_context": "broad_state_4x2500_wage_growth_continuity_dashboard_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
         })
     return payload
 

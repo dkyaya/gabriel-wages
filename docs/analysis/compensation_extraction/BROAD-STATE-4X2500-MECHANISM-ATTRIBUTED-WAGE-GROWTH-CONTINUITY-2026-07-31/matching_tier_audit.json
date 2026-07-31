@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "tier_counts": {
+    "defensible_unit_level_match": 7,
+    "exact_position_schedule_match": 3,
+    "strong_named_position_match": 6
+  },
+  "default_tiers": [
+    1,
+    2
+  ],
+  "tier_3_sensitivity_only": true,
+  "tier_definitions": {
+    "1": "exact position and schedule location",
+    "2": "same named position with incomplete schedule location",
+    "3": "defensible unit-level match; sensitivity only",
+    "4": "exploratory context; not averaged",
+    "5": "not comparable; exclusion ledger"
+  }
+}

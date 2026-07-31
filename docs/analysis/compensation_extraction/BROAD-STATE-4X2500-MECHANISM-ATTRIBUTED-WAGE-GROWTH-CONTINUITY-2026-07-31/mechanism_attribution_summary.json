@@ -1,0 +1,24 @@
+{
+  "mechanism_record_counts": {
+    "COLA_CPI": 50,
+    "across_the_board_percentage_raise": 336,
+    "base_wage_schedule_change": 13,
+    "implementation_retroactivity": 3,
+    "step_schedule_progression": 30
+  },
+  "eligible_average_record_counts": {
+    "COLA_CPI": 43,
+    "across_the_board_percentage_raise": 104,
+    "step_schedule_progression": 17
+  },
+  "route_counts": {
+    "computed_cycle_to_cycle": 16,
+    "source_reported_growth_rate": 416
+  },
+  "unit_type_counts": {
+    "fire": 35,
+    "non_safety": 42,
+    "police": 136,
+    "unclear": 219
+  }
+}
