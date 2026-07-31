@@ -1778,6 +1778,11 @@ BROAD_STATE_REMAINING_5LANE_SCOUT_INFRASTRUCTURE_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31"
 )
+BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7028,6 +7033,60 @@ def broad_state_remaining_5lane_scout_infrastructure_status() -> tuple[bool, dic
     return True, manifest
 
 
+def broad_state_remaining_5lane_live_scout_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize actual live-wave completion, partial, or a safe preflight stop."""
+    directory = BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_DIR
+    required = (
+        directory / "remaining_municipalities_live_scout_manifest.json",
+        directory / "remaining_municipalities_live_scout_summary.json",
+        directory / "live_scout_lane_distribution.json",
+        directory / "cumulative_scout_coverage_update.json",
+        directory / "remaining_after_live_scout_summary.json",
+        directory / "dashboard_remaining_live_scout_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, distribution, coverage, remaining, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decisions = {
+        "broad_state_remaining_municipalities_5lane_live_scout_completed_candidate_review_ready",
+        "broad_state_remaining_municipalities_5lane_live_scout_partial_lanes_completed_resume_ready",
+        "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+    }
+    decision = manifest.get("decision")
+    gates = (
+        decision in decisions
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("input_target_count") == 18702
+        and sum(summary.get("lane_sizes", {}).values()) == 18702
+        and coverage.get("eligible_universe") == 35589
+        and coverage.get("covered_before_wave") == 16887
+        and coverage.get("covered_after_wave")
+        == 16887 + summary.get("parseable_outcomes", 0)
+        and remaining.get("remaining_after_wave")
+        == 18702 - summary.get("parseable_outcomes", 0)
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and validation.get("decision") == decision
+        and distribution.get("lane_sizes") == summary.get("lane_sizes")
+    )
+    if decision == "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed":
+        gates = gates and (
+            manifest.get("live_scout_started") is False
+            and manifest.get("live_workers_launched") == 0
+            and summary.get("accepted_terminal_outcomes") == 0
+            and summary.get("new_scout_covered_municipality_count") == 0
+            and coverage.get("coverage_changed") is False
+        )
+    if not gates:
+        raise ValueError("remaining-municipality five-lane live-scout package fails dashboard gates")
+    return True, {**summary, **dashboard, "decision": decision}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -10703,6 +10762,9 @@ def build_project_phase_summary(
     remaining_5lane_infrastructure_available, remaining_5lane_infrastructure = (
         broad_state_remaining_5lane_scout_infrastructure_status()
     )
+    remaining_5lane_live_available, remaining_5lane_live = (
+        broad_state_remaining_5lane_live_scout_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12137,6 +12199,69 @@ def build_project_phase_summary(
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_5lane_live_available:
+        preflight_failed = (
+            remaining_5lane_live["decision"]
+            == "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed"
+        )
+        payload.update({
+            "data_vintage": "2026-07-31",
+            "stage": (
+                "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed"
+                if preflight_failed
+                else remaining_5lane_live["status"]
+            ),
+            "current_phase": remaining_5lane_live["current_stage"],
+            "current_phase_code": remaining_5lane_live["decision"],
+            "current_evidence_status": (
+                "live_scout_not_started_backend_preflight_failed"
+                if preflight_failed
+                else "remaining_municipality_live_scout_actual_results"
+            ),
+            "remaining_municipality_5lane_live_scout_available": True,
+            "remaining_municipality_5lane_live_scout_preflight_failed": preflight_failed,
+            "accepted_terminal_outcomes": remaining_5lane_live["accepted_terminal_outcomes"],
+            "parseable_outcomes": remaining_5lane_live["parseable_outcomes"],
+            "failed_unparseable_outcomes": remaining_5lane_live["failed_unparseable_outcomes"],
+            "remaining_unscouted_eligible_municipality_count": remaining_5lane_live[
+                "remaining_unscouted_eligible_municipality_count"
+            ],
+            "actual_scout_covered_municipalities": remaining_5lane_live[
+                "cumulative_scout_covered_municipality_count"
+            ],
+            "actual_scout_coverage_rate_percent": remaining_5lane_live[
+                "national_scout_coverage_rate_percent"
+            ],
+            "next_task": remaining_5lane_live["next_task"],
+            "next_phase": (
+                "Retry the unchanged locked wave after a fresh Category A backend gate"
+                if preflight_failed
+                else "Review live-scout candidate metadata or resume incomplete lanes"
+            ),
+            "next_phase_sequence": (
+                [
+                    "rerun the bounded backend gate in a fresh directory",
+                    "require Category A and a parseable quarantined production probe",
+                    "launch the unchanged locked five lanes only after the gate passes",
+                ]
+                if preflight_failed
+                else [
+                    "preserve accepted checkpointed outcomes",
+                    "advance only to the task named above",
+                    "keep candidate review and downstream stages separately authorized",
+                ]
+            ),
+            "last_updated_context": (
+                "remaining_municipality_live_scout_preflight_failed_zero_targets_consumed"
+                if preflight_failed
+                else "remaining_municipality_live_scout_actual_results"
+            ),
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
             "causal_analysis_readiness": "blocked_pending_stronger_causal_design",

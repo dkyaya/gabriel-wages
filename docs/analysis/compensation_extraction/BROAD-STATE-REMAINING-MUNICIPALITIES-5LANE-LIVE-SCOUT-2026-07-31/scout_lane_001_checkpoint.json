@@ -1,0 +1,15 @@
+{
+  "accepted": [],
+  "accepted_target_count": 0,
+  "candidate_count": 0,
+  "checkpoint_after_every_target": true,
+  "failed_count": 0,
+  "global_analysis_readiness": false,
+  "lane_id": "scout_lane_001",
+  "lane_queue_sha256": "784fd9f23141d70fbdcf93ffec16d44e2a97469cacc3923d01b96aacb534844a",
+  "lane_status": "not_started_preflight_failed",
+  "lane_target_count": 3741,
+  "parseable_count": 0,
+  "scheduled_start_offset_minutes": 0,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
+}

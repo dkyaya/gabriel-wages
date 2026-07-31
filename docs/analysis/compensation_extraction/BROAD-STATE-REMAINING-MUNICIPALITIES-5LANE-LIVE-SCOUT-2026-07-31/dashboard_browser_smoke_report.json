@@ -1,0 +1,21 @@
+{
+  "browser_controller_status": "unavailable_no_browser_binding",
+  "checked_at_utc": "2026-07-31T18:51:10Z",
+  "dashboard_build": "passed",
+  "local_http_status": 200,
+  "local_report_pdf_http_status": 200,
+  "static_bundle_validation": "passed",
+  "checks": {
+    "clean_main_structure_preserved": true,
+    "current_stage_preflight_failed": true,
+    "next_task_retry": true,
+    "zero_targets_consumed_visible": true,
+    "scout_coverage_rate_map_preserved": true,
+    "final_pi_report_link_preserved": true,
+    "wage_growth_continuity_module_preserved": true,
+    "technical_details_collapsed_by_default": true,
+    "forbidden_claims_absent": true
+  },
+  "visual_browser_validation_claimed": false,
+  "limitation": "The in-app browser runtime reported that no browser binding was available; local validation therefore used the production build, local HTTP responses, source assertions, and deployed-bundle string checks."
+}

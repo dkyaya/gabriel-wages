@@ -1,0 +1,314 @@
+{
+  "lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "lanes": {
+    "scout_lane_001": {
+      "durable_exclusion_flag_count": 0,
+      "population_band_counts": {
+        "1000_4999": 1050,
+        "25000_99999": 3,
+        "5000_24999": 159,
+        "under_1000": 2529
+      },
+      "query_difficulty_counts": {
+        "limited_official_site": 3076,
+        "standard_official_site": 665
+      },
+      "region_counts": {
+        "Midwest": 2886,
+        "Northeast": 634,
+        "South": 220,
+        "West": 1
+      },
+      "source_family_counts": {
+        "agenda_minutes_packet": 312,
+        "arbitration_factfinding_labor_relations": 311,
+        "broad_pay_employee_compensation_index": 311,
+        "budget_pay_plan": 312,
+        "cba_agreement": 312,
+        "civil_service_hr": 312,
+        "compensation_classification_plan": 312,
+        "local_pay_policy_payroll": 311,
+        "mou_memorandum_settlement": 312,
+        "personnel_policy": 312,
+        "salary_pay_ordinance": 312,
+        "wage_salary_schedule": 312
+      },
+      "state_counts": {
+        "AL": 3,
+        "AR": 11,
+        "CT": 1,
+        "GA": 20,
+        "IA": 94,
+        "IL": 435,
+        "IN": 221,
+        "KS": 277,
+        "ME": 7,
+        "MI": 255,
+        "MN": 424,
+        "MO": 148,
+        "NC": 20,
+        "ND": 243,
+        "NE": 82,
+        "NJ": 11,
+        "NY": 205,
+        "OH": 295,
+        "OK": 28,
+        "PA": 410,
+        "SD": 152,
+        "TX": 138,
+        "WA": 1,
+        "WI": 260
+      },
+      "target_count": 3741
+    },
+    "scout_lane_002": {
+      "durable_exclusion_flag_count": 0,
+      "population_band_counts": {
+        "1000_4999": 1051,
+        "25000_99999": 2,
+        "5000_24999": 158,
+        "under_1000": 2530
+      },
+      "query_difficulty_counts": {
+        "limited_official_site": 3077,
+        "standard_official_site": 664
+      },
+      "region_counts": {
+        "Midwest": 2887,
+        "Northeast": 634,
+        "South": 220
+      },
+      "source_family_counts": {
+        "agenda_minutes_packet": 312,
+        "arbitration_factfinding_labor_relations": 312,
+        "broad_pay_employee_compensation_index": 312,
+        "budget_pay_plan": 312,
+        "cba_agreement": 311,
+        "civil_service_hr": 312,
+        "compensation_classification_plan": 312,
+        "local_pay_policy_payroll": 312,
+        "mou_memorandum_settlement": 311,
+        "personnel_policy": 312,
+        "salary_pay_ordinance": 312,
+        "wage_salary_schedule": 311
+      },
+      "state_counts": {
+        "AL": 3,
+        "AR": 10,
+        "DE": 1,
+        "GA": 20,
+        "IA": 95,
+        "IL": 435,
+        "IN": 221,
+        "KS": 276,
+        "ME": 7,
+        "MI": 254,
+        "MN": 424,
+        "MO": 148,
+        "NC": 19,
+        "ND": 244,
+        "NE": 83,
+        "NJ": 11,
+        "NY": 205,
+        "OH": 295,
+        "OK": 29,
+        "PA": 410,
+        "SD": 151,
+        "TX": 138,
+        "VT": 1,
+        "WI": 261
+      },
+      "target_count": 3741
+    },
+    "scout_lane_003": {
+      "durable_exclusion_flag_count": 0,
+      "population_band_counts": {
+        "1000_4999": 1051,
+        "25000_99999": 2,
+        "5000_24999": 157,
+        "under_1000": 2530
+      },
+      "query_difficulty_counts": {
+        "limited_official_site": 3076,
+        "standard_official_site": 664
+      },
+      "region_counts": {
+        "Midwest": 2886,
+        "Northeast": 633,
+        "South": 221
+      },
+      "source_family_counts": {
+        "agenda_minutes_packet": 312,
+        "arbitration_factfinding_labor_relations": 312,
+        "broad_pay_employee_compensation_index": 312,
+        "budget_pay_plan": 311,
+        "cba_agreement": 312,
+        "civil_service_hr": 312,
+        "compensation_classification_plan": 311,
+        "local_pay_policy_payroll": 312,
+        "mou_memorandum_settlement": 312,
+        "personnel_policy": 312,
+        "salary_pay_ordinance": 311,
+        "wage_salary_schedule": 311
+      },
+      "state_counts": {
+        "AL": 3,
+        "AR": 11,
+        "GA": 19,
+        "IA": 95,
+        "IL": 434,
+        "IN": 222,
+        "KS": 277,
+        "LA": 1,
+        "ME": 6,
+        "MI": 254,
+        "MN": 425,
+        "MO": 148,
+        "NC": 20,
+        "ND": 243,
+        "NE": 82,
+        "NJ": 11,
+        "NY": 205,
+        "OH": 295,
+        "OK": 29,
+        "PA": 410,
+        "SD": 151,
+        "TX": 138,
+        "VT": 1,
+        "WI": 260
+      },
+      "target_count": 3740
+    },
+    "scout_lane_004": {
+      "durable_exclusion_flag_count": 1,
+      "population_band_counts": {
+        "1000_4999": 1051,
+        "25000_99999": 2,
+        "5000_24999": 158,
+        "under_1000": 2529
+      },
+      "query_difficulty_counts": {
+        "limited_official_site": 3077,
+        "standard_official_site": 663
+      },
+      "region_counts": {
+        "Midwest": 2886,
+        "Northeast": 634,
+        "South": 220
+      },
+      "source_family_counts": {
+        "agenda_minutes_packet": 311,
+        "arbitration_factfinding_labor_relations": 312,
+        "broad_pay_employee_compensation_index": 312,
+        "budget_pay_plan": 312,
+        "cba_agreement": 312,
+        "civil_service_hr": 311,
+        "compensation_classification_plan": 311,
+        "local_pay_policy_payroll": 312,
+        "mou_memorandum_settlement": 312,
+        "personnel_policy": 311,
+        "salary_pay_ordinance": 312,
+        "wage_salary_schedule": 312
+      },
+      "state_counts": {
+        "AL": 3,
+        "AR": 11,
+        "GA": 19,
+        "IA": 94,
+        "IL": 434,
+        "IN": 221,
+        "KS": 276,
+        "MA": 1,
+        "ME": 6,
+        "MI": 254,
+        "MN": 425,
+        "MO": 148,
+        "NC": 20,
+        "ND": 244,
+        "NE": 83,
+        "NJ": 12,
+        "NY": 205,
+        "OH": 295,
+        "OK": 29,
+        "PA": 410,
+        "SD": 151,
+        "TX": 138,
+        "WI": 261
+      },
+      "target_count": 3740
+    },
+    "scout_lane_005": {
+      "durable_exclusion_flag_count": 0,
+      "population_band_counts": {
+        "100000_plus": 1,
+        "1000_4999": 1051,
+        "25000_99999": 2,
+        "5000_24999": 157,
+        "under_1000": 2529
+      },
+      "query_difficulty_counts": {
+        "limited_official_site": 3077,
+        "standard_official_site": 663
+      },
+      "region_counts": {
+        "Midwest": 2886,
+        "Northeast": 633,
+        "South": 221
+      },
+      "source_family_counts": {
+        "agenda_minutes_packet": 311,
+        "arbitration_factfinding_labor_relations": 311,
+        "broad_pay_employee_compensation_index": 311,
+        "budget_pay_plan": 312,
+        "cba_agreement": 312,
+        "civil_service_hr": 312,
+        "compensation_classification_plan": 312,
+        "local_pay_policy_payroll": 311,
+        "mou_memorandum_settlement": 312,
+        "personnel_policy": 312,
+        "salary_pay_ordinance": 312,
+        "wage_salary_schedule": 312
+      },
+      "state_counts": {
+        "AL": 3,
+        "AR": 11,
+        "FL": 1,
+        "GA": 19,
+        "IA": 94,
+        "IL": 434,
+        "IN": 222,
+        "KS": 276,
+        "ME": 6,
+        "MI": 254,
+        "MN": 425,
+        "MO": 148,
+        "NC": 20,
+        "ND": 243,
+        "NE": 83,
+        "NJ": 12,
+        "NY": 205,
+        "OH": 295,
+        "OK": 29,
+        "PA": 410,
+        "SD": 151,
+        "TX": 138,
+        "WI": 261
+      },
+      "target_count": 3740
+    }
+  },
+  "live_status": "not_started_preflight_failed",
+  "stagger_offsets_minutes": {
+    "scout_lane_001": 0,
+    "scout_lane_002": 8,
+    "scout_lane_003": 16,
+    "scout_lane_004": 24,
+    "scout_lane_005": 32
+  }
+}

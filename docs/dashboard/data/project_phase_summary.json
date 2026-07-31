@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-07-31T18:20:43Z",
+  "generated_at": "2026-07-31T18:49:08Z",
   "data_vintage": "2026-07-31",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_5lane_scout_infrastructure_ready",
-  "current_phase": "Remaining-municipality 5-lane scout infrastructure ready",
-  "current_phase_code": "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_live_ready",
-  "current_evidence_status": "locked_no_call_remaining_municipality_queue_ready",
+  "stage": "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+  "current_phase": "remaining-municipality 5-lane live scout blocked at backend preflight",
+  "current_phase_code": "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+  "current_evidence_status": "live_scout_not_started_backend_preflight_failed",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Run the locked remaining-municipality queue in five checkpointed lanes",
+  "next_phase": "Retry the unchanged locked wave after a fresh Category A backend gate",
   "next_phase_sequence": [
-    "launch only after explicit live-scout authorization",
-    "stagger five lanes at T+0, T+8, T+16, T+24, and T+32 minutes",
-    "checkpoint after every municipality and resume only incomplete rows"
+    "rerun the bounded backend gate in a fresh directory",
+    "require Category A and a parseable quarantined production probe",
+    "launch the unchanged locked five lanes only after the gate passes"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_5lane_scout_infrastructure_ready_live_not_run",
+  "last_updated_context": "remaining_municipality_live_scout_preflight_failed_zero_targets_consumed",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -6142,5 +6142,11 @@
     3740
   ],
   "planned_remaining_scout_lane_count": 5,
-  "planned_scout_strategy": "broad_source_family_and_geography_balanced_no_live_calls"
+  "planned_scout_strategy": "broad_source_family_and_geography_balanced_no_live_calls",
+  "remaining_municipality_5lane_live_scout_available": true,
+  "remaining_municipality_5lane_live_scout_preflight_failed": true,
+  "accepted_terminal_outcomes": 0,
+  "parseable_outcomes": 0,
+  "failed_unparseable_outcomes": 0,
+  "actual_scout_coverage_rate_percent": 47.4501
 }

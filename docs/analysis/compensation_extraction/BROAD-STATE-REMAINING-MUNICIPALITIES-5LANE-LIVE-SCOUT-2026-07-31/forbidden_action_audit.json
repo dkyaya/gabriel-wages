@@ -1,0 +1,21 @@
+{
+  "candidate_review_runs": 0,
+  "codification_runs": 0,
+  "downloads": 0,
+  "final_causal_claims": 0,
+  "ingestion_runs": 0,
+  "live_targets_consumed": 0,
+  "live_workers_launched": 0,
+  "matching_runs": 0,
+  "normalization_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "rating_runs": 0,
+  "regressions": 0,
+  "source_review_runs": 0,
+  "span_extraction_runs": 0,
+  "text_extraction_runs": 0,
+  "treatment_effect_models": 0,
+  "verification_runs": 0,
+  "wage_gap_calculations": 0
+}

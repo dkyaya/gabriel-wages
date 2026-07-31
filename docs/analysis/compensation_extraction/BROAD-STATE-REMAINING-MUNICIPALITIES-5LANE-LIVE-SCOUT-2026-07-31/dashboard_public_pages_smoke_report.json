@@ -1,0 +1,9 @@
+{
+  "status": "pending_commit_push_and_pages_deployment",
+  "checked_at_utc": null,
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "cache_busting_query": null,
+  "visual_browser_validation_claimed": false,
+  "checks": {},
+  "limitation": "Public Pages validation must run after the safe preflight-stop package is committed, pushed, and deployed."
+}

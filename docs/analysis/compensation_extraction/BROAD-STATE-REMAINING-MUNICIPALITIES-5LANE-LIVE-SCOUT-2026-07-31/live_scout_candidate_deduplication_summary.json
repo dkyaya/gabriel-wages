@@ -1,0 +1,8 @@
+{
+  "candidate_review_performed": false,
+  "prior_seen_locator_rows": 0,
+  "raw_candidate_rows": 0,
+  "scout_level_deduped_new_locator_count": 0,
+  "unique_normalized_locators_this_wave": 0,
+  "within_wave_duplicate_locator_rows": 0
+}

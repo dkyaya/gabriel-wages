@@ -1,0 +1,8 @@
+{
+  "locked_targets_consumed": 0,
+  "reason": "No-search passed, but at least one hosted-search call failed before a usable response.",
+  "safe_to_retry_from_locked_queue": true,
+  "stage": "preflight",
+  "transport_category": "B",
+  "workers_launched": 0
+}

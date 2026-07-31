@@ -1,0 +1,25 @@
+{
+  "candidate_review_performed": false,
+  "decision": "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+  "global_analysis_readiness": false,
+  "head_before": "e898ee0aad376f5fdf7afc5018661afd7c6f808e",
+  "input_target_count": 18702,
+  "lane_hashes": {
+    "scout_lane_001": "784fd9f23141d70fbdcf93ffec16d44e2a97469cacc3923d01b96aacb534844a",
+    "scout_lane_002": "8b5c17dcd6cbd934abe5e6e78c66b5edbf28e564dbe79a1e77d5a8121b8cd96f",
+    "scout_lane_003": "cb16760d2760ec7857d2d1e9c78fd4a5c0e97adacdc0acc761ec7abc02a470ae",
+    "scout_lane_004": "1b0a7623d41780467b09b9aa1946932956fdc5c41c10f9ceefdb3c7823577857",
+    "scout_lane_005": "d3c491a8326dcb13dc053e34cc5605986e73c02f7d1e7dfc9153f1540108a1e8"
+  },
+  "lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "live_scout_started": false,
+  "live_workers_launched": 0,
+  "master_queue_sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
+}

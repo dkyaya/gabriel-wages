@@ -1,0 +1,82 @@
+{
+  "accepted_terminal_outcomes": 0,
+  "blocker": "hosted_search_preflight_category_b",
+  "candidate_bearing_municipality_count": 0,
+  "candidate_review_performed": false,
+  "completed_lane_count": 0,
+  "cumulative_scout_covered_municipality_count": 16887,
+  "decision": "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+  "eligible_municipality_universe_count": 35589,
+  "failed_unparseable_outcomes": 0,
+  "global_analysis_readiness": false,
+  "input_target_count": 18702,
+  "lane_completion_statuses": {
+    "scout_lane_001": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 0
+    },
+    "scout_lane_002": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 8
+    },
+    "scout_lane_003": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 16
+    },
+    "scout_lane_004": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 24
+    },
+    "scout_lane_005": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 32
+    }
+  },
+  "lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "national_scout_coverage_rate_percent": 47.4501,
+  "new_scout_covered_municipality_count": 0,
+  "parseable_no_candidates": 0,
+  "parseable_outcomes": 0,
+  "parseable_with_candidates": 0,
+  "raw_candidate_rows": 0,
+  "remaining_unscouted_eligible_municipality_count": 18702,
+  "scout_level_deduped_locator_count": 0,
+  "wayland_handling": "locked_unchanged_not_processed",
+  "zero_candidate_municipality_count": 0
+}

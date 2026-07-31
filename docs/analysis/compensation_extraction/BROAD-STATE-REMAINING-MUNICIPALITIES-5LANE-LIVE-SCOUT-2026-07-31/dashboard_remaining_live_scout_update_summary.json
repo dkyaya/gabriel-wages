@@ -1,0 +1,70 @@
+{
+  "accepted_terminal_outcomes": 0,
+  "cumulative_scout_covered_municipalities": 16887,
+  "current_stage": "remaining-municipality 5-lane live scout blocked at backend preflight",
+  "decision": "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+  "failed_unparseable_outcomes": 0,
+  "final_pi_report_link_preserved": true,
+  "global_analysis_readiness": false,
+  "lane_completion_statuses": {
+    "scout_lane_001": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 0
+    },
+    "scout_lane_002": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 8
+    },
+    "scout_lane_003": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 16
+    },
+    "scout_lane_004": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 24
+    },
+    "scout_lane_005": {
+      "accepted_terminal_outcomes": 0,
+      "actual_started_at": null,
+      "completed_at": null,
+      "failed_outcomes": 0,
+      "lane_status": "not_started_preflight_failed",
+      "parseable_outcomes": 0,
+      "raw_candidate_rows": 0,
+      "scheduled_start_offset_minutes": 32
+    }
+  },
+  "map_primary_metric": "scout_coverage_rate",
+  "new_scout_covered_municipalities": 0,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01",
+  "parseable_outcomes": 0,
+  "raw_candidate_rows": 0,
+  "remaining_unscouted_eligible_municipalities": 18702,
+  "scout_coverage_rate_percent": 47.4501,
+  "status": "preflight_failed_live_not_started",
+  "wage_growth_continuity_module_preserved": true
+}

@@ -228,15 +228,36 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                             "remaining_municipality_scout_infrastructure_manifest.json"
                                                         )
                                                         if remaining_infrastructure_path.exists():
-                                                            self.assertEqual(
-                                                                phase["current_phase"],
-                                                                "Remaining-municipality 5-lane scout infrastructure ready",
-                                                            )
-                                                            self.assertEqual(
-                                                                phase["next_task"],
+                                                            remaining_live_path = (
+                                                                ROOT / "docs/analysis/compensation_extraction/"
                                                                 "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
-                                                                "LIVE-SCOUT-2026-07-31",
+                                                                "LIVE-SCOUT-2026-07-31/"
+                                                                "remaining_municipalities_live_scout_manifest.json"
                                                             )
+                                                            if remaining_live_path.exists():
+                                                                self.assertEqual(
+                                                                    phase["current_phase"],
+                                                                    "remaining-municipality 5-lane live scout blocked at backend preflight",
+                                                                )
+                                                                self.assertEqual(
+                                                                    phase["next_task"],
+                                                                    "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                                    "LIVE-SCOUT-RETRY-2026-08-01",
+                                                                )
+                                                                self.assertTrue(
+                                                                    phase["remaining_municipality_5lane_live_scout_preflight_failed"]
+                                                                )
+                                                                self.assertEqual(phase["accepted_terminal_outcomes"], 0)
+                                                            else:
+                                                                self.assertEqual(
+                                                                    phase["current_phase"],
+                                                                    "Remaining-municipality 5-lane scout infrastructure ready",
+                                                                )
+                                                                self.assertEqual(
+                                                                    phase["next_task"],
+                                                                    "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                                    "LIVE-SCOUT-2026-07-31",
+                                                                )
                                                             self.assertEqual(
                                                                 phase["planned_remaining_scout_lane_sizes"],
                                                                 [3741, 3741, 3740, 3740, 3740],

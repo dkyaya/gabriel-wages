@@ -1,0 +1,3 @@
+# Hosted-search per-target scratch remains local.
+lanes/scout_lane_*/targets/
+lanes/scout_lane_*/outcomes/
