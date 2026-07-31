@@ -1,6 +1,6 @@
 # Final PI Report Validation
 
-Overall: **pending**.
+Overall: **passed**.
 
 - PASS — 01_final_report_exists
 - PASS — 02_final_executive_summary_exists
@@ -30,7 +30,7 @@ Overall: **pending**.
 - PASS — 26_dashboard_clean_if_updated
 - PASS — 27_dashboard_map_scout_rate
 - PASS — 28_local_dashboard_build
-- PENDING/FAIL — 29_public_dashboard_smoke
+- PASS — 29_public_dashboard_smoke
 - PASS — 30_no_ocr
 - PASS — 31_no_download
 - PASS — 32_no_source_review

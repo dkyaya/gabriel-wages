@@ -1,12 +1,26 @@
 {
-  "checked_at": null,
-  "status": "pending_post_push_pages_deployment",
-  "url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_pi_report_final_pending",
-  "public_pages_static_current_passed": false,
+  "checked_at": "2026-07-31T02:43:07.876755Z",
+  "status": "public_pages_static_current_passed_browser_controller_unavailable",
+  "url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260730_pi_report_final_1785465771",
+  "deployment_workflow_run_id": 30599529504,
+  "deployment_workflow_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30599529504",
+  "deployed_head_sha": "65e4bfcee5abf30b448bf77faa0e06700f621947",
+  "deployment_status": "completed_success",
+  "public_pages_static_current_passed": true,
   "public_pages_visible_current_passed": false,
   "browser_controller_status": "browser_controller_unavailable_no_browser_instances",
   "visual_browser_smoke_passed": false,
   "map_primary_metric": "scout_coverage_rate",
   "clean_dashboard_structure_preserved": true,
-  "checks": {}
+  "checks": {
+    "public_html_loaded": true,
+    "current_stage_final": true,
+    "next_task_send_package": true,
+    "final_report_path": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "clean_dashboard_structure": true,
+    "global_readiness_not_advanced": true,
+    "causal_readiness_blocked": true,
+    "no_final_national_causal_dashboard_claim": true
+  }
 }

@@ -812,7 +812,7 @@ def smoke_public(html_path: Path, bundle_path: Path, url: str) -> None:
         "next_task_send_package": NEXT_TASK in bundle,
         "final_report_path": REPORT_REL in bundle,
         "map_primary_metric_scout_coverage_rate": "scout_coverage_rate" in bundle,
-        "clean_dashboard_structure": "Technical details" in bundle,
+        "clean_dashboard_structure": "Technical audit and stage history" in bundle,
         "global_readiness_not_advanced": "bounded_local_documentary_examples_only_final_estimation_blocked" in bundle,
         "causal_readiness_blocked": "blocked_pending_stronger_causal_design" in bundle,
         "no_final_national_causal_dashboard_claim":
@@ -868,7 +868,6 @@ def build_relay(commit_or_status: str, commit_hash: str, push_status: str) -> Pa
         ],
         "next_task": NEXT_TASK,
     }
-    write_json(OUTPUT / "relay_status.json", relay_status)
     include = sorted(path for path in OUTPUT.iterdir() if path.is_file())
     if relay_path.exists():
         relay_path.unlink()

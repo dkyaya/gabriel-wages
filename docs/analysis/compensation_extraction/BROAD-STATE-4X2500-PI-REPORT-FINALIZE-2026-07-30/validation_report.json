@@ -1,13 +1,11 @@
 {
   "task_id": "BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30",
-  "decision": "broad_state_4x2500_pi_report_finalize_completed_repair_needed",
-  "validated_at": "2026-07-31T02:38:39.721532Z",
+  "decision": "broad_state_4x2500_pi_report_finalize_completed_send_ready",
+  "validated_at": "2026-07-31T02:43:19.447761Z",
   "core_checks_passed": true,
-  "all_checks_passed": false,
+  "all_checks_passed": true,
   "failed_checks": [],
-  "pending_checks": [
-    "29_public_dashboard_smoke"
-  ],
+  "pending_checks": [],
   "checks": {
     "01_final_report_exists": true,
     "02_final_executive_summary_exists": true,
@@ -37,7 +35,7 @@
     "26_dashboard_clean_if_updated": true,
     "27_dashboard_map_scout_rate": true,
     "28_local_dashboard_build": true,
-    "29_public_dashboard_smoke": false,
+    "29_public_dashboard_smoke": true,
     "30_no_ocr": true,
     "31_no_download": true,
     "32_no_source_review": true,

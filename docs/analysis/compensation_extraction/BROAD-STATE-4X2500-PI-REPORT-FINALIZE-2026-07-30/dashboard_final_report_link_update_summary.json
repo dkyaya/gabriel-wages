@@ -1,5 +1,5 @@
 {
-  "status": "local_build_and_static_smoke_passed_public_pending",
+  "status": "local_and_public_static_smoke_passed",
   "current_stage": "PI report final complete",
   "next_task": "BROAD-STATE-4X2500-PI-REPORT-SEND-PACKAGE-2026-07-30",
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
@@ -11,5 +11,7 @@
   "final_wage_gap_or_causal_claim_shown": false,
   "local_build_passed": true,
   "local_static_smoke_passed": true,
-  "local_browser_controller_status": "browser_controller_unavailable_no_browser_instances"
+  "local_browser_controller_status": "browser_controller_unavailable_no_browser_instances",
+  "public_static_smoke_passed": true,
+  "public_browser_controller_status": "browser_controller_unavailable_no_browser_instances"
 }
