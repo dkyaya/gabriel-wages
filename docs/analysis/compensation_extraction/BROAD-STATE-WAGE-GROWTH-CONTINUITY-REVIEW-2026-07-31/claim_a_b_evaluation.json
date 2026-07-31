@@ -1,0 +1,22 @@
+{
+  "recommended_claim_type": "hybrid_claim_b",
+  "recommended_claim": "Within the processed normalized corpus, safety-side growth evidence is more numerous, but unit-cycle-weighted rates do not show a uniform safety advantage. Step progression currently leans safety/police (7.44% versus 2.75% for non-safety), while across-the-board raises are mixed (fire 6.32%, non-safety 6.06%, police 4.02%) and COLA/CPI cross-side comparisons remain too small to resolve. The strongest current interpretation is mechanism- and cycle-specific divergence, not a general safety wage-growth premium.",
+  "claim_a": {
+    "support_status": "partially_supported",
+    "strongest_support": "Safety-side eligible evidence is more numerous for across-the-board raises, COLA/CPI, and step progression.",
+    "strongest_counterevidence": "Non-safety across-the-board growth averages 6.06%, above the 4.65% all-safety aggregate; rate direction is not uniformly safety-favoring.",
+    "small_n_caveat": "The non-safety step cell contains three unit-cycles from one municipality, and the non-safety COLA/CPI cell contains one unit-cycle.",
+    "recommended_wording": "Safety-side growth evidence is more numerous, but frequency does not imply uniformly higher weighted growth rates.",
+    "dashboard_suitability": "not_as_standalone_headline",
+    "report_suitability": "supporting_frequency_context_only"
+  },
+  "claim_b": {
+    "support_status": "supported_with_mechanism_specific_refinement",
+    "strongest_support": "Across-the-board and step-progression comparisons point in opposite cross-side directions, and the matched-cycle-only layer is too sparse to override that heterogeneity.",
+    "strongest_counterevidence": "Safety/police step progression is materially higher in the displayed means, so the result is not simply no difference.",
+    "small_n_caveat": "Only nine computed Tier 1+2 pairs enter the default; many displayed mechanism rates are source-reported rather than computed continuity pairs.",
+    "recommended_wording": "Within the processed normalized corpus, safety-side growth evidence is more numerous, but unit-cycle-weighted rates do not show a uniform safety advantage. Step progression currently leans safety/police (7.44% versus 2.75% for non-safety), while across-the-board raises are mixed (fire 6.32%, non-safety 6.06%, police 4.02%) and COLA/CPI cross-side comparisons remain too small to resolve. The strongest current interpretation is mechanism- and cycle-specific divergence, not a general safety wage-growth premium.",
+    "dashboard_suitability": "recommended",
+    "report_suitability": "recommended_bounded_claim"
+  }
+}

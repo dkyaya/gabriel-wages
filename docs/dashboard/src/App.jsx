@@ -69,7 +69,7 @@ function GrowthContinuityModule() {
           <p className="eyebrow">Derived growth continuity</p>
           <h3 id="growth-continuity-title">{wageGrowthContinuity.title}</h3>
         </div>
-        <p><strong>Default:</strong> unit-cycle weighted · computed Tier 1+2 plus eligible source-reported rates</p>
+        <p><strong>Reviewed default:</strong> unit-cycle weighted · computed Tier 1+2 plus eligible source-reported rates · minimum 3 unit-cycles</p>
       </div>
       <div className="growth-bars" role="img" aria-label="Average growth by mechanism for all safety and non-safety unit-cycles">
         {grouped.map((item) => (
@@ -88,7 +88,7 @@ function GrowthContinuityModule() {
           </div>
         ))}
       </div>
-      <p className="growth-claim"><strong>Current weighted pattern:</strong> {wageGrowthContinuity.claim_evaluation?.revised_synthesis}</p>
+      <p className="growth-claim"><strong>Reviewed continuity conclusion:</strong> {wageGrowthContinuity.recommended_continuity_claim ?? wageGrowthContinuity.claim_evaluation?.revised_synthesis}</p>
       <p className="growth-caveat">{wageGrowthContinuity.caveat}</p>
       <details className="growth-details">
         <summary>Time series, sensitivity, and evidence-route details</summary>

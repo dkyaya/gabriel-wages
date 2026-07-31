@@ -1,0 +1,22 @@
+{
+  "status": "static_smoke_passed_browser_controller_unavailable",
+  "dashboard_build_passed": true,
+  "local_smoke_passed": true,
+  "browser_controller_status": "unavailable",
+  "browser_controller_note": "The in-app browser runtime reported no available browser; repository-built bundle and served HTML were validated statically.",
+  "local_url_checked": "http://127.0.0.1:4173/gabriel-wages/",
+  "checks": {
+    "dashboard_build_exists": true,
+    "review_stage_current": true,
+    "next_task_current": true,
+    "map_metric_preserved": true,
+    "covered_count_preserved": true,
+    "recommended_claim_in_data": true,
+    "reviewed_label_in_source": true,
+    "reviewed_label_in_bundle": true,
+    "small_n_label_in_bundle": true,
+    "final_report_asset_exists": true,
+    "global_readiness_not_advanced": true,
+    "technical_details_collapsed_in_source": true
+  }
+}

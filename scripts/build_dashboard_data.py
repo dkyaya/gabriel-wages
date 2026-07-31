@@ -1768,6 +1768,11 @@ BROAD_STATE_4X2500_WAGE_GROWTH_CONTINUITY_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31"
 )
+BROAD_STATE_WAGE_GROWTH_CONTINUITY_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -6905,6 +6910,58 @@ def broad_state_4x2500_wage_growth_continuity_status() -> tuple[bool, dict[str, 
     return True, manifest
 
 
+def broad_state_wage_growth_continuity_review_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the bounded continuity review and remaining-universe plan."""
+    directory = BROAD_STATE_WAGE_GROWTH_CONTINUITY_REVIEW_DIR
+    required = (
+        directory / "wage_growth_continuity_review_manifest.json",
+        directory / "continuity_layer_integrity_review.json",
+        directory / "claim_a_b_evaluation.json",
+        directory / "weighting_method_review.json",
+        directory / "weekend_remaining_municipality_scout_plan.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest = read_json(required[0])
+    integrity = read_json(required[1])
+    claims = read_json(required[2])
+    weighting = read_json(required[3])
+    plan = read_json(required[4])
+    forbidden = read_json(required[5])
+    gates = (
+        manifest.get("decision")
+        in {
+            "preliminary_review_complete_validation_pending",
+            "broad_state_wage_growth_continuity_review_completed_local_ready_public_pending",
+            "broad_state_wage_growth_continuity_review_completed_weekend_scout_prep_ready",
+        }
+        and manifest.get("computed_cycle_to_cycle_growth_count") == 16
+        and manifest.get("source_reported_growth_count") == 416
+        and manifest.get("mechanism_attributed_growth_count") == 432
+        and integrity.get("passed") is True
+        and claims.get("recommended_claim_type") == "hybrid_claim_b"
+        and weighting.get("recommended_dashboard_default")
+        == "unit_cycle_weighted_average"
+        and plan.get("covered_union_count") == 16887
+        and plan.get("exact_remaining_unscouted_eligible_count") == 18702
+        and sum(plan.get("recommended_lane_sizes", {}).values()) == 18702
+        and plan.get("live_scout_run_authorized_in_this_task") is False
+        and forbidden.get("passed") is True
+    )
+    if not gates:
+        raise ValueError("wage-growth continuity review fails dashboard gates")
+    manifest = {
+        **manifest,
+        "recommended_claim": claims["recommended_claim"],
+        "exact_remaining_unscouted_eligible_count": plan[
+            "exact_remaining_unscouted_eligible_count"
+        ],
+        "recommended_lane_sizes": plan["recommended_lane_sizes"],
+    }
+    return True, manifest
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -7067,6 +7124,9 @@ def build_reports_index_layer(
     )
     broad_4x2500_growth_continuity_available, broad_4x2500_growth_continuity = (
         broad_state_4x2500_wage_growth_continuity_status()
+    )
+    growth_continuity_review_available, growth_continuity_review = (
+        broad_state_wage_growth_continuity_review_status()
     )
     published_reports = [
         *(
@@ -10571,6 +10631,9 @@ def build_project_phase_summary(
     broad_4x2500_growth_continuity_available, broad_4x2500_growth_continuity = (
         broad_state_4x2500_wage_growth_continuity_status()
     )
+    growth_continuity_review_available, growth_continuity_review = (
+        broad_state_wage_growth_continuity_review_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -11941,6 +12004,37 @@ def build_project_phase_summary(
                 "plan targeted future coverage without advancing national, final-gap, or causal readiness",
             ],
             "last_updated_context": "broad_state_4x2500_wage_growth_continuity_dashboard_ready",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "actual_scout_covered_municipalities": 16887,
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if growth_continuity_review_available:
+        payload.update({
+            "data_vintage": "2026-07-31",
+            "stage": "broad_state_wage_growth_continuity_review_complete",
+            "current_phase": "Wage-growth continuity review complete",
+            "current_phase_code": growth_continuity_review["decision"],
+            "current_evidence_status": "reviewed_mechanism_specific_growth_continuity_claim",
+            "wage_growth_continuity_review_available": True,
+            "recommended_growth_continuity_claim_type": growth_continuity_review[
+                "recommended_claim_type"
+            ],
+            "recommended_growth_continuity_claim": growth_continuity_review[
+                "recommended_claim"
+            ],
+            "remaining_unscouted_eligible_municipality_count": 18702,
+            "recommended_remaining_scout_lane_sizes": [3741, 3741, 3740, 3740, 3740],
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31",
+            "next_phase": "Prepare the capped five-lane remaining-municipality scout infrastructure",
+            "next_phase_sequence": [
+                "lock the exact 18,702-municipality remaining-universe queue",
+                "balance five disjoint lanes by geography and broad source opportunity",
+                "validate checkpoint/resume and staggered launch infrastructure before live authorization",
+            ],
+            "last_updated_context": "wage_growth_continuity_review_complete_weekend_scout_prep_ready",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "actual_scout_covered_municipalities": 16887,

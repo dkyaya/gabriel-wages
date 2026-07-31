@@ -1,0 +1,97 @@
+{
+  "authoritative_universe_path": "docs/analysis/national_municipality_universe.csv",
+  "authoritative_coverage_sources": [
+    "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27/broad_state_by_state_source_scout_results.csv",
+    "docs/analysis/compensation_extraction/BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27/broad_state_4x1000_parallel_live_scout_master_results.csv",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29/broad_state_4x2500_live_scout_results.csv"
+  ],
+  "eligible_municipality_universe_count": 35589,
+  "covered_component_counts": {
+    "canonical_parseable_coverage": 2436,
+    "broad_state_source_wave_parseable": 486,
+    "broad_4x1000_parseable": 3997,
+    "broad_4x2500_parseable": 9968
+  },
+  "pairwise_overlap_counts": {
+    "canonical_parseable_coverage__broad_state_source_wave_parseable": 0,
+    "canonical_parseable_coverage__broad_4x1000_parseable": 0,
+    "canonical_parseable_coverage__broad_4x2500_parseable": 0,
+    "broad_state_source_wave_parseable__broad_4x1000_parseable": 0,
+    "broad_state_source_wave_parseable__broad_4x2500_parseable": 0,
+    "broad_4x1000_parseable__broad_4x2500_parseable": 0
+  },
+  "covered_union_count": 16887,
+  "covered_ids_outside_universe": 0,
+  "exact_remaining_unscouted_eligible_count": 18702,
+  "recommended_lane_sizes": {
+    "lane_001": 3741,
+    "lane_002": 3741,
+    "lane_003": 3740,
+    "lane_004": 3740,
+    "lane_005": 3740
+  },
+  "remaining_by_state": {
+    "IL": 2172,
+    "MN": 2123,
+    "PA": 2050,
+    "OH": 1475,
+    "KS": 1382,
+    "WI": 1303,
+    "MI": 1271,
+    "ND": 1217,
+    "IN": 1107,
+    "NY": 1025,
+    "SD": 756,
+    "MO": 740,
+    "TX": 690,
+    "IA": 472,
+    "NE": 413,
+    "OK": 144,
+    "NC": 99,
+    "GA": 97,
+    "NJ": 57,
+    "AR": 54,
+    "ME": 32,
+    "AL": 15,
+    "VT": 2,
+    "CT": 1,
+    "DE": 1,
+    "FL": 1,
+    "LA": 1,
+    "MA": 1,
+    "WA": 1
+  },
+  "remaining_by_region": {
+    "Midwest": 14431,
+    "Northeast": 3168,
+    "South": 1102,
+    "West": 1
+  },
+  "five_by_4000_feasible": false,
+  "five_lane_plan_capped_to_remaining_universe": true,
+  "recommended_next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31",
+  "recommended_lane_count": 5,
+  "nominal_requested_shape": "5 lanes x approximately 4,000 targets",
+  "actual_shape": "entire remaining 18,702-municipality universe split 3,741/3,741/3,740/3,740/3,740",
+  "stagger_minutes": {
+    "lane_001": 0,
+    "lane_002": 8,
+    "lane_003": 16,
+    "lane_004": 24,
+    "lane_005": 32
+  },
+  "infrastructure_first": true,
+  "live_scout_run_authorized_in_this_task": false,
+  "balancing_strategy": "Build one locked remaining-universe queue, stratify by Census region, state, population band, government type, and official-website availability, then deterministic round-robin into five disjoint lanes while enforcing exact lane sizes.",
+  "source_family_strategy": "Use broad, diverse official-source query families—labor/CBA portals, pay plans and budgets, ordinances/civil service, arbitration/factfinding/settlement, union sources, and separate discourse leads—without targeting only one mechanism.",
+  "checkpoint_resume_strategy": "Checkpoint every municipality, accept each terminal row once, resume from the next unaccepted target, never rerun accepted rows, and fail closed on checkpoint corruption or cross-lane ID overlap.",
+  "dashboard_coverage_update_rule": "Add only unique parseable terminal municipality outcomes to scout coverage after lane-local and coordinator audits; failed/unparseable targets remain excluded and no denominator is fabricated.",
+  "downstream_boundaries": [
+    "no candidate review in infrastructure prep",
+    "no verification/download",
+    "no extraction/OCR/rating",
+    "no normalization/matching",
+    "no wage-gap, prevalence, or causal claim"
+  ]
+}

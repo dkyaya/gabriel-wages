@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "ocr_runs": 0,
+  "downloads": 0,
+  "source_reviews": 0,
+  "text_extractions": 0,
+  "span_extractions": 0,
+  "rating_runs": 0,
+  "new_ingestion_runs": 0,
+  "new_normalization_runs": 0,
+  "new_matching_runs": 0,
+  "live_scout_runs": 0,
+  "regressions": 0,
+  "treatment_effect_models": 0,
+  "cost_of_living_adjustments": 0,
+  "final_wage_gap_claims": 0,
+  "national_prevalence_claims": 0,
+  "final_causal_claims": 0
+}

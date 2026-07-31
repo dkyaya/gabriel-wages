@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "computed_cycle_to_cycle_growth_count": 16,
+  "source_reported_growth_count": 416,
+  "source_reported_recurring_rate_eligible_count": 164,
+  "mechanism_attributed_growth_count": 432,
+  "growth_exclusion_count": 504,
+  "route_distribution": {
+    "computed_cycle_to_cycle": 16,
+    "source_reported_growth_rate": 416
+  },
+  "match_tier_distribution": {
+    "defensible_unit_level_match": 7,
+    "exact_position_schedule_match": 3,
+    "strong_named_position_match": 6
+  },
+  "computed_confidence_score_distribution": {
+    "0.65": 7,
+    "0.82": 6,
+    "0.95": 3
+  },
+  "source_reported_confidence_score_distribution": {
+    "0.45": 252,
+    "0.72": 73,
+    "0.9": 91
+  },
+  "unit_type_distribution": {
+    "fire": 35,
+    "non_safety": 42,
+    "police": 136,
+    "unclear": 219
+  },
+  "mechanism_distribution": {
+    "COLA_CPI": 50,
+    "across_the_board_percentage_raise": 336,
+    "base_wage_schedule_change": 13,
+    "implementation_retroactivity": 3,
+    "step_schedule_progression": 30
+  },
+  "source_family_distribution": {
+    "agenda_packet_or_minutes": 79,
+    "arbitration_award": 7,
+    "budget_or_pay_plan": 89,
+    "cba": 106,
+    "civil_service_or_hr_pay_plan": 6,
+    "compensation_study": 3,
+    "factfinding_report": 18,
+    "mou_or_memorandum": 27,
+    "other_local_government_pay_policy": 17,
+    "personnel_policy": 7,
+    "salary_ordinance": 9,
+    "settlement_agreement": 1,
+    "wage_schedule": 63
+  },
+  "computed_later_cycle_distribution": {
+    "2018": 1,
+    "2019": 1,
+    "2020": 2,
+    "2022": 3,
+    "2023": 2,
+    "2024": 7
+  },
+  "source_reported_eligible_year_distribution": {
+    "2015": 3,
+    "2016": 4,
+    "2017": 6,
+    "2018": 9,
+    "2019": 9,
+    "2020": 17,
+    "2021": 16,
+    "2022": 39,
+    "2023": 29,
+    "2024": 32
+  },
+  "exclusion_reason_distribution": {
+    "growth_value_not_a_plausible_percentage_rate": 2,
+    "insufficient_context_to_confirm_recurring_wage_growth": 223,
+    "multiple_distinct_values_at_same_position_cycle_without_resolved_schedule_location": 252,
+    "percentage_or_amount_is_not_recurring_wage_growth": 20,
+    "prior_audit_exception_police_officer_expressly_excluded": 1,
+    "proposal_or_bargaining_context_not_confirmed_implemented_growth": 6
+  },
+  "lineage_missing_ids": [],
+  "quarantine_overlap_ids": [],
+  "formula_error_ids": [],
+  "raw_preservation_error_ids": [],
+  "independent_unit_cycle_summary_mismatches": [],
+  "computed_and_source_reported_routes_separate": true,
+  "cola_cpi_boundary": "Source/contract growth mechanism only; no analyst-side cost-of-living adjustment was performed."
+}

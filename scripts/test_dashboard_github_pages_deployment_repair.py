@@ -215,14 +215,34 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                     "CONTINUITY-2026-07-31/wage_growth_continuity_manifest.json"
                                                 )
                                                 if growth_continuity_path.exists():
-                                                    self.assertEqual(
-                                                        phase["current_phase"],
-                                                        "Mechanism-attributed wage-growth continuity complete",
+                                                    growth_review_path = (
+                                                        ROOT / "docs/analysis/compensation_extraction/"
+                                                        "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31/"
+                                                        "wage_growth_continuity_review_manifest.json"
                                                     )
-                                                    self.assertEqual(
-                                                        phase["next_task"],
-                                                        "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
-                                                    )
+                                                    if growth_review_path.exists():
+                                                        self.assertEqual(
+                                                            phase["current_phase"],
+                                                            "Wage-growth continuity review complete",
+                                                        )
+                                                        self.assertEqual(
+                                                            phase["next_task"],
+                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                            "SCOUT-INFRASTRUCTURE-2026-07-31",
+                                                        )
+                                                        self.assertEqual(
+                                                            phase["remaining_unscouted_eligible_municipality_count"],
+                                                            18702,
+                                                        )
+                                                    else:
+                                                        self.assertEqual(
+                                                            phase["current_phase"],
+                                                            "Mechanism-attributed wage-growth continuity complete",
+                                                        )
+                                                        self.assertEqual(
+                                                            phase["next_task"],
+                                                            "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
+                                                        )
                                                 else:
                                                     self.assertEqual(phase["current_phase"], "PI report final complete")
                                                     self.assertEqual(

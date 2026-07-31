@@ -1,0 +1,36 @@
+{
+  "task_id": "BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31",
+  "decision": "broad_state_wage_growth_continuity_review_completed_local_ready_public_pending",
+  "generated_at": "2026-07-31T16:54:31Z",
+  "head_before": "5c2c23fae31589def35f604402df569e3599057d",
+  "computed_cycle_to_cycle_growth_count": 16,
+  "source_reported_growth_count": 416,
+  "mechanism_attributed_growth_count": 432,
+  "recommended_claim_type": "hybrid_claim_b",
+  "recommended_dashboard_weighting_method": "unit_cycle_weighted_average",
+  "recommended_computed_tiers": [
+    1,
+    2
+  ],
+  "exact_remaining_unscouted_eligible_count": 18702,
+  "recommended_lane_sizes": {
+    "lane_001": 3741,
+    "lane_002": 3741,
+    "lane_003": 3740,
+    "lane_004": 3740,
+    "lane_005": 3740
+  },
+  "map_primary_metric": "scout_coverage_rate",
+  "global_analysis_readiness": false,
+  "wage_gap_readiness": false,
+  "causal_readiness": false,
+  "validation_passed": true,
+  "public_pages_passed": false,
+  "continuity_integrity_review_passed": true,
+  "claim_a_status": "partially_supported",
+  "claim_b_status": "supported_with_mechanism_specific_refinement",
+  "recommended_claim": "Within the processed normalized corpus, safety-side growth evidence is more numerous, but unit-cycle-weighted rates do not show a uniform safety advantage. Step progression currently leans safety/police (7.44% versus 2.75% for non-safety), while across-the-board raises are mixed (fire 6.32%, non-safety 6.06%, police 4.02%) and COLA/CPI cross-side comparisons remain too small to resolve. The strongest current interpretation is mechanism- and cycle-specific divergence, not a general safety wage-growth premium.",
+  "five_by_4000_feasible": false,
+  "five_lane_plan_capped_to_remaining_universe": true,
+  "weekend_scout_run_performed": false
+}

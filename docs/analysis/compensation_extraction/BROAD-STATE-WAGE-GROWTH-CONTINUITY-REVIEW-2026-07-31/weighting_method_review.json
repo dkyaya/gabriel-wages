@@ -1,0 +1,91 @@
+{
+  "recommended_dashboard_default": "unit_cycle_weighted_average",
+  "recommended_computed_tiers": [
+    1,
+    2
+  ],
+  "small_n_threshold": 3,
+  "method_summaries": {
+    "record_weighted_average": {
+      "overall_cell_count": 18,
+      "displayable_cell_count": 13,
+      "key_means": {
+        "COLA_CPI|all_safety": 3.530556,
+        "COLA_CPI|fire": 2.875,
+        "COLA_CPI|non_safety": 3.2,
+        "COLA_CPI|police": 3.717857,
+        "across_the_board_percentage_raise|all_safety": 4.670968,
+        "across_the_board_percentage_raise|fire": 6.078571,
+        "across_the_board_percentage_raise|non_safety": 6.772727,
+        "across_the_board_percentage_raise|police": 4.260417,
+        "base_wage_schedule_change|all_safety": 6.553452,
+        "base_wage_schedule_change|fire": 7.623648,
+        "base_wage_schedule_change|non_safety": 4.663158,
+        "base_wage_schedule_change|police": 5.483256,
+        "step_schedule_progression|all_safety": 6.636364,
+        "step_schedule_progression|non_safety": 2.75,
+        "step_schedule_progression|police": 6.636364
+      }
+    },
+    "municipality_cycle_weighted_average": {
+      "overall_cell_count": 18,
+      "displayable_cell_count": 13,
+      "key_means": {
+        "COLA_CPI|all_safety": 3.253846,
+        "COLA_CPI|fire": 2.75,
+        "COLA_CPI|non_safety": 3.2,
+        "COLA_CPI|police": 3.345455,
+        "across_the_board_percentage_raise|all_safety": 4.654255,
+        "across_the_board_percentage_raise|fire": 6.315385,
+        "across_the_board_percentage_raise|non_safety": 6.3125,
+        "across_the_board_percentage_raise|police": 4.019118,
+        "base_wage_schedule_change|all_safety": 6.553452,
+        "base_wage_schedule_change|fire": 7.623648,
+        "base_wage_schedule_change|non_safety": 5.075045,
+        "base_wage_schedule_change|police": 5.483256,
+        "step_schedule_progression|all_safety": 7.444444,
+        "step_schedule_progression|non_safety": 2.75,
+        "step_schedule_progression|police": 7.444444
+      }
+    },
+    "unit_cycle_weighted_average": {
+      "overall_cell_count": 18,
+      "displayable_cell_count": 13,
+      "key_means": {
+        "COLA_CPI|all_safety": 3.253846,
+        "COLA_CPI|fire": 2.75,
+        "COLA_CPI|non_safety": 3.2,
+        "COLA_CPI|police": 3.345455,
+        "across_the_board_percentage_raise|all_safety": 4.654255,
+        "across_the_board_percentage_raise|fire": 6.315385,
+        "across_the_board_percentage_raise|non_safety": 6.055556,
+        "across_the_board_percentage_raise|police": 4.019118,
+        "base_wage_schedule_change|all_safety": 6.553452,
+        "base_wage_schedule_change|fire": 7.623648,
+        "base_wage_schedule_change|non_safety": 4.663158,
+        "base_wage_schedule_change|police": 5.483256,
+        "step_schedule_progression|all_safety": 7.444444,
+        "step_schedule_progression|non_safety": 2.75,
+        "step_schedule_progression|police": 7.444444
+      }
+    },
+    "matched_cycle_only_average": {
+      "overall_cell_count": 6,
+      "displayable_cell_count": 0,
+      "key_means": {
+        "COLA_CPI|all_safety": 3.2,
+        "COLA_CPI|non_safety": 3.2,
+        "COLA_CPI|police": 3.2,
+        "across_the_board_percentage_raise|all_safety": 2.0,
+        "across_the_board_percentage_raise|non_safety": 3.0,
+        "across_the_board_percentage_raise|police": 2.0
+      }
+    }
+  },
+  "record_weighted_assessment": "Diagnostic only because repeated spans or records within one unit-cycle can overweight a document or municipality.",
+  "municipality_cycle_weighted_assessment": "Useful sensitivity that limits city-cycle dominance, but it can collapse distinct bargaining units inside one municipality-cycle.",
+  "unit_cycle_weighted_assessment": "Preferred because one bargaining unit contract-cycle is the project unit of observation; it limits duplicate-record influence while preserving occupation-unit structure.",
+  "matched_cycle_only_assessment": "Too sparse for the main dashboard: only one municipality-cycle contributes to each displayed cross-side mechanism cell.",
+  "tier_assessment": "Tier 1+2 retains exact and strong named-position continuity; Tier 3 remains sensitivity-only because schedule location is incomplete.",
+  "conclusion_stability": "The mechanism-specific conclusion is stable. Weighting changes exact magnitudes—especially non-safety across-the-board and base-schedule means—but not the finding that step and across-the-board mechanisms point in different cross-side directions."
+}
