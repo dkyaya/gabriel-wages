@@ -1,0 +1,81 @@
+{
+  "accepted_terminal_outcomes": 18702,
+  "cumulative_scout_covered_municipalities": 35574,
+  "current_stage": "remaining-municipality 5-lane live scout complete",
+  "decision": "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready",
+  "deduped_locator_count": 5868,
+  "failed_unparseable_outcomes": 15,
+  "final_pi_report_link_preserved": true,
+  "global_analysis_readiness": false,
+  "lane_completion_statuses": {
+    "scout_lane_001": {
+      "accepted_terminal_outcomes": 3741,
+      "actual_offset_minutes_from_lane_001": 0.0,
+      "actual_started_at": "2026-07-31T19:51:08.689795+00:00",
+      "completed_at": "2026-08-01T18:28:36.525878+00:00",
+      "failed_outcomes": 2,
+      "lane_status": "completed",
+      "parseable_outcomes": 3739,
+      "planned_offset_minutes_from_lane_001": 0,
+      "raw_candidate_rows": 1524,
+      "scheduled_start_offset_minutes": 0
+    },
+    "scout_lane_002": {
+      "accepted_terminal_outcomes": 3741,
+      "actual_offset_minutes_from_lane_001": 11.67,
+      "actual_started_at": "2026-07-31T20:02:48.725304+00:00",
+      "completed_at": "2026-08-01T18:35:30.511421+00:00",
+      "failed_outcomes": 2,
+      "lane_status": "completed",
+      "parseable_outcomes": 3739,
+      "planned_offset_minutes_from_lane_001": 8,
+      "raw_candidate_rows": 1605,
+      "scheduled_start_offset_minutes": 8
+    },
+    "scout_lane_003": {
+      "accepted_terminal_outcomes": 3740,
+      "actual_offset_minutes_from_lane_001": 16.17,
+      "actual_started_at": "2026-07-31T20:07:18.614505+00:00",
+      "completed_at": "2026-08-01T18:39:13.458972+00:00",
+      "failed_outcomes": 6,
+      "lane_status": "completed",
+      "parseable_outcomes": 3734,
+      "planned_offset_minutes_from_lane_001": 16,
+      "raw_candidate_rows": 1601,
+      "scheduled_start_offset_minutes": 16
+    },
+    "scout_lane_004": {
+      "accepted_terminal_outcomes": 3740,
+      "actual_offset_minutes_from_lane_001": 27.15,
+      "actual_started_at": "2026-07-31T20:18:17.843790+00:00",
+      "completed_at": "2026-08-01T19:18:17.045891+00:00",
+      "failed_outcomes": 2,
+      "lane_status": "completed",
+      "parseable_outcomes": 3738,
+      "planned_offset_minutes_from_lane_001": 24,
+      "raw_candidate_rows": 1564,
+      "scheduled_start_offset_minutes": 24
+    },
+    "scout_lane_005": {
+      "accepted_terminal_outcomes": 3740,
+      "actual_offset_minutes_from_lane_001": 34.09,
+      "actual_started_at": "2026-07-31T20:25:14.039737+00:00",
+      "completed_at": "2026-08-01T18:52:10.389872+00:00",
+      "failed_outcomes": 3,
+      "lane_status": "completed",
+      "parseable_outcomes": 3737,
+      "planned_offset_minutes_from_lane_001": 32,
+      "raw_candidate_rows": 1619,
+      "scheduled_start_offset_minutes": 32
+    }
+  },
+  "map_primary_metric": "scout_coverage_rate",
+  "new_scout_covered_municipalities": 18687,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01",
+  "parseable_outcomes": 18687,
+  "raw_candidate_rows": 7913,
+  "remaining_unscouted_eligible_municipalities": 15,
+  "scout_coverage_rate_percent": 99.9579,
+  "status": "live_scout_complete",
+  "wage_growth_continuity_module_preserved": true
+}

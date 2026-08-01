@@ -1783,6 +1783,11 @@ BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
 )
+BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_RETRY_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7035,14 +7040,37 @@ def broad_state_remaining_5lane_scout_infrastructure_status() -> tuple[bool, dic
 
 def broad_state_remaining_5lane_live_scout_status() -> tuple[bool, dict[str, Any]]:
     """Recognize actual live-wave completion, partial, or a safe preflight stop."""
-    directory = BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_DIR
+    retry_required = (
+        BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_RETRY_DIR
+        / "remaining_municipalities_live_scout_retry_manifest.json",
+        BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_RETRY_DIR
+        / "remaining_municipalities_live_scout_retry_summary.json",
+    )
+    retry = all(path.exists() for path in retry_required)
+    directory = (
+        BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_RETRY_DIR
+        if retry
+        else BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_DIR
+    )
     required = (
-        directory / "remaining_municipalities_live_scout_manifest.json",
-        directory / "remaining_municipalities_live_scout_summary.json",
-        directory / "live_scout_lane_distribution.json",
+        directory / (
+            "remaining_municipalities_live_scout_retry_manifest.json"
+            if retry else "remaining_municipalities_live_scout_manifest.json"
+        ),
+        directory / (
+            "remaining_municipalities_live_scout_retry_summary.json"
+            if retry else "remaining_municipalities_live_scout_summary.json"
+        ),
+        directory / (
+            "live_scout_retry_lane_distribution.json"
+            if retry else "live_scout_lane_distribution.json"
+        ),
         directory / "cumulative_scout_coverage_update.json",
         directory / "remaining_after_live_scout_summary.json",
-        directory / "dashboard_remaining_live_scout_update_summary.json",
+        directory / (
+            "dashboard_remaining_live_scout_retry_update_summary.json"
+            if retry else "dashboard_remaining_live_scout_update_summary.json"
+        ),
         directory / "validation_report.json",
         directory / "forbidden_action_audit.json",
     )
@@ -7055,6 +7083,9 @@ def broad_state_remaining_5lane_live_scout_status() -> tuple[bool, dict[str, Any
         "broad_state_remaining_municipalities_5lane_live_scout_completed_candidate_review_ready",
         "broad_state_remaining_municipalities_5lane_live_scout_partial_lanes_completed_resume_ready",
         "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+        "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready",
+        "broad_state_remaining_municipalities_5lane_live_scout_retry_partial_lanes_completed_resume_ready",
+        "broad_state_remaining_municipalities_5lane_live_scout_retry_preflight_failed_backend_unstable",
     }
     decision = manifest.get("decision")
     gates = (
@@ -7074,7 +7105,10 @@ def broad_state_remaining_5lane_live_scout_status() -> tuple[bool, dict[str, Any
         and validation.get("decision") == decision
         and distribution.get("lane_sizes") == summary.get("lane_sizes")
     )
-    if decision == "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed":
+    if decision in {
+        "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+        "broad_state_remaining_municipalities_5lane_live_scout_retry_preflight_failed_backend_unstable",
+    }:
         gates = gates and (
             manifest.get("live_scout_started") is False
             and manifest.get("live_workers_launched") == 0
@@ -7084,7 +7118,41 @@ def broad_state_remaining_5lane_live_scout_status() -> tuple[bool, dict[str, Any
         )
     if not gates:
         raise ValueError("remaining-municipality five-lane live-scout package fails dashboard gates")
-    return True, {**summary, **dashboard, "decision": decision}
+    return True, {
+        **summary,
+        **dashboard,
+        "decision": decision,
+        "artifact_directory": str(directory),
+        "retry": retry,
+    }
+
+
+def broad_state_remaining_5lane_live_state_overlay() -> dict[str, dict[str, int]]:
+    """Return actual per-state retry outcomes; never include planned queue rows."""
+    available, status = broad_state_remaining_5lane_live_scout_status()
+    if not available or status.get("accepted_terminal_outcomes", 0) == 0:
+        return {}
+    directory = Path(status["artifact_directory"])
+    outcomes_path = directory / "merged_live_scout_outcomes.csv"
+    if not outcomes_path.exists():
+        raise ValueError("recognized remaining live scout lacks merged outcomes")
+    overlay: dict[str, dict[str, int]] = defaultdict(
+        lambda: {"parseable": 0, "failed": 0, "candidate_positive": 0, "no_candidate": 0, "candidate_rows": 0}
+    )
+    for row in read_csv(outcomes_path):
+        state = row.get("state", "")
+        if not state:
+            raise ValueError("remaining live-scout outcome lacks state")
+        candidate_count = as_int(row.get("candidate_count"))
+        if row.get("parse_status") == "parseable":
+            overlay[state]["parseable"] += 1
+            overlay[state]["candidate_positive" if candidate_count else "no_candidate"] += 1
+        else:
+            overlay[state]["failed"] += 1
+        overlay[state]["candidate_rows"] += candidate_count
+    if sum(row["parseable"] for row in overlay.values()) != status.get("parseable_outcomes"):
+        raise ValueError("remaining live-scout state overlay does not reconcile")
+    return dict(overlay)
 
 
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
@@ -8324,6 +8392,7 @@ def build_state_summary(
     live_available, live_decision = broad_state_4x1000_live_scout_status()
     broad_4x2500_live_available, broad_4x2500_live_decision = broad_state_4x2500_live_scout_status()
     broad_4x2500_by_state = broad_state_4x2500_live_state_overlay()
+    remaining_5lane_by_state = broad_state_remaining_5lane_live_state_overlay()
     broad_by_state: dict[str, dict[str, str]] = {}
     live_by_state: dict[str, dict[str, str]] = {}
     if broad_completed:
@@ -8366,21 +8435,32 @@ def build_state_summary(
         broad = broad_by_state.get(state, {})
         live = live_by_state.get(state, {})
         live_4x2500 = broad_4x2500_by_state.get(state, {})
+        live_remaining = remaining_5lane_by_state.get(state, {})
         covered = as_int(row["municipalities_scouted"]) + as_int(
             broad.get("parseable_new_municipality_count")
-        ) + as_int(live.get("parseable_municipality_count")) + as_int(live_4x2500.get("parseable"))
+        ) + as_int(live.get("parseable_municipality_count")) + as_int(
+            live_4x2500.get("parseable")
+        ) + as_int(live_remaining.get("parseable"))
         candidate_positive = as_int(row["municipalities_scouted_with_candidates"]) + as_int(
             broad.get("candidate_positive_new_municipality_count")
-        ) + as_int(live.get("candidate_positive_municipality_count")) + as_int(live_4x2500.get("candidate_positive"))
+        ) + as_int(live.get("candidate_positive_municipality_count")) + as_int(
+            live_4x2500.get("candidate_positive")
+        ) + as_int(live_remaining.get("candidate_positive"))
         no_candidate = as_int(row["municipalities_scouted_no_candidates"]) + as_int(
             broad.get("no_candidate_new_municipality_count")
-        ) + as_int(live.get("no_candidate_municipality_count")) + as_int(live_4x2500.get("no_candidate"))
+        ) + as_int(live.get("no_candidate_municipality_count")) + as_int(
+            live_4x2500.get("no_candidate")
+        ) + as_int(live_remaining.get("no_candidate"))
         failure_only = as_int(row["municipalities_scout_attempt_failed_connection"]) + as_int(
             broad.get("failed_or_stopped_target_count")
-        ) + as_int(live.get("failed_or_stopped_target_count")) + as_int(live_4x2500.get("failed"))
+        ) + as_int(live.get("failed_or_stopped_target_count")) + as_int(
+            live_4x2500.get("failed")
+        ) + as_int(live_remaining.get("failed"))
         candidate_rows = as_int(row["candidate_rows_total"]) + as_int(
             broad.get("candidate_row_count")
-        ) + as_int(live.get("candidate_count")) + as_int(live_4x2500.get("candidate_rows"))
+        ) + as_int(live.get("candidate_count")) + as_int(
+            live_4x2500.get("candidate_rows")
+        ) + as_int(live_remaining.get("candidate_rows"))
         likely_sets = as_int(row["municipalities_with_likely_triad"])
         high_priority = as_int(row["high_priority_candidate_rows"])
         tier_c = tier_c_by_state.get(state, {})
@@ -12206,10 +12286,13 @@ def build_project_phase_summary(
     if remaining_5lane_live_available:
         preflight_failed = (
             remaining_5lane_live["decision"]
-            == "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed"
+            in {
+                "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed",
+                "broad_state_remaining_municipalities_5lane_live_scout_retry_preflight_failed_backend_unstable",
+            }
         )
         payload.update({
-            "data_vintage": "2026-07-31",
+            "data_vintage": "2026-08-01" if remaining_5lane_live.get("retry") else "2026-07-31",
             "stage": (
                 "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed"
                 if preflight_failed

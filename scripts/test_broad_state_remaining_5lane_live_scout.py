@@ -40,24 +40,30 @@ class RemainingLiveScoutTests(unittest.TestCase):
         self.assertEqual(live.terminal_status({"parse_status": "failed", "failure_type": "invalid_json"}), "failed_unparseable")
 
     def test_preflight_requires_safe_transport_and_parseable_probe(self) -> None:
-        safe = {
-            "gate_status": "passed",
-            "transport_diagnostic": {
-                "diagnosis_category": "A",
-                "metadata_only": True,
-                "secret_exposure_detected": False,
-                "raw_prompts_persisted": False,
-                "raw_responses_persisted": False,
-                "queue_coverage_dashboard_corpus_changed": False,
-            },
-            "one_row_probe": {"passed": True, "parseable_rows": 1},
+        transport = {
+            "transport_diagnosis_category": "A",
+            "metadata_only": True,
+            "raw_prompts_persisted": False,
+            "raw_responses_persisted": False,
+        }
+        probe = {
+            "passed": True,
+            "parse_status": "parseable",
+            "promoted_to_live_outcomes": False,
+            "locked_target_consumed": False,
+            "live_lanes_authorized": True,
         }
         with tempfile.TemporaryDirectory(dir=ROOT / "tmp") as temporary:
             path = Path(temporary)
-            (path / "preflight_plan.json").write_text(json.dumps(safe), encoding="utf-8")
-            self.assertEqual(live.validate_preflight(path)["gate_status"], "passed")
-            safe["one_row_probe"] = {"passed": False, "parseable_rows": 0}
-            (path / "preflight_plan.json").write_text(json.dumps(safe), encoding="utf-8")
+            (path / "live_scout_retry_transport_preflight_report.json").write_text(json.dumps(transport), encoding="utf-8")
+            (path / "production_probe_report.json").write_text(json.dumps(probe), encoding="utf-8")
+            self.assertEqual(
+                live.validate_preflight(path)["transport_diagnostic"]["transport_diagnosis_category"],
+                "A",
+            )
+            probe["passed"] = False
+            probe["live_lanes_authorized"] = False
+            (path / "production_probe_report.json").write_text(json.dumps(probe), encoding="utf-8")
             with self.assertRaises(RuntimeError):
                 live.validate_preflight(path)
 

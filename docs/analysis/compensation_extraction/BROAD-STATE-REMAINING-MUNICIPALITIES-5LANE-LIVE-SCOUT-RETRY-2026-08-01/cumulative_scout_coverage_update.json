@@ -1,0 +1,17 @@
+{
+  "coverage_rate_percent": 99.9579,
+  "covered_after_wave": 35574,
+  "covered_before_wave": 16887,
+  "eligible_universe": 35589,
+  "new_unique_parseable_covered": 18687,
+  "planned_failed_incomplete_excluded": true,
+  "wayland_handling": {
+    "already_canonical_flag_preserved": true,
+    "counted_as_new_scout_coverage": true,
+    "double_counted": false,
+    "included_in_locked_queue_once": true,
+    "outcome_present": true,
+    "reason": "Canonical-contract presence is distinct from scout-covered status; parseable live discovery counts once in the scout union.",
+    "terminal_status": "parseable_with_candidates"
+  }
+}

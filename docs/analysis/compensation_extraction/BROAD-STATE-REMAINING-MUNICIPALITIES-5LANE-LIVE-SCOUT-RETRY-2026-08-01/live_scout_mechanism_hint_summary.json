@@ -1,0 +1,11 @@
+{
+  "candidate_rows_with_any_hint": 3175,
+  "mechanism_hint_counts": {
+    "fiscal_constraint_signal": 188,
+    "market_or_comparability_pressure": 156,
+    "non_safety_constraint_signal": 2688,
+    "strike_or_no_strike_constraint": 507
+  },
+  "mechanism_targeting_did_not_replace_broad_source_family_assignment": true,
+  "metadata_hints_only": true
+}

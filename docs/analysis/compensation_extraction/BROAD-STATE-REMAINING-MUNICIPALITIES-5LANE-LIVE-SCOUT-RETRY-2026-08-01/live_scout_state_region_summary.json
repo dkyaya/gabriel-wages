@@ -1,0 +1,268 @@
+{
+  "rows": [
+    {
+      "accepted_terminal_outcomes": 15,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 15,
+      "raw_candidate_rows": 0,
+      "scope": "state",
+      "state_or_region": "AL"
+    },
+    {
+      "accepted_terminal_outcomes": 54,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 54,
+      "raw_candidate_rows": 0,
+      "scope": "state",
+      "state_or_region": "AR"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 0,
+      "scope": "state",
+      "state_or_region": "CT"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 1,
+      "scope": "state",
+      "state_or_region": "DE"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 2,
+      "scope": "state",
+      "state_or_region": "FL"
+    },
+    {
+      "accepted_terminal_outcomes": 97,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 96,
+      "raw_candidate_rows": 20,
+      "scope": "state",
+      "state_or_region": "GA"
+    },
+    {
+      "accepted_terminal_outcomes": 472,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 472,
+      "raw_candidate_rows": 96,
+      "scope": "state",
+      "state_or_region": "IA"
+    },
+    {
+      "accepted_terminal_outcomes": 2172,
+      "failed_outcomes": 5,
+      "parseable_outcomes": 2167,
+      "raw_candidate_rows": 797,
+      "scope": "state",
+      "state_or_region": "IL"
+    },
+    {
+      "accepted_terminal_outcomes": 1107,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1107,
+      "raw_candidate_rows": 405,
+      "scope": "state",
+      "state_or_region": "IN"
+    },
+    {
+      "accepted_terminal_outcomes": 1382,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1382,
+      "raw_candidate_rows": 282,
+      "scope": "state",
+      "state_or_region": "KS"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 0,
+      "scope": "state",
+      "state_or_region": "LA"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 4,
+      "scope": "state",
+      "state_or_region": "MA"
+    },
+    {
+      "accepted_terminal_outcomes": 32,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 32,
+      "raw_candidate_rows": 17,
+      "scope": "state",
+      "state_or_region": "ME"
+    },
+    {
+      "accepted_terminal_outcomes": 1271,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1271,
+      "raw_candidate_rows": 783,
+      "scope": "state",
+      "state_or_region": "MI"
+    },
+    {
+      "accepted_terminal_outcomes": 2123,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 2123,
+      "raw_candidate_rows": 628,
+      "scope": "state",
+      "state_or_region": "MN"
+    },
+    {
+      "accepted_terminal_outcomes": 740,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 739,
+      "raw_candidate_rows": 146,
+      "scope": "state",
+      "state_or_region": "MO"
+    },
+    {
+      "accepted_terminal_outcomes": 99,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 99,
+      "raw_candidate_rows": 30,
+      "scope": "state",
+      "state_or_region": "NC"
+    },
+    {
+      "accepted_terminal_outcomes": 1217,
+      "failed_outcomes": 3,
+      "parseable_outcomes": 1214,
+      "raw_candidate_rows": 98,
+      "scope": "state",
+      "state_or_region": "ND"
+    },
+    {
+      "accepted_terminal_outcomes": 413,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 413,
+      "raw_candidate_rows": 64,
+      "scope": "state",
+      "state_or_region": "NE"
+    },
+    {
+      "accepted_terminal_outcomes": 57,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 57,
+      "raw_candidate_rows": 92,
+      "scope": "state",
+      "state_or_region": "NJ"
+    },
+    {
+      "accepted_terminal_outcomes": 1025,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 1024,
+      "raw_candidate_rows": 792,
+      "scope": "state",
+      "state_or_region": "NY"
+    },
+    {
+      "accepted_terminal_outcomes": 1475,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 1474,
+      "raw_candidate_rows": 1040,
+      "scope": "state",
+      "state_or_region": "OH"
+    },
+    {
+      "accepted_terminal_outcomes": 144,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 144,
+      "raw_candidate_rows": 6,
+      "scope": "state",
+      "state_or_region": "OK"
+    },
+    {
+      "accepted_terminal_outcomes": 2050,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 2050,
+      "raw_candidate_rows": 1213,
+      "scope": "state",
+      "state_or_region": "PA"
+    },
+    {
+      "accepted_terminal_outcomes": 756,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 756,
+      "raw_candidate_rows": 103,
+      "scope": "state",
+      "state_or_region": "SD"
+    },
+    {
+      "accepted_terminal_outcomes": 690,
+      "failed_outcomes": 3,
+      "parseable_outcomes": 687,
+      "raw_candidate_rows": 452,
+      "scope": "state",
+      "state_or_region": "TX"
+    },
+    {
+      "accepted_terminal_outcomes": 2,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 2,
+      "raw_candidate_rows": 4,
+      "scope": "state",
+      "state_or_region": "VT"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 3,
+      "scope": "state",
+      "state_or_region": "WA"
+    },
+    {
+      "accepted_terminal_outcomes": 1303,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1303,
+      "raw_candidate_rows": 835,
+      "scope": "state",
+      "state_or_region": "WI"
+    },
+    {
+      "accepted_terminal_outcomes": 14431,
+      "failed_outcomes": 10,
+      "parseable_outcomes": 14421,
+      "raw_candidate_rows": 5277,
+      "scope": "region",
+      "state_or_region": "Midwest"
+    },
+    {
+      "accepted_terminal_outcomes": 3168,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 3167,
+      "raw_candidate_rows": 2122,
+      "scope": "region",
+      "state_or_region": "Northeast"
+    },
+    {
+      "accepted_terminal_outcomes": 1102,
+      "failed_outcomes": 4,
+      "parseable_outcomes": 1098,
+      "raw_candidate_rows": 511,
+      "scope": "region",
+      "state_or_region": "South"
+    },
+    {
+      "accepted_terminal_outcomes": 1,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1,
+      "raw_candidate_rows": 3,
+      "scope": "region",
+      "state_or_region": "West"
+    }
+  ]
+}

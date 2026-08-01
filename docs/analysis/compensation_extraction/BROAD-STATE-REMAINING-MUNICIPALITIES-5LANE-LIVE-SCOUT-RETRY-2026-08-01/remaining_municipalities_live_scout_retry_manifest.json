@@ -1,0 +1,37 @@
+{
+  "accepted_terminal_outcomes": 18702,
+  "backend": "direct-sdk",
+  "candidate_review_performed": false,
+  "completed_lane_count": 5,
+  "decision": "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready",
+  "failed_unparseable_outcomes": 15,
+  "global_analysis_readiness": false,
+  "head_before": "9691e1395381abc6a1298be171aa8fbe7489eded",
+  "input_target_count": 18702,
+  "lane_hashes": {
+    "scout_lane_001": "784fd9f23141d70fbdcf93ffec16d44e2a97469cacc3923d01b96aacb534844a",
+    "scout_lane_002": "8b5c17dcd6cbd934abe5e6e78c66b5edbf28e564dbe79a1e77d5a8121b8cd96f",
+    "scout_lane_003": "cb16760d2760ec7857d2d1e9c78fd4a5c0e97adacdc0acc761ec7abc02a470ae",
+    "scout_lane_004": "1b0a7623d41780467b09b9aa1946932956fdc5c41c10f9ceefdb3c7823577857",
+    "scout_lane_005": "d3c491a8326dcb13dc053e34cc5605986e73c02f7d1e7dfc9153f1540108a1e8"
+  },
+  "lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "live_scout_started": true,
+  "live_workers_launched": 5,
+  "master_queue_sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
+  "model": "gpt-5.4-nano",
+  "parseable_outcomes": 18687,
+  "production_probe_result": "passed",
+  "public_pages_passed": false,
+  "raw_candidate_rows": 7913,
+  "scout_level_deduped_locator_count": 5868,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01",
+  "transport_diagnosis_category": "A",
+  "validation_passed": true
+}

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-08-01T19:21:55Z",
+  "dashboard_url": "http://127.0.0.1:4175/gabriel-wages/",
+  "validation_mode": "served_production_bundle_static_smoke",
+  "browser_controller_status": "unavailable_no_browser_connected",
+  "visual_browser_validation_claimed": false,
+  "dashboard_http_status": 200,
+  "final_pi_report_http_status": 200,
+  "final_pi_report_sha256_matches_published_asset": true,
+  "dashboard_build_passed": true,
+  "current_stage": "remaining-municipality 5-lane live scout complete",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01",
+  "accepted_terminal_outcomes": 18702,
+  "parseable_outcomes": 18687,
+  "failed_unparseable_outcomes": 15,
+  "scout_covered_municipalities": 35574,
+  "eligible_municipality_universe": 35589,
+  "scout_coverage_rate_percent": 99.9579,
+  "remaining_unscouted_eligible_municipalities": 15,
+  "map_primary_metric": "scout_coverage_rate",
+  "raw_scout_count_context_only": true,
+  "final_pi_report_link_intact": true,
+  "wage_growth_continuity_module_intact": true,
+  "technical_details_collapsed_by_default_static_check": true,
+  "global_analysis_readiness": false,
+  "forbidden_dashboard_claims_detected": false,
+  "passed": true,
+  "limitations": [
+    "No in-app or external browser was connected, so visible layout and console state were not visually inspected.",
+    "The production bundle, dashboard data, component defaults, dashboard route, and final PDF asset were validated statically and over the local HTTP server."
+  ]
+}

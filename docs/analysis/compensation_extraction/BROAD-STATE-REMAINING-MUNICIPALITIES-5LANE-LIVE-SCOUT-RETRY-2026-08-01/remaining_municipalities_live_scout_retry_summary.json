@@ -1,0 +1,102 @@
+{
+  "accepted_terminal_outcomes": 18702,
+  "candidate_bearing_municipality_count": 3971,
+  "candidate_review_performed": false,
+  "completed_lane_count": 5,
+  "cumulative_scout_covered_municipality_count": 35574,
+  "decision": "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready",
+  "eligible_municipality_universe_count": 35589,
+  "failed_unparseable_outcomes": 15,
+  "global_analysis_readiness": false,
+  "input_target_count": 18702,
+  "lane_completion_statuses": {
+    "scout_lane_001": {
+      "accepted_terminal_outcomes": 3741,
+      "actual_offset_minutes_from_lane_001": 0.0,
+      "actual_started_at": "2026-07-31T19:51:08.689795+00:00",
+      "completed_at": "2026-08-01T18:28:36.525878+00:00",
+      "failed_outcomes": 2,
+      "lane_status": "completed",
+      "parseable_outcomes": 3739,
+      "planned_offset_minutes_from_lane_001": 0,
+      "raw_candidate_rows": 1524,
+      "scheduled_start_offset_minutes": 0
+    },
+    "scout_lane_002": {
+      "accepted_terminal_outcomes": 3741,
+      "actual_offset_minutes_from_lane_001": 11.67,
+      "actual_started_at": "2026-07-31T20:02:48.725304+00:00",
+      "completed_at": "2026-08-01T18:35:30.511421+00:00",
+      "failed_outcomes": 2,
+      "lane_status": "completed",
+      "parseable_outcomes": 3739,
+      "planned_offset_minutes_from_lane_001": 8,
+      "raw_candidate_rows": 1605,
+      "scheduled_start_offset_minutes": 8
+    },
+    "scout_lane_003": {
+      "accepted_terminal_outcomes": 3740,
+      "actual_offset_minutes_from_lane_001": 16.17,
+      "actual_started_at": "2026-07-31T20:07:18.614505+00:00",
+      "completed_at": "2026-08-01T18:39:13.458972+00:00",
+      "failed_outcomes": 6,
+      "lane_status": "completed",
+      "parseable_outcomes": 3734,
+      "planned_offset_minutes_from_lane_001": 16,
+      "raw_candidate_rows": 1601,
+      "scheduled_start_offset_minutes": 16
+    },
+    "scout_lane_004": {
+      "accepted_terminal_outcomes": 3740,
+      "actual_offset_minutes_from_lane_001": 27.15,
+      "actual_started_at": "2026-07-31T20:18:17.843790+00:00",
+      "completed_at": "2026-08-01T19:18:17.045891+00:00",
+      "failed_outcomes": 2,
+      "lane_status": "completed",
+      "parseable_outcomes": 3738,
+      "planned_offset_minutes_from_lane_001": 24,
+      "raw_candidate_rows": 1564,
+      "scheduled_start_offset_minutes": 24
+    },
+    "scout_lane_005": {
+      "accepted_terminal_outcomes": 3740,
+      "actual_offset_minutes_from_lane_001": 34.09,
+      "actual_started_at": "2026-07-31T20:25:14.039737+00:00",
+      "completed_at": "2026-08-01T18:52:10.389872+00:00",
+      "failed_outcomes": 3,
+      "lane_status": "completed",
+      "parseable_outcomes": 3737,
+      "planned_offset_minutes_from_lane_001": 32,
+      "raw_candidate_rows": 1619,
+      "scheduled_start_offset_minutes": 32
+    }
+  },
+  "lane_sizes": {
+    "scout_lane_001": 3741,
+    "scout_lane_002": 3741,
+    "scout_lane_003": 3740,
+    "scout_lane_004": 3740,
+    "scout_lane_005": 3740
+  },
+  "live_lanes_launched": true,
+  "national_scout_coverage_rate_percent": 99.9579,
+  "new_scout_covered_municipality_count": 18687,
+  "parseable_no_candidates": 14716,
+  "parseable_outcomes": 18687,
+  "parseable_with_candidates": 3971,
+  "production_probe_result": "passed",
+  "raw_candidate_rows": 7913,
+  "remaining_unscouted_eligible_municipality_count": 15,
+  "scout_level_deduped_locator_count": 5868,
+  "transport_diagnosis_category": "A",
+  "wayland_handling": {
+    "already_canonical_flag_preserved": true,
+    "counted_as_new_scout_coverage": true,
+    "double_counted": false,
+    "included_in_locked_queue_once": true,
+    "outcome_present": true,
+    "reason": "Canonical-contract presence is distinct from scout-covered status; parseable live discovery counts once in the scout union.",
+    "terminal_status": "parseable_with_candidates"
+  },
+  "zero_candidate_municipality_count": 14716
+}

@@ -1,0 +1,88 @@
+{
+  "rows": [
+    {
+      "accepted_terminal_outcomes": 1558,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 1557,
+      "raw_candidate_rows": 1037,
+      "source_family_query_family": "agenda_minutes_packet"
+    },
+    {
+      "accepted_terminal_outcomes": 1558,
+      "failed_outcomes": 3,
+      "parseable_outcomes": 1555,
+      "raw_candidate_rows": 377,
+      "source_family_query_family": "arbitration_factfinding_labor_relations"
+    },
+    {
+      "accepted_terminal_outcomes": 1558,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1558,
+      "raw_candidate_rows": 773,
+      "source_family_query_family": "broad_pay_employee_compensation_index"
+    },
+    {
+      "accepted_terminal_outcomes": 1559,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1559,
+      "raw_candidate_rows": 746,
+      "source_family_query_family": "budget_pay_plan"
+    },
+    {
+      "accepted_terminal_outcomes": 1559,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1559,
+      "raw_candidate_rows": 354,
+      "source_family_query_family": "cba_agreement"
+    },
+    {
+      "accepted_terminal_outcomes": 1559,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 1558,
+      "raw_candidate_rows": 662,
+      "source_family_query_family": "civil_service_hr"
+    },
+    {
+      "accepted_terminal_outcomes": 1558,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 1557,
+      "raw_candidate_rows": 590,
+      "source_family_query_family": "compensation_classification_plan"
+    },
+    {
+      "accepted_terminal_outcomes": 1558,
+      "failed_outcomes": 1,
+      "parseable_outcomes": 1557,
+      "raw_candidate_rows": 717,
+      "source_family_query_family": "local_pay_policy_payroll"
+    },
+    {
+      "accepted_terminal_outcomes": 1559,
+      "failed_outcomes": 0,
+      "parseable_outcomes": 1559,
+      "raw_candidate_rows": 406,
+      "source_family_query_family": "mou_memorandum_settlement"
+    },
+    {
+      "accepted_terminal_outcomes": 1559,
+      "failed_outcomes": 2,
+      "parseable_outcomes": 1557,
+      "raw_candidate_rows": 980,
+      "source_family_query_family": "personnel_policy"
+    },
+    {
+      "accepted_terminal_outcomes": 1559,
+      "failed_outcomes": 4,
+      "parseable_outcomes": 1555,
+      "raw_candidate_rows": 700,
+      "source_family_query_family": "salary_pay_ordinance"
+    },
+    {
+      "accepted_terminal_outcomes": 1558,
+      "failed_outcomes": 2,
+      "parseable_outcomes": 1556,
+      "raw_candidate_rows": 571,
+      "source_family_query_family": "wage_salary_schedule"
+    }
+  ]
+}

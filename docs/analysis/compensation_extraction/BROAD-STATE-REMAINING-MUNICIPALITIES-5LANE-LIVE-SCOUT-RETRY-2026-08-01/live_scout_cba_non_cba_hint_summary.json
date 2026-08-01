@@ -1,0 +1,23 @@
+{
+  "cba_arbitration_factfinding_hint_count": 689,
+  "deduped_candidate_count": 5868,
+  "metadata_hints_only": true,
+  "non_cba_or_unresolved_hint_count": 5179,
+  "source_family_hint_counts": {
+    "agenda_packet_or_minutes": 1786,
+    "arbitration_award": 139,
+    "budget_or_pay_plan": 965,
+    "cba": 468,
+    "civil_service_or_hr_pay_plan": 92,
+    "classification_study": 1,
+    "compensation_study": 7,
+    "factfinding_report": 82,
+    "mou_or_memorandum": 218,
+    "other_local_government_pay_policy": 554,
+    "personnel_policy": 184,
+    "salary_ordinance": 249,
+    "settlement_agreement": 4,
+    "unknown_or_needs_review": 265,
+    "wage_schedule": 854
+  }
+}

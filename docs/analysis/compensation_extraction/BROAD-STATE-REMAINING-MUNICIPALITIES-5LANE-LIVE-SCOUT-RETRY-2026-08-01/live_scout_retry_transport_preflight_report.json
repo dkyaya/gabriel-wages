@@ -1,0 +1,158 @@
+{
+  "bounded_retry_limit_per_smoke": 1,
+  "category_a_achieved": true,
+  "category_a_required": true,
+  "completed_at": "2026-07-31T19:47:00.687525+00:00",
+  "external_calls_attempted": 4,
+  "hosted_smokes_attempted": 3,
+  "hosted_smokes_passed": 3,
+  "live_lanes_authorized_by_transport": true,
+  "locked_targets_consumed": 0,
+  "metadata_only": true,
+  "model": "gpt-5.4-nano",
+  "no_search_control": {
+    "attempt_count": 1,
+    "diagnostic_name": "no_search_control",
+    "elapsed_seconds": 2.151,
+    "failure_class": null,
+    "failure_detail": null,
+    "output_tokens": 5,
+    "passed": true,
+    "raw_prompt_persisted": false,
+    "raw_response_persisted": false,
+    "response_id_present": true,
+    "response_text_length": 2,
+    "response_text_present": true,
+    "status": "passed",
+    "web_search_enabled": false
+  },
+  "parser_smoke_required": true,
+  "queue_validation": {
+    "all_prior_coverage_status_not_scout_covered": true,
+    "all_query_packets_complete": true,
+    "lane_counts": {
+      "scout_lane_001": 3741,
+      "scout_lane_002": 3741,
+      "scout_lane_003": 3740,
+      "scout_lane_004": 3740,
+      "scout_lane_005": 3740
+    },
+    "lane_hashes": {
+      "scout_lane_001": "784fd9f23141d70fbdcf93ffec16d44e2a97469cacc3923d01b96aacb534844a",
+      "scout_lane_002": "8b5c17dcd6cbd934abe5e6e78c66b5edbf28e564dbe79a1e77d5a8121b8cd96f",
+      "scout_lane_003": "cb16760d2760ec7857d2d1e9c78fd4a5c0e97adacdc0acc761ec7abc02a470ae",
+      "scout_lane_004": "1b0a7623d41780467b09b9aa1946932956fdc5c41c10f9ceefdb3c7823577857",
+      "scout_lane_005": "d3c491a8326dcb13dc053e34cc5605986e73c02f7d1e7dfc9153f1540108a1e8"
+    },
+    "master_equals_disjoint_lane_union": true,
+    "master_queue_sha256": "13d2328ac19526a9a441b768fddb988cb4d83879d772cb098a77f1d0423ad1f8",
+    "master_target_count": 18702,
+    "passed": true,
+    "wayland_special_flag": "included_once_already_canonical_not_scout_covered"
+  },
+  "raw_prompts_persisted": false,
+  "raw_responses_persisted": false,
+  "representative_hosted_search_smokes": [
+    {
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate_count": 0,
+          "elapsed_seconds": 15.587,
+          "failure_class": null,
+          "output_tokens": 731,
+          "parse_status": "parseable",
+          "passed": true,
+          "response_id_present": true
+        }
+      ],
+      "bounded_retry_used": false,
+      "candidate_count": 0,
+      "diagnostic_name": "representative_hosted_search_01",
+      "failure_class": null,
+      "municipality": "Alleman",
+      "parser_passed": true,
+      "passed": true,
+      "promoted_to_live_outcomes": false,
+      "raw_prompt_persisted": false,
+      "raw_response_persisted": false,
+      "region": "Midwest",
+      "source_family_query_family": "cba_agreement",
+      "state": "IA",
+      "target_id": "BRM5-20260731-00001",
+      "terminal_parse_status": "parseable",
+      "web_search_enabled": true
+    },
+    {
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate_count": 0,
+          "elapsed_seconds": 9.133,
+          "failure_class": null,
+          "output_tokens": 346,
+          "parse_status": "parseable",
+          "passed": true,
+          "response_id_present": true
+        }
+      ],
+      "bounded_retry_used": false,
+      "candidate_count": 0,
+      "diagnostic_name": "representative_hosted_search_02",
+      "failure_class": null,
+      "municipality": "Abbott",
+      "parser_passed": true,
+      "passed": true,
+      "promoted_to_live_outcomes": false,
+      "raw_prompt_persisted": false,
+      "raw_response_persisted": false,
+      "region": "Northeast",
+      "source_family_query_family": "wage_salary_schedule",
+      "state": "PA",
+      "target_id": "BRM5-20260731-03111",
+      "terminal_parse_status": "parseable",
+      "web_search_enabled": true
+    },
+    {
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate_count": 0,
+          "elapsed_seconds": 17.378,
+          "failure_class": null,
+          "output_tokens": 543,
+          "parse_status": "parseable",
+          "passed": true,
+          "response_id_present": true
+        }
+      ],
+      "bounded_retry_used": false,
+      "candidate_count": 0,
+      "diagnostic_name": "representative_hosted_search_03",
+      "failure_class": null,
+      "municipality": "Ethelsville",
+      "parser_passed": true,
+      "passed": true,
+      "promoted_to_live_outcomes": false,
+      "raw_prompt_persisted": false,
+      "raw_response_persisted": false,
+      "region": "South",
+      "source_family_query_family": "budget_pay_plan",
+      "state": "AL",
+      "target_id": "BRM5-20260731-03521",
+      "terminal_parse_status": "parseable",
+      "web_search_enabled": true
+    }
+  ],
+  "representative_smoke_count_required": 3,
+  "search_context_size": "low",
+  "secret_values_persisted": false,
+  "started_at": "2026-07-31T19:46:06.427543+00:00",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01",
+  "timeout_seconds": 90.0,
+  "transport_diagnosis_category": "A",
+  "transport_diagnosis_reason": "No-search control and all three representative hosted-search/parser smokes passed."
+}

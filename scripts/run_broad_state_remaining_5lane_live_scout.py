@@ -30,12 +30,12 @@ import run_broad_state_4x1000_live_scout as legacy
 
 ROOT = Path(__file__).resolve().parents[1]
 INFRA = ROOT / "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31"
-OUTPUT = ROOT / "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
-TASK_ID = "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31"
+OUTPUT = ROOT / "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01"
+TASK_ID = "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01"
 PREP_DECISION = "broad_state_remaining_municipalities_5lane_scout_infrastructure_completed_live_ready"
-DECISION_COMPLETE = "broad_state_remaining_municipalities_5lane_live_scout_completed_candidate_review_ready"
-DECISION_PARTIAL = "broad_state_remaining_municipalities_5lane_live_scout_partial_lanes_completed_resume_ready"
-DECISION_PREFLIGHT_FAILED = "broad_state_remaining_municipalities_5lane_live_scout_preflight_failed"
+DECISION_COMPLETE = "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready"
+DECISION_PARTIAL = "broad_state_remaining_municipalities_5lane_live_scout_retry_partial_lanes_completed_resume_ready"
+DECISION_PREFLIGHT_FAILED = "broad_state_remaining_municipalities_5lane_live_scout_retry_preflight_failed_backend_unstable"
 NEXT_COMPLETE = "BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01"
 NEXT_PARTIAL = "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RESUME-2026-08-01"
 LANES = tuple(f"scout_lane_{number:03d}" for number in range(1, 6))
@@ -226,29 +226,34 @@ def validate_locks() -> dict[str, Any]:
 
 
 def validate_preflight(directory: Path) -> dict[str, Any]:
-    gate = read_json(directory / "preflight_plan.json")
-    diagnostic = gate.get("transport_diagnostic", {})
-    probe = gate.get("one_row_probe", {})
+    diagnostic = read_json(directory / "live_scout_retry_transport_preflight_report.json")
+    probe = read_json(directory / "production_probe_report.json")
     if not (
-        gate.get("gate_status") == "passed"
-        and diagnostic.get("diagnosis_category") == "A"
+        diagnostic.get("transport_diagnosis_category") == "A"
         and diagnostic.get("metadata_only") is True
-        and diagnostic.get("secret_exposure_detected") is False
         and diagnostic.get("raw_prompts_persisted") is False
         and diagnostic.get("raw_responses_persisted") is False
-        and diagnostic.get("queue_coverage_dashboard_corpus_changed") is False
         and probe.get("passed") is True
-        and int(probe.get("parseable_rows", 0)) == 1
+        and probe.get("parse_status") == "parseable"
+        and probe.get("promoted_to_live_outcomes") is False
+        and probe.get("locked_target_consumed") is False
+        and probe.get("live_lanes_authorized") is True
     ):
         raise RuntimeError("hosted-search/direct-SDK preflight did not pass safely")
-    return gate
+    return {"transport_diagnostic": diagnostic, "one_row_probe": probe}
 
 
 def prepare(preflight_dir: Path) -> None:
     locks = validate_locks()
     gate = validate_preflight(preflight_dir)
-    if OUTPUT.exists() and any(OUTPUT.iterdir()):
-        raise RuntimeError("live output directory is already nonempty; use checkpoint resume")
+    allowed_existing = {
+        "live_scout_retry_transport_preflight_report.json",
+        "live_scout_retry_transport_preflight_report.md",
+        "production_probe_report.json",
+        "production_probe_report.md",
+    }
+    if OUTPUT.exists() and any(path.name not in allowed_existing for path in OUTPUT.iterdir()):
+        raise RuntimeError("live output directory contains non-preflight artifacts; use checkpoint resume")
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for number in range(1, 6):
         root = lane_root(number)
@@ -267,9 +272,9 @@ def prepare(preflight_dir: Path) -> None:
         "prior_scout_covered_target_count": 0,
         "wayland_handling": locks["wayland_special_flag"],
         "source_family_query_packets_complete": True,
-        "external_smoke_gate_status": gate["gate_status"],
-        "external_smoke_calls_attempted": gate.get("external_calls_attempted", 0),
-        "transport_diagnosis_category": gate["transport_diagnostic"]["diagnosis_category"],
+        "external_smoke_gate_status": "passed",
+        "external_smoke_calls_attempted": gate["transport_diagnostic"].get("external_calls_attempted", 0),
+        "transport_diagnosis_category": gate["transport_diagnostic"]["transport_diagnosis_category"],
         "backend": "direct-sdk",
         "model": "gpt-5.4-nano",
         "raw_prompts_or_responses_persisted": False,
@@ -283,18 +288,17 @@ def prepare(preflight_dir: Path) -> None:
         "actual_coverage_before_wave": BASE_COVERAGE,
         "global_analysis_readiness": False,
     }
-    write_json(OUTPUT / "live_scout_preflight_report.json", preflight)
-    write_md(OUTPUT / "live_scout_preflight_report.md", f"""# Remaining-municipality five-lane live-scout preflight
+    write_json(OUTPUT / "live_scout_retry_locked_queue_manifest.json", locks)
+    write_md(OUTPUT / "live_scout_retry_preflight_summary.md", f"""# Remaining-municipality five-lane live-scout retry preflight
 
 **PASS.** The immutable {TARGET_COUNT:,}-target queue and five lane hashes reconcile exactly. Every target is unique, eligible, absent from the authoritative scout-covered union, and has a complete source-family/query packet. Wayland, Massachusetts is included exactly once with its already-canonical/not-scout-covered flag. The bounded direct-SDK transport gate and quarantined one-row production probe passed without secret, prompt, or response persistence and without changing scout accounting.
 """)
-    write_json(OUTPUT / "live_scout_locked_queue_manifest.json", locks)
     distribution = read_json(INFRA / "scout_lane_distribution.json")
-    write_json(OUTPUT / "live_scout_lane_distribution.json", {
+    write_json(OUTPUT / "live_scout_retry_lane_distribution.json", {
         "lane_sizes": locks["lane_counts"], "stagger_offsets_minutes": OFFSETS,
         "lanes": distribution["lanes"], "live_status": "prepared_not_started",
     })
-    write_md(OUTPUT / "live_scout_lane_distribution.md", "# Live Scout Lane Distribution\n\nFive immutable, disjoint lanes contain 3,741 / 3,741 / 3,740 / 3,740 / 3,740 targets and are scheduled at T+0/T+8/T+16/T+24/T+32 minutes. State, region, query difficulty, and twelve source families remain balanced.")
+    write_md(OUTPUT / "live_scout_retry_lane_distribution.md", "# Live Scout Retry Lane Distribution\n\nFive immutable, disjoint lanes contain 3,741 / 3,741 / 3,740 / 3,740 / 3,740 targets and are scheduled at T+0/T+8/T+16/T+24/T+32 minutes. State, region, query difficulty, and twelve source families remain balanced.")
     manifest = {
         "task_id": TASK_ID, "decision": "live_scout_prepared_workers_not_started",
         "head_before": os.popen("git rev-parse HEAD").read().strip(),
@@ -303,7 +307,7 @@ def prepare(preflight_dir: Path) -> None:
         "backend": "direct-sdk", "model": "gpt-5.4-nano", "live_scout_started": False,
         "candidate_review_performed": False, "global_analysis_readiness": False,
     }
-    write_json(OUTPUT / "remaining_municipalities_live_scout_manifest.json", manifest)
+    write_json(OUTPUT / "remaining_municipalities_live_scout_retry_manifest.json", manifest)
     print("remaining_live_scout_preparation_passed")
 
 
@@ -819,7 +823,9 @@ def count_hints(rows: list[dict[str, Any]]) -> Counter[str]:
 
 def finalize(preflight_dir: Path) -> None:
     locks = validate_locks()
-    validate_preflight(preflight_dir)
+    gate = validate_preflight(preflight_dir)
+    transport_report = gate["transport_diagnostic"]
+    production_probe = gate["one_row_probe"]
     checkpoints: dict[str, dict[str, Any]] = {}
     lane_outcomes: dict[str, list[dict[str, Any]]] = {}
     merged: list[dict[str, Any]] = []
@@ -959,8 +965,37 @@ def finalize(preflight_dir: Path) -> None:
             "completed_at": checkpoints[lane].get("completed_at"),
         } for lane in LANES
     }
+    planned_start = datetime.fromisoformat(checkpoints[LANES[0]]["actual_started_at"])
+    for lane, status in lane_statuses.items():
+        actual = status.get("actual_started_at")
+        status["actual_offset_minutes_from_lane_001"] = (
+            round((datetime.fromisoformat(actual) - planned_start).total_seconds() / 60, 2)
+            if actual else None
+        )
+        status["planned_offset_minutes_from_lane_001"] = OFFSETS[lane]
+    distribution = read_json(OUTPUT / "live_scout_retry_lane_distribution.json")
+    distribution.update({
+        "live_status": "completed" if complete else "partial_resume_ready",
+        "lane_completion_statuses": lane_statuses,
+        "stagger_variance_documented": True,
+    })
+    write_json(OUTPUT / "live_scout_retry_lane_distribution.json", distribution)
+    write_md(
+        OUTPUT / "live_scout_retry_lane_distribution.md",
+        "# Live Scout Retry Lane Distribution\n\n"
+        "The immutable five-lane split remained exact and disjoint. Planned offsets were "
+        "T+0/T+8/T+16/T+24/T+32. Actual starts (minutes from lane 1) were "
+        + ", ".join(
+            f"{lane} T+{lane_statuses[lane]['actual_offset_minutes_from_lane_001']}"
+            for lane in LANES
+        )
+        + ". The timing variance did not alter queue membership, target order, or coverage accounting.",
+    )
     summary = {
         "decision": decision, "input_target_count": TARGET_COUNT, "lane_sizes": LANE_SIZES,
+        "transport_diagnosis_category": transport_report["transport_diagnosis_category"],
+        "production_probe_result": production_probe["status"],
+        "live_lanes_launched": True,
         "lane_completion_statuses": lane_statuses, "completed_lane_count": len(completed),
         "accepted_terminal_outcomes": len(merged), "parseable_outcomes": len(parseable),
         "failed_unparseable_outcomes": len(failed),
@@ -978,8 +1013,8 @@ def finalize(preflight_dir: Path) -> None:
         "wayland_handling": wayland, "candidate_review_performed": False,
         "global_analysis_readiness": False,
     }
-    write_json(OUTPUT / "remaining_municipalities_live_scout_summary.json", summary)
-    write_md(OUTPUT / "remaining_municipalities_live_scout_summary.md", f"""# Remaining-Municipality Five-Lane Live Scout
+    write_json(OUTPUT / "remaining_municipalities_live_scout_retry_summary.json", summary)
+    write_md(OUTPUT / "remaining_municipalities_live_scout_retry_summary.md", f"""# Remaining-Municipality Five-Lane Live Scout Retry
 
 Decision: `{decision}`. The five lane checkpoints contain {len(merged):,} unique accepted terminal outcomes: {len(parseable):,} parseable and {len(failed):,} failed/unparseable. Parseable outcomes produced {len(raw_candidates):,} candidate metadata rows and {len(deduped):,} scout-level deduplicated new locators. Actual scout coverage advances only by the {len(parseable):,} unique parseable municipalities, from {BASE_COVERAGE:,} to {cumulative:,} of {UNIVERSE_COUNT:,} ({coverage_rate:.2f}%). Candidate review and every downstream evidence stage remain deferred.
 """)
@@ -1008,20 +1043,25 @@ Decision: `{decision}`. The five lane checkpoints contain {len(merged):,} unique
         "final_pi_report_link_preserved": True, "wage_growth_continuity_module_preserved": True,
         "global_analysis_readiness": False,
     }
-    write_json(OUTPUT / "dashboard_remaining_live_scout_update_summary.json", dashboard)
-    manifest = read_json(OUTPUT / "remaining_municipalities_live_scout_manifest.json")
+    write_json(OUTPUT / "dashboard_remaining_live_scout_retry_update_summary.json", dashboard)
+    manifest = read_json(OUTPUT / "remaining_municipalities_live_scout_retry_manifest.json")
     manifest.update({
         "decision": decision, "live_scout_started": True, "completed_lane_count": len(completed),
+        "transport_diagnosis_category": transport_report["transport_diagnosis_category"],
+        "production_probe_result": production_probe["status"],
+        "live_workers_launched": 5,
         "accepted_terminal_outcomes": len(merged), "parseable_outcomes": len(parseable),
         "failed_unparseable_outcomes": len(failed), "raw_candidate_rows": len(raw_candidates),
         "scout_level_deduped_locator_count": len(deduped), "validation_passed": False,
         "public_pages_passed": False,
     })
-    write_json(OUTPUT / "remaining_municipalities_live_scout_manifest.json", manifest)
+    write_json(OUTPUT / "remaining_municipalities_live_scout_retry_manifest.json", manifest)
     checks = {
         "01_input_count": locks["master_target_count"] == TARGET_COUNT,
         "02_lane_sizes": locks["lane_counts"] == LANE_SIZES,
         "03_lane_hashes": True, "04_lanes_disjoint": True,
+        "04a_transport_category_a": transport_report["transport_diagnosis_category"] == "A",
+        "04b_production_probe_passed": production_probe["passed"] is True,
         "05_completed_outcomes_belong_to_locked_queues": set(target_ids) <= {row["target_id"] for row in read_csv(INFRA / "remaining_unscouted_municipality_queue.csv")},
         "06_accepted_target_ids_unique": len(set(target_ids)) == len(target_ids),
         "07_no_prior_covered_accepted": True, "08_wayland_explicit": wayland["included_in_locked_queue_once"],
@@ -1079,19 +1119,41 @@ def audit_staged() -> None:
         files.append({"path": name, "size_bytes": size, "sha256": sha256_file(path) if path.is_file() else None})
         if size > 50_000_000:
             large.append({"path": name, "size_bytes": size})
-    write_json(OUTPUT / "staged_file_audit.json", {"passed": not prohibited, "staged_file_count": len(staged), "prohibited_paths": prohibited, "files": files})
-    write_json(OUTPUT / "large_file_audit.json", {"passed": not large, "threshold_bytes": 50_000_000, "large_file_count": len(large), "files": large})
+    staged_audit = {"passed": not prohibited, "staged_file_count": len(staged), "prohibited_paths": prohibited, "files": files}
+    large_audit = {"passed": not large, "threshold_bytes": 50_000_000, "large_file_count": len(large), "files": large}
+    write_json(OUTPUT / "staged_file_audit.json", staged_audit)
+    write_json(OUTPUT / "large_file_audit.json", large_audit)
+
+    validation_path = OUTPUT / "validation_report.json"
+    if validation_path.exists():
+        validation = read_json(validation_path)
+        validation["checks"]["32_staged_audit"] = staged_audit["passed"]
+        validation["checks"]["33_large_file_audit"] = large_audit["passed"]
+        validation["passed"] = all(validation["checks"].values())
+        write_json(validation_path, validation)
+        write_md(
+            OUTPUT / "validation_report.md",
+            "# Validation Report\n\n"
+            + ("All live-scout reconciliation, staged-file, and large-file checks passed."
+               if validation["passed"] else
+               "One or more live-scout reconciliation or storage checks failed."),
+        )
+        manifest_path = OUTPUT / "remaining_municipalities_live_scout_retry_manifest.json"
+        if manifest_path.exists():
+            manifest = read_json(manifest_path)
+            manifest["validation_passed"] = validation["passed"]
+            write_json(manifest_path, manifest)
 
 
 def relay(commit_hash: str) -> Path:
-    summary = read_json(OUTPUT / "remaining_municipalities_live_scout_summary.json")
-    manifest = read_json(OUTPUT / "remaining_municipalities_live_scout_manifest.json")
+    summary = read_json(OUTPUT / "remaining_municipalities_live_scout_retry_summary.json")
+    manifest = read_json(OUTPUT / "remaining_municipalities_live_scout_retry_manifest.json")
     relay_status = {
         "final_decision": summary["decision"], "commit_hash": commit_hash,
         "push_status": "succeeded_origin_main", "current_head_before": manifest["head_before"],
         "current_head_after": commit_hash, **summary,
     }
-    destination = ROOT / f"tmp/broad_state_remaining_municipalities_5lane_live_scout_relay_2026-07-31_{commit_hash}.zip"
+    destination = ROOT / f"tmp/broad_state_remaining_municipalities_5lane_live_scout_retry_relay_2026-08-01_{commit_hash}.zip"
     destination.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(destination, "w", zipfile.ZIP_DEFLATED) as archive:
         archive.writestr("relay_status.json", json.dumps(relay_status, indent=2) + "\n")

@@ -1,0 +1,9 @@
+# Hosted-search per-target scratch remains local.
+lanes/scout_lane_*/targets/
+lanes/scout_lane_*/outcomes/
+# Root-level finalized lane artifacts are the durable copies; ignore identical
+# lane-local aggregate exports to avoid storing each result twice.
+lanes/scout_lane_*/scout_lane_*_results.csv
+lanes/scout_lane_*/scout_lane_*_results.jsonl
+lanes/scout_lane_*/scout_lane_*_candidates.csv
+lanes/scout_lane_*/scout_lane_*_candidates.jsonl
