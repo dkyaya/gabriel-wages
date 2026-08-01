@@ -72,7 +72,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
     def test_current_dashboard_contract(self) -> None:
         phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
         expected = {
-            "actual_scout_covered_municipalities": 16887,
+            "actual_scout_covered_municipalities": 35574,
             "broad_state_4x2500_source_review_queue_count": 3950,
             "broad_state_4x2500_source_review_retained_count": 3672,
             "broad_state_4x2500_source_review_retained_pdf_count": 3248,
@@ -86,6 +86,15 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         }
         for field, value in expected.items():
             self.assertEqual(phase[field], value)
+        self.assertEqual(phase["accepted_terminal_outcomes"], 18702)
+        self.assertEqual(phase["parseable_outcomes"], 18687)
+        self.assertEqual(phase["failed_unparseable_outcomes"], 15)
+        self.assertEqual(phase["remaining_unscouted_eligible_municipality_count"], 15)
+        self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
+        self.assertEqual(
+            phase["current_phase_code"],
+            "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready",
+        )
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertIn(
@@ -235,19 +244,40 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                 "remaining_municipalities_live_scout_manifest.json"
                                                             )
                                                             if remaining_live_path.exists():
-                                                                self.assertEqual(
-                                                                    phase["current_phase"],
-                                                                    "remaining-municipality 5-lane live scout blocked at backend preflight",
-                                                                )
-                                                                self.assertEqual(
-                                                                    phase["next_task"],
+                                                                retry_manifest = (
+                                                                    ROOT / "docs/analysis/compensation_extraction/"
                                                                     "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
-                                                                    "LIVE-SCOUT-RETRY-2026-08-01",
+                                                                    "LIVE-SCOUT-RETRY-2026-08-01/"
+                                                                    "remaining_municipalities_live_scout_retry_manifest.json"
                                                                 )
-                                                                self.assertTrue(
-                                                                    phase["remaining_municipality_5lane_live_scout_preflight_failed"]
-                                                                )
-                                                                self.assertEqual(phase["accepted_terminal_outcomes"], 0)
+                                                                if retry_manifest.exists():
+                                                                    self.assertEqual(
+                                                                        phase["current_phase"],
+                                                                        "remaining-municipality 5-lane live scout complete",
+                                                                    )
+                                                                    self.assertEqual(
+                                                                        phase["next_task"],
+                                                                        "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                        "CANDIDATE-REVIEW-2026-08-01",
+                                                                    )
+                                                                    self.assertFalse(
+                                                                        phase["remaining_municipality_5lane_live_scout_preflight_failed"]
+                                                                    )
+                                                                    self.assertEqual(phase["accepted_terminal_outcomes"], 18702)
+                                                                else:
+                                                                    self.assertEqual(
+                                                                        phase["current_phase"],
+                                                                        "remaining-municipality 5-lane live scout blocked at backend preflight",
+                                                                    )
+                                                                    self.assertEqual(
+                                                                        phase["next_task"],
+                                                                        "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                                        "LIVE-SCOUT-RETRY-2026-08-01",
+                                                                    )
+                                                                    self.assertTrue(
+                                                                        phase["remaining_municipality_5lane_live_scout_preflight_failed"]
+                                                                    )
+                                                                    self.assertEqual(phase["accepted_terminal_outcomes"], 0)
                                                             else:
                                                                 self.assertEqual(
                                                                     phase["current_phase"],
@@ -274,7 +304,12 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                             )
                                                         self.assertEqual(
                                                             phase["remaining_unscouted_eligible_municipality_count"],
-                                                            18702,
+                                                            15 if (
+                                                                ROOT / "docs/analysis/compensation_extraction/"
+                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-"
+                                                                "LIVE-SCOUT-RETRY-2026-08-01/"
+                                                                "remaining_municipalities_live_scout_retry_manifest.json"
+                                                            ).exists() else 18702,
                                                         )
                                                     else:
                                                         self.assertEqual(
