@@ -4,6 +4,8 @@
   "final_pi_report_link_preserved": true,
   "global_analysis_readiness": false,
   "map_primary_metric": "scout_coverage_rate",
+  "public_pages_static_validation_passed": true,
+  "public_visual_browser_validation": false,
   "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-01",
   "priority_counts": {
     "high_priority_verification_ready": 2440,

@@ -87,7 +87,7 @@
     "low_priority_verification_ready": 24,
     "medium_priority_verification_ready": 1441
   },
-  "public_pages_passed": false,
+  "public_pages_passed": true,
   "response_bodies_saved": 0,
   "source_review_ready_count": 2956,
   "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
