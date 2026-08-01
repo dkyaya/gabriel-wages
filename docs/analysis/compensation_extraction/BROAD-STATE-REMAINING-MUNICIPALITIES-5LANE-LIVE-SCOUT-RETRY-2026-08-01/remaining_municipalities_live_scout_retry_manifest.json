@@ -28,7 +28,7 @@
   "model": "gpt-5.4-nano",
   "parseable_outcomes": 18687,
   "production_probe_result": "passed",
-  "public_pages_passed": false,
+  "public_pages_passed": true,
   "raw_candidate_rows": 7913,
   "scout_level_deduped_locator_count": 5868,
   "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01",

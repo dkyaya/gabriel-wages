@@ -1,107 +1,17 @@
 {
   "files": [
     {
-      "path": "docs/dashboard/data/analysis_readiness.json",
-      "sha256": "a9b361080fa5a22d8ba49c0221d1bf2eb14024183b326771ac78353b7f58426d",
-      "size_bytes": 36433
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01/dashboard_public_pages_smoke_report.json",
+      "sha256": "ebb7404dc9e0b3b271e2a03fdb56e20cadb0bbae11401012837540a8cc50b403",
+      "size_bytes": 1266
     },
     {
-      "path": "docs/dashboard/data/candidate_queue_summary.json",
-      "sha256": "a136365dc48088924fd47f99665ff28d55c523f046b46c2c857bb3b7535882ba",
-      "size_bytes": 27834
-    },
-    {
-      "path": "docs/dashboard/data/content_triage_status_summary.json",
-      "sha256": "ef68313d22c8d96c8fcfccd0ada8cfa2742c19e569acddabdfc254af2b96e0e4",
-      "size_bytes": 15708
-    },
-    {
-      "path": "docs/dashboard/data/coverage_funnel.json",
-      "sha256": "3fa354beeababe805e6cb679dfbc7f84f5f3fe037443906e89813cee51463b39",
-      "size_bytes": 12676
-    },
-    {
-      "path": "docs/dashboard/data/parallel_scout_status.json",
-      "sha256": "bf1e366946edb79322317639e6c6f5f5a8830457689ad5cc42788f50f517097d",
-      "size_bytes": 13422
-    },
-    {
-      "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
-      "sha256": "cb710e6f5a985b03f47b4a9811d1a6b4abae0385e1a2994440b7be8384f70a0a",
-      "size_bytes": 12684
-    },
-    {
-      "path": "docs/dashboard/data/priority_summary.json",
-      "sha256": "c4105c2c4c45578e87c3197575ab98ed98e997fe707783e6658fd658be6a453f",
-      "size_bytes": 11853
-    },
-    {
-      "path": "docs/dashboard/data/project_phase_summary.json",
-      "sha256": "910c796aab86a3953dc03933b3b65bc3523b7f0e76f6080befec904a4ec533fb",
-      "size_bytes": 206083
-    },
-    {
-      "path": "docs/dashboard/data/reports_index.json",
-      "sha256": "f9eced7e4684258072385962bbcfaf9329428c7a9e5f0ab4640824ee62c7dd4e",
-      "size_bytes": 42538
-    },
-    {
-      "path": "docs/dashboard/data/scout_operations_summary.json",
-      "sha256": "4c76202402b5b4ad44e65426cff474aee1b7abb75a87b32912fcd0ff065a69b8",
-      "size_bytes": 12964
-    },
-    {
-      "path": "docs/dashboard/data/scout_runtime_trends.json",
-      "sha256": "705b6bc9a03059bec7e960aa3f37c45370ebdae89fe60c399e9658626c1e30af",
-      "size_bytes": 14022
-    },
-    {
-      "path": "docs/dashboard/data/scout_yield_by_state.json",
-      "sha256": "efd12e00cee3e57d3ca0691131795e8fbc29084ba6750edacf010d773f4d3a86",
-      "size_bytes": 51681
-    },
-    {
-      "path": "docs/dashboard/data/source_review_status_summary.json",
-      "sha256": "d439bee33bcb3580d3b573d314951655fe5b455e2ad73d7cdb84d1586cf9a3b3",
-      "size_bytes": 27241
-    },
-    {
-      "path": "docs/dashboard/data/state_priority_summary.json",
-      "sha256": "edc028a403432f956e9b4c74c63e150fbe113ed0c7d9e30dc6f02770eecc5cdf",
-      "size_bytes": 39561
-    },
-    {
-      "path": "docs/dashboard/data/state_summary.json",
-      "sha256": "89bde1792d34b153d0f013b78d16fe0befb14981b065edfa9efab0d17742255f",
-      "size_bytes": 165404
-    },
-    {
-      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
-      "sha256": "eb1e9a683ecb1347d151a3c83e117f449b0404bacb8c0a3cc8cff0977a54f2bf",
-      "size_bytes": 56812
-    },
-    {
-      "path": "docs/dashboard/data/text_table_detection_status_summary.json",
-      "sha256": "e3693ff1f1d7befcbb7ea13cc014224a7c6d0399ab855117f54389310ea5f7c8",
-      "size_bytes": 12889
-    },
-    {
-      "path": "docs/dashboard/data/top_priority_targets.json",
-      "sha256": "cbc01f4bf48cc4cc78f02430e9c3361a6167b94f1856880c6e0556bd8390f310",
-      "size_bytes": 217464
-    },
-    {
-      "path": "docs/dashboard/data/verification_status_summary.json",
-      "sha256": "c1bdabf6b824882759179ccffe58480a1649e8e127af311a4740e96edd3b1fb7",
-      "size_bytes": 15288
-    },
-    {
-      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
-      "sha256": "74ef8a48e20c3424144686b0ad31e93b3a644563c6ee87d362e1019b35285b81",
-      "size_bytes": 28633
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01/remaining_municipalities_live_scout_retry_manifest.json",
+      "sha256": "5c570a4cf3f539d00448a15280b4fcdfab6fe75fd1fd593847777de63df3499d",
+      "size_bytes": 1560
     }
   ],
   "passed": true,
   "prohibited_paths": [],
-  "staged_file_count": 20
+  "staged_file_count": 2
 }
