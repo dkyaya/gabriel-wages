@@ -1,0 +1,14 @@
+{
+  "checkpoint_frequency": "after_every_row",
+  "checkpointed_at": "2026-08-01T21:52:51Z",
+  "completed_rows": 781,
+  "downloads": 0,
+  "lane_id": "verification_lane_002",
+  "last_verification_row_id": "RMV-20260801-01562",
+  "locked_rows": 781,
+  "queue_sha256": "769eae240880a2af7198dd5af1b02108cfc088db3ebe11058b99ec371de1deda",
+  "remaining_rows": 0,
+  "response_bodies_saved": 0,
+  "status": "completed",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01"
+}

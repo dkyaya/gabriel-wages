@@ -1,0 +1,67 @@
+{
+  "network_smoke_downloads": 0,
+  "network_smoke_http_responses": 3,
+  "network_smoke_passed": true,
+  "network_smoke_priority_coverage": [
+    "high_priority_verification_ready",
+    "low_priority_verification_ready",
+    "medium_priority_verification_ready"
+  ],
+  "network_smoke_response_bodies_saved": 0,
+  "network_smoke_rows": 3,
+  "network_smoke_source_families": [
+    "agenda_packet_or_minutes",
+    "arbitration_award",
+    "budget_or_pay_plan"
+  ],
+  "network_smoke_states": [
+    "IA",
+    "IL",
+    "NY"
+  ],
+  "queue_validation_passed": true,
+  "rows": [
+    {
+      "downloaded": "false",
+      "error_class": "",
+      "http_status_code": "200",
+      "priority_bucket": "high_priority_verification_ready",
+      "raw_headers_saved": "false",
+      "region": "Midwest",
+      "response_body_saved": "false",
+      "source_domain": "allemaniowa.org",
+      "source_family_hint": "agenda_packet_or_minutes",
+      "state": "IA",
+      "verification_row_id": "RMV-20260801-00001",
+      "verification_status": "reachable"
+    },
+    {
+      "downloaded": "false",
+      "error_class": "",
+      "http_status_code": "200",
+      "priority_bucket": "medium_priority_verification_ready",
+      "raw_headers_saved": "false",
+      "region": "Northeast",
+      "response_body_saved": "false",
+      "source_domain": "ecommons.cornell.edu",
+      "source_family_hint": "arbitration_award",
+      "state": "NY",
+      "verification_row_id": "RMV-20260801-00269",
+      "verification_status": "reachable"
+    },
+    {
+      "downloaded": "false",
+      "error_class": "",
+      "http_status_code": "200",
+      "priority_bucket": "low_priority_verification_ready",
+      "raw_headers_saved": "false",
+      "region": "Midwest",
+      "response_body_saved": "false",
+      "source_domain": "thevillagersvoice.com",
+      "source_family_hint": "budget_or_pay_plan",
+      "state": "IL",
+      "verification_row_id": "RMV-20260801-00390",
+      "verification_status": "reachable"
+    }
+  ]
+}

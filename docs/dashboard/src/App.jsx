@@ -187,9 +187,11 @@ function App() {
             <div><span>Next task</span><strong>{projectPhaseSummary.next_task}</strong></div>
             <div><span>Claim boundary</span><strong>Bounded local documentary evidence only · final, national, and causal claims blocked</strong></div>
             <div>
-              <span>{projectPhaseSummary.remaining_municipality_candidate_review_available ? "Candidate review" : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed ? "Scout gate" : projectPhaseSummary.remaining_municipality_5lane_live_scout_available ? "Live scout" : projectPhaseSummary.remaining_municipality_5lane_scout_infrastructure_available ? "Planned scout" : "Data current"}</span>
+              <span>{projectPhaseSummary.remaining_municipality_verification_available ? "Verification" : projectPhaseSummary.remaining_municipality_candidate_review_available ? "Candidate review" : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed ? "Scout gate" : projectPhaseSummary.remaining_municipality_5lane_live_scout_available ? "Live scout" : projectPhaseSummary.remaining_municipality_5lane_scout_infrastructure_available ? "Planned scout" : "Data current"}</span>
               <strong>
-                {projectPhaseSummary.remaining_municipality_candidate_review_available
+                {projectPhaseSummary.remaining_municipality_verification_available
+                  ? `${formatNumber(projectPhaseSummary.source_review_ready_count)} source-review-ready of ${formatNumber(projectPhaseSummary.verified_row_count)} verified`
+                  : projectPhaseSummary.remaining_municipality_candidate_review_available
                   ? `${formatNumber(projectPhaseSummary.verification_ready_count)} verification-ready of ${formatNumber(projectPhaseSummary.reviewed_candidate_count)} reviewed · ${formatNumber(projectPhaseSummary.high_priority_verification_ready_count)} high priority`
                   : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed
                   ? `${formatNumber(projectPhaseSummary.remaining_unscouted_eligible_municipality_count)} remaining · backend preflight failed · zero targets consumed`

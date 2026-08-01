@@ -1,0 +1,8 @@
+{
+  "completed_rows": 781,
+  "lane_id": "verification_lane_001",
+  "queue_sha256": "12cb16cbada7a932da66681db0576a04e273803c0f44e8d3789085fce08b959c",
+  "remaining_rows": 0,
+  "resume_required": false,
+  "status": "completed"
+}

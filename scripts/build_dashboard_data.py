@@ -1793,6 +1793,11 @@ BROAD_STATE_REMAINING_CANDIDATE_REVIEW_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01"
 )
+BROAD_STATE_REMAINING_VERIFICATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7200,6 +7205,44 @@ def broad_state_remaining_candidate_review_status() -> tuple[bool, dict[str, Any
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_verification_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize completed HEAD-only verification for the remaining wave."""
+    directory = BROAD_STATE_REMAINING_VERIFICATION_DIR
+    required = (
+        directory / "remaining_municipalities_verification_manifest.json",
+        directory / "remaining_municipalities_verification_summary.json",
+        directory / "source_review_ready_manifest.json",
+        directory / "dashboard_remaining_verification_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, ready, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_verification_completed_source_review_ready"
+    core_checks = validation.get("checks", {})
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("verification_queue_count") == 3905
+        and summary.get("verified_row_count") == 3905
+        and sum(summary.get("lane_sizes", {}).values()) == 3905
+        and ready.get("queue_row_count") == summary.get("source_review_ready_count")
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and all(value is True for key, value in core_checks.items() if not key.startswith(("32_", "33_")))
+        and forbidden.get("passed") is True
+        and forbidden.get("documents_downloaded") == 0
+        and forbidden.get("response_bodies_saved") == 0
+        and forbidden.get("source_reviews") == 0
+    )
+    if not gates:
+        raise ValueError("remaining-municipality verification package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -10893,6 +10936,9 @@ def build_project_phase_summary(
     remaining_candidate_review_available, remaining_candidate_review = (
         broad_state_remaining_candidate_review_status()
     )
+    remaining_verification_available, remaining_verification = (
+        broad_state_remaining_verification_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12434,6 +12480,37 @@ def build_project_phase_summary(
                 "defer downloads, source review, extraction, rating, and analysis",
             ],
             "last_updated_context": "remaining_municipality_candidate_review_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_verification_available:
+        payload.update({
+            "data_vintage": "2026-08-01",
+            "stage": "broad_state_remaining_municipalities_verification_complete",
+            "current_phase": "Remaining-municipality verification complete",
+            "current_phase_code": remaining_verification["decision"],
+            "current_evidence_status": "verification_complete_source_review_queue_ready",
+            "remaining_municipality_verification_available": True,
+            "verification_queue_count": remaining_verification["verification_queue_count"],
+            "verified_row_count": remaining_verification["verified_row_count"],
+            "source_review_ready_count": remaining_verification["source_review_ready_count"],
+            "verification_terminal_status_counts": remaining_verification[
+                "terminal_status_counts"
+            ],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-01",
+            "next_phase": "Review and retain eligible verified sources without changing the analysis layer",
+            "next_phase_sequence": [
+                "process only the locked source-review-ready queue",
+                "checkpoint every row and retain binaries only in ignored local storage",
+                "defer extraction, OCR, rating, ingestion, normalization, and matching",
+            ],
+            "last_updated_context": "remaining_municipality_verification_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

@@ -1,0 +1,31 @@
+{
+  "grouping_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_arbitration_factfinding_hint": {
+      "source_review_ready": 509,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 70,
+        "duplicate_final_locator": 5,
+        "reachable": 487,
+        "reachable_with_redirect": 22,
+        "timeout": 1,
+        "unavailable": 78
+      },
+      "total": 663
+    },
+    "non_cba_or_unresolved_hint": {
+      "source_review_ready": 2447,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 494,
+        "duplicate_final_locator": 3,
+        "reachable": 2358,
+        "reachable_with_redirect": 89,
+        "timeout": 1,
+        "unavailable": 295,
+        "verification_error": 2
+      },
+      "total": 3242
+    }
+  },
+  "total_rows": 3905
+}

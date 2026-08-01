@@ -1,0 +1,47 @@
+{
+  "canonicalization_method": "first locked verification row with a reachable canonical final locator",
+  "duplicate_final_locator_count": 8,
+  "duplicate_links_present": true,
+  "links": [
+    {
+      "duplicate_of_verification_id": "RMV-20260801-00201",
+      "final_canonical_locator": "https://buffalocitywi.gov",
+      "verification_id": "RMV-20260801-01944"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-01251",
+      "final_canonical_locator": "https://oshkoshwi.gov",
+      "verification_id": "RMV-20260801-02030"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-00076",
+      "final_canonical_locator": "https://fayaltownshipmn.gov",
+      "verification_id": "RMV-20260801-02425"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-01251",
+      "final_canonical_locator": "https://oshkoshwi.gov",
+      "verification_id": "RMV-20260801-02811"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-00499",
+      "final_canonical_locator": "https://villageofhammond.com/404.html",
+      "verification_id": "RMV-20260801-03377"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-02763",
+      "final_canonical_locator": "https://cityofbiwabik.com/vertical/sites/%7B7B8CE12E-F192-48FD-9F8B-F0F6ED66A00E%7D/uploads/October_26_2022.pdf",
+      "verification_id": "RMV-20260801-03544"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-02156",
+      "final_canonical_locator": "https://breitungtownshipmn.gov",
+      "verification_id": "RMV-20260801-03610"
+    },
+    {
+      "duplicate_of_verification_id": "RMV-20260801-00652",
+      "final_canonical_locator": "https://hinckleyil.govoffice3.com/404.htm",
+      "verification_id": "RMV-20260801-03775"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "grouping_field": "source_family_hint",
+  "groups": {
+    "agenda_packet_or_minutes": {
+      "source_review_ready": 1035,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 62,
+        "duplicate_final_locator": 1,
+        "reachable": 1005,
+        "reachable_with_redirect": 30,
+        "unavailable": 85,
+        "verification_error": 2
+      },
+      "total": 1185
+    },
+    "arbitration_award": {
+      "source_review_ready": 102,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 6,
+        "reachable": 94,
+        "reachable_with_redirect": 8,
+        "unavailable": 5
+      },
+      "total": 113
+    },
+    "budget_or_pay_plan": {
+      "source_review_ready": 533,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 74,
+        "duplicate_final_locator": 2,
+        "reachable": 506,
+        "reachable_with_redirect": 27,
+        "unavailable": 64
+      },
+      "total": 673
+    },
+    "cba": {
+      "source_review_ready": 228,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 37,
+        "duplicate_final_locator": 3,
+        "reachable": 220,
+        "reachable_with_redirect": 8,
+        "unavailable": 50
+      },
+      "total": 318
+    },
+    "civil_service_or_hr_pay_plan": {
+      "source_review_ready": 40,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 15,
+        "reachable": 37,
+        "reachable_with_redirect": 3,
+        "unavailable": 7
+      },
+      "total": 62
+    },
+    "classification_study": {
+      "source_review_ready": 1,
+      "terminal_status_counts": {
+        "reachable": 1
+      },
+      "total": 1
+    },
+    "compensation_study": {
+      "source_review_ready": 3,
+      "terminal_status_counts": {
+        "reachable": 3,
+        "unavailable": 3
+      },
+      "total": 6
+    },
+    "factfinding_report": {
+      "source_review_ready": 45,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 3,
+        "duplicate_final_locator": 1,
+        "reachable": 43,
+        "reachable_with_redirect": 2,
+        "unavailable": 3
+      },
+      "total": 52
+    },
+    "mou_or_memorandum": {
+      "source_review_ready": 130,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 22,
+        "reachable": 130,
+        "unavailable": 14
+      },
+      "total": 166
+    },
+    "other_local_government_pay_policy": {
+      "source_review_ready": 204,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 197,
+        "reachable": 197,
+        "reachable_with_redirect": 7,
+        "timeout": 1,
+        "unavailable": 29
+      },
+      "total": 431
+    },
+    "personnel_policy": {
+      "source_review_ready": 95,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 32,
+        "reachable": 89,
+        "reachable_with_redirect": 6,
+        "unavailable": 7
+      },
+      "total": 134
+    },
+    "salary_ordinance": {
+      "source_review_ready": 114,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 33,
+        "reachable": 108,
+        "reachable_with_redirect": 6,
+        "unavailable": 12
+      },
+      "total": 159
+    },
+    "settlement_agreement": {
+      "source_review_ready": 2,
+      "terminal_status_counts": {
+        "reachable": 2
+      },
+      "total": 2
+    },
+    "wage_schedule": {
+      "source_review_ready": 424,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 83,
+        "duplicate_final_locator": 1,
+        "reachable": 410,
+        "reachable_with_redirect": 14,
+        "timeout": 1,
+        "unavailable": 94
+      },
+      "total": 603
+    }
+  },
+  "total_rows": 3905
+}

@@ -1,0 +1,17 @@
+{
+  "all_rows_from_locked_verification_queue": true,
+  "csv_sha256": "bb292075e0c8acb6c6ce91b94b7e5eaba528ddb05fe1a2d4563df16287f5b703",
+  "documents_downloaded": 0,
+  "eligible_terminal_statuses": [
+    "reachable",
+    "reachable_with_redirect"
+  ],
+  "jsonl_sha256": "2831e814bc72dbcb648e844019e6363b28c285992b6f36b2a63822b0eaf6f626",
+  "queue_row_count": 2956,
+  "response_bodies_saved": 0,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
+  "terminal_status_counts": {
+    "reachable": 2845,
+    "reachable_with_redirect": 111
+  }
+}

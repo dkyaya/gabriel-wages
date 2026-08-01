@@ -1,0 +1,4 @@
+verification_row_id,priority_bucket,state,region,source_family_hint,source_domain,verification_status,http_status_code,error_class,response_body_saved,raw_headers_saved,downloaded
+RMV-20260801-00001,high_priority_verification_ready,IA,Midwest,agenda_packet_or_minutes,allemaniowa.org,reachable,200,,false,false,false
+RMV-20260801-00269,medium_priority_verification_ready,NY,Northeast,arbitration_award,ecommons.cornell.edu,reachable,200,,false,false,false
+RMV-20260801-00390,low_priority_verification_ready,IL,Midwest,budget_or_pay_plan,thevillagersvoice.com,reachable,200,,false,false,false

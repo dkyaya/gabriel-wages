@@ -1,0 +1,28 @@
+{
+  "current_stage": "remaining-municipality verification complete",
+  "decision": "broad_state_remaining_municipalities_verification_completed_source_review_ready",
+  "final_pi_report_link_preserved": true,
+  "global_analysis_readiness": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-01",
+  "priority_counts": {
+    "high_priority_verification_ready": 2440,
+    "low_priority_verification_ready": 24,
+    "medium_priority_verification_ready": 1441
+  },
+  "scout_coverage_rate_percent": 99.9579,
+  "source_review_ready_count": 2956,
+  "status": "verification_complete",
+  "terminal_status_counts": {
+    "blocked_or_forbidden": 564,
+    "duplicate_final_locator": 8,
+    "reachable": 2845,
+    "reachable_with_redirect": 111,
+    "timeout": 2,
+    "unavailable": 373,
+    "verification_error": 2
+  },
+  "verification_queue_count": 3905,
+  "verified_row_count": 3905,
+  "wage_growth_continuity_module_preserved": true
+}

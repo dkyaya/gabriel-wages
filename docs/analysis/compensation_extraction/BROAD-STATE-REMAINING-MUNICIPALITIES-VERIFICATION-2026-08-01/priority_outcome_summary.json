@@ -1,0 +1,38 @@
+{
+  "grouping_field": "priority_bucket",
+  "groups": {
+    "high_priority_verification_ready": {
+      "source_review_ready": 1924,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 254,
+        "duplicate_final_locator": 8,
+        "reachable": 1860,
+        "reachable_with_redirect": 64,
+        "timeout": 1,
+        "unavailable": 251,
+        "verification_error": 2
+      },
+      "total": 2440
+    },
+    "low_priority_verification_ready": {
+      "source_review_ready": 13,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 11,
+        "reachable": 13
+      },
+      "total": 24
+    },
+    "medium_priority_verification_ready": {
+      "source_review_ready": 1019,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 299,
+        "reachable": 972,
+        "reachable_with_redirect": 47,
+        "timeout": 1,
+        "unavailable": 122
+      },
+      "total": 1441
+    }
+  },
+  "total_rows": 3905
+}

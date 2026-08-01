@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-01T20:26:29Z",
+  "generated_at": "2026-08-01T22:17:58Z",
   "data_vintage": "2026-08-01",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_candidate_review_complete",
-  "current_phase": "Remaining-municipality candidate review complete",
-  "current_phase_code": "broad_state_remaining_municipalities_candidate_review_completed_verification_ready",
-  "current_evidence_status": "metadata_review_complete_verification_queue_ready",
+  "stage": "broad_state_remaining_municipalities_verification_complete",
+  "current_phase": "Remaining-municipality verification complete",
+  "current_phase_code": "broad_state_remaining_municipalities_verification_completed_source_review_ready",
+  "current_evidence_status": "verification_complete_source_review_queue_ready",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -567,7 +567,7 @@
   "candidate_review_universe_size": 9065,
   "candidate_review_broad_subtotal": 7642,
   "candidate_review_supplementary_count": 1423,
-  "source_review_ready_count": 5589,
+  "source_review_ready_count": 2956,
   "source_review_ready_high_count": 2884,
   "source_review_ready_medium_count": 2562,
   "source_review_ready_low_count": 143,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-01",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Verify the 3,905 metadata-reviewed locators in checkpointed lanes",
+  "next_phase": "Review and retain eligible verified sources without changing the analysis layer",
   "next_phase_sequence": [
-    "verify high-, medium-, and low-priority rows from the locked queue",
-    "checkpoint every locator and preserve candidate-review lineage",
-    "defer downloads, source review, extraction, rating, and analysis"
+    "process only the locked source-review-ready queue",
+    "checkpoint every row and retain binaries only in ignored local storage",
+    "defer extraction, OCR, rating, ingestion, normalization, and matching"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_candidate_review_complete",
+  "last_updated_context": "remaining_municipality_verification_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -6157,5 +6157,17 @@
   "low_priority_verification_ready_count": 24,
   "candidate_review_repair_needed_count": 1141,
   "candidate_review_duplicate_count": 9,
-  "candidate_review_navigation_only_count": 489
+  "candidate_review_navigation_only_count": 489,
+  "remaining_municipality_verification_available": true,
+  "verification_queue_count": 3905,
+  "verified_row_count": 3905,
+  "verification_terminal_status_counts": {
+    "blocked_or_forbidden": 564,
+    "duplicate_final_locator": 8,
+    "reachable": 2845,
+    "reachable_with_redirect": 111,
+    "timeout": 2,
+    "unavailable": 373,
+    "verification_error": 2
+  }
 }

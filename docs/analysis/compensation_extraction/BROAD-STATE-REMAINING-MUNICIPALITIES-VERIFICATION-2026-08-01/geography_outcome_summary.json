@@ -1,0 +1,270 @@
+{
+  "region": {
+    "grouping_field": "region",
+    "groups": {
+      "Midwest": {
+        "source_review_ready": 1861,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 233,
+          "duplicate_final_locator": 8,
+          "reachable": 1800,
+          "reachable_with_redirect": 61,
+          "timeout": 2,
+          "unavailable": 255,
+          "verification_error": 2
+        },
+        "total": 2361
+      },
+      "Northeast": {
+        "source_review_ready": 914,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 264,
+          "reachable": 870,
+          "reachable_with_redirect": 44,
+          "unavailable": 90
+        },
+        "total": 1268
+      },
+      "South": {
+        "source_review_ready": 179,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 67,
+          "reachable": 173,
+          "reachable_with_redirect": 6,
+          "unavailable": 28
+        },
+        "total": 274
+      },
+      "West": {
+        "source_review_ready": 2,
+        "terminal_status_counts": {
+          "reachable": 2
+        },
+        "total": 2
+      }
+    },
+    "total_rows": 3905
+  },
+  "state": {
+    "grouping_field": "state",
+    "groups": {
+      "DE": {
+        "source_review_ready": 1,
+        "terminal_status_counts": {
+          "reachable": 1
+        },
+        "total": 1
+      },
+      "FL": {
+        "source_review_ready": 2,
+        "terminal_status_counts": {
+          "reachable": 2
+        },
+        "total": 2
+      },
+      "GA": {
+        "source_review_ready": 11,
+        "terminal_status_counts": {
+          "reachable": 11
+        },
+        "total": 11
+      },
+      "IA": {
+        "source_review_ready": 39,
+        "terminal_status_counts": {
+          "reachable": 39,
+          "unavailable": 15
+        },
+        "total": 54
+      },
+      "IL": {
+        "source_review_ready": 284,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 68,
+          "duplicate_final_locator": 2,
+          "reachable": 273,
+          "reachable_with_redirect": 11,
+          "unavailable": 28
+        },
+        "total": 382
+      },
+      "IN": {
+        "source_review_ready": 89,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 24,
+          "reachable": 83,
+          "reachable_with_redirect": 6,
+          "unavailable": 10
+        },
+        "total": 123
+      },
+      "KS": {
+        "source_review_ready": 77,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 6,
+          "reachable": 75,
+          "reachable_with_redirect": 2,
+          "unavailable": 21
+        },
+        "total": 104
+      },
+      "MA": {
+        "source_review_ready": 0,
+        "terminal_status_counts": {
+          "unavailable": 4
+        },
+        "total": 4
+      },
+      "ME": {
+        "source_review_ready": 6,
+        "terminal_status_counts": {
+          "reachable": 6
+        },
+        "total": 6
+      },
+      "MI": {
+        "source_review_ready": 363,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 14,
+          "reachable": 357,
+          "reachable_with_redirect": 6,
+          "unavailable": 37,
+          "verification_error": 2
+        },
+        "total": 416
+      },
+      "MN": {
+        "source_review_ready": 244,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 15,
+          "duplicate_final_locator": 3,
+          "reachable": 230,
+          "reachable_with_redirect": 14,
+          "timeout": 2,
+          "unavailable": 18
+        },
+        "total": 282
+      },
+      "MO": {
+        "source_review_ready": 44,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 20,
+          "reachable": 37,
+          "reachable_with_redirect": 7,
+          "unavailable": 3
+        },
+        "total": 67
+      },
+      "NC": {
+        "source_review_ready": 14,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 1,
+          "reachable": 14
+        },
+        "total": 15
+      },
+      "ND": {
+        "source_review_ready": 38,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 2,
+          "reachable": 36,
+          "reachable_with_redirect": 2
+        },
+        "total": 40
+      },
+      "NE": {
+        "source_review_ready": 18,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 6,
+          "reachable": 18
+        },
+        "total": 24
+      },
+      "NJ": {
+        "source_review_ready": 30,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 16,
+          "reachable": 30,
+          "unavailable": 12
+        },
+        "total": 58
+      },
+      "NY": {
+        "source_review_ready": 391,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 77,
+          "reachable": 353,
+          "reachable_with_redirect": 38,
+          "unavailable": 34
+        },
+        "total": 502
+      },
+      "OH": {
+        "source_review_ready": 282,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 42,
+          "reachable": 279,
+          "reachable_with_redirect": 3,
+          "unavailable": 48
+        },
+        "total": 372
+      },
+      "PA": {
+        "source_review_ready": 484,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 171,
+          "reachable": 478,
+          "reachable_with_redirect": 6,
+          "unavailable": 40
+        },
+        "total": 695
+      },
+      "SD": {
+        "source_review_ready": 32,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 5,
+          "reachable": 31,
+          "reachable_with_redirect": 1,
+          "unavailable": 10
+        },
+        "total": 47
+      },
+      "TX": {
+        "source_review_ready": 151,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 66,
+          "reachable": 145,
+          "reachable_with_redirect": 6,
+          "unavailable": 28
+        },
+        "total": 245
+      },
+      "VT": {
+        "source_review_ready": 3,
+        "terminal_status_counts": {
+          "reachable": 3
+        },
+        "total": 3
+      },
+      "WA": {
+        "source_review_ready": 2,
+        "terminal_status_counts": {
+          "reachable": 2
+        },
+        "total": 2
+      },
+      "WI": {
+        "source_review_ready": 351,
+        "terminal_status_counts": {
+          "blocked_or_forbidden": 31,
+          "duplicate_final_locator": 3,
+          "reachable": 342,
+          "reachable_with_redirect": 9,
+          "unavailable": 65
+        },
+        "total": 450
+      }
+    },
+    "total_rows": 3905
+  }
+}

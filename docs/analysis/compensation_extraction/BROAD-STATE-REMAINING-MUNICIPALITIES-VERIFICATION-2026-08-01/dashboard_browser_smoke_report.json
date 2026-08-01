@@ -1,0 +1,21 @@
+{
+  "status": "passed_with_browser_and_cross_session_http_limitations",
+  "dashboard_build_passed": true,
+  "browser_controller_available": false,
+  "browser_controller_result": "No browser is available",
+  "local_server_started": true,
+  "local_server_cross_session_reachable": false,
+  "static_validation_passed": true,
+  "current_stage": "Remaining-municipality verification complete",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-01",
+  "verification_queue_count": 3905,
+  "verified_row_count": 3905,
+  "source_review_ready_count": 2956,
+  "map_primary_metric": "scout_coverage_rate",
+  "scout_coverage_rate_percent": 99.9579,
+  "final_pi_report_link_preserved": true,
+  "wage_growth_continuity_module_preserved": true,
+  "technical_details_collapsed_by_default": true,
+  "forbidden_dashboard_claims_found": false,
+  "notes": "Vite production build and generated dashboard data/static source checks passed. The available browser-control runtime reported no browser, and the command-session HTTP server was not reachable from a separate smoke command, so no local visual-browser pass is claimed."
+}

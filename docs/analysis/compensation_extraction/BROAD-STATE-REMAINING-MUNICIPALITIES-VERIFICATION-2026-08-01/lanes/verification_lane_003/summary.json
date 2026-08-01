@@ -1,0 +1,31 @@
+{
+  "actual_started_at": "2026-08-01T21:50:44Z",
+  "checkpoint_frequency": "after_every_row",
+  "completed_at": "2026-08-01T22:00:58Z",
+  "completed_rows": 781,
+  "downloads": 0,
+  "lane_id": "verification_lane_003",
+  "locked_rows": 781,
+  "priority_counts": {
+    "high_priority_verification_ready": 488,
+    "low_priority_verification_ready": 5,
+    "medium_priority_verification_ready": 288
+  },
+  "raw_headers_saved": 0,
+  "remaining_rows": 0,
+  "response_bodies_saved": 0,
+  "resumed_completed_rows": 0,
+  "scheduled_stagger_minutes": 16,
+  "scheduled_start_at": "2026-08-01T21:50:44.804Z",
+  "source_reviews": 0,
+  "status": "completed",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
+  "terminal_status_counts": {
+    "blocked_or_forbidden": 116,
+    "reachable": 579,
+    "reachable_with_redirect": 19,
+    "unavailable": 66,
+    "verification_error": 1
+  },
+  "verification_method": "HEAD_metadata_only"
+}

@@ -1,0 +1,15 @@
+{
+  "checkpoint_frequency": "after_every_row",
+  "csv_sha256": "12cb16cbada7a932da66681db0576a04e273803c0f44e8d3789085fce08b959c",
+  "jsonl_sha256": "3af7d987ceb077606853374908d8219c1e74d2718970c086abe21f62ee84a05e",
+  "lane_id": "verification_lane_001",
+  "priority_counts": {
+    "high_priority_verification_ready": 488,
+    "low_priority_verification_ready": 4,
+    "medium_priority_verification_ready": 289
+  },
+  "scheduled_stagger_minutes": 0,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
+  "total_rows": 781,
+  "verification_method": "HEAD_metadata_only"
+}

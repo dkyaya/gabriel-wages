@@ -1,0 +1,13 @@
+{
+  "status": "pending_post_push_deployment_validation",
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "cache_busting_query_prefix": "dashboard_smoke=20260801_remaining_verification_",
+  "dashboard_load_checked": false,
+  "current_stage_checked": false,
+  "map_primary_metric_checked": false,
+  "final_pi_report_link_checked": false,
+  "wage_growth_continuity_module_checked": false,
+  "forbidden_claims_checked": false,
+  "visual_browser_validation": false,
+  "limitation": "Post-push GitHub Pages deployment validation is pending."
+}

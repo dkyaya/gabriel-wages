@@ -1,0 +1,146 @@
+{
+  "grouping_field": "possible_mechanism_hints",
+  "groups": {
+    "fiscal_constraint_signal": {
+      "source_review_ready": 60,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 6,
+        "reachable": 55,
+        "reachable_with_redirect": 5,
+        "unavailable": 8
+      },
+      "total": 74
+    },
+    "market_or_comparability_pressure": {
+      "source_review_ready": 32,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 9,
+        "reachable": 31,
+        "reachable_with_redirect": 1,
+        "unavailable": 7
+      },
+      "total": 48
+    },
+    "market_or_comparability_pressure;fiscal_constraint_signal": {
+      "source_review_ready": 1,
+      "terminal_status_counts": {
+        "reachable": 1
+      },
+      "total": 1
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal": {
+      "source_review_ready": 43,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 13,
+        "reachable": 42,
+        "reachable_with_redirect": 1,
+        "unavailable": 8
+      },
+      "total": 64
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "source_review_ready": 4,
+      "terminal_status_counts": {
+        "reachable": 4,
+        "unavailable": 1
+      },
+      "total": 5
+    },
+    "non_safety_constraint_signal": {
+      "source_review_ready": 1228,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 223,
+        "duplicate_final_locator": 2,
+        "reachable": 1191,
+        "reachable_with_redirect": 37,
+        "timeout": 1,
+        "unavailable": 150,
+        "verification_error": 1
+      },
+      "total": 1605
+    },
+    "non_safety_constraint_signal;fiscal_constraint_signal": {
+      "source_review_ready": 63,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 3,
+        "reachable": 61,
+        "reachable_with_redirect": 2,
+        "unavailable": 10
+      },
+      "total": 76
+    },
+    "strike_or_no_strike_constraint": {
+      "source_review_ready": 187,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 26,
+        "duplicate_final_locator": 2,
+        "reachable": 176,
+        "reachable_with_redirect": 11,
+        "unavailable": 16
+      },
+      "total": 231
+    },
+    "strike_or_no_strike_constraint;fiscal_constraint_signal": {
+      "source_review_ready": 2,
+      "terminal_status_counts": {
+        "reachable": 2
+      },
+      "total": 2
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure": {
+      "source_review_ready": 1,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 1,
+        "reachable": 1,
+        "unavailable": 2
+      },
+      "total": 4
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal": {
+      "source_review_ready": 1,
+      "terminal_status_counts": {
+        "reachable": 1
+      },
+      "total": 1
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "source_review_ready": 0,
+      "terminal_status_counts": {
+        "unavailable": 1
+      },
+      "total": 1
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal": {
+      "source_review_ready": 90,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 16,
+        "reachable": 84,
+        "reachable_with_redirect": 6,
+        "timeout": 1,
+        "unavailable": 8
+      },
+      "total": 115
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "source_review_ready": 2,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 1,
+        "reachable": 2
+      },
+      "total": 3
+    },
+    "unknown": {
+      "source_review_ready": 1242,
+      "terminal_status_counts": {
+        "blocked_or_forbidden": 266,
+        "duplicate_final_locator": 4,
+        "reachable": 1194,
+        "reachable_with_redirect": 48,
+        "unavailable": 162,
+        "verification_error": 1
+      },
+      "total": 1675
+    }
+  },
+  "total_rows": 3905
+}

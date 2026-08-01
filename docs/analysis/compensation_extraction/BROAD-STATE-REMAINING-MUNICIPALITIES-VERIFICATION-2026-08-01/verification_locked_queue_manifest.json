@@ -1,0 +1,88 @@
+{
+  "candidate_id_set_sha256": "5401d32063d465080de1654dc871164539bf45564e2e5470be843e6f90168053",
+  "created_at": "2026-08-01T21:02:03Z",
+  "documents_downloaded": 0,
+  "head_before": "2cef9b2e2b9b7d3324a0b5f49c676bcff8d5045a",
+  "input_queue_count": 3905,
+  "input_queue_path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/verification_ready_queue.csv",
+  "input_queue_sha256": "53e3d5316a269599bcca84c70037c54ed830c12853ef91829e2ec35f4c4a0c69",
+  "lane_distribution": {
+    "verification_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 488,
+        "low_priority_verification_ready": 4,
+        "medium_priority_verification_ready": 289
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 781
+    },
+    "verification_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 488,
+        "low_priority_verification_ready": 5,
+        "medium_priority_verification_ready": 288
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 781
+    },
+    "verification_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 488,
+        "low_priority_verification_ready": 5,
+        "medium_priority_verification_ready": 288
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 781
+    },
+    "verification_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 488,
+        "low_priority_verification_ready": 5,
+        "medium_priority_verification_ready": 288
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 781
+    },
+    "verification_lane_005": {
+      "priority_counts": {
+        "high_priority_verification_ready": 488,
+        "low_priority_verification_ready": 5,
+        "medium_priority_verification_ready": 288
+      },
+      "scheduled_stagger_minutes": 32,
+      "total_rows": 781
+    }
+  },
+  "lane_hashes": {
+    "verification_lane_001": {
+      "csv_sha256": "12cb16cbada7a932da66681db0576a04e273803c0f44e8d3789085fce08b959c",
+      "jsonl_sha256": "3af7d987ceb077606853374908d8219c1e74d2718970c086abe21f62ee84a05e"
+    },
+    "verification_lane_002": {
+      "csv_sha256": "769eae240880a2af7198dd5af1b02108cfc088db3ebe11058b99ec371de1deda",
+      "jsonl_sha256": "0f3a733b879e4c27562efde4272bd9ad77bee71feca0c08d69c1de22a3d1d1c6"
+    },
+    "verification_lane_003": {
+      "csv_sha256": "93addcbdfc625ce662055fb79eae554ebcf9298d25459af23dcf4d36ff190a91",
+      "jsonl_sha256": "1d4e56aa7405a01ae96c79da99fcd8067ba69064b8bcd898c8a3df4c30964b1e"
+    },
+    "verification_lane_004": {
+      "csv_sha256": "27f7d0584a7bad245d39f4f290e3b93d8fa92077b580fb2c16d806b84ac05c52",
+      "jsonl_sha256": "d904df3c085cbc6cf8fcdff911475205894d5677c70606f35c2f6e3a42d6ca84"
+    },
+    "verification_lane_005": {
+      "csv_sha256": "a62537b6f94ce604423d85572126f3bbbfb7a480edc18c7cf7a16a0b3a9006bd",
+      "jsonl_sha256": "cd2b76ce4a23ba5b051dc59720b83eceb260d726f505626c5886fbe06f27f31a"
+    }
+  },
+  "locked_queue_csv_sha256": "6d9d098f8733566a2d1c1348f17b8c35752618ac61496bc13af59e92a28d8684",
+  "locked_queue_jsonl_sha256": "ef76234b6ee2de452d32a6cf25f7d2523b4d8deffe4d59e9e73d84bc1e755402",
+  "network_requests": 0,
+  "priority_counts": {
+    "high_priority_verification_ready": 2440,
+    "low_priority_verification_ready": 24,
+    "medium_priority_verification_ready": 1441
+  },
+  "response_bodies_saved": 0,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01"
+}
