@@ -1,8 +1,24 @@
 {
-  "status": "pending_push_and_pages_deployment",
+  "status": "passed_public_static_validation",
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
-  "cache_busting_query": "dashboard_smoke=20260801_remaining_candidate_review_pending",
-  "public_validation_performed": false,
+  "cache_busting_query": "dashboard_smoke=20260801_remaining_candidate_review_203405",
+  "validated_at": "2026-08-01T20:50:54Z",
+  "implementation_commit": "ae82b01a84eeb069e7c6c33252bc285b73606a78",
+  "github_pages_workflow_run": 30717171160,
+  "github_pages_workflow_conclusion": "success",
+  "public_dashboard_http_status": 200,
+  "public_report_pdf_http_status": 200,
+  "public_validation_performed": true,
   "public_visual_validation_performed": false,
-  "notes": "Will be updated after the candidate-review commit is pushed and GitHub Pages publishes the new bundle."
+  "deployed_bundle_checks": {
+    "candidate_review_stage_present": true,
+    "verification_next_task_present": true,
+    "reviewed_candidate_count_present": true,
+    "verification_ready_count_present": true,
+    "map_metric_is_scout_coverage_rate": true,
+    "final_pi_report_link_preserved": true,
+    "wage_growth_continuity_module_preserved": true,
+    "technical_details_collapsed_by_default": true
+  },
+  "notes": "GitHub Pages deployment and static deployed-bundle validation passed. The in-app browser was unavailable, so no public visual-browser claim is made."
 }

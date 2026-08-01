@@ -23,7 +23,9 @@
     "candidate_review_lane_005": 1173
   },
   "network_verification_runs": 0,
-  "public_pages_passed": false,
+  "public_pages_passed": true,
+  "implementation_commit": "ae82b01a84eeb069e7c6c33252bc285b73606a78",
+  "github_pages_workflow_run": 30717171160,
   "reviewed_candidate_count": 5868,
   "validation_passed": true,
   "verification_ready_count": 3905
