@@ -1,0 +1,26 @@
+{
+  "included_primary_buckets": [
+    "high_priority_verification_ready",
+    "low_priority_verification_ready",
+    "medium_priority_verification_ready"
+  ],
+  "metadata_only_review": true,
+  "network_verification_performed": false,
+  "non_verification_buckets_excluded": [
+    "deferred_low_signal",
+    "excluded_out_of_scope",
+    "likely_duplicate_prior_source",
+    "likely_duplicate_within_wave",
+    "likely_non_source_or_navigation_only",
+    "malformed_or_missing_locator",
+    "repair_needed",
+    "review_error"
+  ],
+  "priority_counts": {
+    "high_priority_verification_ready": 2440,
+    "low_priority_verification_ready": 24,
+    "medium_priority_verification_ready": 1441
+  },
+  "queue_count": 3905,
+  "queue_sha256": "53e3d5316a269599bcca84c70037c54ed830c12853ef91829e2ec35f4c4a0c69"
+}

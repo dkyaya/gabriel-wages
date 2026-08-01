@@ -1,0 +1,19 @@
+{
+  "current_stage": "remaining-municipality candidate review complete",
+  "decision": "broad_state_remaining_municipalities_candidate_review_completed_verification_ready",
+  "duplicate_count": 9,
+  "final_pi_report_link_preserved": true,
+  "global_analysis_readiness": false,
+  "high_priority_count": 2440,
+  "low_priority_count": 24,
+  "map_primary_metric": "scout_coverage_rate",
+  "medium_priority_count": 1441,
+  "navigation_low_signal_excluded_count": 813,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
+  "repair_needed_count": 1141,
+  "reviewed_candidates": 5868,
+  "scout_coverage_rate_percent": 99.9579,
+  "status": "candidate_review_complete",
+  "verification_ready_count": 3905,
+  "wage_growth_continuity_module_preserved": true
+}

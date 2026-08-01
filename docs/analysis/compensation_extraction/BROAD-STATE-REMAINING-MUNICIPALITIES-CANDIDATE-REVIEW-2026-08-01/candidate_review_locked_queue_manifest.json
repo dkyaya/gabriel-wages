@@ -1,0 +1,29 @@
+{
+  "candidate_urls_opened": 0,
+  "deterministic_assignment": "greedy minimum source-family/state/region/CBA/mechanism/total load with lexical tie-break",
+  "head_before": "7a895b6788344a1b4f76dae3e18eed5f4100d75e",
+  "input_candidate_count": 5868,
+  "input_sha256": "5e632e0c904eaa04311e158cb7a9c3262c5c82c708f3d9156509ead4e78faef5",
+  "lane_queue_sha256": {
+    "candidate_review_lane_001": "20faec353226b38bad792128a456ba09cd77a34558bf6c6cdcdcbb6c8aaa30e7",
+    "candidate_review_lane_002": "7178dc28de6e4c9f87a352bf19539c959c62675e7e78f235c7b1e1f7461df9e8",
+    "candidate_review_lane_003": "f585c9ad87c84662b6dec33eeb69da5ffed6718ba45bda84b215bec3223c4126",
+    "candidate_review_lane_004": "b8b6e846e12e2926ac3738c59d34f720f3ff83cab8faa250607244e024e7519f",
+    "candidate_review_lane_005": "2db1f2138f84910b4383b3d59b17c3858dde82063c1cad7695b59dd75b9e40dd"
+  },
+  "lane_sizes": {
+    "candidate_review_lane_001": 1174,
+    "candidate_review_lane_002": 1174,
+    "candidate_review_lane_003": 1174,
+    "candidate_review_lane_004": 1173,
+    "candidate_review_lane_005": 1173
+  },
+  "locked_at": "2026-08-01T20:24:52.261256+00:00",
+  "locked_queue_sha256": "78f8ed51e4d3863c81cbcc62537673697f25dc2c0eb349f67d36d1ecc4277ed9",
+  "network_activity": false,
+  "network_calls": 0,
+  "raw_candidate_count": 7913,
+  "raw_sha256": "d4da3f46cadf2d7567275d03aa387a365aeb13bef1320185db06127ccb75f283",
+  "required_schema_fields_present": true,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01"
+}

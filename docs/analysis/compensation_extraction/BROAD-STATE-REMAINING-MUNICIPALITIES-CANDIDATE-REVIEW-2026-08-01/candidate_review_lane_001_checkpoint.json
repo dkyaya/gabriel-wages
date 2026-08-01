@@ -1,0 +1,19 @@
+{
+  "bucket_counts": {
+    "deferred_low_signal": 33,
+    "excluded_out_of_scope": 27,
+    "high_priority_verification_ready": 490,
+    "likely_duplicate_prior_source": 1,
+    "likely_duplicate_within_wave": 1,
+    "likely_non_source_or_navigation_only": 88,
+    "low_priority_verification_ready": 6,
+    "medium_priority_verification_ready": 306,
+    "repair_needed": 222
+  },
+  "checkpointed_at": "2026-08-01T20:24:57.088693+00:00",
+  "lane_id": "candidate_review_lane_001",
+  "lane_status": "completed",
+  "last_review_candidate_id": "BRM5C-BRM5-20260731-18573-01",
+  "processed_candidate_count": 1174,
+  "queue_count": 1174
+}

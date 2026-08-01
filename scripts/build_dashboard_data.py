@@ -1788,6 +1788,11 @@ BROAD_STATE_REMAINING_5LANE_LIVE_SCOUT_RETRY_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01"
 )
+BROAD_STATE_REMAINING_CANDIDATE_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7155,6 +7160,46 @@ def broad_state_remaining_5lane_live_state_overlay() -> dict[str, dict[str, int]
     return dict(overlay)
 
 
+def broad_state_remaining_candidate_review_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the completed metadata-only review of the remaining wave."""
+    directory = BROAD_STATE_REMAINING_CANDIDATE_REVIEW_DIR
+    required = (
+        directory / "remaining_municipalities_candidate_review_manifest.json",
+        directory / "remaining_municipalities_candidate_review_summary.json",
+        directory / "candidate_review_bucket_counts.json",
+        directory / "verification_ready_queue_manifest.json",
+        directory / "dashboard_remaining_candidate_review_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, buckets, queue, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_candidate_review_completed_verification_ready"
+    core_checks = validation.get("checks", {})
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("input_candidate_count") == 5868
+        and summary.get("reviewed_candidate_count") == 5868
+        and sum(summary.get("lane_sizes", {}).values()) == 5868
+        and buckets.get("input_candidate_count") == 5868
+        and sum(buckets.get("bucket_counts", {}).values()) == 5868
+        and queue.get("queue_count") == summary.get("verification_ready_count")
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and all(value is True for key, value in core_checks.items() if not key.startswith(("31_", "32_")))
+        and forbidden.get("passed") is True
+        and forbidden.get("candidate_url_opens") == 0
+        and forbidden.get("network_verification_runs") == 0
+    )
+    if not gates:
+        raise ValueError("remaining-municipality candidate-review package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -10845,6 +10890,9 @@ def build_project_phase_summary(
     remaining_5lane_live_available, remaining_5lane_live = (
         broad_state_remaining_5lane_live_scout_status()
     )
+    remaining_candidate_review_available, remaining_candidate_review = (
+        broad_state_remaining_candidate_review_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12343,6 +12391,49 @@ def build_project_phase_summary(
                 if preflight_failed
                 else "remaining_municipality_live_scout_actual_results"
             ),
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_candidate_review_available:
+        payload.update({
+            "data_vintage": "2026-08-01",
+            "stage": "broad_state_remaining_municipalities_candidate_review_complete",
+            "current_phase": "Remaining-municipality candidate review complete",
+            "current_phase_code": remaining_candidate_review["decision"],
+            "current_evidence_status": "metadata_review_complete_verification_queue_ready",
+            "remaining_municipality_candidate_review_available": True,
+            "reviewed_candidate_count": remaining_candidate_review["reviewed_candidate_count"],
+            "verification_ready_count": remaining_candidate_review["verification_ready_count"],
+            "high_priority_verification_ready_count": remaining_candidate_review[
+                "high_priority_verification_ready_count"
+            ],
+            "medium_priority_verification_ready_count": remaining_candidate_review[
+                "medium_priority_verification_ready_count"
+            ],
+            "low_priority_verification_ready_count": remaining_candidate_review[
+                "low_priority_verification_ready_count"
+            ],
+            "candidate_review_repair_needed_count": remaining_candidate_review[
+                "repair_needed_count"
+            ],
+            "candidate_review_duplicate_count": remaining_candidate_review["duplicate_count"],
+            "candidate_review_navigation_only_count": remaining_candidate_review[
+                "navigation_only_count"
+            ],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01",
+            "next_phase": "Verify the 3,905 metadata-reviewed locators in checkpointed lanes",
+            "next_phase_sequence": [
+                "verify high-, medium-, and low-priority rows from the locked queue",
+                "checkpoint every locator and preserve candidate-review lineage",
+                "defer downloads, source review, extraction, rating, and analysis",
+            ],
+            "last_updated_context": "remaining_municipality_candidate_review_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

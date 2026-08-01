@@ -1,0 +1,517 @@
+{
+  "files": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_bucket_counts.json",
+      "sha256": "0218d2ed7e993a34ac75e24e6277966dd78d12d6688c21381c8db8c34979d194",
+      "size_bytes": 491
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_001_checkpoint.json",
+      "sha256": "8485d2bec3194e4fab0e66e646197b87710dffad78c68af4cf3a918af7c3dfcd",
+      "size_bytes": 630
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_001_queue.csv",
+      "sha256": "20faec353226b38bad792128a456ba09cd77a34558bf6c6cdcdcbb6c8aaa30e7",
+      "size_bytes": 2186490
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_001_queue.jsonl",
+      "sha256": "d3563d546ba4ae93389924531c8579fc7e9116eae3f6d5cd2d6dde59dac8e719",
+      "size_bytes": 3836197
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_001_results.csv",
+      "sha256": "1ca386d22894f359426d3ebc54087da7ef94ce8e01be43bcc6826885d5aabd41",
+      "size_bytes": 2555043
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_001_results.jsonl",
+      "sha256": "14d2fb37eeade1a499c26def66f1577c80a0b7f8b80e8c409d9416f4c782e0f7",
+      "size_bytes": 4867593
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_002_checkpoint.json",
+      "sha256": "ee0821a15d7062aa8c2516ef7252856d309f3561f10a34671e7acde9f1b402e9",
+      "size_bytes": 631
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_002_queue.csv",
+      "sha256": "7178dc28de6e4c9f87a352bf19539c959c62675e7e78f235c7b1e1f7461df9e8",
+      "size_bytes": 2192825
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_002_queue.jsonl",
+      "sha256": "12e497496b9fa5445aaaa95a16bfec72dd0f73b5c73e5a66cbcea0f136526a12",
+      "size_bytes": 3842386
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_002_results.csv",
+      "sha256": "3e1ad8747719980c8b7b14eceb295fcb42f704380570d5cb1d75570bd01cb55a",
+      "size_bytes": 2560486
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_002_results.jsonl",
+      "sha256": "eeadfe5e2138df8f9235c5377869094e71ad8d7681c24ed38421f4ca12c2e1ed",
+      "size_bytes": 4872890
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_003_checkpoint.json",
+      "sha256": "a7ea399e372ea26bd82f94f360e52af12e602db4753a52cf046dcc120bc444f4",
+      "size_bytes": 630
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_003_queue.csv",
+      "sha256": "f585c9ad87c84662b6dec33eeb69da5ffed6718ba45bda84b215bec3223c4126",
+      "size_bytes": 2192729
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_003_queue.jsonl",
+      "sha256": "fa6e9043e7012c6b5712476545f83b80d88b22151c296ce5fda5840aa3964d37",
+      "size_bytes": 3842522
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_003_results.csv",
+      "sha256": "7a5676757b1e33602d26704e469d6a91bb4bd265ed5e882bf77f4bbcc8c8d018",
+      "size_bytes": 2559731
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_003_results.jsonl",
+      "sha256": "fee2472efb6a2552a8dc22042370ec3eb3c14ed7f7fe27c8425af468d5082fa0",
+      "size_bytes": 4872367
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_004_checkpoint.json",
+      "sha256": "a78206b5850f1b800a861e13491ba5723d56a0ca8f0191f58a3e72edd6f7e145",
+      "size_bytes": 590
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_004_queue.csv",
+      "sha256": "b8b6e846e12e2926ac3738c59d34f720f3ff83cab8faa250607244e024e7519f",
+      "size_bytes": 2185845
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_004_queue.jsonl",
+      "sha256": "1d05d794726ed269b01fc4ae4e2ec025465219d50a51aaf6cba286ee444c0466",
+      "size_bytes": 3834067
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_004_results.csv",
+      "sha256": "70831a3dfe8a7469d06250fab9de4cdf48d58d451ceea28abb56bb20082a9dd6",
+      "size_bytes": 2554096
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_004_results.jsonl",
+      "sha256": "6c37d2802fa0285521be82abcc2b515485fc4dc226f53dd5db6875e247daa7c3",
+      "size_bytes": 4864596
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_005_checkpoint.json",
+      "sha256": "c4913adef22456318dd00b7aadb75a9c59fa589efe2a95af486d3b9298b51d98",
+      "size_bytes": 591
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_005_queue.csv",
+      "sha256": "2db1f2138f84910b4383b3d59b17c3858dde82063c1cad7695b59dd75b9e40dd",
+      "size_bytes": 2184248
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_005_queue.jsonl",
+      "sha256": "82436bba460801642230590bc75b6e681e18e1a0f93376c8f305733fd313a038",
+      "size_bytes": 3832463
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_005_results.csv",
+      "sha256": "20d2f2c2e966440b8ba2816fa671bd3aad549e1d1d3cc4135b62485c6d5a2133",
+      "size_bytes": 2551960
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_005_results.jsonl",
+      "sha256": "5893490735ef823d1be6c25c93f80879ab14bb5ebe32573262fcca0ea73acba0",
+      "size_bytes": 4862453
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_distribution.json",
+      "sha256": "93a11b7d20033d514dea64944dfed504769603befbefe3b4d939a4cb61303ab1",
+      "size_bytes": 11075
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_lane_distribution.md",
+      "sha256": "d5713159a599881fef2d47f0e1ec604fc177cb2296f54a14ecfca40eaca6c8e7",
+      "size_bytes": 338
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_locked_queue.csv",
+      "sha256": "78f8ed51e4d3863c81cbcc62537673697f25dc2c0eb349f67d36d1ecc4277ed9",
+      "size_bytes": 10937893
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_locked_queue.jsonl",
+      "sha256": "98951bf4308c73da35dc46447492f5395ce8bc49b2bfd5e4eb554aa13e5e83ef",
+      "size_bytes": 19187635
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/candidate_review_locked_queue_manifest.json",
+      "sha256": "b599fb59cdbd997eb3fa78f1f50e1549b1c2c029f3d046179ac15faf3dfd661c",
+      "size_bytes": 1520
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/cba_non_cba_candidate_review_summary.json",
+      "sha256": "27099ad0a5c4a3fcffb98f8b287d56d7ea5dd38359c9374e6c42b051cbd0b226",
+      "size_bytes": 299
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/dashboard_browser_smoke_report.json",
+      "sha256": "a4cfa5f8a47bc0cfa213cacb46713b11026a1247bd55277dfe0a74e9bd7f174c",
+      "size_bytes": 1021
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/dashboard_browser_smoke_report.md",
+      "sha256": "c5b891954121fea24cf92ee416cba6d6c2ff5d91451359000d16167c58ea1fa6",
+      "size_bytes": 546
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/dashboard_public_pages_smoke_report.json",
+      "sha256": "480799533746de61f7b136e3e87b2223a8680c2e55644f481c495a8ee4a146ea",
+      "size_bytes": 403
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/dashboard_remaining_candidate_review_update_summary.json",
+      "sha256": "8c1d7e6a40e5da3054d92007caba3bb4fc4a3f6cd3650e26aa89c3a9e3a1613d",
+      "size_bytes": 775
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/deferred_low_signal_queue.csv",
+      "sha256": "d3cd1d33173a98e075598869b1691b04c058e0aa1af740784027eec0a9bf879d",
+      "size_bytes": 310209
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/deferred_low_signal_queue.jsonl",
+      "sha256": "039f16ea8defce3cbf16403f8f4d78462b2574c1fd8fac4602e819157e207358",
+      "size_bytes": 608091
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/duplicate_suppression_links.jsonl",
+      "sha256": "6aab11f888f0fd8ab7627011f29000c7a5a88624532a492b7e8224a1e52b1fe1",
+      "size_bytes": 3251
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/duplicate_suppression_summary.json",
+      "sha256": "337e5be17537af36ed4e40a4f7a332cc883438eb476ffb79dc2d19f2e822f10c",
+      "size_bytes": 1578
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/excluded_out_of_scope_queue.csv",
+      "sha256": "8079017a43007d1ce259f26653e2d34034d52e554f9b9c1c36e38cb01944b316",
+      "size_bytes": 391066
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/excluded_out_of_scope_queue.jsonl",
+      "sha256": "a42cff9746271f1ffec9937596b6fc55ecb253f23564c0ff3ac7368b532d59dd",
+      "size_bytes": 736665
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/forbidden_action_audit.json",
+      "sha256": "ee86e7380409c6e36404cf78b9c5b2f53537b35dd2a68dbb8610df5b266ba790",
+      "size_bytes": 501
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/geography_candidate_review_summary.json",
+      "sha256": "eb852e19a47ed905137cf42dcb5ebe6b06aad3df4ee924b09c7b1f1a570b58c4",
+      "size_bytes": 1078
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/high_priority_verification_ready_queue.csv",
+      "sha256": "83f7fb61c3ebbb9e080a35684a98fed9fd0d9703588f1eb0095f5f2f0f71abfc",
+      "size_bytes": 5538677
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/high_priority_verification_ready_queue.jsonl",
+      "sha256": "0e9610df088f7cee0e3b0c453e6c10da84fe677418282fc80c89edde5f272a7c",
+      "size_bytes": 10404530
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/large_file_audit.json",
+      "sha256": "042eeb89cfc66d75a4c590f61824d9ec11c56028c8bf0bf94471d6948e8edc10",
+      "size_bytes": 53
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/likely_duplicate_prior_source_queue.csv",
+      "sha256": "dc6bd406e15e303b2b0b13db5681d9c69162f2e95d6542a5cdafa7be23c73b52",
+      "size_bytes": 9580
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/likely_duplicate_prior_source_queue.jsonl",
+      "sha256": "2130cf3ac1388c482d16517616e5707d158f652dc6a31afdcc6554716d75b6fc",
+      "size_bytes": 14042
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/likely_duplicate_within_wave_queue.csv",
+      "sha256": "33f4007398d1acbd2be9f38f3b61904da1745c0e5885ffc14a513cfa156e6735",
+      "size_bytes": 13390
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/likely_duplicate_within_wave_queue.jsonl",
+      "sha256": "386a8051c6eec4bf4697feb7f58e8546d9bbfccb53ac3dc78648ffb8114afb4c",
+      "size_bytes": 23840
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/likely_non_source_or_navigation_only_queue.csv",
+      "sha256": "05d70f1bcbcb047d0f40991745e68786fc4ac9de9ac2cd140bfa3bf39531e04e",
+      "size_bytes": 959983
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/likely_non_source_or_navigation_only_queue.jsonl",
+      "sha256": "2b2c05bb338933c698d2c8371f4f62701253b1398d7a11ef6a6414d0c5c1fe86",
+      "size_bytes": 1934212
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/low_priority_verification_ready_queue.csv",
+      "sha256": "fae8915b0283ce5364a0ba7d37e39248128b44b23ca5ab31e13bd831ef6c5ea1",
+      "size_bytes": 49731
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/low_priority_verification_ready_queue.jsonl",
+      "sha256": "ee4a72189f5f9a1f5086f7b1dbe700f6049eb0aec095a258e7d5ba2b83c750b3",
+      "size_bytes": 96071
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/malformed_or_missing_locator_queue.csv",
+      "sha256": "dd779ebf0f3c491a163780ffc3f5aeb1c6991870a644362c0b0f5aabfd3ca8b3",
+      "size_bytes": 1528
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/malformed_or_missing_locator_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/mechanism_hint_candidate_review_summary.json",
+      "sha256": "2b52de32b6a21830e8bb1e482ac5adb46232977d8d69105878ec8b37832c399b",
+      "size_bytes": 534
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/medium_priority_verification_ready_queue.csv",
+      "sha256": "9a68e4b8eb8191668f999a89df6e109a2c8fb357fa46c8d0704cfde42e9b2ba9",
+      "size_bytes": 3124004
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/medium_priority_verification_ready_queue.jsonl",
+      "sha256": "fb0fa0ba87f629ab64b5c7e8730c5fdd47e5c2c309091fc9db5a0e2469135493",
+      "size_bytes": 5998148
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/merged_candidate_review_results.csv",
+      "sha256": "9545487d4594300c7eba7d5992429959de0bf18649a7cb220c645c2c948b52e5",
+      "size_bytes": 12775204
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/merged_candidate_review_results.jsonl",
+      "sha256": "342311a78941d522cbbd0e331f94a36b3cdf8eff79abb02e744e29b5d43683cc",
+      "size_bytes": 24480731
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/next_task.md",
+      "sha256": "ac2c88d47f19a4b32d9cc67d1f3742d3de3ad826e009d7b41bfc8bf7c6b2e3ce",
+      "size_bytes": 370
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/priority_distribution_summary.json",
+      "sha256": "8d4d4aa82e7eb15f5dfca051bb04889ee128f36aad412b9bd57ad172e71bd4ee",
+      "size_bytes": 2249
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/remaining_municipalities_candidate_review_manifest.json",
+      "sha256": "aac9ef44aa343826ae10fdd3dfd84d1791c3cbf509b28f1537592275375eceaf",
+      "size_bytes": 1049
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/remaining_municipalities_candidate_review_summary.json",
+      "sha256": "e6e95baa31cf9fb981b9c8be4613a1baa6e3214edada421613aa7909b482bbc5",
+      "size_bytes": 4663
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/remaining_municipalities_candidate_review_summary.md",
+      "sha256": "d8dabb3b56527963c3e6ca0aefd54945803de09c9117f7f1d9ff50a4c9d47d88",
+      "size_bytes": 720
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/repair_needed_queue.csv",
+      "sha256": "503a6463bd83f37e8697c46bff9ca280666b0b9bd0d7d63e85fbd4b2fff7b406",
+      "size_bytes": 2390788
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/repair_needed_queue.jsonl",
+      "sha256": "326e55c30ae5991c9c52268554c1ffacda97cdcf7de508b0db297cde3833bfad",
+      "size_bytes": 4665132
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/repair_needed_summary.json",
+      "sha256": "f48ca63541266917d2758867915a6ff95721c4a831623eaa804eead8e714c280",
+      "size_bytes": 136
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/review_error_queue.csv",
+      "sha256": "dd779ebf0f3c491a163780ffc3f5aeb1c6991870a644362c0b0f5aabfd3ca8b3",
+      "size_bytes": 1528
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/review_error_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/source_family_candidate_review_summary.json",
+      "sha256": "44b91a136c25593f24c641c2b25b6c1fbb2ce6580d9c0387f3de83787a0f8d23",
+      "size_bytes": 5347
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/staged_file_audit.json",
+      "sha256": "042eeb89cfc66d75a4c590f61824d9ec11c56028c8bf0bf94471d6948e8edc10",
+      "size_bytes": 53
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/validation_report.json",
+      "sha256": "df1f9c36766730466e64dcd170bb9893a6a1e374afce17697874d01a5f6952fa",
+      "size_bytes": 1250
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/validation_report.md",
+      "sha256": "86fd7c699808e7235d6e3e2d673f6d773c0ef0b61810eb208c8628e56af96ec7",
+      "size_bytes": 122
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/verification_ready_queue.csv",
+      "sha256": "53e3d5316a269599bcca84c70037c54ed830c12853ef91829e2ec35f4c4a0c69",
+      "size_bytes": 8709356
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/verification_ready_queue.jsonl",
+      "sha256": "17004cc6cb82172504bee7f3fa40e565b101e6bd4ce41eefdb34243e2fca0f2c",
+      "size_bytes": 16498749
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01/verification_ready_queue_manifest.json",
+      "sha256": "19c7fee17db378fa2488e96db86828bb737225a5929c0752b82a625aced8b36d",
+      "size_bytes": 803
+    },
+    {
+      "path": "docs/dashboard/data/analysis_readiness.json",
+      "sha256": "d9ea7d9cb324ac6a101c72dfbbf99647530c4986225a9ef1c1473b1c8c558e63",
+      "size_bytes": 36433
+    },
+    {
+      "path": "docs/dashboard/data/candidate_queue_summary.json",
+      "sha256": "59165e84f734c46aadb0a34de16679a4d66d64bf3469a537821ec48c2d693521",
+      "size_bytes": 27834
+    },
+    {
+      "path": "docs/dashboard/data/content_triage_status_summary.json",
+      "sha256": "2aa1b4132965fc165aedcce01b5c4716fc7b2614ecfacb6a551e3b14547d2b1a",
+      "size_bytes": 15708
+    },
+    {
+      "path": "docs/dashboard/data/coverage_funnel.json",
+      "sha256": "5475c05795756d7537e2ea8e1de0d7967f7252981c864bb72dca322dba2095f2",
+      "size_bytes": 12676
+    },
+    {
+      "path": "docs/dashboard/data/parallel_scout_status.json",
+      "sha256": "c5bbf5c4ccc8417e94fc8609e5dc7cd8fa68da4e10bbdf45242b33917744a0c8",
+      "size_bytes": 13422
+    },
+    {
+      "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
+      "sha256": "7a2975430bd061fcf0661657db1d14a86bd0071cb34b087e0be485d610124408",
+      "size_bytes": 12684
+    },
+    {
+      "path": "docs/dashboard/data/priority_summary.json",
+      "sha256": "2554da7bb00e6982bb7ed06ade5b976d6f1965bf36fc6ecbc967372cbb6f0fb3",
+      "size_bytes": 11853
+    },
+    {
+      "path": "docs/dashboard/data/project_phase_summary.json",
+      "sha256": "a657a695faf0db16c5f1fe771c81ae358ee2dcac89e3fe6f71572c09127e284e",
+      "size_bytes": 206586
+    },
+    {
+      "path": "docs/dashboard/data/reports_index.json",
+      "sha256": "1efcd4e85ab6539163fdc777003d4da8ddbfed18c1efa9f3f1436a0c60fb0962",
+      "size_bytes": 42538
+    },
+    {
+      "path": "docs/dashboard/data/scout_operations_summary.json",
+      "sha256": "ca6a7bee76798ac45af62f887887d0d26600fcdc2f37ba8592f20e90f9e2bf8d",
+      "size_bytes": 12964
+    },
+    {
+      "path": "docs/dashboard/data/scout_runtime_trends.json",
+      "sha256": "f4af20b1d87fed6550d7601fba869e002813064d468d1aa13ace587cd4040d72",
+      "size_bytes": 14022
+    },
+    {
+      "path": "docs/dashboard/data/scout_yield_by_state.json",
+      "sha256": "45f5c5cd523da0abe849c97d89d6cb7b768066f32896cae5c66c16e1277d34ce",
+      "size_bytes": 51681
+    },
+    {
+      "path": "docs/dashboard/data/source_review_status_summary.json",
+      "sha256": "3463b8f78d0ce33efa04d8157500006df63a36cca03e5e1378f987d88dd15329",
+      "size_bytes": 27241
+    },
+    {
+      "path": "docs/dashboard/data/state_priority_summary.json",
+      "sha256": "e3b16292ee8928eb7f80935f49fe5053c6a93028b6436ef7cf8e6e260f4227e7",
+      "size_bytes": 39561
+    },
+    {
+      "path": "docs/dashboard/data/state_summary.json",
+      "sha256": "f49611ba6b3eed83a65def9cf15308d16f39ad5cf0c39b8c3fae05983c36ba2c",
+      "size_bytes": 165404
+    },
+    {
+      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
+      "sha256": "6b602bc94efed84abe3878af10e0858fbbdb101bd388ae491d7201fbf7a25e60",
+      "size_bytes": 56812
+    },
+    {
+      "path": "docs/dashboard/data/text_table_detection_status_summary.json",
+      "sha256": "3c48f5ab07740429e191a2425ab5a81aa7db2ce23ac54774a80e653395a94257",
+      "size_bytes": 12889
+    },
+    {
+      "path": "docs/dashboard/data/top_priority_targets.json",
+      "sha256": "e68024fa1ac05fb90c594127230b6053bd2cd54aa42e24c2ef95e9b9c5cba591",
+      "size_bytes": 217464
+    },
+    {
+      "path": "docs/dashboard/data/verification_status_summary.json",
+      "sha256": "46d8f9e5ffc6abcd96ece5e091fe175758e160feba927a645f4441e8a5165418",
+      "size_bytes": 15288
+    },
+    {
+      "path": "docs/dashboard/src/App.jsx",
+      "sha256": "694bb2721168d33cfedd5fdfc90739cc947b3d55e7e26bf7393167046f7c20bc",
+      "size_bytes": 19904
+    },
+    {
+      "path": "scripts/build_dashboard_data.py",
+      "sha256": "57729a719cdaad1376b210fbcb0aa018df8d840c896ddf289fb33fe874921059",
+      "size_bytes": 1072728
+    },
+    {
+      "path": "scripts/run_remaining_municipality_candidate_review.py",
+      "sha256": "09937dd15aa5aa201dd7d344b13095f0b8b48c9b713a8e66dc825ac79d2aa447",
+      "size_bytes": 46244
+    },
+    {
+      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
+      "sha256": "39788c0016e1d18366b42aac2cb1c2299a3ddb91f84954b575bc315ef7083f53",
+      "size_bytes": 30556
+    }
+  ],
+  "passed": true,
+  "prohibited_paths": [],
+  "staged_file_count": 102
+}

@@ -1,0 +1,17 @@
+{
+  "metadata_hints_only": true,
+  "reviewed_candidates_with_hint": 3175,
+  "reviewed_hint_counts": {
+    "fiscal_constraint_signal": 188,
+    "market_or_comparability_pressure": 156,
+    "non_safety_constraint_signal": 2688,
+    "strike_or_no_strike_constraint": 507
+  },
+  "verification_ready_candidates_with_hint": 2230,
+  "verification_ready_hint_counts": {
+    "fiscal_constraint_signal": 162,
+    "market_or_comparability_pressure": 124,
+    "non_safety_constraint_signal": 1870,
+    "strike_or_no_strike_constraint": 357
+  }
+}

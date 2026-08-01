@@ -1,0 +1,22 @@
+{
+  "status": "passed_static_local_with_browser_unavailable",
+  "tested_at": "2026-08-01T20:28:12Z",
+  "build_command": "npm run build",
+  "build_passed": true,
+  "local_preview_url": "http://127.0.0.1:4175/gabriel-wages/",
+  "local_http_status": 200,
+  "browser_controller_available": false,
+  "visual_browser_validation_performed": false,
+  "static_bundle_validation_passed": true,
+  "checks": {
+    "candidate_review_stage_present": true,
+    "verification_next_task_present": true,
+    "reviewed_and_verification_ready_counts_present": true,
+    "map_metric_is_scout_coverage_rate": true,
+    "final_pi_report_link_preserved": true,
+    "wage_growth_continuity_module_preserved": true,
+    "technical_details_collapsed_by_default": true,
+    "forbidden_dashboard_claims_absent": true
+  },
+  "limitation": "The in-app browser runtime reported that no browser was available. Validation therefore used the production build, local HTTP response, generated data, and bundled UI text; no visual browser pass is claimed."
+}

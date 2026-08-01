@@ -1,0 +1,8 @@
+{
+  "status": "pending_push_and_pages_deployment",
+  "public_url": "https://dkyaya.github.io/gabriel-wages/",
+  "cache_busting_query": "dashboard_smoke=20260801_remaining_candidate_review_pending",
+  "public_validation_performed": false,
+  "public_visual_validation_performed": false,
+  "notes": "Will be updated after the candidate-review commit is pushed and GitHub Pages publishes the new bundle."
+}

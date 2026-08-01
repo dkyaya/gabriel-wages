@@ -1,0 +1,11 @@
+{
+  "classification_basis": "source-family/query-family metadata hints only",
+  "reviewed": {
+    "cba_arbitration_factfinding_hint": 981,
+    "non_cba_or_unresolved_hint": 4887
+  },
+  "verification_ready": {
+    "cba_arbitration_factfinding_hint": 663,
+    "non_cba_or_unresolved_hint": 3242
+  }
+}

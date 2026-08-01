@@ -1,0 +1,38 @@
+{
+  "duplicate_links_written": 9,
+  "duplicates_suppressed_from_verification_ready_queue": true,
+  "likely_duplicate_prior_source_count": 3,
+  "likely_duplicate_within_wave_count": 6,
+  "metadata_only": true,
+  "prior_reference_ledgers": [
+    {
+      "available": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_results.csv",
+      "row_count": 9072,
+      "sha256": "38c10aaab6a338f41644e8ab7acf022b01d6c3c5ca67851ea1ce14f80a97d215",
+      "unique_locators_first_added": 9072
+    },
+    {
+      "available": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30/merged_verification_results.csv",
+      "row_count": 5768,
+      "sha256": "41f9ef14a273bb4ddf45288389489bd16369ce734c3b2fee968b1d5df55c5842",
+      "unique_locators_first_added": 606
+    },
+    {
+      "available": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/merged_source_review_results.csv",
+      "row_count": 3950,
+      "sha256": "38d8af4a19b2d69584c4c0405a9e27ffde66b2de9a5c6abe232d0f57e4b3cfac",
+      "unique_locators_first_added": 0
+    },
+    {
+      "available": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30/retained_source_manifest.csv",
+      "row_count": 3672,
+      "sha256": "ca0a11542e2adb510c3dd424a3b24fc7a11d7e9c93631f8add98801e9046d0e4",
+      "unique_locators_first_added": 51
+    }
+  ],
+  "prior_unique_locator_index_count": 9729
+}

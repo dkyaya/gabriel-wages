@@ -1,0 +1,21 @@
+{
+  "candidate_url_opens": 0,
+  "codification_runs": 0,
+  "downloads": 0,
+  "final_causal_claims": 0,
+  "head_get_checks": 0,
+  "ingestion_runs": 0,
+  "matching_runs": 0,
+  "national_population_prevalence_claims": 0,
+  "network_verification_runs": 0,
+  "normalization_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "rating_runs": 0,
+  "regressions": 0,
+  "source_review_runs": 0,
+  "span_extraction_runs": 0,
+  "text_extraction_runs": 0,
+  "treatment_effect_models": 0,
+  "wage_gap_calculations": 0
+}

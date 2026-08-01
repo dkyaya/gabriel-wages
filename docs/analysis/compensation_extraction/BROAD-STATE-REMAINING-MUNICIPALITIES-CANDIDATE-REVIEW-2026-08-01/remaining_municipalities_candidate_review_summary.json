@@ -1,0 +1,129 @@
+{
+  "bucket_counts": {
+    "deferred_low_signal": 150,
+    "excluded_out_of_scope": 174,
+    "high_priority_verification_ready": 2440,
+    "likely_duplicate_prior_source": 3,
+    "likely_duplicate_within_wave": 6,
+    "likely_non_source_or_navigation_only": 489,
+    "low_priority_verification_ready": 24,
+    "medium_priority_verification_ready": 1441,
+    "repair_needed": 1141
+  },
+  "candidate_urls_opened": 0,
+  "decision": "broad_state_remaining_municipalities_candidate_review_completed_verification_ready",
+  "deferred_low_signal_count": 150,
+  "downloads": 0,
+  "duplicate_count": 9,
+  "eligible_municipality_universe": 35589,
+  "excluded_out_of_scope_count": 174,
+  "extraction_runs": 0,
+  "final_pi_report_link_preserved": true,
+  "global_analysis_readiness": false,
+  "high_priority_verification_ready_count": 2440,
+  "ingestion_runs": 0,
+  "input_candidate_count": 5868,
+  "lane_sizes": {
+    "candidate_review_lane_001": 1174,
+    "candidate_review_lane_002": 1174,
+    "candidate_review_lane_003": 1174,
+    "candidate_review_lane_004": 1173,
+    "candidate_review_lane_005": 1173
+  },
+  "lane_statuses": {
+    "candidate_review_lane_001": {
+      "bucket_counts": {
+        "deferred_low_signal": 33,
+        "excluded_out_of_scope": 27,
+        "high_priority_verification_ready": 490,
+        "likely_duplicate_prior_source": 1,
+        "likely_duplicate_within_wave": 1,
+        "likely_non_source_or_navigation_only": 88,
+        "low_priority_verification_ready": 6,
+        "medium_priority_verification_ready": 306,
+        "repair_needed": 222
+      },
+      "queue_sha256": "20faec353226b38bad792128a456ba09cd77a34558bf6c6cdcdcbb6c8aaa30e7",
+      "reviewed": 1174,
+      "status": "completed"
+    },
+    "candidate_review_lane_002": {
+      "bucket_counts": {
+        "deferred_low_signal": 28,
+        "excluded_out_of_scope": 37,
+        "high_priority_verification_ready": 485,
+        "likely_duplicate_prior_source": 1,
+        "likely_duplicate_within_wave": 1,
+        "likely_non_source_or_navigation_only": 107,
+        "low_priority_verification_ready": 6,
+        "medium_priority_verification_ready": 276,
+        "repair_needed": 233
+      },
+      "queue_sha256": "7178dc28de6e4c9f87a352bf19539c959c62675e7e78f235c7b1e1f7461df9e8",
+      "reviewed": 1174,
+      "status": "completed"
+    },
+    "candidate_review_lane_003": {
+      "bucket_counts": {
+        "deferred_low_signal": 42,
+        "excluded_out_of_scope": 45,
+        "high_priority_verification_ready": 472,
+        "likely_duplicate_prior_source": 1,
+        "likely_duplicate_within_wave": 2,
+        "likely_non_source_or_navigation_only": 91,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 277,
+        "repair_needed": 241
+      },
+      "queue_sha256": "f585c9ad87c84662b6dec33eeb69da5ffed6718ba45bda84b215bec3223c4126",
+      "reviewed": 1174,
+      "status": "completed"
+    },
+    "candidate_review_lane_004": {
+      "bucket_counts": {
+        "deferred_low_signal": 28,
+        "excluded_out_of_scope": 35,
+        "high_priority_verification_ready": 489,
+        "likely_duplicate_within_wave": 1,
+        "likely_non_source_or_navigation_only": 95,
+        "low_priority_verification_ready": 5,
+        "medium_priority_verification_ready": 306,
+        "repair_needed": 214
+      },
+      "queue_sha256": "b8b6e846e12e2926ac3738c59d34f720f3ff83cab8faa250607244e024e7519f",
+      "reviewed": 1173,
+      "status": "completed"
+    },
+    "candidate_review_lane_005": {
+      "bucket_counts": {
+        "deferred_low_signal": 19,
+        "excluded_out_of_scope": 30,
+        "high_priority_verification_ready": 504,
+        "likely_duplicate_within_wave": 1,
+        "likely_non_source_or_navigation_only": 108,
+        "low_priority_verification_ready": 4,
+        "medium_priority_verification_ready": 276,
+        "repair_needed": 231
+      },
+      "queue_sha256": "2db1f2138f84910b4383b3d59b17c3858dde82063c1cad7695b59dd75b9e40dd",
+      "reviewed": 1173,
+      "status": "completed"
+    }
+  },
+  "low_priority_verification_ready_count": 24,
+  "malformed_or_missing_locator_count": 0,
+  "map_primary_metric": "scout_coverage_rate",
+  "medium_priority_verification_ready_count": 1441,
+  "navigation_only_count": 489,
+  "network_verification_runs": 0,
+  "normalization_matching_runs": 0,
+  "rating_runs": 0,
+  "repair_needed_count": 1141,
+  "review_error_count": 0,
+  "reviewed_candidate_count": 5868,
+  "scout_coverage_rate_percent": 99.9579,
+  "scout_covered_municipalities": 35574,
+  "source_review_runs": 0,
+  "verification_ready_count": 3905,
+  "wage_growth_continuity_module_preserved": true
+}

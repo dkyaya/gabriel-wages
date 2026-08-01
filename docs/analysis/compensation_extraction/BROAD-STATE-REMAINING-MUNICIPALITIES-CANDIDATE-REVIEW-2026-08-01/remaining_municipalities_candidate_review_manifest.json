@@ -1,0 +1,30 @@
+{
+  "bucket_counts": {
+    "deferred_low_signal": 150,
+    "excluded_out_of_scope": 174,
+    "high_priority_verification_ready": 2440,
+    "likely_duplicate_prior_source": 3,
+    "likely_duplicate_within_wave": 6,
+    "likely_non_source_or_navigation_only": 489,
+    "low_priority_verification_ready": 24,
+    "medium_priority_verification_ready": 1441,
+    "repair_needed": 1141
+  },
+  "candidate_urls_opened": 0,
+  "completed_at": "2026-08-01T20:28:31.630731+00:00",
+  "decision": "broad_state_remaining_municipalities_candidate_review_completed_verification_ready",
+  "head_before": "7a895b6788344a1b4f76dae3e18eed5f4100d75e",
+  "input_candidate_count": 5868,
+  "lane_sizes": {
+    "candidate_review_lane_001": 1174,
+    "candidate_review_lane_002": 1174,
+    "candidate_review_lane_003": 1174,
+    "candidate_review_lane_004": 1173,
+    "candidate_review_lane_005": 1173
+  },
+  "network_verification_runs": 0,
+  "public_pages_passed": false,
+  "reviewed_candidate_count": 5868,
+  "validation_passed": true,
+  "verification_ready_count": 3905
+}

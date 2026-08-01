@@ -93,8 +93,11 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
         self.assertEqual(
             phase["current_phase_code"],
-            "broad_state_remaining_municipalities_5lane_live_scout_retry_completed_candidate_review_ready",
+            "broad_state_remaining_municipalities_candidate_review_completed_verification_ready",
         )
+        self.assertEqual(phase["reviewed_candidate_count"], 5868)
+        self.assertEqual(phase["verification_ready_count"], 3905)
+        self.assertEqual(phase["high_priority_verification_ready_count"], 2440)
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertIn(
@@ -251,15 +254,32 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                     "remaining_municipalities_live_scout_retry_manifest.json"
                                                                 )
                                                                 if retry_manifest.exists():
-                                                                    self.assertEqual(
-                                                                        phase["current_phase"],
-                                                                        "remaining-municipality 5-lane live scout complete",
-                                                                    )
-                                                                    self.assertEqual(
-                                                                        phase["next_task"],
+                                                                    candidate_review_manifest = (
+                                                                        ROOT / "docs/analysis/compensation_extraction/"
                                                                         "BROAD-STATE-REMAINING-MUNICIPALITIES-"
-                                                                        "CANDIDATE-REVIEW-2026-08-01",
+                                                                        "CANDIDATE-REVIEW-2026-08-01/"
+                                                                        "remaining_municipalities_candidate_review_manifest.json"
                                                                     )
+                                                                    if candidate_review_manifest.exists():
+                                                                        self.assertEqual(
+                                                                            phase["current_phase"],
+                                                                            "Remaining-municipality candidate review complete",
+                                                                        )
+                                                                        self.assertEqual(
+                                                                            phase["next_task"],
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "VERIFICATION-2026-08-01",
+                                                                        )
+                                                                    else:
+                                                                        self.assertEqual(
+                                                                            phase["current_phase"],
+                                                                            "remaining-municipality 5-lane live scout complete",
+                                                                        )
+                                                                        self.assertEqual(
+                                                                            phase["next_task"],
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "CANDIDATE-REVIEW-2026-08-01",
+                                                                        )
                                                                     self.assertFalse(
                                                                         phase["remaining_municipality_5lane_live_scout_preflight_failed"]
                                                                     )
