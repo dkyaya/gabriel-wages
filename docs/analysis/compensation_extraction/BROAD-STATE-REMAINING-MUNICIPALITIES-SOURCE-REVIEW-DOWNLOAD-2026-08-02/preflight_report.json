@@ -1,0 +1,75 @@
+{
+  "all_required_lineage_present": true,
+  "artifact_root_git_ignored": true,
+  "deterministic_preflight_passed": true,
+  "eligible_statuses_only": true,
+  "lane_distribution": {
+    "source_review_lane_001": {
+      "priority_counts": {
+        "high_priority_verification_ready": 385,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 204
+      },
+      "scheduled_stagger_minutes": 0,
+      "total_rows": 592
+    },
+    "source_review_lane_002": {
+      "priority_counts": {
+        "high_priority_verification_ready": 385,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 204
+      },
+      "scheduled_stagger_minutes": 8,
+      "total_rows": 591
+    },
+    "source_review_lane_003": {
+      "priority_counts": {
+        "high_priority_verification_ready": 385,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 204
+      },
+      "scheduled_stagger_minutes": 16,
+      "total_rows": 591
+    },
+    "source_review_lane_004": {
+      "priority_counts": {
+        "high_priority_verification_ready": 385,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 203
+      },
+      "scheduled_stagger_minutes": 24,
+      "total_rows": 591
+    },
+    "source_review_lane_005": {
+      "priority_counts": {
+        "high_priority_verification_ready": 384,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 204
+      },
+      "scheduled_stagger_minutes": 32,
+      "total_rows": 591
+    }
+  },
+  "network_smoke_http_responses": 3,
+  "network_smoke_passed": true,
+  "network_smoke_priority_coverage": [
+    "high_priority_verification_ready",
+    "low_priority_verification_ready",
+    "medium_priority_verification_ready"
+  ],
+  "network_smoke_rows": 3,
+  "network_smoke_source_families": [
+    "arbitration_award",
+    "mou_or_memorandum",
+    "wage_schedule"
+  ],
+  "priority_counts": {
+    "high_priority_verification_ready": 1924,
+    "low_priority_verification_ready": 13,
+    "medium_priority_verification_ready": 1019
+  },
+  "queue_rows": 2956,
+  "retained_binaries_staged_before_run": 0,
+  "smoke_retained_files_written": 0,
+  "storage_sanity_passed": true
+}

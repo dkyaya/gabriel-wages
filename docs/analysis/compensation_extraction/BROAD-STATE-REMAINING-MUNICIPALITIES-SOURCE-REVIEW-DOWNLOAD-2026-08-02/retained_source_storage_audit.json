@@ -1,0 +1,12 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02",
+  "artifact_root_git_ignored": true,
+  "audited_at": "2026-08-02T14:57:16Z",
+  "duplicate_retained_hashes": 14,
+  "manifest_retained_count": 2865,
+  "part_files": 0,
+  "passed": true,
+  "retained_bytes": 3265531012,
+  "retained_file_count": 2865,
+  "unique_retained_hashes": 2865
+}

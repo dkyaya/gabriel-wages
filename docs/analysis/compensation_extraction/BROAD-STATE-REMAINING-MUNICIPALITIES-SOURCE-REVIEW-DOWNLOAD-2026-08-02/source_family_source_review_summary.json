@@ -1,0 +1,173 @@
+{
+  "grouping_field": "source_family_hint",
+  "groups": {
+    "agenda_packet_or_minutes": {
+      "not_retained": 20,
+      "retained": 1015,
+      "retained_bytes": 602308096,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 1,
+        "restricted_or_login_required": 13,
+        "retained_html": 190,
+        "retained_pdf": 825,
+        "unavailable_on_download": 6
+      },
+      "total": 1035
+    },
+    "arbitration_award": {
+      "not_retained": 0,
+      "retained": 102,
+      "retained_bytes": 70076203,
+      "terminal_status_counts": {
+        "retained_html": 3,
+        "retained_pdf": 99
+      },
+      "total": 102
+    },
+    "budget_or_pay_plan": {
+      "not_retained": 14,
+      "retained": 519,
+      "retained_bytes": 598623152,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 1,
+        "duplicate_retained_source": 2,
+        "likely_non_source_or_navigation_only": 1,
+        "restricted_or_login_required": 6,
+        "retained_html": 59,
+        "retained_pdf": 460,
+        "unavailable_on_download": 4
+      },
+      "total": 533
+    },
+    "cba": {
+      "not_retained": 13,
+      "retained": 215,
+      "retained_bytes": 595562927,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 2,
+        "duplicate_retained_source": 1,
+        "restricted_or_login_required": 5,
+        "retained_html": 18,
+        "retained_pdf": 197,
+        "unavailable_on_download": 5
+      },
+      "total": 228
+    },
+    "civil_service_or_hr_pay_plan": {
+      "not_retained": 1,
+      "retained": 39,
+      "retained_bytes": 69308322,
+      "terminal_status_counts": {
+        "retained_html": 8,
+        "retained_pdf": 31,
+        "unavailable_on_download": 1
+      },
+      "total": 40
+    },
+    "classification_study": {
+      "not_retained": 0,
+      "retained": 1,
+      "retained_bytes": 123047,
+      "terminal_status_counts": {
+        "retained_html": 1
+      },
+      "total": 1
+    },
+    "compensation_study": {
+      "not_retained": 1,
+      "retained": 2,
+      "retained_bytes": 11176552,
+      "terminal_status_counts": {
+        "retained_pdf": 2,
+        "unavailable_on_download": 1
+      },
+      "total": 3
+    },
+    "factfinding_report": {
+      "not_retained": 1,
+      "retained": 44,
+      "retained_bytes": 27706155,
+      "terminal_status_counts": {
+        "restricted_or_login_required": 1,
+        "retained_html": 5,
+        "retained_pdf": 39
+      },
+      "total": 45
+    },
+    "mou_or_memorandum": {
+      "not_retained": 8,
+      "retained": 122,
+      "retained_bytes": 275183078,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 2,
+        "restricted_or_login_required": 3,
+        "retained_html": 5,
+        "retained_pdf": 117,
+        "unavailable_on_download": 3
+      },
+      "total": 130
+    },
+    "other_local_government_pay_policy": {
+      "not_retained": 11,
+      "retained": 193,
+      "retained_bytes": 172757344,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 5,
+        "oversized_defer": 1,
+        "restricted_or_login_required": 4,
+        "retained_html": 32,
+        "retained_pdf": 161,
+        "unavailable_on_download": 1
+      },
+      "total": 204
+    },
+    "personnel_policy": {
+      "not_retained": 2,
+      "retained": 93,
+      "retained_bytes": 128922305,
+      "terminal_status_counts": {
+        "restricted_or_login_required": 2,
+        "retained_html": 10,
+        "retained_pdf": 83
+      },
+      "total": 95
+    },
+    "salary_ordinance": {
+      "not_retained": 7,
+      "retained": 107,
+      "retained_bytes": 127665170,
+      "terminal_status_counts": {
+        "duplicate_retained_source": 1,
+        "restricted_or_login_required": 4,
+        "retained_html": 17,
+        "retained_pdf": 90,
+        "unavailable_on_download": 2
+      },
+      "total": 114
+    },
+    "settlement_agreement": {
+      "not_retained": 0,
+      "retained": 2,
+      "retained_bytes": 267245,
+      "terminal_status_counts": {
+        "retained_pdf": 2
+      },
+      "total": 2
+    },
+    "wage_schedule": {
+      "not_retained": 13,
+      "retained": 411,
+      "retained_bytes": 585851416,
+      "terminal_status_counts": {
+        "broken_or_corrupt": 3,
+        "duplicate_retained_source": 2,
+        "restricted_or_login_required": 6,
+        "retained_html": 61,
+        "retained_pdf": 350,
+        "unavailable_on_download": 2
+      },
+      "total": 424
+    }
+  },
+  "total_rows": 2956
+}

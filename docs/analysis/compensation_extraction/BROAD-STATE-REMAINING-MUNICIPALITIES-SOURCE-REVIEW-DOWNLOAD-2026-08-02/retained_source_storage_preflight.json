@@ -1,0 +1,10 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02",
+  "artifact_root_git_ignored": true,
+  "available_bytes_before_run": 61206835200,
+  "known_content_length_rows": 2456,
+  "maximum_file_bytes": 78643200,
+  "minimum_free_bytes_required": 21474836480,
+  "projected_retained_bytes": 3728069980,
+  "storage_sanity_passed": true
+}

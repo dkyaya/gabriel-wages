@@ -1,0 +1,28 @@
+{
+  "clean_dashboard_structure_preserved": true,
+  "completed_source_review_rows": 2956,
+  "current_stage": "remaining-municipality source review/download complete",
+  "decision": "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready",
+  "final_pi_report_link_preserved": true,
+  "global_analysis_readiness": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02",
+  "retained_html_count": 409,
+  "retained_other_document_count": 0,
+  "retained_pdf_count": 2456,
+  "retained_source_count": 2865,
+  "scout_coverage_rate_percent": 99.9579,
+  "source_review_queue_count": 2956,
+  "status": "source_review_download_complete",
+  "terminal_status_counts": {
+    "broken_or_corrupt": 6,
+    "duplicate_retained_source": 14,
+    "likely_non_source_or_navigation_only": 1,
+    "oversized_defer": 1,
+    "restricted_or_login_required": 44,
+    "retained_html": 409,
+    "retained_pdf": 2456,
+    "unavailable_on_download": 25
+  },
+  "wage_growth_continuity_module_preserved": true
+}

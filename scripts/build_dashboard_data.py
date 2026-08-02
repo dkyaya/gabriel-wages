@@ -1798,6 +1798,11 @@ BROAD_STATE_REMAINING_VERIFICATION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01"
 )
+BROAD_STATE_REMAINING_SOURCE_REVIEW_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7243,6 +7248,45 @@ def broad_state_remaining_verification_status() -> tuple[bool, dict[str, Any]]:
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_source_review_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize completed source review/download for the remaining wave."""
+    directory = BROAD_STATE_REMAINING_SOURCE_REVIEW_DIR
+    required = (
+        directory / "remaining_municipalities_source_review_download_manifest.json",
+        directory / "remaining_municipalities_source_review_download_summary.json",
+        directory / "retained_source_manifest.sha256.json",
+        directory / "retained_source_storage_audit.json",
+        directory / "dashboard_remaining_source_review_download_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, retained, storage, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("input_source_review_ready_count") == 2956
+        and summary.get("completed_source_review_rows") == 2956
+        and sum(summary.get("lane_sizes", {}).values()) == 2956
+        and retained.get("retained_source_count") == summary.get("retained_source_count")
+        and storage.get("passed") is True
+        and storage.get("artifact_root_git_ignored") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and validation.get("validation_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("text_extractions") == 0
+        and forbidden.get("ocr_runs") == 0
+    )
+    if not gates:
+        raise ValueError("remaining-municipality source-review package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -10939,6 +10983,9 @@ def build_project_phase_summary(
     remaining_verification_available, remaining_verification = (
         broad_state_remaining_verification_status()
     )
+    remaining_source_review_available, remaining_source_review = (
+        broad_state_remaining_source_review_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12511,6 +12558,38 @@ def build_project_phase_summary(
                 "defer extraction, OCR, rating, ingestion, normalization, and matching",
             ],
             "last_updated_context": "remaining_municipality_verification_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_source_review_available:
+        payload.update({
+            "data_vintage": "2026-08-02",
+            "stage": "broad_state_remaining_municipalities_source_review_download_complete",
+            "current_phase": "Remaining-municipality source review/download complete",
+            "current_phase_code": remaining_source_review["decision"],
+            "current_evidence_status": "source_review_complete_pdf_text_readiness_next",
+            "remaining_municipality_source_review_available": True,
+            "source_review_queue_count": remaining_source_review["input_source_review_ready_count"],
+            "source_review_completed_count": remaining_source_review["completed_source_review_rows"],
+            "source_review_retained_count": remaining_source_review["retained_source_count"],
+            "source_review_retained_pdf_count": remaining_source_review["retained_pdf_count"],
+            "source_review_retained_html_count": remaining_source_review["retained_html_count"],
+            "source_review_retained_other_count": remaining_source_review["retained_other_document_count"],
+            "source_review_terminal_status_counts": remaining_source_review["terminal_status_counts"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02",
+            "next_phase": "Classify retained sources for PDF, HTML, and other-document text readiness",
+            "next_phase_sequence": [
+                "process only retained sources from ignored local artifact storage",
+                "checkpoint every retained source and classify readiness without extracting text",
+                "defer OCR, rating, ingestion, normalization, matching, and analysis",
+            ],
+            "last_updated_context": "remaining_municipality_source_review_download_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

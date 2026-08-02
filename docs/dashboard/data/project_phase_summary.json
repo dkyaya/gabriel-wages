@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-01T22:17:58Z",
-  "data_vintage": "2026-08-01",
+  "generated_at": "2026-08-02T14:57:37Z",
+  "data_vintage": "2026-08-02",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
     "docs/analysis/national_scout_coverage_municipality_2026-07-20.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_verification_complete",
-  "current_phase": "Remaining-municipality verification complete",
-  "current_phase_code": "broad_state_remaining_municipalities_verification_completed_source_review_ready",
-  "current_evidence_status": "verification_complete_source_review_queue_ready",
+  "stage": "broad_state_remaining_municipalities_source_review_download_complete",
+  "current_phase": "Remaining-municipality source review/download complete",
+  "current_phase_code": "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready",
+  "current_evidence_status": "source_review_complete_pdf_text_readiness_next",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-01",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Review and retain eligible verified sources without changing the analysis layer",
+  "next_phase": "Classify retained sources for PDF, HTML, and other-document text readiness",
   "next_phase_sequence": [
-    "process only the locked source-review-ready queue",
-    "checkpoint every row and retain binaries only in ignored local storage",
-    "defer extraction, OCR, rating, ingestion, normalization, and matching"
+    "process only retained sources from ignored local artifact storage",
+    "checkpoint every retained source and classify readiness without extracting text",
+    "defer OCR, rating, ingestion, normalization, matching, and analysis"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_verification_complete",
+  "last_updated_context": "remaining_municipality_source_review_download_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -6169,5 +6169,22 @@
     "timeout": 2,
     "unavailable": 373,
     "verification_error": 2
+  },
+  "remaining_municipality_source_review_available": true,
+  "source_review_queue_count": 2956,
+  "source_review_completed_count": 2956,
+  "source_review_retained_count": 2865,
+  "source_review_retained_pdf_count": 2456,
+  "source_review_retained_html_count": 409,
+  "source_review_retained_other_count": 0,
+  "source_review_terminal_status_counts": {
+    "broken_or_corrupt": 6,
+    "duplicate_retained_source": 14,
+    "likely_non_source_or_navigation_only": 1,
+    "oversized_defer": 1,
+    "restricted_or_login_required": 44,
+    "retained_html": 409,
+    "retained_pdf": 2456,
+    "unavailable_on_download": 25
   }
 }

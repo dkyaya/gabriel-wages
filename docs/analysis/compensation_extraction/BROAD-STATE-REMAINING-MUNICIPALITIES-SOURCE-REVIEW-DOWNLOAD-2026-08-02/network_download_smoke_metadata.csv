@@ -1,0 +1,4 @@
+source_review_download_id,priority_bucket,source_family_hint,http_status,bytes_read,content_type,transport_error_type,retained_file_written
+RMSRD-20260802-b452a044c17ca676fddf,high_priority_verification_ready,arbitration_award,206,4096,application/pdf,,false
+RMSRD-20260802-a3d8f5fdb4fb44a1e517,medium_priority_verification_ready,mou_or_memorandum,206,4096,application/pdf,,false
+RMSRD-20260802-bd5988b08d07cd9509db,low_priority_verification_ready,wage_schedule,200,4096,text/html,,false

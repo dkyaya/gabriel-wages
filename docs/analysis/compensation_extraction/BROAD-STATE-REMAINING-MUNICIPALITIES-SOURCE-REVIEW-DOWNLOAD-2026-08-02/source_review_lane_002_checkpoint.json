@@ -1,0 +1,11 @@
+{
+  "checkpoint_frequency": "after_every_row",
+  "checkpointed_at": "2026-08-02T14:30:45Z",
+  "completed_rows": 591,
+  "lane_id": "source_review_lane_002",
+  "locked_rows": 591,
+  "queue_sha256": "98a662675d50549ba60fdb251e5fdb094a1d40de986367b9a0ea1b63ea0f5071",
+  "remaining_rows": 0,
+  "status": "completed",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02"
+}

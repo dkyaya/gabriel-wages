@@ -1,0 +1,46 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02",
+  "csv_sha256": "998e197c68b6464ff32012bc4e7d0739734dafc9c74c595fc3a3420d949a2994",
+  "eligible_verification_statuses": [
+    "reachable",
+    "reachable_with_redirect"
+  ],
+  "execution_status": "completed",
+  "jsonl_sha256": "b2deeb41b57bcf63055dab302ba24e3d43a366286405d2e4f6db545461cfb6dc",
+  "lane_counts": {
+    "source_review_lane_001": 592,
+    "source_review_lane_002": 591,
+    "source_review_lane_003": 591,
+    "source_review_lane_004": 591,
+    "source_review_lane_005": 591
+  },
+  "lane_hashes": {
+    "source_review_lane_001": {
+      "csv_sha256": "1e46fd25dbcbbd8fe7e83d31281c9586db7b6ea56cd494c698a7fa2632a8a128",
+      "jsonl_sha256": "6a3067f37fa6b8e5243a5c5585c64d0f49373c41beb75c0c9d7c14c6a03c73f5"
+    },
+    "source_review_lane_002": {
+      "csv_sha256": "98a662675d50549ba60fdb251e5fdb094a1d40de986367b9a0ea1b63ea0f5071",
+      "jsonl_sha256": "cf727cbe02f3578892021d86d8b6d1dcc63ccfdd5340f3c2393894d64d074511"
+    },
+    "source_review_lane_003": {
+      "csv_sha256": "83a577ebab6fbe4ffa198d16288c9fcfa80ac099259ed89957d4c154bc2cd901",
+      "jsonl_sha256": "fdfe614d6eff43732db94e440781ba8f7ab9ed3929e3c863b567dd73ea436304"
+    },
+    "source_review_lane_004": {
+      "csv_sha256": "f616bcb1e82e40b27886d7bd368058bb8f3576965ca6149eff4460d2623d5895",
+      "jsonl_sha256": "007d0c399e7250b9ce73dffff305d635ed2492577b7082290a96c866b83a575b"
+    },
+    "source_review_lane_005": {
+      "csv_sha256": "69196b1667f9ae1d6b27157e655b921b75ca8571bb57837a83850c10649a2994",
+      "jsonl_sha256": "eac1e51ae5a8efe8c394c2437a909990e8ec22fc3671f7c8866edfbd65ff8cc8"
+    }
+  },
+  "priority_counts": {
+    "high_priority_verification_ready": 1924,
+    "low_priority_verification_ready": 13,
+    "medium_priority_verification_ready": 1019
+  },
+  "queue_row_count": 2956,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02"
+}

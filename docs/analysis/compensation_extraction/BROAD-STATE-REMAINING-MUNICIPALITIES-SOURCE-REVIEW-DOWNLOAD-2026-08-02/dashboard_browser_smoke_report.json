@@ -1,0 +1,21 @@
+{
+  "browser_controller_available": false,
+  "clean_dashboard_structure_preserved": true,
+  "current_phase_present_in_static_bundle": true,
+  "current_report_link_present_in_static_bundle": true,
+  "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "dashboard_build_status": "passed",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "final_pi_report_link_preserved": true,
+  "forbidden_claims_present": false,
+  "local_http_cross_session_check": "unavailable_due_execution_session_isolation",
+  "next_task_present_in_static_bundle": true,
+  "retained_count_present_in_static_bundle": true,
+  "source_review_stage_present_in_static_bundle": true,
+  "static_bundle_validation_passed": true,
+  "status": "passed_static_only_browser_unavailable",
+  "technical_details_collapsed_by_default_in_source": true,
+  "visual_browser_validation_passed": false,
+  "visual_browser_validation_status": "not_run_browser_unavailable",
+  "wage_growth_continuity_module_preserved": true
+}
