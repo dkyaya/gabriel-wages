@@ -19,6 +19,7 @@
 - PASS: `lane_hashes_match`
 - PASS: `lane_sizes_592_591_591_591_591`
 - PASS: `lane_union_exact_and_disjoint`
+- PASS: `large_file_audit_passes`
 - PASS: `no_extraction_ocr_rating_or_downstream_analysis`
 - PASS: `one_terminal_status_per_input`
 - PASS: `report_and_growth_module_preserved`
@@ -26,8 +27,7 @@
 - PASS: `retained_manifest_reconciles`
 - PASS: `retained_storage_manifest_hash_size_reconciles`
 - PASS: `retained_type_manifests_reconcile`
-- PASS: `unique_retained_hash_count_reconciles`
 - PASS: `staged_file_audit_passes`
-- PASS: `large_file_audit_passes`
+- PASS: `unique_retained_hash_count_reconciles`
 
 Overall: PASS.

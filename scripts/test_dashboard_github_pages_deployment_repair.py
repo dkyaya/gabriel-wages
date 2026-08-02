@@ -93,11 +93,17 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
         self.assertEqual(
             phase["current_phase_code"],
-            "broad_state_remaining_municipalities_verification_completed_source_review_ready",
+            "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready",
         )
         self.assertEqual(phase["verification_queue_count"], 3905)
         self.assertEqual(phase["verified_row_count"], 3905)
-        self.assertGreater(phase["source_review_ready_count"], 0)
+        self.assertEqual(phase["source_review_ready_count"], 2956)
+        self.assertEqual(phase["source_review_queue_count"], 2956)
+        self.assertEqual(phase["source_review_completed_count"], 2956)
+        self.assertEqual(phase["source_review_retained_count"], 2865)
+        self.assertEqual(phase["source_review_retained_pdf_count"], 2456)
+        self.assertEqual(phase["source_review_retained_html_count"], 409)
+        self.assertEqual(phase["source_review_retained_other_count"], 0)
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertIn(
@@ -272,7 +278,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(verification_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_verification_completed_source_review_ready"
                                                                         )
-                                                                        if verification_complete:
+                                                                        source_review_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "SOURCE-REVIEW-DOWNLOAD-2026-08-02/"
+                                                                            "remaining_municipalities_source_review_download_manifest.json"
+                                                                        )
+                                                                        source_review_complete = (
+                                                                            source_review_manifest.exists()
+                                                                            and json.loads(source_review_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready"
+                                                                        )
+                                                                        if source_review_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality source review/download complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "PDF-TEXT-READINESS-2026-08-02",
+                                                                            )
+                                                                        elif verification_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality verification complete",
