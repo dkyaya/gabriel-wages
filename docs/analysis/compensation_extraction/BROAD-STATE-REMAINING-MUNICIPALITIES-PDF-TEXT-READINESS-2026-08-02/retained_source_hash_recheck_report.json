@@ -1,0 +1,14 @@
+{
+  "all_files_exist": true,
+  "all_paths_inside_ignored_artifact_root": true,
+  "artifact_root": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02",
+  "artifact_root_git_ignored": true,
+  "checked_at": "2026-08-02T16:22:38Z",
+  "failure_rows": [],
+  "files_checked": 2865,
+  "hash_match_count": 2865,
+  "hash_mismatch_or_missing_count": 0,
+  "observed_retained_bytes": 3265531012,
+  "recorded_retained_bytes": 3265531012,
+  "unique_recorded_hashes": 2865
+}

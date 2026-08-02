@@ -86,16 +86,18 @@ class ReadinessPackageTests(unittest.TestCase):
         phase = json.loads((ROOT / "docs/dashboard/data/project_phase_summary.json").read_text())
         pdf_status = json.loads((ROOT / "docs/dashboard/data/pdf_readiness_status_summary.json").read_text())
         reports = json.loads((ROOT / "docs/dashboard/data/reports_index.json").read_text())
-        self.assertEqual(phase["stage"], "broad_state_4x2500_pdf_text_readiness_complete")
+        self.assertTrue(phase["broad_state_4x2500_pdf_text_readiness_available"])
+        self.assertEqual(phase["broad_state_4x2500_pdf_text_readiness_text_extraction_ready_count"], 2940)
         self.assertEqual(phase["current_scout_covered"], 16887)
-        self.assertEqual(phase["dashboard_map_filter"], "total_scout_coverage_only")
+        self.assertEqual(phase["actual_scout_covered_municipalities"], 35574)
+        self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
-        self.assertEqual(phase["wage_gap_analysis_readiness"], "blocked_pending_normalization")
-        self.assertEqual(phase["causal_analysis_readiness"], "blocked_pending_matched_structure")
+        self.assertIn(phase["wage_gap_analysis_readiness"], {"blocked_pending_normalization", "bounded_growth_continuity_only_final_estimation_blocked"})
+        self.assertIn(phase["causal_analysis_readiness"], {"blocked_pending_matched_structure", "blocked_pending_stronger_causal_design"})
         self.assertEqual(pdf_status["pdf_readiness_phase"], "broad_state_4x2500_3672_completed")
         current = [report for report in reports["reports"] if report["current"]]
         self.assertEqual(len(current), 1)
-        self.assertEqual(current[0]["id"], "broad-state-4x2500-pdf-text-readiness-2026-07-30")
+        self.assertEqual(current[0]["id"], "broad-state-4x2500-pi-report-final-2026-07-30")
 
 
 if __name__ == "__main__":

@@ -502,8 +502,8 @@ def prepare() -> None:
                 "inside_artifact_root": inside, "exists": exists, "recorded_size": row["retained_file_size_bytes"],
                 "observed_size": size, "recorded_sha256": row["retained_file_sha256"], "observed_sha256": observed_hash,
             })
-        lane = LANES[index % 4]
-        lane_sequence = index // 4 + 1
+        lane = LANES[index % len(LANES)]
+        lane_sequence = index // len(LANES) + 1
         source_type = normalized_source_type(row)
         detected = detect_file_type(path, row["retained_file_type"]) if exists else "missing"
         locked.append({
@@ -572,7 +572,9 @@ The 3,672 retained sources are locked into four deterministic, interleaved lanes
 
     representatives: list[dict[str, Any]] = []
     for source_type in ("pdf", "html", "other_document"):
-        row = next(item for item in locked if item["source_type"] == source_type)
+        row = next((item for item in locked if item["source_type"] == source_type), None)
+        if row is None:
+            continue
         result = inspect_one(row)
         representatives.append({
             "source_type": source_type, "source_review_download_id": row["source_review_download_id"],
@@ -608,7 +610,8 @@ def run_lane(lane: str, stagger_seconds: int) -> None:
     queue_path = OUTPUT_DIR / f"{lane}_queue.csv"
     queue = read_csv(queue_path)
     lane_manifest = read_json(OUTPUT_DIR / "lanes" / lane / "lane_manifest.json")
-    if len(queue) != 918 or sha256(queue_path) != lane_manifest["csv_sha256"] or any(row["lane_id"] != lane for row in queue):
+    expected_lane_count = LANE_COUNTS[lane]
+    if len(queue) != expected_lane_count or sha256(queue_path) != lane_manifest["csv_sha256"] or any(row["lane_id"] != lane for row in queue):
         raise RuntimeError("lane queue lock validation failed")
     csv_path, jsonl_path = lane_result_paths(lane)
     completed = read_csv(csv_path) if csv_path.exists() else []
@@ -649,8 +652,8 @@ def run_lane(lane: str, stagger_seconds: int) -> None:
         raise RuntimeError("lane completion reconciliation failed")
     completed_at = now()
     summary = {
-        "lane_id": lane, "status": "completed", "locked_queue_count": 918,
-        "completed_count": 918, "remaining_count": 0,
+        "lane_id": lane, "status": "completed", "locked_queue_count": expected_lane_count,
+        "completed_count": expected_lane_count, "remaining_count": 0,
         "source_type_counts": dict(sorted(Counter(row["source_type"] for row in completed).items())),
         "readiness_status_counts": dict(sorted(Counter(row["primary_readiness_status"] for row in completed).items())),
         "integrity_fail_count": sum(row["file_integrity_status"] != "integrity_pass" for row in completed),
@@ -660,16 +663,16 @@ def run_lane(lane: str, stagger_seconds: int) -> None:
     }
     write_json(lane_dir / "summary.json", summary)
     write_json(lane_dir / "checkpoint.json", {
-        "lane_id": lane, "status": "completed", "locked_queue_count": 918,
-        "completed_count": 918, "remaining_count": 0, "last_lane_sequence": 918,
+        "lane_id": lane, "status": "completed", "locked_queue_count": expected_lane_count,
+        "completed_count": expected_lane_count, "remaining_count": 0, "last_lane_sequence": expected_lane_count,
         "checkpointed_at": completed_at, "checkpoint_after_every_source": True,
     })
     write_json(lane_dir / "resume_state.json", {
-        "lane_id": lane, "status": "completed", "completed_count": 918, "remaining_count": 0,
+        "lane_id": lane, "status": "completed", "completed_count": expected_lane_count, "remaining_count": 0,
         "resumable": True, "resume_needed": False, "process_started_at": process_started,
         "work_started_at": work_started, "completed_at": completed_at, "stagger_seconds": stagger_seconds,
     })
-    print(json.dumps({"status": "lane_completed", "lane": lane, "rows": 918, "counts": summary["readiness_status_counts"]}))
+    print(json.dumps({"status": "lane_completed", "lane": lane, "rows": expected_lane_count, "counts": summary["readiness_status_counts"]}))
 
 
 def page_band(value: str) -> str:
@@ -734,7 +737,7 @@ def merge() -> None:
         csv_path, _ = lane_result_paths(lane)
         lane_results = read_csv(csv_path)
         summary = read_json(csv_path.parent / "summary.json")
-        if len(lane_results) != 918 or summary.get("status") != "completed":
+        if len(lane_results) != LANE_COUNTS[lane] or summary.get("status") != "completed":
             raise RuntimeError(f"{lane} incomplete")
         results.extend(lane_results)
         lane_summaries[lane] = summary
@@ -776,7 +779,7 @@ def merge() -> None:
         "task_id": TASK_ID, "final_decision": DECISION, "completed_at": now(),
         "retained_source_count": EXPECTED_COUNT, "retained_pdf_count": source_counts["pdf"],
         "retained_html_count": source_counts["html"], "retained_other_document_count": source_counts["other_document"],
-        "lane_distribution": LANE_COUNTS, "completed_lane_count": 4,
+        "lane_distribution": LANE_COUNTS, "completed_lane_count": len(LANES),
         "primary_readiness_status_counts": {status: counts[status] for status in sorted(CONTROLLED_STATUSES)},
         "parse_text_pdf_ready_count": counts["parse_text_pdf_ready"],
         "html_text_ready_count": counts["html_text_ready"],
@@ -863,7 +866,7 @@ Run `BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30` over only `text_extraction_r
 """)
     write_json(OUTPUT_DIR / "final_decision.json", {
         "task_id": TASK_ID, "decision": DECISION, "text_extraction_ready_count": len(extraction_ready),
-        "completed_lane_count": 4, "dashboard_update_required": True,
+        "completed_lane_count": len(LANES), "dashboard_update_required": True,
         "next_task": "BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30", "global_analysis_readiness": False,
     })
     print(json.dumps({"status": "merge_completed", "decision": DECISION, "summary": summary}))

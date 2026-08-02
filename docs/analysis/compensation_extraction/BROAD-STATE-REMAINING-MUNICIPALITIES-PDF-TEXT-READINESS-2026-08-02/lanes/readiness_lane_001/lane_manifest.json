@@ -1,0 +1,17 @@
+{
+  "csv_sha256": "c73ffdeed3dd255acfafe5bbbeeeaf5b6e3160ae6cb2a779d99bf4caf94e7686",
+  "id_set_sha256": "f68c5fc4fae01b020fcc5777c54188e4276ea8563f5b3ac991dee8989f77fe3e",
+  "jsonl_sha256": "2ed6baea2158055f822e80281bb97b538646d450733e0ef48e89e65d81fd0d0d",
+  "lane_id": "readiness_lane_001",
+  "priority_counts": {
+    "high_priority_verification_ready": 370,
+    "medium_priority_verification_ready": 203
+  },
+  "row_count": 573,
+  "source_type_counts": {
+    "html": 78,
+    "pdf": 495
+  },
+  "stagger_seconds": 0,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02"
+}

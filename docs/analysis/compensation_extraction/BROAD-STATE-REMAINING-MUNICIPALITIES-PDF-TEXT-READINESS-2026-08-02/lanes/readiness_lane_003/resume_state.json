@@ -1,0 +1,12 @@
+{
+  "completed_at": "2026-08-02T16:39:13Z",
+  "completed_count": 573,
+  "lane_id": "readiness_lane_003",
+  "process_started_at": "2026-08-02T16:23:00Z",
+  "remaining_count": 0,
+  "resumable": true,
+  "resume_needed": false,
+  "stagger_seconds": 960,
+  "status": "completed",
+  "work_started_at": "2026-08-02T16:39:00Z"
+}

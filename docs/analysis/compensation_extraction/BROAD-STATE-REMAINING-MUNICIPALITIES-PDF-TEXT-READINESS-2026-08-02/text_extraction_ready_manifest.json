@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-08-02T16:56:57Z",
+  "csv_sha256": "0a5bbe32910be9edc69d522cf2d586e6d8cc2624f5836457f052d75c41a715d3",
+  "eligible_statuses": [
+    "html_text_ready",
+    "other_document_text_ready",
+    "parse_text_pdf_ready"
+  ],
+  "full_text_extracted": false,
+  "global_analysis_readiness": false,
+  "id_set_sha256": "2838b5b3821f3b216aa6b48aaaf99e909846c5795b503074d5e83eb4c00eb813",
+  "jsonl_sha256": "55ed81ade42a210ac2e17ea715fb8a053af5a6d2bddeae888c1ff82ddd157dbe",
+  "ocr_included": false,
+  "row_count": 2558,
+  "status_counts": {
+    "html_text_ready": 382,
+    "parse_text_pdf_ready": 2176
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02"
+}

@@ -1,0 +1,16 @@
+{
+  "maximum_pages": 893,
+  "minimum_pages": 1,
+  "page_count_bands": {
+    "001_010": 1594,
+    "011_025": 312,
+    "026_050": 240,
+    "051_100": 198,
+    "101_250": 79,
+    "251_500": 26,
+    "501_plus": 7
+  },
+  "pdf_count": 2456,
+  "pdf_page_count_recorded_count": 2456,
+  "total_pages_where_readable": 60223
+}

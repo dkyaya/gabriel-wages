@@ -1803,6 +1803,11 @@ BROAD_STATE_REMAINING_SOURCE_REVIEW_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02"
 )
+BROAD_STATE_REMAINING_PDF_TEXT_READINESS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7287,6 +7292,44 @@ def broad_state_remaining_source_review_status() -> tuple[bool, dict[str, Any]]:
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_pdf_text_readiness_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize completed bounded PDF/HTML text-readiness classification."""
+    directory = BROAD_STATE_REMAINING_PDF_TEXT_READINESS_DIR
+    required = (
+        directory / "remaining_municipalities_pdf_text_readiness_manifest.json",
+        directory / "remaining_municipalities_pdf_text_readiness_summary.json",
+        directory / "text_extraction_ready_manifest.json",
+        directory / "retained_source_hash_recheck_report.json",
+        directory / "dashboard_remaining_pdf_text_readiness_update_summary.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, ready, hashes, dashboard, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_pdf_text_readiness_completed_text_extraction_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("retained_source_count") == 2865
+        and summary.get("retained_pdf_count") == 2456
+        and summary.get("retained_html_count") == 409
+        and summary.get("retained_other_document_count") == 0
+        and sum(summary.get("lane_distribution", {}).values()) == 2865
+        and ready.get("row_count") == summary.get("text_extraction_ready_count")
+        and hashes.get("hash_mismatch_or_missing_count") == 0
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and forbidden.get("full_text_extraction_runs") == 0
+        and forbidden.get("ocr_runs") == 0
+    )
+    if not gates:
+        raise ValueError("remaining-municipality PDF/text-readiness package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -10986,6 +11029,9 @@ def build_project_phase_summary(
     remaining_source_review_available, remaining_source_review = (
         broad_state_remaining_source_review_status()
     )
+    remaining_pdf_text_readiness_available, remaining_pdf_text_readiness = (
+        broad_state_remaining_pdf_text_readiness_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12590,6 +12636,39 @@ def build_project_phase_summary(
                 "defer OCR, rating, ingestion, normalization, matching, and analysis",
             ],
             "last_updated_context": "remaining_municipality_source_review_download_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_pdf_text_readiness_available:
+        payload.update({
+            "data_vintage": "2026-08-02",
+            "stage": "broad_state_remaining_municipalities_pdf_text_readiness_complete",
+            "current_phase": "Remaining-municipality PDF/text readiness complete",
+            "current_phase_code": remaining_pdf_text_readiness["decision"],
+            "current_evidence_status": "bounded_readiness_complete_non_ocr_text_extraction_queue_ready",
+            "remaining_municipality_pdf_text_readiness_available": True,
+            "remaining_municipality_readiness_retained_count": remaining_pdf_text_readiness["retained_source_count"],
+            "remaining_municipality_readiness_pdf_count": remaining_pdf_text_readiness["retained_pdf_count"],
+            "remaining_municipality_readiness_html_count": remaining_pdf_text_readiness["retained_html_count"],
+            "remaining_municipality_parse_text_pdf_ready_count": remaining_pdf_text_readiness["parse_text_pdf_ready_count"],
+            "remaining_municipality_html_text_ready_count": remaining_pdf_text_readiness["html_text_ready_count"],
+            "remaining_municipality_other_document_text_ready_count": remaining_pdf_text_readiness["other_document_text_ready_count"],
+            "remaining_municipality_text_extraction_ready_count": remaining_pdf_text_readiness["text_extraction_ready_count"],
+            "remaining_municipality_readiness_status_counts": remaining_pdf_text_readiness["primary_readiness_status_counts"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02",
+            "next_phase": "Extract non-OCR text only from the locked readiness-approved queue",
+            "next_phase_sequence": [
+                "process only parse-text PDF, HTML-text, and supported other-document rows",
+                "checkpoint every retained source and store extracted text only in ignored local artifacts",
+                "defer OCR, span extraction, rating, ingestion, normalization, matching, and analysis",
+            ],
+            "last_updated_context": "remaining_municipality_pdf_text_readiness_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

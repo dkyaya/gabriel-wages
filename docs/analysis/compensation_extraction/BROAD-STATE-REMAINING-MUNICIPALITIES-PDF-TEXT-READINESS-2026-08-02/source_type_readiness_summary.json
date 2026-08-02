@@ -1,0 +1,32 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 2,
+  "group_field": "source_type",
+  "retained_source_count": 2865,
+  "rows": [
+    {
+      "not_ready_count": 27,
+      "readiness_status_counts": {
+        "html_text_ready": 382,
+        "needs_manual_review": 10,
+        "shell_or_navigation_only": 17
+      },
+      "retained_source_count": 409,
+      "source_type": "html",
+      "text_extraction_ready_count": 382
+    },
+    {
+      "not_ready_count": 280,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 10,
+        "ocr_later": 248,
+        "oversized_defer": 22,
+        "parse_text_pdf_ready": 2176
+      },
+      "retained_source_count": 2456,
+      "source_type": "pdf",
+      "text_extraction_ready_count": 2176
+    }
+  ],
+  "text_extraction_ready_count": 2558
+}

@@ -1,0 +1,87 @@
+{
+  "all_rows_exactly_once": true,
+  "deterministic_assignment": "stable_sha256_interleave",
+  "lanes": {
+    "readiness_lane_001": {
+      "csv_sha256": "c73ffdeed3dd255acfafe5bbbeeeaf5b6e3160ae6cb2a779d99bf4caf94e7686",
+      "id_set_sha256": "f68c5fc4fae01b020fcc5777c54188e4276ea8563f5b3ac991dee8989f77fe3e",
+      "jsonl_sha256": "2ed6baea2158055f822e80281bb97b538646d450733e0ef48e89e65d81fd0d0d",
+      "priority_counts": {
+        "high_priority_verification_ready": 370,
+        "medium_priority_verification_ready": 203
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 78,
+        "pdf": 495
+      },
+      "stagger_seconds": 0
+    },
+    "readiness_lane_002": {
+      "csv_sha256": "e9a816428b377417e50dde8c1f0cb63e32b5135f293c6832a6c8c6d9e8a3b2a7",
+      "id_set_sha256": "fb4ca79589114c708d0ea15216e8f533eb6bb72bfc3a01e14b2b6baa53b106bd",
+      "jsonl_sha256": "296f8b871054de433c5b555016a47b5500d435907da47aad700aaf486e15937e",
+      "priority_counts": {
+        "high_priority_verification_ready": 394,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 177
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 70,
+        "pdf": 503
+      },
+      "stagger_seconds": 480
+    },
+    "readiness_lane_003": {
+      "csv_sha256": "91c1afa9fb26a368b408b7f191a3beaa8b30c6cf2fa39174746cc8a134ebadb3",
+      "id_set_sha256": "73b81ad33ee1556c0a414eee5ad7cc46a97fb8753521a2877623e7f26e672020",
+      "jsonl_sha256": "d5ab28fa4e1383bcf290739531e01c8fd3f09b25b1ea8e4f993f94ac65a87cff",
+      "priority_counts": {
+        "high_priority_verification_ready": 370,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 201
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 80,
+        "pdf": 493
+      },
+      "stagger_seconds": 960
+    },
+    "readiness_lane_004": {
+      "csv_sha256": "cf4e6744762657a8aefe51352858c56e779632a52cd8b600f3dfade9a18ebd3c",
+      "id_set_sha256": "18904d95fef8efe620bddcd7032f6b935f06d4ae5f5bfb6a7e83d63bef66305c",
+      "jsonl_sha256": "4c5e529e722bc8ac633bc3601e04399a053d4d111a6a98e961f8f06c8c0f19bf",
+      "priority_counts": {
+        "high_priority_verification_ready": 375,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 195
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 91,
+        "pdf": 482
+      },
+      "stagger_seconds": 1440
+    },
+    "readiness_lane_005": {
+      "csv_sha256": "1b9ab51901b743097aaf5d979211867c2a8dfcf461505d75b915073ecd1e498d",
+      "id_set_sha256": "8bd92c18510ae93abba1627bc558743480d1c0ea6c94ddb1bbc7d0df2445c9bf",
+      "jsonl_sha256": "ceb58a0b31ec3b0fac4e46cdee4b0c555cd292d3b9212415bfacc3e4a39d459a",
+      "priority_counts": {
+        "high_priority_verification_ready": 373,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 197
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 90,
+        "pdf": 483
+      },
+      "stagger_seconds": 1920
+    }
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02",
+  "total": 2865
+}

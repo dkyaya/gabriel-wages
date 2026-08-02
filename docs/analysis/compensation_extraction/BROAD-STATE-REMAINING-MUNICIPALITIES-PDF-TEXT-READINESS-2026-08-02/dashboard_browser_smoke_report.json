@@ -1,0 +1,19 @@
+{
+  "browser_controller_available": false,
+  "browser_controller_error": "No browser is available; the prescribed bootstrap-troubleshooting document was unavailable because the installed plugin documentation path was version-skewed.",
+  "build_passed": true,
+  "cross_command_local_http_available": false,
+  "cross_command_local_http_limitation": "The preview process ran in an isolated execution session and could not be reached from a separate command.",
+  "final_pi_report_link_intact": true,
+  "forbidden_dashboard_claims_found": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "relative_pages_build_passed": true,
+  "remaining_readiness_stage_present": true,
+  "retained_source_count_present": 2865,
+  "text_extraction_ready_count_present": 2558,
+  "technical_details_collapsed_markup_present": true,
+  "tested_at": "2026-08-02T17:00:00Z",
+  "validation_method": "production_and_relative_build_plus_static_bundle_contract; visual browser unavailable",
+  "wage_growth_continuity_module_intact": true,
+  "status": "passed_static_browser_unavailable"
+}

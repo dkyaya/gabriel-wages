@@ -1,0 +1,333 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 23,
+  "group_field": "state",
+  "region_summary": [
+    {
+      "not_ready_count": 188,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 8,
+        "html_text_ready": 239,
+        "needs_manual_review": 6,
+        "ocr_later": 142,
+        "oversized_defer": 21,
+        "parse_text_pdf_ready": 1379,
+        "shell_or_navigation_only": 11
+      },
+      "region": "Midwest",
+      "retained_source_count": 1806,
+      "text_extraction_ready_count": 1618
+    },
+    {
+      "not_ready_count": 84,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 110,
+        "needs_manual_review": 3,
+        "ocr_later": 73,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 695,
+        "shell_or_navigation_only": 5
+      },
+      "region": "Northeast",
+      "retained_source_count": 889,
+      "text_extraction_ready_count": 805
+    },
+    {
+      "not_ready_count": 35,
+      "readiness_status_counts": {
+        "html_text_ready": 33,
+        "needs_manual_review": 1,
+        "ocr_later": 33,
+        "parse_text_pdf_ready": 100,
+        "shell_or_navigation_only": 1
+      },
+      "region": "South",
+      "retained_source_count": 168,
+      "text_extraction_ready_count": 133
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 2
+      },
+      "region": "West",
+      "retained_source_count": 2,
+      "text_extraction_ready_count": 2
+    }
+  ],
+  "retained_source_count": 2865,
+  "rows": [
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 1
+      },
+      "retained_source_count": 1,
+      "state": "DE",
+      "text_extraction_ready_count": 1
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "html_text_ready": 1,
+        "parse_text_pdf_ready": 1
+      },
+      "retained_source_count": 2,
+      "state": "FL",
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "html_text_ready": 4,
+        "parse_text_pdf_ready": 7
+      },
+      "retained_source_count": 11,
+      "state": "GA",
+      "text_extraction_ready_count": 11
+    },
+    {
+      "not_ready_count": 2,
+      "readiness_status_counts": {
+        "html_text_ready": 6,
+        "ocr_later": 2,
+        "parse_text_pdf_ready": 30
+      },
+      "retained_source_count": 38,
+      "state": "IA",
+      "text_extraction_ready_count": 36
+    },
+    {
+      "not_ready_count": 39,
+      "readiness_status_counts": {
+        "html_text_ready": 37,
+        "needs_manual_review": 1,
+        "ocr_later": 30,
+        "oversized_defer": 6,
+        "parse_text_pdf_ready": 194,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 270,
+      "state": "IL",
+      "text_extraction_ready_count": 231
+    },
+    {
+      "not_ready_count": 26,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 12,
+        "ocr_later": 23,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 50
+      },
+      "retained_source_count": 88,
+      "state": "IN",
+      "text_extraction_ready_count": 62
+    },
+    {
+      "not_ready_count": 9,
+      "readiness_status_counts": {
+        "html_text_ready": 13,
+        "ocr_later": 8,
+        "parse_text_pdf_ready": 52,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 74,
+      "state": "KS",
+      "text_extraction_ready_count": 65
+    },
+    {
+      "not_ready_count": 1,
+      "readiness_status_counts": {
+        "ocr_later": 1,
+        "parse_text_pdf_ready": 5
+      },
+      "retained_source_count": 6,
+      "state": "ME",
+      "text_extraction_ready_count": 5
+    },
+    {
+      "not_ready_count": 27,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 25,
+        "needs_manual_review": 3,
+        "ocr_later": 18,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 304,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 356,
+      "state": "MI",
+      "text_extraction_ready_count": 329
+    },
+    {
+      "not_ready_count": 16,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 45,
+        "needs_manual_review": 2,
+        "ocr_later": 8,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 166,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 227,
+      "state": "MN",
+      "text_extraction_ready_count": 211
+    },
+    {
+      "not_ready_count": 8,
+      "readiness_status_counts": {
+        "html_text_ready": 11,
+        "ocr_later": 7,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 25
+      },
+      "retained_source_count": 44,
+      "state": "MO",
+      "text_extraction_ready_count": 36
+    },
+    {
+      "not_ready_count": 3,
+      "readiness_status_counts": {
+        "html_text_ready": 2,
+        "ocr_later": 3,
+        "parse_text_pdf_ready": 9
+      },
+      "retained_source_count": 14,
+      "state": "NC",
+      "text_extraction_ready_count": 11
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "html_text_ready": 8,
+        "parse_text_pdf_ready": 29
+      },
+      "retained_source_count": 37,
+      "state": "ND",
+      "text_extraction_ready_count": 37
+    },
+    {
+      "not_ready_count": 1,
+      "readiness_status_counts": {
+        "html_text_ready": 5,
+        "ocr_later": 1,
+        "parse_text_pdf_ready": 8
+      },
+      "retained_source_count": 14,
+      "state": "NE",
+      "text_extraction_ready_count": 13
+    },
+    {
+      "not_ready_count": 4,
+      "readiness_status_counts": {
+        "html_text_ready": 3,
+        "ocr_later": 4,
+        "parse_text_pdf_ready": 21
+      },
+      "retained_source_count": 28,
+      "state": "NJ",
+      "text_extraction_ready_count": 24
+    },
+    {
+      "not_ready_count": 32,
+      "readiness_status_counts": {
+        "html_text_ready": 60,
+        "needs_manual_review": 3,
+        "ocr_later": 26,
+        "parse_text_pdf_ready": 289,
+        "shell_or_navigation_only": 3
+      },
+      "retained_source_count": 381,
+      "state": "NY",
+      "text_extraction_ready_count": 349
+    },
+    {
+      "not_ready_count": 30,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 27,
+        "ocr_later": 25,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 221,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 278,
+      "state": "OH",
+      "text_extraction_ready_count": 248
+    },
+    {
+      "not_ready_count": 47,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 47,
+        "ocr_later": 42,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 377,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 471,
+      "state": "PA",
+      "text_extraction_ready_count": 424
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "html_text_ready": 3,
+        "parse_text_pdf_ready": 29
+      },
+      "retained_source_count": 32,
+      "state": "SD",
+      "text_extraction_ready_count": 32
+    },
+    {
+      "not_ready_count": 32,
+      "readiness_status_counts": {
+        "html_text_ready": 26,
+        "needs_manual_review": 1,
+        "ocr_later": 30,
+        "parse_text_pdf_ready": 82,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 140,
+      "state": "TX",
+      "text_extraction_ready_count": 108
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 3
+      },
+      "retained_source_count": 3,
+      "state": "VT",
+      "text_extraction_ready_count": 3
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 2,
+      "state": "WA",
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 30,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 47,
+        "ocr_later": 20,
+        "oversized_defer": 6,
+        "parse_text_pdf_ready": 271,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 348,
+      "state": "WI",
+      "text_extraction_ready_count": 318
+    }
+  ],
+  "text_extraction_ready_count": 2558
+}

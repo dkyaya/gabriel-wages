@@ -1,0 +1,181 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 14,
+  "group_field": "source_family_hint",
+  "retained_source_count": 2865,
+  "rows": [
+    {
+      "not_ready_count": 71,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 178,
+        "needs_manual_review": 5,
+        "ocr_later": 55,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 766,
+        "shell_or_navigation_only": 7
+      },
+      "retained_source_count": 1015,
+      "source_family_hint": "agenda_packet_or_minutes",
+      "text_extraction_ready_count": 944
+    },
+    {
+      "not_ready_count": 10,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 3,
+        "ocr_later": 7,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 89
+      },
+      "retained_source_count": 102,
+      "source_family_hint": "arbitration_award",
+      "text_extraction_ready_count": 92
+    },
+    {
+      "not_ready_count": 75,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 2,
+        "html_text_ready": 53,
+        "needs_manual_review": 1,
+        "ocr_later": 64,
+        "oversized_defer": 3,
+        "parse_text_pdf_ready": 391,
+        "shell_or_navigation_only": 5
+      },
+      "retained_source_count": 519,
+      "source_family_hint": "budget_or_pay_plan",
+      "text_extraction_ready_count": 444
+    },
+    {
+      "not_ready_count": 26,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 3,
+        "html_text_ready": 17,
+        "needs_manual_review": 1,
+        "ocr_later": 20,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 172
+      },
+      "retained_source_count": 215,
+      "source_family_hint": "cba",
+      "text_extraction_ready_count": 189
+    },
+    {
+      "not_ready_count": 4,
+      "readiness_status_counts": {
+        "html_text_ready": 8,
+        "ocr_later": 3,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 27
+      },
+      "retained_source_count": 39,
+      "source_family_hint": "civil_service_or_hr_pay_plan",
+      "text_extraction_ready_count": 35
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "html_text_ready": 1
+      },
+      "retained_source_count": 1,
+      "source_family_hint": "classification_study",
+      "text_extraction_ready_count": 1
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 2,
+      "source_family_hint": "compensation_study",
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "html_text_ready": 5,
+        "parse_text_pdf_ready": 39
+      },
+      "retained_source_count": 44,
+      "source_family_hint": "factfinding_report",
+      "text_extraction_ready_count": 44
+    },
+    {
+      "not_ready_count": 18,
+      "readiness_status_counts": {
+        "html_text_ready": 5,
+        "ocr_later": 15,
+        "oversized_defer": 3,
+        "parse_text_pdf_ready": 99
+      },
+      "retained_source_count": 122,
+      "source_family_hint": "mou_or_memorandum",
+      "text_extraction_ready_count": 104
+    },
+    {
+      "not_ready_count": 33,
+      "readiness_status_counts": {
+        "html_text_ready": 30,
+        "ocr_later": 29,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 130,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 193,
+      "source_family_hint": "other_local_government_pay_policy",
+      "text_extraction_ready_count": 160
+    },
+    {
+      "not_ready_count": 10,
+      "readiness_status_counts": {
+        "html_text_ready": 9,
+        "ocr_later": 7,
+        "oversized_defer": 2,
+        "parse_text_pdf_ready": 74,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 93,
+      "source_family_hint": "personnel_policy",
+      "text_extraction_ready_count": 83
+    },
+    {
+      "not_ready_count": 20,
+      "readiness_status_counts": {
+        "html_text_ready": 16,
+        "needs_manual_review": 1,
+        "ocr_later": 18,
+        "oversized_defer": 1,
+        "parse_text_pdf_ready": 71
+      },
+      "retained_source_count": 107,
+      "source_family_hint": "salary_ordinance",
+      "text_extraction_ready_count": 87
+    },
+    {
+      "not_ready_count": 0,
+      "readiness_status_counts": {
+        "parse_text_pdf_ready": 2
+      },
+      "retained_source_count": 2,
+      "source_family_hint": "settlement_agreement",
+      "text_extraction_ready_count": 2
+    },
+    {
+      "not_ready_count": 40,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 1,
+        "html_text_ready": 57,
+        "needs_manual_review": 2,
+        "ocr_later": 30,
+        "oversized_defer": 5,
+        "parse_text_pdf_ready": 314,
+        "shell_or_navigation_only": 2
+      },
+      "retained_source_count": 411,
+      "source_family_hint": "wage_schedule",
+      "text_extraction_ready_count": 371
+    }
+  ],
+  "text_extraction_ready_count": 2558
+}

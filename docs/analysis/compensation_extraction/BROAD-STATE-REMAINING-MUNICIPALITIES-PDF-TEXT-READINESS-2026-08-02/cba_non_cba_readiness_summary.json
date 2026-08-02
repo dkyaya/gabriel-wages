@@ -1,0 +1,39 @@
+{
+  "global_analysis_readiness": false,
+  "group_count": 2,
+  "group_field": "cba_non_cba_hint",
+  "retained_source_count": 2865,
+  "rows": [
+    {
+      "cba_non_cba_hint": "cba_arbitration_factfinding_hint",
+      "not_ready_count": 53,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 5,
+        "html_text_ready": 36,
+        "needs_manual_review": 3,
+        "ocr_later": 40,
+        "oversized_defer": 4,
+        "parse_text_pdf_ready": 402,
+        "shell_or_navigation_only": 1
+      },
+      "retained_source_count": 491,
+      "text_extraction_ready_count": 438
+    },
+    {
+      "cba_non_cba_hint": "non_cba_or_unresolved_hint",
+      "not_ready_count": 254,
+      "readiness_status_counts": {
+        "encrypted_or_locked": 5,
+        "html_text_ready": 346,
+        "needs_manual_review": 7,
+        "ocr_later": 208,
+        "oversized_defer": 18,
+        "parse_text_pdf_ready": 1774,
+        "shell_or_navigation_only": 16
+      },
+      "retained_source_count": 2374,
+      "text_extraction_ready_count": 2120
+    }
+  ],
+  "text_extraction_ready_count": 2558
+}

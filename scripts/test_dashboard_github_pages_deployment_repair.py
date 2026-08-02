@@ -93,8 +93,9 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
         self.assertEqual(
             phase["current_phase_code"],
-            "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready",
+            "broad_state_remaining_municipalities_pdf_text_readiness_completed_text_extraction_ready",
         )
+        self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_pdf_text_readiness_complete")
         self.assertEqual(phase["verification_queue_count"], 3905)
         self.assertEqual(phase["verified_row_count"], 3905)
         self.assertEqual(phase["source_review_ready_count"], 2956)
@@ -104,6 +105,14 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["source_review_retained_pdf_count"], 2456)
         self.assertEqual(phase["source_review_retained_html_count"], 409)
         self.assertEqual(phase["source_review_retained_other_count"], 0)
+        self.assertTrue(phase["remaining_municipality_pdf_text_readiness_available"])
+        self.assertEqual(phase["remaining_municipality_readiness_retained_count"], 2865)
+        self.assertEqual(phase["remaining_municipality_readiness_pdf_count"], 2456)
+        self.assertEqual(phase["remaining_municipality_readiness_html_count"], 409)
+        self.assertEqual(phase["remaining_municipality_parse_text_pdf_ready_count"], 2176)
+        self.assertEqual(phase["remaining_municipality_html_text_ready_count"], 382)
+        self.assertEqual(phase["remaining_municipality_other_document_text_ready_count"], 0)
+        self.assertEqual(phase["remaining_municipality_text_extraction_ready_count"], 2558)
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertIn(
@@ -289,7 +298,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(source_review_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready"
                                                                         )
-                                                                        if source_review_complete:
+                                                                        readiness_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "PDF-TEXT-READINESS-2026-08-02/"
+                                                                            "remaining_municipalities_pdf_text_readiness_manifest.json"
+                                                                        )
+                                                                        readiness_complete = (
+                                                                            readiness_manifest.exists()
+                                                                            and json.loads(readiness_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_pdf_text_readiness_completed_text_extraction_ready"
+                                                                        )
+                                                                        if readiness_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality PDF/text readiness complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "TEXT-EXTRACTION-2026-08-02",
+                                                                            )
+                                                                        elif source_review_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality source review/download complete",

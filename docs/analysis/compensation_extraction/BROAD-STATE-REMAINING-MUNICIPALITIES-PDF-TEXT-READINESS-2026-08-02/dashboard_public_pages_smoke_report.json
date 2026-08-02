@@ -1,0 +1,10 @@
+{
+  "cache_busting_url": null,
+  "deployment_run_id": null,
+  "final_pi_report_link_intact": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "public_http_status": "pending_push_and_deployment",
+  "status": "pending_push_and_deployment",
+  "visual_browser_validated": false,
+  "wage_growth_continuity_module_intact": true
+}

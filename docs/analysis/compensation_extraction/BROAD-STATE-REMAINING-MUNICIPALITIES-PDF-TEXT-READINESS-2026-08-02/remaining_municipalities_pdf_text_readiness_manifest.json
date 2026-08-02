@@ -1,0 +1,148 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02",
+  "completed_at": "2026-08-02T16:56:57Z",
+  "completed_lane_count": 5,
+  "created_at": "2026-08-02T16:22:38Z",
+  "dashboard_map_filter": "scout_coverage_rate_only",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "decision": "broad_state_remaining_municipalities_pdf_text_readiness_completed_text_extraction_ready",
+  "execution_status": "completed",
+  "final_pi_report_link_preserved": true,
+  "full_text_persisted": false,
+  "global_analysis_readiness": false,
+  "input_commit": "63a0cea36c913590d527ffebe3b3e9402b56edd1",
+  "input_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02",
+  "lane_count": 5,
+  "lane_distribution": {
+    "readiness_lane_001": 573,
+    "readiness_lane_002": 573,
+    "readiness_lane_003": 573,
+    "readiness_lane_004": 573,
+    "readiness_lane_005": 573
+  },
+  "lane_manifests": {
+    "readiness_lane_001": {
+      "csv_sha256": "c73ffdeed3dd255acfafe5bbbeeeaf5b6e3160ae6cb2a779d99bf4caf94e7686",
+      "id_set_sha256": "f68c5fc4fae01b020fcc5777c54188e4276ea8563f5b3ac991dee8989f77fe3e",
+      "jsonl_sha256": "2ed6baea2158055f822e80281bb97b538646d450733e0ef48e89e65d81fd0d0d",
+      "priority_counts": {
+        "high_priority_verification_ready": 370,
+        "medium_priority_verification_ready": 203
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 78,
+        "pdf": 495
+      },
+      "stagger_seconds": 0
+    },
+    "readiness_lane_002": {
+      "csv_sha256": "e9a816428b377417e50dde8c1f0cb63e32b5135f293c6832a6c8c6d9e8a3b2a7",
+      "id_set_sha256": "fb4ca79589114c708d0ea15216e8f533eb6bb72bfc3a01e14b2b6baa53b106bd",
+      "jsonl_sha256": "296f8b871054de433c5b555016a47b5500d435907da47aad700aaf486e15937e",
+      "priority_counts": {
+        "high_priority_verification_ready": 394,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 177
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 70,
+        "pdf": 503
+      },
+      "stagger_seconds": 480
+    },
+    "readiness_lane_003": {
+      "csv_sha256": "91c1afa9fb26a368b408b7f191a3beaa8b30c6cf2fa39174746cc8a134ebadb3",
+      "id_set_sha256": "73b81ad33ee1556c0a414eee5ad7cc46a97fb8753521a2877623e7f26e672020",
+      "jsonl_sha256": "d5ab28fa4e1383bcf290739531e01c8fd3f09b25b1ea8e4f993f94ac65a87cff",
+      "priority_counts": {
+        "high_priority_verification_ready": 370,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 201
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 80,
+        "pdf": 493
+      },
+      "stagger_seconds": 960
+    },
+    "readiness_lane_004": {
+      "csv_sha256": "cf4e6744762657a8aefe51352858c56e779632a52cd8b600f3dfade9a18ebd3c",
+      "id_set_sha256": "18904d95fef8efe620bddcd7032f6b935f06d4ae5f5bfb6a7e83d63bef66305c",
+      "jsonl_sha256": "4c5e529e722bc8ac633bc3601e04399a053d4d111a6a98e961f8f06c8c0f19bf",
+      "priority_counts": {
+        "high_priority_verification_ready": 375,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 195
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 91,
+        "pdf": 482
+      },
+      "stagger_seconds": 1440
+    },
+    "readiness_lane_005": {
+      "csv_sha256": "1b9ab51901b743097aaf5d979211867c2a8dfcf461505d75b915073ecd1e498d",
+      "id_set_sha256": "8bd92c18510ae93abba1627bc558743480d1c0ea6c94ddb1bbc7d0df2445c9bf",
+      "jsonl_sha256": "ceb58a0b31ec3b0fac4e46cdee4b0c555cd292d3b9212415bfacc3e4a39d459a",
+      "priority_counts": {
+        "high_priority_verification_ready": 373,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 197
+      },
+      "row_count": 573,
+      "source_type_counts": {
+        "html": 90,
+        "pdf": 483
+      },
+      "stagger_seconds": 1920
+    }
+  },
+  "lane_sizes": {
+    "readiness_lane_001": 573,
+    "readiness_lane_002": 573,
+    "readiness_lane_003": 573,
+    "readiness_lane_004": 573,
+    "readiness_lane_005": 573
+  },
+  "locked_id_set_sha256": "2a500d2777d14005499c572788a915825b79e3e4b15e40e621a74c0b87c7cfb3",
+  "locked_queue_csv_sha256": "476e3ce02c5bcca3c2bcda19739be7e89f6dd2cc044caa73f937b6773c52f48c",
+  "locked_queue_jsonl_sha256": "7062a65dd2f117679a0c27e549b78966a520e365af3cae8e4cf6acaffcd8da3b",
+  "network_access": false,
+  "ocr_performed": false,
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02",
+  "primary_readiness_status_counts": {
+    "corrupt_or_broken": 0,
+    "encrypted_or_locked": 10,
+    "html_text_ready": 382,
+    "needs_manual_review": 10,
+    "ocr_later": 248,
+    "other_document_text_ready": 0,
+    "oversized_defer": 22,
+    "parse_text_pdf_ready": 2176,
+    "readiness_error": 0,
+    "shell_or_navigation_only": 17,
+    "unsupported_file_type": 0
+  },
+  "prior_decision": "broad_state_remaining_municipalities_source_review_download_completed_pdf_readiness_ready",
+  "probe_limits": {
+    "html_bytes": 262144,
+    "oversized_bytes": 20971520,
+    "oversized_pages": 500,
+    "pdf_pages": 3
+  },
+  "retained_source_count": 2865,
+  "retained_type_counts": {
+    "html": 409,
+    "other_document": 0,
+    "pdf": 2456
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02",
+  "text_extraction_ready_count": 2558,
+  "validated_at": "2026-08-02T17:00:39Z",
+  "validation_passed": true,
+  "wage_growth_continuity_module_preserved": true
+}

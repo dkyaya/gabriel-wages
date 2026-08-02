@@ -1,0 +1,25 @@
+{
+  "full_text_persisted": false,
+  "network_used": false,
+  "ocr_performed": false,
+  "representative_count": 2,
+  "representatives": [
+    {
+      "file_integrity_status": "integrity_pass",
+      "full_text_persisted_flag": false,
+      "primary_readiness_status": "parse_text_pdf_ready",
+      "reason_code": "bounded_first_three_pages_show_machine_readable_text_layer",
+      "source_review_download_id": "RMSRD-20260802-f77c695ac77c94024c09",
+      "source_type": "pdf"
+    },
+    {
+      "file_integrity_status": "integrity_pass",
+      "full_text_persisted_flag": false,
+      "primary_readiness_status": "html_text_ready",
+      "reason_code": "bounded_html_structure_has_usable_visible_text",
+      "source_review_download_id": "RMSRD-20260802-30989cc6b5ee3270baca",
+      "source_type": "html"
+    }
+  ],
+  "status": "passed"
+}

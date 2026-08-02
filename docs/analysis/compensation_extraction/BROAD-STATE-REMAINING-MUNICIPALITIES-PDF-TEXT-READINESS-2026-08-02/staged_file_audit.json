@@ -1,0 +1,727 @@
+{
+  "aggregate_staged_bytes": 84288776,
+  "audit_status": "passed",
+  "audited_at": "2026-08-02T17:00:58Z",
+  "forbidden_file_count": 0,
+  "forbidden_files": [],
+  "full_text_or_ocr_artifacts_staged": false,
+  "large_file_audit_status": "passed",
+  "large_file_count": 0,
+  "large_file_threshold_bytes": 26214400,
+  "large_files": [],
+  "largest_staged_file_bytes": 8758052,
+  "retained_artifact_paths_staged_or_tracked": false,
+  "staged_file_count": 142,
+  "staged_files": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/cba_non_cba_readiness_summary.json",
+      "size_bytes": 1096,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/corrupt_or_broken_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/corrupt_or_broken_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/dashboard_browser_smoke_report.json",
+      "size_bytes": 1063,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/dashboard_browser_smoke_report.md",
+      "size_bytes": 943,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/dashboard_public_pages_smoke_report.json",
+      "size_bytes": 330,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/dashboard_remaining_pdf_text_readiness_update_summary.json",
+      "size_bytes": 1379,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/dashboard_status_input.json",
+      "size_bytes": 1374,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/dashboard_status_update_summary.md",
+      "size_bytes": 303,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/encrypted_or_locked_queue.csv",
+      "size_bytes": 16604,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/encrypted_or_locked_queue.jsonl",
+      "size_bytes": 30913,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/file_size_summary.json",
+      "size_bytes": 273,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/final_decision.json",
+      "size_bytes": 398,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/forbidden_action_audit.json",
+      "size_bytes": 642,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/geography_readiness_summary.json",
+      "size_bytes": 8540,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/html_text_ready_queue.csv",
+      "size_bytes": 535408,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/html_text_ready_queue.jsonl",
+      "size_bytes": 1127535,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_001/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_001/lane_manifest.json",
+      "size_bytes": 603,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_001/results.csv",
+      "size_bytes": 864225,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_001/results.jsonl",
+      "size_bytes": 1752854,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_001/resume_state.json",
+      "size_bytes": 319,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_001/summary.json",
+      "size_bytes": 726,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_002/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_002/lane_manifest.json",
+      "size_bytes": 647,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_002/results.csv",
+      "size_bytes": 865348,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_002/results.jsonl",
+      "size_bytes": 1753995,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_002/resume_state.json",
+      "size_bytes": 321,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_002/summary.json",
+      "size_bytes": 698,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_003/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_003/lane_manifest.json",
+      "size_bytes": 647,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_003/results.csv",
+      "size_bytes": 862842,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_003/results.jsonl",
+      "size_bytes": 1751495,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_003/resume_state.json",
+      "size_bytes": 321,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_003/summary.json",
+      "size_bytes": 702,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_004/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_004/lane_manifest.json",
+      "size_bytes": 648,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_004/results.csv",
+      "size_bytes": 860374,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_004/results.jsonl",
+      "size_bytes": 1749025,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_004/resume_state.json",
+      "size_bytes": 322,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_004/summary.json",
+      "size_bytes": 699,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_005/checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_005/lane_manifest.json",
+      "size_bytes": 648,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_005/results.csv",
+      "size_bytes": 862048,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_005/results.jsonl",
+      "size_bytes": 1750683,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_005/resume_state.json",
+      "size_bytes": 322,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/lanes/readiness_lane_005/summary.json",
+      "size_bytes": 729,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/large_file_audit.json",
+      "size_bytes": 206,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/mechanism_hint_readiness_summary.json",
+      "size_bytes": 5178,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/merged_pdf_text_readiness_results.csv",
+      "size_bytes": 4309969,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/merged_pdf_text_readiness_results.jsonl",
+      "size_bytes": 8758052,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/needs_manual_review_queue.csv",
+      "size_bytes": 15721,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/needs_manual_review_queue.jsonl",
+      "size_bytes": 30036,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/next_task.md",
+      "size_bytes": 603,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/ocr_later_queue.csv",
+      "size_bytes": 371823,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/ocr_later_queue.jsonl",
+      "size_bytes": 755800,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/other_document_text_ready_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/other_document_text_ready_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/oversized_defer_queue.csv",
+      "size_bytes": 34570,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/oversized_defer_queue.jsonl",
+      "size_bytes": 67515,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/page_count_summary.json",
+      "size_bytes": 316,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/parse_text_pdf_ready_queue.csv",
+      "size_bytes": 3317824,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/parse_text_pdf_ready_queue.jsonl",
+      "size_bytes": 6695739,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/pdf_text_readiness_manifest.json",
+      "size_bytes": 5697,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/pdf_text_readiness_summary.json",
+      "size_bytes": 2559,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/pdf_text_readiness_summary.md",
+      "size_bytes": 803,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/preflight_report.json",
+      "size_bytes": 658,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/priority_readiness_summary.json",
+      "size_bytes": 1384,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_error_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_error_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_001_checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_001_queue.csv",
+      "size_bytes": 673545,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_001_queue.jsonl",
+      "size_bytes": 1128448,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_001_results.csv",
+      "size_bytes": 864225,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_001_results.jsonl",
+      "size_bytes": 1752854,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_002_checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_002_queue.csv",
+      "size_bytes": 674349,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_002_queue.jsonl",
+      "size_bytes": 1129270,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_002_results.csv",
+      "size_bytes": 865348,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_002_results.jsonl",
+      "size_bytes": 1753995,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_003_checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_003_queue.csv",
+      "size_bytes": 672135,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_003_queue.jsonl",
+      "size_bytes": 1127062,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_003_results.csv",
+      "size_bytes": 862842,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_003_results.jsonl",
+      "size_bytes": 1751495,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_004_checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_004_queue.csv",
+      "size_bytes": 670109,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_004_queue.jsonl",
+      "size_bytes": 1125034,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_004_results.csv",
+      "size_bytes": 860374,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_004_results.jsonl",
+      "size_bytes": 1749025,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_005_checkpoint.json",
+      "size_bytes": 257,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_005_queue.csv",
+      "size_bytes": 671637,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_005_queue.jsonl",
+      "size_bytes": 1126546,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_005_results.csv",
+      "size_bytes": 862048,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_005_results.jsonl",
+      "size_bytes": 1750683,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_distribution.json",
+      "size_bytes": 3245,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_lane_distribution.md",
+      "size_bytes": 404,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_locked_queue.csv",
+      "size_bytes": 3359339,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_locked_queue.jsonl",
+      "size_bytes": 5636360,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_locked_queue_manifest.json",
+      "size_bytes": 732,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/readiness_smoke_preflight.json",
+      "size_bytes": 838,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/remaining_municipalities_pdf_text_readiness_manifest.json",
+      "size_bytes": 5697,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/remaining_municipalities_pdf_text_readiness_summary.json",
+      "size_bytes": 2559,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/remaining_municipalities_pdf_text_readiness_summary.md",
+      "size_bytes": 803,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/retained_source_hash_recheck_report.json",
+      "size_bytes": 513,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/shell_or_navigation_only_queue.csv",
+      "size_bytes": 25321,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/shell_or_navigation_only_queue.jsonl",
+      "size_bytes": 50514,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/source_family_readiness_summary.json",
+      "size_bytes": 5062,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/source_type_readiness_summary.json",
+      "size_bytes": 802,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/staged_file_audit.json",
+      "size_bytes": 28988,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/text_extraction_ready_manifest.json",
+      "size_bytes": 699,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/text_extraction_ready_queue.csv",
+      "size_bytes": 3852015,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/text_extraction_ready_queue.jsonl",
+      "size_bytes": 7823274,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/unsupported_file_type_queue.csv",
+      "size_bytes": 1217,
+      "suffix": ".csv"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/unsupported_file_type_queue.jsonl",
+      "size_bytes": 0,
+      "suffix": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/validation_report.json",
+      "size_bytes": 1614,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02/validation_report.md",
+      "size_bytes": 1297,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/dashboard/data/analysis_readiness.json",
+      "size_bytes": 36433,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/candidate_queue_summary.json",
+      "size_bytes": 27834,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/content_triage_status_summary.json",
+      "size_bytes": 15708,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/coverage_funnel.json",
+      "size_bytes": 12676,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/parallel_scout_status.json",
+      "size_bytes": 13422,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/pdf_readiness_status_summary.json",
+      "size_bytes": 12684,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/priority_summary.json",
+      "size_bytes": 11853,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/project_phase_summary.json",
+      "size_bytes": 208515,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/reports_index.json",
+      "size_bytes": 42538,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/scout_operations_summary.json",
+      "size_bytes": 12964,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/scout_runtime_trends.json",
+      "size_bytes": 14022,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/scout_yield_by_state.json",
+      "size_bytes": 51681,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/source_review_status_summary.json",
+      "size_bytes": 27241,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/state_priority_summary.json",
+      "size_bytes": 39561,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/state_summary.json",
+      "size_bytes": 165404,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/text_table_calibration_status_summary.json",
+      "size_bytes": 56812,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/text_table_detection_status_summary.json",
+      "size_bytes": 12889,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/top_priority_targets.json",
+      "size_bytes": 217464,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/data/verification_status_summary.json",
+      "size_bytes": 15288,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/dashboard/src/App.jsx",
+      "size_bytes": 21174,
+      "suffix": ".jsx"
+    },
+    {
+      "path": "scripts/build_dashboard_data.py",
+      "size_bytes": 1086745,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/run_broad_state_4x2500_pdf_text_readiness.py",
+      "size_bytes": 58429,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/run_remaining_municipality_pdf_text_readiness.py",
+      "size_bytes": 22474,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_broad_state_4x2500_pdf_text_readiness.py",
+      "size_bytes": 5271,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
+      "size_bytes": 38661,
+      "suffix": ".py"
+    }
+  ]
+}
