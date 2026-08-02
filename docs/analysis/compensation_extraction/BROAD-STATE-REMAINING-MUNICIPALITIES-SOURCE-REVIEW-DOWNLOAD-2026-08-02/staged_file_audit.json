@@ -1,13 +1,28 @@
 {
   "files": [
     {
-      "path": "scripts/test_dashboard_github_pages_deployment_repair.py",
-      "sha256": "af556e47d9aaf52e1d096eec0b7acf5b1cbef4833d13a2c7e9e7a3ec59f56f41",
-      "size_bytes": 35606
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02/dashboard_public_pages_smoke_report.json",
+      "sha256": "bcce4caca071ce2adc06a70cc062ae84c136dc59ec32495195289cec353d3127",
+      "size_bytes": 1117
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02/remaining_municipalities_source_review_download_manifest.json",
+      "sha256": "7b39716adcbac497229db6ce394e49627bef4ca877322a87e443291d4442adc1",
+      "size_bytes": 5177
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02/validation_report.json",
+      "sha256": "b8b81fb71087aa5a0ae34143bcf2c58e2a1b145700cddf5bbb4ddc8a23eed721",
+      "size_bytes": 2109
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02/validation_report.md",
+      "sha256": "607ac6459f9d28275afc92a7e942e80580869b259871a0b1929511dcf594b0bc",
+      "size_bytes": 1538
     }
   ],
   "passed": true,
   "prohibited_paths": [],
   "retained_artifact_paths_tracked": [],
-  "staged_file_count": 1
+  "staged_file_count": 4
 }

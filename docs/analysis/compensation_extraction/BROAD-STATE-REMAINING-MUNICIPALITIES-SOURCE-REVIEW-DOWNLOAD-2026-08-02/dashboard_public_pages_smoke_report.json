@@ -1,8 +1,23 @@
 {
-  "cache_busting_query": "dashboard_smoke=20260802_remaining_source_review_download_pending",
-  "checked_after_push": false,
+  "cache_busting_query": "dashboard_smoke=20260802_remaining_source_review_download_20260802T1526Z",
+  "checked_after_push": true,
+  "clean_dashboard_structure_present_in_deployed_bundle": true,
+  "current_phase_present_in_deployed_bundle": true,
+  "current_report_pdf_content_type": "application/pdf",
+  "current_report_pdf_http_status": 200,
+  "current_report_pdf_link_present_in_deployed_bundle": true,
+  "dashboard_http_status": 200,
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "deployed_bundle_bytes": 532756,
+  "forbidden_claims_present": false,
+  "github_pages_deployment_run_id": 30754209079,
+  "github_pages_deployment_status": "success",
+  "next_task_present_in_deployed_bundle": true,
+  "public_static_validation_passed": true,
   "public_url": "https://dkyaya.github.io/gabriel-wages/",
-  "status": "pending_commit_push_and_pages_deployment",
+  "retained_counts_present_in_deployed_bundle": true,
+  "status": "passed_static_and_http_visual_browser_unavailable",
   "visual_browser_validation_passed": false,
-  "visual_browser_validation_status": "not_run_browser_unavailable"
+  "visual_browser_validation_status": "not_run_browser_unavailable",
+  "wage_growth_continuity_module_present_in_deployed_bundle": true
 }

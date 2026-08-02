@@ -92,6 +92,8 @@
     "low_priority_verification_ready": 13,
     "medium_priority_verification_ready": 1019
   },
+  "public_pages_deployment_run_id": 30754209079,
+  "public_pages_passed": true,
   "queue_csv_sha256": "998e197c68b6464ff32012bc4e7d0739734dafc9c74c595fc3a3420d949a2994",
   "queue_jsonl_sha256": "b2deeb41b57bcf63055dab302ba24e3d43a366286405d2e4f6db545461cfb6dc",
   "queue_rows": 2956,

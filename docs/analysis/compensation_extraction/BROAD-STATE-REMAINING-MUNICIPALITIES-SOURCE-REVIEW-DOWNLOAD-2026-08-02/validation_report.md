@@ -22,6 +22,9 @@
 - PASS: `large_file_audit_passes`
 - PASS: `no_extraction_ocr_rating_or_downstream_analysis`
 - PASS: `one_terminal_status_per_input`
+- PASS: `public_dashboard_http_and_static_validation_passed`
+- PASS: `public_final_pi_report_pdf_accessible`
+- PASS: `public_visual_browser_limitation_honestly_reported`
 - PASS: `report_and_growth_module_preserved`
 - PASS: `retained_artifacts_not_tracked`
 - PASS: `retained_manifest_reconciles`
