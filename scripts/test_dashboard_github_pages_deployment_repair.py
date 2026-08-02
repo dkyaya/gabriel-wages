@@ -93,9 +93,9 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
         self.assertEqual(
             phase["current_phase_code"],
-            "broad_state_remaining_municipalities_pdf_text_readiness_completed_text_extraction_ready",
+            "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready",
         )
-        self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_pdf_text_readiness_complete")
+        self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_text_extraction_complete")
         self.assertEqual(phase["verification_queue_count"], 3905)
         self.assertEqual(phase["verified_row_count"], 3905)
         self.assertEqual(phase["source_review_ready_count"], 2956)
@@ -113,6 +113,15 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["remaining_municipality_html_text_ready_count"], 382)
         self.assertEqual(phase["remaining_municipality_other_document_text_ready_count"], 0)
         self.assertEqual(phase["remaining_municipality_text_extraction_ready_count"], 2558)
+        self.assertTrue(phase["remaining_municipality_text_extraction_available"])
+        self.assertEqual(phase["remaining_municipality_text_extraction_queue_count"], 2558)
+        self.assertEqual(phase["remaining_municipality_text_extraction_pdf_count"], 2176)
+        self.assertEqual(phase["remaining_municipality_text_extraction_html_count"], 382)
+        self.assertEqual(phase["remaining_municipality_text_extraction_success_count"], 2543)
+        self.assertEqual(phase["remaining_municipality_text_extraction_problem_count"], 15)
+        self.assertEqual(phase["remaining_municipality_span_extraction_ready_count"], 2366)
+        self.assertEqual(phase["remaining_municipality_pdf_pages_queued"], 49047)
+        self.assertEqual(phase["remaining_municipality_pdf_pages_extracted"], 49046)
         self.assertEqual(phase["dashboard_map_filter"], "scout_coverage_rate_only")
         self.assertFalse(phase["global_analysis_readiness"])
         self.assertIn(
@@ -309,7 +318,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(readiness_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_pdf_text_readiness_completed_text_extraction_ready"
                                                                         )
-                                                                        if readiness_complete:
+                                                                        extraction_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "TEXT-EXTRACTION-2026-08-02/"
+                                                                            "remaining_municipalities_text_extraction_manifest.json"
+                                                                        )
+                                                                        extraction_complete = (
+                                                                            extraction_manifest.exists()
+                                                                            and json.loads(extraction_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready"
+                                                                        )
+                                                                        if extraction_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality text extraction complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "SPAN-EXTRACTION-2026-08-02",
+                                                                            )
+                                                                        elif readiness_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality PDF/text readiness complete",

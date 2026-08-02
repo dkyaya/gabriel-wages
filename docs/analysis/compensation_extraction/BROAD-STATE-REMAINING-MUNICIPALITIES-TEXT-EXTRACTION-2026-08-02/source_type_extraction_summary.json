@@ -1,0 +1,22 @@
+{
+  "group_field": "primary_readiness_status",
+  "groups": {
+    "html_text_ready": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 14,
+        "extracted_low_text_but_usable": 167,
+        "extracted_ok": 201
+      },
+      "total": 382
+    },
+    "parse_text_pdf_ready": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 10,
+        "extracted_ok": 2165
+      },
+      "total": 2176
+    }
+  },
+  "total_rows": 2558
+}

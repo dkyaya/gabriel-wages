@@ -1,0 +1,105 @@
+{
+  "group_field": "source_family_hint",
+  "groups": {
+    "agenda_packet_or_minutes": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 8,
+        "extracted_low_text_but_usable": 76,
+        "extracted_ok": 860
+      },
+      "total": 944
+    },
+    "arbitration_award": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 4,
+        "extracted_ok": 88
+      },
+      "total": 92
+    },
+    "budget_or_pay_plan": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 2,
+        "extracted_low_text_but_usable": 28,
+        "extracted_ok": 414
+      },
+      "total": 444
+    },
+    "cba": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 9,
+        "extracted_ok": 180
+      },
+      "total": 189
+    },
+    "civil_service_or_hr_pay_plan": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 4,
+        "extracted_ok": 31
+      },
+      "total": 35
+    },
+    "classification_study": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1
+      },
+      "total": 1
+    },
+    "compensation_study": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "factfinding_report": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 4,
+        "extracted_ok": 40
+      },
+      "total": 44
+    },
+    "mou_or_memorandum": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 103
+      },
+      "total": 104
+    },
+    "other_local_government_pay_policy": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 2,
+        "extracted_low_text_but_usable": 12,
+        "extracted_ok": 146
+      },
+      "total": 160
+    },
+    "personnel_policy": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 3,
+        "extracted_ok": 80
+      },
+      "total": 83
+    },
+    "salary_ordinance": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 12,
+        "extracted_ok": 75
+      },
+      "total": 87
+    },
+    "settlement_agreement": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "wage_schedule": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 3,
+        "extracted_low_text_but_usable": 23,
+        "extracted_ok": 345
+      },
+      "total": 371
+    }
+  },
+  "total_rows": 2558
+}

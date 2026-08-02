@@ -1,0 +1,13 @@
+{
+  "checkpoint_after_every_row": true,
+  "completed_at": "2026-08-02T18:26:58Z",
+  "lane_id": "text_extraction_lane_005",
+  "result_csv_sha256": "d8e756b5a73811f31e3a6c01deeec763fc70677dc5b43cb181f7a3ce02900217",
+  "rows": 511,
+  "started_at": "2026-08-02T18:26:38Z",
+  "status_counts": {
+    "extracted_empty_or_too_low_text": 2,
+    "extracted_low_text_but_usable": 37,
+    "extracted_ok": 472
+  }
+}

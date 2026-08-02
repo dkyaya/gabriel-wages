@@ -1,0 +1,101 @@
+{
+  "group_field": "possible_mechanism_hints",
+  "groups": {
+    "fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 43
+      },
+      "total": 44
+    },
+    "market_or_comparability_pressure": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 2,
+        "extracted_ok": 20
+      },
+      "total": 22
+    },
+    "market_or_comparability_pressure;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 1
+      },
+      "total": 1
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 3,
+        "extracted_ok": 34
+      },
+      "total": 37
+    },
+    "market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 5,
+        "extracted_low_text_but_usable": 60,
+        "extracted_ok": 988
+      },
+      "total": 1053
+    },
+    "non_safety_constraint_signal;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 4,
+        "extracted_ok": 46
+      },
+      "total": 50
+    },
+    "strike_or_no_strike_constraint": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 9,
+        "extracted_ok": 157
+      },
+      "total": 167
+    },
+    "strike_or_no_strike_constraint;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure": {
+      "status_counts": {
+        "extracted_ok": 1
+      },
+      "total": 1
+    },
+    "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 1
+      },
+      "total": 1
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 83
+      },
+      "total": 84
+    },
+    "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "unknown": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 9,
+        "extracted_low_text_but_usable": 97,
+        "extracted_ok": 986
+      },
+      "total": 1092
+    }
+  },
+  "total_rows": 2558
+}

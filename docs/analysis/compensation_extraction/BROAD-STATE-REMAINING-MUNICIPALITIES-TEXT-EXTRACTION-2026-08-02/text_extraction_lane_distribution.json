@@ -1,0 +1,93 @@
+{
+  "lanes": {
+    "text_extraction_lane_001": {
+      "csv_sha256": "4d34f16d952c876d6b6dbc54adfd6f82db9451282f98473233a28e71c64f5ed5",
+      "jsonl_sha256": "51f0988dc71bfc3a79408efc876427979e465ceced11425898b0050aad726035",
+      "priority_counts": {
+        "high_priority_verification_ready": 323,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 187
+      },
+      "rows": 512,
+      "source_type_counts": {
+        "html_text_ready": 76,
+        "parse_text_pdf_ready": 436
+      },
+      "start_delay_seconds": 0
+    },
+    "text_extraction_lane_002": {
+      "csv_sha256": "4424dbe6e911199b82356ee679deeb2de1a30c6d6c08d16d0914829805f5c3e8",
+      "jsonl_sha256": "a06ea35b7bd621aef30bcf393e390e0f9cbe98b0346f4e4446303712360a8d4d",
+      "priority_counts": {
+        "high_priority_verification_ready": 331,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 178
+      },
+      "rows": 512,
+      "source_type_counts": {
+        "html_text_ready": 77,
+        "parse_text_pdf_ready": 435
+      },
+      "start_delay_seconds": 480
+    },
+    "text_extraction_lane_003": {
+      "csv_sha256": "66763c72c8a0c22a22e99e60eac6e598a776a3e4961c66abe8a0f7dd535b48f0",
+      "jsonl_sha256": "a5a86f24d1a7769e505bc6ae00cfe9f1288008b1373425594295baeaf7d5dd51",
+      "priority_counts": {
+        "high_priority_verification_ready": 324,
+        "low_priority_verification_ready": 2,
+        "medium_priority_verification_ready": 186
+      },
+      "rows": 512,
+      "source_type_counts": {
+        "html_text_ready": 77,
+        "parse_text_pdf_ready": 435
+      },
+      "start_delay_seconds": 960
+    },
+    "text_extraction_lane_004": {
+      "csv_sha256": "a043c1a8e7ff32061bcc40234f086cbcbb56118cb4884acc4c39943e27e33a2d",
+      "jsonl_sha256": "ca9dbc9020c4f1e7ddf4534f423f58e1aa0f1ba3acf5cd1f35f6d7ecd415b6d9",
+      "priority_counts": {
+        "high_priority_verification_ready": 350,
+        "low_priority_verification_ready": 3,
+        "medium_priority_verification_ready": 158
+      },
+      "rows": 511,
+      "source_type_counts": {
+        "html_text_ready": 76,
+        "parse_text_pdf_ready": 435
+      },
+      "start_delay_seconds": 1440
+    },
+    "text_extraction_lane_005": {
+      "csv_sha256": "0f98b673777d170f0b507ee5a49abaa354cdfef7f8cbc7e6fd8da9b1a8d93b02",
+      "jsonl_sha256": "413ca758878ec96e0a7ebb6c0af542c5461fc71e7f2320c8ec5dd7ed75751011",
+      "priority_counts": {
+        "high_priority_verification_ready": 338,
+        "medium_priority_verification_ready": 173
+      },
+      "rows": 511,
+      "source_type_counts": {
+        "html_text_ready": 76,
+        "parse_text_pdf_ready": 435
+      },
+      "start_delay_seconds": 1920
+    }
+  },
+  "reconciles": true,
+  "stagger_seconds": {
+    "text_extraction_lane_001": 0,
+    "text_extraction_lane_002": 480,
+    "text_extraction_lane_003": 960,
+    "text_extraction_lane_004": 1440,
+    "text_extraction_lane_005": 1920
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02",
+  "total_rows": 2558,
+  "total_source_type_counts": {
+    "html_text_ready": 382,
+    "other_document_text_ready": 0,
+    "parse_text_pdf_ready": 2176
+  }
+}

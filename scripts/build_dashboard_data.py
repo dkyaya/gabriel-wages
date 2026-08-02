@@ -1808,6 +1808,11 @@ BROAD_STATE_REMAINING_PDF_TEXT_READINESS_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02"
 )
+BROAD_STATE_REMAINING_TEXT_EXTRACTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7330,6 +7335,46 @@ def broad_state_remaining_pdf_text_readiness_status() -> tuple[bool, dict[str, A
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_text_extraction_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize completed non-OCR extraction for the remaining wave."""
+    directory = BROAD_STATE_REMAINING_TEXT_EXTRACTION_DIR
+    required = (
+        directory / "remaining_municipalities_text_extraction_manifest.json",
+        directory / "remaining_municipalities_text_extraction_summary.json",
+        directory / "span_extraction_ready_manifest.json",
+        directory / "corpus_page_contribution_summary.json",
+        directory / "extracted_text_storage_audit.json",
+        directory / "dashboard_remaining_text_extraction_update_summary.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, span, pages, storage, dashboard, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("total_text_extraction_queue") == 2558
+        and summary.get("parse_text_pdf_ready_count") == 2176
+        and summary.get("html_text_ready_count") == 382
+        and sum(summary.get("lane_distribution", {}).values()) == 2558
+        and span.get("rows") == summary.get("span_extraction_ready_count")
+        and pages.get("parse_text_pdf_ready_pages_queued") == 49047
+        and pages.get("pdf_pages_successfully_extracted") + pages.get("pdf_pages_failed_or_problematic") == 49047
+        and storage.get("passed") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and forbidden.get("ocr_runs") == 0
+        and forbidden.get("span_extraction_runs") == 0
+    )
+    if not gates:
+        raise ValueError("remaining-municipality text-extraction package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11032,6 +11077,9 @@ def build_project_phase_summary(
     remaining_pdf_text_readiness_available, remaining_pdf_text_readiness = (
         broad_state_remaining_pdf_text_readiness_status()
     )
+    remaining_text_extraction_available, remaining_text_extraction = (
+        broad_state_remaining_text_extraction_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12669,6 +12717,42 @@ def build_project_phase_summary(
                 "defer OCR, span extraction, rating, ingestion, normalization, matching, and analysis",
             ],
             "last_updated_context": "remaining_municipality_pdf_text_readiness_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_text_extraction_available:
+        payload.update({
+            "data_vintage": "2026-08-02",
+            "stage": "broad_state_remaining_municipalities_text_extraction_complete",
+            "current_phase": "Remaining-municipality text extraction complete",
+            "current_phase_code": remaining_text_extraction["decision"],
+            "current_evidence_status": "bounded_non_ocr_text_extraction_complete_span_queue_ready",
+            "remaining_municipality_text_extraction_available": True,
+            "remaining_municipality_text_extraction_queue_count": remaining_text_extraction["total_text_extraction_queue"],
+            "remaining_municipality_text_extraction_pdf_count": remaining_text_extraction["parse_text_pdf_ready_count"],
+            "remaining_municipality_text_extraction_html_count": remaining_text_extraction["html_text_ready_count"],
+            "remaining_municipality_text_extraction_success_count": remaining_text_extraction["total_sources_successfully_extracted"],
+            "remaining_municipality_text_extraction_problem_count": remaining_text_extraction["failed_or_problem_count"],
+            "remaining_municipality_span_extraction_ready_count": remaining_text_extraction["span_extraction_ready_count"],
+            "remaining_municipality_pdf_pages_queued": remaining_text_extraction["parse_text_pdf_ready_pages_queued"],
+            "remaining_municipality_pdf_pages_extracted": remaining_text_extraction["pdf_pages_successfully_extracted"],
+            "remaining_municipality_extracted_character_count": remaining_text_extraction["total_extracted_character_count"],
+            "remaining_municipality_extracted_byte_count": remaining_text_extraction["total_extracted_byte_count"],
+            "remaining_municipality_extracted_text_artifact_root": remaining_text_extraction["artifact_root"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02",
+            "next_phase": "Extract compensation and mechanism spans from the clean local text queue",
+            "next_phase_sequence": [
+                "process only the span-extraction-ready local text queue",
+                "checkpoint every source and retain exact snippet and lineage metadata",
+                "defer OCR, rating, ingestion, normalization, matching, and analysis",
+            ],
+            "last_updated_context": "remaining_municipality_text_extraction_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

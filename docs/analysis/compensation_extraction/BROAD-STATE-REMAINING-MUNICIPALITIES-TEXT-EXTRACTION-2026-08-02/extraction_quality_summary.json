@@ -1,0 +1,15 @@
+{
+  "html_noisy_included_in_span_queue": 0,
+  "low_density_included_in_span_queue": 0,
+  "span_ready_policy": "extracted_ok_only",
+  "status_counts": {
+    "extracted_empty_or_too_low_text": 15,
+    "extracted_low_text_but_usable": 177,
+    "extracted_ok": 2366,
+    "extraction_error": 0,
+    "extraction_failed": 0,
+    "hash_mismatch": 0,
+    "missing_local_file": 0,
+    "unsupported_after_readiness": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "browser_controller_available": false,
+  "browser_controller_error": "No browser is available; the prescribed bootstrap-troubleshooting document was unavailable because the installed plugin documentation path was version-skewed.",
+  "build_passed": true,
+  "relative_pages_build_passed": true,
+  "remaining_text_extraction_stage_present": true,
+  "next_span_extraction_task_present": true,
+  "text_extraction_queue_count_present": 2558,
+  "span_extraction_ready_count_present": 2366,
+  "pdf_pages_successfully_extracted_present": 49046,
+  "map_primary_metric": "scout_coverage_rate",
+  "final_pi_report_link_intact": true,
+  "wage_growth_continuity_module_intact": true,
+  "technical_details_collapsed_markup_present": true,
+  "forbidden_dashboard_findings_found": false,
+  "tested_at": "2026-08-02T18:28:00Z",
+  "validation_method": "production and relative Vite builds plus generated-data and static-bundle contract checks; visual browser unavailable",
+  "status": "passed_static_browser_unavailable"
+}

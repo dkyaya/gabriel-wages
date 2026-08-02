@@ -1,0 +1,30 @@
+{
+  "group_field": "priority_bucket",
+  "groups": {
+    "high_priority_verification_ready": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 34,
+        "extracted_ok": 1631
+      },
+      "total": 1666
+    },
+    "low_priority_verification_ready": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 2,
+        "extracted_ok": 7
+      },
+      "total": 10
+    },
+    "medium_priority_verification_ready": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 13,
+        "extracted_low_text_but_usable": 141,
+        "extracted_ok": 728
+      },
+      "total": 882
+    }
+  },
+  "total_rows": 2558
+}

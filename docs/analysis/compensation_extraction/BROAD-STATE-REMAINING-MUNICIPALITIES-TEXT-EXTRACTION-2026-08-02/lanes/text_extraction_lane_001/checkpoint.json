@@ -1,0 +1,9 @@
+{
+  "accepted_completed_count": 512,
+  "expected_count": 512,
+  "lane_id": "text_extraction_lane_001",
+  "last_completed_extraction_id": "RMTXT-20260802-d72801d364622bba3571",
+  "queue_csv_sha256": "4d34f16d952c876d6b6dbc54adfd6f82db9451282f98473233a28e71c64f5ed5",
+  "terminal": true,
+  "updated_at": "2026-08-02T17:52:36Z"
+}

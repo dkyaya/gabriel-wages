@@ -1,0 +1,8 @@
+{
+  "artifact_rows": 2558,
+  "canonicalization_policy": "Rows remain distinct; duplicate hashes are documented and not silently discarded.",
+  "duplicate_hash_count": 0,
+  "duplicate_links": {},
+  "duplicate_source_count": 0,
+  "unique_extracted_text_hash_count": 2558
+}

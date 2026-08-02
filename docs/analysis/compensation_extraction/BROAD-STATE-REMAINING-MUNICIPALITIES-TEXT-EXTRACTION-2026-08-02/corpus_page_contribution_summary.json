@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "These are corpus-processing counts, not wage-gap, prevalence, or causal findings.",
+  "exclusion_note": "OCR-later, oversized, encrypted, shell/navigation-only, and manual-review sources were excluded from this non-OCR corpus.",
+  "extracted_text_artifact_directory": "artifacts/local_extracted_text/broad_state_remaining_municipalities_text_extraction_2026-08-02",
+  "html_counting_note": "HTML contributions are counted as sources, not pages; no HTML-to-page proxy is used.",
+  "html_sources_successfully_extracted": 368,
+  "html_text_ready_count": 382,
+  "parse_text_pdf_ready_count": 2176,
+  "parse_text_pdf_ready_pages_queued": 49047,
+  "pdf_page_success_rate_percent": 99.998,
+  "pdf_pages_attempted": 49047,
+  "pdf_pages_failed_or_problematic": 1,
+  "pdf_pages_successfully_extracted": 49046,
+  "retained_pdf_count": 2456,
+  "retained_pdf_total_pages_upper_bound": 60223,
+  "total_sources_successfully_extracted": 2543,
+  "total_text_extraction_ready_sources": 2558
+}

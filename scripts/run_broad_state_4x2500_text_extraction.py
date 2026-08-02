@@ -396,8 +396,9 @@ def preflight_smoke(locked: list[dict[str, str]]) -> dict[str, Any]:
     smoke_dir = ARTIFACT_ROOT / ".smoke_preflight"
     smoke_dir.mkdir(parents=True, exist_ok=True)
     selected = []
-    for status in APPROVED:
-        selected.append(next(r for r in locked if r["primary_readiness_status"] == status))
+    for status, expected_count in APPROVED.items():
+        if expected_count:
+            selected.append(next(r for r in locked if r["primary_readiness_status"] == status))
     reports = []
     for row in selected:
         smoke_row = dict(row)
@@ -613,7 +614,7 @@ def merge() -> None:
     rows: list[dict[str, str]] = []
     for lane in LANES:
         checkpoint = json.loads((OUTPUT / "lanes" / lane / "checkpoint.json").read_text())
-        if not checkpoint.get("terminal") or checkpoint.get("accepted_completed_count") != 735:
+        if not checkpoint.get("terminal") or checkpoint.get("accepted_completed_count") != LANES[lane]:
             raise RuntimeError(f"lane checkpoint not terminal: {lane}")
         rows.extend(read_csv(OUTPUT / f"{lane}_results.csv"))
     if len(rows) != EXPECTED or len({r["extraction_id"] for r in rows}) != EXPECTED:

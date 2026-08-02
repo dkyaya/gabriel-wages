@@ -1,0 +1,21 @@
+{
+  "audit_status": "passed",
+  "codification_runs": 0,
+  "extracted_text_written_to_tracked_storage": false,
+  "final_causal_claims": 0,
+  "global_readiness_advanced": false,
+  "image_pdf_processing_runs": 0,
+  "ingestion_runs": 0,
+  "model_or_gabriel_calls": 0,
+  "national_or_population_prevalence_claims": 0,
+  "normalization_matching_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "rating_runs": 0,
+  "regressions": 0,
+  "retained_binary_written_to_tracked_storage": false,
+  "span_extraction_runs": 0,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02",
+  "treatment_effect_claims": 0,
+  "wage_gap_calculations": 0
+}

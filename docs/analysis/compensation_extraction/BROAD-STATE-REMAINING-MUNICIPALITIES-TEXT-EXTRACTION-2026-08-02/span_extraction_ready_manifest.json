@@ -1,0 +1,13 @@
+{
+  "csv_sha256": "b0275f020d8af02052d01fa5be7914bf1e3a8d43aedc9aee04f35bf3be6eec0f",
+  "eligible_statuses": [
+    "extracted_ok"
+  ],
+  "excluded_quality_statuses": [
+    "extracted_low_density",
+    "html_noisy_or_boilerplate"
+  ],
+  "full_text_artifact_root": "artifacts/local_extracted_text/broad_state_remaining_municipalities_text_extraction_2026-08-02",
+  "jsonl_sha256": "48fe7565abd5e9b5630a0ef0ea3ffd7d1548b6b0d669913d39799995e338b06a",
+  "rows": 2366
+}

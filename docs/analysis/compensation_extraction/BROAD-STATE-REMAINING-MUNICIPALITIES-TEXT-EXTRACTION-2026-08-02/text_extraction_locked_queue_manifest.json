@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-08-02T17:52:05Z",
+  "csv_sha256": "330601bd49107e70e8bbb96829dd58a44f40a106907d542e73be0e407398a91e",
+  "jsonl_sha256": "8e76c69096aed37a814bbd6f85ddcd10734767db2a3dd65ea8774bbef342f9f9",
+  "lane_sizes": {
+    "text_extraction_lane_001": 512,
+    "text_extraction_lane_002": 512,
+    "text_extraction_lane_003": 512,
+    "text_extraction_lane_004": 511,
+    "text_extraction_lane_005": 511
+  },
+  "locked_against_readiness_queue": true,
+  "row_count": 2558,
+  "status_counts": {
+    "html_text_ready": 382,
+    "parse_text_pdf_ready": 2176
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02",
+  "unique_readiness_ids": 2558
+}

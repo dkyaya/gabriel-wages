@@ -1,0 +1,199 @@
+{
+  "regions": {
+    "Midwest": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 11,
+        "extracted_low_text_but_usable": 104,
+        "extracted_ok": 1503
+      },
+      "total": 1618
+    },
+    "Northeast": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 4,
+        "extracted_low_text_but_usable": 52,
+        "extracted_ok": 749
+      },
+      "total": 805
+    },
+    "South": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 21,
+        "extracted_ok": 112
+      },
+      "total": 133
+    },
+    "West": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    }
+  },
+  "states": {
+    "DE": {
+      "status_counts": {
+        "extracted_ok": 1
+      },
+      "total": 1
+    },
+    "FL": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 1
+      },
+      "total": 2
+    },
+    "GA": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 2,
+        "extracted_ok": 9
+      },
+      "total": 11
+    },
+    "IA": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 2,
+        "extracted_ok": 34
+      },
+      "total": 36
+    },
+    "IL": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 2,
+        "extracted_low_text_but_usable": 20,
+        "extracted_ok": 209
+      },
+      "total": 231
+    },
+    "IN": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 9,
+        "extracted_ok": 52
+      },
+      "total": 62
+    },
+    "KS": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 4,
+        "extracted_ok": 61
+      },
+      "total": 65
+    },
+    "ME": {
+      "status_counts": {
+        "extracted_ok": 5
+      },
+      "total": 5
+    },
+    "MI": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 14,
+        "extracted_ok": 314
+      },
+      "total": 329
+    },
+    "MN": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 20,
+        "extracted_ok": 191
+      },
+      "total": 211
+    },
+    "MO": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 3,
+        "extracted_ok": 32
+      },
+      "total": 36
+    },
+    "NC": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 10
+      },
+      "total": 11
+    },
+    "ND": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 7,
+        "extracted_ok": 30
+      },
+      "total": 37
+    },
+    "NE": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 12
+      },
+      "total": 13
+    },
+    "NJ": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 23
+      },
+      "total": 24
+    },
+    "NY": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 28,
+        "extracted_ok": 321
+      },
+      "total": 349
+    },
+    "OH": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 4,
+        "extracted_ok": 244
+      },
+      "total": 248
+    },
+    "PA": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 4,
+        "extracted_low_text_but_usable": 23,
+        "extracted_ok": 397
+      },
+      "total": 424
+    },
+    "SD": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 1,
+        "extracted_ok": 31
+      },
+      "total": 32
+    },
+    "TX": {
+      "status_counts": {
+        "extracted_low_text_but_usable": 17,
+        "extracted_ok": 91
+      },
+      "total": 108
+    },
+    "VT": {
+      "status_counts": {
+        "extracted_ok": 3
+      },
+      "total": 3
+    },
+    "WA": {
+      "status_counts": {
+        "extracted_ok": 2
+      },
+      "total": 2
+    },
+    "WI": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 6,
+        "extracted_low_text_but_usable": 19,
+        "extracted_ok": 293
+      },
+      "total": 318
+    }
+  },
+  "total_rows": 2558
+}

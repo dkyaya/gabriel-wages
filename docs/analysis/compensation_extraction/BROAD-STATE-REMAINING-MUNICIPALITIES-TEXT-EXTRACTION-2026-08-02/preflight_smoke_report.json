@@ -1,0 +1,20 @@
+{
+  "full_text_cleanup_completed": true,
+  "representative_rows": [
+    {
+      "character_count": 18203,
+      "method": "poppler_pdftotext_layout_utf8_non_ocr",
+      "readiness_id": "RMRDY-20260802-a69791313cbf543188cb",
+      "source_type": "parse_text_pdf_ready",
+      "status": "extracted_ok"
+    },
+    {
+      "character_count": 10631,
+      "method": "stdlib_htmlparser_visible_text_cleanup",
+      "readiness_id": "RMRDY-20260802-86a248fe85b67e4bbd06",
+      "source_type": "html_text_ready",
+      "status": "extracted_low_text_but_usable"
+    }
+  ],
+  "status": "passed"
+}

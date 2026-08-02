@@ -1,0 +1,22 @@
+{
+  "group_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_arbitration_factfinding_hint": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 1,
+        "extracted_low_text_but_usable": 18,
+        "extracted_ok": 419
+      },
+      "total": 438
+    },
+    "non_cba_or_unresolved_hint": {
+      "status_counts": {
+        "extracted_empty_or_too_low_text": 14,
+        "extracted_low_text_but_usable": 159,
+        "extracted_ok": 1947
+      },
+      "total": 2120
+    }
+  },
+  "total_rows": 2558
+}
