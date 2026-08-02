@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-02T18:28:49Z",
+  "generated_at": "2026-08-02T21:10:02Z",
   "data_vintage": "2026-08-02",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_text_extraction_complete",
-  "current_phase": "Remaining-municipality text extraction complete",
-  "current_phase_code": "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready",
-  "current_evidence_status": "bounded_non_ocr_text_extraction_complete_span_queue_ready",
+  "stage": "broad_state_remaining_municipalities_span_extraction_complete",
+  "current_phase": "Remaining-municipality span extraction complete",
+  "current_phase_code": "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready",
+  "current_evidence_status": "bounded_compensation_spans_complete_gabriel_rating_queue_ready",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Extract compensation and mechanism spans from the clean local text queue",
+  "next_phase": "Rate only the bounded GABRIEL-ready evidence queue after a fail-closed backend preflight",
   "next_phase_sequence": [
-    "process only the span-extraction-ready local text queue",
-    "checkpoint every source and retain exact snippet and lineage metadata",
-    "defer OCR, rating, ingestion, normalization, matching, and analysis"
+    "process only the GABRIEL-rating-ready bounded span queue",
+    "use redacted packets and checkpoint every packet or source",
+    "defer OCR, ingestion, normalization, matching, and final analysis"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_text_extraction_complete",
+  "last_updated_context": "remaining_municipality_span_extraction_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -6219,5 +6219,77 @@
   "remaining_municipality_pdf_pages_extracted": 49046,
   "remaining_municipality_extracted_character_count": 102969703,
   "remaining_municipality_extracted_byte_count": 103406295,
-  "remaining_municipality_extracted_text_artifact_root": "artifacts/local_extracted_text/broad_state_remaining_municipalities_text_extraction_2026-08-02"
+  "remaining_municipality_extracted_text_artifact_root": "artifacts/local_extracted_text/broad_state_remaining_municipalities_text_extraction_2026-08-02",
+  "remaining_municipality_span_extraction_available": true,
+  "remaining_municipality_span_ready_source_count": 2366,
+  "remaining_municipality_span_positive_source_count": 1812,
+  "remaining_municipality_span_weak_source_count": 358,
+  "remaining_municipality_span_no_relevant_source_count": 196,
+  "remaining_municipality_total_span_count": 15636,
+  "remaining_municipality_quantitative_span_count": 7576,
+  "remaining_municipality_qualitative_span_count": 7613,
+  "remaining_municipality_gabriel_ready_source_count": 1812,
+  "remaining_municipality_gabriel_ready_span_count": 15189,
+  "remaining_municipality_top_evidence_categories": [
+    [
+      "qual_non_base_compensation_mechanism",
+      2156
+    ],
+    [
+      "quant_base_wage_direct_value",
+      1614
+    ],
+    [
+      "quant_other_compensation_value",
+      1448
+    ],
+    [
+      "qual_market_recruitment_retention_pressure",
+      1322
+    ],
+    [
+      "qual_collective_bargaining",
+      1175
+    ],
+    [
+      "quant_overtime_or_holiday_rate",
+      1053
+    ],
+    [
+      "quant_allowance_or_reimbursement",
+      760
+    ],
+    [
+      "quant_percentage_raise_or_cola",
+      754
+    ],
+    [
+      "qual_position_classification_or_civil_service_structure",
+      659
+    ],
+    [
+      "qual_ordinance_or_council_adoption",
+      477
+    ],
+    [
+      "quant_budget_or_pay_plan_amount",
+      468
+    ],
+    [
+      "qual_mou_or_settlement",
+      372
+    ],
+    [
+      "qual_strike_no_strike_or_labor_dispute_process",
+      363
+    ],
+    [
+      "quant_salary_schedule_table",
+      361
+    ],
+    [
+      "weak_or_ambiguous_compensation_signal",
+      356
+    ]
+  ]
 }

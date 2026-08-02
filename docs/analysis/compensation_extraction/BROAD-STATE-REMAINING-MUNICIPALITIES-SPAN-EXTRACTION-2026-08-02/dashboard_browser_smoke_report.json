@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "clean_dashboard_structure_preserved": true,
+    "current_stage_span_extraction_complete": true,
+    "final_pi_report_link_intact": true,
+    "gabriel_next_task_present": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "no_final_national_wage_gap_or_causal_claim": true,
+    "span_counts_compactly_visible": true,
+    "technical_details_collapsed_in_markup": true,
+    "wage_growth_continuity_module_intact": true
+  },
+  "local_url": "http://127.0.0.1:4173/gabriel-wages/",
+  "status": "passed_static_browser_unavailable",
+  "validation_method": "production_build_static_contract_and_generated_data",
+  "visual_browser_validated": false,
+  "visual_validation_limitation": "The in-app browser runtime reported that no browser was available. Its installed bootstrap-troubleshooting resource path was also unavailable, so no visual or interactive assertion is claimed."
+}

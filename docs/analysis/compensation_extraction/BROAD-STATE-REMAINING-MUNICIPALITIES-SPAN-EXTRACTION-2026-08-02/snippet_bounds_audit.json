@@ -1,0 +1,10 @@
+{
+  "full_text_payload_detected": false,
+  "maximum_allowed_context_characters": 1500,
+  "maximum_allowed_span_characters": 1200,
+  "observed_maximum_context_characters": 0,
+  "observed_maximum_span_characters": 648,
+  "passed": true,
+  "project_standard_maximum_span_characters": 800,
+  "span_count": 15636
+}

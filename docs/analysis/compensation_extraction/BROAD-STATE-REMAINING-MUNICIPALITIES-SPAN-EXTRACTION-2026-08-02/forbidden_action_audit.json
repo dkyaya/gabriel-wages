@@ -1,0 +1,13 @@
+{
+  "full_extracted_text_written_to_git": false,
+  "gabriel_or_api_rating_occurred": false,
+  "global_readiness_advanced": false,
+  "image_pdf_processing_occurred": false,
+  "ingestion_or_codification_occurred": false,
+  "normalization_or_matching_occurred": false,
+  "ocr_occurred": false,
+  "passed": true,
+  "prevalence_or_causal_claims_made": false,
+  "retained_binary_written_to_git": false,
+  "wage_gap_or_regression_occurred": false
+}

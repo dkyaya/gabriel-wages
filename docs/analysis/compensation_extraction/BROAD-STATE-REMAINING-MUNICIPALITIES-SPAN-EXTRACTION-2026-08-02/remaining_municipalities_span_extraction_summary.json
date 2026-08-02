@@ -1,0 +1,115 @@
+{
+  "comparison_potential_span_count": 118,
+  "completed_at": "2026-08-02T21:09:43Z",
+  "context_reference_span_count": 447,
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "decision": "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready",
+  "error_missing_hash_or_unsupported_count": 0,
+  "final_decision": "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready",
+  "final_pi_report_link_preserved": true,
+  "gabriel_or_api_rating_occurred": false,
+  "gabriel_rating_ready_source_count": 1812,
+  "gabriel_rating_ready_span_count": 15189,
+  "global_analysis_readiness": false,
+  "ingestion_or_codification_occurred": false,
+  "input_span_ready_source_count": 2366,
+  "lane_distribution": {
+    "span_extraction_lane_001": 474,
+    "span_extraction_lane_002": 473,
+    "span_extraction_lane_003": 473,
+    "span_extraction_lane_004": 473,
+    "span_extraction_lane_005": 473
+  },
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02",
+  "no_relevant_source_count": 196,
+  "normalization_or_matching_occurred": false,
+  "ocr_occurred": false,
+  "positive_source_count": 1812,
+  "qualitative_mechanism_span_count": 7613,
+  "quantitative_compensation_span_count": 7576,
+  "safety_side_hint_counts": {
+    "fire": 199,
+    "mixed": 6,
+    "non_safety": 176,
+    "police": 714,
+    "safety_combined": 23,
+    "unclear": 14518
+  },
+  "scout_coverage_rate_percent": 99.9579,
+  "source_level_span_status_counts": {
+    "hash_mismatch": 0,
+    "missing_extracted_text": 0,
+    "no_relevant_compensation_span": 196,
+    "span_extraction_error": 0,
+    "span_positive": 1812,
+    "span_weak_or_ambiguous": 358,
+    "unsupported_text_structure": 0
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02",
+  "top_evidence_categories": [
+    [
+      "qual_non_base_compensation_mechanism",
+      2156
+    ],
+    [
+      "quant_base_wage_direct_value",
+      1614
+    ],
+    [
+      "quant_other_compensation_value",
+      1448
+    ],
+    [
+      "qual_market_recruitment_retention_pressure",
+      1322
+    ],
+    [
+      "qual_collective_bargaining",
+      1175
+    ],
+    [
+      "quant_overtime_or_holiday_rate",
+      1053
+    ],
+    [
+      "quant_allowance_or_reimbursement",
+      760
+    ],
+    [
+      "quant_percentage_raise_or_cola",
+      754
+    ],
+    [
+      "qual_position_classification_or_civil_service_structure",
+      659
+    ],
+    [
+      "qual_ordinance_or_council_adoption",
+      477
+    ],
+    [
+      "quant_budget_or_pay_plan_amount",
+      468
+    ],
+    [
+      "qual_mou_or_settlement",
+      372
+    ],
+    [
+      "qual_strike_no_strike_or_labor_dispute_process",
+      363
+    ],
+    [
+      "quant_salary_schedule_table",
+      361
+    ],
+    [
+      "weak_or_ambiguous_compensation_signal",
+      356
+    ]
+  ],
+  "total_extracted_span_count": 15636,
+  "wage_gap_or_regression_occurred": false,
+  "wage_growth_continuity_module_preserved": true,
+  "weak_or_ambiguous_source_count": 358
+}

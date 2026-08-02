@@ -1,0 +1,23 @@
+{
+  "full_text_persisted": false,
+  "ocr_used": false,
+  "rating_or_api_used": false,
+  "representative_rows": [
+    {
+      "candidate_spans": 4,
+      "extraction_id": "RMTXT-20260802-0d280b76bd8744c88952",
+      "source_type": "pdf",
+      "status": "pass",
+      "text_characters": 18203
+    },
+    {
+      "candidate_spans": 0,
+      "extraction_id": "RMTXT-20260802-64e7571793464d842481",
+      "source_type": "html",
+      "status": "pass",
+      "text_characters": 4070
+    }
+  ],
+  "status": "passed",
+  "taxonomy_adapter": "remaining_municipality_quantitative_qualitative_v1"
+}

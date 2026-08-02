@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "fire": 199,
+    "mixed": 6,
+    "non_safety": 176,
+    "police": 714,
+    "safety_combined": 23,
+    "unclear": 14518
+  },
+  "total_spans": 15636
+}

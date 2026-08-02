@@ -91,11 +91,27 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["failed_unparseable_outcomes"], 15)
         self.assertEqual(phase["remaining_unscouted_eligible_municipality_count"], 15)
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
-        self.assertEqual(
-            phase["current_phase_code"],
-            "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready",
+        remaining_span_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/"
+            "remaining_municipalities_span_extraction_manifest.json"
         )
-        self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_text_extraction_complete")
+        if remaining_span_manifest.exists() and json.loads(remaining_span_manifest.read_text()).get("decision") == (
+            "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready",
+            )
+            self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_span_extraction_complete")
+            self.assertTrue(phase["remaining_municipality_span_extraction_available"])
+            self.assertEqual(phase["remaining_municipality_span_ready_source_count"], 2366)
+        else:
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready",
+            )
+            self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_text_extraction_complete")
         self.assertEqual(phase["verification_queue_count"], 3905)
         self.assertEqual(phase["verified_row_count"], 3905)
         self.assertEqual(phase["source_review_ready_count"], 2956)
@@ -329,7 +345,31 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(extraction_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_text_extraction_completed_span_extraction_ready"
                                                                         )
-                                                                        if extraction_complete:
+                                                                        span_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "SPAN-EXTRACTION-2026-08-02/"
+                                                                            "remaining_municipalities_span_extraction_manifest.json"
+                                                                        )
+                                                                        span_complete = (
+                                                                            span_manifest.exists()
+                                                                            and json.loads(span_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready"
+                                                                        )
+                                                                        if span_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality span extraction complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "GABRIEL-RATING-2026-08-02",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_span_extraction_available"]
+                                                                            )
+                                                                        elif extraction_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality text extraction complete",

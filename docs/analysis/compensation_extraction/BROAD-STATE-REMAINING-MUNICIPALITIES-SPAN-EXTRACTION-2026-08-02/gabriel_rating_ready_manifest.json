@@ -1,0 +1,12 @@
+{
+  "csv_sha256": "a1201b72529b434ec4b9b4cdf54b1e62731deabfb63407b2093d11ea6d62c4fa",
+  "eligible_evidence_families": [
+    "qualitative_mechanism",
+    "quantitative_compensation"
+  ],
+  "jsonl_sha256": "6cc9182bcefe4aa1992236476d6003137eef49a0985aed408242c4c4c10b6951",
+  "rating_occurred": false,
+  "source_count": 1812,
+  "span_count": 15189,
+  "weak_no_relevant_error_rows_included": 0
+}

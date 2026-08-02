@@ -1,0 +1,42 @@
+{
+  "input_rows": 2366,
+  "lane_manifests": {
+    "span_extraction_lane_001": {
+      "csv_sha256": "b259acaa6276d0ec050ea7a85ef27ec2b1df464b75870b5c31cf9de53eefc5bc",
+      "jsonl_sha256": "33ac6e8ce527ff4dbff33968a75becdd8a5b60dca92dce9210e5439b89d83d54",
+      "required_start_delay_seconds": 0,
+      "rows": 474
+    },
+    "span_extraction_lane_002": {
+      "csv_sha256": "14ab76cf69756662ded579757b9dc1dab28fdb68efe54f98c79960190d6b5802",
+      "jsonl_sha256": "8607c34a4ca1b926941059605be2c07185c643061af434332034b20810037ae0",
+      "required_start_delay_seconds": 480,
+      "rows": 473
+    },
+    "span_extraction_lane_003": {
+      "csv_sha256": "4384738541a1ae2de2ee28721af6578dbe27082a96f09299a990cca98ff5af37",
+      "jsonl_sha256": "a49c952b9efe887da93b09d5d6434955f14207bf94f883f0e706a0959390686b",
+      "required_start_delay_seconds": 960,
+      "rows": 473
+    },
+    "span_extraction_lane_004": {
+      "csv_sha256": "23256117a9cec7b81f550edc1c2b3935b894eadb1cf02d147ebdf85ba2eea657",
+      "jsonl_sha256": "c4aeed1327aa307cacbf9f3acac5794fd7ac4ec0fd9b0fbfa1ef8a277b1e7dac",
+      "required_start_delay_seconds": 1440,
+      "rows": 473
+    },
+    "span_extraction_lane_005": {
+      "csv_sha256": "da380461f5c3bd585ad8205a9f0692777992ae2fd87146e3388f24905a3169d4",
+      "jsonl_sha256": "2f88b34c5b2e41507a0318237f4c881bd498f088ae03e6299d47f41de17bff08",
+      "required_start_delay_seconds": 1920,
+      "rows": 473
+    }
+  },
+  "locked_csv_sha256": "d0081d54f3d2e677d1dc8417b1198d251beffe188227142ceb31db856ea8a0e3",
+  "locked_jsonl_sha256": "fcb9ac856623a563b3315f1399f64c859ab4bb87f41b8cf4f230a98ecfdbd810",
+  "maximum_span_characters": 800,
+  "maximum_spans_per_source": 18,
+  "prepared_at": "2026-08-02T20:36:46Z",
+  "rating_or_api_used": false,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02"
+}

@@ -1,0 +1,10 @@
+{
+  "build_command": "pnpm build",
+  "build_status": "passed",
+  "dashboard_package": "docs/dashboard",
+  "generated_asset": "dist/assets/index-CGs-izR0.js",
+  "generated_asset_bytes": 536330,
+  "passed": true,
+  "static_contract_tests": "passed_10_tests",
+  "vite_chunk_size_warning_only": true
+}

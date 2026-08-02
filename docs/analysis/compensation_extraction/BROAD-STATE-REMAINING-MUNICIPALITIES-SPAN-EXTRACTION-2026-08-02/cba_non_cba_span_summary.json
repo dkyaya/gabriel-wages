@@ -1,0 +1,93 @@
+{
+  "group_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_arbitration_factfinding_hint": {
+      "evidence_category_counts": {
+        "qual_budget_or_fiscal_constraint": 54,
+        "qual_cola_or_indexing_mechanism": 99,
+        "qual_collective_bargaining": 593,
+        "qual_comparability_or_parity_language": 71,
+        "qual_factfinding": 51,
+        "qual_grievance_arbitration": 15,
+        "qual_interest_arbitration": 34,
+        "qual_market_recruitment_retention_pressure": 385,
+        "qual_mou_or_settlement": 148,
+        "qual_non_base_compensation_mechanism": 895,
+        "qual_ordinance_or_council_adoption": 74,
+        "qual_other_pay_setting_mechanism": 132,
+        "qual_position_classification_or_civil_service_structure": 300,
+        "qual_retroactivity_or_implementation_timing": 139,
+        "qual_strike_no_strike_or_labor_dispute_process": 247,
+        "quant_allowance_or_reimbursement": 257,
+        "quant_base_wage_direct_value": 385,
+        "quant_budget_or_pay_plan_amount": 5,
+        "quant_cpi_indexed_adjustment": 99,
+        "quant_longevity_or_service_pay": 91,
+        "quant_other_compensation_value": 605,
+        "quant_overtime_or_holiday_rate": 449,
+        "quant_percentage_raise_or_cola": 270,
+        "quant_position_classification_pay_band": 71,
+        "quant_retroactive_pay_or_lump_sum": 45,
+        "quant_salary_schedule_table": 153,
+        "quant_step_schedule_progression": 133,
+        "quant_stipend_or_premium": 75,
+        "reference_navigation_only": 53,
+        "weak_or_ambiguous_compensation_signal": 20
+      },
+      "evidence_family_counts": {
+        "context": 73,
+        "qualitative_mechanism": 3237,
+        "quantitative_compensation": 2638
+      },
+      "gabriel_rating_ready_span_count": 5875,
+      "positive_source_count": 394,
+      "source_count": 419,
+      "span_count": 5948
+    },
+    "non_cba_or_unresolved_hint": {
+      "evidence_category_counts": {
+        "qual_budget_or_fiscal_constraint": 53,
+        "qual_cola_or_indexing_mechanism": 171,
+        "qual_collective_bargaining": 582,
+        "qual_comparability_or_parity_language": 41,
+        "qual_factfinding": 9,
+        "qual_grievance_arbitration": 4,
+        "qual_interest_arbitration": 4,
+        "qual_market_recruitment_retention_pressure": 937,
+        "qual_mou_or_settlement": 224,
+        "qual_non_base_compensation_mechanism": 1261,
+        "qual_ordinance_or_council_adoption": 403,
+        "qual_other_pay_setting_mechanism": 113,
+        "qual_position_classification_or_civil_service_structure": 359,
+        "qual_retroactivity_or_implementation_timing": 99,
+        "qual_strike_no_strike_or_labor_dispute_process": 116,
+        "quant_allowance_or_reimbursement": 503,
+        "quant_base_wage_direct_value": 1229,
+        "quant_budget_or_pay_plan_amount": 463,
+        "quant_cpi_indexed_adjustment": 171,
+        "quant_longevity_or_service_pay": 84,
+        "quant_other_compensation_value": 843,
+        "quant_overtime_or_holiday_rate": 604,
+        "quant_percentage_raise_or_cola": 484,
+        "quant_position_classification_pay_band": 105,
+        "quant_retroactive_pay_or_lump_sum": 37,
+        "quant_salary_schedule_table": 208,
+        "quant_step_schedule_progression": 146,
+        "quant_stipend_or_premium": 61,
+        "reference_navigation_only": 38,
+        "weak_or_ambiguous_compensation_signal": 336
+      },
+      "evidence_family_counts": {
+        "context": 374,
+        "qualitative_mechanism": 4376,
+        "quantitative_compensation": 4938
+      },
+      "gabriel_rating_ready_span_count": 9314,
+      "positive_source_count": 1418,
+      "source_count": 1947,
+      "span_count": 9688
+    }
+  },
+  "total_sources": 2366,
+  "total_spans": 15636
+}

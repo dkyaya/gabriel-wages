@@ -1,0 +1,21 @@
+{
+  "current_stage": "remaining-municipality span extraction complete",
+  "decision": "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready",
+  "final_pi_report_link_intact": true,
+  "gabriel_ready_sources": 1812,
+  "gabriel_ready_spans": 15189,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02",
+  "no_relevant_sources": 196,
+  "positive_sources": 1812,
+  "qualitative_spans": 7613,
+  "quantitative_spans": 7576,
+  "span_ready_sources": 2366,
+  "dashboard_build_status": "passed",
+  "dashboard_static_smoke_status": "passed",
+  "status": "span_extraction_complete_dashboard_ready",
+  "visual_browser_validated": false,
+  "total_spans": 15636,
+  "wage_growth_continuity_module_intact": true,
+  "weak_sources": 358
+}

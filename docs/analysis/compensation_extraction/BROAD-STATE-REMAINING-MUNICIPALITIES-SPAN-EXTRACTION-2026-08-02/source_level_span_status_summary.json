@@ -1,0 +1,12 @@
+{
+  "status_counts": {
+    "hash_mismatch": 0,
+    "missing_extracted_text": 0,
+    "no_relevant_compensation_span": 196,
+    "span_extraction_error": 0,
+    "span_positive": 1812,
+    "span_weak_or_ambiguous": 358,
+    "unsupported_text_structure": 0
+  },
+  "total_sources": 2366
+}

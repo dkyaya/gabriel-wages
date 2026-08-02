@@ -1813,6 +1813,11 @@ BROAD_STATE_REMAINING_TEXT_EXTRACTION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02"
 )
+BROAD_STATE_REMAINING_SPAN_EXTRACTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7375,6 +7380,44 @@ def broad_state_remaining_text_extraction_status() -> tuple[bool, dict[str, Any]
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_span_extraction_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize completed bounded span extraction for the remaining wave."""
+    directory = BROAD_STATE_REMAINING_SPAN_EXTRACTION_DIR
+    required = (
+        directory / "remaining_municipalities_span_extraction_manifest.json",
+        directory / "remaining_municipalities_span_extraction_summary.json",
+        directory / "gabriel_rating_ready_manifest.json",
+        directory / "snippet_bounds_audit.json",
+        directory / "extracted_text_hash_recheck_report.json",
+        directory / "dashboard_remaining_span_extraction_update_summary.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, rating, snippets, hashes, dashboard, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and dashboard.get("decision") == decision
+        and summary.get("input_span_ready_source_count") == 2366
+        and sum(summary.get("lane_distribution", {}).values()) == 2366
+        and rating.get("source_count") == summary.get("gabriel_rating_ready_source_count")
+        and rating.get("span_count") == summary.get("gabriel_rating_ready_span_count")
+        and snippets.get("passed") is True
+        and hashes.get("all_hashes_match") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and forbidden.get("passed") is True
+        and forbidden.get("ocr_occurred") is False
+        and forbidden.get("gabriel_or_api_rating_occurred") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality span-extraction package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11080,6 +11123,9 @@ def build_project_phase_summary(
     remaining_text_extraction_available, remaining_text_extraction = (
         broad_state_remaining_text_extraction_status()
     )
+    remaining_span_extraction_available, remaining_span_extraction = (
+        broad_state_remaining_span_extraction_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12753,6 +12799,41 @@ def build_project_phase_summary(
                 "defer OCR, rating, ingestion, normalization, matching, and analysis",
             ],
             "last_updated_context": "remaining_municipality_text_extraction_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_span_extraction_available:
+        payload.update({
+            "data_vintage": "2026-08-02",
+            "stage": "broad_state_remaining_municipalities_span_extraction_complete",
+            "current_phase": "Remaining-municipality span extraction complete",
+            "current_phase_code": remaining_span_extraction["decision"],
+            "current_evidence_status": "bounded_compensation_spans_complete_gabriel_rating_queue_ready",
+            "remaining_municipality_span_extraction_available": True,
+            "remaining_municipality_span_ready_source_count": remaining_span_extraction["input_span_ready_source_count"],
+            "remaining_municipality_span_positive_source_count": remaining_span_extraction["positive_source_count"],
+            "remaining_municipality_span_weak_source_count": remaining_span_extraction["weak_or_ambiguous_source_count"],
+            "remaining_municipality_span_no_relevant_source_count": remaining_span_extraction["no_relevant_source_count"],
+            "remaining_municipality_total_span_count": remaining_span_extraction["total_extracted_span_count"],
+            "remaining_municipality_quantitative_span_count": remaining_span_extraction["quantitative_compensation_span_count"],
+            "remaining_municipality_qualitative_span_count": remaining_span_extraction["qualitative_mechanism_span_count"],
+            "remaining_municipality_gabriel_ready_source_count": remaining_span_extraction["gabriel_rating_ready_source_count"],
+            "remaining_municipality_gabriel_ready_span_count": remaining_span_extraction["gabriel_rating_ready_span_count"],
+            "remaining_municipality_top_evidence_categories": remaining_span_extraction["top_evidence_categories"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02",
+            "next_phase": "Rate only the bounded GABRIEL-ready evidence queue after a fail-closed backend preflight",
+            "next_phase_sequence": [
+                "process only the GABRIEL-rating-ready bounded span queue",
+                "use redacted packets and checkpoint every packet or source",
+                "defer OCR, ingestion, normalization, matching, and final analysis",
+            ],
+            "last_updated_context": "remaining_municipality_span_extraction_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

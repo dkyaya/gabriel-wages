@@ -1,0 +1,17 @@
+{
+  "csv_sha256": "d0081d54f3d2e677d1dc8417b1198d251beffe188227142ceb31db856ea8a0e3",
+  "excluded_input_statuses": [
+    "extracted_low_text_but_usable",
+    "extracted_empty_or_too_low_text"
+  ],
+  "input_status_required": "extracted_ok",
+  "jsonl_sha256": "fcb9ac856623a563b3315f1399f64c859ab4bb87f41b8cf4f230a98ecfdbd810",
+  "lane_sizes": {
+    "span_extraction_lane_001": 474,
+    "span_extraction_lane_002": 473,
+    "span_extraction_lane_003": 473,
+    "span_extraction_lane_004": 473,
+    "span_extraction_lane_005": 473
+  },
+  "rows": 2366
+}
