@@ -1,10 +1,42 @@
 {
-  "cache_busting_url": null,
-  "deployment_run_id": null,
-  "final_pi_report_link_intact": true,
+  "cache_busting_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260802_remaining_span_extraction_20260802T211620Z",
+  "checked_at_utc": "2026-08-02T21:16:20Z",
+  "deployment": {
+    "conclusion": "success",
+    "head_sha": "a842c415a4c0e4c3e1dbd24980e60a2985af1580",
+    "run_id": 30767398380,
+    "status": "completed",
+    "workflow_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/30767398380"
+  },
+  "final_pi_report": {
+    "http_status": 200,
+    "link_intact": true,
+    "path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+    "response_bytes": 86986
+  },
   "map_primary_metric": "scout_coverage_rate",
-  "public_http_status": "pending_push_and_deployment",
-  "status": "pending_push_and_deployment",
-  "visual_browser_validated": false,
+  "public_bundle": {
+    "asset": "assets/index-B7vk8hOn.js",
+    "http_status": 200,
+    "response_bytes": 536332
+  },
+  "public_content_checks": {
+    "current_stage_present": true,
+    "details_component_present": true,
+    "final_pi_report_link_present": true,
+    "gabriel_rating_ready_counts_present": true,
+    "map_metric_present": true,
+    "next_task_present": true,
+    "scout_coverage_rate_present": true,
+    "span_counts_present": true,
+    "wage_growth_continuity_module_present": true
+  },
+  "public_http_status": "passed",
+  "status": "passed_static_http_visual_browser_unavailable",
+  "visual_browser": {
+    "attempted": true,
+    "reason_unavailable": "In-app browser bootstrap reported that no browser was available; the configured troubleshooting resource was also absent from the installed browser plugin cache.",
+    "validated": false
+  },
   "wage_growth_continuity_module_intact": true
 }
