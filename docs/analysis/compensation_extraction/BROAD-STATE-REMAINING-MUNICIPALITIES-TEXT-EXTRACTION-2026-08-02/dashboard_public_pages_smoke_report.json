@@ -1,10 +1,43 @@
 {
-  "cache_busting_url": null,
-  "deployment_run_id": null,
+  "bundle_asset": "/gabriel-wages/assets/index-BSYrlqqC.js",
+  "bundle_checks": {
+    "completed_stage_present": true,
+    "final_pi_report_link_present": true,
+    "map_metric_present": true,
+    "next_task_present": true,
+    "pdf_pages_successfully_extracted_49046_present": true,
+    "span_extraction_ready_count_2366_present": true,
+    "technical_details_present": true,
+    "text_extraction_queue_count_2558_present": true,
+    "wage_growth_continuity_module_present": true
+  },
+  "cache_busting_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260802_remaining_text_extraction_20260802T1932Z",
+  "dashboard_http": {
+    "content_length_bytes": 865,
+    "content_type": "text/html",
+    "status_code": 200
+  },
+  "deployment": {
+    "build_conclusion": "success",
+    "deploy_conclusion": "success",
+    "head_sha": "ce3ef28ba7c62696531fa3bad48fd8bc4fc05e7f",
+    "run_id": 30763470130
+  },
+  "final_pi_report_http": {
+    "content_length_bytes": 86986,
+    "content_type": "application/pdf",
+    "pdf_page_count": 17,
+    "pdf_version": "1.4",
+    "status_code": 200
+  },
   "final_pi_report_link_intact": true,
   "map_primary_metric": "scout_coverage_rate",
-  "public_http_status": "pending_push_and_deployment",
-  "status": "pending_push_and_deployment",
+  "public_http_status": "passed",
+  "status": "passed_static_http_visual_browser_unavailable",
+  "validation_limitations": [
+    "The in-app browser runtime reported that no browser was available, so no visual or interactive public-browser assertion is claimed.",
+    "Public validation used the successful GitHub Pages workflow, HTTP responses, PDF metadata, and deployed JavaScript bundle markers."
+  ],
   "visual_browser_validated": false,
   "wage_growth_continuity_module_intact": true
 }
