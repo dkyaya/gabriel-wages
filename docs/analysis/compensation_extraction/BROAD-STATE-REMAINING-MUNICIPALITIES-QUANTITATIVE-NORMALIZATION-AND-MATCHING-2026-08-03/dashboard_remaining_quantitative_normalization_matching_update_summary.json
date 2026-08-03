@@ -7,7 +7,7 @@
   "dashboard_local_static_validation_passed": true,
   "dashboard_local_visual_browser_validation": "not_run_browser_runtime_unavailable",
   "dashboard_map_primary_metric": "scout_coverage_rate",
-  "dashboard_public_validation": "pending_push_and_deployment",
+  "dashboard_public_validation": "passed_static_http_at_implementation_commit_96d5784e95f122a834d2b2e74915e539a1c15cac",
   "final_pi_report_link_intact": true,
   "global_analysis_readiness": false,
   "global_causal_readiness": false,
