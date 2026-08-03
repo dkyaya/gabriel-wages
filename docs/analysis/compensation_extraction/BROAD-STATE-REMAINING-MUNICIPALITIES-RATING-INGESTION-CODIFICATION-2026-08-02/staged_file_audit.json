@@ -6,28 +6,11 @@
     "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
     "package-lock.json"
   ],
-  "staged_file_count": 21,
+  "staged_file_count": 4,
   "staged_files": [
-    "docs/dashboard/data/analysis_readiness.json",
-    "docs/dashboard/data/candidate_queue_summary.json",
-    "docs/dashboard/data/content_triage_status_summary.json",
-    "docs/dashboard/data/coverage_funnel.json",
-    "docs/dashboard/data/parallel_scout_status.json",
-    "docs/dashboard/data/pdf_readiness_status_summary.json",
-    "docs/dashboard/data/priority_summary.json",
-    "docs/dashboard/data/project_phase_summary.json",
-    "docs/dashboard/data/reports_index.json",
-    "docs/dashboard/data/scout_operations_summary.json",
-    "docs/dashboard/data/scout_runtime_trends.json",
-    "docs/dashboard/data/scout_yield_by_state.json",
-    "docs/dashboard/data/source_review_status_summary.json",
-    "docs/dashboard/data/state_priority_summary.json",
-    "docs/dashboard/data/state_summary.json",
-    "docs/dashboard/data/text_table_calibration_status_summary.json",
-    "docs/dashboard/data/text_table_detection_status_summary.json",
-    "docs/dashboard/data/top_priority_targets.json",
-    "docs/dashboard/data/verification_status_summary.json",
-    "scripts/run_remaining_municipality_rating_ingestion_codification.py",
-    "scripts/test_dashboard_github_pages_deployment_repair.py"
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/dashboard_public_pages_smoke_report.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/dashboard_remaining_rating_ingestion_update_summary.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/validation_report.json",
+    "scripts/run_remaining_municipality_rating_ingestion_codification.py"
   ]
 }

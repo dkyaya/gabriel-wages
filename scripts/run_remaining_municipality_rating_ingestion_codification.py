@@ -664,6 +664,12 @@ Global analysis, wage-gap, and causal readiness remain false. No normalization, 
         "input_span_directory": str(SPAN_DIR.relative_to(ROOT)),
         "canonical_layer_manifest": "canonical_ingested_rating_layer_manifest.json",
     })
+    public_validation: dict[str, Any] = {"status": "pending_commit_push_and_pages_deployment"}
+    existing_dashboard_summary = OUTPUT / "dashboard_remaining_rating_ingestion_update_summary.json"
+    if existing_dashboard_summary.is_file():
+        prior_public = read_json(existing_dashboard_summary).get("public_browser_validation", {})
+        if str(prior_public.get("status", "")).startswith("passed_"):
+            public_validation = prior_public
     write_json(OUTPUT / "dashboard_remaining_rating_ingestion_update_summary.json", {
         "current_stage": "remaining-municipality rating ingestion/codification complete",
         "next_task": NEXT_TASK, "rated_sources_ingested": len(canonical_sources),
@@ -684,7 +690,7 @@ Global analysis, wage-gap, and causal readiness remain false. No normalization, 
             "technical_details_count": 3, "technical_details_open_by_default": 0,
             "current_preview_console_errors": 0,
         },
-        "public_browser_validation": {"status": "pending_commit_push_and_pages_deployment"},
+        "public_browser_validation": public_validation,
         "global_analysis_readiness": False, "global_wage_gap_readiness": False, "global_causal_readiness": False,
     })
     write_md(OUTPUT / "next_task.md", "Next task", f"""

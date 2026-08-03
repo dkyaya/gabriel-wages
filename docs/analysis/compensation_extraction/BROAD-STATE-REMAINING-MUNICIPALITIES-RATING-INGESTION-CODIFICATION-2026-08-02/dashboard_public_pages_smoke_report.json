@@ -1,0 +1,21 @@
+{
+  "cache_busted_url": "https://dkyaya.github.io/gabriel-wages/?dashboard_smoke=20260802_remaining_rating_ingestion_20260803T0315Z",
+  "checked_at_utc": "2026-08-03T03:14:41Z",
+  "checks": {
+    "claim_boundary_visible": true,
+    "current_stage_visible": true,
+    "final_pi_report_link_visible": true,
+    "global_analysis_readiness_remains_false": true,
+    "map_primary_metric_scout_coverage_rate": true,
+    "next_task_visible": true,
+    "no_positive_national_prevalence_or_causal_claim": true,
+    "technical_details_collapsed_by_default": true,
+    "unclear_reconciliation_queue_count_13180_visible": true,
+    "wage_growth_continuity_module_visible": true
+  },
+  "console_error_count": 0,
+  "deployment_commit": "dfeb7aeab3c3c1ff0961fab0e2305cb7d5c1860c",
+  "deployment_run_id": 30781219167,
+  "deployment_status": "success",
+  "status": "passed_public_browser_validation"
+}
