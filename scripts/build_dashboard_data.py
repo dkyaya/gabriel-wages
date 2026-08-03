@@ -1863,6 +1863,11 @@ BROAD_STATE_WHOLE_CORPUS_SYNTHESIS_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03"
 )
+BROAD_STATE_WHOLE_CORPUS_CLAIM_PACKAGE_PREP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7872,6 +7877,46 @@ def broad_state_whole_corpus_synthesis_status() -> tuple[bool, dict[str, Any]]:
     return True, {**summary, **dashboard, "claim_readiness_gates": gates, "artifact_directory": str(directory)}
 
 
+def broad_state_whole_corpus_claim_package_prep_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the validated internal claim package without advancing estimate gates."""
+    directory = BROAD_STATE_WHOLE_CORPUS_CLAIM_PACKAGE_PREP_DIR
+    required = (
+        directory / "broad_state_whole_corpus_claim_package_prep_manifest.json",
+        directory / "broad_state_whole_corpus_claim_package_prep_summary.json",
+        directory / "internal_causal_mechanism_claim_package.json",
+        directory / "safety_wage_growth_assertion_assessment.json",
+        directory / "dashboard_whole_corpus_claim_package_prep_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, package, assessment, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready"
+    valid = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and summary.get("major_claim_family_count") == 8
+        and summary.get("major_supportable_causal_mechanism_claim_count", 0) > 0
+        and summary.get("safety_wage_growth_assertion_assessment") == "supported_as_causal_mechanism_story"
+        and package.get("package_type") == "internal_pi_facing_causal_mechanism_claim_package"
+        and assessment.get("assertion_assessment") == "supported_as_causal_mechanism_story"
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("causal_effect_estimate_made") is False
+        and forbidden.get("polished_pdf_docx_slide_or_public_memo_created") is False
+    )
+    if not valid:
+        raise ValueError("whole-corpus claim package prep fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11607,6 +11652,9 @@ def build_project_phase_summary(
     whole_corpus_synthesis_available, whole_corpus_synthesis = (
         broad_state_whole_corpus_synthesis_status()
     )
+    whole_corpus_claim_package_available, whole_corpus_claim_package = (
+        broad_state_whole_corpus_claim_package_prep_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13651,6 +13699,41 @@ def build_project_phase_summary(
             "global_causal_readiness": False,
             "wage_gap_analysis_readiness": "false_whole_corpus_local_gate_partial_global_gate_failed",
             "causal_analysis_readiness": "false_whole_corpus_causal_gate_failed",
+        })
+    if whole_corpus_claim_package_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_whole_corpus_claim_package_prep_complete",
+            "current_phase": "Whole-corpus claim package prep complete",
+            "current_phase_code": whole_corpus_claim_package["decision"],
+            "current_evidence_status": "bounded_internal_causal_mechanism_claim_package_prepared",
+            "whole_corpus_claim_package_prep_available": True,
+            "internal_causal_mechanism_claim_package_prepared": True,
+            "major_supportable_causal_mechanism_claim_count": whole_corpus_claim_package["major_supportable_causal_mechanism_claim_count"],
+            "major_conditional_causal_mechanism_claim_count": whole_corpus_claim_package["major_conditional_or_exploratory_claim_count"],
+            "unsupported_claim_count": whole_corpus_claim_package["unsupported_claim_count"],
+            "safety_wage_growth_assertion_assessment": whole_corpus_claim_package["safety_wage_growth_assertion_assessment"],
+            "claim_package_example_count": whole_corpus_claim_package["example_count"],
+            "claim_package_claim_family_count": whole_corpus_claim_package["claim_family_coverage_count"],
+            "claim_package_strength_summary": whole_corpus_claim_package["mechanism_claim_strength_summary"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03",
+            "next_phase": "Review the internal claim package and convert validated findings into a report outline",
+            "next_phase_sequence": [
+                "refine claim wording, examples, caveats, and evidence boundaries",
+                "route claims to main report, appendix, dashboard, or future work",
+                "retain failed global wage-gap and causal-estimation gates",
+            ],
+            "last_updated_context": "whole_corpus_claim_package_prep_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "global_wage_gap_readiness": False,
+            "global_causal_readiness": False,
+            "wage_gap_analysis_readiness": "false_claim_package_preserves_failed_global_wage_gap_gate",
+            "causal_analysis_readiness": "false_bounded_mechanism_interpretation_not_causal_estimation",
         })
     return payload
 

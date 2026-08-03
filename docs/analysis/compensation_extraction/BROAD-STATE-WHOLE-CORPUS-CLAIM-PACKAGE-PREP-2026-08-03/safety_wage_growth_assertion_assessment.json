@@ -1,0 +1,30 @@
+{
+  "assertion": "Safety-position wages grow faster than non-safety-position wages.",
+  "assertion_assessment": "supported_as_causal_mechanism_story",
+  "local_comparison_support": "partial: 21 supporting or conditional local documentary comparison records; no global estimator",
+  "mechanism_support": "pass: 37,369 mechanism records and 1,682 quant-qual links support institutional wage-pressure channels",
+  "national_readiness_support": "partial: 35,623 readiness strata describe coverage and blockers, not national outcomes",
+  "non_base_compensation_support": "partial but extensive: 8,422 evidence units; total-compensation harmonization remains incomplete",
+  "recommended_bounded_wording": "The corpus supports a bounded causal-mechanism interpretation: safety compensation appears especially exposed to a reinforcing bundle of bargaining, impasse resolution, step progression, non-base compensation, recruitment/retention pressure, comparability, and retroactive implementation. These institutions can raise floors, schedule growth, protect add-ons, strengthen leverage, and make delayed increases payable. Non-safety units also receive several of these mechanisms, so the evidence supports the direction of the safety wage-pressure story more strongly than a universal safety-only mechanism or a clean global wage-gap estimate.",
+  "same_side_growth_support": "partial: 1,945 growth evidence units, including claim-ready/supporting records with heterogeneous periods and structures",
+  "strength": "moderate",
+  "strongest_countervailing_or_limiting_evidence": [
+    "The 21 local comparison records are supporting or conditional examples, not a scalable wage-gap estimator.",
+    "Mechanism evidence counts are coded spans and can repeat within sources.",
+    "Non-safety units also receive bargaining, COLA, step, and pay-plan mechanisms.",
+    "Pay basis, period, and role comparability remain incomplete in national strata.",
+    "Documented institutional channels do not identify counterfactual wage outcomes.",
+    "Budget and adoption mechanisms can constrain or delay as well as increase compensation."
+  ],
+  "strongest_supporting_mechanisms": [
+    "collective_bargaining",
+    "step_schedule_seniority",
+    "non_base_compensation",
+    "market_recruitment_retention",
+    "retroactivity_implementation",
+    "comparability_parity"
+  ],
+  "what_evidence_would_upgrade_this_assertion": "A repeated city-by-cycle contract panel with comparable safety/non-safety roles, harmonized total compensation, validated implementation dates, external controls, and credible identifying variation.",
+  "why_causal_estimate_is_not_ready": "The documentary corpus identifies mechanisms and plausible direction but supplies no validated counterfactual design, regression, shock, or treatment-effect estimate.",
+  "why_global_wage_gap_estimate_is_not_ready": "The corpus lacks sufficient clean, repeated, same-city same-cycle cross-side comparisons with compatible pay basis, periods, and roles."
+}

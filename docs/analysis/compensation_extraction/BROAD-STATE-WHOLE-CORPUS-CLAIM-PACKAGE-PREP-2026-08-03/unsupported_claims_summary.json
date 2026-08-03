@@ -1,0 +1,41 @@
+{
+  "claims": [
+    {
+      "claim": "A national safety wage-gap estimate",
+      "claim_id": "UNSUP-01",
+      "reason": "Matched city-cycle breadth and harmonized pay basis are insufficient.",
+      "status": "not_supported"
+    },
+    {
+      "claim": "A national prevalence estimate for any mechanism",
+      "claim_id": "UNSUP-02",
+      "reason": "Evidence-unit counts are not population-weighted denominators.",
+      "status": "not_supported"
+    },
+    {
+      "claim": "A causal effect estimate of a mechanism",
+      "claim_id": "UNSUP-03",
+      "reason": "No counterfactual identification design or treatment-effect analysis was run.",
+      "status": "not_supported"
+    },
+    {
+      "claim": "A regression-based claim",
+      "claim_id": "UNSUP-04",
+      "reason": "No regression was run or authorized.",
+      "status": "not_supported"
+    },
+    {
+      "claim": "A precise claim that safety wages grow X percent faster",
+      "claim_id": "UNSUP-05",
+      "reason": "Global wage-gap readiness fails.",
+      "status": "not_supported"
+    },
+    {
+      "claim": "The mechanism caused an observed wage difference",
+      "claim_id": "UNSUP-06",
+      "reason": "Documentary mechanism interpretation is not causal estimation.",
+      "status": "not_supported"
+    }
+  ],
+  "unsupported_claim_count": 6
+}

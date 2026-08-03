@@ -1,0 +1,181 @@
+{
+  "claims": [
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-A",
+      "claim_statement": "Safety compensation is exposed to recurring formal negotiation and impasse-resolution institutions that can lift wage floors, preserve leverage, and lock increases into agreements or awards.",
+      "claim_strength": "moderate",
+      "claim_title": "Formal bargaining, arbitration, and factfinding",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-b7717536d2561f66db0ced52",
+        "WCCPEX-620023a75d044a4d722b9ff0",
+        "WCCPEX-c50f28536893cd93aa5a787c",
+        "WCCPEX-9002228502ce09035b47f850",
+        "WCCPEX-f9fc40ff1c1507df5ef0c2fc",
+        "WCCPEX-4c27a8c5b48512597d9835de"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "supports",
+      "mechanism_classes": [
+        "collective_bargaining",
+        "arbitration_factfinding",
+        "strike_no_strike_dispute_process"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-B",
+      "claim_statement": "Step, seniority, rank, and COLA structures embed recurring wage growth rather than requiring a wholly discretionary raise each year.",
+      "claim_strength": "strong",
+      "claim_title": "Step schedules and seniority progression",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-f2fd6f6f10b7f68fc611502d",
+        "WCCPEX-04b78c315901ed753adfaafc",
+        "WCCPEX-fa637add09963a080b3734e2",
+        "WCCPEX-c85689d111d6649da0624c40"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "supports",
+      "mechanism_classes": [
+        "step_schedule_seniority",
+        "cola_cpi_indexing"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-C",
+      "claim_statement": "Safety compensation pressure extends beyond base pay because overtime, holidays, longevity, premiums, stipends, and allowances are structured compensation channels.",
+      "claim_strength": "strong",
+      "claim_title": "Non-base compensation pressure",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-605e55a2877ed56999fd1d6a",
+        "WCCPEX-a443067e1aa2cb1c4e72dce3"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "supports",
+      "mechanism_classes": [
+        "non_base_compensation"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-D",
+      "claim_statement": "Recruitment, retention, and comparator pressure provides an explicit institutional justification for raising schedules or adding targeted premiums, with public-safety staffing making the channel especially salient in many records.",
+      "claim_strength": "strong",
+      "claim_title": "Market, recruitment, and retention pressure",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-80dbbcb3f4d246dc7abfaaef",
+        "WCCPEX-fe047165d32196d00caf2864",
+        "WCCPEX-cfdab14887d017045b0994c6",
+        "WCCPEX-84fda55ff83131f374bb944f"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "supports",
+      "mechanism_classes": [
+        "market_recruitment_retention",
+        "comparability_parity"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-E",
+      "claim_statement": "Retroactive effective dates and implementation provisions turn bargaining delay into payable increases and back pay instead of eliminating scheduled growth.",
+      "claim_strength": "strong",
+      "claim_title": "Retroactivity and implementation",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-d2fabc32027cdf0d9f2d46df",
+        "WCCPEX-74306cd723a39a8fdecaf5dd"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "supports",
+      "mechanism_classes": [
+        "retroactivity_implementation"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-F",
+      "claim_statement": "Council action, ordinances, budgets, pay plans, and classification systems translate compensation proposals into funded policy, while also imposing fiscal limits.",
+      "claim_strength": "moderate",
+      "claim_title": "Ordinance, budget, and pay-plan formalization",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-84d60d648789abeaa588e12c",
+        "WCCPEX-691b60a557d81d806bb055be",
+        "WCCPEX-6e0a5f498b3ab5fea3275c6c",
+        "WCCPEX-9484c5ee48320bc2c57fca84",
+        "WCCPEX-c24569c6bd53381699bae3b1",
+        "WCCPEX-caedb9df9638617877d52c61"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "partially_supports",
+      "mechanism_classes": [
+        "ordinance_council_adoption",
+        "budget_fiscal_constraint",
+        "classification_civil_service"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-G",
+      "claim_statement": "Non-safety units also receive bargaining, steps, COLAs, and pay-plan mechanisms; the defensible distinction is a reinforcing safety pressure bundle, not a claim that non-safety compensation lacks institutional growth channels.",
+      "claim_strength": "moderate",
+      "claim_title": "Non-safety mechanisms as counterweights",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-fa637add09963a080b3734e2",
+        "WCCPEX-c85689d111d6649da0624c40",
+        "WCCPEX-f2fd6f6f10b7f68fc611502d",
+        "WCCPEX-04b78c315901ed753adfaafc",
+        "WCCPEX-b7717536d2561f66db0ced52",
+        "WCCPEX-620023a75d044a4d722b9ff0",
+        "WCCPEX-80dbbcb3f4d246dc7abfaaef",
+        "WCCPEX-50ce521ead120927aeb6428f"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "complicates",
+      "mechanism_classes": [
+        "cola_cpi_indexing",
+        "step_schedule_seniority",
+        "collective_bargaining"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+      "claim_id": "CLAIM-H",
+      "claim_statement": "The corpus supports the direction and operation of a safety wage-pressure story more strongly than it supports a clean global wage-gap or causal-effect estimate.",
+      "claim_strength": "strong",
+      "claim_title": "Mechanism interpretation versus wage-gap estimation",
+      "counterexamples_or_limits": "Non-safety mechanisms are real; local matched comparisons remain partial; mechanism coding is not a frequency or effect-size estimate.",
+      "example_ids": [
+        "WCCPEX-b7717536d2561f66db0ced52",
+        "WCCPEX-620023a75d044a4d722b9ff0",
+        "WCCPEX-605e55a2877ed56999fd1d6a",
+        "WCCPEX-a443067e1aa2cb1c4e72dce3",
+        "WCCPEX-80dbbcb3f4d246dc7abfaaef",
+        "WCCPEX-fe047165d32196d00caf2864",
+        "WCCPEX-d2fabc32027cdf0d9f2d46df",
+        "WCCPEX-74306cd723a39a8fdecaf5dd",
+        "WCCPEX-8e43bbcb8fd2a422e8c1776c",
+        "WCCPEX-3ba33f16e80188d389e25308",
+        "WCCPEX-7768659eace95d2d5edc5a3f"
+      ],
+      "fit_with_safety_wages_grow_faster_assertion": "supports",
+      "mechanism_classes": [
+        "collective_bargaining",
+        "non_base_compensation",
+        "market_recruitment_retention",
+        "retroactivity_implementation"
+      ],
+      "what_would_make_good_as_gold": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    }
+  ],
+  "conditional_or_exploratory_card_count": 1,
+  "major_claim_count": 8,
+  "supportable_mechanism_card_count": 13
+}

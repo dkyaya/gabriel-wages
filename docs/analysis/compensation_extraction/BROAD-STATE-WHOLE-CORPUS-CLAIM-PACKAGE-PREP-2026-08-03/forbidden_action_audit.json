@@ -1,0 +1,18 @@
+{
+  "causal_effect_estimate_made": false,
+  "existing_final_pi_report_overwritten": false,
+  "files_deleted_or_archived": false,
+  "final_wage_gap_estimate_made": false,
+  "gabriel_api_rating_run": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "national_or_prevalence_estimate_made": false,
+  "new_normalization_or_matching_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "polished_pdf_docx_slide_or_public_memo_created": false,
+  "regression_run": false,
+  "span_extraction_run": false,
+  "text_extraction_run": false,
+  "treatment_effect_run": false
+}

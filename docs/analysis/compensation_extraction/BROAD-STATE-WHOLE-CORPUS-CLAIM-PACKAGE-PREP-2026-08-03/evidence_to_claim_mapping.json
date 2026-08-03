@@ -1,0 +1,120 @@
+{
+  "CLAIM-A": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-b7717536d2561f66db0ced52",
+      "WCCPEX-620023a75d044a4d722b9ff0",
+      "WCCPEX-c50f28536893cd93aa5a787c",
+      "WCCPEX-9002228502ce09035b47f850",
+      "WCCPEX-f9fc40ff1c1507df5ef0c2fc",
+      "WCCPEX-4c27a8c5b48512597d9835de"
+    ],
+    "mechanisms": [
+      "collective_bargaining",
+      "arbitration_factfinding",
+      "strike_no_strike_dispute_process"
+    ]
+  },
+  "CLAIM-B": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-f2fd6f6f10b7f68fc611502d",
+      "WCCPEX-04b78c315901ed753adfaafc",
+      "WCCPEX-fa637add09963a080b3734e2",
+      "WCCPEX-c85689d111d6649da0624c40"
+    ],
+    "mechanisms": [
+      "step_schedule_seniority",
+      "cola_cpi_indexing"
+    ]
+  },
+  "CLAIM-C": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-605e55a2877ed56999fd1d6a",
+      "WCCPEX-a443067e1aa2cb1c4e72dce3"
+    ],
+    "mechanisms": [
+      "non_base_compensation"
+    ]
+  },
+  "CLAIM-D": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-80dbbcb3f4d246dc7abfaaef",
+      "WCCPEX-fe047165d32196d00caf2864",
+      "WCCPEX-cfdab14887d017045b0994c6",
+      "WCCPEX-84fda55ff83131f374bb944f"
+    ],
+    "mechanisms": [
+      "market_recruitment_retention",
+      "comparability_parity"
+    ]
+  },
+  "CLAIM-E": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-d2fabc32027cdf0d9f2d46df",
+      "WCCPEX-74306cd723a39a8fdecaf5dd"
+    ],
+    "mechanisms": [
+      "retroactivity_implementation"
+    ]
+  },
+  "CLAIM-F": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-84d60d648789abeaa588e12c",
+      "WCCPEX-691b60a557d81d806bb055be",
+      "WCCPEX-6e0a5f498b3ab5fea3275c6c",
+      "WCCPEX-9484c5ee48320bc2c57fca84",
+      "WCCPEX-c24569c6bd53381699bae3b1",
+      "WCCPEX-caedb9df9638617877d52c61"
+    ],
+    "mechanisms": [
+      "ordinance_council_adoption",
+      "budget_fiscal_constraint",
+      "classification_civil_service"
+    ]
+  },
+  "CLAIM-G": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-fa637add09963a080b3734e2",
+      "WCCPEX-c85689d111d6649da0624c40",
+      "WCCPEX-f2fd6f6f10b7f68fc611502d",
+      "WCCPEX-04b78c315901ed753adfaafc",
+      "WCCPEX-b7717536d2561f66db0ced52",
+      "WCCPEX-620023a75d044a4d722b9ff0",
+      "WCCPEX-80dbbcb3f4d246dc7abfaaef",
+      "WCCPEX-50ce521ead120927aeb6428f"
+    ],
+    "mechanisms": [
+      "cola_cpi_indexing",
+      "step_schedule_seniority",
+      "collective_bargaining"
+    ]
+  },
+  "CLAIM-H": {
+    "boundary": "Internal bounded mechanism claim; no national prevalence, wage-gap estimate, or causal-effect estimate.",
+    "example_ids": [
+      "WCCPEX-b7717536d2561f66db0ced52",
+      "WCCPEX-620023a75d044a4d722b9ff0",
+      "WCCPEX-605e55a2877ed56999fd1d6a",
+      "WCCPEX-a443067e1aa2cb1c4e72dce3",
+      "WCCPEX-80dbbcb3f4d246dc7abfaaef",
+      "WCCPEX-fe047165d32196d00caf2864",
+      "WCCPEX-d2fabc32027cdf0d9f2d46df",
+      "WCCPEX-74306cd723a39a8fdecaf5dd",
+      "WCCPEX-8e43bbcb8fd2a422e8c1776c",
+      "WCCPEX-3ba33f16e80188d389e25308",
+      "WCCPEX-7768659eace95d2d5edc5a3f"
+    ],
+    "mechanisms": [
+      "collective_bargaining",
+      "non_base_compensation",
+      "market_recruitment_retention",
+      "retroactivity_implementation"
+    ]
+  }
+}

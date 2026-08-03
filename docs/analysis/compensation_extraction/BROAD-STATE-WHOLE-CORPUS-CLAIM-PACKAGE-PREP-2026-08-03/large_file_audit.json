@@ -1,0 +1,284 @@
+{
+  "audited_at": "2026-08-03T22:33:37.685866+00:00",
+  "hard_limit_violations": [],
+  "large_files_25_mib_or_more": [
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/pi_report_supporting_examples.jsonl",
+      "size_bytes": 33145177
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/side_relevance_unclear_full_reconciliation_queue.csv",
+      "size_bytes": 29830782
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/side_relevance_unclear_full_reconciliation_queue.jsonl",
+      "size_bytes": 44249705
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03/matching_prep_universe.jsonl",
+      "size_bytes": 39661232
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_claim_readiness_layer.jsonl",
+      "size_bytes": 30783049
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/side_relevance_reconciliation_locked_queue.csv",
+      "size_bytes": 30414654
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/all_tier_matching_results.jsonl",
+      "size_bytes": 42931088
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/merged_gabriel_span_ratings.jsonl",
+      "size_bytes": 41733523
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_rating_ready_queue.jsonl",
+      "size_bytes": 47846510
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.jsonl",
+      "size_bytes": 82389626
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "inbox/foia/ma_newton_police_cba_lris.pdf",
+      "size_bytes": 43460347
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/span_rating_locked_queue.jsonl",
+      "size_bytes": 50261642
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/blocker_rescue_results.jsonl",
+      "size_bytes": 31922320
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "corpus/oh_cleveland/oh_cleveland_afscme_local100_cba_2022_2025.pdf",
+      "size_bytes": 29073135
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/reconciled_side_relevance_span_layer.jsonl",
+      "size_bytes": 64821858
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_results.jsonl",
+      "size_bytes": 26560323
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/normalized_quantitative_records.jsonl",
+      "size_bytes": 46637849
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_rating_span_layer.csv",
+      "size_bytes": 50626789
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "corpus/ma_newton/ma_newton_police_cba_lris.pdf",
+      "size_bytes": 43460347
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/all_tier_matching_input_universe.jsonl",
+      "size_bytes": 42094914
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/cleaned_analysis_use_layer.jsonl",
+      "size_bytes": 48267903
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28/combined_broad_span_extraction_3815_rating_candidate_manifest.csv",
+      "size_bytes": 42429291
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/gabriel_rating_ready_queue.jsonl",
+      "size_bytes": 29789330
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/cleaned_analysis_use_layer.csv",
+      "size_bytes": 35753894
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/merged_side_relevance_reconciliation_results.jsonl",
+      "size_bytes": 37165496
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/side_relevance_reconciliation_deltas.jsonl",
+      "size_bytes": 38306318
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "corpus/tx_san_antonio/tx_san_antonio_sapoa_police_cba_2022_2026.pdf",
+      "size_bytes": 28242821
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.csv",
+      "size_bytes": 29825297
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_rating_ready_queue.csv",
+      "size_bytes": 29045211
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.jsonl",
+      "size_bytes": 49138108
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_results.csv",
+      "size_bytes": 26218143
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28/combined_broad_span_extraction_3815_positive_spans.csv",
+      "size_bytes": 42429291
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01/merged_live_scout_outcomes.jsonl",
+      "size_bytes": 27968652
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/reconciled_side_relevance_span_layer.csv",
+      "size_bytes": 28047385
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.csv",
+      "size_bytes": 50917902
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/merged_normalization_rescue_results.jsonl",
+      "size_bytes": 28257098
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28/combined_broad_rating_ingestion_codification_16947_codified_records.csv",
+      "size_bytes": 29164711
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_rating_span_layer.jsonl",
+      "size_bytes": 42043821
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/side_relevance_reconciliation_locked_queue.jsonl",
+      "size_bytes": 46416882
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/merged_compensation_evidence_spans.jsonl",
+      "size_bytes": 30655319
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/span_rating_locked_queue.csv",
+      "size_bytes": 31553469
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_claim_readiness_layer.csv",
+      "size_bytes": 32100888
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.csv",
+      "size_bytes": 46806143
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": false,
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_locked_queue.csv",
+      "size_bytes": 44703127
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/canonical_ingested_span_ratings.jsonl",
+      "size_bytes": 58406694
+    },
+    {
+      "over_100_mib": false,
+      "over_50_mib": true,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.jsonl",
+      "size_bytes": 93427898
+    }
+  ],
+  "new_output_over_50_mib": [],
+  "passed": true
+}

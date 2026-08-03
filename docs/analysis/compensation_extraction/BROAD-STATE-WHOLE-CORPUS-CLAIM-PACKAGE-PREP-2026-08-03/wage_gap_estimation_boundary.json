@@ -1,0 +1,6 @@
+{
+  "gate": "fail",
+  "global_wage_gap_readiness": false,
+  "reason": "The corpus lacks sufficient clean, repeated, same-city same-cycle cross-side comparisons with compatible pay basis, periods, and roles.",
+  "status": "not_ready"
+}

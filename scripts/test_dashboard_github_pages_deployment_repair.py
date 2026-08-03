@@ -141,7 +141,38 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/"
             "broad_state_whole_corpus_rating_span_synthesis_manifest.json"
         )
-        if whole_corpus_synthesis_manifest.exists() and json.loads(
+        whole_corpus_claim_package_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/"
+            "broad_state_whole_corpus_claim_package_prep_manifest.json"
+        )
+        if whole_corpus_claim_package_manifest.exists() and json.loads(
+            whole_corpus_claim_package_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_claim_package_prep_complete",
+            )
+            self.assertTrue(phase["whole_corpus_claim_package_prep_available"])
+            self.assertTrue(phase["internal_causal_mechanism_claim_package_prepared"])
+            self.assertEqual(phase["major_supportable_causal_mechanism_claim_count"], 13)
+            self.assertEqual(phase["major_conditional_causal_mechanism_claim_count"], 1)
+            self.assertEqual(phase["unsupported_claim_count"], 6)
+            self.assertEqual(phase["claim_package_claim_family_count"], 8)
+            self.assertEqual(
+                phase["safety_wage_growth_assertion_assessment"],
+                "supported_as_causal_mechanism_story",
+            )
+            self.assertFalse(phase["global_analysis_readiness"])
+            self.assertFalse(phase["global_wage_gap_readiness"])
+            self.assertFalse(phase["global_causal_readiness"])
+        elif whole_corpus_synthesis_manifest.exists() and json.loads(
             whole_corpus_synthesis_manifest.read_text()
         ).get("decision") == (
             "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready"
@@ -354,6 +385,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "false_local_examples_bounded_no_final_wage_gap_claim",
                 "false_pending_whole_corpus_synthesis_and_quality_gates",
                 "false_whole_corpus_local_gate_partial_global_gate_failed",
+                "false_claim_package_preserves_failed_global_wage_gap_gate",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -366,6 +398,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "blocked_pending_stronger_causal_design",
                 "false_blocked_pending_stronger_causal_design",
                 "false_whole_corpus_causal_gate_failed",
+                "false_bounded_mechanism_interpretation_not_causal_estimation",
             },
         )
         extraction_summary_path = (
@@ -666,7 +699,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(whole_corpus_synthesis_manifest.read_text()).get("decision")
                                                                             == "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready"
                                                                         )
-                                                                        if whole_corpus_synthesis_complete:
+                                                                        whole_corpus_claim_package_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/"
+                                                                            "broad_state_whole_corpus_claim_package_prep_manifest.json"
+                                                                        )
+                                                                        whole_corpus_claim_package_complete = (
+                                                                            whole_corpus_claim_package_manifest.exists()
+                                                                            and json.loads(whole_corpus_claim_package_manifest.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready"
+                                                                        )
+                                                                        if whole_corpus_claim_package_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Whole-corpus claim package prep complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(phase["whole_corpus_claim_package_prep_available"])
+                                                                            self.assertEqual(phase["major_supportable_causal_mechanism_claim_count"], 13)
+                                                                        elif whole_corpus_synthesis_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Whole-corpus rating-span synthesis and claim readiness complete",

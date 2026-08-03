@@ -1,0 +1,7 @@
+{
+  "causal_effect_estimate_made": false,
+  "gate": "fail",
+  "regression_run": false,
+  "status": "not_estimated",
+  "treatment_effect_run": false
+}

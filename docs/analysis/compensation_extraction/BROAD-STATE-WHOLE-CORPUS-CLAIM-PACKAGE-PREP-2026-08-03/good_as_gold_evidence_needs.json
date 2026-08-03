@@ -1,0 +1,36 @@
+{
+  "needs": [
+    {
+      "claim_family": "CLAIM-A",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-B",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-C",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-D",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-E",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-F",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-G",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    },
+    {
+      "claim_family": "CLAIM-H",
+      "need": "Repeated same-city, same-period, same-cycle safety/non-safety contracts with harmonized pay basis, comparable roles, total-compensation components, and a credible panel or shock-based identification design."
+    }
+  ]
+}

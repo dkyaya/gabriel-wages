@@ -1,0 +1,6 @@
+{
+  "allowed": "Explain documented institutional channels and plausible wage-pressure direction.",
+  "global_causal_readiness": false,
+  "not_allowed": "State or imply an estimated causal effect.",
+  "status": "supported_bounded_interpretation"
+}

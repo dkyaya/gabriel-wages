@@ -1,0 +1,26 @@
+{
+  "bounded_causal_mechanism_language_used": true,
+  "claim_family_coverage_count": 8,
+  "counterexamples_or_limits_count": 6,
+  "decision": "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready",
+  "example_count": 123,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "head_before": "6e3292d45ccf64dcb74b02e0c9efc734f78408f3",
+  "local_example_support_count": 21,
+  "major_claim_family_count": 8,
+  "major_conditional_or_exploratory_claim_count": 1,
+  "major_supportable_causal_mechanism_claim_count": 13,
+  "mechanism_claim_strength_summary": {
+    "exploratory": 1,
+    "moderate": 6,
+    "strong": 7
+  },
+  "national_readiness_only_example_count": 15,
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03",
+  "polished_deliverable_created": false,
+  "safety_wage_growth_assertion_assessment": "supported_as_causal_mechanism_story",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+  "unsupported_claim_count": 6
+}
