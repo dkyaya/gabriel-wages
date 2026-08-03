@@ -1,0 +1,83 @@
+{
+  "caveats": [
+    "Batch-local source identifiers are namespaced; no aggressive cross-batch source collapse.",
+    "Later QA/readiness units remain distinct from rated-span units.",
+    "Write-off and blocker records remain labeled and separate."
+  ],
+  "created_at": "2026-08-03T18:45:41.245956+00:00",
+  "excluded_or_superseded_directory_count": 19,
+  "included_canonical_layer_count": 10,
+  "included_directory_count": 10,
+  "preserved_reference_or_lineage_directory_count": 95,
+  "quarantine_error_records_in_valid_spine": 0,
+  "rating_span_canonical_inputs": [
+    {
+      "batch": "initial_4726_source_pipeline",
+      "expected": 636,
+      "kind": "initial",
+      "path": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25/gabriel_claim_oriented_attribute_ratings_643_repaired.csv",
+      "row_count": 636,
+      "sha256": "de7ce29aa5c749e0faadab97ccade17d1f470e35e1dc48a95767baf70ed191e9",
+      "task_id": "COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25",
+      "validation_status": "passed_or_canonical_repair_passed"
+    },
+    {
+      "batch": "targeted_scout_ab",
+      "expected": 173,
+      "kind": "targeted",
+      "path": "TARGETED-EVIDENCE-SPAN-RATING-201-EXACT-SPANS-2026-07-26/targeted_evidence_span_rating_201_valid_ratings.csv",
+      "row_count": 173,
+      "sha256": "86eeec30f7394003b24707123539e5f37b834ae755a71c624e91a184bc124158",
+      "task_id": "TARGETED-EVIDENCE-SPAN-RATING-201-EXACT-SPANS-2026-07-26",
+      "validation_status": "passed_or_canonical_repair_passed"
+    },
+    {
+      "batch": "targeted_scout_c",
+      "expected": 140,
+      "kind": "targeted",
+      "path": "TIER-C-EVIDENCE-SPAN-RATING-159-EXACT-SPANS-2026-07-27/tier_c_evidence_span_rating_159_valid_ratings.csv",
+      "row_count": 140,
+      "sha256": "973265a71b421ebe28451283c7694aaeee30d725adc753098903158179398a11",
+      "task_id": "TIER-C-EVIDENCE-SPAN-RATING-159-EXACT-SPANS-2026-07-27",
+      "validation_status": "passed_or_canonical_repair_passed"
+    },
+    {
+      "batch": "combined_broad",
+      "expected": 16947,
+      "kind": "combined",
+      "path": "COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28/combined_broad_rating_ingestion_codification_16947_ingested_records.csv",
+      "row_count": 16947,
+      "sha256": "2c7b1cbcdd6484c9d4dca279dd3b9440a11f10789227e46b757e7af98d201259",
+      "task_id": "COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28",
+      "validation_status": "passed_or_canonical_repair_passed"
+    },
+    {
+      "batch": "broad_state_4x2500",
+      "expected": 18554,
+      "kind": "fourx",
+      "path": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.csv",
+      "row_count": 18554,
+      "sha256": "0b7c88dbbc1d60b83902f147985fb970bb2ceaab624d231b7c237ec7cadbd960",
+      "task_id": "BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30",
+      "validation_status": "passed_or_canonical_repair_passed"
+    },
+    {
+      "batch": "remaining_municipalities",
+      "expected": 15189,
+      "kind": "remaining",
+      "path": "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/canonical_ingested_span_ratings.csv",
+      "row_count": 15189,
+      "sha256": "e7cc3459623de3b5511f9820e9f356113914e6a17cbe76ead9f69698594909fa",
+      "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02",
+      "validation_status": "passed_or_canonical_repair_passed"
+    }
+  ],
+  "specialized_canonical_layers": [
+    "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+    "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+    "BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31",
+    "BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30"
+  ],
+  "whole_corpus_rated_span_count": 51639,
+  "whole_corpus_source_count": 7538
+}

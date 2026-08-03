@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "fire_direct": 2507,
+    "mixed_direct": 120,
+    "non_safety_direct": 1786,
+    "not_applicable": 1867,
+    "police_direct": 10328,
+    "remains_unclear": 33288,
+    "safety_combined_direct": 205,
+    "write_off": 1538
+  },
+  "total": 51639
+}

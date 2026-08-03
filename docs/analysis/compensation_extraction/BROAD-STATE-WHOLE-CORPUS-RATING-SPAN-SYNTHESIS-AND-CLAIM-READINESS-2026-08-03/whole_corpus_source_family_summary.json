@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "agenda_packet_or_minutes": 5667,
+    "arbitration_award": 3361,
+    "budget_or_pay_plan": 6625,
+    "cba": 12890,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record": 689,
+    "cba_or_arbitration_award_or_factfinding_or_impasse_record (interest arbitration award)": 3,
+    "cba_or_budget_pay_plan_with_explicit_compensation_mechanism": 850,
+    "cba_or_compensation_study_or_classification_study_or_wage_schedule": 1420,
+    "civil_service_or_hr_pay_plan": 875,
+    "classification_study": 141,
+    "collective_bargaining_agreement_or_moa_or_wage_schedule": 604,
+    "compensation_study": 414,
+    "factfinding_report": 822,
+    "missing": 636,
+    "mou_or_memorandum": 3007,
+    "other_local_government_pay_policy": 2916,
+    "personnel_policy": 1243,
+    "salary_ordinance": 1120,
+    "settlement_agreement": 45,
+    "unknown_or_needs_review": 159,
+    "wage_schedule": 8152
+  },
+  "total": 51639
+}

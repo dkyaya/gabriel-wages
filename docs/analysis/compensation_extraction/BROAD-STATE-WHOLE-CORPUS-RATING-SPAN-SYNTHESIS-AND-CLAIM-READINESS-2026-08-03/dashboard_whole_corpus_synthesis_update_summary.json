@@ -1,0 +1,41 @@
+{
+  "claim_boundary_counts": {
+    "claim_ready": 8701,
+    "conditional_with_caveats": 3369,
+    "local_context_only": 117,
+    "mechanism_only": 10638,
+    "readiness_only": 1860,
+    "repair_needed": 22368,
+    "supporting_example_ready": 2601,
+    "write_off": 15589
+  },
+  "current_stage": "whole-corpus rating-span synthesis and claim readiness complete",
+  "dashboard_local_build": "passed",
+  "dashboard_local_static_validation": "passed",
+  "dashboard_local_visual_validation": "unavailable_browser_runtime",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "dashboard_public_validation": "pending_push_and_deployment",
+  "final_pi_report_link_intact": true,
+  "gate_statuses": {
+    "global_causal_readiness_gate": "fail",
+    "global_wage_gap_readiness_gate": "fail",
+    "growth_evidence_gate": "partial",
+    "local_comparison_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "national_readiness_gate": "partial",
+    "non_base_compensation_gate": "partial",
+    "same_side_evidence_gate": "partial",
+    "whole_corpus_synthesis_gate": "pass"
+  },
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "included_canonical_layer_count": 10,
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+  "no_polished_deliverable_created": true,
+  "scout_coverage_rate_percent": 99.9579,
+  "wage_growth_continuity_module_intact": true,
+  "whole_corpus_claim_readiness_record_count": 65243,
+  "whole_corpus_rated_span_count": 51639,
+  "whole_corpus_source_count": 7538
+}

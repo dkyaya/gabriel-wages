@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "readiness_only": 1860,
+    "repair_needed": 22368,
+    "write_off": 15589
+  },
+  "total": 39817
+}

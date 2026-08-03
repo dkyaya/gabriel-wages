@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "context_only": 10,
+    "direct_quantitative_claim_support": 160,
+    "direct_text_claim": 42,
+    "directional_hint_only": 437,
+    "documentary_mechanism_claim": 30,
+    "global_descriptive_ready": 42,
+    "global_descriptive_ready_with_caveats": 44,
+    "local_context_only": 141,
+    "mechanism_summary_ready": 13,
+    "mechanism_summary_support": 3341,
+    "provisional_causal_candidate": 5,
+    "provisional_causal_hint_only": 4,
+    "quant_needs_normalization": 2042,
+    "same_side_claim_ready": 2,
+    "same_side_needs_repair": 236,
+    "same_side_supporting_example_ready": 392,
+    "same_side_write_off": 415,
+    "source_navigation_only": 14,
+    "weak_or_not_supported": 1052
+  },
+  "total": 8422
+}

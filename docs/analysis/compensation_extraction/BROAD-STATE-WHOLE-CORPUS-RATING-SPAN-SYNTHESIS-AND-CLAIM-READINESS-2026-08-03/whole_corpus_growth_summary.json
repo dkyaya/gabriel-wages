@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "same_side_claim_ready": 42,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 628,
+    "same_side_supporting_example_ready": 726,
+    "same_side_write_off": 20,
+    "validated_growth_continuity": 432
+  },
+  "total": 1945
+}

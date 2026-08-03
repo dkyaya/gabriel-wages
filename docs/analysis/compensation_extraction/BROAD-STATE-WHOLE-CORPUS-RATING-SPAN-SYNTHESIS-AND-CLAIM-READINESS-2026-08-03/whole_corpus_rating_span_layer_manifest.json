@@ -1,0 +1,18 @@
+{
+  "batch_counts": {
+    "broad_state_4x2500": 18554,
+    "combined_broad": 16947,
+    "initial_4726_source_pipeline": 636,
+    "remaining_municipalities": 15189,
+    "targeted_scout_ab": 173,
+    "targeted_scout_c": 140
+  },
+  "created_at": "2026-08-03T18:45:41.246828+00:00",
+  "csv_sha256": "ee796adf03ce4299baf9cedf643e1619ac07d9e7a3fbce4b4599b5e84c35f12e",
+  "field_count": 33,
+  "input_count_sum": 51639,
+  "jsonl_sha256": "95cb3f5db928079bffda5e505ee06d1966415dca0774c19c9fa73e7ef53a612a",
+  "jsonl_storage_policy": "storage-optimized keyed projection; complete required schema is in paired CSV",
+  "record_count": 51639,
+  "row_unit": "one canonical valid rated span; later QA units are stored separately"
+}

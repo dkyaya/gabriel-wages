@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "cba_arbitration_factfinding_hint": 5875,
+    "cba_hint": 5397,
+    "missing": 17896,
+    "non_cba_or_other_hint": 13157,
+    "non_cba_or_unresolved_hint": 9314
+  },
+  "total": 51639
+}

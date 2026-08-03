@@ -95,8 +95,8 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_repo_deep_clean_archive_complete",
-  "current_phase": "Repo deep clean/archive complete",
+  "stage": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_complete",
+  "current_phase": "Whole-corpus rating-span synthesis and claim readiness complete",
   "current_phase_code": "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready",
   "current_evidence_status": "conservative_archive_first_cleanup_complete_canonical_evidence_preserved",
   "global_analysis_readiness": false,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -6697,5 +6697,33 @@
   "remaining_municipality_cleanup_active_files_preserved": 2527,
   "remaining_municipality_cleanup_provenance_files_preserved": 1547,
   "remaining_municipality_cleanup_retained_sources_preserved": true,
-  "remaining_municipality_cleanup_extracted_text_preserved": true
+  "remaining_municipality_cleanup_extracted_text_preserved": true,
+  "whole_corpus_synthesis_available": true,
+  "whole_corpus_canonical_layer_count": 10,
+  "whole_corpus_rated_span_count": 51639,
+  "whole_corpus_source_count": 7538,
+  "whole_corpus_claim_readiness_record_count": 65243,
+  "whole_corpus_claim_boundary_counts": {
+    "claim_ready": 8701,
+    "conditional_with_caveats": 3369,
+    "local_context_only": 117,
+    "mechanism_only": 10638,
+    "readiness_only": 1860,
+    "repair_needed": 22368,
+    "supporting_example_ready": 2601,
+    "write_off": 15589
+  },
+  "whole_corpus_gate_statuses": {
+    "local_comparison_gate": "partial",
+    "same_side_evidence_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "growth_evidence_gate": "partial",
+    "non_base_compensation_gate": "partial",
+    "national_readiness_gate": "partial",
+    "whole_corpus_synthesis_gate": "pass",
+    "global_wage_gap_readiness_gate": "fail",
+    "global_causal_readiness_gate": "fail"
+  },
+  "global_wage_gap_readiness": false,
+  "global_causal_readiness": false
 }

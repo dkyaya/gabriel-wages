@@ -1,0 +1,11 @@
+{
+  "aggressive_fuzzy_deduplication": false,
+  "exact_linkage_group_count": 3806,
+  "keys_used": [
+    "nonempty span_sha256"
+  ],
+  "linked_record_count": 8879,
+  "records_collapsed": 0,
+  "treatment": "preserve_and_link",
+  "unique_record_count": 42760
+}

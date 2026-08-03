@@ -1,0 +1,43 @@
+{
+  "all_available_canonical_layers_synthesized": true,
+  "claim_boundary_counts": {
+    "claim_ready": 8701,
+    "conditional_with_caveats": 3369,
+    "local_context_only": 117,
+    "mechanism_only": 10638,
+    "readiness_only": 1860,
+    "repair_needed": 22368,
+    "supporting_example_ready": 2601,
+    "write_off": 15589
+  },
+  "decision": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready",
+  "excluded_or_superseded_layer_count": 19,
+  "gate_statuses": {
+    "global_causal_readiness_gate": "fail",
+    "global_wage_gap_readiness_gate": "fail",
+    "growth_evidence_gate": "partial",
+    "local_comparison_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "national_readiness_gate": "partial",
+    "non_base_compensation_gate": "partial",
+    "same_side_evidence_gate": "partial",
+    "whole_corpus_synthesis_gate": "pass"
+  },
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "growth_evidence_count": 1945,
+  "head_before": "b85aee44a039b1d4460c3f23c1ab8035a9628255",
+  "included_canonical_layer_count": 10,
+  "local_comparison_record_count": 21,
+  "mechanism_evidence_count": 37369,
+  "national_readiness_stratum_count": 35623,
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+  "non_base_compensation_evidence_count": 8422,
+  "polished_deliverables_created": false,
+  "quant_qual_link_count": 1682,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+  "whole_corpus_claim_readiness_record_count": 65243,
+  "whole_corpus_rated_span_count": 51639,
+  "whole_corpus_source_count": 7538
+}

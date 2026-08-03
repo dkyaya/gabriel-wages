@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "claim_ready": 8701,
+    "conditional_with_caveats": 3369,
+    "local_context_only": 117,
+    "mechanism_only": 10638,
+    "readiness_only": 1860,
+    "repair_needed": 22368,
+    "supporting_example_ready": 2601,
+    "write_off": 15589
+  },
+  "total": 65243
+}

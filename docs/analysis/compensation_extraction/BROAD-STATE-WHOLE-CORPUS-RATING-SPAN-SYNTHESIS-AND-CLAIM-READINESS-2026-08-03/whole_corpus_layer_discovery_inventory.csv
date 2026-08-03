@@ -1,0 +1,110 @@
+directory,classification,canonical_decision,reason,validation_status,file_count,csv_file_count,manifest_present,summary_present
+BOUNDED-INTERNAL-MECHANISM-LINKAGE-CLAIM-MEMO-2026-07-26,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,26,0,false,true
+BOUNDED-TIER-C-EVIDENCE-MEMO-SUPPLEMENT-140-RATING-SUMMARY-2026-07-27,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,29,0,false,true
+BROAD-CANDIDATE-VERIFICATION-4X3000-PARALLEL-LONG-RUN-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,76,20,false,true
+BROAD-CANDIDATE-VERIFICATION-4X3000-RESUME-LANE-004-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,49,13,false,true
+BROAD-STATE-4X2500-BOUNDED-WAGE-DIFFERENTIAL-VALIDATION-2026-07-30,canonical_bounded_local_comparison_layer,include,selected latest validated canonical row/QA layer for its batch and stage,passed,46,6,true,true
+BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,27,3,true,true
+BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,49,10,false,true
+BROAD-STATE-4X2500-LIVE-SCOUT-FINALIZED-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,10,1,false,true
+BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31,canonical_growth_continuity_layer,include,selected latest validated canonical row/QA layer for its batch and stage,passed,49,9,true,true
+BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,passed,76,11,true,true
+BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,passed,123,35,true,true
+BROAD-STATE-4X2500-PDF-TEXT-READINESS-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,documented_caveats_or_nonstandard,73,22,true,true
+BROAD-STATE-4X2500-PI-REPORT-COMPARISON-MECHANISM-REPAIR-2026-07-30,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,passed,63,14,true,true
+BROAD-STATE-4X2500-PI-REPORT-DRAFT-2026-07-30,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,passed,28,6,true,true
+BROAD-STATE-4X2500-PI-REPORT-FINALIZE-2026-07-30,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,passed,38,7,true,true
+BROAD-STATE-4X2500-PI-REPORT-PDF-DASHBOARD-PUBLISH-2026-07-30,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,passed,14,0,true,true
+BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30,canonical_valid_rating_span_layer,include,selected latest validated canonical row/QA layer for its batch and stage,passed,65,11,true,true
+BROAD-STATE-4X2500-SCOUT-INFRASTRUCTURE-PREP-2026-07-29,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,58,15,false,true
+BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,documented_caveats_or_nonstandard,67,21,true,true
+BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,76,22,true,true
+BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,passed,70,7,true,true
+BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,78,21,true,true
+BROAD-STATE-4X2500-VERIFICATION-2026-07-30,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,documented_caveats_or_nonstandard,53,16,true,true
+BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,43,8,false,true
+BROAD-STATE-BY-STATE-4X1000-SCOUT-DRY-RUN-PREP-2026-07-27,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,57,15,false,true
+BROAD-STATE-BY-STATE-SOURCE-SCOUT-WAVE-2026-07-27,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,47,14,false,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-2026-07-31,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,63,15,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,64,15,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-SCOUT-INFRASTRUCTURE-2026-07-31,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,43,7,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,passed,107,34,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,79,24,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02,obsolete_or_superseded_rating_layer,exclude_superseded,later validated ingestion/codification or repair layer selected,passed,138,46,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03,canonical_latest_claim_readiness_qa_layer,include,selected latest validated canonical row/QA layer for its batch and stage,passed,85,27,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-PDF-TEXT-READINESS-2026-08-02,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,documented_caveats_or_nonstandard,88,24,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,passed,70,18,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,passed,54,10,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02,canonical_valid_rating_span_layer,include,selected latest validated canonical row/QA layer for its batch and stage,passed,92,21,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,passed,40,3,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03,canonical_latest_side_relevance_overlay,include,selected latest validated canonical row/QA layer for its batch and stage,passed,95,28,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,documented_caveats_or_nonstandard,82,26,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,89,26,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,documented_caveats_or_nonstandard,101,24,true,true
+BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,passed,68,19,true,true
+BROAD-STATE-WAGE-GROWTH-CONTINUITY-REVIEW-2026-07-31,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,passed,27,1,true,true
+COMBINED-BROAD-CANDIDATE-REVIEW-AFTER-4X3000-VERIFICATION-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,98,30,false,true
+COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28,obsolete_or_superseded_rating_layer,exclude_superseded,later validated ingestion/codification or repair layer selected,not_found,103,46,true,true
+COMBINED-BROAD-EXACT-SPAN-RATING-SUMMARY-16947-VALID-RATINGS-2026-07-28,obsolete_or_superseded_rating_layer,exclude_superseded,later validated ingestion/codification or repair layer selected,not_found,85,23,false,true
+COMBINED-BROAD-PDF-TEXT-LAYER-READINESS-4961-PARALLEL-LANES-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,85,27,false,true
+COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28,canonical_valid_rating_span_layer,include,selected latest validated canonical row/QA layer for its batch and stage,not_found,75,28,true,true
+COMBINED-BROAD-SOURCE-REVIEW-DOWNLOAD-5589-PARALLEL-LANES-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,75,17,true,true
+COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,133,49,true,true
+COMBINED-BROAD-TEXT-EXTRACTION-4051-PARALLEL-LANES-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,83,25,true,true
+COMPENSATION-EVIDENCE-BOUNDED-PDF-TEXT-SPAN-CAPTURE-SYSTEM-HARDENING-AND-READINESS-PREP-2026-07-25,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,23,11,false,true
+COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-AND-RESIDUAL-METADATA-REPAIR-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,19,10,false,true
+COMPENSATION-EVIDENCE-BOUNDED-QUALITATIVE-SPAN-DISAMBIGUATION-FOLLOWUP-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,22,10,false,true
+COMPENSATION-EVIDENCE-BOUNDED-SCHEMA-REPAIR-FOLLOWUP-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,27,14,false,true
+COMPENSATION-EVIDENCE-CLAIM-ORIENTED-QA-RATING-AND-GABRIEL-READINESS-FINAL-PHASE-CLOSE-2026-07-25,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,36,12,true,true
+COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,20,7,true,true
+COMPENSATION-EVIDENCE-EXTRACTION-1000DOC-TARGETED-QA-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,10,6,false,true
+COMPENSATION-EVIDENCE-EXTRACTION-500DOC-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,17,5,true,true
+COMPENSATION-EVIDENCE-EXTRACTION-500DOC-TARGETED-QA-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,10,6,false,true
+COMPENSATION-EVIDENCE-EXTRACTION-READABLE-PARSE-TEXT-1826-TARGETED-CONFLICT-QA-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,10,6,false,true
+COMPENSATION-EVIDENCE-EXTRACTION-REMAINING-PARSE-TEXT-826-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,26,12,true,true
+COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-2026-07-25,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,10,2,true,true
+COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-MERGE-PROMPT-PREP-2026-07-25,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,3,0,false,true
+COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-PACKAGE-SCHEMA-READINESS-REVIEW-2026-07-25,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,6,1,false,false
+COMPENSATION-EVIDENCE-FINAL-PROVISIONAL-SCHEMA-REPAIR-AND-ANALYSIS-VIEW-PREP-2026-07-25,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,26,13,false,true
+COMPENSATION-EVIDENCE-FINAL-QA-CATEGORIZATION-AND-GABRIEL-ATTRIBUTE-READINESS-2026-07-25,report_or_memo_layer,support_reference_only,not re-ingested as rating spans,not_found,24,8,true,true
+COMPENSATION-EVIDENCE-GABRIEL-CLAIM-ORIENTED-ATTRIBUTE-RATING-643-2026-07-25,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,29,9,true,true
+COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-35-QUARANTINE-REPAIR-2026-07-25,canonical_valid_rating_span_layer,include,selected latest validated canonical row/QA layer for its batch and stage,not_found,25,10,true,true
+COMPENSATION-EVIDENCE-GABRIEL-CLAIM-RATING-SUMMARY-REVIEW-636-2026-07-25,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,29,8,true,true
+COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-ANALYSIS-READINESS-REVIEW-2026-07-25,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,12,1,false,true
+COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-PROMOTION-HARDENED-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,17,6,true,true
+COMPENSATION-EVIDENCE-LIMITED-EXACT-SPAN-QUALITATIVE-USAGE-REVIEW-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,15,2,true,true
+COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-LAYER-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,21,2,true,true
+COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-LAYER-ACCEPTANCE-REGISTRATION-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,13,1,true,false
+COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-LAYER-QA-REVIEW-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,16,2,false,true
+COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-ACCEPTANCE-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,14,1,false,true
+COMPENSATION-EVIDENCE-LIMITED-QUALITATIVE-USAGE-REGISTRY-REVIEW-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,15,1,false,true
+COMPENSATION-EVIDENCE-PIPELINE-HARDENING-READINESS-ACCELERATOR-2026-07-25,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,38,11,false,true
+COMPENSATION-EVIDENCE-PROVISIONAL-CLAIM-REVIEW-FROM-GABRIEL-RATINGS-636-2026-07-25,obsolete_or_superseded_rating_layer,exclude_superseded,later validated ingestion/codification or repair layer selected,not_found,27,1,false,true
+COMPENSATION-EVIDENCE-QUALITATIVE-EVIDENCE-CONTRACT-FOLLOWUP-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,24,12,false,true
+COMPENSATION-EVIDENCE-READABLE-PARSE-TEXT-1826-INDEPENDENT-BOUNDED-REVIEW-2026-07-25,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,5,1,false,true
+DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,72,27,true,true
+DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,45,16,true,true
+DASHBOARD-GITHUB-PAGES-DEPLOYMENT-REPAIR-2026-07-30,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,documented_caveats_or_nonstandard,18,0,true,true
+GLOBAL-ANALYSIS-READINESS-GATE-AFTER-BROAD-INGESTION-2026-07-28,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,42,2,false,true
+LIVE-DASHBOARD-CONTENT-AUDIT-FIX-AND-TIER-C-READINESS-PREP-2026-07-27,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,20,0,false,true
+MECHANISM-LINKAGE-CLAIM-REVIEW-268-EXACT-SAME-SOURCE-LINKS-2026-07-26,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,35,4,false,true
+PUSH-ONLY-REPAIR-PDF-TEXT-READINESS-4961-AND-PUSH-HARDENING-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,10,0,false,true
+PUSH-ONLY-REPAIR-SOURCE-REVIEW-DOWNLOAD-5589-2026-07-28,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,5,0,false,true
+QUANTITATIVE-DIRECT-TEXT-CLAIM-TRIAGE-862-PRESERVED-ROWS-2026-07-26,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,37,19,false,true
+QUANTITATIVE-TO-QUALITATIVE-MECHANISM-LINKAGE-513-CANDIDATES-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,33,13,false,true
+RETAINED-SOURCE-STORAGE-HISTORY-REPAIR-OPTION1-2026-07-28,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,42,6,true,true
+TARGETED-EVIDENCE-SPAN-EXTRACTION-321-EXTRACTED-TEXT-SOURCES-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,46,17,true,true
+TARGETED-EVIDENCE-SPAN-RATING-201-EXACT-SPANS-2026-07-26,canonical_valid_rating_span_layer,include,selected latest validated canonical row/QA layer for its batch and stage,not_found,38,17,true,true
+TARGETED-EVIDENCE-SPAN-RATING-SUMMARY-173-VALID-RATINGS-2026-07-26,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,33,7,false,true
+TARGETED-PDF-TEXT-LAYER-READINESS-387-RETAINED-SOURCES-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,34,14,false,true
+TARGETED-SCOUTING-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,29,8,false,true
+TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-LIVE-RUN-OVERLAP-AUTHORIZED-2026-07-25,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,26,6,false,true
+TARGETED-SCOUTING-FOUR-LANE-PREP-DRY-RUN-FROM-PROVISIONAL-CLAIM-REVIEW-2026-07-25,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,42,17,true,true
+TARGETED-SCOUTING-FOUR-LANE-STAGGERED-LIVE-RUN-FROM-PREP-2026-07-25,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,23,6,false,true
+TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,35,15,true,true
+TARGETED-SOURCE-VERIFICATION-TIER-A-B-FROM-FOUR-LANE-CANDIDATE-REVIEW-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,30,11,true,true
+TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26,analytical_or_readiness_layer,exclude_superseded_or_reference,latest canonical QA/specialized layer selected where applicable,not_found,41,17,true,true
+TARGETED-TIER-C-VERIFICATION-FROM-BOUNDED-MEMO-GAPS-AND-DASHBOARD-VISIBILITY-CHECK-2026-07-26,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,39,13,true,true
+TIER-C-EVIDENCE-SPAN-RATING-159-EXACT-SPANS-2026-07-27,canonical_valid_rating_span_layer,include,selected latest validated canonical row/QA layer for its batch and stage,not_found,40,17,true,true
+TIER-C-EVIDENCE-SPAN-RATING-SUMMARY-140-VALID-RATINGS-2026-07-27,uncertain_or_support_layer,preserve_not_merged,no unambiguous canonical row-layer signal,not_found,35,6,false,true
+TIER-C-READINESS-AND-DASHBOARD-MAP-UPDATE-WITH-BROAD-SCOUTING-STRATEGY-2026-07-27,extraction_or_collection_lineage,lineage_only,not a rating/claim-readiness row layer,not_found,53,17,false,true

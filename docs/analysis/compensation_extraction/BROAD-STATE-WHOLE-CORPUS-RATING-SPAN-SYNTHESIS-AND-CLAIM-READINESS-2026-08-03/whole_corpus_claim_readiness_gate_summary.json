@@ -1,0 +1,38 @@
+{
+  "global_causal_readiness_gate": {
+    "basis": "documentary mechanism support does not establish causal identification",
+    "status": "fail"
+  },
+  "global_wage_gap_readiness_gate": {
+    "basis": "no clean claim-ready remaining-batch cross-side comparison and insufficient matched city-cycle breadth",
+    "status": "fail"
+  },
+  "growth_evidence_gate": {
+    "basis": "1945 whole-corpus growth evidence units with heterogeneous periods and structures",
+    "status": "partial"
+  },
+  "local_comparison_gate": {
+    "basis": "21 validated/supporting or conditional local examples; zero remaining-batch local_claim_ready records",
+    "status": "partial"
+  },
+  "mechanism_evidence_gate": {
+    "basis": "636 strong and 359 moderate QA links plus earlier mechanism evidence",
+    "status": "pass"
+  },
+  "national_readiness_gate": {
+    "basis": "readiness strata exist, but side balance, periods, pay basis, and role comparability remain incomplete; no national claim",
+    "status": "partial"
+  },
+  "non_base_compensation_gate": {
+    "basis": "8422 bounded non-base evidence units; heterogeneous compensation types remain",
+    "status": "partial"
+  },
+  "same_side_evidence_gate": {
+    "basis": "266 claim-ready and 1341 supporting remaining-batch records",
+    "status": "partial"
+  },
+  "whole_corpus_synthesis_gate": {
+    "basis": "all six validated canonical rating batches and active QA/specialized layers were inventoried, linked, and synthesized",
+    "status": "pass"
+  }
+}

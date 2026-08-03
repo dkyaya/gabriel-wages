@@ -1,0 +1,15 @@
+{
+  "causal_claim_made": false,
+  "files_deleted_or_archived": false,
+  "final_wage_gap_claim_made": false,
+  "gabriel_api_rating_run": false,
+  "national_or_prevalence_claim_made": false,
+  "new_value_normalization_or_matching_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "polished_deliverable_created": false,
+  "regression_run": false,
+  "span_extraction_run": false,
+  "text_extraction_run": false,
+  "treatment_effect_run": false
+}

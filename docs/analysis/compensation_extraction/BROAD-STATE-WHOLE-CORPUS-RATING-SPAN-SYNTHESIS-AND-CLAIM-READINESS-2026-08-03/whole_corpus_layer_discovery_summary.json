@@ -1,0 +1,25 @@
+{
+  "canonical_included_directory_count": 10,
+  "classification_counts": {
+    "analytical_or_readiness_layer": 15,
+    "canonical_bounded_local_comparison_layer": 1,
+    "canonical_growth_continuity_layer": 1,
+    "canonical_latest_claim_readiness_qa_layer": 1,
+    "canonical_latest_side_relevance_overlay": 1,
+    "canonical_valid_rating_span_layer": 6,
+    "extraction_or_collection_lineage": 43,
+    "obsolete_or_superseded_rating_layer": 4,
+    "report_or_memo_layer": 12,
+    "uncertain_or_support_layer": 25
+  },
+  "decision_counts": {
+    "exclude_superseded": 4,
+    "exclude_superseded_or_reference": 15,
+    "include": 10,
+    "lineage_only": 43,
+    "preserve_not_merged": 25,
+    "support_reference_only": 12
+  },
+  "directory_count": 109,
+  "discovery_completed_before_merge": true
+}

@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "national_growth_readiness_ready": 346,
+    "national_insufficient_structure": 27378,
+    "national_mechanism_readiness_ready": 745,
+    "national_needs_pay_basis_repair": 463,
+    "national_needs_period_repair": 161,
+    "national_needs_side_balance": 3694,
+    "national_readiness_stratum_partial": 2044,
+    "national_readiness_stratum_ready": 299,
+    "national_write_off": 493
+  },
+  "total": 35623
+}

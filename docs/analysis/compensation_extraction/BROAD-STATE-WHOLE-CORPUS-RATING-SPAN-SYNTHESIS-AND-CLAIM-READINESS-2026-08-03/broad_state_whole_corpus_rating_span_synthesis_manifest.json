@@ -1,0 +1,11 @@
+{
+  "canonical_manifest": "whole_corpus_canonical_layer_manifest.json",
+  "created_at": "2026-08-03T18:45:41.318339+00:00",
+  "decision": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready",
+  "head_before": "b85aee44a039b1d4460c3f23c1ab8035a9628255",
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+  "whole_corpus_claim_readiness_record_count": 65243,
+  "whole_corpus_rated_span_count": 51639
+}

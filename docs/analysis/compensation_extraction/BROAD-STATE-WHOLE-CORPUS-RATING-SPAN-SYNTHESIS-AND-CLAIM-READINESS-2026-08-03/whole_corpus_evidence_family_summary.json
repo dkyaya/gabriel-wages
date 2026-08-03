@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "non_base_compensation": 2213,
+    "not_supported": 728,
+    "qualitative_mechanism": 28850,
+    "quantitative_compensation": 15745,
+    "source_navigation_reference": 495,
+    "weak_or_not_compensation_relevant": 3608
+  },
+  "total": 51639
+}
