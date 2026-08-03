@@ -1,0 +1,15 @@
+{
+  "extracted_text_bounded_context_reads": 0,
+  "final_national_prevalence_or_causal_claim_made": false,
+  "full_extracted_text_persisted_or_staged": false,
+  "full_text_extraction_run": false,
+  "gabriel_api_rating_run": false,
+  "global_readiness_advanced": false,
+  "normalization_or_matching_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "regression_or_treatment_effect_run": false,
+  "retained_binary_persisted_or_staged": false,
+  "span_extraction_run": false,
+  "wage_gap_calculation_run": false
+}

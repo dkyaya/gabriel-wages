@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "available_bounded_metadata_insufficient": 5041,
+    "explicit_source_title_unit_anchor": 5146,
+    "explicit_span_heading_or_bounded_context_anchor": 577,
+    "generic_local_or_directional_context_without_unit_anchor": 492,
+    "generic_mechanism_or_adoption_context_without_unit_anchor": 380,
+    "multiple_same_page_or_section_neighbor_anchors": 6,
+    "rated_reference_weak_or_writeoff_without_side_anchor": 1538
+  },
+  "total": 13180
+}

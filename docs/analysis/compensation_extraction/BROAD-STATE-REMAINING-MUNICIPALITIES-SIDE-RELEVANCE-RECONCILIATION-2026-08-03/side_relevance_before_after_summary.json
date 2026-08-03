@@ -1,0 +1,22 @@
+{
+  "after": {
+    "fire_direct": 1080,
+    "mixed_direct": 27,
+    "non_safety_direct": 1177,
+    "not_applicable": 1867,
+    "police_direct": 4416,
+    "remains_unclear": 5041,
+    "safety_combined_direct": 43,
+    "write_off": 1538
+  },
+  "before": {
+    "fire_direct": 185,
+    "mixed_direct": 3,
+    "non_safety_direct": 138,
+    "not_applicable": 995,
+    "police_direct": 667,
+    "safety_combined_direct": 21,
+    "unclear": 13180
+  },
+  "total": 15189
+}

@@ -1,0 +1,16 @@
+{
+  "affected_preliminary_lanes": [
+    "side_relevance_reconciliation_lane_001",
+    "side_relevance_reconciliation_lane_002"
+  ],
+  "canonical_duplicate_reconciliation_ids": 0,
+  "canonical_rows_rerun_after_final_rule_acceptance": 0,
+  "forbidden_action_occurred": false,
+  "incident": "premerge_rule_conservatism_repair",
+  "issue_1": "generic public safety phrase initially treated as combined safety",
+  "issue_2": "explicit title annotation saying police/fire not indicated initially parsed as a positive anchor",
+  "locked_queue_changed": false,
+  "passed": true,
+  "repair": "invalidated preliminary lane files and regenerated them once under v3_negation_aware_conservative before merge",
+  "row_scope_changed": false
+}

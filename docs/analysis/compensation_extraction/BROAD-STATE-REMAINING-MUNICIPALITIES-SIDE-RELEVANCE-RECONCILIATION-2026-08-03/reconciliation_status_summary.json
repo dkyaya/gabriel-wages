@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "assigned_not_applicable": 872,
+    "relabeled_from_unclear": 5729,
+    "remains_unclear": 5041,
+    "write_off": 1538
+  },
+  "total": 13180
+}

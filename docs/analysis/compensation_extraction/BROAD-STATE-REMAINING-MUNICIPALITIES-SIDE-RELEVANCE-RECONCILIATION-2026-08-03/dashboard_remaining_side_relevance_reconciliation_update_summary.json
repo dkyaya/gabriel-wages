@@ -1,0 +1,42 @@
+{
+  "clear_side_comparison_potential_count": 22,
+  "clear_side_growth_continuity_potential_count": 852,
+  "clear_side_qualitative_mechanism_candidate_count": 3748,
+  "clear_side_quantitative_candidate_count": 3859,
+  "current_stage": "remaining-municipality side-relevance reconciliation complete",
+  "dashboard_clean_structure_preserved": true,
+  "dashboard_local_build_passed": true,
+  "dashboard_local_static_validation_passed": true,
+  "dashboard_local_visual_browser_validation": "not_run_browser_runtime_unavailable",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "dashboard_public_validation": "pending_push_and_deployment",
+  "final_pi_report_link_intact": true,
+  "final_side_relevance_counts": {
+    "fire_direct": 1080,
+    "mixed_direct": 27,
+    "non_safety_direct": 1177,
+    "not_applicable": 1867,
+    "police_direct": 4416,
+    "remains_unclear": 5041,
+    "safety_combined_direct": 43,
+    "write_off": 1538
+  },
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+  "reconciliation_label_counts": {
+    "fire_direct": 895,
+    "mixed_direct": 24,
+    "non_safety_direct": 1039,
+    "not_applicable": 872,
+    "police_direct": 3749,
+    "remains_unclear": 5041,
+    "safety_combined_direct": 22,
+    "write_off": 1538
+  },
+  "records_excluded_upfront": 0,
+  "scout_coverage_rate_percent": 99.9579,
+  "unclear_records_inspected": 13180,
+  "wage_growth_continuity_module_intact": true
+}

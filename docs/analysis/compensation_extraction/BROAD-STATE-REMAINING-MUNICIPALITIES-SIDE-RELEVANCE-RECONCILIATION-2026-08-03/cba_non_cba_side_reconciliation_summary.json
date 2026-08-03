@@ -1,0 +1,44 @@
+{
+  "group_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_arbitration_factfinding_hint": {
+      "final_side_relevance_counts": {
+        "fire_direct": 531,
+        "mixed_direct": 6,
+        "non_safety_direct": 269,
+        "not_applicable": 300,
+        "police_direct": 2141,
+        "remains_unclear": 1300,
+        "safety_combined_direct": 9,
+        "write_off": 469
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 300,
+        "relabeled_from_unclear": 2956,
+        "remains_unclear": 1300,
+        "write_off": 469
+      },
+      "row_count": 5025
+    },
+    "non_cba_or_unresolved_hint": {
+      "final_side_relevance_counts": {
+        "fire_direct": 364,
+        "mixed_direct": 18,
+        "non_safety_direct": 770,
+        "not_applicable": 572,
+        "police_direct": 1608,
+        "remains_unclear": 3741,
+        "safety_combined_direct": 13,
+        "write_off": 1069
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 572,
+        "relabeled_from_unclear": 2773,
+        "remains_unclear": 3741,
+        "write_off": 1069
+      },
+      "row_count": 8155
+    }
+  },
+  "total": 13180
+}

@@ -1,0 +1,12 @@
+{
+  "accepted_count": 2636,
+  "complete": true,
+  "lane_id": "side_relevance_reconciliation_lane_001",
+  "last_accepted_span_rating_id": "BRMGRT-20260802-9a4d1442a13d3c7dbc507dfe",
+  "last_queue_index": 2636,
+  "next_queue_index": 2637,
+  "queue_count": 2636,
+  "rule_version": "v3_negation_aware_conservative",
+  "started_at": "2026-08-03T04:13:17.725774+00:00",
+  "updated_at": "2026-08-03T04:13:18.250392+00:00"
+}

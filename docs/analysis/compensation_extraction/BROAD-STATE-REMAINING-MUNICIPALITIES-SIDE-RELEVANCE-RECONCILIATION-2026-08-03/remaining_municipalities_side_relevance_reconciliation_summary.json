@@ -1,0 +1,54 @@
+{
+  "bounded_context_reads_from_extracted_text": 0,
+  "canonical_span_count": 15189,
+  "claim_boundary": "Reconciliation metadata only; no normalization, matching, wage-gap, prevalence, or causal claim.",
+  "clear_side_comparison_potential_count": 22,
+  "clear_side_growth_continuity_potential_count": 852,
+  "clear_side_qualitative_mechanism_candidate_count": 3748,
+  "clear_side_quantitative_candidate_count": 3859,
+  "confidence_counts": {
+    "high": 5723,
+    "low": 7451,
+    "moderate": 6
+  },
+  "decision": "broad_state_remaining_municipalities_side_relevance_reconciliation_completed_normalization_prep_ready",
+  "final_side_relevance_counts": {
+    "fire_direct": 1080,
+    "mixed_direct": 27,
+    "non_safety_direct": 1177,
+    "not_applicable": 1867,
+    "police_direct": 4416,
+    "remains_unclear": 5041,
+    "safety_combined_direct": 43,
+    "write_off": 1538
+  },
+  "lane_sizes": {
+    "side_relevance_reconciliation_lane_001": 2636,
+    "side_relevance_reconciliation_lane_002": 2636,
+    "side_relevance_reconciliation_lane_003": 2636,
+    "side_relevance_reconciliation_lane_004": 2636,
+    "side_relevance_reconciliation_lane_005": 2636
+  },
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+  "original_unclear_count": 13180,
+  "reconciliation_label_counts": {
+    "fire_direct": 895,
+    "mixed_direct": 24,
+    "non_safety_direct": 1039,
+    "not_applicable": 872,
+    "police_direct": 3749,
+    "remains_unclear": 5041,
+    "safety_combined_direct": 22,
+    "write_off": 1538
+  },
+  "reconciliation_status_counts": {
+    "assigned_not_applicable": 872,
+    "relabeled_from_unclear": 5729,
+    "remains_unclear": 5041,
+    "write_off": 1538
+  },
+  "records_excluded_upfront": 0,
+  "records_inspected": 13180,
+  "rule_repair_status": "passed_premerge_conservatism_repair_canonical_outputs_unique",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03"
+}

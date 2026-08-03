@@ -1,0 +1,17 @@
+{
+  "all_unclear_included": true,
+  "created_at": "2026-08-03T04:03:59.824351+00:00",
+  "excluded_upfront": 0,
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/canonical_ingested_source_ratings.csv": "ab0bd245ffab6703ea9777a459bc4a3a7bc5d482e35e09a04475a42fdbf7f8cc",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/canonical_ingested_span_ratings.csv": "e7cc3459623de3b5511f9820e9f356113914e6a17cbe76ead9f69698594909fa",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/side_relevance_unclear_full_reconciliation_queue.csv": "f76e8c7b0fe3c12169c13483c3bf5adcc50456d855614096bada5b124fead6b6",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/side_relevance_unclear_full_reconciliation_queue_manifest.json": "318cff6de6034cd77ee4467b0430794c98107f2fd109f3835df4117b4c2d78f8",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/validation_report.json": "669afc11c268dba12fbe8d68646733a52bb932b420e6511efcaf0d35ae9f2d7b",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/merged_compensation_evidence_spans.csv": "a2b3d22cf19d4b917dbb898983d45182fbbc91984ed91594b06f6c5bfb43455e"
+  },
+  "queue_count": 13180,
+  "queue_csv_sha256": "c6051675f09593835b19a6c29c1a8048127c24ebb27fcc17641861c71ac4f145",
+  "queue_jsonl_sha256": "3765ca4ffc61718d64082ff5aef92acc8b8b55bfc514463878404fb8e2739b42",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03"
+}

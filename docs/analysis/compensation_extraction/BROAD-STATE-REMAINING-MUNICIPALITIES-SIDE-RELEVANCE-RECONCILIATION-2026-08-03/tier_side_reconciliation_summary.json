@@ -1,0 +1,76 @@
+{
+  "group_field": "reconciliation_priority_tier",
+  "groups": {
+    "tier_1_high_value_downstream": {
+      "final_side_relevance_counts": {
+        "fire_direct": 416,
+        "mixed_direct": 10,
+        "non_safety_direct": 587,
+        "not_applicable": 256,
+        "police_direct": 1868,
+        "remains_unclear": 3375,
+        "safety_combined_direct": 4
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 256,
+        "relabeled_from_unclear": 2885,
+        "remains_unclear": 3375
+      },
+      "row_count": 6516
+    },
+    "tier_2_manual_or_strong_support": {
+      "final_side_relevance_counts": {
+        "fire_direct": 154,
+        "mixed_direct": 4,
+        "non_safety_direct": 131,
+        "not_applicable": 194,
+        "police_direct": 618,
+        "remains_unclear": 1072,
+        "safety_combined_direct": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 194,
+        "relabeled_from_unclear": 909,
+        "remains_unclear": 1072
+      },
+      "row_count": 2175
+    },
+    "tier_3_local_context_or_directional": {
+      "final_side_relevance_counts": {
+        "fire_direct": 94,
+        "mixed_direct": 3,
+        "non_safety_direct": 112,
+        "not_applicable": 396,
+        "police_direct": 479,
+        "remains_unclear": 578,
+        "safety_combined_direct": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 396,
+        "relabeled_from_unclear": 691,
+        "remains_unclear": 578
+      },
+      "row_count": 1665
+    },
+    "tier_4_weak_reference_or_writeoff": {
+      "final_side_relevance_counts": {
+        "fire_direct": 231,
+        "mixed_direct": 7,
+        "non_safety_direct": 209,
+        "not_applicable": 26,
+        "police_direct": 784,
+        "remains_unclear": 16,
+        "safety_combined_direct": 13,
+        "write_off": 1538
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 26,
+        "relabeled_from_unclear": 1244,
+        "remains_unclear": 16,
+        "write_off": 1538
+      },
+      "row_count": 2824
+    }
+  },
+  "total": 13180
+}

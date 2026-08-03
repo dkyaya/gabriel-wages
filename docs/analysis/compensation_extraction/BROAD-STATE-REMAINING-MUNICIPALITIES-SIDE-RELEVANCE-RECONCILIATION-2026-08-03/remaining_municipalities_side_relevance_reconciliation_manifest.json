@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-08-03T04:38:37.963620+00:00",
+  "decision": "broad_state_remaining_municipalities_side_relevance_reconciliation_completed_normalization_prep_ready",
+  "excluded_upfront": 0,
+  "input_canonical_span_count": 15189,
+  "lane_sizes": {
+    "side_relevance_reconciliation_lane_001": 2636,
+    "side_relevance_reconciliation_lane_002": 2636,
+    "side_relevance_reconciliation_lane_003": 2636,
+    "side_relevance_reconciliation_lane_004": 2636,
+    "side_relevance_reconciliation_lane_005": 2636
+  },
+  "locked_queue_sha256": "c6051675f09593835b19a6c29c1a8048127c24ebb27fcc17641861c71ac4f145",
+  "merged_results_sha256": "fdf89efb4f964b85906672706838ea6a6ab135407017b0e1c760c67b5d2f899a",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+  "original_unclear_count": 13180,
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+  "reconciled_span_layer_count": 15189,
+  "reconciled_span_layer_sha256": "ce92385eca730f73f3819fcc59d899b83d251784cd5df79519805470e94e181a",
+  "reconciliation_result_count": 13180,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03"
+}

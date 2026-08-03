@@ -1,0 +1,152 @@
+{
+  "group_field": "downstream_use_bucket",
+  "groups": {
+    "comparison_review_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 3,
+        "non_safety_direct": 1,
+        "not_applicable": 2,
+        "police_direct": 15,
+        "remains_unclear": 6
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 2,
+        "relabeled_from_unclear": 19,
+        "remains_unclear": 6
+      },
+      "row_count": 27
+    },
+    "core_finding_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 78,
+        "mixed_direct": 7,
+        "non_safety_direct": 212,
+        "not_applicable": 12,
+        "police_direct": 373,
+        "remains_unclear": 974,
+        "safety_combined_direct": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 12,
+        "relabeled_from_unclear": 672,
+        "remains_unclear": 974
+      },
+      "row_count": 1658
+    },
+    "exclude_or_write_off": {
+      "final_side_relevance_counts": {
+        "fire_direct": 234,
+        "mixed_direct": 8,
+        "non_safety_direct": 216,
+        "not_applicable": 44,
+        "police_direct": 801,
+        "remains_unclear": 41,
+        "safety_combined_direct": 13,
+        "write_off": 1538
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 44,
+        "relabeled_from_unclear": 1272,
+        "remains_unclear": 41,
+        "write_off": 1538
+      },
+      "row_count": 2895
+    },
+    "growth_continuity_candidate": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 6,
+        "not_applicable": 3,
+        "police_direct": 6,
+        "remains_unclear": 16
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 3,
+        "relabeled_from_unclear": 12,
+        "remains_unclear": 16
+      },
+      "row_count": 31
+    },
+    "local_context_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 95,
+        "mixed_direct": 2,
+        "non_safety_direct": 120,
+        "not_applicable": 385,
+        "police_direct": 475,
+        "remains_unclear": 610,
+        "safety_combined_direct": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 385,
+        "relabeled_from_unclear": 695,
+        "remains_unclear": 610
+      },
+      "row_count": 1690
+    },
+    "manual_review_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 150,
+        "mixed_direct": 4,
+        "non_safety_direct": 116,
+        "not_applicable": 187,
+        "police_direct": 605,
+        "remains_unclear": 1015,
+        "safety_combined_direct": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 187,
+        "relabeled_from_unclear": 877,
+        "remains_unclear": 1015
+      },
+      "row_count": 2079
+    },
+    "mechanism_summary_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 134,
+        "non_safety_direct": 94,
+        "not_applicable": 174,
+        "police_direct": 543,
+        "remains_unclear": 740,
+        "safety_combined_direct": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 174,
+        "relabeled_from_unclear": 773,
+        "remains_unclear": 740
+      },
+      "row_count": 1687
+    },
+    "quantitative_normalization_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 37,
+        "non_safety_direct": 17,
+        "not_applicable": 2,
+        "police_direct": 124,
+        "remains_unclear": 183
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 2,
+        "relabeled_from_unclear": 178,
+        "remains_unclear": 183
+      },
+      "row_count": 363
+    },
+    "supporting_example_candidate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 164,
+        "mixed_direct": 3,
+        "non_safety_direct": 257,
+        "not_applicable": 63,
+        "police_direct": 807,
+        "remains_unclear": 1456
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 63,
+        "relabeled_from_unclear": 1231,
+        "remains_unclear": 1456
+      },
+      "row_count": 2750
+    }
+  },
+  "total": 13180
+}

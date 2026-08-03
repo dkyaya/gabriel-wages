@@ -1,0 +1,423 @@
+{
+  "by_region": {
+    "Midwest": {
+      "final_side_relevance_counts": {
+        "fire_direct": 840,
+        "mixed_direct": 6,
+        "non_safety_direct": 672,
+        "not_applicable": 559,
+        "police_direct": 2681,
+        "remains_unclear": 3150,
+        "safety_combined_direct": 22,
+        "write_off": 1092
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 559,
+        "relabeled_from_unclear": 4221,
+        "remains_unclear": 3150,
+        "write_off": 1092
+      },
+      "row_count": 9022
+    },
+    "Northeast": {
+      "final_side_relevance_counts": {
+        "fire_direct": 55,
+        "mixed_direct": 18,
+        "non_safety_direct": 338,
+        "not_applicable": 277,
+        "police_direct": 934,
+        "remains_unclear": 1611,
+        "write_off": 372
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 277,
+        "relabeled_from_unclear": 1345,
+        "remains_unclear": 1611,
+        "write_off": 372
+      },
+      "row_count": 3605
+    },
+    "South": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 8,
+        "not_applicable": 36,
+        "police_direct": 120,
+        "remains_unclear": 280,
+        "write_off": 74
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 36,
+        "relabeled_from_unclear": 128,
+        "remains_unclear": 280,
+        "write_off": 74
+      },
+      "row_count": 518
+    },
+    "West": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 21,
+        "police_direct": 14
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 35
+      },
+      "row_count": 35
+    }
+  },
+  "by_state": {
+    "DE": {
+      "final_side_relevance_counts": {
+        "police_direct": 3
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 3
+      },
+      "row_count": 3
+    },
+    "FL": {
+      "final_side_relevance_counts": {
+        "police_direct": 19
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 19
+      },
+      "row_count": 19
+    },
+    "GA": {
+      "final_side_relevance_counts": {
+        "not_applicable": 8,
+        "police_direct": 19,
+        "remains_unclear": 18,
+        "write_off": 10
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 8,
+        "relabeled_from_unclear": 19,
+        "remains_unclear": 18,
+        "write_off": 10
+      },
+      "row_count": 55
+    },
+    "IA": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 4,
+        "not_applicable": 19,
+        "police_direct": 14,
+        "remains_unclear": 66,
+        "write_off": 12
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 19,
+        "relabeled_from_unclear": 18,
+        "remains_unclear": 66,
+        "write_off": 12
+      },
+      "row_count": 115
+    },
+    "IL": {
+      "final_side_relevance_counts": {
+        "fire_direct": 39,
+        "mixed_direct": 5,
+        "non_safety_direct": 81,
+        "not_applicable": 77,
+        "police_direct": 258,
+        "remains_unclear": 424,
+        "write_off": 145
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 77,
+        "relabeled_from_unclear": 383,
+        "remains_unclear": 424,
+        "write_off": 145
+      },
+      "row_count": 1029
+    },
+    "IN": {
+      "final_side_relevance_counts": {
+        "fire_direct": 23,
+        "mixed_direct": 1,
+        "non_safety_direct": 69,
+        "not_applicable": 37,
+        "police_direct": 108,
+        "remains_unclear": 113,
+        "safety_combined_direct": 2,
+        "write_off": 45
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 37,
+        "relabeled_from_unclear": 203,
+        "remains_unclear": 113,
+        "write_off": 45
+      },
+      "row_count": 398
+    },
+    "KS": {
+      "final_side_relevance_counts": {
+        "fire_direct": 3,
+        "non_safety_direct": 13,
+        "not_applicable": 35,
+        "police_direct": 29,
+        "remains_unclear": 163,
+        "write_off": 75
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 35,
+        "relabeled_from_unclear": 45,
+        "remains_unclear": 163,
+        "write_off": 75
+      },
+      "row_count": 318
+    },
+    "ME": {
+      "final_side_relevance_counts": {
+        "fire_direct": 1,
+        "remains_unclear": 23,
+        "write_off": 1
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 1,
+        "remains_unclear": 23,
+        "write_off": 1
+      },
+      "row_count": 25
+    },
+    "MI": {
+      "final_side_relevance_counts": {
+        "fire_direct": 98,
+        "non_safety_direct": 145,
+        "not_applicable": 59,
+        "police_direct": 289,
+        "remains_unclear": 550,
+        "safety_combined_direct": 3,
+        "write_off": 153
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 59,
+        "relabeled_from_unclear": 535,
+        "remains_unclear": 550,
+        "write_off": 153
+      },
+      "row_count": 1297
+    },
+    "MN": {
+      "final_side_relevance_counts": {
+        "fire_direct": 51,
+        "non_safety_direct": 97,
+        "not_applicable": 104,
+        "police_direct": 286,
+        "remains_unclear": 418,
+        "safety_combined_direct": 10,
+        "write_off": 133
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 104,
+        "relabeled_from_unclear": 444,
+        "remains_unclear": 418,
+        "write_off": 133
+      },
+      "row_count": 1099
+    },
+    "MO": {
+      "final_side_relevance_counts": {
+        "fire_direct": 16,
+        "non_safety_direct": 2,
+        "not_applicable": 9,
+        "police_direct": 16,
+        "remains_unclear": 70,
+        "write_off": 31
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 9,
+        "relabeled_from_unclear": 34,
+        "remains_unclear": 70,
+        "write_off": 31
+      },
+      "row_count": 144
+    },
+    "NC": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 1,
+        "not_applicable": 5,
+        "remains_unclear": 23,
+        "write_off": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 5,
+        "relabeled_from_unclear": 1,
+        "remains_unclear": 23,
+        "write_off": 2
+      },
+      "row_count": 31
+    },
+    "ND": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 8,
+        "not_applicable": 3,
+        "police_direct": 17,
+        "remains_unclear": 24,
+        "write_off": 10
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 3,
+        "relabeled_from_unclear": 25,
+        "remains_unclear": 24,
+        "write_off": 10
+      },
+      "row_count": 62
+    },
+    "NE": {
+      "final_side_relevance_counts": {
+        "not_applicable": 5,
+        "remains_unclear": 29,
+        "write_off": 7
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 5,
+        "remains_unclear": 29,
+        "write_off": 7
+      },
+      "row_count": 41
+    },
+    "NJ": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 4,
+        "not_applicable": 17,
+        "remains_unclear": 53,
+        "write_off": 11
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 17,
+        "relabeled_from_unclear": 4,
+        "remains_unclear": 53,
+        "write_off": 11
+      },
+      "row_count": 85
+    },
+    "NY": {
+      "final_side_relevance_counts": {
+        "fire_direct": 32,
+        "non_safety_direct": 187,
+        "not_applicable": 168,
+        "police_direct": 444,
+        "remains_unclear": 993,
+        "write_off": 246
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 168,
+        "relabeled_from_unclear": 663,
+        "remains_unclear": 993,
+        "write_off": 246
+      },
+      "row_count": 2070
+    },
+    "OH": {
+      "final_side_relevance_counts": {
+        "fire_direct": 529,
+        "non_safety_direct": 157,
+        "not_applicable": 125,
+        "police_direct": 1033,
+        "remains_unclear": 738,
+        "safety_combined_direct": 7,
+        "write_off": 350
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 125,
+        "relabeled_from_unclear": 1726,
+        "remains_unclear": 738,
+        "write_off": 350
+      },
+      "row_count": 2939
+    },
+    "PA": {
+      "final_side_relevance_counts": {
+        "fire_direct": 22,
+        "mixed_direct": 18,
+        "non_safety_direct": 147,
+        "not_applicable": 91,
+        "police_direct": 490,
+        "remains_unclear": 533,
+        "write_off": 113
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 91,
+        "relabeled_from_unclear": 677,
+        "remains_unclear": 533,
+        "write_off": 113
+      },
+      "row_count": 1414
+    },
+    "SD": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 7,
+        "not_applicable": 6,
+        "police_direct": 74,
+        "remains_unclear": 57,
+        "write_off": 20
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 6,
+        "relabeled_from_unclear": 81,
+        "remains_unclear": 57,
+        "write_off": 20
+      },
+      "row_count": 164
+    },
+    "TX": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 7,
+        "not_applicable": 23,
+        "police_direct": 79,
+        "remains_unclear": 239,
+        "write_off": 62
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 23,
+        "relabeled_from_unclear": 86,
+        "remains_unclear": 239,
+        "write_off": 62
+      },
+      "row_count": 410
+    },
+    "VT": {
+      "final_side_relevance_counts": {
+        "not_applicable": 1,
+        "remains_unclear": 9,
+        "write_off": 1
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 1,
+        "remains_unclear": 9,
+        "write_off": 1
+      },
+      "row_count": 11
+    },
+    "WA": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 21,
+        "police_direct": 14
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 35
+      },
+      "row_count": 35
+    },
+    "WI": {
+      "final_side_relevance_counts": {
+        "fire_direct": 81,
+        "non_safety_direct": 89,
+        "not_applicable": 80,
+        "police_direct": 557,
+        "remains_unclear": 498,
+        "write_off": 111
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 80,
+        "relabeled_from_unclear": 727,
+        "remains_unclear": 498,
+        "write_off": 111
+      },
+      "row_count": 1416
+    }
+  },
+  "total": 13180
+}

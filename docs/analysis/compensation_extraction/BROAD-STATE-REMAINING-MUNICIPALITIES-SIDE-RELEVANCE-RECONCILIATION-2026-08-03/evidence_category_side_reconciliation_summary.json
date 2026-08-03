@@ -1,0 +1,453 @@
+{
+  "group_field": "evidence_category",
+  "groups": {
+    "qual_budget_or_fiscal_constraint": {
+      "final_side_relevance_counts": {
+        "fire_direct": 3,
+        "non_safety_direct": 5,
+        "not_applicable": 63,
+        "police_direct": 30,
+        "write_off": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 63,
+        "relabeled_from_unclear": 38,
+        "write_off": 3
+      },
+      "row_count": 104
+    },
+    "qual_cola_or_indexing_mechanism": {
+      "final_side_relevance_counts": {
+        "fire_direct": 11,
+        "mixed_direct": 2,
+        "non_safety_direct": 17,
+        "not_applicable": 19,
+        "police_direct": 88,
+        "remains_unclear": 103,
+        "write_off": 10
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 19,
+        "relabeled_from_unclear": 118,
+        "remains_unclear": 103,
+        "write_off": 10
+      },
+      "row_count": 250
+    },
+    "qual_collective_bargaining": {
+      "final_side_relevance_counts": {
+        "fire_direct": 42,
+        "mixed_direct": 3,
+        "non_safety_direct": 59,
+        "not_applicable": 139,
+        "police_direct": 290,
+        "remains_unclear": 374,
+        "safety_combined_direct": 4,
+        "write_off": 99
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 139,
+        "relabeled_from_unclear": 398,
+        "remains_unclear": 374,
+        "write_off": 99
+      },
+      "row_count": 1010
+    },
+    "qual_comparability_or_parity_language": {
+      "final_side_relevance_counts": {
+        "fire_direct": 5,
+        "non_safety_direct": 5,
+        "not_applicable": 13,
+        "police_direct": 40,
+        "remains_unclear": 34,
+        "write_off": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 13,
+        "relabeled_from_unclear": 50,
+        "remains_unclear": 34,
+        "write_off": 2
+      },
+      "row_count": 99
+    },
+    "qual_factfinding": {
+      "final_side_relevance_counts": {
+        "fire_direct": 3,
+        "non_safety_direct": 5,
+        "not_applicable": 3,
+        "police_direct": 20,
+        "remains_unclear": 13,
+        "write_off": 11
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 3,
+        "relabeled_from_unclear": 28,
+        "remains_unclear": 13,
+        "write_off": 11
+      },
+      "row_count": 55
+    },
+    "qual_grievance_arbitration": {
+      "final_side_relevance_counts": {
+        "not_applicable": 3,
+        "police_direct": 7,
+        "remains_unclear": 7
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 3,
+        "relabeled_from_unclear": 7,
+        "remains_unclear": 7
+      },
+      "row_count": 17
+    },
+    "qual_interest_arbitration": {
+      "final_side_relevance_counts": {
+        "fire_direct": 1,
+        "not_applicable": 1,
+        "police_direct": 25,
+        "remains_unclear": 4,
+        "write_off": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 1,
+        "relabeled_from_unclear": 26,
+        "remains_unclear": 4,
+        "write_off": 3
+      },
+      "row_count": 34
+    },
+    "qual_market_recruitment_retention_pressure": {
+      "final_side_relevance_counts": {
+        "fire_direct": 79,
+        "mixed_direct": 2,
+        "non_safety_direct": 92,
+        "not_applicable": 134,
+        "police_direct": 237,
+        "remains_unclear": 292,
+        "safety_combined_direct": 7,
+        "write_off": 324
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 134,
+        "relabeled_from_unclear": 417,
+        "remains_unclear": 292,
+        "write_off": 324
+      },
+      "row_count": 1167
+    },
+    "qual_mou_or_settlement": {
+      "final_side_relevance_counts": {
+        "fire_direct": 17,
+        "non_safety_direct": 30,
+        "not_applicable": 15,
+        "police_direct": 117,
+        "remains_unclear": 68,
+        "safety_combined_direct": 3,
+        "write_off": 75
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 15,
+        "relabeled_from_unclear": 167,
+        "remains_unclear": 68,
+        "write_off": 75
+      },
+      "row_count": 325
+    },
+    "qual_non_base_compensation_mechanism": {
+      "final_side_relevance_counts": {
+        "fire_direct": 136,
+        "non_safety_direct": 142,
+        "not_applicable": 103,
+        "police_direct": 606,
+        "remains_unclear": 672,
+        "write_off": 262
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 103,
+        "relabeled_from_unclear": 884,
+        "remains_unclear": 672,
+        "write_off": 262
+      },
+      "row_count": 1921
+    },
+    "qual_ordinance_or_council_adoption": {
+      "final_side_relevance_counts": {
+        "fire_direct": 12,
+        "non_safety_direct": 31,
+        "not_applicable": 179,
+        "police_direct": 94,
+        "safety_combined_direct": 4,
+        "write_off": 91
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 179,
+        "relabeled_from_unclear": 141,
+        "write_off": 91
+      },
+      "row_count": 411
+    },
+    "qual_other_pay_setting_mechanism": {
+      "final_side_relevance_counts": {
+        "fire_direct": 4,
+        "non_safety_direct": 2,
+        "not_applicable": 17,
+        "police_direct": 18,
+        "safety_combined_direct": 2,
+        "write_off": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 17,
+        "relabeled_from_unclear": 26,
+        "write_off": 3
+      },
+      "row_count": 46
+    },
+    "qual_position_classification_or_civil_service_structure": {
+      "final_side_relevance_counts": {
+        "fire_direct": 60,
+        "non_safety_direct": 29,
+        "not_applicable": 51,
+        "police_direct": 158,
+        "remains_unclear": 174,
+        "write_off": 92
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 51,
+        "relabeled_from_unclear": 247,
+        "remains_unclear": 174,
+        "write_off": 92
+      },
+      "row_count": 564
+    },
+    "qual_retroactivity_or_implementation_timing": {
+      "final_side_relevance_counts": {
+        "fire_direct": 21,
+        "non_safety_direct": 8,
+        "not_applicable": 121,
+        "police_direct": 66,
+        "write_off": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 121,
+        "relabeled_from_unclear": 95,
+        "write_off": 2
+      },
+      "row_count": 218
+    },
+    "qual_strike_no_strike_or_labor_dispute_process": {
+      "final_side_relevance_counts": {
+        "fire_direct": 60,
+        "non_safety_direct": 16,
+        "not_applicable": 11,
+        "police_direct": 111,
+        "remains_unclear": 58,
+        "write_off": 68
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 11,
+        "relabeled_from_unclear": 187,
+        "remains_unclear": 58,
+        "write_off": 68
+      },
+      "row_count": 324
+    },
+    "quant_allowance_or_reimbursement": {
+      "final_side_relevance_counts": {
+        "fire_direct": 48,
+        "non_safety_direct": 61,
+        "police_direct": 195,
+        "remains_unclear": 301,
+        "write_off": 72
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 304,
+        "remains_unclear": 301,
+        "write_off": 72
+      },
+      "row_count": 677
+    },
+    "quant_base_wage_direct_value": {
+      "final_side_relevance_counts": {
+        "fire_direct": 66,
+        "mixed_direct": 3,
+        "non_safety_direct": 207,
+        "police_direct": 233,
+        "remains_unclear": 909,
+        "safety_combined_direct": 2,
+        "write_off": 1
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 511,
+        "remains_unclear": 909,
+        "write_off": 1
+      },
+      "row_count": 1421
+    },
+    "quant_budget_or_pay_plan_amount": {
+      "final_side_relevance_counts": {
+        "fire_direct": 6,
+        "non_safety_direct": 46,
+        "police_direct": 73,
+        "remains_unclear": 234,
+        "write_off": 29
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 125,
+        "remains_unclear": 234,
+        "write_off": 29
+      },
+      "row_count": 388
+    },
+    "quant_cpi_indexed_adjustment": {
+      "final_side_relevance_counts": {
+        "fire_direct": 11,
+        "mixed_direct": 2,
+        "non_safety_direct": 17,
+        "police_direct": 88,
+        "remains_unclear": 122,
+        "write_off": 10
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 118,
+        "remains_unclear": 122,
+        "write_off": 10
+      },
+      "row_count": 250
+    },
+    "quant_longevity_or_service_pay": {
+      "final_side_relevance_counts": {
+        "fire_direct": 13,
+        "non_safety_direct": 6,
+        "police_direct": 55,
+        "remains_unclear": 61,
+        "write_off": 21
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 74,
+        "remains_unclear": 61,
+        "write_off": 21
+      },
+      "row_count": 156
+    },
+    "quant_other_compensation_value": {
+      "final_side_relevance_counts": {
+        "fire_direct": 107,
+        "mixed_direct": 12,
+        "non_safety_direct": 86,
+        "police_direct": 376,
+        "remains_unclear": 575,
+        "write_off": 95
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 581,
+        "remains_unclear": 575,
+        "write_off": 95
+      },
+      "row_count": 1251
+    },
+    "quant_overtime_or_holiday_rate": {
+      "final_side_relevance_counts": {
+        "fire_direct": 66,
+        "non_safety_direct": 68,
+        "police_direct": 279,
+        "remains_unclear": 379,
+        "write_off": 152
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 413,
+        "remains_unclear": 379,
+        "write_off": 152
+      },
+      "row_count": 944
+    },
+    "quant_percentage_raise_or_cola": {
+      "final_side_relevance_counts": {
+        "fire_direct": 58,
+        "non_safety_direct": 60,
+        "police_direct": 216,
+        "remains_unclear": 342,
+        "write_off": 1
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 334,
+        "remains_unclear": 342,
+        "write_off": 1
+      },
+      "row_count": 677
+    },
+    "quant_position_classification_pay_band": {
+      "final_side_relevance_counts": {
+        "fire_direct": 9,
+        "non_safety_direct": 9,
+        "police_direct": 51,
+        "remains_unclear": 78,
+        "write_off": 15
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 69,
+        "remains_unclear": 78,
+        "write_off": 15
+      },
+      "row_count": 162
+    },
+    "quant_retroactive_pay_or_lump_sum": {
+      "final_side_relevance_counts": {
+        "fire_direct": 8,
+        "non_safety_direct": 2,
+        "police_direct": 28,
+        "remains_unclear": 35,
+        "write_off": 3
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 38,
+        "remains_unclear": 35,
+        "write_off": 3
+      },
+      "row_count": 76
+    },
+    "quant_salary_schedule_table": {
+      "final_side_relevance_counts": {
+        "fire_direct": 17,
+        "non_safety_direct": 14,
+        "police_direct": 98,
+        "remains_unclear": 100,
+        "write_off": 78
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 129,
+        "remains_unclear": 100,
+        "write_off": 78
+      },
+      "row_count": 307
+    },
+    "quant_step_schedule_progression": {
+      "final_side_relevance_counts": {
+        "fire_direct": 23,
+        "non_safety_direct": 17,
+        "police_direct": 85,
+        "remains_unclear": 87
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 125,
+        "remains_unclear": 87
+      },
+      "row_count": 212
+    },
+    "quant_stipend_or_premium": {
+      "final_side_relevance_counts": {
+        "fire_direct": 9,
+        "non_safety_direct": 5,
+        "police_direct": 65,
+        "remains_unclear": 19,
+        "write_off": 16
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 79,
+        "remains_unclear": 19,
+        "write_off": 16
+      },
+      "row_count": 114
+    }
+  },
+  "total": 13180
+}

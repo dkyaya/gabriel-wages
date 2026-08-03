@@ -1,0 +1,142 @@
+{
+  "group_field": "claim_readiness_bucket",
+  "groups": {
+    "directional_hint_only": {
+      "final_side_relevance_counts": {
+        "fire_direct": 26,
+        "mixed_direct": 1,
+        "non_safety_direct": 40,
+        "not_applicable": 181,
+        "police_direct": 180,
+        "remains_unclear": 163,
+        "safety_combined_direct": 1
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 181,
+        "relabeled_from_unclear": 248,
+        "remains_unclear": 163
+      },
+      "row_count": 592
+    },
+    "local_context_only": {
+      "final_side_relevance_counts": {
+        "fire_direct": 74,
+        "mixed_direct": 3,
+        "non_safety_direct": 62,
+        "not_applicable": 381,
+        "police_direct": 299,
+        "remains_unclear": 213,
+        "safety_combined_direct": 1
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 381,
+        "relabeled_from_unclear": 439,
+        "remains_unclear": 213
+      },
+      "row_count": 1033
+    },
+    "mixed_quant_qual_claim_ready": {
+      "final_side_relevance_counts": {
+        "fire_direct": 27,
+        "non_safety_direct": 31,
+        "not_applicable": 14,
+        "police_direct": 77,
+        "remains_unclear": 158
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 14,
+        "relabeled_from_unclear": 135,
+        "remains_unclear": 158
+      },
+      "row_count": 307
+    },
+    "qualitative_mechanism_claim_ready": {
+      "final_side_relevance_counts": {
+        "fire_direct": 178,
+        "non_safety_direct": 128,
+        "not_applicable": 193,
+        "police_direct": 745,
+        "remains_unclear": 1000,
+        "safety_combined_direct": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 193,
+        "relabeled_from_unclear": 1053,
+        "remains_unclear": 1000
+      },
+      "row_count": 2246
+    },
+    "quantitative_direct_text_claim_ready": {
+      "final_side_relevance_counts": {
+        "fire_direct": 215,
+        "mixed_direct": 10,
+        "non_safety_direct": 438,
+        "not_applicable": 31,
+        "police_direct": 1078,
+        "remains_unclear": 2260,
+        "safety_combined_direct": 2
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 31,
+        "relabeled_from_unclear": 1743,
+        "remains_unclear": 2260
+      },
+      "row_count": 4034
+    },
+    "quantitative_needs_normalization": {
+      "final_side_relevance_counts": {
+        "fire_direct": 28,
+        "mixed_direct": 1,
+        "non_safety_direct": 41,
+        "not_applicable": 9,
+        "police_direct": 162,
+        "remains_unclear": 287
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 9,
+        "relabeled_from_unclear": 232,
+        "remains_unclear": 287
+      },
+      "row_count": 528
+    },
+    "source_navigation_or_reference_only": {
+      "final_side_relevance_counts": {
+        "fire_direct": 208,
+        "mixed_direct": 2,
+        "non_safety_direct": 149,
+        "not_applicable": 34,
+        "police_direct": 661,
+        "remains_unclear": 248,
+        "safety_combined_direct": 5,
+        "write_off": 969
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 34,
+        "relabeled_from_unclear": 1025,
+        "remains_unclear": 248,
+        "write_off": 969
+      },
+      "row_count": 2276
+    },
+    "weak_or_not_supported": {
+      "final_side_relevance_counts": {
+        "fire_direct": 139,
+        "mixed_direct": 7,
+        "non_safety_direct": 150,
+        "not_applicable": 29,
+        "police_direct": 547,
+        "remains_unclear": 712,
+        "safety_combined_direct": 11,
+        "write_off": 569
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 29,
+        "relabeled_from_unclear": 854,
+        "remains_unclear": 712,
+        "write_off": 569
+      },
+      "row_count": 2164
+    }
+  },
+  "total": 13180
+}

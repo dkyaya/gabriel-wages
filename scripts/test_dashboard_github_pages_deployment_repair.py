@@ -106,7 +106,29 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/"
             "remaining_municipalities_rating_ingestion_codification_manifest.json"
         )
-        if remaining_rating_ingestion_manifest.exists() and json.loads(
+        remaining_side_reconciliation_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/"
+            "remaining_municipalities_side_relevance_reconciliation_manifest.json"
+        )
+        if remaining_side_reconciliation_manifest.exists() and json.loads(
+            remaining_side_reconciliation_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_remaining_municipalities_side_relevance_reconciliation_completed_normalization_prep_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_side_relevance_reconciliation_completed_normalization_prep_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_remaining_municipalities_side_relevance_reconciliation_complete",
+            )
+            self.assertTrue(phase["remaining_municipality_side_reconciliation_available"])
+            self.assertEqual(phase["remaining_municipality_side_reconciliation_inspected_count"], 13180)
+            self.assertEqual(phase["remaining_municipality_side_reconciliation_excluded_upfront_count"], 0)
+            self.assertFalse(phase["global_analysis_readiness"])
+        elif remaining_rating_ingestion_manifest.exists() and json.loads(
             remaining_rating_ingestion_manifest.read_text()
         ).get("decision") == (
             "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready"
@@ -424,7 +446,35 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(rating_ingestion_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready"
                                                                         )
-                                                                        if rating_ingestion_complete:
+                                                                        side_reconciliation_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "SIDE-RELEVANCE-RECONCILIATION-2026-08-03/"
+                                                                            "remaining_municipalities_side_relevance_reconciliation_manifest.json"
+                                                                        )
+                                                                        side_reconciliation_complete = (
+                                                                            side_reconciliation_manifest.exists()
+                                                                            and json.loads(side_reconciliation_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_side_relevance_reconciliation_completed_normalization_prep_ready"
+                                                                        )
+                                                                        if side_reconciliation_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality side-relevance reconciliation complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_side_reconciliation_available"]
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_side_reconciliation_inspected_count"],
+                                                                                13_180,
+                                                                            )
+                                                                        elif rating_ingestion_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality rating ingestion/codification complete",

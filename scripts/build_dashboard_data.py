@@ -1828,6 +1828,11 @@ BROAD_STATE_REMAINING_RATING_INGESTION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02"
 )
+BROAD_STATE_REMAINING_SIDE_RECONCILIATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7525,6 +7530,49 @@ def broad_state_remaining_rating_ingestion_status() -> tuple[bool, dict[str, Any
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_side_reconciliation_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the complete all-row side-relevance reconciliation layer."""
+    directory = BROAD_STATE_REMAINING_SIDE_RECONCILIATION_DIR
+    required = (
+        directory / "remaining_municipalities_side_relevance_reconciliation_manifest.json",
+        directory / "remaining_municipalities_side_relevance_reconciliation_summary.json",
+        directory / "side_relevance_reconciliation_locked_queue_manifest.json",
+        directory / "final_side_relevance_summary.json",
+        directory / "dashboard_remaining_side_relevance_reconciliation_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, locked, final_side, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_side_relevance_reconciliation_completed_normalization_prep_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and manifest.get("input_canonical_span_count") == 15189
+        and manifest.get("original_unclear_count") == 13180
+        and manifest.get("reconciliation_result_count") == 13180
+        and locked.get("queue_count") == 13180
+        and locked.get("all_unclear_included") is True
+        and locked.get("excluded_upfront") == 0
+        and final_side.get("total") == 15189
+        and sum(final_side.get("counts", {}).values()) == 15189
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("gabriel_api_rating_run") is False
+        and forbidden.get("normalization_or_matching_run") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality side-reconciliation package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11239,6 +11287,9 @@ def build_project_phase_summary(
     remaining_rating_ingestion_available, remaining_rating_ingestion = (
         broad_state_remaining_rating_ingestion_status()
     )
+    remaining_side_reconciliation_available, remaining_side_reconciliation = (
+        broad_state_remaining_side_reconciliation_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13015,6 +13066,39 @@ def build_project_phase_summary(
                 "preserve or write off unrecoverable items with documented reasons",
             ],
             "last_updated_context": "remaining_municipality_rating_ingestion_codification_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_pending_normalization_matching_and_valid_analysis",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if remaining_side_reconciliation_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_remaining_municipalities_side_relevance_reconciliation_complete",
+            "current_phase": "Remaining-municipality side-relevance reconciliation complete",
+            "current_phase_code": remaining_side_reconciliation["decision"],
+            "current_evidence_status": "all_unclear_side_records_inspected_reconciled_layer_ready_for_normalization_matching_prep",
+            "remaining_municipality_side_reconciliation_available": True,
+            "remaining_municipality_side_reconciliation_inspected_count": remaining_side_reconciliation["records_inspected"],
+            "remaining_municipality_side_reconciliation_excluded_upfront_count": remaining_side_reconciliation["records_excluded_upfront"],
+            "remaining_municipality_reconciliation_label_counts": remaining_side_reconciliation["reconciliation_label_counts"],
+            "remaining_municipality_final_side_relevance_counts": remaining_side_reconciliation["final_side_relevance_counts"],
+            "remaining_municipality_clear_side_quantitative_candidate_count": remaining_side_reconciliation["clear_side_quantitative_candidate_count"],
+            "remaining_municipality_clear_side_qualitative_candidate_count": remaining_side_reconciliation["clear_side_qualitative_mechanism_candidate_count"],
+            "remaining_municipality_clear_side_comparison_candidate_count": remaining_side_reconciliation["clear_side_comparison_potential_count"],
+            "remaining_municipality_clear_side_growth_candidate_count": remaining_side_reconciliation["clear_side_growth_continuity_potential_count"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+            "next_phase": "Prepare clear-side quantitative normalization and within-municipality matching opportunities without transforming values",
+            "next_phase_sequence": [
+                "preserve reconciliation confidence and reason codes",
+                "identify same-city, same-cycle, same-source/document safety and non-safety anchors",
+                "defer value normalization, matching execution, wage-gap estimation, regressions, and causal claims",
+            ],
+            "last_updated_context": "remaining_municipality_side_relevance_reconciliation_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

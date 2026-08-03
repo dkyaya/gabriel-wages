@@ -1,0 +1,86 @@
+{
+  "group_field": "comparison_potential_rating",
+  "groups": {
+    "direct_comparison_ready": {
+      "final_side_relevance_counts": {
+        "police_direct": 2,
+        "remains_unclear": 3
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 2,
+        "remains_unclear": 3
+      },
+      "row_count": 5
+    },
+    "explicit_cross_side_comparison_possible": {
+      "final_side_relevance_counts": {
+        "fire_direct": 1,
+        "not_applicable": 1,
+        "police_direct": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 1,
+        "relabeled_from_unclear": 4
+      },
+      "row_count": 5
+    },
+    "named_position_possible": {
+      "final_side_relevance_counts": {
+        "fire_direct": 1,
+        "police_direct": 3
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 4
+      },
+      "row_count": 4
+    },
+    "none": {
+      "final_side_relevance_counts": {
+        "fire_direct": 889,
+        "mixed_direct": 24,
+        "non_safety_direct": 1034,
+        "not_applicable": 864,
+        "police_direct": 3703,
+        "remains_unclear": 5017,
+        "safety_combined_direct": 22,
+        "write_off": 1535
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 864,
+        "relabeled_from_unclear": 5672,
+        "remains_unclear": 5017,
+        "write_off": 1535
+      },
+      "row_count": 13088
+    },
+    "same_source_possible": {
+      "final_side_relevance_counts": {
+        "non_safety_direct": 2,
+        "remains_unclear": 2
+      },
+      "reconciliation_status_counts": {
+        "relabeled_from_unclear": 2,
+        "remains_unclear": 2
+      },
+      "row_count": 4
+    },
+    "weak_context_only": {
+      "final_side_relevance_counts": {
+        "fire_direct": 4,
+        "non_safety_direct": 3,
+        "not_applicable": 7,
+        "police_direct": 38,
+        "remains_unclear": 19,
+        "write_off": 3
+      },
+      "reconciliation_status_counts": {
+        "assigned_not_applicable": 7,
+        "relabeled_from_unclear": 45,
+        "remains_unclear": 19,
+        "write_off": 3
+      },
+      "row_count": 74
+    }
+  },
+  "total": 13180
+}

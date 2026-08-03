@@ -1,0 +1,132 @@
+{
+  "lanes": {
+    "side_relevance_reconciliation_lane_001": {
+      "priority_tier_counts": {
+        "tier_1_high_value_downstream": 1303,
+        "tier_2_manual_or_strong_support": 436,
+        "tier_3_local_context_or_directional": 332,
+        "tier_4_weak_reference_or_writeoff": 565
+      },
+      "queue_csv_sha256": "964950ca859c49cbf23d1b74d501e18d2efd097c3e1b1f67d10ac870b5d2bea7",
+      "queue_jsonl_sha256": "41fde10f28db258fa28ab7a5ff066bc9693e651ae6c44fa238e8e6c80f548265",
+      "row_count": 2636,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 437,
+        "arbitration_award": 214,
+        "budget_or_pay_plan": 333,
+        "cba": 581,
+        "civil_service_or_hr_pay_plan": 42,
+        "compensation_study": 8,
+        "factfinding_report": 107,
+        "mou_or_memorandum": 142,
+        "other_local_government_pay_policy": 173,
+        "personnel_policy": 66,
+        "salary_ordinance": 82,
+        "wage_schedule": 451
+      }
+    },
+    "side_relevance_reconciliation_lane_002": {
+      "priority_tier_counts": {
+        "tier_1_high_value_downstream": 1303,
+        "tier_2_manual_or_strong_support": 435,
+        "tier_3_local_context_or_directional": 333,
+        "tier_4_weak_reference_or_writeoff": 565
+      },
+      "queue_csv_sha256": "8e80da0ed8fe17f61d0f1dabaf1cf7367053813f4f8bb3139f545b9b8280ce3d",
+      "queue_jsonl_sha256": "0bd66cf6a094de4ac9e806e7975a3c1d90aacdbf8cf7cf6d5e9078d060a9ba50",
+      "row_count": 2636,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 436,
+        "arbitration_award": 213,
+        "budget_or_pay_plan": 334,
+        "cba": 577,
+        "civil_service_or_hr_pay_plan": 41,
+        "compensation_study": 9,
+        "factfinding_report": 101,
+        "mou_or_memorandum": 145,
+        "other_local_government_pay_policy": 175,
+        "personnel_policy": 69,
+        "salary_ordinance": 81,
+        "wage_schedule": 455
+      }
+    },
+    "side_relevance_reconciliation_lane_003": {
+      "priority_tier_counts": {
+        "tier_1_high_value_downstream": 1303,
+        "tier_2_manual_or_strong_support": 435,
+        "tier_3_local_context_or_directional": 333,
+        "tier_4_weak_reference_or_writeoff": 565
+      },
+      "queue_csv_sha256": "30d03433976bcef63bd1bdebbbe9315986dabf64b49c71fa6e091a0bd4673783",
+      "queue_jsonl_sha256": "1de042804c88cc30bb6d72e6508727062ed084a69addf5b46041cabe8b76c988",
+      "row_count": 2636,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 439,
+        "arbitration_award": 215,
+        "budget_or_pay_plan": 329,
+        "cba": 572,
+        "civil_service_or_hr_pay_plan": 43,
+        "compensation_study": 9,
+        "factfinding_report": 100,
+        "mou_or_memorandum": 147,
+        "other_local_government_pay_policy": 174,
+        "personnel_policy": 73,
+        "salary_ordinance": 83,
+        "settlement_agreement": 1,
+        "wage_schedule": 451
+      }
+    },
+    "side_relevance_reconciliation_lane_004": {
+      "priority_tier_counts": {
+        "tier_1_high_value_downstream": 1303,
+        "tier_2_manual_or_strong_support": 435,
+        "tier_3_local_context_or_directional": 333,
+        "tier_4_weak_reference_or_writeoff": 565
+      },
+      "queue_csv_sha256": "4fcfb90b7664ce31f4262e89ad265ad0bdfea5d6b9a1114ae36cf1b5467e049f",
+      "queue_jsonl_sha256": "2373065773ad048a4ee0329556eeb09f587343234108a3329c8ba98e9b77e050",
+      "row_count": 2636,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 438,
+        "arbitration_award": 221,
+        "budget_or_pay_plan": 326,
+        "cba": 574,
+        "civil_service_or_hr_pay_plan": 43,
+        "compensation_study": 9,
+        "factfinding_report": 99,
+        "mou_or_memorandum": 148,
+        "other_local_government_pay_policy": 169,
+        "personnel_policy": 74,
+        "salary_ordinance": 86,
+        "wage_schedule": 449
+      }
+    },
+    "side_relevance_reconciliation_lane_005": {
+      "priority_tier_counts": {
+        "tier_1_high_value_downstream": 1304,
+        "tier_2_manual_or_strong_support": 434,
+        "tier_3_local_context_or_directional": 334,
+        "tier_4_weak_reference_or_writeoff": 564
+      },
+      "queue_csv_sha256": "bf35d2c4f500bde35f19ec6c4696074c750cc650bd925777e74f65c1a1aa8e7e",
+      "queue_jsonl_sha256": "a3dbb94815842efb78834845707b9ee6de57c9fe268b763c865b994a6ea231a7",
+      "row_count": 2636,
+      "source_family_counts": {
+        "agenda_packet_or_minutes": 435,
+        "arbitration_award": 216,
+        "budget_or_pay_plan": 326,
+        "cba": 579,
+        "civil_service_or_hr_pay_plan": 40,
+        "compensation_study": 8,
+        "factfinding_report": 100,
+        "mou_or_memorandum": 145,
+        "other_local_government_pay_policy": 166,
+        "personnel_policy": 72,
+        "salary_ordinance": 89,
+        "settlement_agreement": 2,
+        "wage_schedule": 458
+      }
+    }
+  },
+  "total": 13180
+}
