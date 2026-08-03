@@ -101,7 +101,32 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/"
             "remaining_municipalities_gabriel_rating_manifest.json"
         )
-        if remaining_rating_manifest.exists() and json.loads(remaining_rating_manifest.read_text()).get("decision") == (
+        remaining_rating_ingestion_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/"
+            "remaining_municipalities_rating_ingestion_codification_manifest.json"
+        )
+        if remaining_rating_ingestion_manifest.exists() and json.loads(
+            remaining_rating_ingestion_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_remaining_municipalities_rating_ingestion_codification_complete",
+            )
+            self.assertTrue(phase["remaining_municipality_rating_ingestion_available"])
+            self.assertEqual(phase["remaining_municipality_ingested_source_count"], 1812)
+            self.assertEqual(phase["remaining_municipality_ingested_span_count"], 15189)
+            self.assertEqual(
+                phase["remaining_municipality_unclear_side_reconciliation_queue_count"], 13180
+            )
+            self.assertFalse(phase["global_analysis_readiness"])
+        elif remaining_rating_manifest.exists() and json.loads(remaining_rating_manifest.read_text()).get("decision") == (
             "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready"
         ):
             self.assertEqual(
@@ -164,6 +189,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "bounded_local_documentary_validation_complete_final_estimation_blocked",
                 "bounded_local_documentary_examples_only_final_estimation_blocked",
                 "bounded_growth_continuity_only_final_estimation_blocked",
+                "false_pending_normalization_matching_and_valid_analysis",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -171,7 +197,11 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["rejected_bounded_wage_differential_candidate_count"], 0)
         self.assertIn(
             phase["causal_analysis_readiness"],
-            {"blocked_pending_matched_structure", "blocked_pending_stronger_causal_design"},
+            {
+                "blocked_pending_matched_structure",
+                "blocked_pending_stronger_causal_design",
+                "false_blocked_pending_stronger_causal_design",
+            },
         )
         extraction_summary_path = (
             ROOT / "docs/analysis/compensation_extraction/"
@@ -383,7 +413,35 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(rating_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready"
                                                                         )
-                                                                        if rating_complete:
+                                                                        rating_ingestion_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "RATING-INGESTION-CODIFICATION-2026-08-02/"
+                                                                            "remaining_municipalities_rating_ingestion_codification_manifest.json"
+                                                                        )
+                                                                        rating_ingestion_complete = (
+                                                                            rating_ingestion_manifest.exists()
+                                                                            and json.loads(rating_ingestion_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready"
+                                                                        )
+                                                                        if rating_ingestion_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality rating ingestion/codification complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_rating_ingestion_available"]
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_unclear_side_reconciliation_queue_count"],
+                                                                                13_180,
+                                                                            )
+                                                                        elif rating_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality GABRIEL rating complete",

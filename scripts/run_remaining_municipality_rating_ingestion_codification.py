@@ -786,6 +786,7 @@ def audit_staged() -> None:
     staged = [Path(value.decode("utf-8")) for value in result.stdout.split(b"\0") if value]
     allowed_prefixes = (
         "scripts/run_remaining_municipality_rating_ingestion_codification.py",
+        "scripts/test_dashboard_github_pages_deployment_repair.py",
         "scripts/build_dashboard_data.py", "docs/dashboard/src/App.jsx",
         "docs/dashboard/data/", "docs/dashboard/public/data/", "docs/dashboard/dist/",
         "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/",
