@@ -1,0 +1,16 @@
+{
+  "input_count": 3094,
+  "input_group_counts": {
+    "growth": 1513,
+    "non_base": 1045,
+    "scalar": 126,
+    "structured_schedule": 410
+  },
+  "qa_status_counts": {
+    "same_side_claim_ready": 266,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 864,
+    "same_side_supporting_example_ready": 1341,
+    "same_side_write_off": 526
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-03T15:11:46Z",
+  "generated_at": "2026-08-03T16:03:43Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_complete",
-  "current_phase": "Blocker rescue and analysis-ready reclassification complete",
-  "current_phase_code": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready",
-  "current_evidence_status": "overlapping_blockers_deoverlapped_and_evidence_routed_by_supported_analysis_use",
+  "stage": "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_complete",
+  "current_phase": "Local comparison QA and claim readiness complete",
+  "current_phase_code": "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready",
+  "current_evidence_status": "all_cleaned_evidence_groups_qa_complete_bounded_gates_only",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "QA the cleaned local, same-side, growth, non-base, mechanism, and national-readiness routes",
+  "next_phase": "Plan and dry-run a deep repo cleanup/archive while preserving every canonical ledger, manifest, hash, lineage, and current QA output",
   "next_phase_sequence": [
-    "audit cleaned direct and conditional comparison candidates and source lineage",
-    "QA same-side, structured, growth, non-base, mechanism, and national-readiness evidence routes",
-    "defer regressions, treatment effects, and final national, prevalence, wage-gap, or causal claims"
+    "inventory active canonical files and storage pressure before any mutation",
+    "produce a dry-run archive/deletion manifest and archive ambiguity rather than deleting it",
+    "after cleanup, synthesize the entire rating-span corpus without unsupported local or national claims"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_blocker_rescue_analysis_ready_reclassification_complete",
+  "last_updated_context": "remaining_municipality_local_comparison_qa_claim_readiness_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1187,7 +1187,7 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 35574,
-  "wage_gap_analysis_readiness": "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
+  "wage_gap_analysis_readiness": "false_local_examples_bounded_no_final_wage_gap_claim",
   "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
@@ -6624,5 +6624,67 @@
     "role_side_repair_needed": 10602,
     "unresolved_or_defer": 51,
     "write_off_or_exclude": 2031
+  },
+  "remaining_municipality_local_comparison_qa_available": true,
+  "remaining_municipality_local_comparison_qa_input_count": 17,
+  "remaining_municipality_local_comparison_qa_status_counts": {
+    "conditional_example_ready": 4,
+    "local_supporting_example_ready": 13
+  },
+  "remaining_municipality_local_claim_ready_count": 0,
+  "remaining_municipality_local_supporting_example_count": 13,
+  "remaining_municipality_conditional_example_count": 4,
+  "remaining_municipality_same_side_qa_status_counts": {
+    "same_side_claim_ready": 266,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 864,
+    "same_side_supporting_example_ready": 1341,
+    "same_side_write_off": 526
+  },
+  "remaining_municipality_same_side_claim_ready_count": 266,
+  "remaining_municipality_same_side_supporting_count": 1341,
+  "remaining_municipality_growth_qa_status_counts": {
+    "same_side_claim_ready": 42,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 628,
+    "same_side_supporting_example_ready": 726,
+    "same_side_write_off": 20
+  },
+  "remaining_municipality_non_base_qa_status_counts": {
+    "same_side_claim_ready": 2,
+    "same_side_needs_repair": 236,
+    "same_side_supporting_example_ready": 392,
+    "same_side_write_off": 415
+  },
+  "remaining_municipality_quant_qual_mechanism_qa_status_counts": {
+    "blocked_mechanism_link": 32,
+    "moderate_mechanism_link_supporting": 359,
+    "not_linkable_write_off": 208,
+    "strong_mechanism_link_claim_ready": 636,
+    "weak_mechanism_link_review": 15
+  },
+  "remaining_municipality_side_independent_mechanism_qa_status_counts": {
+    "side_independent_mechanism_claim_ready": 15,
+    "side_independent_mechanism_context": 20,
+    "side_independent_mechanism_supporting": 57
+  },
+  "remaining_municipality_national_readiness_qa_status_counts": {
+    "national_growth_readiness_ready": 346,
+    "national_insufficient_structure": 470,
+    "national_mechanism_readiness_ready": 745,
+    "national_needs_pay_basis_repair": 463,
+    "national_needs_period_repair": 161,
+    "national_needs_side_balance": 3694,
+    "national_readiness_stratum_partial": 2044,
+    "national_readiness_stratum_ready": 299,
+    "national_write_off": 493
+  },
+  "remaining_municipality_claim_readiness_gate_statuses": {
+    "growth_evidence_gate": "partial",
+    "local_comparison_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "national_readiness_gate": "partial",
+    "non_base_compensation_evidence_gate": "partial",
+    "same_side_evidence_gate": "partial"
   }
 }

@@ -126,7 +126,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/"
             "remaining_municipalities_blocker_rescue_analysis_ready_reclassification_manifest.json"
         )
-        if remaining_blocker_rescue_manifest.exists() and json.loads(
+        remaining_local_comparison_qa_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03/"
+            "remaining_municipalities_local_comparison_qa_claim_readiness_manifest.json"
+        )
+        if remaining_local_comparison_qa_manifest.exists() and json.loads(
+            remaining_local_comparison_qa_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_complete",
+            )
+            self.assertTrue(phase["remaining_municipality_local_comparison_qa_available"])
+            self.assertEqual(phase["remaining_municipality_local_comparison_qa_input_count"], 17)
+            self.assertFalse(phase["global_analysis_readiness"])
+        elif remaining_blocker_rescue_manifest.exists() and json.loads(
             remaining_blocker_rescue_manifest.read_text()
         ).get("decision") == (
             "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready"
@@ -284,6 +305,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "false_pending_normalization_matching_quality_gates",
                 "false_pending_local_comparison_qa_and_claim_readiness",
                 "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
+                "false_local_examples_bounded_no_final_wage_gap_claim",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -562,7 +584,35 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(blocker_rescue_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready"
                                                                         )
-                                                                        if blocker_rescue_complete:
+                                                                        local_comparison_qa_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03/"
+                                                                            "remaining_municipalities_local_comparison_qa_claim_readiness_manifest.json"
+                                                                        )
+                                                                        local_comparison_qa_complete = (
+                                                                            local_comparison_qa_manifest.exists()
+                                                                            and json.loads(local_comparison_qa_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready"
+                                                                        )
+                                                                        if local_comparison_qa_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Local comparison QA and claim readiness complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "REPO-DEEP-CLEAN-ARCHIVE-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_local_comparison_qa_available"]
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_local_comparison_qa_input_count"], 17
+                                                                            )
+                                                                            self.assertFalse(phase["global_analysis_readiness"])
+                                                                        elif blocker_rescue_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Blocker rescue and analysis-ready reclassification complete",

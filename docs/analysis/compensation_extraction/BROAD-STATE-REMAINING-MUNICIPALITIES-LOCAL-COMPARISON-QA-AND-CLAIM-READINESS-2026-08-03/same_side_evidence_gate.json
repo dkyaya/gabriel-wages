@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+  "counts": {
+    "same_side_claim_ready": 266,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 864,
+    "same_side_supporting_example_ready": 1341,
+    "same_side_write_off": 526
+  },
+  "gate": "same_side_evidence_gate",
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "rationale": "Bounded same-side claims pass where side, period, basis, and raw/structured evidence gates pass; repair and write-off rows remain separate.",
+  "status": "partial"
+}

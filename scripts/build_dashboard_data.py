@@ -1848,6 +1848,11 @@ BROAD_STATE_REMAINING_BLOCKER_RESCUE_RECLASSIFICATION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03"
 )
+BROAD_STATE_REMAINING_LOCAL_COMPARISON_QA_CLAIM_READINESS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7734,6 +7739,52 @@ def broad_state_remaining_blocker_rescue_reclassification_status() -> tuple[bool
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_local_comparison_qa_claim_readiness_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize validated local-comparison QA and bounded claim-readiness gates."""
+    directory = BROAD_STATE_REMAINING_LOCAL_COMPARISON_QA_CLAIM_READINESS_DIR
+    required = (
+        directory / "remaining_municipalities_local_comparison_qa_claim_readiness_manifest.json",
+        directory / "remaining_municipalities_local_comparison_qa_claim_readiness_summary.json",
+        directory / "local_comparison_qa_summary.json",
+        directory / "same_side_evidence_qa_summary.json",
+        directory / "quant_qual_mechanism_link_qa_summary.json",
+        directory / "national_readiness_qa_summary.json",
+        directory / "claim_readiness_gate_summary.json",
+        directory / "dashboard_remaining_local_comparison_qa_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, local, same_side, quant_qual, national, gates, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready"
+    valid = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and summary.get("cleaned_analysis_use_layer_count") == 28358
+        and local.get("deduplicated_candidate_count") == 17
+        and same_side.get("input_count") == 3094
+        and quant_qual.get("input_count") == 1250
+        and national.get("input_count") == 8715
+        and gates.get("global_analysis_readiness") is False
+        and gates.get("global_wage_gap_readiness") is False
+        and gates.get("global_causal_readiness") is False
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("no_polished_deliverables_created") is True
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("regression_run") is False
+        and forbidden.get("treatment_effect_run") is False
+        and forbidden.get("final_wage_gap_claim_made") is False
+        and forbidden.get("national_population_prevalence_claim_made") is False
+    )
+    if not valid:
+        raise ValueError("remaining-municipality local-comparison QA package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11460,6 +11511,9 @@ def build_project_phase_summary(
     remaining_blocker_rescue_reclassification_available, remaining_blocker_rescue_reclassification = (
         broad_state_remaining_blocker_rescue_reclassification_status()
     )
+    remaining_local_comparison_qa_available, remaining_local_comparison_qa = (
+        broad_state_remaining_local_comparison_qa_claim_readiness_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13392,6 +13446,49 @@ def build_project_phase_summary(
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if remaining_local_comparison_qa_available:
+        local_counts = remaining_local_comparison_qa["local_comparison_qa_status_counts"]
+        same_counts = remaining_local_comparison_qa["same_side_qa_status_counts"]
+        quant_qual_counts = remaining_local_comparison_qa["quant_qual_mechanism_qa_status_counts"]
+        national_counts = remaining_local_comparison_qa["national_readiness_qa_status_counts"]
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_complete",
+            "current_phase": "Local comparison QA and claim readiness complete",
+            "current_phase_code": remaining_local_comparison_qa["decision"],
+            "current_evidence_status": "all_cleaned_evidence_groups_qa_complete_bounded_gates_only",
+            "remaining_municipality_local_comparison_qa_available": True,
+            "remaining_municipality_local_comparison_qa_input_count": remaining_local_comparison_qa["local_comparison_qa_input_count"],
+            "remaining_municipality_local_comparison_qa_status_counts": local_counts,
+            "remaining_municipality_local_claim_ready_count": local_counts.get("local_claim_ready", 0),
+            "remaining_municipality_local_supporting_example_count": local_counts.get("local_supporting_example_ready", 0),
+            "remaining_municipality_conditional_example_count": local_counts.get("conditional_example_ready", 0),
+            "remaining_municipality_same_side_qa_status_counts": same_counts,
+            "remaining_municipality_same_side_claim_ready_count": same_counts.get("same_side_claim_ready", 0),
+            "remaining_municipality_same_side_supporting_count": same_counts.get("same_side_supporting_example_ready", 0),
+            "remaining_municipality_growth_qa_status_counts": remaining_local_comparison_qa["growth_qa_status_counts"],
+            "remaining_municipality_non_base_qa_status_counts": remaining_local_comparison_qa["non_base_qa_status_counts"],
+            "remaining_municipality_quant_qual_mechanism_qa_status_counts": quant_qual_counts,
+            "remaining_municipality_side_independent_mechanism_qa_status_counts": remaining_local_comparison_qa["side_independent_mechanism_qa_status_counts"],
+            "remaining_municipality_national_readiness_qa_status_counts": national_counts,
+            "remaining_municipality_claim_readiness_gate_statuses": remaining_local_comparison_qa["claim_readiness_gate_statuses"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03",
+            "next_phase": "Plan and dry-run a deep repo cleanup/archive while preserving every canonical ledger, manifest, hash, lineage, and current QA output",
+            "next_phase_sequence": [
+                "inventory active canonical files and storage pressure before any mutation",
+                "produce a dry-run archive/deletion manifest and archive ambiguity rather than deleting it",
+                "after cleanup, synthesize the entire rating-span corpus without unsupported local or national claims",
+            ],
+            "last_updated_context": "remaining_municipality_local_comparison_qa_claim_readiness_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_local_examples_bounded_no_final_wage_gap_claim",
             "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
         })
     return payload

@@ -1,0 +1,438 @@
+{
+  "groups": {
+    "allowance_reimbursement": {
+      "count": 760,
+      "qa_status_counts": {
+        "national_insufficient_structure": 33,
+        "national_mechanism_readiness_ready": 36,
+        "national_needs_side_balance": 301,
+        "national_readiness_stratum_partial": 288,
+        "national_readiness_stratum_ready": 30,
+        "national_write_off": 72
+      }
+    },
+    "arbitration_factfinding": {
+      "count": 5,
+      "qa_status_counts": {
+        "moderate_mechanism_link_supporting": 3,
+        "strong_mechanism_link_claim_ready": 2
+      }
+    },
+    "base_wage": {
+      "count": 1614,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 4,
+        "national_insufficient_structure": 70,
+        "national_mechanism_readiness_ready": 171,
+        "national_needs_pay_basis_repair": 25,
+        "national_needs_period_repair": 152,
+        "national_needs_side_balance": 909,
+        "national_readiness_stratum_partial": 200,
+        "national_readiness_stratum_ready": 82,
+        "national_write_off": 1
+      }
+    },
+    "budget_fiscal_constraint": {
+      "count": 3,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 1,
+        "strong_mechanism_link_claim_ready": 2
+      }
+    },
+    "budget_or_pay_plan": {
+      "count": 468,
+      "qa_status_counts": {
+        "national_insufficient_structure": 7,
+        "national_mechanism_readiness_ready": 34,
+        "national_needs_period_repair": 4,
+        "national_needs_side_balance": 234,
+        "national_readiness_stratum_partial": 116,
+        "national_readiness_stratum_ready": 44,
+        "national_write_off": 29
+      }
+    },
+    "classification_civil_service": {
+      "count": 83,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 1,
+        "moderate_mechanism_link_supporting": 24,
+        "strong_mechanism_link_claim_ready": 58
+      }
+    },
+    "classification_pay_band": {
+      "count": 176,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 1,
+        "national_insufficient_structure": 5,
+        "national_mechanism_readiness_ready": 7,
+        "national_needs_side_balance": 78,
+        "national_readiness_stratum_partial": 70,
+        "national_write_off": 15
+      }
+    },
+    "cola_cpi_indexing": {
+      "count": 81,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 1,
+        "moderate_mechanism_link_supporting": 20,
+        "strong_mechanism_link_claim_ready": 58,
+        "weak_mechanism_link_review": 2
+      }
+    },
+    "cola_or_raise": {
+      "count": 1024,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 233,
+        "national_insufficient_structure": 46,
+        "national_mechanism_readiness_ready": 212,
+        "national_needs_side_balance": 464,
+        "national_readiness_stratum_partial": 20,
+        "national_readiness_stratum_ready": 38,
+        "national_write_off": 11
+      }
+    },
+    "collective_bargaining": {
+      "count": 146,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 10,
+        "moderate_mechanism_link_supporting": 14,
+        "strong_mechanism_link_claim_ready": 119,
+        "weak_mechanism_link_review": 3
+      }
+    },
+    "comparability_parity": {
+      "count": 4,
+      "qa_status_counts": {
+        "moderate_mechanism_link_supporting": 4
+      }
+    },
+    "longevity_service": {
+      "count": 175,
+      "qa_status_counts": {
+        "national_insufficient_structure": 10,
+        "national_mechanism_readiness_ready": 3,
+        "national_needs_side_balance": 61,
+        "national_readiness_stratum_partial": 77,
+        "national_readiness_stratum_ready": 3,
+        "national_write_off": 21
+      }
+    },
+    "market_recruitment_retention": {
+      "count": 130,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 4,
+        "moderate_mechanism_link_supporting": 30,
+        "strong_mechanism_link_claim_ready": 94,
+        "weak_mechanism_link_review": 2
+      }
+    },
+    "matching_structure": {
+      "count": 1161,
+      "qa_status_counts": {
+        "same_side_context_only": 97,
+        "same_side_needs_repair": 425,
+        "same_side_supporting_example_ready": 639
+      }
+    },
+    "missing": {
+      "count": 208,
+      "qa_status_counts": {
+        "not_linkable_write_off": 208
+      }
+    },
+    "non_base_compensation": {
+      "count": 431,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 5,
+        "moderate_mechanism_link_supporting": 158,
+        "national_growth_readiness_ready": 1,
+        "national_insufficient_structure": 2,
+        "national_mechanism_readiness_ready": 1,
+        "national_needs_side_balance": 35,
+        "national_readiness_stratum_partial": 40,
+        "national_write_off": 3,
+        "strong_mechanism_link_claim_ready": 182,
+        "weak_mechanism_link_review": 4
+      }
+    },
+    "ordinance_council_adoption": {
+      "count": 88,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 3,
+        "moderate_mechanism_link_supporting": 3,
+        "strong_mechanism_link_claim_ready": 82
+      }
+    },
+    "other": {
+      "count": 2587,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 96,
+        "national_insufficient_structure": 154,
+        "national_mechanism_readiness_ready": 183,
+        "national_needs_pay_basis_repair": 438,
+        "national_needs_period_repair": 5,
+        "national_needs_side_balance": 1027,
+        "national_readiness_stratum_partial": 520,
+        "national_readiness_stratum_ready": 69,
+        "national_write_off": 95
+      }
+    },
+    "other_pay_setting_mechanism": {
+      "count": 112,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 6,
+        "moderate_mechanism_link_supporting": 73,
+        "strong_mechanism_link_claim_ready": 30,
+        "weak_mechanism_link_review": 3
+      }
+    },
+    "overtime_holiday": {
+      "count": 1053,
+      "qa_status_counts": {
+        "national_insufficient_structure": 78,
+        "national_mechanism_readiness_ready": 17,
+        "national_needs_side_balance": 379,
+        "national_readiness_stratum_partial": 409,
+        "national_readiness_stratum_ready": 18,
+        "national_write_off": 152
+      }
+    },
+    "qual_budget_or_fiscal_constraint": {
+      "count": 18,
+      "qa_status_counts": {
+        "side_independent_mechanism_claim_ready": 5,
+        "side_independent_mechanism_context": 3,
+        "side_independent_mechanism_supporting": 10
+      }
+    },
+    "qual_cola_or_indexing_mechanism": {
+      "count": 79,
+      "qa_status_counts": {
+        "same_side_needs_repair": 32,
+        "same_side_supporting_example_ready": 34,
+        "same_side_write_off": 8,
+        "side_independent_mechanism_claim_ready": 1,
+        "side_independent_mechanism_context": 2,
+        "side_independent_mechanism_supporting": 2
+      }
+    },
+    "qual_collective_bargaining": {
+      "count": 4,
+      "qa_status_counts": {
+        "same_side_needs_repair": 1,
+        "same_side_supporting_example_ready": 1,
+        "side_independent_mechanism_claim_ready": 1,
+        "side_independent_mechanism_context": 1
+      }
+    },
+    "qual_comparability_or_parity_language": {
+      "count": 2,
+      "qa_status_counts": {
+        "same_side_supporting_example_ready": 1,
+        "side_independent_mechanism_context": 1
+      }
+    },
+    "qual_market_recruitment_retention_pressure": {
+      "count": 2,
+      "qa_status_counts": {
+        "same_side_supporting_example_ready": 1,
+        "side_independent_mechanism_context": 1
+      }
+    },
+    "qual_non_base_compensation_mechanism": {
+      "count": 138,
+      "qa_status_counts": {
+        "same_side_needs_repair": 35,
+        "same_side_supporting_example_ready": 80,
+        "side_independent_mechanism_context": 8,
+        "side_independent_mechanism_supporting": 15
+      }
+    },
+    "qual_ordinance_or_council_adoption": {
+      "count": 5,
+      "qa_status_counts": {
+        "side_independent_mechanism_claim_ready": 1,
+        "side_independent_mechanism_supporting": 4
+      }
+    },
+    "qual_other_pay_setting_mechanism": {
+      "count": 15,
+      "qa_status_counts": {
+        "same_side_needs_repair": 8,
+        "same_side_supporting_example_ready": 2,
+        "side_independent_mechanism_context": 1,
+        "side_independent_mechanism_supporting": 4
+      }
+    },
+    "qual_position_classification_or_civil_service_structure": {
+      "count": 6,
+      "qa_status_counts": {
+        "same_side_supporting_example_ready": 5,
+        "side_independent_mechanism_supporting": 1
+      }
+    },
+    "qual_retroactivity_or_implementation_timing": {
+      "count": 35,
+      "qa_status_counts": {
+        "same_side_needs_repair": 1,
+        "same_side_supporting_example_ready": 3,
+        "side_independent_mechanism_claim_ready": 7,
+        "side_independent_mechanism_context": 3,
+        "side_independent_mechanism_supporting": 21
+      }
+    },
+    "quant_allowance_or_reimbursement": {
+      "count": 288,
+      "qa_status_counts": {
+        "same_side_needs_repair": 53,
+        "same_side_supporting_example_ready": 94,
+        "same_side_write_off": 141
+      }
+    },
+    "quant_base_wage_direct_value": {
+      "count": 222,
+      "qa_status_counts": {
+        "same_side_claim_ready": 163,
+        "same_side_needs_repair": 2,
+        "same_side_supporting_example_ready": 57
+      }
+    },
+    "quant_budget_or_pay_plan_amount": {
+      "count": 8,
+      "qa_status_counts": {
+        "same_side_claim_ready": 5,
+        "same_side_supporting_example_ready": 3
+      }
+    },
+    "quant_cpi_indexed_adjustment": {
+      "count": 95,
+      "qa_status_counts": {
+        "same_side_needs_repair": 40,
+        "same_side_supporting_example_ready": 44,
+        "same_side_write_off": 11
+      }
+    },
+    "quant_longevity_or_service_pay": {
+      "count": 77,
+      "qa_status_counts": {
+        "same_side_needs_repair": 20,
+        "same_side_supporting_example_ready": 27,
+        "same_side_write_off": 30
+      }
+    },
+    "quant_other_compensation_value": {
+      "count": 60,
+      "qa_status_counts": {
+        "same_side_claim_ready": 21,
+        "same_side_needs_repair": 4,
+        "same_side_supporting_example_ready": 29,
+        "same_side_write_off": 6
+      }
+    },
+    "quant_overtime_or_holiday_rate": {
+      "count": 408,
+      "qa_status_counts": {
+        "same_side_needs_repair": 98,
+        "same_side_supporting_example_ready": 118,
+        "same_side_write_off": 192
+      }
+    },
+    "quant_percentage_raise_or_cola": {
+      "count": 144,
+      "qa_status_counts": {
+        "same_side_claim_ready": 30,
+        "same_side_needs_repair": 108,
+        "same_side_supporting_example_ready": 5,
+        "same_side_write_off": 1
+      }
+    },
+    "quant_position_classification_pay_band": {
+      "count": 68,
+      "qa_status_counts": {
+        "same_side_claim_ready": 5,
+        "same_side_supporting_example_ready": 45,
+        "same_side_write_off": 18
+      }
+    },
+    "quant_retroactive_pay_or_lump_sum": {
+      "count": 41,
+      "qa_status_counts": {
+        "same_side_needs_repair": 9,
+        "same_side_supporting_example_ready": 24,
+        "same_side_write_off": 8
+      }
+    },
+    "quant_salary_schedule_table": {
+      "count": 127,
+      "qa_status_counts": {
+        "same_side_claim_ready": 1,
+        "same_side_supporting_example_ready": 51,
+        "same_side_write_off": 75
+      }
+    },
+    "quant_step_schedule_progression": {
+      "count": 106,
+      "qa_status_counts": {
+        "same_side_claim_ready": 41,
+        "same_side_needs_repair": 11,
+        "same_side_supporting_example_ready": 54
+      }
+    },
+    "quant_stipend_or_premium": {
+      "count": 77,
+      "qa_status_counts": {
+        "same_side_needs_repair": 17,
+        "same_side_supporting_example_ready": 24,
+        "same_side_write_off": 36
+      }
+    },
+    "retroactivity_implementation": {
+      "count": 31,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 1,
+        "moderate_mechanism_link_supporting": 20,
+        "strong_mechanism_link_claim_ready": 9,
+        "weak_mechanism_link_review": 1
+      }
+    },
+    "salary_schedule": {
+      "count": 361,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 1,
+        "national_insufficient_structure": 45,
+        "national_mechanism_readiness_ready": 5,
+        "national_needs_side_balance": 100,
+        "national_readiness_stratum_partial": 132,
+        "national_write_off": 78
+      }
+    },
+    "step_progression": {
+      "count": 279,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 10,
+        "national_insufficient_structure": 8,
+        "national_mechanism_readiness_ready": 64,
+        "national_needs_side_balance": 87,
+        "national_readiness_stratum_partial": 95,
+        "national_readiness_stratum_ready": 15
+      }
+    },
+    "stipend_premium": {
+      "count": 136,
+      "qa_status_counts": {
+        "national_insufficient_structure": 12,
+        "national_mechanism_readiness_ready": 12,
+        "national_needs_side_balance": 19,
+        "national_readiness_stratum_partial": 77,
+        "national_write_off": 16
+      }
+    },
+    "strike_no_strike_dispute_process": {
+      "count": 10,
+      "qa_status_counts": {
+        "moderate_mechanism_link_supporting": 10
+      }
+    }
+  },
+  "total": 13151
+}

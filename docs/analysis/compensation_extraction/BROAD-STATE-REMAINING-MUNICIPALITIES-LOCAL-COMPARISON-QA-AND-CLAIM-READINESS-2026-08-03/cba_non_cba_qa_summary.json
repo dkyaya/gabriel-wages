@@ -1,0 +1,65 @@
+{
+  "groups": {
+    "cba_arbitration_factfinding_hint": {
+      "count": 4043,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 184,
+        "national_insufficient_structure": 191,
+        "national_mechanism_readiness_ready": 363,
+        "national_needs_pay_basis_repair": 245,
+        "national_needs_period_repair": 76,
+        "national_needs_side_balance": 832,
+        "national_readiness_stratum_partial": 955,
+        "national_readiness_stratum_ready": 30,
+        "national_write_off": 138,
+        "same_side_claim_ready": 59,
+        "same_side_needs_repair": 266,
+        "same_side_supporting_example_ready": 343,
+        "same_side_write_off": 327,
+        "side_independent_mechanism_claim_ready": 5,
+        "side_independent_mechanism_context": 8,
+        "side_independent_mechanism_supporting": 21
+      }
+    },
+    "missing": {
+      "count": 1161,
+      "qa_status_counts": {
+        "same_side_context_only": 97,
+        "same_side_needs_repair": 425,
+        "same_side_supporting_example_ready": 639
+      }
+    },
+    "non_cba_or_unresolved_hint": {
+      "count": 6697,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 162,
+        "national_insufficient_structure": 279,
+        "national_mechanism_readiness_ready": 382,
+        "national_needs_pay_basis_repair": 218,
+        "national_needs_period_repair": 85,
+        "national_needs_side_balance": 2862,
+        "national_readiness_stratum_partial": 1089,
+        "national_readiness_stratum_ready": 269,
+        "national_write_off": 355,
+        "same_side_claim_ready": 207,
+        "same_side_needs_repair": 173,
+        "same_side_supporting_example_ready": 359,
+        "same_side_write_off": 199,
+        "side_independent_mechanism_claim_ready": 10,
+        "side_independent_mechanism_context": 12,
+        "side_independent_mechanism_supporting": 36
+      }
+    },
+    "not_encoded_in_link": {
+      "count": 1250,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 32,
+        "moderate_mechanism_link_supporting": 359,
+        "not_linkable_write_off": 208,
+        "strong_mechanism_link_claim_ready": 636,
+        "weak_mechanism_link_review": 15
+      }
+    }
+  },
+  "total": 13151
+}

@@ -1,0 +1,104 @@
+{
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "growth_evidence_gate": {
+    "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+    "counts": {
+      "same_side_claim_ready": 42,
+      "same_side_context_only": 97,
+      "same_side_needs_repair": 628,
+      "same_side_supporting_example_ready": 726,
+      "same_side_write_off": 20
+    },
+    "gate": "growth_evidence_gate",
+    "global_analysis_readiness": false,
+    "global_causal_readiness": false,
+    "global_wage_gap_readiness": false,
+    "rationale": "Growth evidence supports bounded side-specific claims where period and percentage/COLA structure are documented; incomplete rows remain repair-bound.",
+    "status": "partial"
+  },
+  "local_comparison_gate": {
+    "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+    "counts": {
+      "conditional_example_ready": 4,
+      "local_supporting_example_ready": 13
+    },
+    "gate": "local_comparison_gate",
+    "global_analysis_readiness": false,
+    "global_causal_readiness": false,
+    "global_wage_gap_readiness": false,
+    "rationale": "No candidate has strong role comparability; 13 are bounded supporting examples and 4 remain conditional examples.",
+    "status": "partial"
+  },
+  "mechanism_evidence_gate": {
+    "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+    "counts": {
+      "blocked_mechanism_link": 32,
+      "moderate_mechanism_link_supporting": 359,
+      "not_linkable_write_off": 208,
+      "side_independent:side_independent_mechanism_claim_ready": 15,
+      "side_independent:side_independent_mechanism_context": 20,
+      "side_independent:side_independent_mechanism_supporting": 57,
+      "strong_mechanism_link_claim_ready": 636,
+      "weak_mechanism_link_review": 15
+    },
+    "gate": "mechanism_evidence_gate",
+    "global_analysis_readiness": false,
+    "global_causal_readiness": false,
+    "global_wage_gap_readiness": false,
+    "rationale": "Strong documentary quant–qual links and bounded side-independent mechanisms support mechanism claims without causal language.",
+    "status": "pass"
+  },
+  "national_readiness_gate": {
+    "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+    "counts": {
+      "national_growth_readiness_ready": 346,
+      "national_insufficient_structure": 470,
+      "national_mechanism_readiness_ready": 745,
+      "national_needs_pay_basis_repair": 463,
+      "national_needs_period_repair": 161,
+      "national_needs_side_balance": 3694,
+      "national_readiness_stratum_partial": 2044,
+      "national_readiness_stratum_ready": 299,
+      "national_write_off": 493
+    },
+    "gate": "national_readiness_gate",
+    "global_analysis_readiness": false,
+    "global_causal_readiness": false,
+    "global_wage_gap_readiness": false,
+    "rationale": "Readiness strata exist, but side balance, period, pay-basis, and structure blockers prevent national claims.",
+    "status": "partial"
+  },
+  "non_base_compensation_evidence_gate": {
+    "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+    "counts": {
+      "same_side_claim_ready": 2,
+      "same_side_needs_repair": 236,
+      "same_side_supporting_example_ready": 392,
+      "same_side_write_off": 415
+    },
+    "gate": "non_base_compensation_evidence_gate",
+    "global_analysis_readiness": false,
+    "global_causal_readiness": false,
+    "global_wage_gap_readiness": false,
+    "rationale": "Non-base claims pass only for explicit values, clear side, supported period, and compatible compensation type.",
+    "status": "partial"
+  },
+  "same_side_evidence_gate": {
+    "claim_boundary": "internal bounded claim-readiness gate only; global analysis, wage-gap, and causal readiness remain false",
+    "counts": {
+      "same_side_claim_ready": 266,
+      "same_side_context_only": 97,
+      "same_side_needs_repair": 864,
+      "same_side_supporting_example_ready": 1341,
+      "same_side_write_off": 526
+    },
+    "gate": "same_side_evidence_gate",
+    "global_analysis_readiness": false,
+    "global_causal_readiness": false,
+    "global_wage_gap_readiness": false,
+    "rationale": "Bounded same-side claims pass where side, period, basis, and raw/structured evidence gates pass; repair and write-off rows remain separate.",
+    "status": "partial"
+  }
+}

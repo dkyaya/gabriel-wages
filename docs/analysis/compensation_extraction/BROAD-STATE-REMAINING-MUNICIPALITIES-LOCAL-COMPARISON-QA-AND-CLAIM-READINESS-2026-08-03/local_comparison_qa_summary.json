@@ -1,0 +1,12 @@
+{
+  "all_computation_checks_match": true,
+  "analysis_use_conditional_unit_count": 27,
+  "analysis_use_direct_unit_count": 26,
+  "deduplicated_candidate_count": 17,
+  "final_wage_gap_claims": 0,
+  "input_count": 17,
+  "qa_status_counts": {
+    "conditional_example_ready": 4,
+    "local_supporting_example_ready": 13
+  }
+}

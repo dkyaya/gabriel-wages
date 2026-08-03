@@ -1,0 +1,150 @@
+{
+  "groups": {
+    "fire_direct": {
+      "count": 1174,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 5,
+        "moderate_mechanism_link_supporting": 49,
+        "national_growth_readiness_ready": 65,
+        "national_insufficient_structure": 12,
+        "national_mechanism_readiness_ready": 99,
+        "national_needs_pay_basis_repair": 84,
+        "national_needs_period_repair": 17,
+        "national_readiness_stratum_partial": 295,
+        "national_readiness_stratum_ready": 28,
+        "not_linkable_write_off": 18,
+        "same_side_claim_ready": 28,
+        "same_side_needs_repair": 114,
+        "same_side_supporting_example_ready": 178,
+        "same_side_write_off": 109,
+        "strong_mechanism_link_claim_ready": 71,
+        "weak_mechanism_link_review": 2
+      }
+    },
+    "fire_direct|police_direct": {
+      "count": 76,
+      "qa_status_counts": {
+        "same_side_context_only": 76
+      }
+    },
+    "fire_direct|police_direct|safety_combined_direct": {
+      "count": 10,
+      "qa_status_counts": {
+        "same_side_context_only": 10
+      }
+    },
+    "fire_direct|safety_combined_direct": {
+      "count": 2,
+      "qa_status_counts": {
+        "same_side_context_only": 2
+      }
+    },
+    "mixed_direct": {
+      "count": 28,
+      "qa_status_counts": {
+        "moderate_mechanism_link_supporting": 1,
+        "national_insufficient_structure": 11,
+        "national_mechanism_readiness_ready": 2,
+        "national_needs_pay_basis_repair": 3,
+        "national_needs_period_repair": 1,
+        "national_readiness_stratum_partial": 3,
+        "national_readiness_stratum_ready": 2,
+        "same_side_claim_ready": 1,
+        "strong_mechanism_link_claim_ready": 2,
+        "weak_mechanism_link_review": 2
+      }
+    },
+    "mixed_direct|non_safety_direct": {
+      "count": 4,
+      "qa_status_counts": {
+        "same_side_context_only": 4
+      }
+    },
+    "non_safety_direct": {
+      "count": 1749,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 18,
+        "moderate_mechanism_link_supporting": 86,
+        "national_growth_readiness_ready": 62,
+        "national_insufficient_structure": 8,
+        "national_mechanism_readiness_ready": 136,
+        "national_needs_pay_basis_repair": 75,
+        "national_needs_period_repair": 37,
+        "national_readiness_stratum_partial": 363,
+        "national_readiness_stratum_ready": 106,
+        "not_linkable_write_off": 129,
+        "same_side_claim_ready": 136,
+        "same_side_needs_repair": 174,
+        "same_side_supporting_example_ready": 216,
+        "same_side_write_off": 71,
+        "strong_mechanism_link_claim_ready": 128,
+        "weak_mechanism_link_review": 4
+      }
+    },
+    "not_applicable": {
+      "count": 672,
+      "qa_status_counts": {
+        "national_insufficient_structure": 409,
+        "national_readiness_stratum_partial": 171,
+        "side_independent_mechanism_claim_ready": 15,
+        "side_independent_mechanism_context": 20,
+        "side_independent_mechanism_supporting": 57
+      }
+    },
+    "police_direct": {
+      "count": 5213,
+      "qa_status_counts": {
+        "blocked_mechanism_link": 9,
+        "moderate_mechanism_link_supporting": 223,
+        "national_growth_readiness_ready": 215,
+        "national_insufficient_structure": 30,
+        "national_mechanism_readiness_ready": 507,
+        "national_needs_pay_basis_repair": 299,
+        "national_needs_period_repair": 105,
+        "national_readiness_stratum_partial": 1202,
+        "national_readiness_stratum_ready": 163,
+        "not_linkable_write_off": 61,
+        "same_side_claim_ready": 100,
+        "same_side_needs_repair": 572,
+        "same_side_supporting_example_ready": 943,
+        "same_side_write_off": 343,
+        "strong_mechanism_link_claim_ready": 434,
+        "weak_mechanism_link_review": 7
+      }
+    },
+    "police_direct|safety_combined_direct": {
+      "count": 5,
+      "qa_status_counts": {
+        "same_side_context_only": 5
+      }
+    },
+    "remains_unclear": {
+      "count": 3694,
+      "qa_status_counts": {
+        "national_needs_side_balance": 3694
+      }
+    },
+    "safety_combined_direct": {
+      "count": 31,
+      "qa_status_counts": {
+        "national_growth_readiness_ready": 4,
+        "national_mechanism_readiness_ready": 1,
+        "national_needs_pay_basis_repair": 2,
+        "national_needs_period_repair": 1,
+        "national_readiness_stratum_partial": 10,
+        "same_side_claim_ready": 1,
+        "same_side_needs_repair": 4,
+        "same_side_supporting_example_ready": 4,
+        "same_side_write_off": 3,
+        "strong_mechanism_link_claim_ready": 1
+      }
+    },
+    "write_off": {
+      "count": 493,
+      "qa_status_counts": {
+        "national_write_off": 493
+      }
+    }
+  },
+  "total": 13151
+}

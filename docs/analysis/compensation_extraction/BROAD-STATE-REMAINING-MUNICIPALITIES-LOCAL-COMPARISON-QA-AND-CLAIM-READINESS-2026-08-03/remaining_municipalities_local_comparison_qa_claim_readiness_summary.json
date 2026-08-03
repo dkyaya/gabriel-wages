@@ -1,0 +1,82 @@
+{
+  "analysis_use_conditional_unit_count": 27,
+  "analysis_use_direct_unit_count": 26,
+  "claim_boundary": "internal bounded QA and readiness gates only; no final wage-gap, national, prevalence, policy-effect, or causal claim",
+  "claim_readiness_gate_statuses": {
+    "growth_evidence_gate": "partial",
+    "local_comparison_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "national_readiness_gate": "partial",
+    "non_base_compensation_evidence_gate": "partial",
+    "same_side_evidence_gate": "partial"
+  },
+  "cleaned_analysis_use_layer_count": 28358,
+  "decision": "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready",
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "growth_qa_status_counts": {
+    "same_side_claim_ready": 42,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 628,
+    "same_side_supporting_example_ready": 726,
+    "same_side_write_off": 20
+  },
+  "later_whole_corpus_task": "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+  "local_comparison_qa_input_count": 17,
+  "local_comparison_qa_status_counts": {
+    "conditional_example_ready": 4,
+    "local_supporting_example_ready": 13
+  },
+  "national_readiness_qa_status_counts": {
+    "national_growth_readiness_ready": 346,
+    "national_insufficient_structure": 470,
+    "national_mechanism_readiness_ready": 745,
+    "national_needs_pay_basis_repair": 463,
+    "national_needs_period_repair": 161,
+    "national_needs_side_balance": 3694,
+    "national_readiness_stratum_partial": 2044,
+    "national_readiness_stratum_ready": 299,
+    "national_write_off": 493
+  },
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03",
+  "no_polished_deliverables_created": true,
+  "non_base_qa_status_counts": {
+    "same_side_claim_ready": 2,
+    "same_side_needs_repair": 236,
+    "same_side_supporting_example_ready": 392,
+    "same_side_write_off": 415
+  },
+  "qa_completed_across_all_requested_evidence_groups": true,
+  "quant_qual_mechanism_qa_status_counts": {
+    "blocked_mechanism_link": 32,
+    "moderate_mechanism_link_supporting": 359,
+    "not_linkable_write_off": 208,
+    "strong_mechanism_link_claim_ready": 636,
+    "weak_mechanism_link_review": 15
+  },
+  "same_side_input_group_counts": {
+    "growth": 1513,
+    "non_base": 1045,
+    "scalar": 126,
+    "structured_schedule": 410
+  },
+  "same_side_qa_status_counts": {
+    "same_side_claim_ready": 266,
+    "same_side_context_only": 97,
+    "same_side_needs_repair": 864,
+    "same_side_supporting_example_ready": 1341,
+    "same_side_write_off": 526
+  },
+  "side_independent_mechanism_qa_status_counts": {
+    "side_independent_mechanism_claim_ready": 15,
+    "side_independent_mechanism_context": 20,
+    "side_independent_mechanism_supporting": 57
+  },
+  "structured_schedule_qa_status_counts": {
+    "same_side_claim_ready": 96,
+    "same_side_supporting_example_ready": 223,
+    "same_side_write_off": 91
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03"
+}

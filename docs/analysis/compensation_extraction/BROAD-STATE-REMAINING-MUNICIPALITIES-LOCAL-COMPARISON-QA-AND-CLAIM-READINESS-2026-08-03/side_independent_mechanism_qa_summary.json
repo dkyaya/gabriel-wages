@@ -1,0 +1,9 @@
+{
+  "input_count": 92,
+  "qa_status_counts": {
+    "side_independent_mechanism_claim_ready": 15,
+    "side_independent_mechanism_context": 20,
+    "side_independent_mechanism_supporting": 57
+  },
+  "side_specific_claims": 0
+}

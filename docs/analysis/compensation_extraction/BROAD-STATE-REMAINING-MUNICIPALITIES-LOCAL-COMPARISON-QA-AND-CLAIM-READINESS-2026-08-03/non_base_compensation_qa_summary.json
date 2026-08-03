@@ -1,0 +1,9 @@
+{
+  "input_count": 1045,
+  "qa_status_counts": {
+    "same_side_claim_ready": 2,
+    "same_side_needs_repair": 236,
+    "same_side_supporting_example_ready": 392,
+    "same_side_write_off": 415
+  }
+}

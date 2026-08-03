@@ -1,0 +1,12 @@
+{
+  "causal_claims": 0,
+  "input_count": 1250,
+  "mechanism_attribution_record_count": 1004,
+  "qa_status_counts": {
+    "blocked_mechanism_link": 32,
+    "moderate_mechanism_link_supporting": 359,
+    "not_linkable_write_off": 208,
+    "strong_mechanism_link_claim_ready": 636,
+    "weak_mechanism_link_review": 15
+  }
+}
