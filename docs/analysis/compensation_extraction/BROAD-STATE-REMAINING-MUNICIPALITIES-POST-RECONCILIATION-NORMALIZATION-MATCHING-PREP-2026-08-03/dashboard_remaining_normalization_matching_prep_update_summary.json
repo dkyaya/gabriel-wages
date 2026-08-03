@@ -7,7 +7,7 @@
   "dashboard_local_static_validation_passed": true,
   "dashboard_local_visual_browser_validation": "not_run_browser_runtime_unavailable_stale_plugin_bootstrap_reference",
   "dashboard_map_primary_metric": "scout_coverage_rate",
-  "dashboard_public_validation": "pending_push_and_deployment",
+  "dashboard_public_validation": "passed_static_cache_busted_bundle_after_github_pages_deployment",
   "expanded_structural_comparison_prep_candidate_count": 4454,
   "final_pi_report_link_intact": true,
   "global_analysis_readiness": false,
