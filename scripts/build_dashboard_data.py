@@ -1858,6 +1858,11 @@ BROAD_STATE_REMAINING_REPO_DEEP_CLEAN_ARCHIVE_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03"
 )
+BROAD_STATE_WHOLE_CORPUS_SYNTHESIS_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7829,6 +7834,44 @@ def broad_state_remaining_repo_deep_clean_archive_status() -> tuple[bool, dict[s
     return True, {**summary, **savings, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_whole_corpus_synthesis_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the validated whole-corpus synthesis without advancing global claims."""
+    directory = BROAD_STATE_WHOLE_CORPUS_SYNTHESIS_DIR
+    required = (
+        directory / "broad_state_whole_corpus_rating_span_synthesis_manifest.json",
+        directory / "broad_state_whole_corpus_rating_span_synthesis_summary.json",
+        directory / "whole_corpus_claim_readiness_gate_summary.json",
+        directory / "dashboard_whole_corpus_synthesis_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, gates, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready"
+    valid = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and summary.get("whole_corpus_rated_span_count") == 51639
+        and summary.get("whole_corpus_source_count") == 7538
+        and summary.get("whole_corpus_claim_readiness_record_count") == 65243
+        and gates.get("whole_corpus_synthesis_gate", {}).get("status") == "pass"
+        and gates.get("mechanism_evidence_gate", {}).get("status") == "pass"
+        and gates.get("global_wage_gap_readiness_gate", {}).get("status") == "fail"
+        and gates.get("global_causal_readiness_gate", {}).get("status") == "fail"
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("polished_deliverable_created") is False
+    )
+    if not valid:
+        raise ValueError("whole-corpus synthesis package fails dashboard gates")
+    return True, {**summary, **dashboard, "claim_readiness_gates": gates, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11561,6 +11604,9 @@ def build_project_phase_summary(
     remaining_repo_cleanup_available, remaining_repo_cleanup = (
         broad_state_remaining_repo_deep_clean_archive_status()
     )
+    whole_corpus_synthesis_available, whole_corpus_synthesis = (
+        broad_state_whole_corpus_synthesis_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13572,6 +13618,39 @@ def build_project_phase_summary(
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "false_pending_whole_corpus_synthesis_and_quality_gates",
             "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if whole_corpus_synthesis_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_complete",
+            "current_phase": "Whole-corpus rating-span synthesis and claim readiness complete",
+            "current_phase_code": whole_corpus_synthesis["decision"],
+            "current_evidence_status": "whole_corpus_canonical_spans_and_typed_readiness_units_synthesized",
+            "whole_corpus_synthesis_available": True,
+            "whole_corpus_canonical_layer_count": whole_corpus_synthesis["included_canonical_layer_count"],
+            "whole_corpus_rated_span_count": whole_corpus_synthesis["whole_corpus_rated_span_count"],
+            "whole_corpus_source_count": whole_corpus_synthesis["whole_corpus_source_count"],
+            "whole_corpus_claim_readiness_record_count": whole_corpus_synthesis["whole_corpus_claim_readiness_record_count"],
+            "whole_corpus_claim_boundary_counts": whole_corpus_synthesis["claim_boundary_counts"],
+            "whole_corpus_gate_statuses": whole_corpus_synthesis["gate_statuses"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+            "next_phase": "Prepare a bounded internal whole-corpus claim package from the validated gates",
+            "next_phase_sequence": [
+                "separate claim-ready, supporting, conditional, readiness-only, repair, and write-off evidence",
+                "preserve source lineage, claim boundaries, and local versus national limitations",
+                "defer unsupported final wage-gap, national, prevalence, causal, regression, and treatment-effect work",
+            ],
+            "last_updated_context": "whole_corpus_rating_span_synthesis_claim_readiness_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "global_wage_gap_readiness": False,
+            "global_causal_readiness": False,
+            "wage_gap_analysis_readiness": "false_whole_corpus_local_gate_partial_global_gate_failed",
+            "causal_analysis_readiness": "false_whole_corpus_causal_gate_failed",
         })
     return payload
 

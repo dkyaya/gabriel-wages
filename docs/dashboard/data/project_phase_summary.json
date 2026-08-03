@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-03T17:57:35Z",
+  "generated_at": "2026-08-03T18:51:58Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -97,8 +97,8 @@
   ],
   "stage": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_complete",
   "current_phase": "Whole-corpus rating-span synthesis and claim readiness complete",
-  "current_phase_code": "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready",
-  "current_evidence_status": "conservative_archive_first_cleanup_complete_canonical_evidence_preserved",
+  "current_phase_code": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready",
+  "current_evidence_status": "whole_corpus_canonical_spans_and_typed_readiness_units_synthesized",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Unify the entire rating-span corpus into bounded local and national claim-readiness layers",
+  "next_phase": "Prepare a bounded internal whole-corpus claim package from the validated gates",
   "next_phase_sequence": [
-    "reconcile batch-specific rating-span and claim-readiness layers across the whole corpus",
-    "preserve local, mechanism, growth, non-base, quant–qual, and national-readiness boundaries",
-    "defer unsupported final claims, regressions, treatment effects, and polished deliverables"
+    "separate claim-ready, supporting, conditional, readiness-only, repair, and write-off evidence",
+    "preserve source lineage, claim boundaries, and local versus national limitations",
+    "defer unsupported final wage-gap, national, prevalence, causal, regression, and treatment-effect work"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_repo_deep_clean_archive_complete",
+  "last_updated_context": "whole_corpus_rating_span_synthesis_claim_readiness_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1187,8 +1187,8 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 35574,
-  "wage_gap_analysis_readiness": "false_pending_whole_corpus_synthesis_and_quality_gates",
-  "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+  "wage_gap_analysis_readiness": "false_whole_corpus_local_gate_partial_global_gate_failed",
+  "causal_analysis_readiness": "false_whole_corpus_causal_gate_failed",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
   "broad_state_4x2500_text_extraction_queue_count": 2940,
@@ -6714,15 +6714,15 @@
     "write_off": 15589
   },
   "whole_corpus_gate_statuses": {
-    "local_comparison_gate": "partial",
-    "same_side_evidence_gate": "partial",
-    "mechanism_evidence_gate": "pass",
-    "growth_evidence_gate": "partial",
-    "non_base_compensation_gate": "partial",
-    "national_readiness_gate": "partial",
-    "whole_corpus_synthesis_gate": "pass",
+    "global_causal_readiness_gate": "fail",
     "global_wage_gap_readiness_gate": "fail",
-    "global_causal_readiness_gate": "fail"
+    "growth_evidence_gate": "partial",
+    "local_comparison_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "national_readiness_gate": "partial",
+    "non_base_compensation_gate": "partial",
+    "same_side_evidence_gate": "partial",
+    "whole_corpus_synthesis_gate": "pass"
   },
   "global_wage_gap_readiness": false,
   "global_causal_readiness": false

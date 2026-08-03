@@ -796,6 +796,7 @@ def update_dashboard(summary: dict[str, Any], dashboard: dict[str, Any]) -> None
     data.update({
         "stage": "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_complete",
         "current_phase": "Whole-corpus rating-span synthesis and claim readiness complete",
+        "current_phase_code": DECISION,
         "next_task": NEXT_TASK, "whole_corpus_synthesis_available": True,
         "whole_corpus_canonical_layer_count": summary["included_canonical_layer_count"],
         "whole_corpus_rated_span_count": summary["whole_corpus_rated_span_count"],
@@ -900,7 +901,12 @@ def audit_staged() -> dict[str, Any]:
     staged = run("git", "diff", "--cached", "--name-only").splitlines()
     forbidden_markers = ("artifacts/local_retained_sources/", "artifacts/local_extracted_text/", "artifacts/local_archives/", ".pdf", ".docx", ".pptx", "node_modules/")
     bad = [p for p in staged if any(x in p.lower() for x in forbidden_markers)]
-    allowed_roots = (str(OUT_REL) + "/", "docs/dashboard/", "scripts/run_broad_state_whole_corpus_rating_span_synthesis.py")
+    allowed_roots = (
+        str(OUT_REL) + "/", "docs/dashboard/",
+        "scripts/run_broad_state_whole_corpus_rating_span_synthesis.py",
+        "scripts/build_dashboard_data.py",
+        "scripts/test_dashboard_github_pages_deployment_repair.py",
+    )
     outside = [p for p in staged if not p.startswith(allowed_roots)]
     audit = {"audited_at": now(), "passed": not bad and not outside, "staged_file_count": len(staged), "forbidden_staged_paths": bad, "outside_authorized_scope": outside, "staged_files": staged}
     write_json(OUT / "staged_file_audit.json", audit)

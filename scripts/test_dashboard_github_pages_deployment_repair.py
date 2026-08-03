@@ -136,7 +136,31 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03/"
             "remaining_municipalities_repo_deep_clean_archive_manifest.json"
         )
-        if remaining_repo_cleanup_manifest.exists() and json.loads(
+        whole_corpus_synthesis_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/"
+            "broad_state_whole_corpus_rating_span_synthesis_manifest.json"
+        )
+        if whole_corpus_synthesis_manifest.exists() and json.loads(
+            whole_corpus_synthesis_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_complete",
+            )
+            self.assertTrue(phase["whole_corpus_synthesis_available"])
+            self.assertEqual(phase["whole_corpus_rated_span_count"], 51639)
+            self.assertEqual(phase["whole_corpus_source_count"], 7538)
+            self.assertFalse(phase["global_analysis_readiness"])
+            self.assertFalse(phase["global_wage_gap_readiness"])
+            self.assertFalse(phase["global_causal_readiness"])
+        elif remaining_repo_cleanup_manifest.exists() and json.loads(
             remaining_repo_cleanup_manifest.read_text()
         ).get("decision") == (
             "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready"
@@ -329,6 +353,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
                 "false_local_examples_bounded_no_final_wage_gap_claim",
                 "false_pending_whole_corpus_synthesis_and_quality_gates",
+                "false_whole_corpus_local_gate_partial_global_gate_failed",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -340,6 +365,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "blocked_pending_matched_structure",
                 "blocked_pending_stronger_causal_design",
                 "false_blocked_pending_stronger_causal_design",
+                "false_whole_corpus_causal_gate_failed",
             },
         )
         extraction_summary_path = (
@@ -629,7 +655,29 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(repo_cleanup_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready"
                                                                         )
-                                                                        if repo_cleanup_complete:
+                                                                        whole_corpus_synthesis_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-"
+                                                                            "SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/"
+                                                                            "broad_state_whole_corpus_rating_span_synthesis_manifest.json"
+                                                                        )
+                                                                        whole_corpus_synthesis_complete = (
+                                                                            whole_corpus_synthesis_manifest.exists()
+                                                                            and json.loads(whole_corpus_synthesis_manifest.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_rating_span_synthesis_claim_readiness_completed_claim_package_ready"
+                                                                        )
+                                                                        if whole_corpus_synthesis_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Whole-corpus rating-span synthesis and claim readiness complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(phase["whole_corpus_synthesis_available"])
+                                                                            self.assertEqual(phase["whole_corpus_rated_span_count"], 51639)
+                                                                        elif repo_cleanup_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Repo deep clean/archive complete",
