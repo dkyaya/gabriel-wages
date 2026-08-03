@@ -1,0 +1,17 @@
+{
+  "final_national_claims": 0,
+  "national_prevalence_estimates": 0,
+  "national_wage_gaps": 0,
+  "status_counts": {
+    "national_growth_stratum_candidate": 346,
+    "national_insufficient_structure": 470,
+    "national_mechanism_stratum_candidate": 745,
+    "national_needs_pay_basis_repair": 463,
+    "national_needs_period_repair": 161,
+    "national_needs_side_balance": 3694,
+    "national_partial_stratum_candidate": 2044,
+    "national_ready_stratum_candidate": 299,
+    "national_write_off": 493
+  },
+  "total": 8715
+}

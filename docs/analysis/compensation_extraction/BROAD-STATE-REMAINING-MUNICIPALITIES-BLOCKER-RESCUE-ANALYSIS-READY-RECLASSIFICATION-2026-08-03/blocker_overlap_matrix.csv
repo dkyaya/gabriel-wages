@@ -1,0 +1,6 @@
+blocker,missing_clear_cross_side_normalized_anchors,pay_basis_or_compensation_type_incompatible,period_incompatible_or_missing,no_scalar_normalized_value,non_clear_side_status_present
+missing_clear_cross_side_normalized_anchors,19542,17684,17305,17118,8446
+pay_basis_or_compensation_type_incompatible,17684,17761,17262,17118,8446
+period_incompatible_or_missing,17305,17262,17339,17118,8446
+no_scalar_normalized_value,17118,17118,17118,17118,8446
+non_clear_side_status_present,8446,8446,8446,8446,8446

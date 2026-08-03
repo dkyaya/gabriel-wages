@@ -1,0 +1,43 @@
+{
+  "cleaned_compensation_type_counts": {
+    "allowance_reimbursement": 760,
+    "base_wage": 1614,
+    "budget_or_pay_plan": 468,
+    "classification_pay_band": 176,
+    "cola_or_raise": 1024,
+    "longevity_service": 175,
+    "mechanism_only": 1139,
+    "non_base_compensation": 82,
+    "other": 1448,
+    "overtime_holiday": 1053,
+    "salary_schedule": 361,
+    "step_progression": 279,
+    "stipend_premium": 136
+  },
+  "cleaned_pay_basis_counts": {
+    "allowance": 894,
+    "annual_salary": 324,
+    "budget_amount": 1100,
+    "cola_cpi": 405,
+    "holiday_rate": 23,
+    "hourly": 1595,
+    "monthly": 101,
+    "overtime_rate": 988,
+    "pay_grade": 168,
+    "per_diem": 12,
+    "percentage_raise": 828,
+    "range_min_max": 7,
+    "step_schedule": 498,
+    "stipend": 248,
+    "unknown": 214,
+    "unknown_or_mixed": 1288,
+    "weekly": 22
+  },
+  "status_counts": {
+    "existing_pay_basis_confirmed": 6718,
+    "pay_basis_comp_type_rescued": 495,
+    "pay_basis_not_applicable_mechanism": 214,
+    "pay_basis_unknown_after_rescue": 1288
+  },
+  "total": 8715
+}

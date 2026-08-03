@@ -1,0 +1,10 @@
+{
+  "resolution_counts": {
+    "resolved": 17,
+    "routed_to_defer": 5,
+    "routed_to_non_comparison_analysis_use": 2946,
+    "routed_to_repair_needed": 15137,
+    "routed_to_write_off": 1538
+  },
+  "total": 19643
+}

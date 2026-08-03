@@ -1,0 +1,208 @@
+{
+  "blocker_count_cohorts": {
+    "0": 22,
+    "1": 1830,
+    "2": 561,
+    "3": 112,
+    "4": 8672,
+    "5": 8446
+  },
+  "blocker_resolution_counts": {
+    "resolved": 17,
+    "routed_to_defer": 5,
+    "routed_to_non_comparison_analysis_use": 2946,
+    "routed_to_repair_needed": 15137,
+    "routed_to_write_off": 1538
+  },
+  "claim_boundary": "internal analysis-use routing only; no final wage-gap, national, prevalence, or causal claim",
+  "cleaned_analysis_use_category_counts": {
+    "budget_or_pay_plan_context_evidence": 235,
+    "conditional_cross_side_comparison_candidate": 27,
+    "direct_cross_side_comparison_ready": 26,
+    "local_context_only": 409,
+    "national_readiness_stratum_only": 1028,
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 587,
+    "period_repair_needed": 214,
+    "qualitative_mechanism_only": 161,
+    "quant_qual_mechanism_linked_evidence": 1643,
+    "role_side_repair_needed": 10602,
+    "same_side_growth_evidence": 1513,
+    "same_side_non_base_compensation_evidence": 1045,
+    "same_side_scalar_wage_evidence": 126,
+    "same_side_structured_schedule_evidence": 410,
+    "side_independent_mechanism_evidence": 92,
+    "unresolved_or_defer": 51,
+    "write_off_or_exclude": 2031
+  },
+  "cleaned_analysis_use_layer_count": 28358,
+  "cleaned_growth_continuity_summary": {
+    "forced_cross_side_wage_level_comparisons": 0,
+    "status_counts": {
+      "growth_partial_review": 101,
+      "side_specific_growth_ready": 392
+    },
+    "total": 493
+  },
+  "cleaned_local_comparison_summary": {
+    "all_require_qa": true,
+    "conditional_count": 4,
+    "direct_count": 13,
+    "final_wage_gap_claims": 0,
+    "total": 17
+  },
+  "cleaned_mechanism_attribution_count": 1004,
+  "decision": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready",
+  "matching_structure_count": 19643,
+  "national_readiness_reclassification_summary": {
+    "final_national_claims": 0,
+    "national_prevalence_estimates": 0,
+    "national_wage_gaps": 0,
+    "status_counts": {
+      "national_growth_stratum_candidate": 346,
+      "national_insufficient_structure": 470,
+      "national_mechanism_stratum_candidate": 745,
+      "national_needs_pay_basis_repair": 463,
+      "national_needs_period_repair": 161,
+      "national_needs_side_balance": 3694,
+      "national_partial_stratum_candidate": 2044,
+      "national_ready_stratum_candidate": 299,
+      "national_write_off": 493
+    },
+    "total": 8715
+  },
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+  "no_polished_deliverables_created": true,
+  "non_scalar_structuring_summary": {
+    "fake_scalar_created_count": 0,
+    "status_counts": {
+      "not_non_scalar_structure": 2985,
+      "structured_without_scalar_collapse": 5730
+    },
+    "structure_counts": {
+      "budget_or_pay_plan_context": 943,
+      "genuinely_no_quantitative_value": 1288,
+      "mechanism_only": 317,
+      "multiple_value_table": 420,
+      "non_base_amount": 2134,
+      "pay_grade_or_classification_band": 134,
+      "percentage_raise_or_cola": 1467,
+      "salary_range": 44,
+      "scalar_value": 1380,
+      "step_schedule": 588
+    },
+    "total": 8715
+  },
+  "normalization_input_count": 8715,
+  "normalized_count_correction_note": "normalized_quantitative_records.csv is the complete 8,715-row status ledger; 1,250 is its usable normalized subset",
+  "normalized_status_ledger_count": 8715,
+  "original_blocker_flag_counts": {
+    "missing_clear_cross_side_normalized_anchors": 19542,
+    "no_scalar_normalized_value": 17118,
+    "non_clear_side_status_present": 8446,
+    "pay_basis_or_compensation_type_incompatible": 17761,
+    "period_incompatible_or_missing": 17339
+  },
+  "pay_basis_comp_type_rescue_summary": {
+    "cleaned_compensation_type_counts": {
+      "allowance_reimbursement": 760,
+      "base_wage": 1614,
+      "budget_or_pay_plan": 468,
+      "classification_pay_band": 176,
+      "cola_or_raise": 1024,
+      "longevity_service": 175,
+      "mechanism_only": 1139,
+      "non_base_compensation": 82,
+      "other": 1448,
+      "overtime_holiday": 1053,
+      "salary_schedule": 361,
+      "step_progression": 279,
+      "stipend_premium": 136
+    },
+    "cleaned_pay_basis_counts": {
+      "allowance": 894,
+      "annual_salary": 324,
+      "budget_amount": 1100,
+      "cola_cpi": 405,
+      "holiday_rate": 23,
+      "hourly": 1595,
+      "monthly": 101,
+      "overtime_rate": 988,
+      "pay_grade": 168,
+      "per_diem": 12,
+      "percentage_raise": 828,
+      "range_min_max": 7,
+      "step_schedule": 498,
+      "stipend": 248,
+      "unknown": 214,
+      "unknown_or_mixed": 1288,
+      "weekly": 22
+    },
+    "status_counts": {
+      "existing_pay_basis_confirmed": 6718,
+      "pay_basis_comp_type_rescued": 495,
+      "pay_basis_not_applicable_mechanism": 214,
+      "pay_basis_unknown_after_rescue": 1288
+    },
+    "total": 8715
+  },
+  "period_rescue_summary": {
+    "remaining_missing_or_conflict_count": 2383,
+    "rescued_or_existing_period_count": 6332,
+    "status_counts": {
+      "explicit_period_rescued": 5897,
+      "period_missing_after_rescue": 2383,
+      "period_not_applicable": 435
+    },
+    "total": 8715
+  },
+  "quant_qual_link_rescue_summary": {
+    "analysis_ready_link_count": 1004,
+    "original_status_counts": {
+      "blocked_side_mismatch": 13,
+      "blocked_source_context_insufficient": 10,
+      "moderate_quant_qual_link": 359,
+      "not_linkable": 208,
+      "strong_quant_qual_link": 645,
+      "weak_quant_qual_link": 15
+    },
+    "rescue_status_counts": {
+      "blocked_or_not_linkable_preserved": 231,
+      "preserved_analysis_ready_link": 1004,
+      "weak_link_review_needed": 15
+    },
+    "total": 1250
+  },
+  "records_or_structures_rescued_or_rerouted": 2963,
+  "remaining_repair_defer_writeoff_counts": {
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 587,
+    "period_repair_needed": 214,
+    "role_side_repair_needed": 10602,
+    "unresolved_or_defer": 51,
+    "write_off_or_exclude": 2031
+  },
+  "side_status_routing_summary": {
+    "clear_side_anchor_eligible_count": 3948,
+    "routing_counts": {
+      "clear_side_analysis_eligible": 3948,
+      "local_context_or_defer": 437,
+      "role_side_repair_or_defer": 3694,
+      "side_independent_budget_context": 51,
+      "side_independent_mechanism": 92,
+      "write_off": 493
+    },
+    "status_counts": {
+      "existing_final_clear_side_preserved": 3948,
+      "not_applicable_routed_without_clear_side_use": 580,
+      "remains_unclear_preserved": 3694,
+      "write_off_preserved": 493
+    },
+    "total": 8715
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03",
+  "unique_blocker_signature_count": 10,
+  "usable_normalized_input_count": 1250
+}

@@ -1,0 +1,18 @@
+{
+  "blocker_count_cohorts": {
+    "0": 22,
+    "1": 1830,
+    "2": 561,
+    "3": 112,
+    "4": 8672,
+    "5": 8446
+  },
+  "primary_blocker_counts": {
+    "missing_cross_side_anchor": 1783,
+    "multiple_blockers": 17791,
+    "no_material_blocker_after_reclassification": 22,
+    "pay_basis_or_comp_type_blocked": 45,
+    "period_blocked": 2
+  },
+  "unique_structure_count": 19643
+}

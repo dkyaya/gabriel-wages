@@ -1843,6 +1843,11 @@ BROAD_STATE_REMAINING_QUANTITATIVE_NORMALIZATION_MATCHING_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03"
 )
+BROAD_STATE_REMAINING_BLOCKER_RESCUE_RECLASSIFICATION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7683,6 +7688,52 @@ def broad_state_remaining_quantitative_normalization_matching_status() -> tuple[
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_blocker_rescue_reclassification_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the validated blocker-rescue and derived analysis-use layer."""
+    directory = BROAD_STATE_REMAINING_BLOCKER_RESCUE_RECLASSIFICATION_DIR
+    required = (
+        directory / "remaining_municipalities_blocker_rescue_analysis_ready_reclassification_manifest.json",
+        directory / "remaining_municipalities_blocker_rescue_analysis_ready_reclassification_summary.json",
+        directory / "blocker_overlap_matrix.json",
+        directory / "cleaned_analysis_use_layer_manifest.json",
+        directory / "cleaned_analysis_use_category_summary.json",
+        directory / "dashboard_remaining_blocker_rescue_analysis_ready_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, overlap, layer, categories, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and manifest.get("normalization_status_ledger_count") == 8715
+        and manifest.get("usable_normalized_input_count") == 1250
+        and manifest.get("matching_structure_count") == 19643
+        and layer.get("row_count") == 28358
+        and layer.get("exactly_one_primary_category") is True
+        and categories.get("total") == 28358
+        and overlap.get("diagonal_reconciles_to_original_counts") == summary.get("original_blocker_flag_counts")
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and dashboard.get("no_polished_deliverables_created") is True
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("regression_run") is False
+        and forbidden.get("treatment_effect_run") is False
+        and forbidden.get("final_wage_gap_claim_made") is False
+        and forbidden.get("national_population_prevalence_claim_made") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality blocker-rescue package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11406,6 +11457,9 @@ def build_project_phase_summary(
     remaining_quantitative_normalization_matching_available, remaining_quantitative_normalization_matching = (
         broad_state_remaining_quantitative_normalization_matching_status()
     )
+    remaining_blocker_rescue_reclassification_available, remaining_blocker_rescue_reclassification = (
+        broad_state_remaining_blocker_rescue_reclassification_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13295,6 +13349,49 @@ def build_project_phase_summary(
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "false_pending_local_comparison_qa_and_claim_readiness",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if remaining_blocker_rescue_reclassification_available:
+        categories = remaining_blocker_rescue_reclassification["cleaned_analysis_use_category_counts"]
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_complete",
+            "current_phase": "Blocker rescue and analysis-ready reclassification complete",
+            "current_phase_code": remaining_blocker_rescue_reclassification["decision"],
+            "current_evidence_status": "overlapping_blockers_deoverlapped_and_evidence_routed_by_supported_analysis_use",
+            "remaining_municipality_blocker_rescue_reclassification_available": True,
+            "remaining_municipality_original_blocker_flag_counts": remaining_blocker_rescue_reclassification["original_blocker_flag_counts"],
+            "remaining_municipality_unique_blocker_signature_count": remaining_blocker_rescue_reclassification["unique_blocker_signature_count"],
+            "remaining_municipality_blocker_count_cohorts": remaining_blocker_rescue_reclassification["blocker_count_cohorts"],
+            "remaining_municipality_blocker_resolution_counts": remaining_blocker_rescue_reclassification["blocker_resolution_counts"],
+            "remaining_municipality_records_structures_rescued_rerouted": remaining_blocker_rescue_reclassification["records_or_structures_rescued_or_rerouted"],
+            "remaining_municipality_cleaned_analysis_use_count": remaining_blocker_rescue_reclassification["cleaned_analysis_use_layer_count"],
+            "remaining_municipality_cleaned_analysis_use_category_counts": categories,
+            "remaining_municipality_cleaned_direct_comparison_count": categories.get("direct_cross_side_comparison_ready", 0),
+            "remaining_municipality_cleaned_conditional_comparison_count": categories.get("conditional_cross_side_comparison_candidate", 0),
+            "remaining_municipality_cleaned_same_side_scalar_count": categories.get("same_side_scalar_wage_evidence", 0),
+            "remaining_municipality_cleaned_structured_schedule_count": categories.get("same_side_structured_schedule_evidence", 0),
+            "remaining_municipality_cleaned_growth_count": categories.get("same_side_growth_evidence", 0),
+            "remaining_municipality_cleaned_non_base_count": categories.get("same_side_non_base_compensation_evidence", 0),
+            "remaining_municipality_cleaned_quant_qual_count": categories.get("quant_qual_mechanism_linked_evidence", 0),
+            "remaining_municipality_cleaned_side_independent_mechanism_count": categories.get("side_independent_mechanism_evidence", 0),
+            "remaining_municipality_cleaned_national_readiness_only_count": categories.get("national_readiness_stratum_only", 0),
+            "remaining_municipality_cleaned_remaining_counts": remaining_blocker_rescue_reclassification["remaining_repair_defer_writeoff_counts"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+            "next_phase": "QA the cleaned local, same-side, growth, non-base, mechanism, and national-readiness routes",
+            "next_phase_sequence": [
+                "audit cleaned direct and conditional comparison candidates and source lineage",
+                "QA same-side, structured, growth, non-base, mechanism, and national-readiness evidence routes",
+                "defer regressions, treatment effects, and final national, prevalence, wage-gap, or causal claims",
+            ],
+            "last_updated_context": "remaining_municipality_blocker_rescue_analysis_ready_reclassification_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
             "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
         })
     return payload

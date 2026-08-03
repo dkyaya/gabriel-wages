@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "analysis_use_qa": 4854,
+    "conditional_local_comparison_qa": 23,
+    "exclude": 493,
+    "growth_evidence_qa": 352,
+    "local_comparison_qa": 30,
+    "mechanism_link_qa": 992,
+    "repair_or_defer": 21614
+  }
+}

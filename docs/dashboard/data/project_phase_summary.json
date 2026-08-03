@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-03T13:09:40Z",
+  "generated_at": "2026-08-03T15:11:46Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_quantitative_normalization_matching_complete",
-  "current_phase": "Quantitative normalization and matching complete",
-  "current_phase_code": "broad_state_remaining_municipalities_quantitative_normalization_matching_completed_local_qa_ready",
-  "current_evidence_status": "all_tiers_a_g_processed_local_comparisons_provisional_national_readiness_only",
+  "stage": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_complete",
+  "current_phase": "Blocker rescue and analysis-ready reclassification complete",
+  "current_phase_code": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready",
+  "current_evidence_status": "overlapping_blockers_deoverlapped_and_evidence_routed_by_supported_analysis_use",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "QA provisional and conditional local comparisons, quant–qual links, and claim-readiness gates",
+  "next_phase": "QA the cleaned local, same-side, growth, non-base, mechanism, and national-readiness routes",
   "next_phase_sequence": [
-    "audit normalization, period, pay-basis, role comparability, and source lineage",
-    "separate claim-ready local evidence from conditional, national-readiness-only, and write-off records",
-    "defer regressions, treatment effects, and final national, prevalence, or causal claims"
+    "audit cleaned direct and conditional comparison candidates and source lineage",
+    "QA same-side, structured, growth, non-base, mechanism, and national-readiness evidence routes",
+    "defer regressions, treatment effects, and final national, prevalence, wage-gap, or causal claims"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_quantitative_normalization_matching_complete",
+  "last_updated_context": "remaining_municipality_blocker_rescue_analysis_ready_reclassification_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1187,7 +1187,7 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 35574,
-  "wage_gap_analysis_readiness": "false_pending_local_comparison_qa_and_claim_readiness",
+  "wage_gap_analysis_readiness": "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
   "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
@@ -6559,5 +6559,70 @@
     "national_needs_side_balance": 951,
     "national_ready_stratum_candidate": 299,
     "national_write_off": 493
+  },
+  "remaining_municipality_blocker_rescue_reclassification_available": true,
+  "remaining_municipality_original_blocker_flag_counts": {
+    "missing_clear_cross_side_normalized_anchors": 19542,
+    "no_scalar_normalized_value": 17118,
+    "non_clear_side_status_present": 8446,
+    "pay_basis_or_compensation_type_incompatible": 17761,
+    "period_incompatible_or_missing": 17339
+  },
+  "remaining_municipality_unique_blocker_signature_count": 10,
+  "remaining_municipality_blocker_count_cohorts": {
+    "0": 22,
+    "1": 1830,
+    "2": 561,
+    "3": 112,
+    "4": 8672,
+    "5": 8446
+  },
+  "remaining_municipality_blocker_resolution_counts": {
+    "resolved": 17,
+    "routed_to_defer": 5,
+    "routed_to_non_comparison_analysis_use": 2946,
+    "routed_to_repair_needed": 15137,
+    "routed_to_write_off": 1538
+  },
+  "remaining_municipality_records_structures_rescued_rerouted": 2963,
+  "remaining_municipality_cleaned_analysis_use_count": 28358,
+  "remaining_municipality_cleaned_analysis_use_category_counts": {
+    "budget_or_pay_plan_context_evidence": 235,
+    "conditional_cross_side_comparison_candidate": 27,
+    "direct_cross_side_comparison_ready": 26,
+    "local_context_only": 409,
+    "national_readiness_stratum_only": 1028,
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 587,
+    "period_repair_needed": 214,
+    "qualitative_mechanism_only": 161,
+    "quant_qual_mechanism_linked_evidence": 1643,
+    "role_side_repair_needed": 10602,
+    "same_side_growth_evidence": 1513,
+    "same_side_non_base_compensation_evidence": 1045,
+    "same_side_scalar_wage_evidence": 126,
+    "same_side_structured_schedule_evidence": 410,
+    "side_independent_mechanism_evidence": 92,
+    "unresolved_or_defer": 51,
+    "write_off_or_exclude": 2031
+  },
+  "remaining_municipality_cleaned_direct_comparison_count": 26,
+  "remaining_municipality_cleaned_conditional_comparison_count": 27,
+  "remaining_municipality_cleaned_same_side_scalar_count": 126,
+  "remaining_municipality_cleaned_structured_schedule_count": 410,
+  "remaining_municipality_cleaned_growth_count": 1513,
+  "remaining_municipality_cleaned_non_base_count": 1045,
+  "remaining_municipality_cleaned_quant_qual_count": 1643,
+  "remaining_municipality_cleaned_side_independent_mechanism_count": 92,
+  "remaining_municipality_cleaned_national_readiness_only_count": 1028,
+  "remaining_municipality_cleaned_remaining_counts": {
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 587,
+    "period_repair_needed": 214,
+    "role_side_repair_needed": 10602,
+    "unresolved_or_defer": 51,
+    "write_off_or_exclude": 2031
   }
 }

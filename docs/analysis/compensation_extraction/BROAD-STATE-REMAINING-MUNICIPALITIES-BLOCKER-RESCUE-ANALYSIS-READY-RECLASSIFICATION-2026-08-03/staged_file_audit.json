@@ -1,0 +1,11 @@
+{
+  "forbidden_or_polished_files": [],
+  "out_of_scope": [],
+  "passed": true,
+  "pre_existing_untracked_preserved_not_staged": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "package-lock.json"
+  ],
+  "staged_file_count": 130,
+  "status": "final_staged_audit"
+}

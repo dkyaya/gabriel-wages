@@ -1,0 +1,215 @@
+{
+  "by_group": {
+    "qual_budget_or_fiscal_constraint": {
+      "qualitative_mechanism_only": 1,
+      "quant_qual_mechanism_linked_evidence": 1,
+      "side_independent_mechanism_evidence": 18
+    },
+    "qual_cola_or_indexing_mechanism": {
+      "budget_or_pay_plan_context_evidence": 7,
+      "conditional_cross_side_comparison_candidate": 2,
+      "qualitative_mechanism_only": 22,
+      "quant_qual_mechanism_linked_evidence": 19,
+      "role_side_repair_needed": 55,
+      "same_side_growth_evidence": 73,
+      "same_side_non_base_compensation_evidence": 1,
+      "side_independent_mechanism_evidence": 5
+    },
+    "qual_collective_bargaining": {
+      "budget_or_pay_plan_context_evidence": 2,
+      "qualitative_mechanism_only": 20,
+      "quant_qual_mechanism_linked_evidence": 2,
+      "role_side_repair_needed": 10,
+      "same_side_growth_evidence": 1,
+      "same_side_structured_schedule_evidence": 1,
+      "side_independent_mechanism_evidence": 2
+    },
+    "qual_comparability_or_parity_language": {
+      "qualitative_mechanism_only": 7,
+      "quant_qual_mechanism_linked_evidence": 2,
+      "role_side_repair_needed": 3,
+      "same_side_structured_schedule_evidence": 1,
+      "side_independent_mechanism_evidence": 1
+    },
+    "qual_market_recruitment_retention_pressure": {
+      "conditional_cross_side_comparison_candidate": 1,
+      "qualitative_mechanism_only": 9,
+      "quant_qual_mechanism_linked_evidence": 1,
+      "role_side_repair_needed": 26,
+      "same_side_non_base_compensation_evidence": 1,
+      "side_independent_mechanism_evidence": 1
+    },
+    "qual_mou_or_settlement": {
+      "qualitative_mechanism_only": 1,
+      "quant_qual_mechanism_linked_evidence": 1,
+      "role_side_repair_needed": 1
+    },
+    "qual_non_base_compensation_mechanism": {
+      "budget_or_pay_plan_context_evidence": 47,
+      "conditional_cross_side_comparison_candidate": 6,
+      "qualitative_mechanism_only": 56,
+      "quant_qual_mechanism_linked_evidence": 104,
+      "role_side_repair_needed": 338,
+      "same_side_growth_evidence": 1,
+      "same_side_non_base_compensation_evidence": 114,
+      "side_independent_mechanism_evidence": 23
+    },
+    "qual_ordinance_or_council_adoption": {
+      "qualitative_mechanism_only": 4,
+      "side_independent_mechanism_evidence": 5
+    },
+    "qual_other_pay_setting_mechanism": {
+      "budget_or_pay_plan_context_evidence": 2,
+      "qualitative_mechanism_only": 20,
+      "quant_qual_mechanism_linked_evidence": 9,
+      "same_side_growth_evidence": 7,
+      "same_side_non_base_compensation_evidence": 3,
+      "side_independent_mechanism_evidence": 5
+    },
+    "qual_position_classification_or_civil_service_structure": {
+      "qualitative_mechanism_only": 8,
+      "quant_qual_mechanism_linked_evidence": 2,
+      "role_side_repair_needed": 19,
+      "same_side_structured_schedule_evidence": 5,
+      "side_independent_mechanism_evidence": 1
+    },
+    "qual_retroactivity_or_implementation_timing": {
+      "qualitative_mechanism_only": 13,
+      "quant_qual_mechanism_linked_evidence": 14,
+      "same_side_growth_evidence": 1,
+      "same_side_structured_schedule_evidence": 3,
+      "side_independent_mechanism_evidence": 31
+    },
+    "quant_allowance_or_reimbursement": {
+      "local_context_only": 33,
+      "quant_qual_mechanism_linked_evidence": 66,
+      "role_side_repair_needed": 301,
+      "same_side_non_base_compensation_evidence": 288,
+      "write_off_or_exclude": 72
+    },
+    "quant_base_wage_direct_value": {
+      "budget_or_pay_plan_context_evidence": 2,
+      "conditional_cross_side_comparison_candidate": 3,
+      "direct_cross_side_comparison_ready": 12,
+      "local_context_only": 70,
+      "pay_basis_repair_needed": 25,
+      "period_repair_needed": 152,
+      "quant_qual_mechanism_linked_evidence": 218,
+      "role_side_repair_needed": 909,
+      "same_side_growth_evidence": 4,
+      "same_side_non_base_compensation_evidence": 3,
+      "same_side_scalar_wage_evidence": 117,
+      "same_side_structured_schedule_evidence": 98,
+      "write_off_or_exclude": 1
+    },
+    "quant_budget_or_pay_plan_amount": {
+      "budget_or_pay_plan_context_evidence": 109,
+      "local_context_only": 7,
+      "period_repair_needed": 4,
+      "quant_qual_mechanism_linked_evidence": 77,
+      "role_side_repair_needed": 234,
+      "same_side_non_base_compensation_evidence": 1,
+      "same_side_scalar_wage_evidence": 2,
+      "same_side_structured_schedule_evidence": 5,
+      "write_off_or_exclude": 29
+    },
+    "quant_cpi_indexed_adjustment": {
+      "budget_or_pay_plan_context_evidence": 9,
+      "conditional_cross_side_comparison_candidate": 2,
+      "local_context_only": 10,
+      "quant_qual_mechanism_linked_evidence": 20,
+      "role_side_repair_needed": 122,
+      "same_side_growth_evidence": 94,
+      "same_side_non_base_compensation_evidence": 1,
+      "unresolved_or_defer": 2,
+      "write_off_or_exclude": 10
+    },
+    "quant_longevity_or_service_pay": {
+      "conditional_cross_side_comparison_candidate": 1,
+      "local_context_only": 9,
+      "quant_qual_mechanism_linked_evidence": 6,
+      "role_side_repair_needed": 61,
+      "same_side_non_base_compensation_evidence": 77,
+      "write_off_or_exclude": 21
+    },
+    "quant_other_compensation_value": {
+      "budget_or_pay_plan_context_evidence": 36,
+      "conditional_cross_side_comparison_candidate": 6,
+      "direct_cross_side_comparison_ready": 1,
+      "local_context_only": 110,
+      "pay_basis_repair_needed": 438,
+      "period_repair_needed": 5,
+      "quant_qual_mechanism_linked_evidence": 88,
+      "role_side_repair_needed": 575,
+      "same_side_growth_evidence": 13,
+      "same_side_non_base_compensation_evidence": 25,
+      "same_side_scalar_wage_evidence": 7,
+      "same_side_structured_schedule_evidence": 15,
+      "unresolved_or_defer": 34,
+      "write_off_or_exclude": 95
+    },
+    "quant_overtime_or_holiday_rate": {
+      "budget_or_pay_plan_context_evidence": 1,
+      "conditional_cross_side_comparison_candidate": 1,
+      "local_context_only": 77,
+      "quant_qual_mechanism_linked_evidence": 35,
+      "role_side_repair_needed": 379,
+      "same_side_non_base_compensation_evidence": 408,
+      "write_off_or_exclude": 152
+    },
+    "quant_percentage_raise_or_cola": {
+      "budget_or_pay_plan_context_evidence": 10,
+      "local_context_only": 32,
+      "quant_qual_mechanism_linked_evidence": 225,
+      "role_side_repair_needed": 342,
+      "same_side_growth_evidence": 144,
+      "write_off_or_exclude": 1
+    },
+    "quant_position_classification_pay_band": {
+      "budget_or_pay_plan_context_evidence": 3,
+      "local_context_only": 5,
+      "quant_qual_mechanism_linked_evidence": 7,
+      "role_side_repair_needed": 78,
+      "same_side_growth_evidence": 1,
+      "same_side_structured_schedule_evidence": 67,
+      "write_off_or_exclude": 15
+    },
+    "quant_retroactive_pay_or_lump_sum": {
+      "conditional_cross_side_comparison_candidate": 1,
+      "local_context_only": 1,
+      "quant_qual_mechanism_linked_evidence": 1,
+      "role_side_repair_needed": 35,
+      "same_side_growth_evidence": 1,
+      "same_side_non_base_compensation_evidence": 40,
+      "write_off_or_exclude": 3
+    },
+    "quant_salary_schedule_table": {
+      "budget_or_pay_plan_context_evidence": 6,
+      "local_context_only": 35,
+      "quant_qual_mechanism_linked_evidence": 5,
+      "role_side_repair_needed": 100,
+      "same_side_growth_evidence": 1,
+      "same_side_non_base_compensation_evidence": 3,
+      "same_side_structured_schedule_evidence": 123,
+      "unresolved_or_defer": 10,
+      "write_off_or_exclude": 78
+    },
+    "quant_step_schedule_progression": {
+      "budget_or_pay_plan_context_evidence": 1,
+      "local_context_only": 8,
+      "quant_qual_mechanism_linked_evidence": 77,
+      "role_side_repair_needed": 87,
+      "same_side_growth_evidence": 11,
+      "same_side_non_base_compensation_evidence": 3,
+      "same_side_structured_schedule_evidence": 92
+    },
+    "quant_stipend_or_premium": {
+      "local_context_only": 12,
+      "quant_qual_mechanism_linked_evidence": 12,
+      "role_side_repair_needed": 19,
+      "same_side_non_base_compensation_evidence": 77,
+      "write_off_or_exclude": 16
+    }
+  },
+  "total_records": 8715
+}

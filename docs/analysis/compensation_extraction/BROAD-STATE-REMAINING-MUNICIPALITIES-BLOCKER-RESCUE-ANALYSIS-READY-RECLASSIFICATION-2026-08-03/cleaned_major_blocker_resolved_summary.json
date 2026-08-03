@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "budget_or_pay_plan_context_evidence": 235,
+    "conditional_cross_side_comparison_candidate": 27,
+    "direct_cross_side_comparison_ready": 26,
+    "local_context_only": 409,
+    "national_readiness_stratum_only": 1028,
+    "qualitative_mechanism_only": 161,
+    "quant_qual_mechanism_linked_evidence": 1643,
+    "same_side_growth_evidence": 1513,
+    "same_side_non_base_compensation_evidence": 1045,
+    "same_side_scalar_wage_evidence": 126,
+    "same_side_structured_schedule_evidence": 410,
+    "side_independent_mechanism_evidence": 92
+  },
+  "resolution_counts": {
+    "resolved": 17,
+    "routed_to_defer": 5,
+    "routed_to_non_comparison_analysis_use": 2946,
+    "routed_to_repair_needed": 15137,
+    "routed_to_write_off": 1538
+  },
+  "total": 6715
+}

@@ -1,0 +1,13 @@
+{
+  "analysis_ready_strong_moderate_count": 1004,
+  "causal_claims": 0,
+  "status_counts": {
+    "blocked_side_mismatch": 13,
+    "blocked_source_context_insufficient": 10,
+    "moderate_quant_qual_link": 359,
+    "not_linkable": 208,
+    "strong_quant_qual_link": 645,
+    "weak_quant_qual_link": 15
+  },
+  "total": 1250
+}

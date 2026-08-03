@@ -1,0 +1,25 @@
+{
+  "category_counts": {
+    "conditional_cross_side_comparison_candidate": 4,
+    "direct_cross_side_comparison_ready": 13,
+    "national_readiness_stratum_only": 1028,
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 124,
+    "period_repair_needed": 53,
+    "quant_qual_mechanism_linked_evidence": 651,
+    "role_side_repair_needed": 6908,
+    "same_side_growth_evidence": 1161,
+    "unresolved_or_defer": 5,
+    "write_off_or_exclude": 1538
+  },
+  "original_missing_cross_side_flag_count": 19542,
+  "route_counts": {
+    "clean_local_comparison_queue": 17,
+    "defer_queue": 5,
+    "repair_queue": 15137,
+    "retain_for_non_comparison_analysis": 2946,
+    "write_off_queue": 1538
+  },
+  "total": 19643
+}

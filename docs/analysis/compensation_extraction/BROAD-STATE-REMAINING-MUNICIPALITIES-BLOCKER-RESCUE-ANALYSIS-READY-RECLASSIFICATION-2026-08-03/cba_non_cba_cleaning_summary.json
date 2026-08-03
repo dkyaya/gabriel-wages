@@ -1,0 +1,39 @@
+{
+  "by_group": {
+    "cba_arbitration_factfinding_hint": {
+      "budget_or_pay_plan_context_evidence": 19,
+      "local_context_only": 168,
+      "pay_basis_repair_needed": 245,
+      "period_repair_needed": 76,
+      "qualitative_mechanism_only": 94,
+      "quant_qual_mechanism_linked_evidence": 390,
+      "role_side_repair_needed": 832,
+      "same_side_growth_evidence": 184,
+      "same_side_non_base_compensation_evidence": 571,
+      "same_side_scalar_wage_evidence": 15,
+      "same_side_structured_schedule_evidence": 225,
+      "side_independent_mechanism_evidence": 34,
+      "unresolved_or_defer": 23,
+      "write_off_or_exclude": 138
+    },
+    "non_cba_or_unresolved_hint": {
+      "budget_or_pay_plan_context_evidence": 216,
+      "conditional_cross_side_comparison_candidate": 23,
+      "direct_cross_side_comparison_ready": 13,
+      "local_context_only": 241,
+      "pay_basis_repair_needed": 218,
+      "period_repair_needed": 85,
+      "qualitative_mechanism_only": 67,
+      "quant_qual_mechanism_linked_evidence": 602,
+      "role_side_repair_needed": 2862,
+      "same_side_growth_evidence": 168,
+      "same_side_non_base_compensation_evidence": 474,
+      "same_side_scalar_wage_evidence": 111,
+      "same_side_structured_schedule_evidence": 185,
+      "side_independent_mechanism_evidence": 58,
+      "unresolved_or_defer": 23,
+      "write_off_or_exclude": 355
+    }
+  },
+  "total_records": 8715
+}

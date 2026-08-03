@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 587,
+    "period_repair_needed": 214,
+    "role_side_repair_needed": 10602,
+    "unresolved_or_defer": 51,
+    "write_off_or_exclude": 2031
+  },
+  "total": 21643,
+  "unit_note": "record and structure analysis-use units; not additive to original overlapping blocker flags"
+}

@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "budget_or_pay_plan_context_evidence": 235,
+    "conditional_cross_side_comparison_candidate": 27,
+    "direct_cross_side_comparison_ready": 26,
+    "local_context_only": 409,
+    "national_readiness_stratum_only": 1028,
+    "no_cross_side_anchor_available": 106,
+    "non_scalar_structuring_needed": 8052,
+    "pay_basis_repair_needed": 587,
+    "period_repair_needed": 214,
+    "qualitative_mechanism_only": 161,
+    "quant_qual_mechanism_linked_evidence": 1643,
+    "role_side_repair_needed": 10602,
+    "same_side_growth_evidence": 1513,
+    "same_side_non_base_compensation_evidence": 1045,
+    "same_side_scalar_wage_evidence": 126,
+    "same_side_structured_schedule_evidence": 410,
+    "side_independent_mechanism_evidence": 92,
+    "unresolved_or_defer": 51,
+    "write_off_or_exclude": 2031
+  },
+  "record_count": 8715,
+  "structure_count": 19643,
+  "total": 28358
+}

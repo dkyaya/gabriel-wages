@@ -1,0 +1,18 @@
+{
+  "clear_side_anchor_eligible_count": 3948,
+  "routing_counts": {
+    "clear_side_analysis_eligible": 3948,
+    "local_context_or_defer": 437,
+    "role_side_repair_or_defer": 3694,
+    "side_independent_budget_context": 51,
+    "side_independent_mechanism": 92,
+    "write_off": 493
+  },
+  "status_counts": {
+    "existing_final_clear_side_preserved": 3948,
+    "not_applicable_routed_without_clear_side_use": 580,
+    "remains_unclear_preserved": 3694,
+    "write_off_preserved": 493
+  },
+  "total": 8715
+}

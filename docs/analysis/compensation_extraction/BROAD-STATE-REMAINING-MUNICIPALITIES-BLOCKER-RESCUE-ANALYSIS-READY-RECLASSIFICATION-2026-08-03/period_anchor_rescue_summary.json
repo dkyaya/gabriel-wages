@@ -1,0 +1,10 @@
+{
+  "remaining_missing_or_conflict_count": 2383,
+  "rescued_or_existing_period_count": 6332,
+  "status_counts": {
+    "explicit_period_rescued": 5897,
+    "period_missing_after_rescue": 2383,
+    "period_not_applicable": 435
+  },
+  "total": 8715
+}

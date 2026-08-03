@@ -1,0 +1,16 @@
+{
+  "signature_counts": {
+    "missing_clear_cross_side_normalized_anchors": 1783,
+    "missing_clear_cross_side_normalized_anchors+no_scalar_normalized_value+non_clear_side_status_present+pay_basis_or_compensation_type_incompatible+period_incompatible_or_missing": 8446,
+    "missing_clear_cross_side_normalized_anchors+no_scalar_normalized_value+pay_basis_or_compensation_type_incompatible+period_incompatible_or_missing": 8672,
+    "missing_clear_cross_side_normalized_anchors+pay_basis_or_compensation_type_incompatible": 454,
+    "missing_clear_cross_side_normalized_anchors+pay_basis_or_compensation_type_incompatible+period_incompatible_or_missing": 112,
+    "missing_clear_cross_side_normalized_anchors+period_incompatible_or_missing": 75,
+    "no_material_blocker": 22,
+    "pay_basis_or_compensation_type_incompatible": 45,
+    "pay_basis_or_compensation_type_incompatible+period_incompatible_or_missing": 32,
+    "period_incompatible_or_missing": 2
+  },
+  "total": 19643,
+  "unique_signature_count": 10
+}

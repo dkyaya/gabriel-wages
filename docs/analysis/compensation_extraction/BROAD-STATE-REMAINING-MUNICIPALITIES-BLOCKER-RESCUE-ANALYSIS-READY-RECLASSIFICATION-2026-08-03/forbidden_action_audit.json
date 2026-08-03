@@ -1,0 +1,23 @@
+{
+  "bounded_extracted_text_context_reads": 0,
+  "causal_claim_made": false,
+  "final_wage_gap_claim_made": false,
+  "full_text_extraction_run": false,
+  "gabriel_api_rating_run": false,
+  "global_analysis_readiness_advanced": false,
+  "global_causal_readiness_advanced": false,
+  "global_wage_gap_readiness_advanced": false,
+  "national_population_prevalence_claim_made": false,
+  "ocr_run": false,
+  "passed": true,
+  "pdf_docx_or_slide_deck_created": false,
+  "pi_report_created": false,
+  "polished_deliverable_created": false,
+  "public_memo_created": false,
+  "regression_run": false,
+  "retained_binary_or_full_text_staged": false,
+  "span_extraction_run": false,
+  "treatment_effect_run": false,
+  "unsupported_hourly_annual_conversion": false,
+  "unsupported_normalized_value_inferred": false
+}

@@ -1,0 +1,12 @@
+{
+  "canonical_full_width_format": "csv",
+  "csv_sha256": "f1351b61f7e75f73ebf8e500fcb972d5d37c8bd6a94df7ebddd91e6144b11264",
+  "exactly_one_primary_category": true,
+  "jsonl_format": "compact index projection with canonical_csv_row_pointer",
+  "jsonl_sha256": "23ffaf4625bfae5ebfa8e7587c441d4d0f23dab62b60632a7acdf6b57f98dd8f",
+  "large_file_decision": "avoid redundant long hashes/caveats in JSONL while preserving them in canonical CSV",
+  "matching_structure_count": 19643,
+  "normalized_record_count": 8715,
+  "row_count": 28358,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03"
+}

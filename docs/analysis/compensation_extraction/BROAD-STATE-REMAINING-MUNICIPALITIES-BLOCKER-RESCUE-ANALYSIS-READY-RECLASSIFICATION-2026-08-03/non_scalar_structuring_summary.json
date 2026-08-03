@@ -1,0 +1,20 @@
+{
+  "fake_scalar_created_count": 0,
+  "status_counts": {
+    "not_non_scalar_structure": 2985,
+    "structured_without_scalar_collapse": 5730
+  },
+  "structure_counts": {
+    "budget_or_pay_plan_context": 943,
+    "genuinely_no_quantitative_value": 1288,
+    "mechanism_only": 317,
+    "multiple_value_table": 420,
+    "non_base_amount": 2134,
+    "pay_grade_or_classification_band": 134,
+    "percentage_raise_or_cola": 1467,
+    "salary_range": 44,
+    "scalar_value": 1380,
+    "step_schedule": 588
+  },
+  "total": 8715
+}

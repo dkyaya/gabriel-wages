@@ -1,0 +1,14 @@
+{
+  "cleaned_analysis_use_layer_count": 28358,
+  "cleaned_layer_sha256": "23ffaf4625bfae5ebfa8e7587c441d4d0f23dab62b60632a7acdf6b57f98dd8f",
+  "created_at": "2026-08-03T15:14:45.753699+00:00",
+  "decision": "broad_state_remaining_municipalities_blocker_rescue_analysis_ready_reclassification_completed_local_qa_ready",
+  "head_before": "dd1d53f653e61b42bbd38d774fe6abaaa96df6fd",
+  "input_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "matching_structure_count": 19643,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+  "normalization_status_ledger_count": 8715,
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03",
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03",
+  "usable_normalized_input_count": 1250
+}

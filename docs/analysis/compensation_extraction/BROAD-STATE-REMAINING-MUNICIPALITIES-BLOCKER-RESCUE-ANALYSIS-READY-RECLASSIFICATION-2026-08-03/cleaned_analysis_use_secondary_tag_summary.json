@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "annual_salary_basis": 324,
+    "budget_context_available": 1100,
+    "clear_non_safety_side": 809,
+    "clear_safety_side": 3161,
+    "cola_cpi_available": 405,
+    "explicit_period_available": 5897,
+    "growth_candidate": 2394,
+    "hourly_basis": 1595,
+    "inferred_period_available": 435,
+    "local_comparison_candidate": 53,
+    "mechanism_link_available": 1004,
+    "missing_period": 2383,
+    "mixed_pay_basis": 1502,
+    "national_stratum_candidate": 1327,
+    "needs_manual_review": 2698,
+    "non_base_compensation_available": 2153,
+    "pay_grade_available": 134,
+    "percent_value_available": 1471,
+    "percentage_basis": 1233,
+    "quant_qual_link_moderate": 359,
+    "quant_qual_link_strong": 645,
+    "range_value_available": 44,
+    "same_period_cluster": 2304,
+    "same_source_cluster": 2094,
+    "scalar_value_available": 1974,
+    "side_independent": 580,
+    "side_unclear": 3694,
+    "step_schedule_available": 588
+  },
+  "total_tag_assignments": 42360
+}
