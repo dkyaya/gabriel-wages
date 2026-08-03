@@ -5,6 +5,6 @@
   "passed": true,
   "payload_files": [],
   "retained_or_extracted_payloads_staged": false,
-  "staged_file_count": 64,
+  "staged_file_count": 4,
   "status": "final_staged_audit"
 }
