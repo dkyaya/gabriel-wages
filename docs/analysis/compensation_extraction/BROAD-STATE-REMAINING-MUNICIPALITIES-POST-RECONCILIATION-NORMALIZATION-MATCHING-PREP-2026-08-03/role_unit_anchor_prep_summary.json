@@ -1,0 +1,18 @@
+{
+  "category_counts": {
+    "fire_role": 1080,
+    "mixed_role": 27,
+    "non_safety_role": 1177,
+    "not_applicable": 3405,
+    "police_role": 4416,
+    "safety_combined_role": 43,
+    "unclear_role": 5041
+  },
+  "quality_counts": {
+    "bounded_text_anchor_conflict_review": 2529,
+    "explicit_bounded_text_anchor": 6158,
+    "missing_or_not_applicable": 5986,
+    "side_reconciliation_anchor_only": 516
+  },
+  "total": 15189
+}

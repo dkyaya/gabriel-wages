@@ -1,0 +1,14 @@
+{
+  "category_counts": {
+    "explicit_calendar_year": 3083,
+    "explicit_contract_period": 2286,
+    "explicit_effective_date": 4277,
+    "explicit_fiscal_year": 63,
+    "missing_period_anchor": 5480
+  },
+  "quality_counts": {
+    "explicit": 9709,
+    "missing": 5480
+  },
+  "total": 15189
+}

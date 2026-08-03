@@ -1,0 +1,384 @@
+{
+  "group_field": "state",
+  "groups": {
+    "DE": {
+      "matching_tier_counts": {
+        "Tier F": 7
+      },
+      "row_count": 7,
+      "side_label_counts": {
+        "police_direct": 7
+      }
+    },
+    "FL": {
+      "matching_tier_counts": {
+        "Tier E": 7,
+        "Tier F": 18,
+        "Tier G": 4
+      },
+      "row_count": 29,
+      "side_label_counts": {
+        "police_direct": 29
+      }
+    },
+    "GA": {
+      "matching_tier_counts": {
+        "Tier E": 6,
+        "Tier F": 12,
+        "Tier G": 55
+      },
+      "row_count": 73,
+      "side_label_counts": {
+        "not_applicable": 13,
+        "police_direct": 32,
+        "remains_unclear": 18,
+        "write_off": 10
+      }
+    },
+    "IA": {
+      "matching_tier_counts": {
+        "Tier E": 10,
+        "Tier F": 18,
+        "Tier G": 118
+      },
+      "row_count": 146,
+      "side_label_counts": {
+        "non_safety_direct": 18,
+        "not_applicable": 27,
+        "police_direct": 23,
+        "remains_unclear": 66,
+        "write_off": 12
+      }
+    },
+    "IL": {
+      "matching_tier_counts": {
+        "Tier A": 4,
+        "Tier B": 4,
+        "Tier C": 1,
+        "Tier D": 34,
+        "Tier E": 109,
+        "Tier F": 442,
+        "Tier G": 953
+      },
+      "row_count": 1547,
+      "side_label_counts": {
+        "fire_direct": 110,
+        "mixed_direct": 17,
+        "non_safety_direct": 208,
+        "not_applicable": 132,
+        "police_direct": 578,
+        "remains_unclear": 424,
+        "safety_combined_direct": 10,
+        "write_off": 145
+      }
+    },
+    "IN": {
+      "matching_tier_counts": {
+        "Tier A": 6,
+        "Tier B": 3,
+        "Tier D": 17,
+        "Tier E": 64,
+        "Tier F": 174,
+        "Tier G": 332
+      },
+      "row_count": 596,
+      "side_label_counts": {
+        "fire_direct": 54,
+        "mixed_direct": 6,
+        "non_safety_direct": 136,
+        "not_applicable": 72,
+        "police_direct": 199,
+        "remains_unclear": 113,
+        "safety_combined_direct": 16,
+        "write_off": 45
+      }
+    },
+    "KS": {
+      "matching_tier_counts": {
+        "Tier E": 33,
+        "Tier F": 60,
+        "Tier G": 300
+      },
+      "row_count": 393,
+      "side_label_counts": {
+        "fire_direct": 25,
+        "non_safety_direct": 35,
+        "not_applicable": 41,
+        "police_direct": 61,
+        "remains_unclear": 163,
+        "write_off": 75
+      }
+    },
+    "ME": {
+      "matching_tier_counts": {
+        "Tier F": 8,
+        "Tier G": 34
+      },
+      "row_count": 42,
+      "side_label_counts": {
+        "fire_direct": 9,
+        "not_applicable": 9,
+        "remains_unclear": 23,
+        "write_off": 1
+      }
+    },
+    "MI": {
+      "matching_tier_counts": {
+        "Tier A": 10,
+        "Tier B": 7,
+        "Tier D": 28,
+        "Tier E": 216,
+        "Tier F": 460,
+        "Tier G": 1190
+      },
+      "row_count": 1911,
+      "side_label_counts": {
+        "fire_direct": 226,
+        "mixed_direct": 7,
+        "non_safety_direct": 343,
+        "not_applicable": 167,
+        "police_direct": 539,
+        "remains_unclear": 550,
+        "safety_combined_direct": 13,
+        "write_off": 153
+      }
+    },
+    "MN": {
+      "matching_tier_counts": {
+        "Tier A": 3,
+        "Tier B": 2,
+        "Tier D": 15,
+        "Tier E": 176,
+        "Tier F": 427,
+        "Tier G": 912
+      },
+      "row_count": 1535,
+      "side_label_counts": {
+        "fire_direct": 113,
+        "non_safety_direct": 213,
+        "not_applicable": 174,
+        "police_direct": 492,
+        "remains_unclear": 418,
+        "safety_combined_direct": 16,
+        "write_off": 133
+      }
+    },
+    "MO": {
+      "matching_tier_counts": {
+        "Tier B": 1,
+        "Tier D": 6,
+        "Tier E": 6,
+        "Tier F": 45,
+        "Tier G": 141
+      },
+      "row_count": 199,
+      "side_label_counts": {
+        "fire_direct": 39,
+        "non_safety_direct": 17,
+        "not_applicable": 17,
+        "police_direct": 41,
+        "remains_unclear": 70,
+        "write_off": 31
+      }
+    },
+    "NC": {
+      "matching_tier_counts": {
+        "Tier G": 47
+      },
+      "row_count": 47,
+      "side_label_counts": {
+        "non_safety_direct": 3,
+        "not_applicable": 19,
+        "remains_unclear": 23,
+        "write_off": 2
+      }
+    },
+    "ND": {
+      "matching_tier_counts": {
+        "Tier E": 8,
+        "Tier F": 42,
+        "Tier G": 56
+      },
+      "row_count": 106,
+      "side_label_counts": {
+        "non_safety_direct": 17,
+        "not_applicable": 11,
+        "police_direct": 44,
+        "remains_unclear": 24,
+        "write_off": 10
+      }
+    },
+    "NE": {
+      "matching_tier_counts": {
+        "Tier G": 42
+      },
+      "row_count": 42,
+      "side_label_counts": {
+        "not_applicable": 6,
+        "remains_unclear": 29,
+        "write_off": 7
+      }
+    },
+    "NJ": {
+      "matching_tier_counts": {
+        "Tier D": 2,
+        "Tier F": 26,
+        "Tier G": 92
+      },
+      "row_count": 120,
+      "side_label_counts": {
+        "fire_direct": 9,
+        "non_safety_direct": 22,
+        "not_applicable": 17,
+        "police_direct": 13,
+        "remains_unclear": 53,
+        "write_off": 11
+      }
+    },
+    "NY": {
+      "matching_tier_counts": {
+        "Tier A": 4,
+        "Tier B": 2,
+        "Tier D": 12,
+        "Tier E": 205,
+        "Tier F": 629,
+        "Tier G": 1888
+      },
+      "row_count": 2740,
+      "side_label_counts": {
+        "fire_direct": 76,
+        "non_safety_direct": 417,
+        "not_applicable": 303,
+        "police_direct": 737,
+        "remains_unclear": 993,
+        "write_off": 246
+      }
+    },
+    "OH": {
+      "matching_tier_counts": {
+        "Tier A": 7,
+        "Tier B": 4,
+        "Tier C": 2,
+        "Tier D": 51,
+        "Tier E": 593,
+        "Tier F": 1570,
+        "Tier G": 2281
+      },
+      "row_count": 4508,
+      "side_label_counts": {
+        "fire_direct": 965,
+        "non_safety_direct": 330,
+        "not_applicable": 400,
+        "police_direct": 1871,
+        "remains_unclear": 738,
+        "safety_combined_direct": 58,
+        "write_off": 350
+      }
+    },
+    "PA": {
+      "matching_tier_counts": {
+        "Tier A": 17,
+        "Tier B": 14,
+        "Tier D": 93,
+        "Tier E": 243,
+        "Tier F": 907,
+        "Tier G": 1284
+      },
+      "row_count": 2558,
+      "side_label_counts": {
+        "fire_direct": 105,
+        "mixed_direct": 41,
+        "non_safety_direct": 487,
+        "not_applicable": 186,
+        "police_direct": 1261,
+        "remains_unclear": 533,
+        "write_off": 113
+      }
+    },
+    "SD": {
+      "matching_tier_counts": {
+        "Tier A": 2,
+        "Tier B": 1,
+        "Tier D": 5,
+        "Tier E": 50,
+        "Tier F": 50,
+        "Tier G": 141
+      },
+      "row_count": 249,
+      "side_label_counts": {
+        "non_safety_direct": 35,
+        "not_applicable": 24,
+        "police_direct": 121,
+        "remains_unclear": 57,
+        "write_off": 20
+      }
+    },
+    "TX": {
+      "matching_tier_counts": {
+        "Tier A": 3,
+        "Tier B": 2,
+        "Tier D": 6,
+        "Tier E": 47,
+        "Tier F": 92,
+        "Tier G": 427
+      },
+      "row_count": 577,
+      "side_label_counts": {
+        "fire_direct": 6,
+        "non_safety_direct": 42,
+        "not_applicable": 55,
+        "police_direct": 187,
+        "remains_unclear": 239,
+        "write_off": 62
+      }
+    },
+    "VT": {
+      "matching_tier_counts": {
+        "Tier G": 11
+      },
+      "row_count": 11,
+      "side_label_counts": {
+        "not_applicable": 1,
+        "remains_unclear": 9,
+        "write_off": 1
+      }
+    },
+    "WA": {
+      "matching_tier_counts": {
+        "Tier D": 4,
+        "Tier E": 16,
+        "Tier F": 24,
+        "Tier G": 6
+      },
+      "row_count": 50,
+      "side_label_counts": {
+        "non_safety_direct": 30,
+        "not_applicable": 1,
+        "police_direct": 23
+      }
+    },
+    "WI": {
+      "matching_tier_counts": {
+        "Tier A": 10,
+        "Tier B": 8,
+        "Tier C": 2,
+        "Tier D": 49,
+        "Tier E": 271,
+        "Tier F": 688,
+        "Tier G": 1129
+      },
+      "row_count": 2157,
+      "side_label_counts": {
+        "fire_direct": 173,
+        "mixed_direct": 5,
+        "non_safety_direct": 267,
+        "not_applicable": 192,
+        "police_direct": 1012,
+        "remains_unclear": 498,
+        "safety_combined_direct": 10,
+        "write_off": 111
+      }
+    }
+  },
+  "total": 19643
+}

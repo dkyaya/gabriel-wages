@@ -1,0 +1,51 @@
+{
+  "broader_clear_side_growth_continuity_candidate_count": 852,
+  "broader_clear_side_quantitative_candidate_count": 3859,
+  "claim_boundary": "Prep metadata only; no normalization, finalized matching, wage-gap, regression, prevalence, or causal claim.",
+  "clear_side_growth_continuity_candidate_count": 852,
+  "clear_side_qualitative_mechanism_candidate_count": 3748,
+  "clear_side_quantitative_candidate_count": 3859,
+  "cross_source_candidate_count": 137,
+  "decision": "broad_state_remaining_municipalities_normalization_matching_prep_completed_normalization_ready",
+  "expanded_structural_comparison_prep_candidate_count": 4454,
+  "final_side_relevance_counts": {
+    "fire_direct": 1080,
+    "mixed_direct": 27,
+    "non_safety_direct": 1177,
+    "not_applicable": 1867,
+    "police_direct": 4416,
+    "remains_unclear": 5041,
+    "safety_combined_direct": 43,
+    "write_off": 1538
+  },
+  "growth_continuity_structurally_viable_count": 221,
+  "matching_prep_universe_count": 19643,
+  "matching_tier_counts": {
+    "Tier A": 66,
+    "Tier B": 48,
+    "Tier C": 5,
+    "Tier D": 322,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  },
+  "mechanism_attribution_prep_candidate_count": 3748,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "normalization_prep_universe_count": 8715,
+  "normalization_status_counts": {
+    "needs_pay_basis_review": 130,
+    "needs_period_anchor_review": 525,
+    "needs_role_unit_anchor_review": 13,
+    "needs_value_token_review": 1999,
+    "non_wage_or_non_normalizable": 173,
+    "not_applicable_defer": 580,
+    "ready_for_normalization_design": 1108,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "original_explicit_comparison_potential_seed_count": 22,
+  "reconciled_span_layer_count": 15189,
+  "same_municipality_same_period_candidate_count": 1089,
+  "same_source_candidate_count": 2094,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03"
+}

@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-08-03T12:40:27.055827+00:00",
+  "decision": "broad_state_remaining_municipalities_normalization_matching_prep_completed_normalization_ready",
+  "expanded_structural_comparison_prep_count": 4454,
+  "explicit_seed_count": 22,
+  "head_before": "f0989c162ca701100a08496e648ffb8604a312b3",
+  "input_reconciled_span_count": 15189,
+  "matching_prep_universe_count": 19643,
+  "matching_universe_sha256": "f7b63ff512e8213e2568b138b08d63dee8386358794c5d9541742c94f2277bd8",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "normalization_prep_universe_count": 8715,
+  "normalization_universe_sha256": "fc1b02e47266e0d1415c467ba4285cd556a724cb62d42368c99bb20e89529818",
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+  "seed_is_indicator_not_ceiling": true,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03"
+}

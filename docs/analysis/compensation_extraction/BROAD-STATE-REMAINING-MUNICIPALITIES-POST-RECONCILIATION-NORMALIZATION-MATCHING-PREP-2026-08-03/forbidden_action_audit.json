@@ -1,0 +1,16 @@
+{
+  "actual_wage_matching_finalized": false,
+  "actual_wage_normalization_run": false,
+  "final_national_prevalence_or_causal_claim_made": false,
+  "full_extracted_text_persisted_or_staged": false,
+  "full_text_extraction_run": false,
+  "gabriel_api_rating_run": false,
+  "global_readiness_advanced": false,
+  "hourly_annual_conversion_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "regression_or_treatment_effect_run": false,
+  "retained_binary_persisted_or_staged": false,
+  "span_extraction_run": false,
+  "wage_gap_calculation_run": false
+}

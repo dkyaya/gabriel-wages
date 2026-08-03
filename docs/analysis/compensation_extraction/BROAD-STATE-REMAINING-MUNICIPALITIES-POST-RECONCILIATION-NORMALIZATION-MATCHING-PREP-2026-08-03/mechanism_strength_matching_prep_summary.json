@@ -1,0 +1,10 @@
+{
+  "token_counts": {
+    "central": 900,
+    "moderate": 3958,
+    "none": 12122,
+    "strong": 178,
+    "weak": 5961
+  },
+  "total_structures": 19643
+}

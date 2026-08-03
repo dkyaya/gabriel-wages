@@ -1,0 +1,32 @@
+{
+  "clear_side_quantitative_candidates_considered": 3859,
+  "cross_source_comparison_prep_candidate_count": 137,
+  "current_stage": "post-reconciliation normalization/matching prep complete",
+  "dashboard_clean_structure_preserved": true,
+  "dashboard_local_build_passed": true,
+  "dashboard_local_static_validation_passed": true,
+  "dashboard_local_visual_browser_validation": "not_run_browser_runtime_unavailable_stale_plugin_bootstrap_reference",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "dashboard_public_validation": "pending_push_and_deployment",
+  "expanded_structural_comparison_prep_candidate_count": 4454,
+  "final_pi_report_link_intact": true,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "growth_continuity_prep_candidate_count": 221,
+  "major_blocker_counts": {
+    "missing_clear_cross_side_anchor": 19202,
+    "missing_period_anchor": 6187,
+    "pay_basis_needs_review": 8307
+  },
+  "matching_prep_universe_count": 19643,
+  "mechanism_attribution_prep_candidate_count": 3748,
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "normalization_prep_universe_count": 8715,
+  "original_explicit_comparison_potential_seed_count": 22,
+  "reconciled_span_layer_count": 15189,
+  "same_municipality_same_period_comparison_prep_candidate_count": 1089,
+  "same_source_comparison_prep_candidate_count": 2094,
+  "scout_coverage_rate_percent": 99.9579,
+  "wage_growth_continuity_module_intact": true
+}

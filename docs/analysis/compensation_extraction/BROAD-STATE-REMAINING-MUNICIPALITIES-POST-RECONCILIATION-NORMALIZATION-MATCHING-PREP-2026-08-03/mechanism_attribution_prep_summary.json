@@ -1,0 +1,18 @@
+{
+  "attachable_to_comparison_count": 1129,
+  "mechanism_class_counts": {
+    "arbitration_factfinding": 62,
+    "budget_fiscal_constraint": 38,
+    "classification_civil_service": 287,
+    "cola_cpi_indexing": 124,
+    "collective_bargaining": 508,
+    "comparability_parity": 54,
+    "market_recruitment_retention": 473,
+    "non_base_compensation": 984,
+    "ordinance_council_adoption": 158,
+    "other_pay_setting_mechanism": 770,
+    "retroactivity_implementation": 101,
+    "strike_no_strike_dispute_process": 189
+  },
+  "total": 3748
+}

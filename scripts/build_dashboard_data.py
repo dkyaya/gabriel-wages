@@ -1833,6 +1833,11 @@ BROAD_STATE_REMAINING_SIDE_RECONCILIATION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03"
 )
+BROAD_STATE_REMAINING_NORMALIZATION_MATCHING_PREP_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7573,6 +7578,53 @@ def broad_state_remaining_side_reconciliation_status() -> tuple[bool, dict[str, 
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_normalization_matching_prep_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the complete metadata-only normalization/matching prep layer."""
+    directory = BROAD_STATE_REMAINING_NORMALIZATION_MATCHING_PREP_DIR
+    required = (
+        directory / "remaining_municipalities_normalization_matching_prep_manifest.json",
+        directory / "remaining_municipalities_normalization_matching_prep_summary.json",
+        directory / "normalization_prep_universe_manifest.json",
+        directory / "matching_prep_universe_manifest.json",
+        directory / "comparison_seed_expansion_summary.json",
+        directory / "dashboard_remaining_normalization_matching_prep_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, normalization, matching, expansion, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_normalization_matching_prep_completed_normalization_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and manifest.get("input_reconciled_span_count") == 15189
+        and summary.get("clear_side_quantitative_candidate_count") == 3859
+        and summary.get("original_explicit_comparison_potential_seed_count") == 22
+        and normalization.get("universe_count") == summary.get("normalization_prep_universe_count")
+        and matching.get("universe_count") == summary.get("matching_prep_universe_count")
+        and matching.get("seed_is_indicator_not_ceiling") is True
+        and matching.get("finalized_matches") == 0
+        and expansion.get("expanded_structural_comparison_prep_candidate_count", 0) > 22
+        and expansion.get("normalized_values_produced") == 0
+        and expansion.get("wage_gaps_calculated") == 0
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("actual_wage_normalization_run") is False
+        and forbidden.get("actual_wage_matching_finalized") is False
+        and forbidden.get("wage_gap_calculation_run") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality normalization/matching prep package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11290,6 +11342,9 @@ def build_project_phase_summary(
     remaining_side_reconciliation_available, remaining_side_reconciliation = (
         broad_state_remaining_side_reconciliation_status()
     )
+    remaining_normalization_matching_prep_available, remaining_normalization_matching_prep = (
+        broad_state_remaining_normalization_matching_prep_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13103,6 +13158,43 @@ def build_project_phase_summary(
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "false_pending_normalization_matching_and_valid_analysis",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if remaining_normalization_matching_prep_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_remaining_municipalities_normalization_matching_prep_complete",
+            "current_phase": "Post-reconciliation normalization/matching prep complete",
+            "current_phase_code": remaining_normalization_matching_prep["decision"],
+            "current_evidence_status": "expanded_structural_comparison_and_normalization_prep_ready_no_values_transformed",
+            "remaining_municipality_normalization_matching_prep_available": True,
+            "remaining_municipality_reconciled_span_count": remaining_normalization_matching_prep["reconciled_span_layer_count"],
+            "remaining_municipality_prep_clear_quantitative_count": remaining_normalization_matching_prep["clear_side_quantitative_candidate_count"],
+            "remaining_municipality_explicit_comparison_seed_count": remaining_normalization_matching_prep["original_explicit_comparison_potential_seed_count"],
+            "remaining_municipality_expanded_structural_comparison_count": remaining_normalization_matching_prep["expanded_structural_comparison_prep_candidate_count"],
+            "remaining_municipality_same_source_comparison_prep_count": remaining_normalization_matching_prep["same_source_candidate_count"],
+            "remaining_municipality_same_period_comparison_prep_count": remaining_normalization_matching_prep["same_municipality_same_period_candidate_count"],
+            "remaining_municipality_cross_source_comparison_prep_count": remaining_normalization_matching_prep["cross_source_candidate_count"],
+            "remaining_municipality_growth_continuity_prep_count": remaining_normalization_matching_prep["growth_continuity_structurally_viable_count"],
+            "remaining_municipality_mechanism_attribution_prep_count": remaining_normalization_matching_prep["mechanism_attribution_prep_candidate_count"],
+            "remaining_municipality_normalization_prep_universe_count": remaining_normalization_matching_prep["normalization_prep_universe_count"],
+            "remaining_municipality_matching_prep_universe_count": remaining_normalization_matching_prep["matching_prep_universe_count"],
+            "remaining_municipality_matching_prep_tier_counts": remaining_normalization_matching_prep["matching_tier_counts"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+            "next_phase": "Normalize bounded raw compensation candidates and match only within approved structural tiers after quality gates",
+            "next_phase_sequence": [
+                "preserve every raw value and explicit side, period, role, and pay-basis uncertainty",
+                "normalize only ready or repairable candidates and evaluate approved prep structures",
+                "defer regressions, treatment effects, and final national, prevalence, or causal claims",
+            ],
+            "last_updated_context": "remaining_municipality_normalization_matching_prep_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_pending_normalization_matching_quality_gates",
             "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
         })
     return payload

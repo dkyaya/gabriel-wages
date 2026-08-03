@@ -1,0 +1,13 @@
+{
+  "token_counts": {
+    "directional_hint_only": 1321,
+    "local_context_only": 2158,
+    "mixed_quant_qual_claim_ready": 931,
+    "qualitative_mechanism_claim_ready": 4172,
+    "quantitative_direct_text_claim_ready": 7233,
+    "quantitative_needs_normalization": 1236,
+    "source_navigation_or_reference_only": 4022,
+    "weak_or_not_supported": 3866
+  },
+  "total_structures": 19643
+}

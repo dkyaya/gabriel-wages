@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "needs_pay_basis_review": 130,
+    "needs_period_anchor_review": 525,
+    "needs_role_unit_anchor_review": 13,
+    "needs_value_token_review": 1999,
+    "non_wage_or_non_normalizable": 173,
+    "not_applicable_defer": 580,
+    "ready_for_normalization_design": 1108,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "total": 8715
+}

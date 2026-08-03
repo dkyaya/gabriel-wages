@@ -1,0 +1,19 @@
+{
+  "same_document_cross_side_candidate_count": 91,
+  "source_family_counts": {
+    "agenda_packet_or_minutes": 600,
+    "arbitration_award": 86,
+    "budget_or_pay_plan": 284,
+    "cba": 176,
+    "civil_service_or_hr_pay_plan": 25,
+    "compensation_study": 2,
+    "factfinding_report": 37,
+    "mou_or_memorandum": 96,
+    "other_local_government_pay_policy": 111,
+    "personnel_policy": 54,
+    "salary_ordinance": 60,
+    "settlement_agreement": 2,
+    "wage_schedule": 279
+  },
+  "total": 1812
+}

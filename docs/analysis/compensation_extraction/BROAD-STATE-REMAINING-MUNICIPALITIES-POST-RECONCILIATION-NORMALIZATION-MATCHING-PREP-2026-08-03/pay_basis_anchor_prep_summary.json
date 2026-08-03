@@ -1,0 +1,26 @@
+{
+  "primary_hint_counts": {
+    "allowance": 1286,
+    "annual_salary": 341,
+    "budget_amount": 1230,
+    "cola_cpi": 483,
+    "holiday_rate": 36,
+    "hourly": 1680,
+    "monthly": 149,
+    "overtime_rate": 1730,
+    "pay_grade": 220,
+    "per_diem": 12,
+    "percentage_raise": 874,
+    "range_min_max": 7,
+    "step_schedule": 351,
+    "stipend": 231,
+    "unknown_or_mixed": 6531,
+    "weekly": 28
+  },
+  "quality_counts": {
+    "explicit_bounded_hint": 6274,
+    "multiple_raw_basis_hints": 2384,
+    "needs_review": 6531
+  },
+  "total": 15189
+}

@@ -1,0 +1,14 @@
+{
+  "token_counts": {
+    "comparison_review_candidate": 115,
+    "core_finding_candidate": 3709,
+    "exclude_or_write_off": 5024,
+    "growth_continuity_candidate": 88,
+    "local_context_candidate": 3582,
+    "manual_review_candidate": 3905,
+    "mechanism_summary_candidate": 3542,
+    "quantitative_normalization_candidate": 816,
+    "supporting_example_candidate": 5153
+  },
+  "total_structures": 19643
+}

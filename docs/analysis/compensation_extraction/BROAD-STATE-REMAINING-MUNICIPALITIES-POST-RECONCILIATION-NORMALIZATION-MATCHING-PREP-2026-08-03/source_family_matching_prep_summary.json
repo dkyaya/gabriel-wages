@@ -1,0 +1,18 @@
+{
+  "token_counts": {
+    "agenda_packet_or_minutes": 3609,
+    "arbitration_award": 1617,
+    "budget_or_pay_plan": 2477,
+    "cba": 4331,
+    "civil_service_or_hr_pay_plan": 303,
+    "compensation_study": 50,
+    "factfinding_report": 722,
+    "mou_or_memorandum": 1206,
+    "other_local_government_pay_policy": 1178,
+    "personnel_policy": 442,
+    "salary_ordinance": 651,
+    "settlement_agreement": 20,
+    "wage_schedule": 3297
+  },
+  "total_structures": 19643
+}

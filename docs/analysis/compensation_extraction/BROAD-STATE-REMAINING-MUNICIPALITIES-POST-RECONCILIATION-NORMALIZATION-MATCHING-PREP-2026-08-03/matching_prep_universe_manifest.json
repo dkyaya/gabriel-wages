@@ -1,0 +1,10 @@
+{
+  "csv_sha256": "f7b63ff512e8213e2568b138b08d63dee8386358794c5d9541742c94f2277bd8",
+  "explicit_seed_count": 22,
+  "finalized_matches": 0,
+  "jsonl_sha256": "9414296adfb26e4acac450a6c38917d4d23dfa21f547b6d8b65f1a2872d68405",
+  "seed_is_indicator_not_ceiling": true,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+  "universe_count": 19643,
+  "wage_gaps_calculated": 0
+}

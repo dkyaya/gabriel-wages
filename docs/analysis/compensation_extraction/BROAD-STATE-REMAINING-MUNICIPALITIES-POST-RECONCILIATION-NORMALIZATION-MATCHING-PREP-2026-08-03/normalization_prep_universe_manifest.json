@@ -1,0 +1,9 @@
+{
+  "contains_non_clear_audit_records": true,
+  "criteria_are_inclusive": true,
+  "csv_sha256": "fc1b02e47266e0d1415c467ba4285cd556a724cb62d42368c99bb20e89529818",
+  "jsonl_sha256": "8caf0ce0571455298c2dc1fa409de78250062056b8cdae0f54a46b7a3b44cf83",
+  "normalized_values_produced": false,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03",
+  "universe_count": 8715
+}
