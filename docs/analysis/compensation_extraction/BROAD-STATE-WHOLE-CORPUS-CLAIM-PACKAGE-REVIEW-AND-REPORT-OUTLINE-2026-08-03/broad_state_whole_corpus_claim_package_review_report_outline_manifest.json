@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-08-03T23:39:12.851368+00:00",
+  "decision": "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready",
+  "forbidden_operations_performed": [],
+  "head_before": "e1c79f2e15021c532be357082b876bc7c3787d90",
+  "input_directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03",
+  "major_claim_count": 8,
+  "next_task": "MANUAL-REVIEW-WHOLE-CORPUS-CAUSAL-MECHANISM-REPORT-DRAFT-2026-08-03",
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03",
+  "output_files": [
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/broad_state_whole_corpus_claim_package_review_report_outline_manifest.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/broad_state_whole_corpus_claim_package_review_report_outline_summary.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/broad_state_whole_corpus_claim_package_review_report_outline_summary.md",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/dashboard_report_link_update_summary.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/forbidden_action_audit.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/large_file_audit.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/next_task.md",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/report_claim_boundary_audit.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/report_claim_review_notes.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/report_claim_review_notes.md",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/report_example_selection.csv",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/report_example_selection.jsonl",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/staged_file_audit.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/validation_report.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/validation_report.md",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/whole_corpus_report_outline_2026-08-03.md",
+    "docs/dashboard/public/reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md"
+  ],
+  "public_report_path": "docs/dashboard/public/reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "selected_example_count": 31,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03"
+}

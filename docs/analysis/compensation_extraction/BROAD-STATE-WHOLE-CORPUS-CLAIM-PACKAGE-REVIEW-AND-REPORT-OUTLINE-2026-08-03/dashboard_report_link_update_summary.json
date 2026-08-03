@@ -1,0 +1,17 @@
+{
+  "current_stage": "whole-corpus claim package review and Markdown report draft complete",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "dashboard_report_draft_href": "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "dashboard_report_draft_link_label": "Open whole-corpus causal-mechanism report draft (MD)",
+  "dashboard_report_draft_link_present": true,
+  "final_pi_report_pdf_link_intact": true,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "manual_review_pending": true,
+  "markdown_report_draft_created": true,
+  "next_task": "MANUAL-REVIEW-WHOLE-CORPUS-CAUSAL-MECHANISM-REPORT-DRAFT-2026-08-03",
+  "pdf_docx_slides_created": false,
+  "scout_coverage_rate_percent": 99.9579,
+  "wage_growth_continuity_module_intact": true
+}

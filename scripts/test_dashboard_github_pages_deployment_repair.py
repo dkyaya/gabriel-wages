@@ -146,7 +146,31 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/"
             "broad_state_whole_corpus_claim_package_prep_manifest.json"
         )
-        if whole_corpus_claim_package_manifest.exists() and json.loads(
+        whole_corpus_review_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/"
+            "broad_state_whole_corpus_claim_package_review_report_outline_manifest.json"
+        )
+        if whole_corpus_review_manifest.exists() and json.loads(
+            whole_corpus_review_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_claim_package_review_markdown_report_complete",
+            )
+            self.assertTrue(phase["whole_corpus_report_draft_available"])
+            self.assertEqual(phase["whole_corpus_report_major_claim_count"], 8)
+            self.assertEqual(
+                phase["whole_corpus_report_draft_href"],
+                "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+            )
+        elif whole_corpus_claim_package_manifest.exists() and json.loads(
             whole_corpus_claim_package_manifest.read_text()
         ).get("decision") == (
             "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready"
@@ -386,6 +410,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "false_pending_whole_corpus_synthesis_and_quality_gates",
                 "false_whole_corpus_local_gate_partial_global_gate_failed",
                 "false_claim_package_preserves_failed_global_wage_gap_gate",
+                "false_markdown_draft_preserves_failed_global_wage_gap_gate",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -399,6 +424,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "false_blocked_pending_stronger_causal_design",
                 "false_whole_corpus_causal_gate_failed",
                 "false_bounded_mechanism_interpretation_not_causal_estimation",
+                "false_bounded_mechanism_report_not_causal_estimation",
             },
         )
         extraction_summary_path = (
@@ -709,7 +735,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(whole_corpus_claim_package_manifest.read_text()).get("decision")
                                                                             == "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready"
                                                                         )
-                                                                        if whole_corpus_claim_package_complete:
+                                                                        whole_corpus_review_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/"
+                                                                            "broad_state_whole_corpus_claim_package_review_report_outline_manifest.json"
+                                                                        )
+                                                                        whole_corpus_review_complete = (
+                                                                            whole_corpus_review_manifest.exists()
+                                                                            and json.loads(whole_corpus_review_manifest.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready"
+                                                                        )
+                                                                        if whole_corpus_review_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Whole-corpus claim package review and Markdown report draft complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "MANUAL-REVIEW-WHOLE-CORPUS-CAUSAL-MECHANISM-REPORT-DRAFT-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(phase["whole_corpus_report_draft_available"])
+                                                                            self.assertEqual(phase["whole_corpus_report_major_claim_count"], 8)
+                                                                        elif whole_corpus_claim_package_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Whole-corpus claim package prep complete",

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-03T21:06:47Z",
+  "generated_at": "2026-08-03T23:39:14Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_whole_corpus_claim_package_prep_complete",
-  "current_phase": "Whole-corpus claim package prep complete",
-  "current_phase_code": "broad_state_whole_corpus_claim_package_prep_completed_review_outline_ready",
-  "current_evidence_status": "bounded_internal_causal_mechanism_claim_package_prepared",
+  "stage": "broad_state_whole_corpus_claim_package_review_markdown_report_complete",
+  "current_phase": "Whole-corpus claim package review and Markdown report draft complete",
+  "current_phase_code": "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready",
+  "current_evidence_status": "manual_review_markdown_causal_mechanism_report_draft_available",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03",
+  "next_task": "MANUAL-REVIEW-WHOLE-CORPUS-CAUSAL-MECHANISM-REPORT-DRAFT-2026-08-03",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Review the internal claim package and convert validated findings into a report outline",
+  "next_phase": "Manually review the whole-corpus causal-mechanism Markdown draft",
   "next_phase_sequence": [
-    "refine claim wording, examples, caveats, and evidence boundaries",
-    "route claims to main report, appendix, dashboard, or future work",
-    "retain failed global wage-gap and causal-estimation gates"
+    "identify claims that are too strong or too weak",
+    "promote, replace, or move examples to an appendix",
+    "decide whether to refine evidence or authorize a polished export"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "whole_corpus_claim_package_prep_complete",
+  "last_updated_context": "whole_corpus_claim_package_review_markdown_report_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1187,8 +1187,8 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 35574,
-  "wage_gap_analysis_readiness": "false_claim_package_preserves_failed_global_wage_gap_gate",
-  "causal_analysis_readiness": "false_bounded_mechanism_interpretation_not_causal_estimation",
+  "wage_gap_analysis_readiness": "false_markdown_draft_preserves_failed_global_wage_gap_gate",
+  "causal_analysis_readiness": "false_bounded_mechanism_report_not_causal_estimation",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
   "broad_state_4x2500_text_extraction_queue_count": 2940,
@@ -6738,5 +6738,13 @@
     "exploratory": 1,
     "moderate": 6,
     "strong": 7
-  }
+  },
+  "whole_corpus_claim_package_review_available": true,
+  "whole_corpus_report_draft_available": true,
+  "whole_corpus_report_draft_href": "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "whole_corpus_report_draft_link_label": "Open whole-corpus causal-mechanism report draft (MD)",
+  "whole_corpus_report_major_claim_count": 8,
+  "whole_corpus_report_selected_example_count": 31,
+  "markdown_report_draft_created": true,
+  "pdf_docx_slides_created": false
 }

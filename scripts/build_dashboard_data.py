@@ -1868,6 +1868,11 @@ BROAD_STATE_WHOLE_CORPUS_CLAIM_PACKAGE_PREP_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03"
 )
+BROAD_STATE_WHOLE_CORPUS_CLAIM_PACKAGE_REVIEW_REPORT_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7917,6 +7922,49 @@ def broad_state_whole_corpus_claim_package_prep_status() -> tuple[bool, dict[str
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_whole_corpus_claim_package_review_report_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the validated Markdown review draft without advancing estimate gates."""
+    directory = BROAD_STATE_WHOLE_CORPUS_CLAIM_PACKAGE_REVIEW_REPORT_DIR
+    public_report = ROOT / "docs/dashboard/public/reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md"
+    required = (
+        directory / "broad_state_whole_corpus_claim_package_review_report_outline_manifest.json",
+        directory / "broad_state_whole_corpus_claim_package_review_report_outline_summary.json",
+        directory / "whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+        directory / "dashboard_report_link_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+        public_report,
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, dashboard, validation, forbidden = (
+        read_json(required[i]) for i in (0, 1, 3, 4, 5)
+    )
+    decision = "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready"
+    valid = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and summary.get("major_claim_count") == 8
+        and summary.get("selected_report_example_count", 0) > 0
+        and summary.get("claim_boundary_audit_passed") is True
+        and dashboard.get("dashboard_report_draft_link_present") is True
+        and dashboard.get("final_pi_report_pdf_link_intact") is True
+        and dashboard.get("wage_growth_continuity_module_intact") is True
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("pdf_created") is False
+        and forbidden.get("docx_created") is False
+        and forbidden.get("slides_created") is False
+    )
+    if not valid:
+        raise ValueError("whole-corpus claim-package review Markdown draft fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11655,6 +11703,9 @@ def build_project_phase_summary(
     whole_corpus_claim_package_available, whole_corpus_claim_package = (
         broad_state_whole_corpus_claim_package_prep_status()
     )
+    whole_corpus_claim_package_review_available, whole_corpus_claim_package_review = (
+        broad_state_whole_corpus_claim_package_review_report_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13734,6 +13785,37 @@ def build_project_phase_summary(
             "global_causal_readiness": False,
             "wage_gap_analysis_readiness": "false_claim_package_preserves_failed_global_wage_gap_gate",
             "causal_analysis_readiness": "false_bounded_mechanism_interpretation_not_causal_estimation",
+        })
+    if whole_corpus_claim_package_review_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_whole_corpus_claim_package_review_markdown_report_complete",
+            "current_phase": "Whole-corpus claim package review and Markdown report draft complete",
+            "current_phase_code": whole_corpus_claim_package_review["decision"],
+            "current_evidence_status": "manual_review_markdown_causal_mechanism_report_draft_available",
+            "whole_corpus_claim_package_review_available": True,
+            "whole_corpus_report_draft_available": True,
+            "whole_corpus_report_draft_href": whole_corpus_claim_package_review["dashboard_report_draft_href"],
+            "whole_corpus_report_draft_link_label": whole_corpus_claim_package_review["dashboard_report_draft_link_label"],
+            "whole_corpus_report_major_claim_count": whole_corpus_claim_package_review["major_claim_count"],
+            "whole_corpus_report_selected_example_count": whole_corpus_claim_package_review["selected_report_example_count"],
+            "markdown_report_draft_created": True,
+            "pdf_docx_slides_created": False,
+            "next_task": "MANUAL-REVIEW-WHOLE-CORPUS-CAUSAL-MECHANISM-REPORT-DRAFT-2026-08-03",
+            "next_phase": "Manually review the whole-corpus causal-mechanism Markdown draft",
+            "next_phase_sequence": [
+                "identify claims that are too strong or too weak",
+                "promote, replace, or move examples to an appendix",
+                "decide whether to refine evidence or authorize a polished export",
+            ],
+            "last_updated_context": "whole_corpus_claim_package_review_markdown_report_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "global_wage_gap_readiness": False,
+            "global_causal_readiness": False,
+            "wage_gap_analysis_readiness": "false_markdown_draft_preserves_failed_global_wage_gap_gate",
+            "causal_analysis_readiness": "false_bounded_mechanism_report_not_causal_estimation",
         })
     return payload
 

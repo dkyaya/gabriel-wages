@@ -1,0 +1,23 @@
+{
+  "claim_strengths_preserved": {
+    "exploratory": 1,
+    "moderate": 6,
+    "strong": 7
+  },
+  "editorial_decisions": [
+    "lead with one reinforcing mechanism bundle rather than a mechanism inventory",
+    "state wage-pressure mechanisms directly while separating them from causal estimation",
+    "retain non-safety counterweights in the main report",
+    "treat local comparisons as supporting or conditional examples, not final wage-gap claims",
+    "keep source pointers in a compact ledger rather than dumping giant tables into the draft"
+  ],
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "input_claim_card_count": 14,
+  "input_example_count": 123,
+  "major_claim_count": 8,
+  "reviewed_claim_family_count": 8,
+  "safety_wage_growth_assertion_assessment": "supported_as_causal_mechanism_story",
+  "selected_example_count": 31,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03"
+}

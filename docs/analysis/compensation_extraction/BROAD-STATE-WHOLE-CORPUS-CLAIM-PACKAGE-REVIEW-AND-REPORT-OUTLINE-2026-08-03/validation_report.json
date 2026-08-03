@@ -1,0 +1,134 @@
+{
+  "all_checks_passed": true,
+  "check_count": 30,
+  "checks": [
+    {
+      "check": "01_analysis_markdown_exists",
+      "passed": true
+    },
+    {
+      "check": "02_dashboard_markdown_exists",
+      "passed": true
+    },
+    {
+      "check": "03_dashboard_link_points_to_draft",
+      "passed": true
+    },
+    {
+      "check": "04_final_pi_pdf_link_intact",
+      "passed": true
+    },
+    {
+      "check": "05_wage_growth_module_intact",
+      "passed": true
+    },
+    {
+      "check": "06_report_outline_exists",
+      "passed": true
+    },
+    {
+      "check": "07_claim_review_notes_exist",
+      "passed": true
+    },
+    {
+      "check": "08_required_report_sections_exist",
+      "passed": true
+    },
+    {
+      "check": "09_each_major_claim_has_required_components",
+      "passed": true
+    },
+    {
+      "check": "10_bounded_causal_mechanism_language_used",
+      "passed": true
+    },
+    {
+      "check": "11_no_final_national_wage_gap_estimate",
+      "passed": true
+    },
+    {
+      "check": "12_no_national_prevalence_estimate",
+      "passed": true
+    },
+    {
+      "check": "13_no_causal_effect_estimate",
+      "passed": true
+    },
+    {
+      "check": "14_no_regression_or_treatment_effect_run",
+      "passed": true
+    },
+    {
+      "check": "15_global_wage_gap_readiness_false",
+      "passed": true
+    },
+    {
+      "check": "16_global_causal_readiness_false",
+      "passed": true
+    },
+    {
+      "check": "17_no_pdf_docx_slides_created",
+      "passed": true
+    },
+    {
+      "check": "18_no_new_gabriel_api_rating",
+      "passed": true
+    },
+    {
+      "check": "19_no_ocr",
+      "passed": true
+    },
+    {
+      "check": "20_no_text_extraction",
+      "passed": true
+    },
+    {
+      "check": "21_no_span_extraction",
+      "passed": true
+    },
+    {
+      "check": "22_no_new_normalization_or_matching",
+      "passed": true
+    },
+    {
+      "check": "23_retained_sources_git_ignored",
+      "passed": true
+    },
+    {
+      "check": "24_extracted_text_git_ignored",
+      "passed": true
+    },
+    {
+      "check": "25_archive_root_git_ignored",
+      "passed": true
+    },
+    {
+      "check": "26_no_forbidden_payloads_staged",
+      "passed": true
+    },
+    {
+      "check": "27_dashboard_clean_structure_preserved",
+      "passed": true
+    },
+    {
+      "check": "28_dashboard_map_is_scout_coverage_rate",
+      "passed": true
+    },
+    {
+      "check": "29_staged_file_audit_passes",
+      "passed": true
+    },
+    {
+      "check": "30_large_file_audit_passes",
+      "passed": true
+    }
+  ],
+  "local_dashboard_build_passed": true,
+  "local_http_smoke_status": {
+    "dashboard": 200,
+    "final_pi_pdf": 200,
+    "markdown_draft": 200
+  },
+  "passed_count": 30,
+  "visual_browser_validation": "not_run_browser_runtime_unavailable_static_and_http_validation_used"
+}

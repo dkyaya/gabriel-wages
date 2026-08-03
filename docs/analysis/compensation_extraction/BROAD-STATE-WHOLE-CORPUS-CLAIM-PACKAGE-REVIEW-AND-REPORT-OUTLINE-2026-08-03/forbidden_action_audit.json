@@ -1,0 +1,18 @@
+{
+  "causal_effect_estimate_made": false,
+  "docx_created": false,
+  "files_deleted_or_archived": false,
+  "final_pi_report_overwritten": false,
+  "gabriel_api_rating_run": false,
+  "national_prevalence_estimate_made": false,
+  "national_wage_gap_estimate_made": false,
+  "new_normalization_or_matching_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "pdf_created": false,
+  "regression_run": false,
+  "slides_created": false,
+  "span_extraction_run": false,
+  "text_extraction_run": false,
+  "treatment_effect_run": false
+}

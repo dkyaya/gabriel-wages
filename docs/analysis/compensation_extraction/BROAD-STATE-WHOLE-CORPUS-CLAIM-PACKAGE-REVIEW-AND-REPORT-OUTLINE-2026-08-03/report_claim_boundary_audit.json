@@ -1,0 +1,32 @@
+{
+  "bounded_causal_mechanism_language_present": true,
+  "causal_effect_estimate_made": false,
+  "final_national_wage_gap_estimate_made": false,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "major_claims_have_examples_limits_gold_and_boundary": true,
+  "mechanism_pressure_language_present": true,
+  "national_prevalence_estimate_made": false,
+  "passed": true,
+  "required_sections": {
+    "Appendix Pointers": true,
+    "Claim 1:": true,
+    "Claim 2:": true,
+    "Claim 3:": true,
+    "Claim 4:": true,
+    "Claim 5:": true,
+    "Claim 6:": true,
+    "Claim 7:": true,
+    "Core Claim": true,
+    "Draft Claim Language": true,
+    "Evidence Base": true,
+    "Executive Summary": true,
+    "Good as Gold": true,
+    "How the Mechanisms Interact": true,
+    "Local Examples": true,
+    "National Readiness": true,
+    "Suggested Report Outline": true,
+    "What We Cannot Claim Yet": true
+  }
+}

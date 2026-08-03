@@ -1,0 +1,22 @@
+{
+  "available_example_count": 123,
+  "bounded_causal_mechanism_language_used": true,
+  "claim_boundary_audit_passed": true,
+  "claim_family_count": 8,
+  "dashboard_accessible_markdown_report_draft_path": "docs/dashboard/public/reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "decision": "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready",
+  "final_pi_report_link_intact": true,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "head_before": "e1c79f2e15021c532be357082b876bc7c3787d90",
+  "major_claim_count": 8,
+  "markdown_report_draft_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "next_task": "MANUAL-REVIEW-WHOLE-CORPUS-CAUSAL-MECHANISM-REPORT-DRAFT-2026-08-03",
+  "pdf_docx_slides_created": false,
+  "report_outline_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/whole_corpus_report_outline_2026-08-03.md",
+  "selected_report_example_count": 31,
+  "source_claim_card_count": 14,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03",
+  "wage_growth_module_intact": true
+}
