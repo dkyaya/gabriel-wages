@@ -1,0 +1,46 @@
+{
+  "by_normalization_status": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "by_region": {
+    "Midwest": 5872,
+    "Northeast": 2449,
+    "South": 373,
+    "West": 21
+  },
+  "by_state": {
+    "FL": 8,
+    "GA": 32,
+    "IA": 69,
+    "IL": 664,
+    "IN": 266,
+    "KS": 191,
+    "ME": 32,
+    "MI": 957,
+    "MN": 669,
+    "MO": 72,
+    "NC": 22,
+    "ND": 31,
+    "NE": 31,
+    "NJ": 54,
+    "NY": 1348,
+    "OH": 1865,
+    "PA": 1010,
+    "SD": 120,
+    "TX": 311,
+    "VT": 5,
+    "WA": 21,
+    "WI": 937
+  },
+  "total": 8715
+}

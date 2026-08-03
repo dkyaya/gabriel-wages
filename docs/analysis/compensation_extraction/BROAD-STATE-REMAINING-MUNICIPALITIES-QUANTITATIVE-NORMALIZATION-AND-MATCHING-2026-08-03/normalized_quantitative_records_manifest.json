@@ -1,0 +1,23 @@
+{
+  "csv_sha256": "64073d51b25b4b9835e07c078070654d651315713ffc08e58124063e5d50d0d5",
+  "hourly_annual_conversions": 0,
+  "imputed_hours_weeks_fte": 0,
+  "input_count": 8715,
+  "jsonl_sha256": "a7a45aa4f3e60c90855bb556c32ebeac28262c07d36ce0aea92b1d743bc42c2b",
+  "ledger_count": 8715,
+  "status_counts": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "usable_normalized_record_count": 1250
+}

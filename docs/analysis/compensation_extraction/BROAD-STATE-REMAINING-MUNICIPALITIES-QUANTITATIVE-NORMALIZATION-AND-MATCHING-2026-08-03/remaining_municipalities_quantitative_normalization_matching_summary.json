@@ -1,0 +1,182 @@
+{
+  "all_tier_matching_input_count": 19643,
+  "all_tiers_processed": true,
+  "claim_boundary": "Internal provisional local candidates and national readiness strata only; no final wage-gap, prevalence, or causal claim.",
+  "conditional_local_comparison_candidate_count": 4,
+  "decision": "broad_state_remaining_municipalities_quantitative_normalization_matching_completed_local_qa_ready",
+  "explicit_seed_count": 22,
+  "growth_continuity_output_count": 493,
+  "matching_result_count": 19643,
+  "matching_status_counts": {
+    "conditional_local_comparison_ready": 6,
+    "growth_continuity_ready": 1161,
+    "national_readiness_candidate": 1028,
+    "normalization_partial_defer": 7997,
+    "pay_basis_blocked": 45,
+    "period_blocked": 34,
+    "provisional_local_comparison_ready": 16,
+    "quant_qual_mechanism_link_ready": 651,
+    "side_anchor_blocked": 7167,
+    "write_off_exclude": 1538
+  },
+  "mechanism_attributed_quantitative_record_count": 1004,
+  "national_comparison_readiness_candidate_count": 299,
+  "national_comparison_readiness_status_counts": {
+    "national_insufficient_structure": 6318,
+    "national_needs_pay_basis_repair": 128,
+    "national_needs_period_repair": 526,
+    "national_needs_side_balance": 951,
+    "national_ready_stratum_candidate": 299,
+    "national_write_off": 493
+  },
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+  "no_polished_deliverables_created": true,
+  "normalization_input_universe_count": 8715,
+  "normalization_status_counts": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "normalized_quantitative_record_count": 1250,
+  "provisional_local_comparison_candidate_count": 13,
+  "quant_qual_link_status_counts": {
+    "blocked_side_mismatch": 13,
+    "blocked_source_context_insufficient": 10,
+    "moderate_quant_qual_link": 359,
+    "not_linkable": 208,
+    "strong_quant_qual_link": 645,
+    "weak_quant_qual_link": 15
+  },
+  "quant_qual_mechanism_link_count": 1250,
+  "seed_is_indicator_not_ceiling": true,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "tier_final_counts": {
+    "Tier A": 68,
+    "Tier B": 52,
+    "Tier C": 5,
+    "Tier D": 316,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  },
+  "tier_input_counts": {
+    "Tier A": 66,
+    "Tier B": 48,
+    "Tier C": 5,
+    "Tier D": 322,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  },
+  "tier_outcomes": {
+    "Tier A": {
+      "blocked_or_deferred": 56,
+      "growth_ready": 0,
+      "local_ready": 10,
+      "national_readiness_candidate": 0,
+      "processed": 66,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "normalization_partial_defer": 11,
+        "pay_basis_blocked": 9,
+        "provisional_local_comparison_ready": 10,
+        "side_anchor_blocked": 36
+      }
+    },
+    "Tier B": {
+      "blocked_or_deferred": 42,
+      "growth_ready": 0,
+      "local_ready": 6,
+      "national_readiness_candidate": 0,
+      "processed": 48,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "normalization_partial_defer": 10,
+        "pay_basis_blocked": 7,
+        "provisional_local_comparison_ready": 6,
+        "side_anchor_blocked": 25
+      }
+    },
+    "Tier C": {
+      "blocked_or_deferred": 5,
+      "growth_ready": 0,
+      "local_ready": 0,
+      "national_readiness_candidate": 0,
+      "processed": 5,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "period_blocked": 2,
+        "side_anchor_blocked": 3
+      }
+    },
+    "Tier D": {
+      "blocked_or_deferred": 316,
+      "growth_ready": 0,
+      "local_ready": 6,
+      "national_readiness_candidate": 0,
+      "processed": 322,
+      "promoted": 6,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "conditional_local_comparison_ready": 6,
+        "normalization_partial_defer": 124,
+        "pay_basis_blocked": 29,
+        "period_blocked": 32,
+        "side_anchor_blocked": 131
+      }
+    },
+    "Tier E": {
+      "blocked_or_deferred": 899,
+      "growth_ready": 1161,
+      "local_ready": 0,
+      "national_readiness_candidate": 0,
+      "processed": 2060,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "growth_continuity_ready": 1161,
+        "normalization_partial_defer": 835,
+        "side_anchor_blocked": 64
+      }
+    },
+    "Tier F": {
+      "blocked_or_deferred": 5048,
+      "growth_ready": 0,
+      "local_ready": 0,
+      "national_readiness_candidate": 0,
+      "processed": 5699,
+      "promoted": 0,
+      "quant_qual_ready": 651,
+      "status_counts": {
+        "normalization_partial_defer": 5048,
+        "quant_qual_mechanism_link_ready": 651
+      }
+    },
+    "Tier G": {
+      "blocked_or_deferred": 10415,
+      "growth_ready": 0,
+      "local_ready": 0,
+      "national_readiness_candidate": 1028,
+      "processed": 11443,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "national_readiness_candidate": 1028,
+        "normalization_partial_defer": 1969,
+        "side_anchor_blocked": 6908,
+        "write_off_exclude": 1538
+      }
+    }
+  }
+}

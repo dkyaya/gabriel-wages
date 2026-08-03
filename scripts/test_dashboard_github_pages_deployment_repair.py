@@ -116,7 +116,30 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03/"
             "remaining_municipalities_normalization_matching_prep_manifest.json"
         )
-        if remaining_normalization_matching_prep_manifest.exists() and json.loads(
+        remaining_quantitative_normalization_matching_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/"
+            "remaining_municipalities_quantitative_normalization_matching_manifest.json"
+        )
+        if remaining_quantitative_normalization_matching_manifest.exists() and json.loads(
+            remaining_quantitative_normalization_matching_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_remaining_municipalities_quantitative_normalization_matching_completed_local_qa_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_quantitative_normalization_matching_completed_local_qa_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_remaining_municipalities_quantitative_normalization_matching_complete",
+            )
+            self.assertTrue(phase["remaining_municipality_quantitative_normalization_matching_available"])
+            self.assertEqual(phase["remaining_municipality_normalization_input_count"], 8715)
+            self.assertEqual(phase["remaining_municipality_all_tier_matching_input_count"], 19643)
+            self.assertGreater(phase["remaining_municipality_normalized_quantitative_record_count"], 0)
+            self.assertFalse(phase["global_analysis_readiness"])
+        elif remaining_normalization_matching_prep_manifest.exists() and json.loads(
             remaining_normalization_matching_prep_manifest.read_text()
         ).get("decision") == (
             "broad_state_remaining_municipalities_normalization_matching_prep_completed_normalization_ready"
@@ -237,6 +260,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "bounded_growth_continuity_only_final_estimation_blocked",
                 "false_pending_normalization_matching_and_valid_analysis",
                 "false_pending_normalization_matching_quality_gates",
+                "false_pending_local_comparison_qa_and_claim_readiness",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -493,7 +517,35 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(normalization_matching_prep_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_normalization_matching_prep_completed_normalization_ready"
                                                                         )
-                                                                        if normalization_matching_prep_complete:
+                                                                        quantitative_normalization_matching_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/"
+                                                                            "remaining_municipalities_quantitative_normalization_matching_manifest.json"
+                                                                        )
+                                                                        quantitative_normalization_matching_complete = (
+                                                                            quantitative_normalization_matching_manifest.exists()
+                                                                            and json.loads(quantitative_normalization_matching_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_quantitative_normalization_matching_completed_local_qa_ready"
+                                                                        )
+                                                                        if quantitative_normalization_matching_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Quantitative normalization and matching complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_quantitative_normalization_matching_available"]
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_all_tier_matching_input_count"], 19_643
+                                                                            )
+                                                                            self.assertFalse(phase["global_analysis_readiness"])
+                                                                        elif normalization_matching_prep_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Post-reconciliation normalization/matching prep complete",

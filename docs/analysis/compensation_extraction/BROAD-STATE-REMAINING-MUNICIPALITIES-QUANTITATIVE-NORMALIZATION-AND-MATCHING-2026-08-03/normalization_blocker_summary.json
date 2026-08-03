@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "bounded_metadata_repair_applied": 33,
+    "final_side_label_not_applicable": 580,
+    "final_side_label_remains_unclear": 3694,
+    "final_side_label_write_off": 493,
+    "multiple_raw_values_preserved_no_single_value_selected": 1009,
+    "no_cross_basis_conversion_performed": 1896,
+    "no_explicit_normalizable_value_token": 4360,
+    "pay_basis_unresolved": 1997,
+    "period_anchor_missing_or_unresolved": 2383,
+    "role_unit_anchor_unresolved_or_not_applicable": 4767
+  },
+  "input_count": 8715
+}

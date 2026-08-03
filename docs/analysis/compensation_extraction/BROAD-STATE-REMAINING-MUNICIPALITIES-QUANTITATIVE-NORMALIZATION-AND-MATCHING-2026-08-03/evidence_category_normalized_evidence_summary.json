@@ -1,0 +1,42 @@
+{
+  "by_evidence_category": {
+    "qual_budget_or_fiscal_constraint": 20,
+    "qual_cola_or_indexing_mechanism": 184,
+    "qual_collective_bargaining": 38,
+    "qual_comparability_or_parity_language": 14,
+    "qual_market_recruitment_retention_pressure": 39,
+    "qual_mou_or_settlement": 3,
+    "qual_non_base_compensation_mechanism": 689,
+    "qual_ordinance_or_council_adoption": 9,
+    "qual_other_pay_setting_mechanism": 46,
+    "qual_position_classification_or_civil_service_structure": 35,
+    "qual_retroactivity_or_implementation_timing": 62,
+    "quant_allowance_or_reimbursement": 760,
+    "quant_base_wage_direct_value": 1614,
+    "quant_budget_or_pay_plan_amount": 468,
+    "quant_cpi_indexed_adjustment": 270,
+    "quant_longevity_or_service_pay": 175,
+    "quant_other_compensation_value": 1448,
+    "quant_overtime_or_holiday_rate": 1053,
+    "quant_percentage_raise_or_cola": 754,
+    "quant_position_classification_pay_band": 176,
+    "quant_retroactive_pay_or_lump_sum": 82,
+    "quant_salary_schedule_table": 361,
+    "quant_step_schedule_progression": 279,
+    "quant_stipend_or_premium": 136
+  },
+  "by_normalization_status": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "total": 8715
+}

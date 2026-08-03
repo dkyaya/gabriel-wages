@@ -1,0 +1,21 @@
+{
+  "linkage_status_counts": {
+    "moderate_quant_qual_link": 359,
+    "strong_quant_qual_link": 645
+  },
+  "mechanism_attributed_quantitative_record_count": 1004,
+  "mechanism_class_counts": {
+    "arbitration_factfinding": 5,
+    "budget_fiscal_constraint": 3,
+    "classification_civil_service": 82,
+    "cola_cpi_indexing": 79,
+    "collective_bargaining": 138,
+    "comparability_parity": 4,
+    "market_recruitment_retention": 126,
+    "non_base_compensation": 340,
+    "ordinance_council_adoption": 85,
+    "other_pay_setting_mechanism": 103,
+    "retroactivity_implementation": 29,
+    "strike_no_strike_dispute_process": 10
+  }
+}

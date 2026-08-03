@@ -1,0 +1,46 @@
+{
+  "all_tiers_processed": [
+    "Tier A",
+    "Tier B",
+    "Tier C",
+    "Tier D",
+    "Tier E",
+    "Tier F",
+    "Tier G"
+  ],
+  "csv_sha256": "ef089a70ff2057c153657bc12aa398efbd2e3c05519858b5456171dccb038677",
+  "input_count": 19643,
+  "jsonl_sha256": "9b31dea20786dc3692dc52e2bdabce3bd4b68a650605963dd6070d23738d1a50",
+  "result_count": 19643,
+  "status_counts": {
+    "conditional_local_comparison_ready": 6,
+    "growth_continuity_ready": 1161,
+    "national_readiness_candidate": 1028,
+    "normalization_partial_defer": 7997,
+    "pay_basis_blocked": 45,
+    "period_blocked": 34,
+    "provisional_local_comparison_ready": 16,
+    "quant_qual_mechanism_link_ready": 651,
+    "side_anchor_blocked": 7167,
+    "write_off_exclude": 1538
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03",
+  "tier_final_counts": {
+    "Tier A": 68,
+    "Tier B": 52,
+    "Tier C": 5,
+    "Tier D": 316,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  },
+  "tier_input_counts": {
+    "Tier A": 66,
+    "Tier B": 48,
+    "Tier C": 5,
+    "Tier D": 322,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "candidate_count": 299,
+  "final_national_claims": 0,
+  "national_prevalence_estimates": 0,
+  "national_wage_gaps": 0,
+  "status_counts": {
+    "national_insufficient_structure": 6318,
+    "national_needs_pay_basis_repair": 128,
+    "national_needs_period_repair": 526,
+    "national_needs_side_balance": 951,
+    "national_ready_stratum_candidate": 299,
+    "national_write_off": 493
+  },
+  "total": 8715
+}

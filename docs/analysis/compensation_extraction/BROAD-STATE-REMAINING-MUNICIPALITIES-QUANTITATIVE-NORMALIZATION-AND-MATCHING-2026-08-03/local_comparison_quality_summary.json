@@ -1,0 +1,15 @@
+{
+  "all_candidates_require_qa": true,
+  "conditional_count": 4,
+  "confidence_counts": {
+    "high": 13,
+    "moderate": 4
+  },
+  "final_wage_gap_claims": 0,
+  "provisional_count": 13,
+  "tier_counts": {
+    "Tier A": 10,
+    "Tier B": 7
+  },
+  "total": 17
+}

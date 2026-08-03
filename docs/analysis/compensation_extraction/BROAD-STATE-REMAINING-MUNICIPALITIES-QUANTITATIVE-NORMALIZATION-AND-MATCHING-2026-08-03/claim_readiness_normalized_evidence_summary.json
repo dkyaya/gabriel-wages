@@ -1,0 +1,26 @@
+{
+  "by_claim_readiness_bucket": {
+    "directional_hint_only": 322,
+    "local_context_only": 439,
+    "mixed_quant_qual_claim_ready": 373,
+    "qualitative_mechanism_claim_ready": 556,
+    "quantitative_direct_text_claim_ready": 4609,
+    "quantitative_needs_normalization": 576,
+    "source_navigation_or_reference_only": 880,
+    "weak_or_not_supported": 960
+  },
+  "by_normalization_status": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "total": 8715
+}

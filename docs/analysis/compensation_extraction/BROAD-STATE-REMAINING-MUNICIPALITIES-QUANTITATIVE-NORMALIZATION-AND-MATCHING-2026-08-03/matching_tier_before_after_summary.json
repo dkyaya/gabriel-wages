@@ -1,0 +1,123 @@
+{
+  "after": {
+    "Tier A": 68,
+    "Tier B": 52,
+    "Tier C": 5,
+    "Tier D": 316,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  },
+  "before": {
+    "Tier A": 66,
+    "Tier B": 48,
+    "Tier C": 5,
+    "Tier D": 322,
+    "Tier E": 2060,
+    "Tier F": 5699,
+    "Tier G": 11443
+  },
+  "tier_outcomes": {
+    "Tier A": {
+      "blocked_or_deferred": 56,
+      "growth_ready": 0,
+      "local_ready": 10,
+      "national_readiness_candidate": 0,
+      "processed": 66,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "normalization_partial_defer": 11,
+        "pay_basis_blocked": 9,
+        "provisional_local_comparison_ready": 10,
+        "side_anchor_blocked": 36
+      }
+    },
+    "Tier B": {
+      "blocked_or_deferred": 42,
+      "growth_ready": 0,
+      "local_ready": 6,
+      "national_readiness_candidate": 0,
+      "processed": 48,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "normalization_partial_defer": 10,
+        "pay_basis_blocked": 7,
+        "provisional_local_comparison_ready": 6,
+        "side_anchor_blocked": 25
+      }
+    },
+    "Tier C": {
+      "blocked_or_deferred": 5,
+      "growth_ready": 0,
+      "local_ready": 0,
+      "national_readiness_candidate": 0,
+      "processed": 5,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "period_blocked": 2,
+        "side_anchor_blocked": 3
+      }
+    },
+    "Tier D": {
+      "blocked_or_deferred": 316,
+      "growth_ready": 0,
+      "local_ready": 6,
+      "national_readiness_candidate": 0,
+      "processed": 322,
+      "promoted": 6,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "conditional_local_comparison_ready": 6,
+        "normalization_partial_defer": 124,
+        "pay_basis_blocked": 29,
+        "period_blocked": 32,
+        "side_anchor_blocked": 131
+      }
+    },
+    "Tier E": {
+      "blocked_or_deferred": 899,
+      "growth_ready": 1161,
+      "local_ready": 0,
+      "national_readiness_candidate": 0,
+      "processed": 2060,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "growth_continuity_ready": 1161,
+        "normalization_partial_defer": 835,
+        "side_anchor_blocked": 64
+      }
+    },
+    "Tier F": {
+      "blocked_or_deferred": 5048,
+      "growth_ready": 0,
+      "local_ready": 0,
+      "national_readiness_candidate": 0,
+      "processed": 5699,
+      "promoted": 0,
+      "quant_qual_ready": 651,
+      "status_counts": {
+        "normalization_partial_defer": 5048,
+        "quant_qual_mechanism_link_ready": 651
+      }
+    },
+    "Tier G": {
+      "blocked_or_deferred": 10415,
+      "growth_ready": 0,
+      "local_ready": 0,
+      "national_readiness_candidate": 1028,
+      "processed": 11443,
+      "promoted": 0,
+      "quant_qual_ready": 0,
+      "status_counts": {
+        "national_readiness_candidate": 1028,
+        "normalization_partial_defer": 1969,
+        "side_anchor_blocked": 6908,
+        "write_off_exclude": 1538
+      }
+    }
+  }
+}

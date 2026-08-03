@@ -1,0 +1,7 @@
+{
+  "artifact_size_decision": "compact row schemas; no tracked file may reach 50 MiB",
+  "hard_limit_bytes": 104857600,
+  "large_staged_files": [],
+  "passed": true,
+  "threshold_bytes": 52428800
+}

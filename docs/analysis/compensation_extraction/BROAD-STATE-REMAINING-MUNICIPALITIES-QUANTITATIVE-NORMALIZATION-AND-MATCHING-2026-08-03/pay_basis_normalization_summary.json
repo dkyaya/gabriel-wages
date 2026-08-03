@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "allowance": 894,
+    "annual_salary": 313,
+    "budget_amount": 1024,
+    "cola_cpi": 380,
+    "holiday_rate": 23,
+    "hourly": 1583,
+    "monthly": 100,
+    "overtime_rate": 959,
+    "pay_grade": 127,
+    "per_diem": 12,
+    "percentage_raise": 828,
+    "range_min_max": 7,
+    "step_schedule": 288,
+    "stipend": 158,
+    "unknown_or_mixed": 1997,
+    "weekly": 22
+  },
+  "total": 8715
+}

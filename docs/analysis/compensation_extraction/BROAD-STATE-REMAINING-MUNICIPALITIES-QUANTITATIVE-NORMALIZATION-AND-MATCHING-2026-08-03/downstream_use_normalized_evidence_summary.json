@@ -1,0 +1,27 @@
+{
+  "by_downstream_use_bucket": {
+    "comparison_review_candidate": 18,
+    "core_finding_candidate": 1921,
+    "exclude_or_write_off": 1193,
+    "growth_continuity_candidate": 30,
+    "local_context_candidate": 724,
+    "manual_review_candidate": 1138,
+    "mechanism_summary_candidate": 668,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 2632
+  },
+  "by_normalization_status": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "total": 8715
+}

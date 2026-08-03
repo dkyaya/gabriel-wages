@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "conditional_local_comparison_ready": 6,
+    "growth_continuity_ready": 1161,
+    "national_readiness_candidate": 1028,
+    "normalization_partial_defer": 7997,
+    "pay_basis_blocked": 45,
+    "period_blocked": 34,
+    "provisional_local_comparison_ready": 16,
+    "quant_qual_mechanism_link_ready": 651,
+    "side_anchor_blocked": 7167,
+    "write_off_exclude": 1538
+  },
+  "total": 19643
+}

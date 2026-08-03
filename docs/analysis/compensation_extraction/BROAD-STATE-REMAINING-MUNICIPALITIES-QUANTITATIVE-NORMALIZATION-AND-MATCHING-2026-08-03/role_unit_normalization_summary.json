@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "fire_role": 600,
+    "mixed_role": 22,
+    "non_safety_role": 787,
+    "not_applicable": 1073,
+    "police_role": 2521,
+    "safety_combined_role": 18,
+    "unclear_role": 3694
+  },
+  "total": 8715
+}

@@ -1838,6 +1838,11 @@ BROAD_STATE_REMAINING_NORMALIZATION_MATCHING_PREP_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03"
 )
+BROAD_STATE_REMAINING_QUANTITATIVE_NORMALIZATION_MATCHING_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7625,6 +7630,59 @@ def broad_state_remaining_normalization_matching_prep_status() -> tuple[bool, di
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_quantitative_normalization_matching_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize the validated all-tier quantitative normalization/matching layer."""
+    directory = BROAD_STATE_REMAINING_QUANTITATIVE_NORMALIZATION_MATCHING_DIR
+    required = (
+        directory / "remaining_municipalities_quantitative_normalization_matching_manifest.json",
+        directory / "remaining_municipalities_quantitative_normalization_matching_summary.json",
+        directory / "normalized_quantitative_records_manifest.json",
+        directory / "all_tier_matching_manifest.json",
+        directory / "quant_qual_mechanism_link_summary.json",
+        directory / "national_comparison_readiness_summary.json",
+        directory / "dashboard_remaining_quantitative_normalization_matching_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, normalized, matching, quant_qual, national, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_quantitative_normalization_matching_completed_local_qa_ready"
+    expected_tiers = {"Tier A": 66, "Tier B": 48, "Tier C": 5, "Tier D": 322, "Tier E": 2060, "Tier F": 5699, "Tier G": 11443}
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and manifest.get("normalization_input_count") == 8715
+        and manifest.get("matching_input_count") == 19643
+        and manifest.get("matching_result_count") == 19643
+        and summary.get("tier_input_counts") == expected_tiers
+        and summary.get("all_tiers_processed") is True
+        and summary.get("seed_is_indicator_not_ceiling") is True
+        and summary.get("explicit_seed_count") == 22
+        and normalized.get("input_count") == 8715
+        and matching.get("input_count") == 19643
+        and matching.get("result_count") == 19643
+        and quant_qual.get("total") == summary.get("quant_qual_mechanism_link_count")
+        and national.get("final_national_claims") == 0
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and dashboard.get("no_polished_deliverables_created") is True
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("regression_run") is False
+        and forbidden.get("treatment_effect_run") is False
+        and forbidden.get("final_wage_gap_claim_made") is False
+        and forbidden.get("national_population_prevalence_claim_made") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality quantitative normalization/matching package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11345,6 +11403,9 @@ def build_project_phase_summary(
     remaining_normalization_matching_prep_available, remaining_normalization_matching_prep = (
         broad_state_remaining_normalization_matching_prep_status()
     )
+    remaining_quantitative_normalization_matching_available, remaining_quantitative_normalization_matching = (
+        broad_state_remaining_quantitative_normalization_matching_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13195,6 +13256,45 @@ def build_project_phase_summary(
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "false_pending_normalization_matching_quality_gates",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if remaining_quantitative_normalization_matching_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_remaining_municipalities_quantitative_normalization_matching_complete",
+            "current_phase": "Quantitative normalization and matching complete",
+            "current_phase_code": remaining_quantitative_normalization_matching["decision"],
+            "current_evidence_status": "all_tiers_a_g_processed_local_comparisons_provisional_national_readiness_only",
+            "remaining_municipality_quantitative_normalization_matching_available": True,
+            "remaining_municipality_normalization_input_count": remaining_quantitative_normalization_matching["normalization_input_universe_count"],
+            "remaining_municipality_normalized_quantitative_record_count": remaining_quantitative_normalization_matching["normalized_quantitative_record_count"],
+            "remaining_municipality_normalization_status_counts": remaining_quantitative_normalization_matching["normalization_status_counts"],
+            "remaining_municipality_all_tier_matching_input_count": remaining_quantitative_normalization_matching["all_tier_matching_input_count"],
+            "remaining_municipality_matching_result_count": remaining_quantitative_normalization_matching["matching_result_count"],
+            "remaining_municipality_all_tier_processed_counts": remaining_quantitative_normalization_matching["tier_input_counts"],
+            "remaining_municipality_all_tier_outcomes": remaining_quantitative_normalization_matching["tier_outcomes"],
+            "remaining_municipality_provisional_local_comparison_count": remaining_quantitative_normalization_matching["provisional_local_comparison_candidate_count"],
+            "remaining_municipality_conditional_local_comparison_count": remaining_quantitative_normalization_matching["conditional_local_comparison_candidate_count"],
+            "remaining_municipality_growth_continuity_output_count": remaining_quantitative_normalization_matching["growth_continuity_output_count"],
+            "remaining_municipality_quant_qual_link_count": remaining_quantitative_normalization_matching["quant_qual_mechanism_link_count"],
+            "remaining_municipality_quant_qual_link_status_counts": remaining_quantitative_normalization_matching["quant_qual_link_status_counts"],
+            "remaining_municipality_national_readiness_candidate_count": remaining_quantitative_normalization_matching["national_comparison_readiness_candidate_count"],
+            "remaining_municipality_national_readiness_status_counts": remaining_quantitative_normalization_matching["national_comparison_readiness_status_counts"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03",
+            "next_phase": "QA provisional and conditional local comparisons, quant–qual links, and claim-readiness gates",
+            "next_phase_sequence": [
+                "audit normalization, period, pay-basis, role comparability, and source lineage",
+                "separate claim-ready local evidence from conditional, national-readiness-only, and write-off records",
+                "defer regressions, treatment effects, and final national, prevalence, or causal claims",
+            ],
+            "last_updated_context": "remaining_municipality_quantitative_normalization_matching_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_pending_local_comparison_qa_and_claim_readiness",
             "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
         })
     return payload

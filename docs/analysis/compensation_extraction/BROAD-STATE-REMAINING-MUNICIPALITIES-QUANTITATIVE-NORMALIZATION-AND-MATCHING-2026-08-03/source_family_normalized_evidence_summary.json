@@ -1,0 +1,31 @@
+{
+  "by_normalization_status": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "by_source_family": {
+    "agenda_packet_or_minutes": 1654,
+    "arbitration_award": 616,
+    "budget_or_pay_plan": 1424,
+    "cba": 1740,
+    "civil_service_or_hr_pay_plan": 111,
+    "compensation_study": 26,
+    "factfinding_report": 304,
+    "mou_or_memorandum": 408,
+    "other_local_government_pay_policy": 488,
+    "personnel_policy": 173,
+    "salary_ordinance": 253,
+    "settlement_agreement": 1,
+    "wage_schedule": 1517
+  },
+  "total": 8715
+}

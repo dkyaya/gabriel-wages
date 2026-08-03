@@ -1,0 +1,8 @@
+{
+  "status_counts": {
+    "explicit_or_bounded_repair": 6332,
+    "missing_period_anchor": 2383
+  },
+  "total": 8715,
+  "with_period_label": 6342
+}

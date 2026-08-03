@@ -1,0 +1,26 @@
+{
+  "by_normalization_status": {
+    "needs_pay_basis_review": 128,
+    "needs_period_review": 526,
+    "needs_value_review": 2044,
+    "normalized_budget_context_only": 235,
+    "normalized_growth_or_percentage_only": 370,
+    "normalized_non_base_only": 137,
+    "normalized_partial": 162,
+    "normalized_ready": 346,
+    "not_applicable_defer": 580,
+    "side_unclear_defer": 3694,
+    "write_off_exclude": 493
+  },
+  "by_normalized_side_label": {
+    "fire_direct": 600,
+    "mixed_direct": 22,
+    "non_safety_direct": 787,
+    "not_applicable": 580,
+    "police_direct": 2521,
+    "remains_unclear": 3694,
+    "safety_combined_direct": 18,
+    "write_off": 493
+  },
+  "total": 8715
+}

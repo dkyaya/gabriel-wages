@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "municipality_missing_clear_side_balance": 7921,
+    "pay_basis_unresolved": 1997,
+    "period_anchor_missing_or_unresolved": 2383,
+    "role_unit_anchor_unresolved_or_not_applicable": 4767
+  },
+  "status_counts": {
+    "national_insufficient_structure": 6318,
+    "national_needs_pay_basis_repair": 128,
+    "national_needs_period_repair": 526,
+    "national_needs_side_balance": 951,
+    "national_ready_stratum_candidate": 299,
+    "national_write_off": 493
+  },
+  "total": 8715
+}

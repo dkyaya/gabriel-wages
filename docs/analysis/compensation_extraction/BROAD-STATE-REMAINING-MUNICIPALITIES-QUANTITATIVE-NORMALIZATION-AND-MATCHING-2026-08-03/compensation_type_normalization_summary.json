@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "allowance_reimbursement": 760,
+    "base_wage": 1614,
+    "budget_or_pay_plan": 468,
+    "classification_pay_band": 176,
+    "cola_or_raise": 1024,
+    "longevity_service": 175,
+    "non_base_compensation": 82,
+    "other": 2587,
+    "overtime_holiday": 1053,
+    "salary_schedule": 361,
+    "step_progression": 279,
+    "stipend_premium": 136
+  },
+  "total": 8715
+}
