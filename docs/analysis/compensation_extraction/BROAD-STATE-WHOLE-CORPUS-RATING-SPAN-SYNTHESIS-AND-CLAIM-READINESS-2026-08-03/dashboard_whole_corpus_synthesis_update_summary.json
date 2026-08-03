@@ -14,7 +14,7 @@
   "dashboard_local_static_validation": "passed",
   "dashboard_local_visual_validation": "unavailable_browser_runtime",
   "dashboard_map_primary_metric": "scout_coverage_rate",
-  "dashboard_public_validation": "pending_push_and_deployment",
+  "dashboard_public_validation": "passed_static_public_smoke_after_pages_run_30843270989",
   "final_pi_report_link_intact": true,
   "gate_statuses": {
     "global_causal_readiness_gate": "fail",

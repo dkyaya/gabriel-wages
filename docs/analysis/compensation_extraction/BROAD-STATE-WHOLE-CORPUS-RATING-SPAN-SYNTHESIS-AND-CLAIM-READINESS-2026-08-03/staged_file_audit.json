@@ -1,13 +1,11 @@
 {
-  "audited_at": "2026-08-03T18:52:40.584710+00:00",
+  "audited_at": "2026-08-03T19:05:37.041937+00:00",
   "forbidden_staged_paths": [],
   "outside_authorized_scope": [],
   "passed": true,
-  "staged_file_count": 4,
+  "staged_file_count": 2,
   "staged_files": [
-    "docs/dashboard/data/project_phase_summary.json",
-    "scripts/build_dashboard_data.py",
-    "scripts/run_broad_state_whole_corpus_rating_span_synthesis.py",
-    "scripts/test_dashboard_github_pages_deployment_repair.py"
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/dashboard_whole_corpus_synthesis_update_summary.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/validation_report.json"
   ]
 }
