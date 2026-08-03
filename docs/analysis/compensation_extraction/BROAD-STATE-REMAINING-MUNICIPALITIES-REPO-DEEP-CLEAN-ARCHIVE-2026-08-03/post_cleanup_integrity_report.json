@@ -1,0 +1,17 @@
+{
+  "active_canonical_changed": [],
+  "active_canonical_missing": [],
+  "active_canonical_passed": true,
+  "ambiguous_user_paths_untouched": true,
+  "archive_paths_match_manifest": true,
+  "checked_at": "2026-08-03T17:51:42.040759+00:00",
+  "current_qa_outputs_present": true,
+  "extracted_text_passed": true,
+  "no_tracked_files_removed": true,
+  "passed": true,
+  "pi_report_passed": true,
+  "provenance_missing": [],
+  "removed_paths_match_manifest": true,
+  "retained_sources_passed": true,
+  "wage_growth_passed": true
+}

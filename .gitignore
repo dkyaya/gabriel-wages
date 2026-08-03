@@ -40,6 +40,7 @@ docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-
 # pointers instead. See future_artifact_storage_standard_for_retained_sources.md.
 /artifacts/local_retained_sources/
 /artifacts/local_extracted_text/
+/artifacts/local_archives/
 /docs/analysis/compensation_extraction/*/retained_sources/
 
 # BROAD-STATE 4x2500 span worker ledgers are resumable local intermediates.

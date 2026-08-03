@@ -1,0 +1,14 @@
+{
+  "clean_structure_preserved": true,
+  "final_pi_report_link_intact": true,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "local_build_status": "passed",
+  "local_static_validation": "passed",
+  "local_visual_validation": "not_run_browser_runtime_unavailable",
+  "map_primary_metric": "scout_coverage_rate",
+  "public_validation": "pending_push_and_deployment",
+  "scout_coverage_rate_percent": 99.9579,
+  "wage_growth_module_intact": true
+}

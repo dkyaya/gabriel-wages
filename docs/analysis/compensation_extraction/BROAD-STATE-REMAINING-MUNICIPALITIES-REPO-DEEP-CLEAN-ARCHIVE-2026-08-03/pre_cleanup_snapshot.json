@@ -1,0 +1,35 @@
+{
+  "active_manifest_sha256": "ef48b96a087d16eb1d95bbef4ed65f60ce5b4141de9323603131763ea66098c5",
+  "created_at": "2026-08-03T17:46:03.656612+00:00",
+  "extracted_root_exists": true,
+  "pi_pdf_sha256": "28b0aba9713d877dfe9b96906a98da78e3762894e6efcbbeffac8062e9d1664a",
+  "provenance_count": 1547,
+  "repo_storage": {
+    "active_canonical_file_count": 2527,
+    "artifacts_directory_size_bytes_before": 22997250048,
+    "created_at": "2026-08-03T17:46:03.656612+00:00",
+    "dirty_worktree_exception": {
+      "approved_by_user": true,
+      "paths": [
+        "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages",
+        "package-lock.json"
+      ],
+      "policy": "preserve_ambiguous_and_do_not_touch"
+    },
+    "extracted_text_size_bytes_before": 674598912,
+    "git_directory_size_bytes_before": 13934821376,
+    "head_before": "8489cc0507dfbcf07eaeed0f42b75f08271b62b0",
+    "ignored_artifact_size_bytes_before": 22997250048,
+    "large_tracked_file_count_over_25_mib": 42,
+    "large_untracked_or_ignored_file_count_over_100_mib": 2,
+    "preserved_provenance_file_count": 1547,
+    "relay_zip_count": 267,
+    "repo_size_bytes_before": 70369779712,
+    "retained_source_size_bytes_before": 22322651136,
+    "tmp_size_bytes_before": 9338212352,
+    "tmp_top_level_candidate_count": 693,
+    "tracked_file_count": 9087
+  },
+  "retained_root_exists": true,
+  "wage_growth_sha256": "1302c76e417173471c87af86246975740246993cb05cc65deed6a0b25a07721e"
+}

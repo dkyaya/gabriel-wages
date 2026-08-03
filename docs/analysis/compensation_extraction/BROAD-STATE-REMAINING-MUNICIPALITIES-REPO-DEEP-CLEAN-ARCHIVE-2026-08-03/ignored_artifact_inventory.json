@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-08-03T17:46:03.656612+00:00",
+  "extracted_text_file_count": 9548,
+  "extracted_text_root": "artifacts/local_extracted_text",
+  "extracted_text_size_bytes": 674598912,
+  "local_archive_root": "artifacts/local_archives/repo_deep_clean_archive_2026-08-03",
+  "local_archive_size_bytes_before": 0,
+  "policy": "all retained-source and extracted-text payloads preserved",
+  "retained_source_file_count": 11498,
+  "retained_source_root": "artifacts/local_retained_sources",
+  "retained_source_size_bytes": 22322651136,
+  "tmp_size_bytes": 9338212352
+}

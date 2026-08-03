@@ -1853,6 +1853,11 @@ BROAD_STATE_REMAINING_LOCAL_COMPARISON_QA_CLAIM_READINESS_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03"
 )
+BROAD_STATE_REMAINING_REPO_DEEP_CLEAN_ARCHIVE_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7785,6 +7790,45 @@ def broad_state_remaining_local_comparison_qa_claim_readiness_status() -> tuple[
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_repo_deep_clean_archive_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize a validated conservative cleanup that preserved canonical evidence."""
+    directory = BROAD_STATE_REMAINING_REPO_DEEP_CLEAN_ARCHIVE_DIR
+    required = (
+        directory / "remaining_municipalities_repo_deep_clean_archive_manifest.json",
+        directory / "remaining_municipalities_repo_deep_clean_archive_summary.json",
+        directory / "storage_savings_summary.json",
+        directory / "post_cleanup_integrity_report.json",
+        directory / "dashboard_remaining_repo_cleanup_update_summary.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, savings, integrity, dashboard, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready"
+    valid = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and summary.get("cleanup_mode") == "conservative_archive_first"
+        and summary.get("post_cleanup_integrity_passed") is True
+        and savings.get("files_removed_manifest_entries") == 168
+        and savings.get("bytes_removed") == 2499261775
+        and integrity.get("passed") is True
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and dashboard.get("no_analysis_or_polished_deliverables_created") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("analysis_run") is False
+        and forbidden.get("polished_deliverable_created") is False
+    )
+    if not valid:
+        raise ValueError("remaining-municipality repo deep-clean/archive package fails dashboard gates")
+    return True, {**summary, **savings, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11514,6 +11558,9 @@ def build_project_phase_summary(
     remaining_local_comparison_qa_available, remaining_local_comparison_qa = (
         broad_state_remaining_local_comparison_qa_claim_readiness_status()
     )
+    remaining_repo_cleanup_available, remaining_repo_cleanup = (
+        broad_state_remaining_repo_deep_clean_archive_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -13489,6 +13536,41 @@ def build_project_phase_summary(
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "false_local_examples_bounded_no_final_wage_gap_claim",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
+        })
+    if remaining_repo_cleanup_available:
+        payload.update({
+            "data_vintage": "2026-08-03",
+            "stage": "broad_state_remaining_municipalities_repo_deep_clean_archive_complete",
+            "current_phase": "Repo deep clean/archive complete",
+            "current_phase_code": remaining_repo_cleanup["decision"],
+            "current_evidence_status": "conservative_archive_first_cleanup_complete_canonical_evidence_preserved",
+            "remaining_municipality_repo_cleanup_available": True,
+            "remaining_municipality_cleanup_mode": remaining_repo_cleanup["cleanup_mode"],
+            "remaining_municipality_cleanup_files_archived_count": remaining_repo_cleanup["files_archived_count"],
+            "remaining_municipality_cleanup_files_removed_count": remaining_repo_cleanup["files_removed_manifest_entries"],
+            "remaining_municipality_cleanup_payload_files_removed": remaining_repo_cleanup["payload_files_removed"],
+            "remaining_municipality_cleanup_bytes_archived": remaining_repo_cleanup["bytes_archived"],
+            "remaining_municipality_cleanup_bytes_removed": remaining_repo_cleanup["bytes_removed"],
+            "remaining_municipality_cleanup_active_files_preserved": remaining_repo_cleanup["active_canonical_files_preserved"],
+            "remaining_municipality_cleanup_provenance_files_preserved": remaining_repo_cleanup["preserved_provenance_files"],
+            "remaining_municipality_cleanup_retained_sources_preserved": remaining_repo_cleanup["retained_source_artifacts_preserved"],
+            "remaining_municipality_cleanup_extracted_text_preserved": remaining_repo_cleanup["extracted_text_artifacts_preserved"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+            "next_phase": "Unify the entire rating-span corpus into bounded local and national claim-readiness layers",
+            "next_phase_sequence": [
+                "reconcile batch-specific rating-span and claim-readiness layers across the whole corpus",
+                "preserve local, mechanism, growth, non-base, quant–qual, and national-readiness boundaries",
+                "defer unsupported final claims, regressions, treatment effects, and polished deliverables",
+            ],
+            "last_updated_context": "remaining_municipality_repo_deep_clean_archive_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_pending_whole_corpus_synthesis_and_quality_gates",
             "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
         })
     return payload

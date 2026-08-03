@@ -23,6 +23,13 @@ function countFor(key) {
   return projectPhaseSummary[key] ?? 0;
 }
 
+function formatStorage(bytes) {
+  const value = Number(bytes ?? 0);
+  return value >= 1024 ** 3
+    ? `${(value / 1024 ** 3).toFixed(2)} GiB`
+    : `${(value / 1024 ** 2).toFixed(1)} MiB`;
+}
+
 function dominantDirection(counts = {}) {
   const ranked = Object.entries(counts).sort((a, b) => b[1] - a[1]);
   return ranked[0] ? label(ranked[0][0]) : "No rated direction";
@@ -187,9 +194,11 @@ function App() {
             <div><span>Next task</span><strong>{projectPhaseSummary.next_task}</strong></div>
             <div><span>Claim boundary</span><strong>Bounded local documentary evidence only · final, national, and causal claims blocked</strong></div>
             <div>
-              <span>{projectPhaseSummary.remaining_municipality_local_comparison_qa_available ? "QA / claim gates" : projectPhaseSummary.remaining_municipality_blocker_rescue_reclassification_available ? "Blocker rescue / analysis use" : projectPhaseSummary.remaining_municipality_quantitative_normalization_matching_available ? "Normalization / matching" : projectPhaseSummary.remaining_municipality_normalization_matching_prep_available ? "Normalization / matching prep" : projectPhaseSummary.remaining_municipality_side_reconciliation_available ? "Side reconciliation" : projectPhaseSummary.remaining_municipality_rating_ingestion_available ? "Rating layer" : projectPhaseSummary.remaining_municipality_gabriel_rating_available ? "GABRIEL rating" : projectPhaseSummary.remaining_municipality_span_extraction_available ? "Span extraction" : projectPhaseSummary.remaining_municipality_text_extraction_available ? "Text extraction" : projectPhaseSummary.remaining_municipality_pdf_text_readiness_available ? "Text readiness" : projectPhaseSummary.remaining_municipality_source_review_available ? "Source review" : projectPhaseSummary.remaining_municipality_verification_available ? "Verification" : projectPhaseSummary.remaining_municipality_candidate_review_available ? "Candidate review" : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed ? "Scout gate" : projectPhaseSummary.remaining_municipality_5lane_live_scout_available ? "Live scout" : projectPhaseSummary.remaining_municipality_5lane_scout_infrastructure_available ? "Planned scout" : "Data current"}</span>
+              <span>{projectPhaseSummary.remaining_municipality_repo_cleanup_available ? "Conservative cleanup" : projectPhaseSummary.remaining_municipality_local_comparison_qa_available ? "QA / claim gates" : projectPhaseSummary.remaining_municipality_blocker_rescue_reclassification_available ? "Blocker rescue / analysis use" : projectPhaseSummary.remaining_municipality_quantitative_normalization_matching_available ? "Normalization / matching" : projectPhaseSummary.remaining_municipality_normalization_matching_prep_available ? "Normalization / matching prep" : projectPhaseSummary.remaining_municipality_side_reconciliation_available ? "Side reconciliation" : projectPhaseSummary.remaining_municipality_rating_ingestion_available ? "Rating layer" : projectPhaseSummary.remaining_municipality_gabriel_rating_available ? "GABRIEL rating" : projectPhaseSummary.remaining_municipality_span_extraction_available ? "Span extraction" : projectPhaseSummary.remaining_municipality_text_extraction_available ? "Text extraction" : projectPhaseSummary.remaining_municipality_pdf_text_readiness_available ? "Text readiness" : projectPhaseSummary.remaining_municipality_source_review_available ? "Source review" : projectPhaseSummary.remaining_municipality_verification_available ? "Verification" : projectPhaseSummary.remaining_municipality_candidate_review_available ? "Candidate review" : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed ? "Scout gate" : projectPhaseSummary.remaining_municipality_5lane_live_scout_available ? "Live scout" : projectPhaseSummary.remaining_municipality_5lane_scout_infrastructure_available ? "Planned scout" : "Data current"}</span>
               <strong>
-                {projectPhaseSummary.remaining_municipality_local_comparison_qa_available
+                {projectPhaseSummary.remaining_municipality_repo_cleanup_available
+                  ? `${formatStorage(projectPhaseSummary.remaining_municipality_cleanup_bytes_removed)} reclaimed · ${formatNumber(projectPhaseSummary.remaining_municipality_cleanup_files_removed_count)} verified duplicate/cache entries removed · canonical evidence preserved`
+                  : projectPhaseSummary.remaining_municipality_local_comparison_qa_available
                   ? `${formatNumber(projectPhaseSummary.remaining_municipality_local_comparison_qa_input_count)} local candidates QA'd · ${formatNumber(projectPhaseSummary.remaining_municipality_local_supporting_example_count)} supporting + ${formatNumber(projectPhaseSummary.remaining_municipality_conditional_example_count)} conditional · mechanism gate ${projectPhaseSummary.remaining_municipality_claim_readiness_gate_statuses?.mechanism_evidence_gate ?? "unavailable"}`
                   : projectPhaseSummary.remaining_municipality_blocker_rescue_reclassification_available
                   ? `${formatNumber(projectPhaseSummary.remaining_municipality_records_structures_rescued_rerouted)} structures rescued or rerouted · ${formatNumber(projectPhaseSummary.remaining_municipality_cleaned_analysis_use_count)} cleaned record/structure routes · ${formatNumber(projectPhaseSummary.remaining_municipality_unique_blocker_signature_count)} blocker signatures`
@@ -335,6 +344,14 @@ function App() {
                 <div><span>Same-side claim / supporting</span><strong>{formatNumber(projectPhaseSummary.remaining_municipality_same_side_claim_ready_count)} / {formatNumber(projectPhaseSummary.remaining_municipality_same_side_supporting_count)}</strong></div>
                 <div><span>Mechanism gate</span><strong>{projectPhaseSummary.remaining_municipality_claim_readiness_gate_statuses?.mechanism_evidence_gate ?? "unavailable"}</strong></div>
                 <div><span>Local / national gate</span><strong>{projectPhaseSummary.remaining_municipality_claim_readiness_gate_statuses?.local_comparison_gate ?? "unavailable"} / {projectPhaseSummary.remaining_municipality_claim_readiness_gate_statuses?.national_readiness_gate ?? "unavailable"}</strong></div>
+              </>}
+              {projectPhaseSummary.remaining_municipality_repo_cleanup_available && <>
+                <div><span>Cleanup mode</span><strong>Conservative archive-first</strong></div>
+                <div><span>Disk reclaimed</span><strong>{formatStorage(projectPhaseSummary.remaining_municipality_cleanup_bytes_removed)}</strong></div>
+                <div><span>Removed / archived entries</span><strong>{formatNumber(projectPhaseSummary.remaining_municipality_cleanup_files_removed_count)} / {formatNumber(projectPhaseSummary.remaining_municipality_cleanup_files_archived_count)}</strong></div>
+                <div><span>Payload files removed</span><strong>{formatNumber(projectPhaseSummary.remaining_municipality_cleanup_payload_files_removed)}</strong></div>
+                <div><span>Active / provenance files preserved</span><strong>{formatNumber(projectPhaseSummary.remaining_municipality_cleanup_active_files_preserved)} / {formatNumber(projectPhaseSummary.remaining_municipality_cleanup_provenance_files_preserved)}</strong></div>
+                <div><span>Local source / text artifacts</span><strong>{projectPhaseSummary.remaining_municipality_cleanup_retained_sources_preserved && projectPhaseSummary.remaining_municipality_cleanup_extracted_text_preserved ? "Preserved" : "Review required"}</strong></div>
               </>}
             </div>
             <p>Detailed lane reconciliation, schemas, quarantine reasons, source-family summaries, and validation outputs are in the linked current report. Retained source files and full extracted text remain outside Git.</p>

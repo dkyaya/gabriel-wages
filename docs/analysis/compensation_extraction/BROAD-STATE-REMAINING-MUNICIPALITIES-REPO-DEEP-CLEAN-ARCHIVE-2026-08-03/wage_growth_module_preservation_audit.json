@@ -1,0 +1,7 @@
+{
+  "exists": true,
+  "passed": true,
+  "path": "docs/dashboard/data/wage_growth_continuity.json",
+  "sha256_after": "1302c76e417173471c87af86246975740246993cb05cc65deed6a0b25a07721e",
+  "sha256_before": "1302c76e417173471c87af86246975740246993cb05cc65deed6a0b25a07721e"
+}

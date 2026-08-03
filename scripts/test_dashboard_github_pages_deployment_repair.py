@@ -131,7 +131,29 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03/"
             "remaining_municipalities_local_comparison_qa_claim_readiness_manifest.json"
         )
-        if remaining_local_comparison_qa_manifest.exists() and json.loads(
+        remaining_repo_cleanup_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-REPO-DEEP-CLEAN-ARCHIVE-2026-08-03/"
+            "remaining_municipalities_repo_deep_clean_archive_manifest.json"
+        )
+        if remaining_repo_cleanup_manifest.exists() and json.loads(
+            remaining_repo_cleanup_manifest.read_text()
+        ).get("decision") == (
+            "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_remaining_municipalities_repo_deep_clean_archive_complete",
+            )
+            self.assertTrue(phase["remaining_municipality_repo_cleanup_available"])
+            self.assertEqual(phase["remaining_municipality_cleanup_files_removed_count"], 168)
+            self.assertEqual(phase["remaining_municipality_cleanup_bytes_removed"], 2499261775)
+            self.assertFalse(phase["global_analysis_readiness"])
+        elif remaining_local_comparison_qa_manifest.exists() and json.loads(
             remaining_local_comparison_qa_manifest.read_text()
         ).get("decision") == (
             "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready"
@@ -306,6 +328,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                 "false_pending_local_comparison_qa_and_claim_readiness",
                 "false_pending_cleaned_local_comparison_qa_and_claim_readiness",
                 "false_local_examples_bounded_no_final_wage_gap_claim",
+                "false_pending_whole_corpus_synthesis_and_quality_gates",
             },
         )
         self.assertEqual(phase["validated_bounded_wage_differential_candidate_count"], 1)
@@ -595,7 +618,34 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(local_comparison_qa_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_local_comparison_qa_claim_readiness_completed_repo_cleanup_ready"
                                                                         )
-                                                                        if local_comparison_qa_complete:
+                                                                        repo_cleanup_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "REPO-DEEP-CLEAN-ARCHIVE-2026-08-03/"
+                                                                            "remaining_municipalities_repo_deep_clean_archive_manifest.json"
+                                                                        )
+                                                                        repo_cleanup_complete = (
+                                                                            repo_cleanup_manifest.exists()
+                                                                            and json.loads(repo_cleanup_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_repo_deep_clean_archive_completed_whole_corpus_ready"
+                                                                        )
+                                                                        if repo_cleanup_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Repo deep clean/archive complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-"
+                                                                                "SYNTHESIS-AND-CLAIM-READINESS-2026-08-03",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_repo_cleanup_available"]
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_cleanup_files_removed_count"], 168
+                                                                            )
+                                                                        elif local_comparison_qa_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Local comparison QA and claim readiness complete",

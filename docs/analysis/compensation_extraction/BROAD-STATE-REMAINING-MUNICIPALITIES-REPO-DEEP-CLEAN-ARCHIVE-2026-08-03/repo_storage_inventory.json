@@ -1,0 +1,26 @@
+{
+  "active_canonical_file_count": 2527,
+  "artifacts_directory_size_bytes_before": 22997250048,
+  "created_at": "2026-08-03T17:46:03.656612+00:00",
+  "dirty_worktree_exception": {
+    "approved_by_user": true,
+    "paths": [
+      "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages",
+      "package-lock.json"
+    ],
+    "policy": "preserve_ambiguous_and_do_not_touch"
+  },
+  "extracted_text_size_bytes_before": 674598912,
+  "git_directory_size_bytes_before": 13934821376,
+  "head_before": "8489cc0507dfbcf07eaeed0f42b75f08271b62b0",
+  "ignored_artifact_size_bytes_before": 22997250048,
+  "large_tracked_file_count_over_25_mib": 42,
+  "large_untracked_or_ignored_file_count_over_100_mib": 2,
+  "preserved_provenance_file_count": 1547,
+  "relay_zip_count": 267,
+  "repo_size_bytes_before": 70369779712,
+  "retained_source_size_bytes_before": 22322651136,
+  "tmp_size_bytes_before": 9338212352,
+  "tmp_top_level_candidate_count": 693,
+  "tracked_file_count": 9087
+}

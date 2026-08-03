@@ -1,0 +1,6 @@
+{
+  "count": 0,
+  "manifest_sha256": "6607992acc060017e7850160927545435d6f19b0bd10419dda36c5cf94ed1531",
+  "payload_bytes": 0,
+  "policy": "no ambiguous payload was moved; user-confirmed ambiguous paths remain untouched"
+}

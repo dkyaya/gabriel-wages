@@ -1,0 +1,17 @@
+{
+  "count": 2,
+  "files": [
+    {
+      "classification": "preserve_ambiguous",
+      "ignored": true,
+      "path": "tmp/source_review_batch2_500_live_collection_relay_2026-07-24_4db4317.zip",
+      "size_bytes": 911013190
+    },
+    {
+      "classification": "preserve_ambiguous",
+      "ignored": true,
+      "path": "tmp/source_review_pilot1_httpx_retry_relay_2026-07-24_5e14f63.zip",
+      "size_bytes": 305543584
+    }
+  ]
+}

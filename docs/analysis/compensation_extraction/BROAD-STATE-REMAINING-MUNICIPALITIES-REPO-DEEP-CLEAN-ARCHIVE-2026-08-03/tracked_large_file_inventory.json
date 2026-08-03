@@ -1,0 +1,257 @@
+{
+  "count": 42,
+  "files": [
+    {
+      "classification": "preserve_provenance",
+      "path": "corpus/ma_newton/ma_newton_police_cba_lris.pdf",
+      "sha256": "72ca1f50a622d8a328b7f31faf6983d21e7252602af52976c01ffc5918b2edb3",
+      "size_bytes": 43460347
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "corpus/oh_cleveland/oh_cleveland_afscme_local100_cba_2022_2025.pdf",
+      "sha256": "ac80eb141d341179b96e7ea03a5eb286c43b99b455ba8705d9d80acb7f1e421b",
+      "size_bytes": 29073135
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "corpus/tx_san_antonio/tx_san_antonio_sapoa_police_cba_2022_2026.pdf",
+      "sha256": "fd8c2db7f6a7715953cc49d3a4d5caa7193e6c8138d57277466b3721aa4487d0",
+      "size_bytes": 28242821
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-CANDIDATE-REVIEW-2026-07-30/candidate_review_results.jsonl",
+      "sha256": "34241bcb950c8969815273dcd159c348761e20f80c69626d970d41de48a23513",
+      "size_bytes": 26560323
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-MATCHED-STRUCTURE-PARAPHRASE-REPAIR-2026-07-30/normalized_quantitative_records.jsonl",
+      "sha256": "b104c09157bfdf5192cc5cbd71c0320c5f451644b42c879f9af62e45e279891e",
+      "size_bytes": 46637849
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30/merged_normalization_rescue_results.jsonl",
+      "sha256": "f0dbab754fdad8add078cd5c8702b071a9df006a0b8bcf98b652a47f4309d0fe",
+      "size_bytes": 28257098
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.csv",
+      "sha256": "0b7c88dbbc1d60b83902f147985fb970bb2ceaab624d231b7c237ec7cadbd960",
+      "size_bytes": 50917902
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30/codified_valid_ratings.jsonl",
+      "sha256": "53853a335f02f9186e309400a3bc0e46da74ab69c1cf62d2eda376336dd81584",
+      "size_bytes": 82389626
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.csv",
+      "sha256": "6205ce3bf034a786e7fd3a4480939fa28eb59d99b791f042eb00c6f1c791969d",
+      "size_bytes": 29825297
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.jsonl",
+      "sha256": "c9684ea522e393b41e004752dbabba73ecd528d43d5fcd69b8cbad6e8cb6015c",
+      "size_bytes": 49138108
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_rating_ready_queue.csv",
+      "sha256": "2bb7c6a62d087f3c53b4b1d629f4455f50c5e73fbc57ed94a0823a41c9c8761e",
+      "size_bytes": 29045211
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_rating_ready_queue.jsonl",
+      "sha256": "4aee268e37122daec6316a01d23bfc1243b44fd5bc57190ed025078163a545e0",
+      "size_bytes": 47846510
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.csv",
+      "sha256": "2f5a2e309299fcef8e7b0541cd5a99982357c0307dfc74140ddcffd4a6139016",
+      "size_bytes": 46806143
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/merged_span_ratings_valid.jsonl",
+      "sha256": "dc55d78b11e123771348326c6a2d361a23a070c220d6fb275605ef8251aee73a",
+      "size_bytes": 93427898
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/pi_report_supporting_examples.jsonl",
+      "sha256": "f29e80fe32c24bb2b42db96fb24946329f19558d9cb34ac5788f64afb074af77",
+      "size_bytes": 33145177
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/span_rating_locked_queue.csv",
+      "sha256": "edf4eef1e15c2db7ed3c406f3042a58d0914cac4fc9883424ae476843615aa00",
+      "size_bytes": 31553469
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30/span_rating_locked_queue.jsonl",
+      "sha256": "81a7b7b03edc041ec1bc536cf3a52b4ed492b0d75e37ee475bb4cbb05df931b2",
+      "size_bytes": 50261642
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01/merged_live_scout_outcomes.jsonl",
+      "sha256": "8883909e7487b9c90f44ada4682dae23d661ee5e66876b6616dfcfb3fa540b12",
+      "size_bytes": 27968652
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/blocker_rescue_results.jsonl",
+      "sha256": "f68192ea12ab8f675cb0c19bf258e3a07720e77464374ee19f6ff2508124ccda",
+      "size_bytes": 31922320
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/cleaned_analysis_use_layer.csv",
+      "sha256": "f1351b61f7e75f73ebf8e500fcb972d5d37c8bd6a94df7ebddd91e6144b11264",
+      "size_bytes": 35753894
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03/cleaned_analysis_use_layer.jsonl",
+      "sha256": "23ffaf4625bfae5ebfa8e7587c441d4d0f23dab62b60632a7acdf6b57f98dd8f",
+      "size_bytes": 48267903
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/merged_gabriel_span_ratings.jsonl",
+      "sha256": "4ebc77f046877f46ab799d6561b8e88e73a5b7e485b6c2fc159be2bbd895249d",
+      "size_bytes": 41733523
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03/matching_prep_universe.jsonl",
+      "sha256": "9414296adfb26e4acac450a6c38917d4d23dfa21f547b6d8b65f1a2872d68405",
+      "size_bytes": 39661232
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/all_tier_matching_input_universe.jsonl",
+      "sha256": "dc428176854d83c6e891b671bd6001e747854c209e43a343abaf51d8cbad7665",
+      "size_bytes": 42094914
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/all_tier_matching_results.jsonl",
+      "sha256": "9b31dea20786dc3692dc52e2bdabce3bd4b68a650605963dd6070d23738d1a50",
+      "size_bytes": 42931088
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/canonical_ingested_span_ratings.jsonl",
+      "sha256": "e9a6e2ff834f97fe68d32557b7ab7ce3dcfc9481f3b3cdbca79f78efff86f1aa",
+      "size_bytes": 58406694
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/side_relevance_unclear_full_reconciliation_queue.csv",
+      "sha256": "f76e8c7b0fe3c12169c13483c3bf5adcc50456d855614096bada5b124fead6b6",
+      "size_bytes": 29830782
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02/side_relevance_unclear_full_reconciliation_queue.jsonl",
+      "sha256": "634df7af5dda0cf322183398e8570a367494f75e6047a23780ad08779125e62e",
+      "size_bytes": 44249705
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/merged_side_relevance_reconciliation_results.jsonl",
+      "sha256": "1c2567f5d2cd79d4e56f06a28eb30591254bc1d11b0ddffff4c1d963a33e36cd",
+      "size_bytes": 37165496
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/reconciled_side_relevance_span_layer.csv",
+      "sha256": "ce92385eca730f73f3819fcc59d899b83d251784cd5df79519805470e94e181a",
+      "size_bytes": 28047385
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/reconciled_side_relevance_span_layer.jsonl",
+      "sha256": "fd780407db8e1e1a60e5ee3b965a34e612661f5dffaa5cf2ea8b277bf6d66bb0",
+      "size_bytes": 64821858
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/side_relevance_reconciliation_deltas.jsonl",
+      "sha256": "cf16dbbb11541f057536f5b162516230efd099106eef6408e062e863e254e4f4",
+      "size_bytes": 38306318
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/side_relevance_reconciliation_locked_queue.csv",
+      "sha256": "c6051675f09593835b19a6c29c1a8048127c24ebb27fcc17641861c71ac4f145",
+      "size_bytes": 30414654
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03/side_relevance_reconciliation_locked_queue.jsonl",
+      "sha256": "3765ca4ffc61718d64082ff5aef92acc8b8b55bfc514463878404fb8e2739b42",
+      "size_bytes": 46416882
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/gabriel_rating_ready_queue.jsonl",
+      "sha256": "6cc9182bcefe4aa1992236476d6003137eef49a0985aed408242c4c4c10b6951",
+      "size_bytes": 29789330
+    },
+    {
+      "classification": "preserve_active_canonical",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/merged_compensation_evidence_spans.jsonl",
+      "sha256": "747dc8a38f14a55eedbd1e0100c83b21ab29417b572133110e51e08bdfeade69",
+      "size_bytes": 30655319
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_locked_queue.csv",
+      "sha256": "739c3150707c2c0ec3fa7f318f99329623bace5b8a96904e9ce7d8e1049fff07",
+      "size_bytes": 44703127
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28/combined_broad_exact_span_rating_17259_results.csv",
+      "sha256": "f926086b09a94386c0b4c02aa3271521cef7d69b000a558d764d05839688df6a",
+      "size_bytes": 26218143
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-RATING-INGESTION-CODIFICATION-16947-VALID-RATINGS-2026-07-28/combined_broad_rating_ingestion_codification_16947_codified_records.csv",
+      "sha256": "c0effc3f763b8954990f68588632eadcc1a1a918f914825096d9852499ead0a4",
+      "size_bytes": 29164711
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28/combined_broad_span_extraction_3815_positive_spans.csv",
+      "sha256": "da3eebb296af17bb63e2a1ef40811a4f60abfede9c8926e9c7b3d0e2a400d4b5",
+      "size_bytes": 42429291
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "docs/analysis/compensation_extraction/COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28/combined_broad_span_extraction_3815_rating_candidate_manifest.csv",
+      "sha256": "da3eebb296af17bb63e2a1ef40811a4f60abfede9c8926e9c7b3d0e2a400d4b5",
+      "size_bytes": 42429291
+    },
+    {
+      "classification": "preserve_provenance",
+      "path": "inbox/foia/ma_newton_police_cba_lris.pdf",
+      "sha256": "72ca1f50a622d8a328b7f31faf6983d21e7252602af52976c01ffc5918b2edb3",
+      "size_bytes": 43460347
+    }
+  ]
+}

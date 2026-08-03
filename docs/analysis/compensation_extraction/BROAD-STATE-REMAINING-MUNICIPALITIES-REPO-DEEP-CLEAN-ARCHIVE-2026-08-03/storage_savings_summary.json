@@ -1,0 +1,30 @@
+{
+  "ambiguous_items_preserved": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages",
+    "package-lock.json"
+  ],
+  "bytes_archived": 0,
+  "bytes_removed": 2499261775,
+  "extracted_text_bytes_preserved": 674598912,
+  "files_archived_count": 0,
+  "files_removed_manifest_entries": 168,
+  "ignored_artifact_bytes_saved": 0,
+  "ignored_artifact_size_bytes_after": 22997250048,
+  "ignored_artifact_size_bytes_before": 22997250048,
+  "largest_archived_categories": {},
+  "largest_removed_categories": {
+    "removal_candidate_cache": 14185262,
+    "removal_candidate_duplicate": 2485076513
+  },
+  "manual_review_cleanup_candidates_left_untouched": 531,
+  "payload_files_removed": 15100,
+  "preserved_active_file_count": 2527,
+  "preserved_provenance_file_count": 1547,
+  "repo_du_bytes_saved": 2543255552,
+  "repo_size_bytes_after": 67826524160,
+  "repo_size_bytes_before": 70369779712,
+  "retained_source_bytes_preserved": 22322651136,
+  "tmp_du_bytes_saved": 2528993280,
+  "tmp_size_bytes_after": 6809219072,
+  "tmp_size_bytes_before": 9338212352
+}

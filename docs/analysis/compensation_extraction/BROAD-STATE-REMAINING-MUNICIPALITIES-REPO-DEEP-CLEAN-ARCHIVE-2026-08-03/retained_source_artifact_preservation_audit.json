@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-08-03T17:51:42.038199+00:00",
+  "exists": true,
+  "passed": true,
+  "payload_actions": 0,
+  "preserved": true,
+  "referenced_artifacts_removed": 0,
+  "root": "artifacts/local_retained_sources",
+  "size_bytes_after": 22322651136,
+  "size_bytes_before": 22322651136
+}

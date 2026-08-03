@@ -1,0 +1,21 @@
+{
+  "ambiguous_user_path_touched": false,
+  "analysis_run": false,
+  "archive_payload_staged": false,
+  "causal_claim_made": false,
+  "extracted_text_payload_removed": false,
+  "final_wage_gap_claim_made": false,
+  "gabriel_api_rating_run": false,
+  "matching_run": false,
+  "national_or_prevalence_claim_made": false,
+  "normalization_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "polished_deliverable_created": false,
+  "regression_run": false,
+  "retained_source_payload_removed": false,
+  "span_extraction_run": false,
+  "text_extraction_run": false,
+  "tracked_file_removed": false,
+  "treatment_effect_run": false
+}
