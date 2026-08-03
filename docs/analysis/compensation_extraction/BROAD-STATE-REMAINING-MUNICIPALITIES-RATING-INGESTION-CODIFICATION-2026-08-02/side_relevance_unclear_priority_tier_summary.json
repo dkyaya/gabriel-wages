@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "tier_1_high_value_downstream": 6516,
+    "tier_2_manual_or_strong_support": 2175,
+    "tier_3_local_context_or_directional": 1665,
+    "tier_4_weak_reference_or_writeoff": 2824
+  },
+  "field": "reconciliation_priority_tier",
+  "total": 13180
+}

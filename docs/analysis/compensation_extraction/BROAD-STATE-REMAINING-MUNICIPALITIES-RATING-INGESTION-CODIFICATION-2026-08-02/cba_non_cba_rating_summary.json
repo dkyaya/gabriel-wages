@@ -1,0 +1,56 @@
+{
+  "group_field": "cba_non_cba_hint",
+  "groups": {
+    "cba_arbitration_factfinding_hint": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 253,
+        "local_context_only": 515,
+        "mixed_quant_qual_claim_ready": 143,
+        "qualitative_mechanism_claim_ready": 1292,
+        "quantitative_direct_text_claim_ready": 1340,
+        "quantitative_needs_normalization": 232,
+        "source_navigation_or_reference_only": 1291,
+        "weak_or_not_supported": 809
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 21,
+        "core_finding_candidate": 610,
+        "exclude_or_write_off": 1435,
+        "growth_continuity_candidate": 17,
+        "local_context_candidate": 839,
+        "manual_review_candidate": 894,
+        "mechanism_summary_candidate": 881,
+        "quantitative_normalization_candidate": 171,
+        "supporting_example_candidate": 1007
+      },
+      "source_count": 394,
+      "span_count": 5875
+    },
+    "non_cba_or_unresolved_hint": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 404,
+        "local_context_only": 692,
+        "mixed_quant_qual_claim_ready": 230,
+        "qualitative_mechanism_claim_ready": 1310,
+        "quantitative_direct_text_claim_ready": 3269,
+        "quantitative_needs_normalization": 344,
+        "source_navigation_or_reference_only": 1415,
+        "weak_or_not_supported": 1650
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 11,
+        "core_finding_candidate": 1352,
+        "exclude_or_write_off": 1997,
+        "growth_continuity_candidate": 15,
+        "local_context_candidate": 1150,
+        "manual_review_candidate": 1402,
+        "mechanism_summary_candidate": 1072,
+        "quantitative_normalization_candidate": 220,
+        "supporting_example_candidate": 2095
+      },
+      "source_count": 1418,
+      "span_count": 9314
+    }
+  },
+  "total_spans": 15189
+}

@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "high_priority_verification_ready": 11437,
+    "low_priority_verification_ready": 14,
+    "medium_priority_verification_ready": 3738
+  },
+  "field": "priority_bucket",
+  "total": 15189
+}

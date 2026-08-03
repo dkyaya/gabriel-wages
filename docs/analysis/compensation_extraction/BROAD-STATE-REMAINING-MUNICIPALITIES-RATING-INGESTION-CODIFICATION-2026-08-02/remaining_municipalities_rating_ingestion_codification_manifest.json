@@ -1,0 +1,58 @@
+{
+  "api_usage_summary_preserved_by_reference": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/api_usage_summary.json",
+  "canonical_layer_manifest": "canonical_ingested_rating_layer_manifest.json",
+  "claim_readiness_counts": {
+    "directional_hint_only": 657,
+    "local_context_only": 1207,
+    "mixed_quant_qual_claim_ready": 373,
+    "qualitative_mechanism_claim_ready": 2602,
+    "quantitative_direct_text_claim_ready": 4609,
+    "quantitative_needs_normalization": 576,
+    "source_navigation_or_reference_only": 2706,
+    "weak_or_not_supported": 2459
+  },
+  "created_at": "2026-08-02T22:50:00-04:00",
+  "decision": "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready",
+  "downstream_use_counts": {
+    "comparison_review_candidate": 32,
+    "core_finding_candidate": 1962,
+    "exclude_or_write_off": 3432,
+    "growth_continuity_candidate": 32,
+    "local_context_candidate": 1989,
+    "manual_review_candidate": 2296,
+    "mechanism_summary_candidate": 1953,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 3102
+  },
+  "duplicate_worker_incident_preserved": true,
+  "full_unclear_reconciliation_queue_count": 13180,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "input_rating_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02",
+  "input_span_directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+  "quarantine_or_error_count": 0,
+  "reconciliation_prep_status": "complete_all_unclear_queued_no_relabeling",
+  "reconciliation_priority_tier_counts": {
+    "tier_1_high_value_downstream": 6516,
+    "tier_2_manual_or_strong_support": 2175,
+    "tier_3_local_context_or_directional": 1665,
+    "tier_4_weak_reference_or_writeoff": 2824
+  },
+  "repo_cleanup_status": "complete_safe_no_durable_deletions",
+  "schema_repair_packet_count_preserved": 18,
+  "schema_version": "remaining_municipality_canonical_ingested_rating_v1",
+  "side_relevance_counts": {
+    "fire_direct": 185,
+    "mixed_direct": 3,
+    "non_safety_direct": 138,
+    "not_applicable": 995,
+    "police_direct": 667,
+    "safety_combined_direct": 21,
+    "unclear": 13180
+  },
+  "source_ratings_ingested": 1812,
+  "span_ratings_ingested": 15189,
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02"
+}

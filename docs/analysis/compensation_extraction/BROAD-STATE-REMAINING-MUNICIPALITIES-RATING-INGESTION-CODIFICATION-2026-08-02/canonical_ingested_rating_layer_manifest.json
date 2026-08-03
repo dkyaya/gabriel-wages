@@ -1,0 +1,22 @@
+{
+  "input_hashes": {
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/api_usage_summary.json": "c43a84955ac775c19366a7c088702441f16c42a18b9587eb733a3c48f917c7a3",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/merged_gabriel_source_ratings.csv": "99270ec9394ecbe7c3a693f4d70de5757b63def9050d58e7b0ffe84cea3de3be",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/merged_gabriel_span_ratings.csv": "1babea30f7652e9bc40c66a3a236754d8974d3fd2e004e25245429d4bdd47aeb",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/orchestration_integrity_repair_audit.json": "77bd3a54d2e483887372587bb60f1cd680d7773f116cb561ac76b8ca5cc22c7a",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/packet_redaction_audit.json": "6f071a67a8114869f118765d301532d3d61f8e10017face0161f17f52b8a2164",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/schema_validation_summary.json": "afd046bb30921d42ac9575d55553c600b44a74f57f239d3d263fdbd035d3666f",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/validation_report.json": "d26982e01ae654e45defd8ce20894302d2407a5c08dd122567fd1b025f42fd75",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SOURCE-REVIEW-DOWNLOAD-2026-08-02/merged_source_review_results.csv": "51f98b96ac0f3410ff6117e20613bc48bc0281d70ac730c9b8e10c6c938ca38f",
+    "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/merged_compensation_evidence_spans.csv": "a2b3d22cf19d4b917dbb898983d45182fbbc91984ed91594b06f6c5bfb43455e"
+  },
+  "quarantine_count": 0,
+  "schema_version": "remaining_municipality_canonical_ingested_rating_v1",
+  "source_count": 1812,
+  "source_csv_sha256": "ab0bd245ffab6703ea9777a459bc4a3a7bc5d482e35e09a04475a42fdbf7f8cc",
+  "source_jsonl_sha256": "5bc08d5653ce0cc6d514140ca6e37391568b9f2f48ae51a045f8610c2d2d9f61",
+  "span_count": 15189,
+  "span_csv_sha256": "e7cc3459623de3b5511f9820e9f356113914e6a17cbe76ead9f69698594909fa",
+  "span_jsonl_sha256": "e9a6e2ff834f97fe68d32557b7ab7ce3dcfc9481f3b3cdbca79f78efff86f1aa",
+  "unclear_reconciliation_queue_count": 13180
+}

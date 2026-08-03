@@ -1,0 +1,6 @@
+{
+  "quarantine_queue_sha256": "071125d4048f9002a3a7d9aee9b718166d2773a0648978f4e0508795e97f79b8",
+  "quarantine_source_count": 0,
+  "quarantine_span_count": 0,
+  "separate_from_canonical_valid_layer": true
+}

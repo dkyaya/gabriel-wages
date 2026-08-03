@@ -1,0 +1,14 @@
+{
+  "final_national_prevalence_or_causal_claim_made": false,
+  "gabriel_api_rating_run": false,
+  "normalization_or_matching_run": false,
+  "ocr_run": false,
+  "passed": true,
+  "regression_or_treatment_effect_run": false,
+  "retained_or_extracted_payload_staged": false,
+  "side_relevance_labels_changed": false,
+  "side_relevance_reconciliation_run": false,
+  "span_extraction_run": false,
+  "text_extraction_run": false,
+  "wage_gap_calculation_run": false
+}

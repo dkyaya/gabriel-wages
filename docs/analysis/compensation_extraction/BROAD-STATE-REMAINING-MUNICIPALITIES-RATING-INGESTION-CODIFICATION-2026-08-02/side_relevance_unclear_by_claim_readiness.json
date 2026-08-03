@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "directional_hint_only": 592,
+    "local_context_only": 1033,
+    "mixed_quant_qual_claim_ready": 307,
+    "qualitative_mechanism_claim_ready": 2246,
+    "quantitative_direct_text_claim_ready": 4034,
+    "quantitative_needs_normalization": 528,
+    "source_navigation_or_reference_only": 2276,
+    "weak_or_not_supported": 2164
+  },
+  "field": "claim_readiness_bucket",
+  "total": 13180
+}

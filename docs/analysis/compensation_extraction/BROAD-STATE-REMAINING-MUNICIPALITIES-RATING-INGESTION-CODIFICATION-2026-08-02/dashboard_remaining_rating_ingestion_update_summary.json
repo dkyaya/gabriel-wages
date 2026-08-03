@@ -1,0 +1,55 @@
+{
+  "claim_readiness_counts": {
+    "directional_hint_only": 657,
+    "local_context_only": 1207,
+    "mixed_quant_qual_claim_ready": 373,
+    "qualitative_mechanism_claim_ready": 2602,
+    "quantitative_direct_text_claim_ready": 4609,
+    "quantitative_needs_normalization": 576,
+    "source_navigation_or_reference_only": 2706,
+    "weak_or_not_supported": 2459
+  },
+  "current_stage": "remaining-municipality rating ingestion/codification complete",
+  "dashboard_clean_structure_preserved": true,
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "downstream_use_counts": {
+    "comparison_review_candidate": 32,
+    "core_finding_candidate": 1962,
+    "exclude_or_write_off": 3432,
+    "growth_continuity_candidate": 32,
+    "local_context_candidate": 1989,
+    "manual_review_candidate": 2296,
+    "mechanism_summary_candidate": 1953,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 3102
+  },
+  "final_pi_report_link_intact": true,
+  "global_analysis_readiness": false,
+  "global_causal_readiness": false,
+  "global_wage_gap_readiness": false,
+  "local_browser_validation": {
+    "current_preview_console_errors": 0,
+    "current_stage_visible": true,
+    "final_pi_report_link_visible": true,
+    "map_coverage_rate_only_visible": true,
+    "next_task_visible": true,
+    "status": "passed_vite_preview_playwright",
+    "technical_details_count": 3,
+    "technical_details_open_by_default": 0,
+    "unclear_queue_count_13180_visible": true,
+    "url": "http://127.0.0.1:8766/gabriel-wages/",
+    "wage_growth_continuity_module_visible": true
+  },
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+  "public_browser_validation": {
+    "status": "pending_commit_push_and_pages_deployment"
+  },
+  "quarantine_error_count": 0,
+  "rated_sources_ingested": 1812,
+  "rated_spans_ingested": 15189,
+  "reconciliation_prep_status": "complete_all_13180_queued_no_relabeling",
+  "repo_cleanup_status": "complete_safe_no_durable_deletions",
+  "scout_coverage_rate_percent": 99.9579,
+  "unclear_side_relevance_full_reconciliation_queue_count": 13180,
+  "wage_growth_continuity_module_intact": true
+}

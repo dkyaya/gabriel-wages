@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-03T02:01:51Z",
+  "generated_at": "2026-08-03T03:06:14Z",
   "data_vintage": "2026-08-02",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_remaining_municipalities_gabriel_rating_complete",
-  "current_phase": "Remaining-municipality GABRIEL rating complete",
-  "current_phase_code": "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready",
-  "current_evidence_status": "bounded_gabriel_ratings_complete_ingestion_codification_ready",
+  "stage": "broad_state_remaining_municipalities_rating_ingestion_codification_complete",
+  "current_phase": "Remaining-municipality rating ingestion/codification complete",
+  "current_phase_code": "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready",
+  "current_evidence_status": "canonical_ratings_ingested_full_unclear_side_reconciliation_ready",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -1037,15 +1037,15 @@
     }
   ],
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
-  "next_phase": "Ingest and codify only schema-valid ratings while preserving quarantine separation",
+  "next_phase": "Inspect every unclear side-relevance item using bounded context; tiering orders work but excludes nothing",
   "next_phase_sequence": [
-    "ingest and codify only valid GABRIEL rating outputs",
-    "keep packet/schema quarantines separate and reconstruct summaries from ledgers",
-    "defer normalization, matching, wage-gap estimation, regressions, and causal claims"
+    "process all 13,180 unclear side-relevance spans",
+    "relabel only when bounded metadata and context support the label",
+    "preserve or write off unrecoverable items with documented reasons"
   ],
   "regressions_status": "Deferred",
   "last_updated_commit": "98ad608",
-  "last_updated_context": "remaining_municipality_gabriel_rating_complete",
+  "last_updated_context": "remaining_municipality_rating_ingestion_codification_complete",
   "future_live_controls": [
     "stronger preflight gate",
     "compact prompts",
@@ -1187,8 +1187,8 @@
     "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 3
   },
   "actual_scout_covered_municipalities": 35574,
-  "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
-  "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+  "wage_gap_analysis_readiness": "false_pending_normalization_matching_and_valid_analysis",
+  "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
   "broad_state_4x2500_text_extraction_available": true,
   "broad_state_4x2500_text_extraction_decision": "broad_state_4x2500_text_extraction_completed_span_extraction_ready",
   "broad_state_4x2500_text_extraction_queue_count": 2940,
@@ -6317,5 +6317,48 @@
     "mechanism_summary_candidate": 1953,
     "quantitative_normalization_candidate": 391,
     "supporting_example_candidate": 3102
-  }
+  },
+  "remaining_municipality_rating_ingestion_available": true,
+  "remaining_municipality_ingested_source_count": 1812,
+  "remaining_municipality_ingested_span_count": 15189,
+  "remaining_municipality_rating_quarantine_error_count": 0,
+  "remaining_municipality_ingested_claim_readiness_counts": {
+    "directional_hint_only": 657,
+    "local_context_only": 1207,
+    "mixed_quant_qual_claim_ready": 373,
+    "qualitative_mechanism_claim_ready": 2602,
+    "quantitative_direct_text_claim_ready": 4609,
+    "quantitative_needs_normalization": 576,
+    "source_navigation_or_reference_only": 2706,
+    "weak_or_not_supported": 2459
+  },
+  "remaining_municipality_ingested_downstream_use_counts": {
+    "comparison_review_candidate": 32,
+    "core_finding_candidate": 1962,
+    "exclude_or_write_off": 3432,
+    "growth_continuity_candidate": 32,
+    "local_context_candidate": 1989,
+    "manual_review_candidate": 2296,
+    "mechanism_summary_candidate": 1953,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 3102
+  },
+  "remaining_municipality_side_relevance_counts": {
+    "fire_direct": 185,
+    "mixed_direct": 3,
+    "non_safety_direct": 138,
+    "not_applicable": 995,
+    "police_direct": 667,
+    "safety_combined_direct": 21,
+    "unclear": 13180
+  },
+  "remaining_municipality_unclear_side_reconciliation_queue_count": 13180,
+  "remaining_municipality_unclear_side_reconciliation_tier_counts": {
+    "tier_1_high_value_downstream": 6516,
+    "tier_2_manual_or_strong_support": 2175,
+    "tier_3_local_context_or_directional": 1665,
+    "tier_4_weak_reference_or_writeoff": 2824
+  },
+  "remaining_municipality_reconciliation_prep_status": "complete_all_13180_queued_no_relabeling",
+  "remaining_municipality_repo_cleanup_status": "complete_safe_no_durable_deletions"
 }

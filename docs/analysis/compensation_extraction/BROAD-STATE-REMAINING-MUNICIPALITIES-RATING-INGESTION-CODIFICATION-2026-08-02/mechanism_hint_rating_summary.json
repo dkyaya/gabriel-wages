@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "fiscal_constraint_signal": 252,
+    "market_or_comparability_pressure": 143,
+    "market_or_comparability_pressure;fiscal_constraint_signal": 3,
+    "market_or_comparability_pressure;non_safety_constraint_signal": 251,
+    "market_or_comparability_pressure;non_safety_constraint_signal;fiscal_constraint_signal": 2,
+    "missing": 6213,
+    "non_safety_constraint_signal": 5751,
+    "non_safety_constraint_signal;fiscal_constraint_signal": 199,
+    "strike_or_no_strike_constraint": 1668,
+    "strike_or_no_strike_constraint;fiscal_constraint_signal": 12,
+    "strike_or_no_strike_constraint;market_or_comparability_pressure": 3,
+    "strike_or_no_strike_constraint;market_or_comparability_pressure;non_safety_constraint_signal": 26,
+    "strike_or_no_strike_constraint;non_safety_constraint_signal": 664,
+    "strike_or_no_strike_constraint;non_safety_constraint_signal;fiscal_constraint_signal": 2
+  },
+  "field": "mechanism_source_family_hints",
+  "total": 15189
+}

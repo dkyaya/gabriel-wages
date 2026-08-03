@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "Midwest": 9022,
+    "Northeast": 3605,
+    "South": 518,
+    "West": 35
+  },
+  "field": "region",
+  "total": 13180
+}

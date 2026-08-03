@@ -1823,6 +1823,11 @@ BROAD_STATE_REMAINING_GABRIEL_RATING_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02"
 )
+BROAD_STATE_REMAINING_RATING_INGESTION_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7473,6 +7478,53 @@ def broad_state_remaining_gabriel_rating_status() -> tuple[bool, dict[str, Any]]
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_rating_ingestion_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize canonical rating ingestion and full unclear-side queue prep."""
+    directory = BROAD_STATE_REMAINING_RATING_INGESTION_DIR
+    required = (
+        directory / "remaining_municipalities_rating_ingestion_codification_manifest.json",
+        directory / "remaining_municipalities_rating_ingestion_codification_summary.json",
+        directory / "canonical_ingested_rating_layer_manifest.json",
+        directory / "side_relevance_unclear_full_reconciliation_queue_manifest.json",
+        directory / "side_relevance_unclear_reconciliation_prep_summary.json",
+        directory / "dashboard_remaining_rating_ingestion_update_summary.json",
+        directory / "repo_cleanup_audit.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, layer, queue, prep, dashboard, cleanup, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_rating_ingestion_codification_completed_side_reconciliation_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and layer.get("source_count") == 1812
+        and layer.get("span_count") == 15189
+        and layer.get("quarantine_count") == 0
+        and queue.get("queue_count") == 13180
+        and queue.get("all_unclear_included") is True
+        and queue.get("tiered_not_filtered") is True
+        and queue.get("reconciliation_or_relabeling_performed") is False
+        and prep.get("unclear_side_relevance_spans_queued") == 13180
+        and prep.get("reconciliation_or_relabeling_occurred") is False
+        and dashboard.get("dashboard_map_primary_metric") == "scout_coverage_rate"
+        and dashboard.get("global_analysis_readiness") is False
+        and dashboard.get("global_wage_gap_readiness") is False
+        and dashboard.get("global_causal_readiness") is False
+        and cleanup.get("ignored_artifact_roots_preserved") is True
+        and validation.get("all_checks_passed") is True
+        and forbidden.get("passed") is True
+        and forbidden.get("side_relevance_reconciliation_run") is False
+        and forbidden.get("normalization_or_matching_run") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality rating-ingestion package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11184,6 +11236,9 @@ def build_project_phase_summary(
     remaining_gabriel_rating_available, remaining_gabriel_rating = (
         broad_state_remaining_gabriel_rating_status()
     )
+    remaining_rating_ingestion_available, remaining_rating_ingestion = (
+        broad_state_remaining_rating_ingestion_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12930,6 +12985,41 @@ def build_project_phase_summary(
             "global_analysis_readiness": False,
             "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
             "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_rating_ingestion_available:
+        payload.update({
+            "data_vintage": "2026-08-02",
+            "stage": "broad_state_remaining_municipalities_rating_ingestion_codification_complete",
+            "current_phase": "Remaining-municipality rating ingestion/codification complete",
+            "current_phase_code": remaining_rating_ingestion["decision"],
+            "current_evidence_status": "canonical_ratings_ingested_full_unclear_side_reconciliation_ready",
+            "remaining_municipality_rating_ingestion_available": True,
+            "remaining_municipality_ingested_source_count": remaining_rating_ingestion["source_ratings_ingested"],
+            "remaining_municipality_ingested_span_count": remaining_rating_ingestion["span_ratings_ingested"],
+            "remaining_municipality_rating_quarantine_error_count": remaining_rating_ingestion["quarantine_or_error_count"],
+            "remaining_municipality_ingested_claim_readiness_counts": remaining_rating_ingestion["claim_readiness_counts"],
+            "remaining_municipality_ingested_downstream_use_counts": remaining_rating_ingestion["downstream_use_counts"],
+            "remaining_municipality_side_relevance_counts": remaining_rating_ingestion["side_relevance_counts"],
+            "remaining_municipality_unclear_side_reconciliation_queue_count": remaining_rating_ingestion["full_unclear_reconciliation_queue_count"],
+            "remaining_municipality_unclear_side_reconciliation_tier_counts": remaining_rating_ingestion["reconciliation_priority_tier_counts"],
+            "remaining_municipality_reconciliation_prep_status": remaining_rating_ingestion["reconciliation_prep_status"],
+            "remaining_municipality_repo_cleanup_status": remaining_rating_ingestion["repo_cleanup_status"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+            "next_phase": "Inspect every unclear side-relevance item using bounded context; tiering orders work but excludes nothing",
+            "next_phase_sequence": [
+                "process all 13,180 unclear side-relevance spans",
+                "relabel only when bounded metadata and context support the label",
+                "preserve or write off unrecoverable items with documented reasons",
+            ],
+            "last_updated_context": "remaining_municipality_rating_ingestion_codification_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "false_pending_normalization_matching_and_valid_analysis",
+            "causal_analysis_readiness": "false_blocked_pending_stronger_causal_design",
         })
     return payload
 

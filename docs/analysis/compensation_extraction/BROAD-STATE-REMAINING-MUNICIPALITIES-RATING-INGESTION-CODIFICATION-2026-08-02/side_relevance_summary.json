@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "fire_direct": 185,
+    "mixed_direct": 3,
+    "non_safety_direct": 138,
+    "not_applicable": 995,
+    "police_direct": 667,
+    "safety_combined_direct": 21,
+    "unclear": 13180
+  },
+  "field": "side_relevance_rating",
+  "total": 15189
+}

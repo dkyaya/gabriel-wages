@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "central": 330,
+    "moderate": 1985,
+    "none": 7477,
+    "strong": 62,
+    "weak": 3326
+  },
+  "field": "mechanism_strength_level",
+  "total": 13180
+}

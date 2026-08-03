@@ -1,0 +1,6 @@
+{
+  "large_staged_files": [],
+  "passed": true,
+  "threshold_bytes": 99614720,
+  "threshold_rationale": "below the GitHub 100 MiB hard limit with a 5 MiB safety margin; metadata-only ledgers are audited separately from forbidden payload types"
+}

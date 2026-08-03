@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "comparison_review_candidate": 27,
+    "core_finding_candidate": 1658,
+    "exclude_or_write_off": 2895,
+    "growth_continuity_candidate": 31,
+    "local_context_candidate": 1690,
+    "manual_review_candidate": 2079,
+    "mechanism_summary_candidate": 1687,
+    "quantitative_normalization_candidate": 363,
+    "supporting_example_candidate": 2750
+  },
+  "field": "downstream_use_bucket",
+  "total": 13180
+}

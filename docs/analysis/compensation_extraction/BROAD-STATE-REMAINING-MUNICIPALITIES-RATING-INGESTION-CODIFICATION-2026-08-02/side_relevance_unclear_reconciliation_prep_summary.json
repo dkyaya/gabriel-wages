@@ -1,0 +1,15 @@
+{
+  "all_unclear_items_queued": true,
+  "instruction": "Inspect every unclear item; recover police/fire/safety/non-safety/not-applicable only when bounded metadata and context support it. Preserve or write off unrecoverable items with a documented reason.",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03",
+  "priority_tier_counts": {
+    "tier_1_high_value_downstream": 6516,
+    "tier_2_manual_or_strong_support": 2175,
+    "tier_3_local_context_or_directional": 1665,
+    "tier_4_weak_reference_or_writeoff": 2824
+  },
+  "queue_tiered_but_not_filtered": true,
+  "reconciliation_or_relabeling_occurred": false,
+  "rows_with_missing_required_metadata": 0,
+  "unclear_side_relevance_spans_queued": 13180
+}

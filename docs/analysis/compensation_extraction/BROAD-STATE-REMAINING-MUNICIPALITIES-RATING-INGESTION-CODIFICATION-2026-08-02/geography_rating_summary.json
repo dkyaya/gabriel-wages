@@ -1,0 +1,102 @@
+{
+  "group_field": "region",
+  "groups": {
+    "Midwest": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 437,
+        "local_context_only": 853,
+        "mixed_quant_qual_claim_ready": 263,
+        "qualitative_mechanism_claim_ready": 1774,
+        "quantitative_direct_text_claim_ready": 3038,
+        "quantitative_needs_normalization": 349,
+        "source_navigation_or_reference_only": 1993,
+        "weak_or_not_supported": 1692
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 26,
+        "core_finding_candidate": 1315,
+        "exclude_or_write_off": 2526,
+        "growth_continuity_candidate": 28,
+        "local_context_candidate": 1345,
+        "manual_review_candidate": 1534,
+        "mechanism_summary_candidate": 1311,
+        "quantitative_normalization_candidate": 279,
+        "supporting_example_candidate": 2035
+      },
+      "source_count": 1116,
+      "span_count": 10399
+    },
+    "Northeast": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 190,
+        "local_context_only": 320,
+        "mixed_quant_qual_claim_ready": 87,
+        "qualitative_mechanism_claim_ready": 737,
+        "quantitative_direct_text_claim_ready": 1371,
+        "quantitative_needs_normalization": 181,
+        "source_navigation_or_reference_only": 630,
+        "weak_or_not_supported": 645
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 6,
+        "core_finding_candidate": 594,
+        "exclude_or_write_off": 780,
+        "growth_continuity_candidate": 3,
+        "local_context_candidate": 550,
+        "manual_review_candidate": 646,
+        "mechanism_summary_candidate": 575,
+        "quantitative_normalization_candidate": 103,
+        "supporting_example_candidate": 904
+      },
+      "source_count": 617,
+      "span_count": 4161
+    },
+    "South": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 29,
+        "local_context_only": 33,
+        "mixed_quant_qual_claim_ready": 16,
+        "qualitative_mechanism_claim_ready": 82,
+        "quantitative_direct_text_claim_ready": 191,
+        "quantitative_needs_normalization": 46,
+        "source_navigation_or_reference_only": 77,
+        "weak_or_not_supported": 118
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 46,
+        "exclude_or_write_off": 120,
+        "local_context_candidate": 92,
+        "manual_review_candidate": 110,
+        "mechanism_summary_candidate": 65,
+        "quantitative_normalization_candidate": 6,
+        "supporting_example_candidate": 153
+      },
+      "source_count": 77,
+      "span_count": 592
+    },
+    "West": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 1,
+        "local_context_only": 1,
+        "mixed_quant_qual_claim_ready": 7,
+        "qualitative_mechanism_claim_ready": 9,
+        "quantitative_direct_text_claim_ready": 9,
+        "source_navigation_or_reference_only": 6,
+        "weak_or_not_supported": 4
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 7,
+        "exclude_or_write_off": 6,
+        "growth_continuity_candidate": 1,
+        "local_context_candidate": 2,
+        "manual_review_candidate": 6,
+        "mechanism_summary_candidate": 2,
+        "quantitative_normalization_candidate": 3,
+        "supporting_example_candidate": 10
+      },
+      "source_count": 2,
+      "span_count": 37
+    }
+  },
+  "total_spans": 15189
+}

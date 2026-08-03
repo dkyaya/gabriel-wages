@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "direct_comparison_ready": 8,
+    "explicit_cross_side_comparison_possible": 7,
+    "named_position_possible": 5,
+    "none": 15074,
+    "same_source_possible": 8,
+    "weak_context_only": 87
+  },
+  "field": "comparison_potential_rating",
+  "total": 15189
+}

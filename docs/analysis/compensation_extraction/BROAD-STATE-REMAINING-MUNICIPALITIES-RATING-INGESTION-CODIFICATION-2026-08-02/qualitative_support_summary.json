@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "direct": 482,
+    "moderate": 2440,
+    "none": 7483,
+    "strong": 97,
+    "weak": 4687
+  },
+  "field": "qualitative_support_level",
+  "total": 15189
+}

@@ -1,0 +1,16 @@
+{
+  "ambiguity_policy": "keep and document",
+  "consolidated": [],
+  "ignored_artifact_roots_preserved": true,
+  "kept": [
+    "all prior durable rating/span ledgers",
+    "retained-source artifact directory",
+    "extracted-text artifact directory",
+    "prior relay ZIPs",
+    "unrelated pre-existing untracked rendered_pages directory",
+    "unrelated pre-existing package-lock.json"
+  ],
+  "note": "Canonical summaries were reconstructed in the new output directory; no prior summary or durable ledger was deleted.",
+  "removed": [],
+  "status": "complete_safe_no_durable_deletions"
+}
