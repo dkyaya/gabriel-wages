@@ -1818,6 +1818,11 @@ BROAD_STATE_REMAINING_SPAN_EXTRACTION_DIR = (
     / "compensation_extraction"
     / "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02"
 )
+BROAD_STATE_REMAINING_GABRIEL_RATING_DIR = (
+    ANALYSIS_DIR
+    / "compensation_extraction"
+    / "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02"
+)
 
 SCOUT_CHECKPOINT_TARGET = 2_000
 COORDINATED_WAVE_SIZE = 150
@@ -7418,6 +7423,56 @@ def broad_state_remaining_span_extraction_status() -> tuple[bool, dict[str, Any]
     return True, {**summary, **dashboard, "artifact_directory": str(directory)}
 
 
+def broad_state_remaining_gabriel_rating_status() -> tuple[bool, dict[str, Any]]:
+    """Recognize completed bounded GABRIEL rating for the remaining wave."""
+    directory = BROAD_STATE_REMAINING_GABRIEL_RATING_DIR
+    required = (
+        directory / "remaining_municipalities_gabriel_rating_manifest.json",
+        directory / "remaining_municipalities_gabriel_rating_summary.json",
+        directory / "gabriel_rating_dry_run_report.json",
+        directory / "gabriel_rating_transport_preflight.json",
+        directory / "schema_validation_summary.json",
+        directory / "packet_redaction_audit.json",
+        directory / "dashboard_remaining_gabriel_rating_update_summary.json",
+        directory / "validation_report.json",
+        directory / "forbidden_action_audit.json",
+    )
+    if not all(path.exists() for path in required):
+        return False, {}
+    manifest, summary, dry, transport, schema, redaction, dashboard, validation, forbidden = (
+        read_json(path) for path in required
+    )
+    decision = "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready"
+    gates = (
+        manifest.get("decision") == decision
+        and summary.get("decision") == decision
+        and manifest.get("input_source_count") == 1812
+        and manifest.get("input_span_count") == 15189
+        and sum(manifest.get("lane_sizes", {}).values()) == 1812
+        and summary.get("rated_source_count", 0) + summary.get("quarantine_source_count", 0) == 1812
+        and summary.get("rated_span_count", 0) + summary.get("quarantine_span_count", 0) == 15189
+        and dry.get("passed") is True
+        and dry.get("model_api_calls") == 0
+        and transport.get("live_smoke_passed") is True
+        and transport.get("live_lanes_authorized") is True
+        and schema.get("passed") is True
+        and redaction.get("passed") is True
+        and dashboard.get("map_primary_metric") == "scout_coverage_rate"
+        and (
+            validation.get("all_checks_passed") is True
+            or validation.get("core_checks_passed") is True
+            or validation.get("status") == "pending_final_validation"
+        )
+        and forbidden.get("passed") is True
+        and forbidden.get("ingestion_or_codification_occurred") is False
+        and forbidden.get("normalization_or_matching_occurred") is False
+        and forbidden.get("global_readiness_advanced") is False
+    )
+    if not gates:
+        raise ValueError("remaining-municipality GABRIEL-rating package fails dashboard gates")
+    return True, {**summary, **dashboard, "artifact_directory": str(directory)}
+
+
 def broad_state_4x2500_live_state_overlay() -> dict[str, dict[str, int]]:
     """Return actual per-state 4x2500 outcomes; never include planned rows."""
     available, status = broad_state_4x2500_live_scout_status()
@@ -11126,6 +11181,9 @@ def build_project_phase_summary(
     remaining_span_extraction_available, remaining_span_extraction = (
         broad_state_remaining_span_extraction_status()
     )
+    remaining_gabriel_rating_available, remaining_gabriel_rating = (
+        broad_state_remaining_gabriel_rating_status()
+    )
     if broad_scout_completed:
         broad_state_rows = read_csv(BROAD_STATE_SOURCE_SCOUT_STATE_COVERAGE_PATH)
         covered += as_int(broad_scout["parseable_target_count"])
@@ -12834,6 +12892,39 @@ def build_project_phase_summary(
                 "defer OCR, ingestion, normalization, matching, and final analysis",
             ],
             "last_updated_context": "remaining_municipality_span_extraction_complete",
+            "dashboard_map_filter": "scout_coverage_rate_only",
+            "dashboard_map_primary_metric": "scout_coverage_rate",
+            "global_analysis_readiness": False,
+            "wage_gap_analysis_readiness": "bounded_growth_continuity_only_final_estimation_blocked",
+            "causal_analysis_readiness": "blocked_pending_stronger_causal_design",
+        })
+    if remaining_gabriel_rating_available:
+        payload.update({
+            "data_vintage": "2026-08-02",
+            "stage": "broad_state_remaining_municipalities_gabriel_rating_complete",
+            "current_phase": "Remaining-municipality GABRIEL rating complete",
+            "current_phase_code": remaining_gabriel_rating["decision"],
+            "current_evidence_status": "bounded_gabriel_ratings_complete_ingestion_codification_ready",
+            "remaining_municipality_gabriel_rating_available": True,
+            "remaining_municipality_gabriel_ready_source_count": remaining_gabriel_rating["input_sources"],
+            "remaining_municipality_gabriel_ready_span_count": remaining_gabriel_rating["input_spans"],
+            "remaining_municipality_gabriel_rated_source_count": remaining_gabriel_rating["rated_source_count"],
+            "remaining_municipality_gabriel_rated_span_count": remaining_gabriel_rating["rated_span_count"],
+            "remaining_municipality_gabriel_quarantine_source_count": remaining_gabriel_rating["quarantine_source_count"],
+            "remaining_municipality_gabriel_quarantine_span_count": remaining_gabriel_rating["quarantine_span_count"],
+            "remaining_municipality_gabriel_claim_readiness_counts": remaining_gabriel_rating["claim_readiness_counts"],
+            "remaining_municipality_gabriel_downstream_use_counts": remaining_gabriel_rating["downstream_use_counts"],
+            "remaining_unscouted_eligible_municipality_count": 15,
+            "actual_scout_covered_municipalities": 35574,
+            "actual_scout_coverage_rate_percent": 99.9579,
+            "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02",
+            "next_phase": "Ingest and codify only schema-valid ratings while preserving quarantine separation",
+            "next_phase_sequence": [
+                "ingest and codify only valid GABRIEL rating outputs",
+                "keep packet/schema quarantines separate and reconstruct summaries from ledgers",
+                "defer normalization, matching, wage-gap estimation, regressions, and causal claims",
+            ],
+            "last_updated_context": "remaining_municipality_gabriel_rating_complete",
             "dashboard_map_filter": "scout_coverage_rate_only",
             "dashboard_map_primary_metric": "scout_coverage_rate",
             "global_analysis_readiness": False,

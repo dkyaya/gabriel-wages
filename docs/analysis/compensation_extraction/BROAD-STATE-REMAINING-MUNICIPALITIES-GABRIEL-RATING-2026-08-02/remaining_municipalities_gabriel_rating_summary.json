@@ -1,0 +1,1138 @@
+{
+  "api_usage": {
+    "backend": "huit_openai_responses_direct_sdk",
+    "credential_values_logged": 0,
+    "duplicate_worker_api_executions_excluded_from_canonical_usage": 290,
+    "input_tokens": 4995778,
+    "model_counts": {
+      "gpt-5.4-nano": 2082
+    },
+    "output_tokens": 4122241,
+    "raw_prompts_saved": 0,
+    "raw_responses_saved": 0,
+    "request_attempt_count": 2082,
+    "retry_attempts": 169,
+    "schema_valid_attempts": 1812,
+    "successful_transport_attempts": 2080,
+    "total_tokens": 9118019
+  },
+  "claim_readiness_counts": {
+    "directional_hint_only": 657,
+    "local_context_only": 1207,
+    "mixed_quant_qual_claim_ready": 373,
+    "qualitative_mechanism_claim_ready": 2602,
+    "quantitative_direct_text_claim_ready": 4609,
+    "quantitative_needs_normalization": 576,
+    "source_navigation_or_reference_only": 2706,
+    "weak_or_not_supported": 2459
+  },
+  "comparison_potential_counts": {
+    "direct_comparison_ready": 8,
+    "explicit_cross_side_comparison_possible": 7,
+    "named_position_possible": 5,
+    "none": 15074,
+    "same_source_possible": 8,
+    "weak_context_only": 87
+  },
+  "decision": "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready",
+  "downstream_use_counts": {
+    "comparison_review_candidate": 32,
+    "core_finding_candidate": 1962,
+    "exclude_or_write_off": 3432,
+    "growth_continuity_candidate": 32,
+    "local_context_candidate": 1989,
+    "manual_review_candidate": 2296,
+    "mechanism_summary_candidate": 1953,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 3102
+  },
+  "global_analysis_readiness": false,
+  "input_sources": 1812,
+  "input_spans": 15189,
+  "lane_sizes": {
+    "gabriel_rating_lane_001": 363,
+    "gabriel_rating_lane_002": 363,
+    "gabriel_rating_lane_003": 362,
+    "gabriel_rating_lane_004": 362,
+    "gabriel_rating_lane_005": 362
+  },
+  "mechanism_strength_counts": {
+    "central": 401,
+    "moderate": 2311,
+    "none": 8647,
+    "strong": 75,
+    "weak": 3755
+  },
+  "operational_integrity_incident": {
+    "accepted_canonical_output_discarded": false,
+    "accepted_packets_redundantly_executed": 290,
+    "canonical_packet_count": 362,
+    "canonical_span_rating_count": 2996,
+    "canonicalization_rule": "retain earliest schema-valid terminal outcome per locked packet; retain its exact span ratings and request-attempt group",
+    "detected_at": "2026-08-03T01:55:36.011102+00:00",
+    "duplicate_packet_group_count": 290,
+    "extra_terminal_outcome_count_removed": 290,
+    "forbidden_analytical_or_payload_action_occurred": false,
+    "incident_type": "duplicate_worker_execution_after_supervisor_ownership_loss",
+    "lane_id": "gabriel_rating_lane_004",
+    "locked_queue_changed": false,
+    "operational_no_rerun_rule_violated": true,
+    "repair_completed_at": "2026-08-03T01:55:36.011104+00:00",
+    "repair_status": "passed_canonical_outputs_unique"
+  },
+  "packet_count": 1812,
+  "qualitative_support_counts": {
+    "direct": 482,
+    "moderate": 2440,
+    "none": 7483,
+    "strong": 97,
+    "weak": 4687
+  },
+  "quantitative_support_counts": {
+    "direct": 4558,
+    "moderate": 409,
+    "none": 9126,
+    "strong": 51,
+    "weak": 1045
+  },
+  "quarantine_source_count": 0,
+  "quarantine_span_count": 0,
+  "rated_source_count": 1812,
+  "rated_span_count": 15189,
+  "schema_repair_packet_count": 18,
+  "schema_validation": {
+    "expected_sources": 1812,
+    "expected_spans": 15189,
+    "invalid_objects_in_clean_ledgers": 0,
+    "passed": true,
+    "quarantine_source_ratings": 0,
+    "quarantine_spans": 0,
+    "terminal_source_ratings": 1812,
+    "terminal_span_count": 15189,
+    "valid_rating_objects_schema_valid": 15189,
+    "valid_source_ratings": 1812,
+    "valid_span_ratings": 15189
+  },
+  "side_relevance_counts": {
+    "fire_direct": 185,
+    "mixed_direct": 3,
+    "non_safety_direct": 138,
+    "not_applicable": 995,
+    "police_direct": 667,
+    "safety_combined_direct": 21,
+    "unclear": 13180
+  },
+  "task_id": "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02",
+  "top_candidates": {
+    "comparison_review_candidate": [
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Elyria",
+        "rating_id": "BRMGRT-20260802-5d5bbf7f2bc13ee8d46daf49",
+        "retained_source_id": "RMSRD-20260802-469d28fb5640ba578945",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-8d91d680a0347b80b88980fa",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Shelby",
+        "rating_id": "BRMGRT-20260802-95ddf8363c870fe11ab28da4",
+        "retained_source_id": "RMSRD-20260802-bbe7539fc24eff58f149",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-df08bd6d1e0568863ed33660",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "quant_position_classification_pay_band",
+        "municipality": "Wadsworth",
+        "rating_id": "BRMGRT-20260802-adb261a6b667100831e3f71c",
+        "retained_source_id": "RMSRD-20260802-d742162988835968b97d",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-3b0104c445ec5d808ce3a13b",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_budget_or_pay_plan_amount",
+        "municipality": "Minong",
+        "rating_id": "BRMGRT-20260802-c46a5d755df1415860f8b44a",
+        "retained_source_id": "RMSRD-20260802-afb55b9cbeccfa549acf",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-e2bfd00a36045d9c8ac3de7b",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_cpi_indexed_adjustment",
+        "municipality": "Mantorville",
+        "rating_id": "BRMGRT-20260802-cc853fc8cc94656e003e9ea7",
+        "retained_source_id": "RMSRD-20260802-3df6c8a5f616eb28ff4a",
+        "source_family": "personnel_policy",
+        "span_id": "BRMSPAN-20260802-d177f70ec697ab0a3915b303",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Corning",
+        "rating_id": "BRMGRT-20260802-0af061833b2446287f749128",
+        "retained_source_id": "RMSRD-20260802-9c6a8889b3275eff23e1",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-f6f549402711b6c7e44e4f8e",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_market_recruitment_retention_pressure",
+        "municipality": "Milton",
+        "rating_id": "BRMGRT-20260802-0fcdaf68306b57bec9fba348",
+        "retained_source_id": "RMSRD-20260802-d68e68e0ec6dbf0d7bad",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-bace8b5988cfa527c8351db1",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Milton",
+        "rating_id": "BRMGRT-20260802-1b26ac3b39fbf958120dc3ef",
+        "retained_source_id": "RMSRD-20260802-d68e68e0ec6dbf0d7bad",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-8abc2f8343e849d39215757c",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Corning",
+        "rating_id": "BRMGRT-20260802-220937d96eaf5fdbb1089a74",
+        "retained_source_id": "RMSRD-20260802-5a0cebb79452466bb4f9",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-6029bace8da1d7a732711ed1",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Plymouth",
+        "rating_id": "BRMGRT-20260802-505bbd150afc844c889252de",
+        "retained_source_id": "RMSRD-20260802-6efafcac094d6cbd13ed",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-9df3b16e6029358eb5eceabf",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_non_base_compensation_mechanism",
+        "municipality": "Waupun",
+        "rating_id": "BRMGRT-20260802-5868361d797705b4b7daff2f",
+        "retained_source_id": "RMSRD-20260802-16c3368620e557fd6f09",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-abe3f4b17ca23bb4ff824096",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Milton",
+        "rating_id": "BRMGRT-20260802-58bc29273cb960c27ffdad5c",
+        "retained_source_id": "RMSRD-20260802-d68e68e0ec6dbf0d7bad",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-fd7a5d4b31994999b11bf14d",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Athens",
+        "rating_id": "BRMGRT-20260802-66961c0b8083e7885d03a3ee",
+        "retained_source_id": "RMSRD-20260802-fd7174b8933bf0eca5aa",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-645cbd4594da926b697f3e82",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "qual_other_pay_setting_mechanism",
+        "municipality": "Tomah",
+        "rating_id": "BRMGRT-20260802-672831e22df75b52cbfeb796",
+        "retained_source_id": "RMSRD-20260802-9dd0d6a8ddf98b02e568",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-ca45be7d26cfe54d2c03e478",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Perry",
+        "rating_id": "BRMGRT-20260802-85cce14b8132087523344626",
+        "retained_source_id": "RMSRD-20260802-f77c695ac77c94024c09",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-5f5832d181d7bc711d5ee1a6",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Milton",
+        "rating_id": "BRMGRT-20260802-8b85adb2e83a8e8a0f0e464f",
+        "retained_source_id": "RMSRD-20260802-d68e68e0ec6dbf0d7bad",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-bc99f4906f18ac25844eb1ce",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Caledonia",
+        "rating_id": "BRMGRT-20260802-8b99ecf5e77775ea521fe7fc",
+        "retained_source_id": "RMSRD-20260802-2cc70d1c166ccc6b5f02",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-8e6cd527fb497b153cceafd2",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_collective_bargaining",
+        "municipality": "Wadsworth",
+        "rating_id": "BRMGRT-20260802-9196082a4721ba077389514c",
+        "retained_source_id": "RMSRD-20260802-99f8d61eb7b388fbf1ca",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-258699563820cb3413d7c6fa",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_comparability_or_parity_language",
+        "municipality": "Athens",
+        "rating_id": "BRMGRT-20260802-a373552e0dcb1696b289309b",
+        "retained_source_id": "RMSRD-20260802-fd7174b8933bf0eca5aa",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-6771186d5862822c5f843a57",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_other_pay_setting_mechanism",
+        "municipality": "Dunn",
+        "rating_id": "BRMGRT-20260802-a764089ad0730aef495d7059",
+        "retained_source_id": "RMSRD-20260802-11b58c3ff3ad2751768c",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-7a86f9745c917b07b6d0522a",
+        "state": "WI"
+      }
+    ],
+    "core_finding_candidate": [
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Amsterdam",
+        "rating_id": "BRMGRT-20260802-00013e257c53d628db4265f7",
+        "retained_source_id": "RMSRD-20260802-b9f5cab85ed38417aa73",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-9ffe22344cc8ba1470be60ee",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Hempfield",
+        "rating_id": "BRMGRT-20260802-0008e6a2106ccbb4c0705428",
+        "retained_source_id": "RMSRD-20260802-ad010ab56612cfd67a52",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-557331a63e171ef522e3d71f",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_budget_or_pay_plan_amount",
+        "municipality": "Cussewago",
+        "rating_id": "BRMGRT-20260802-000b1ec05c98296b87744798",
+        "retained_source_id": "RMSRD-20260802-91f399e7eaa8c69bb4e5",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-8acf30c415b1094213b6583b",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "West Nottingham",
+        "rating_id": "BRMGRT-20260802-000cb6ad908e586c11c94a89",
+        "retained_source_id": "RMSRD-20260802-fde3c6ae7e28cedaaa68",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-ec235aea821427ea3cd7eccc",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_allowance_or_reimbursement",
+        "municipality": "Springport",
+        "rating_id": "BRMGRT-20260802-001aa50d96609c4463fa9805",
+        "retained_source_id": "RMSRD-20260802-b723c076186bf1d47e05",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-7ee710b50b56a605d99038d3",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Franklin",
+        "rating_id": "BRMGRT-20260802-0052b58496765039de4e798c",
+        "retained_source_id": "RMSRD-20260802-c307d635d6f0df4f7886",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-029f4c81ffec46c9ac9fe7b1",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Denning",
+        "rating_id": "BRMGRT-20260802-007541d31b23912875f0d842",
+        "retained_source_id": "RMSRD-20260802-4105488b43b216accf6e",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-7e224fcfb0da7ad85603a3e7",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Mount Vernon",
+        "rating_id": "BRMGRT-20260802-007f79eab669cf73f95c2fca",
+        "retained_source_id": "RMSRD-20260802-d39af9b8de727da06a4b",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-ca92db785bbf829d6559e8ff",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Foster",
+        "rating_id": "BRMGRT-20260802-00aea00a8c3c7c76c6d49d49",
+        "retained_source_id": "RMSRD-20260802-6d45f688d29e2e292899",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-2b1c849bfd82617ee65c918b",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Carp Lake",
+        "rating_id": "BRMGRT-20260802-00c848de675fcf31f91cf5e8",
+        "retained_source_id": "RMSRD-20260802-2a1ab457e46deb5679e3",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-434b581ea2b8240712d84339",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Taylorville",
+        "rating_id": "BRMGRT-20260802-00d2c0de4184a72525a56382",
+        "retained_source_id": "RMSRD-20260802-e8b867566ca0039d6d6b",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-fe698f51d3091511740bbba2",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Gresham",
+        "rating_id": "BRMGRT-20260802-018c69b9f88f9e3c969a8bbb",
+        "retained_source_id": "RMSRD-20260802-09da655ed6158503c435",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-2938f47e4dd66eafed397832",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Benezette",
+        "rating_id": "BRMGRT-20260802-018e6050e7bd0598c6e038d0",
+        "retained_source_id": "RMSRD-20260802-cc8dc0a6c1e46c3b3128",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-a1234a2214df334a0a642ba3",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Wadsworth",
+        "rating_id": "BRMGRT-20260802-01b84ff0213f4c2d214f63db",
+        "retained_source_id": "RMSRD-20260802-99f8d61eb7b388fbf1ca",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-24a444cf4251af0ce8bfd507",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Nottawa",
+        "rating_id": "BRMGRT-20260802-01ce884e81ace9ad7081fc07",
+        "retained_source_id": "RMSRD-20260802-2d1bb155c413345c1d8b",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-a18a193262f07b4afbf3ff10",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_allowance_or_reimbursement",
+        "municipality": "Delaware",
+        "rating_id": "BRMGRT-20260802-01e75049f452fc5729bb5a00",
+        "retained_source_id": "RMSRD-20260802-4f755739cace3dc17236",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-d15a29db210b550af8ff0cf5",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Northfield Center",
+        "rating_id": "BRMGRT-20260802-01f19e57be89ea67e649984b",
+        "retained_source_id": "RMSRD-20260802-d5c0500801fd0bc986fa",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-a774c5664bba7183dd8fa93e",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Hardenburgh",
+        "rating_id": "BRMGRT-20260802-022baf5e30d60569f9650db5",
+        "retained_source_id": "RMSRD-20260802-4a69c6782b1e95f61b3a",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-2c4764dce58909cfd854646f",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Hiram",
+        "rating_id": "BRMGRT-20260802-02876c3a665b4aac79313fb8",
+        "retained_source_id": "RMSRD-20260802-a3d1bf0378afbe6846a5",
+        "source_family": "other_local_government_pay_policy",
+        "span_id": "BRMSPAN-20260802-df99f75041c95b1fbce8daad",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "South Beaver",
+        "rating_id": "BRMGRT-20260802-02b1e826ce3eb97863303392",
+        "retained_source_id": "RMSRD-20260802-fc0a00a0086e3787b5d7",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-9ad3d5cdf14625335723ec68",
+        "state": "PA"
+      }
+    ],
+    "growth_continuity_candidate": [
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Green",
+        "rating_id": "BRMGRT-20260802-39b761100fd848515fa260d9",
+        "retained_source_id": "RMSRD-20260802-0a1aca7944814672c4d9",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-c6400b9e5dc7a0176795d5cb",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Dodge",
+        "rating_id": "BRMGRT-20260802-5995b9375d953ddb45d6946a",
+        "retained_source_id": "RMSRD-20260802-d8f92e446593b8e77083",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-f2f81405ca6693d4e46b819a",
+        "state": "KS"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Fairfield",
+        "rating_id": "BRMGRT-20260802-6792747c83f77199966d9c9c",
+        "retained_source_id": "RMSRD-20260802-03e2759c9734230e3f3c",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-cea63b5ba9e7c8e4d7ac8a18",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Dodge",
+        "rating_id": "BRMGRT-20260802-6c014e9350e671de314f94b7",
+        "retained_source_id": "RMSRD-20260802-d8f92e446593b8e77083",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-6371c2d8907dc5c4929c238e",
+        "state": "KS"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_budget_or_pay_plan_amount",
+        "municipality": "Winneconne",
+        "rating_id": "BRMGRT-20260802-710a51ce80af1c9a9f0bfb18",
+        "retained_source_id": "RMSRD-20260802-8a02fd4979c0804b2c0e",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-7ecc7c788005c8a074b9fb3d",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Green",
+        "rating_id": "BRMGRT-20260802-9631737d3b86962a1dd48f5f",
+        "retained_source_id": "RMSRD-20260802-0a1aca7944814672c4d9",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-b5854fe5bbb5f3b270548678",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Kirkwood",
+        "rating_id": "BRMGRT-20260802-ac64c335864144903640c36c",
+        "retained_source_id": "RMSRD-20260802-191564c2b768a94becc2",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-61aa13f98f3e8a5ffd44295f",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Dodge",
+        "rating_id": "BRMGRT-20260802-cc60276499b9088cce5223d6",
+        "retained_source_id": "RMSRD-20260802-d8f92e446593b8e77083",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-32f88f832ef4ea7bb371eb2d",
+        "state": "KS"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Fairfield",
+        "rating_id": "BRMGRT-20260802-db6c8d893a18b223c3659795",
+        "retained_source_id": "RMSRD-20260802-03e2759c9734230e3f3c",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-52b7c9a3385cc3291126a8d2",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_market_recruitment_retention_pressure",
+        "municipality": "Union Gap",
+        "rating_id": "BRMGRT-20260802-13ffa3a10a6b284bb5cb0996",
+        "retained_source_id": "RMSRD-20260802-2de9a9d0a0345d47d0bf",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-7667339fc6b2233a52cf2901",
+        "state": "WA"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_collective_bargaining",
+        "municipality": "Ticonderoga",
+        "rating_id": "BRMGRT-20260802-14f4a9771702afb3cb64ca26",
+        "retained_source_id": "RMSRD-20260802-c016b6593a88c2dcb884",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-6c7cb89679c791932e72f980",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "qual_ordinance_or_council_adoption",
+        "municipality": "Benson",
+        "rating_id": "BRMGRT-20260802-432290734e196a636652f4a1",
+        "retained_source_id": "RMSRD-20260802-ce11189f174d0f45fabf",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-8175a9e38873240b4a0eb960",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_ordinance_or_council_adoption",
+        "municipality": "Oronoco",
+        "rating_id": "BRMGRT-20260802-56db50e38825dcff34f91648",
+        "retained_source_id": "RMSRD-20260802-c8629d6ec06fa1b560c4",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-3d7a39b3e511e8a15f0ce4ca",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_collective_bargaining",
+        "municipality": "Upper Mount Bethel",
+        "rating_id": "BRMGRT-20260802-90aa5631d54c73fc35d8c7a3",
+        "retained_source_id": "RMSRD-20260802-72ceddc7596944ae704b",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-88261e71bf9343f7180721b7",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "qual_retroactivity_or_implementation_timing",
+        "municipality": "Washington",
+        "rating_id": "BRMGRT-20260802-d3bbfecfe05ce98613cf66f9",
+        "retained_source_id": "RMSRD-20260802-6c72e5c71faba30d79fe",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-e716abc28d13ff53f6cace18",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "qual_retroactivity_or_implementation_timing",
+        "municipality": "Fairfield",
+        "rating_id": "BRMGRT-20260802-d4f64e094c524670efb917e7",
+        "retained_source_id": "RMSRD-20260802-03e2759c9734230e3f3c",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-2e6ec01a2c4964ed1353ba9b",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "qual_retroactivity_or_implementation_timing",
+        "municipality": "Bedford Park",
+        "rating_id": "BRMGRT-20260802-eae7b7d035c0bb1de944cf39",
+        "retained_source_id": "RMSRD-20260802-7505080050f6ff6db05d",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-aac37c264d5e6575ef1c70d4",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "directional_hint_only",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Carrollton",
+        "rating_id": "BRMGRT-20260802-21e9eab6f5e4219d9d8c5f47",
+        "retained_source_id": "RMSRD-20260802-46368518720a683d41cc",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-c973c6a11550f31ec0f2785a",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Amherst",
+        "rating_id": "BRMGRT-20260802-2383690d3adfd8d83c52922f",
+        "retained_source_id": "RMSRD-20260802-491976a71841f55598f6",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-4ac987f7cf7d8b5eaff8d794",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Bay",
+        "rating_id": "BRMGRT-20260802-36b7a74f29d18e9e27469d49",
+        "retained_source_id": "RMSRD-20260802-e7363f570a0328b75fe3",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-d941996c0f0baaad9dfb1447",
+        "state": "MI"
+      }
+    ],
+    "mechanism_summary_candidate": [
+      {
+        "claim_readiness_bucket": "quantitative_needs_normalization",
+        "evidence_category": "quant_overtime_or_holiday_rate",
+        "municipality": "Cumberland",
+        "rating_id": "BRMGRT-20260802-0052b2a25e9fa077af696987",
+        "retained_source_id": "RMSRD-20260802-597afc21f2ae981ab260",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-138bda085ed058e79cccd9f0",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Victory",
+        "rating_id": "BRMGRT-20260802-00864730967d8119a411880c",
+        "retained_source_id": "RMSRD-20260802-4b33e4aa28ea2db77ca4",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-b3fc809a3c331db1a85e6cef",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Mount Vernon",
+        "rating_id": "BRMGRT-20260802-00da00abfe11f4f3d80f76b6",
+        "retained_source_id": "RMSRD-20260802-dd17cbd73434df292f07",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-ba044e2d32f6005205747dfc",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "West Brownsville",
+        "rating_id": "BRMGRT-20260802-02e0287432daf8a5c24cfdd9",
+        "retained_source_id": "RMSRD-20260802-2b2d09a58be1af48e7c0",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-98362856f91c793b3ab37736",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Marysville",
+        "rating_id": "BRMGRT-20260802-078328f348f4e445bd52f673",
+        "retained_source_id": "RMSRD-20260802-4237cdd0f75b49b855fb",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-c57b2671b7760947f7e63c0c",
+        "state": "KS"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Ford Heights",
+        "rating_id": "BRMGRT-20260802-079e98487aec69dc45a661fb",
+        "retained_source_id": "RMSRD-20260802-a3dbbe76c422b4791c70",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-3cedbc4f448780ca96cbc92b",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "qualitative_mechanism_claim_ready",
+        "evidence_category": "quant_overtime_or_holiday_rate",
+        "municipality": "Pentland",
+        "rating_id": "BRMGRT-20260802-0d704ad91220ceacc8460c2e",
+        "retained_source_id": "RMSRD-20260802-7f37f9c3ef3f523aa41c",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-a6cae6c8f4e725df55bb09a6",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_cpi_indexed_adjustment",
+        "municipality": "Mantorville",
+        "rating_id": "BRMGRT-20260802-128803ff0e85a81a05974266",
+        "retained_source_id": "RMSRD-20260802-3df6c8a5f616eb28ff4a",
+        "source_family": "personnel_policy",
+        "span_id": "BRMSPAN-20260802-89a3529aa8fc00e2668af343",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Mineral Point",
+        "rating_id": "BRMGRT-20260802-1bd83133818424ec306cc969",
+        "retained_source_id": "RMSRD-20260802-df17f4f8cb508dae8b25",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-ab962368167929f130b7d36e",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_cpi_indexed_adjustment",
+        "municipality": "Decatur",
+        "rating_id": "BRMGRT-20260802-1d002ade433471ea0face244",
+        "retained_source_id": "RMSRD-20260802-24cd7e167bbdc5b3bd85",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-997c50a116b7e5a03898ef57",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "East Berlin",
+        "rating_id": "BRMGRT-20260802-1db6508529e67db99ce94703",
+        "retained_source_id": "RMSRD-20260802-fab3c13188e11b27b4a9",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-c644ee4985added38dfe6e03",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Caratunk",
+        "rating_id": "BRMGRT-20260802-1e36bfd7f820e48e9ec8ddfa",
+        "retained_source_id": "RMSRD-20260802-60b14b100e1b2b17d74a",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-94b89e90e8da600c41074361",
+        "state": "ME"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_cpi_indexed_adjustment",
+        "municipality": "Lamberton",
+        "rating_id": "BRMGRT-20260802-1ebe41cdbf857a31ee4d055b",
+        "retained_source_id": "RMSRD-20260802-e77f5c227eddf79cd746",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-563fe9bc587c9ebef6c268cd",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Bedford",
+        "rating_id": "BRMGRT-20260802-20e247bfe3a35893e2e202b7",
+        "retained_source_id": "RMSRD-20260802-5e9dc1d6cc48b4647eaf",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-e224bc2b9af2ae31c1259d0b",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Clay",
+        "rating_id": "BRMGRT-20260802-214adcc1aad181ad0bca3266",
+        "retained_source_id": "RMSRD-20260802-2d68faed07f44fdd713c",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-917d8fed2c5fa97116d526fa",
+        "state": "MO"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Rye",
+        "rating_id": "BRMGRT-20260802-21af8d46228c11e2adc64afd",
+        "retained_source_id": "RMSRD-20260802-8c5d0151e748d50ce09e",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-b3e930b6e2bd4fc73a1d431c",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Jefferson",
+        "rating_id": "BRMGRT-20260802-23308bc6778814f8102c5522",
+        "retained_source_id": "RMSRD-20260802-e1d06edb5d23939a64c2",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-51c740aee7a4d2bc289c9769",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Jackson",
+        "rating_id": "BRMGRT-20260802-23f831bcae6989b3d92cb0bf",
+        "retained_source_id": "RMSRD-20260802-3aa3bef8e78828d0d4d3",
+        "source_family": "salary_ordinance",
+        "span_id": "BRMSPAN-20260802-f5fdf69b7fdc8ff9335e1f91",
+        "state": "IN"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Monroe",
+        "rating_id": "BRMGRT-20260802-24ef980eb4827686098dd1a0",
+        "retained_source_id": "RMSRD-20260802-fd8f1ecd97a59fd3530f",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-ac94972a9c054aba2c29d785",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Valley View",
+        "rating_id": "BRMGRT-20260802-273515bae1f00c0ca7f8a174",
+        "retained_source_id": "RMSRD-20260802-d838b93bd2cca7a94ea1",
+        "source_family": "personnel_policy",
+        "span_id": "BRMSPAN-20260802-b846aa7a068c3146392a109d",
+        "state": "TX"
+      }
+    ],
+    "supporting_example_candidate": [
+      {
+        "claim_readiness_bucket": "mixed_quant_qual_claim_ready",
+        "evidence_category": "quant_budget_or_pay_plan_amount",
+        "municipality": "Marshfield",
+        "rating_id": "BRMGRT-20260802-000010d05f9b485f7c0729cc",
+        "retained_source_id": "RMSRD-20260802-ac17c9a31f82372a79fa",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-fd01babb48e200d0ebaea891",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_step_schedule_progression",
+        "municipality": "Kenyon",
+        "rating_id": "BRMGRT-20260802-000e471471f5f0f5693c520b",
+        "retained_source_id": "RMSRD-20260802-2e8544f21b8260f0093b",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-578781719a7caa1f457a0601",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Green",
+        "rating_id": "BRMGRT-20260802-003212520c25e69483d05260",
+        "retained_source_id": "RMSRD-20260802-a81903547c3f65f42376",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-31715ec44943e6d908424400",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Austin",
+        "rating_id": "BRMGRT-20260802-0046da857bfcda71416d95fb",
+        "retained_source_id": "RMSRD-20260802-72c084e000bdaaa691d2",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-48bf8ec5fcdb474c84ca7036",
+        "state": "MN"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Floyd",
+        "rating_id": "BRMGRT-20260802-006fda10a3de09dedf0bd835",
+        "retained_source_id": "RMSRD-20260802-1ec8217d64a2b100b708",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-e516329d586558239f6a08a6",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Sanilac",
+        "rating_id": "BRMGRT-20260802-0083938e966e40bf1d208e44",
+        "retained_source_id": "RMSRD-20260802-8377a43a99fded55bfae",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-bcb047fe3c5aede308dae0c6",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Frankfort",
+        "rating_id": "BRMGRT-20260802-00979e235442bfb7684efc7c",
+        "retained_source_id": "RMSRD-20260802-da0ff8227c577f02312c",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-d4f392bb2a4468d28ecabd8b",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Warrior Run",
+        "rating_id": "BRMGRT-20260802-00a6a7982f34c37d502b8b38",
+        "retained_source_id": "RMSRD-20260802-92c0039223702bfc9cb2",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-4402cb6d3eae16aed41f6930",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_budget_or_pay_plan_amount",
+        "municipality": "Franklin",
+        "rating_id": "BRMGRT-20260802-00d0c3dc8e9f4a880665421e",
+        "retained_source_id": "RMSRD-20260802-e1a9b3128132336bbc05",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-ebd7f43bd3b3104d5aa16f60",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "McDonald",
+        "rating_id": "BRMGRT-20260802-00d2bea77e541bdc02be1ef1",
+        "retained_source_id": "RMSRD-20260802-4e1e3e512f2c364fe599",
+        "source_family": "salary_ordinance",
+        "span_id": "BRMSPAN-20260802-7f55c11df1b92cd243eca101",
+        "state": "OH"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_overtime_or_holiday_rate",
+        "municipality": "Richland",
+        "rating_id": "BRMGRT-20260802-00f169013b034eb477f0725a",
+        "retained_source_id": "RMSRD-20260802-d31d49ddd22bda123a5d",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-ad0dcaef9ac5e1836330004d",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Rye",
+        "rating_id": "BRMGRT-20260802-012db275fd765761dc6383c0",
+        "retained_source_id": "RMSRD-20260802-8c5d0151e748d50ce09e",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-bc05448b9f9d0dbc929a2170",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_percentage_raise_or_cola",
+        "municipality": "Pewamo",
+        "rating_id": "BRMGRT-20260802-013b978dbfeff0da450f4d9f",
+        "retained_source_id": "RMSRD-20260802-8c074f9066d36e52dd0e",
+        "source_family": "agenda_packet_or_minutes",
+        "span_id": "BRMSPAN-20260802-f5ac6fd0302969ddb5b6b35d",
+        "state": "MI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Sterling",
+        "rating_id": "BRMGRT-20260802-013cac535908e4dd4eef4381",
+        "retained_source_id": "RMSRD-20260802-ef1a4abd97ad1529bdc4",
+        "source_family": "cba",
+        "span_id": "BRMSPAN-20260802-dd9bba6ed51529658cfc5101",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Winnebago",
+        "rating_id": "BRMGRT-20260802-01878c4d20ef4c93635d9ea3",
+        "retained_source_id": "RMSRD-20260802-c7d513ef4974126b79cf",
+        "source_family": "other_local_government_pay_policy",
+        "span_id": "BRMSPAN-20260802-aec066651ca9222d1be27788",
+        "state": "IL"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Corning",
+        "rating_id": "BRMGRT-20260802-01ccf091dbd82d9f7f0db5a2",
+        "retained_source_id": "RMSRD-20260802-9c6a8889b3275eff23e1",
+        "source_family": "arbitration_award",
+        "span_id": "BRMSPAN-20260802-eea282d451646f95bf612de2",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_other_compensation_value",
+        "municipality": "Portland",
+        "rating_id": "BRMGRT-20260802-0214ea8273af422cee1f7979",
+        "retained_source_id": "RMSRD-20260802-acb1239222b97c0555f9",
+        "source_family": "factfinding_report",
+        "span_id": "BRMSPAN-20260802-ca6120f04913bc521a3c13e1",
+        "state": "NY"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_overtime_or_holiday_rate",
+        "municipality": "East Fallowfield",
+        "rating_id": "BRMGRT-20260802-02150be33cf6787f63f46154",
+        "retained_source_id": "RMSRD-20260802-e2e96eaf7e3c4ca72fd1",
+        "source_family": "mou_or_memorandum",
+        "span_id": "BRMSPAN-20260802-3f1a8968e4d9ab0fd04870fe",
+        "state": "PA"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_budget_or_pay_plan_amount",
+        "municipality": "Mosinee",
+        "rating_id": "BRMGRT-20260802-026b594d5baab1122ad0311b",
+        "retained_source_id": "RMSRD-20260802-ba4692d68b179a6dddf2",
+        "source_family": "budget_or_pay_plan",
+        "span_id": "BRMSPAN-20260802-b6f5229e7d7a726316989182",
+        "state": "WI"
+      },
+      {
+        "claim_readiness_bucket": "quantitative_direct_text_claim_ready",
+        "evidence_category": "quant_base_wage_direct_value",
+        "municipality": "Theresa",
+        "rating_id": "BRMGRT-20260802-02780503851b38c7eb5f702b",
+        "retained_source_id": "RMSRD-20260802-f781bdfa9a5adfe78900",
+        "source_family": "wage_schedule",
+        "span_id": "BRMSPAN-20260802-d5aa55f6a3d2b1ee28b98252",
+        "state": "NY"
+      }
+    ]
+  }
+}

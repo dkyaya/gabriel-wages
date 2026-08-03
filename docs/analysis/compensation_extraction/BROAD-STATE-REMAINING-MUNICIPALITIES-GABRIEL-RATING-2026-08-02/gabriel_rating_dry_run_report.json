@@ -1,0 +1,21 @@
+{
+  "full_text_payloads_in_input": 0,
+  "global_analysis_readiness": false,
+  "input_csv_sha256": "a1201b72529b434ec4b9b4cdf54b1e62731deabfb63407b2093d11ea6d62c4fa",
+  "input_source_count": 1812,
+  "input_span_count": 15189,
+  "maximum_packet_input_characters": 19965,
+  "maximum_spans_per_packet": 31,
+  "model_api_calls": 0,
+  "output_schema_constructed": true,
+  "packet_count": 1812,
+  "packet_redaction_passed": true,
+  "packet_schema_constructed": true,
+  "passed": true,
+  "prepared_source_count": 1812,
+  "prepared_span_count": 15189,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "snippet_bounds_passed": true,
+  "tracked_local_payloads": 0
+}

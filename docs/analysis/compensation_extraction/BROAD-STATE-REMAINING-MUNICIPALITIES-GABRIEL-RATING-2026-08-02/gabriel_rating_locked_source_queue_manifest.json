@@ -1,0 +1,15 @@
+{
+  "disjoint_lanes": true,
+  "input_csv_sha256": "a1201b72529b434ec4b9b4cdf54b1e62731deabfb63407b2093d11ea6d62c4fa",
+  "lane_sizes": {
+    "gabriel_rating_lane_001": 363,
+    "gabriel_rating_lane_002": 363,
+    "gabriel_rating_lane_003": 362,
+    "gabriel_rating_lane_004": 362,
+    "gabriel_rating_lane_005": 362
+  },
+  "master_equals_lane_union": true,
+  "source_count": 1812,
+  "source_id_order_sha256": "8b7ab2b986b0aa63d3efe7f1dcbe55042d2495fdf6ca98f1757686675301a739",
+  "span_count": 15189
+}

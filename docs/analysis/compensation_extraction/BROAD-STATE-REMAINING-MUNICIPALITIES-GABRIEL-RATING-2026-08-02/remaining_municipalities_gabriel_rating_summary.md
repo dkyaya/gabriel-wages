@@ -1,0 +1,3 @@
+# Remaining-municipality GABRIEL rating
+
+Decision: `broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready`. All 1,812 locked source packets reached a terminal result. Clean schema-valid source ratings: 1,812; clean span ratings: 15,189; quarantined sources/spans: 0/0. Packets contained bounded span metadata only. No prompts, raw responses, secrets, full text, retained binaries, ingestion, codification, normalization, matching, wage-gap analysis, regression, treatment-effect analysis, prevalence estimate, or final causal claim was persisted or performed. Global analysis readiness remains false.

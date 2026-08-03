@@ -1,0 +1,1180 @@
+{
+  "group_field": "evidence_category",
+  "groups": {
+    "qual_budget_or_fiscal_constraint": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 5,
+        "local_context_only": 1,
+        "mixed_quant_qual_claim_ready": 6,
+        "qualitative_mechanism_claim_ready": 62,
+        "quantitative_direct_text_claim_ready": 13,
+        "quantitative_needs_normalization": 1,
+        "source_navigation_or_reference_only": 9,
+        "weak_or_not_supported": 10
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 2,
+        "exclude_or_write_off": 7,
+        "local_context_candidate": 20,
+        "manual_review_candidate": 10,
+        "mechanism_summary_candidate": 62,
+        "quantitative_normalization_candidate": 1,
+        "supporting_example_candidate": 5
+      },
+      "mechanism_strength_counts": {
+        "central": 11,
+        "moderate": 50,
+        "none": 13,
+        "strong": 1,
+        "weak": 32
+      },
+      "qualitative_support_counts": {
+        "direct": 10,
+        "moderate": 53,
+        "none": 7,
+        "strong": 3,
+        "weak": 34
+      },
+      "quantitative_support_counts": {
+        "direct": 14,
+        "moderate": 3,
+        "none": 81,
+        "weak": 9
+      },
+      "source_count": 62,
+      "span_count": 107
+    },
+    "qual_cola_or_indexing_mechanism": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 27,
+        "local_context_only": 10,
+        "mixed_quant_qual_claim_ready": 26,
+        "qualitative_mechanism_claim_ready": 79,
+        "quantitative_direct_text_claim_ready": 62,
+        "quantitative_needs_normalization": 17,
+        "source_navigation_or_reference_only": 16,
+        "weak_or_not_supported": 33
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 1,
+        "core_finding_candidate": 23,
+        "exclude_or_write_off": 29,
+        "local_context_candidate": 18,
+        "manual_review_candidate": 39,
+        "mechanism_summary_candidate": 108,
+        "quantitative_normalization_candidate": 11,
+        "supporting_example_candidate": 41
+      },
+      "mechanism_strength_counts": {
+        "central": 36,
+        "moderate": 88,
+        "none": 63,
+        "strong": 1,
+        "weak": 82
+      },
+      "qualitative_support_counts": {
+        "direct": 21,
+        "moderate": 79,
+        "none": 81,
+        "strong": 3,
+        "weak": 86
+      },
+      "quantitative_support_counts": {
+        "direct": 83,
+        "moderate": 13,
+        "none": 145,
+        "weak": 29
+      },
+      "source_count": 148,
+      "span_count": 270
+    },
+    "qual_collective_bargaining": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 68,
+        "local_context_only": 200,
+        "mixed_quant_qual_claim_ready": 7,
+        "qualitative_mechanism_claim_ready": 435,
+        "quantitative_direct_text_claim_ready": 15,
+        "quantitative_needs_normalization": 13,
+        "source_navigation_or_reference_only": 250,
+        "weak_or_not_supported": 187
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 3,
+        "core_finding_candidate": 18,
+        "exclude_or_write_off": 219,
+        "growth_continuity_candidate": 2,
+        "local_context_candidate": 369,
+        "manual_review_candidate": 185,
+        "mechanism_summary_candidate": 265,
+        "quantitative_normalization_candidate": 4,
+        "supporting_example_candidate": 110
+      },
+      "mechanism_strength_counts": {
+        "central": 51,
+        "moderate": 234,
+        "none": 377,
+        "strong": 6,
+        "weak": 507
+      },
+      "qualitative_support_counts": {
+        "direct": 74,
+        "moderate": 328,
+        "none": 128,
+        "strong": 13,
+        "weak": 632
+      },
+      "quantitative_support_counts": {
+        "direct": 14,
+        "moderate": 2,
+        "none": 1148,
+        "weak": 11
+      },
+      "source_count": 476,
+      "span_count": 1175
+    },
+    "qual_comparability_or_parity_language": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 22,
+        "local_context_only": 7,
+        "mixed_quant_qual_claim_ready": 7,
+        "qualitative_mechanism_claim_ready": 57,
+        "quantitative_direct_text_claim_ready": 3,
+        "source_navigation_or_reference_only": 5,
+        "weak_or_not_supported": 11
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 14,
+        "core_finding_candidate": 2,
+        "exclude_or_write_off": 7,
+        "local_context_candidate": 14,
+        "manual_review_candidate": 23,
+        "mechanism_summary_candidate": 37,
+        "supporting_example_candidate": 15
+      },
+      "mechanism_strength_counts": {
+        "central": 3,
+        "moderate": 41,
+        "none": 19,
+        "weak": 49
+      },
+      "qualitative_support_counts": {
+        "moderate": 55,
+        "none": 2,
+        "strong": 1,
+        "weak": 54
+      },
+      "quantitative_support_counts": {
+        "direct": 4,
+        "moderate": 1,
+        "none": 106,
+        "weak": 1
+      },
+      "source_count": 62,
+      "span_count": 112
+    },
+    "qual_factfinding": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 1,
+        "local_context_only": 4,
+        "qualitative_mechanism_claim_ready": 15,
+        "source_navigation_or_reference_only": 36,
+        "weak_or_not_supported": 4
+      },
+      "downstream_use_counts": {
+        "exclude_or_write_off": 33,
+        "local_context_candidate": 10,
+        "manual_review_candidate": 5,
+        "mechanism_summary_candidate": 11,
+        "supporting_example_candidate": 1
+      },
+      "mechanism_strength_counts": {
+        "central": 5,
+        "moderate": 5,
+        "none": 41,
+        "weak": 9
+      },
+      "qualitative_support_counts": {
+        "direct": 2,
+        "moderate": 10,
+        "none": 31,
+        "weak": 17
+      },
+      "quantitative_support_counts": {
+        "none": 60
+      },
+      "source_count": 31,
+      "span_count": 60
+    },
+    "qual_grievance_arbitration": {
+      "claim_readiness_counts": {
+        "local_context_only": 4,
+        "qualitative_mechanism_claim_ready": 13,
+        "source_navigation_or_reference_only": 1,
+        "weak_or_not_supported": 1
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 2,
+        "exclude_or_write_off": 1,
+        "local_context_candidate": 5,
+        "manual_review_candidate": 2,
+        "mechanism_summary_candidate": 8,
+        "supporting_example_candidate": 1
+      },
+      "mechanism_strength_counts": {
+        "central": 3,
+        "moderate": 11,
+        "none": 1,
+        "weak": 4
+      },
+      "qualitative_support_counts": {
+        "direct": 3,
+        "moderate": 9,
+        "strong": 1,
+        "weak": 6
+      },
+      "quantitative_support_counts": {
+        "none": 19
+      },
+      "source_count": 16,
+      "span_count": 19
+    },
+    "qual_interest_arbitration": {
+      "claim_readiness_counts": {
+        "local_context_only": 3,
+        "qualitative_mechanism_claim_ready": 15,
+        "source_navigation_or_reference_only": 18,
+        "weak_or_not_supported": 2
+      },
+      "downstream_use_counts": {
+        "exclude_or_write_off": 11,
+        "local_context_candidate": 7,
+        "manual_review_candidate": 5,
+        "mechanism_summary_candidate": 14,
+        "supporting_example_candidate": 1
+      },
+      "mechanism_strength_counts": {
+        "central": 2,
+        "moderate": 11,
+        "none": 14,
+        "weak": 11
+      },
+      "qualitative_support_counts": {
+        "moderate": 12,
+        "none": 8,
+        "strong": 1,
+        "weak": 17
+      },
+      "quantitative_support_counts": {
+        "none": 38
+      },
+      "source_count": 24,
+      "span_count": 38
+    },
+    "qual_market_recruitment_retention_pressure": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 62,
+        "local_context_only": 195,
+        "mixed_quant_qual_claim_ready": 11,
+        "qualitative_mechanism_claim_ready": 248,
+        "quantitative_direct_text_claim_ready": 20,
+        "quantitative_needs_normalization": 7,
+        "source_navigation_or_reference_only": 296,
+        "weak_or_not_supported": 483
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 1,
+        "core_finding_candidate": 6,
+        "exclude_or_write_off": 564,
+        "growth_continuity_candidate": 1,
+        "local_context_candidate": 265,
+        "manual_review_candidate": 281,
+        "mechanism_summary_candidate": 140,
+        "quantitative_normalization_candidate": 3,
+        "supporting_example_candidate": 61
+      },
+      "mechanism_strength_counts": {
+        "central": 6,
+        "moderate": 139,
+        "none": 736,
+        "weak": 441
+      },
+      "qualitative_support_counts": {
+        "direct": 16,
+        "moderate": 201,
+        "none": 391,
+        "strong": 3,
+        "weak": 711
+      },
+      "quantitative_support_counts": {
+        "direct": 16,
+        "moderate": 9,
+        "none": 1286,
+        "weak": 11
+      },
+      "source_count": 591,
+      "span_count": 1322
+    },
+    "qual_mou_or_settlement": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 9,
+        "local_context_only": 29,
+        "mixed_quant_qual_claim_ready": 1,
+        "qualitative_mechanism_claim_ready": 81,
+        "quantitative_direct_text_claim_ready": 1,
+        "quantitative_needs_normalization": 1,
+        "source_navigation_or_reference_only": 194,
+        "weak_or_not_supported": 56
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 3,
+        "exclude_or_write_off": 179,
+        "local_context_candidate": 58,
+        "manual_review_candidate": 59,
+        "mechanism_summary_candidate": 53,
+        "supporting_example_candidate": 20
+      },
+      "mechanism_strength_counts": {
+        "central": 6,
+        "moderate": 45,
+        "none": 211,
+        "strong": 1,
+        "weak": 109
+      },
+      "qualitative_support_counts": {
+        "direct": 10,
+        "moderate": 59,
+        "none": 136,
+        "strong": 3,
+        "weak": 164
+      },
+      "quantitative_support_counts": {
+        "direct": 3,
+        "moderate": 1,
+        "none": 366,
+        "weak": 2
+      },
+      "source_count": 191,
+      "span_count": 372
+    },
+    "qual_non_base_compensation_mechanism": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 89,
+        "local_context_only": 109,
+        "mixed_quant_qual_claim_ready": 57,
+        "qualitative_mechanism_claim_ready": 350,
+        "quantitative_direct_text_claim_ready": 522,
+        "quantitative_needs_normalization": 109,
+        "source_navigation_or_reference_only": 473,
+        "weak_or_not_supported": 447
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 2,
+        "core_finding_candidate": 123,
+        "exclude_or_write_off": 635,
+        "local_context_candidate": 133,
+        "manual_review_candidate": 388,
+        "mechanism_summary_candidate": 242,
+        "quantitative_normalization_candidate": 19,
+        "supporting_example_candidate": 614
+      },
+      "mechanism_strength_counts": {
+        "central": 36,
+        "moderate": 342,
+        "none": 1205,
+        "strong": 16,
+        "weak": 557
+      },
+      "qualitative_support_counts": {
+        "direct": 75,
+        "moderate": 361,
+        "none": 1080,
+        "strong": 11,
+        "weak": 629
+      },
+      "quantitative_support_counts": {
+        "direct": 512,
+        "moderate": 83,
+        "none": 1380,
+        "strong": 9,
+        "weak": 172
+      },
+      "source_count": 666,
+      "span_count": 2156
+    },
+    "qual_ordinance_or_council_adoption": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 18,
+        "local_context_only": 64,
+        "mixed_quant_qual_claim_ready": 2,
+        "qualitative_mechanism_claim_ready": 147,
+        "quantitative_direct_text_claim_ready": 5,
+        "quantitative_needs_normalization": 2,
+        "source_navigation_or_reference_only": 165,
+        "weak_or_not_supported": 74
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 3,
+        "exclude_or_write_off": 169,
+        "growth_continuity_candidate": 2,
+        "local_context_candidate": 131,
+        "manual_review_candidate": 59,
+        "mechanism_summary_candidate": 102,
+        "supporting_example_candidate": 11
+      },
+      "mechanism_strength_counts": {
+        "central": 33,
+        "moderate": 78,
+        "none": 209,
+        "strong": 5,
+        "weak": 152
+      },
+      "qualitative_support_counts": {
+        "direct": 26,
+        "moderate": 93,
+        "none": 125,
+        "strong": 10,
+        "weak": 223
+      },
+      "quantitative_support_counts": {
+        "direct": 6,
+        "moderate": 1,
+        "none": 463,
+        "weak": 7
+      },
+      "source_count": 256,
+      "span_count": 477
+    },
+    "qual_other_pay_setting_mechanism": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 11,
+        "local_context_only": 29,
+        "mixed_quant_qual_claim_ready": 21,
+        "qualitative_mechanism_claim_ready": 105,
+        "quantitative_direct_text_claim_ready": 20,
+        "quantitative_needs_normalization": 5,
+        "source_navigation_or_reference_only": 15,
+        "weak_or_not_supported": 39
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 2,
+        "core_finding_candidate": 19,
+        "exclude_or_write_off": 24,
+        "local_context_candidate": 52,
+        "manual_review_candidate": 36,
+        "mechanism_summary_candidate": 69,
+        "quantitative_normalization_candidate": 1,
+        "supporting_example_candidate": 42
+      },
+      "mechanism_strength_counts": {
+        "central": 20,
+        "moderate": 87,
+        "none": 52,
+        "strong": 1,
+        "weak": 85
+      },
+      "qualitative_support_counts": {
+        "direct": 16,
+        "moderate": 117,
+        "none": 27,
+        "strong": 6,
+        "weak": 79
+      },
+      "quantitative_support_counts": {
+        "direct": 36,
+        "moderate": 2,
+        "none": 193,
+        "weak": 14
+      },
+      "source_count": 165,
+      "span_count": 245
+    },
+    "qual_position_classification_or_civil_service_structure": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 14,
+        "local_context_only": 88,
+        "mixed_quant_qual_claim_ready": 12,
+        "qualitative_mechanism_claim_ready": 228,
+        "quantitative_direct_text_claim_ready": 18,
+        "quantitative_needs_normalization": 5,
+        "source_navigation_or_reference_only": 189,
+        "weak_or_not_supported": 105
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 14,
+        "exclude_or_write_off": 192,
+        "local_context_candidate": 150,
+        "manual_review_candidate": 105,
+        "mechanism_summary_candidate": 158,
+        "quantitative_normalization_candidate": 3,
+        "supporting_example_candidate": 37
+      },
+      "mechanism_strength_counts": {
+        "central": 24,
+        "moderate": 152,
+        "none": 256,
+        "strong": 3,
+        "weak": 224
+      },
+      "qualitative_support_counts": {
+        "direct": 38,
+        "moderate": 156,
+        "none": 151,
+        "strong": 9,
+        "weak": 305
+      },
+      "quantitative_support_counts": {
+        "direct": 21,
+        "moderate": 4,
+        "none": 620,
+        "weak": 14
+      },
+      "source_count": 287,
+      "span_count": 659
+    },
+    "qual_retroactivity_or_implementation_timing": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 11,
+        "local_context_only": 14,
+        "mixed_quant_qual_claim_ready": 16,
+        "qualitative_mechanism_claim_ready": 138,
+        "quantitative_direct_text_claim_ready": 37,
+        "quantitative_needs_normalization": 8,
+        "source_navigation_or_reference_only": 6,
+        "weak_or_not_supported": 8
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 21,
+        "exclude_or_write_off": 3,
+        "growth_continuity_candidate": 3,
+        "local_context_candidate": 34,
+        "manual_review_candidate": 23,
+        "mechanism_summary_candidate": 129,
+        "quantitative_normalization_candidate": 2,
+        "supporting_example_candidate": 23
+      },
+      "mechanism_strength_counts": {
+        "central": 14,
+        "moderate": 136,
+        "none": 24,
+        "strong": 4,
+        "weak": 60
+      },
+      "qualitative_support_counts": {
+        "direct": 23,
+        "moderate": 113,
+        "none": 28,
+        "strong": 9,
+        "weak": 65
+      },
+      "quantitative_support_counts": {
+        "direct": 42,
+        "moderate": 3,
+        "none": 175,
+        "strong": 3,
+        "weak": 15
+      },
+      "source_count": 168,
+      "span_count": 238
+    },
+    "qual_strike_no_strike_or_labor_dispute_process": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 10,
+        "local_context_only": 17,
+        "qualitative_mechanism_claim_ready": 119,
+        "source_navigation_or_reference_only": 162,
+        "weak_or_not_supported": 55
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 5,
+        "exclude_or_write_off": 182,
+        "local_context_candidate": 32,
+        "manual_review_candidate": 43,
+        "mechanism_summary_candidate": 65,
+        "supporting_example_candidate": 36
+      },
+      "mechanism_strength_counts": {
+        "central": 12,
+        "moderate": 63,
+        "none": 189,
+        "weak": 99
+      },
+      "qualitative_support_counts": {
+        "direct": 36,
+        "moderate": 68,
+        "none": 124,
+        "strong": 4,
+        "weak": 131
+      },
+      "quantitative_support_counts": {
+        "none": 362,
+        "weak": 1
+      },
+      "source_count": 150,
+      "span_count": 363
+    },
+    "quant_allowance_or_reimbursement": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 21,
+        "local_context_only": 38,
+        "mixed_quant_qual_claim_ready": 16,
+        "qualitative_mechanism_claim_ready": 82,
+        "quantitative_direct_text_claim_ready": 263,
+        "quantitative_needs_normalization": 56,
+        "source_navigation_or_reference_only": 129,
+        "weak_or_not_supported": 155
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 78,
+        "exclude_or_write_off": 193,
+        "local_context_candidate": 37,
+        "manual_review_candidate": 142,
+        "mechanism_summary_candidate": 55,
+        "quantitative_normalization_candidate": 10,
+        "supporting_example_candidate": 245
+      },
+      "mechanism_strength_counts": {
+        "central": 12,
+        "moderate": 115,
+        "none": 441,
+        "strong": 5,
+        "weak": 187
+      },
+      "qualitative_support_counts": {
+        "direct": 22,
+        "moderate": 117,
+        "none": 396,
+        "strong": 2,
+        "weak": 223
+      },
+      "quantitative_support_counts": {
+        "direct": 262,
+        "moderate": 26,
+        "none": 381,
+        "strong": 5,
+        "weak": 86
+      },
+      "source_count": 408,
+      "span_count": 760
+    },
+    "quant_base_wage_direct_value": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 2,
+        "local_context_only": 2,
+        "mixed_quant_qual_claim_ready": 37,
+        "qualitative_mechanism_claim_ready": 1,
+        "quantitative_direct_text_claim_ready": 1535,
+        "quantitative_needs_normalization": 26,
+        "source_navigation_or_reference_only": 1,
+        "weak_or_not_supported": 10
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 817,
+        "exclude_or_write_off": 4,
+        "local_context_candidate": 8,
+        "manual_review_candidate": 26,
+        "mechanism_summary_candidate": 20,
+        "quantitative_normalization_candidate": 78,
+        "supporting_example_candidate": 661
+      },
+      "mechanism_strength_counts": {
+        "central": 10,
+        "moderate": 71,
+        "none": 1358,
+        "strong": 8,
+        "weak": 167
+      },
+      "qualitative_support_counts": {
+        "direct": 6,
+        "moderate": 24,
+        "none": 1478,
+        "weak": 106
+      },
+      "quantitative_support_counts": {
+        "direct": 1526,
+        "moderate": 45,
+        "none": 1,
+        "strong": 17,
+        "weak": 25
+      },
+      "source_count": 696,
+      "span_count": 1614
+    },
+    "quant_budget_or_pay_plan_amount": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 33,
+        "local_context_only": 26,
+        "mixed_quant_qual_claim_ready": 13,
+        "qualitative_mechanism_claim_ready": 7,
+        "quantitative_direct_text_claim_ready": 273,
+        "quantitative_needs_normalization": 11,
+        "source_navigation_or_reference_only": 36,
+        "weak_or_not_supported": 69
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 1,
+        "core_finding_candidate": 99,
+        "exclude_or_write_off": 69,
+        "growth_continuity_candidate": 2,
+        "local_context_candidate": 71,
+        "manual_review_candidate": 48,
+        "mechanism_summary_candidate": 7,
+        "quantitative_normalization_candidate": 17,
+        "supporting_example_candidate": 154
+      },
+      "mechanism_strength_counts": {
+        "central": 6,
+        "moderate": 23,
+        "none": 388,
+        "strong": 2,
+        "weak": 49
+      },
+      "qualitative_support_counts": {
+        "direct": 1,
+        "moderate": 25,
+        "none": 380,
+        "weak": 62
+      },
+      "quantitative_support_counts": {
+        "direct": 278,
+        "moderate": 10,
+        "none": 153,
+        "strong": 1,
+        "weak": 26
+      },
+      "source_count": 159,
+      "span_count": 468
+    },
+    "quant_cpi_indexed_adjustment": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 27,
+        "local_context_only": 7,
+        "mixed_quant_qual_claim_ready": 22,
+        "qualitative_mechanism_claim_ready": 49,
+        "quantitative_direct_text_claim_ready": 80,
+        "quantitative_needs_normalization": 32,
+        "source_navigation_or_reference_only": 17,
+        "weak_or_not_supported": 36
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 2,
+        "core_finding_candidate": 41,
+        "exclude_or_write_off": 31,
+        "local_context_candidate": 19,
+        "manual_review_candidate": 45,
+        "mechanism_summary_candidate": 76,
+        "quantitative_normalization_candidate": 18,
+        "supporting_example_candidate": 38
+      },
+      "mechanism_strength_counts": {
+        "central": 31,
+        "moderate": 79,
+        "none": 79,
+        "strong": 1,
+        "weak": 80
+      },
+      "qualitative_support_counts": {
+        "direct": 16,
+        "moderate": 68,
+        "none": 100,
+        "strong": 2,
+        "weak": 84
+      },
+      "quantitative_support_counts": {
+        "direct": 91,
+        "moderate": 18,
+        "none": 120,
+        "weak": 41
+      },
+      "source_count": 148,
+      "span_count": 270
+    },
+    "quant_longevity_or_service_pay": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 8,
+        "local_context_only": 14,
+        "mixed_quant_qual_claim_ready": 4,
+        "qualitative_mechanism_claim_ready": 32,
+        "quantitative_direct_text_claim_ready": 33,
+        "quantitative_needs_normalization": 15,
+        "source_navigation_or_reference_only": 34,
+        "weak_or_not_supported": 35
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 2,
+        "core_finding_candidate": 12,
+        "exclude_or_write_off": 48,
+        "local_context_candidate": 21,
+        "manual_review_candidate": 32,
+        "mechanism_summary_candidate": 23,
+        "supporting_example_candidate": 37
+      },
+      "mechanism_strength_counts": {
+        "central": 9,
+        "moderate": 27,
+        "none": 105,
+        "weak": 34
+      },
+      "qualitative_support_counts": {
+        "direct": 10,
+        "moderate": 33,
+        "none": 92,
+        "strong": 1,
+        "weak": 39
+      },
+      "quantitative_support_counts": {
+        "direct": 29,
+        "moderate": 5,
+        "none": 112,
+        "strong": 4,
+        "weak": 25
+      },
+      "source_count": 106,
+      "span_count": 175
+    },
+    "quant_other_compensation_value": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 139,
+        "local_context_only": 254,
+        "mixed_quant_qual_claim_ready": 21,
+        "qualitative_mechanism_claim_ready": 52,
+        "quantitative_direct_text_claim_ready": 443,
+        "quantitative_needs_normalization": 129,
+        "source_navigation_or_reference_only": 144,
+        "weak_or_not_supported": 266
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 153,
+        "exclude_or_write_off": 233,
+        "growth_continuity_candidate": 16,
+        "local_context_candidate": 378,
+        "manual_review_candidate": 354,
+        "mechanism_summary_candidate": 48,
+        "quantitative_normalization_candidate": 79,
+        "supporting_example_candidate": 187
+      },
+      "mechanism_strength_counts": {
+        "central": 11,
+        "moderate": 102,
+        "none": 1108,
+        "strong": 5,
+        "weak": 222
+      },
+      "qualitative_support_counts": {
+        "direct": 14,
+        "moderate": 124,
+        "none": 914,
+        "strong": 1,
+        "weak": 395
+      },
+      "quantitative_support_counts": {
+        "direct": 376,
+        "moderate": 63,
+        "none": 701,
+        "strong": 1,
+        "weak": 307
+      },
+      "source_count": 659,
+      "span_count": 1448
+    },
+    "quant_overtime_or_holiday_rate": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 54,
+        "local_context_only": 41,
+        "mixed_quant_qual_claim_ready": 20,
+        "qualitative_mechanism_claim_ready": 149,
+        "quantitative_direct_text_claim_ready": 240,
+        "quantitative_needs_normalization": 51,
+        "source_navigation_or_reference_only": 265,
+        "weak_or_not_supported": 233
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 55,
+        "exclude_or_write_off": 356,
+        "local_context_candidate": 57,
+        "manual_review_candidate": 192,
+        "mechanism_summary_candidate": 90,
+        "quantitative_normalization_candidate": 10,
+        "supporting_example_candidate": 293
+      },
+      "mechanism_strength_counts": {
+        "central": 13,
+        "moderate": 138,
+        "none": 669,
+        "strong": 5,
+        "weak": 228
+      },
+      "qualitative_support_counts": {
+        "direct": 32,
+        "moderate": 146,
+        "none": 582,
+        "strong": 7,
+        "weak": 286
+      },
+      "quantitative_support_counts": {
+        "direct": 221,
+        "moderate": 43,
+        "none": 688,
+        "weak": 101
+      },
+      "source_count": 462,
+      "span_count": 1053
+    },
+    "quant_percentage_raise_or_cola": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 6,
+        "local_context_only": 1,
+        "mixed_quant_qual_claim_ready": 35,
+        "quantitative_direct_text_claim_ready": 675,
+        "quantitative_needs_normalization": 27,
+        "source_navigation_or_reference_only": 1,
+        "weak_or_not_supported": 9
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 294,
+        "exclude_or_write_off": 4,
+        "growth_continuity_candidate": 3,
+        "local_context_candidate": 4,
+        "manual_review_candidate": 32,
+        "mechanism_summary_candidate": 33,
+        "quantitative_normalization_candidate": 80,
+        "supporting_example_candidate": 304
+      },
+      "mechanism_strength_counts": {
+        "central": 15,
+        "moderate": 94,
+        "none": 481,
+        "strong": 6,
+        "weak": 158
+      },
+      "qualitative_support_counts": {
+        "direct": 4,
+        "moderate": 41,
+        "none": 608,
+        "weak": 101
+      },
+      "quantitative_support_counts": {
+        "direct": 673,
+        "moderate": 43,
+        "none": 1,
+        "strong": 6,
+        "weak": 31
+      },
+      "source_count": 375,
+      "span_count": 754
+    },
+    "quant_position_classification_pay_band": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 2,
+        "local_context_only": 19,
+        "mixed_quant_qual_claim_ready": 3,
+        "qualitative_mechanism_claim_ready": 54,
+        "quantitative_direct_text_claim_ready": 41,
+        "quantitative_needs_normalization": 6,
+        "source_navigation_or_reference_only": 21,
+        "weak_or_not_supported": 30
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 1,
+        "core_finding_candidate": 26,
+        "exclude_or_write_off": 25,
+        "local_context_candidate": 27,
+        "manual_review_candidate": 30,
+        "mechanism_summary_candidate": 40,
+        "quantitative_normalization_candidate": 5,
+        "supporting_example_candidate": 22
+      },
+      "mechanism_strength_counts": {
+        "central": 9,
+        "moderate": 48,
+        "none": 62,
+        "strong": 2,
+        "weak": 55
+      },
+      "qualitative_support_counts": {
+        "direct": 7,
+        "moderate": 43,
+        "none": 59,
+        "strong": 6,
+        "weak": 61
+      },
+      "quantitative_support_counts": {
+        "direct": 41,
+        "moderate": 2,
+        "none": 115,
+        "weak": 18
+      },
+      "source_count": 92,
+      "span_count": 176
+    },
+    "quant_retroactive_pay_or_lump_sum": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 3,
+        "local_context_only": 3,
+        "mixed_quant_qual_claim_ready": 7,
+        "qualitative_mechanism_claim_ready": 19,
+        "quantitative_direct_text_claim_ready": 23,
+        "quantitative_needs_normalization": 9,
+        "source_navigation_or_reference_only": 3,
+        "weak_or_not_supported": 15
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 7,
+        "exclude_or_write_off": 4,
+        "local_context_candidate": 4,
+        "manual_review_candidate": 17,
+        "mechanism_summary_candidate": 26,
+        "quantitative_normalization_candidate": 3,
+        "supporting_example_candidate": 21
+      },
+      "mechanism_strength_counts": {
+        "central": 2,
+        "moderate": 31,
+        "none": 16,
+        "strong": 2,
+        "weak": 31
+      },
+      "qualitative_support_counts": {
+        "direct": 2,
+        "moderate": 29,
+        "none": 21,
+        "weak": 30
+      },
+      "quantitative_support_counts": {
+        "direct": 24,
+        "moderate": 4,
+        "none": 36,
+        "weak": 18
+      },
+      "source_count": 68,
+      "span_count": 82
+    },
+    "quant_salary_schedule_table": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 11,
+        "local_context_only": 21,
+        "mixed_quant_qual_claim_ready": 2,
+        "qualitative_mechanism_claim_ready": 42,
+        "quantitative_direct_text_claim_ready": 14,
+        "quantitative_needs_normalization": 32,
+        "source_navigation_or_reference_only": 178,
+        "weak_or_not_supported": 61
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 1,
+        "core_finding_candidate": 9,
+        "exclude_or_write_off": 159,
+        "local_context_candidate": 48,
+        "manual_review_candidate": 89,
+        "mechanism_summary_candidate": 42,
+        "quantitative_normalization_candidate": 5,
+        "supporting_example_candidate": 8
+      },
+      "mechanism_strength_counts": {
+        "central": 6,
+        "moderate": 43,
+        "none": 260,
+        "weak": 52
+      },
+      "qualitative_support_counts": {
+        "direct": 9,
+        "moderate": 38,
+        "none": 229,
+        "weak": 85
+      },
+      "quantitative_support_counts": {
+        "direct": 12,
+        "moderate": 6,
+        "none": 282,
+        "weak": 61
+      },
+      "source_count": 196,
+      "span_count": 361
+    },
+    "quant_step_schedule_progression": {
+      "claim_readiness_counts": {
+        "mixed_quant_qual_claim_ready": 21,
+        "qualitative_mechanism_claim_ready": 1,
+        "quantitative_direct_text_claim_ready": 246,
+        "quantitative_needs_normalization": 7,
+        "weak_or_not_supported": 4
+      },
+      "downstream_use_counts": {
+        "comparison_review_candidate": 2,
+        "core_finding_candidate": 121,
+        "exclude_or_write_off": 2,
+        "growth_continuity_candidate": 3,
+        "local_context_candidate": 3,
+        "manual_review_candidate": 7,
+        "mechanism_summary_candidate": 14,
+        "quantitative_normalization_candidate": 42,
+        "supporting_example_candidate": 85
+      },
+      "mechanism_strength_counts": {
+        "central": 13,
+        "moderate": 35,
+        "none": 191,
+        "weak": 40
+      },
+      "qualitative_support_counts": {
+        "direct": 3,
+        "moderate": 21,
+        "none": 227,
+        "weak": 28
+      },
+      "quantitative_support_counts": {
+        "direct": 247,
+        "moderate": 17,
+        "none": 2,
+        "strong": 5,
+        "weak": 8
+      },
+      "source_count": 138,
+      "span_count": 279
+    },
+    "quant_stipend_or_premium": {
+      "claim_readiness_counts": {
+        "directional_hint_only": 4,
+        "local_context_only": 7,
+        "mixed_quant_qual_claim_ready": 6,
+        "qualitative_mechanism_claim_ready": 22,
+        "quantitative_direct_text_claim_ready": 27,
+        "quantitative_needs_normalization": 7,
+        "source_navigation_or_reference_only": 42,
+        "weak_or_not_supported": 21
+      },
+      "downstream_use_counts": {
+        "core_finding_candidate": 9,
+        "exclude_or_write_off": 49,
+        "local_context_candidate": 14,
+        "manual_review_candidate": 19,
+        "mechanism_summary_candidate": 16,
+        "supporting_example_candidate": 29
+      },
+      "mechanism_strength_counts": {
+        "central": 2,
+        "moderate": 23,
+        "none": 79,
+        "strong": 1,
+        "weak": 31
+      },
+      "qualitative_support_counts": {
+        "direct": 6,
+        "moderate": 17,
+        "none": 78,
+        "strong": 1,
+        "weak": 34
+      },
+      "quantitative_support_counts": {
+        "direct": 27,
+        "moderate": 5,
+        "none": 92,
+        "weak": 12
+      },
+      "source_count": 80,
+      "span_count": 136
+    }
+  },
+  "total_sources": 1812,
+  "total_spans": 15189
+}

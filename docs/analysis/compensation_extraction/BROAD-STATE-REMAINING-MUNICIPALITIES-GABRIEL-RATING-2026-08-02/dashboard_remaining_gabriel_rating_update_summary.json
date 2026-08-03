@@ -1,0 +1,37 @@
+{
+  "claim_readiness_counts": {
+    "directional_hint_only": 657,
+    "local_context_only": 1207,
+    "mixed_quant_qual_claim_ready": 373,
+    "qualitative_mechanism_claim_ready": 2602,
+    "quantitative_direct_text_claim_ready": 4609,
+    "quantitative_needs_normalization": 576,
+    "source_navigation_or_reference_only": 2706,
+    "weak_or_not_supported": 2459
+  },
+  "clean_dashboard_structure_preserved": true,
+  "current_stage": "Remaining-municipality GABRIEL rating complete",
+  "downstream_use_counts": {
+    "comparison_review_candidate": 32,
+    "core_finding_candidate": 1962,
+    "exclude_or_write_off": 3432,
+    "growth_continuity_candidate": 32,
+    "local_context_candidate": 1989,
+    "manual_review_candidate": 2296,
+    "mechanism_summary_candidate": 1953,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 3102
+  },
+  "final_pi_report_link_intact": true,
+  "gabriel_ready_sources": 1812,
+  "gabriel_ready_spans": 15189,
+  "global_analysis_readiness": false,
+  "map_primary_metric": "scout_coverage_rate",
+  "next_task": "BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02",
+  "quarantine_sources": 0,
+  "quarantine_spans": 0,
+  "rated_sources": 1812,
+  "rated_spans": 15189,
+  "scout_coverage_rate_percent": 99.9579,
+  "wage_growth_continuity_module_intact": true
+}

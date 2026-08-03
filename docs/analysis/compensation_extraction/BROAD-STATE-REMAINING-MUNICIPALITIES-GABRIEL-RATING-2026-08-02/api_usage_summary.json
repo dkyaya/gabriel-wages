@@ -1,0 +1,17 @@
+{
+  "backend": "huit_openai_responses_direct_sdk",
+  "credential_values_logged": 0,
+  "duplicate_worker_api_executions_excluded_from_canonical_usage": 290,
+  "input_tokens": 4995778,
+  "model_counts": {
+    "gpt-5.4-nano": 2082
+  },
+  "output_tokens": 4122241,
+  "raw_prompts_saved": 0,
+  "raw_responses_saved": 0,
+  "request_attempt_count": 2082,
+  "retry_attempts": 169,
+  "schema_valid_attempts": 1812,
+  "successful_transport_attempts": 2080,
+  "total_tokens": 9118019
+}

@@ -1,0 +1,12 @@
+{
+  "credentials_or_environment_values_in_payloads": 0,
+  "full_text_or_retained_payloads_in_packets": 0,
+  "local_paths_in_payloads": 0,
+  "maximum_packet_input_characters": 19965,
+  "packet_count": 1812,
+  "packets_with_failures": 0,
+  "passed": true,
+  "public_locator_lineage_sent": false,
+  "raw_prompts_will_be_saved": false,
+  "raw_responses_will_be_saved": false
+}

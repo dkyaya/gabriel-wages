@@ -1,0 +1,16 @@
+{
+  "checkpoint_after_every_packet": true,
+  "completed_at": "2026-08-03T01:57:10.643456+00:00",
+  "completed_packet_count": 362,
+  "lane_id": "gabriel_rating_lane_003",
+  "last_completed_packet_id": "BRMGRP-20260802-ce9376a9d1493cb90ce08cf0",
+  "locked_source_count": 362,
+  "quarantine_packet_count": 0,
+  "rated_span_count": 3037,
+  "remaining_packet_count": 0,
+  "request_count": 392,
+  "started_at": "2026-08-02T22:07:22.520539+00:00",
+  "status": "completed",
+  "updated_at": "2026-08-03T01:57:10.483065+00:00",
+  "valid_packet_count": 362
+}

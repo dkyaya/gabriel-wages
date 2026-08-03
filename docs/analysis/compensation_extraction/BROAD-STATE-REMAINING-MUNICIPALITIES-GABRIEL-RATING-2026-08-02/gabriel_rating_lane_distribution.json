@@ -1,0 +1,27 @@
+{
+  "lane_sizes": {
+    "gabriel_rating_lane_001": 363,
+    "gabriel_rating_lane_002": 363,
+    "gabriel_rating_lane_003": 362,
+    "gabriel_rating_lane_004": 362,
+    "gabriel_rating_lane_005": 362
+  },
+  "lane_span_counts": {
+    "gabriel_rating_lane_001": 3039,
+    "gabriel_rating_lane_002": 3039,
+    "gabriel_rating_lane_003": 3037,
+    "gabriel_rating_lane_004": 3037,
+    "gabriel_rating_lane_005": 3037
+  },
+  "lane_union_exact": true,
+  "lanes_disjoint": true,
+  "source_count": 1812,
+  "span_count": 15189,
+  "stagger_seconds": {
+    "gabriel_rating_lane_001": 0,
+    "gabriel_rating_lane_002": 480,
+    "gabriel_rating_lane_003": 960,
+    "gabriel_rating_lane_004": 1440,
+    "gabriel_rating_lane_005": 1920
+  }
+}

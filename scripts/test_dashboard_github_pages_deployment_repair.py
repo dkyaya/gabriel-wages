@@ -96,7 +96,23 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/"
             "remaining_municipalities_span_extraction_manifest.json"
         )
-        if remaining_span_manifest.exists() and json.loads(remaining_span_manifest.read_text()).get("decision") == (
+        remaining_rating_manifest = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02/"
+            "remaining_municipalities_gabriel_rating_manifest.json"
+        )
+        if remaining_rating_manifest.exists() and json.loads(remaining_rating_manifest.read_text()).get("decision") == (
+            "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready",
+            )
+            self.assertEqual(phase["stage"], "broad_state_remaining_municipalities_gabriel_rating_complete")
+            self.assertTrue(phase["remaining_municipality_gabriel_rating_available"])
+            self.assertEqual(phase["remaining_municipality_gabriel_rated_source_count"], 1812)
+            self.assertEqual(phase["remaining_municipality_gabriel_rated_span_count"], 15189)
+        elif remaining_span_manifest.exists() and json.loads(remaining_span_manifest.read_text()).get("decision") == (
             "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready"
         ):
             self.assertEqual(
@@ -356,7 +372,39 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(span_manifest.read_text()).get("decision")
                                                                             == "broad_state_remaining_municipalities_span_extraction_completed_gabriel_rating_ready"
                                                                         )
-                                                                        if span_complete:
+                                                                        rating_manifest = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                            "GABRIEL-RATING-2026-08-02/"
+                                                                            "remaining_municipalities_gabriel_rating_manifest.json"
+                                                                        )
+                                                                        rating_complete = (
+                                                                            rating_manifest.exists()
+                                                                            and json.loads(rating_manifest.read_text()).get("decision")
+                                                                            == "broad_state_remaining_municipalities_gabriel_rating_completed_ingestion_codification_ready"
+                                                                        )
+                                                                        if rating_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Remaining-municipality GABRIEL rating complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-REMAINING-MUNICIPALITIES-"
+                                                                                "RATING-INGESTION-CODIFICATION-2026-08-02",
+                                                                            )
+                                                                            self.assertTrue(
+                                                                                phase["remaining_municipality_gabriel_rating_available"]
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_gabriel_ready_source_count"],
+                                                                                1_812,
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["remaining_municipality_gabriel_ready_span_count"],
+                                                                                15_189,
+                                                                            )
+                                                                        elif span_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Remaining-municipality span extraction complete",

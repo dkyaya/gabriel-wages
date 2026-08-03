@@ -1,0 +1,18 @@
+{
+  "accepted_packets_redundantly_executed": 290,
+  "audit_scope_note": "passed covers forbidden analytical, payload, credential, and downstream actions; the separately disclosed operational duplicate-execution incident did occur",
+  "full_text_extraction_rerun": false,
+  "full_text_or_retained_binary_written_to_git": false,
+  "global_readiness_advanced": false,
+  "image_pdf_processing_occurred": false,
+  "ingestion_or_codification_occurred": false,
+  "normalization_or_matching_occurred": false,
+  "ocr_occurred": false,
+  "operational_incident_canonicalized": true,
+  "operational_no_rerun_rule_violated": true,
+  "passed": true,
+  "prevalence_or_final_causal_claim_made": false,
+  "secrets_or_raw_prompts_responses_persisted": false,
+  "span_extraction_rerun": false,
+  "wage_gap_or_regression_occurred": false
+}

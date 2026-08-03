@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "claim_boundary": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "spans": {
+      "maxItems": 32,
+      "type": "array"
+    }
+  },
+  "required": [
+    "source",
+    "spans",
+    "claim_boundary"
+  ],
+  "type": "object"
+}

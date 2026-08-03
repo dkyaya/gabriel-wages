@@ -1,0 +1,13 @@
+{
+  "accepted_valid_outcomes_preserved": 355,
+  "accepted_valid_packets_rerun": 0,
+  "lane_id": "gabriel_rating_lane_003",
+  "prior_terminal_outcomes": 362,
+  "quarantine_error_code_counts": {
+    "side_relevance_overclassified": 5,
+    "span_membership_changed": 2
+  },
+  "quarantined_packets_reopened": 7,
+  "repair_applied_at": "2026-08-03T01:56:21.752590+00:00",
+  "repair_scope": "remove two over-strict cross-family support constraints and accept exact reordered span membership"
+}

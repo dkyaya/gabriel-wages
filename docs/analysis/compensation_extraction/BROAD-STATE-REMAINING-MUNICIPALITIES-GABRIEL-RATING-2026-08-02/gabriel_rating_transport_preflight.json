@@ -1,0 +1,115 @@
+{
+  "api_usage": {
+    "input_tokens": 6797,
+    "output_tokens": 2159,
+    "total_tokens": 8956
+  },
+  "backend": "huit_openai_responses_direct_sdk",
+  "base_url": "https://go.apis.huit.harvard.edu/ais-openai-direct/v2",
+  "credential_location": "project_root",
+  "credential_presence": "present",
+  "credential_value_logged": false,
+  "dry_run_passed": true,
+  "live_lanes_authorized": true,
+  "live_smoke_passed": true,
+  "model": "gpt-5.4-nano",
+  "packet_redaction_passed": true,
+  "raw_prompts_saved": false,
+  "raw_responses_saved": false,
+  "representative_smoke_packet_count": 6,
+  "smoke_packets": [
+    {
+      "cba_non_cba_hint": "non_cba_or_unresolved_hint",
+      "evidence_families": [
+        "quantitative_compensation"
+      ],
+      "packet_id": "BRMGRP-20260802-445129a64236d96edb9adbad",
+      "promoted_to_live_output": false,
+      "retained_source_id": "RMSRD-20260802-016641e8096d80d4b21d",
+      "safety_side_hints": [
+        "unclear"
+      ],
+      "source_family": "agenda_packet_or_minutes",
+      "span_count": 1,
+      "status": "valid_rating"
+    },
+    {
+      "cba_non_cba_hint": "non_cba_or_unresolved_hint",
+      "evidence_families": [
+        "qualitative_mechanism"
+      ],
+      "packet_id": "BRMGRP-20260802-abf7ae0a6be1ba462ffc2b2c",
+      "promoted_to_live_output": false,
+      "retained_source_id": "RMSRD-20260802-000742a41da4dc821217",
+      "safety_side_hints": [
+        "unclear"
+      ],
+      "source_family": "mou_or_memorandum",
+      "span_count": 1,
+      "status": "valid_rating"
+    },
+    {
+      "cba_non_cba_hint": "cba_arbitration_factfinding_hint",
+      "evidence_families": [
+        "qualitative_mechanism"
+      ],
+      "packet_id": "BRMGRP-20260802-6fb21000580c7ac5d31192d5",
+      "promoted_to_live_output": false,
+      "retained_source_id": "RMSRD-20260802-04be8989ae400035b049",
+      "safety_side_hints": [
+        "unclear"
+      ],
+      "source_family": "wage_schedule",
+      "span_count": 1,
+      "status": "valid_rating"
+    },
+    {
+      "cba_non_cba_hint": "non_cba_or_unresolved_hint",
+      "evidence_families": [
+        "qualitative_mechanism"
+      ],
+      "packet_id": "BRMGRP-20260802-1672d3ea4d33d893920ce4d9",
+      "promoted_to_live_output": false,
+      "retained_source_id": "RMSRD-20260802-011c5533a51e3abf7eaa",
+      "safety_side_hints": [
+        "unclear"
+      ],
+      "source_family": "mou_or_memorandum",
+      "span_count": 1,
+      "status": "valid_rating"
+    },
+    {
+      "cba_non_cba_hint": "non_cba_or_unresolved_hint",
+      "evidence_families": [
+        "quantitative_compensation"
+      ],
+      "packet_id": "BRMGRP-20260802-2344147ac305600cd524b2c7",
+      "promoted_to_live_output": false,
+      "retained_source_id": "RMSRD-20260802-023d880ea0dff4f618f9",
+      "safety_side_hints": [
+        "police"
+      ],
+      "source_family": "agenda_packet_or_minutes",
+      "span_count": 1,
+      "status": "valid_rating"
+    },
+    {
+      "cba_non_cba_hint": "non_cba_or_unresolved_hint",
+      "evidence_families": [
+        "qualitative_mechanism"
+      ],
+      "packet_id": "BRMGRP-20260802-7be2d6b87feedf2889a1340b",
+      "promoted_to_live_output": false,
+      "retained_source_id": "RMSRD-20260802-01bd78cc23bca20289b0",
+      "safety_side_hints": [
+        "unclear"
+      ],
+      "source_family": "agenda_packet_or_minutes",
+      "span_count": 1,
+      "status": "valid_rating"
+    }
+  ],
+  "smoke_requests": 7,
+  "status": "passed",
+  "valid_smoke_packet_count": 6
+}

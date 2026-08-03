@@ -1,0 +1,94 @@
+{
+  "claim_readiness_by_value": {
+    "direct_comparison_ready": {
+      "mixed_quant_qual_claim_ready": 1,
+      "qualitative_mechanism_claim_ready": 2,
+      "quantitative_direct_text_claim_ready": 5
+    },
+    "explicit_cross_side_comparison_possible": {
+      "directional_hint_only": 2,
+      "qualitative_mechanism_claim_ready": 3,
+      "quantitative_direct_text_claim_ready": 2
+    },
+    "named_position_possible": {
+      "mixed_quant_qual_claim_ready": 2,
+      "qualitative_mechanism_claim_ready": 2,
+      "quantitative_direct_text_claim_ready": 1
+    },
+    "none": {
+      "directional_hint_only": 633,
+      "local_context_only": 1206,
+      "mixed_quant_qual_claim_ready": 364,
+      "qualitative_mechanism_claim_ready": 2563,
+      "quantitative_direct_text_claim_ready": 4584,
+      "quantitative_needs_normalization": 571,
+      "source_navigation_or_reference_only": 2704,
+      "weak_or_not_supported": 2449
+    },
+    "same_source_possible": {
+      "quantitative_direct_text_claim_ready": 8
+    },
+    "weak_context_only": {
+      "directional_hint_only": 22,
+      "local_context_only": 1,
+      "mixed_quant_qual_claim_ready": 6,
+      "qualitative_mechanism_claim_ready": 32,
+      "quantitative_direct_text_claim_ready": 9,
+      "quantitative_needs_normalization": 5,
+      "source_navigation_or_reference_only": 2,
+      "weak_or_not_supported": 10
+    }
+  },
+  "counts": {
+    "direct_comparison_ready": 8,
+    "explicit_cross_side_comparison_possible": 7,
+    "named_position_possible": 5,
+    "none": 15074,
+    "same_source_possible": 8,
+    "weak_context_only": 87
+  },
+  "dimension": "comparison_potential_rating",
+  "downstream_use_by_value": {
+    "direct_comparison_ready": {
+      "comparison_review_candidate": 3,
+      "core_finding_candidate": 2,
+      "quantitative_normalization_candidate": 3
+    },
+    "explicit_cross_side_comparison_possible": {
+      "comparison_review_candidate": 6,
+      "supporting_example_candidate": 1
+    },
+    "named_position_possible": {
+      "comparison_review_candidate": 2,
+      "mechanism_summary_candidate": 2,
+      "quantitative_normalization_candidate": 1
+    },
+    "none": {
+      "comparison_review_candidate": 6,
+      "core_finding_candidate": 1951,
+      "exclude_or_write_off": 3429,
+      "growth_continuity_candidate": 32,
+      "local_context_candidate": 1983,
+      "manual_review_candidate": 2280,
+      "mechanism_summary_candidate": 1932,
+      "quantitative_normalization_candidate": 378,
+      "supporting_example_candidate": 3083
+    },
+    "same_source_possible": {
+      "core_finding_candidate": 3,
+      "quantitative_normalization_candidate": 4,
+      "supporting_example_candidate": 1
+    },
+    "weak_context_only": {
+      "comparison_review_candidate": 15,
+      "core_finding_candidate": 6,
+      "exclude_or_write_off": 3,
+      "local_context_candidate": 6,
+      "manual_review_candidate": 16,
+      "mechanism_summary_candidate": 19,
+      "quantitative_normalization_candidate": 5,
+      "supporting_example_candidate": 17
+    }
+  },
+  "rated_span_count": 15189
+}

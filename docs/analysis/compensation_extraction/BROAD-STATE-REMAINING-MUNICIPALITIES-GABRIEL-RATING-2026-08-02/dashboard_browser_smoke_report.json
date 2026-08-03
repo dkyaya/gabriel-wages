@@ -1,0 +1,20 @@
+{
+  "status": "passed_static_browser_unavailable",
+  "checked_at": "2026-08-03T01:59:30Z",
+  "browser_controller_attempted": true,
+  "browser_controller_result": "No browser is available",
+  "production_build_passed": true,
+  "local_http_smoke_passed": true,
+  "dashboard_loaded_from_local_build": true,
+  "current_stage_correct": true,
+  "next_task_correct": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "scout_coverage_rate_percent": 99.9579,
+  "final_pi_report_link_intact": true,
+  "wage_growth_continuity_module_intact": true,
+  "compact_rating_counts_present": true,
+  "technical_details_collapsed_by_default": true,
+  "forbidden_claim_present": false,
+  "visual_browser_validation_passed": false,
+  "validation_method": "production build, local HTTP response, dashboard JSON contract tests, and static source inspection"
+}

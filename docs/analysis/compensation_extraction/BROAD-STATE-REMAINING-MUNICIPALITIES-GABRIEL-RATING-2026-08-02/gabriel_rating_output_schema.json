@@ -1,0 +1,164 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ratings": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_readiness_bucket": {
+            "enum": [
+              "quantitative_direct_text_claim_ready",
+              "quantitative_needs_normalization",
+              "qualitative_mechanism_claim_ready",
+              "mixed_quant_qual_claim_ready",
+              "directional_hint_only",
+              "local_context_only",
+              "source_navigation_or_reference_only",
+              "weak_or_not_supported"
+            ],
+            "type": "string"
+          },
+          "comparison_potential_rating": {
+            "enum": [
+              "none",
+              "weak_context_only",
+              "same_source_possible",
+              "named_position_possible",
+              "structured_schedule_possible",
+              "explicit_cross_side_comparison_possible",
+              "direct_comparison_ready"
+            ],
+            "type": "string"
+          },
+          "concise_rating_rationale": {
+            "maxLength": 320,
+            "minLength": 1,
+            "type": "string"
+          },
+          "downstream_use_bucket": {
+            "enum": [
+              "core_finding_candidate",
+              "supporting_example_candidate",
+              "mechanism_summary_candidate",
+              "quantitative_normalization_candidate",
+              "comparison_review_candidate",
+              "growth_continuity_candidate",
+              "local_context_candidate",
+              "manual_review_candidate",
+              "exclude_or_write_off"
+            ],
+            "type": "string"
+          },
+          "extraction_confidence_rating": {
+            "enum": [
+              "low",
+              "moderate",
+              "high",
+              "very_high"
+            ],
+            "type": "string"
+          },
+          "flags": {
+            "items": {
+              "pattern": "^[a-z][a-z0-9_]{0,63}$",
+              "type": "string"
+            },
+            "maxItems": 6,
+            "type": "array"
+          },
+          "mechanism_strength_level": {
+            "enum": [
+              "none",
+              "weak",
+              "moderate",
+              "strong",
+              "central"
+            ],
+            "type": "string"
+          },
+          "qualitative_support_level": {
+            "enum": [
+              "none",
+              "weak",
+              "moderate",
+              "strong",
+              "direct"
+            ],
+            "type": "string"
+          },
+          "quantitative_support_level": {
+            "enum": [
+              "none",
+              "weak",
+              "moderate",
+              "strong",
+              "direct"
+            ],
+            "type": "string"
+          },
+          "reason_codes": {
+            "items": {
+              "pattern": "^[a-z][a-z0-9_]{0,63}$",
+              "type": "string"
+            },
+            "maxItems": 6,
+            "minItems": 1,
+            "type": "array"
+          },
+          "side_relevance_rating": {
+            "enum": [
+              "police_direct",
+              "fire_direct",
+              "safety_combined_direct",
+              "non_safety_direct",
+              "mixed_direct",
+              "unclear",
+              "not_applicable"
+            ],
+            "type": "string"
+          },
+          "source_context_quality_rating": {
+            "enum": [
+              "weak",
+              "moderate",
+              "strong"
+            ],
+            "type": "string"
+          },
+          "span_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "span_id",
+          "claim_readiness_bucket",
+          "quantitative_support_level",
+          "qualitative_support_level",
+          "mechanism_strength_level",
+          "side_relevance_rating",
+          "comparison_potential_rating",
+          "extraction_confidence_rating",
+          "source_context_quality_rating",
+          "downstream_use_bucket",
+          "reason_codes",
+          "concise_rating_rationale",
+          "flags"
+        ],
+        "type": "object"
+      },
+      "maxItems": 32,
+      "minItems": 32,
+      "type": "array"
+    },
+    "source_rating_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_rating_id",
+    "ratings"
+  ],
+  "type": "object"
+}

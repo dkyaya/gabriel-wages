@@ -1,0 +1,119 @@
+{
+  "claim_readiness_by_value": {
+    "comparison_review_candidate": {
+      "directional_hint_only": 12,
+      "mixed_quant_qual_claim_ready": 6,
+      "qualitative_mechanism_claim_ready": 9,
+      "quantitative_direct_text_claim_ready": 4,
+      "quantitative_needs_normalization": 1
+    },
+    "core_finding_candidate": {
+      "mixed_quant_qual_claim_ready": 63,
+      "qualitative_mechanism_claim_ready": 55,
+      "quantitative_direct_text_claim_ready": 1843,
+      "quantitative_needs_normalization": 1
+    },
+    "exclude_or_write_off": {
+      "directional_hint_only": 74,
+      "local_context_only": 76,
+      "quantitative_direct_text_claim_ready": 9,
+      "quantitative_needs_normalization": 6,
+      "source_navigation_or_reference_only": 2196,
+      "weak_or_not_supported": 1071
+    },
+    "growth_continuity_candidate": {
+      "directional_hint_only": 2,
+      "mixed_quant_qual_claim_ready": 1,
+      "qualitative_mechanism_claim_ready": 5,
+      "quantitative_direct_text_claim_ready": 22,
+      "quantitative_needs_normalization": 2
+    },
+    "local_context_candidate": {
+      "directional_hint_only": 223,
+      "local_context_only": 795,
+      "mixed_quant_qual_claim_ready": 9,
+      "qualitative_mechanism_claim_ready": 372,
+      "quantitative_direct_text_claim_ready": 99,
+      "quantitative_needs_normalization": 23,
+      "source_navigation_or_reference_only": 298,
+      "weak_or_not_supported": 170
+    },
+    "manual_review_candidate": {
+      "directional_hint_only": 254,
+      "local_context_only": 248,
+      "mixed_quant_qual_claim_ready": 23,
+      "qualitative_mechanism_claim_ready": 66,
+      "quantitative_direct_text_claim_ready": 29,
+      "quantitative_needs_normalization": 288,
+      "source_navigation_or_reference_only": 207,
+      "weak_or_not_supported": 1181
+    },
+    "mechanism_summary_candidate": {
+      "directional_hint_only": 24,
+      "local_context_only": 22,
+      "mixed_quant_qual_claim_ready": 152,
+      "qualitative_mechanism_claim_ready": 1593,
+      "quantitative_direct_text_claim_ready": 92,
+      "quantitative_needs_normalization": 66,
+      "weak_or_not_supported": 4
+    },
+    "quantitative_normalization_candidate": {
+      "directional_hint_only": 1,
+      "mixed_quant_qual_claim_ready": 13,
+      "quantitative_direct_text_claim_ready": 313,
+      "quantitative_needs_normalization": 64
+    },
+    "supporting_example_candidate": {
+      "directional_hint_only": 67,
+      "local_context_only": 66,
+      "mixed_quant_qual_claim_ready": 106,
+      "qualitative_mechanism_claim_ready": 502,
+      "quantitative_direct_text_claim_ready": 2198,
+      "quantitative_needs_normalization": 125,
+      "source_navigation_or_reference_only": 5,
+      "weak_or_not_supported": 33
+    }
+  },
+  "counts": {
+    "comparison_review_candidate": 32,
+    "core_finding_candidate": 1962,
+    "exclude_or_write_off": 3432,
+    "growth_continuity_candidate": 32,
+    "local_context_candidate": 1989,
+    "manual_review_candidate": 2296,
+    "mechanism_summary_candidate": 1953,
+    "quantitative_normalization_candidate": 391,
+    "supporting_example_candidate": 3102
+  },
+  "dimension": "downstream_use_bucket",
+  "downstream_use_by_value": {
+    "comparison_review_candidate": {
+      "comparison_review_candidate": 32
+    },
+    "core_finding_candidate": {
+      "core_finding_candidate": 1962
+    },
+    "exclude_or_write_off": {
+      "exclude_or_write_off": 3432
+    },
+    "growth_continuity_candidate": {
+      "growth_continuity_candidate": 32
+    },
+    "local_context_candidate": {
+      "local_context_candidate": 1989
+    },
+    "manual_review_candidate": {
+      "manual_review_candidate": 2296
+    },
+    "mechanism_summary_candidate": {
+      "mechanism_summary_candidate": 1953
+    },
+    "quantitative_normalization_candidate": {
+      "quantitative_normalization_candidate": 391
+    },
+    "supporting_example_candidate": {
+      "supporting_example_candidate": 3102
+    }
+  },
+  "rated_span_count": 15189
+}

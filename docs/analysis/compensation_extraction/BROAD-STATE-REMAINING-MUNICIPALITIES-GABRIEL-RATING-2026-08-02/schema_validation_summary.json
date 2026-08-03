@@ -1,0 +1,13 @@
+{
+  "expected_sources": 1812,
+  "expected_spans": 15189,
+  "invalid_objects_in_clean_ledgers": 0,
+  "passed": true,
+  "quarantine_source_ratings": 0,
+  "quarantine_spans": 0,
+  "terminal_source_ratings": 1812,
+  "terminal_span_count": 15189,
+  "valid_rating_objects_schema_valid": 15189,
+  "valid_source_ratings": 1812,
+  "valid_span_ratings": 15189
+}

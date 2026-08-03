@@ -1,0 +1,3 @@
+# Next task: BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02
+
+Ingest and codify only schema-valid GABRIEL ratings from this package into the project analysis-ready rating layer. Keep quarantine/error records separate. Reconstruct summaries from valid/quarantine ledgers, classify direct quantitative, needs-normalization, qualitative mechanism, mixed, directional, local-context, weak/not-supported, and quarantine records. Do not normalize or match pay values without separate authorization; do not calculate wage gaps, run regressions or treatment effects, make national/prevalence/final-causal claims, or set global readiness true. Preserve the clean dashboard, final PI report link, wage-growth continuity module, and `scout_coverage_rate` map.
