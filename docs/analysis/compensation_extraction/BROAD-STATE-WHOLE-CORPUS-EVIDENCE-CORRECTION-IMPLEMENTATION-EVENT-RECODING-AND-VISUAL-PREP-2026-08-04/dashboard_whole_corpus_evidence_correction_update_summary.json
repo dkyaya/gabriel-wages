@@ -9,6 +9,8 @@
   "map_primary_metric": "scout_coverage_rate",
   "scout_coverage_percent": 99.9579,
   "production_build_status": "pass",
+  "ci_regeneration_overlay_status": "pass",
+  "github_pages_workflow_compatibility": "validated_by_builder_regeneration_and_production_build",
   "local_http_status": {
     "dashboard_root": 200,
     "corrected_scaffold": 200,

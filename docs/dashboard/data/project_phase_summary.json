@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-03T23:39:14Z",
+  "generated_at": "2026-08-04T21:37:54Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_whole_corpus_claim_package_review_markdown_report_complete",
+  "stage": "broad_state_whole_corpus_evidence_correction_implementation_event_recoding_complete",
   "current_phase": "Whole-corpus evidence correction and implementation-event recoding complete",
-  "current_phase_code": "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready",
-  "current_evidence_status": "manual_review_markdown_causal_mechanism_report_draft_available",
+  "current_phase_code": "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready",
+  "current_evidence_status": "corrected_bounded_evidence_scaffold_and_implementation_event_layers_available",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -6771,7 +6771,7 @@
     "fire": 287,
     "mixed": 12
   },
-  "hex_density_visual_ready_status": "partial_coordinate_join_required",
+  "hex_density_visual_ready_status": "fixed_grid_spec_ready_coordinate_join_partial",
   "external_data_missingness_matrix_count": 8994,
   "external_data_search_target_count": 8994,
   "corrected_claim_gate_statuses": {

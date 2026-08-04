@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-03T23:39:14Z",
+  "generated_at": "2026-08-04T21:37:54Z",
   "data_vintage": "2026-07-30",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
@@ -44,7 +44,7 @@
       "report_type": "Active internal evidence-review scaffold",
       "date": "2026-08-04",
       "checkpoint": "31 excerpts repaired; 2998 deduplicated implementation events",
-      "summary": "Bounded textual evidence, human-readable citations, proposal/adoption/implementation recoding, event deduplication, fixed hex specification, and external-data targets. Not a final visual report or estimate.",
+      "summary": "Bounded textual evidence, human-readable citations, implementation-status recoding, event deduplication, fixed hex specification, and external-data targets. This is not a final visual report or estimate.",
       "tags": [
         "whole corpus",
         "evidence correction",

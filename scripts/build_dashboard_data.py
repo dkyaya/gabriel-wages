@@ -20684,6 +20684,96 @@ def main() -> int:
         metadata=metadata,
     )
 
+    # The whole-corpus correction package is a post-builder analysis layer.
+    # Overlay its compact status only when the validated summary and public
+    # scaffold are both present, so CI regeneration preserves the active
+    # internal-review state without weakening the older source-data gates.
+    correction_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04"
+    )
+    correction_summary_path = correction_dir / "whole_corpus_evidence_correction_summary.json"
+    corrected_scaffold_href = (
+        "reports/whole_corpus_evidence_corrected_2026-08-04/"
+        "whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md"
+    )
+    corrected_scaffold_path = ROOT / "docs" / "dashboard" / "public" / corrected_scaffold_href
+    if correction_summary_path.is_file() and corrected_scaffold_path.is_file():
+        correction = read_json(correction_summary_path)
+        project_phase_summary.update(
+            {
+                "current_phase": "Whole-corpus evidence correction and implementation-event recoding complete",
+                "stage": "broad_state_whole_corpus_evidence_correction_implementation_event_recoding_complete",
+                "current_phase_code": correction["decision"],
+                "current_evidence_status": "corrected_bounded_evidence_scaffold_and_implementation_event_layers_available",
+                "next_task": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04",
+                "whole_corpus_evidence_correction_available": True,
+                "whole_corpus_evidence_correction_status": correction["decision"],
+                "representative_evidence_excerpt_repair_count": correction["repaired_example_count"],
+                "human_readable_citation_count": correction["human_readable_citation_count"],
+                "proposal_adoption_implementation_counts": correction["implementation_status_counts"],
+                "mechanism_implementation_event_count": correction["mechanism_implementation_event_count"],
+                "mechanism_implementation_by_side": correction["events_by_side"],
+                "hex_density_visual_ready_status": correction["hex_density_status"],
+                "external_data_missingness_matrix_count": correction["external_data_missingness_count"],
+                "external_data_search_target_count": correction["external_data_search_target_count"],
+                "corrected_claim_gate_statuses": correction["gate_statuses"],
+                "corrected_scaffold_available": True,
+                "corrected_scaffold_href": corrected_scaffold_href,
+                "corrected_scaffold_link_label": "Open corrected whole-corpus evidence scaffold (MD)",
+                "active_internal_review_href": corrected_scaffold_href,
+                "global_analysis_readiness": False,
+                "global_wage_gap_readiness": False,
+                "global_causal_readiness": False,
+                "causal_mechanism_interpretation_gate": correction["gate_statuses"]["causal_mechanism_interpretation_gate"],
+                "external_search_executed_in_correction_task": False,
+                "final_visual_report_created": False,
+            }
+        )
+        corrected_report = {
+            "id": "whole-corpus-evidence-corrected-2026-08-04",
+            "title": "Corrected whole-corpus causal-mechanism evidence scaffold",
+            "report_type": "Active internal evidence-review scaffold",
+            "date": "2026-08-04",
+            "checkpoint": f"{correction['repaired_example_count']} excerpts repaired; {correction['mechanism_implementation_event_count']} deduplicated implementation events",
+            "summary": "Bounded textual evidence, human-readable citations, implementation-status recoding, event deduplication, fixed hex specification, and external-data targets. This is not a final visual report or estimate.",
+            "tags": ["whole corpus", "evidence correction", "implementation events", "internal review"],
+            "current": False,
+            "historical": False,
+            "href": corrected_scaffold_href,
+            "link_label": "Open corrected whole-corpus evidence scaffold (MD)",
+            "scope_metrics": [
+                {"label": "repaired excerpts", "value": correction["repaired_example_count"]},
+                {"label": "implementation events", "value": correction["mechanism_implementation_event_count"]},
+                {"label": "search targets", "value": correction["external_data_search_target_count"]},
+            ],
+        }
+        prior_report = {
+            "id": "whole-corpus-claim-package-review-2026-08-03",
+            "title": "Whole-corpus causal-mechanism report draft — previous reviewed version",
+            "report_type": "Previous internal Markdown evidence scaffold",
+            "date": "2026-08-03",
+            "checkpoint": "8 claim families; 31 selected examples",
+            "summary": "Archived reviewed draft retained before evidence correction.",
+            "tags": ["whole corpus", "previous reviewed draft"],
+            "current": False,
+            "historical": True,
+            "href": "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+            "link_label": "Open prior reviewed whole-corpus report draft (MD)",
+            "scope_metrics": [
+                {"label": "claim families", "value": 8},
+                {"label": "selected examples", "value": 31},
+            ],
+        }
+        reports_index["reports"] = [
+            report
+            for report in reports_index["reports"]
+            if report.get("id") not in {corrected_report["id"], prior_report["id"]}
+        ]
+        reports_index["reports"].insert(1, corrected_report)
+        reports_index["reports"].insert(2, prior_report)
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),
