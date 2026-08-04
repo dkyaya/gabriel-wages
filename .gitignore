@@ -43,6 +43,10 @@ docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-
 /artifacts/local_archives/
 /docs/analysis/compensation_extraction/*/retained_sources/
 
+# Bounded adjudication render payloads are reproducible local review assets.
+# Their tracked render manifest preserves paths, byte counts, and SHA-256 values.
+/docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/
+
 # BROAD-STATE 4x2500 span worker ledgers are resumable local intermediates.
 # Their locked queues, merged source results, merged bounded candidates,
 # checkpoints, and summaries are durable at the task root; do not duplicate the

@@ -1,0 +1,56 @@
+{
+  "resolution_id": "WORKTREE-INTEGRITY-RESOLUTION-2026-08-04",
+  "created_at": "2026-08-04T22:34:00-04:00",
+  "head_before_resolution": "d2d9710f6078076f62d9c4e30b2809b566cf597f",
+  "scope": [
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "package-lock.json"
+  ],
+  "rendered_pages": {
+    "original_path": "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/",
+    "handling": "preserved_in_place_and_path_specifically_git_ignored",
+    "archive_path": null,
+    "file_count": 785,
+    "directory_count": 150,
+    "byte_count": 106889932,
+    "aggregate_sha256": "2392aebfe397632a835ddfea461b3d556472ba26b1b2241b1777dbf78e979907",
+    "aggregate_hash_method": "sha256 over sorted rendered_image_path, NUL, byte_count, NUL, file_sha256, newline",
+    "tracked_per_file_manifest": "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/independent_adjudication_render_manifest.csv",
+    "tracked_manifest_rows": 785,
+    "manifest_missing_file_count": 0,
+    "manifest_extra_file_count": 0,
+    "manifest_size_mismatch_count": 0,
+    "manifest_hash_mismatch_count": 0,
+    "active_references": [
+      "scripts/run_auto_gabriel_text_table_adjudication.py resolves each rendered_image_path relative to the packet directory",
+      "scripts/prepare_independent_text_table_adjudication_packet.py creates and links bounded rendered pages",
+      "scripts/run_compensation_evidence_extraction.py reads the tracked render manifest",
+      "docs/dashboard/data/text_table_calibration_status_summary.json exposes the tracked adjudication manifest"
+    ],
+    "handling_reason": "The payload is generated and noncanonical, but active tracked manifests and workflows reference its in-place relative paths. The images were therefore not moved or deleted. A path-specific ignore rule prevents accidental staging while preserving reproducibility and active references."
+  },
+  "root_package_lock": {
+    "original_path": "package-lock.json",
+    "handling": "moved_to_git_ignored_local_archive",
+    "archive_path": "artifacts/local_archives/worktree_integrity_resolution_2026-08-04/root_package-lock.json",
+    "file_count": 1,
+    "byte_count": 92,
+    "sha256": "f07dd26daf1b0b64d3d5ba84b8d69188ba08908732f6bd8f82169aedd6147373",
+    "root_package_json_exists": false,
+    "lockfile_version": 3,
+    "package_entry_count": 0,
+    "handling_reason": "The repository root is not an npm package. The only active npm application is docs/dashboard, whose committed package.json and package-lock.json are used by the GitHub Pages workflow. The empty root lockfile was accidental and redundant, so it was archived without changing dependencies or application behavior."
+  },
+  "canonical_dashboard_npm_project": {
+    "package_json": "docs/dashboard/package.json",
+    "package_json_sha256": "50aa577ac56a8a1da21e78caf3ad2161949bca88911634c00ed1477693b10136",
+    "package_lock": "docs/dashboard/package-lock.json",
+    "package_lock_sha256": "e8f6a759307c14ec327c90746e9e01288bf361e26ab64d0b24ca2dcc8e19e7c3",
+    "workflow": ".github/workflows/deploy-dashboard.yml",
+    "workflow_install_command": "npm ci",
+    "dependency_or_version_changes": 0
+  },
+  "payloads_staged": false,
+  "rendered_images_deleted": false,
+  "dependencies_regenerated": false
+}
