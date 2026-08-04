@@ -3,7 +3,7 @@
   "passed": true,
   "soft_limit_bytes": 52428800,
   "github_hard_limit_bytes": 104857600,
-  "largest_staged_file_bytes": 46477385,
+  "largest_staged_file_bytes": 20324600,
   "files_over_50_mib": [],
   "github_hard_limit_violations": []
 }

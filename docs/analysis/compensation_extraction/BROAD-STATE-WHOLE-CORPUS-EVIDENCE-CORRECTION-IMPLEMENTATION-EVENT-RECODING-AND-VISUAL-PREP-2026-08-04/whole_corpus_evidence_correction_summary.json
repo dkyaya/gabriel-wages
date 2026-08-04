@@ -58,8 +58,8 @@
   "hex_density_visual_ready_row_count": 0,
   "hex_density_status": "fixed_grid_spec_ready_coordinate_join_partial",
   "staffing_hypothesis_record_count": 3330,
-  "external_data_missingness_count": 8994,
-  "external_data_search_target_count": 8994,
+  "external_data_missingness_count": 20986,
+  "external_data_search_target_count": 20986,
   "gate_statuses": {
     "local_comparison_gate": "partial",
     "same_side_evidence_gate": "partial",

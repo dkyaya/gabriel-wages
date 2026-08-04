@@ -172,6 +172,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             self.assertTrue(phase["whole_corpus_evidence_correction_available"])
             self.assertEqual(phase["representative_evidence_excerpt_repair_count"], 31)
             self.assertEqual(phase["mechanism_implementation_event_count"], 2998)
+            self.assertEqual(phase["external_data_search_target_count"], 20986)
             self.assertEqual(
                 phase["corrected_scaffold_href"],
                 "reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
@@ -792,6 +793,7 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             self.assertTrue(phase["whole_corpus_evidence_correction_available"])
                                                                             self.assertEqual(phase["representative_evidence_excerpt_repair_count"], 31)
                                                                             self.assertEqual(phase["mechanism_implementation_event_count"], 2998)
+                                                                            self.assertEqual(phase["external_data_search_target_count"], 20986)
                                                                             self.assertEqual(
                                                                                 phase["corrected_scaffold_link_label"],
                                                                                 "Open corrected whole-corpus evidence scaffold (MD)",

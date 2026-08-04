@@ -1,12 +1,12 @@
 {
-  "target_count": 8994,
+  "target_count": 20986,
   "locked_from_missingness_matrix": true,
   "external_search_executed": false,
   "five_lane_counts": {
-    "search_lane_004": 1855,
-    "search_lane_003": 1796,
-    "search_lane_001": 1802,
-    "search_lane_005": 1757,
-    "search_lane_002": 1784
+    "search_lane_004": 4188,
+    "search_lane_003": 4216,
+    "search_lane_002": 4174,
+    "search_lane_001": 4226,
+    "search_lane_005": 4182
   }
 }
