@@ -1,0 +1,380 @@
+{
+  "AK": {
+    "implementation_event_count": 11,
+    "unique_municipality_count": 8,
+    "unique_cycle_count": 8,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 3,
+    "implemented_event_count": 8,
+    "paid_or_observed_event_count": 0
+  },
+  "AL": {
+    "implementation_event_count": 6,
+    "unique_municipality_count": 6,
+    "unique_cycle_count": 6,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 5,
+    "paid_or_observed_event_count": 0
+  },
+  "AR": {
+    "implementation_event_count": 7,
+    "unique_municipality_count": 4,
+    "unique_cycle_count": 5,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 5,
+    "paid_or_observed_event_count": 0
+  },
+  "CA": {
+    "implementation_event_count": 59,
+    "unique_municipality_count": 21,
+    "unique_cycle_count": 12,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 11,
+    "implemented_event_count": 48,
+    "paid_or_observed_event_count": 0
+  },
+  "CO": {
+    "implementation_event_count": 12,
+    "unique_municipality_count": 5,
+    "unique_cycle_count": 6,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 11,
+    "paid_or_observed_event_count": 0
+  },
+  "CT": {
+    "implementation_event_count": 14,
+    "unique_municipality_count": 8,
+    "unique_cycle_count": 10,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 6,
+    "implemented_event_count": 8,
+    "paid_or_observed_event_count": 0
+  },
+  "FL": {
+    "implementation_event_count": 28,
+    "unique_municipality_count": 19,
+    "unique_cycle_count": 13,
+    "corroborated_event_count": 1,
+    "adopted_event_count": 5,
+    "implemented_event_count": 23,
+    "paid_or_observed_event_count": 0
+  },
+  "GA": {
+    "implementation_event_count": 18,
+    "unique_municipality_count": 13,
+    "unique_cycle_count": 9,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 7,
+    "implemented_event_count": 11,
+    "paid_or_observed_event_count": 0
+  },
+  "IA": {
+    "implementation_event_count": 46,
+    "unique_municipality_count": 36,
+    "unique_cycle_count": 22,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 4,
+    "implemented_event_count": 42,
+    "paid_or_observed_event_count": 0
+  },
+  "ID": {
+    "implementation_event_count": 6,
+    "unique_municipality_count": 3,
+    "unique_cycle_count": 3,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 3,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "IL": {
+    "implementation_event_count": 200,
+    "unique_municipality_count": 90,
+    "unique_cycle_count": 49,
+    "corroborated_event_count": 1,
+    "adopted_event_count": 25,
+    "implemented_event_count": 174,
+    "paid_or_observed_event_count": 1
+  },
+  "IN": {
+    "implementation_event_count": 59,
+    "unique_municipality_count": 37,
+    "unique_cycle_count": 24,
+    "corroborated_event_count": 2,
+    "adopted_event_count": 9,
+    "implemented_event_count": 50,
+    "paid_or_observed_event_count": 0
+  },
+  "KS": {
+    "implementation_event_count": 33,
+    "unique_municipality_count": 23,
+    "unique_cycle_count": 15,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 7,
+    "implemented_event_count": 26,
+    "paid_or_observed_event_count": 0
+  },
+  "KY": {
+    "implementation_event_count": 17,
+    "unique_municipality_count": 15,
+    "unique_cycle_count": 10,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 6,
+    "implemented_event_count": 11,
+    "paid_or_observed_event_count": 0
+  },
+  "LA": {
+    "implementation_event_count": 13,
+    "unique_municipality_count": 11,
+    "unique_cycle_count": 8,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 11,
+    "paid_or_observed_event_count": 0
+  },
+  "MA": {
+    "implementation_event_count": 37,
+    "unique_municipality_count": 22,
+    "unique_cycle_count": 14,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 5,
+    "implemented_event_count": 32,
+    "paid_or_observed_event_count": 0
+  },
+  "MD": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "ME": {
+    "implementation_event_count": 31,
+    "unique_municipality_count": 18,
+    "unique_cycle_count": 14,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 4,
+    "implemented_event_count": 27,
+    "paid_or_observed_event_count": 0
+  },
+  "MI": {
+    "implementation_event_count": 246,
+    "unique_municipality_count": 126,
+    "unique_cycle_count": 52,
+    "corroborated_event_count": 4,
+    "adopted_event_count": 16,
+    "implemented_event_count": 230,
+    "paid_or_observed_event_count": 0
+  },
+  "MN": {
+    "implementation_event_count": 203,
+    "unique_municipality_count": 97,
+    "unique_cycle_count": 40,
+    "corroborated_event_count": 7,
+    "adopted_event_count": 28,
+    "implemented_event_count": 171,
+    "paid_or_observed_event_count": 4
+  },
+  "MO": {
+    "implementation_event_count": 15,
+    "unique_municipality_count": 13,
+    "unique_cycle_count": 10,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 3,
+    "implemented_event_count": 12,
+    "paid_or_observed_event_count": 0
+  },
+  "MS": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "NC": {
+    "implementation_event_count": 82,
+    "unique_municipality_count": 55,
+    "unique_cycle_count": 20,
+    "corroborated_event_count": 2,
+    "adopted_event_count": 21,
+    "implemented_event_count": 60,
+    "paid_or_observed_event_count": 1
+  },
+  "ND": {
+    "implementation_event_count": 12,
+    "unique_municipality_count": 9,
+    "unique_cycle_count": 9,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 10,
+    "paid_or_observed_event_count": 0
+  },
+  "NE": {
+    "implementation_event_count": 19,
+    "unique_municipality_count": 14,
+    "unique_cycle_count": 12,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 4,
+    "implemented_event_count": 15,
+    "paid_or_observed_event_count": 0
+  },
+  "NH": {
+    "implementation_event_count": 9,
+    "unique_municipality_count": 9,
+    "unique_cycle_count": 6,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 8,
+    "paid_or_observed_event_count": 0
+  },
+  "NJ": {
+    "implementation_event_count": 181,
+    "unique_municipality_count": 89,
+    "unique_cycle_count": 20,
+    "corroborated_event_count": 6,
+    "adopted_event_count": 9,
+    "implemented_event_count": 172,
+    "paid_or_observed_event_count": 0
+  },
+  "NY": {
+    "implementation_event_count": 420,
+    "unique_municipality_count": 209,
+    "unique_cycle_count": 102,
+    "corroborated_event_count": 11,
+    "adopted_event_count": 73,
+    "implemented_event_count": 344,
+    "paid_or_observed_event_count": 3
+  },
+  "OH": {
+    "implementation_event_count": 645,
+    "unique_municipality_count": 137,
+    "unique_cycle_count": 26,
+    "corroborated_event_count": 38,
+    "adopted_event_count": 18,
+    "implemented_event_count": 627,
+    "paid_or_observed_event_count": 0
+  },
+  "OK": {
+    "implementation_event_count": 15,
+    "unique_municipality_count": 10,
+    "unique_cycle_count": 9,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 13,
+    "paid_or_observed_event_count": 0
+  },
+  "OR": {
+    "implementation_event_count": 4,
+    "unique_municipality_count": 3,
+    "unique_cycle_count": 3,
+    "corroborated_event_count": 1,
+    "adopted_event_count": 1,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "PA": {
+    "implementation_event_count": 173,
+    "unique_municipality_count": 99,
+    "unique_cycle_count": 29,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 20,
+    "implemented_event_count": 153,
+    "paid_or_observed_event_count": 0
+  },
+  "SC": {
+    "implementation_event_count": 4,
+    "unique_municipality_count": 4,
+    "unique_cycle_count": 3,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 4,
+    "paid_or_observed_event_count": 0
+  },
+  "SD": {
+    "implementation_event_count": 24,
+    "unique_municipality_count": 15,
+    "unique_cycle_count": 12,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 23,
+    "paid_or_observed_event_count": 0
+  },
+  "TN": {
+    "implementation_event_count": 26,
+    "unique_municipality_count": 23,
+    "unique_cycle_count": 23,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 4,
+    "implemented_event_count": 22,
+    "paid_or_observed_event_count": 0
+  },
+  "TX": {
+    "implementation_event_count": 67,
+    "unique_municipality_count": 44,
+    "unique_cycle_count": 20,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 28,
+    "implemented_event_count": 38,
+    "paid_or_observed_event_count": 1
+  },
+  "UT": {
+    "implementation_event_count": 8,
+    "unique_municipality_count": 4,
+    "unique_cycle_count": 5,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 7,
+    "paid_or_observed_event_count": 0
+  },
+  "VA": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "VT": {
+    "implementation_event_count": 19,
+    "unique_municipality_count": 10,
+    "unique_cycle_count": 10,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 3,
+    "implemented_event_count": 16,
+    "paid_or_observed_event_count": 0
+  },
+  "WA": {
+    "implementation_event_count": 21,
+    "unique_municipality_count": 12,
+    "unique_cycle_count": 12,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 5,
+    "implemented_event_count": 16,
+    "paid_or_observed_event_count": 0
+  },
+  "WI": {
+    "implementation_event_count": 204,
+    "unique_municipality_count": 115,
+    "unique_cycle_count": 95,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 57,
+    "implemented_event_count": 144,
+    "paid_or_observed_event_count": 3
+  },
+  "WV": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  }
+}

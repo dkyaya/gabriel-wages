@@ -1,0 +1,4043 @@
+{
+  "2014": {
+    "implementation_event_count": 47,
+    "unique_municipality_count": 42,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 1,
+    "adopted_event_count": 6,
+    "implemented_event_count": 41,
+    "paid_or_observed_event_count": 0
+  },
+  "2015": {
+    "implementation_event_count": 54,
+    "unique_municipality_count": 46,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 54,
+    "paid_or_observed_event_count": 0
+  },
+  "2016": {
+    "implementation_event_count": 67,
+    "unique_municipality_count": 49,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 2,
+    "adopted_event_count": 1,
+    "implemented_event_count": 65,
+    "paid_or_observed_event_count": 1
+  },
+  "2017": {
+    "implementation_event_count": 99,
+    "unique_municipality_count": 80,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 2,
+    "adopted_event_count": 6,
+    "implemented_event_count": 93,
+    "paid_or_observed_event_count": 0
+  },
+  "2018": {
+    "implementation_event_count": 92,
+    "unique_municipality_count": 75,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 3,
+    "adopted_event_count": 8,
+    "implemented_event_count": 83,
+    "paid_or_observed_event_count": 1
+  },
+  "2019": {
+    "implementation_event_count": 154,
+    "unique_municipality_count": 106,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 8,
+    "adopted_event_count": 11,
+    "implemented_event_count": 143,
+    "paid_or_observed_event_count": 0
+  },
+  "2020": {
+    "implementation_event_count": 189,
+    "unique_municipality_count": 122,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 11,
+    "adopted_event_count": 16,
+    "implemented_event_count": 172,
+    "paid_or_observed_event_count": 1
+  },
+  "2021": {
+    "implementation_event_count": 219,
+    "unique_municipality_count": 159,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 13,
+    "adopted_event_count": 13,
+    "implemented_event_count": 206,
+    "paid_or_observed_event_count": 0
+  },
+  "2022": {
+    "implementation_event_count": 237,
+    "unique_municipality_count": 190,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 3,
+    "adopted_event_count": 29,
+    "implemented_event_count": 208,
+    "paid_or_observed_event_count": 0
+  },
+  "2023": {
+    "implementation_event_count": 260,
+    "unique_municipality_count": 211,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 8,
+    "adopted_event_count": 19,
+    "implemented_event_count": 241,
+    "paid_or_observed_event_count": 0
+  },
+  "2024": {
+    "implementation_event_count": 414,
+    "unique_municipality_count": 308,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 12,
+    "adopted_event_count": 54,
+    "implemented_event_count": 359,
+    "paid_or_observed_event_count": 1
+  },
+  "2025": {
+    "implementation_event_count": 372,
+    "unique_municipality_count": 297,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 6,
+    "adopted_event_count": 27,
+    "implemented_event_count": 342,
+    "paid_or_observed_event_count": 3
+  },
+  "2026": {
+    "implementation_event_count": 233,
+    "unique_municipality_count": 194,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 4,
+    "adopted_event_count": 25,
+    "implemented_event_count": 206,
+    "paid_or_observed_event_count": 2
+  },
+  "undated-source-B4X2500LIVE-20260729-000023": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000069": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000125": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000197": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000365": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000393": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000398": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000438": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000495": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000531": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000552": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000555": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000560": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000563": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000596": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000902": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000921": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000924": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000944": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-000962": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 1
+  },
+  "undated-source-B4X2500LIVE-20260729-001032": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001134": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001139": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001322": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001355": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001408": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001409": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001505": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001517": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001541": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001547": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001635": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-001772": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002015": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002111": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002135": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002261": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002309": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002312": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002476": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002491": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002680": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002703": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002725": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002740": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002884": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002926": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002947": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002967": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002968": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-002975": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003045": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003054": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003122": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003181": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003193": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003392": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003393": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003451": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003457": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003463": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003468": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003473": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003479": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003490": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003491": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003497": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003582": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003835": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003879": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003896": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003899": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003930": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003931": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003934": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003942": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003945": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003946": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003948": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003960": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003966": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003967": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003984": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-003985": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004005": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004030": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004090": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004128": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004155": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004275": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004434": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004439": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004549": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004599": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004604": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004605": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004606": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004630": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004632": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004634": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004636": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004637": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004673": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004780": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004829": {
+    "implementation_event_count": 4,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004861": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004930": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004951": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-004988": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005063": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005147": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005206": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005349": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005354": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005363": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005375": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005384": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005385": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005394": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005398": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005426": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005445": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005467": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005473": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005500": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005532": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005536": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005703": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005729": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005879": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005890": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005894": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005901": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005928": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005945": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005946": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005961": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005963": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005968": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-005991": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006107": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006176": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006212": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006214": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006284": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006385": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006401": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006418": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006440": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006443": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006444": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006445": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006456": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006486": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006487": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006509": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006524": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006727": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006802": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006859": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-006941": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007001": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007019": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007022": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007033": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007106": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007127": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007130": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007133": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007144": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007151": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007154": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007165": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007307": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007369": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007412": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007440": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007485": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007586": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007607": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007608": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007881": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007905": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007968": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-007971": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008003": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008094": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008395": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008436": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008448": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008455": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008456": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008467": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008894": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008907": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008911": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008912": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-008926": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009006": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009008": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009140": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009226": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009270": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009296": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009347": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009379": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009421": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009528": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009585": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009596": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009659": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009665": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009671": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009722": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009748": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009763": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009821": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009822": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-B4X2500LIVE-20260729-009977": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-012d0866950f2ebcb04e4b99": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-01c3216fe86d1955d65c7564": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-03119db0283cd7d3a165c992": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-0519ec359389d05900dd7d38": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-06723a1c6b64b511328bcc75": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-079ed452218eee2ecaa3f7ca": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-08716dea359ac27520e6ba82": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-0a364f2bb4951b3a0cb015fd": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-0bce5c22ecaea5b317c6730e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-0bf0246845e49763b4029638": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-0e2343bf70ef19cfcc66b47f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-108b008862e71ed213ca17a7": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-1257364601df84e5eabc51dc": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-139c8d44db8d6130035c9563": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-13d2257a01705fe1b6774224": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-14917abc014aae0e5b68e35e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-16aa674a1e522d9c436643b0": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-1936a3f2d7530e6292cdb6eb": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-1b62e34ee1fb310e711c6b95": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-1db7c6ef807023529844a2eb": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-20dcebd83c60c631a35b1eb1": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-225c21cd514fa84930f07276": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-230ddf78865eceb7f82c368a": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-2348e40fa5903ec89639f2a0": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-25dee9899a1b4bd3423b3d2a": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-26ea73a3a1fd6c0825c7d2ac": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 3,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-2750acaaab23932f49a06a46": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-2b2998e1e1c4115f1754bea0": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-2d99db9c5d98380c4c599bff": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-2e2837ddc7693bac7b658951": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-3091efa7884845e6e848001f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-327099d5ce39b70383b7ab79": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-34a5cde45668a37044df261f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-3896130f590bcf0ddf743104": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-3bf30dde4b17871fa3d92c16": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-3c6816e0777a275ebd4123b8": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-3da028110257d1fb76bab0f4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-3f2ceb706d3194fad2ee2343": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-4238c2abe9c48e3212f187c5": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-43a3c5453897f1e76c13cba4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-44cedcc20c84114820b24837": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-4530e7bc048420e9bf1ec007": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-48dfa6e1837fb8cad158d4ab": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-49814cab8b01c6622a7f23f5": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-4bbe771ece309ee5e8e883b0": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-4cb20cbd458f5d476a07e93d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-4e99efd65975539cacb959e4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-53e1dbd8f0755d69d5937c50": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-550e1faaf2a3e8ea9f07ce63": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-554084207c8d7c9551e4e30c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-5574980324c1e88bc178473b": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-56ac3cb4c44b6e0f2d10047b": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-575a77b9e89bfcfdc3d3628e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-5aaf0681eac3617d4a66bf78": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-5b67a098e220639121f8625d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-5feb5a1c80793ddbf12b1d6d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-600ff16a39893dcc2a8c2f63": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6104242d1996065cb9c4445c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6205b83d86ec617a0b8fd483": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 1
+  },
+  "undated-source-BRMGRS-20260802-6282b7166570ecb618d29f83": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6378ec6d87eda221e6893ea3": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-643b966bab9cc0466d0c18b9": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6567f68b109671973a0e75d3": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-67df49212a5290f6803b15cf": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-680e880be86d1da831617a59": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-68ab9c494ec1beca3800bd02": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6b77a98a8f930c2f26f3a620": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6d9df8f6a7e5930ad6e26a1f": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-6da24352b201754d5da7aaf5": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-7065cb4fbeaab4765744d04e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-724c1915e72ea9902dde16ec": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-76f3f4ec66d86a32e1901c39": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-7992e9e97a221039ef9e86c4": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 1
+  },
+  "undated-source-BRMGRS-20260802-79baa8d2a35fd2ba8f7086ee": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-7b75046536a18e3052ca5424": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-7d838488546c50d5f639cdae": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-7e44e8654df0662d04dd8ff8": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-826ffacd36837db576eecc01": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8375a68ac741ccfaa469aa36": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-846d27b2199bd28daa2a6cef": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-85268ac21283ff54130d840e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-857388a82c1729de4c07493e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-86253a5d237ee9c712edf89f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-86eb181f5a708a9562429b72": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8979866a3aae9a795f4e2655": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8b4b84318e522bff80e79efc": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8c502e3433465b971f600756": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8d12c9dc81b3367bf521873a": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8df62993d1b37a56b60c498e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-8e4e1501a3d6fa95f0274c0b": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-91675ace91c40522b785d902": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-91855e81069eb2695175ace1": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-9492c6ee7f7a82834b0231de": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-99cd0402d4d6cbe49db332ac": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-9b3057bfccd601d566884c8a": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-9b7101700da56ca3bcc11235": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-9cbb3d6a233bf5eeb6242528": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-a2b99a4a3c9b9e673dacd261": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-a324af0cc77419d0a1e4e3ad": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-ab169279593adfe98ca4fb44": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-ad8b57840fa5b7fe47810690": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-af762117c19981e8234de3cf": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b01633d745fd11a357f040fb": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b34970d0d74748c5128f9a16": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b4b6198a711673cceb52952d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b50e88a494f5879e5346bb7d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b6799560cc5141e48b58ed50": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b8ceadbfebf5c6d548b1aca7": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-b9e543c91933b26b74a8f15d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-ba2f2450692b14888432cae4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-bacef7146da0f5b7120971ea": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-bf8e544edccc778d9c7163bf": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-c0aa47ec3971c9aeb2867f8f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-c0eae713d569e27e2d13f9e9": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-c651a4fa17b469ff71375c4a": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-c7938058c73ed696b4feeae4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-c9aabbd6e7fb6c98ea6a5058": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-cc3115a02da00f048e317abb": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-cfc44f4c19f024f93b8c4bd4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d019a24f0c42b4382902dff6": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d4fc138947a682a1acf034d6": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d64ac3dd57e8d53aa665c2cc": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d71d7044f9d486ac0e6d4596": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d7711447b08f24eccfd289ae": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d8db33ef283758631ee250e0": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-d9d0334dbcf430895f6619eb": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-deedcc50a399416457f2557d": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-dfc4cffc3f03ed51f663fc57": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-e3c16c3973d13f7f7759f944": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-e516dc936ce14d30fcf33b3b": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-e797b0015e59e3f61532964d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-ecba4d2768718d8de101e65c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-ee49487423cd0c4523852bfd": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f01236b700542891a1aba100": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f2c630a3f46e34f9e17a20ca": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f302391acc2a6ce038be6914": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f3b4a4cc9909cab8b325ee4f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f3d1ffb85508cb7b3ec3c913": {
+    "implementation_event_count": 3,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 3,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f5bd2ad9baa20fd66834d1f9": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f5f0fc74e9a2c8356f6dbe1c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f64b87df381833a4c7a192e7": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-f9d5d71e9c74bda7357e9535": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-fac6f03389e983e247b4b28d": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-fc096ddbaafcb1daf2c10e6e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-fcb0e518adb7ea5a846a94b5": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 1
+  },
+  "undated-source-BRMGRS-20260802-fd08f34dde9d86bd7505684f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-fe04b1c5c13ad900afa924e1": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-BRMGRS-20260802-fe05d488bff1722cf188b06a": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-02240007fe6513e6684b": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-0aa9bec11dc81eb8c392": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-0d60553e076a753d87c7": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-0f8aede0e1ea717c3c26": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-1010106d0eb7668eae45": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-151921cc0dbdc7f7585f": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-187b42325134b18466c0": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-18ad0ea55d1a73018e5d": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-229e87b6cec1a609381b": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-2333c188cd6bb118679e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-23beabd3887515ea5d1f": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-294b2c2bda6ef0458722": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-2d545c13993b9f18625b": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-30b2ce9b198f23eafae3": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-310cbece02eeaf007b29": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-328a4c69c49405c24402": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-35b66ab798090a11e557": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-36a699eacec2b66d46a2": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-3822b3bdf1031e26bf68": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-39af19b6c7bdf70ed862": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-3d7b690187d8c2636953": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-44385490b1c1c0918544": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-4c3a7c4883b83def4abf": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-5a291c60e44f5a978b38": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-5df59dc162a76287511f": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-5e76aa4c2f5a476cc6b4": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-66db087f1bf4dd50858f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-67034cc7f9613b9151ea": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-6838e547c3986093b6e9": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-6ba0f13dcda120ccca22": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-6dbe81366092e535caca": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-6f072050f1fafab7f139": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-6fc976296b9ad19d0711": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-73701efdcca12306952b": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-759f97e5eba5ae38c389": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-7de2d2ec0511e4911415": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-8265c55530332c626686": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-866a717685765606272b": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-8965ce3bf0dccd365679": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-8bb343b753b910d1d5bb": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-923ced684d730235fc1f": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-9837b3bbeabc8e1748f1": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-9873033847f98efa7803": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-9c9a92f961b9a4497e7d": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-9cdb7043acab366dd01f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-9fd6952cfc972936a70c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-ace03dd12adcbccaf282": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-adf33ca00876e65f51f5": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-b115d8dc7037d0acdf4e": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-ba3ac2769cb332d0b52f": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-c0b24851cc06db9a8bca": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-c167f2a61f4166190396": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-c33e4a70fdc5045b30cd": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-c3a775aca23ccf9ae30a": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-c43d2ffaaa0f5b5f5ebd": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-cd0b5649366209f42a2e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-d4571a618ce82ec6e221": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-df59bbeeea62001e48fe": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-e4a9713083e242bb0a34": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-e4f099199cea41753efc": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-e5f48b75bfa9cb4a052a": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-e6131c6eca4731504c8e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-e96af6fd90f9e2bfda9f": {
+    "implementation_event_count": 2,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-efd8cd4228ea32e9f7a0": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-CBSRD-20260728-fef23f3fa0acd1295656": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-RS429-66fa6f654cb677ff7e4e": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-RS429-728fa34f79dffe429f1c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 1,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-RS556-12e65484e7490fd1ab7c": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "undated-source-RS556-8291125fe31139fcd192": {
+    "implementation_event_count": 1,
+    "unique_municipality_count": 1,
+    "unique_cycle_count": 1,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 1,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  }
+}

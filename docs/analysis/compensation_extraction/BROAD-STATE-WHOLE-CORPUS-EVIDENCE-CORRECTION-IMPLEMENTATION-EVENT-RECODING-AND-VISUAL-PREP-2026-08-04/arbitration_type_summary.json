@@ -1,0 +1,16 @@
+{
+  "record_count": 37369,
+  "counts": {
+    "not_applicable": 21934,
+    "contract_negotiation": 9810,
+    "grievance_arbitration": 34,
+    "interest_arbitration": 2655,
+    "unclear_dispute_type": 7,
+    "factfinding": 43,
+    "litigation_or_court": 66,
+    "mediation_or_conciliation": 26,
+    "settlement_or_mou": 2157,
+    "generic_dispute_process": 637
+  },
+  "grievance_not_treated_as_interest_arbitration": true
+}

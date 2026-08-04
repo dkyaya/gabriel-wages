@@ -1,0 +1,6 @@
+{
+  "gate": "implementation_event_visual_readiness_gate",
+  "status": "partial",
+  "assessed_at": "2026-08-04T21:10:00Z",
+  "rationale": "Event data and fixed-grid specification are ready; authoritative municipality coordinates are missing."
+}

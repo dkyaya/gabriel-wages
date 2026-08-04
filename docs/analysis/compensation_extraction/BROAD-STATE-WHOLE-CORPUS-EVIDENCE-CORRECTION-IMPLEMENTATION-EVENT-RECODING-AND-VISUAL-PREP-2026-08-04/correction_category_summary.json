@@ -1,0 +1,24 @@
+{
+  "record_count": 87023,
+  "category_counts": {
+    "compensation_cycle_repair": 87023,
+    "external_data_gap_prep": 87023,
+    "implementation_event_deduplication": 87023,
+    "pay_basis_repair": 74676,
+    "proposal_vs_implementation_repair": 87023,
+    "beneficiary_side_repair": 59737,
+    "compensation_type_repair": 59737,
+    "pressure_direction_repair": 59737,
+    "arbitration_type_repair": 1776,
+    "recurring_vs_one_time_repair": 37369,
+    "visual_geography_prep": 37369,
+    "non_scalar_structure_repair": 3904
+  },
+  "lane_counts": {
+    "lane_005": 17447,
+    "lane_003": 17599,
+    "lane_001": 17225,
+    "lane_002": 17254,
+    "lane_004": 17498
+  }
+}

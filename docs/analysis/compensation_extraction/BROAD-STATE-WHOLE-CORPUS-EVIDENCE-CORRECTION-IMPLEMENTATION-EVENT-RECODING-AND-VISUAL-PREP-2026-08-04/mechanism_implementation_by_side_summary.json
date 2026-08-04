@@ -1,0 +1,56 @@
+{
+  "fire": {
+    "implementation_event_count": 287,
+    "unique_municipality_count": 121,
+    "unique_cycle_count": 31,
+    "corroborated_event_count": 3,
+    "adopted_event_count": 10,
+    "implemented_event_count": 277,
+    "paid_or_observed_event_count": 0
+  },
+  "mixed": {
+    "implementation_event_count": 12,
+    "unique_municipality_count": 12,
+    "unique_cycle_count": 6,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 10,
+    "paid_or_observed_event_count": 0
+  },
+  "non_safety": {
+    "implementation_event_count": 140,
+    "unique_municipality_count": 99,
+    "unique_cycle_count": 32,
+    "corroborated_event_count": 2,
+    "adopted_event_count": 18,
+    "implemented_event_count": 121,
+    "paid_or_observed_event_count": 1
+  },
+  "police": {
+    "implementation_event_count": 940,
+    "unique_municipality_count": 459,
+    "unique_cycle_count": 134,
+    "corroborated_event_count": 39,
+    "adopted_event_count": 89,
+    "implemented_event_count": 848,
+    "paid_or_observed_event_count": 3
+  },
+  "safety_combined": {
+    "implementation_event_count": 11,
+    "unique_municipality_count": 10,
+    "unique_cycle_count": 8,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 2,
+    "implemented_event_count": 9,
+    "paid_or_observed_event_count": 0
+  },
+  "unclear": {
+    "implementation_event_count": 1608,
+    "unique_municipality_count": 1015,
+    "unique_cycle_count": 297,
+    "corroborated_event_count": 29,
+    "adopted_event_count": 277,
+    "implemented_event_count": 1322,
+    "paid_or_observed_event_count": 9
+  }
+}

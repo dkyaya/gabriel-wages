@@ -1,0 +1,6 @@
+{
+  "gate": "global_causal_readiness_gate",
+  "status": "fail",
+  "assessed_at": "2026-08-04T21:10:00Z",
+  "rationale": "No causal design or treatment-effect estimation."
+}

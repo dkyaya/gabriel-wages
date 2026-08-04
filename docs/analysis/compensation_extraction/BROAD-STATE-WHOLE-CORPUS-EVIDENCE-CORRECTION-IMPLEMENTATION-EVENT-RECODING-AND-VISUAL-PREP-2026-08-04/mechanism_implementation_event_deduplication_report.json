@@ -1,0 +1,9 @@
+{
+  "status_eligible_source_records": 5143,
+  "excluded_missing_municipality_or_state": 185,
+  "eligible_source_records": 4958,
+  "deduplicated_event_count": 2998,
+  "collapsed_repeated_records": 1960,
+  "corroborated_event_count": 73,
+  "rule": "corroboration changes confidence, never event count"
+}

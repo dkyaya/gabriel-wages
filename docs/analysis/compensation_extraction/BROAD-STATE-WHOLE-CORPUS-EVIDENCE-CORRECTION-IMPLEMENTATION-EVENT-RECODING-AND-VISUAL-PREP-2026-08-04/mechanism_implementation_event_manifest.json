@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-08-04T21:10:00Z",
+  "primary_unit": "municipality × compensation_cycle × mechanism × side",
+  "record_count": 2998,
+  "included_statuses": [
+    "formally_adopted",
+    "implemented",
+    "paid_or_observed"
+  ],
+  "excluded_statuses": [
+    "negotiated_term",
+    "proposal_or_demand",
+    "recommendation",
+    "rejected_or_not_adopted",
+    "tentative_agreement",
+    "unclear_status"
+  ],
+  "manifest_hash": "5494e722cd75e7e016723565f1022525535fdd96595e14268b4bd4d02ab37395"
+}

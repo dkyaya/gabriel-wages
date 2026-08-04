@@ -1,0 +1,9 @@
+{
+  "event_count": 2998,
+  "link_count": 2998,
+  "status_counts": {
+    "strong_exact_link": 2908,
+    "moderate_same_source_link": 90
+  },
+  "legacy_quant_qual_record_count": 1682
+}

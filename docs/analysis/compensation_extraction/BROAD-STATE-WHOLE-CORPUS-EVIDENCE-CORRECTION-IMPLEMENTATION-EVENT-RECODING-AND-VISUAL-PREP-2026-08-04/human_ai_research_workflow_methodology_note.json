@@ -1,0 +1,31 @@
+{
+  "perspective": "Joachim first person",
+  "role_allocation": {
+    "Joachim": [
+      "defined and refined research question",
+      "challenged weak classifications and claims",
+      "directed scaling and repair passes",
+      "reviewed outputs and accepted claim boundaries"
+    ],
+    "ChatGPT": [
+      "translated substantive directions into self-contained operational prompts"
+    ],
+    "Codex": [
+      "executed authorized search, verification, extraction, rating, reconciliation, cleaning, correction, and synthesis workflows"
+    ]
+  },
+  "scale": {
+    "eligible_municipalities": 35589,
+    "scout_covered_municipalities": 35574,
+    "scout_coverage_percent": 99.9579,
+    "whole_corpus_rated_spans": 51639,
+    "sources": 7538,
+    "claim_readiness_records": 65243,
+    "unclear_side_records_reexamined": 13180,
+    "side_labels_recovered": 5729,
+    "explicit_comparison_seeds": 22,
+    "expanded_comparison_candidates": 4454,
+    "parallel_lanes": 5
+  },
+  "claim_boundary": "documented operational evidence, not controlled benchmark proof"
+}

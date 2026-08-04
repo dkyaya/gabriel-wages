@@ -187,9 +187,14 @@ function App() {
             <a className="primary-report-link" href={currentReport?.href} target="_blank" rel="noreferrer">
               {currentReport?.link_label ?? "Open current evidence report"}
             </a>
+            {projectPhaseSummary.corrected_scaffold_available ? (
+              <a className="secondary-report-link" href={projectPhaseSummary.corrected_scaffold_href} target="_blank" rel="noreferrer">
+                {projectPhaseSummary.corrected_scaffold_link_label}
+              </a>
+            ) : null}
             {projectPhaseSummary.whole_corpus_report_draft_available ? (
               <a className="secondary-report-link" href={projectPhaseSummary.whole_corpus_report_draft_href} target="_blank" rel="noreferrer">
-                {projectPhaseSummary.whole_corpus_report_draft_link_label}
+                Open prior reviewed whole-corpus report draft (MD)
               </a>
             ) : null}
           </div>
@@ -201,9 +206,11 @@ function App() {
             <div><span>Next task</span><strong>{projectPhaseSummary.next_task}</strong></div>
             <div><span>Claim boundary</span><strong>Bounded local documentary evidence only · final, national, and causal claims blocked</strong></div>
             <div>
-              <span>{projectPhaseSummary.whole_corpus_claim_package_review_available ? "Markdown review draft" : projectPhaseSummary.whole_corpus_claim_package_prep_available ? "Internal claim package" : projectPhaseSummary.whole_corpus_synthesis_available ? "Whole-corpus synthesis" : projectPhaseSummary.remaining_municipality_repo_cleanup_available ? "Conservative cleanup" : projectPhaseSummary.remaining_municipality_local_comparison_qa_available ? "QA / claim gates" : projectPhaseSummary.remaining_municipality_blocker_rescue_reclassification_available ? "Blocker rescue / analysis use" : projectPhaseSummary.remaining_municipality_quantitative_normalization_matching_available ? "Normalization / matching" : projectPhaseSummary.remaining_municipality_normalization_matching_prep_available ? "Normalization / matching prep" : projectPhaseSummary.remaining_municipality_side_reconciliation_available ? "Side reconciliation" : projectPhaseSummary.remaining_municipality_rating_ingestion_available ? "Rating layer" : projectPhaseSummary.remaining_municipality_gabriel_rating_available ? "GABRIEL rating" : projectPhaseSummary.remaining_municipality_span_extraction_available ? "Span extraction" : projectPhaseSummary.remaining_municipality_text_extraction_available ? "Text extraction" : projectPhaseSummary.remaining_municipality_pdf_text_readiness_available ? "Text readiness" : projectPhaseSummary.remaining_municipality_source_review_available ? "Source review" : projectPhaseSummary.remaining_municipality_verification_available ? "Verification" : projectPhaseSummary.remaining_municipality_candidate_review_available ? "Candidate review" : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed ? "Scout gate" : projectPhaseSummary.remaining_municipality_5lane_live_scout_available ? "Live scout" : projectPhaseSummary.remaining_municipality_5lane_scout_infrastructure_available ? "Planned scout" : "Data current"}</span>
+              <span>{projectPhaseSummary.whole_corpus_evidence_correction_available ? "Evidence correction" : projectPhaseSummary.whole_corpus_claim_package_review_available ? "Markdown review draft" : projectPhaseSummary.whole_corpus_claim_package_prep_available ? "Internal claim package" : projectPhaseSummary.whole_corpus_synthesis_available ? "Whole-corpus synthesis" : projectPhaseSummary.remaining_municipality_repo_cleanup_available ? "Conservative cleanup" : projectPhaseSummary.remaining_municipality_local_comparison_qa_available ? "QA / claim gates" : projectPhaseSummary.remaining_municipality_blocker_rescue_reclassification_available ? "Blocker rescue / analysis use" : projectPhaseSummary.remaining_municipality_quantitative_normalization_matching_available ? "Normalization / matching" : projectPhaseSummary.remaining_municipality_normalization_matching_prep_available ? "Normalization / matching prep" : projectPhaseSummary.remaining_municipality_side_reconciliation_available ? "Side reconciliation" : projectPhaseSummary.remaining_municipality_rating_ingestion_available ? "Rating layer" : projectPhaseSummary.remaining_municipality_gabriel_rating_available ? "GABRIEL rating" : projectPhaseSummary.remaining_municipality_span_extraction_available ? "Span extraction" : projectPhaseSummary.remaining_municipality_text_extraction_available ? "Text extraction" : projectPhaseSummary.remaining_municipality_pdf_text_readiness_available ? "Text readiness" : projectPhaseSummary.remaining_municipality_source_review_available ? "Source review" : projectPhaseSummary.remaining_municipality_verification_available ? "Verification" : projectPhaseSummary.remaining_municipality_candidate_review_available ? "Candidate review" : projectPhaseSummary.remaining_municipality_5lane_live_scout_preflight_failed ? "Scout gate" : projectPhaseSummary.remaining_municipality_5lane_live_scout_available ? "Live scout" : projectPhaseSummary.remaining_municipality_5lane_scout_infrastructure_available ? "Planned scout" : "Data current"}</span>
               <strong>
-                {projectPhaseSummary.whole_corpus_claim_package_review_available
+                {projectPhaseSummary.whole_corpus_evidence_correction_available
+                  ? `${formatNumber(projectPhaseSummary.representative_evidence_excerpt_repair_count)} repaired excerpts · ${formatNumber(projectPhaseSummary.mechanism_implementation_event_count)} deduplicated implementation events · hex prep ${projectPhaseSummary.hex_density_visual_ready_status?.replaceAll("_", " ")}`
+                  : projectPhaseSummary.whole_corpus_claim_package_review_available
                   ? `${formatNumber(projectPhaseSummary.whole_corpus_report_major_claim_count)} reviewed claim families · ${formatNumber(projectPhaseSummary.whole_corpus_report_selected_example_count)} selected examples · manual review pending`
                   : projectPhaseSummary.whole_corpus_claim_package_prep_available
                   ? `${formatNumber(projectPhaseSummary.major_supportable_causal_mechanism_claim_count)} supportable mechanism claims · ${formatNumber(projectPhaseSummary.claim_package_example_count)} traceable examples · estimation gates remain blocked`
@@ -379,6 +386,14 @@ function App() {
                 <div><span>Claim families / examples</span><strong>{formatNumber(projectPhaseSummary.claim_package_claim_family_count)} / {formatNumber(projectPhaseSummary.claim_package_example_count)}</strong></div>
                 <div><span>Safety wage-growth assessment</span><strong>{projectPhaseSummary.safety_wage_growth_assertion_assessment?.replaceAll("_", " ")}</strong></div>
                 <div><span>Unsupported estimate claims</span><strong>{formatNumber(projectPhaseSummary.unsupported_claim_count)}</strong></div>
+              </>}
+              {projectPhaseSummary.whole_corpus_evidence_correction_available && <>
+                <div><span>Repaired excerpts / citations</span><strong>{formatNumber(projectPhaseSummary.representative_evidence_excerpt_repair_count)} / {formatNumber(projectPhaseSummary.human_readable_citation_count)}</strong></div>
+                <div><span>Implementation events</span><strong>{formatNumber(projectPhaseSummary.mechanism_implementation_event_count)}</strong></div>
+                <div><span>Mechanism / causal-estimation gates</span><strong>{projectPhaseSummary.causal_mechanism_interpretation_gate} / {projectPhaseSummary.global_causal_readiness ? "pass" : "fail"}</strong></div>
+                <div><span>Hex-density prep</span><strong>{projectPhaseSummary.hex_density_visual_ready_status?.replaceAll("_", " ")}</strong></div>
+                <div><span>External-data gaps / targets</span><strong>{formatNumber(projectPhaseSummary.external_data_missingness_matrix_count)} / {formatNumber(projectPhaseSummary.external_data_search_target_count)}</strong></div>
+                <div><span>Correction boundaries</span><strong>No external search · no final visuals</strong></div>
               </>}
             </div>
             <p>Detailed lane reconciliation, schemas, quarantine reasons, source-family summaries, and validation outputs are in the linked current report. Retained source files and full extracted text remain outside Git.</p>

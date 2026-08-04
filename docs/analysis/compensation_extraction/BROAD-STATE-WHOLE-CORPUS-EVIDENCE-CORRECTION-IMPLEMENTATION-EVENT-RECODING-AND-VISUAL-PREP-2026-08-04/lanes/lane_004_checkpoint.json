@@ -1,0 +1,8 @@
+{
+  "lane": "lane_004",
+  "locked_manifest_hash": "5494e722cd75e7e016723565f1022525535fdd96595e14268b4bd4d02ab37395",
+  "assigned_records": 17498,
+  "completed_records": 17498,
+  "status": "complete",
+  "duplicate_worker_guard": "single deterministic owner"
+}

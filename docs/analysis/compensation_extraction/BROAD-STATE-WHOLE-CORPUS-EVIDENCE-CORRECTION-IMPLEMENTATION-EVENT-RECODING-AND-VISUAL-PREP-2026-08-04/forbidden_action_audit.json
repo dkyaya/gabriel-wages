@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "actions_occurred": {
+    "external_web_search": false,
+    "new_gabriel_or_api_rating": false,
+    "ocr": false,
+    "broad_text_extraction": false,
+    "broad_span_extraction": false,
+    "regression": false,
+    "treatment_effect_analysis": false,
+    "national_wage_gap_estimate": false,
+    "national_prevalence_estimate": false,
+    "causal_effect_estimate": false,
+    "final_heatmap_or_report_graphic": false,
+    "pdf_docx_slides": false,
+    "retained_binary_staged": false,
+    "full_extracted_text_staged": false
+  },
+  "text_layer_only": true
+}

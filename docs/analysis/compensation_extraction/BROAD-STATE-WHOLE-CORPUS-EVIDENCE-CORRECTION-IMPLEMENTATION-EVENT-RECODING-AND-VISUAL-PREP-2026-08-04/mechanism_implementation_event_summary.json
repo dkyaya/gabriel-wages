@@ -1,0 +1,34 @@
+{
+  "implementation_event_count": 2998,
+  "unique_municipality_count": 1440,
+  "unique_cycle_count": 449,
+  "status_counts": {
+    "formally_adopted": 398,
+    "implemented": 2587,
+    "paid_or_observed": 13
+  },
+  "mechanism_counts": {
+    "retroactivity_implementation": 1356,
+    "across_the_board_raise": 373,
+    "budget_pay_plan": 569,
+    "non_base_compensation": 481,
+    "other_pay_setting_mechanism": 49,
+    "market_recruitment_retention": 39,
+    "strike_no_strike_dispute_process": 15,
+    "cola_cpi_indexing": 31,
+    "step_schedule_seniority": 35,
+    "ordinance_council_adoption": 27,
+    "collective_bargaining": 17,
+    "comparability_parity": 1,
+    "classification_civil_service": 4,
+    "interest_arbitration": 1
+  },
+  "side_counts": {
+    "unclear": 1608,
+    "safety_combined": 11,
+    "police": 940,
+    "non_safety": 140,
+    "fire": 287,
+    "mixed": 12
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "formally_adopted": {
+    "implementation_event_count": 398,
+    "unique_municipality_count": 320,
+    "unique_cycle_count": 163,
+    "corroborated_event_count": 2,
+    "adopted_event_count": 398,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 0
+  },
+  "implemented": {
+    "implementation_event_count": 2587,
+    "unique_municipality_count": 1269,
+    "unique_cycle_count": 323,
+    "corroborated_event_count": 71,
+    "adopted_event_count": 0,
+    "implemented_event_count": 2587,
+    "paid_or_observed_event_count": 0
+  },
+  "paid_or_observed": {
+    "implementation_event_count": 13,
+    "unique_municipality_count": 13,
+    "unique_cycle_count": 10,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 0,
+    "paid_or_observed_event_count": 13
+  }
+}

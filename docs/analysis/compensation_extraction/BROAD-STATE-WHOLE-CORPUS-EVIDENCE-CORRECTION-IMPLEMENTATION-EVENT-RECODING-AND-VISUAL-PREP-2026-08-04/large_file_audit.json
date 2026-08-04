@@ -1,0 +1,9 @@
+{
+  "audited_at": "2026-08-04T21:10:00Z",
+  "passed": true,
+  "soft_limit_bytes": 52428800,
+  "github_hard_limit_bytes": 104857600,
+  "largest_staged_file_bytes": 46477385,
+  "files_over_50_mib": [],
+  "github_hard_limit_violations": []
+}

@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-08-04T21:10:00Z",
+  "locked": true,
+  "record_count": 87023,
+  "claim_readiness_records": 49654,
+  "mechanism_records": 37369,
+  "correction_manifest_hash": "5494e722cd75e7e016723565f1022525535fdd96595e14268b4bd4d02ab37395",
+  "lane_counts": {
+    "lane_001": 17225,
+    "lane_002": 17254,
+    "lane_003": 17599,
+    "lane_004": 17498,
+    "lane_005": 17447
+  },
+  "checkpoint_policy": "checkpoint after each deterministic row; regenerate only from the locked manifest"
+}

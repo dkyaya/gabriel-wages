@@ -1,0 +1,15 @@
+mechanism_class,safety_implementation_event_count,non_safety_implementation_event_count,difference_event_count,safety_unique_municipality_count,non_safety_unique_municipality_count,interpretation_boundary
+across_the_board_raise,172,11,161,136,10,processed-corpus event counts; not prevalence
+budget_pay_plan,132,65,67,82,50,processed-corpus event counts; not prevalence
+classification_civil_service,2,0,2,2,0,processed-corpus event counts; not prevalence
+cola_cpi_indexing,21,0,21,14,0,processed-corpus event counts; not prevalence
+collective_bargaining,12,1,11,11,1,processed-corpus event counts; not prevalence
+comparability_parity,1,0,1,1,0,processed-corpus event counts; not prevalence
+interest_arbitration,1,0,1,1,0,processed-corpus event counts; not prevalence
+market_recruitment_retention,14,5,9,9,4,processed-corpus event counts; not prevalence
+non_base_compensation,267,14,253,177,13,processed-corpus event counts; not prevalence
+ordinance_council_adoption,15,1,14,12,1,processed-corpus event counts; not prevalence
+other_pay_setting_mechanism,12,3,9,11,3,processed-corpus event counts; not prevalence
+retroactivity_implementation,560,40,520,348,28,processed-corpus event counts; not prevalence
+step_schedule_seniority,23,0,23,23,0,processed-corpus event counts; not prevalence
+strike_no_strike_dispute_process,6,0,6,6,0,processed-corpus event counts; not prevalence

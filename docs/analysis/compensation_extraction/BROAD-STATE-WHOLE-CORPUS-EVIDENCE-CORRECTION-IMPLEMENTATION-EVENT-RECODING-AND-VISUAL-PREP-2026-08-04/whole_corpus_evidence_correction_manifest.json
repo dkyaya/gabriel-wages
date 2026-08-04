@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-08-04T21:10:00Z",
+  "decision": "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready",
+  "current_head_before": "4ec21b441e627911678776ecbee85ffc81185839",
+  "input_files": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_claim_readiness_layer.csv",
+      "sha256": "56f2891d3089c36cca001e5c37436db0c5f547647f21e16c3b87cba8b0e582cf"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_rating_span_layer.csv",
+      "sha256": "ee796adf03ce4299baf9cedf643e1619ac07d9e7a3fbce4b4599b5e84c35f12e"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_mechanism_layer.csv",
+      "sha256": "ddf4c5648e50638a2cbdd5e8278cdfd41f165c4910789291c4d778b95a62e901"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_quant_qual_link_layer.csv",
+      "sha256": "966fca56fd512701c2a2d79a7cca926149e89371d45bd434d756a7e37b7362de"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_growth_evidence_layer.csv",
+      "sha256": "caa180d86d23a126bae42a511b3b0f63811529d0eb479b55820411807c204e42"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_non_base_compensation_layer.csv",
+      "sha256": "9ce62ce73705409553d44df0b03c3a13ba0ea4e8ac81155371fb4991533404cd"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_local_comparison_layer.csv",
+      "sha256": "c8452209227fcd26b377bf1ab4f3817341fca91e793efc72d798461e38642544"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_national_readiness_layer.csv",
+      "sha256": "6f9cf13098ae9093177f4318afd8bd62104d2fb676f0a9f74d0c8aa61dfaff68"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/report_example_selection.csv",
+      "sha256": "d8a4315ec796bca1f9fc5360ab4a6f39dd6e709e09182110de9b901e2119de7f"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/claim_examples.csv",
+      "sha256": "2fb94f066bcbb687f225fa35ce983cdbbe8db3d4608c7bfafdc32b13c2f9da87"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/merged_compensation_evidence_spans.csv",
+      "sha256": "a2b3d22cf19d4b917dbb898983d45182fbbc91984ed91594b06f6c5bfb43455e"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30/span_candidates.csv",
+      "sha256": "6205ce3bf034a786e7fd3a4480939fa28eb59d99b791f042eb00c6f1c791969d"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03/local_comparison_qa_results.jsonl",
+      "sha256": "3578a955fe2b7ba563c4d091b9f2f63fa4c60ddc663af013c1925ede661ad69a"
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03/normalized_quantitative_records.csv",
+      "sha256": "64073d51b25b4b9835e07c078070654d651315713ffc08e58124063e5d50d0d5"
+    }
+  ],
+  "correction_manifest_hash": "5494e722cd75e7e016723565f1022525535fdd96595e14268b4bd4d02ab37395",
+  "five_lane_counts": {
+    "lane_005": 17447,
+    "lane_003": 17599,
+    "lane_001": 17225,
+    "lane_002": 17254,
+    "lane_004": 17498
+  },
+  "outputs_required_by_prompt": "materialized",
+  "text_layer_only": true
+}

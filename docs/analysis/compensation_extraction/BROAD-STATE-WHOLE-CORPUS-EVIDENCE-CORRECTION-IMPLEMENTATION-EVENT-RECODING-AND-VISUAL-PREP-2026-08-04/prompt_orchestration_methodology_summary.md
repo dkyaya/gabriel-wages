@@ -1,0 +1,5 @@
+# Prompt-orchestration methodology summary
+
+The operational prompt was the workflow contract. It contained: (1) substantive objective and decision options; (2) repository path and task identity; (3) locked inputs and named outputs; (4) explicit permissions and prohibitions; (5) preflight and integrity-stop conditions; (6) five independent, balanced lanes; (7) staggered starts for live work; (8) per-record or per-packet checkpoints; (9) resume-only-on-incomplete behavior; (10) duplicate-worker guards; (11) semantic and file-integrity validation; (12) dashboard preservation and update rules; (13) staged-file and large-file audits; (14) commit, push, deployment, and relay requirements; and (15) iterative human review and correction.
+
+This structure let Joachim make substantive judgments at the prompt and review layers while ChatGPT converted those judgments into explicit operational contracts and Codex performed the authorized repository work. Fail-closed gates prevented incomplete evidence from being promoted simply because a pipeline finished.

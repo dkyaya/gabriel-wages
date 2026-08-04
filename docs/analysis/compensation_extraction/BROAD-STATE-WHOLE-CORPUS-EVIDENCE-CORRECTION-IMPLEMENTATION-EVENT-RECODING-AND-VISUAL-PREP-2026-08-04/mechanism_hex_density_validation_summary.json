@@ -1,0 +1,11 @@
+{
+  "fixed_grid_specification": "pass",
+  "single_projection": "pass",
+  "identical_comparison_scale_specification": "pass",
+  "municipality_point_default": "forbidden",
+  "coordinate_join": "fail_missing_authoritative_coordinates",
+  "hex_row_count": 0,
+  "excluded_missing_coordinate_count": 2998,
+  "urbanicity_status": "missing_not_fabricated",
+  "overall_status": "partial"
+}

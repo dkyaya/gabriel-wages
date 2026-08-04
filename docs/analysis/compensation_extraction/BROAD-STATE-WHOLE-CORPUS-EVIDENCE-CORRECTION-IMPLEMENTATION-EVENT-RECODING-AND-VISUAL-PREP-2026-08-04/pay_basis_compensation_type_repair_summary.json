@@ -1,0 +1,42 @@
+{
+  "record_count": 37369,
+  "pay_basis_counts": {
+    "unknown": 22311,
+    "annual_salary": 2179,
+    "step_schedule": 636,
+    "hourly": 3517,
+    "percentage": 2469,
+    "budget_amount": 3188,
+    "monthly": 207,
+    "allowance": 1392,
+    "pay_grade": 384,
+    "benefit_cost_share": 250,
+    "weekly": 43,
+    "range_min_max": 48,
+    "reimbursement": 37,
+    "stipend": 546,
+    "lump_sum": 121,
+    "per_diem": 41
+  },
+  "compensation_type_counts": {
+    "other": 3560,
+    "retroactive_pay": 623,
+    "mechanism_only": 11299,
+    "base_wage": 410,
+    "step_progression": 1432,
+    "cola_or_indexing": 1956,
+    "classification_band": 478,
+    "across_the_board_raise": 6076,
+    "holiday_pay": 117,
+    "overtime": 2420,
+    "benefit_cost_change": 408,
+    "salary_range": 151,
+    "longevity": 632,
+    "budget_or_pay_plan": 5068,
+    "uniform_or_equipment_allowance": 1675,
+    "reimbursement": 51,
+    "stipend_or_premium": 843,
+    "lump_sum": 170
+  },
+  "raw_values_preserved": true
+}

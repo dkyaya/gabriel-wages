@@ -1,0 +1,9 @@
+{
+  "row_count": 8994,
+  "unique_unit_count": 2998,
+  "family_counts": {
+    "payroll_and_earnings": 2998,
+    "staffing_and_headcount": 2998,
+    "urbanicity_and_context": 2998
+  }
+}

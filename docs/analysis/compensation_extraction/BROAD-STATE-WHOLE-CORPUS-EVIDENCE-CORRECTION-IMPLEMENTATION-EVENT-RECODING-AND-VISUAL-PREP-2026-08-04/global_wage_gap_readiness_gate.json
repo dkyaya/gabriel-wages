@@ -1,0 +1,6 @@
+{
+  "gate": "global_wage_gap_readiness_gate",
+  "status": "fail",
+  "assessed_at": "2026-08-04T21:10:00Z",
+  "rationale": "No representative matched wage panel or validated global estimate."
+}

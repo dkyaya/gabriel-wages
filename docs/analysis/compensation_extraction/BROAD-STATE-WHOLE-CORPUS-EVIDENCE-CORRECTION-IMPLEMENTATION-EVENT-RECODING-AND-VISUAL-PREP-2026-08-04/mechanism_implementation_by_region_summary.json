@@ -1,0 +1,47 @@
+{
+  "": {
+    "implementation_event_count": 6,
+    "unique_municipality_count": 5,
+    "unique_cycle_count": 5,
+    "corroborated_event_count": 0,
+    "adopted_event_count": 0,
+    "implemented_event_count": 6,
+    "paid_or_observed_event_count": 0
+  },
+  "Midwest": {
+    "implementation_event_count": 1704,
+    "unique_municipality_count": 710,
+    "unique_cycle_count": 249,
+    "corroborated_event_count": 52,
+    "adopted_event_count": 174,
+    "implemented_event_count": 1522,
+    "paid_or_observed_event_count": 8
+  },
+  "Northeast": {
+    "implementation_event_count": 881,
+    "unique_municipality_count": 462,
+    "unique_cycle_count": 137,
+    "corroborated_event_count": 17,
+    "adopted_event_count": 121,
+    "implemented_event_count": 757,
+    "paid_or_observed_event_count": 3
+  },
+  "South": {
+    "implementation_event_count": 287,
+    "unique_municipality_count": 208,
+    "unique_cycle_count": 72,
+    "corroborated_event_count": 3,
+    "adopted_event_count": 78,
+    "implemented_event_count": 207,
+    "paid_or_observed_event_count": 2
+  },
+  "West": {
+    "implementation_event_count": 120,
+    "unique_municipality_count": 55,
+    "unique_cycle_count": 27,
+    "corroborated_event_count": 1,
+    "adopted_event_count": 25,
+    "implemented_event_count": 95,
+    "paid_or_observed_event_count": 0
+  }
+}

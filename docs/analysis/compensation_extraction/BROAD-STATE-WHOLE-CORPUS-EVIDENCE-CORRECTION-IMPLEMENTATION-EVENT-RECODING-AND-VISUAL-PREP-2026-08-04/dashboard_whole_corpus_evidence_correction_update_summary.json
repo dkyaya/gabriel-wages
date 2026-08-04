@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-08-04T21:10:00Z",
+  "current_stage": "Whole-corpus evidence correction and implementation-event recoding complete",
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04",
+  "corrected_scaffold_href": "reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+  "prior_draft_href": "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "final_pi_report_href": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "wage_growth_continuity_preserved": true,
+  "map_primary_metric": "scout_coverage_rate",
+  "scout_coverage_percent": 99.9579,
+  "production_build_status": "pass",
+  "local_http_status": {
+    "dashboard_root": 200,
+    "corrected_scaffold": 200,
+    "prior_draft": 200,
+    "final_pi_pdf": 200
+  },
+  "browser_visual_validation": "unavailable_no_connected_browser_surface",
+  "validation_mode": "production build plus static and local HTTP checks",
+  "no_final_heatmaps_added": true,
+  "technical_details_collapsed": true
+}

@@ -1,0 +1,15 @@
+{
+  "record_count": 37369,
+  "counts": {
+    "unclear_status": 16676,
+    "implemented": 4389,
+    "formally_adopted": 736,
+    "proposal_or_demand": 328,
+    "recommendation": 123,
+    "negotiated_term": 15090,
+    "tentative_agreement": 7,
+    "paid_or_observed": 18,
+    "rejected_or_not_adopted": 2
+  },
+  "primary_status_mutually_exclusive": true
+}

@@ -1,0 +1,18 @@
+{
+  "statuses": {
+    "local_comparison_gate": "partial",
+    "same_side_evidence_gate": "partial",
+    "mechanism_evidence_gate": "pass",
+    "growth_evidence_gate": "partial",
+    "non_base_compensation_gate": "partial",
+    "national_readiness_gate": "partial",
+    "whole_corpus_synthesis_gate": "pass",
+    "global_wage_gap_readiness_gate": "fail",
+    "global_causal_readiness_gate": "fail",
+    "causal_mechanism_interpretation_gate": "pass",
+    "implementation_event_visual_readiness_gate": "partial",
+    "external_data_search_readiness_gate": "pass"
+  },
+  "causal_mechanism_interpretation_separate_from_causal_estimation": true,
+  "global_analysis_readiness": false
+}

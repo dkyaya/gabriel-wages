@@ -1,0 +1,15 @@
+{
+  "narrative_files": [
+    "whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+    "human_ai_research_workflow_methodology_note.md",
+    "prompt_orchestration_methodology_summary.md"
+  ],
+  "pattern_hits": {
+    "sha256": 0,
+    "repo_path": 0,
+    "task_id": 0,
+    "opaque_id": 0
+  },
+  "passed": true,
+  "technical_ledgers_preserve_lineage": true
+}

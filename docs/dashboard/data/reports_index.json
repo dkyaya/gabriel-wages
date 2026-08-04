@@ -39,6 +39,64 @@
       ]
     },
     {
+      "id": "whole-corpus-evidence-corrected-2026-08-04",
+      "title": "Corrected whole-corpus causal-mechanism evidence scaffold",
+      "report_type": "Active internal evidence-review scaffold",
+      "date": "2026-08-04",
+      "checkpoint": "31 excerpts repaired; 2998 deduplicated implementation events",
+      "summary": "Bounded textual evidence, human-readable citations, proposal/adoption/implementation recoding, event deduplication, fixed hex specification, and external-data targets. Not a final visual report or estimate.",
+      "tags": [
+        "whole corpus",
+        "evidence correction",
+        "implementation events",
+        "internal review"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+      "link_label": "Open corrected whole-corpus evidence scaffold (MD)",
+      "scope_metrics": [
+        {
+          "label": "repaired excerpts",
+          "value": 31
+        },
+        {
+          "label": "implementation events",
+          "value": 2998
+        },
+        {
+          "label": "search targets",
+          "value": 8994
+        }
+      ]
+    },
+    {
+      "id": "whole-corpus-claim-package-review-2026-08-03",
+      "title": "Whole-corpus causal-mechanism report draft — previous reviewed version",
+      "report_type": "Previous internal Markdown evidence scaffold",
+      "date": "2026-08-03",
+      "checkpoint": "8 claim families; 31 selected examples",
+      "summary": "Archived reviewed draft retained before evidence correction.",
+      "tags": [
+        "whole corpus",
+        "previous reviewed draft"
+      ],
+      "current": false,
+      "historical": true,
+      "href": "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+      "link_label": "Open prior reviewed whole-corpus report draft (MD)",
+      "scope_metrics": [
+        {
+          "label": "claim families",
+          "value": 8
+        },
+        {
+          "label": "selected examples",
+          "value": 31
+        }
+      ]
+    },
+    {
       "id": "broad-state-4x1000-parallel-live-scout-2026-07-27",
       "title": "Parallel Broad State 4x1000 Live Scout",
       "report_type": "Current staggered live discovery operations report",

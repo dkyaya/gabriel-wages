@@ -1,0 +1,14 @@
+{
+  "record_count": 3330,
+  "safety_record_count": 1253,
+  "non_safety_record_count": 171,
+  "supports": "The corpus documents bounded instances of vacancy, recruitment, retention, overtime, and staffing language.",
+  "cannot_establish": "It cannot establish that non-safety staffing reductions are more prevalent, because comparable denominators and administrative headcount panels are absent.",
+  "external_data_required": [
+    "authorized and filled headcount",
+    "vacancy rates and duration",
+    "layoffs and eliminated positions",
+    "overtime earnings",
+    "applicant and turnover records"
+  ]
+}

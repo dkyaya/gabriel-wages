@@ -1,0 +1,23 @@
+{
+  "status": "fixed_grid_spec_ready_coordinate_join_blocked",
+  "projection": "EPSG:5070 NAD83 / Conus Albers",
+  "primary_hex_radius_meters": 50000,
+  "candidate_radii_reviewed_meters": [
+    40000,
+    50000,
+    75000
+  ],
+  "fixed_grid_reuse_required": true,
+  "event_count_waiting_for_coordinates": 2998,
+  "fabricated_coordinate_count": 0,
+  "alaska_hawaii_handling": "separate equal-area inset transforms consistent across all views; not yet materialized",
+  "views": [
+    "safety",
+    "non_safety",
+    "police",
+    "fire",
+    "safety_combined",
+    "side_independent",
+    "safety_minus_non_safety"
+  ]
+}

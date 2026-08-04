@@ -1,0 +1,11 @@
+{
+  "missing_not_validated": {
+    "implementation_event_count": 2998,
+    "unique_municipality_count": 1440,
+    "unique_cycle_count": 449,
+    "corroborated_event_count": 73,
+    "adopted_event_count": 398,
+    "implemented_event_count": 2587,
+    "paid_or_observed_event_count": 13
+  }
+}

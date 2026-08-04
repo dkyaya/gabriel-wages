@@ -1,0 +1,22 @@
+{
+  "record_count": 5182,
+  "structure_counts": {
+    "step_schedule": 636,
+    "table_or_formula": 621,
+    "percentage": 2469,
+    "annual_salary": 664,
+    "pay_grade": 384,
+    "range_min_max": 48,
+    "monthly": 12,
+    "benefit_cost_share": 6,
+    "budget_amount": 152,
+    "weekly": 4,
+    "hourly": 144,
+    "allowance": 31,
+    "stipend": 4,
+    "per_diem": 2,
+    "lump_sum": 3,
+    "reimbursement": 2
+  },
+  "fake_scalar_values_created": 0
+}

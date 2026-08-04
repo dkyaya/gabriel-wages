@@ -1,0 +1,16 @@
+{
+  "record_count": 37369,
+  "counts": {
+    "unclear_duration": 4240,
+    "retroactive_back_pay": 623,
+    "not_applicable": 11299,
+    "recurring_base": 410,
+    "scheduled_step": 1432,
+    "percentage_adjustment": 8032,
+    "recurring_non_base": 5677,
+    "benefit_cost_shift": 408,
+    "budget_context_only": 5068,
+    "one_time_lump_sum": 170,
+    "temporary_premium": 10
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "components": [
+    "objectives",
+    "repo path and task identity",
+    "input contracts",
+    "output contracts",
+    "allowed actions",
+    "forbidden actions",
+    "preflight",
+    "five-lane execution",
+    "staggered starts",
+    "checkpointing",
+    "resumability",
+    "duplicate-worker protection",
+    "validation gates",
+    "staged and large-file audits",
+    "dashboard requirements",
+    "relay requirements",
+    "iterative human review"
+  ],
+  "Joachim_role": "substantive direction, review, challenge, scale, acceptance",
+  "ChatGPT_role": "operational prompt design",
+  "Codex_role": "authorized workflow execution"
+}

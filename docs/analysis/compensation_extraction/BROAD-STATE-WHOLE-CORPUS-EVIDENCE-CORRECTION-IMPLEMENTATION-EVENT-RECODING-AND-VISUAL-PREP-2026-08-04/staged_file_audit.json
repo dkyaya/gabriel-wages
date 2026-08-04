@@ -1,0 +1,445 @@
+{
+  "audited_at": "2026-08-04T21:10:00Z",
+  "passed": true,
+  "staged_file_count": 108,
+  "forbidden_staged_file_count": 0,
+  "forbidden_staged_files": [],
+  "preexisting_untracked_excluded": [
+    "package-lock.json",
+    "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24/rendered_pages/"
+  ],
+  "staged_files": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/arbitration_dispute_process_recode.csv",
+      "size_bytes": 13049049
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/arbitration_dispute_process_recode.jsonl",
+      "size_bytes": 28074394
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/arbitration_type_summary.json",
+      "size_bytes": 422
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/causal_mechanism_interpretation_gate.json",
+      "size_bytes": 229
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/compensation_cycle_repair_layer.csv",
+      "size_bytes": 15607356
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/compensation_cycle_repair_layer.jsonl",
+      "size_bytes": 29810613
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/compensation_cycle_repair_summary.json",
+      "size_bytes": 100
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/corrected_claim_readiness_gate_summary.json",
+      "size_bytes": 680
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/corrected_quant_qual_implementation_link_layer.csv",
+      "size_bytes": 1964639
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/corrected_quant_qual_implementation_link_layer.jsonl",
+      "size_bytes": 3241904
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/corrected_quant_qual_implementation_link_summary.json",
+      "size_bytes": 183
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/correction_category_summary.json",
+      "size_bytes": 672
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/correction_input_universe.csv",
+      "size_bytes": 29682093
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/correction_input_universe.jsonl",
+      "size_bytes": 46477385
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/correction_input_universe_manifest.json",
+      "size_bytes": 496
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/dashboard_whole_corpus_evidence_correction_update_summary.json",
+      "size_bytes": 1148
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/evidence_excerpt_quality_audit.json",
+      "size_bytes": 119
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_expected_claim_upgrade_summary.json",
+      "size_bytes": 223
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_live_scout_plan.md",
+      "size_bytes": 593
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_missingness_matrix.csv",
+      "size_bytes": 4677294
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_missingness_matrix.jsonl",
+      "size_bytes": 8418452
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_missingness_summary.json",
+      "size_bytes": 184
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_family_summary.json",
+      "size_bytes": 103
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_priority_summary.json",
+      "size_bytes": 39
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_readiness_gate.json",
+      "size_bytes": 216
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_target_manifest.json",
+      "size_bytes": 279
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_target_queue.csv",
+      "size_bytes": 2536482
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_target_queue.jsonl",
+      "size_bytes": 4874716
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/forbidden_action_audit.json",
+      "size_bytes": 580
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/global_causal_readiness_gate.json",
+      "size_bytes": 173
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/global_wage_gap_readiness_gate.json",
+      "size_bytes": 193
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/growth_evidence_gate.json",
+      "size_bytes": 216
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/human_ai_research_workflow_methodology_note.json",
+      "size_bytes": 1062
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/human_ai_research_workflow_methodology_note.md",
+      "size_bytes": 3600
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/human_readable_citation_layer.csv",
+      "size_bytes": 25642
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/human_readable_citation_layer.jsonl",
+      "size_bytes": 37306
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/human_readable_citation_summary.json",
+      "size_bytes": 140
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/implementation_event_visual_readiness_gate.json",
+      "size_bytes": 244
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/implementation_status_summary.json",
+      "size_bytes": 354
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/lanes/lane_001_checkpoint.json",
+      "size_bytes": 260
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/lanes/lane_002_checkpoint.json",
+      "size_bytes": 260
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/lanes/lane_003_checkpoint.json",
+      "size_bytes": 260
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/lanes/lane_004_checkpoint.json",
+      "size_bytes": 260
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/lanes/lane_005_checkpoint.json",
+      "size_bytes": 260
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/large_file_audit.json",
+      "size_bytes": 239
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/local_comparison_gate.json",
+      "size_bytes": 217
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_evidence_gate.json",
+      "size_bytes": 216
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_density_methodology_blurb.md",
+      "size_bytes": 962
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_density_validation_summary.json",
+      "size_bytes": 381
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_density_visual_ready_layer.csv",
+      "size_bytes": 424
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_density_visual_ready_layer.jsonl",
+      "size_bytes": 0
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_density_visual_spec.md",
+      "size_bytes": 808
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_grid_manifest.json",
+      "size_bytes": 619
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_grid_resolution_review.md",
+      "size_bytes": 673
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_by_cycle_summary.json",
+      "size_bytes": 134029
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_by_region_summary.json",
+      "size_bytes": 1326
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_by_side_summary.json",
+      "size_bytes": 1606
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_by_state_summary.json",
+      "size_bytes": 10816
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_by_status_summary.json",
+      "size_bytes": 826
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_by_urbanicity_summary.json",
+      "size_bytes": 291
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_deduplication_report.json",
+      "size_bytes": 302
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_layer.csv",
+      "size_bytes": 1362014
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_layer.jsonl",
+      "size_bytes": 3012073
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_manifest.json",
+      "size_bytes": 507
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_summary.json",
+      "size_bytes": 887
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/narrative_identifier_exclusion_audit.json",
+      "size_bytes": 377
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/national_readiness_gate.json",
+      "size_bytes": 219
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/next_task.md",
+      "size_bytes": 644
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/non_base_compensation_gate.json",
+      "size_bytes": 222
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/non_scalar_structured_evidence_layer.csv",
+      "size_bytes": 2323871
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/non_scalar_structured_evidence_layer.jsonl",
+      "size_bytes": 4447951
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/non_scalar_structured_evidence_summary.json",
+      "size_bytes": 453
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/pay_basis_compensation_type_repair_layer.csv",
+      "size_bytes": 14889202
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/pay_basis_compensation_type_repair_layer.jsonl",
+      "size_bytes": 28174248
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/pay_basis_compensation_type_repair_summary.json",
+      "size_bytes": 999
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/prompt_orchestration_methodology_summary.json",
+      "size_bytes": 640
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/prompt_orchestration_methodology_summary.md",
+      "size_bytes": 1059
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/proposal_adoption_implementation_recode.csv",
+      "size_bytes": 17040263
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/proposal_adoption_implementation_recode.jsonl",
+      "size_bytes": 34323703
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/recurring_one_time_compensation_layer.csv",
+      "size_bytes": 13921881
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/recurring_one_time_compensation_layer.jsonl",
+      "size_bytes": 26705142
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/recurring_one_time_compensation_summary.json",
+      "size_bytes": 383
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/repaired_evidence_example_summary.json",
+      "size_bytes": 141
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/repaired_evidence_examples.csv",
+      "size_bytes": 29174
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/repaired_evidence_examples.jsonl",
+      "size_bytes": 45154
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/role_unit_comparability_layer.csv",
+      "size_bytes": 13168754
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/role_unit_comparability_layer.jsonl",
+      "size_bytes": 26736751
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/role_unit_comparability_summary.json",
+      "size_bytes": 125
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/safety_non_safety_mechanism_implementation_comparison.csv",
+      "size_bytes": 1376
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/safety_non_safety_mechanism_implementation_comparison.jsonl",
+      "size_bytes": 4321
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/same_side_evidence_gate.json",
+      "size_bytes": 219
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/staffing_reduction_vacancy_current_corpus_layer.csv",
+      "size_bytes": 1001821
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/staffing_reduction_vacancy_current_corpus_layer.jsonl",
+      "size_bytes": 2910920
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/staffing_reduction_vacancy_hypothesis_summary.json",
+      "size_bytes": 608
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/staffing_reduction_vacancy_hypothesis_summary.md",
+      "size_bytes": 980
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/staged_file_audit.json",
+      "size_bytes": 25240
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/validation_report.json",
+      "size_bytes": 4290
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/validation_report.md",
+      "size_bytes": 4056
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+      "size_bytes": 39031
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/whole_corpus_evidence_correction_manifest.json",
+      "size_bytes": 4194
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/whole_corpus_evidence_correction_summary.json",
+      "size_bytes": 2773
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/whole_corpus_evidence_correction_summary.md",
+      "size_bytes": 1146
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/whole_corpus_synthesis_gate.json",
+      "size_bytes": 220
+    },
+    {
+      "path": "docs/dashboard/data/project_phase_summary.json",
+      "size_bytes": 230743
+    },
+    {
+      "path": "docs/dashboard/data/reports_index.json",
+      "size_bytes": 44712
+    },
+    {
+      "path": "docs/dashboard/public/reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+      "size_bytes": 39031
+    },
+    {
+      "path": "docs/dashboard/src/App.jsx",
+      "size_bytes": 39493
+    },
+    {
+      "path": "scripts/build_whole_corpus_evidence_correction.py",
+      "size_bytes": 98423
+    }
+  ]
+}
