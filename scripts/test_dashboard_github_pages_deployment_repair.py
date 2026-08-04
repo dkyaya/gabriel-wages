@@ -151,7 +151,32 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-REVIEW-AND-REPORT-OUTLINE-2026-08-03/"
             "broad_state_whole_corpus_claim_package_review_report_outline_manifest.json"
         )
-        if whole_corpus_review_manifest.exists() and json.loads(
+        whole_corpus_correction_summary = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/"
+            "whole_corpus_evidence_correction_summary.json"
+        )
+        if whole_corpus_correction_summary.exists() and json.loads(
+            whole_corpus_correction_summary.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_evidence_correction_implementation_event_recoding_complete",
+            )
+            self.assertTrue(phase["whole_corpus_evidence_correction_available"])
+            self.assertEqual(phase["representative_evidence_excerpt_repair_count"], 31)
+            self.assertEqual(phase["mechanism_implementation_event_count"], 2998)
+            self.assertEqual(
+                phase["corrected_scaffold_href"],
+                "reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+            )
+        elif whole_corpus_review_manifest.exists() and json.loads(
             whole_corpus_review_manifest.read_text()
         ).get("decision") == (
             "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready"
@@ -745,7 +770,33 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(whole_corpus_review_manifest.read_text()).get("decision")
                                                                             == "broad_state_whole_corpus_claim_package_review_report_outline_completed_manual_review_ready"
                                                                         )
-                                                                        if whole_corpus_review_complete:
+                                                                        whole_corpus_correction_summary = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/"
+                                                                            "whole_corpus_evidence_correction_summary.json"
+                                                                        )
+                                                                        whole_corpus_correction_complete = (
+                                                                            whole_corpus_correction_summary.exists()
+                                                                            and json.loads(whole_corpus_correction_summary.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready"
+                                                                        )
+                                                                        if whole_corpus_correction_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Whole-corpus evidence correction and implementation-event recoding complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04",
+                                                                            )
+                                                                            self.assertTrue(phase["whole_corpus_evidence_correction_available"])
+                                                                            self.assertEqual(phase["representative_evidence_excerpt_repair_count"], 31)
+                                                                            self.assertEqual(phase["mechanism_implementation_event_count"], 2998)
+                                                                            self.assertEqual(
+                                                                                phase["corrected_scaffold_link_label"],
+                                                                                "Open corrected whole-corpus evidence scaffold (MD)",
+                                                                            )
+                                                                        elif whole_corpus_review_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Whole-corpus claim package review and Markdown report draft complete",
