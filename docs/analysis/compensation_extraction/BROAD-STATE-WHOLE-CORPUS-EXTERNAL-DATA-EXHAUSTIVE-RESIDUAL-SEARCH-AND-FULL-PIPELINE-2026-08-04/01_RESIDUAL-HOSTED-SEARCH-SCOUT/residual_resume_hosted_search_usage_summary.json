@@ -1,0 +1,13 @@
+{
+  "hosted_search_smoke_calls": 14,
+  "input_tokens": "not_reliably_exposed_for_failed_preflight",
+  "no_search_control_calls": 1,
+  "output_tokens": "not_reliably_exposed_for_failed_preflight",
+  "prior_production_usage_preserved_unchanged": true,
+  "production_primary_calls": 0,
+  "production_probe_calls": 0,
+  "production_repair_calls": 0,
+  "reasoning_tokens": "not_reliably_exposed_for_failed_preflight",
+  "reliable_dollar_cost": "reliable_dollar_cost_not_available",
+  "resumed_target_calls": 0
+}

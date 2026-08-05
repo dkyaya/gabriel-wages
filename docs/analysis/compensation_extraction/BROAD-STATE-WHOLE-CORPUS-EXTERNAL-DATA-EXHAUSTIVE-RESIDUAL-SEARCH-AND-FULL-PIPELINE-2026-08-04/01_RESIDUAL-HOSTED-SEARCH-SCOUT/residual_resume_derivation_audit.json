@@ -1,0 +1,10 @@
+{
+  "equation": "18689 - 5845 = 12844",
+  "locked_ids_unique": true,
+  "locked_resume": 12844,
+  "no_rerun_overlap": true,
+  "original_residual_universe": 18689,
+  "preserved_authoritative_bulk": 2998,
+  "preserved_candidate_found": 2847,
+  "preserved_completed": 5845
+}

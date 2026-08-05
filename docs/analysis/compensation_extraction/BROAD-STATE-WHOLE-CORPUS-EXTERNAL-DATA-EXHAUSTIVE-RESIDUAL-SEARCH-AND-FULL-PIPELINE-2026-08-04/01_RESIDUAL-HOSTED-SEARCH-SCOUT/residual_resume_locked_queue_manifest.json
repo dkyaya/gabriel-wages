@@ -1,0 +1,23 @@
+{
+  "complete_queue_hash_method": "sha256 of ordered concatenated CSV shard SHA-256 values",
+  "complete_queue_sha256": "98d3c619bee5fa44a871a189495577ab408d040e252a871476342c6c23583bb1",
+  "preserved_completed_not_in_queue": 5845,
+  "queue_sha256": "bcf07649f4ed09990352406a6edf49be2098eb55d4f49ccb33ffcc04a9c2d72b",
+  "resume_run_id": "external_data_exhaustive_resume_2026-08-05",
+  "row_count": 12844,
+  "shard_hashes": [
+    {
+      "csv": "residual_resume_locked_queue.csv",
+      "rows": 8000,
+      "sha256": "bcf07649f4ed09990352406a6edf49be2098eb55d4f49ccb33ffcc04a9c2d72b"
+    },
+    {
+      "csv": "residual_resume_locked_queue.part-002.csv",
+      "rows": 4844,
+      "sha256": "d3361218a714fe96042a4954ffd0697da0c9e83cb3c2c6de1a6f8e4d3851938d"
+    }
+  ],
+  "shard_manifest": "residual_resume_locked_queue_shard_manifest.json",
+  "source_manifest": "residual_search_transport_resume_manifest.json",
+  "unique_target_count": 12844
+}

@@ -1,0 +1,6 @@
+{
+  "production_repair_calls": 0,
+  "smoke_bounded_retry_attempts": 7,
+  "smoke_primary_attempts": 7,
+  "uncontrolled_retries": 0
+}

@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "candidate_review_remains_provisional": true,
+    "category_A_gate_failed": true,
+    "download_not_started": true,
+    "integrity_preflight_passed": true,
+    "lane_queues_sum_12844": true,
+    "lanes_disjoint": true,
+    "locked_queue_unchanged_12844": true,
+    "no_preserved_target_rerun": true,
+    "parser_schema_operational": true,
+    "preserved_targets_unchanged_5845": true,
+    "production_lanes_not_launched": true,
+    "production_probe_not_run_after_failed_smoke": true,
+    "resumed_target_outcomes_zero": true,
+    "url_verification_not_started": true
+  },
+  "decision": "broad_state_whole_corpus_external_data_exhaustive_pipeline_preflight_failed_backend_unstable",
+  "passed_for_production": false,
+  "passed_for_safe_partial_resume": true,
+  "validated_at": "2026-08-05T04:17:33.767544+00:00"
+}

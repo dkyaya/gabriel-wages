@@ -1,0 +1,21 @@
+{
+  "append_only_ledgers": true,
+  "checkpoint_each_target": true,
+  "disjoint": true,
+  "lane_sizes": {
+    "residual_resume_lane_001": 2569,
+    "residual_resume_lane_002": 2569,
+    "residual_resume_lane_003": 2569,
+    "residual_resume_lane_004": 2569,
+    "residual_resume_lane_005": 2568
+  },
+  "resume_run_id": "external_data_exhaustive_resume_2026-08-05",
+  "stagger_seconds": {
+    "residual_resume_lane_001": 0,
+    "residual_resume_lane_002": 480,
+    "residual_resume_lane_003": 960,
+    "residual_resume_lane_004": 1440,
+    "residual_resume_lane_005": 1920
+  },
+  "total": 12844
+}

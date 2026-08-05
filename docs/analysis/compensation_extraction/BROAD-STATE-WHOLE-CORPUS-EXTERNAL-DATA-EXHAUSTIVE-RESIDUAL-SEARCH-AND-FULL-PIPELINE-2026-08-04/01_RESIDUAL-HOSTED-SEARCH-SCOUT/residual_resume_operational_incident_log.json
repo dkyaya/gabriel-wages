@@ -1,0 +1,16 @@
+{
+  "at": "2026-08-05T04:17:33.766878+00:00",
+  "family_smokes_passed": 0,
+  "family_smokes_required": 7,
+  "handling": "fail closed; preserve queue; commit diagnostic; no downstream transition",
+  "hosted_smoke_calls": 14,
+  "incident_id": "residual_resume_category_b_preflight_2026_08_05",
+  "locked_targets_consumed": 0,
+  "locked_targets_remaining": 12844,
+  "parser_schema_passed": true,
+  "production_lanes_launched": false,
+  "production_probe_ran": false,
+  "severity": "genuine_backend_blocker",
+  "stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
+  "transport_category": "B"
+}

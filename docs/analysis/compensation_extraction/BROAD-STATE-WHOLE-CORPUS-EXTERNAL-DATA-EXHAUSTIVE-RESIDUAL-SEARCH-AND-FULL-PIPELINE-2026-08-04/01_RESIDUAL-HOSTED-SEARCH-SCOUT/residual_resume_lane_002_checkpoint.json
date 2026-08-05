@@ -1,0 +1,11 @@
+{
+  "append_only_checkpointing": true,
+  "assigned": 2569,
+  "call_count": 0,
+  "candidate_count": 0,
+  "completed": 0,
+  "lane_id": "residual_resume_lane_002",
+  "queue_sha256": "25ed397f047f773b64fe499bef7ec59592da90cef193336404aad6f1f7fdd28f",
+  "resume_run_id": "external_data_exhaustive_resume_2026-08-05",
+  "status": "locked_waiting_for_transport"
+}
