@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "moderate_locator_relationships.csv",
+      "csv_bytes": 527210,
+      "csv_sha256": "6b7a70cc96d8c04534f14aac49f01da3886e68e552f49f43c28f3a7eab2c8e6e",
+      "jsonl": "moderate_locator_relationships.jsonl",
+      "jsonl_bytes": 798143,
+      "jsonl_sha256": "b50b620504812e67e251b25c55fdaa0f8931bcf976a79798856fdfa63b925768",
+      "part": 1,
+      "rows": 1604
+    }
+  ],
+  "sharded": false,
+  "total_rows": 1604
+}

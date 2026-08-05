@@ -1,0 +1,16 @@
+{
+  "incident_count": 1,
+  "incidents": [
+    {
+      "accepted_results_lost": 0,
+      "duplicate_targets_accepted": 0,
+      "handling": "Stopped all five workers, confirmed no worker remained active, preserved append-only accepted rows, changed only in-memory ordering of remaining locked lane members to round-robin host interleaving, and resumed incomplete locators.",
+      "incident_id": "VERIFY-OPS-001",
+      "incident_type": "host_grouped_batch_underutilized_cross_host_concurrency",
+      "locked_queue_or_hash_changed": false,
+      "possible_cancelled_inflight_locator_attempt_upper_bound": 384,
+      "request_accounting_note": "The request ledger exactly counts completed logged requests that produced accepted outcomes. Up to 384 lane-1/lane-2 locator tasks were in the interrupted batches; whether each emitted a network transmission before cancellation cannot be reconstructed. All unaccepted locators were subsequently verified once to an accepted terminal outcome.",
+      "severity": "bounded_infrastructure_repair"
+    }
+  ]
+}

@@ -20923,6 +20923,64 @@ def main() -> int:
                 }
             )
 
+    # A completed locator-verification stage supersedes the candidate-review
+    # status without changing the dashboard's geographic map or report links.
+    # These are direct HTTP metadata observations only: source payloads remain
+    # unreviewed and undownloaded until the next, separately gated stage.
+    available_verification_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04"
+        / "03_EXTERNAL-DATA-VERIFICATION"
+    )
+    available_verification_path = (
+        available_verification_dir
+        / "dashboard_full_external_verification_update_summary.json"
+    )
+    available_verification_validation_path = available_verification_dir / "validation_report.json"
+    if available_verification_path.is_file() and available_verification_validation_path.is_file():
+        available_verification = read_json(available_verification_path)
+        available_verification_validation = read_json(available_verification_validation_path)
+        if available_verification_validation.get("passed") is True:
+            project_phase_summary.update(
+                {
+                    "current_phase": "Available external-data verification complete",
+                    "stage": "broad_state_whole_corpus_available_external_data_verification_complete",
+                    "current_phase_code": available_verification["decision"],
+                    "current_evidence_status": "available_external_candidate_locators_verified_source_review_pending",
+                    "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
+                    "available_external_data_verification_performed": True,
+                    "available_external_data_actionable_candidate_rows": available_verification["actionable_candidate_rows"],
+                    "available_external_data_unique_canonical_locator_count": available_verification["unique_canonical_locators"],
+                    "available_external_data_exact_locator_duplicate_group_count": available_verification["exact_locator_duplicate_groups"],
+                    "available_external_data_repaired_locator_count": available_verification["repaired_locators"],
+                    "available_external_data_unrepaired_locator_count": available_verification["unrepaired_malformed_locators"],
+                    "available_external_data_verification_request_count": available_verification["verification_requests_made"],
+                    "available_external_data_verification_retry_count": available_verification["retry_count"],
+                    "available_external_data_reachable_locator_count": available_verification["reachable_locators"],
+                    "available_external_data_reachable_direct_document_count": available_verification["reachable_direct_documents"],
+                    "available_external_data_reachable_structured_data_count": available_verification["reachable_structured_data"],
+                    "available_external_data_reachable_html_portal_count": available_verification["reachable_html_or_portal"],
+                    "available_external_data_redirect_hop_count": available_verification["redirect_hops"],
+                    "available_external_data_duplicate_final_locator_count": available_verification["duplicate_final_locators"],
+                    "available_external_data_blocked_auth_captcha_count": available_verification["blocked_auth_captcha"],
+                    "available_external_data_unavailable_locator_count": available_verification["unavailable"],
+                    "available_external_data_timeout_dns_tls_count": available_verification["timeout_dns_tls_errors"],
+                    "available_external_data_source_review_ready_count": available_verification["source_review_ready_count"],
+                    "available_external_data_source_review_ready_by_type": available_verification["source_review_ready_by_type"],
+                    "available_external_data_source_review_ready_by_priority": available_verification["source_review_ready_by_priority"],
+                    "unresolved_hosted_search_target_count": available_verification["unresolved_hosted_search_targets"],
+                    "available_external_data_gabriel_scoring_used": False,
+                    "available_external_data_downloads_performed": False,
+                    "candidate_source_download_performed": False,
+                    "candidate_source_review_performed": False,
+                    "candidate_text_extraction_performed": False,
+                    "implementation_event_deduplication_rerun_for_external_verification": False,
+                    "final_visual_report_created": False,
+                    "dashboard_map_primary_metric": "scout_coverage_rate",
+                }
+            )
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),

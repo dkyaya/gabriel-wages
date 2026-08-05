@@ -1,0 +1,76 @@
+{
+  "bounded_retry_limit": 1,
+  "bounded_timeout_seconds": 12.0,
+  "checked_at": "2026-08-05T15:10:32.037955+00:00",
+  "http_responses_observed": 5,
+  "max_body_prefix_bytes": 2048,
+  "parser_status_handling_passed": true,
+  "passed": true,
+  "redaction_check_passed": true,
+  "response_bodies_retained": 0,
+  "secrets_or_headers_logged": false,
+  "smoke_call_count": 5,
+  "smoke_rows": [
+    {
+      "body_prefix_bytes_inspected": 0,
+      "content_type": "application/pdf",
+      "error_class": "",
+      "final_url": "https://www.ohioauditor.gov/AuditSearch/Reports/2020/Howland_Township_19-Trumbull.pdf",
+      "full_body_retained": "false",
+      "http_status": 200,
+      "redirect_count": 0,
+      "requested_url": "https://www.ohioauditor.gov/AuditSearch/Reports/2020/Howland_Township_19-Trumbull.pdf",
+      "secrets_logged": "false",
+      "smoke_kind": "official_pdf"
+    },
+    {
+      "body_prefix_bytes_inspected": 0,
+      "content_type": "text/html; charset=utf-8",
+      "error_class": "",
+      "final_url": "https://hrmanual.calhr.ca.gov/Home/ManualItem/1/1208",
+      "full_body_retained": "false",
+      "http_status": 200,
+      "redirect_count": 0,
+      "requested_url": "https://hrmanual.calhr.ca.gov/Home/ManualItem/1/1208",
+      "secrets_logged": "false",
+      "smoke_kind": "official_html"
+    },
+    {
+      "body_prefix_bytes_inspected": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "error_class": "",
+      "final_url": "https://www.census.gov/",
+      "full_body_retained": "false",
+      "http_status": 200,
+      "redirect_count": 1,
+      "requested_url": "http://www.census.gov/",
+      "secrets_logged": "false",
+      "smoke_kind": "redirect"
+    },
+    {
+      "body_prefix_bytes_inspected": 0,
+      "content_type": "text/html",
+      "error_class": "",
+      "final_url": "https://www.census.gov/gabriel-wages-verification-smoke-not-found-20260805",
+      "full_body_retained": "false",
+      "http_status": 404,
+      "redirect_count": 0,
+      "requested_url": "https://www.census.gov/gabriel-wages-verification-smoke-not-found-20260805",
+      "secrets_logged": "false",
+      "smoke_kind": "expected_404"
+    },
+    {
+      "body_prefix_bytes_inspected": 0,
+      "content_type": "text/html",
+      "error_class": "",
+      "final_url": "https://www.reddit.com/r/datasets/comments/15zh6jp/",
+      "full_body_retained": "false",
+      "http_status": 200,
+      "redirect_count": 1,
+      "requested_url": "https://www.reddit.com/r/datasets/comments/15zh6jp",
+      "secrets_logged": "false",
+      "smoke_kind": "open_data_or_dataset"
+    }
+  ],
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-FULL-VERIFICATION-2026-08-05"
+}

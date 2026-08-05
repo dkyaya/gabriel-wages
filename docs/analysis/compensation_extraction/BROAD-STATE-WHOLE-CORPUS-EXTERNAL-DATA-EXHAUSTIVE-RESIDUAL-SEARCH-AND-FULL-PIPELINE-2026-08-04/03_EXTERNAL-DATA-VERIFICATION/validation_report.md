@@ -1,0 +1,50 @@
+# Full external-data verification validation
+
+- PASS — available candidate universe 62796
+- PASS — verification ready 61624
+- PASS — repair needed 515
+- PASS — actionable candidate rows 62139
+- PASS — navigation only 55
+- PASS — excluded 602
+- PASS — actionable candidates locked exactly once
+- PASS — canonicalization covers actionable
+- PASS — strong duplicate groups have one canonical
+- PASS — strong duplicates preserved
+- PASS — moderate relationships preserved
+- PASS — repair terminal each
+- PASS — no invented locator
+- PASS — unique locator queue reconciles
+- PASS — five lanes disjoint
+- PASS — five lanes cover all unique locators
+- PASS — one terminal outcome per unique locator
+- PASS — candidate propagation complete
+- PASS — request ledger reconciles
+- PASS — no uncontrolled retries
+- PASS — redirect hops reconcile
+- PASS — final locator duplicates reconcile
+- PASS — source review ready only eligible
+- PASS — nonready queues separate
+- PASS — all priorities handled
+- PASS — distinct event sources not collapsed
+- PASS — implementation event deduplication not rerun
+- PASS — unresolved 12844 preserved
+- PASS — no hosted search
+- PASS — no gabriel api
+- PASS — no retained source download
+- PASS — no full page body retained
+- PASS — no source review
+- PASS — no text extraction
+- PASS — no ocr
+- PASS — no field extraction
+- PASS — no normalization or matching
+- PASS — no regression or treatment effect
+- PASS — no national wage gap estimate
+- PASS — no prevalence estimate
+- PASS — no causal effect estimate
+- PASS — no final documents or heatmaps
+- PASS — dashboard assets intact
+- PASS — coverage map scout coverage rate
+- PASS — payload roots ignored
+- PASS — no forbidden payload staged
+- PASS — staged file audit pending precommit
+- PASS — large file audit pending precommit

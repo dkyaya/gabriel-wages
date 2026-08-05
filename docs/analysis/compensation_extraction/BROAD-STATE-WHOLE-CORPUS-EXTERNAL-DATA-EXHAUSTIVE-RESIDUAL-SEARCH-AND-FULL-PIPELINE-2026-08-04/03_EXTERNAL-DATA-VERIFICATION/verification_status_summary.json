@@ -1,0 +1,18 @@
+{
+  "blocked_or_forbidden": 875,
+  "captcha_or_bot_protection": 3625,
+  "dns_failure": 1230,
+  "duplicate_final_locator": 291,
+  "login_or_auth_required": 9,
+  "reachable": 5,
+  "reachable_direct_document": 14953,
+  "reachable_head_unsupported_get_confirmed": 73,
+  "reachable_html_shell_or_portal": 34238,
+  "reachable_structured_data": 24,
+  "reachable_with_redirect": 1,
+  "timeout": 257,
+  "unavailable_404": 4033,
+  "unavailable_410": 35,
+  "unavailable_other": 2291,
+  "verification_error": 177
+}

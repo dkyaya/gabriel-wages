@@ -1,0 +1,15 @@
+{
+  "distinct_event_sources_preserved": true,
+  "excluded_preserved_not_verified": 602,
+  "full_bodies_retained": 0,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "locator_canonicalization_before_network": true,
+  "navigation_only_preserved_not_verified": 55,
+  "repair_needed_attempted": 515,
+  "results_propagated_to_all_lineage": true,
+  "source_review_performed": false,
+  "strong_duplicates_verified_once": true,
+  "verification_ready_included": 61624
+}

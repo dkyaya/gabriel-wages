@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "repair_needed_locator_results.csv",
+      "csv_bytes": 187379,
+      "csv_sha256": "b90c337fd11af7810b553dbe09ccb8575cbe7a2075a5b2470ccb4d0a509fcd0f",
+      "jsonl": "repair_needed_locator_results.jsonl",
+      "jsonl_bytes": 295873,
+      "jsonl_sha256": "b284d0f64532a51fe1eae4f380460d590aa5d7a2bed403b490370a919f9e9f8e",
+      "part": 1,
+      "rows": 515
+    }
+  ],
+  "sharded": false,
+  "total_rows": 515
+}

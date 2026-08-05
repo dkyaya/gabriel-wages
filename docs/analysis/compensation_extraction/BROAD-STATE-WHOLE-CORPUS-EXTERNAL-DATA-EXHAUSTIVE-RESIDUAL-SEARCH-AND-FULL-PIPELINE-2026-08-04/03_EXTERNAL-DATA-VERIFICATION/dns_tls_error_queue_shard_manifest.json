@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "dns_tls_error_queue.csv",
+      "csv_bytes": 517627,
+      "csv_sha256": "95e02675074806807392ce3afed571b4fcb651d7b9ef58a8ef8c7e0e614cef5a",
+      "jsonl": "dns_tls_error_queue.jsonl",
+      "jsonl_bytes": 1623855,
+      "jsonl_sha256": "500321931b3d3319c48c82d2db7eb27af1be120ab747ccb228dfbe06913d66be",
+      "part": 1,
+      "rows": 1230
+    }
+  ],
+  "sharded": false,
+  "total_rows": 1230
+}

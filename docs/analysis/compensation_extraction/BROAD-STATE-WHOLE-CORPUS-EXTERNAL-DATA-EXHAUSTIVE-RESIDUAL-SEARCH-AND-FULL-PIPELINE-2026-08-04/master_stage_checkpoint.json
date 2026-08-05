@@ -1,17 +1,11 @@
 {
-  "checkpoint_paths": [
-    "01_RESIDUAL-HOSTED-SEARCH-SCOUT/residual_resume_locked_queue_manifest.json",
-    "01_RESIDUAL-HOSTED-SEARCH-SCOUT/residual_resume_lane_distribution.json",
-    "01_RESIDUAL-HOSTED-SEARCH-SCOUT/residual_resume_transport_preflight.json"
-  ],
-  "decision": "broad_state_whole_corpus_external_data_exhaustive_pipeline_preflight_failed_backend_unstable",
-  "locked_remaining_targets": 12844,
-  "no_rerun_targets": 5845,
-  "preserved_completed_targets": 5845,
-  "resume_precondition": "all seven family smokes source-bearing under Category A plus successful quarantined production probe",
-  "resume_run_id": "external_data_exhaustive_resume_2026-08-05",
-  "resumed_completed_targets": 0,
-  "stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
-  "status": "preflight_failed_backend_unstable",
-  "updated_at": "2026-08-05T13:57:19.532756+00:00"
+  "actionable_candidate_rows": 62139,
+  "decision": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
+  "source_review_ready_locators": 49294,
+  "stage": "03_EXTERNAL-DATA-VERIFICATION",
+  "status": "complete_source_review_ready",
+  "unique_verified_locators": 62117,
+  "unresolved_hosted_search_targets": 12844,
+  "updated_at": "2026-08-05T16:04:48.886180+00:00"
 }

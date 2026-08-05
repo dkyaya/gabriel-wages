@@ -1,0 +1,37 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "verification_lane_002_request_ledger.csv",
+      "csv_bytes": 3274667,
+      "csv_sha256": "664dfcbd130cecc04a9e90ad786cb73f1437a712406cf28328c56b19de1b6808",
+      "jsonl": "verification_lane_002_request_ledger.jsonl",
+      "jsonl_bytes": 7084690,
+      "jsonl_sha256": "5114113cea9fc676fcaf0adec52fb2940fa6249cfe7180f8b0361957200ba8aa",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_lane_002_request_ledger.part-002.csv",
+      "csv_bytes": 3110454,
+      "csv_sha256": "4f64a17f9d861f4e729553483c24a21e603f0c0466013846a302ef6621f826b6",
+      "jsonl": "verification_lane_002_request_ledger.part-002.jsonl",
+      "jsonl_bytes": 6923747,
+      "jsonl_sha256": "b02843da39f37a574b96daf3bd18df0d1c52c8b503e1633a2524cf2d909fe38a",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_lane_002_request_ledger.part-003.csv",
+      "csv_bytes": 2111862,
+      "csv_sha256": "2c98cc8a29afe931db71881c1409e6648798980af32734dbfbf44caab81a2b80",
+      "jsonl": "verification_lane_002_request_ledger.part-003.jsonl",
+      "jsonl_bytes": 4887146,
+      "jsonl_sha256": "005b54c4298a7adbb4d5f3f7ecaf2ae2c4b99020002fa7e9eed25601a4e3fb84",
+      "part": 3,
+      "rows": 5819
+    }
+  ],
+  "sharded": true,
+  "total_rows": 21819
+}

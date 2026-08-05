@@ -1,0 +1,9 @@
+{
+  "actionable_candidate_rows": 62139,
+  "invalid_or_unrepaired_candidate_rows": 0,
+  "moderate_locator_relationships": 1604,
+  "strong_duplicate_candidate_links": 22,
+  "strong_duplicate_groups": 22,
+  "unique_strong_canonical_locators": 62117,
+  "valid_candidate_rows": 62139
+}

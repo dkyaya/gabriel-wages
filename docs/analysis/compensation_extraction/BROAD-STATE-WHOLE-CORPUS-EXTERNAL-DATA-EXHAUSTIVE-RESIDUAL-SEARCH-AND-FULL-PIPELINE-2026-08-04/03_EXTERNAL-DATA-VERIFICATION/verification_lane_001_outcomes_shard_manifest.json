@@ -1,0 +1,27 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "verification_lane_001_outcomes.csv",
+      "csv_bytes": 4577024,
+      "csv_sha256": "1b1b94a16e8ac8cb5f17cf6fe7e44db5169a9765755247ae4364ba041580fde3",
+      "jsonl": "verification_lane_001_outcomes.jsonl",
+      "jsonl_bytes": 11768520,
+      "jsonl_sha256": "54f5c0a81165554c519f0126c616299316c62a94e45c79016682945bb648f878",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_lane_001_outcomes.part-002.csv",
+      "csv_bytes": 2007541,
+      "csv_sha256": "3d0f3adbfc5ef43df4b4ee5fc65d6b4db99a623782159175cc9a17f817474bd7",
+      "jsonl": "verification_lane_001_outcomes.part-002.jsonl",
+      "jsonl_bytes": 5400119,
+      "jsonl_sha256": "b2b6f0eb62643416d781729c799a691dd3ad650e373bfa1ee359a11aeb058d67",
+      "part": 2,
+      "rows": 3771
+    }
+  ],
+  "sharded": true,
+  "total_rows": 11771
+}

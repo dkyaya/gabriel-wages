@@ -1,0 +1,17 @@
+{
+  "append_only_checkpointing": true,
+  "assigned": 12598,
+  "completed": 12598,
+  "downloads": 0,
+  "finished_at": "2026-08-05T15:49:06.494150+00:00",
+  "full_bodies_retained": 0,
+  "lane_id": "verification_lane_002",
+  "queue_content_sha256": "e35221c80a7fc70efaedbf9c39114c71d4f83e4a0ff427c64393cbceb207158a",
+  "redirect_hop_count": 838,
+  "remaining": 0,
+  "request_count": 21819,
+  "retry_count": 2593,
+  "started_at": "2026-08-05T15:16:08.561092+00:00",
+  "status": "complete",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-FULL-VERIFICATION-2026-08-05"
+}

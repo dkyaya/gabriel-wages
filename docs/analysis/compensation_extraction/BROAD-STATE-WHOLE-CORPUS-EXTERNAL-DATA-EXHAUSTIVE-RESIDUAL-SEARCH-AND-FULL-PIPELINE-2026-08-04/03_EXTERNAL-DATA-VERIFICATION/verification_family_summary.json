@@ -1,0 +1,141 @@
+{
+  "grouping_field": "primary_external_data_families",
+  "groups": {
+    "benefits_and_total_compensation": {
+      "count": 761,
+      "status_counts": {
+        "blocked_or_forbidden": 26,
+        "captcha_or_bot_protection": 50,
+        "dns_failure": 26,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 162,
+        "reachable_html_shell_or_portal": 407,
+        "timeout": 3,
+        "unavailable_404": 63,
+        "unavailable_other": 22,
+        "verification_error": 1
+      }
+    },
+    "implementation_confirmation": {
+      "count": 915,
+      "status_counts": {
+        "blocked_or_forbidden": 14,
+        "captcha_or_bot_protection": 36,
+        "dns_failure": 10,
+        "duplicate_final_locator": 3,
+        "reachable": 1,
+        "reachable_direct_document": 226,
+        "reachable_html_shell_or_portal": 521,
+        "reachable_structured_data": 1,
+        "timeout": 2,
+        "unavailable_404": 58,
+        "unavailable_other": 37,
+        "verification_error": 6
+      }
+    },
+    "multi_family_administrative_source": {
+      "count": 41136,
+      "status_counts": {
+        "blocked_or_forbidden": 607,
+        "captcha_or_bot_protection": 2535,
+        "dns_failure": 816,
+        "duplicate_final_locator": 176,
+        "login_or_auth_required": 7,
+        "reachable": 3,
+        "reachable_direct_document": 9929,
+        "reachable_head_unsupported_get_confirmed": 53,
+        "reachable_html_shell_or_portal": 22380,
+        "reachable_structured_data": 15,
+        "reachable_with_redirect": 1,
+        "timeout": 158,
+        "unavailable_404": 2652,
+        "unavailable_410": 21,
+        "unavailable_other": 1654,
+        "verification_error": 129
+      }
+    },
+    "payroll_and_earnings": {
+      "count": 15570,
+      "status_counts": {
+        "blocked_or_forbidden": 182,
+        "captcha_or_bot_protection": 808,
+        "dns_failure": 306,
+        "duplicate_final_locator": 87,
+        "login_or_auth_required": 1,
+        "reachable": 1,
+        "reachable_direct_document": 3807,
+        "reachable_head_unsupported_get_confirmed": 20,
+        "reachable_html_shell_or_portal": 8674,
+        "reachable_structured_data": 5,
+        "timeout": 75,
+        "unavailable_404": 1046,
+        "unavailable_410": 9,
+        "unavailable_other": 513,
+        "verification_error": 36
+      }
+    },
+    "recruitment_and_retention": {
+      "count": 280,
+      "status_counts": {
+        "blocked_or_forbidden": 1,
+        "captcha_or_bot_protection": 17,
+        "dns_failure": 4,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 64,
+        "reachable_html_shell_or_portal": 170,
+        "timeout": 1,
+        "unavailable_404": 18,
+        "unavailable_410": 1,
+        "unavailable_other": 3
+      }
+    },
+    "staffing_and_headcount": {
+      "count": 2496,
+      "status_counts": {
+        "blocked_or_forbidden": 35,
+        "captcha_or_bot_protection": 133,
+        "dns_failure": 57,
+        "duplicate_final_locator": 17,
+        "login_or_auth_required": 1,
+        "reachable_direct_document": 555,
+        "reachable_html_shell_or_portal": 1482,
+        "reachable_structured_data": 2,
+        "timeout": 16,
+        "unavailable_404": 156,
+        "unavailable_410": 2,
+        "unavailable_other": 36,
+        "verification_error": 4
+      }
+    },
+    "tenure_and_progression": {
+      "count": 771,
+      "status_counts": {
+        "blocked_or_forbidden": 8,
+        "captcha_or_bot_protection": 31,
+        "dns_failure": 8,
+        "duplicate_final_locator": 5,
+        "reachable_direct_document": 162,
+        "reachable_html_shell_or_portal": 487,
+        "timeout": 2,
+        "unavailable_404": 45,
+        "unavailable_410": 2,
+        "unavailable_other": 21
+      }
+    },
+    "unclear": {
+      "count": 197,
+      "status_counts": {
+        "blocked_or_forbidden": 2,
+        "captcha_or_bot_protection": 15,
+        "dns_failure": 3,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 49,
+        "reachable_html_shell_or_portal": 118,
+        "reachable_structured_data": 1,
+        "unavailable_404": 2,
+        "unavailable_other": 5,
+        "verification_error": 1
+      }
+    }
+  }
+}

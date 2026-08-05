@@ -1,0 +1,87 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "candidate_locator_canonicalization_results.csv",
+      "csv_bytes": 2682018,
+      "csv_sha256": "f9c1c3817efe5f12dc84e894feb532765e700c5d6938d5d81b291d2ccf9deb2e",
+      "jsonl": "candidate_locator_canonicalization_results.jsonl",
+      "jsonl_bytes": 4561701,
+      "jsonl_sha256": "dcf4c1b1cdc658f7025a58c771d4099c4a3b73f7cc663e07eed26fb14801c13e",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-002.csv",
+      "csv_bytes": 2697677,
+      "csv_sha256": "bc7d4e3f76b31239166e9512967711b8da657ec4c87539c7226fb01535c5a8c9",
+      "jsonl": "candidate_locator_canonicalization_results.part-002.jsonl",
+      "jsonl_bytes": 4577382,
+      "jsonl_sha256": "593e9784af1d16e6eedcbcc44a34aa39a91fc167f0905d48a7715ef414cd985e",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-003.csv",
+      "csv_bytes": 2674355,
+      "csv_sha256": "dc01495998bb83b6a5848649532cbd8fb7d456fffeb107fc30860b2c0e4162ef",
+      "jsonl": "candidate_locator_canonicalization_results.part-003.jsonl",
+      "jsonl_bytes": 4554056,
+      "jsonl_sha256": "f9fd34077dcf9e0f5b4bbe25057eeaf05a59b897918c42b0bd063f2be4db0986",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-004.csv",
+      "csv_bytes": 2703160,
+      "csv_sha256": "cc9b30352bc43099f8e5e0c5d0f85f98c89280f6d8b619128428ee3cb6415c93",
+      "jsonl": "candidate_locator_canonicalization_results.part-004.jsonl",
+      "jsonl_bytes": 4582871,
+      "jsonl_sha256": "54bde197c1bbbc4b951f9a24f7c470f50dc2d48342950fc4604af35284dc0f6a",
+      "part": 4,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-005.csv",
+      "csv_bytes": 2733145,
+      "csv_sha256": "2bb9c4603c8e315b61e9ba2e65da903c6f9718844f92eaa6c5f2ca9c5d7e8e8a",
+      "jsonl": "candidate_locator_canonicalization_results.part-005.jsonl",
+      "jsonl_bytes": 4612752,
+      "jsonl_sha256": "4197a51dd53cfe6d5834e954599301d5644ab96d3b20f9efbfac3ee1cd883b58",
+      "part": 5,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-006.csv",
+      "csv_bytes": 2739868,
+      "csv_sha256": "3b4bef04c5356c848204824634607185581fe6e8d8800db882f2f303d9d7b499",
+      "jsonl": "candidate_locator_canonicalization_results.part-006.jsonl",
+      "jsonl_bytes": 4619485,
+      "jsonl_sha256": "8005518c363b116d2f76412edf7acf02dceaa0a217196b8c4b7d3f59a7fa394f",
+      "part": 6,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-007.csv",
+      "csv_bytes": 2753792,
+      "csv_sha256": "1ec792171b7a67df707d2d79b1d74b39338221959d45743c08ea545515a79051",
+      "jsonl": "candidate_locator_canonicalization_results.part-007.jsonl",
+      "jsonl_bytes": 4633375,
+      "jsonl_sha256": "fc173563d57fb31aeaecef70d5d27741e48df891691c0e429ff7c1ebc4247d4e",
+      "part": 7,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_locator_canonicalization_results.part-008.csv",
+      "csv_bytes": 2101866,
+      "csv_sha256": "c04ceea7b51b9e1f7db03bc9b40626d252c572768d016bb78a10c10e1b9a2b85",
+      "jsonl": "candidate_locator_canonicalization_results.part-008.jsonl",
+      "jsonl_bytes": 3544188,
+      "jsonl_sha256": "4678477d6dd83cf027fedb5b3a4069f824e589108ac00d5973a9ba66f8757ce9",
+      "part": 8,
+      "rows": 6139
+    }
+  ],
+  "sharded": true,
+  "total_rows": 62139
+}

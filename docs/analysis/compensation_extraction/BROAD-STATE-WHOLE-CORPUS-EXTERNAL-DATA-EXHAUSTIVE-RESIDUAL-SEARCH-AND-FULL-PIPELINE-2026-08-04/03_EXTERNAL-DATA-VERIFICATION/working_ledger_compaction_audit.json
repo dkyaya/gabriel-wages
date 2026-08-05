@@ -1,0 +1,118 @@
+{
+  "canonical_replacements": [
+    "verification_lane_001_outcomes_shard_manifest.json",
+    "verification_lane_002_outcomes_shard_manifest.json",
+    "verification_lane_003_outcomes_shard_manifest.json",
+    "verification_lane_004_outcomes_shard_manifest.json",
+    "verification_lane_005_outcomes_shard_manifest.json",
+    "verification_lane_001_request_ledger_shard_manifest.json",
+    "verification_lane_002_request_ledger_shard_manifest.json",
+    "verification_lane_003_request_ledger_shard_manifest.json",
+    "verification_lane_004_request_ledger_shard_manifest.json",
+    "verification_lane_005_request_ledger_shard_manifest.json",
+    "verification_redirect_hops_shard_manifest.json",
+    "verification_retry_ledger_shard_manifest.json"
+  ],
+  "compacted_at": "2026-08-05T16:04:48.885517+00:00",
+  "lineage_normalization": {
+    "authoritative_candidate_lineage_table": "actionable_candidate_locked_queue",
+    "candidate_locator_link_table": "candidate_to_canonical_locator_links",
+    "candidate_results_join_key": "canonical_candidate_id",
+    "locator_views_repeat_event_lineage": false
+  },
+  "passed": true,
+  "retired_byte_count": 216818495,
+  "retired_file_count": 15,
+  "retired_working_ledgers": [
+    {
+      "bytes": 25865202,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_001_outcomes_append_only.jsonl",
+      "sha256": "acdb9c4b4740857d999fae4236572d6dd324b2aaf305507bc9eab43aa6c3d5a0"
+    },
+    {
+      "bytes": 27531889,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_002_outcomes_append_only.jsonl",
+      "sha256": "dca83395c13f866160e1ddd9f3db25fcd23ca07ef1d3efd67cdfb6f4c1929ffb"
+    },
+    {
+      "bytes": 28107845,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_003_outcomes_append_only.jsonl",
+      "sha256": "570b9ce0dc22ffb28c5b21cae594c1e3b48b4bdc5fdfb7e28a7a8867dcd968b9"
+    },
+    {
+      "bytes": 27918907,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_004_outcomes_append_only.jsonl",
+      "sha256": "abcf509397c5383978170b79a673666ee9da35ca7024623f76898e24db131b9c"
+    },
+    {
+      "bytes": 28336312,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_005_outcomes_append_only.jsonl",
+      "sha256": "9cbd37a838223fa8fa27da4d4de9cfdab47bc03d17d2398e80996fbbd5010ed0"
+    },
+    {
+      "bytes": 12720513,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_001_request_ledger_append_only.jsonl",
+      "sha256": "d0ef8ed941ef2ce15b32e933f434105c9047d48994caba7ad384cab6548d29ef"
+    },
+    {
+      "bytes": 18895583,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_002_request_ledger_append_only.jsonl",
+      "sha256": "00e4f07801beb4b17940d0ed3ec71e254b01d5f67a6c0bc5f60c3647824f3889"
+    },
+    {
+      "bytes": 14506534,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_003_request_ledger_append_only.jsonl",
+      "sha256": "5eb01039e3f84ca7745742786860642aaaace84c6644caed71e4eff3ba8b69fb"
+    },
+    {
+      "bytes": 14283405,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_004_request_ledger_append_only.jsonl",
+      "sha256": "108c011b4a85e12d1524eb51215d3ab0e2f36e0f590852da48431689c9705ec7"
+    },
+    {
+      "bytes": 13383256,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_005_request_ledger_append_only.jsonl",
+      "sha256": "3c1570291a87f91e5943649ec40b55efaab8dbcbff9cff9959ba14296058f099"
+    },
+    {
+      "bytes": 2095833,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_001_redirect_retry_append_only.jsonl",
+      "sha256": "527b61b0ed7e64c5b33f24a215957cb9d59a79db753a5c14b569a7c6e09bb06d"
+    },
+    {
+      "bytes": 1352449,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_002_redirect_retry_append_only.jsonl",
+      "sha256": "090735ea198199362afc39b633614b896a675b6fd045a0af3436bc91a7296195"
+    },
+    {
+      "bytes": 438504,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_003_redirect_retry_append_only.jsonl",
+      "sha256": "31cff99b7c396cf9e41d50c6956af7754e85042096215be1b5ead9fd0203fff1"
+    },
+    {
+      "bytes": 600854,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_004_redirect_retry_append_only.jsonl",
+      "sha256": "91aab18b8365ea381e3b2546bb157058fe7b262d623342281ca33cb520cb1b6b"
+    },
+    {
+      "bytes": 781409,
+      "handling_reason": "Crash-safe working ledger superseded by validated canonical sharded lane outputs",
+      "path": "verification_lane_005_redirect_retry_append_only.jsonl",
+      "sha256": "cb93c40bdd7ad4d613db70296588640aed0ba49fc6e727648fe32a57131f2190"
+    }
+  ]
+}

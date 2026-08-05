@@ -1,0 +1,17 @@
+{
+  "actionable_candidate_rows": 62139,
+  "available_candidates": 62796,
+  "created_at": "2026-08-05T15:10:00.071174+00:00",
+  "excluded_preserved": 602,
+  "implementation_event_deduplication_rerun": false,
+  "locked_queue_sha256": "8a7c148db704c5d0bdbc448f139b277ca65ab86361052c3143e682b6d64cce3c",
+  "moderate_relationships": 1604,
+  "navigation_only_preserved": 55,
+  "network_started": false,
+  "repair_needed": 515,
+  "starting_head": "0b99e8fb6f2746eb818ad3125676b1c7e3433591",
+  "strong_duplicate_links": 22,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-FULL-VERIFICATION-2026-08-05",
+  "unique_canonical_locators": 62117,
+  "verification_ready": 61624
+}

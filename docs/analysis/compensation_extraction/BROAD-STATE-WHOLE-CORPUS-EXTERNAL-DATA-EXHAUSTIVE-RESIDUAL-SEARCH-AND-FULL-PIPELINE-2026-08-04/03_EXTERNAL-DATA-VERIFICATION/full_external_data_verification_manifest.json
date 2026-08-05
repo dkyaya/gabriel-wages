@@ -1,0 +1,17 @@
+{
+  "completed_at": "2026-08-05T16:00:05.364471+00:00",
+  "decision": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
+  "implementation_event_deduplication_rerun": false,
+  "input_counts": {
+    "actionable": 62139,
+    "available": 62796,
+    "ready": 61624,
+    "repair": 515
+  },
+  "production_request_count": 83307,
+  "retry_count": 4535,
+  "source_review_ready_count": 49294,
+  "starting_head": "0b99e8fb6f2746eb818ad3125676b1c7e3433591",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-FULL-VERIFICATION-2026-08-05",
+  "unique_locator_count": 62117
+}

@@ -1,0 +1,10 @@
+{
+  "completed_locator_count": 62117,
+  "current_stage": "verification_complete",
+  "decision": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
+  "source_review_ready_count": 49294,
+  "status": "complete_source_review_ready",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-FULL-VERIFICATION-2026-08-05",
+  "unique_locator_count": 62117,
+  "updated_at": "2026-08-05T16:00:05.364819+00:00"
+}

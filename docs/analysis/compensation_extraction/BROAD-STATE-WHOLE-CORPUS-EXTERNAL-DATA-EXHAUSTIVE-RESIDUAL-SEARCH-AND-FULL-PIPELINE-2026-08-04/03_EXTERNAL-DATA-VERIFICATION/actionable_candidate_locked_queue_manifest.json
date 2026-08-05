@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-08-05T15:09:51.283614+00:00",
+  "excluded_preserved": 602,
+  "navigation_only_preserved": 55,
+  "queue_content_sha256": "8a7c148db704c5d0bdbc448f139b277ca65ab86361052c3143e682b6d64cce3c",
+  "repair_needed_count": 515,
+  "row_count": 62139,
+  "shard_manifest": "actionable_candidate_locked_queue_shard_manifest.json",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-FULL-VERIFICATION-2026-08-05",
+  "verification_ready_count": 61624
+}

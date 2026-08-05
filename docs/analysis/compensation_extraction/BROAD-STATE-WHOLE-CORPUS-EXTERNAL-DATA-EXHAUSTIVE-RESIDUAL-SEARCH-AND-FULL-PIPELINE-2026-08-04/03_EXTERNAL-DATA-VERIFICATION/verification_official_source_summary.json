@@ -1,0 +1,45 @@
+{
+  "grouping_field": "official_source_flags",
+  "groups": {
+    "false": {
+      "count": 32509,
+      "status_counts": {
+        "blocked_or_forbidden": 270,
+        "captcha_or_bot_protection": 2590,
+        "dns_failure": 270,
+        "duplicate_final_locator": 96,
+        "login_or_auth_required": 4,
+        "reachable": 1,
+        "reachable_direct_document": 6152,
+        "reachable_head_unsupported_get_confirmed": 73,
+        "reachable_html_shell_or_portal": 19298,
+        "reachable_structured_data": 1,
+        "reachable_with_redirect": 1,
+        "timeout": 144,
+        "unavailable_404": 1443,
+        "unavailable_410": 31,
+        "unavailable_other": 2075,
+        "verification_error": 60
+      }
+    },
+    "true": {
+      "count": 29608,
+      "status_counts": {
+        "blocked_or_forbidden": 605,
+        "captcha_or_bot_protection": 1035,
+        "dns_failure": 960,
+        "duplicate_final_locator": 195,
+        "login_or_auth_required": 5,
+        "reachable": 4,
+        "reachable_direct_document": 8801,
+        "reachable_html_shell_or_portal": 14940,
+        "reachable_structured_data": 23,
+        "timeout": 113,
+        "unavailable_404": 2590,
+        "unavailable_410": 4,
+        "unavailable_other": 216,
+        "verification_error": 117
+      }
+    }
+  }
+}

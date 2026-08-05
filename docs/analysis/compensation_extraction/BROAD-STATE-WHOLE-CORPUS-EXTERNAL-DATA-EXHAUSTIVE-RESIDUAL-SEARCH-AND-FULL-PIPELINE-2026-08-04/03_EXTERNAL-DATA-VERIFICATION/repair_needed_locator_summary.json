@@ -1,0 +1,10 @@
+{
+  "attempts_per_candidate": 1,
+  "input_count": 515,
+  "invented_locator_count": 0,
+  "successful_or_not_needed": 515,
+  "terminal_status_counts": {
+    "repair_not_needed_after_canonicalization": 515
+  },
+  "unrepaired": 0
+}

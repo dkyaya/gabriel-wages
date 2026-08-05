@@ -1,0 +1,77 @@
+{
+  "high": {
+    "source_review_ready": 22510,
+    "status_counts": {
+      "blocked_or_forbidden": 583,
+      "captcha_or_bot_protection": 996,
+      "dns_failure": 921,
+      "duplicate_final_locator": 179,
+      "login_or_auth_required": 4,
+      "reachable": 4,
+      "reachable_direct_document": 8506,
+      "reachable_html_shell_or_portal": 13979,
+      "reachable_structured_data": 21,
+      "timeout": 111,
+      "unavailable_404": 2492,
+      "unavailable_410": 3,
+      "unavailable_other": 209,
+      "verification_error": 112
+    },
+    "total": 28120
+  },
+  "low": {
+    "source_review_ready": 25441,
+    "status_counts": {
+      "blocked_or_forbidden": 268,
+      "captcha_or_bot_protection": 2577,
+      "dns_failure": 269,
+      "duplicate_final_locator": 95,
+      "login_or_auth_required": 4,
+      "reachable": 1,
+      "reachable_direct_document": 6145,
+      "reachable_head_unsupported_get_confirmed": 73,
+      "reachable_html_shell_or_portal": 19220,
+      "reachable_structured_data": 1,
+      "reachable_with_redirect": 1,
+      "timeout": 143,
+      "unavailable_404": 1437,
+      "unavailable_410": 30,
+      "unavailable_other": 2075,
+      "verification_error": 60
+    },
+    "total": 32399
+  },
+  "medium": {
+    "source_review_ready": 863,
+    "status_counts": {
+      "blocked_or_forbidden": 24,
+      "captcha_or_bot_protection": 45,
+      "dns_failure": 32,
+      "duplicate_final_locator": 13,
+      "login_or_auth_required": 1,
+      "reachable_direct_document": 301,
+      "reachable_html_shell_or_portal": 560,
+      "reachable_structured_data": 2,
+      "timeout": 2,
+      "unavailable_404": 92,
+      "unavailable_410": 2,
+      "unavailable_other": 7,
+      "verification_error": 3
+    },
+    "total": 1084
+  },
+  "repaired": {
+    "source_review_ready": 480,
+    "status_counts": {
+      "captcha_or_bot_protection": 7,
+      "dns_failure": 8,
+      "duplicate_final_locator": 4,
+      "reachable_direct_document": 1,
+      "reachable_html_shell_or_portal": 479,
+      "timeout": 1,
+      "unavailable_404": 12,
+      "verification_error": 2
+    },
+    "total": 514
+  }
+}

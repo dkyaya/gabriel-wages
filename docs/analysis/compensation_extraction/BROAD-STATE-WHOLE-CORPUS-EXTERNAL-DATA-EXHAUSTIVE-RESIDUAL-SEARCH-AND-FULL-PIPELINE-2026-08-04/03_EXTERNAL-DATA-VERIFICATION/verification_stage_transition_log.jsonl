@@ -1,0 +1,2 @@
+{"at":"2026-08-05T15:10:00.071833+00:00","details":{"actionable_rows":62139,"unique_locators":62117},"stage":"locator_canonicalization","status":"complete"}
+{"at":"2026-08-05T16:00:05.365011+00:00","decision":"broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready","details":{"source_review_ready":49294,"unique_locators":62117},"stage":"verification","status":"complete"}

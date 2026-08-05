@@ -1,0 +1,60 @@
+{
+  "actionable_candidate_rows": 62139,
+  "blocked_auth_captcha": 4509,
+  "current_stage": "available external-data verification complete",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "dashboard_validation": {
+    "checks": {
+      "coverage_map_preserved": true,
+      "current_stage_updated": true,
+      "downloads_not_started": true,
+      "gabriel_not_used": true,
+      "next_task_source_review": true,
+      "reports_and_module_preserved": true,
+      "unresolved_targets_12844": true
+    },
+    "passed": true,
+    "validated_at": "2026-08-05T16:05:18.907544+00:00"
+  },
+  "decision": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
+  "downloads_performed": false,
+  "duplicate_final_locators": 291,
+  "exact_locator_duplicate_groups": 22,
+  "final_visuals_created": false,
+  "gabriel_scoring_used": false,
+  "implementation_event_deduplication_rerun": false,
+  "next_task": "available external-data source review and download",
+  "preservation": {
+    "corrected_scaffold": true,
+    "final_pi_report": true,
+    "prior_report_draft": true,
+    "semantic_scaffold": true,
+    "wage_growth_module": true
+  },
+  "reachable_direct_documents": 14953,
+  "reachable_html_or_portal": 34238,
+  "reachable_locators": 49294,
+  "reachable_structured_data": 24,
+  "redirect_hops": 8121,
+  "repaired_locators": 515,
+  "retry_count": 4535,
+  "source_review_performed": false,
+  "source_review_ready_by_priority": {
+    "high": 22510,
+    "low": 25441,
+    "medium": 863,
+    "repaired": 480
+  },
+  "source_review_ready_by_type": {
+    "source_review_ready_direct_document": 15032,
+    "source_review_ready_html": 34238,
+    "source_review_ready_structured_data": 24
+  },
+  "source_review_ready_count": 49294,
+  "timeout_dns_tls_errors": 1487,
+  "unavailable": 6359,
+  "unique_canonical_locators": 62117,
+  "unrepaired_malformed_locators": 0,
+  "unresolved_hosted_search_targets": 12844,
+  "verification_requests_made": 83307
+}

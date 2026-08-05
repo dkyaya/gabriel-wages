@@ -1,0 +1,148 @@
+{
+  "grouping_field": "side_scopes",
+  "groups": {
+    "all_units": {
+      "count": 11985,
+      "status_counts": {
+        "blocked_or_forbidden": 172,
+        "captcha_or_bot_protection": 646,
+        "dns_failure": 257,
+        "duplicate_final_locator": 38,
+        "login_or_auth_required": 2,
+        "reachable": 1,
+        "reachable_direct_document": 2911,
+        "reachable_head_unsupported_get_confirmed": 20,
+        "reachable_html_shell_or_portal": 6549,
+        "reachable_structured_data": 4,
+        "reachable_with_redirect": 1,
+        "timeout": 52,
+        "unavailable_404": 664,
+        "unavailable_410": 4,
+        "unavailable_other": 625,
+        "verification_error": 39
+      }
+    },
+    "fire": {
+      "count": 5876,
+      "status_counts": {
+        "blocked_or_forbidden": 69,
+        "captcha_or_bot_protection": 418,
+        "dns_failure": 159,
+        "duplicate_final_locator": 23,
+        "login_or_auth_required": 2,
+        "reachable_direct_document": 1471,
+        "reachable_head_unsupported_get_confirmed": 8,
+        "reachable_html_shell_or_portal": 3105,
+        "reachable_structured_data": 2,
+        "timeout": 16,
+        "unavailable_404": 430,
+        "unavailable_410": 2,
+        "unavailable_other": 165,
+        "verification_error": 6
+      }
+    },
+    "mixed": {
+      "count": 310,
+      "status_counts": {
+        "blocked_or_forbidden": 8,
+        "captcha_or_bot_protection": 10,
+        "dns_failure": 1,
+        "reachable_direct_document": 75,
+        "reachable_html_shell_or_portal": 178,
+        "reachable_structured_data": 1,
+        "timeout": 1,
+        "unavailable_404": 17,
+        "unavailable_other": 19
+      }
+    },
+    "non_safety": {
+      "count": 3442,
+      "status_counts": {
+        "blocked_or_forbidden": 56,
+        "captcha_or_bot_protection": 193,
+        "dns_failure": 57,
+        "duplicate_final_locator": 24,
+        "reachable_direct_document": 798,
+        "reachable_head_unsupported_get_confirmed": 4,
+        "reachable_html_shell_or_portal": 1962,
+        "timeout": 9,
+        "unavailable_404": 209,
+        "unavailable_410": 2,
+        "unavailable_other": 114,
+        "verification_error": 14
+      }
+    },
+    "police": {
+      "count": 19285,
+      "status_counts": {
+        "blocked_or_forbidden": 195,
+        "captcha_or_bot_protection": 1190,
+        "dns_failure": 345,
+        "duplicate_final_locator": 89,
+        "login_or_auth_required": 2,
+        "reachable": 1,
+        "reachable_direct_document": 4538,
+        "reachable_head_unsupported_get_confirmed": 31,
+        "reachable_html_shell_or_portal": 10494,
+        "reachable_structured_data": 8,
+        "timeout": 73,
+        "unavailable_404": 1428,
+        "unavailable_410": 16,
+        "unavailable_other": 823,
+        "verification_error": 52
+      }
+    },
+    "safety_combined": {
+      "count": 247,
+      "status_counts": {
+        "blocked_or_forbidden": 5,
+        "captcha_or_bot_protection": 38,
+        "dns_failure": 5,
+        "duplicate_final_locator": 2,
+        "reachable_direct_document": 53,
+        "reachable_html_shell_or_portal": 115,
+        "timeout": 1,
+        "unavailable_404": 15,
+        "unavailable_other": 13
+      }
+    },
+    "side_independent": {
+      "count": 4939,
+      "status_counts": {
+        "blocked_or_forbidden": 90,
+        "captcha_or_bot_protection": 350,
+        "dns_failure": 95,
+        "duplicate_final_locator": 17,
+        "login_or_auth_required": 1,
+        "reachable_direct_document": 1229,
+        "reachable_head_unsupported_get_confirmed": 4,
+        "reachable_html_shell_or_portal": 2603,
+        "timeout": 15,
+        "unavailable_404": 307,
+        "unavailable_410": 2,
+        "unavailable_other": 195,
+        "verification_error": 31
+      }
+    },
+    "unclear": {
+      "count": 17816,
+      "status_counts": {
+        "blocked_or_forbidden": 308,
+        "captcha_or_bot_protection": 917,
+        "dns_failure": 366,
+        "duplicate_final_locator": 102,
+        "login_or_auth_required": 2,
+        "reachable": 3,
+        "reachable_direct_document": 4325,
+        "reachable_head_unsupported_get_confirmed": 10,
+        "reachable_html_shell_or_portal": 10128,
+        "reachable_structured_data": 9,
+        "timeout": 93,
+        "unavailable_404": 1100,
+        "unavailable_410": 9,
+        "unavailable_other": 398,
+        "verification_error": 46
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "by_priority": {
+    "high": 22510,
+    "low": 25441,
+    "medium": 863,
+    "repaired": 480
+  },
+  "by_routing_type": {
+    "source_review_ready_direct_document": 15032,
+    "source_review_ready_html": 34238,
+    "source_review_ready_structured_data": 24
+  },
+  "total": 49294
+}

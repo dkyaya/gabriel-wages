@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-05T14:40:28Z",
+  "generated_at": "2026-08-05T16:00:29Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_whole_corpus_available_external_candidate_review_complete",
-  "current_phase": "Available external-data candidate review complete",
-  "current_phase_code": "broad_state_whole_corpus_available_external_candidate_review_completed_verification_ready",
-  "current_evidence_status": "available_external_candidate_metadata_reviewed_verification_pending",
+  "stage": "broad_state_whole_corpus_available_external_data_verification_complete",
+  "current_phase": "Available external-data verification complete",
+  "current_phase_code": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
+  "current_evidence_status": "available_external_candidate_locators_verified_source_review_pending",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-VERIFICATION-2026-08-05",
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -6853,5 +6853,36 @@
   "external_search_capacity_limitation_documented": true,
   "deterministic_local_external_classification_documented": true,
   "available_external_data_gabriel_scoring_used": false,
-  "available_external_data_verification_performed": false
+  "available_external_data_verification_performed": true,
+  "available_external_data_actionable_candidate_rows": 62139,
+  "available_external_data_unique_canonical_locator_count": 62117,
+  "available_external_data_exact_locator_duplicate_group_count": 22,
+  "available_external_data_repaired_locator_count": 515,
+  "available_external_data_unrepaired_locator_count": 0,
+  "available_external_data_verification_request_count": 83307,
+  "available_external_data_verification_retry_count": 4535,
+  "available_external_data_reachable_locator_count": 49294,
+  "available_external_data_reachable_direct_document_count": 14953,
+  "available_external_data_reachable_structured_data_count": 24,
+  "available_external_data_reachable_html_portal_count": 34238,
+  "available_external_data_redirect_hop_count": 8121,
+  "available_external_data_duplicate_final_locator_count": 291,
+  "available_external_data_blocked_auth_captcha_count": 4509,
+  "available_external_data_unavailable_locator_count": 6359,
+  "available_external_data_timeout_dns_tls_count": 1487,
+  "available_external_data_source_review_ready_count": 49294,
+  "available_external_data_source_review_ready_by_type": {
+    "source_review_ready_direct_document": 15032,
+    "source_review_ready_html": 34238,
+    "source_review_ready_structured_data": 24
+  },
+  "available_external_data_source_review_ready_by_priority": {
+    "high": 22510,
+    "low": 25441,
+    "medium": 863,
+    "repaired": 480
+  },
+  "available_external_data_downloads_performed": false,
+  "candidate_source_review_performed": false,
+  "implementation_event_deduplication_rerun_for_external_verification": false
 }

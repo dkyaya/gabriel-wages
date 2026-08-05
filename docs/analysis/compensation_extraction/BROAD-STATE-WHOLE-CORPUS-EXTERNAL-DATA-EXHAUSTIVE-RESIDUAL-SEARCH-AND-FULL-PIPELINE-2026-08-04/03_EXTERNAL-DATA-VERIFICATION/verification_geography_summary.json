@@ -1,0 +1,616 @@
+{
+  "grouping_field": "states",
+  "groups": {
+    "AK": {
+      "count": 376,
+      "status_counts": {
+        "blocked_or_forbidden": 6,
+        "captcha_or_bot_protection": 21,
+        "dns_failure": 13,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 91,
+        "reachable_html_shell_or_portal": 217,
+        "timeout": 1,
+        "unavailable_404": 9,
+        "unavailable_other": 13,
+        "verification_error": 4
+      }
+    },
+    "AL": {
+      "count": 257,
+      "status_counts": {
+        "blocked_or_forbidden": 5,
+        "captcha_or_bot_protection": 10,
+        "dns_failure": 2,
+        "reachable_direct_document": 77,
+        "reachable_head_unsupported_get_confirmed": 1,
+        "reachable_html_shell_or_portal": 141,
+        "timeout": 2,
+        "unavailable_404": 19
+      }
+    },
+    "AR": {
+      "count": 305,
+      "status_counts": {
+        "blocked_or_forbidden": 10,
+        "captcha_or_bot_protection": 14,
+        "dns_failure": 6,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 59,
+        "reachable_html_shell_or_portal": 197,
+        "timeout": 1,
+        "unavailable_404": 9,
+        "unavailable_410": 2,
+        "unavailable_other": 6
+      }
+    },
+    "CA": {
+      "count": 1540,
+      "status_counts": {
+        "blocked_or_forbidden": 16,
+        "captcha_or_bot_protection": 49,
+        "dns_failure": 12,
+        "duplicate_final_locator": 9,
+        "reachable_direct_document": 401,
+        "reachable_head_unsupported_get_confirmed": 1,
+        "reachable_html_shell_or_portal": 922,
+        "reachable_with_redirect": 1,
+        "timeout": 3,
+        "unavailable_404": 58,
+        "unavailable_other": 66,
+        "verification_error": 2
+      }
+    },
+    "CO": {
+      "count": 154,
+      "status_counts": {
+        "blocked_or_forbidden": 5,
+        "captcha_or_bot_protection": 5,
+        "dns_failure": 5,
+        "reachable_direct_document": 33,
+        "reachable_head_unsupported_get_confirmed": 1,
+        "reachable_html_shell_or_portal": 99,
+        "timeout": 2,
+        "unavailable_404": 3,
+        "unavailable_other": 1
+      }
+    },
+    "CT": {
+      "count": 425,
+      "status_counts": {
+        "blocked_or_forbidden": 5,
+        "captcha_or_bot_protection": 41,
+        "dns_failure": 32,
+        "duplicate_final_locator": 2,
+        "reachable_direct_document": 98,
+        "reachable_html_shell_or_portal": 194,
+        "timeout": 1,
+        "unavailable_404": 42,
+        "unavailable_other": 10
+      }
+    },
+    "FL": {
+      "count": 987,
+      "status_counts": {
+        "blocked_or_forbidden": 42,
+        "captcha_or_bot_protection": 57,
+        "dns_failure": 12,
+        "duplicate_final_locator": 10,
+        "reachable_direct_document": 246,
+        "reachable_head_unsupported_get_confirmed": 4,
+        "reachable_html_shell_or_portal": 549,
+        "reachable_structured_data": 1,
+        "timeout": 5,
+        "unavailable_404": 50,
+        "unavailable_other": 10,
+        "verification_error": 1
+      }
+    },
+    "GA": {
+      "count": 477,
+      "status_counts": {
+        "blocked_or_forbidden": 5,
+        "captcha_or_bot_protection": 36,
+        "dns_failure": 9,
+        "duplicate_final_locator": 5,
+        "reachable_direct_document": 118,
+        "reachable_head_unsupported_get_confirmed": 1,
+        "reachable_html_shell_or_portal": 263,
+        "timeout": 2,
+        "unavailable_404": 17,
+        "unavailable_other": 19,
+        "verification_error": 2
+      }
+    },
+    "IA": {
+      "count": 1132,
+      "status_counts": {
+        "blocked_or_forbidden": 21,
+        "captcha_or_bot_protection": 66,
+        "dns_failure": 6,
+        "duplicate_final_locator": 2,
+        "reachable_direct_document": 280,
+        "reachable_head_unsupported_get_confirmed": 2,
+        "reachable_html_shell_or_portal": 632,
+        "timeout": 10,
+        "unavailable_404": 99,
+        "unavailable_other": 12,
+        "verification_error": 2
+      }
+    },
+    "ID": {
+      "count": 50,
+      "status_counts": {
+        "captcha_or_bot_protection": 6,
+        "dns_failure": 1,
+        "reachable_direct_document": 11,
+        "reachable_html_shell_or_portal": 25,
+        "unavailable_404": 6,
+        "unavailable_other": 1
+      }
+    },
+    "IL": {
+      "count": 3914,
+      "status_counts": {
+        "blocked_or_forbidden": 45,
+        "captcha_or_bot_protection": 347,
+        "dns_failure": 30,
+        "duplicate_final_locator": 11,
+        "login_or_auth_required": 2,
+        "reachable_direct_document": 1005,
+        "reachable_head_unsupported_get_confirmed": 3,
+        "reachable_html_shell_or_portal": 2078,
+        "reachable_structured_data": 4,
+        "timeout": 21,
+        "unavailable_404": 317,
+        "unavailable_410": 1,
+        "unavailable_other": 48,
+        "verification_error": 2
+      }
+    },
+    "IN": {
+      "count": 928,
+      "status_counts": {
+        "blocked_or_forbidden": 10,
+        "captcha_or_bot_protection": 81,
+        "dns_failure": 18,
+        "reachable_direct_document": 231,
+        "reachable_html_shell_or_portal": 515,
+        "reachable_structured_data": 2,
+        "timeout": 3,
+        "unavailable_404": 41,
+        "unavailable_other": 27
+      }
+    },
+    "KS": {
+      "count": 769,
+      "status_counts": {
+        "blocked_or_forbidden": 19,
+        "captcha_or_bot_protection": 55,
+        "dns_failure": 9,
+        "duplicate_final_locator": 2,
+        "reachable_direct_document": 186,
+        "reachable_head_unsupported_get_confirmed": 2,
+        "reachable_html_shell_or_portal": 450,
+        "timeout": 3,
+        "unavailable_404": 21,
+        "unavailable_other": 19,
+        "verification_error": 3
+      }
+    },
+    "KY": {
+      "count": 646,
+      "status_counts": {
+        "blocked_or_forbidden": 3,
+        "captcha_or_bot_protection": 50,
+        "dns_failure": 3,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 141,
+        "reachable_html_shell_or_portal": 403,
+        "timeout": 2,
+        "unavailable_404": 38,
+        "unavailable_other": 5
+      }
+    },
+    "LA": {
+      "count": 231,
+      "status_counts": {
+        "blocked_or_forbidden": 3,
+        "captcha_or_bot_protection": 9,
+        "dns_failure": 8,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 66,
+        "reachable_html_shell_or_portal": 136,
+        "timeout": 1,
+        "unavailable_404": 3,
+        "unavailable_other": 4
+      }
+    },
+    "MA": {
+      "count": 758,
+      "status_counts": {
+        "blocked_or_forbidden": 54,
+        "captcha_or_bot_protection": 65,
+        "dns_failure": 5,
+        "duplicate_final_locator": 3,
+        "reachable_direct_document": 141,
+        "reachable_html_shell_or_portal": 409,
+        "timeout": 1,
+        "unavailable_404": 39,
+        "unavailable_other": 41
+      }
+    },
+    "MD": {
+      "count": 19,
+      "status_counts": {
+        "reachable_direct_document": 6,
+        "reachable_html_shell_or_portal": 13
+      }
+    },
+    "ME": {
+      "count": 759,
+      "status_counts": {
+        "blocked_or_forbidden": 7,
+        "captcha_or_bot_protection": 26,
+        "dns_failure": 17,
+        "duplicate_final_locator": 8,
+        "login_or_auth_required": 2,
+        "reachable_direct_document": 170,
+        "reachable_html_shell_or_portal": 450,
+        "timeout": 1,
+        "unavailable_404": 57,
+        "unavailable_other": 20,
+        "verification_error": 1
+      }
+    },
+    "MI": {
+      "count": 6098,
+      "status_counts": {
+        "blocked_or_forbidden": 78,
+        "captcha_or_bot_protection": 384,
+        "dns_failure": 160,
+        "duplicate_final_locator": 20,
+        "login_or_auth_required": 1,
+        "reachable_direct_document": 1475,
+        "reachable_head_unsupported_get_confirmed": 9,
+        "reachable_html_shell_or_portal": 3323,
+        "reachable_structured_data": 3,
+        "timeout": 41,
+        "unavailable_404": 373,
+        "unavailable_410": 7,
+        "unavailable_other": 194,
+        "verification_error": 30
+      }
+    },
+    "MN": {
+      "count": 5218,
+      "status_counts": {
+        "blocked_or_forbidden": 40,
+        "captcha_or_bot_protection": 252,
+        "dns_failure": 103,
+        "duplicate_final_locator": 24,
+        "reachable": 1,
+        "reachable_direct_document": 1358,
+        "reachable_head_unsupported_get_confirmed": 24,
+        "reachable_html_shell_or_portal": 3049,
+        "reachable_structured_data": 2,
+        "timeout": 16,
+        "unavailable_404": 252,
+        "unavailable_410": 9,
+        "unavailable_other": 83,
+        "verification_error": 5
+      }
+    },
+    "MO": {
+      "count": 329,
+      "status_counts": {
+        "blocked_or_forbidden": 1,
+        "captcha_or_bot_protection": 12,
+        "duplicate_final_locator": 5,
+        "reachable": 1,
+        "reachable_direct_document": 77,
+        "reachable_html_shell_or_portal": 180,
+        "timeout": 3,
+        "unavailable_404": 28,
+        "unavailable_other": 22
+      }
+    },
+    "MS": {
+      "count": 17,
+      "status_counts": {
+        "reachable_direct_document": 6,
+        "reachable_html_shell_or_portal": 11
+      }
+    },
+    "NC": {
+      "count": 1352,
+      "status_counts": {
+        "blocked_or_forbidden": 12,
+        "captcha_or_bot_protection": 79,
+        "dns_failure": 7,
+        "duplicate_final_locator": 8,
+        "reachable_direct_document": 320,
+        "reachable_head_unsupported_get_confirmed": 4,
+        "reachable_html_shell_or_portal": 843,
+        "timeout": 3,
+        "unavailable_404": 60,
+        "unavailable_other": 12,
+        "verification_error": 4
+      }
+    },
+    "ND": {
+      "count": 164,
+      "status_counts": {
+        "blocked_or_forbidden": 2,
+        "captcha_or_bot_protection": 19,
+        "login_or_auth_required": 1,
+        "reachable_direct_document": 43,
+        "reachable_html_shell_or_portal": 88,
+        "timeout": 1,
+        "unavailable_404": 7,
+        "unavailable_other": 3
+      }
+    },
+    "NE": {
+      "count": 494,
+      "status_counts": {
+        "blocked_or_forbidden": 8,
+        "captcha_or_bot_protection": 33,
+        "dns_failure": 5,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 130,
+        "reachable_html_shell_or_portal": 284,
+        "timeout": 3,
+        "unavailable_404": 25,
+        "unavailable_other": 4,
+        "verification_error": 1
+      }
+    },
+    "NH": {
+      "count": 287,
+      "status_counts": {
+        "blocked_or_forbidden": 2,
+        "captcha_or_bot_protection": 8,
+        "dns_failure": 4,
+        "reachable_direct_document": 70,
+        "reachable_html_shell_or_portal": 183,
+        "timeout": 1,
+        "unavailable_404": 14,
+        "unavailable_other": 4,
+        "verification_error": 1
+      }
+    },
+    "NJ": {
+      "count": 3079,
+      "status_counts": {
+        "blocked_or_forbidden": 27,
+        "captcha_or_bot_protection": 74,
+        "dns_failure": 6,
+        "duplicate_final_locator": 9,
+        "reachable": 1,
+        "reachable_direct_document": 837,
+        "reachable_head_unsupported_get_confirmed": 1,
+        "reachable_html_shell_or_portal": 1649,
+        "timeout": 13,
+        "unavailable_404": 141,
+        "unavailable_other": 317,
+        "verification_error": 4
+      }
+    },
+    "NY": {
+      "count": 7820,
+      "status_counts": {
+        "blocked_or_forbidden": 138,
+        "captcha_or_bot_protection": 325,
+        "dns_failure": 59,
+        "duplicate_final_locator": 55,
+        "reachable": 1,
+        "reachable_direct_document": 1845,
+        "reachable_html_shell_or_portal": 4311,
+        "reachable_structured_data": 2,
+        "timeout": 26,
+        "unavailable_404": 482,
+        "unavailable_410": 2,
+        "unavailable_other": 526,
+        "verification_error": 48
+      }
+    },
+    "OH": {
+      "count": 12115,
+      "status_counts": {
+        "blocked_or_forbidden": 173,
+        "captcha_or_bot_protection": 1081,
+        "dns_failure": 446,
+        "duplicate_final_locator": 57,
+        "login_or_auth_required": 3,
+        "reachable_direct_document": 2823,
+        "reachable_head_unsupported_get_confirmed": 8,
+        "reachable_html_shell_or_portal": 6121,
+        "reachable_structured_data": 6,
+        "timeout": 40,
+        "unavailable_404": 1023,
+        "unavailable_410": 10,
+        "unavailable_other": 316,
+        "verification_error": 8
+      }
+    },
+    "OK": {
+      "count": 293,
+      "status_counts": {
+        "blocked_or_forbidden": 5,
+        "captcha_or_bot_protection": 16,
+        "dns_failure": 12,
+        "reachable_direct_document": 53,
+        "reachable_html_shell_or_portal": 169,
+        "timeout": 5,
+        "unavailable_404": 15,
+        "unavailable_other": 12,
+        "verification_error": 6
+      }
+    },
+    "OR": {
+      "count": 39,
+      "status_counts": {
+        "captcha_or_bot_protection": 2,
+        "reachable_direct_document": 12,
+        "reachable_html_shell_or_portal": 23,
+        "unavailable_404": 1,
+        "verification_error": 1
+      }
+    },
+    "PA": {
+      "count": 3145,
+      "status_counts": {
+        "blocked_or_forbidden": 36,
+        "captcha_or_bot_protection": 86,
+        "dns_failure": 51,
+        "duplicate_final_locator": 19,
+        "reachable_direct_document": 764,
+        "reachable_html_shell_or_portal": 1728,
+        "reachable_structured_data": 2,
+        "timeout": 10,
+        "unavailable_404": 205,
+        "unavailable_410": 1,
+        "unavailable_other": 236,
+        "verification_error": 7
+      }
+    },
+    "SC": {
+      "count": 87,
+      "status_counts": {
+        "blocked_or_forbidden": 1,
+        "captcha_or_bot_protection": 5,
+        "dns_failure": 1,
+        "reachable_direct_document": 20,
+        "reachable_html_shell_or_portal": 55,
+        "timeout": 1,
+        "unavailable_404": 2,
+        "unavailable_other": 2
+      }
+    },
+    "SD": {
+      "count": 719,
+      "status_counts": {
+        "blocked_or_forbidden": 10,
+        "captcha_or_bot_protection": 20,
+        "dns_failure": 9,
+        "duplicate_final_locator": 4,
+        "reachable_direct_document": 185,
+        "reachable_html_shell_or_portal": 427,
+        "timeout": 3,
+        "unavailable_404": 51,
+        "unavailable_410": 2,
+        "unavailable_other": 5,
+        "verification_error": 3
+      }
+    },
+    "TN": {
+      "count": 609,
+      "status_counts": {
+        "blocked_or_forbidden": 10,
+        "captcha_or_bot_protection": 24,
+        "dns_failure": 19,
+        "duplicate_final_locator": 3,
+        "reachable_direct_document": 147,
+        "reachable_head_unsupported_get_confirmed": 1,
+        "reachable_html_shell_or_portal": 346,
+        "timeout": 2,
+        "unavailable_404": 49,
+        "unavailable_other": 7,
+        "verification_error": 1
+      }
+    },
+    "TX": {
+      "count": 1834,
+      "status_counts": {
+        "blocked_or_forbidden": 18,
+        "captcha_or_bot_protection": 74,
+        "dns_failure": 23,
+        "duplicate_final_locator": 16,
+        "reachable_direct_document": 348,
+        "reachable_head_unsupported_get_confirmed": 8,
+        "reachable_html_shell_or_portal": 1105,
+        "reachable_structured_data": 1,
+        "timeout": 5,
+        "unavailable_404": 119,
+        "unavailable_other": 115,
+        "verification_error": 2
+      }
+    },
+    "UT": {
+      "count": 103,
+      "status_counts": {
+        "captcha_or_bot_protection": 10,
+        "dns_failure": 2,
+        "reachable_direct_document": 26,
+        "reachable_html_shell_or_portal": 58,
+        "unavailable_404": 6,
+        "verification_error": 1
+      }
+    },
+    "VA": {
+      "count": 9,
+      "status_counts": {
+        "reachable_direct_document": 2,
+        "reachable_html_shell_or_portal": 6,
+        "unavailable_404": 1
+      }
+    },
+    "VT": {
+      "count": 518,
+      "status_counts": {
+        "blocked_or_forbidden": 22,
+        "captcha_or_bot_protection": 11,
+        "dns_failure": 115,
+        "duplicate_final_locator": 1,
+        "reachable_direct_document": 86,
+        "reachable_html_shell_or_portal": 245,
+        "timeout": 9,
+        "unavailable_404": 18,
+        "unavailable_other": 11
+      }
+    },
+    "WA": {
+      "count": 239,
+      "status_counts": {
+        "blocked_or_forbidden": 3,
+        "captcha_or_bot_protection": 5,
+        "dns_failure": 1,
+        "reachable": 1,
+        "reachable_direct_document": 68,
+        "reachable_html_shell_or_portal": 130,
+        "unavailable_404": 9,
+        "unavailable_other": 19,
+        "verification_error": 3
+      }
+    },
+    "WI": {
+      "count": 3745,
+      "status_counts": {
+        "blocked_or_forbidden": 33,
+        "captcha_or_bot_protection": 165,
+        "dns_failure": 19,
+        "duplicate_final_locator": 13,
+        "reachable_direct_document": 884,
+        "reachable_head_unsupported_get_confirmed": 3,
+        "reachable_html_shell_or_portal": 2154,
+        "reachable_structured_data": 1,
+        "timeout": 16,
+        "unavailable_404": 322,
+        "unavailable_410": 1,
+        "unavailable_other": 99,
+        "verification_error": 35
+      }
+    },
+    "WV": {
+      "count": 82,
+      "status_counts": {
+        "captcha_or_bot_protection": 2,
+        "reachable_direct_document": 16,
+        "reachable_html_shell_or_portal": 57,
+        "unavailable_404": 5,
+        "unavailable_other": 2
+      }
+    }
+  }
+}
