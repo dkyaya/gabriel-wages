@@ -1,5 +1,7 @@
 {
   "blocked_reason": "seven of seven external-data families returned globally source-less responses on both bounded attempts",
+  "cumulative_resume_hosted_search_smoke_calls": 28,
+  "cumulative_resume_production_calls": 0,
   "dashboard_modified": false,
   "extraction_records": 0,
   "final_candidate_review_run": false,
@@ -32,6 +34,7 @@
   "reconciliation_repairs": 0,
   "reliable_dollar_cost": "reliable_dollar_cost_not_available",
   "resume_integrity_preflight": "pass",
+  "resume_transport_attempt_number": 2,
   "resumed_completed_targets": 0,
   "retained_sources": 0,
   "stage": "resume Stage 1 preflight",

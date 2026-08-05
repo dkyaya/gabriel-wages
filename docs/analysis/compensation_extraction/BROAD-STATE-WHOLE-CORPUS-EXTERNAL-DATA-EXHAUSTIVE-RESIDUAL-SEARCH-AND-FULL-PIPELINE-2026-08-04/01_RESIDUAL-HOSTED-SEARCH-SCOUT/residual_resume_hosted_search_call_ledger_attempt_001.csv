@@ -1,0 +1,16 @@
+search_call_id,call_type,web_search,external_data_family,attempt,terminal_status,source_count,transport_category,run_at
+resume_no_search_control,no_search_control,false,control,1,failed,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_payroll_and_earnings_1,transport_smoke,true,payroll_and_earnings,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_payroll_and_earnings_2,transport_smoke,true,payroll_and_earnings,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_staffing_and_headcount_1,transport_smoke,true,staffing_and_headcount,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_staffing_and_headcount_2,transport_smoke,true,staffing_and_headcount,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_recruitment_and_retention_1,transport_smoke,true,recruitment_and_retention,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_recruitment_and_retention_2,transport_smoke,true,recruitment_and_retention,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_tenure_and_progression_1,transport_smoke,true,tenure_and_progression,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_tenure_and_progression_2,transport_smoke,true,tenure_and_progression,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_implementation_confirmation_1,transport_smoke,true,implementation_confirmation,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_implementation_confirmation_2,transport_smoke,true,implementation_confirmation,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_benefits_and_total_compensation_1,transport_smoke,true,benefits_and_total_compensation,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_benefits_and_total_compensation_2,transport_smoke,true,benefits_and_total_compensation,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_contextual_controls_1,transport_smoke,true,contextual_controls,1,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00
+resume_smoke_contextual_controls_2,transport_smoke,true,contextual_controls,2,global_zero_source_failure,0,B,2026-08-05T04:15:38.879257+00:00

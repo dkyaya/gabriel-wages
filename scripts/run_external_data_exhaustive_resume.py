@@ -34,6 +34,7 @@ EXPECTED_PRESERVED = 5845
 EXPECTED_CANDIDATE_TARGETS = 2847
 EXPECTED_BULK_TARGETS = 2998
 PRIOR_CHECKPOINT = "e2ccee6dd7b4ba5d6b1e79c58df6be7625f811b2"
+RESUME_STARTING_HEAD = "4a2dd47fcf76a577f8531543d7a714da90fa687e"
 BLOCKED_DECISION = "broad_state_whole_corpus_external_data_exhaustive_pipeline_preflight_failed_backend_unstable"
 
 
@@ -175,13 +176,34 @@ def transport_preflight() -> None:
         raise RuntimeError("resume integrity preflight must pass first")
     scratch = core.TMP / "residual_resume_transport_preflight"
     examples = {
-        "payroll_and_earnings": "official municipal payroll earnings overtime 2023",
-        "staffing_and_headcount": "official city budget authorized filled positions vacancies 2024",
-        "recruitment_and_retention": "official municipal recruitment retention turnover compensation study",
-        "tenure_and_progression": "official civil service salary step seniority schedule",
-        "implementation_confirmation": "official ordinance resolution pay plan effective date",
-        "benefits_and_total_compensation": "official pension health contribution longevity allowance",
-        "contextual_controls": "official local fiscal capacity labor market government data",
+        "payroll_and_earnings": (
+            "site:nyc.gov official employee payroll earnings overtime 2023",
+            "site:mass.gov official public employee payroll 2023 earnings",
+        ),
+        "staffing_and_headcount": (
+            "site:boston.gov FY2024 budget authorized positions vacancies police fire",
+            "site:chicago.gov 2024 budget position count vacancies police fire",
+        ),
+        "recruitment_and_retention": (
+            "site:austintexas.gov police recruitment retention compensation study",
+            "site:.gov municipal fire turnover vacancy recruitment study",
+        ),
+        "tenure_and_progression": (
+            "site:mass.gov civil service salary step seniority schedule",
+            "site:ca.gov official classification salary step schedule years of service",
+        ),
+        "implementation_confirmation": (
+            "site:seattle.gov ordinance salary schedule effective date pay plan",
+            "site:.gov municipal resolution adopted compensation plan effective date",
+        ),
+        "benefits_and_total_compensation": (
+            "site:calpers.ca.gov employer contribution rates 2024 official",
+            "site:.gov municipal health pension contribution longevity allowance official",
+        ),
+        "contextual_controls": (
+            "site:census.gov QuickFacts city population official",
+            "site:bls.gov local area unemployment statistics official metropolitan",
+        ),
     }
     control, failure = core.live_search_call("Reply exactly OK.", "resume_no_search_control", scratch / "control", False)
     control_result = {"passed": not failure and core.true(control.get("Successful")), "failure": failure or "",
@@ -189,9 +211,9 @@ def transport_preflight() -> None:
     smokes = []
     smoke_calls = 0
     parser_passed = True
-    for index, (family, query) in enumerate(examples.items(), 1):
+    for index, (family, queries) in enumerate(examples.items(), 1):
         attempts = []
-        for attempt in (1, 2):
+        for attempt, query in enumerate(queries, 1):
             row, failure = core.live_search_call(
                 f"Use live web search to find one official public source for {query}. Return one short sentence.",
                 f"resume_smoke_{index:02d}_{attempt}", scratch / f"smoke_{index:02d}_{attempt}", True)
@@ -205,7 +227,8 @@ def transport_preflight() -> None:
             parser_passed = parser_passed and schema_ok
             passed = not failure and core.true(row.get("Successful")) and schema_ok and bool(sources)
             attempts.append({"attempt": attempt, "passed": passed, "source_count": len(sources),
-                             "schema_ok": schema_ok, "failure": failure or ""})
+                             "schema_ok": schema_ok, "failure": failure or "",
+                             "query_variant": "known_official_primary" if attempt == 1 else "different_official_source_retry"})
             if passed: break
             time.sleep(2)
         smokes.append({"family": family, **attempts[-1], "attempts": attempts})
@@ -265,6 +288,23 @@ def finalize_blocked() -> None:
     ).hexdigest()
     locked_manifest["complete_queue_hash_method"] = "sha256 of ordered concatenated CSV shard SHA-256 values"
     core.write_json(locked_manifest_path, locked_manifest)
+    attempt_files = sorted(core.STAGE1.glob("residual_resume_transport_preflight_attempt_*.json"))
+    if not attempt_files:
+        rel = (core.STAGE1 / "residual_resume_transport_preflight.json").relative_to(core.ROOT)
+        try:
+            prior = json.loads(subprocess.check_output(["git", "show", f"HEAD:{rel}"], cwd=core.ROOT, text=True))
+            core.write_json(core.STAGE1 / "residual_resume_transport_preflight_attempt_001.json", prior)
+            prior_csv = core.STAGE1 / "residual_resume_hosted_search_call_ledger.csv"
+            prior_jsonl = core.STAGE1 / "residual_resume_hosted_search_call_ledger.jsonl"
+            if prior_csv.exists():
+                shutil.copy2(prior_csv, core.STAGE1 / "residual_resume_hosted_search_call_ledger_attempt_001.csv")
+            if prior_jsonl.exists():
+                shutil.copy2(prior_jsonl, core.STAGE1 / "residual_resume_hosted_search_call_ledger_attempt_001.jsonl")
+        except (subprocess.CalledProcessError, json.JSONDecodeError):
+            pass
+        attempt_files = sorted(core.STAGE1.glob("residual_resume_transport_preflight_attempt_*.json"))
+    attempt_number = len(attempt_files) + 1
+    core.write_json(core.STAGE1 / f"residual_resume_transport_preflight_attempt_{attempt_number:03d}.json", transport)
     calls = [{"search_call_id": "resume_no_search_control", "call_type": "no_search_control",
               "web_search": "false", "external_data_family": "control", "attempt": 1,
               "terminal_status": "passed" if transport["no_search_control"]["passed"] else "failed",
@@ -280,6 +320,7 @@ def finalize_blocked() -> None:
                           "failure": attempt["failure"], "transport_category": transport["transport_category"],
                           "run_at": transport["run_at"]})
     core.write_pair(core.STAGE1, "residual_resume_hosted_search_call_ledger", calls)
+    core.write_pair(core.STAGE1, f"residual_resume_hosted_search_call_ledger_attempt_{attempt_number:03d}", calls)
     core.write_json(core.STAGE1 / "residual_resume_hosted_search_usage_summary.json", {
         "hosted_search_smoke_calls": transport["smoke_call_count"], "no_search_control_calls": 1,
         "production_probe_calls": 0, "production_primary_calls": 0, "production_repair_calls": 0,
@@ -304,7 +345,7 @@ def finalize_blocked() -> None:
         "candidate_universe_changed": False,
     })
     incident = {
-        "incident_id": "residual_resume_category_b_preflight_2026_08_05",
+        "incident_id": "residual_resume_category_b_preflight_" + transport["run_at"].replace(":", "").replace("-", "").replace(".", "").replace("+", "_"),
         "at": core.utc_now(), "stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
         "severity": "genuine_backend_blocker", "transport_category": transport["transport_category"],
         "family_smokes_passed": transport["family_smokes_passed"], "family_smokes_required": 7,
@@ -312,6 +353,7 @@ def finalize_blocked() -> None:
         "production_probe_ran": transport["production_probe"]["ran"], "production_lanes_launched": False,
         "locked_targets_consumed": 0, "locked_targets_remaining": EXPECTED_LOCKED,
         "handling": "fail closed; preserve queue; commit diagnostic; no downstream transition",
+        "resume_preflight_attempt_number": attempt_number,
     }
     core.write_json(core.STAGE1 / "residual_resume_operational_incident_log.json", incident)
     master_incidents = core.MASTER / "operational_incident_log.jsonl"
@@ -366,6 +408,9 @@ def finalize_blocked() -> None:
         "resumed_completed_targets": 0, "locked_remaining_targets": EXPECTED_LOCKED,
         "lane_sizes": integrity["lane_sizes"], "fresh_hosted_search_smoke_calls": transport["smoke_call_count"],
         "fresh_production_calls": 0, "fresh_candidates": 0,
+        "resume_transport_attempt_number": attempt_number,
+        "cumulative_resume_hosted_search_smoke_calls": attempt_number * 14,
+        "cumulative_resume_production_calls": 0,
         "prior_wave2_raw_candidates": 91105, "prior_wave2_canonical_candidates": 33003,
         "prior_wave1_canonical_candidates": 29793, "provisional_merged_candidates": 62796,
         "provisional_verification_ready": 32355, "final_candidate_review_run": False,
@@ -444,6 +489,12 @@ def build_relay(commit_hash: str, push_status: str) -> None:
                core.STAGE1 / "residual_resume_preflight.json", core.STAGE1 / "residual_resume_derivation_audit.json",
                core.STAGE1 / "residual_resume_locked_queue_manifest.json", core.STAGE1 / "residual_resume_lane_distribution.json",
                core.STAGE1 / "residual_resume_transport_preflight.json", core.STAGE1 / "residual_resume_transport_preflight.md",
+               core.STAGE1 / "residual_resume_transport_preflight_attempt_001.json",
+               core.STAGE1 / "residual_resume_transport_preflight_attempt_002.json",
+               core.STAGE1 / "residual_resume_hosted_search_call_ledger_attempt_001.csv",
+               core.STAGE1 / "residual_resume_hosted_search_call_ledger_attempt_001.jsonl",
+               core.STAGE1 / "residual_resume_hosted_search_call_ledger_attempt_002.csv",
+               core.STAGE1 / "residual_resume_hosted_search_call_ledger_attempt_002.jsonl",
                core.STAGE1 / "residual_resume_operational_incident_log.json", core.STAGE1 / "residual_resume_validation_report.json",
                core.STAGE1 / "residual_resume_validation_report.md", core.STAGE1 / "residual_resume_search_status_summary.json",
                core.STAGE1 / "residual_resume_candidate_summary.json", core.STAGE1 / "residual_resume_hosted_search_usage_summary.json",
@@ -451,7 +502,8 @@ def build_relay(commit_hash: str, push_status: str) -> None:
     for path in include:
         if path.exists(): shutil.copy2(path, relay_dir / path.name)
     summary = json.loads((core.MASTER / "master_resume_preflight_failure_summary.json").read_text())
-    summary.update({"starting_head": PRIOR_CHECKPOINT, "ending_head": commit_hash, "push_status": push_status,
+    summary.update({"starting_head": RESUME_STARTING_HEAD, "canonical_locked_checkpoint": PRIOR_CHECKPOINT,
+                    "ending_head": commit_hash, "push_status": push_status,
                     "exact_checkpoint_manifest": str(core.STAGE1 / "residual_resume_locked_queue_manifest.json"),
                     "forbidden_action_occurred": False, "blockers_and_uncertainties": [
                         "hosted-search backend remains globally source-less across all seven families",
