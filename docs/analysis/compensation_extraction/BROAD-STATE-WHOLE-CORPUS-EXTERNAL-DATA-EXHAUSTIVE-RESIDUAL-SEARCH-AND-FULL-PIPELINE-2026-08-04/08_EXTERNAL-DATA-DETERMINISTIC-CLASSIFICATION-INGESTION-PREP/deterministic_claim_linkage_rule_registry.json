@@ -1,0 +1,4 @@
+{
+  "policy": "canonical crosswalk only; upgrade tags are never claim IDs",
+  "version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation"
+}

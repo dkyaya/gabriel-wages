@@ -1,0 +1,17 @@
+{
+  "classified_spans": 1781186,
+  "compact_observations": 1876183,
+  "field_terminal": {
+    "ambiguity": 766540,
+    "boilerplate_or_structural_writeoff": 2908700,
+    "compacted_into_another": 7347,
+    "promoted": 1876183
+  },
+  "raw_fields": 5558770,
+  "raw_spans": 4289437,
+  "span_terminal": {
+    "ambiguity": 2277506,
+    "boilerplate_or_structural_writeoff": 230745,
+    "promoted": 1781186
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "claim_policy": "canonical crosswalk only; upgrade tags are never claim IDs",
+  "confidence_bases": [
+    "exact_structured_row",
+    "exact_structured_cell",
+    "exact_labeled_text",
+    "exact_table_row_with_headers",
+    "exact_ordinance_or_resolution_clause",
+    "exact_payroll_record",
+    "exact_schedule_record",
+    "strong_local_context",
+    "weak_local_context_manual_review",
+    "ambiguous_narrative_manual_review"
+  ],
+  "cross_source_policy": "link; never physically collapse",
+  "exact_deduplication": "payload+type+source_coordinates+raw_value+rule_version",
+  "lifecycle_requirement": "explicit verb plus local compensation/administrative object context",
+  "lifecycle_states": [
+    "adopted",
+    "amended",
+    "appropriated",
+    "approved",
+    "expired",
+    "implemented",
+    "negotiated",
+    "paid",
+    "payroll_effective",
+    "proposed",
+    "ratified",
+    "recommended",
+    "rejected",
+    "tentative",
+    "unclear"
+  ],
+  "sha256": "f3a6cb15c99fe68855d00515b8d34848e6a7c82117cd90d42d0905e7645ae8c0",
+  "source_local_compaction": "explicit administrative identity+field+literal+period+row",
+  "structural_rules": [
+    "empty_value_or_excerpt",
+    "url_or_navigation_collision",
+    "isolated_label_or_heading",
+    "navigation_or_template_control",
+    "oversized_unbounded_structural_match",
+    "non_geographic_county_collision",
+    "weak_isolated_lexical_hit"
+  ],
+  "version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation"
+}

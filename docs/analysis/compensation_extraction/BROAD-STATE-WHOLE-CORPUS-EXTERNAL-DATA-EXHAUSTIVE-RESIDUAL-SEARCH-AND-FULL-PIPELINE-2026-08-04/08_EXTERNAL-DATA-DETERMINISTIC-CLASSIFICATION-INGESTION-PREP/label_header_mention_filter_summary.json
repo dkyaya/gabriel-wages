@@ -1,0 +1,11 @@
+{
+  "excluded": 2446555,
+  "reasons": {
+    "isolated_label_or_heading": 2238947,
+    "navigation_or_template_control": 43,
+    "non_geographic_county_collision": 692803,
+    "oversized_unbounded_structural_match": 87,
+    "url_or_navigation_collision": 48218,
+    "weak_isolated_lexical_hit": 159347
+  }
+}

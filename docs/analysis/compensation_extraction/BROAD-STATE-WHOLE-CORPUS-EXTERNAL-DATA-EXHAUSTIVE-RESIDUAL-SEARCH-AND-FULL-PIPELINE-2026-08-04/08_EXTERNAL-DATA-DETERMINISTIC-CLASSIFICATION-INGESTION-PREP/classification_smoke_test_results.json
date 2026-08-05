@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "actual": "isolated_label_or_heading",
+      "case": "repeated page header",
+      "expected": "isolated_label_or_heading",
+      "passed": true
+    },
+    {
+      "actual": "isolated_label_or_heading",
+      "case": "repeated table header",
+      "expected": "isolated_label_or_heading",
+      "passed": true
+    },
+    {
+      "actual": "url_or_navigation_collision",
+      "case": "navigation collision",
+      "expected": "url_or_navigation_collision",
+      "passed": true
+    },
+    {
+      "actual": "url_or_navigation_collision",
+      "case": "county collision",
+      "expected": "url_or_navigation_collision",
+      "passed": true
+    },
+    {
+      "actual": "",
+      "case": "employee payroll row",
+      "expected": "",
+      "passed": true
+    },
+    {
+      "actual": "",
+      "case": "staffing count",
+      "expected": "",
+      "passed": true
+    },
+    {
+      "actual": "",
+      "case": "proposal not adoption",
+      "expected": "",
+      "passed": true
+    },
+    {
+      "actual": "ambiguous",
+      "case": "unsupported lifecycle",
+      "expected": "ambiguous",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "tested_at": "2026-08-05T23:31:15.865724+00:00"
+}

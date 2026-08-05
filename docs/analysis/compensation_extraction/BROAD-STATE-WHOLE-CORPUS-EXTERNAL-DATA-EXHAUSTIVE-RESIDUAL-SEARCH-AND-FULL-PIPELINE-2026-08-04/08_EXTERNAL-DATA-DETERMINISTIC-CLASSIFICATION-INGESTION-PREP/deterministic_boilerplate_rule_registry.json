@@ -1,0 +1,12 @@
+{
+  "rules": [
+    "empty_value_or_excerpt",
+    "url_or_navigation_collision",
+    "isolated_label_or_heading",
+    "navigation_or_template_control",
+    "oversized_unbounded_structural_match",
+    "non_geographic_county_collision",
+    "weak_isolated_lexical_hit"
+  ],
+  "version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation"
+}

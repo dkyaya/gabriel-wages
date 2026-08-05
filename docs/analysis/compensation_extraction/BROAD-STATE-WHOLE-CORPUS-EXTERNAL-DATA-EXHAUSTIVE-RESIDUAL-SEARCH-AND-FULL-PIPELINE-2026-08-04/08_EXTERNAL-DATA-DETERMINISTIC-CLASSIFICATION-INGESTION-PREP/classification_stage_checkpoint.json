@@ -1,6 +1,8 @@
 {
   "decision": "broad_state_whole_corpus_external_data_classification_completed_ingestion_ready",
+  "processed_payloads": 14160,
+  "qa_repair_generation": 1,
   "stage": "08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP",
   "status": "complete",
-  "updated_at": "2026-08-05T23:55:46.268434+00:00"
+  "updated_at": "2026-08-05T23:55:46.343492+00:00"
 }

@@ -1,0 +1,11 @@
+{
+  "duplicate_physical_pdf_paths_removed": 71,
+  "html_page_equivalents_included": false,
+  "page_count_conflicts_input": 248,
+  "page_count_conflicts_resolved": 248,
+  "page_count_conflicts_unresolved": 0,
+  "page_count_label": "audit_final_unique_native_pdf_pages",
+  "physical_pages_not_page_labels": true,
+  "whole_corpus_unique_native_pdf_pages": 1029482,
+  "whole_corpus_unique_pdfs": 15163
+}

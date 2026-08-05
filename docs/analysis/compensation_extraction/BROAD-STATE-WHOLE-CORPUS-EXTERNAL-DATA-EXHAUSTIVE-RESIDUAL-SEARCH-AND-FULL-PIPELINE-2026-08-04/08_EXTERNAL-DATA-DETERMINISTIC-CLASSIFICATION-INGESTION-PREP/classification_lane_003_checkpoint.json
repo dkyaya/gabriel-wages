@@ -1,0 +1,10 @@
+{
+  "accepted_shards": 2829,
+  "completed_at": "2026-08-05T23:55:54.770683+00:00",
+  "lane_id": "classification_lane_003",
+  "queue_offset": 2829,
+  "queue_total": 2829,
+  "repair_generation": 1,
+  "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+  "status": "complete"
+}

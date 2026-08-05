@@ -1,0 +1,14 @@
+{
+  "gabriel_authorized": false,
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations",
+  "network_authorized": false,
+  "normalization_authorized": false,
+  "ocr_authorized": false,
+  "prior_commit_verified": true,
+  "prior_stage": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION",
+  "raw_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction",
+  "rule_version": "deterministic-observation-compaction-classification-2026-08-05-v1",
+  "started_at": "2026-08-05T23:28:08.025022+00:00",
+  "starting_head": "f5275f8b8b04baf98773eefd57d4d2251e844730",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-EVIDENCE-CLASSIFICATION-AND-INGESTION-PREP-2026-08-05"
+}

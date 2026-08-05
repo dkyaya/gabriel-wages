@@ -1,0 +1,285 @@
+{
+  "ambiguity_count": 3044046,
+  "audit_final_native_pdf_page_count": 1029482,
+  "audit_final_unique_pdf_count": 15163,
+  "boilerplate_structural_writeoff_count": 3139445,
+  "claim_family_link_count": 537370,
+  "classified_span_count": 1781186,
+  "classified_span_shards": [
+    {
+      "bytes": 42165784,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_001/classified_spans.jsonl.gz",
+      "row_count": 218345,
+      "sha256": "ba17f88fc0aa81f3a31ec666440428ce3cd0bac582e468d51c5b9e9dc5d16be1",
+      "shard_id": "classified_spans"
+    },
+    {
+      "bytes": 49115795,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_002/classified_spans.jsonl.gz",
+      "row_count": 255993,
+      "sha256": "f7f250aa302f0832eb3832b0de9c96eeddf10123f00f5c9021bbf3c3e1a07d27",
+      "shard_id": "classified_spans"
+    },
+    {
+      "bytes": 69487713,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_003/classified_spans.jsonl.gz",
+      "row_count": 425353,
+      "sha256": "3cfda78f60f5bd93c49843d0d844aafc4ad0f88d1bbfb77c4822e08347aef6d4",
+      "shard_id": "classified_spans"
+    },
+    {
+      "bytes": 74299497,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_004/classified_spans.jsonl.gz",
+      "row_count": 484121,
+      "sha256": "40703b3394fb8d8beede0091d5cbd32091a33324038103de278b31154f227a4f",
+      "shard_id": "classified_spans"
+    },
+    {
+      "bytes": 61766988,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_005/classified_spans.jsonl.gz",
+      "row_count": 397374,
+      "sha256": "94db305cb6b3627c68b101ca043fc6ed3d7b52146880f2da31ca960badff777f",
+      "shard_id": "classified_spans"
+    }
+  ],
+  "compact_observation_count": 1876183,
+  "completed_at": "2026-08-05T23:53:44.985340+00:00",
+  "conflict_count": 266890,
+  "corroboration_group_count": 34225,
+  "corroboration_link_count": 276352,
+  "csv_tsv_files": 17,
+  "csv_tsv_rows": 1445,
+  "decision": "broad_state_whole_corpus_external_data_classification_completed_ingestion_ready",
+  "embedded_json_xml_records": 132188,
+  "exact_claim_id_link_count": 382771,
+  "exact_duplicate_count": 0,
+  "exact_raw_field_duplicate_count": 0,
+  "exact_raw_span_duplicate_count": 0,
+  "extraction_repair_payloads_preserved": 97,
+  "five_lane_completion": {
+    "classification_lane_001": 2801,
+    "classification_lane_002": 2869,
+    "classification_lane_003": 2829,
+    "classification_lane_004": 2830,
+    "classification_lane_005": 2831
+  },
+  "forbidden_actions": 0,
+  "gabriel_authorized": false,
+  "gabriel_scores_assigned": 0,
+  "html_characters": 797141281,
+  "html_table_rows": 1017511,
+  "html_tables": 96484,
+  "implementation_event_deduplication_rerun": false,
+  "ingestion_readiness_counts": {
+    "ingestion_ready_conflict_preserved": 266890,
+    "ingestion_ready_direct_administrative": 1117471,
+    "ingestion_ready_implementation_record": 145409,
+    "ingestion_ready_official_summary": 271577,
+    "ingestion_ready_schedule_record": 74836
+  },
+  "ingestion_ready_count": 1876183,
+  "label_header_mention_exclusion_count": 2446555,
+  "lanes": {
+    "classification_lane_001": {
+      "checkpoint": {
+        "accepted_shards": 2801,
+        "completed_at": "2026-08-05T23:50:46.595763+00:00",
+        "lane_id": "classification_lane_001",
+        "queue_offset": 2801,
+        "queue_total": 2801,
+        "repair_generation": 1,
+        "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+        "status": "complete"
+      },
+      "outcome_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/repair_generation_001/lanes/classification_lane_001/outcomes.jsonl",
+      "outcome_sha256": "0004665d00a5c37c283ec6f0c81c06a3f23c3d2f20c05aa1bc3508a1e5ec033c",
+      "payloads": 2801
+    },
+    "classification_lane_002": {
+      "checkpoint": {
+        "accepted_shards": 2869,
+        "completed_at": "2026-08-05T23:50:46.810933+00:00",
+        "lane_id": "classification_lane_002",
+        "queue_offset": 2869,
+        "queue_total": 2869,
+        "repair_generation": 1,
+        "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+        "status": "complete"
+      },
+      "outcome_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/repair_generation_001/lanes/classification_lane_002/outcomes.jsonl",
+      "outcome_sha256": "1c1aca4b358ec8a9e636befdc7290d66085b5ccae9dabffd3b93d5d09b494220",
+      "payloads": 2869
+    },
+    "classification_lane_003": {
+      "checkpoint": {
+        "accepted_shards": 2829,
+        "completed_at": "2026-08-05T23:50:47.013487+00:00",
+        "lane_id": "classification_lane_003",
+        "queue_offset": 2829,
+        "queue_total": 2829,
+        "repair_generation": 1,
+        "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+        "status": "complete"
+      },
+      "outcome_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/repair_generation_001/lanes/classification_lane_003/outcomes.jsonl",
+      "outcome_sha256": "ddff998ad4db03619772a207ffc0724f640425fc90a1807c0a115de504df56f8",
+      "payloads": 2829
+    },
+    "classification_lane_004": {
+      "checkpoint": {
+        "accepted_shards": 2830,
+        "completed_at": "2026-08-05T23:50:47.226528+00:00",
+        "lane_id": "classification_lane_004",
+        "queue_offset": 2830,
+        "queue_total": 2830,
+        "repair_generation": 1,
+        "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+        "status": "complete"
+      },
+      "outcome_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/repair_generation_001/lanes/classification_lane_004/outcomes.jsonl",
+      "outcome_sha256": "2ca9e72df41e32e927baea6823189f10f0b6b695002981b6fc88e04fdf619711",
+      "payloads": 2830
+    },
+    "classification_lane_005": {
+      "checkpoint": {
+        "accepted_shards": 2831,
+        "completed_at": "2026-08-05T23:50:47.434718+00:00",
+        "lane_id": "classification_lane_005",
+        "queue_offset": 2831,
+        "queue_total": 2831,
+        "repair_generation": 1,
+        "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+        "status": "complete"
+      },
+      "outcome_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/repair_generation_001/lanes/classification_lane_005/outcomes.jsonl",
+      "outcome_sha256": "4d13c46aeeb1dabbb144ad0ac0b401f40e8dafab601132013f42acaebd563dcc",
+      "payloads": 2831
+    }
+  },
+  "lifecycle_status_counts": {
+    "adopted": 222,
+    "amended": 38,
+    "appropriated": 3,
+    "approved": 24,
+    "implemented": 1,
+    "negotiated": 38,
+    "paid": 77,
+    "proposed": 106,
+    "recommended": 4,
+    "tentative": 9,
+    "unclear": 1875661
+  },
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations",
+  "network_authorized": false,
+  "normalization_authorized": false,
+  "observation_shards": [
+    {
+      "bytes": 29083291,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_001.jsonl.gz",
+      "row_count": 262414,
+      "sha256": "48edc1aa55d4a6fd850557aab231d52072808c4904ed33a3fe7edddf0f777bb5",
+      "shard_id": "classification_lane_001"
+    },
+    {
+      "bytes": 30771718,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_002.jsonl.gz",
+      "row_count": 277745,
+      "sha256": "03cd3b4a82828e3e06c3a02153ad6451a60be408afa4c6164d64cf2c7064199d",
+      "shard_id": "classification_lane_002"
+    },
+    {
+      "bytes": 43298569,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_003.jsonl.gz",
+      "row_count": 402000,
+      "sha256": "952483a29d290607d863e5b4c585f48ac3b8c4101451fbf18951eaf9841ef0e7",
+      "shard_id": "classification_lane_003"
+    },
+    {
+      "bytes": 57392758,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_004.jsonl.gz",
+      "row_count": 524545,
+      "sha256": "58259cad4d42c854f52b178f5636e091a3e75b37985e71b6bc6b55322ff81fe6",
+      "shard_id": "classification_lane_004"
+    },
+    {
+      "bytes": 44601251,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_005.jsonl.gz",
+      "row_count": 409479,
+      "sha256": "dc1e11dcfab93678b609ad41326e53b8c75905d28a5e991272be31b0b8a37116",
+      "shard_id": "classification_lane_005"
+    }
+  ],
+  "observations_by_analytical_role": {
+    "contextual_only": 191828,
+    "growth_candidate": 206401,
+    "implementation_confirmation_candidate": 145409,
+    "local_comparison_candidate": 1002804,
+    "pending_reconciliation": 266890,
+    "staffing_hypothesis_candidate": 56944,
+    "total_compensation_candidate": 5907
+  },
+  "observations_by_evidence_quality_class": {
+    "conflicting_administrative_record": 266890,
+    "direct_official_administrative_record": 751006,
+    "direct_official_structured_record": 366465,
+    "official_administrative_summary": 271577,
+    "official_implementation_record": 145409,
+    "official_schedule_or_policy_record": 74836
+  },
+  "observations_by_family": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 39083,
+    "tenure_and_progression": 430720
+  },
+  "observations_by_type": {
+    "benefit_component_observation": 5907,
+    "contextual_control_observation": 208726,
+    "implementation_lifecycle_observation": 147064,
+    "overtime_observation": 4386,
+    "position_compensation_observation": 993412,
+    "premium_pay_observation": 28651,
+    "recruitment_retention_observation": 18234,
+    "salary_schedule_step_observation": 430720,
+    "staffing_count_observation": 29163,
+    "vacancy_observation": 9920
+  },
+  "ocr_authorized": false,
+  "ocr_later_preserved": 118,
+  "prior_commit_verified": true,
+  "prior_stage": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION",
+  "qa_repair_generation": 1,
+  "quality_gates_passed": true,
+  "raw_evidence_span_count": 4289437,
+  "raw_field_record_count": 5558770,
+  "raw_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction",
+  "raw_to_compacted_reduction_rate": 0.6624823477136129,
+  "resolved_pdf_page_conflicts": 248,
+  "rough_500_word_text_equivalent": 650482,
+  "rule_version": "deterministic-observation-compaction-classification-2026-08-05-v1",
+  "sampled_qa_counts": {
+    "ambiguities": 200,
+    "benefits": 100,
+    "conflicts": 150,
+    "contextual": 100,
+    "lifecycle": 100,
+    "observations": 500,
+    "payroll": 100,
+    "schedule": 100,
+    "staffing": 100,
+    "writeoffs": 250
+  },
+  "source_local_compacted_record_count": 7347,
+  "started_at": "2026-08-05T23:28:08.025022+00:00",
+  "starting_head": "f5275f8b8b04baf98773eefd57d4d2251e844730",
+  "storage_capacity_holds_preserved": 7895,
+  "substantive_html_documents": 8718,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-EVIDENCE-CLASSIFICATION-AND-INGESTION-PREP-2026-08-05",
+  "unresolved_claim_link_count": 1493412,
+  "unresolved_hosted_search_targets": 12844,
+  "unresolved_pdf_page_conflicts": 0,
+  "writeoff_count": 3139445
+}

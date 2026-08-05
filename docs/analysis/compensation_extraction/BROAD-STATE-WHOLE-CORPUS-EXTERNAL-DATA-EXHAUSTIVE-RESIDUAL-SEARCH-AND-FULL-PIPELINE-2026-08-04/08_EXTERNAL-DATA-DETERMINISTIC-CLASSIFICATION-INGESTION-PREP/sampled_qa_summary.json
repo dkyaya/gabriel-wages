@@ -1,0 +1,66 @@
+{
+  "adjudication_rows": 1700,
+  "gates": {
+    "A_source_coordinate_integrity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.995
+    },
+    "B_literal_value_fidelity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.99
+    },
+    "C_boilerplate_suppression_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.97
+    },
+    "D_administrative_observation_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.95
+    },
+    "E_lifecycle_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.95
+    },
+    "F_compaction_correctness": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.97
+    },
+    "G_claim_linkage_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    }
+  },
+  "important_boundary": "Mechanical invariant replay is not independent human semantic gold coding.",
+  "passed": true,
+  "rates": {
+    "administrative_observation_valid": 1.0,
+    "boilerplate_decision_valid": 1.0,
+    "claim_linkage_canonical": 1.0,
+    "compaction_decision_valid": 1.0,
+    "coordinate_valid": 1.0,
+    "lifecycle_status_supported": 1.0,
+    "literal_value_fidelity": 1.0
+  },
+  "records_with_overlapping_membership": true,
+  "repair_basis": "QA projection repaired by resolving sampled exception/conflict pointers; production classifications unchanged",
+  "repair_generation": 1,
+  "sample_membership_counts": {
+    "ambiguities": 200,
+    "benefits": 100,
+    "conflicts": 150,
+    "contextual": 100,
+    "lifecycle": 100,
+    "observations": 500,
+    "payroll": 100,
+    "schedule": 100,
+    "staffing": 100,
+    "writeoffs": 250
+  }
+}

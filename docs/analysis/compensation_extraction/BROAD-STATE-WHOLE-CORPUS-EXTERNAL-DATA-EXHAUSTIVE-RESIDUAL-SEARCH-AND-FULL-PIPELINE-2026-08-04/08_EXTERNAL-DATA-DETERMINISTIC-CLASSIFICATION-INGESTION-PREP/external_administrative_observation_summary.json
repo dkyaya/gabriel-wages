@@ -1,0 +1,29 @@
+{
+  "count": 1876183,
+  "family": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 39083,
+    "tenure_and_progression": 430720
+  },
+  "quality": {
+    "conflicting_administrative_record": 266890,
+    "direct_official_administrative_record": 751006,
+    "direct_official_structured_record": 366465,
+    "official_administrative_summary": 271577,
+    "official_implementation_record": 145409,
+    "official_schedule_or_policy_record": 74836
+  },
+  "role": {
+    "contextual_only": 191828,
+    "growth_candidate": 206401,
+    "implementation_confirmation_candidate": 145409,
+    "local_comparison_candidate": 1002804,
+    "pending_reconciliation": 266890,
+    "staffing_hypothesis_candidate": 56944,
+    "total_compensation_candidate": 5907
+  }
+}

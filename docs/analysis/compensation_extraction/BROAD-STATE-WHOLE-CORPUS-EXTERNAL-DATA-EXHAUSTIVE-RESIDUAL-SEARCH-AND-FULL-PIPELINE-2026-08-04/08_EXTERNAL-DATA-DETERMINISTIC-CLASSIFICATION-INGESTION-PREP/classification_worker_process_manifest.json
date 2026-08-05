@@ -1,0 +1,35 @@
+{
+  "launched_at": "2026-08-05T23:31:43.772430+00:00",
+  "workers": [
+    {
+      "delay_seconds": 0,
+      "lane_id": "classification_lane_001",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_001.log",
+      "pid": 38133
+    },
+    {
+      "delay_seconds": 120,
+      "lane_id": "classification_lane_002",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_002.log",
+      "pid": 38134
+    },
+    {
+      "delay_seconds": 240,
+      "lane_id": "classification_lane_003",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_003.log",
+      "pid": 38135
+    },
+    {
+      "delay_seconds": 360,
+      "lane_id": "classification_lane_004",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_004.log",
+      "pid": 38136
+    },
+    {
+      "delay_seconds": 480,
+      "lane_id": "classification_lane_005",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_005.log",
+      "pid": 38137
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+field_name,mechanism_class,claim_id,mapping_basis
+adopted,ordinance_council_adoption,MECH-08,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+allowance,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+approved,ordinance_council_adoption,MECH-08,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+budgeted_positions,budget_fiscal_constraint,MECH-09,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+fiscal_year,budget_fiscal_constraint,MECH-09,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+hiring_freeze,market_recruitment_retention,MECH-06,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+holiday_pay,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+longevity_pay,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+ordinance_number,ordinance_council_adoption,MECH-08,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+overtime_earnings,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+overtime_hours,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+paid,retroactivity_implementation,MECH-07,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+payment_date,retroactivity_implementation,MECH-07,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+payroll_effective,retroactivity_implementation,MECH-07,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+premium_pay,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+resolution_number,ordinance_council_adoption,MECH-08,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+retroactive_pay,retroactivity_implementation,MECH-07,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+step_number,step_schedule_seniority,MECH-04,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+stipend,non_base_compensation,MECH-03,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+time_to_fill,market_recruitment_retention,MECH-06,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+turnover_rate_explicit,market_recruitment_retention,MECH-06,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+vacant_positions,market_recruitment_retention,MECH-06,explicit field semantics to canonical mechanism class; canonical claim-card lookup
+years_of_service,step_schedule_seniority,MECH-04,explicit field semantics to canonical mechanism class; canonical claim-card lookup

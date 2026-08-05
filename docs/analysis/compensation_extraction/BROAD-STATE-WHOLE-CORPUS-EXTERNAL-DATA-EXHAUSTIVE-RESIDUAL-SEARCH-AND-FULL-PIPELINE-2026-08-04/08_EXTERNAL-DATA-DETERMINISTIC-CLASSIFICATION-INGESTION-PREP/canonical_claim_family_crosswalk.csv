@@ -1,0 +1,20 @@
+mechanism_class,claim_family_id,mapping_basis
+arbitration_factfinding,CLAIM-A,canonical evidence_to_claim_mapping.json
+budget_fiscal_constraint,CLAIM-F,canonical evidence_to_claim_mapping.json
+classification_civil_service,CLAIM-F,canonical evidence_to_claim_mapping.json
+cola_cpi_indexing,CLAIM-B,canonical evidence_to_claim_mapping.json
+cola_cpi_indexing,CLAIM-G,canonical evidence_to_claim_mapping.json
+collective_bargaining,CLAIM-A,canonical evidence_to_claim_mapping.json
+collective_bargaining,CLAIM-G,canonical evidence_to_claim_mapping.json
+collective_bargaining,CLAIM-H,canonical evidence_to_claim_mapping.json
+comparability_parity,CLAIM-D,canonical evidence_to_claim_mapping.json
+market_recruitment_retention,CLAIM-D,canonical evidence_to_claim_mapping.json
+market_recruitment_retention,CLAIM-H,canonical evidence_to_claim_mapping.json
+non_base_compensation,CLAIM-C,canonical evidence_to_claim_mapping.json
+non_base_compensation,CLAIM-H,canonical evidence_to_claim_mapping.json
+ordinance_council_adoption,CLAIM-F,canonical evidence_to_claim_mapping.json
+retroactivity_implementation,CLAIM-E,canonical evidence_to_claim_mapping.json
+retroactivity_implementation,CLAIM-H,canonical evidence_to_claim_mapping.json
+step_schedule_seniority,CLAIM-B,canonical evidence_to_claim_mapping.json
+step_schedule_seniority,CLAIM-G,canonical evidence_to_claim_mapping.json
+strike_no_strike_dispute_process,CLAIM-A,canonical evidence_to_claim_mapping.json

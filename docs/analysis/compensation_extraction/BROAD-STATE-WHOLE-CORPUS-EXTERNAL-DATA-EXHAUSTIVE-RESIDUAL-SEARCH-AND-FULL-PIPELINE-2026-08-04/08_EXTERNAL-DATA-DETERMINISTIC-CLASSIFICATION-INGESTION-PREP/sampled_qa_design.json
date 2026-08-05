@@ -1,0 +1,27 @@
+{
+  "reproducible": true,
+  "requested_minimums": {
+    "ambiguities": 200,
+    "benefits": 100,
+    "conflicts": 150,
+    "contextual": 100,
+    "lifecycle": 100,
+    "observations": 500,
+    "payroll": 100,
+    "schedule": 100,
+    "staffing": 100,
+    "writeoffs": 250
+  },
+  "seed": "sha256(identifier|stratum)",
+  "strata": [
+    "evidence_family",
+    "source_type",
+    "structured_vs_text",
+    "priority",
+    "state",
+    "side_hint",
+    "rule_frequency",
+    "source_yield",
+    "evidence_quality_class"
+  ]
+}

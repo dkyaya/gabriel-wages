@@ -1,0 +1,7 @@
+{
+  "classification_errors": 0,
+  "failed_classification_rules": [],
+  "qa_projection_repairs": [
+    "source_coordinate_pointer_projection"
+  ]
+}

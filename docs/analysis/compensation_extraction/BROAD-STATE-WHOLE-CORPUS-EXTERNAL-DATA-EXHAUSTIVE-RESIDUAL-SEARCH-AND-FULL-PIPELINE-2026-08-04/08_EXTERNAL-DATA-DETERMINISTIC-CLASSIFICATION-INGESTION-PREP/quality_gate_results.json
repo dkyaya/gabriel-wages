@@ -1,0 +1,41 @@
+{
+  "gates": {
+    "A_source_coordinate_integrity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.995
+    },
+    "B_literal_value_fidelity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.99
+    },
+    "C_boilerplate_suppression_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.97
+    },
+    "D_administrative_observation_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.95
+    },
+    "E_lifecycle_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.95
+    },
+    "F_compaction_correctness": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.97
+    },
+    "G_claim_linkage_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    }
+  },
+  "passed": true,
+  "repair_generation": 1
+}

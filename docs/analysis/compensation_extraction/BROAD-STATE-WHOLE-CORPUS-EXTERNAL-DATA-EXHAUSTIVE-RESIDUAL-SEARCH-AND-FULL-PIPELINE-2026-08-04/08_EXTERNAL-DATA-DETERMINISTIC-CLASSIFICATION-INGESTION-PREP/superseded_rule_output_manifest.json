@@ -1,0 +1,10 @@
+{
+  "accepted_field_shards_rerun_for_rule_repair": true,
+  "affected_rule": "source-local compaction of anonymous coordinate-distinct records",
+  "qa_projection_repair": "sampled exception/conflict pointers resolved to authoritative rows after finalization",
+  "repair": "coordinate discriminator added when employee/position and row identity are absent",
+  "repair_generations": 1,
+  "spans_rerun": false,
+  "superseded_generation": "generation_000",
+  "superseded_local_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/superseded_generation_000"
+}

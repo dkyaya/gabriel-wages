@@ -1,0 +1,18 @@
+{
+  "causal_effect_claims": 0,
+  "final_pdf_docx_slide_heatmap_outputs": 0,
+  "gabriel_api_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_runs": 0,
+  "network_requests": 0,
+  "normalization_runs": 0,
+  "ocr_calls": 0,
+  "passed": true,
+  "prevalence_estimates": 0,
+  "redownloads": 0,
+  "regressions": 0,
+  "safety_non_safety_matching_runs": 0,
+  "treatment_effect_estimates": 0,
+  "unit_conversions": 0,
+  "wage_gap_calculations": 0
+}

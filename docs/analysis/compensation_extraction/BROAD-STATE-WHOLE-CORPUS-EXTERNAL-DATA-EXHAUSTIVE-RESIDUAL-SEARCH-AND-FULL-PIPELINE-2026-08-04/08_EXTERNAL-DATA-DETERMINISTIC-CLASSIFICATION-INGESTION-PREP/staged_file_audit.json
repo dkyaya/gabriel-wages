@@ -1,0 +1,980 @@
+{
+  "bulky_local_roots_staged": false,
+  "files": [
+    {
+      "bytes": 3,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/administrative_source_type_yield_summary.json"
+    },
+    {
+      "bytes": 210,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ambiguity_summary.json"
+    },
+    {
+      "bytes": 272,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/analytical_role_summary.json"
+    },
+    {
+      "bytes": 400,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_page_accounting.json"
+    },
+    {
+      "bytes": 281,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_page_accounting.md"
+    },
+    {
+      "bytes": 44,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_pages_by_period.json"
+    },
+    {
+      "bytes": 412,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_pages_by_pipeline.json"
+    },
+    {
+      "bytes": 44,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_pages_by_source_family.json"
+    },
+    {
+      "bytes": 44,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_pages_by_state.json"
+    },
+    {
+      "bytes": 28826,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_pdf_duplicate_links.csv"
+    },
+    {
+      "bytes": 35916,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_pdf_duplicate_links.jsonl"
+    },
+    {
+      "bytes": 4955032,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_unique_pdf_manifest.csv"
+    },
+    {
+      "bytes": 7593262,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_unique_pdf_manifest.jsonl"
+    },
+    {
+      "bytes": 3272,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/boilerplate_pattern_summary.json"
+    },
+    {
+      "bytes": 1325,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/boilerplate_suppression_results.csv"
+    },
+    {
+      "bytes": 1585,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/boilerplate_suppression_results.jsonl"
+    },
+    {
+      "bytes": 304,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/boilerplate_writeoff_summary.json"
+    },
+    {
+      "bytes": 1446,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/canonical_claim_family_crosswalk.csv"
+    },
+    {
+      "bytes": 2540,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/canonical_claim_family_crosswalk.jsonl"
+    },
+    {
+      "bytes": 3055,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/canonical_claim_id_crosswalk.csv"
+    },
+    {
+      "bytes": 4569,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/canonical_claim_id_crosswalk.jsonl"
+    },
+    {
+      "bytes": 227,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/claim_linkage_repair_audit.json"
+    },
+    {
+      "bytes": 257,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/claim_linkage_repair_audit.md"
+    },
+    {
+      "bytes": 221,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_disk_capacity_audit.json"
+    },
+    {
+      "bytes": 1467,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_error_queue.csv"
+    },
+    {
+      "bytes": 1895,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_error_queue.jsonl"
+    },
+    {
+      "bytes": 466,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_forbidden_action_audit.json"
+    },
+    {
+      "bytes": 10533,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_input_reconciliation_audit.json"
+    },
+    {
+      "bytes": 125,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_input_reconciliation_audit.md"
+    },
+    {
+      "bytes": 344,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_001_checkpoint.json"
+    },
+    {
+      "bytes": 792743,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_001_outcomes.csv"
+    },
+    {
+      "bytes": 999957,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_001_outcomes.jsonl"
+    },
+    {
+      "bytes": 201971,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_001_queue.csv"
+    },
+    {
+      "bytes": 521189,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_001_queue.jsonl"
+    },
+    {
+      "bytes": 344,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_002_checkpoint.json"
+    },
+    {
+      "bytes": 811987,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_002_outcomes.csv"
+    },
+    {
+      "bytes": 1024233,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_002_outcomes.jsonl"
+    },
+    {
+      "bytes": 206883,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_002_queue.csv"
+    },
+    {
+      "bytes": 533853,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_002_queue.jsonl"
+    },
+    {
+      "bytes": 344,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_003_checkpoint.json"
+    },
+    {
+      "bytes": 800667,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_003_outcomes.csv"
+    },
+    {
+      "bytes": 1009953,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_003_outcomes.jsonl"
+    },
+    {
+      "bytes": 204267,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_003_queue.csv"
+    },
+    {
+      "bytes": 526677,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_003_queue.jsonl"
+    },
+    {
+      "bytes": 344,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_004_checkpoint.json"
+    },
+    {
+      "bytes": 800950,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_004_outcomes.csv"
+    },
+    {
+      "bytes": 1010310,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_004_outcomes.jsonl"
+    },
+    {
+      "bytes": 204365,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_004_queue.csv"
+    },
+    {
+      "bytes": 526889,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_004_queue.jsonl"
+    },
+    {
+      "bytes": 344,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_005_checkpoint.json"
+    },
+    {
+      "bytes": 801233,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_005_outcomes.csv"
+    },
+    {
+      "bytes": 1010667,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_005_outcomes.jsonl"
+    },
+    {
+      "bytes": 204396,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_005_queue.csv"
+    },
+    {
+      "bytes": 527034,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_005_queue.jsonl"
+    },
+    {
+      "bytes": 1015,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_distribution.json"
+    },
+    {
+      "bytes": 517,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_distribution.md"
+    },
+    {
+      "bytes": 21859,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_lane_local_ledger_manifest.json"
+    },
+    {
+      "bytes": 84,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_large_file_audit.json"
+    },
+    {
+      "bytes": 181,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_local_artifact_storage_audit.json"
+    },
+    {
+      "bytes": 0,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_operational_incident_log.jsonl"
+    },
+    {
+      "bytes": 966,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_run_manifest.json"
+    },
+    {
+      "bytes": 280,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_run_state.json"
+    },
+    {
+      "bytes": 1220,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_smoke_test_results.json"
+    },
+    {
+      "bytes": 311,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_stage_checkpoint.json"
+    },
+    {
+      "bytes": 599,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_stage_transition_log.jsonl"
+    },
+    {
+      "bytes": 69216,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_staged_file_audit.json"
+    },
+    {
+      "bytes": 1328,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classification_worker_process_manifest.json"
+    },
+    {
+      "bytes": 1,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_examples.csv"
+    },
+    {
+      "bytes": 0,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_examples.jsonl"
+    },
+    {
+      "bytes": 1425,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_hash_manifest.csv"
+    },
+    {
+      "bytes": 1946,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_hash_manifest.json"
+    },
+    {
+      "bytes": 1695,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_hash_manifest.jsonl"
+    },
+    {
+      "bytes": 1982,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_manifest.json"
+    },
+    {
+      "bytes": 1425,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_pointer_manifest.csv"
+    },
+    {
+      "bytes": 1675,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1423,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_schema.json"
+    },
+    {
+      "bytes": 151,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/classified_administrative_span_summary.json"
+    },
+    {
+      "bytes": 199,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/combined_rule_registry_hash.json"
+    },
+    {
+      "bytes": 1717,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/compaction_repair_generation_001_process_manifest.json"
+    },
+    {
+      "bytes": 143,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/compensation_basis_summary.json"
+    },
+    {
+      "bytes": 107,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/conflict_summary.json"
+    },
+    {
+      "bytes": 81,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/corroboration_summary.json"
+    },
+    {
+      "bytes": 4959,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/dashboard_external_data_classification_ingestion_prep_update_summary.json"
+    },
+    {
+      "bytes": 1497,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deferred_low_value_context_queue.csv"
+    },
+    {
+      "bytes": 1925,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deferred_low_value_context_queue.jsonl"
+    },
+    {
+      "bytes": 1043,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/department_coverage_summary.json"
+    },
+    {
+      "bytes": 388,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_boilerplate_rule_registry.json"
+    },
+    {
+      "bytes": 193,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_claim_linkage_rule_registry.json"
+    },
+    {
+      "bytes": 8948,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_evidence_classification_methodology_note.json"
+    },
+    {
+      "bytes": 2152,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_evidence_classification_methodology_note.md"
+    },
+    {
+      "bytes": 1529,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_evidence_classification_rule_registry.json"
+    },
+    {
+      "bytes": 200,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_evidence_classification_rule_registry.md"
+    },
+    {
+      "bytes": 481,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_lifecycle_validation_rule_registry.json"
+    },
+    {
+      "bytes": 8948,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_observation_compaction_methodology_note.json"
+    },
+    {
+      "bytes": 2152,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_observation_compaction_methodology_note.md"
+    },
+    {
+      "bytes": 338,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_observation_compaction_rule_registry.json"
+    },
+    {
+      "bytes": 308,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/deterministic_observation_compaction_rule_registry.md"
+    },
+    {
+      "bytes": 44,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/duplicate_writeoff_summary.json"
+    },
+    {
+      "bytes": 284,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/evidence_quality_class_summary.json"
+    },
+    {
+      "bytes": 1420,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/exact_raw_field_duplicate_links.csv"
+    },
+    {
+      "bytes": 1670,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/exact_raw_field_duplicate_links.jsonl"
+    },
+    {
+      "bytes": 1410,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/exact_raw_span_duplicate_links.csv"
+    },
+    {
+      "bytes": 1660,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/exact_raw_span_duplicate_links.jsonl"
+    },
+    {
+      "bytes": 116,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_ingestion_ready_manifest.json"
+    },
+    {
+      "bytes": 1687,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_ingestion_ready_queue.csv"
+    },
+    {
+      "bytes": 2115,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_ingestion_ready_queue.jsonl"
+    },
+    {
+      "bytes": 104995,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_examples.csv"
+    },
+    {
+      "bytes": 212161,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_examples.jsonl"
+    },
+    {
+      "bytes": 1485,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_hash_manifest.csv"
+    },
+    {
+      "bytes": 2006,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_hash_manifest.json"
+    },
+    {
+      "bytes": 1755,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_hash_manifest.jsonl"
+    },
+    {
+      "bytes": 2101,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_manifest.json"
+    },
+    {
+      "bytes": 1485,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_pointer_manifest.csv"
+    },
+    {
+      "bytes": 1735,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1706,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_schema.json"
+    },
+    {
+      "bytes": 927,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_summary.json"
+    },
+    {
+      "bytes": 1758,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_benefits_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2100,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_benefits_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1698,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_context_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2040,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_context_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 13070,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_data_deterministic_classification_manifest.json"
+    },
+    {
+      "bytes": 4279,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_data_deterministic_classification_summary.json"
+    },
+    {
+      "bytes": 4351,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_data_deterministic_classification_summary.md"
+    },
+    {
+      "bytes": 1738,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_implementation_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2080,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_implementation_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1345,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_observation_ambiguity_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 1605,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_observation_ambiguity_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1155,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_observation_claim_link_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 1359,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_observation_claim_link_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1426,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_observation_conflict_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 1686,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_observation_conflict_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1703,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_payroll_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2045,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_payroll_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1688,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_qualitative_administrative_span_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2030,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_qualitative_administrative_span_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1728,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_recruitment_retention_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2070,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_recruitment_retention_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 290,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_search_capacity_limitation_note.md"
+    },
+    {
+      "bytes": 1683,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_source_corroboration_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2025,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_source_corroboration_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1873,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_staffing_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2215,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_staffing_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1713,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_tenure_progression_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 2055,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_tenure_progression_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 1643,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_vacancy_observation_layer_pointer_manifest.csv"
+    },
+    {
+      "bytes": 1985,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_vacancy_observation_layer_pointer_manifest.jsonl"
+    },
+    {
+      "bytes": 466,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/forbidden_action_audit.json"
+    },
+    {
+      "bytes": 1,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/high_error_rule_repair_queue.csv"
+    },
+    {
+      "bytes": 0,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/high_error_rule_repair_queue.jsonl"
+    },
+    {
+      "bytes": 173,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/implementation_event_deduplication_preservation_note.md"
+    },
+    {
+      "bytes": 210,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/implementation_lifecycle_summary.json"
+    },
+    {
+      "bytes": 244,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_readiness_summary.json"
+    },
+    {
+      "bytes": 1812,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_conflict_preserved_queue.csv"
+    },
+    {
+      "bytes": 2240,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_conflict_preserved_queue.jsonl"
+    },
+    {
+      "bytes": 1777,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_contextual_queue.csv"
+    },
+    {
+      "bytes": 2205,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_contextual_queue.jsonl"
+    },
+    {
+      "bytes": 1847,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_direct_administrative_queue.csv"
+    },
+    {
+      "bytes": 2275,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_direct_administrative_queue.jsonl"
+    },
+    {
+      "bytes": 1842,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_implementation_queue.csv"
+    },
+    {
+      "bytes": 2270,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_implementation_queue.jsonl"
+    },
+    {
+      "bytes": 1792,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_official_summary_queue.csv"
+    },
+    {
+      "bytes": 2220,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_official_summary_queue.jsonl"
+    },
+    {
+      "bytes": 1777,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_schedule_queue.csv"
+    },
+    {
+      "bytes": 2205,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/ingestion_ready_schedule_queue.jsonl"
+    },
+    {
+      "bytes": 307,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/label_header_mention_filter_summary.json"
+    },
+    {
+      "bytes": 84,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/large_file_audit.json"
+    },
+    {
+      "bytes": 181,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/local_artifact_storage_audit.json"
+    },
+    {
+      "bytes": 23526,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/municipality_coverage_summary.json"
+    },
+    {
+      "bytes": 577,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/next_task.md"
+    },
+    {
+      "bytes": 534,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/no_gabriel_external_evidence_methodology_note.json"
+    },
+    {
+      "bytes": 431,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/no_gabriel_external_evidence_methodology_note.md"
+    },
+    {
+      "bytes": 264,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_family_summary.json"
+    },
+    {
+      "bytes": 275,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_claim_family_links.csv"
+    },
+    {
+      "bytes": 287,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_claim_family_links.jsonl"
+    },
+    {
+      "bytes": 271,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_claim_id_links.csv"
+    },
+    {
+      "bytes": 283,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_claim_id_links.jsonl"
+    },
+    {
+      "bytes": 269,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_event_links.csv"
+    },
+    {
+      "bytes": 281,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_event_links.jsonl"
+    },
+    {
+      "bytes": 274,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_mechanism_links.csv"
+    },
+    {
+      "bytes": 286,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_to_mechanism_links.jsonl"
+    },
+    {
+      "bytes": 415,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/observation_type_summary.json"
+    },
+    {
+      "bytes": 0,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/operational_incident_log.jsonl"
+    },
+    {
+      "bytes": 442,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/page_accounting_repair_methodology_note.json"
+    },
+    {
+      "bytes": 307,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/page_accounting_repair_methodology_note.md"
+    },
+    {
+      "bytes": 177,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pay_basis_summary.json"
+    },
+    {
+      "bytes": 260515,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pdf_page_count_conflict_repair_results.csv"
+    },
+    {
+      "bytes": 305665,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pdf_page_count_conflict_repair_results.jsonl"
+    },
+    {
+      "bytes": 400,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pdf_page_count_conflict_repair_summary.json"
+    },
+    {
+      "bytes": 1687,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_claim_linkage_queue.csv"
+    },
+    {
+      "bytes": 2115,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_claim_linkage_queue.jsonl"
+    },
+    {
+      "bytes": 1597,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_manual_narrative_review_queue.csv"
+    },
+    {
+      "bytes": 2025,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_manual_narrative_review_queue.jsonl"
+    },
+    {
+      "bytes": 1622,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_pay_basis_reconciliation_queue.csv"
+    },
+    {
+      "bytes": 2050,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_pay_basis_reconciliation_queue.jsonl"
+    },
+    {
+      "bytes": 1582,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_period_reconciliation_queue.csv"
+    },
+    {
+      "bytes": 2010,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_period_reconciliation_queue.jsonl"
+    },
+    {
+      "bytes": 1597,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_side_reconciliation_queue.csv"
+    },
+    {
+      "bytes": 2025,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/pending_side_reconciliation_queue.jsonl"
+    },
+    {
+      "bytes": 4747,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/period_coverage_summary.json"
+    },
+    {
+      "bytes": 178,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/post_interpretation_storage_hold_recovery_strategy.json"
+    },
+    {
+      "bytes": 176,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/post_interpretation_storage_hold_recovery_strategy.md"
+    },
+    {
+      "bytes": 834,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/quality_gate_results.json"
+    },
+    {
+      "bytes": 691,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/quality_gate_results.md"
+    },
+    {
+      "bytes": 3946,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/raw_field_span_shard_hash_manifest.json"
+    },
+    {
+      "bytes": 4232,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/raw_field_span_shard_manifest.json"
+    },
+    {
+      "bytes": 407,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/raw_to_compacted_record_flow_summary.json"
+    },
+    {
+      "bytes": 55,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/rule_error_summary.json"
+    },
+    {
+      "bytes": 147,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/rule_level_error_summary.json"
+    },
+    {
+      "bytes": 7275,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/rule_yield_summary.json"
+    },
+    {
+      "bytes": 670041,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_adjudication.csv"
+    },
+    {
+      "bytes": 1531422,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_adjudication.jsonl"
+    },
+    {
+      "bytes": 522,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_design.json"
+    },
+    {
+      "bytes": 484267,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_records.csv"
+    },
+    {
+      "bytes": 926222,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_records.jsonl"
+    },
+    {
+      "bytes": 1678,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_summary.json"
+    },
+    {
+      "bytes": 1700,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/sampled_qa_summary.md"
+    },
+    {
+      "bytes": 128,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/side_hint_summary.json"
+    },
+    {
+      "bytes": 89,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/source_coordinate_compaction_summary.json"
+    },
+    {
+      "bytes": 3,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/source_quality_yield_summary.json"
+    },
+    {
+      "bytes": 69216,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/staged_file_audit.json"
+    },
+    {
+      "bytes": 635,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/state_coverage_summary.json"
+    },
+    {
+      "bytes": 111,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/storage_capacity_hold_preservation_summary.md"
+    },
+    {
+      "bytes": 304,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/structural_duplicate_suppression_summary.json"
+    },
+    {
+      "bytes": 635,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/superseded_rule_output_manifest.json"
+    },
+    {
+      "bytes": 1687,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/unresolved_observation_claim_linkage_queue.csv"
+    },
+    {
+      "bytes": 2115,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/unresolved_observation_claim_linkage_queue.jsonl"
+    },
+    {
+      "bytes": 1,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/unresolved_pdf_page_count_conflict_queue.csv"
+    },
+    {
+      "bytes": 0,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/unresolved_pdf_page_count_conflict_queue.jsonl"
+    },
+    {
+      "bytes": 2793,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/validation_report.json"
+    },
+    {
+      "bytes": 2509,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/validation_report.md"
+    },
+    {
+      "bytes": 454,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/whole_corpus_scale_summary_for_report_revised.md"
+    },
+    {
+      "bytes": 1537,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/within_source_repeat_links.csv"
+    },
+    {
+      "bytes": 1787,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/within_source_repeat_links.jsonl"
+    },
+    {
+      "bytes": 1527,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/writeoff_boilerplate_queue.csv"
+    },
+    {
+      "bytes": 1955,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/writeoff_boilerplate_queue.jsonl"
+    },
+    {
+      "bytes": 3067,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/writeoff_duplicate_queue.csv"
+    },
+    {
+      "bytes": 4005,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/writeoff_duplicate_queue.jsonl"
+    },
+    {
+      "bytes": 1462,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/writeoff_irrelevant_queue.csv"
+    },
+    {
+      "bytes": 1890,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/writeoff_irrelevant_queue.jsonl"
+    },
+    {
+      "bytes": 1905,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/master_run_state.json"
+    },
+    {
+      "bytes": 251,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/master_stage_checkpoint.json"
+    },
+    {
+      "bytes": 244721,
+      "path": "docs/dashboard/data/project_phase_summary.json"
+    },
+    {
+      "bytes": 136786,
+      "path": "scripts/run_external_data_deterministic_classification_ingestion_prep.py"
+    }
+  ],
+  "forbidden_staged_files": [],
+  "passed": true,
+  "staged_file_count": 243
+}

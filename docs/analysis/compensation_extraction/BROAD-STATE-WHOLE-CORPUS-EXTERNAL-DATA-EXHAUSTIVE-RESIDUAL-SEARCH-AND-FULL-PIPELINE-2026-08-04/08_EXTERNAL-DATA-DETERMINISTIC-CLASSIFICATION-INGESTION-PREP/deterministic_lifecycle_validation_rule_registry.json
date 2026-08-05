@@ -1,0 +1,21 @@
+{
+  "requirement": "explicit verb plus local compensation/administrative object context",
+  "statuses": [
+    "adopted",
+    "amended",
+    "appropriated",
+    "approved",
+    "expired",
+    "implemented",
+    "negotiated",
+    "paid",
+    "payroll_effective",
+    "proposed",
+    "ratified",
+    "recommended",
+    "rejected",
+    "tentative",
+    "unclear"
+  ],
+  "version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation"
+}

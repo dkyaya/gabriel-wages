@@ -4,11 +4,24 @@
   "actual_scout_coverage_rate_percent": 99.9579,
   "actual_scout_covered_municipalities": 35574,
   "available_external_ambiguous_review_records": 2203064,
+  "available_external_boilerplate_structural_writeoffs": 3139445,
+  "available_external_claim_family_links": 537370,
   "available_external_claim_links_reconstructed": 0,
   "available_external_claim_links_unresolved_payloads": 13943,
+  "available_external_classification_ambiguities": 3044046,
+  "available_external_classification_compaction_complete": true,
+  "available_external_classification_conflicts": 266890,
+  "available_external_classification_gabriel_scoring_used": false,
+  "available_external_classification_normalization_matching_used": false,
+  "available_external_classification_ocr_used": false,
   "available_external_classification_ready_payloads": 13931,
+  "available_external_classification_wage_gap_or_causal_estimate_used": false,
+  "available_external_classification_writeoffs": 3139445,
+  "available_external_classified_evidence_spans": 1781186,
+  "available_external_compact_administrative_observations": 1876183,
   "available_external_conflict_records": 0,
-  "available_external_current_stage": "external administrative deterministic field/span extraction complete",
+  "available_external_corroboration_groups": 34225,
+  "available_external_current_stage": "external administrative observation compaction and classification complete",
   "available_external_data_actionable_candidate_rows": 62139,
   "available_external_data_blocked_auth_captcha_count": 4509,
   "available_external_data_candidate_review_complete": true,
@@ -115,6 +128,8 @@
   "available_external_data_verification_request_count": 83307,
   "available_external_data_verification_retry_count": 4535,
   "available_external_evidence_spans": 4289437,
+  "available_external_exact_claim_id_links": 382771,
+  "available_external_exact_duplicates_removed": 0,
   "available_external_extraction_compressed_bytes": 716870783,
   "available_external_extraction_gabriel_calls": 0,
   "available_external_extraction_html_table_rows": 1017511,
@@ -153,8 +168,40 @@
   "available_external_field_span_payloads_processed": 14160,
   "available_external_field_span_ready_payloads": 14160,
   "available_external_implementation_event_deduplication_rerun": false,
+  "available_external_ingestion_ready_observations": 1876183,
+  "available_external_labels_headers_mentions_excluded": 2446555,
+  "available_external_lifecycle_status_counts": {
+    "adopted": 222,
+    "amended": 38,
+    "appropriated": 3,
+    "approved": 24,
+    "implemented": 1,
+    "negotiated": 38,
+    "paid": 77,
+    "proposed": 106,
+    "recommended": 4,
+    "tentative": 9,
+    "unclear": 1875661
+  },
   "available_external_native_pdf_pages": 611124,
-  "available_external_next_task": "deterministic external evidence classification and ingestion preparation",
+  "available_external_next_task": "external administrative evidence ingestion and codification",
+  "available_external_observations_by_evidence_quality": {
+    "conflicting_administrative_record": 266890,
+    "direct_official_administrative_record": 751006,
+    "direct_official_structured_record": 366465,
+    "official_administrative_summary": 271577,
+    "official_implementation_record": 145409,
+    "official_schedule_or_policy_record": 74836
+  },
+  "available_external_observations_by_family": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 39083,
+    "tenure_and_progression": 430720
+  },
   "available_external_overtime_records": 5418,
   "available_external_position_reduction_records": 46,
   "available_external_processing_eligibility_counts": {
@@ -164,10 +211,62 @@
     "low_yield_context_only": 191,
     "mixed_structured_and_text_processing_ready": 4849
   },
+  "available_external_quality_gate_results": {
+    "A_source_coordinate_integrity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.995
+    },
+    "B_literal_value_fidelity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.99
+    },
+    "C_boilerplate_suppression_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.97
+    },
+    "D_administrative_observation_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.95
+    },
+    "E_lifecycle_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.95
+    },
+    "F_compaction_correctness": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.97
+    },
+    "G_claim_linkage_precision": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    }
+  },
+  "available_external_raw_field_records_processed": 5558770,
+  "available_external_raw_spans_processed": 4289437,
+  "available_external_sampled_qa_counts": {
+    "ambiguities": 200,
+    "benefits": 100,
+    "conflicts": 150,
+    "contextual": 100,
+    "lifecycle": 100,
+    "observations": 500,
+    "payroll": 100,
+    "schedule": 100,
+    "staffing": 100,
+    "writeoffs": 250
+  },
   "available_external_sources_no_relevant_evidence": 217,
   "available_external_sources_qualitative_only": 12,
   "available_external_sources_with_fields": 13931,
   "available_external_storage_capacity_holds": 7895,
+  "available_external_unresolved_claim_links": 1493412,
   "available_external_unresolved_hosted_search_targets": 12844,
   "available_external_vacancy_records": 10829,
   "bounded_validation_input_candidate_count": 4,
@@ -7009,6 +7108,7 @@
   "whole_corpus_report_selected_example_count": 31,
   "whole_corpus_source_count": 7538,
   "whole_corpus_synthesis_available": true,
-  "whole_corpus_unique_native_pdf_pages": 975977,
+  "whole_corpus_unique_native_pdf_pages": 1029482,
+  "whole_corpus_unresolved_pdf_page_conflicts": 0,
   "zero_candidate_target_count": 2
 }

@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "disjoint": true,
+  "lanes": {
+    "classification_lane_001": {
+      "assignment_cost": 2838620,
+      "payloads": 2801,
+      "raw_fields": 1044036,
+      "raw_spans": 810910,
+      "stagger_seconds": 0
+    },
+    "classification_lane_002": {
+      "assignment_cost": 2838619,
+      "payloads": 2869,
+      "raw_fields": 1038051,
+      "raw_spans": 802532,
+      "stagger_seconds": 120
+    },
+    "classification_lane_003": {
+      "assignment_cost": 2838619,
+      "payloads": 2829,
+      "raw_fields": 1149658,
+      "raw_spans": 900352,
+      "stagger_seconds": 240
+    },
+    "classification_lane_004": {
+      "assignment_cost": 2838619,
+      "payloads": 2830,
+      "raw_fields": 1169757,
+      "raw_spans": 886213,
+      "stagger_seconds": 360
+    },
+    "classification_lane_005": {
+      "assignment_cost": 2838619,
+      "payloads": 2831,
+      "raw_fields": 1157268,
+      "raw_spans": 889430,
+      "stagger_seconds": 480
+    }
+  },
+  "method": "stable_lpt_by_payload_cost"
+}

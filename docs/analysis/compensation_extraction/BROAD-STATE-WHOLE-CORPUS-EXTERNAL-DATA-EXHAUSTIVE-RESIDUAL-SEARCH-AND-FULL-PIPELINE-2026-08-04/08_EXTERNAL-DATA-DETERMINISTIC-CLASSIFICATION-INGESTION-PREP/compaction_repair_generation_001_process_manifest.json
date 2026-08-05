@@ -1,0 +1,34 @@
+{
+  "affected_rule": "anonymous records lacked coordinate discriminator",
+  "launched_at": "2026-08-05T23:49:22.517543+00:00",
+  "repair_version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation",
+  "span_outputs_rerun": false,
+  "superseded_metadata_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/superseded_generation_000/tracked_metadata_snapshot",
+  "workers": [
+    {
+      "lane_id": "classification_lane_001",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_001_compaction_repair.log",
+      "pid": 40139
+    },
+    {
+      "lane_id": "classification_lane_002",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_002_compaction_repair.log",
+      "pid": 40140
+    },
+    {
+      "lane_id": "classification_lane_003",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_003_compaction_repair.log",
+      "pid": 40141
+    },
+    {
+      "lane_id": "classification_lane_004",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_004_compaction_repair.log",
+      "pid": 40142
+    },
+    {
+      "lane_id": "classification_lane_005",
+      "log": "tmp/broad_state_whole_corpus_external_data_deterministic_classification_ingestion_prep_2026-08-05_logs/classification_lane_005_compaction_repair.log",
+      "pid": 40143
+    }
+  ]
+}

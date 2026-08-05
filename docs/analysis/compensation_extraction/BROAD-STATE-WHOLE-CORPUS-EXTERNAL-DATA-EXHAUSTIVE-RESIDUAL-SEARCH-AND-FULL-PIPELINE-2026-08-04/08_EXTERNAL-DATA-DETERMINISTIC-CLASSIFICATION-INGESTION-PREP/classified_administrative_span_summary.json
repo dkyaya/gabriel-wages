@@ -1,0 +1,8 @@
+{
+  "count": 1781186,
+  "terminal_counts": {
+    "ambiguity": 2277506,
+    "boilerplate_or_structural_writeoff": 230745,
+    "promoted": 1781186
+  }
+}

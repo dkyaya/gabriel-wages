@@ -1,0 +1,6 @@
+{
+  "cross_source_policy": "link; never physically collapse",
+  "rules": "payload+type+source_coordinates+raw_value+rule_version",
+  "source_local_compaction": "explicit administrative identity+field+literal+period+row",
+  "version": "deterministic-observation-compaction-classification-2026-08-05-v2-anonymous-coordinate-preservation"
+}

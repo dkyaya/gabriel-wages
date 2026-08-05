@@ -1,0 +1,8 @@
+{
+  "count": 3044046,
+  "reasons": {
+    "lifecycle_subject_or_object_not_locally_supported": 839325,
+    "local_text_pattern_requires_review": 431775,
+    "weak_or_ambiguous_extraction_context": 1772946
+  }
+}

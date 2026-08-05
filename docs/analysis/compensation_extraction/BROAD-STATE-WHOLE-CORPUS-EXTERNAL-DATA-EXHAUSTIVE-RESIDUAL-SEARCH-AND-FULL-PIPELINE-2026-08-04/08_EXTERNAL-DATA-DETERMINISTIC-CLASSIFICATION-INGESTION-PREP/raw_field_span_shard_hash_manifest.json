@@ -1,0 +1,74 @@
+{
+  "shards": [
+    {
+      "bytes": 77027377,
+      "lane_id": "classification_lane_001",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_001/raw_fields.jsonl.gz",
+      "record_type": "field",
+      "sha256": "44cb7a24fbfb4eccfc71ab79d4d6b728c57937351f4761c0f0082808a6912bb2"
+    },
+    {
+      "bytes": 104684551,
+      "lane_id": "classification_lane_001",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_001/raw_spans.jsonl.gz",
+      "record_type": "span",
+      "sha256": "dd391976c9c54060482ab5a1fec5b5ffb4f48cfe1a88eab085ee8c842c0c7b95"
+    },
+    {
+      "bytes": 79154312,
+      "lane_id": "classification_lane_002",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_002/raw_fields.jsonl.gz",
+      "record_type": "field",
+      "sha256": "8c70246c8352940c1c79a8c383730cceb7ea935460144b5dd089b601ad20e99c"
+    },
+    {
+      "bytes": 105400982,
+      "lane_id": "classification_lane_002",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_002/raw_spans.jsonl.gz",
+      "record_type": "span",
+      "sha256": "ace8dab7606453a1b982b4da845b7052ec3d9447cf6467b3af9f00be620498af"
+    },
+    {
+      "bytes": 88787234,
+      "lane_id": "classification_lane_003",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_003/raw_fields.jsonl.gz",
+      "record_type": "field",
+      "sha256": "87be48b8aed3169fa51dd4ee3179afde7175050abedb7b6e9e930317b57233ba"
+    },
+    {
+      "bytes": 114999154,
+      "lane_id": "classification_lane_003",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_003/raw_spans.jsonl.gz",
+      "record_type": "span",
+      "sha256": "41ac4ced6c9798549075b6b64ef49be02b02301e42b71cb1c0a90676b205ba79"
+    },
+    {
+      "bytes": 89855153,
+      "lane_id": "classification_lane_004",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_004/raw_fields.jsonl.gz",
+      "record_type": "field",
+      "sha256": "a535317e17e70170dc8a7e0f057942b008074620db55a6df98c4dc8b1d4ca403"
+    },
+    {
+      "bytes": 110609853,
+      "lane_id": "classification_lane_004",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_004/raw_spans.jsonl.gz",
+      "record_type": "span",
+      "sha256": "f8b1b0bfe2bb23f66ad076e7d1ce8f15fc802820a2d0ff12474036febacf50ad"
+    },
+    {
+      "bytes": 87629965,
+      "lane_id": "classification_lane_005",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_005/raw_fields.jsonl.gz",
+      "record_type": "field",
+      "sha256": "462a779eff611400abe0256d4ada6e9ed24aadcf387c3a525fb600674d6d28be"
+    },
+    {
+      "bytes": 108617357,
+      "lane_id": "classification_lane_005",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/raw_inputs/classification_lane_005/raw_spans.jsonl.gz",
+      "record_type": "span",
+      "sha256": "66ed6ed9b812fe2565f8c5beba3e091c01ae8c18556cc7b575ffdd3841bfa7f1"
+    }
+  ]
+}
