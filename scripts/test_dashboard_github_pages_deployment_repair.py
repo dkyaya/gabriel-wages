@@ -161,7 +161,33 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/"
             "broad_state_whole_corpus_external_data_hosted_search_summary.json"
         )
-        if whole_corpus_external_scout_summary.exists() and json.loads(
+        available_external_verification_summary = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/"
+            "03_EXTERNAL-DATA-VERIFICATION/full_external_data_verification_summary.json"
+        )
+        if available_external_verification_summary.exists() and json.loads(
+            available_external_verification_summary.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_available_external_data_verification_complete",
+            )
+            self.assertEqual(phase["available_external_data_actionable_candidate_rows"], 62139)
+            self.assertEqual(phase["available_external_data_unique_canonical_locator_count"], 62117)
+            self.assertEqual(phase["available_external_data_source_review_ready_count"], 49294)
+            self.assertEqual(phase["unresolved_hosted_search_target_count"], 12844)
+            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+            self.assertTrue(phase["available_external_data_verification_performed"])
+            self.assertFalse(phase["available_external_data_downloads_performed"])
+            self.assertFalse(phase["final_visual_report_created"])
+        elif whole_corpus_external_scout_summary.exists() and json.loads(
             whole_corpus_external_scout_summary.read_text()
         ).get("decision") == (
             "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready"
@@ -820,7 +846,26 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(whole_corpus_external_scout_summary.read_text()).get("decision")
                                                                             == "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready"
                                                                         )
-                                                                        if whole_corpus_external_scout_complete:
+                                                                        available_external_verification_complete = (
+                                                                            available_external_verification_summary.exists()
+                                                                            and json.loads(available_external_verification_summary.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready"
+                                                                        )
+                                                                        if available_external_verification_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Available external-data verification complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
+                                                                            )
+                                                                            self.assertEqual(phase["available_external_data_actionable_candidate_rows"], 62139)
+                                                                            self.assertEqual(phase["available_external_data_unique_canonical_locator_count"], 62117)
+                                                                            self.assertEqual(phase["available_external_data_source_review_ready_count"], 49294)
+                                                                            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+                                                                            self.assertFalse(phase["available_external_data_downloads_performed"])
+                                                                        elif whole_corpus_external_scout_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Targeted external-data hosted-search scout complete",
