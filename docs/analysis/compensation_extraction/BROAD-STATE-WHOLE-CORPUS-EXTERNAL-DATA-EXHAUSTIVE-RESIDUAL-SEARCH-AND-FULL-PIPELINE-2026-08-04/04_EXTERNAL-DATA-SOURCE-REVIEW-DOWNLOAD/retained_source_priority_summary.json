@@ -1,0 +1,25 @@
+{
+  "grouping_field": "final_priority_bucket",
+  "groups": {
+    "high": {
+      "bytes": 31416309477,
+      "count": 22510,
+      "retained_or_duplicate": 14805
+    },
+    "low": {
+      "bytes": 152870905,
+      "count": 25441,
+      "retained_or_duplicate": 53
+    },
+    "medium": {
+      "bytes": 593094565,
+      "count": 863,
+      "retained_or_duplicate": 234
+    },
+    "repaired": {
+      "bytes": 49979667,
+      "count": 480,
+      "retained_or_duplicate": 173
+    }
+  }
+}

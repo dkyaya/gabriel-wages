@@ -1,0 +1,45 @@
+{
+  "grouping_field": "side_scope",
+  "groups": {
+    "all_units": {
+      "bytes": 5947735855,
+      "count": 9486,
+      "retained_or_duplicate": 3231
+    },
+    "fire": {
+      "bytes": 3350370402,
+      "count": 4586,
+      "retained_or_duplicate": 1369
+    },
+    "mixed": {
+      "bytes": 52834261,
+      "count": 254,
+      "retained_or_duplicate": 76
+    },
+    "non_safety": {
+      "bytes": 1887437298,
+      "count": 2764,
+      "retained_or_duplicate": 827
+    },
+    "police": {
+      "bytes": 9292876601,
+      "count": 15072,
+      "retained_or_duplicate": 4445
+    },
+    "safety_combined": {
+      "bytes": 23986761,
+      "count": 168,
+      "retained_or_duplicate": 53
+    },
+    "side_independent": {
+      "bytes": 2704545817,
+      "count": 3836,
+      "retained_or_duplicate": 1291
+    },
+    "unclear": {
+      "bytes": 9861797086,
+      "count": 14475,
+      "retained_or_duplicate": 4478
+    }
+  }
+}

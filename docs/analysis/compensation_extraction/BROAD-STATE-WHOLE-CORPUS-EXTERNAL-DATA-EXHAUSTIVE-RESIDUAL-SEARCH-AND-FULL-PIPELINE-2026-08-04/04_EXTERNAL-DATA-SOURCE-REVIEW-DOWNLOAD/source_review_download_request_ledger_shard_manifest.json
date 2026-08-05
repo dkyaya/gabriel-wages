@@ -1,0 +1,77 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "source_review_download_request_ledger.csv",
+      "csv_bytes": 3102076,
+      "csv_sha256": "e93fffe49d62d83c8ad4f4fe301bbe3b4adfe6420e25fac2b364a471297c1013",
+      "jsonl": "source_review_download_request_ledger.jsonl",
+      "jsonl_bytes": 5485532,
+      "jsonl_sha256": "790a8a16896123b13ad816d711464ecceb6eff826b2ea63f05971032699fef37",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "source_review_download_request_ledger.part-002.csv",
+      "csv_bytes": 3204116,
+      "csv_sha256": "0927526f4fe3973f42fc58fc31c9730490ee57623b1a22dbc79d7c90b7206989",
+      "jsonl": "source_review_download_request_ledger.part-002.jsonl",
+      "jsonl_bytes": 5586830,
+      "jsonl_sha256": "5cb12ee5607d8d30e0911629ceedf921eb0dc1e14ab1af304e60d588a37f7f48",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "source_review_download_request_ledger.part-003.csv",
+      "csv_bytes": 3175441,
+      "csv_sha256": "21ffe4539d9a6c7c5fc7e871dfaf8d4e243688aa280d9fbbac58d5ef5c62d68b",
+      "jsonl": "source_review_download_request_ledger.part-003.jsonl",
+      "jsonl_bytes": 5558605,
+      "jsonl_sha256": "577d453f49278bda32dba15c2a1405fa145b28437f7d4101a7417a2814b92e4e",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "source_review_download_request_ledger.part-004.csv",
+      "csv_bytes": 3120017,
+      "csv_sha256": "da212ba28d9bb846e41875ddc39abca3f30217a0a426d3c05bd2cc61ce3472d5",
+      "jsonl": "source_review_download_request_ledger.part-004.jsonl",
+      "jsonl_bytes": 5503227,
+      "jsonl_sha256": "912645acd7306b243cfaa83e2496ce2664559d24975faabc6ad79343afabd397",
+      "part": 4,
+      "rows": 8000
+    },
+    {
+      "csv": "source_review_download_request_ledger.part-005.csv",
+      "csv_bytes": 3422963,
+      "csv_sha256": "dc87986ce4643aed69649e83cd007d9d13b098cf7759f17e5ba9c870ab186416",
+      "jsonl": "source_review_download_request_ledger.part-005.jsonl",
+      "jsonl_bytes": 5806085,
+      "jsonl_sha256": "e87aa71b36553e327697671a22606f79a6334888b8b318680580a7a0955ddd9d",
+      "part": 5,
+      "rows": 8000
+    },
+    {
+      "csv": "source_review_download_request_ledger.part-006.csv",
+      "csv_bytes": 3236324,
+      "csv_sha256": "47d2087b66e821e90e0dea742811451a337724da3a48b7c9b4d034f3144719bb",
+      "jsonl": "source_review_download_request_ledger.part-006.jsonl",
+      "jsonl_bytes": 5619408,
+      "jsonl_sha256": "80207cdb31002906d0bc2a9f72c3751687232b0d9f950931260948833a86b692",
+      "part": 6,
+      "rows": 8000
+    },
+    {
+      "csv": "source_review_download_request_ledger.part-007.csv",
+      "csv_bytes": 783777,
+      "csv_sha256": "f652b72365ee0c6aac8751a700f6d8f8d993e8d687410c1476e964fe02d07b14",
+      "jsonl": "source_review_download_request_ledger.part-007.jsonl",
+      "jsonl_bytes": 1336825,
+      "jsonl_sha256": "0c06b39c1ef3de316eb979a111fb45b059f4a7279459b2f8182fd81fd3285831",
+      "part": 7,
+      "rows": 1861
+    }
+  ],
+  "sharded": true,
+  "total_rows": 49861
+}

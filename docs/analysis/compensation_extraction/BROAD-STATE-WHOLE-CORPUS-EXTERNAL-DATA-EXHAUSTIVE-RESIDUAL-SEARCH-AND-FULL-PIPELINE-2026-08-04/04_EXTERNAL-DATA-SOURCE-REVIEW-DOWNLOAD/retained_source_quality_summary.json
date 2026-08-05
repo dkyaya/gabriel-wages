@@ -1,0 +1,35 @@
+{
+  "grouping_field": "source_quality",
+  "groups": {
+    "direct_official_administrative_record": {
+      "bytes": 29902216211,
+      "count": 8771,
+      "retained_or_duplicate": 5887
+    },
+    "navigation_or_shell": {
+      "bytes": 0,
+      "count": 230,
+      "retained_or_duplicate": 0
+    },
+    "official_administrative_summary": {
+      "bytes": 2310038403,
+      "count": 14389,
+      "retained_or_duplicate": 9378
+    },
+    "reputable_secondary_context": {
+      "bytes": 0,
+      "count": 24569,
+      "retained_or_duplicate": 0
+    },
+    "unclear": {
+      "bytes": 0,
+      "count": 1321,
+      "retained_or_duplicate": 0
+    },
+    "weak_secondary_context": {
+      "bytes": 0,
+      "count": 14,
+      "retained_or_duplicate": 0
+    }
+  }
+}

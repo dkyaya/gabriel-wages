@@ -20981,6 +20981,59 @@ def main() -> int:
                 }
             )
 
+    # Source review/download advances only after all locator-level outcomes and
+    # local-artifact pointers validate. Payload bodies remain in ignored local
+    # storage; the dashboard receives compact counts and readiness status only.
+    available_source_review_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04"
+        / "04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD"
+    )
+    available_source_review_path = (
+        available_source_review_dir
+        / "dashboard_external_data_source_review_update_summary.json"
+    )
+    available_source_review_validation_path = available_source_review_dir / "validation_report.json"
+    if available_source_review_path.is_file() and available_source_review_validation_path.is_file():
+        available_source_review = read_json(available_source_review_path)
+        available_source_review_validation = read_json(available_source_review_validation_path)
+        if available_source_review_validation.get("passed") is True:
+            project_phase_summary.update(
+                {
+                    "current_phase": "Available external-data source review and download complete",
+                    "stage": "broad_state_whole_corpus_available_external_data_source_review_complete",
+                    "current_phase_code": available_source_review["decision"],
+                    "current_evidence_status": "available_external_sources_retained_readiness_pending",
+                    "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-READINESS-2026-08-05",
+                    "available_external_data_source_review_complete": True,
+                    "available_external_data_source_review_ready_count": available_source_review["verified_source_review_ready_locators"],
+                    "available_external_data_sources_processed": available_source_review["sources_processed"],
+                    "available_external_data_retained_source_count": available_source_review["retained_source_count"],
+                    "available_external_data_retained_total_bytes": available_source_review["retained_total_bytes"],
+                    "available_external_data_retained_type_counts": available_source_review["retained_type_counts"],
+                    "available_external_data_exact_payload_duplicate_count": available_source_review["exact_payload_duplicates"],
+                    "available_external_data_known_prior_reuse_count": available_source_review["known_prior_reuses"],
+                    "available_external_data_navigation_shell_exclusions": available_source_review["navigation_shell_exclusions"],
+                    "available_external_data_context_only_deferrals": available_source_review["context_only_deferrals"],
+                    "available_external_data_restricted_unavailable": available_source_review["restricted_unavailable"],
+                    "available_external_data_oversized_deferrals": available_source_review["oversized_deferrals"],
+                    "available_external_data_manual_review_holds": available_source_review["manual_review_holds"],
+                    "available_external_data_storage_capacity_holds": available_source_review["storage_capacity_holds"],
+                    "available_external_data_corrupt_unsupported_quarantine": available_source_review["corrupt_unsupported_quarantine"],
+                    "available_external_data_readiness_queue_count": available_source_review["readiness_queue_count"],
+                    "unresolved_hosted_search_target_count": available_source_review["unresolved_hosted_search_targets"],
+                    "available_external_data_downloads_performed": True,
+                    "candidate_source_download_performed": True,
+                    "candidate_source_review_performed": True,
+                    "available_external_data_gabriel_scoring_used": False,
+                    "candidate_text_extraction_performed": False,
+                    "implementation_event_deduplication_rerun_for_external_source_review": False,
+                    "final_visual_report_created": False,
+                    "dashboard_map_primary_metric": "scout_coverage_rate",
+                }
+            )
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),

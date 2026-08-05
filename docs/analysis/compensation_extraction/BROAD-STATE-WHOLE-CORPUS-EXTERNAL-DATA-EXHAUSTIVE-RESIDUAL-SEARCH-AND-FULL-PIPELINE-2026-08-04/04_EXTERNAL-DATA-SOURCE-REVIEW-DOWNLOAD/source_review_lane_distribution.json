@@ -1,0 +1,84 @@
+{
+  "disjoint": true,
+  "lanes": {
+    "source_review_lane_001": {
+      "count": 9865,
+      "host_count": 2061,
+      "priority_counts": {
+        "high": 2171,
+        "low": 7532,
+        "medium": 86,
+        "repaired": 76
+      },
+      "stagger_minutes": 0,
+      "type_counts": {
+        "document": 1549,
+        "html": 8315,
+        "structured": 1
+      }
+    },
+    "source_review_lane_002": {
+      "count": 9855,
+      "host_count": 2168,
+      "priority_counts": {
+        "high": 4853,
+        "low": 4688,
+        "medium": 221,
+        "repaired": 93
+      },
+      "stagger_minutes": 8,
+      "type_counts": {
+        "document": 3503,
+        "html": 6352
+      }
+    },
+    "source_review_lane_003": {
+      "count": 9859,
+      "host_count": 2170,
+      "priority_counts": {
+        "high": 4984,
+        "low": 4589,
+        "medium": 192,
+        "repaired": 94
+      },
+      "stagger_minutes": 16,
+      "type_counts": {
+        "document": 3168,
+        "html": 6668,
+        "structured": 23
+      }
+    },
+    "source_review_lane_004": {
+      "count": 9859,
+      "host_count": 2170,
+      "priority_counts": {
+        "high": 5172,
+        "low": 4385,
+        "medium": 185,
+        "repaired": 117
+      },
+      "stagger_minutes": 24,
+      "type_counts": {
+        "document": 3110,
+        "html": 6740,
+        "structured": 9
+      }
+    },
+    "source_review_lane_005": {
+      "count": 9856,
+      "host_count": 2169,
+      "priority_counts": {
+        "high": 5330,
+        "low": 4247,
+        "medium": 179,
+        "repaired": 100
+      },
+      "stagger_minutes": 32,
+      "type_counts": {
+        "document": 3693,
+        "html": 6163
+      }
+    }
+  },
+  "total": 49294
+}

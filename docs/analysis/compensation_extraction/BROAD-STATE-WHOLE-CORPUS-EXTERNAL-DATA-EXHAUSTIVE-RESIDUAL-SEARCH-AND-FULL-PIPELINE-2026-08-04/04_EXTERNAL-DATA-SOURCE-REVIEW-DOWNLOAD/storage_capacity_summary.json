@@ -1,0 +1,18 @@
+{
+  "available_bytes": 55257997312,
+  "available_bytes_after": 19154583552,
+  "bounded_retained_quota_bytes": 32212254720,
+  "capacity_plan": "Content-addressed deduplication; high-value-first lane order; 30 GiB retained ceiling; 15 GiB free-space reserve; explicit manual-review holds if cumulative capacity prevents retention.",
+  "completed_at": "2026-08-05T18:10:32.022267+00:00",
+  "created_at": "2026-08-05T16:48:59.481595+00:00",
+  "existing_retained_source_bytes": 22299234867,
+  "known_content_length_rows": 29513,
+  "known_content_length_sum_bytes": 70470287676,
+  "minimum_free_bytes": 16106127360,
+  "passed": true,
+  "quota_state_retained_bytes": 32212254614,
+  "retained_bytes": 32212254614,
+  "storage_capacity_holds": 7895,
+  "unconstrained_projection_exceeds_available": true,
+  "unknown_content_length_rows": 19781
+}

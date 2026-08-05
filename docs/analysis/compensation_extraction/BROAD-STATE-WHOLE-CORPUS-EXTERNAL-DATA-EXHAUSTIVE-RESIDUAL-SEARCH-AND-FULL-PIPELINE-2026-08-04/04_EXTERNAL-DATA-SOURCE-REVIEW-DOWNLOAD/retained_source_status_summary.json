@@ -1,0 +1,20 @@
+{
+  "captcha_or_bot_protection": 196,
+  "corrupt_or_broken": 79,
+  "download_timeout_retry_exhausted": 116,
+  "duplicate_exact_payload": 552,
+  "duplicate_known_retained_source": 264,
+  "generic_portal_without_direct_evidence": 6,
+  "manual_review_hold": 7895,
+  "navigation_or_index_only": 16,
+  "private_or_commercial_source": 14,
+  "restricted_or_login_required": 983,
+  "retained_csv": 17,
+  "retained_html": 8947,
+  "retained_pdf": 5484,
+  "retained_text": 1,
+  "secondary_context_only_deferred": 24569,
+  "shell_or_placeholder": 12,
+  "unavailable_on_download": 142,
+  "unsupported_file_type": 1
+}

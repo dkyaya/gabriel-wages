@@ -1,0 +1,2 @@
+{"at":"2026-08-05T18:10:32.024886+00:00","details":"Nine XLS locators remained in the authoritative direct-document route while execution balancing used their detected spreadsheet type; no locator, lane, or outcome changed.","incident":"verification_route_execution_label_reconciled","severity":"informational"}
+{"at":"2026-08-05T18:10:32.024891+00:00","count":7895,"details":"Rows received terminal manual-review holds rather than violating the retained-payload quota or minimum free-space reserve.","incident":"bounded_storage_capacity_holds","severity":"bounded_partial"}

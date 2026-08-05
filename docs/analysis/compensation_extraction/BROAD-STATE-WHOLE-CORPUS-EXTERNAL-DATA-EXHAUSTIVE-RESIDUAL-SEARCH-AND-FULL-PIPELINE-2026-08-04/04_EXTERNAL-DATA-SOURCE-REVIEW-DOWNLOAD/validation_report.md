@@ -1,0 +1,51 @@
+# Source-review/download validation
+
+- PASS — coverage map scout
+- PASS — dashboard assets intact
+- PASS — direct 15032
+- PASS — distinct event sources preserved
+- PASS — duplicate links preserved
+- PASS — exact payloads stored once
+- PASS — extracted root ignored
+- PASS — five lanes complete
+- PASS — five lanes disjoint
+- PASS — html 34238
+- PASS — implementation event dedup not rerun
+- PASS — input 49294
+- PASS — known prior reuse documented
+- PASS — local artifact storage pass
+- PASS — locked unique
+- PASS — no analytical text extraction
+- PASS — no binary payload staged
+- PASS — no causal effect claim
+- PASS — no field table extraction
+- PASS — no final visual documents
+- PASS — no full html staged
+- PASS — no gabriel
+- PASS — no hosted search
+- PASS — no normalization matching
+- PASS — no ocr
+- PASS — no prevalence estimate
+- PASS — no regression treatment
+- PASS — no retained payload staged
+- PASS — no uncontrolled retries
+- PASS — no wage gap estimate
+- PASS — nonready queues separate
+- PASS — one terminal status each
+- PASS — partial downloads clean
+- PASS — priority counts reconcile
+- PASS — readiness only accepted
+- PASS — request ledger reconciles
+- PASS — retained hashes present
+- PASS — retained lineage present
+- PASS — retained local paths valid
+- PASS — retained root ignored
+- PASS — retained size type present
+- PASS — retry ledger reconciles
+- PASS — storage capacity pass
+- PASS — structured 24
+- PASS — structured root ignored
+- PASS — unresolved 12844 preserved
+- PASS — versions not improperly collapsed
+- PASS — staged file audit passed
+- PASS — large file audit passed

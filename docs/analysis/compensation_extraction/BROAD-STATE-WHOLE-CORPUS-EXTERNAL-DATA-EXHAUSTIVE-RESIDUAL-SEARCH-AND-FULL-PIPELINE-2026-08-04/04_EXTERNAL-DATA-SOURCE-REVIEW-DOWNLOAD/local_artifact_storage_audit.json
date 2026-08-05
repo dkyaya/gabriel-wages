@@ -1,0 +1,11 @@
+{
+  "artifact_root": "artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04",
+  "audited_at": "2026-08-05T18:11:06.352190+00:00",
+  "git_ignored": true,
+  "hash_and_size_reconciliation": true,
+  "local_payload_count": 14449,
+  "manifest_file_count": 14449,
+  "partial_download_count": 0,
+  "passed": true,
+  "retained_bytes": 32212254614
+}

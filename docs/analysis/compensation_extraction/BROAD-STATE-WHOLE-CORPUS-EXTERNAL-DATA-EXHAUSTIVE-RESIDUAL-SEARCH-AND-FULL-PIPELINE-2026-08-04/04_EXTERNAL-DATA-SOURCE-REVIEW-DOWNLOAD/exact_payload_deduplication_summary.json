@@ -1,0 +1,6 @@
+{
+  "duplicate_payload_bytes_avoided": 1762277662,
+  "exact_payload_duplicates": 552,
+  "known_prior_reuses": 264,
+  "unique_payloads": 14449
+}

@@ -1,0 +1,83 @@
+{
+  "hashing_worked": true,
+  "navigation_rejection_rule_confirmed": true,
+  "partial_downloads_remaining": 0,
+  "passed": true,
+  "probe_count": 7,
+  "probes": [
+    {
+      "bounded_hash": "0866fe01f43204f18df314bcc0a0f67be022dbf0a70dac736ac7edcfb42fa97a",
+      "bytes_observed": 65536,
+      "detected_type": "pdf",
+      "http_status": 206,
+      "partial_file_cleaned": true,
+      "probe_type": "pdf",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-466b473a9d8a21526eb30d5c"
+    },
+    {
+      "bounded_hash": "263178a8d45d50241ada7b0825029aeef48b090554efc7d10d55325f5277c35d",
+      "bytes_observed": 8421,
+      "detected_type": "html",
+      "http_status": 206,
+      "partial_file_cleaned": true,
+      "probe_type": "html",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-d4e86c639c5ea1577a0d6d03"
+    },
+    {
+      "bounded_hash": "7d7d9861bef152629ccb9d89fcaf47ce33878fa1a221622c7dd49a9cdea4077f",
+      "bytes_observed": 5512,
+      "detected_type": "html",
+      "http_status": 403,
+      "partial_file_cleaned": true,
+      "probe_type": "csv",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-df6efae9ee33f59744c04c5d"
+    },
+    {
+      "bounded_hash": "c68caf7b5c94fc723ff76f96dd13f90349940415cb708a3ebd5c520f549b1b45",
+      "bytes_observed": 65536,
+      "detected_type": "xls",
+      "http_status": 200,
+      "partial_file_cleaned": true,
+      "probe_type": "xls",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-dedb7ca48b3526a0ebf116ed"
+    },
+    {
+      "bounded_hash": "bfc410df36cca8cd68fc5f0927fdf68cbfce23f65002aa27ddf4877a1289b0fc",
+      "bytes_observed": 9089,
+      "detected_type": "xml",
+      "http_status": 200,
+      "partial_file_cleaned": true,
+      "probe_type": "xml",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-17e038a5d0e4a89013ee5d3a"
+    },
+    {
+      "bounded_hash": "cf2f54afd61b4b3c496add230a6d34e43a4594fc7ee176753c241cb62835f2b0",
+      "bytes_observed": 65536,
+      "detected_type": "html",
+      "http_status": 200,
+      "partial_file_cleaned": true,
+      "probe_type": "html",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-665818df85dc822ed257ff29"
+    },
+    {
+      "bounded_hash": "b46c24950eb2f2b4a478853db633306cf152ce4c638f8bbf8cc0852e1bec1f0b",
+      "bytes_observed": 65536,
+      "detected_type": "html",
+      "http_status": 200,
+      "partial_file_cleaned": true,
+      "probe_type": "html",
+      "retained_payload_created": false,
+      "source_review_id": "EXTSRCREV-34292da078102faaf2dd5049"
+    }
+  ],
+  "production_navigation_or_shell_rejections_observed": 34,
+  "retained_files_created": 0,
+  "tested_at": "2026-08-05T16:55:32.637495+00:00",
+  "updated_at_finalize": "2026-08-05T18:10:31.446560+00:00"
+}

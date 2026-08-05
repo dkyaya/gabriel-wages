@@ -1,0 +1,3 @@
+# Available external-data source review and download
+
+Decision: `broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready`. Five lanes processed all 49,294 verified source-review-ready locators. The run retained 14,449 unique content-addressed payloads totaling 32,212,254,614 bytes and produced 14,703 canonical readiness rows. Exact duplicate payloads were stored once; retained payloads remain only in ignored local artifact storage. No hosted search, GABRIEL, OCR, analytical extraction, normalization, matching, implementation-event deduplication, or final analysis occurred.

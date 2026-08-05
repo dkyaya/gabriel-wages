@@ -1,0 +1,50 @@
+{
+  "grouping_field": "primary_content_family",
+  "groups": {
+    "benefits_and_total_compensation": {
+      "bytes": 527638131,
+      "count": 1141,
+      "retained_or_duplicate": 428
+    },
+    "contextual_controls": {
+      "bytes": 100971217,
+      "count": 910,
+      "retained_or_duplicate": 436
+    },
+    "implementation_confirmation": {
+      "bytes": 884524845,
+      "count": 5521,
+      "retained_or_duplicate": 1578
+    },
+    "multi_family_administrative_source": {
+      "bytes": 21478492775,
+      "count": 25751,
+      "retained_or_duplicate": 8671
+    },
+    "payroll_and_earnings": {
+      "bytes": 7910800883,
+      "count": 11262,
+      "retained_or_duplicate": 3324
+    },
+    "recruitment_and_retention": {
+      "bytes": 104323982,
+      "count": 621,
+      "retained_or_duplicate": 187
+    },
+    "staffing_and_headcount": {
+      "bytes": 1018812509,
+      "count": 2071,
+      "retained_or_duplicate": 532
+    },
+    "tenure_and_progression": {
+      "bytes": 138463613,
+      "count": 596,
+      "retained_or_duplicate": 80
+    },
+    "unclear": {
+      "bytes": 48226659,
+      "count": 1422,
+      "retained_or_duplicate": 30
+    }
+  }
+}

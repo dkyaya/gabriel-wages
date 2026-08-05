@@ -1,0 +1,47 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "secondary_context_only_deferred_queue.csv",
+      "csv_bytes": 17691515,
+      "csv_sha256": "895af2438c0a401830ea8623141faf4188775e6862cf0e8cea7289c9c9910d97",
+      "jsonl": "secondary_context_only_deferred_queue.jsonl",
+      "jsonl_bytes": 27465362,
+      "jsonl_sha256": "fbbe2400c21b70f8016dd6dc016135ab01f3396fba278a9c61ce3bda2c406ca6",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "secondary_context_only_deferred_queue.part-002.csv",
+      "csv_bytes": 17815274,
+      "csv_sha256": "ec37809b5fb6bdab643827061c35d60a6ff0bf4a5d489af8b1191504bfebee56",
+      "jsonl": "secondary_context_only_deferred_queue.part-002.jsonl",
+      "jsonl_bytes": 27588947,
+      "jsonl_sha256": "eef65538f361c41fc03a7bb46cbbbb6d1ee4d257b95954532c53fb1dd9bd6ba5",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "secondary_context_only_deferred_queue.part-003.csv",
+      "csv_bytes": 17783669,
+      "csv_sha256": "710dd3b891c23f6d9b43ee981c7bb5eb881e6c008c0420daa636ef0e2fdcf073",
+      "jsonl": "secondary_context_only_deferred_queue.part-003.jsonl",
+      "jsonl_bytes": 27557662,
+      "jsonl_sha256": "d804f88d2565fa9b05bd06b88a37927a56e2af359e5510546e2126c4cae4f81b",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "secondary_context_only_deferred_queue.part-004.csv",
+      "csv_bytes": 1263556,
+      "csv_sha256": "5be25be212a8570a79bdd039d70d4044d7dcb7e9471b3df41b0c5f2747eb6ac3",
+      "jsonl": "secondary_context_only_deferred_queue.part-004.jsonl",
+      "jsonl_bytes": 1957784,
+      "jsonl_sha256": "9af4b24d5cdee3bacbd5a2e7b8708f39debb9e6ca9848fb3db92834294c01edd",
+      "part": 4,
+      "rows": 569
+    }
+  ],
+  "sharded": true,
+  "total_rows": 24569
+}

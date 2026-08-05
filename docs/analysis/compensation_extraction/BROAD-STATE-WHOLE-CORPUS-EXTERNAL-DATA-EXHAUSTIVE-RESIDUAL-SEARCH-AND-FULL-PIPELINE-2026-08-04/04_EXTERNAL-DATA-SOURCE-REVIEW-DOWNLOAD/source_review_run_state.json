@@ -1,0 +1,10 @@
+{
+  "completed_count": 49294,
+  "decision": "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready",
+  "input_count": 49294,
+  "readiness_queue_count": 14703,
+  "retained_source_count": 14449,
+  "status": "complete_readiness_ready",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
+  "updated_at": "2026-08-05T18:10:32.023922+00:00"
+}

@@ -1,0 +1,215 @@
+{
+  "grouping_field": "state",
+  "groups": {
+    "AK": {
+      "bytes": 146719481,
+      "count": 308,
+      "retained_or_duplicate": 118
+    },
+    "AL": {
+      "bytes": 183160763,
+      "count": 219,
+      "retained_or_duplicate": 90
+    },
+    "AR": {
+      "bytes": 177703224,
+      "count": 256,
+      "retained_or_duplicate": 85
+    },
+    "CA": {
+      "bytes": 962730915,
+      "count": 1325,
+      "retained_or_duplicate": 368
+    },
+    "CO": {
+      "bytes": 87970045,
+      "count": 133,
+      "retained_or_duplicate": 38
+    },
+    "CT": {
+      "bytes": 255785370,
+      "count": 292,
+      "retained_or_duplicate": 74
+    },
+    "FL": {
+      "bytes": 626920625,
+      "count": 800,
+      "retained_or_duplicate": 251
+    },
+    "GA": {
+      "bytes": 293135569,
+      "count": 382,
+      "retained_or_duplicate": 127
+    },
+    "IA": {
+      "bytes": 644048069,
+      "count": 914,
+      "retained_or_duplicate": 311
+    },
+    "ID": {
+      "bytes": 75327876,
+      "count": 36,
+      "retained_or_duplicate": 8
+    },
+    "IL": {
+      "bytes": 2191153007,
+      "count": 3090,
+      "retained_or_duplicate": 931
+    },
+    "IN": {
+      "bytes": 533963913,
+      "count": 748,
+      "retained_or_duplicate": 225
+    },
+    "KS": {
+      "bytes": 318162021,
+      "count": 638,
+      "retained_or_duplicate": 218
+    },
+    "KY": {
+      "bytes": 259627191,
+      "count": 544,
+      "retained_or_duplicate": 233
+    },
+    "LA": {
+      "bytes": 243379014,
+      "count": 202,
+      "retained_or_duplicate": 99
+    },
+    "MA": {
+      "bytes": 409809159,
+      "count": 550,
+      "retained_or_duplicate": 197
+    },
+    "MD": {
+      "bytes": 24800115,
+      "count": 19,
+      "retained_or_duplicate": 12
+    },
+    "ME": {
+      "bytes": 452673883,
+      "count": 620,
+      "retained_or_duplicate": 262
+    },
+    "MI": {
+      "bytes": 2773343739,
+      "count": 4810,
+      "retained_or_duplicate": 1244
+    },
+    "MN": {
+      "bytes": 3545986122,
+      "count": 4434,
+      "retained_or_duplicate": 1337
+    },
+    "MO": {
+      "bytes": 97486908,
+      "count": 258,
+      "retained_or_duplicate": 84
+    },
+    "MS": {
+      "bytes": 54180250,
+      "count": 17,
+      "retained_or_duplicate": 8
+    },
+    "NC": {
+      "bytes": 904685560,
+      "count": 1167,
+      "retained_or_duplicate": 439
+    },
+    "ND": {
+      "bytes": 127904717,
+      "count": 131,
+      "retained_or_duplicate": 51
+    },
+    "NE": {
+      "bytes": 465971329,
+      "count": 414,
+      "retained_or_duplicate": 212
+    },
+    "NH": {
+      "bytes": 128680810,
+      "count": 253,
+      "retained_or_duplicate": 119
+    },
+    "NJ": {
+      "bytes": 759784485,
+      "count": 2488,
+      "retained_or_duplicate": 586
+    },
+    "NY": {
+      "bytes": 3470106255,
+      "count": 6159,
+      "retained_or_duplicate": 2108
+    },
+    "OH": {
+      "bytes": 5729923129,
+      "count": 8958,
+      "retained_or_duplicate": 2464
+    },
+    "OK": {
+      "bytes": 242947995,
+      "count": 222,
+      "retained_or_duplicate": 89
+    },
+    "OR": {
+      "bytes": 92725723,
+      "count": 35,
+      "retained_or_duplicate": 14
+    },
+    "PA": {
+      "bytes": 981087592,
+      "count": 2494,
+      "retained_or_duplicate": 670
+    },
+    "SC": {
+      "bytes": 81286114,
+      "count": 75,
+      "retained_or_duplicate": 36
+    },
+    "SD": {
+      "bytes": 502392749,
+      "count": 612,
+      "retained_or_duplicate": 236
+    },
+    "TN": {
+      "bytes": 297560659,
+      "count": 494,
+      "retained_or_duplicate": 197
+    },
+    "TX": {
+      "bytes": 1359238750,
+      "count": 1462,
+      "retained_or_duplicate": 473
+    },
+    "UT": {
+      "bytes": 185366867,
+      "count": 84,
+      "retained_or_duplicate": 52
+    },
+    "VA": {
+      "bytes": 203672,
+      "count": 8,
+      "retained_or_duplicate": 3
+    },
+    "VT": {
+      "bytes": 360960781,
+      "count": 331,
+      "retained_or_duplicate": 100
+    },
+    "WA": {
+      "bytes": 127936598,
+      "count": 199,
+      "retained_or_duplicate": 86
+    },
+    "WI": {
+      "bytes": 1950254611,
+      "count": 3042,
+      "retained_or_duplicate": 975
+    },
+    "WV": {
+      "bytes": 87610462,
+      "count": 73,
+      "retained_or_duplicate": 36
+    }
+  }
+}

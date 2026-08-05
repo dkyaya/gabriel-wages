@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "source_review_lane_003_retained_file_ledger.csv",
+      "csv_bytes": 9237977,
+      "csv_sha256": "78d631ce76a873d2a97645408135181cc43254fb2e56172923fc8dafe8e11008",
+      "jsonl": "source_review_lane_003_retained_file_ledger.jsonl",
+      "jsonl_bytes": 14855005,
+      "jsonl_sha256": "a88ecc34fa65282d9fa71c6a49751686139bf6767e4506e0d0ffe124477dba35",
+      "part": 1,
+      "rows": 5087
+    }
+  ],
+  "sharded": false,
+  "total_rows": 5087
+}

@@ -1,0 +1,12 @@
+{
+  "analytical_extraction_runs": 0,
+  "deterministic_local": true,
+  "exact_hash_deduplication": true,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "input": 49294,
+  "lanes": 5,
+  "ocr_runs": 0,
+  "payloads_ignored": true
+}

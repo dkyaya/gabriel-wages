@@ -1,11 +1,13 @@
 {
-  "actionable_candidate_rows": 62139,
-  "decision": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
-  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
-  "source_review_ready_locators": 49294,
-  "stage": "03_EXTERNAL-DATA-VERIFICATION",
-  "status": "complete_source_review_ready",
-  "unique_verified_locators": 62117,
-  "unresolved_hosted_search_targets": 12844,
-  "updated_at": "2026-08-05T16:04:48.886180+00:00"
+  "decision": "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready",
+  "details": {
+    "gabriel_calls": 0,
+    "hosted_search_calls": 0,
+    "readiness_queue_count": 14703,
+    "retained_source_count": 14449,
+    "sources_processed": 49294
+  },
+  "stage": "04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD",
+  "status": "complete",
+  "updated_at": "2026-08-05T18:09:42.301223+00:00"
 }

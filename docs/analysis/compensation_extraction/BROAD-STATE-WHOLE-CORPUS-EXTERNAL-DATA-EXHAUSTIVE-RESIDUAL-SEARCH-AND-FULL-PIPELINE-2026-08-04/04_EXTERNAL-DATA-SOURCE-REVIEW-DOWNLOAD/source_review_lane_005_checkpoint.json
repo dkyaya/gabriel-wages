@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-08-05T18:09:20.039317+00:00",
+  "completed_count": 9856,
+  "lane_id": "source_review_lane_005",
+  "locked_count": 9856,
+  "remaining_count": 0,
+  "request_count": 9946,
+  "retained_or_duplicate_count": 126,
+  "retry_count": 90,
+  "started_at": "2026-08-05T17:27:41.396319+00:00",
+  "status": "complete",
+  "updated_at": "2026-08-05T18:09:20.039328+00:00"
+}

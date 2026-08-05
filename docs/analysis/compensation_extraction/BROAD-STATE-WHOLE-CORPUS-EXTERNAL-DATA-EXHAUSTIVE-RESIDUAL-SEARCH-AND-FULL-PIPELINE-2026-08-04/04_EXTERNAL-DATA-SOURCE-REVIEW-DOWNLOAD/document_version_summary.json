@@ -1,0 +1,6 @@
+{
+  "all_version_payloads_preserved": true,
+  "conservative_no_title_only_collapses": true,
+  "relationship_basis": "same host, normalized path-stem family, and type with differing hashes",
+  "relationships": 720
+}

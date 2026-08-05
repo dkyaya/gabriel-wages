@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-08-05T16:00:29Z",
+  "generated_at": "2026-08-05T18:11:15Z",
   "data_vintage": "2026-08-03",
   "source_files": [
     "docs/analysis/national_scout_coverage_state.csv",
@@ -95,10 +95,10 @@
     "Municipality priority tiers are transparent research-operational heuristics, not claims about unionization, departments, source availability, wage gaps, or causal effects.",
     "The 2,000-municipality checkpoint is a project-management target, not an evidentiary threshold."
   ],
-  "stage": "broad_state_whole_corpus_available_external_data_verification_complete",
-  "current_phase": "Available external-data verification complete",
-  "current_phase_code": "broad_state_whole_corpus_available_external_data_verification_completed_source_review_ready",
-  "current_evidence_status": "available_external_candidate_locators_verified_source_review_pending",
+  "stage": "broad_state_whole_corpus_available_external_data_source_review_complete",
+  "current_phase": "Available external-data source review and download complete",
+  "current_phase_code": "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready",
+  "current_evidence_status": "available_external_sources_retained_readiness_pending",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "broad_state_4x2500_source_review_download_available": true,
@@ -1003,7 +1003,7 @@
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD-2026-08-05",
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-READINESS-2026-08-05",
   "checkpoint_target_scout_covered": 2000,
   "current_scout_covered": 16887,
   "remaining_to_checkpoint": 0,
@@ -6832,7 +6832,7 @@
   "semantic_repair_scaffold_href": "reports/whole_corpus_evidence_semantic_repair_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_semantic_repair_2026-08-04.md",
   "semantic_repair_scaffold_link_label": "Open semantically repaired whole-corpus evidence scaffold (MD)",
   "candidate_verification_performed": false,
-  "candidate_source_download_performed": false,
+  "candidate_source_download_performed": true,
   "candidate_text_extraction_performed": false,
   "candidate_rating_performed": false,
   "available_external_data_candidate_review_complete": true,
@@ -6882,7 +6882,28 @@
     "medium": 863,
     "repaired": 480
   },
-  "available_external_data_downloads_performed": false,
-  "candidate_source_review_performed": false,
-  "implementation_event_deduplication_rerun_for_external_verification": false
+  "available_external_data_downloads_performed": true,
+  "candidate_source_review_performed": true,
+  "implementation_event_deduplication_rerun_for_external_verification": false,
+  "available_external_data_source_review_complete": true,
+  "available_external_data_sources_processed": 49294,
+  "available_external_data_retained_source_count": 14449,
+  "available_external_data_retained_total_bytes": 32212254614,
+  "available_external_data_retained_type_counts": {
+    "csv": 17,
+    "html": 8947,
+    "pdf": 5484,
+    "txt": 1
+  },
+  "available_external_data_exact_payload_duplicate_count": 552,
+  "available_external_data_known_prior_reuse_count": 264,
+  "available_external_data_navigation_shell_exclusions": 34,
+  "available_external_data_context_only_deferrals": 24569,
+  "available_external_data_restricted_unavailable": 1241,
+  "available_external_data_oversized_deferrals": 0,
+  "available_external_data_manual_review_holds": 7895,
+  "available_external_data_storage_capacity_holds": 7895,
+  "available_external_data_corrupt_unsupported_quarantine": 80,
+  "available_external_data_readiness_queue_count": 14703,
+  "implementation_event_deduplication_rerun_for_external_source_review": false
 }

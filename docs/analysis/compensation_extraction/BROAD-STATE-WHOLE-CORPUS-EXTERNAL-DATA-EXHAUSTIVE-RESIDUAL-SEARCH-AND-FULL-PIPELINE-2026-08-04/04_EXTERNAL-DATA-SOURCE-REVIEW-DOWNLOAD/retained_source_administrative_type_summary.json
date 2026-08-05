@@ -1,0 +1,115 @@
+{
+  "grouping_field": "final_administrative_source_type",
+  "groups": {
+    "audit_or_financial_report": {
+      "bytes": 51925379,
+      "count": 67,
+      "retained_or_duplicate": 27
+    },
+    "benefits_document": {
+      "bytes": 11636121,
+      "count": 172,
+      "retained_or_duplicate": 96
+    },
+    "budget": {
+      "bytes": 887369204,
+      "count": 996,
+      "retained_or_duplicate": 399
+    },
+    "compensation_study": {
+      "bytes": 211099277,
+      "count": 194,
+      "retained_or_duplicate": 66
+    },
+    "contract_or_mou": {
+      "bytes": 11700153,
+      "count": 205,
+      "retained_or_duplicate": 59
+    },
+    "earnings_report": {
+      "bytes": 48319472,
+      "count": 166,
+      "retained_or_duplicate": 47
+    },
+    "government_dataset": {
+      "bytes": 10227497,
+      "count": 106,
+      "retained_or_duplicate": 47
+    },
+    "implementation_record": {
+      "bytes": 51110,
+      "count": 1,
+      "retained_or_duplicate": 1
+    },
+    "media_or_context": {
+      "bytes": 19920714,
+      "count": 123,
+      "retained_or_duplicate": 10
+    },
+    "meeting_packet": {
+      "bytes": 92135765,
+      "count": 134,
+      "retained_or_duplicate": 30
+    },
+    "navigation_or_index": {
+      "bytes": 0,
+      "count": 19,
+      "retained_or_duplicate": 0
+    },
+    "open_checkbook": {
+      "bytes": 1547051,
+      "count": 22,
+      "retained_or_duplicate": 8
+    },
+    "open_data_portal": {
+      "bytes": 2295127,
+      "count": 22,
+      "retained_or_duplicate": 12
+    },
+    "ordinance_or_resolution": {
+      "bytes": 390188995,
+      "count": 4694,
+      "retained_or_duplicate": 1250
+    },
+    "other": {
+      "bytes": 495514980,
+      "count": 1595,
+      "retained_or_duplicate": 198
+    },
+    "payroll_roster": {
+      "bytes": 27704572795,
+      "count": 36296,
+      "retained_or_duplicate": 11841
+    },
+    "pension_or_retirement_document": {
+      "bytes": 667931918,
+      "count": 1085,
+      "retained_or_duplicate": 382
+    },
+    "recruitment_study": {
+      "bytes": 2465967,
+      "count": 6,
+      "retained_or_duplicate": 4
+    },
+    "salary_schedule": {
+      "bytes": 195814326,
+      "count": 486,
+      "retained_or_duplicate": 221
+    },
+    "staffing_table": {
+      "bytes": 1405618157,
+      "count": 1568,
+      "retained_or_duplicate": 557
+    },
+    "unclear": {
+      "bytes": 443846,
+      "count": 1314,
+      "retained_or_duplicate": 2
+    },
+    "vacancy_report": {
+      "bytes": 1476760,
+      "count": 23,
+      "retained_or_duplicate": 8
+    }
+  }
+}

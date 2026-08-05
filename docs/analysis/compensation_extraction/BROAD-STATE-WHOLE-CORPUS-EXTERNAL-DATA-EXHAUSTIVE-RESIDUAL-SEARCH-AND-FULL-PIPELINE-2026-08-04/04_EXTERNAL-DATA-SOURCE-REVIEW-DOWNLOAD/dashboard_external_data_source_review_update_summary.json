@@ -1,0 +1,39 @@
+{
+  "context_only_deferrals": 24569,
+  "corrupt_unsupported_quarantine": 80,
+  "current_stage": "available external-data source review and download complete",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "decision": "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready",
+  "exact_payload_duplicates": 552,
+  "extraction_runs": 0,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "known_prior_reuses": 264,
+  "manual_review_holds": 7895,
+  "navigation_shell_exclusions": 34,
+  "next_task": "external-data readiness classification",
+  "ocr_runs": 0,
+  "oversized_deferrals": 0,
+  "preservation": {
+    "corrected_scaffold": true,
+    "final_pi_report": true,
+    "prior_markdown_drafts": true,
+    "semantic_scaffold": true,
+    "wage_growth_continuity": true
+  },
+  "readiness_queue_count": 14703,
+  "restricted_unavailable": 1241,
+  "retained_source_count": 14449,
+  "retained_total_bytes": 32212254614,
+  "retained_type_counts": {
+    "csv": 17,
+    "html": 8947,
+    "pdf": 5484,
+    "txt": 1
+  },
+  "sources_processed": 49294,
+  "storage_capacity_holds": 7895,
+  "unresolved_hosted_search_targets": 12844,
+  "verified_source_review_ready_locators": 49294
+}
