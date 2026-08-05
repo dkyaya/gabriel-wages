@@ -1,0 +1,9 @@
+{
+  "historical_structural_checks_remain_valid": true,
+  "resume_queue_count": 12844,
+  "resume_queue_locked": true,
+  "stage_complete": false,
+  "stage_status": "partial_stage_resume_ready",
+  "substantive_zero_candidate_classification_valid": false,
+  "supersedes_validation_readiness": "residual_search_validation_report.json"
+}

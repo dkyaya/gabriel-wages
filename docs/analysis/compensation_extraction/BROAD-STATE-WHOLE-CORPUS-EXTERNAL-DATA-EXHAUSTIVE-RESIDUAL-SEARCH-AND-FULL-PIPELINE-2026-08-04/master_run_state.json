@@ -1,8 +1,13 @@
 {
+  "coordinator_error": "Hosted-search Category B transition; downstream stopped conservatively after provisional metadata-only review and before verification.",
   "current_stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
-  "latest_decision": "residual_exhaustive_hosted_search_completed_merged_candidate_review_ready",
+  "latest_decision": "broad_state_whole_corpus_external_data_exhaustive_pipeline_partial_stage_resume_ready",
+  "preserved_authoritative_bulk_count": 2998,
+  "preserved_candidate_target_count": 2847,
+  "resume_queue_count": 12844,
+  "stage2_status": "provisional_pending_residual_search_resume",
   "started_at": "2026-08-05T01:48:23.540059+00:00",
-  "status": "complete",
+  "status": "partial_stage_resume_ready",
   "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04",
-  "updated_at": "2026-08-05T03:52:42.309987+00:00"
+  "updated_at": "2026-08-05T03:58:46.128198+00:00"
 }

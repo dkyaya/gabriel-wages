@@ -1,0 +1,10 @@
+{
+  "audited_at": "2026-08-05T04:00:13.235533+00:00",
+  "oversized_tracked_output_files": [],
+  "passed": true,
+  "payload_roots_ignored": true,
+  "provisional_pending_residual_resume": true,
+  "reshard_rows_per_part": 8000,
+  "stage": 2,
+  "supersedes_failed_audit_at": "2026-08-05T03:53:46.276759+00:00"
+}

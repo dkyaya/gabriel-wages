@@ -1,0 +1,47 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "candidate_review_defer_queue.csv",
+      "csv_bytes": 16457807,
+      "csv_sha256": "cddbf8b90dbb5ba7ca1ff802f68b3fd3e3add0b4b259b79d117a0bdf30699fc1",
+      "jsonl": "candidate_review_defer_queue.jsonl",
+      "jsonl_bytes": 23328565,
+      "jsonl_sha256": "91ed42930e3c85fc10cb907454cb0a62ef1a3baae01b7f600560c50265959cf2",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_defer_queue.part-002.csv",
+      "csv_bytes": 15997702,
+      "csv_sha256": "7ce2815f99b6b24ffaacb9fde397722619e2abaa80408e0d06d7d293a5035ef0",
+      "jsonl": "candidate_review_defer_queue.part-002.jsonl",
+      "jsonl_bytes": 22870817,
+      "jsonl_sha256": "5c9ad1eb44e567264079c3135766582591dee3bbe0ae7ffe086b4b1178acd03a",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_defer_queue.part-003.csv",
+      "csv_bytes": 16333879,
+      "csv_sha256": "a605efb8ff30772959335b95ec54acddb4bd3a9bc496858c22052653b9cc9d4a",
+      "jsonl": "candidate_review_defer_queue.part-003.jsonl",
+      "jsonl_bytes": 23206541,
+      "jsonl_sha256": "2fb4dfdbe01f3342c285140fbdf606aae66b0f7bdddcfff373c05cf22715dd11",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_defer_queue.part-004.csv",
+      "csv_bytes": 8687396,
+      "csv_sha256": "71e8070e5fc1bfbd63fff0d3d8b2bc79f917a3bac89dbb7c6787db0b4ed98338",
+      "jsonl": "candidate_review_defer_queue.part-004.jsonl",
+      "jsonl_bytes": 12409064,
+      "jsonl_sha256": "b7d3dce46c978591f3c51919c261fbe027d383e999d8713e70104199effb357e",
+      "part": 4,
+      "rows": 4332
+    }
+  ],
+  "sharded": true,
+  "total_rows": 28332
+}

@@ -1,0 +1,11 @@
+{
+  "disjoint_candidate_ids": true,
+  "lane_count": 5,
+  "lane_sizes": {
+    "candidate_review_lane_001": 12560,
+    "candidate_review_lane_002": 12559,
+    "candidate_review_lane_003": 12559,
+    "candidate_review_lane_004": 12559,
+    "candidate_review_lane_005": 12559
+  }
+}

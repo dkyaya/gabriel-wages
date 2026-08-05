@@ -1,0 +1,10 @@
+{
+  "coverage_map_expected_metric": "scout_coverage_rate",
+  "dashboard_modified": false,
+  "final_pi_report_exists": true,
+  "passed": true,
+  "prior_corrected_scaffold_exists": true,
+  "prior_report_draft_exists": true,
+  "semantic_scaffold_exists": true,
+  "wage_growth_module_exists": true
+}

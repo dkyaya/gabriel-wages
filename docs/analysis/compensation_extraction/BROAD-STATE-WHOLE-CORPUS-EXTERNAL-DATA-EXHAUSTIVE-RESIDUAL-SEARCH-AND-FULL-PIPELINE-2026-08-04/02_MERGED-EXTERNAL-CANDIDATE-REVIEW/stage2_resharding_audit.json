@@ -1,0 +1,128 @@
+{
+  "artifacts": [
+    {
+      "artifact": "candidate_review_defer_queue",
+      "largest_part_bytes": 23328565,
+      "parts": 4,
+      "rows": 28332
+    },
+    {
+      "artifact": "candidate_review_error_queue",
+      "largest_part_bytes": 1,
+      "parts": 1,
+      "rows": 0
+    },
+    {
+      "artifact": "candidate_review_exclude_queue",
+      "largest_part_bytes": 1218555,
+      "parts": 1,
+      "rows": 454
+    },
+    {
+      "artifact": "candidate_review_lane_001_results",
+      "largest_part_bytes": 23062020,
+      "parts": 2,
+      "rows": 12560
+    },
+    {
+      "artifact": "candidate_review_lane_002_results",
+      "largest_part_bytes": 23216056,
+      "parts": 2,
+      "rows": 12559
+    },
+    {
+      "artifact": "candidate_review_lane_003_results",
+      "largest_part_bytes": 23109309,
+      "parts": 2,
+      "rows": 12559
+    },
+    {
+      "artifact": "candidate_review_lane_004_results",
+      "largest_part_bytes": 23129011,
+      "parts": 2,
+      "rows": 12559
+    },
+    {
+      "artifact": "candidate_review_lane_005_results",
+      "largest_part_bytes": 23259487,
+      "parts": 2,
+      "rows": 12559
+    },
+    {
+      "artifact": "candidate_review_malformed_queue",
+      "largest_part_bytes": 1,
+      "parts": 1,
+      "rows": 0
+    },
+    {
+      "artifact": "candidate_review_navigation_queue",
+      "largest_part_bytes": 4687369,
+      "parts": 1,
+      "rows": 1655
+    },
+    {
+      "artifact": "candidate_review_repair_queue",
+      "largest_part_bytes": 1,
+      "parts": 1,
+      "rows": 0
+    },
+    {
+      "artifact": "candidate_review_results",
+      "largest_part_bytes": 23240038,
+      "parts": 8,
+      "rows": 62796
+    },
+    {
+      "artifact": "high_priority_verification_ready_queue",
+      "largest_part_bytes": 23264007,
+      "parts": 2,
+      "rows": 12710
+    },
+    {
+      "artifact": "likely_duplicate_prior_source_queue",
+      "largest_part_bytes": 1,
+      "parts": 1,
+      "rows": 0
+    },
+    {
+      "artifact": "likely_duplicate_within_external_wave_queue",
+      "largest_part_bytes": 1,
+      "parts": 1,
+      "rows": 0
+    },
+    {
+      "artifact": "low_priority_verification_ready_queue",
+      "largest_part_bytes": 16641920,
+      "parts": 1,
+      "rows": 5846
+    },
+    {
+      "artifact": "medium_priority_verification_ready_queue",
+      "largest_part_bytes": 22808684,
+      "parts": 2,
+      "rows": 13799
+    },
+    {
+      "artifact": "merged_cross_wave_candidate_duplicate_links",
+      "largest_part_bytes": 2544170,
+      "parts": 8,
+      "rows": 58102
+    },
+    {
+      "artifact": "merged_external_candidate_universe",
+      "largest_part_bytes": 20657826,
+      "parts": 8,
+      "rows": 62796
+    },
+    {
+      "artifact": "verification_ready_queue",
+      "largest_part_bytes": 23107362,
+      "parts": 5,
+      "rows": 32355
+    }
+  ],
+  "chunk_rows": 8000,
+  "completed_at": "2026-08-05T03:58:46.094657+00:00",
+  "oversized_files_after": [],
+  "passes_50_mib_limit": true
+}

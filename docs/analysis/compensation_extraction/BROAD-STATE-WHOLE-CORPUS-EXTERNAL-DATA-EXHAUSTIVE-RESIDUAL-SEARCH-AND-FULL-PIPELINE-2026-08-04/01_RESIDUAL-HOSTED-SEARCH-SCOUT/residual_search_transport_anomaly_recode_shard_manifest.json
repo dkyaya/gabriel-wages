@@ -1,0 +1,27 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "residual_search_transport_anomaly_recode.csv",
+      "csv_bytes": 1560200,
+      "csv_sha256": "af94f037a3b547aff9150d99801ee7fe26479440037348f578d9825f90874f0a",
+      "jsonl": "residual_search_transport_anomaly_recode.jsonl",
+      "jsonl_bytes": 3496000,
+      "jsonl_sha256": "7a427a6189529f7fa3e336c08ded7f70a809cac0c237a58a5b1ec2a2f61f96fb",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "residual_search_transport_anomaly_recode.part-002.csv",
+      "csv_bytes": 944780,
+      "csv_sha256": "3416870a285d727a5032badcceab4bbd61fbe24f9fcd987753eccf1df3faf27f",
+      "jsonl": "residual_search_transport_anomaly_recode.part-002.jsonl",
+      "jsonl_bytes": 2116828,
+      "jsonl_sha256": "4797e5f4c6a996c509ef2e7e475ab89ee55884b6229ec7660214917f74832dc0",
+      "part": 2,
+      "rows": 4844
+    }
+  ],
+  "sharded": true,
+  "total_rows": 12844
+}

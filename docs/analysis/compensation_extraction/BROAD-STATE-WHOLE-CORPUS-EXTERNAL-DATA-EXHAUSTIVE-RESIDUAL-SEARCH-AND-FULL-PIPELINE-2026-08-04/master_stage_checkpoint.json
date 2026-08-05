@@ -1,15 +1,10 @@
 {
-  "decision": "residual_exhaustive_hosted_search_completed_merged_candidate_review_ready",
-  "details": {
-    "canonical_candidates": 33003,
-    "raw_candidates": 91105,
-    "status_counts": {
-      "candidate_found": 2847,
-      "resolved_by_authoritative_bulk_join": 2998,
-      "zero_candidate": 12844
-    }
-  },
-  "stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
-  "status": "complete",
-  "updated_at": "2026-08-05T03:52:42.310406+00:00"
+  "completed_targets_not_to_rerun": 5845,
+  "current_stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
+  "next_stage_after_residual_completion": "02_MERGED-EXTERNAL-CANDIDATE-REVIEW rerun/merge",
+  "resume_artifact": "01_RESIDUAL-HOSTED-SEARCH-SCOUT/residual_search_transport_resume_manifest.json",
+  "resume_precondition": "Category A transport preflight and successful production probe",
+  "resume_queue_count": 12844,
+  "status": "partial_stage_resume_ready",
+  "updated_at": "2026-08-05T03:58:46.128198+00:00"
 }

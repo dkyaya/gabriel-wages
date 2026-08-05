@@ -1,0 +1,87 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "candidate_review_results.csv",
+      "csv_bytes": 16193914,
+      "csv_sha256": "25a09df8ca53b7292bc3884160f3f5521a606a5508784dcb0ae0cc6b0ec7ab3b",
+      "jsonl": "candidate_review_results.jsonl",
+      "jsonl_bytes": 23062020,
+      "jsonl_sha256": "eefb18f3361947c818d748796eaca54b940ff86f905094bd37b72bda3384f093",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-002.csv",
+      "csv_bytes": 16230199,
+      "csv_sha256": "87c430d319c75f429ae8485e62acaa030036dcaeb58cd0b9ff26a1f4ad5b0352",
+      "jsonl": "candidate_review_results.part-002.jsonl",
+      "jsonl_bytes": 23104749,
+      "jsonl_sha256": "b36b8484f88770acc42ad781fc805fb9cfd76c74572ad3a57fdda64d40152964",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-003.csv",
+      "csv_bytes": 16030748,
+      "csv_sha256": "71ad5f3bc22953d86c457c5111e84ce66b1d3ccb339faf1a2145f3cdecf79f12",
+      "jsonl": "candidate_review_results.part-003.jsonl",
+      "jsonl_bytes": 22903607,
+      "jsonl_sha256": "3eafcd7852f91c13ac4da65ba55d679b588706a7a469cdaaabdf78357a73e1db",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-004.csv",
+      "csv_bytes": 16235130,
+      "csv_sha256": "176c505c463de85b3c46049b66aed220a678d127c5851853915944f3c2481902",
+      "jsonl": "candidate_review_results.part-004.jsonl",
+      "jsonl_bytes": 23103192,
+      "jsonl_sha256": "1ab2097bcda9d95f48693b14730783357b9897db6d928451841b9b14232c161b",
+      "part": 4,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-005.csv",
+      "csv_bytes": 16065835,
+      "csv_sha256": "2039a83c66d4dc160ef8a9da8c0a4e9968f733a579381b70ac434a4c5efb8697",
+      "jsonl": "candidate_review_results.part-005.jsonl",
+      "jsonl_bytes": 22942527,
+      "jsonl_sha256": "eee3b9379ef9290d19256fb55e9d2a6e11477fd497e9569815061cc39afcf24b",
+      "part": 5,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-006.csv",
+      "csv_bytes": 16161455,
+      "csv_sha256": "e8ba2ac37baded980997912653d4cdf4ba4fbe39e2043aa87832d9cda508c40f",
+      "jsonl": "candidate_review_results.part-006.jsonl",
+      "jsonl_bytes": 23032301,
+      "jsonl_sha256": "37c0ce9c7fa81390c9082fd9f2d58625073c84f813fbed5a62b1fa1046cc2ed9",
+      "part": 6,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-007.csv",
+      "csv_bytes": 16369992,
+      "csv_sha256": "01d179fec470aea597d6423593e15e6206ccbcd4bef641269e181a986c4df7b9",
+      "jsonl": "candidate_review_results.part-007.jsonl",
+      "jsonl_bytes": 23240038,
+      "jsonl_sha256": "1c46771dd5c3848e25ad0f36c84ee338cc08c5b2ca257d154807147e4a4f143a",
+      "part": 7,
+      "rows": 8000
+    },
+    {
+      "csv": "candidate_review_results.part-008.csv",
+      "csv_bytes": 13503325,
+      "csv_sha256": "48e7bbd7e2603b24a6b3938004ad441b0bf83d6ce5a6aa5c81c32250cf1835b4",
+      "jsonl": "candidate_review_results.part-008.jsonl",
+      "jsonl_bytes": 19345223,
+      "jsonl_sha256": "d02fc46137dac2d4f8e70bf741f6c9a217339f8eaace319cf18b4a0ced77d7ca",
+      "part": 8,
+      "rows": 6796
+    }
+  ],
+  "sharded": true,
+  "total_rows": 62796
+}

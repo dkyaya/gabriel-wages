@@ -1,0 +1,22 @@
+{
+  "primary": {
+    "benefits_and_total_compensation": 777,
+    "contextual_controls": 1,
+    "implementation_confirmation": 705,
+    "multi_family_administrative_source": 57368,
+    "payroll_and_earnings": 2112,
+    "recruitment_and_retention": 284,
+    "staffing_and_headcount": 970,
+    "tenure_and_progression": 579
+  },
+  "secondary_tags": {
+    "benefits_and_total_compensation": 34511,
+    "contextual_controls": 61,
+    "implementation": 35493,
+    "implementation_confirmation": 50379,
+    "payroll_and_earnings": 57463,
+    "recruitment_and_retention": 35917,
+    "staffing_and_headcount": 41379,
+    "tenure_and_progression": 35219
+  }
+}

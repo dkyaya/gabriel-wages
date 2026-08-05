@@ -1,0 +1,10 @@
+{
+  "all_candidates_review_required": true,
+  "cross_wave_or_merged_duplicate_count": 58102,
+  "duplicate_target_event_linkage_aggregated_on_canonical_candidates": true,
+  "merged_canonical_count": 62796,
+  "prepared_at": "2026-08-05T03:53:19.532639+00:00",
+  "wave1_canonical_input": 29793,
+  "wave2_canonical_input": 33003,
+  "wave2_raw_candidate_input": 91105
+}

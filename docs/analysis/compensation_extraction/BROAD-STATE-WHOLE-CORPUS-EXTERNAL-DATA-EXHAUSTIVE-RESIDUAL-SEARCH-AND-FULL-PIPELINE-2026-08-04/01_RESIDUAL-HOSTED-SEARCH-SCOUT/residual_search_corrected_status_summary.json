@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "candidate_found": 2847,
+    "hosted_search_backend_error_pending_resume": 12844,
+    "resolved_by_authoritative_bulk_join": 2998
+  },
+  "historical_call_ledger_preserved": true,
+  "record_count": 18689,
+  "supersedes": "residual_search_status_summary.json for readiness and continuation decisions"
+}

@@ -1,0 +1,57 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "verification_ready_queue.csv",
+      "csv_bytes": 16025511,
+      "csv_sha256": "fe51126f70c9738333d1e1b590921d477912678e036a2247187f7ebc0143a9f7",
+      "jsonl": "verification_ready_queue.jsonl",
+      "jsonl_bytes": 22897139,
+      "jsonl_sha256": "74b0e6debc920ea0a31983d09f43319877885ea34054d41b043c86174f40646d",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_ready_queue.part-002.csv",
+      "csv_bytes": 16236584,
+      "csv_sha256": "d3cb9a0a4f14311470b73f44f76459149fd0628fa15824c8f448e230c22f8472",
+      "jsonl": "verification_ready_queue.part-002.jsonl",
+      "jsonl_bytes": 23107362,
+      "jsonl_sha256": "93e8019d8834d28eedcd5797a7aba848d6f92696a78e87f0e40da289376098f4",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_ready_queue.part-003.csv",
+      "csv_bytes": 16112295,
+      "csv_sha256": "a7768551a269df6b41fd7645cb91de5f8e62dccf53775403dec4327c758d58d8",
+      "jsonl": "verification_ready_queue.part-003.jsonl",
+      "jsonl_bytes": 22984727,
+      "jsonl_sha256": "48b2092b8840897661f133b62f45c65dde886d08ea9417d26e3ffdaee3fedca0",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_ready_queue.part-004.csv",
+      "csv_bytes": 16135305,
+      "csv_sha256": "564fe3ad0014d867f5400153a3d707dd4b8852766852e135ea81b345ea569401",
+      "jsonl": "verification_ready_queue.part-004.jsonl",
+      "jsonl_bytes": 23008961,
+      "jsonl_sha256": "ab315987b812b4eebbc6ccab1e33a9e3f551c610b03a4ee535c9b65a43da4e99",
+      "part": 4,
+      "rows": 8000
+    },
+    {
+      "csv": "verification_ready_queue.part-005.csv",
+      "csv_bytes": 709961,
+      "csv_sha256": "e316843ac8ad463c0c7e98e3a1037f8225d7ce758ecec66123f57ddb12eca957",
+      "jsonl": "verification_ready_queue.part-005.jsonl",
+      "jsonl_bytes": 1014557,
+      "jsonl_sha256": "07a2b60177984a2bf54d988959034c45bc9b50fc23227ffac986c2b1e7732732",
+      "part": 5,
+      "rows": 355
+    }
+  ],
+  "sharded": true,
+  "total_rows": 32355
+}

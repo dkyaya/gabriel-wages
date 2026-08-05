@@ -149,7 +149,7 @@ def write_md(path: Path, value: str) -> None:
     path.write_text(value.rstrip() + "\n", encoding="utf-8")
 
 
-def write_sharded_pair(directory: Path, name: str, rows: list[dict[str, Any]], chunk_size: int = 20_000) -> None:
+def write_sharded_pair(directory: Path, name: str, rows: list[dict[str, Any]], chunk_size: int = 8_000) -> None:
     chunks = [rows[i:i + chunk_size] for i in range(0, len(rows), chunk_size)] or [[]]
     parts = []
     fields = list(rows[0]) if rows else []

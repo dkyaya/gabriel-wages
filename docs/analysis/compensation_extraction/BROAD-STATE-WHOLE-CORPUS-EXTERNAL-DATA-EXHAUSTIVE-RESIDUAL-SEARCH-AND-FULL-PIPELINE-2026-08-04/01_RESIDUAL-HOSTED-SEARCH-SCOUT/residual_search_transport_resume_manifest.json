@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-08-05T03:58:32.383663+00:00",
+  "decision": "residual_search_partial_resume_locked",
+  "duplicate_worker_protection_required": true,
+  "five_lane_required": true,
+  "invalidated_zero_candidate_outcomes": 12844,
+  "locked_resume_count": 12844,
+  "original_residual_count": 18689,
+  "preserved_authoritative_bulk_resolutions": 2998,
+  "preserved_candidate_found": 2847,
+  "resume_queue_manifest": "residual_search_transport_resume_queue_shard_manifest.json",
+  "resume_queue_part_hashes": [
+    {
+      "csv": "residual_search_transport_resume_queue.csv",
+      "csv_sha256": "8495b3846a841f68d3602f76728359e09a82c14604385cc25e3041306686e794",
+      "rows": 8000
+    },
+    {
+      "csv": "residual_search_transport_resume_queue.part-002.csv",
+      "csv_sha256": "81a0c7ae28683ed1801c8433a45c55ac6f7422a71aabd83d36b53d524e734609",
+      "rows": 4844
+    }
+  ],
+  "resume_rule": "Do not rerun candidate-bearing or authoritative-bulk rows; rerun only this locked queue after Category A transport and production probe pass."
+}

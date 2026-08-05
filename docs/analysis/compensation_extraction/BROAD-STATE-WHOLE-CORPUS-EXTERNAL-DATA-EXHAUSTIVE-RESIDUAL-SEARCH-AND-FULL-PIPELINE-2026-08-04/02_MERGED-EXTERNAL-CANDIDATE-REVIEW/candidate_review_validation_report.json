@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "all_merged_candidates_reviewed": true,
+    "bucket_complete": true,
+    "metadata_only": true,
+    "unique_candidate_review": true
+  },
+  "passed": true,
+  "review_bucket_counts": {
+    "deferred_low_signal": 28332,
+    "excluded_out_of_scope": 454,
+    "high_priority_verification_ready": 12710,
+    "likely_duplicate_prior_source": 0,
+    "likely_duplicate_within_external_wave": 0,
+    "likely_navigation_only": 1655,
+    "low_priority_verification_ready": 5846,
+    "malformed_or_missing_locator": 0,
+    "medium_priority_verification_ready": 13799,
+    "repair_needed": 0,
+    "review_error": 0
+  },
+  "verification_ready_count": 32355
+}

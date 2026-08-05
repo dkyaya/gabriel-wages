@@ -1,0 +1,23 @@
+{
+  "anomalous_zero_targets_locked_for_resume": 12844,
+  "anomaly_reason": "global_category_B_zero_source_transition",
+  "audit_at": "2026-08-05T03:58:32.383915+00:00",
+  "authoritative_bulk_targets_preserved": 2998,
+  "corrected_status_counts": {
+    "candidate_found": 2847,
+    "hosted_search_backend_error_pending_resume": 12844,
+    "resolved_by_authoritative_bulk_join": 2998
+  },
+  "downstream_continuation_allowed": false,
+  "fresh_family_smokes_attempted": 7,
+  "fresh_family_smokes_passed": 0,
+  "no_candidate_verification_or_download_authorized_while_blocked": true,
+  "original_status_counts": {
+    "candidate_found": 2847,
+    "resolved_by_authoritative_bulk_join": 2998,
+    "zero_candidate": 12844
+  },
+  "production_probe_ran": false,
+  "successful_candidate_targets_preserved": 2847,
+  "transport_category_after_run": "B"
+}

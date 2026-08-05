@@ -1,0 +1,11 @@
+{
+  "candidate_review_must_be_remerged_after_resume": true,
+  "original_review_decision": "merged_external_candidate_review_completed_verification_ready",
+  "provisional_reviewed_candidate_count": 62796,
+  "provisional_verification_ready_count": 32355,
+  "reason": "global_category_B_zero_source_transition",
+  "recorded_at": "2026-08-05T03:58:46.099137+00:00",
+  "stage3_authorized": false,
+  "status": "provisional_pending_residual_search_resume",
+  "supersedes_continuation_authority_of": "stage_decision.json"
+}

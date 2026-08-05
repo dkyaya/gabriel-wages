@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-08-05T04:00:13.231023+00:00",
+  "dashboard_mutated_in_partial_checkpoint": false,
+  "decision": "broad_state_whole_corpus_external_data_exhaustive_pipeline_partial_stage_resume_ready",
+  "historical_search_call_counts": {
+    "production_primary": 15691,
+    "repair": 12846
+  },
+  "historical_token_usage": {
+    "input_tokens": 29572454,
+    "output_tokens": 3063705,
+    "reasoning_tokens": 476124,
+    "total_tokens": 32636159
+  },
+  "historical_total_search_calls": 28537,
+  "locked_resume_targets": 12844,
+  "preserved_authoritative_bulk_resolutions": 2998,
+  "preserved_candidate_found_targets": 2847,
+  "preserved_wave2_candidates": {
+    "canonical_wave2_candidates": 33003,
+    "duplicate_against_wave1": 27144,
+    "duplicate_links": 58102,
+    "official_candidates": 13142,
+    "raw_wave2_candidates": 91105
+  },
+  "provisional_stage2_review": {
+    "bucket_counts": {
+      "deferred_low_signal": 28332,
+      "excluded_out_of_scope": 454,
+      "high_priority_verification_ready": 12710,
+      "likely_duplicate_prior_source": 0,
+      "likely_duplicate_within_external_wave": 0,
+      "likely_navigation_only": 1655,
+      "low_priority_verification_ready": 5846,
+      "malformed_or_missing_locator": 0,
+      "medium_priority_verification_ready": 13799,
+      "repair_needed": 0,
+      "review_error": 0
+    },
+    "continuation_authorized": false,
+    "must_remerge_after_resume": true,
+    "reviewed": 62796,
+    "verification_ready": 32355
+  },
+  "reliable_dollar_cost": "reliable_dollar_cost_not_available",
+  "residual_locked_queue": 18689,
+  "stages_not_started": [
+    "03_EXTERNAL-DATA-VERIFICATION",
+    "04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD",
+    "05_EXTERNAL-DATA-READINESS",
+    "06_EXTERNAL-DATA-EXTRACTION",
+    "07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION",
+    "08_EXTERNAL-DATA-GABRIEL-RATING",
+    "09_EXTERNAL-DATA-RATING-INGESTION-CODIFICATION",
+    "10_EXTERNAL-DATA-RECONCILIATION-LINKAGE",
+    "11_EXTERNAL-DATA-NORMALIZATION-MATCHING",
+    "12_WHOLE-CORPUS-EXTERNAL-DATA-INTEGRATION",
+    "13_FINAL-GATES-DASHBOARD-RELAY"
+  ],
+  "status": "stopped_at_genuine_backend_blocker",
+  "transport_category": "B",
+  "transport_category_A_usable": false
+}

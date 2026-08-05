@@ -1,0 +1,11 @@
+{
+  "assigned": 12559,
+  "completed": 12559,
+  "finished_at": "2026-08-05T03:53:38.586055+00:00",
+  "lane_id": "candidate_review_lane_005",
+  "last_candidate_id": "RESCAND-34be03cb86a7df46ffc656e6",
+  "queue_sha256": "3128a9146eecfecd68434d925fd90ee505d5a03ef37b37d930f74f62fa5b1350",
+  "started_at": "2026-08-05T03:53:21.877993+00:00",
+  "status": "complete",
+  "updated_at": "2026-08-05T03:53:38.331241+00:00"
+}

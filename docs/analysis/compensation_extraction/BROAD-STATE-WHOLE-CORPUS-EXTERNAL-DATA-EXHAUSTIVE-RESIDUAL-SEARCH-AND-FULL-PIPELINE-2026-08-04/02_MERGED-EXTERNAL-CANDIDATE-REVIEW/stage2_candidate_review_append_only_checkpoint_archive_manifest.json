@@ -1,0 +1,33 @@
+{
+  "archive_root": "tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/downstream_append_only_checkpoint_archive/stage2_candidate_review",
+  "archive_root_git_ignored": true,
+  "archived_after_validation": true,
+  "canonical_lane_and_merged_outputs_preserved": true,
+  "files": [
+    {
+      "bytes": 36068282,
+      "name": "candidate_review_lane_001_accepted_results.jsonl",
+      "sha256": "34c3a793e7002b445f0f947c6fff3864ba99af952c742c6a117186bd3cfa6d21"
+    },
+    {
+      "bytes": 36152010,
+      "name": "candidate_review_lane_002_accepted_results.jsonl",
+      "sha256": "b723fff1be6e0b5f3adf24ca2fbba9cb222206ae49858881c7220506698cbaa9"
+    },
+    {
+      "bytes": 36142620,
+      "name": "candidate_review_lane_003_accepted_results.jsonl",
+      "sha256": "aae047b0330e8eb1fdeca51afbf98097e819ff78630e8a9931ea6005ab3f3bff"
+    },
+    {
+      "bytes": 36119106,
+      "name": "candidate_review_lane_004_accepted_results.jsonl",
+      "sha256": "3a6632b9141c10cf3e34247bf564505755537988a401855e195e0c9f7659ab68"
+    },
+    {
+      "bytes": 36251639,
+      "name": "candidate_review_lane_005_accepted_results.jsonl",
+      "sha256": "922461c92a17c913f856082a5d4436cc3f209185ec762ec4646f219e29a8c64d"
+    }
+  ]
+}
