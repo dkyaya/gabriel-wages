@@ -1,0 +1,21 @@
+{
+  "count": 14160,
+  "created_at": "2026-08-05T21:09:37.185394+00:00",
+  "eligibility_counts": {
+    "deterministic_text_pattern_processing_ready": 9103,
+    "direct_structured_processing_ready": 17,
+    "low_yield_context_only": 191,
+    "mixed_structured_and_text_processing_ready": 4849
+  },
+  "family_counts": {
+    "benefits_and_total_compensation": 5280,
+    "contextual_controls": 459,
+    "implementation_confirmation": 8600,
+    "payroll_and_earnings": 10631,
+    "recruitment_and_retention": 5426,
+    "staffing_and_headcount": 7054,
+    "tenure_and_progression": 3888,
+    "unclear": 25
+  },
+  "unique_payloads": 14160
+}

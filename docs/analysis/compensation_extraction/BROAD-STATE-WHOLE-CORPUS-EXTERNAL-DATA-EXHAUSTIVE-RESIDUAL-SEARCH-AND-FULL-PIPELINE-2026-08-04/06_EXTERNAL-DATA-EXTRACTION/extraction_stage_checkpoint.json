@@ -1,0 +1,8 @@
+{
+  "decision": "broad_state_whole_corpus_available_external_data_extraction_completed_field_span_ready",
+  "field_span_ready": 14160,
+  "payloads": 14257,
+  "stage": "06_EXTERNAL-DATA-EXTRACTION",
+  "status": "complete",
+  "updated_at": "2026-08-05T21:09:37.425913+00:00"
+}

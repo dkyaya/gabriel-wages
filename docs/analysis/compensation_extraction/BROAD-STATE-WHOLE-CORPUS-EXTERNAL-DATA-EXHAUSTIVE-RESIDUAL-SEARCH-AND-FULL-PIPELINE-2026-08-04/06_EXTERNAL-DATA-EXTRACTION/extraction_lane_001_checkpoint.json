@@ -1,0 +1,20 @@
+{
+  "artifact_bytes_created": 170988446,
+  "completed_at": "2026-08-05T20:31:06.008895+00:00",
+  "completed_count": 2851,
+  "free_bytes": 11945353216,
+  "lane_id": "extraction_lane_001",
+  "locked_count": 2851,
+  "remaining_count": 0,
+  "source_bytes_completed": 6296487722,
+  "started_at": "2026-08-05T19:37:05.496061+00:00",
+  "status": "complete",
+  "terminal_status_counts": {
+    "extracted_low_yield_usable": 43,
+    "extracted_structured_ok": 3,
+    "extracted_text_and_structured_ok": 968,
+    "extracted_text_ok": 1813,
+    "parse_error": 24
+  },
+  "updated_at": "2026-08-05T20:31:06.008925+00:00"
+}

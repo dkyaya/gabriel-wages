@@ -1,0 +1,58 @@
+# External-data non-OCR extraction validation
+
+- PASS — artifact hashes sizes valid
+- PASS — canonical source propagated
+- PASS — coverage map scout
+- PASS — csv 17
+- PASS — csv order preserved
+- PASS — dashboard assets intact
+- PASS — disk capacity audit passed
+- PASS — disk reserve preserved
+- PASS — exceptions separate
+- PASS — extracted root ignored
+- PASS — field queue valid
+- PASS — full artifacts ignored local
+- PASS — holds 7895 preserved
+- PASS — html 8815
+- PASS — html structural ordering
+- PASS — implementation event dedup not rerun
+- PASS — input 14257
+- PASS — lanes complete
+- PASS — lanes disjoint
+- PASS — large file audit passed
+- PASS — lineage preserved
+- PASS — local artifact storage audit passed
+- PASS — locked unique
+- PASS — no causal effect
+- PASS — no duplicate extraction
+- PASS — no final visual documents
+- PASS — no full extraction artifact staged
+- PASS — no gabriel
+- PASS — no hosted search
+- PASS — no monolithic corpus
+- PASS — no national wage gap
+- PASS — no normalization matching
+- PASS — no ocr
+- PASS — no ocr later processed
+- PASS — no prevalence
+- PASS — no prior reuse duplicate extraction
+- PASS — no redownload
+- PASS — no regression treatment
+- PASS — no retained payload staged
+- PASS — no substantive interpretation
+- PASS — no wage staffing comparison
+- PASS — nonready excluded
+- PASS — one terminal outcome
+- PASS — pdf 5424
+- PASS — pdf page boundaries
+- PASS — retained root ignored
+- PASS — source hash extractor version preserved
+- PASS — staged file audit passed
+- PASS — storage holds excluded
+- PASS — structured root ignored
+- PASS — successful artifact pointers
+- PASS — table identity
+- PASS — temporary files cleaned
+- PASS — text 1
+- PASS — tracked previews bounded
+- PASS — unresolved 12844 preserved

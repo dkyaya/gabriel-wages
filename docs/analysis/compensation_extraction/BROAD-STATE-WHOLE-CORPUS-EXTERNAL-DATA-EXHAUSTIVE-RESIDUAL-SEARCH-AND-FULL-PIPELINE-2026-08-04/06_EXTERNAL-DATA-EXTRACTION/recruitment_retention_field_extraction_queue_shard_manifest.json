@@ -1,0 +1,27 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "recruitment_retention_field_extraction_queue.csv",
+      "csv_bytes": 6346084,
+      "csv_sha256": "304c4e2d6e07e453575d1df307c20ec1f4dcca4adf1e8ea228b6087330985c9e",
+      "jsonl": "recruitment_retention_field_extraction_queue.jsonl",
+      "jsonl_bytes": 9129504,
+      "jsonl_sha256": "5a369cb27c3855065cc2d4c70e802bcaf9d680d6b6a14e3b5a5e4e727db9e3d6",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "recruitment_retention_field_extraction_queue.part-002.csv",
+      "csv_bytes": 2266035,
+      "csv_sha256": "9b59e03d285eb574326e18091cdb5cbce978d75fa431a16149117e70060eb181",
+      "jsonl": "recruitment_retention_field_extraction_queue.part-002.jsonl",
+      "jsonl_bytes": 3257951,
+      "jsonl_sha256": "5fcbb1d172d67d5d7fa2c9abe6ef441ef3333e30cae3274f68caed18b8ebba7a",
+      "part": 2,
+      "rows": 1426
+    }
+  ],
+  "sharded": true,
+  "total_rows": 5426
+}

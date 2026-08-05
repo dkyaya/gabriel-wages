@@ -1,0 +1,27 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "staffing_headcount_field_extraction_queue.csv",
+      "csv_bytes": 6260641,
+      "csv_sha256": "963fbd6a26569d3728e05b448ea9f65784f4dff5b7f8011e63327d4ecb761eac",
+      "jsonl": "staffing_headcount_field_extraction_queue.jsonl",
+      "jsonl_bytes": 9044061,
+      "jsonl_sha256": "1545bccee0c7e8cc26a8612090b5e56b52d0915ac901da57552df31f505a0f04",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "staffing_headcount_field_extraction_queue.part-002.csv",
+      "csv_bytes": 4786449,
+      "csv_sha256": "13c7c794afa2ef042d4eb1dedef5a37dc76610625038b1a5d6f6657ba0235e6a",
+      "jsonl": "staffing_headcount_field_extraction_queue.part-002.jsonl",
+      "jsonl_bytes": 6911453,
+      "jsonl_sha256": "705922dd8e37156ddc170efda126ea03c4788ab47a2f7d20b68b7d00f0a5e60e",
+      "part": 2,
+      "rows": 3054
+    }
+  ],
+  "sharded": true,
+  "total_rows": 7054
+}

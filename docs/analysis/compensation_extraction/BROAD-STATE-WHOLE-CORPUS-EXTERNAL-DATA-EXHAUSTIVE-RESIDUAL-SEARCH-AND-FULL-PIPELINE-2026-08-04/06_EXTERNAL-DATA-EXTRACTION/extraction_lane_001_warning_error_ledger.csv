@@ -1,0 +1,60 @@
+at,canonical_payload_id,extraction_result_id,modality_status,terminal_status,warning_codes
+2026-08-05T19:37:07.065280+00:00,EXTPAYLOAD-06514d2df868732911cb1dfd,EXTEXTRACT-14027262f44772435c34c142,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:07.112561+00:00,EXTPAYLOAD-0748f01e5417439ff898c09e,EXTEXTRACT-3936872c3565f3fd904b12b8,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:08.096325+00:00,EXTPAYLOAD-09c063ae0c1d80428b777949,EXTEXTRACT-25878895524290bd73c54492,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:19.147188+00:00,EXTPAYLOAD-12a0cbd962d71077354fa6b2,EXTEXTRACT-44b6801cd5d9c5e8827be4d8,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'iso8859_15''""]"
+2026-08-05T19:37:22.904900+00:00,EXTPAYLOAD-16cbd4d15e076e0f51d7de0e,EXTEXTRACT-bcdf56a4ff94fc37b7ef2939,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:23.695252+00:00,EXTPAYLOAD-186c0029a8dc433bdb372a62,EXTEXTRACT-13249edea8e89cc0fbe10c05,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:27.133904+00:00,EXTPAYLOAD-18f7b010f3243b62f9e20b4b,EXTEXTRACT-49e3b483a50a98cd6476d2e0,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:28.288603+00:00,EXTPAYLOAD-1eab8a917d25b88eaea1db64,EXTEXTRACT-e55cde7ce7c7ca5feecef19a,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:28.809644+00:00,EXTPAYLOAD-20ae3bb79db23a7e61eccb22,EXTEXTRACT-bd3e56d1b4844d3570d58a92,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:30.376235+00:00,EXTPAYLOAD-28716926c429b43cd6376d42,EXTEXTRACT-10c6a674d2e9b5ac85fe5e3b,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:31.278936+00:00,EXTPAYLOAD-2e272e3890c24c6716acadf6,EXTEXTRACT-45adb911f84815b18c675e16,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:32.059031+00:00,EXTPAYLOAD-3245e3aa88a35da08368d194,EXTEXTRACT-1292cb23944dbc058b0e697f,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:32.235591+00:00,EXTPAYLOAD-338e83e960635190a1617e8a,EXTEXTRACT-13668bb45ebebbd156c61e21,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:32.742071+00:00,EXTPAYLOAD-389635eb832619ce4f61e445,EXTEXTRACT-dddbaa389109acac66bc8c62,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:32.992845+00:00,EXTPAYLOAD-3bd8f9bb25421e7c05ee1ff8,EXTEXTRACT-91497c25e27ba75e0b0ce2b9,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:33.044941+00:00,EXTPAYLOAD-3d3da0153377276936a2e01a,EXTEXTRACT-b33dee864d0228aad7351902,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:33.303580+00:00,EXTPAYLOAD-3e81b4d9f7e49a49e128bc03,EXTEXTRACT-21e4318131c7f1d8fc61583a,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:43.068418+00:00,EXTPAYLOAD-494544e78f0978861dc88c14,EXTEXTRACT-905fad07e86deb48ac0f43c2,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:44.310323+00:00,EXTPAYLOAD-4a4af48574fa23c485511219,EXTEXTRACT-9a554113cae947112c8e0ebf,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:44.439599+00:00,EXTPAYLOAD-4ba803d08f4280ed64e63c7b,EXTEXTRACT-c18e24f3ab7ccb445e24324e,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:45.142850+00:00,EXTPAYLOAD-4db919bbd0a7e2a1042ed2b3,EXTEXTRACT-6fb026804f960e19423b8de1,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:46.102180+00:00,EXTPAYLOAD-5385682979f3271f48d6bef1,EXTEXTRACT-29a4cf3ec817962d1fbb200c,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:46.416113+00:00,EXTPAYLOAD-572f8bad1026fcd208f1e65c,EXTEXTRACT-bb763257df053765e0660add,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:49.717394+00:00,EXTPAYLOAD-6196d49a3e59c79f0573f625,EXTEXTRACT-8a11e821322a88f852a3a2e0,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:37:52.461166+00:00,EXTPAYLOAD-620b5960d9b6e5e4d097ffd3,EXTEXTRACT-d24c7c33136414940dd52d98,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:52.511863+00:00,EXTPAYLOAD-62612d61e62a61afe016feca,EXTEXTRACT-586044506fefe0805cd706cb,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:52.682896+00:00,EXTPAYLOAD-6399de473bb3c65586590aff,EXTEXTRACT-9afee578a8bab4a995cba997,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:53.767822+00:00,EXTPAYLOAD-6688ca42144bb4fcc884cd3d,EXTEXTRACT-34421f7054c1f111fabb2aec,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:37:55.735463+00:00,EXTPAYLOAD-67ed350d221df0c26b4bf991,EXTEXTRACT-fa83dab5e8396ad40b0413fa,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:37:55.736660+00:00,EXTPAYLOAD-67f9d5747e69544d5c41cc5a,EXTEXTRACT-5b071c4577f9b3d6ddb76bad,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:38:00.433088+00:00,EXTPAYLOAD-7093d918294d738ae070ea69,EXTEXTRACT-be4666b14b2bc3682558b1ea,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:38:01.385329+00:00,EXTPAYLOAD-73f5c47c99a7297e622c21f8,EXTEXTRACT-44724d2e98ad67a66330bcd7,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:38:02.585680+00:00,EXTPAYLOAD-78ca55695194bc204ed2e6d1,EXTEXTRACT-fe9152ff75cc1125174018db,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:38:02.620067+00:00,EXTPAYLOAD-790db170ec6f5fae35497857,EXTEXTRACT-29830d16637a2f2e73937b12,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:38:06.002039+00:00,EXTPAYLOAD-886fee384fb10fc92af3c335,EXTEXTRACT-96d1b0451d1e982f954bf487,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:38:07.213369+00:00,EXTPAYLOAD-8e161baba26bcf26dd8fd6d7,EXTEXTRACT-f119e5eacdac0e4abd74837a,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:38:14.355499+00:00,EXTPAYLOAD-92f1579e68c56a2077b8c037,EXTEXTRACT-c043d7eb6d5e596c4861a5d5,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:38:14.878144+00:00,EXTPAYLOAD-967233baee1cb6f09f3e873b,EXTEXTRACT-7832ba3419e474151275138f,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:38:17.094723+00:00,EXTPAYLOAD-996456ad3a59d9b52632bcb0,EXTEXTRACT-32fa43049655c8290c43e0b5,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:38:25.711135+00:00,EXTPAYLOAD-9ab84c469db74aa131d98c49,EXTEXTRACT-4d2969a624593df9ed259762,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:38:43.107997+00:00,EXTPAYLOAD-a74cf08d720d1e310488d257,EXTEXTRACT-e87fea3561ad4b4adeddaa07,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:38:46.015102+00:00,EXTPAYLOAD-aeda89b882b6e596528c3573,EXTEXTRACT-9c509e1b903eee58f3c6d107,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:24.066200+00:00,EXTPAYLOAD-b52a4aa22e506de77ba46b37,EXTEXTRACT-4b2cac1dde278601228963e9,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:32.993093+00:00,EXTPAYLOAD-bd3da38f71a1c3c0c79cbe74,EXTEXTRACT-201ed54412cc1ddc60205514,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:33.653049+00:00,EXTPAYLOAD-c1a5ed69a0c7a95609ac65c4,EXTEXTRACT-7857b0edfa12f0886024d5b7,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:39:33.714215+00:00,EXTPAYLOAD-c216fe1179cc14031fb80c3c,EXTEXTRACT-aea271b1794fdb18b0629f8f,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:39:34.291736+00:00,EXTPAYLOAD-c24417317edca2869b81b87e,EXTEXTRACT-0c63315d8b9279c8f3f5e603,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:37.516366+00:00,EXTPAYLOAD-cd8cd5f5ba281bdbf67bb5d5,EXTEXTRACT-de4cf27668dd8e7fabaa04c0,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:52.393637+00:00,EXTPAYLOAD-df488e5021985fcac7eaeceb,EXTEXTRACT-89ef78c909135bcb3b30b155,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf_16''""]"
+2026-08-05T19:39:53.619051+00:00,EXTPAYLOAD-e44a2af08b3a42589ce42290,EXTEXTRACT-6c70cc331566aada4e9a8ce8,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:39:53.950446+00:00,EXTPAYLOAD-e87f44d6ebf9ec64f7c62492,EXTEXTRACT-c3f51770b4a2dd90e6a5fa68,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:54.268496+00:00,EXTPAYLOAD-e9211d6e12f9ca172407af49,EXTEXTRACT-af17fce14a86df90be2a464b,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:39:54.372403+00:00,EXTPAYLOAD-e970b00c9609647c74d59b02,EXTEXTRACT-b6b291e6713a5d3b66da394d,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:39:54.456574+00:00,EXTPAYLOAD-ea63a640d9ea5a00a87054c7,EXTEXTRACT-6473ad8fe2f0d19abe8eb49a,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'latin_1''""]"
+2026-08-05T19:39:57.559934+00:00,EXTPAYLOAD-f2134dd23cb419683710e6fd,EXTEXTRACT-3d83cc8365b0711f01dd2fbf,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:40:04.427759+00:00,EXTPAYLOAD-f8ea0dd9047dd5bf82ee1b63,EXTEXTRACT-d5fac320f079deb8fffde82e,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'mac_iceland''""]"
+2026-08-05T19:40:05.403058+00:00,EXTPAYLOAD-f99c68caf60dd6e2ea173c38,EXTEXTRACT-64b28d5764a2c9c71b7c3880,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf_16''""]"
+2026-08-05T19:40:06.165857+00:00,EXTPAYLOAD-f9a4b2478ef6ee16a773ca5d,EXTEXTRACT-842fc26ab04a46f77238a4a3,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:40:07.080641+00:00,EXTPAYLOAD-fb5dae128a68763b31f794e3,EXTEXTRACT-a370e1842712681c98ac8839,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']

@@ -1,0 +1,12 @@
+{
+  "terminal_failure_counts": {
+    "empty_extraction": 0,
+    "extraction_error": 0,
+    "hash_mismatch": 0,
+    "manual_review_hold": 0,
+    "parse_error": 93,
+    "parse_timeout": 4,
+    "payload_missing": 0
+  },
+  "warning_error_rows": 265
+}

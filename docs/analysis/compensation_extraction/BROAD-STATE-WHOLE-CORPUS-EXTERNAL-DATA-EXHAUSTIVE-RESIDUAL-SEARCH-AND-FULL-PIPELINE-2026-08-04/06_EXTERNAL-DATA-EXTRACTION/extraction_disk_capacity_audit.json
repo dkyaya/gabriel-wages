@@ -1,0 +1,21 @@
+{
+  "actual_compressed_extraction_bytes": 716870783,
+  "audited_at": "2026-08-05T19:36:57.824516+00:00",
+  "completed_at": "2026-08-05T21:09:37.812674+00:00",
+  "conservative_projected_extraction_bytes": 1550738995,
+  "extracted_root_bytes_before": 0,
+  "free_bytes_after_extraction": 28477263872,
+  "free_bytes_before_preflight": 18444034048,
+  "minimum_reserve_bytes": 8589934592,
+  "passed": true,
+  "projected_free_bytes_after_extraction": 16687282041,
+  "reserve_preserved": true,
+  "retained_root_bytes": 32212254769,
+  "safety_action": "launch_complete_five_lane_extraction",
+  "sample_compressed_output_bytes": 68970,
+  "sample_source_bytes": 7036207,
+  "structured_root_bytes_before": 0,
+  "temporary_files_remaining": 0,
+  "temporary_peak_bytes": 206013012,
+  "temporary_root_bytes_before": 0
+}

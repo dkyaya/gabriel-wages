@@ -1,0 +1,27 @@
+{
+  "compression": "gzip level 6 deterministic mtime",
+  "five_independent_lanes": true,
+  "full_outputs_ignored_local_only": true,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "html_local_no_javascript_browser_network": true,
+  "implementation_event_deduplication_rerun": false,
+  "lineage_preserved": [
+    "source",
+    "page",
+    "section",
+    "table",
+    "row",
+    "column",
+    "candidate",
+    "event",
+    "claim"
+  ],
+  "ocr_runs": 0,
+  "payloads_processed_once": 14257,
+  "pdf_existing_text_layers_only": true,
+  "statement": "Extraction establishes machine-readable content, not evidentiary truth.",
+  "storage_holds": 7895,
+  "substantive_interpretation_runs": 0,
+  "unresolved_search_targets": 12844
+}

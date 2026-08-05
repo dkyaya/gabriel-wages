@@ -1,0 +1,47 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "extraction_lane_003_artifact_pointer_ledger.csv",
+      "csv_bytes": 7019749,
+      "csv_sha256": "f38f07ac1a69eb6b08e8e723909c417197b0bedd9239edaa93f9370ba745146e",
+      "jsonl": "extraction_lane_003_artifact_pointer_ledger.jsonl",
+      "jsonl_bytes": 7883584,
+      "jsonl_sha256": "ace069827416857fc587027d4a47ede4865fdcab9f7edcb0e20060faba0308a1",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_lane_003_artifact_pointer_ledger.part-002.csv",
+      "csv_bytes": 7027178,
+      "csv_sha256": "c1133fe64ebe7ca002e7b0a2a37ae913a9dbcac84d4a7e2cb23e33d71429d5b6",
+      "jsonl": "extraction_lane_003_artifact_pointer_ledger.part-002.jsonl",
+      "jsonl_bytes": 7891004,
+      "jsonl_sha256": "6337223d68c81b4f1174e949ec6d13af4e145e2b4c7c55f45c4f57cbe2bfcc99",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_lane_003_artifact_pointer_ledger.part-003.csv",
+      "csv_bytes": 5405242,
+      "csv_sha256": "39de0df9e4a8f446bfcbce25ceb503f1df57ac69c6435f78870ffb01740be9fc",
+      "jsonl": "extraction_lane_003_artifact_pointer_ledger.part-003.jsonl",
+      "jsonl_bytes": 6269068,
+      "jsonl_sha256": "586ebb173828046775b252b8759ba31e0feb4962e11d04806bfe9fdab827bbba",
+      "part": 3,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_lane_003_artifact_pointer_ledger.part-004.csv",
+      "csv_bytes": 5207,
+      "csv_sha256": "fac6534480f54854feee491a91f00dde91ad5e57aef2c122628fbee1ca7e8627",
+      "jsonl": "extraction_lane_003_artifact_pointer_ledger.part-004.jsonl",
+      "jsonl_bytes": 5897,
+      "jsonl_sha256": "6b122ce4ef17166bdc01da02783718f8bcf9a0426f125662ee49fb17f98dc5c0",
+      "part": 4,
+      "rows": 4
+    }
+  ],
+  "sharded": true,
+  "total_rows": 12004
+}

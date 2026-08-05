@@ -1,0 +1,53 @@
+at,canonical_payload_id,extraction_result_id,modality_status,terminal_status,warning_codes
+2026-08-05T19:49:05.921596+00:00,EXTPAYLOAD-01688dcc9fe6d17506bec03f,EXTEXTRACT-e60ebbdfd8e05381a653109b,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:49:05.989670+00:00,EXTPAYLOAD-028faf008329224b1d746ff1,EXTEXTRACT-728682afba5059e30a560bd3,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:49:13.292669+00:00,EXTPAYLOAD-0783f0f9012d8dcb0885c6a9,EXTEXTRACT-c9b7e3d7063c2aa566a7b98a,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:49:13.692814+00:00,EXTPAYLOAD-0b08ac5a7047282e61eaebf0,EXTEXTRACT-91f78542db03b4f39506e4c9,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:49:18.534748+00:00,EXTPAYLOAD-1db0d1ba7d6ff2dfdeb0a900,EXTEXTRACT-f638ee26151f8493a48d0296,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:49:21.159731+00:00,EXTPAYLOAD-243d9f998324c877b31de4f4,EXTEXTRACT-bf855b676c343c9b83c14e9b,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:49:25.521191+00:00,EXTPAYLOAD-29fa83fbf17bd0c9672b582e,EXTEXTRACT-2669a33d24564d19dc8a0df7,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:49:35.765327+00:00,EXTPAYLOAD-2ef98f502ab478f46372d0a8,EXTEXTRACT-39b8495641089784d074339b,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:49:45.874254+00:00,EXTPAYLOAD-32548e4dab594ee8ab6030a2,EXTEXTRACT-8aa561fc393e6050b6014b67,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:49:46.337346+00:00,EXTPAYLOAD-3614a4cafa6437b48579b21c,EXTEXTRACT-044481260ae01b27febbad27,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf_16_le''""]"
+2026-08-05T19:49:46.507352+00:00,EXTPAYLOAD-372ecbd345be205bfb85bebb,EXTEXTRACT-64da429614456e6d6f15088f,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:49:59.600495+00:00,EXTPAYLOAD-446758da9e9f2a4cf343becb,EXTEXTRACT-be4e0f2463e5c19709bf74b8,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:50:03.001179+00:00,EXTPAYLOAD-4e2f8904e80739b83fdf06ff,EXTEXTRACT-c91f3a53e8c5adf1bcdcbf94,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:50:03.032108+00:00,EXTPAYLOAD-4ebf049124b663289347e0d7,EXTEXTRACT-7f56836b6e1a20b3f933fa9e,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'latin_1''""]"
+2026-08-05T19:50:03.151237+00:00,EXTPAYLOAD-4fe80da768022d1c9c16cc8b,EXTEXTRACT-3191e22046b9b6720b144e4f,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:50:03.248805+00:00,EXTPAYLOAD-503b0bcacf8436312819c8c9,EXTEXTRACT-a9f699b9df8284b3e9a8589c,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'mac_iceland''""]"
+2026-08-05T19:50:04.149570+00:00,EXTPAYLOAD-55a534cefd441bded6189e77,EXTEXTRACT-57a9319b0dd91cc9579ed0ec,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:50:04.407083+00:00,EXTPAYLOAD-563d5540cd305198c440bba3,EXTEXTRACT-cccd757dc1008cc042f4656b,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:50:08.119964+00:00,EXTPAYLOAD-5b69374484ad0aa988e70298,EXTEXTRACT-fd64be7b3d0ecdfefa1a5739,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:50:08.558040+00:00,EXTPAYLOAD-5d723bf4b2045c0e7b84df50,EXTEXTRACT-fd9a0a4467dd7f8266d611ee,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:56:48.083954+00:00,EXTPAYLOAD-615fcb931d30cdea3620ee83,EXTEXTRACT-baca01dbcb510d5e1543c232,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:56:48.568169+00:00,EXTPAYLOAD-64f047fe94a8f05f8d9f9ddd,EXTEXTRACT-d5163520606724431b317a07,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:56:48.818386+00:00,EXTPAYLOAD-660ec203c6e9adc5db78ffc5,EXTEXTRACT-db15524fba0d1cbef905c6ca,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:56:49.803753+00:00,EXTPAYLOAD-6637c9d9dc0f4832805f8806,EXTEXTRACT-671889755236b1a53a8d27f7,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:56:55.258548+00:00,EXTPAYLOAD-6702dcbc1349f87284a78269,EXTEXTRACT-608aa8b2b358f20a0ff5f65c,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:56:55.885044+00:00,EXTPAYLOAD-6dc9a1b412b1e31c96176e6b,EXTEXTRACT-c46982349dd1c981adf39412,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:56:56.647164+00:00,EXTPAYLOAD-7005ea1255a67eef8b655ced,EXTEXTRACT-c78bd0e0cf1aa3ff4c814b08,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:57:00.173710+00:00,EXTPAYLOAD-76315a349bf13fffbb1678e8,EXTEXTRACT-ce9e943942e2bc799c91962f,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:12.504345+00:00,EXTPAYLOAD-7b9fd3d17baf96f2a85fa36e,EXTEXTRACT-7df30ee7f65a4a6697cb09d6,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'iso8859_15''""]"
+2026-08-05T19:57:12.602184+00:00,EXTPAYLOAD-7bd6be7bc96b8e2603a3f7b5,EXTEXTRACT-5015bbe4e367a32e25089539,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:57:15.486283+00:00,EXTPAYLOAD-83141ff0e08cef3ec2c71358,EXTEXTRACT-6b15582621b936f29076acc4,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:23.507249+00:00,EXTPAYLOAD-898a6c23c2615ba0e2e4edf9,EXTEXTRACT-66e5f0289db4b38253d06db8,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:57:24.634270+00:00,EXTPAYLOAD-8fcf3bb1c2086df6b1b36621,EXTEXTRACT-9d8d8f20da7cbaa609302014,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:57:28.191179+00:00,EXTPAYLOAD-9281cd950e2e1dc3f10681d8,EXTEXTRACT-2582da2f254b22fe757909df,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:57:28.680736+00:00,EXTPAYLOAD-954d48dd2b3d1b0d0faf3cfb,EXTEXTRACT-7eca936eb12ea9bc9b4e3d72,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:28.707843+00:00,EXTPAYLOAD-954fa7afc6eb777cab189c21,EXTEXTRACT-71e338c9a83195e7187bfe45,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:57:29.647513+00:00,EXTPAYLOAD-97fa207215457408d9aa9ec4,EXTEXTRACT-8ac8d8e2668da4b428963fdc,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:31.072847+00:00,EXTPAYLOAD-9fbd11e92f44fe1ce2730f29,EXTEXTRACT-6e3ee79cc1a0034fded57875,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:31.213055+00:00,EXTPAYLOAD-a0ef418af41e28962ab4fa5e,EXTEXTRACT-1fc48498628bdefe958a2d7f,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:33.283634+00:00,EXTPAYLOAD-a58d138954d0b24a84d5455a,EXTEXTRACT-3d871600ed681e49514c6dcc,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:57:36.942421+00:00,EXTPAYLOAD-aca7f1f1b900b796e9e141eb,EXTEXTRACT-bf5e02d83762ac6ca9e61c7d,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:57:37.783484+00:00,EXTPAYLOAD-ad37ae8b3caf060e62c32ca4,EXTEXTRACT-15f1d24c81c415342f298ad4,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T19:57:39.177946+00:00,EXTPAYLOAD-b440f95d62f65869f9bde024,EXTEXTRACT-4f0b5416eee1bb3bfe7f100a,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:57:41.579758+00:00,EXTPAYLOAD-bd77dae8a69f4e1be400194b,EXTEXTRACT-9f56b5f043b7e22ac8f63225,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:57:41.885974+00:00,EXTPAYLOAD-bedcf5a86f2695f3c4a373e5,EXTEXTRACT-e48e2f78e197efb7cd1f5f51,html_text_extracted_ok,extracted_text_ok,"['embedded_json_1_parse_error', 'embedded_json_2_parse_error', 'embedded_json_3_parse_error', 'embedded_json_4_parse_error', 'embedded_json_5_parse_error']"
+2026-08-05T19:58:02.443036+00:00,EXTPAYLOAD-cf8caafd9b96316aa1aafb9b,EXTEXTRACT-6ec1fe58fc86be5709de03e9,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:58:28.414669+00:00,EXTPAYLOAD-d24be55e1e9b65bc4586a9b8,EXTEXTRACT-7a9279099f5f134903ea7a57,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:58:29.168749+00:00,EXTPAYLOAD-d4d9ee3893b08c1f63d7f953,EXTEXTRACT-5bca046d5d7daf679522f12b,html_parse_error,parse_error,"[""html_parse_error:LookupError:unknown encoding: 'b'utf-8-sig''""]"
+2026-08-05T19:58:35.164720+00:00,EXTPAYLOAD-dde9e8fd692afe88e2244380,EXTEXTRACT-852f24c2d843cf4d5098f18a,html_text_extracted_ok,extracted_text_ok,['non_utf8_decoded']
+2026-08-05T19:59:11.029185+00:00,EXTPAYLOAD-e3850bedbd3b9a24016d1fd6,EXTEXTRACT-1ac5ac25ad7b1dfb79a13acd,html_text_and_tables_extracted_ok,extracted_text_and_structured_ok,['non_utf8_decoded']
+2026-08-05T20:09:56.768918+00:00,EXTPAYLOAD-2b5f055ff5371d1de7dd208a,EXTEXTRACT-0302b9bafd28c32d00d4efdf,pdf_extracted_partial_pages,extracted_partial_usable,['page_53_extract_error:PdfReadError']
+2026-08-05T20:26:35.119373+00:00,EXTPAYLOAD-a5625b2181aed6ee246a8826,EXTEXTRACT-d13db3bea9e4f82af4916965,pdf_extracted_partial_pages,extracted_partial_usable,['page_10_extract_error:PdfReadError']

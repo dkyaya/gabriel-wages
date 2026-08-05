@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "contextual_controls_field_extraction_queue.csv",
+      "csv_bytes": 725367,
+      "csv_sha256": "c76854b9eb65485b2a36f71c6ebca0b6e305e9a97257c795d9d52cb7739aff4b",
+      "jsonl": "contextual_controls_field_extraction_queue.jsonl",
+      "jsonl_bytes": 1044251,
+      "jsonl_sha256": "fd3c9adfb353c4a7e0f2e36522495e32a2d249cfa9893a05527df670943a95f7",
+      "part": 1,
+      "rows": 459
+    }
+  ],
+  "sharded": false,
+  "total_rows": 459
+}

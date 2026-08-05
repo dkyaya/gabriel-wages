@@ -1,0 +1,25 @@
+{
+  "modality_status_counts": {
+    "csv_extracted_ok": 17,
+    "html_low_text_extracted": 165,
+    "html_parse_error": 93,
+    "html_parse_timeout": 4,
+    "html_text_and_structured_extracted_ok": 2025,
+    "html_text_and_tables_extracted_ok": 2148,
+    "html_text_extracted_ok": 3704,
+    "html_text_tables_and_structured_extracted_ok": 676,
+    "pdf_extracted_low_text": 25,
+    "pdf_extracted_ok": 5397,
+    "pdf_extracted_partial_pages": 2,
+    "text_low_quality_extracted": 1
+  },
+  "terminal_status_counts": {
+    "extracted_low_yield_usable": 191,
+    "extracted_partial_usable": 2,
+    "extracted_structured_ok": 17,
+    "extracted_text_and_structured_ok": 4849,
+    "extracted_text_ok": 9101,
+    "parse_error": 93,
+    "parse_timeout": 4
+  }
+}

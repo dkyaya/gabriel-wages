@@ -1,0 +1,27 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "benefits_total_compensation_field_extraction_queue.csv",
+      "csv_bytes": 6374380,
+      "csv_sha256": "421fd482dffef4fae1709cb81693945b60dc36637a96dc14004b77a611609a3f",
+      "jsonl": "benefits_total_compensation_field_extraction_queue.jsonl",
+      "jsonl_bytes": 9157800,
+      "jsonl_sha256": "d8100a28b0cda69d9cd5c0bf853d15722d91811b849c8e23d6819972fa123441",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "benefits_total_compensation_field_extraction_queue.part-002.csv",
+      "csv_bytes": 2035923,
+      "csv_sha256": "fe7e75ed9472d0aea35c1ae530efe2048c49c5efbeb2d19fbbd529854ec33782",
+      "jsonl": "benefits_total_compensation_field_extraction_queue.part-002.jsonl",
+      "jsonl_bytes": 2926223,
+      "jsonl_sha256": "34a75d6e521303bc07e265f64c43367d9b314cd6d57308c8bbea190c0116488c",
+      "part": 2,
+      "rows": 1280
+    }
+  ],
+  "sharded": true,
+  "total_rows": 5280
+}

@@ -1,0 +1,17 @@
+{
+  "compression": "gzip level 6, mtime 0",
+  "disk_stop_threshold_bytes": 9126805504,
+  "reserve_bytes": 8589934592,
+  "sampling_statuses": [
+    "parse_text_pdf_ready",
+    "parse_text_pdf_low_text_usable",
+    "html_text_ready",
+    "html_table_candidate_ready",
+    "html_structured_data_candidate",
+    "html_low_text_usable",
+    "csv_structured_ready",
+    "text_low_quality_usable"
+  ],
+  "streaming": true,
+  "temporary_uncompressed_full_artifacts": false
+}

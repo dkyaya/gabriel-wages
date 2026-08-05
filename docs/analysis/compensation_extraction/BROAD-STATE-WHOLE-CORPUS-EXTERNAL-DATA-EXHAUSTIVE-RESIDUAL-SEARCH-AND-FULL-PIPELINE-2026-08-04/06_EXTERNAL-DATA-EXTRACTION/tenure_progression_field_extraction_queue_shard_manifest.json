@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "tenure_progression_field_extraction_queue.csv",
+      "csv_bytes": 6171707,
+      "csv_sha256": "d1ef8afbbc79525f1bd4ba94641f2fd84be85ea362001af8067bebac367c48bd",
+      "jsonl": "tenure_progression_field_extraction_queue.jsonl",
+      "jsonl_bytes": 8877175,
+      "jsonl_sha256": "6b3af9b4aa122eb0792919b56670ed8574d71a434dc8d41f142d3a577b91774e",
+      "part": 1,
+      "rows": 3888
+    }
+  ],
+  "sharded": false,
+  "total_rows": 3888
+}

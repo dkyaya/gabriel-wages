@@ -1,0 +1,37 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "deterministic_text_pattern_processing_ready_queue.csv",
+      "csv_bytes": 5827965,
+      "csv_sha256": "c5ad0347084f4be45178b56d31462c1c8755b5cf786b491cd277941b2777b28e",
+      "jsonl": "deterministic_text_pattern_processing_ready_queue.jsonl",
+      "jsonl_bytes": 8611385,
+      "jsonl_sha256": "510cd85fe03a73e60433a58ecffc6be29d35bfb065d368209c0a241aee06fb2b",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "deterministic_text_pattern_processing_ready_queue.part-002.csv",
+      "csv_bytes": 5851664,
+      "csv_sha256": "5fd6221381b7bf1861137b50192e72572c28ce60ee2d3e5e859f32a5bfda3e48",
+      "jsonl": "deterministic_text_pattern_processing_ready_queue.part-002.jsonl",
+      "jsonl_bytes": 8635084,
+      "jsonl_sha256": "bcc3dd1e48a3a27e53de2a04b9faaecad55a23652ecf8318a69d97f862c812ee",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "deterministic_text_pattern_processing_ready_queue.part-003.csv",
+      "csv_bytes": 1609821,
+      "csv_sha256": "3a5605858b1162c066e5bdd983b923db64d27ed4c2296b242583d7499a900f02",
+      "jsonl": "deterministic_text_pattern_processing_ready_queue.part-003.jsonl",
+      "jsonl_bytes": 2376929,
+      "jsonl_sha256": "ae81d79c426aa21a51a0e8379e0ff3e2b35fb971055041ba47c4a1171287fbd2",
+      "part": 3,
+      "rows": 1103
+    }
+  ],
+  "sharded": true,
+  "total_rows": 9103
+}

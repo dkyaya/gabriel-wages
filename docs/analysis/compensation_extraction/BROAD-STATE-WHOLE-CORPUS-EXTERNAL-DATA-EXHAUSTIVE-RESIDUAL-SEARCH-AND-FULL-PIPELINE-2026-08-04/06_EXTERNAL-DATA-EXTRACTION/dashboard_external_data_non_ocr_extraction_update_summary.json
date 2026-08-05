@@ -1,0 +1,39 @@
+{
+  "compressed_bytes": 716870783,
+  "coverage_map_metric": "scout_coverage_rate",
+  "current_stage": "Retained external-data non-OCR extraction complete",
+  "field_span_ready_count": 14160,
+  "html_table_rows": 1017511,
+  "html_tables": 96484,
+  "implementation_event_deduplication_preserved": true,
+  "next_task": "external-data deterministic field and evidence-span extraction",
+  "no_gabriel": true,
+  "no_hosted_search": true,
+  "no_ocr": true,
+  "no_substantive_interpretation": true,
+  "payloads_processed": 14257,
+  "pdf_pages": 611124,
+  "prior_reports_and_modules_preserved": true,
+  "processing_eligibility_counts": {
+    "deterministic_text_pattern_processing_ready": 9103,
+    "direct_structured_processing_ready": 17,
+    "extraction_repair_needed": 97,
+    "low_yield_context_only": 191,
+    "mixed_structured_and_text_processing_ready": 4849
+  },
+  "source_bytes_processed": 31553349301,
+  "storage_holds_preserved": 7895,
+  "structured_records": 133633,
+  "terminal_status_counts": {
+    "extracted_low_yield_usable": 191,
+    "extracted_partial_usable": 2,
+    "extracted_structured_ok": 17,
+    "extracted_text_and_structured_ok": 4849,
+    "extracted_text_ok": 9101,
+    "parse_error": 93,
+    "parse_timeout": 4
+  },
+  "total_characters": 2214446063,
+  "unresolved_search_targets": 12844,
+  "updated_at": "2026-08-05T21:09:37.424081+00:00"
+}

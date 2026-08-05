@@ -1,0 +1,13 @@
+{
+  "embedded_json_1_parse_error": 6,
+  "embedded_json_2_parse_error": 2,
+  "embedded_json_3_parse_error": 2,
+  "embedded_json_4_parse_error": 2,
+  "embedded_json_5_parse_error": 2,
+  "html_child_process_wall_timeout": 3,
+  "html_parse_error": 93,
+  "non_utf8_decoded": 160,
+  "page_10_extract_error": 1,
+  "page_53_extract_error": 1,
+  "parse_timeout": 1
+}

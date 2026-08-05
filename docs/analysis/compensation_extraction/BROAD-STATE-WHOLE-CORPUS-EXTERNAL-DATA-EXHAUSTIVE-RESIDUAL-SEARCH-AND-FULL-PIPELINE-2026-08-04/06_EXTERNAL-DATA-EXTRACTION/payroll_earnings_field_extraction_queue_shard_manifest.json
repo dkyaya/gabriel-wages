@@ -1,0 +1,37 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "payroll_earnings_field_extraction_queue.csv",
+      "csv_bytes": 6096695,
+      "csv_sha256": "36c2b29a686e82cae60dca2bb47b28a4e2c517d3794f686b20def559282924bc",
+      "jsonl": "payroll_earnings_field_extraction_queue.jsonl",
+      "jsonl_bytes": 8880115,
+      "jsonl_sha256": "f1e3a6c76b2c33ea6418efa73008ef932662b0d655f54e95ba8c91153ea7b746",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "payroll_earnings_field_extraction_queue.part-002.csv",
+      "csv_bytes": 6125194,
+      "csv_sha256": "f6b8d3fa1157cab26a695d432c815e35a76442a311270603daa593d5fe3e7006",
+      "jsonl": "payroll_earnings_field_extraction_queue.part-002.jsonl",
+      "jsonl_bytes": 8908614,
+      "jsonl_sha256": "af1f832503bc678a4574a1061eee50f0d908dfbb1862938df8beabc673ced388",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "payroll_earnings_field_extraction_queue.part-003.csv",
+      "csv_bytes": 4024610,
+      "csv_sha256": "c197f4965986b1f3c1202c4abb75cf8d3e4b4d1e10535b125c6b310dc72b13fd",
+      "jsonl": "payroll_earnings_field_extraction_queue.part-003.jsonl",
+      "jsonl_bytes": 5855206,
+      "jsonl_sha256": "0055b6c5e4dd4e6a78e1b5b231cbd1657680115eed734640187f675f3b1f057a",
+      "part": 3,
+      "rows": 2631
+    }
+  ],
+  "sharded": true,
+  "total_rows": 10631
+}

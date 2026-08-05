@@ -1,0 +1,48 @@
+{
+  "artifact_bytes": 716870783,
+  "artifact_count": 59916,
+  "completed_at": "2026-08-05T21:09:37.172948+00:00",
+  "compression_codec": "gzip",
+  "compression_level": 6,
+  "configuration_version": "external-non-ocr-v1",
+  "created_at": "2026-08-05T19:36:57.883533+00:00",
+  "decision": "broad_state_whole_corpus_available_external_data_extraction_completed_field_span_ready",
+  "decision_pending": false,
+  "extraction_ready_payloads": 14257,
+  "extractor_version": "pypdf+lxml+csv-2026-08-05",
+  "field_span_ready_count": 14160,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "lane_sizes": {
+    "extraction_lane_001": 2851,
+    "extraction_lane_002": 2852,
+    "extraction_lane_003": 2851,
+    "extraction_lane_004": 2852,
+    "extraction_lane_005": 2851
+  },
+  "minimum_free_space_reserve_bytes": 8589934592,
+  "network_requests": 0,
+  "ocr_runs": 0,
+  "outcomes": {
+    "extracted_low_yield_usable": 191,
+    "extracted_partial_usable": 2,
+    "extracted_structured_ok": 17,
+    "extracted_text_and_structured_ok": 4849,
+    "extracted_text_ok": 9101,
+    "parse_error": 93,
+    "parse_timeout": 4
+  },
+  "redownloads": 0,
+  "source_bytes": 31553349301,
+  "starting_head": "586823c31ce4f14db0cdf7374754185ebcc89d91",
+  "storage_capacity_holds_preserved": 7895,
+  "substantive_interpretation_runs": 0,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-NON-OCR-EXTRACTION-2026-08-05",
+  "type_counts": {
+    "csv": 17,
+    "html": 8815,
+    "pdf": 5424,
+    "txt": 1
+  },
+  "unresolved_hosted_search_targets": 12844
+}

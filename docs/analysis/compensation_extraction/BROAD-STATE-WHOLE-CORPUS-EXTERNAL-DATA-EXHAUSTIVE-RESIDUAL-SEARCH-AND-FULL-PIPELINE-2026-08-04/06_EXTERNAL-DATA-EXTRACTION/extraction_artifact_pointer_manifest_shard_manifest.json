@@ -1,0 +1,157 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "extraction_artifact_pointer_manifest.csv",
+      "csv_bytes": 6451491,
+      "csv_sha256": "d935fd9965d34497be464d2887f6aebdf08207c05b18d196c48837a0ee3fdbba",
+      "jsonl": "extraction_artifact_pointer_manifest.jsonl",
+      "jsonl_bytes": 7323320,
+      "jsonl_sha256": "2d06a5a4a1fda413c53e16f469c5eab18208f8cb02ebec6d828b50839d833c5f",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-002.csv",
+      "csv_bytes": 6494247,
+      "csv_sha256": "dbc531a27ab1f05951fa61e4fc96110c94768190b85f6cb170119160e9db74a8",
+      "jsonl": "extraction_artifact_pointer_manifest.part-002.jsonl",
+      "jsonl_bytes": 7366076,
+      "jsonl_sha256": "bc6a462b423b38e55de9c4046be40f8acf86a0cc0772c6447b09a63cece7b81d",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-003.csv",
+      "csv_bytes": 6488943,
+      "csv_sha256": "dc4c883e9890e67a8c88082c6535b9500bc31857b7e9041daff001d6322ca7e2",
+      "jsonl": "extraction_artifact_pointer_manifest.part-003.jsonl",
+      "jsonl_bytes": 7360772,
+      "jsonl_sha256": "c968c876acd637f9821113194c69ff4d6b1766f08920eea50bbe9b2c79d56cab",
+      "part": 3,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-004.csv",
+      "csv_bytes": 6475996,
+      "csv_sha256": "616bf139171dd104d866ac5a407add16f1766e37bc316997dad573224ccec70a",
+      "jsonl": "extraction_artifact_pointer_manifest.part-004.jsonl",
+      "jsonl_bytes": 7347825,
+      "jsonl_sha256": "52a0df60f34953885c5d763d61e46c2b237912c74578d1491fd52add80975556",
+      "part": 4,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-005.csv",
+      "csv_bytes": 6444743,
+      "csv_sha256": "aa0c26b1d50cddb2cda0be24c9066f6b722c6a7fcf2e7f1844e3242244f4959f",
+      "jsonl": "extraction_artifact_pointer_manifest.part-005.jsonl",
+      "jsonl_bytes": 7316572,
+      "jsonl_sha256": "132ea1fbf5ec5d38fde3e94eb14b23203a3546c3f729e3f3ecd5af1e7dfffd48",
+      "part": 5,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-006.csv",
+      "csv_bytes": 6501877,
+      "csv_sha256": "533c28ec8d840e0db24fdb39bafefaee73dd0f5cfc0ba24463fe46c93e31280b",
+      "jsonl": "extraction_artifact_pointer_manifest.part-006.jsonl",
+      "jsonl_bytes": 7373703,
+      "jsonl_sha256": "691b873b9654782e33af20885055edcd78ee20296d0cb767511a750874fcb67f",
+      "part": 6,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-007.csv",
+      "csv_bytes": 6497160,
+      "csv_sha256": "5b35de30e3fd357bbdba3c5ef74334a3c075bf0bd6137df80ae6f3d2f544d367",
+      "jsonl": "extraction_artifact_pointer_manifest.part-007.jsonl",
+      "jsonl_bytes": 7368986,
+      "jsonl_sha256": "78fddf45db06d22e27763641444bb697b419712a62d60c981e87b8d9b74c9c22",
+      "part": 7,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-008.csv",
+      "csv_bytes": 6475727,
+      "csv_sha256": "8a17debd773c3c7d3361dc31c07217221b1fd73a66a91e5f94db524fcb9557c8",
+      "jsonl": "extraction_artifact_pointer_manifest.part-008.jsonl",
+      "jsonl_bytes": 7347559,
+      "jsonl_sha256": "8d3ed762ade4851185cefe488f2ccfe549b8000f74cb992cda66d139cb4d41d7",
+      "part": 8,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-009.csv",
+      "csv_bytes": 6518385,
+      "csv_sha256": "fa6bc486ccb7b230af85780709d92a3af57f5d78df27c103969d6c333aa16018",
+      "jsonl": "extraction_artifact_pointer_manifest.part-009.jsonl",
+      "jsonl_bytes": 7390214,
+      "jsonl_sha256": "dcc106b86bcbf89718dc6e2f32babe8b3c694e92a93f96af53f67fa3cdac4df3",
+      "part": 9,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-010.csv",
+      "csv_bytes": 6485583,
+      "csv_sha256": "27c1ed2822243d08f0a61b84b9ab33a988cdf07fada962cced1dba58f3b63bc4",
+      "jsonl": "extraction_artifact_pointer_manifest.part-010.jsonl",
+      "jsonl_bytes": 7357421,
+      "jsonl_sha256": "bc656c9bc93524690c02ab0267525a490a8d05431738c8958579633b2a65875a",
+      "part": 10,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-011.csv",
+      "csv_bytes": 6487009,
+      "csv_sha256": "2c02868d865f5e3401b74e7e18d7abb28acd903b5637826e1ce466c2ab01613b",
+      "jsonl": "extraction_artifact_pointer_manifest.part-011.jsonl",
+      "jsonl_bytes": 7358835,
+      "jsonl_sha256": "69cd2b5568e3291b7f567448dc0355d1a6c30e584e7951b945549f9618b32f72",
+      "part": 11,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-012.csv",
+      "csv_bytes": 6496478,
+      "csv_sha256": "12a33e3e3f225c93611b7462eee0b3d6bb0bd89e60237c51d18c8a4307717d04",
+      "jsonl": "extraction_artifact_pointer_manifest.part-012.jsonl",
+      "jsonl_bytes": 7368310,
+      "jsonl_sha256": "3d4e55646950982afc3d37fe39a917cfc92e4ecec783590f1067a7069a0d9187",
+      "part": 12,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-013.csv",
+      "csv_bytes": 6450083,
+      "csv_sha256": "c20b2f48f684fcb5ae8221d2ac4768af362ee4267a130a9db92f66dc4eafff49",
+      "jsonl": "extraction_artifact_pointer_manifest.part-013.jsonl",
+      "jsonl_bytes": 7321912,
+      "jsonl_sha256": "2524d77fd98bc68a8af567a338c278eb6ec9ceb8820399c5f0ea6254bb909f3f",
+      "part": 13,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-014.csv",
+      "csv_bytes": 6473420,
+      "csv_sha256": "5ed25ff03109f5a407583a80ac26c2f3b85f1d4d4da6de3f67c099efec794a5a",
+      "jsonl": "extraction_artifact_pointer_manifest.part-014.jsonl",
+      "jsonl_bytes": 7345249,
+      "jsonl_sha256": "14fec542b89ce9de4199967d7e5976a8922b4053032d8e792985fef60e3ab437",
+      "part": 14,
+      "rows": 4000
+    },
+    {
+      "csv": "extraction_artifact_pointer_manifest.part-015.csv",
+      "csv_bytes": 6363867,
+      "csv_sha256": "d02a1da2a1478b28099a2d5a8d7d00e13682d67d3bdf83953fd0c5a0538ebc22",
+      "jsonl": "extraction_artifact_pointer_manifest.part-015.jsonl",
+      "jsonl_bytes": 7217384,
+      "jsonl_sha256": "cd6b5bf90270431ac2989f0ce3c397a4d07152135da1d7280314c74409de5ac9",
+      "part": 15,
+      "rows": 3916
+    }
+  ],
+  "sharded": true,
+  "total_rows": 59916
+}

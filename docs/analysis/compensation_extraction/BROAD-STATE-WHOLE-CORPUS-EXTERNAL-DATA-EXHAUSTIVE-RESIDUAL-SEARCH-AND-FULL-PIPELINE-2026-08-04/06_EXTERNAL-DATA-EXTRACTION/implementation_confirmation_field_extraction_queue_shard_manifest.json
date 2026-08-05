@@ -1,0 +1,37 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "implementation_confirmation_field_extraction_queue.csv",
+      "csv_bytes": 6300731,
+      "csv_sha256": "5edc05c034bcaca12cf908021e39625f8060de0aee10a97f3dcd4729a3f9b08b",
+      "jsonl": "implementation_confirmation_field_extraction_queue.jsonl",
+      "jsonl_bytes": 9084151,
+      "jsonl_sha256": "865335718c78390be4852944f86d7ed55209e409e67fb88d6c338557eda68ef0",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "implementation_confirmation_field_extraction_queue.part-002.csv",
+      "csv_bytes": 6291124,
+      "csv_sha256": "f1009c1e980a639ee6eb37e419ef244b86087fa60336f8b39cac02c7d7b8dbeb",
+      "jsonl": "implementation_confirmation_field_extraction_queue.part-002.jsonl",
+      "jsonl_bytes": 9074544,
+      "jsonl_sha256": "4c2b6b0e42d966efd8376eacfadb745de5ad241a6e923ff5e88f1120f431da4b",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "implementation_confirmation_field_extraction_queue.part-003.csv",
+      "csv_bytes": 950623,
+      "csv_sha256": "6406fba29a0c687a37e351d9da33134d1d2e2090ceea8f6ae6dc6ef9277ffadb",
+      "jsonl": "implementation_confirmation_field_extraction_queue.part-003.jsonl",
+      "jsonl_bytes": 1367643,
+      "jsonl_sha256": "3118ffa6473d86807ad6810be04c0e7d86378913c9bab8a564d2431e644cd1bb",
+      "part": 3,
+      "rows": 600
+    }
+  ],
+  "sharded": true,
+  "total_rows": 8600
+}

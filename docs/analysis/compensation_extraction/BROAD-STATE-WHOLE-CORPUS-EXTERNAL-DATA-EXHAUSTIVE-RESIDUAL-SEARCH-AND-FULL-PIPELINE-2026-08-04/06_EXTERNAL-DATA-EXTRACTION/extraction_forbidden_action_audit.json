@@ -1,0 +1,17 @@
+{
+  "causal_effect_claims": 0,
+  "final_visual_documents": 0,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_runs": 0,
+  "national_wage_gap_estimates": 0,
+  "network_requests": 0,
+  "normalization_matching_runs": 0,
+  "ocr_later_payloads_processed": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "prevalence_estimates": 0,
+  "redownloads": 0,
+  "regressions_treatment_effects": 0,
+  "substantive_field_interpretations": 0
+}

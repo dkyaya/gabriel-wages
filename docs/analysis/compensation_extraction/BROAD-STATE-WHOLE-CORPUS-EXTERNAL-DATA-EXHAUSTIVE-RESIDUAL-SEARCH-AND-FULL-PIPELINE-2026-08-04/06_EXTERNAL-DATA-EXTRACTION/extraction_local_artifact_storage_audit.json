@@ -1,0 +1,12 @@
+{
+  "all_hashes_and_sizes_valid": true,
+  "all_paths_exist": true,
+  "artifact_bytes": 716870783,
+  "artifact_count": 59916,
+  "audited_at": "2026-08-05T21:09:50.484095+00:00",
+  "extracted_root_ignored": true,
+  "passed": true,
+  "retained_root_ignored": true,
+  "structured_root_ignored": true,
+  "temporary_files_remaining": 0
+}
