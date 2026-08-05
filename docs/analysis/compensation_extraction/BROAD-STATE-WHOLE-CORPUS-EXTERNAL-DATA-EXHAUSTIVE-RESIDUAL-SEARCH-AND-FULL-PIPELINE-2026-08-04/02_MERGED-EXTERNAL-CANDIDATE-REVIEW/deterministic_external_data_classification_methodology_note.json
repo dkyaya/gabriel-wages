@@ -1,0 +1,8 @@
+{
+  "ambiguous_narrative_route": "pending_gabriel_or_manual_narrative_review",
+  "explicit_structured_values_processed_directly": true,
+  "gabriel_scores_created": false,
+  "method": "deterministic_locally_auditable_rules",
+  "not_equivalent_to_gabriel": true,
+  "required_methodology_text": "New external administrative evidence was classified through deterministic and locally auditable rules rather than GABRIEL scoring because hosted-search/API capacity became unavailable. Explicit structured values were processed directly; ambiguous narrative evidence was retained for manual or future model-assisted review."
+}

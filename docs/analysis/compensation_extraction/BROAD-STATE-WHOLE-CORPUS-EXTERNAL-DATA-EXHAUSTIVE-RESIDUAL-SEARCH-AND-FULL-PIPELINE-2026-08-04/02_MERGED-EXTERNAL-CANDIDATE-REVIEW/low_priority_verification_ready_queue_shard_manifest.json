@@ -3,15 +3,55 @@
   "parts": [
     {
       "csv": "low_priority_verification_ready_queue.csv",
-      "csv_bytes": 11620303,
-      "csv_sha256": "20a57e2008e515150f936d955571e99dc52c58f5de591b5b45db956cddd04c0f",
+      "csv_bytes": 22631956,
+      "csv_sha256": "0ec15a3d866d380f56e86c202dc98276c7d67b847cc13f58db51a2c015e379b6",
       "jsonl": "low_priority_verification_ready_queue.jsonl",
-      "jsonl_bytes": 16641920,
-      "jsonl_sha256": "7e905dd65c6199c6cd680773645f282588832a57f24fdb7efce19b4d95e72a0e",
+      "jsonl_bytes": 34055628,
+      "jsonl_sha256": "7799d97bfb2df7b46199985a6c0bfeed50587551bfc068d0f13a5e6abff83ffe",
       "part": 1,
-      "rows": 5846
+      "rows": 8000
+    },
+    {
+      "csv": "low_priority_verification_ready_queue.part-002.csv",
+      "csv_bytes": 22564308,
+      "csv_sha256": "1ae587a4e89b75b9ca00463db68b33e3f28de060945d0e7dbfb1d76107114da3",
+      "jsonl": "low_priority_verification_ready_queue.part-002.jsonl",
+      "jsonl_bytes": 33987912,
+      "jsonl_sha256": "03dc7f1526a04a24bb17539b94d1b0d0d79ab5fda31653a8a8db35a015b8ccc1",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "low_priority_verification_ready_queue.part-003.csv",
+      "csv_bytes": 21662645,
+      "csv_sha256": "ca9d9324b46879e9dc6d9b30d87d28da5875aef7fa0b1a45967d571beaa535b3",
+      "jsonl": "low_priority_verification_ready_queue.part-003.jsonl",
+      "jsonl_bytes": 33085775,
+      "jsonl_sha256": "e05857b8bbb163a8f87ae3437cbe0c0d1649b4a72707b301befa47645906a122",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "low_priority_verification_ready_queue.part-004.csv",
+      "csv_bytes": 21650688,
+      "csv_sha256": "7f1adaf31c886ceda13a72237c1aaf3d807bda817e6424294458db9ea9c9540e",
+      "jsonl": "low_priority_verification_ready_queue.part-004.jsonl",
+      "jsonl_bytes": 33073825,
+      "jsonl_sha256": "fe5fc05a0fed58c93281f22a20e139f71fff92d6a6adddda42dc990b59b00263",
+      "part": 4,
+      "rows": 8000
+    },
+    {
+      "csv": "low_priority_verification_ready_queue.part-005.csv",
+      "csv_bytes": 1093172,
+      "csv_sha256": "9645781defd25bd0498965cb7f5f06f02fb72cd53392956c8e62ff98d1009151",
+      "jsonl": "low_priority_verification_ready_queue.part-005.jsonl",
+      "jsonl_bytes": 1668903,
+      "jsonl_sha256": "abcd2b66b643f060235810fdb0ac552b034f869d79c51f4b07a157614d8e1982",
+      "part": 5,
+      "rows": 404
     }
   ],
-  "sharded": false,
-  "total_rows": 5846
+  "sharded": true,
+  "total_rows": 32404
 }

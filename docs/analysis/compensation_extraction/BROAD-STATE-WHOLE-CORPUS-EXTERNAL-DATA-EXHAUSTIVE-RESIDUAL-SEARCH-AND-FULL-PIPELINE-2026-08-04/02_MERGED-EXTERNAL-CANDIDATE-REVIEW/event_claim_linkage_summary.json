@@ -1,5 +1,7 @@
 {
   "reviewed": 62796,
+  "with_claim_id_linkage": 0,
   "with_expected_claim_upgrade": 62796,
-  "with_root_event": 62796
+  "with_mechanism_event_linkage": 62796,
+  "with_root_event_linkage": 62796
 }

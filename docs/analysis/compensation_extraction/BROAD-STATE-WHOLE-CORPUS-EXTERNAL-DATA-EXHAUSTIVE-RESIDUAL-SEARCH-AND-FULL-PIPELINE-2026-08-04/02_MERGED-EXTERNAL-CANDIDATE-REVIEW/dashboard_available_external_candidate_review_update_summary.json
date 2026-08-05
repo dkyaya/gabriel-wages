@@ -1,0 +1,53 @@
+{
+  "available_canonical_candidates_reviewed": 62796,
+  "cross_wave_duplicate_links": 58102,
+  "current_stage": "available external-data candidate review complete",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "dashboard_validation": {
+    "checked_at": "2026-08-05T14:41:53.838560+00:00",
+    "checks": {
+      "coverage_map_preserved": true,
+      "current_stage_updated": true,
+      "next_task_verification": true,
+      "reports_preserved": true,
+      "unresolved_targets_12844": true,
+      "verification_not_started": true
+    },
+    "passed": true
+  },
+  "decision": "broad_state_whole_corpus_available_external_candidate_review_completed_verification_ready",
+  "deterministic_local_classification_documented": true,
+  "direct_staffing_candidates": 37924,
+  "final_visuals_created": false,
+  "gabriel_scoring_used": false,
+  "hosted_search_limitation_documented": true,
+  "implementation_confirmation_candidates": 918,
+  "next_task": "available external-data verification",
+  "nonverification_bucket_counts": {
+    "deferred_low_signal": 0,
+    "excluded_out_of_scope": 602,
+    "likely_duplicate_prior_source": 0,
+    "likely_duplicate_within_external_wave": 0,
+    "likely_navigation_only": 55,
+    "malformed_or_missing_locator": 0,
+    "repair_needed": 515,
+    "review_error": 0
+  },
+  "official_administrative_source_candidates": 29774,
+  "payroll_candidates": 15725,
+  "preservation": {
+    "corrected_scaffold": true,
+    "final_pi_report": true,
+    "prior_report_draft": true,
+    "semantic_scaffold": true,
+    "wage_growth_module": true
+  },
+  "unresolved_hosted_search_targets": 12844,
+  "verification_performed": false,
+  "verification_ready_counts": {
+    "high_priority_verification_ready": 28136,
+    "low_priority_verification_ready": 32404,
+    "medium_priority_verification_ready": 1084
+  },
+  "verification_ready_total": 61624
+}

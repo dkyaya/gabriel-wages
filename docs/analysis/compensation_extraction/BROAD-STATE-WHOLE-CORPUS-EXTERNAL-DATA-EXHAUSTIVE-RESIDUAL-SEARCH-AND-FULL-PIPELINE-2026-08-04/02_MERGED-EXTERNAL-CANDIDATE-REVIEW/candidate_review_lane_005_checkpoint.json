@@ -1,11 +1,15 @@
 {
   "assigned": 12559,
+  "checkpoint_batch_size": 100,
   "completed": 12559,
-  "finished_at": "2026-08-05T03:53:38.586055+00:00",
+  "finished_at": "2026-08-05T14:39:40.420446+00:00",
   "lane_id": "candidate_review_lane_005",
-  "last_candidate_id": "RESCAND-34be03cb86a7df46ffc656e6",
-  "queue_sha256": "3128a9146eecfecd68434d925fd90ee505d5a03ef37b37d930f74f62fa5b1350",
-  "started_at": "2026-08-05T03:53:21.877993+00:00",
+  "last_candidate_id": "RESCAND-fe5bffdecc5542bc9216da6f",
+  "locked_queue_sha256": "fe55572c93d741abbccc782dbcf167a1279844b358fc35bcdd9d9a3d701a4012",
+  "prepared_at": "2026-08-05T14:23:21.618075+00:00",
+  "scheduled_delay_seconds": 960,
+  "started_at": "2026-08-05T14:39:37.745490+00:00",
   "status": "complete",
-  "updated_at": "2026-08-05T03:53:38.331241+00:00"
+  "unique_results": 12559,
+  "updated_at": "2026-08-05T14:39:39.780046+00:00"
 }

@@ -3,25 +3,45 @@
   "parts": [
     {
       "csv": "high_priority_verification_ready_queue.csv",
-      "csv_bytes": 16391775,
-      "csv_sha256": "fd256ed5ff214a52d4b6d04eda7401c4e37b469c00713f9dd13b93d9058cabea",
+      "csv_bytes": 23414126,
+      "csv_sha256": "35ff6d3cac44fc84e3b483ab482fbd00290bf0768d9b555c5e97e01f0114d12b",
       "jsonl": "high_priority_verification_ready_queue.jsonl",
-      "jsonl_bytes": 23264007,
-      "jsonl_sha256": "cce0ef2ca7feea2f1dbb8cbd5fe98d043e4700aaa9d39910504ec6ee77c66e6b",
+      "jsonl_bytes": 34837870,
+      "jsonl_sha256": "a531da48b9325cf1729a3d579b7280f222af64ff54bc755f94d4b2eb84b6b0f0",
       "part": 1,
       "rows": 8000
     },
     {
       "csv": "high_priority_verification_ready_queue.part-002.csv",
-      "csv_bytes": 9661413,
-      "csv_sha256": "b773206ea988c294089683b746f2381f3d874e61eadf2c22326f4843e09cc9c4",
+      "csv_bytes": 23202872,
+      "csv_sha256": "1cab058dbb4beb36ee1831112e3bc5300720f7c3dfef9e349e8720fe0a9d7a89",
       "jsonl": "high_priority_verification_ready_queue.part-002.jsonl",
-      "jsonl_bytes": 13707220,
-      "jsonl_sha256": "8d3e9c1025f31f9db46aed296d9671aa52e4f15bda6b2e8a845bb034c1ed53e0",
+      "jsonl_bytes": 34626477,
+      "jsonl_sha256": "809dc681afbc1da1f37855b9fb83c0db42960ea356195b743eddb52005640573",
       "part": 2,
-      "rows": 4710
+      "rows": 8000
+    },
+    {
+      "csv": "high_priority_verification_ready_queue.part-003.csv",
+      "csv_bytes": 22510527,
+      "csv_sha256": "e377fdba83ef1a938366a2c31aefba8eabcadfee1ed3002dfb1f4cc4a3436489",
+      "jsonl": "high_priority_verification_ready_queue.part-003.jsonl",
+      "jsonl_bytes": 33933622,
+      "jsonl_sha256": "bb5515a54e7bc93316d19e23eaeb648b7f9c12c9658e3f6c25f9ec6898ee163e",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "high_priority_verification_ready_queue.part-004.csv",
+      "csv_bytes": 11641989,
+      "csv_sha256": "515e0b72d104a3076f6ad234f64159e14c1facafd16e877d0cbf3b888af9f121",
+      "jsonl": "high_priority_verification_ready_queue.part-004.jsonl",
+      "jsonl_bytes": 17547150,
+      "jsonl_sha256": "df9635504d656ce99c6a6c0ad63f5e4d707978aad211fb61494a90a737c81c56",
+      "part": 4,
+      "rows": 4136
     }
   ],
   "sharded": true,
-  "total_rows": 12710
+  "total_rows": 28136
 }

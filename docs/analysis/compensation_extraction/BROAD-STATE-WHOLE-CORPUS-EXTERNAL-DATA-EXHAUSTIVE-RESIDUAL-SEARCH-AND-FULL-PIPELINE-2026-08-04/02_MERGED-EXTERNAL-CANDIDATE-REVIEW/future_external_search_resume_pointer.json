@@ -1,0 +1,7 @@
+{
+  "do_not_classify_as_zero_candidate": true,
+  "do_not_rebuild_queue": true,
+  "future_resume_queue": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/01_RESIDUAL-HOSTED-SEARCH-SCOUT/residual_resume_locked_queue_manifest.json",
+  "locked_target_count": 12844,
+  "resume_only_if_transport_category_A_and_probe_passes": true
+}

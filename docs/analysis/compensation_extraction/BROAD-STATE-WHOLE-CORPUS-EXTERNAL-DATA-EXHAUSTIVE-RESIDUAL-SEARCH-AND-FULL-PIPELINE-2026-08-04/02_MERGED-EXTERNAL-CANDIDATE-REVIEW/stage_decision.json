@@ -1,19 +1,15 @@
 {
   "bucket_counts": {
-    "deferred_low_signal": 28332,
-    "excluded_out_of_scope": 454,
-    "high_priority_verification_ready": 12710,
-    "likely_duplicate_prior_source": 0,
-    "likely_duplicate_within_external_wave": 0,
-    "likely_navigation_only": 1655,
-    "low_priority_verification_ready": 5846,
-    "malformed_or_missing_locator": 0,
-    "medium_priority_verification_ready": 13799,
-    "repair_needed": 0,
-    "review_error": 0
+    "excluded_out_of_scope": 602,
+    "high_priority_verification_ready": 28136,
+    "likely_navigation_only": 55,
+    "low_priority_verification_ready": 32404,
+    "medium_priority_verification_ready": 1084,
+    "repair_needed": 515
   },
-  "completed_at": "2026-08-05T03:53:46.109859+00:00",
-  "decision": "merged_external_candidate_review_completed_verification_ready",
+  "completed_at": "2026-08-05T14:41:48.119882+00:00",
+  "decision": "broad_state_whole_corpus_available_external_candidate_review_completed_verification_ready",
   "reviewed": 62796,
-  "verification_ready": 32355
+  "stage3_started": false,
+  "verification_ready": 61624
 }

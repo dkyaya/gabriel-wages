@@ -1,0 +1,9 @@
+{
+  "available_wave2_canonical_candidates": 33003,
+  "capacity_limitation_plausible_not_proven": true,
+  "completed_or_resolved_targets": 5845,
+  "definitive_billing_diagnosis_exposed": false,
+  "hosted_search_status": "unavailable_after_repeated_fail_closed_transport_checks",
+  "required_limitation_text": "I planned an exhaustive second search pass across 18,689 event-specific external-data targets. The AI completed or resolved 5,845 targets and preserved 33,003 canonical second-wave candidates before the hosted-search service began returning globally source-less responses across every tested data family. Repeated fail-closed transport checks did not expose a definitive billing diagnosis, although API or product-capacity limitations are a plausible explanation. I ended further discovery rather than treating backend failures as genuine absence of evidence. The remaining 12,844 targets are therefore unsearched external-data gaps. This reduces the completeness and confidence of the administrative-data layer, especially for payroll, staffing, vacancy, tenure, benefits, and implementation-confirmation evidence, but it does not invalidate the documentary mechanism corpus or the administrative candidates already recovered.",
+  "unresolved_targets": 12844
+}

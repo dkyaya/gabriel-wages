@@ -1,0 +1,13 @@
+{
+  "downloads": 0,
+  "final_visuals_or_documents": 0,
+  "gabriel_api_calls": 0,
+  "hosted_search_calls": 0,
+  "normalization_or_matching_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "regressions_or_treatment_effects": 0,
+  "source_reviews": 0,
+  "text_extractions": 0,
+  "url_head_or_get_calls": 0
+}

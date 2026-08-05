@@ -1,0 +1,8 @@
+{
+  "candidate_review_excluded": true,
+  "frozen": true,
+  "source_manifest": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/01_RESIDUAL-HOSTED-SEARCH-SCOUT/residual_resume_locked_queue_manifest.json",
+  "source_queue_sha256": "bcf07649f4ed09990352406a6edf49be2098eb55d4f49ccb33ffcc04a9c2d72b",
+  "terminal_interpretation": "unsearched_external_data_gap_not_zero_candidate",
+  "unresolved_target_count": 12844
+}

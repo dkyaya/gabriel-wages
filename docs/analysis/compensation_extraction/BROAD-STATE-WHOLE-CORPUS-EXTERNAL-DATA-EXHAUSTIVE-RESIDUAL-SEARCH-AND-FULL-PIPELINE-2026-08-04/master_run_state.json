@@ -1,8 +1,12 @@
 {
+  "available_candidate_review_decision": "broad_state_whole_corpus_available_external_candidate_review_completed_verification_ready",
+  "available_candidates_reviewed": 62796,
   "coordinator_error": "Hosted-search Category B transition; downstream stopped conservatively after provisional metadata-only review and before verification.",
-  "current_stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
+  "current_stage": "02_MERGED-EXTERNAL-CANDIDATE-REVIEW",
+  "current_status": "available_external_candidate_review_complete_verification_ready",
   "latest_decision": "broad_state_whole_corpus_external_data_exhaustive_pipeline_preflight_failed_backend_unstable",
   "locked_remaining_count": 12844,
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-VERIFICATION-2026-08-05",
   "preserved_authoritative_bulk_count": 2998,
   "preserved_candidate_target_count": 2847,
   "preserved_completed_count": 5845,
@@ -14,5 +18,7 @@
   "status": "preflight_failed_backend_unstable",
   "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04",
   "transport_category": "B",
-  "updated_at": "2026-08-05T13:57:19.532693+00:00"
+  "unresolved_search_targets": 12844,
+  "updated_at": "2026-08-05T14:41:48.120186+00:00",
+  "verification_ready_candidates": 61624
 }

@@ -1,0 +1,14 @@
+{
+  "administrative_source_type_signal": 60236,
+  "direct_or_likely_official_administrative_evidence": 28136,
+  "direct_staffing_relevance": 37924,
+  "excluded_domain_or_non_us_source": 602,
+  "generic_navigation_or_index_locator": 55,
+  "mechanism_event_linked": 62796,
+  "official_domain": 25249,
+  "official_locator_requires_metadata_repair": 515,
+  "official_source_search_hint": 25243,
+  "plausible_strong_source_requires_verification": 1084,
+  "root_event_linked": 62796,
+  "worth_single_metadata_verification_attempt": 32404
+}

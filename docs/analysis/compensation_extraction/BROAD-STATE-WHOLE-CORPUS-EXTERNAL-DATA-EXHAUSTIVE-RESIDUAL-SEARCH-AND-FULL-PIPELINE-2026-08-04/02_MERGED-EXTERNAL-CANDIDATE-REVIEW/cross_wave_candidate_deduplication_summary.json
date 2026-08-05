@@ -1,0 +1,9 @@
+{
+  "interpretation": "The two canonical wave inputs had no identical canonical URLs. Upstream raw duplicate linkages remain preserved; uncertain title-level relationships were linked without collapse.",
+  "moderate_links_retained": 0,
+  "postdedup_count": 62796,
+  "prededup_count": 62796,
+  "silent_duplicate_discard_count": 0,
+  "strong_collapses": 0,
+  "upstream_duplicate_links_preserved": 58102
+}

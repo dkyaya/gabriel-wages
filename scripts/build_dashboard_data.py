@@ -20869,6 +20869,60 @@ def main() -> int:
         ]
         reports_index["reports"].insert(1, semantic_report)
 
+    # The available-candidate review is intentionally allowed to advance while
+    # the remaining hosted-search queue stays frozen.  Overlay only its compact
+    # validated status; the candidate ledgers remain analysis artifacts, and
+    # the primary dashboard geography continues to use scout coverage.
+    available_review_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04"
+        / "02_MERGED-EXTERNAL-CANDIDATE-REVIEW"
+    )
+    available_review_path = (
+        available_review_dir
+        / "dashboard_available_external_candidate_review_update_summary.json"
+    )
+    available_review_validation_path = available_review_dir / "validation_report.json"
+    if available_review_path.is_file() and available_review_validation_path.is_file():
+        available_review = read_json(available_review_path)
+        available_review_validation = read_json(available_review_validation_path)
+        if available_review_validation.get("passed") is True:
+            ready = available_review["verification_ready_counts"]
+            nonready = available_review["nonverification_bucket_counts"]
+            project_phase_summary.update(
+                {
+                    "current_phase": "Available external-data candidate review complete",
+                    "stage": "broad_state_whole_corpus_available_external_candidate_review_complete",
+                    "current_phase_code": available_review["decision"],
+                    "current_evidence_status": "available_external_candidate_metadata_reviewed_verification_pending",
+                    "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-VERIFICATION-2026-08-05",
+                    "available_external_data_candidate_review_complete": True,
+                    "available_external_data_candidates_reviewed": available_review["available_canonical_candidates_reviewed"],
+                    "available_external_data_verification_ready_count": available_review["verification_ready_total"],
+                    "available_external_data_verification_ready_high": ready.get("high_priority_verification_ready", 0),
+                    "available_external_data_verification_ready_medium": ready.get("medium_priority_verification_ready", 0),
+                    "available_external_data_verification_ready_low": ready.get("low_priority_verification_ready", 0),
+                    "available_external_data_repair_needed_count": nonready.get("repair_needed", 0),
+                    "available_external_data_navigation_only_count": nonready.get("likely_navigation_only", 0),
+                    "available_external_data_deferred_low_signal_count": nonready.get("deferred_low_signal", 0),
+                    "available_external_data_excluded_count": nonready.get("excluded_out_of_scope", 0),
+                    "available_external_data_official_administrative_source_count": available_review["official_administrative_source_candidates"],
+                    "available_external_data_direct_staffing_candidate_count": available_review["direct_staffing_candidates"],
+                    "available_external_data_payroll_candidate_count": available_review["payroll_candidates"],
+                    "available_external_data_implementation_confirmation_candidate_count": available_review["implementation_confirmation_candidates"],
+                    "unresolved_hosted_search_target_count": available_review["unresolved_hosted_search_targets"],
+                    "external_search_capacity_limitation_documented": available_review["hosted_search_limitation_documented"],
+                    "deterministic_local_external_classification_documented": available_review["deterministic_local_classification_documented"],
+                    "available_external_data_gabriel_scoring_used": False,
+                    "available_external_data_verification_performed": False,
+                    "candidate_source_download_performed": False,
+                    "candidate_text_extraction_performed": False,
+                    "final_visual_report_created": False,
+                    "dashboard_map_primary_metric": "scout_coverage_rate",
+                }
+            )
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),

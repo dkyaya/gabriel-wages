@@ -1,0 +1,19 @@
+{
+  "candidate_ids_unique": true,
+  "each_final_candidate_exactly_once": true,
+  "final_canonical_available_candidate_count": 62796,
+  "locked_at": "2026-08-05T14:23:18.543671+00:00",
+  "locked_queue_count": 62796,
+  "moderate_cross_wave_links_not_collapsed": 0,
+  "prededup_merged_count": 62796,
+  "prepared_at": "2026-08-05T14:23:16.109112+00:00",
+  "queue_content_sha256": "fe55572c93d741abbccc782dbcf167a1279844b358fc35bcdd9d9a3d701a4012",
+  "queue_shard_manifest": "candidate_review_locked_queue_shard_manifest.json",
+  "shard_manifest": "final_available_candidate_universe_shard_manifest.json",
+  "strong_cross_wave_collapses": 0,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-AVAILABLE-CANDIDATE-REVIEW-2026-08-05",
+  "unresolved_search_targets_excluded": 12844,
+  "upstream_duplicate_links_preserved": 58102,
+  "wave1_input_count": 29793,
+  "wave2_input_count": 33003
+}

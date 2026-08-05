@@ -1,0 +1,87 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "final_available_candidate_universe.csv",
+      "csv_bytes": 15860656,
+      "csv_sha256": "a562d342cbe4fddf2519189986dc64c6f739f206187b21ff74e27dfd193eb417",
+      "jsonl": "final_available_candidate_universe.jsonl",
+      "jsonl_bytes": 22252897,
+      "jsonl_sha256": "c5e2c09e6d0946a960183f72cbabd08fc9cc68260b7d061c89630da6492d24fc",
+      "part": 1,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-002.csv",
+      "csv_bytes": 15871955,
+      "csv_sha256": "f6e87b7760e0dff9561d3b3da0182848a1beaea64174235a565f92408db93ecb",
+      "jsonl": "final_available_candidate_universe.part-002.jsonl",
+      "jsonl_bytes": 22264172,
+      "jsonl_sha256": "44ebf824f941aef2665268221bb0e0607f5a2edcc112046051d9e66c09079c4e",
+      "part": 2,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-003.csv",
+      "csv_bytes": 15869100,
+      "csv_sha256": "4fe249c6cc582670a58259ae59d5580f80e580258f4e805c5195d930054cd268",
+      "jsonl": "final_available_candidate_universe.part-003.jsonl",
+      "jsonl_bytes": 22261303,
+      "jsonl_sha256": "3a699a11dd2ba6b48fa2282960f2f9e5604b37d9009eaccc3c7d5f25cbbe86e9",
+      "part": 3,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-004.csv",
+      "csv_bytes": 15963198,
+      "csv_sha256": "b7bc126cf8247b40703dfd2c2267e0d2a4ff92264f387b59e1759275421fbe41",
+      "jsonl": "final_available_candidate_universe.part-004.jsonl",
+      "jsonl_bytes": 22355328,
+      "jsonl_sha256": "d875f1c1668df2b917f187c60093d54202922bfbc73eac9c583b263026efda16",
+      "part": 4,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-005.csv",
+      "csv_bytes": 16152610,
+      "csv_sha256": "13ee87fe59bc3c7bebc478734e56d378e34c6bed8662d9edf4288a42705b5357",
+      "jsonl": "final_available_candidate_universe.part-005.jsonl",
+      "jsonl_bytes": 22544228,
+      "jsonl_sha256": "11cf21fbd36361e3b24020c5caa5c39a69cac2f92d9caacef4d2fd2e3b67f4ae",
+      "part": 5,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-006.csv",
+      "csv_bytes": 16148172,
+      "csv_sha256": "72b3e7b37fca62b5c9f69c5151d53fcfda049a2c28e21bcc2c1215d5a0ed60db",
+      "jsonl": "final_available_candidate_universe.part-006.jsonl",
+      "jsonl_bytes": 22539811,
+      "jsonl_sha256": "e2ccf32b82d922aaaeba8de9663d1516f124673fda875d2460ab9346ba1612d0",
+      "part": 6,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-007.csv",
+      "csv_bytes": 16138781,
+      "csv_sha256": "0937cc77fc318f6755841ef9495855208593d41f78f9e937b7c5db738f79f8ae",
+      "jsonl": "final_available_candidate_universe.part-007.jsonl",
+      "jsonl_bytes": 22530430,
+      "jsonl_sha256": "223da25023f3f84d3bd68e5c558cab5f76114265b670786f5181f3fd03b29fb8",
+      "part": 7,
+      "rows": 8000
+    },
+    {
+      "csv": "final_available_candidate_universe.part-008.csv",
+      "csv_bytes": 13720204,
+      "csv_sha256": "757781674704b705e98c00f58e3a950ce6b1d5ab1680e0d6ca590ba2bd10c523",
+      "jsonl": "final_available_candidate_universe.part-008.jsonl",
+      "jsonl_bytes": 19149800,
+      "jsonl_sha256": "9a93b65a079ef0341bef191b8c07252ac1a37db8374c4c63c7e260ce490c5ee1",
+      "part": 8,
+      "rows": 6796
+    }
+  ],
+  "sharded": true,
+  "total_rows": 62796
+}

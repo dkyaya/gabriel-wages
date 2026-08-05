@@ -1,0 +1,11 @@
+{
+  "final_canonical_rows_by_provenance": {
+    "external_search_wave_001_compacted": 29793,
+    "external_search_wave_002_exhaustive_residual": 33003
+  },
+  "input": {
+    "external_search_wave_001_compacted": 29793,
+    "external_search_wave_002_exhaustive_residual": 33003
+  },
+  "unresolved_search_targets_are_not_candidates": true
+}

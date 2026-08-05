@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-08-05T14:23:07.501178+00:00",
+  "checks": {
+    "artifact_roots_ignored": true,
+    "available_prededup_count_62796": true,
+    "dashboard_assets_exist": true,
+    "dashboard_map_preserved": true,
+    "prior_review_provisional": true,
+    "stage3_not_started": true,
+    "unresolved_targets_12844": true,
+    "wave1_candidate_ids_unique": true,
+    "wave1_count_29793": true,
+    "wave2_candidate_ids_unique": true,
+    "wave2_count_33003": true
+  },
+  "gabriel_authorized": false,
+  "hosted_search_authorized": false,
+  "passed": true,
+  "starting_head": "0f231408250cb80e9471eca62de7c229c285a833",
+  "storage_preflight": {
+    "passed": true,
+    "staged_file_count": 0,
+    "staged_files_over_50_mib": [],
+    "staged_payload_file_count": 0
+  },
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-AVAILABLE-CANDIDATE-REVIEW-2026-08-05",
+  "verification_authorized": false
+}

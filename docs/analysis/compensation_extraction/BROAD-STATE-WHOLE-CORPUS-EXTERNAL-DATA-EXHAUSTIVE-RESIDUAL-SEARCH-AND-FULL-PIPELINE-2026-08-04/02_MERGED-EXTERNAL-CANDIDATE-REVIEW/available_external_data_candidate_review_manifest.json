@@ -1,0 +1,16 @@
+{
+  "decision": "broad_state_whole_corpus_available_external_candidate_review_completed_verification_ready",
+  "final_candidate_count": 62796,
+  "input_counts": {
+    "prededup": 62796,
+    "wave1": 29793,
+    "wave2": 33003
+  },
+  "locked_queue_hash": "fe55572c93d741abbccc782dbcf167a1279844b358fc35bcdd9d9a3d701a4012",
+  "metadata_only": true,
+  "stage3_authorized_in_this_task": false,
+  "starting_head": "0f231408250cb80e9471eca62de7c229c285a833",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-AVAILABLE-CANDIDATE-REVIEW-2026-08-05",
+  "validation_passed": true,
+  "verification_ready_count": 61624
+}

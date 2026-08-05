@@ -1,5 +1,7 @@
 {
-  "disjoint_candidate_ids": true,
+  "assignment": "deterministic balanced round-robin after family/domain/geography/side ordering",
+  "covers_locked_queue": true,
+  "disjoint": true,
   "lane_count": 5,
   "lane_sizes": {
     "candidate_review_lane_001": 12560,
@@ -7,5 +9,13 @@
     "candidate_review_lane_003": 12559,
     "candidate_review_lane_004": 12559,
     "candidate_review_lane_005": 12559
-  }
+  },
+  "scheduled_stagger_seconds": {
+    "candidate_review_lane_001": 0,
+    "candidate_review_lane_002": 240,
+    "candidate_review_lane_003": 480,
+    "candidate_review_lane_004": 720,
+    "candidate_review_lane_005": 960
+  },
+  "total": 62796
 }

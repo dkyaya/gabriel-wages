@@ -1,0 +1,67 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "cross_wave_candidate_duplicate_links.csv",
+      "csv_bytes": 2739634,
+      "csv_sha256": "4c7fe2537b16042557b202b77f1deb53cc4c57b4ccf9ecc4b502e2d248d92887",
+      "jsonl": "cross_wave_candidate_duplicate_links.jsonl",
+      "jsonl_bytes": 4519490,
+      "jsonl_sha256": "7ac7e569193d7d16816516e0dc0f1ecdbebd925a0de444bc17674f6f5c203abe",
+      "part": 1,
+      "rows": 10000
+    },
+    {
+      "csv": "cross_wave_candidate_duplicate_links.part-002.csv",
+      "csv_bytes": 2752154,
+      "csv_sha256": "3bfd40b6c52749b0a1b25d7f2282389015d92cd095701e1b610adf7db9f99bdf",
+      "jsonl": "cross_wave_candidate_duplicate_links.part-002.jsonl",
+      "jsonl_bytes": 4532010,
+      "jsonl_sha256": "6113e6f2ff016eef5e95988dda99d3421e545724d4c2aa17f1f7b3ad671bc008",
+      "part": 2,
+      "rows": 10000
+    },
+    {
+      "csv": "cross_wave_candidate_duplicate_links.part-003.csv",
+      "csv_bytes": 2756214,
+      "csv_sha256": "a25ebedb6283f1399915ec3a76dd15ee81497a4650626ae0b946f2d5a825002d",
+      "jsonl": "cross_wave_candidate_duplicate_links.part-003.jsonl",
+      "jsonl_bytes": 4536070,
+      "jsonl_sha256": "d62bce5f73971bf046a901717ce66d58f811bb4e23b8b9bc2882e76081a95800",
+      "part": 3,
+      "rows": 10000
+    },
+    {
+      "csv": "cross_wave_candidate_duplicate_links.part-004.csv",
+      "csv_bytes": 2755934,
+      "csv_sha256": "57cd28f1f3621cb13e68ebaedfcaeb92a646af88d944aa007a230bd070c984aa",
+      "jsonl": "cross_wave_candidate_duplicate_links.part-004.jsonl",
+      "jsonl_bytes": 4535790,
+      "jsonl_sha256": "d52f27b5b2bd07f21bee3b0644a5b457f551e9cc50b77885976a0c473c68c6b0",
+      "part": 4,
+      "rows": 10000
+    },
+    {
+      "csv": "cross_wave_candidate_duplicate_links.part-005.csv",
+      "csv_bytes": 2757894,
+      "csv_sha256": "250cf17a28ed74e45f47dbe7a02740641cf089b62923be890172e93ba94eaf1b",
+      "jsonl": "cross_wave_candidate_duplicate_links.part-005.jsonl",
+      "jsonl_bytes": 4537750,
+      "jsonl_sha256": "f4ee908abd5cb3bbbc12e5d020fc4937c81a3318efad058b2b927e49c3dfe304",
+      "part": 5,
+      "rows": 10000
+    },
+    {
+      "csv": "cross_wave_candidate_duplicate_links.part-006.csv",
+      "csv_bytes": 2236154,
+      "csv_sha256": "5f77cd24efa30d072ce484b4ceb74fe8d23a8461fa9cc6f1b586761d0418851d",
+      "jsonl": "cross_wave_candidate_duplicate_links.part-006.jsonl",
+      "jsonl_bytes": 3678166,
+      "jsonl_sha256": "ddfdb25980a4ec9801d55b6abfafadfe559c4be88ddea0e215d7ee19e31abaec",
+      "part": 6,
+      "rows": 8102
+    }
+  ],
+  "sharded": true,
+  "total_rows": 58102
+}

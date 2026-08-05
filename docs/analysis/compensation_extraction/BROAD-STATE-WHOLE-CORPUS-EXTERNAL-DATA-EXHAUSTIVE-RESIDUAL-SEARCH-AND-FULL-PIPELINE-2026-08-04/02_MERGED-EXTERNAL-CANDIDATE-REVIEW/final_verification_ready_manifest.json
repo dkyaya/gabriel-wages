@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-08-05T14:41:47.598879+00:00",
+  "high_priority_count": 28136,
+  "low_priority_count": 32404,
+  "medium_priority_count": 1084,
+  "queue_shard_manifest": "final_verification_ready_queue_shard_manifest.json",
+  "source_stage": "final_available_candidate_review",
+  "verification_not_started": true,
+  "verification_ready_count": 61624
+}

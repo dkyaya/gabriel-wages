@@ -1,0 +1,44 @@
+# Available external-data candidate-review validation
+
+- PASS — wave1 input count 29793
+- PASS — wave2 input count 33003
+- PASS — prededup merged count 62796
+- PASS — cross wave duplicate decisions documented
+- PASS — no duplicate silently discarded
+- PASS — final canonical universe reconciles
+- PASS — locked queue exactly once
+- PASS — five lanes cover locked queue
+- PASS — five lanes disjoint
+- PASS — one final bucket each
+- PASS — one primary family each
+- PASS — secondary tags candidate content bounded
+- PASS — direct staffing relevance complete
+- PASS — administrative source type complete
+- PASS — primary source quality complete
+- PASS — all nine review scores complete
+- PASS — rationale and reason codes complete
+- PASS — review confidence complete
+- PASS — verification ready only ready buckets
+- PASS — nonverification buckets excluded
+- PASS — prior provisional queue not used as final
+- PASS — unresolved 12844 preserved
+- PASS — unresolved not zero candidate
+- PASS — capacity limitation note exists
+- PASS — deterministic methodology note exists
+- PASS — no hosted search
+- PASS — no gabriel api
+- PASS — no url verification
+- PASS — no download
+- PASS — no source review
+- PASS — no extraction
+- PASS — no ocr
+- PASS — no normalization or matching
+- PASS — no regression or treatment effect
+- PASS — no national wage gap estimate
+- PASS — no prevalence estimate
+- PASS — no causal effect estimate
+- PASS — no final visual or document
+- PASS — dashboard assets intact
+- PASS — coverage map scout coverage rate
+- PASS — artifact roots ignored
+- PASS — no local payload staged
