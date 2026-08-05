@@ -1,0 +1,3 @@
+# Next task
+
+Recommend `BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-NON-OCR-EXTRACTION-2026-08-05`. Process only `external_data_extraction_ready_queue` over unique physical payloads in five local lanes; write full extracted text and bulky structured outputs only to ignored artifact storage; preserve page, section, sheet, row, column, table, source, event, and claim lineage; do not OCR, use hosted search, or call GABRIEL. Continue afterward through field/span extraction, deterministic/local classification, ingestion, reconciliation, normalization/matching, integration, claim-gap reassessment, then gap-targeted recovery from the 7,895 held sources.

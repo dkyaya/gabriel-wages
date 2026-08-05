@@ -1,0 +1,44 @@
+{
+  "groups": {
+    "all_units": {
+      "bytes": 6136198240,
+      "extraction_ready_payloads": 3032,
+      "payload_count": 3115
+    },
+    "fire": {
+      "bytes": 3444389602,
+      "extraction_ready_payloads": 1265,
+      "payload_count": 1314
+    },
+    "mixed": {
+      "bytes": 52834261,
+      "extraction_ready_payloads": 73,
+      "payload_count": 76
+    },
+    "non_safety": {
+      "bytes": 1903654697,
+      "extraction_ready_payloads": 773,
+      "payload_count": 798
+    },
+    "police": {
+      "bytes": 9533810792,
+      "extraction_ready_payloads": 4122,
+      "payload_count": 4263
+    },
+    "safety_combined": {
+      "bytes": 23986761,
+      "extraction_ready_payloads": 51,
+      "payload_count": 52
+    },
+    "side_independent": {
+      "bytes": 2764789031,
+      "extraction_ready_payloads": 1231,
+      "payload_count": 1266
+    },
+    "unclear": {
+      "bytes": 9996233146,
+      "extraction_ready_payloads": 4175,
+      "payload_count": 4305
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "bytes_by_status": {
+    "corrupt_or_broken": 742470673,
+    "csv_structured_ready": 88743,
+    "html_low_text_usable": 21650507,
+    "html_structured_data_candidate": 770508068,
+    "html_table_candidate_ready": 866285251,
+    "html_text_ready": 610172678,
+    "needs_manual_review": 3883,
+    "ocr_later": 608138328,
+    "parse_text_pdf_low_text_usable": 249238272,
+    "parse_text_pdf_ready": 29035405756,
+    "shell_or_navigation_only": 4782965,
+    "text_low_quality_usable": 26
+  },
+  "extraction_ready_bytes": 31553349301,
+  "total_inspected_bytes": 32908745150
+}

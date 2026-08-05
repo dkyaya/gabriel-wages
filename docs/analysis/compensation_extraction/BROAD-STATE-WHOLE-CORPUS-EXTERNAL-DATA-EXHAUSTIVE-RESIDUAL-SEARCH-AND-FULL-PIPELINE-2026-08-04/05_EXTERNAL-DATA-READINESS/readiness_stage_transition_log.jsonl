@@ -1,0 +1,3 @@
+{"at":"2026-08-05T19:12:51.816972+00:00","stage":"preflight","status":"passed"}
+{"at":"2026-08-05T19:12:51.816974+00:00","stage":"five_lane_readiness","status":"complete"}
+{"at":"2026-08-05T19:12:51.816976+00:00","decision":"broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready","stage":"finalize","status":"complete"}

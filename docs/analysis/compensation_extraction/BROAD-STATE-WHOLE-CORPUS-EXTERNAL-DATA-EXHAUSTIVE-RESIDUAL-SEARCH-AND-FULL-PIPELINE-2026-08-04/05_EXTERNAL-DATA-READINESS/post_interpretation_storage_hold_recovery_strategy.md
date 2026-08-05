@@ -1,0 +1,3 @@
+# Post-interpretation storage-hold recovery strategy
+
+The 7,895 verified sources remain recoverable because their locators and metadata are preserved. They are not retained during readiness because the 30 GiB cap was reached. The current retained corpus will complete the interpretation pipeline first. After whole-corpus integration and claim-gap reassessment, held sources will be ranked by unresolved claim gaps, expected administrative-evidence value, undercovered geography/period/side, uniqueness, file size, and marginal claim value per byte. Canonical retained evidence will not be deleted merely to make room; recovery will use a bounded targeted tranche.

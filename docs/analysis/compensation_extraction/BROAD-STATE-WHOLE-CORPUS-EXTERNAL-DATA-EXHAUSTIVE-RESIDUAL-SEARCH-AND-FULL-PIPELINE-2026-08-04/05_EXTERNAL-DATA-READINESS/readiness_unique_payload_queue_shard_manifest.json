@@ -1,0 +1,47 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "readiness_unique_payload_queue.csv",
+      "csv_bytes": 4407130,
+      "csv_sha256": "3c0748c0c11051dcedbdc4ddcb2c2a67de2e3b12fe777d591243b51c71aef014",
+      "jsonl": "readiness_unique_payload_queue.jsonl",
+      "jsonl_bytes": 7418487,
+      "jsonl_sha256": "05622c88f41f3a93dd546e4a3d7f159860e95afdcc1d96bfb358ff6709662d8a",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "readiness_unique_payload_queue.part-002.csv",
+      "csv_bytes": 4401117,
+      "csv_sha256": "c87867a9fb7ce97b8acc83eee69f1c57654a797fd3bd9972df6fdf3ebf00ce3a",
+      "jsonl": "readiness_unique_payload_queue.part-002.jsonl",
+      "jsonl_bytes": 7412478,
+      "jsonl_sha256": "88a9d168b84fcc6dbe129a94c77a4b639b6baa4f4b2b6f7b80fc75a3eb390107",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "readiness_unique_payload_queue.part-003.csv",
+      "csv_bytes": 4425090,
+      "csv_sha256": "fa30317ffa03ac037be7fe6f9bdb3aec120220e764b28e01fc946bc2325d7791",
+      "jsonl": "readiness_unique_payload_queue.part-003.jsonl",
+      "jsonl_bytes": 7436451,
+      "jsonl_sha256": "cd8311a871b56ac35d4b005561b88a1d860e7655c4cd6a24e80fbe785e235ea5",
+      "part": 3,
+      "rows": 4000
+    },
+    {
+      "csv": "readiness_unique_payload_queue.part-004.csv",
+      "csv_bytes": 2980163,
+      "csv_sha256": "a239f104fbf144d720d782068d85b48ab8d612e6c142ddec6fe4f2c2820f3bbc",
+      "jsonl": "readiness_unique_payload_queue.part-004.jsonl",
+      "jsonl_bytes": 5014881,
+      "jsonl_sha256": "dbad35ca6ae8cf7fa9d015edcb3cdf6373c8ae7d8885c199b71adb5db1937608",
+      "part": 4,
+      "rows": 2703
+    }
+  ],
+  "sharded": true,
+  "total_rows": 14703
+}

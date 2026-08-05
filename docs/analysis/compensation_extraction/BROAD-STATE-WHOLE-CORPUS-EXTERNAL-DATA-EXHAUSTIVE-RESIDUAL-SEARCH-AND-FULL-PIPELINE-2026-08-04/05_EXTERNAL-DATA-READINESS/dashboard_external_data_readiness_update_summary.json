@@ -1,0 +1,92 @@
+{
+  "canonical_retained_source_records": 14703,
+  "current_stage": "retained external-data readiness classification complete",
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "decision": "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready",
+  "deterministic_local_strategy_documented": true,
+  "extraction_family_counts": {
+    "groups": {
+      "benefits_and_total_compensation": {
+        "bytes": 482242155,
+        "extraction_ready_payloads": 384,
+        "payload_count": 384
+      },
+      "contextual_controls": {
+        "bytes": 100766781,
+        "extraction_ready_payloads": 412,
+        "payload_count": 412
+      },
+      "implementation_confirmation": {
+        "bytes": 857039382,
+        "extraction_ready_payloads": 1515,
+        "payload_count": 1515
+      },
+      "multi_family_administrative_source": {
+        "bytes": 20963500226,
+        "extraction_ready_payloads": 8079,
+        "payload_count": 8079
+      },
+      "payroll_and_earnings": {
+        "bytes": 7850369615,
+        "extraction_ready_payloads": 3091,
+        "payload_count": 3091
+      },
+      "recruitment_and_retention": {
+        "bytes": 103778084,
+        "extraction_ready_payloads": 182,
+        "payload_count": 182
+      },
+      "staffing_and_headcount": {
+        "bytes": 1021975019,
+        "extraction_ready_payloads": 499,
+        "payload_count": 499
+      },
+      "tenure_and_progression": {
+        "bytes": 134641382,
+        "extraction_ready_payloads": 70,
+        "payload_count": 70
+      },
+      "unclear": {
+        "bytes": 48214697,
+        "extraction_ready_payloads": 26,
+        "payload_count": 26
+      }
+    }
+  },
+  "extraction_priority_counts": {
+    "extraction_priority_high": 13949,
+    "extraction_priority_medium": 308
+  },
+  "extraction_ready_source_records": 14257,
+  "extraction_ready_unique_payloads": 14257,
+  "extraction_runs": 0,
+  "gabriel_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "next_task": "retained external-data non-OCR extraction",
+  "ocr_runs": 0,
+  "preservation": {
+    "corrected_scaffold": true,
+    "final_pi_report": true,
+    "prior_markdown_drafts": true,
+    "semantic_scaffold": true,
+    "wage_growth_continuity": true
+  },
+  "readiness_status_counts": {
+    "corrupt_or_broken": 227,
+    "csv_structured_ready": 17,
+    "html_low_text_usable": 143,
+    "html_structured_data_candidate": 3023,
+    "html_table_candidate_ready": 2155,
+    "html_text_ready": 3494,
+    "needs_manual_review": 7,
+    "ocr_later": 118,
+    "parse_text_pdf_low_text_usable": 24,
+    "parse_text_pdf_ready": 5400,
+    "shell_or_navigation_only": 94,
+    "text_low_quality_usable": 1
+  },
+  "storage_capacity_holds_preserved": 7895,
+  "total_retained_bytes_inspected": 32908745150,
+  "unique_physical_payloads_inspected": 14703,
+  "unresolved_hosted_search_targets": 12844
+}

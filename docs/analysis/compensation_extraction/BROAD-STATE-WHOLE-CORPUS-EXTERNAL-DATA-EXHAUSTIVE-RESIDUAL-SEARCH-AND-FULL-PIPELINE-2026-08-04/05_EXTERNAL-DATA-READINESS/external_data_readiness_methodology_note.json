@@ -1,0 +1,20 @@
+{
+  "canonical_source_records": 14703,
+  "exact_duplicate_and_reuse_propagation": true,
+  "five_independent_lanes": true,
+  "full_analytical_extraction_runs": 0,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "html_text_and_table_readiness_only": true,
+  "implementation_event_deduplication_rerun": false,
+  "network_requests": 0,
+  "ocr_runs": 0,
+  "pdf_text_layer_diagnostics_without_ocr": true,
+  "physical_inspection_unit": true,
+  "readiness_boundary": "processability, not evidentiary truth",
+  "redownloads": 0,
+  "storage_capacity_holds_preserved": 7895,
+  "structured_schema_diagnostics_only": true,
+  "unique_physical_payloads": 14703,
+  "unresolved_hosted_search_targets": 12844
+}

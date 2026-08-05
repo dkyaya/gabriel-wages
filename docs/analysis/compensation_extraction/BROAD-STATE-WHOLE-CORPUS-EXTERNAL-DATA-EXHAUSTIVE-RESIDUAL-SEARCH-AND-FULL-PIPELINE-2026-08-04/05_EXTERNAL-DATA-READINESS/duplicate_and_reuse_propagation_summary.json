@@ -1,0 +1,8 @@
+{
+  "current_store_canonical_payloads": 14449,
+  "duplicate_extraction_rows_created": 0,
+  "exact_duplicate_link_rows": 552,
+  "known_prior_reuse_link_rows": 264,
+  "physical_payloads_queued_once": 14703,
+  "prior_reuse_canonical_payloads": 254
+}

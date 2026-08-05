@@ -1,0 +1,10 @@
+{
+  "all_payloads": {
+    "extraction_priority_high": 14390,
+    "extraction_priority_medium": 313
+  },
+  "extraction_ready": {
+    "extraction_priority_high": 13949,
+    "extraction_priority_medium": 308
+  }
+}

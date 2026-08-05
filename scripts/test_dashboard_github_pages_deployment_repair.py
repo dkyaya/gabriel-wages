@@ -171,7 +171,35 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/"
             "04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD/external_data_source_review_download_summary.json"
         )
-        if available_external_source_review_summary.exists() and json.loads(
+        available_external_readiness_summary = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/"
+            "05_EXTERNAL-DATA-READINESS/external_data_readiness_summary.json"
+        )
+        if available_external_readiness_summary.exists() and json.loads(
+            available_external_readiness_summary.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_available_external_data_readiness_complete",
+            )
+            self.assertEqual(phase["available_external_data_canonical_retained_source_records"], 14703)
+            self.assertEqual(phase["available_external_data_unique_physical_payloads_inspected"], 14703)
+            self.assertEqual(phase["available_external_data_extraction_ready_unique_payloads"], 14257)
+            self.assertEqual(phase["available_external_data_storage_capacity_holds"], 7895)
+            self.assertEqual(phase["unresolved_hosted_search_target_count"], 12844)
+            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+            self.assertFalse(phase["available_external_data_gabriel_scoring_used"])
+            self.assertFalse(phase["candidate_text_extraction_performed"])
+            self.assertFalse(phase["available_external_data_ocr_performed"])
+            self.assertFalse(phase["final_visual_report_created"])
+        elif available_external_source_review_summary.exists() and json.loads(
             available_external_source_review_summary.read_text()
         ).get("decision") == (
             "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready"
@@ -881,7 +909,28 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(available_external_source_review_summary.read_text()).get("decision")
                                                                             == "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready"
                                                                         )
-                                                                        if available_external_source_review_complete:
+                                                                        available_external_readiness_complete = (
+                                                                            available_external_readiness_summary.exists()
+                                                                            and json.loads(available_external_readiness_summary.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready"
+                                                                        )
+                                                                        if available_external_readiness_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Retained external-data readiness classification complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-NON-OCR-EXTRACTION-2026-08-05",
+                                                                            )
+                                                                            self.assertEqual(phase["available_external_data_canonical_retained_source_records"], 14703)
+                                                                            self.assertEqual(phase["available_external_data_unique_physical_payloads_inspected"], 14703)
+                                                                            self.assertEqual(phase["available_external_data_extraction_ready_unique_payloads"], 14257)
+                                                                            self.assertEqual(phase["available_external_data_storage_capacity_holds"], 7895)
+                                                                            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+                                                                            self.assertFalse(phase["candidate_text_extraction_performed"])
+                                                                            self.assertFalse(phase["available_external_data_ocr_performed"])
+                                                                        elif available_external_source_review_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Available external-data source review and download complete",

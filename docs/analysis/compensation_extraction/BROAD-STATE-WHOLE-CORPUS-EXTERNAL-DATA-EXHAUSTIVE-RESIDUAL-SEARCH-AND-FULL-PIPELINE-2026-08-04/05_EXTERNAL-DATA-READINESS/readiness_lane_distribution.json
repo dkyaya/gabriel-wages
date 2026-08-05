@@ -1,0 +1,57 @@
+{
+  "disjoint": true,
+  "lanes": {
+    "readiness_lane_001": {
+      "bytes": 6582351742,
+      "count": 2940,
+      "stagger_minutes": 0,
+      "type_counts": {
+        "csv": 2,
+        "html": 1792,
+        "pdf": 1146
+      }
+    },
+    "readiness_lane_002": {
+      "bytes": 6606607801,
+      "count": 2941,
+      "stagger_minutes": 3,
+      "type_counts": {
+        "csv": 4,
+        "html": 1791,
+        "pdf": 1146
+      }
+    },
+    "readiness_lane_003": {
+      "bytes": 6585118452,
+      "count": 2941,
+      "stagger_minutes": 6,
+      "type_counts": {
+        "csv": 4,
+        "html": 1791,
+        "pdf": 1146
+      }
+    },
+    "readiness_lane_004": {
+      "bytes": 6523717220,
+      "count": 2940,
+      "stagger_minutes": 9,
+      "type_counts": {
+        "csv": 3,
+        "html": 1789,
+        "pdf": 1147,
+        "txt": 1
+      }
+    },
+    "readiness_lane_005": {
+      "bytes": 6610949935,
+      "count": 2941,
+      "stagger_minutes": 12,
+      "type_counts": {
+        "csv": 4,
+        "html": 1791,
+        "pdf": 1146
+      }
+    }
+  },
+  "total": 14703
+}

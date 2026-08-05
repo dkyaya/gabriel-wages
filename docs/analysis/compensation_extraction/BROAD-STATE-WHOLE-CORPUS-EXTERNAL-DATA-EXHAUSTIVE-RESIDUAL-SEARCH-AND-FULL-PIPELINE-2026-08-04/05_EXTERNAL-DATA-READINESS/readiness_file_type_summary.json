@@ -1,0 +1,14 @@
+{
+  "extraction_ready_by_type": {
+    "csv": 17,
+    "html": 8815,
+    "pdf": 5424,
+    "txt": 1
+  },
+  "payload_type_counts": {
+    "csv": 17,
+    "html": 8954,
+    "pdf": 5731,
+    "txt": 1
+  }
+}

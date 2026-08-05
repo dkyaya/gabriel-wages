@@ -1,0 +1,10 @@
+{
+  "preserved_at": "2026-08-05T19:12:51.761738+00:00",
+  "preserved_hold_count": 7895,
+  "processed_in_readiness": 0,
+  "removed_or_relabelled": 0,
+  "source_manifest": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD/manual_review_hold_queue_shard_manifest.json",
+  "source_manifest_sha256": "71f46d479c69a160d7ebb2b78c51a56b1485e3d541105f210fb868aedfd66d24",
+  "source_manifest_total_rows": 7895,
+  "strategy": "post_interpretation_gap_targeted_recovery"
+}

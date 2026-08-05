@@ -1,0 +1,54 @@
+# External-data readiness validation
+
+- PASS — canonical input 14703
+- PASS — canonical relationships preserved
+- PASS — coverage map scout
+- PASS — dashboard assets intact
+- PASS — duplicates reuses no double extraction
+- PASS — every source maps valid payload
+- PASS — exact duplicates not duplicate extraction
+- PASS — exception statuses separate
+- PASS — extracted root ignored
+- PASS — extraction hashes valid
+- PASS — extraction lineage preserved
+- PASS — extraction only allowed statuses
+- PASS — extraction paths valid
+- PASS — five lanes complete
+- PASS — five lanes disjoint
+- PASS — hold queue not processed
+- PASS — hold recovery strategy exists
+- PASS — holds 7895 preserved
+- PASS — html classifications reconcile
+- PASS — implementation event dedup not rerun
+- PASS — no analytical table field extraction
+- PASS — no causal effect claim
+- PASS — no diagnostic full text staged
+- PASS — no evidence rating
+- PASS — no final visual documents
+- PASS — no full analytical text extraction
+- PASS — no gabriel
+- PASS — no hosted search
+- PASS — no normalization matching
+- PASS — no ocr
+- PASS — no prevalence estimate
+- PASS — no redownload
+- PASS — no regression treatment
+- PASS — no retained payload staged
+- PASS — no wage gap estimate
+- PASS — ocr later not ocred
+- PASS — one primary extraction queue each
+- PASS — one propagated result per source
+- PASS — one terminal result per payload
+- PASS — pdf classifications reconcile
+- PASS — physical count documented reconciliation
+- PASS — priority assignments reconcile
+- PASS — retained root ignored
+- PASS — secondary context defers preserved
+- PASS — structured classifications reconcile
+- PASS — structured root ignored
+- PASS — unique payload queue exact
+- PASS — unique source queue exact
+- PASS — unresolved 12844 preserved
+- PASS — local artifact storage audit passed
+- PASS — staged file audit passed
+- PASS — large file audit passed

@@ -1,0 +1,16 @@
+{
+  "analytical_table_field_extractions": 0,
+  "analytical_text_extractions": 0,
+  "evidence_ratings": 0,
+  "final_visuals_documents": 0,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_runs": 0,
+  "national_estimates": 0,
+  "network_requests": 0,
+  "normalization_matching_runs": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "redownloads": 0,
+  "regressions_treatment_effects": 0
+}

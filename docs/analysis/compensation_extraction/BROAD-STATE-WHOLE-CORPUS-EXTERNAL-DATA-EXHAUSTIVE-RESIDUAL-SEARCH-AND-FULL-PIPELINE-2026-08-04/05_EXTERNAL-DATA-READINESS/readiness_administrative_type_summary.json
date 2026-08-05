@@ -1,0 +1,109 @@
+{
+  "groups": {
+    "audit_or_financial_report": {
+      "bytes": 51925379,
+      "extraction_ready_payloads": 26,
+      "payload_count": 26
+    },
+    "benefits_document": {
+      "bytes": 11636121,
+      "extraction_ready_payloads": 93,
+      "payload_count": 93
+    },
+    "budget": {
+      "bytes": 889094364,
+      "extraction_ready_payloads": 363,
+      "payload_count": 380
+    },
+    "compensation_study": {
+      "bytes": 211099277,
+      "extraction_ready_payloads": 63,
+      "payload_count": 64
+    },
+    "contract_or_mou": {
+      "bytes": 11700153,
+      "extraction_ready_payloads": 55,
+      "payload_count": 56
+    },
+    "earnings_report": {
+      "bytes": 51245088,
+      "extraction_ready_payloads": 45,
+      "payload_count": 45
+    },
+    "government_dataset": {
+      "bytes": 10227497,
+      "extraction_ready_payloads": 45,
+      "payload_count": 45
+    },
+    "implementation_record": {
+      "bytes": 51110,
+      "extraction_ready_payloads": 1,
+      "payload_count": 1
+    },
+    "media_or_context": {
+      "bytes": 19920714,
+      "extraction_ready_payloads": 8,
+      "payload_count": 8
+    },
+    "meeting_packet": {
+      "bytes": 92135765,
+      "extraction_ready_payloads": 29,
+      "payload_count": 30
+    },
+    "open_checkbook": {
+      "bytes": 1547051,
+      "extraction_ready_payloads": 6,
+      "payload_count": 7
+    },
+    "open_data_portal": {
+      "bytes": 2295127,
+      "extraction_ready_payloads": 12,
+      "payload_count": 12
+    },
+    "ordinance_or_resolution": {
+      "bytes": 412751054,
+      "extraction_ready_payloads": 1207,
+      "payload_count": 1224
+    },
+    "other": {
+      "bytes": 504227165,
+      "extraction_ready_payloads": 178,
+      "payload_count": 182
+    },
+    "payroll_roster": {
+      "bytes": 28345754660,
+      "extraction_ready_payloads": 11049,
+      "payload_count": 11425
+    },
+    "pension_or_retirement_document": {
+      "bytes": 667931918,
+      "extraction_ready_payloads": 338,
+      "payload_count": 347
+    },
+    "recruitment_study": {
+      "bytes": 2465967,
+      "extraction_ready_payloads": 4,
+      "payload_count": 4
+    },
+    "salary_schedule": {
+      "bytes": 198295385,
+      "extraction_ready_payloads": 213,
+      "payload_count": 216
+    },
+    "staffing_table": {
+      "bytes": 1422520749,
+      "extraction_ready_payloads": 512,
+      "payload_count": 528
+    },
+    "unclear": {
+      "bytes": 443846,
+      "extraction_ready_payloads": 2,
+      "payload_count": 2
+    },
+    "vacancy_report": {
+      "bytes": 1476760,
+      "extraction_ready_payloads": 8,
+      "payload_count": 8
+    }
+  }
+}

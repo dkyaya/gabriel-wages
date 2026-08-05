@@ -1,0 +1,10 @@
+{
+  "audited_at": "2026-08-05T19:12:53.619319+00:00",
+  "bytes_hashed": 32908745150,
+  "current_store_payloads": 14449,
+  "no_payload_copies_created": true,
+  "passed": true,
+  "payload_count": 14703,
+  "prior_reuse_payloads": 254,
+  "retained_root_git_ignored": true
+}

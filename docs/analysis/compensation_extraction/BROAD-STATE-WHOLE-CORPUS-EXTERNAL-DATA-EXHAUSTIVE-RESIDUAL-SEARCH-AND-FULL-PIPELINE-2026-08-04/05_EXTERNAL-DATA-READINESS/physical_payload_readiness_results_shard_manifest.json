@@ -1,0 +1,47 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "physical_payload_readiness_results.csv",
+      "csv_bytes": 7025099,
+      "csv_sha256": "97c61d296b15579ef0aef7c5254b52abc8f9a51e29059bd03030dda00cab3737",
+      "jsonl": "physical_payload_readiness_results.jsonl",
+      "jsonl_bytes": 11624582,
+      "jsonl_sha256": "d24059c3e8853be536af0d1c4d86cb1b91e770f52349e6c6ddfbd7fac5293a0b",
+      "part": 1,
+      "rows": 4000
+    },
+    {
+      "csv": "physical_payload_readiness_results.part-002.csv",
+      "csv_bytes": 7049098,
+      "csv_sha256": "67195fa7619c53d00056827e7ae163352596041e8f161bed3a7f07193e6d5de0",
+      "jsonl": "physical_payload_readiness_results.part-002.jsonl",
+      "jsonl_bytes": 11648554,
+      "jsonl_sha256": "d218d44e27169b954962d5f333d39c094635dc778f3e0aa1f7c7e541314fd13a",
+      "part": 2,
+      "rows": 4000
+    },
+    {
+      "csv": "physical_payload_readiness_results.part-003.csv",
+      "csv_bytes": 7047460,
+      "csv_sha256": "311cdf3170378b7402eccdc9b875b0d46630d70ab7ef1ad326c0b3741af20281",
+      "jsonl": "physical_payload_readiness_results.part-003.jsonl",
+      "jsonl_bytes": 11646815,
+      "jsonl_sha256": "94bacb3e61ad834ed8d1fc60345ad832c5bf44c9e8f1d04d71f0d007616adfe3",
+      "part": 3,
+      "rows": 4000
+    },
+    {
+      "csv": "physical_payload_readiness_results.part-004.csv",
+      "csv_bytes": 4760433,
+      "csv_sha256": "c9befd6be024831ee06cf6637f72309091d6dc680fc419fdb4520d1096ac2e16",
+      "jsonl": "physical_payload_readiness_results.part-004.jsonl",
+      "jsonl_bytes": 7868288,
+      "jsonl_sha256": "e78f1ba25cce5e5cff56aad58281c246f67412159220d03e82286d112cb53e3a",
+      "part": 4,
+      "rows": 2703
+    }
+  ],
+  "sharded": true,
+  "total_rows": 14703
+}

@@ -1,0 +1,9 @@
+{
+  "canonical_sources": 14703,
+  "decision": "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready",
+  "extraction_ready_payloads": 14257,
+  "physical_payloads": 14703,
+  "stage": "05_EXTERNAL-DATA-READINESS",
+  "status": "complete",
+  "updated_at": "2026-08-05T19:12:51.816751+00:00"
+}

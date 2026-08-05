@@ -21034,6 +21034,65 @@ def main() -> int:
                 }
             )
 
+    # Readiness advances only after every canonical retained-source record is
+    # reconciled to one locally verified physical payload and every payload has
+    # exactly one terminal, non-OCR processability classification. The compact
+    # dashboard overlay exposes queue/gate counts, never diagnostic text or
+    # retained payload bodies.
+    available_readiness_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04"
+        / "05_EXTERNAL-DATA-READINESS"
+    )
+    available_readiness_path = available_readiness_dir / "dashboard_external_data_readiness_update_summary.json"
+    available_readiness_validation_path = available_readiness_dir / "validation_report.json"
+    if available_readiness_path.is_file() and available_readiness_validation_path.is_file():
+        available_readiness = read_json(available_readiness_path)
+        available_readiness_validation = read_json(available_readiness_validation_path)
+        if available_readiness_validation.get("passed") is True:
+            readiness_status = available_readiness["readiness_status_counts"]
+            project_phase_summary.update(
+                {
+                    "current_phase": "Retained external-data readiness classification complete",
+                    "stage": "broad_state_whole_corpus_available_external_data_readiness_complete",
+                    "current_phase_code": available_readiness["decision"],
+                    "current_evidence_status": "retained_external_data_non_ocr_extraction_ready",
+                    "next_task": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-NON-OCR-EXTRACTION-2026-08-05",
+                    "available_external_data_readiness_complete": True,
+                    "available_external_data_canonical_retained_source_records": available_readiness["canonical_retained_source_records"],
+                    "available_external_data_unique_physical_payloads_inspected": available_readiness["unique_physical_payloads_inspected"],
+                    "available_external_data_total_retained_bytes_inspected": available_readiness["total_retained_bytes_inspected"],
+                    "available_external_data_extraction_ready_source_records": available_readiness["extraction_ready_source_records"],
+                    "available_external_data_extraction_ready_unique_payloads": available_readiness["extraction_ready_unique_payloads"],
+                    "available_external_data_readiness_status_counts": readiness_status,
+                    "available_external_data_parse_text_pdf_ready": readiness_status.get("parse_text_pdf_ready", 0),
+                    "available_external_data_low_text_pdf_usable": readiness_status.get("parse_text_pdf_low_text_usable", 0),
+                    "available_external_data_html_text_ready": readiness_status.get("html_text_ready", 0),
+                    "available_external_data_html_table_candidates": readiness_status.get("html_table_candidate_ready", 0),
+                    "available_external_data_html_structured_candidates": readiness_status.get("html_structured_data_candidate", 0),
+                    "available_external_data_csv_structured_ready": readiness_status.get("csv_structured_ready", 0),
+                    "available_external_data_text_ready": readiness_status.get("text_ready", 0) + readiness_status.get("text_low_quality_usable", 0),
+                    "available_external_data_ocr_later": readiness_status.get("ocr_later", 0),
+                    "available_external_data_encrypted_locked": readiness_status.get("encrypted_or_locked", 0),
+                    "available_external_data_corrupt_broken": readiness_status.get("corrupt_or_broken", 0),
+                    "available_external_data_shell_navigation_only": readiness_status.get("shell_or_navigation_only", 0),
+                    "available_external_data_unsupported": readiness_status.get("unsupported_file_type", 0),
+                    "available_external_data_readiness_manual_review": readiness_status.get("needs_manual_review", 0),
+                    "available_external_data_readiness_errors": readiness_status.get("readiness_error", 0),
+                    "available_external_data_extraction_priority_counts": available_readiness["extraction_priority_counts"],
+                    "available_external_data_storage_capacity_holds": available_readiness["storage_capacity_holds_preserved"],
+                    "unresolved_hosted_search_target_count": available_readiness["unresolved_hosted_search_targets"],
+                    "available_external_data_deterministic_local_strategy_documented": True,
+                    "available_external_data_gabriel_scoring_used": False,
+                    "candidate_text_extraction_performed": False,
+                    "available_external_data_ocr_performed": False,
+                    "implementation_event_deduplication_rerun_for_external_readiness": False,
+                    "final_visual_report_created": False,
+                    "dashboard_map_primary_metric": "scout_coverage_rate",
+                }
+            )
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),

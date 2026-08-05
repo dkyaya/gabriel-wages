@@ -1,0 +1,49 @@
+{
+  "groups": {
+    "benefits_and_total_compensation": {
+      "bytes": 527638131,
+      "extraction_ready_payloads": 384,
+      "payload_count": 394
+    },
+    "contextual_controls": {
+      "bytes": 100971217,
+      "extraction_ready_payloads": 412,
+      "payload_count": 414
+    },
+    "implementation_confirmation": {
+      "bytes": 911293123,
+      "extraction_ready_payloads": 1515,
+      "payload_count": 1537
+    },
+    "multi_family_administrative_source": {
+      "bytes": 21926347682,
+      "extraction_ready_payloads": 8079,
+      "payload_count": 8358
+    },
+    "payroll_and_earnings": {
+      "bytes": 8123956049,
+      "extraction_ready_payloads": 3091,
+      "payload_count": 3207
+    },
+    "recruitment_and_retention": {
+      "bytes": 104323982,
+      "extraction_ready_payloads": 182,
+      "payload_count": 183
+    },
+    "staffing_and_headcount": {
+      "bytes": 1030119067,
+      "extraction_ready_payloads": 499,
+      "payload_count": 511
+    },
+    "tenure_and_progression": {
+      "bytes": 145047280,
+      "extraction_ready_payloads": 70,
+      "payload_count": 73
+    },
+    "unclear": {
+      "bytes": 48226659,
+      "extraction_ready_payloads": 26,
+      "payload_count": 27
+    }
+  }
+}

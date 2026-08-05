@@ -1,0 +1,214 @@
+{
+  "groups": {
+    "AK": {
+      "bytes": 154571843,
+      "extraction_ready_payloads": 115,
+      "payload_count": 117
+    },
+    "AL": {
+      "bytes": 183160763,
+      "extraction_ready_payloads": 85,
+      "payload_count": 86
+    },
+    "AR": {
+      "bytes": 179303487,
+      "extraction_ready_payloads": 72,
+      "payload_count": 79
+    },
+    "CA": {
+      "bytes": 968689607,
+      "extraction_ready_payloads": 334,
+      "payload_count": 359
+    },
+    "CO": {
+      "bytes": 87970045,
+      "extraction_ready_payloads": 36,
+      "payload_count": 38
+    },
+    "CT": {
+      "bytes": 255785370,
+      "extraction_ready_payloads": 68,
+      "payload_count": 71
+    },
+    "FL": {
+      "bytes": 642285494,
+      "extraction_ready_payloads": 242,
+      "payload_count": 246
+    },
+    "GA": {
+      "bytes": 303425305,
+      "extraction_ready_payloads": 119,
+      "payload_count": 122
+    },
+    "IA": {
+      "bytes": 644981305,
+      "extraction_ready_payloads": 308,
+      "payload_count": 309
+    },
+    "ID": {
+      "bytes": 75327876,
+      "extraction_ready_payloads": 8,
+      "payload_count": 8
+    },
+    "IL": {
+      "bytes": 2207079178,
+      "extraction_ready_payloads": 868,
+      "payload_count": 900
+    },
+    "IN": {
+      "bytes": 546120312,
+      "extraction_ready_payloads": 212,
+      "payload_count": 221
+    },
+    "KS": {
+      "bytes": 318294568,
+      "extraction_ready_payloads": 207,
+      "payload_count": 209
+    },
+    "KY": {
+      "bytes": 263500158,
+      "extraction_ready_payloads": 228,
+      "payload_count": 231
+    },
+    "LA": {
+      "bytes": 252692597,
+      "extraction_ready_payloads": 96,
+      "payload_count": 97
+    },
+    "MA": {
+      "bytes": 414162441,
+      "extraction_ready_payloads": 187,
+      "payload_count": 189
+    },
+    "MD": {
+      "bytes": 24800115,
+      "extraction_ready_payloads": 12,
+      "payload_count": 12
+    },
+    "ME": {
+      "bytes": 462703890,
+      "extraction_ready_payloads": 243,
+      "payload_count": 252
+    },
+    "MI": {
+      "bytes": 2811709247,
+      "extraction_ready_payloads": 1067,
+      "payload_count": 1109
+    },
+    "MN": {
+      "bytes": 3609681539,
+      "extraction_ready_payloads": 1275,
+      "payload_count": 1303
+    },
+    "MO": {
+      "bytes": 107043027,
+      "extraction_ready_payloads": 81,
+      "payload_count": 84
+    },
+    "MS": {
+      "bytes": 54196183,
+      "extraction_ready_payloads": 8,
+      "payload_count": 8
+    },
+    "NC": {
+      "bytes": 934652439,
+      "extraction_ready_payloads": 404,
+      "payload_count": 419
+    },
+    "ND": {
+      "bytes": 127904717,
+      "extraction_ready_payloads": 50,
+      "payload_count": 50
+    },
+    "NE": {
+      "bytes": 467442273,
+      "extraction_ready_payloads": 200,
+      "payload_count": 206
+    },
+    "NH": {
+      "bytes": 129032603,
+      "extraction_ready_payloads": 116,
+      "payload_count": 117
+    },
+    "NJ": {
+      "bytes": 769802059,
+      "extraction_ready_payloads": 517,
+      "payload_count": 538
+    },
+    "NY": {
+      "bytes": 3528297272,
+      "extraction_ready_payloads": 1961,
+      "payload_count": 2047
+    },
+    "OH": {
+      "bytes": 5986158874,
+      "extraction_ready_payloads": 2315,
+      "payload_count": 2387
+    },
+    "OK": {
+      "bytes": 242947995,
+      "extraction_ready_payloads": 85,
+      "payload_count": 88
+    },
+    "OR": {
+      "bytes": 92725723,
+      "extraction_ready_payloads": 14,
+      "payload_count": 14
+    },
+    "PA": {
+      "bytes": 986679443,
+      "extraction_ready_payloads": 627,
+      "payload_count": 656
+    },
+    "SC": {
+      "bytes": 81286114,
+      "extraction_ready_payloads": 36,
+      "payload_count": 36
+    },
+    "SD": {
+      "bytes": 502392749,
+      "extraction_ready_payloads": 217,
+      "payload_count": 220
+    },
+    "TN": {
+      "bytes": 313196629,
+      "extraction_ready_payloads": 189,
+      "payload_count": 190
+    },
+    "TX": {
+      "bytes": 1408816574,
+      "extraction_ready_payloads": 444,
+      "payload_count": 453
+    },
+    "UT": {
+      "bytes": 185366867,
+      "extraction_ready_payloads": 47,
+      "payload_count": 52
+    },
+    "VA": {
+      "bytes": 203672,
+      "extraction_ready_payloads": 3,
+      "payload_count": 3
+    },
+    "VT": {
+      "bytes": 361957509,
+      "extraction_ready_payloads": 95,
+      "payload_count": 99
+    },
+    "WA": {
+      "bytes": 129986152,
+      "extraction_ready_payloads": 86,
+      "payload_count": 86
+    },
+    "WI": {
+      "bytes": 2007242177,
+      "extraction_ready_payloads": 946,
+      "payload_count": 958
+    },
+    "WV": {
+      "bytes": 87610462,
+      "extraction_ready_payloads": 35,
+      "payload_count": 35
+    }
+  }
+}

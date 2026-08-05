@@ -1,0 +1,65 @@
+{
+  "exact_duplicate_propagation_example": {
+    "canonical_payload_id": "EXTPAYLOAD-dcf6835d40fbfa4f9403966f",
+    "canonical_source_record_id": "EXTREADYQ-00b2760cd3360cd5cb27131a",
+    "relationship_count": "1"
+  },
+  "full_extraction_outputs_created": 0,
+  "network_requests": 0,
+  "passed": true,
+  "probe_count": 5,
+  "probes": [
+    {
+      "analytical_rows_extracted": 0,
+      "canonical_payload_id": "EXTPAYLOAD-0e54e7af6d2a9cad068b52ab",
+      "detected_file_type": "pdf",
+      "diagnostic_full_text_persisted": false,
+      "ocr_performed": false,
+      "payload_origin": "current_30_gib_store",
+      "propagated_source_count": 1,
+      "readiness_status": "parse_text_pdf_ready"
+    },
+    {
+      "analytical_rows_extracted": 0,
+      "canonical_payload_id": "EXTPAYLOAD-9132ee535185be804b434148",
+      "detected_file_type": "html",
+      "diagnostic_full_text_persisted": false,
+      "ocr_performed": false,
+      "payload_origin": "current_30_gib_store",
+      "propagated_source_count": 1,
+      "readiness_status": "needs_manual_review"
+    },
+    {
+      "analytical_rows_extracted": 0,
+      "canonical_payload_id": "EXTPAYLOAD-c9d398e4f1d14f3f88adfd8a",
+      "detected_file_type": "csv",
+      "diagnostic_full_text_persisted": false,
+      "ocr_performed": false,
+      "payload_origin": "current_30_gib_store",
+      "propagated_source_count": 1,
+      "readiness_status": "csv_structured_ready"
+    },
+    {
+      "analytical_rows_extracted": 0,
+      "canonical_payload_id": "EXTPAYLOAD-1ec537306f2bb51ec8939aa0",
+      "detected_file_type": "txt",
+      "diagnostic_full_text_persisted": false,
+      "ocr_performed": false,
+      "payload_origin": "current_30_gib_store",
+      "propagated_source_count": 1,
+      "readiness_status": "text_low_quality_usable"
+    },
+    {
+      "analytical_rows_extracted": 0,
+      "canonical_payload_id": "EXTPAYLOAD-e8a704e647fb14581a30f8e5",
+      "detected_file_type": "pdf",
+      "diagnostic_full_text_persisted": false,
+      "ocr_performed": false,
+      "payload_origin": "canonical_prior_retained_source_reuse",
+      "propagated_source_count": 1,
+      "readiness_status": "parse_text_pdf_ready"
+    }
+  ],
+  "redownloads": 0,
+  "tested_at": "2026-08-05T18:54:18.796683+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "readiness_lane_004_queue.csv",
+      "csv_bytes": 3321837,
+      "csv_sha256": "55bb04a836a881f4cc0d12bf208aa5c4d184dfd8ecc07bd943aab6c87e51897d",
+      "jsonl": "readiness_lane_004_queue.jsonl",
+      "jsonl_bytes": 5676096,
+      "jsonl_sha256": "b4774a5e48b658c96ffc05a82b7c25de11b282045a547341b0c2d3e9f91674af",
+      "part": 1,
+      "rows": 2940
+    }
+  ],
+  "sharded": false,
+  "total_rows": 2940
+}

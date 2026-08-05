@@ -1,0 +1,16 @@
+{
+  "analytical_extraction_runs": 0,
+  "canonical_source_records": 14703,
+  "created_at": "2026-08-05T18:54:12.948700+00:00",
+  "decision_pending": true,
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "network_calls": 0,
+  "ocr_runs": 0,
+  "retained_bytes_inspected_preflight": 32908745150,
+  "starting_head": "dd69c9e50cb4a2b875bdb7fb1ad6843d9707b115",
+  "storage_capacity_holds_preserved": 7895,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-READINESS-2026-08-05",
+  "unique_physical_payloads": 14703,
+  "unresolved_hosted_search_targets": 12844
+}

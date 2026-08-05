@@ -1,0 +1,18 @@
+{
+  "disk_reclamation_rule": "Only exact duplicates, disposable temporary artifacts, reproducible caches, and superseded noncanonical intermediates may be considered; canonical retained evidence must not be deleted merely to make room.",
+  "held_sources": 7895,
+  "ranking_factors": [
+    "unresolved claim gap",
+    "expected direct administrative evidence",
+    "staffing/vacancy value",
+    "payroll/earnings value",
+    "implementation-confirmation value",
+    "benefits/total-compensation value",
+    "undercovered municipality, period, or side",
+    "uniqueness against retained evidence",
+    "expected file size",
+    "expected marginal claim value per byte"
+  ],
+  "recovery_form": "bounded targeted tranche, not a blind attempt to download all held sources",
+  "recovery_timing": "after non-OCR extraction, field/span extraction, deterministic/local classification, ingestion/codification, reconciliation/linkage, normalization/matching, whole-corpus integration, and claim-gap reassessment"
+}

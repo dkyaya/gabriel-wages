@@ -1,0 +1,23 @@
+{
+  "bytes_completed": 6585118452,
+  "completed_count": 2941,
+  "lane_id": "readiness_lane_003",
+  "locked_count": 2941,
+  "remaining_count": 0,
+  "status": "complete",
+  "status_counts": {
+    "corrupt_or_broken": 41,
+    "csv_structured_ready": 4,
+    "html_low_text_usable": 31,
+    "html_structured_data_candidate": 582,
+    "html_table_candidate_ready": 446,
+    "html_text_ready": 702,
+    "needs_manual_review": 1,
+    "ocr_later": 24,
+    "parse_text_pdf_low_text_usable": 7,
+    "parse_text_pdf_ready": 1081,
+    "shell_or_navigation_only": 22
+  },
+  "updated_at": "2026-08-05T19:03:00.236375+00:00",
+  "worker_pid": 11168
+}

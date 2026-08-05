@@ -1,0 +1,54 @@
+{
+  "groups": {
+    "contextual_only": {
+      "bytes": 19023278,
+      "extraction_ready_payloads": 6,
+      "payload_count": 6
+    },
+    "no_material_upgrade": {
+      "bytes": 352856040,
+      "extraction_ready_payloads": 158,
+      "payload_count": 160
+    },
+    "upgrades_growth_analysis": {
+      "bytes": 29447946390,
+      "extraction_ready_payloads": 12836,
+      "payload_count": 13244
+    },
+    "upgrades_implementation_confirmation": {
+      "bytes": 26801975802,
+      "extraction_ready_payloads": 11588,
+      "payload_count": 11960
+    },
+    "upgrades_local_wage_comparison": {
+      "bytes": 29447946390,
+      "extraction_ready_payloads": 12836,
+      "payload_count": 13244
+    },
+    "upgrades_mechanism_claim": {
+      "bytes": 26801975802,
+      "extraction_ready_payloads": 11588,
+      "payload_count": 11960
+    },
+    "upgrades_national_readiness": {
+      "bytes": 35608628,
+      "extraction_ready_payloads": 14,
+      "payload_count": 14
+    },
+    "upgrades_staffing_hypothesis": {
+      "bytes": 19800437236,
+      "extraction_ready_payloads": 8727,
+      "payload_count": 8992
+    },
+    "upgrades_total_compensation_comparison": {
+      "bytes": 14125092629,
+      "extraction_ready_payloads": 6517,
+      "payload_count": 6726
+    },
+    "upgrades_visual_geography": {
+      "bytes": 35608628,
+      "extraction_ready_payloads": 14,
+      "payload_count": 14
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"at":"2026-08-05T19:12:53.620213+00:00","details":"The reported 14,449 count covers only the new 30 GiB content-addressed store. The canonical readiness queue also contains 254 distinct valid prior-source payload reuses, so readiness must inspect 14,703 unique physical payloads.","incident":"physical_payload_count_reconciled","severity":"informational"}

@@ -1,0 +1,9 @@
+{
+  "completed_payloads": 14703,
+  "current_stage": "readiness_complete",
+  "decision": "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready",
+  "remaining_payloads": 0,
+  "status": "complete",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-READINESS-2026-08-05",
+  "updated_at": "2026-08-05T19:12:51.816520+00:00"
+}

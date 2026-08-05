@@ -1,0 +1,63 @@
+{
+  "analytical_extraction_runs": 0,
+  "artifact_payloads_tracked_in_git": false,
+  "canonical_readiness_input": 14703,
+  "completed_at": "2026-08-05T19:12:51.763084+00:00",
+  "count_correction": {
+    "corrected_total": 14703,
+    "prior_reuse_payloads": 254,
+    "reported_current_store_payloads": 14449
+  },
+  "decision": "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready",
+  "extraction_priority_counts": {
+    "extraction_priority_high": 13949,
+    "extraction_priority_medium": 308
+  },
+  "extraction_ready_bytes": 31553349301,
+  "extraction_ready_canonical_sources": 14257,
+  "extraction_ready_unique_payloads": 14257,
+  "file_type_counts": {
+    "csv": 17,
+    "html": 8954,
+    "pdf": 5731,
+    "txt": 1
+  },
+  "gabriel_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "lane_sizes": {
+    "readiness_lane_001": 2940,
+    "readiness_lane_002": 2941,
+    "readiness_lane_003": 2941,
+    "readiness_lane_004": 2940,
+    "readiness_lane_005": 2941
+  },
+  "max_payload_inspection_runtime_seconds": 12.741109,
+  "network_requests": 0,
+  "ocr_runs": 0,
+  "output_root": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/05_EXTERNAL-DATA-READINESS",
+  "readiness_status_counts": {
+    "corrupt_or_broken": 227,
+    "csv_structured_ready": 17,
+    "html_low_text_usable": 143,
+    "html_structured_data_candidate": 3023,
+    "html_table_candidate_ready": 2155,
+    "html_text_ready": 3494,
+    "needs_manual_review": 7,
+    "ocr_later": 118,
+    "parse_text_pdf_low_text_usable": 24,
+    "parse_text_pdf_ready": 5400,
+    "shell_or_navigation_only": 94,
+    "text_low_quality_usable": 1
+  },
+  "redownloads": 0,
+  "retained_bytes_inspected": 32908745150,
+  "secondary_context_deferrals_preserved": 24569,
+  "started_at": "2026-08-05T18:54:12.948700+00:00",
+  "storage_capacity_holds_preserved": 7895,
+  "sum_payload_inspection_runtime_seconds": 639.958623,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-READINESS-2026-08-05",
+  "total_runtime_seconds": 1118.814384,
+  "unique_physical_payloads": 14703,
+  "unresolved_hosted_search_targets": 12844
+}

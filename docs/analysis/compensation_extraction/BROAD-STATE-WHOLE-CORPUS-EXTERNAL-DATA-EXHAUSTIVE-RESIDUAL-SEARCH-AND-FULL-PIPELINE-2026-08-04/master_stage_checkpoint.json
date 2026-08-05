@@ -1,13 +1,14 @@
 {
-  "decision": "broad_state_whole_corpus_available_external_data_source_review_completed_readiness_ready",
+  "decision": "broad_state_whole_corpus_available_external_data_readiness_completed_extraction_ready",
   "details": {
+    "canonical_sources": 14703,
+    "extraction_ready_payloads": 14257,
     "gabriel_calls": 0,
     "hosted_search_calls": 0,
-    "readiness_queue_count": 14703,
-    "retained_source_count": 14449,
-    "sources_processed": 49294
+    "ocr_runs": 0,
+    "physical_payloads": 14703
   },
-  "stage": "04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD",
+  "stage": "05_EXTERNAL-DATA-READINESS",
   "status": "complete",
-  "updated_at": "2026-08-05T18:09:42.301223+00:00"
+  "updated_at": "2026-08-05T19:12:51.817482+00:00"
 }

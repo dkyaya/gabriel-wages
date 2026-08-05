@@ -1,0 +1,14 @@
+{
+  "groups": {
+    "direct_official_administrative_record": {
+      "bytes": 30597494315,
+      "extraction_ready_payloads": 5442,
+      "payload_count": 5749
+    },
+    "official_administrative_summary": {
+      "bytes": 2311250835,
+      "extraction_ready_payloads": 8815,
+      "payload_count": 8954
+    }
+  }
+}
