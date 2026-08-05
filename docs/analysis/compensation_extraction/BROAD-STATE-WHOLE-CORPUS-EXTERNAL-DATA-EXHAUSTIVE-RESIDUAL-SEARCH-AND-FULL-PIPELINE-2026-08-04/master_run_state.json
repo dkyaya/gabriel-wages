@@ -1,0 +1,8 @@
+{
+  "current_stage": "01_RESIDUAL-HOSTED-SEARCH-SCOUT",
+  "latest_decision": "residual_exhaustive_hosted_search_completed_merged_candidate_review_ready",
+  "started_at": "2026-08-05T01:48:23.540059+00:00",
+  "status": "complete",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04",
+  "updated_at": "2026-08-05T03:52:42.309987+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "lane_counts": {
+    "residual_search_lane_001": 3738,
+    "residual_search_lane_002": 3738,
+    "residual_search_lane_003": 3738,
+    "residual_search_lane_004": 3738,
+    "residual_search_lane_005": 3737
+  },
+  "prepared_at": "2026-08-05T01:49:02.153369+00:00",
+  "query_rule": "event-specific raw target variant; not the compacted-wave query",
+  "raw_count": 20986,
+  "raw_queue_sha256": "8a3145ec19933d2202acd54caafd64e23f6d383b239f5418223e99c68084734a",
+  "representative_count": 2297,
+  "residual_count": 18689,
+  "residual_queue_sha256": "ac9a86f32fdb9f386067bf5f2950e1c2b143828063e7f8a90235381f07a4ae46",
+  "residual_resolution_counts": {
+    "requires_live_hosted_search": 15691,
+    "resolved_by_authoritative_bulk_join": 2998
+  },
+  "search_wave": "external_search_wave_002_exhaustive_residual",
+  "stage_task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SCOUT-2026-08-04"
+}

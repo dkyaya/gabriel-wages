@@ -43,6 +43,7 @@ docs/analysis/compensation_extraction/TARGETED-SCOUTING-FOUR-LANE-FIXED-STAGGER-
 /artifacts/local_archives/
 /artifacts/local_external_reference_data/
 /artifacts/local_hosted_search_metadata/
+/artifacts/local_structured_external_data/
 /docs/analysis/compensation_extraction/*/retained_sources/
 
 # Bounded adjudication render payloads are reproducible local review assets.

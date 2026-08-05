@@ -1,0 +1,7 @@
+{
+  "archive_root": "tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/stage1_append_only_checkpoint_archive",
+  "archive_root_git_ignored": true,
+  "archived_after_validation": true,
+  "archived_file_count": 15,
+  "canonical_lane_and_merged_outputs_preserved": true
+}

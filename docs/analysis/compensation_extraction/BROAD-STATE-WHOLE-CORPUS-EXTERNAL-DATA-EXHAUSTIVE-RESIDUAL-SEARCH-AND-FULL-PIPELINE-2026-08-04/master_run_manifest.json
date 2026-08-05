@@ -1,0 +1,32 @@
+{
+  "artifact_roots_ignored": true,
+  "dashboard_map_primary_metric": "scout_coverage_rate",
+  "expected_residual": 18689,
+  "final_report_creation_authorized": false,
+  "locked_counts": {
+    "compacted": 2297,
+    "geography": 1440,
+    "prior_canonical": 29793,
+    "raw": 20986
+  },
+  "prior_commit": "cca0c8414009090ae58d773ef3ec89281e3b1e48",
+  "prior_commit_is_ancestor": true,
+  "stage_order": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13"
+  ],
+  "started_at": "2026-08-05T01:48:23.540059+00:00",
+  "starting_head": "cca0c8414009090ae58d773ef3ec89281e3b1e48",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04"
+}

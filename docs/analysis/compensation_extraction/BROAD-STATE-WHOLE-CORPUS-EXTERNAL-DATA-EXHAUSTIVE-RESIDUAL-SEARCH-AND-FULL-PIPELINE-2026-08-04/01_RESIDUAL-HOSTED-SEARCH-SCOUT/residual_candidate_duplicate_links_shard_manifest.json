@@ -1,0 +1,37 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "residual_candidate_duplicate_links.csv",
+      "csv_bytes": 4110952,
+      "csv_sha256": "3f8ec2bd2261079a9ea80ce94ce7a9aec84b6a596a25e507c2409f7498b90ce1",
+      "jsonl": "residual_candidate_duplicate_links.jsonl",
+      "jsonl_bytes": 6670850,
+      "jsonl_sha256": "b0e5ac4ea690ddd3d867d83eddfbc16581a33de465dfa5339f6d99c283d3fae5",
+      "part": 1,
+      "rows": 20000
+    },
+    {
+      "csv": "residual_candidate_duplicate_links.part-002.csv",
+      "csv_bytes": 4108916,
+      "csv_sha256": "b8fef216885a8bc483e804d2fcdb7c273d91ffca5b4138c070bce29a937814d7",
+      "jsonl": "residual_candidate_duplicate_links.part-002.jsonl",
+      "jsonl_bytes": 6668814,
+      "jsonl_sha256": "079e4c2993a566ba38fc468f3e185381973937d0f8f5cb0934c21612f7dcfe69",
+      "part": 2,
+      "rows": 20000
+    },
+    {
+      "csv": "residual_candidate_duplicate_links.part-003.csv",
+      "csv_bytes": 3718492,
+      "csv_sha256": "98a8817bf2fea7c49756108912c425a69dcc301b383ab00c0d3bf037531e6e4c",
+      "jsonl": "residual_candidate_duplicate_links.part-003.jsonl",
+      "jsonl_bytes": 6035446,
+      "jsonl_sha256": "4c9776a2f322354ed90a8e20a8a64e25489576afac8fb3a703041405aadb3582",
+      "part": 3,
+      "rows": 18102
+    }
+  ],
+  "sharded": true,
+  "total_rows": 58102
+}

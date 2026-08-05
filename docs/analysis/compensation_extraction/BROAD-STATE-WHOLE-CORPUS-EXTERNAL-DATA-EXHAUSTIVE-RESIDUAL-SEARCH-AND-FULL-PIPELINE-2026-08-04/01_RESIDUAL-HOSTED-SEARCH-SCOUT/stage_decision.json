@@ -1,0 +1,11 @@
+{
+  "canonical_candidates": 33003,
+  "completed_at": "2026-08-05T03:52:42.309398+00:00",
+  "decision": "residual_exhaustive_hosted_search_completed_merged_candidate_review_ready",
+  "raw_candidates": 91105,
+  "status_counts": {
+    "candidate_found": 2847,
+    "resolved_by_authoritative_bulk_join": 2998,
+    "zero_candidate": 12844
+  }
+}

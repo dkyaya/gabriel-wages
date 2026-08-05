@@ -1,0 +1,16 @@
+{
+  "actual_started_at": "2026-08-05T01:50:05.641606+00:00",
+  "append_only_checkpointing": true,
+  "assigned": 3738,
+  "call_count": 5577,
+  "candidate_count": 21302,
+  "completed": 3738,
+  "finished_at": "2026-08-05T03:51:16.804019+00:00",
+  "lane_id": "residual_search_lane_001",
+  "last_accepted_residual_target_id": "RESIDUAL-3793f43ccea0214210a11227",
+  "pid": 42289,
+  "queue_sha256": "adeee86709345d8b6240f82c076c831038f659840c67e04340f90fa98062d639",
+  "scheduled_delay_seconds": 0,
+  "status": "complete",
+  "updated_at": "2026-08-05T03:51:16.610157+00:00"
+}

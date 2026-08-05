@@ -1,0 +1,11 @@
+{
+  "all_raw_rows": 20986,
+  "all_rows_classified": true,
+  "arithmetic": "20,986 - 2,297 = 18,689",
+  "canonical_primary_representatives": 2297,
+  "residual_resolution_counts": {
+    "requires_live_hosted_search": 15691,
+    "resolved_by_authoritative_bulk_join": 2998
+  },
+  "residual_rows": 18689
+}

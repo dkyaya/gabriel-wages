@@ -1,0 +1,17 @@
+{
+  "convention": "required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv": "residual_search_lane_002_candidates.csv",
+      "csv_bytes": 28204568,
+      "csv_sha256": "80f76b32c86b039aae2ffba4886a3097c94c4794b0c2db1330beecbbc7c09de8",
+      "jsonl": "residual_search_lane_002_candidates.jsonl",
+      "jsonl_bytes": 39303534,
+      "jsonl_sha256": "4e88ce6ad90281f18c5a7e6fbbee4390f7aaffb8cb7d9863e921bb5073cde594",
+      "part": 1,
+      "rows": 19609
+    }
+  ],
+  "sharded": false,
+  "total_rows": 19609
+}

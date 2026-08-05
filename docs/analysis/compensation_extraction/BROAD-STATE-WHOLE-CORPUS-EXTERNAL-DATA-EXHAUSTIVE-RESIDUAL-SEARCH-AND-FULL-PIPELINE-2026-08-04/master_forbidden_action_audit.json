@@ -1,0 +1,12 @@
+{
+  "causal_effect_estimate": false,
+  "final_pdf_docx_slides_heatmap": false,
+  "force_push": false,
+  "history_rewrite": false,
+  "national_prevalence_estimate": false,
+  "national_wage_gap_estimate": false,
+  "ocr": false,
+  "passed": true,
+  "regression": false,
+  "treatment_effect": false
+}

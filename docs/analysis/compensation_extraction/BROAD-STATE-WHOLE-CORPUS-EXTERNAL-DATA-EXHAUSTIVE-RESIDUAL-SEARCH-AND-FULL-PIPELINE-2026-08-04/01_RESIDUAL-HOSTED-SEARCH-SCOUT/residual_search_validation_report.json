@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "all_18689_terminal": true,
+    "call_target_ids_valid": true,
+    "cross_wave_duplicates_linked": true,
+    "lane_counts_match": true,
+    "no_uncontrolled_retries": true,
+    "one_primary_maximum": true,
+    "one_repair_maximum": true,
+    "unique_terminal_per_residual": true,
+    "wave_provenance_present": true
+  },
+  "passed": true,
+  "status_counts": {
+    "candidate_found": 2847,
+    "resolved_by_authoritative_bulk_join": 2998,
+    "zero_candidate": 12844
+  },
+  "usage": {
+    "call_counts": {
+      "production_primary": 15691,
+      "repair": 12846
+    },
+    "input_tokens": 29572454,
+    "output_tokens": 3063705,
+    "reasoning_tokens": 476124,
+    "reliable_dollar_cost": "reliable_dollar_cost_not_available",
+    "total_calls": 28537,
+    "total_tokens": 32636159
+  },
+  "validated_at": "2026-08-05T03:52:42.307003+00:00"
+}

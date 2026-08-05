@@ -1,0 +1,12 @@
+{
+  "call_counts": {
+    "production_primary": 15691,
+    "repair": 12846
+  },
+  "input_tokens": 29572454,
+  "output_tokens": 3063705,
+  "reasoning_tokens": 476124,
+  "reliable_dollar_cost": "reliable_dollar_cost_not_available",
+  "total_calls": 28537,
+  "total_tokens": 32636159
+}

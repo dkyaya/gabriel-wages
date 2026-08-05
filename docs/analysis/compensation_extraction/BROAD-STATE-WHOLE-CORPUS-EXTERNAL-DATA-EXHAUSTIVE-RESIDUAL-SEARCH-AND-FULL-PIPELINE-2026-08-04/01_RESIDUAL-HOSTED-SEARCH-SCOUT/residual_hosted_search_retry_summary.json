@@ -1,0 +1,5 @@
+{
+  "bounded_one_repair_maximum_per_live_target": true,
+  "repair_calls": 12846,
+  "uncontrolled_retries": 0
+}
