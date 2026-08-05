@@ -1,0 +1,30 @@
+{
+  "by_lane": {
+    "field_span_lane_001": {
+      "count": 2832,
+      "ids_sha256": "634c61f9ccf3a18b3566213d831b2c2659eca4074a0cccaf9fe9ff0e7e21d456"
+    },
+    "field_span_lane_002": {
+      "count": 2832,
+      "ids_sha256": "10a8e7ef0567ad6ff2a3abfd8b6d4a2049fa042ae84f73b527fc7bb400604b81"
+    },
+    "field_span_lane_003": {
+      "count": 2832,
+      "ids_sha256": "e2bb0d491c290dfc919febbd8f866c6d7b135f6ff1339eab4be51776e0ce51c5"
+    },
+    "field_span_lane_004": {
+      "count": 2832,
+      "ids_sha256": "1b6d689a3ca14b19a35f3d7a7549fa12824fe6ca0797c4cdfd7eb5b98e45c776"
+    },
+    "field_span_lane_005": {
+      "count": 2832,
+      "ids_sha256": "94ccbd10422a57a531d94984a74eed13c06d10263ea8cf6782fb584f0f02b096"
+    }
+  },
+  "complete_locked_universe": true,
+  "count": 14160,
+  "generated_at": "2026-08-05T22:54:25.776047+00:00",
+  "globally_unique": true,
+  "local_full_id_manifest": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/runtime_recovery/accepted_payload_ids.jsonl",
+  "local_full_id_manifest_sha256": "153fa17e7ac9159122b8d5c3d374cff7157b5fea3fa94a2b8b98c52aa1dcf996"
+}

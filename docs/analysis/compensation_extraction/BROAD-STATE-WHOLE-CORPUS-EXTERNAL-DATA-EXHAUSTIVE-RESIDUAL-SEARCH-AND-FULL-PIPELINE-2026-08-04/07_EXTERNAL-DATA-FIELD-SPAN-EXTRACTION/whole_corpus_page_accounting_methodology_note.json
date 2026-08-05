@@ -1,0 +1,8 @@
+{
+  "deduplication": "SHA-256",
+  "html_as_pages": false,
+  "native_page_method": "pypdf direct physical file",
+  "storage_held_excluded": 7895,
+  "text_equivalent_added_to_native_pages": false,
+  "unsearched_excluded": 12844
+}

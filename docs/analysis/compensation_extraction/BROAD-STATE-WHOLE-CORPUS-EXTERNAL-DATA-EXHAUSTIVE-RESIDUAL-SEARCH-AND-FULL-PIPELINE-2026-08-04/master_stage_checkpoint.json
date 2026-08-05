@@ -1,13 +1,6 @@
 {
-  "decision": "broad_state_whole_corpus_available_external_data_extraction_completed_field_span_ready",
-  "details": {
-    "field_span_ready": 14160,
-    "gabriel_calls": 0,
-    "hosted_search_calls": 0,
-    "ocr_runs": 0,
-    "payloads": 14257
-  },
-  "stage": "06_EXTERNAL-DATA-EXTRACTION",
+  "decision": "broad_state_whole_corpus_external_data_field_span_completed_classification_ready",
+  "stage": "07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION",
   "status": "complete",
-  "updated_at": "2026-08-05T21:09:37.424976+00:00"
+  "updated_at": "2026-08-05T22:54:06.134351+00:00"
 }

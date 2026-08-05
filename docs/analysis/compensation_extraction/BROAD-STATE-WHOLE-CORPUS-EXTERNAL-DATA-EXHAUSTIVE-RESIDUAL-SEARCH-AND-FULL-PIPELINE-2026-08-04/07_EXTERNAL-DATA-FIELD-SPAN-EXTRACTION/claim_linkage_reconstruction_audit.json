@@ -1,0 +1,11 @@
+{
+  "broad_expected_claim_upgrade_tags_used_as_claim_ids": false,
+  "conclusion": "No claim ID was invented. Records lacking exact canonical claim lineage remain pending reconstruction.",
+  "existing_direct_claim_id_links_in_input": 0,
+  "mapping_basis_allowed": [
+    "canonical_extraction_input_existing_claim_id"
+  ],
+  "passed": true,
+  "reconstructed_payload_claim_links": 0,
+  "unresolved_payloads": 13943
+}

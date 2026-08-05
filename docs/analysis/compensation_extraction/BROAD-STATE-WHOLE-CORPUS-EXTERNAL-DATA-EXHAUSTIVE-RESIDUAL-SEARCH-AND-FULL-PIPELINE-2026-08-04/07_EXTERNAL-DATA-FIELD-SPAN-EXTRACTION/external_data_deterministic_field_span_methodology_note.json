@@ -1,0 +1,12 @@
+{
+  "ambiguous_narrative_routed_to_review": true,
+  "claim_mapping_basis": "exact canonical mappings only",
+  "coordinates_preserved": true,
+  "gabriel_scoring": false,
+  "lanes": 5,
+  "matching": false,
+  "normalization": false,
+  "processed": 14160,
+  "raw_values_preserved": true,
+  "rule_version": "deterministic-field-rules-2026-08-05-v1"
+}

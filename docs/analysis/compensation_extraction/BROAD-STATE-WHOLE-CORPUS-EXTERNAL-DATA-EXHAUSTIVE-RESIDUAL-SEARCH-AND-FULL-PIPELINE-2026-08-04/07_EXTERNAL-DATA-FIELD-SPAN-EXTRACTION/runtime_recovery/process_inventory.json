@@ -1,0 +1,30 @@
+{
+  "audited_at": "2026-08-05T22:54:25.777010+00:00",
+  "conclusion": "No original worker, replacement worker, coordinator, merge process, validation process, or task-owned open file exists.",
+  "field_span_coordinator": null,
+  "inspection_commands": [
+    "ps -Ao pid,ppid,lstart,etime,state,%cpu,time,command",
+    "pgrep -af task-identifiers",
+    "lsof filtered to field/span task paths"
+  ],
+  "lane_workers": {
+    "field_span_lane_001": null,
+    "field_span_lane_002": null,
+    "field_span_lane_003": null,
+    "field_span_lane_004": null,
+    "field_span_lane_005": null
+  },
+  "merge_coordinator": null,
+  "observation_one_process_sample_at": "2026-08-05T22:42:50+00:00",
+  "observation_two_process_sample_at": "2026-08-05T22:44:08+00:00",
+  "observer_processes_excluded": [
+    34636,
+    34638,
+    34730,
+    34732
+  ],
+  "pid_files_found": [],
+  "task_owned_open_files": [],
+  "task_owned_processes": [],
+  "validation_coordinator": null
+}

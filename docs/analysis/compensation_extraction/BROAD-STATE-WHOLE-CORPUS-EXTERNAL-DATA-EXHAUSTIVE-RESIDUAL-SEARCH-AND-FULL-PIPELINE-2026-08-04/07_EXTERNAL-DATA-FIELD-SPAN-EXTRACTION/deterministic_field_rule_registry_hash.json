@@ -1,0 +1,7 @@
+{
+  "dictionary_version": "administrative-field-dictionary-2026-08-05-v1",
+  "parser_version": "literal-parser-2026-08-05-v1",
+  "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_field_rule_registry.json",
+  "rule_version": "deterministic-field-rules-2026-08-05-v1",
+  "sha256": "4bfe08913812c9f4e891b43880695c56e0d67640b66125cd405970805207584d"
+}

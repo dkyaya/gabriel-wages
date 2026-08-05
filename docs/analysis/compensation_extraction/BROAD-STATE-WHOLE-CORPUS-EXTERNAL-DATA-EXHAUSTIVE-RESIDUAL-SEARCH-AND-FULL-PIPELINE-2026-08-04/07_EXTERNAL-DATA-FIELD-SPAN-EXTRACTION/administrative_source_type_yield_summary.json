@@ -1,0 +1,23 @@
+{
+  "audit_or_financial_report": 7479,
+  "benefits_document": 4896,
+  "budget": 137664,
+  "compensation_study": 20433,
+  "contract_or_mou": 15277,
+  "earnings_report": 7150,
+  "government_dataset": 4504,
+  "implementation_record": 16,
+  "media_or_context": 2095,
+  "meeting_packet": 6170,
+  "open_checkbook": 50,
+  "open_data_portal": 215,
+  "ordinance_or_resolution": 163653,
+  "other": 53515,
+  "payroll_roster": 4621825,
+  "pension_or_retirement_document": 155914,
+  "recruitment_study": 54,
+  "salary_schedule": 151741,
+  "staffing_table": 205652,
+  "unclear": 10,
+  "vacancy_report": 457
+}

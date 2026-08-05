@@ -1,0 +1,2378 @@
+{
+  "confidence_categories": [
+    "exact_structured_cell",
+    "exact_labeled_text",
+    "exact_table_row_with_header",
+    "strong_pattern_with_local_context",
+    "weak_pattern_requires_review",
+    "ambiguous_narrative_manual_review"
+  ],
+  "created_at": "2026-08-05T21:54:00.507817+00:00",
+  "dictionary_version": "administrative-field-dictionary-2026-08-05-v1",
+  "forbidden_transformations": [
+    "hourly_to_annual",
+    "annual_to_hourly",
+    "inferred_fte_denominator",
+    "base_total_combination",
+    "regular_overtime_combination",
+    "budget_payroll_combination",
+    "semantic_imputation"
+  ],
+  "parser_version": "literal-parser-2026-08-05-v1",
+  "registry_version": "deterministic-field-rules-2026-08-05-v1",
+  "rules": [
+    {
+      "field_family": "contextual_controls",
+      "field_name": "CPI_measure",
+      "labels": [
+        "consumer price index",
+        "cpi"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-CPI_MEASURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "FTE_count",
+      "labels": [
+        "fte count",
+        "ftes",
+        "full-time equivalents"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-FTE_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "MOU_identifier",
+      "labels": [
+        "mou number",
+        "memorandum of understanding"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-MOU_IDENTIFIER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "active_employees",
+      "labels": [
+        "active employees"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-ACTIVE_EMPLOYEES",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "adopted",
+      "labels": [
+        "adopted"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-ADOPTED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "adoption_date",
+      "labels": [
+        "adoption date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-ADOPTION_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "allowance",
+      "labels": [
+        "allowance"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-ALLOWANCE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "amended",
+      "labels": [
+        "amended"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-AMENDED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "annual_salary",
+      "labels": [
+        "annual salary",
+        "annual rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-ANNUAL_SALARY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "applicant_count",
+      "labels": [
+        "applicant count",
+        "applicants"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-APPLICANT_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "appropriated",
+      "labels": [
+        "appropriated"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-APPROPRIATED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "appropriation_date",
+      "labels": [
+        "appropriation date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-APPROPRIATION_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "approved",
+      "labels": [
+        "approved"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-APPROVED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "assessed_value",
+      "labels": [
+        "assessed value"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-ASSESSED_VALUE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "attrition_not_replaced",
+      "labels": [
+        "attrition not replaced",
+        "not replace attrition"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-ATTRITION_NOT_REPLACED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "authorized_positions",
+      "labels": [
+        "authorized positions",
+        "authorized strength"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-AUTHORIZED_POSITIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "bargaining_unit_status",
+      "labels": [
+        "bargaining unit status"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-BARGAINING_UNIT_STATUS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "base_pay",
+      "labels": [
+        "base pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-BASE_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "base_salary",
+      "labels": [
+        "base salary"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-BASE_SALARY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "benefit_effective_date",
+      "labels": [
+        "benefit effective date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-BENEFIT_EFFECTIVE_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "budgeted_positions",
+      "labels": [
+        "budgeted positions"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-BUDGETED_POSITIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "callback_due_to_staffing_gap",
+      "labels": [
+        "callback due to staffing gap"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-CALLBACK_DUE_TO_STAFFING_GAP",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "certification_benefit",
+      "labels": [
+        "certification benefit"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-CERTIFICATION_BENEFIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "certification_level",
+      "labels": [
+        "certification level"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-CERTIFICATION_LEVEL",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "certification_pay",
+      "labels": [
+        "certification pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-CERTIFICATION_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "civilian_count",
+      "labels": [
+        "civilian count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-CIVILIAN_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "classification",
+      "labels": [
+        "classification"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-CLASSIFICATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "compensation_study_finding",
+      "labels": [
+        "compensation study finding"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-COMPENSATION_STUDY_FINDING",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "consolidation",
+      "labels": [
+        "consolidation"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-CONSOLIDATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "contract_identifier",
+      "labels": [
+        "contract identifier"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-CONTRACT_IDENTIFIER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "cost_of_living_measure",
+      "labels": [
+        "cost of living",
+        "cost-of-living"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-COST_OF_LIVING_MEASURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "council_approval_date",
+      "labels": [
+        "council approval date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-COUNCIL_APPROVAL_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "county",
+      "labels": [
+        "county"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-COUNTY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "deferred_compensation_contribution",
+      "labels": [
+        "deferred compensation contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-DEFERRED_COMPENSATION_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "dental_contribution",
+      "labels": [
+        "dental contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-DENTAL_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "department",
+      "labels": [
+        "department"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-DEPARTMENT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "department_budget",
+      "labels": [
+        "department budget"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-DEPARTMENT_BUDGET",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "department_headcount",
+      "labels": [
+        "department headcount",
+        "headcount"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-DEPARTMENT_HEADCOUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "detail_pay",
+      "labels": [
+        "detail pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-DETAIL_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "education_pay",
+      "labels": [
+        "education pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-EDUCATION_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "effective_date",
+      "labels": [
+        "effective date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-EFFECTIVE_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "eligible_candidate_count",
+      "labels": [
+        "eligible candidates",
+        "candidate count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-ELIGIBLE_CANDIDATE_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "employee_health_contribution",
+      "labels": [
+        "employee health contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-EMPLOYEE_HEALTH_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "employee_identifier_public",
+      "labels": [
+        "employee id",
+        "employee number"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-EMPLOYEE_IDENTIFIER_PUBLIC",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "employee_name_public",
+      "labels": [
+        "employee name",
+        "name"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-EMPLOYEE_NAME_PUBLIC",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "employee_pension_contribution",
+      "labels": [
+        "employee pension contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-EMPLOYEE_PENSION_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "employer_health_contribution",
+      "labels": [
+        "employer health contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-EMPLOYER_HEALTH_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "employer_pension_contribution",
+      "labels": [
+        "employer pension contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-EMPLOYER_PENSION_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "employment_status",
+      "labels": [
+        "employment status"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-EMPLOYMENT_STATUS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "equipment_allowance",
+      "labels": [
+        "equipment allowance"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-EQUIPMENT_ALLOWANCE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "expired",
+      "labels": [
+        "expired"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-EXPIRED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "filled_positions",
+      "labels": [
+        "filled positions"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-FILLED_POSITIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "fiscal_year",
+      "labels": [
+        "fiscal year"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-FISCAL_YEAR",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "fiscal_year_expenditure",
+      "labels": [
+        "fiscal year expenditure",
+        "total expenditure"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-FISCAL_YEAR_EXPENDITURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "fiscal_year_revenue",
+      "labels": [
+        "fiscal year revenue",
+        "total revenue"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-FISCAL_YEAR_REVENUE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "full_time_part_time_status",
+      "labels": [
+        "full time/part time",
+        "full-time/part-time",
+        "ft/pt"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-FULL_TIME_PART_TIME_STATUS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "general_fund_expenditure",
+      "labels": [
+        "general fund expenditure"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-GENERAL_FUND_EXPENDITURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "grade",
+      "labels": [
+        "grade"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-GRADE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "gross_pay",
+      "labels": [
+        "gross pay",
+        "gross wages"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-GROSS_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "hazard_pay",
+      "labels": [
+        "hazard pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-HAZARD_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "health_cost_share",
+      "labels": [
+        "health cost share",
+        "healthcare cost share"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-HEALTH_COST_SHARE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "hires",
+      "labels": [
+        "hires"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-HIRES",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "hiring_difficulty",
+      "labels": [
+        "hiring difficulty"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-HIRING_DIFFICULTY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "hiring_freeze",
+      "labels": [
+        "hiring freeze"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-HIRING_FREEZE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "holiday_benefit",
+      "labels": [
+        "holiday benefit"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-HOLIDAY_BENEFIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "holiday_pay",
+      "labels": [
+        "holiday pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-HOLIDAY_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "hourly_rate",
+      "labels": [
+        "hourly rate",
+        "hourly wage"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-HOURLY_RATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "implementation_body",
+      "labels": [
+        "implementation body"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-IMPLEMENTATION_BODY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "implementation_status",
+      "labels": [
+        "implementation status"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-IMPLEMENTATION_STATUS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "implemented",
+      "labels": [
+        "implemented"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-IMPLEMENTED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "incumbent_tier",
+      "labels": [
+        "incumbent tier"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-INCUMBENT_TIER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "inflation_measure",
+      "labels": [
+        "inflation measure"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-INFLATION_MEASURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "labor_force",
+      "labels": [
+        "labor force"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-LABOR_FORCE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "lateral_entry_incentive",
+      "labels": [
+        "lateral entry incentive",
+        "lateral incentive"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-LATERAL_ENTRY_INCENTIVE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "layoffs",
+      "labels": [
+        "layoffs"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-LAYOFFS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "leave_accrual",
+      "labels": [
+        "leave accrual"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-LEAVE_ACCRUAL",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "leave_cashout",
+      "labels": [
+        "leave cashout",
+        "leave payout"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-LEAVE_CASHOUT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "life_insurance_value",
+      "labels": [
+        "life insurance value"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-LIFE_INSURANCE_VALUE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "local_fiscal_constraint_statement",
+      "labels": [
+        "local fiscal constraint statement"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-LOCAL_FISCAL_CONSTRAINT_STATEMENT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "longevity_benefit",
+      "labels": [
+        "longevity benefit"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-LONGEVITY_BENEFIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "longevity_pay",
+      "labels": [
+        "longevity pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-LONGEVITY_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "longevity_threshold",
+      "labels": [
+        "longevity threshold"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-LONGEVITY_THRESHOLD",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "lump_sum_payment",
+      "labels": [
+        "lump sum",
+        "lump-sum"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-LUMP_SUM_PAYMENT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "mandatory_overtime",
+      "labels": [
+        "mandatory overtime"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-MANDATORY_OVERTIME",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "market_competitiveness_statement",
+      "labels": [
+        "market competitiveness statement"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-MARKET_COMPETITIVENESS_STATEMENT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "maximum_rate",
+      "labels": [
+        "maximum rate",
+        "max rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-MAXIMUM_RATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "median_household_income",
+      "labels": [
+        "median household income"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-MEDIAN_HOUSEHOLD_INCOME",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "metro_area",
+      "labels": [
+        "metro area"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-METRO_AREA",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "minimum_rate",
+      "labels": [
+        "minimum rate",
+        "min rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-MINIMUM_RATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "minimum_staffing_requirement",
+      "labels": [
+        "minimum staffing",
+        "minimum manning"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-MINIMUM_STAFFING_REQUIREMENT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "negotiated",
+      "labels": [
+        "negotiated"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-NEGOTIATED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "new_hire_tier",
+      "labels": [
+        "new hire tier",
+        "new-hire tier"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-NEW_HIRE_TIER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "one_time",
+      "labels": [
+        "one-time",
+        "one time"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-ONE_TIME",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "ordinance_number",
+      "labels": [
+        "ordinance number",
+        "ordinance no",
+        "ordinance #"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-ORDINANCE_NUMBER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "other_compensation",
+      "labels": [
+        "other compensation",
+        "other pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-OTHER_COMPENSATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "outsourcing",
+      "labels": [
+        "outsourcing"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-OUTSOURCING",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "overtime_due_to_staffing_gap",
+      "labels": [
+        "overtime due to staffing",
+        "overtime caused by vacancies",
+        "overtime from vacancies"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-OVERTIME_DUE_TO_STAFFING_GAP",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "overtime_earnings",
+      "labels": [
+        "overtime earnings",
+        "overtime pay",
+        "ot earnings"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-OVERTIME_EARNINGS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "overtime_hours",
+      "labels": [
+        "overtime hours",
+        "ot hours"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-OVERTIME_HOURS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "paid",
+      "labels": [
+        "paid"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-PAID",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "part_time_count",
+      "labels": [
+        "part time count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-PART_TIME_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "pay_period",
+      "labels": [
+        "pay period"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-PAY_PERIOD",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "payment_date",
+      "labels": [
+        "payment date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-PAYMENT_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "payroll_effective_date",
+      "labels": [
+        "payroll effective date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-PAYROLL_EFFECTIVE_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "payroll_year",
+      "labels": [
+        "payroll year"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-PAYROLL_YEAR",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "pension_cost_share",
+      "labels": [
+        "pension cost share"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-PENSION_COST_SHARE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "pensionable_earnings",
+      "labels": [
+        "pensionable earnings",
+        "pensionable pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-PENSIONABLE_EARNINGS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "population",
+      "labels": [
+        "population"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-POPULATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "position_additions",
+      "labels": [
+        "position additions"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-POSITION_ADDITIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "position_eliminations",
+      "labels": [
+        "positions eliminated",
+        "position eliminations",
+        "eliminated positions"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-POSITION_ELIMINATIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "position_title",
+      "labels": [
+        "position title",
+        "job title",
+        "title"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-POSITION_TITLE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "premium_eligibility",
+      "labels": [
+        "premium eligibility"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-PREMIUM_ELIGIBILITY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "premium_pay",
+      "labels": [
+        "premium pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-PREMIUM_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "premium_payment",
+      "labels": [
+        "premium payment"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-PREMIUM_PAYMENT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "probationary_rate",
+      "labels": [
+        "probationary rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-PROBATIONARY_RATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "promotion_date",
+      "labels": [
+        "promotion date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-PROMOTION_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "proposed",
+      "labels": [
+        "proposed"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-PROPOSED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "rank",
+      "labels": [
+        "rank"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-RANK",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "ratification_date",
+      "labels": [
+        "ratification date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-RATIFICATION_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "ratified",
+      "labels": [
+        "ratified"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-RATIFIED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "recession_or_emergency_context",
+      "labels": [
+        "recession or emergency context"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-RECESSION_OR_EMERGENCY_CONTEXT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "recommended",
+      "labels": [
+        "recommended"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-RECOMMENDED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "recruitment_incentive",
+      "labels": [
+        "recruitment incentive"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RECRUITMENT_INCENTIVE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "recruitment_shortage",
+      "labels": [
+        "recruitment shortage"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RECRUITMENT_SHORTAGE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "recruitment_study_finding",
+      "labels": [
+        "recruitment study finding"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RECRUITMENT_STUDY_FINDING",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "recurring",
+      "labels": [
+        "recurring"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-RECURRING",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "referral_bonus",
+      "labels": [
+        "referral bonus"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-REFERRAL_BONUS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "regular_earnings",
+      "labels": [
+        "regular earnings"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-REGULAR_EARNINGS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "regular_pay",
+      "labels": [
+        "regular pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-REGULAR_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "rejected",
+      "labels": [
+        "rejected"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-REJECTED",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "resignations",
+      "labels": [
+        "resignations"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RESIGNATIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "resolution_number",
+      "labels": [
+        "resolution number",
+        "resolution no",
+        "resolution #"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-RESOLUTION_NUMBER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "retention_incentive",
+      "labels": [
+        "retention incentive"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RETENTION_INCENTIVE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "retention_problem",
+      "labels": [
+        "retention problem"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RETENTION_PROBLEM",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "retention_rate_explicit",
+      "labels": [
+        "retention rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RETENTION_RATE_EXPLICIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "retirements",
+      "labels": [
+        "retirements"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-RETIREMENTS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "retroactive_pay",
+      "labels": [
+        "retroactive pay",
+        "back pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-RETROACTIVE_PAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "retroactive_start_date",
+      "labels": [
+        "retroactive start date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-RETROACTIVE_START_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "salary_progression",
+      "labels": [
+        "salary progression"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-SALARY_PROGRESSION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "salary_range",
+      "labels": [
+        "salary range",
+        "pay range"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-SALARY_RANGE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "seniority_rule",
+      "labels": [
+        "seniority rule"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-SENIORITY_RULE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "separations",
+      "labels": [
+        "separations"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-SEPARATIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "service_band",
+      "labels": [
+        "service band"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-SERVICE_BAND",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "shift_differential",
+      "labels": [
+        "shift differential",
+        "shift premium"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-SHIFT_DIFFERENTIAL",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "signing_bonus",
+      "labels": [
+        "signing bonus",
+        "sign-on bonus"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-SIGNING_BONUS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "source_confirmation_type",
+      "labels": [
+        "source confirmation type"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-SOURCE_CONFIRMATION_TYPE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "staffing_change_effective_date",
+      "labels": [
+        "staffing change effective date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-STAFFING_CHANGE_EFFECTIVE_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "staffing_shortage_count",
+      "labels": [
+        "staffing shortage count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-STAFFING_SHORTAGE_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "staffing_study_finding",
+      "labels": [
+        "staffing study finding"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-STAFFING_STUDY_FINDING",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "state_labor_law_reference",
+      "labels": [
+        "state labor law reference"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-STATE_LABOR_LAW_REFERENCE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "step_effective_date",
+      "labels": [
+        "step effective date"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-STEP_EFFECTIVE_DATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "step_interval",
+      "labels": [
+        "step interval"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-STEP_INTERVAL",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "step_name",
+      "labels": [
+        "step name"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-STEP_NAME",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "step_number",
+      "labels": [
+        "step number",
+        "step"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-STEP_NUMBER",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "step_progression_rule",
+      "labels": [
+        "step progression",
+        "progression rule"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-STEP_PROGRESSION_RULE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "step_rate",
+      "labels": [
+        "step rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-STEP_RATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "stipend",
+      "labels": [
+        "stipend"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-STIPEND",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "sworn_count",
+      "labels": [
+        "sworn count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-SWORN_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "tax_base",
+      "labels": [
+        "tax base"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-TAX_BASE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "tentative",
+      "labels": [
+        "tentative"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-TENTATIVE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "time_to_fill",
+      "labels": [
+        "time to fill",
+        "time-to-fill"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-TIME_TO_FILL",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "total_compensation_explicit",
+      "labels": [
+        "total compensation"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-TOTAL_COMPENSATION_EXPLICIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "total_earnings",
+      "labels": [
+        "total earnings",
+        "total pay"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-TOTAL_EARNINGS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "tuition_or_education_benefit",
+      "labels": [
+        "tuition or education benefit"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-TUITION_OR_EDUCATION_BENEFIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "turnover_count",
+      "labels": [
+        "turnover count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-TURNOVER_COUNT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "recruitment_and_retention",
+      "field_name": "turnover_rate_explicit",
+      "labels": [
+        "turnover rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-RECRUITMENT_AND_RETENTION-TURNOVER_RATE_EXPLICIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "unemployment_rate",
+      "labels": [
+        "unemployment rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-UNEMPLOYMENT_RATE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "uniform_allowance",
+      "labels": [
+        "uniform allowance"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-UNIFORM_ALLOWANCE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "union_status_explicit",
+      "labels": [
+        "union status explicit"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-UNION_STATUS_EXPLICIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "payroll_and_earnings",
+      "field_name": "unit",
+      "labels": [
+        "unit"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-PAYROLL_AND_EARNINGS-UNIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "contextual_controls",
+      "field_name": "urban_rural_classification",
+      "labels": [
+        "urban rural classification"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-CONTEXTUAL_CONTROLS-URBAN_RURAL_CLASSIFICATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "vacancy_duration",
+      "labels": [
+        "vacancy duration"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-VACANCY_DURATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "vacancy_rate_explicit",
+      "labels": [
+        "vacancy rate"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-VACANCY_RATE_EXPLICIT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "staffing_and_headcount",
+      "field_name": "vacant_positions",
+      "labels": [
+        "vacant positions",
+        "vacancies",
+        "vacancy count"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-STAFFING_AND_HEADCOUNT-VACANT_POSITIONS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "vehicle_allowance",
+      "labels": [
+        "vehicle allowance"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-VEHICLE_ALLOWANCE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "benefits_and_total_compensation",
+      "field_name": "vision_contribution",
+      "labels": [
+        "vision contribution"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-BENEFITS_AND_TOTAL_COMPENSATION-VISION_CONTRIBUTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "implementation_confirmation",
+      "field_name": "vote_result",
+      "labels": [
+        "vote result",
+        "vote"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-IMPLEMENTATION_CONFIRMATION-VOTE_RESULT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "field_family": "tenure_and_progression",
+      "field_name": "years_of_service",
+      "labels": [
+        "years of service",
+        "service years"
+      ],
+      "method": "exact normalized header/label with literal local value parsing",
+      "rule_id": "FIELD-TENURE_AND_PROGRESSION-YEARS_OF_SERVICE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "COLA_indexing_mechanism",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "consumer price index",
+        "cpi adjustment",
+        "cost-of-living adjustment"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-COLA_INDEXING_MECHANISM",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "across_board_mechanism",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "across-the-board",
+        "across the board"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-ACROSS_BOARD_MECHANISM",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "arbitration_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "interest arbitration",
+        "fact finding",
+        "fact-finding"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-ARBITRATION_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "bargaining_leverage",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "bargaining leverage",
+        "collective bargaining"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-BARGAINING_LEVERAGE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "benefit_cost_shift",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "cost shift",
+        "employee share increased",
+        "premium share"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-BENEFIT_COST_SHIFT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "budget_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "budget pressure",
+        "budget constraint",
+        "budget shortfall"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-BUDGET_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "classification_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "reclassification",
+        "classification study"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-CLASSIFICATION_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "compression_or_parity_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "pay compression",
+        "wage compression",
+        "pay parity"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-COMPRESSION_OR_PARITY_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "fiscal_constraint",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "fiscal constraint",
+        "limited fiscal",
+        "revenue constraint"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-FISCAL_CONSTRAINT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "implementation_confirmation",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "became effective",
+        "was implemented",
+        "has been paid"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-IMPLEMENTATION_CONFIRMATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "implementation_delay",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "implementation delay",
+        "delayed implementation",
+        "retroactive to"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-IMPLEMENTATION_DELAY",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "inflation_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "inflation pressure",
+        "rising inflation"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-INFLATION_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "market_competitiveness",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "market competitive",
+        "competitive salary",
+        "pay competitiveness"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-MARKET_COMPETITIVENESS",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "minimum_staffing_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "minimum staffing",
+        "minimum manning"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-MINIMUM_STAFFING_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "non_safety_position_reduction",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "civilian positions eliminated",
+        "clerical positions eliminated"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-NON_SAFETY_POSITION_REDUCTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "one_time_instead_of_base",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "one-time payment instead",
+        "lump sum instead of"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-ONE_TIME_INSTEAD_OF_BASE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "other_administrative_context",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "administrative record",
+        "personnel policy"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-OTHER_ADMINISTRATIVE_CONTEXT",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "outsourcing_or_consolidation",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "outsourced",
+        "consolidated services",
+        "service consolidation"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-OUTSOURCING_OR_CONSOLIDATION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "overtime_response",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "mandatory overtime",
+        "overtime to cover",
+        "overtime because"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-OVERTIME_RESPONSE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "recruitment_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "difficulty recruiting",
+        "recruitment challenge",
+        "hard to recruit"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-RECRUITMENT_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "retention_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "difficulty retaining",
+        "retention challenge",
+        "retain employees"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-RETENTION_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "retroactivity_mechanism",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "retroactive to",
+        "back pay"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-RETROACTIVITY_MECHANISM",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "safety_position_protection",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "police positions protected",
+        "fire positions protected"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-SAFETY_POSITION_PROTECTION",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "staffing_shortage",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "staffing shortage",
+        "staff shortage",
+        "understaffed"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-STAFFING_SHORTAGE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "step_progression_mechanism",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "advance to the next step",
+        "step progression"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-STEP_PROGRESSION_MECHANISM",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "strike_or_job_action_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "strike",
+        "work stoppage",
+        "job action"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-STRIKE_OR_JOB_ACTION_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    },
+    {
+      "evidence_type": "vacancy_pressure",
+      "field_family": "qualitative_administrative",
+      "labels": [
+        "vacancy pressure",
+        "persistent vacancies",
+        "unfilled positions"
+      ],
+      "method": "literal phrase bounded-span capture",
+      "rule_id": "SPAN-QUAL-VACANCY_PRESSURE",
+      "rule_version": "deterministic-field-rules-2026-08-05-v1",
+      "semantic_inference": false
+    }
+  ]
+}

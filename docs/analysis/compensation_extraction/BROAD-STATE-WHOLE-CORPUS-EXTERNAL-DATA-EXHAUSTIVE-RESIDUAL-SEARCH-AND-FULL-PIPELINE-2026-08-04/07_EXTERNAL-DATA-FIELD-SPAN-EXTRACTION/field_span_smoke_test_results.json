@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "case": "payroll_table",
+      "coordinates_exact": true,
+      "field_records": 72,
+      "payload": "EXTPAYLOAD-0048c78471b3515ec2731089",
+      "spans": 70,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "payroll_narrative_pdf",
+      "coordinates_exact": true,
+      "field_records": 284,
+      "payload": "EXTPAYLOAD-0001d1c2c0d00a9d04d43cb9",
+      "spans": 237,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "staffing",
+      "coordinates_exact": true,
+      "field_records": 284,
+      "payload": "EXTPAYLOAD-0001d1c2c0d00a9d04d43cb9",
+      "spans": 237,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "implementation",
+      "coordinates_exact": true,
+      "field_records": 284,
+      "payload": "EXTPAYLOAD-0001d1c2c0d00a9d04d43cb9",
+      "spans": 237,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "benefits",
+      "coordinates_exact": true,
+      "field_records": 195,
+      "payload": "EXTPAYLOAD-001a1204ca212b6b85f43ef5",
+      "spans": 160,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "html_table",
+      "coordinates_exact": true,
+      "field_records": 2,
+      "payload": "EXTPAYLOAD-001f6312d3c142563e4044fd",
+      "spans": 2,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "html_embedded",
+      "coordinates_exact": true,
+      "field_records": 8,
+      "payload": "EXTPAYLOAD-001335100368c5fa28d271eb",
+      "spans": 8,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "csv",
+      "coordinates_exact": true,
+      "field_records": 80,
+      "payload": "EXTPAYLOAD-07773c3fa6534a9c462b2fed",
+      "spans": 80,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    },
+    {
+      "case": "low_yield",
+      "coordinates_exact": true,
+      "field_records": 156,
+      "payload": "EXTPAYLOAD-0110b924b486aa38c049dc5f",
+      "spans": 90,
+      "status": "pass",
+      "terminal_outcome": "field_and_span_extracted"
+    }
+  ],
+  "gabriel_calls": 0,
+  "network_calls": 0,
+  "normalization_runs": 0,
+  "passed": true,
+  "tested_at": "2026-08-05T21:54:13.661036+00:00"
+}

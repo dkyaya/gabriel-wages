@@ -1,0 +1,9 @@
+{"at": "2026-08-05T21:54:00.507516+00:00", "from": "06_EXTERNAL-DATA-EXTRACTION", "to": "07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION", "status": "preflight_started"}
+{"at": "2026-08-05T21:54:21.928210+00:00", "lane_id": "field_span_lane_001", "status": "started", "planned_stagger_seconds": 0, "actual_elapsed_seconds": 0.002}
+{"at": "2026-08-05T21:56:21.934871+00:00", "lane_id": "field_span_lane_002", "status": "started", "planned_stagger_seconds": 120, "actual_elapsed_seconds": 120.009}
+{"at": "2026-08-05T21:58:43.640559+00:00", "lane_id": "field_span_lane_001", "status": "started", "planned_stagger_seconds": 0, "actual_elapsed_seconds": 0.003}
+{"at": "2026-08-05T22:00:43.644221+00:00", "lane_id": "field_span_lane_002", "status": "started", "planned_stagger_seconds": 120, "actual_elapsed_seconds": 120.007}
+{"at": "2026-08-05T22:02:43.640748+00:00", "lane_id": "field_span_lane_003", "status": "started", "planned_stagger_seconds": 240, "actual_elapsed_seconds": 240.004}
+{"at": "2026-08-05T22:04:43.643526+00:00", "lane_id": "field_span_lane_004", "status": "started", "planned_stagger_seconds": 360, "actual_elapsed_seconds": 360.007}
+{"at": "2026-08-05T22:09:06.263468+00:00", "lane_id": "field_span_lane_005", "status": "started", "planned_stagger_seconds": 480, "actual_elapsed_seconds": 480.018}
+{"at": "2026-08-05T22:54:06.315387+00:00", "stage": "07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION", "status": "complete", "decision": "broad_state_whole_corpus_external_data_field_span_completed_classification_ready"}

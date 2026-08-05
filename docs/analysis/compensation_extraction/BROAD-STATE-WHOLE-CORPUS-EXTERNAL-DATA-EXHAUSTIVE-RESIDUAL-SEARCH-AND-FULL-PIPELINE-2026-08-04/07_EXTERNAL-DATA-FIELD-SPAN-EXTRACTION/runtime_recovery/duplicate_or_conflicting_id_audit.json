@@ -1,0 +1,11 @@
+{
+  "accepted_ids_outside_locked_universe": [],
+  "audited_at": "2026-08-05T22:54:25.776784+00:00",
+  "cross_lane_accepted_conflict_count": 0,
+  "cross_lane_accepted_conflicts": [],
+  "duplicate_accepted_payload_id_count": 0,
+  "duplicate_accepted_payload_ids": [],
+  "lane_queue_overlap_count": 0,
+  "lane_queue_overlaps": [],
+  "passed": true
+}

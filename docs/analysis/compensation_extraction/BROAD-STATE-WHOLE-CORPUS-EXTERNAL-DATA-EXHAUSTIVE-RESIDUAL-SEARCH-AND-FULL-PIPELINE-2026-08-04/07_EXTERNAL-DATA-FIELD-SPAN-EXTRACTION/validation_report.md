@@ -1,0 +1,68 @@
+# Deterministic field/span validation
+
+- PASS — ambiguous narrative routed
+- PASS — base total distinct
+- PASS — budget payroll distinct
+- PASS — bulky outputs ignored
+- PASS — claim links canonical only
+- PASS — classification queue valid
+- PASS — conflicts preserved
+- PASS — coordinates preserved
+- PASS — coverage map scout
+- PASS — dashboard assets intact
+- PASS — deterministic text 9103
+- PASS — direct structured 17
+- PASS — disk capacity pass
+- PASS — duplicate payloads not reprocessed
+- PASS — exact spans preserved
+- PASS — external pages reconcile 611124
+- PASS — extracted ignored
+- PASS — five lanes cover all
+- PASS — five lanes disjoint
+- PASS — holds 7895 preserved
+- PASS — implementation event dedup not rerun
+- PASS — implementation lifecycle distinct
+- PASS — literal parsing only
+- PASS — local artifact storage pass
+- PASS — locked unique once
+- PASS — low yield 191
+- PASS — mixed 4849
+- PASS — native pages separate
+- PASS — no causal estimate
+- PASS — no final visual documents
+- PASS — no gabriel
+- PASS — no hosted search
+- PASS — no hourly annual conversion
+- PASS — no matching
+- PASS — no national prevalence
+- PASS — no network
+- PASS — no normalization
+- PASS — no ocr
+- PASS — no redownload
+- PASS — no regression treatment
+- PASS — no unit conversion
+- PASS — no wage gap
+- PASS — non pdf metrics separate
+- PASS — not gabriel scores
+- PASS — ocr 118 preserved
+- PASS — one time recurring distinct
+- PASS — overtime regular distinct
+- PASS — page equivalent labeled
+- PASS — pdf manifest sha deduped
+- PASS — position reduction vacancy distinct
+- PASS — position statuses distinct
+- PASS — raw values required
+- PASS — repair 97 preserved
+- PASS — retained ignored
+- PASS — rule parser versions present
+- PASS — source lineage preserved
+- PASS — structured ignored
+- PASS — terminal outcome per payload
+- PASS — unresolved claim links explicit
+- PASS — unsearched 12844 preserved
+- PASS — usable input 14160
+- PASS — no full field span corpus staged
+- PASS — staged file audit pass
+- PASS — large file audit pass
+- PASS — local artifact storage audit pass
+- PASS — disk capacity audit pass

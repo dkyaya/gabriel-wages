@@ -1,0 +1,9 @@
+# External-data deterministic field/span methodology
+
+All 14,160 usable physical extraction results were processed exactly once across five independent local lanes. Explicit administrative values were recovered using versioned regex, exact header, exact label, dictionary, table-schema, and literal parsers. Every emitted value preserves its exact raw form and applicable page, section, table, row, column, cell, and/or character-offset lineage. Bounded spans preserve exact source text or table context.
+
+New external administrative evidence was classified through deterministic and locally auditable rules rather than GABRIEL scoring because hosted-search/API capacity became unavailable. Explicit structured values were processed directly; ambiguous narrative evidence was retained for manual or future model-assisted review.
+
+These external records were not scored by GABRIEL. Deterministic extraction is not equivalent to GABRIEL rating. Explicit administrative values may be recovered directly, while ambiguous narrative interpretation remains bounded. No value normalization, unit conversion, cross-source matching, wage-gap calculation, causal interpretation, regression, or national prevalence estimate occurred. Exact duplicate physical sources did not create duplicate extraction work, and implementation-event deduplication was not rerun.
+
+The 12,844 unsearched targets, 7,895 storage-capacity-held verified sources, 97 extraction-repair payloads, and 118 OCR-later PDFs remain outside this stage. These missing search and storage-held sources reduce completeness and confidence; they do not invalidate already-supported documentary mechanism claims. Claim IDs were reconstructed only from exact existing canonical mappings. Page accounting deduplicates physical PDFs by SHA-256 and keeps native PDF pages separate from HTML and structured-data scale. Extraction identifies candidate evidence records, not final analytical truth.

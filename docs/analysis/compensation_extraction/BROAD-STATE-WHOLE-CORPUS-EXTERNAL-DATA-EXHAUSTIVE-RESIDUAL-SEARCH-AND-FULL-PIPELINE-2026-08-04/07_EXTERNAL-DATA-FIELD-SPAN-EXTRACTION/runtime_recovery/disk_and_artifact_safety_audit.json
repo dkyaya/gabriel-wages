@@ -1,0 +1,17 @@
+{
+  "audited_at": "2026-08-05T22:54:26.598656+00:00",
+  "canonical_evidence_deleted": false,
+  "cleanup_performed": false,
+  "extracted_text_bytes": 1441685504,
+  "field_span_output_bytes": 1014439936,
+  "free_disk_bytes": 35813384192,
+  "headroom_above_reserve_bytes": 27223449600,
+  "passed": true,
+  "required_reserve_bytes": 8589934592,
+  "retained_source_bytes": 54564610048,
+  "structured_data_bytes": 1138245632,
+  "temporary_files_deleted": false,
+  "temporary_task_bytes": 0,
+  "total_disk_bytes": 494384795648,
+  "used_disk_bytes": 458571411456
+}

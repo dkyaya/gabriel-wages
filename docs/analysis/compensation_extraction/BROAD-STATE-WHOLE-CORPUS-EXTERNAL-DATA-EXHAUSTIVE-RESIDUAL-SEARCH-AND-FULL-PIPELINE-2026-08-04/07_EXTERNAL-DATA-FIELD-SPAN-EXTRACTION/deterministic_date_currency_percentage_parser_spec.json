@@ -1,0 +1,11 @@
+{
+  "currency": "literal dollar/USD token; commas removed only in parsed value",
+  "date": "literal ISO or slash date or month-name date",
+  "denominator_inference": false,
+  "integer_decimal": "literal signed/unsigned numeric token; commas removed only in parsed value",
+  "parser_version": "literal-parser-2026-08-05-v1",
+  "percentage": "literal number followed by percent sign; parsed numeric percentage preserves raw token",
+  "rounding": false,
+  "unit_conversion": false,
+  "year": "literal 1800-2099 four-digit year"
+}

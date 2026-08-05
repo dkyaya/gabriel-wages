@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "disjoint": true,
+  "lane_sizes": {
+    "field_span_lane_001": 2832,
+    "field_span_lane_002": 2832,
+    "field_span_lane_003": 2832,
+    "field_span_lane_004": 2832,
+    "field_span_lane_005": 2832
+  },
+  "method": "sha256(canonical_payload_id) stable sort, round-robin five lanes",
+  "stagger_seconds": {
+    "field_span_lane_001": 0,
+    "field_span_lane_002": 120,
+    "field_span_lane_003": 240,
+    "field_span_lane_004": 360,
+    "field_span_lane_005": 480
+  }
+}

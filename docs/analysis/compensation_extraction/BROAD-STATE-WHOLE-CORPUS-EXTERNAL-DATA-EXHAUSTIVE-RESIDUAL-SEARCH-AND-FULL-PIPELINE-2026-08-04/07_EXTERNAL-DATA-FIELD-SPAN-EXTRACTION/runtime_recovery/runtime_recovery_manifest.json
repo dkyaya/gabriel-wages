@@ -1,0 +1,1284 @@
+{
+  "coordinator_finalized_during_recovery": true,
+  "expected_payload_universe": 14160,
+  "file_inventory": [
+    {
+      "bytes": 14687915,
+      "mtime": "2026-08-05T22:07:07.832236+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/ambiguities.jsonl.gz"
+    },
+    {
+      "bytes": 90,
+      "mtime": "2026-08-05T22:07:07.832213+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/conflicts.jsonl.gz",
+      "sha256": "09ac085819391f04103cd618ad254a707900e94c47998b4ce0cb65a3ab31a812"
+    },
+    {
+      "bytes": 79616827,
+      "mtime": "2026-08-05T22:07:07.832254+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/evidence_spans.jsonl.gz"
+    },
+    {
+      "bytes": 61258967,
+      "mtime": "2026-08-05T22:07:07.832279+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/field_records.jsonl.gz"
+    },
+    {
+      "bytes": 2046907,
+      "mtime": "2026-08-05T22:07:07.831416+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/payload_outcomes.jsonl",
+      "sha256": "a95f0ea6ada1d2800881795007d4d451c4c43e1556e155ca455b2bc743c4a55e"
+    },
+    {
+      "bytes": 16590484,
+      "mtime": "2026-08-05T22:11:55.019114+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/ambiguities.jsonl.gz"
+    },
+    {
+      "bytes": 90,
+      "mtime": "2026-08-05T22:11:55.019094+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/conflicts.jsonl.gz",
+      "sha256": "e590921c680df45f5e4eacbaea84790841934ae718df90f787482f1192aaf393"
+    },
+    {
+      "bytes": 91534807,
+      "mtime": "2026-08-05T22:11:55.019131+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/evidence_spans.jsonl.gz"
+    },
+    {
+      "bytes": 71188287,
+      "mtime": "2026-08-05T22:11:55.019257+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/field_records.jsonl.gz"
+    },
+    {
+      "bytes": 2050056,
+      "mtime": "2026-08-05T22:11:55.017430+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/payload_outcomes.jsonl",
+      "sha256": "51597da1be1341dae8931f481fc2c35656a58b10198c9111ab382ee69898a0f3"
+    },
+    {
+      "bytes": 19170530,
+      "mtime": "2026-08-05T22:15:24.406316+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/ambiguities.jsonl.gz"
+    },
+    {
+      "bytes": 41,
+      "mtime": "2026-08-05T22:15:24.406297+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/conflicts.jsonl.gz",
+      "sha256": "3884288ec896052ad9fcf963e785d22b82dd56bb588e569315edec2716c617e0"
+    },
+    {
+      "bytes": 107841384,
+      "mtime": "2026-08-05T22:15:24.406337+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/evidence_spans.jsonl.gz"
+    },
+    {
+      "bytes": 81690274,
+      "mtime": "2026-08-05T22:15:24.406384+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/field_records.jsonl.gz"
+    },
+    {
+      "bytes": 2049828,
+      "mtime": "2026-08-05T22:15:24.405542+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/payload_outcomes.jsonl",
+      "sha256": "a9b8af9c0eb5adf9786b8555153b6e8f0814e22a3cddc666e513b78ee143ceec"
+    },
+    {
+      "bytes": 16490368,
+      "mtime": "2026-08-05T22:16:33.114345+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/ambiguities.jsonl.gz"
+    },
+    {
+      "bytes": 41,
+      "mtime": "2026-08-05T22:16:33.114331+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/conflicts.jsonl.gz",
+      "sha256": "00519b9f2c17db4f567a3b9c38d6b371cb39c6c606d512b731e15bc486bbd4ad"
+    },
+    {
+      "bytes": 90360465,
+      "mtime": "2026-08-05T22:16:33.114362+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/evidence_spans.jsonl.gz"
+    },
+    {
+      "bytes": 71405526,
+      "mtime": "2026-08-05T22:16:33.115404+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/field_records.jsonl.gz"
+    },
+    {
+      "bytes": 2048389,
+      "mtime": "2026-08-05T22:16:33.113733+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/payload_outcomes.jsonl",
+      "sha256": "0241e86ee840cb7bf443a816740c135a97439d25ef4aecc03e59d101af9e031b"
+    },
+    {
+      "bytes": 32950555,
+      "mtime": "2026-08-05T22:21:53.056192+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/ambiguities.jsonl.gz"
+    },
+    {
+      "bytes": 41,
+      "mtime": "2026-08-05T22:21:53.056176+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/conflicts.jsonl.gz",
+      "sha256": "492641a1a74f20bf66f86e710701d3082a6dae22d446a1922ffaa00efc571bd1"
+    },
+    {
+      "bytes": 142751727,
+      "mtime": "2026-08-05T22:21:53.056205+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/evidence_spans.jsonl.gz"
+    },
+    {
+      "bytes": 105686540,
+      "mtime": "2026-08-05T22:21:53.056278+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/field_records.jsonl.gz"
+    },
+    {
+      "bytes": 2042551,
+      "mtime": "2026-08-05T22:21:53.055197+00:00",
+      "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/payload_outcomes.jsonl",
+      "sha256": "669fd00d800a29b1720c3990f48997609e3266b6677b74fb569bd0fdb0bc5da2"
+    },
+    {
+      "bytes": 595,
+      "mtime": "2026-08-05T22:49:37.745285+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/administrative_source_type_yield_summary.json",
+      "sha256": "9f2b493370503e87fa622997f572026b5dec2482f0268b08d79de63503499d4b"
+    },
+    {
+      "bytes": 155,
+      "mtime": "2026-08-05T22:49:37.746142+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/ambiguity_summary.json",
+      "sha256": "a78c5890e5c356c6ebb93d0d97cc72b5c4c5523cb497b09e7ca75aea0195cde2"
+    },
+    {
+      "bytes": 1533,
+      "mtime": "2026-08-05T22:49:37.726157+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/benefits_total_compensation_field_records_pointer_manifest.csv",
+      "sha256": "85437a958db28a6c8a31bc79f3fa80d457d303534e872ceb410152263875876a"
+    },
+    {
+      "bytes": 1929,
+      "mtime": "2026-08-05T22:49:37.726266+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/benefits_total_compensation_field_records_pointer_manifest.jsonl",
+      "sha256": "2b14fa2509fc5854eeb8d3adcbc8efecb03ed5fc2a2b19e1ebe0d1abf4e0db1e"
+    },
+    {
+      "bytes": 414,
+      "mtime": "2026-08-05T22:49:39.535964+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/claim_linkage_reconstruction_audit.json",
+      "sha256": "390e390be03fd18a1e5ebc614db0d68edf093304db652320661fa17a57eeca02"
+    },
+    {
+      "bytes": 269,
+      "mtime": "2026-08-05T22:49:39.536753+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/claim_linkage_reconstruction_audit.md",
+      "sha256": "5e8072a15fd697b5f76562c4651133e1e89012864fe188b999aa906c5019d81a"
+    },
+    {
+      "bytes": 147,
+      "mtime": "2026-08-05T22:49:37.743129+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/compensation_basis_summary.json",
+      "sha256": "c7086dd4c5a131076944adab057e5f9965a014c8cb2d6c569bf5769632d53a95"
+    },
+    {
+      "bytes": 32,
+      "mtime": "2026-08-05T22:49:37.746273+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/conflict_summary.json",
+      "sha256": "2dabd35ec0e7ec48ae2260ec3929946465e1510cd88576ff15ab80a079cb947f"
+    },
+    {
+      "bytes": 3635108,
+      "mtime": "2026-08-05T22:54:05.854735+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/contextual_control_evidence_queue.csv",
+      "sha256": "da5077d70ce88723e007dd0aca1e63bc4f2f0fd1070f0c9740acf7c9a75a3481"
+    },
+    {
+      "bytes": 5228454,
+      "mtime": "2026-08-05T22:54:05.881923+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/contextual_control_evidence_queue.jsonl",
+      "sha256": "cd754243a64921b45ec643a42b5ab324491bc991d614a4beda5eeaf4c5baeebc"
+    },
+    {
+      "bytes": 1484,
+      "mtime": "2026-08-05T22:49:37.731015+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/contextual_control_field_records_pointer_manifest.csv",
+      "sha256": "c4abcf1b75b372eb0b4c08e5b6447ff5f8fc76b910c9ed8abbaef4ff4c52c3b2"
+    },
+    {
+      "bytes": 1880,
+      "mtime": "2026-08-05T22:49:37.731220+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/contextual_control_field_records_pointer_manifest.jsonl",
+      "sha256": "8c14b37f6f83d082d814052d05e8a6662476d73f1dc0737af5ddb15e5710b1e0"
+    },
+    {
+      "bytes": 7401,
+      "mtime": "2026-08-05T22:54:06.133659+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/dashboard_external_data_field_span_update_summary.json",
+      "sha256": "1026de7f6f2906a291a07588bb921a14c80792e4ebebae147ec93ef432341eaa"
+    },
+    {
+      "bytes": 175,
+      "mtime": "2026-08-05T22:49:37.745129+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/department_coverage_summary.json",
+      "sha256": "c276ba5e08e812a3026e199e2a6e00c9f92a883183204f35d31d27352c6531b1"
+    },
+    {
+      "bytes": 249,
+      "mtime": "2026-08-05T22:49:37.746001+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_confidence_summary.json",
+      "sha256": "67371e90398f5855f0899dcaee35a001955adb4b4f415e9211d13e29b710c63d"
+    },
+    {
+      "bytes": 527,
+      "mtime": "2026-08-05T21:54:00.511305+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_date_currency_percentage_parser_spec.json",
+      "sha256": "0f4b6cf3fb867b137b6a1021a5bcb9a3af99938ffffac279e7b95e141442f50d"
+    },
+    {
+      "bytes": 434,
+      "mtime": "2026-08-05T19:12:51.762496+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_external_data_classification_methodology_note.md",
+      "sha256": "66b9739ce661338b60209a3e3830b257358497b954c494f6f89ae0f02c6e5cbd"
+    },
+    {
+      "bytes": 165,
+      "mtime": "2026-08-05T22:54:06.119054+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_external_evidence_classification_ready_manifest.json",
+      "sha256": "1449a0df8794af90fe15dc2e35904f7e6d3a77cfb352970342ea48aa8f8423c0"
+    },
+    {
+      "bytes": 8596131,
+      "mtime": "2026-08-05T22:54:05.274827+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_external_evidence_classification_ready_queue.csv",
+      "sha256": "af578062a826e9f64db964885e70fcad81a7dce4b629b388903d8d99eed52b18"
+    },
+    {
+      "bytes": 12524437,
+      "mtime": "2026-08-05T22:54:05.342681+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_external_evidence_classification_ready_queue.jsonl",
+      "sha256": "b59e206ac257f017491d98e067a49ed6c56ac964fbd751b720f0048bf8e2464d"
+    },
+    {
+      "bytes": 28548,
+      "mtime": "2026-08-05T21:54:00.510673+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_field_dictionary_registry.json",
+      "sha256": "3f4d9885b95916b775aac66fac457d36e59d845f087ee083246b9777a8ebf405"
+    },
+    {
+      "bytes": 85692,
+      "mtime": "2026-08-05T21:54:00.509149+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_field_rule_registry.json",
+      "sha256": "4bfe08913812c9f4e891b43880695c56e0d67640b66125cd405970805207584d"
+    },
+    {
+      "bytes": 296,
+      "mtime": "2026-08-05T21:54:00.509430+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_field_rule_registry.md",
+      "sha256": "efa1a9e06539f6d5456f74b36577320f996c9d6d314b5784ab268cd4bbed2039"
+    },
+    {
+      "bytes": 493,
+      "mtime": "2026-08-05T21:54:00.511576+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_field_rule_registry_hash.json",
+      "sha256": "a90a4246486c961221dc41ac5b71a265083677e0cddcca2bf4be34b81545f4a6"
+    },
+    {
+      "bytes": 10281,
+      "mtime": "2026-08-05T21:54:00.511134+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/deterministic_header_mapping_registry.json",
+      "sha256": "4ff029718edb8c5ed96a44cb7d22489bbfda53611ab156aa3a31b27748b20a02"
+    },
+    {
+      "bytes": 8596131,
+      "mtime": "2026-08-05T22:54:05.428795+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/direct_administrative_value_queue.csv",
+      "sha256": "af578062a826e9f64db964885e70fcad81a7dce4b629b388903d8d99eed52b18"
+    },
+    {
+      "bytes": 12524437,
+      "mtime": "2026-08-05T22:54:05.493003+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/direct_administrative_value_queue.jsonl",
+      "sha256": "b59e206ac257f017491d98e067a49ed6c56ac964fbd751b720f0048bf8e2464d"
+    },
+    {
+      "bytes": 51,
+      "mtime": "2026-08-05T22:49:37.747454+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/event_to_field_linkage_summary.json",
+      "sha256": "aeb790794b441b13306451d3f7eb678dacca0994ba781619ba0e5599c099c1ff"
+    },
+    {
+      "bytes": 409,
+      "mtime": "2026-08-05T22:49:37.747740+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/expected_claim_upgrade_yield_summary.json",
+      "sha256": "a0b806bd279e9eb035de401de65f4fc8605e70adab794651a82b9f99aa679621"
+    },
+    {
+      "bytes": 434482,
+      "mtime": "2026-08-05T22:54:05.762276+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_benefits_evidence_queue.csv",
+      "sha256": "bd221781ed8acfbffc8851b87d5d2afd7420000d8e494f052e10db42b772013f"
+    },
+    {
+      "bytes": 611624,
+      "mtime": "2026-08-05T22:54:05.765828+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_benefits_evidence_queue.jsonl",
+      "sha256": "8d365d74f69f93b6eed89c6c6f8c63c7f9a481e1df161563599ee89c39a85292"
+    },
+    {
+      "bytes": 5723656,
+      "mtime": "2026-08-05T22:54:05.715970+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_implementation_evidence_queue.csv",
+      "sha256": "59f0dc146a404a14a3cc9ab7b28d5c9506c5d211d81e9300cd65881dc85d5727"
+    },
+    {
+      "bytes": 8264240,
+      "mtime": "2026-08-05T22:54:05.757506+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_implementation_evidence_queue.jsonl",
+      "sha256": "9317eabc6ea96488bcdd4930fe2847c64a3dd5cbe616ea9dd57bfda49001ca63"
+    },
+    {
+      "bytes": 8129787,
+      "mtime": "2026-08-05T22:54:05.599391+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_payroll_evidence_queue.csv",
+      "sha256": "83327da0f1b9fec967dc81cf032a04768a043d93b46f5337f3cf092a833cd0d5"
+    },
+    {
+      "bytes": 11837287,
+      "mtime": "2026-08-05T22:54:05.659553+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_payroll_evidence_queue.jsonl",
+      "sha256": "185db50ee567ed30e243831356f1cb22ee71c67f1b82f2a9f71208176c3a10c6"
+    },
+    {
+      "bytes": 975182,
+      "mtime": "2026-08-05T22:54:05.775666+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_recruitment_retention_evidence_queue.csv",
+      "sha256": "4cdea7333ed12a91198d484ef538c7b7a1a1c60eb542b9a54e11e9a9154c7a76"
+    },
+    {
+      "bytes": 1379052,
+      "mtime": "2026-08-05T22:54:05.782702+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_recruitment_retention_evidence_queue.jsonl",
+      "sha256": "53d75efb0fcf8917af1c76a4c057165ed05d07c721eb62f14683d001b6666367"
+    },
+    {
+      "bytes": 1242174,
+      "mtime": "2026-08-05T22:54:05.509944+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_staffing_evidence_queue.csv",
+      "sha256": "4c94c52c1c09e6a88db6d3037e61c49f16ae4c6e59e6b93ad144670c77371a07"
+    },
+    {
+      "bytes": 1760536,
+      "mtime": "2026-08-05T22:54:05.519263+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_staffing_evidence_queue.jsonl",
+      "sha256": "8ff6458949cbdd99b2607d25782174348df058290f77a3619bbc8a1ff32c6dbf"
+    },
+    {
+      "bytes": 2086236,
+      "mtime": "2026-08-05T22:54:05.803106+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_tenure_progression_evidence_queue.csv",
+      "sha256": "979ebc359d3f27152930482ba78cf56d6fc27fe41d021c226d2311b4c8317a77"
+    },
+    {
+      "bytes": 2971198,
+      "mtime": "2026-08-05T22:54:05.817963+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/explicit_tenure_progression_evidence_queue.jsonl",
+      "sha256": "0eaa92dc3712ca621387d5d46a52f977135965082d6d5b9bcb20a122def753d2"
+    },
+    {
+      "bytes": 382300,
+      "mtime": "2026-08-05T22:49:37.681138+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_span_examples.csv",
+      "sha256": "859530602ad17b5807aea71ae1497c14f306570f95fedb5c4cacd18541a7537b"
+    },
+    {
+      "bytes": 697359,
+      "mtime": "2026-08-05T22:49:37.684382+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_span_examples.jsonl",
+      "sha256": "d740694780567f46ca08844aacd7f381d388199f856d1ecdc24f98599952b0a0"
+    },
+    {
+      "bytes": 60,
+      "mtime": "2026-08-05T22:49:37.686446+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_span_summary.json",
+      "sha256": "95cc0996b4dfddc3c6d717b8a77bb82709a8e9e6fb5bfc3ab8b047f54b7ddbd0"
+    },
+    {
+      "bytes": 1463,
+      "mtime": "2026-08-05T22:49:37.667368+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_spans_hash_manifest.csv",
+      "sha256": "9a6ca302166be0e074bf2d98b3f4b4f4b5047541634a125e6173660329e3574c"
+    },
+    {
+      "bytes": 1863,
+      "mtime": "2026-08-05T22:49:37.667537+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_spans_hash_manifest.jsonl",
+      "sha256": "e260868da149db9e70ddb926612023dbedd08e819bff4e5ccc84afb5b14b06a5"
+    },
+    {
+      "bytes": 8849,
+      "mtime": "2026-08-05T22:49:37.685140+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_spans_manifest.json",
+      "sha256": "93102b20083dbcb510d7d329fc9b5a2fb7efd75aab2e717c1dd95b094bcb423b"
+    },
+    {
+      "bytes": 6507,
+      "mtime": "2026-08-05T22:49:37.667128+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_spans_pointer_manifest.csv",
+      "sha256": "8550c751486af08a319bbd33aed1b01d6cb12676d1c1f46379265c3448e58570"
+    },
+    {
+      "bytes": 7877,
+      "mtime": "2026-08-05T22:49:37.667266+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_spans_pointer_manifest.jsonl",
+      "sha256": "700f78cf7d1594d4db5e348239ee152806be13f1ce1397bf111cf08d2441473b"
+    },
+    {
+      "bytes": 1251,
+      "mtime": "2026-08-05T22:49:37.665723+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_evidence_spans_schema.json",
+      "sha256": "aed7031388ff33bc1e26314c31429d8b2e3847ca9605b15ac22ed0448816b083"
+    },
+    {
+      "bytes": 350847,
+      "mtime": "2026-08-05T22:49:37.672832+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_record_examples.csv",
+      "sha256": "87573e787850674bd8e449e60ac8728ae5f13b481ab06fbe4abbf50f6df8d216"
+    },
+    {
+      "bytes": 671779,
+      "mtime": "2026-08-05T22:49:37.676385+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_record_examples.jsonl",
+      "sha256": "2d1dde3e4f3f82525352bcaf845c2a2232e8320cfede7dbf24a7f592d9522041"
+    },
+    {
+      "bytes": 4161,
+      "mtime": "2026-08-05T22:49:37.685435+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_record_summary.json",
+      "sha256": "3b7906834827185dc1bfd4bb21f796e0792615d87518f690ed7bdda2c16b53a4"
+    },
+    {
+      "bytes": 1461,
+      "mtime": "2026-08-05T22:49:37.666779+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_records_hash_manifest.csv",
+      "sha256": "4ac077ba60230833145602119c754268ae9f9358ac6df4c61bf5c9f39633533c"
+    },
+    {
+      "bytes": 1869,
+      "mtime": "2026-08-05T22:49:37.666972+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_records_hash_manifest.jsonl",
+      "sha256": "9b12ecb4a17b83a303e9cc6e95bc5de98ff86c7af86af1c5855f11739189dd95"
+    },
+    {
+      "bytes": 8848,
+      "mtime": "2026-08-05T22:49:37.684605+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_records_manifest.json",
+      "sha256": "ea4ea29dc4c578d5c47aaabb6ec02152bbae368fe518d9ead586790c13f18ebf"
+    },
+    {
+      "bytes": 6507,
+      "mtime": "2026-08-05T22:49:37.666298+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_records_pointer_manifest.csv",
+      "sha256": "8550c751486af08a319bbd33aed1b01d6cb12676d1c1f46379265c3448e58570"
+    },
+    {
+      "bytes": 7877,
+      "mtime": "2026-08-05T22:49:37.666559+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_records_pointer_manifest.jsonl",
+      "sha256": "700f78cf7d1594d4db5e348239ee152806be13f1ce1397bf111cf08d2441473b"
+    },
+    {
+      "bytes": 1553,
+      "mtime": "2026-08-05T22:49:37.665281+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_administrative_field_records_schema.json",
+      "sha256": "6889b9078bf398577132cab7a4711e0df9484930260bf94e83b8948618810719"
+    },
+    {
+      "bytes": 7189,
+      "mtime": "2026-08-05T22:54:06.124990+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_manifest.json",
+      "sha256": "9859f662e4210f4943a484416d5b400b579b7bf7c2389a3e4319323ac010bb01"
+    },
+    {
+      "bytes": 346,
+      "mtime": "2026-08-05T22:54:06.125351+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_methodology_note.json",
+      "sha256": "5f5e0dfba6bbe1f65c66af5b456376e2676cad136ab75dcd374ef2f6f445c0ef"
+    },
+    {
+      "bytes": 1942,
+      "mtime": "2026-08-05T22:54:06.125250+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_methodology_note.md",
+      "sha256": "908b88e5af2513e00e6297096453f0a1f06bede826d38189fbd76a15019dd975"
+    },
+    {
+      "bytes": 6591,
+      "mtime": "2026-08-05T22:54:06.124677+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_summary.json",
+      "sha256": "465f3491347c9579fbaadeb6d195993f80cc7d08da002610ae5203adc5bc4164"
+    },
+    {
+      "bytes": 764,
+      "mtime": "2026-08-05T22:54:06.125155+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_summary.md",
+      "sha256": "aa44f7336dad1f756fb20b58440286bf313692c9f0944d9076eb2971e6ef9929"
+    },
+    {
+      "bytes": 216,
+      "mtime": "2026-08-05T19:12:51.762412+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_search_capacity_limitation_note.md",
+      "sha256": "1c32c3f8e5a76fca9b5fbe684b6314e9c2e742ed3a362a0a0afa8b887f577584"
+    },
+    {
+      "bytes": 7654,
+      "mtime": "2026-08-05T22:49:37.745840+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/extraction_rule_yield_summary.json",
+      "sha256": "a7191582e837b2fa87465ee5058256a7400ea52e9edb279d49d5accc9840bf20"
+    },
+    {
+      "bytes": 6027270,
+      "mtime": "2026-08-05T22:54:06.067702+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_ambiguity_reconciliation_queue.csv",
+      "sha256": "839795efe9085ab6c00b1a0f18678cbc3ab1f031e8fddcc95322f76e419f3628"
+    },
+    {
+      "bytes": 8714212,
+      "mtime": "2026-08-05T22:54:06.112968+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_ambiguity_reconciliation_queue.jsonl",
+      "sha256": "18cadf6e70d12fc01c39429b4e976053e19b9f629b5a88c888d9bd348384a3e4"
+    },
+    {
+      "bytes": 1,
+      "mtime": "2026-08-05T22:54:05.999866+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_conflict_reconciliation_queue.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T22:54:05.999917+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_conflict_reconciliation_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1,
+      "mtime": "2026-08-05T22:54:06.113192+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_extraction_repair_queue.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T22:54:06.113246+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_extraction_repair_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 265,
+      "mtime": "2026-08-05T22:49:37.742344+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_family_summary.json",
+      "sha256": "5394cd2c5e270d73ff3eb80c1d30ce397ef894fefe9240dc6d995dc60fc19e8b"
+    },
+    {
+      "bytes": 3555,
+      "mtime": "2026-08-05T22:49:37.742611+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_name_summary.json",
+      "sha256": "27e6667c7e37a0089a5c2462d873beb9a343f43c2b18bb3a430af69d01567e29"
+    },
+    {
+      "bytes": 8500258,
+      "mtime": "2026-08-05T22:49:38.236024+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_candidate_links.csv",
+      "sha256": "a49a52c35224b2784a44424273305ad65178a85d7ab5f57ff27ab0980a93f649"
+    },
+    {
+      "bytes": 11316582,
+      "mtime": "2026-08-05T22:49:38.292695+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_candidate_links.jsonl",
+      "sha256": "6bc53b8fe527c82fd496d2cac45586d82aa854e7d4566b3e7c587b11cad79264"
+    },
+    {
+      "bytes": 8500258,
+      "mtime": "2026-08-05T22:49:38.663843+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_claim_links.csv",
+      "sha256": "a49a52c35224b2784a44424273305ad65178a85d7ab5f57ff27ab0980a93f649"
+    },
+    {
+      "bytes": 11316582,
+      "mtime": "2026-08-05T22:49:38.720149+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_claim_links.jsonl",
+      "sha256": "6bc53b8fe527c82fd496d2cac45586d82aa854e7d4566b3e7c587b11cad79264"
+    },
+    {
+      "bytes": 8500258,
+      "mtime": "2026-08-05T22:49:38.376637+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_event_links.csv",
+      "sha256": "a49a52c35224b2784a44424273305ad65178a85d7ab5f57ff27ab0980a93f649"
+    },
+    {
+      "bytes": 11316582,
+      "mtime": "2026-08-05T22:49:38.435292+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_event_links.jsonl",
+      "sha256": "6bc53b8fe527c82fd496d2cac45586d82aa854e7d4566b3e7c587b11cad79264"
+    },
+    {
+      "bytes": 8500258,
+      "mtime": "2026-08-05T22:49:38.519677+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_mechanism_links.csv",
+      "sha256": "a49a52c35224b2784a44424273305ad65178a85d7ab5f57ff27ab0980a93f649"
+    },
+    {
+      "bytes": 11316582,
+      "mtime": "2026-08-05T22:49:38.578013+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_mechanism_links.jsonl",
+      "sha256": "6bc53b8fe527c82fd496d2cac45586d82aa854e7d4566b3e7c587b11cad79264"
+    },
+    {
+      "bytes": 8500258,
+      "mtime": "2026-08-05T22:49:38.095771+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_source_links.csv",
+      "sha256": "a49a52c35224b2784a44424273305ad65178a85d7ab5f57ff27ab0980a93f649"
+    },
+    {
+      "bytes": 11316582,
+      "mtime": "2026-08-05T22:49:38.151858+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_record_to_source_links.jsonl",
+      "sha256": "6bc53b8fe527c82fd496d2cac45586d82aa854e7d4566b3e7c587b11cad79264"
+    },
+    {
+      "bytes": 133,
+      "mtime": "2026-08-05T22:54:06.284167+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_disk_capacity_audit.json",
+      "sha256": "2b2f146b8ddbed1e3e98e44c37928aa4cfb3b788f88963d37ab94f261a47a682"
+    },
+    {
+      "bytes": 586,
+      "mtime": "2026-08-05T22:54:06.283986+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_forbidden_action_audit.json",
+      "sha256": "3f05285869291949460f0dd7f38ca03a6692458e66e99488c9857b0222b9ea82"
+    },
+    {
+      "bytes": 679,
+      "mtime": "2026-08-05T21:54:12.747840+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_input_reconciliation_audit.json",
+      "sha256": "792c29093a6985b51b4181b291a0179412c7dab53ca7739a458543f2de7b3a43"
+    },
+    {
+      "bytes": 255,
+      "mtime": "2026-08-05T21:54:12.748003+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_input_reconciliation_audit.md",
+      "sha256": "49ca5069e6646c1d1f27c60d966c00a58aa4c65404a0f3896a2b9a6decbadb8d"
+    },
+    {
+      "bytes": 190,
+      "mtime": "2026-08-05T22:07:07.832435+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_001_checkpoint.json",
+      "sha256": "3ef2fca0e3071ab81947c2762cdc395d35c4a2f3142ad629917c3b71b19d04da"
+    },
+    {
+      "bytes": 4898950,
+      "mtime": "2026-08-05T21:54:12.391728+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_001_queue.csv",
+      "sha256": "961713ddd99d10761aefe70da0052f7aff51b53b7133252a57523847f05bca74"
+    },
+    {
+      "bytes": 7030823,
+      "mtime": "2026-08-05T21:54:12.421659+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_001_queue.jsonl",
+      "sha256": "8b07a6a70cc88250308e23e0001b64295538c33e2a66a8ecdcb46a9c26de3987"
+    },
+    {
+      "bytes": 190,
+      "mtime": "2026-08-05T22:11:55.019447+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_002_checkpoint.json",
+      "sha256": "4e42654708885c110cf15e136b22f2358d05438040c8da55ce041d097fd82e8b"
+    },
+    {
+      "bytes": 4888914,
+      "mtime": "2026-08-05T21:54:12.468683+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_002_queue.csv",
+      "sha256": "24c2fa97bdd55c09a616c5aa3633d11a269bbe5880105c35426507e1fd2427ca"
+    },
+    {
+      "bytes": 7020787,
+      "mtime": "2026-08-05T21:54:12.499820+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_002_queue.jsonl",
+      "sha256": "1f685e16195cb2660cbd032e31f2172db0fedafc60b413510fab47f6cb3e94b4"
+    },
+    {
+      "bytes": 190,
+      "mtime": "2026-08-05T22:15:24.406540+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_003_checkpoint.json",
+      "sha256": "3e049d8cd74aa540bca3c058a1b12e035946307231bea07c88008391bbac57ea"
+    },
+    {
+      "bytes": 4895339,
+      "mtime": "2026-08-05T21:54:12.548714+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_003_queue.csv",
+      "sha256": "858d7861921fdbaf0ae1400fa49b092c0be90ebaa7c816e54e1160c2b2357cba"
+    },
+    {
+      "bytes": 7027212,
+      "mtime": "2026-08-05T21:54:12.578196+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_003_queue.jsonl",
+      "sha256": "ae7759cc3fad72f564e68c6700e31360a6f40e4a371f1e15919f27e8fd86ae6f"
+    },
+    {
+      "bytes": 190,
+      "mtime": "2026-08-05T22:16:33.116552+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_004_checkpoint.json",
+      "sha256": "d8e162bb038f8e34bc273054b287d1de857ef592758dfffc060b3c8b091916ae"
+    },
+    {
+      "bytes": 4909980,
+      "mtime": "2026-08-05T21:54:12.626354+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_004_queue.csv",
+      "sha256": "c1a4a9111a4e26c114196dd3295170229bbbab0a0636575c9228a186428cce81"
+    },
+    {
+      "bytes": 7041853,
+      "mtime": "2026-08-05T21:54:12.656144+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_004_queue.jsonl",
+      "sha256": "3d492a99d4e7d03d6416bf8b517c51c17ccfabd3efbf8e710655dad4150e0489"
+    },
+    {
+      "bytes": 190,
+      "mtime": "2026-08-05T22:21:53.056420+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_005_checkpoint.json",
+      "sha256": "e4160ed238eb4849a2a3e437dfcded4daaf3cf38368b88f9be4d117777cc45f3"
+    },
+    {
+      "bytes": 4911149,
+      "mtime": "2026-08-05T21:54:12.704132+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_005_queue.csv",
+      "sha256": "a3efaa730783c1fd6ffcb4af21393df5e65436dc491fe95e51179d98bf613ab4"
+    },
+    {
+      "bytes": 7043022,
+      "mtime": "2026-08-05T21:54:12.734359+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_005_queue.jsonl",
+      "sha256": "f2a56351a5f6488c27e1e6db0fa6229846b37bab55c817ee85070ba74ec25d00"
+    },
+    {
+      "bytes": 495,
+      "mtime": "2026-08-05T21:54:12.739879+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_distribution.json",
+      "sha256": "db140c7712f85611e5631b069ef1da4473d2676b8a1d30be87419d4245e6519f"
+    },
+    {
+      "bytes": 374,
+      "mtime": "2026-08-05T21:54:12.740035+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_lane_distribution.md",
+      "sha256": "bdae061ae5c1a30e246fa5023d06155627c5bcfc895c3eb1e38d25aa4a7b69f2"
+    },
+    {
+      "bytes": 210,
+      "mtime": "2026-08-05T21:54:00.507275+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_local_artifact_storage_audit.json",
+      "sha256": "62f49ebb04f54d469f4fce759c0080d05e6b4fffadbde33eb89beef1ad35b863"
+    },
+    {
+      "bytes": 24501840,
+      "mtime": "2026-08-05T21:54:12.181362+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_locked_payload_queue.csv",
+      "sha256": "a930b14a405bc8f8310aff215d0a46479d63b44eef252dcbbea9cd3f2e0537fb"
+    },
+    {
+      "bytes": 35163697,
+      "mtime": "2026-08-05T21:54:12.327920+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_locked_payload_queue.jsonl",
+      "sha256": "5dc4070d49e450d6dd6784d09ed523a80a697e65256663484539358aa9da5629"
+    },
+    {
+      "bytes": 593,
+      "mtime": "2026-08-05T21:54:12.345427+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_locked_payload_queue_manifest.json",
+      "sha256": "e64bc94f6222af2fb04ac1e7a04c5f623b04fc736ae590eaf325162d91ced262"
+    },
+    {
+      "bytes": 1803,
+      "mtime": "2026-08-05T21:58:28.281296+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_operational_incident_log.jsonl",
+      "sha256": "ed64f3fad4efd6919dac89a3a9982886a41c70e430b9074ce7f447e153449dc8"
+    },
+    {
+      "bytes": 713,
+      "mtime": "2026-08-05T21:54:00.419450+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_run_manifest.json",
+      "sha256": "2e95548f99ce618560a2b26c28f320a00cc9feb65154ec4e23c969f466b7cf2c"
+    },
+    {
+      "bytes": 230,
+      "mtime": "2026-08-05T22:54:06.314328+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_run_state.json",
+      "sha256": "dc917ac44ef0cb84951af62d6a3e026050b1545f2315b74c7a714acceaef3426"
+    },
+    {
+      "bytes": 2451,
+      "mtime": "2026-08-05T21:54:13.661275+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_smoke_test_results.json",
+      "sha256": "0116e2a9d2c63d40e6a8fa3272cc71c10928db4ef7b86c223c63420d05745fd9"
+    },
+    {
+      "bytes": 252,
+      "mtime": "2026-08-05T22:54:06.314996+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_stage_checkpoint.json",
+      "sha256": "7a4eefd407fa72a5c3e7fc191a00f8753ebaffe5330d0301abea366e8efd5d51"
+    },
+    {
+      "bytes": 1520,
+      "mtime": "2026-08-05T22:54:06.315513+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/field_span_stage_transition_log.jsonl",
+      "sha256": "6bd0161b637f542236fd3079929858f0e4b8bf52a832f47042630a14cbd043b7"
+    },
+    {
+      "bytes": 586,
+      "mtime": "2026-08-05T22:54:06.283821+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/forbidden_action_audit.json",
+      "sha256": "3f05285869291949460f0dd7f38ca03a6692458e66e99488c9857b0222b9ea82"
+    },
+    {
+      "bytes": 1524,
+      "mtime": "2026-08-05T22:49:37.720801+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/implementation_confirmation_field_records_pointer_manifest.csv",
+      "sha256": "78fa0f7e4d9a8da695c1ae55739693584c26bd78a92c66a06bb6ec494ddd2d5a"
+    },
+    {
+      "bytes": 1920,
+      "mtime": "2026-08-05T22:49:37.720985+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/implementation_confirmation_field_records_pointer_manifest.jsonl",
+      "sha256": "144c7d452dd484dfa3e625effe45e86cd6daf63558aae401b9b19ae2e865cc34"
+    },
+    {
+      "bytes": 187,
+      "mtime": "2026-08-05T19:12:51.762591+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/implementation_event_deduplication_preservation_note.md",
+      "sha256": "a82a914dfcebd58abc825a551020326bef7f9676bf5657cda3b080975cb7905d"
+    },
+    {
+      "bytes": 313,
+      "mtime": "2026-08-05T22:49:37.743274+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/implementation_status_summary.json",
+      "sha256": "f41e5a923b9af1bec9b1383dc8ef9f3737f63b8640f02f665d34a2fdb3591c06"
+    },
+    {
+      "bytes": 152,
+      "mtime": "2026-08-05T22:54:06.313185+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/local_artifact_storage_audit.json",
+      "sha256": "181b0c2c85ede352435375833022c11a0f58bb96693a341b1de0c65aece22050"
+    },
+    {
+      "bytes": 111146,
+      "mtime": "2026-08-05T22:54:06.114481+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/low_yield_context_queue.csv",
+      "sha256": "0f33d14a622956e52a19c13a1cd4af59677db74996ac28914491c8a87ef9e793"
+    },
+    {
+      "bytes": 164772,
+      "mtime": "2026-08-05T22:54:06.115438+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/low_yield_context_queue.jsonl",
+      "sha256": "479875bfe6c20b00838a3c70cd54bfefed9b1fd2c38f7eabf4bc395e6fa2af6f"
+    },
+    {
+      "bytes": 50,
+      "mtime": "2026-08-05T22:49:37.747601+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/mechanism_to_field_linkage_summary.json",
+      "sha256": "0a10695f31abfe96aaf23ffe01e4953385cb2efd3444423703b118207b8cf7fa"
+    },
+    {
+      "bytes": 24203,
+      "mtime": "2026-08-05T22:49:37.744594+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/municipality_coverage_summary.json",
+      "sha256": "cfa14afcb0751b0325f465bf8095741cd17256ca70c1ff612050ef1a967eb47b"
+    },
+    {
+      "bytes": 1074,
+      "mtime": "2026-08-05T22:54:06.128452+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/next_task.md",
+      "sha256": "f1bc38480d50740f10d2258158ca69b87424b1e9d2746257290858261c3c7451"
+    },
+    {
+      "bytes": 121322,
+      "mtime": "2026-08-05T22:54:06.116777+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/no_relevant_field_or_span_queue.csv",
+      "sha256": "57f4ca18b3bf691f578235d71f639763584ef8d58e9254edf3b072b810a4fed9"
+    },
+    {
+      "bytes": 182280,
+      "mtime": "2026-08-05T22:54:06.117875+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/no_relevant_field_or_span_queue.jsonl",
+      "sha256": "9207ac596af4f6d95accc00f19a800df6951c440e1c61772f903684c1da61629"
+    },
+    {
+      "bytes": 1803,
+      "mtime": "2026-08-05T21:58:28.281366+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/operational_incident_log.jsonl",
+      "sha256": "ed64f3fad4efd6919dac89a3a9982886a41c70e430b9074ce7f447e153449dc8"
+    },
+    {
+      "bytes": 160,
+      "mtime": "2026-08-05T22:49:37.742762+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/parsed_value_type_summary.json",
+      "sha256": "8cdaa1cc109c147fc819c33152fdbed214fa8fcee6a94789b4f72e0796f6e729"
+    },
+    {
+      "bytes": 186,
+      "mtime": "2026-08-05T22:49:37.743002+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/pay_basis_summary.json",
+      "sha256": "d4e9758ec309d6ee9d03b84f8159e5174601358479979f5e618fb79d688c5eed"
+    },
+    {
+      "bytes": 1489,
+      "mtime": "2026-08-05T22:49:37.695380+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/payroll_earnings_field_records_pointer_manifest.csv",
+      "sha256": "d2978821e8fdd8c961b2c9787d7025937e0ecb970cf67ca8eda1e6d09a5dd467"
+    },
+    {
+      "bytes": 1885,
+      "mtime": "2026-08-05T22:49:37.695579+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/payroll_earnings_field_records_pointer_manifest.jsonl",
+      "sha256": "be43ea30dd0422c7372ce44cb87f6dc86d63bc69c6de2af88031c3f3f1c3027e"
+    },
+    {
+      "bytes": 6033930,
+      "mtime": "2026-08-05T22:54:05.944738+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/pending_gabriel_or_manual_narrative_review_queue.csv",
+      "sha256": "1943ed53c0e4e5198783b51a38fcc6c6465cdd742bd8b62c593cbc57306bf34b"
+    },
+    {
+      "bytes": 8724256,
+      "mtime": "2026-08-05T22:54:05.999546+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/pending_gabriel_or_manual_narrative_review_queue.jsonl",
+      "sha256": "b5f9e1e31a1119af56c2de7e94567440109389588cb0e011bcc80330c87050fb"
+    },
+    {
+      "bytes": 4800,
+      "mtime": "2026-08-05T22:49:37.743769+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/period_coverage_summary.json",
+      "sha256": "2965e87bc338411d66ac60ed74ef862f64849ba64dd664a0f442af07b6458a78"
+    },
+    {
+      "bytes": 1004,
+      "mtime": "2026-08-05T19:12:51.762123+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/post_interpretation_storage_hold_recovery_strategy.json",
+      "sha256": "9a22d7b30b31dd6e8c08f5571fb6eb23534cf25684ab1d0c5b4213fcb0f2edc1"
+    },
+    {
+      "bytes": 665,
+      "mtime": "2026-08-05T19:12:51.762318+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/post_interpretation_storage_hold_recovery_strategy.md",
+      "sha256": "048c2ed194e43fccb9367c72810bf8a1028de5a74b7b5fe4a2a18876bb0d814c"
+    },
+    {
+      "bytes": 1369,
+      "mtime": "2026-08-05T22:49:37.738878+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/qualitative_administrative_span_pointer_manifest.csv",
+      "sha256": "b7aae9ac4d13444ce19c9db6dc9616e64c860f098154f70ab7ee68651090f70b"
+    },
+    {
+      "bytes": 1661,
+      "mtime": "2026-08-05T22:49:37.739130+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/qualitative_administrative_span_pointer_manifest.jsonl",
+      "sha256": "2ea64b119ea7909286f86092939dbfc6c01b53d9c5cb003ed08a6dfd69641b19"
+    },
+    {
+      "bytes": 1,
+      "mtime": "2026-08-05T22:49:39.451593+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/reconstructed_external_evidence_to_claim_links.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T22:49:39.451691+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/reconstructed_external_evidence_to_claim_links.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1504,
+      "mtime": "2026-08-05T22:49:37.710384+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/recruitment_retention_field_records_pointer_manifest.csv",
+      "sha256": "278838e87774fb21299c91c25f1b8371709eddba742addbd2f3a5b6cdff076f1"
+    },
+    {
+      "bytes": 1900,
+      "mtime": "2026-08-05T22:49:37.710528+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/recruitment_retention_field_records_pointer_manifest.jsonl",
+      "sha256": "792727f89a5f7fa166d37899c6e41c10d49bae6c476ee755bb904d858171e990"
+    },
+    {
+      "bytes": 130,
+      "mtime": "2026-08-05T22:49:37.743550+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/side_hint_summary.json",
+      "sha256": "ee52fac8ad5107ff36348b6577ec009c4ccb7d3b067358e89e5391999ce90cae"
+    },
+    {
+      "bytes": 14090,
+      "mtime": "2026-08-05T22:49:37.745543+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/source_family_yield_summary.json",
+      "sha256": "7a047462a703425de82cb50e4a04bf4956c09c37262a13f916539f2bd53ac303"
+    },
+    {
+      "bytes": 20990,
+      "mtime": "2026-08-05T22:49:37.747226+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/source_to_field_yield_summary.json",
+      "sha256": "e1a70433779bf8c413812f3c4909223a929b99ed6b5ee17b6915a39488310ab5"
+    },
+    {
+      "bytes": 10939739,
+      "mtime": "2026-08-05T22:49:39.373655+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_claim_links.csv",
+      "sha256": "9ee81b842265e706ab4d1272ed3a8a92321293f2b06efb273ddc148ec9b93961"
+    },
+    {
+      "bytes": 14411343,
+      "mtime": "2026-08-05T22:49:39.438920+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_claim_links.jsonl",
+      "sha256": "5a08f9c60b692da8491ffca43d43d792d9e89c2e59ec39ea477d75baacb29247"
+    },
+    {
+      "bytes": 10939739,
+      "mtime": "2026-08-05T22:49:39.200646+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_event_links.csv",
+      "sha256": "9ee81b842265e706ab4d1272ed3a8a92321293f2b06efb273ddc148ec9b93961"
+    },
+    {
+      "bytes": 14411343,
+      "mtime": "2026-08-05T22:49:39.267061+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_event_links.jsonl",
+      "sha256": "5a08f9c60b692da8491ffca43d43d792d9e89c2e59ec39ea477d75baacb29247"
+    },
+    {
+      "bytes": 10939739,
+      "mtime": "2026-08-05T22:49:39.027560+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_field_record_links.csv",
+      "sha256": "9ee81b842265e706ab4d1272ed3a8a92321293f2b06efb273ddc148ec9b93961"
+    },
+    {
+      "bytes": 14411343,
+      "mtime": "2026-08-05T22:49:39.092496+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_field_record_links.jsonl",
+      "sha256": "5a08f9c60b692da8491ffca43d43d792d9e89c2e59ec39ea477d75baacb29247"
+    },
+    {
+      "bytes": 10939739,
+      "mtime": "2026-08-05T22:49:38.854106+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_source_links.csv",
+      "sha256": "9ee81b842265e706ab4d1272ed3a8a92321293f2b06efb273ddc148ec9b93961"
+    },
+    {
+      "bytes": 14411343,
+      "mtime": "2026-08-05T22:49:38.921075+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/span_to_source_links.jsonl",
+      "sha256": "5a08f9c60b692da8491ffca43d43d792d9e89c2e59ec39ea477d75baacb29247"
+    },
+    {
+      "bytes": 1489,
+      "mtime": "2026-08-05T22:49:37.703716+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/staffing_headcount_field_records_pointer_manifest.csv",
+      "sha256": "699c257e21ed12d64425acc8984ef7933c3970ba9a1cfc1ea26b88c4bcb1becb"
+    },
+    {
+      "bytes": 1885,
+      "mtime": "2026-08-05T22:49:37.703856+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/staffing_headcount_field_records_pointer_manifest.jsonl",
+      "sha256": "68721c2d8d4556fd9328330794594f60b2d2aee35cbfbe01259a05b10788b10e"
+    },
+    {
+      "bytes": 659,
+      "mtime": "2026-08-05T22:49:37.744976+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/state_coverage_summary.json",
+      "sha256": "30267941592fa8b108939ed2026d9076b60be9b8e69a9e50e143a7b3feb9c8c9"
+    },
+    {
+      "bytes": 304,
+      "mtime": "2026-08-05T19:12:51.762014+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/storage_capacity_hold_preservation_summary.md",
+      "sha256": "82b7ab593ad32bbb4a61b7f2614661ed5892241ee5ef0739fc0228c0efb611e3"
+    },
+    {
+      "bytes": 1495,
+      "mtime": "2026-08-05T22:49:37.715214+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/tenure_progression_field_records_pointer_manifest.csv",
+      "sha256": "540496db2d1e9fd35b430af7d3a2dcc6286d31c9062105c53b63991b5f3665b8"
+    },
+    {
+      "bytes": 1891,
+      "mtime": "2026-08-05T22:49:37.715410+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/tenure_progression_field_records_pointer_manifest.jsonl",
+      "sha256": "bf4a3642f267dcbc7d704c8299c8b8eec11245460cdbd70098f7c058192b6631"
+    },
+    {
+      "bytes": 4110823,
+      "mtime": "2026-08-05T22:49:39.497433+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/unresolved_external_evidence_claim_linkage_queue.csv",
+      "sha256": "add4144623e8937ac6fd2f26c8d5c1f41a4740b3d0390ab52871174371d4a151"
+    },
+    {
+      "bytes": 6034841,
+      "mtime": "2026-08-05T22:49:39.535361+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/unresolved_external_evidence_claim_linkage_queue.jsonl",
+      "sha256": "7aa2e7c7f841a0759faeba1ade47acac5f0cdf7d018a1923f47ce156bfee0a96"
+    },
+    {
+      "bytes": 2394,
+      "mtime": "2026-08-05T22:54:06.283471+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/validation_report.json",
+      "sha256": "eb8f140a4c654a54dd06dc1041ac713b40c4fb686d0450c919845d9e88083f09"
+    },
+    {
+      "bytes": 2175,
+      "mtime": "2026-08-05T22:54:06.283694+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/validation_report.md",
+      "sha256": "1f34c7c1591b94efb630d92d5e23cca67a75d0bef29f1433bbbf45f3c8629a3b"
+    },
+    {
+      "bytes": 471,
+      "mtime": "2026-08-05T22:54:05.042727+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_500_word_page_equivalent.json",
+      "sha256": "b0a56a984c1a643d5cdf943bf0a601fffefbd2725fa0ae99ef10ad173d79a168"
+    },
+    {
+      "bytes": 452,
+      "mtime": "2026-08-05T22:54:04.743685+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_native_pdf_page_accounting.json",
+      "sha256": "2e3e8293081a2bed7bae1cafb1405aaca4adaf464e89e466081057f85778e2a0"
+    },
+    {
+      "bytes": 378,
+      "mtime": "2026-08-05T22:54:04.744466+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_native_pdf_page_accounting.md",
+      "sha256": "9c82b145508e60c10ad564ce9301a5ce0098d616795b4a4710aba562d29c3b1e"
+    },
+    {
+      "bytes": 65,
+      "mtime": "2026-08-05T22:54:04.764293+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_native_pdf_pages_by_period.json",
+      "sha256": "01f628ec79eee0849ab45e4f30bc180f7442e5f2525ac80f9baa2a07046835bd"
+    },
+    {
+      "bytes": 500,
+      "mtime": "2026-08-05T22:54:04.751153+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_native_pdf_pages_by_pipeline.json",
+      "sha256": "d8f91b10e3ac99f356c85a67038b8784f851badeeb4a68cdd4a66834029b48ed"
+    },
+    {
+      "bytes": 65,
+      "mtime": "2026-08-05T22:54:04.759783+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_native_pdf_pages_by_source_family.json",
+      "sha256": "01f628ec79eee0849ab45e4f30bc180f7442e5f2525ac80f9baa2a07046835bd"
+    },
+    {
+      "bytes": 65,
+      "mtime": "2026-08-05T22:54:04.756004+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_native_pdf_pages_by_state.json",
+      "sha256": "01f628ec79eee0849ab45e4f30bc180f7442e5f2525ac80f9baa2a07046835bd"
+    },
+    {
+      "bytes": 605,
+      "mtime": "2026-08-05T22:54:05.040396+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_non_pdf_scale_accounting.json",
+      "sha256": "ff95d255f75e732b5e321c9ab8400111b5e680525375ef47eb767d53ace17cb3"
+    },
+    {
+      "bytes": 289,
+      "mtime": "2026-08-05T22:54:05.040601+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_non_pdf_scale_accounting.md",
+      "sha256": "e8cfd3f944bf9680171c973a4139caad6d2bb6dab190cfc3ae1f196224b06c9a"
+    },
+    {
+      "bytes": 228,
+      "mtime": "2026-08-05T22:54:06.128308+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_page_accounting_methodology_note.json",
+      "sha256": "f2afebbd7bb027a9c8bd8cce0fe389a4d69e195dae60de2af68c537e1b033d9c"
+    },
+    {
+      "bytes": 522,
+      "mtime": "2026-08-05T22:54:06.128190+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_page_accounting_methodology_note.md",
+      "sha256": "8b83cc94b34151167a1db133bfdc49987bcf6b2cb45be740f8642ce26b654de0"
+    },
+    {
+      "bytes": 28826,
+      "mtime": "2026-08-05T22:54:04.455466+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_pdf_duplicate_links.csv",
+      "sha256": "fa4b6be546490bf77972a48bd623b9587f3abe23a271a37b8f59d47516e40b1d"
+    },
+    {
+      "bytes": 35916,
+      "mtime": "2026-08-05T22:54:04.455773+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_pdf_duplicate_links.jsonl",
+      "sha256": "eaec900d7f627abfba81136ed64961ef00226da7befb8ebb5a3939fbeb6c1e0f"
+    },
+    {
+      "bytes": 72509,
+      "mtime": "2026-08-05T22:54:04.456614+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_pdf_page_count_conflict_queue.csv",
+      "sha256": "0a83586727ae750278b331e86c610c25c4602de64ec296aa1b3a5824db6f1686"
+    },
+    {
+      "bytes": 88582,
+      "mtime": "2026-08-05T22:54:04.457225+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_pdf_page_count_conflict_queue.jsonl",
+      "sha256": "bd7884a52d41b4c41ee0df2ca7a34798092a6a397fcd0b08f06cb1d2264e0327"
+    },
+    {
+      "bytes": 288,
+      "mtime": "2026-08-05T22:54:05.042942+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_scale_summary_for_report.md",
+      "sha256": "cdeef3a5b173769feb6b79172576e05b789ac90b34ec5e171b85ac924642487e"
+    },
+    {
+      "bytes": 4969861,
+      "mtime": "2026-08-05T22:54:04.397784+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_unique_pdf_manifest.csv",
+      "sha256": "d7a309778f31393240e038136ca6c92da6038cb253b88d3ce7c3e626de67324b"
+    },
+    {
+      "bytes": 7547439,
+      "mtime": "2026-08-05T22:54:04.454479+00:00",
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_unique_pdf_manifest.jsonl",
+      "sha256": "8f2aa321158ca620d1dcbb4b616c2531cb20ac7790f78958374814bb4dae2b9e"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T21:54:21.926576+00:00",
+      "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_001.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T21:56:21.931398+00:00",
+      "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_002.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T22:02:43.638373+00:00",
+      "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_003.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T22:04:43.639948+00:00",
+      "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_004.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "mtime": "2026-08-05T22:09:06.252476+00:00",
+      "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_005.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "file_inventory_count": 213,
+  "generated_at": "2026-08-05T22:54:26.926376+00:00",
+  "git_status_at_start": [
+    "?? docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/",
+    "?? scripts/run_available_external_data_deterministic_field_span_extraction.py"
+  ],
+  "ignored_bulky_output_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction",
+  "prior_canonical_commit": "8f451fd06d60a69ea7968e554b8871c04d491c74",
+  "recovered_task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-DETERMINISTIC-FIELD-SPAN-EXTRACTION-2026-08-05",
+  "recovery_started_at": "2026-08-05T22:37:17+00:00",
+  "repository_path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages",
+  "runtime_state_at_recovery": "D_payload_processing_complete_coordinator_interrupted",
+  "starting_head": "8f451fd06d60a69ea7968e554b8871c04d491c74",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-FIELD-SPAN-RUNTIME-RECOVERY-2026-08-05",
+  "temporary_log_root": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs"
+}

@@ -1,0 +1,13 @@
+{
+  "deduplication_key": "physical_SHA_256",
+  "duplicate_pdf_paths_removed": 71,
+  "external_data_unique_native_pdf_pages": 611124,
+  "external_data_unique_native_pdfs": 5424,
+  "external_expected_pages": 611124,
+  "external_reconciled": true,
+  "page_count_conflicts": 248,
+  "storage_held_sources_excluded": 7895,
+  "unsearched_targets_excluded": 12844,
+  "whole_corpus_unique_native_pdf_pages": 975977,
+  "whole_corpus_unique_native_pdfs": 15163
+}

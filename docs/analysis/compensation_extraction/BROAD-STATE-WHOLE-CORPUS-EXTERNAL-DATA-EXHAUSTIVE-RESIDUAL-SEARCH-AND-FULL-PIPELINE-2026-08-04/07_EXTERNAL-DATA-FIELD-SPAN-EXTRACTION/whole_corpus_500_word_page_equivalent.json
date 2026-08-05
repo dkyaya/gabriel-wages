@@ -1,0 +1,9 @@
+{
+  "formula": "ceil(mechanically_tokenized_words / 500)",
+  "mechanically_tokenized_words": 325240974,
+  "native_pdf_pages_combined_with_equivalent": false,
+  "rounding": "ceiling to whole page equivalent",
+  "scope": "successfully extracted retained external-data machine-readable text",
+  "table_cells_counted_only_when processed as structured values; visible HTML text and structured tables remain separate": true,
+  "whole_corpus_500_word_page_equivalent": 650482
+}

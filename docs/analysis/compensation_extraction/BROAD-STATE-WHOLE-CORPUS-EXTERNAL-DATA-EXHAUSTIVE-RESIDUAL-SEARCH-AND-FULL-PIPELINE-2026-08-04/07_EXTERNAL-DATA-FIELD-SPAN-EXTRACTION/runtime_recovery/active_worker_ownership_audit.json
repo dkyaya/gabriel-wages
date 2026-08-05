@@ -1,0 +1,11 @@
+{
+  "active_coordinators": [],
+  "active_original_workers": [],
+  "active_payload_ownership": [],
+  "active_replacement_workers": [],
+  "audited_at": "2026-08-05T22:54:25.777314+00:00",
+  "duplicate_worker_count": 0,
+  "duplicate_workers": [],
+  "passed": true,
+  "task_owned_open_files": []
+}

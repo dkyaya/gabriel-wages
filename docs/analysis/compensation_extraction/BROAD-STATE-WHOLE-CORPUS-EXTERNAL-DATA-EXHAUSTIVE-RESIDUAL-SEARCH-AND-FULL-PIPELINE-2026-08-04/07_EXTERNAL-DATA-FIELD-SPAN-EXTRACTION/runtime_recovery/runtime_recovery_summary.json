@@ -1,0 +1,35 @@
+{
+  "accepted_payload_count_by_lane": {
+    "field_span_lane_001": 2832,
+    "field_span_lane_002": 2832,
+    "field_span_lane_003": 2832,
+    "field_span_lane_004": 2832,
+    "field_span_lane_005": 2832
+  },
+  "active_pids_and_ownership": [],
+  "blockers_or_uncertainties": [],
+  "checkpoints_and_ledgers_reconciled": true,
+  "coordinator_finalize_completed_during_recovery": true,
+  "disk_reserve_passed": true,
+  "duplicate_workers_found": false,
+  "exact_next_action": "Run staged/large-file audit, then commit/push/relay only if original task completion is being published.",
+  "free_disk_bytes": 35813384192,
+  "generated_at": "2026-08-05T22:54:26.949827+00:00",
+  "globally_accepted_payload_count": 14160,
+  "globally_remaining_payload_count": 0,
+  "incomplete_payload_count_by_lane": {
+    "field_span_lane_001": 0,
+    "field_span_lane_002": 0,
+    "field_span_lane_003": 0,
+    "field_span_lane_004": 0,
+    "field_span_lane_005": 0
+  },
+  "only_coordinator_work_remained_at_classification": true,
+  "original_lane_still_active": false,
+  "overall_runtime_state": "D_payload_processing_complete_coordinator_interrupted",
+  "prior_interrupted_gzip_streams_repaired_before_recovery": true,
+  "replacement_worker_pids": [],
+  "replacement_workers_launched": false,
+  "required_reserve_bytes": 8589934592,
+  "truncated_ledger_line_repaired_during_recovery": false
+}

@@ -1,0 +1,22 @@
+{
+  "broad_state_4x2500_source_review_download_2026-07-30": {
+    "pages": 114431,
+    "pdfs": 3248
+  },
+  "broad_state_remaining_municipalities_source_review_download_2026-08-02": {
+    "pages": 59367,
+    "pdfs": 2452
+  },
+  "combined_broad_source_review_download_5589_2026-07-28": {
+    "pages": 198347,
+    "pdfs": 3955
+  },
+  "original_corpus": {
+    "pages": 3266,
+    "pdfs": 58
+  },
+  "whole_corpus_external_data_exhaustive_pipeline_2026-08-04": {
+    "pages": 600566,
+    "pdfs": 5450
+  }
+}

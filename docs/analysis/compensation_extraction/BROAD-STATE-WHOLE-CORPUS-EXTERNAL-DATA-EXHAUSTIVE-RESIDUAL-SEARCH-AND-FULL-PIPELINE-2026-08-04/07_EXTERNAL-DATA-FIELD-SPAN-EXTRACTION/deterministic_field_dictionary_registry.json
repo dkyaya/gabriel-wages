@@ -1,0 +1,1254 @@
+{
+  "dictionary_version": "administrative-field-dictionary-2026-08-05-v1",
+  "fields": {
+    "CPI_measure": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "consumer price index",
+        "cpi"
+      ]
+    },
+    "FTE_count": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "fte count",
+        "ftes",
+        "full-time equivalents"
+      ]
+    },
+    "MOU_identifier": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "mou number",
+        "memorandum of understanding"
+      ]
+    },
+    "active_employees": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "active employees"
+      ]
+    },
+    "adopted": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "adopted"
+      ]
+    },
+    "adoption_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "adoption date"
+      ]
+    },
+    "allowance": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "allowance"
+      ]
+    },
+    "amended": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "amended"
+      ]
+    },
+    "annual_salary": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "annual salary",
+        "annual rate"
+      ]
+    },
+    "applicant_count": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "applicant count",
+        "applicants"
+      ]
+    },
+    "appropriated": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "appropriated"
+      ]
+    },
+    "appropriation_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "appropriation date"
+      ]
+    },
+    "approved": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "approved"
+      ]
+    },
+    "assessed_value": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "assessed value"
+      ]
+    },
+    "attrition_not_replaced": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "attrition not replaced",
+        "not replace attrition"
+      ]
+    },
+    "authorized_positions": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "authorized positions",
+        "authorized strength"
+      ]
+    },
+    "bargaining_unit_status": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "bargaining unit status"
+      ]
+    },
+    "base_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "base pay"
+      ]
+    },
+    "base_salary": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "base salary"
+      ]
+    },
+    "benefit_effective_date": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "benefit effective date"
+      ]
+    },
+    "budgeted_positions": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "budgeted positions"
+      ]
+    },
+    "callback_due_to_staffing_gap": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "callback due to staffing gap"
+      ]
+    },
+    "certification_benefit": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "certification benefit"
+      ]
+    },
+    "certification_level": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "certification level"
+      ]
+    },
+    "certification_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "certification pay"
+      ]
+    },
+    "civilian_count": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "civilian count"
+      ]
+    },
+    "classification": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "classification"
+      ]
+    },
+    "compensation_study_finding": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "compensation study finding"
+      ]
+    },
+    "consolidation": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "consolidation"
+      ]
+    },
+    "contract_identifier": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "contract identifier"
+      ]
+    },
+    "cost_of_living_measure": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "cost of living",
+        "cost-of-living"
+      ]
+    },
+    "council_approval_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "council approval date"
+      ]
+    },
+    "county": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "county"
+      ]
+    },
+    "deferred_compensation_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "deferred compensation contribution"
+      ]
+    },
+    "dental_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "dental contribution"
+      ]
+    },
+    "department": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "department"
+      ]
+    },
+    "department_budget": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "department budget"
+      ]
+    },
+    "department_headcount": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "department headcount",
+        "headcount"
+      ]
+    },
+    "detail_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "detail pay"
+      ]
+    },
+    "education_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "education pay"
+      ]
+    },
+    "effective_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "effective date"
+      ]
+    },
+    "eligible_candidate_count": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "eligible candidates",
+        "candidate count"
+      ]
+    },
+    "employee_health_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "employee health contribution"
+      ]
+    },
+    "employee_identifier_public": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "employee id",
+        "employee number"
+      ]
+    },
+    "employee_name_public": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "employee name",
+        "name"
+      ]
+    },
+    "employee_pension_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "employee pension contribution"
+      ]
+    },
+    "employer_health_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "employer health contribution"
+      ]
+    },
+    "employer_pension_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "employer pension contribution"
+      ]
+    },
+    "employment_status": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "employment status"
+      ]
+    },
+    "equipment_allowance": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "equipment allowance"
+      ]
+    },
+    "expired": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "expired"
+      ]
+    },
+    "filled_positions": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "filled positions"
+      ]
+    },
+    "fiscal_year": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "fiscal year"
+      ]
+    },
+    "fiscal_year_expenditure": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "fiscal year expenditure",
+        "total expenditure"
+      ]
+    },
+    "fiscal_year_revenue": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "fiscal year revenue",
+        "total revenue"
+      ]
+    },
+    "full_time_part_time_status": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "full time/part time",
+        "full-time/part-time",
+        "ft/pt"
+      ]
+    },
+    "general_fund_expenditure": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "general fund expenditure"
+      ]
+    },
+    "grade": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "grade"
+      ]
+    },
+    "gross_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "gross pay",
+        "gross wages"
+      ]
+    },
+    "hazard_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "hazard pay"
+      ]
+    },
+    "health_cost_share": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "health cost share",
+        "healthcare cost share"
+      ]
+    },
+    "hires": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "hires"
+      ]
+    },
+    "hiring_difficulty": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "hiring difficulty"
+      ]
+    },
+    "hiring_freeze": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "hiring freeze"
+      ]
+    },
+    "holiday_benefit": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "holiday benefit"
+      ]
+    },
+    "holiday_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "holiday pay"
+      ]
+    },
+    "hourly_rate": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "hourly rate",
+        "hourly wage"
+      ]
+    },
+    "implementation_body": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "implementation body"
+      ]
+    },
+    "implementation_status": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "implementation status"
+      ]
+    },
+    "implemented": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "implemented"
+      ]
+    },
+    "incumbent_tier": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "incumbent tier"
+      ]
+    },
+    "inflation_measure": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "inflation measure"
+      ]
+    },
+    "labor_force": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "labor force"
+      ]
+    },
+    "lateral_entry_incentive": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "lateral entry incentive",
+        "lateral incentive"
+      ]
+    },
+    "layoffs": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "layoffs"
+      ]
+    },
+    "leave_accrual": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "leave accrual"
+      ]
+    },
+    "leave_cashout": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "leave cashout",
+        "leave payout"
+      ]
+    },
+    "life_insurance_value": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "life insurance value"
+      ]
+    },
+    "local_fiscal_constraint_statement": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "local fiscal constraint statement"
+      ]
+    },
+    "longevity_benefit": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "longevity benefit"
+      ]
+    },
+    "longevity_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "longevity pay"
+      ]
+    },
+    "longevity_threshold": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "longevity threshold"
+      ]
+    },
+    "lump_sum_payment": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "lump sum",
+        "lump-sum"
+      ]
+    },
+    "mandatory_overtime": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "mandatory overtime"
+      ]
+    },
+    "market_competitiveness_statement": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "market competitiveness statement"
+      ]
+    },
+    "maximum_rate": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "maximum rate",
+        "max rate"
+      ]
+    },
+    "median_household_income": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "median household income"
+      ]
+    },
+    "metro_area": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "metro area"
+      ]
+    },
+    "minimum_rate": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "minimum rate",
+        "min rate"
+      ]
+    },
+    "minimum_staffing_requirement": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "minimum staffing",
+        "minimum manning"
+      ]
+    },
+    "negotiated": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "negotiated"
+      ]
+    },
+    "new_hire_tier": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "new hire tier",
+        "new-hire tier"
+      ]
+    },
+    "one_time": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "one-time",
+        "one time"
+      ]
+    },
+    "ordinance_number": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "ordinance number",
+        "ordinance no",
+        "ordinance #"
+      ]
+    },
+    "other_compensation": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "other compensation",
+        "other pay"
+      ]
+    },
+    "outsourcing": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "outsourcing"
+      ]
+    },
+    "overtime_due_to_staffing_gap": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "overtime due to staffing",
+        "overtime caused by vacancies",
+        "overtime from vacancies"
+      ]
+    },
+    "overtime_earnings": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "overtime earnings",
+        "overtime pay",
+        "ot earnings"
+      ]
+    },
+    "overtime_hours": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "overtime hours",
+        "ot hours"
+      ]
+    },
+    "paid": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "paid"
+      ]
+    },
+    "part_time_count": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "part time count"
+      ]
+    },
+    "pay_period": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "pay period"
+      ]
+    },
+    "payment_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "payment date"
+      ]
+    },
+    "payroll_effective_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "payroll effective date"
+      ]
+    },
+    "payroll_year": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "payroll year"
+      ]
+    },
+    "pension_cost_share": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "pension cost share"
+      ]
+    },
+    "pensionable_earnings": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "pensionable earnings",
+        "pensionable pay"
+      ]
+    },
+    "population": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "population"
+      ]
+    },
+    "position_additions": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "position additions"
+      ]
+    },
+    "position_eliminations": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "positions eliminated",
+        "position eliminations",
+        "eliminated positions"
+      ]
+    },
+    "position_title": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "position title",
+        "job title",
+        "title"
+      ]
+    },
+    "premium_eligibility": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "premium eligibility"
+      ]
+    },
+    "premium_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "premium pay"
+      ]
+    },
+    "premium_payment": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "premium payment"
+      ]
+    },
+    "probationary_rate": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "probationary rate"
+      ]
+    },
+    "promotion_date": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "promotion date"
+      ]
+    },
+    "proposed": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "proposed"
+      ]
+    },
+    "rank": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "rank"
+      ]
+    },
+    "ratification_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "ratification date"
+      ]
+    },
+    "ratified": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "ratified"
+      ]
+    },
+    "recession_or_emergency_context": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "recession or emergency context"
+      ]
+    },
+    "recommended": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "recommended"
+      ]
+    },
+    "recruitment_incentive": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "recruitment incentive"
+      ]
+    },
+    "recruitment_shortage": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "recruitment shortage"
+      ]
+    },
+    "recruitment_study_finding": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "recruitment study finding"
+      ]
+    },
+    "recurring": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "recurring"
+      ]
+    },
+    "referral_bonus": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "referral bonus"
+      ]
+    },
+    "regular_earnings": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "regular earnings"
+      ]
+    },
+    "regular_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "regular pay"
+      ]
+    },
+    "rejected": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "rejected"
+      ]
+    },
+    "resignations": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "resignations"
+      ]
+    },
+    "resolution_number": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "resolution number",
+        "resolution no",
+        "resolution #"
+      ]
+    },
+    "retention_incentive": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "retention incentive"
+      ]
+    },
+    "retention_problem": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "retention problem"
+      ]
+    },
+    "retention_rate_explicit": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "retention rate"
+      ]
+    },
+    "retirements": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "retirements"
+      ]
+    },
+    "retroactive_pay": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "retroactive pay",
+        "back pay"
+      ]
+    },
+    "retroactive_start_date": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "retroactive start date"
+      ]
+    },
+    "salary_progression": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "salary progression"
+      ]
+    },
+    "salary_range": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "salary range",
+        "pay range"
+      ]
+    },
+    "seniority_rule": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "seniority rule"
+      ]
+    },
+    "separations": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "separations"
+      ]
+    },
+    "service_band": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "service band"
+      ]
+    },
+    "shift_differential": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "shift differential",
+        "shift premium"
+      ]
+    },
+    "signing_bonus": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "signing bonus",
+        "sign-on bonus"
+      ]
+    },
+    "source_confirmation_type": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "source confirmation type"
+      ]
+    },
+    "staffing_change_effective_date": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "staffing change effective date"
+      ]
+    },
+    "staffing_shortage_count": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "staffing shortage count"
+      ]
+    },
+    "staffing_study_finding": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "staffing study finding"
+      ]
+    },
+    "state_labor_law_reference": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "state labor law reference"
+      ]
+    },
+    "step_effective_date": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "step effective date"
+      ]
+    },
+    "step_interval": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "step interval"
+      ]
+    },
+    "step_name": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "step name"
+      ]
+    },
+    "step_number": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "step number",
+        "step"
+      ]
+    },
+    "step_progression_rule": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "step progression",
+        "progression rule"
+      ]
+    },
+    "step_rate": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "step rate"
+      ]
+    },
+    "stipend": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "stipend"
+      ]
+    },
+    "sworn_count": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "sworn count"
+      ]
+    },
+    "tax_base": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "tax base"
+      ]
+    },
+    "tentative": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "tentative"
+      ]
+    },
+    "time_to_fill": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "time to fill",
+        "time-to-fill"
+      ]
+    },
+    "total_compensation_explicit": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "total compensation"
+      ]
+    },
+    "total_earnings": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "total earnings",
+        "total pay"
+      ]
+    },
+    "tuition_or_education_benefit": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "tuition or education benefit"
+      ]
+    },
+    "turnover_count": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "turnover count"
+      ]
+    },
+    "turnover_rate_explicit": {
+      "field_family": "recruitment_and_retention",
+      "labels": [
+        "turnover rate"
+      ]
+    },
+    "unemployment_rate": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "unemployment rate"
+      ]
+    },
+    "uniform_allowance": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "uniform allowance"
+      ]
+    },
+    "union_status_explicit": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "union status explicit"
+      ]
+    },
+    "unit": {
+      "field_family": "payroll_and_earnings",
+      "labels": [
+        "unit"
+      ]
+    },
+    "urban_rural_classification": {
+      "field_family": "contextual_controls",
+      "labels": [
+        "urban rural classification"
+      ]
+    },
+    "vacancy_duration": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "vacancy duration"
+      ]
+    },
+    "vacancy_rate_explicit": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "vacancy rate"
+      ]
+    },
+    "vacant_positions": {
+      "field_family": "staffing_and_headcount",
+      "labels": [
+        "vacant positions",
+        "vacancies",
+        "vacancy count"
+      ]
+    },
+    "vehicle_allowance": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "vehicle allowance"
+      ]
+    },
+    "vision_contribution": {
+      "field_family": "benefits_and_total_compensation",
+      "labels": [
+        "vision contribution"
+      ]
+    },
+    "vote_result": {
+      "field_family": "implementation_confirmation",
+      "labels": [
+        "vote result",
+        "vote"
+      ]
+    },
+    "years_of_service": {
+      "field_family": "tenure_and_progression",
+      "labels": [
+        "years of service",
+        "service years"
+      ]
+    }
+  },
+  "qualitative_evidence_types": {
+    "COLA_indexing_mechanism": [
+      "consumer price index",
+      "cpi adjustment",
+      "cost-of-living adjustment"
+    ],
+    "across_board_mechanism": [
+      "across-the-board",
+      "across the board"
+    ],
+    "arbitration_pressure": [
+      "interest arbitration",
+      "fact finding",
+      "fact-finding"
+    ],
+    "bargaining_leverage": [
+      "bargaining leverage",
+      "collective bargaining"
+    ],
+    "benefit_cost_shift": [
+      "cost shift",
+      "employee share increased",
+      "premium share"
+    ],
+    "budget_pressure": [
+      "budget pressure",
+      "budget constraint",
+      "budget shortfall"
+    ],
+    "classification_pressure": [
+      "reclassification",
+      "classification study"
+    ],
+    "compression_or_parity_pressure": [
+      "pay compression",
+      "wage compression",
+      "pay parity"
+    ],
+    "fiscal_constraint": [
+      "fiscal constraint",
+      "limited fiscal",
+      "revenue constraint"
+    ],
+    "implementation_confirmation": [
+      "became effective",
+      "was implemented",
+      "has been paid"
+    ],
+    "implementation_delay": [
+      "implementation delay",
+      "delayed implementation",
+      "retroactive to"
+    ],
+    "inflation_pressure": [
+      "inflation pressure",
+      "rising inflation"
+    ],
+    "market_competitiveness": [
+      "market competitive",
+      "competitive salary",
+      "pay competitiveness"
+    ],
+    "minimum_staffing_pressure": [
+      "minimum staffing",
+      "minimum manning"
+    ],
+    "non_safety_position_reduction": [
+      "civilian positions eliminated",
+      "clerical positions eliminated"
+    ],
+    "one_time_instead_of_base": [
+      "one-time payment instead",
+      "lump sum instead of"
+    ],
+    "other_administrative_context": [
+      "administrative record",
+      "personnel policy"
+    ],
+    "outsourcing_or_consolidation": [
+      "outsourced",
+      "consolidated services",
+      "service consolidation"
+    ],
+    "overtime_response": [
+      "mandatory overtime",
+      "overtime to cover",
+      "overtime because"
+    ],
+    "recruitment_pressure": [
+      "difficulty recruiting",
+      "recruitment challenge",
+      "hard to recruit"
+    ],
+    "retention_pressure": [
+      "difficulty retaining",
+      "retention challenge",
+      "retain employees"
+    ],
+    "retroactivity_mechanism": [
+      "retroactive to",
+      "back pay"
+    ],
+    "safety_position_protection": [
+      "police positions protected",
+      "fire positions protected"
+    ],
+    "staffing_shortage": [
+      "staffing shortage",
+      "staff shortage",
+      "understaffed"
+    ],
+    "step_progression_mechanism": [
+      "advance to the next step",
+      "step progression"
+    ],
+    "strike_or_job_action_pressure": [
+      "strike",
+      "work stoppage",
+      "job action"
+    ],
+    "vacancy_pressure": [
+      "vacancy pressure",
+      "persistent vacancies",
+      "unfilled positions"
+    ]
+  }
+}

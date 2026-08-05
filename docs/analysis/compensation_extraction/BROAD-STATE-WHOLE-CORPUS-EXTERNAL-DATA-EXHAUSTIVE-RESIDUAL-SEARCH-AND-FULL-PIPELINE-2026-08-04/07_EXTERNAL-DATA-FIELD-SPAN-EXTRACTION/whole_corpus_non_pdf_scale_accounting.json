@@ -1,0 +1,17 @@
+{
+  "csv_tsv_files": 17,
+  "csv_tsv_rows": 1445,
+  "extracted_text_documents": 1,
+  "html_characters": 797141281,
+  "html_table_rows": 1017511,
+  "html_tables": 96484,
+  "json_xml_records": 132188,
+  "scope": "successfully extracted retained external-data corpus plus separate whole-corpus physical PDF accounting",
+  "spreadsheet_rows": 0,
+  "spreadsheet_workbooks": 0,
+  "total_bounded_evidence_spans": 4289437,
+  "total_external_canonical_source_records": 14257,
+  "total_field_records": 5558770,
+  "total_unique_external_physical_source_payloads": 14257,
+  "unique_substantive_html_documents": 8718
+}

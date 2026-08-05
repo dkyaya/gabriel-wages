@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-08-05T21:54:00.418986+00:00",
+  "dictionary_version": "administrative-field-dictionary-2026-08-05-v1",
+  "gabriel_authorized": false,
+  "input_count": 14160,
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction",
+  "network_authorized": false,
+  "normalization_authorized": false,
+  "ocr_authorized": false,
+  "parser_version": "literal-parser-2026-08-05-v1",
+  "rule_version": "deterministic-field-rules-2026-08-05-v1",
+  "starting_head": "8f451fd06d60a69ea7968e554b8871c04d491c74",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AVAILABLE-EXTERNAL-DATA-DETERMINISTIC-FIELD-SPAN-EXTRACTION-2026-08-05"
+}

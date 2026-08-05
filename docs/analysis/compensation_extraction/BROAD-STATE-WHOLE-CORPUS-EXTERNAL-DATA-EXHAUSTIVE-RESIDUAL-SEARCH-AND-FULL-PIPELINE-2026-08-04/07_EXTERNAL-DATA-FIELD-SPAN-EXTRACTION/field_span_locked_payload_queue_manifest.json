@@ -1,0 +1,19 @@
+{
+  "count": 14160,
+  "created_at": "2026-08-05T21:54:12.345162+00:00",
+  "eligibility_counts": {
+    "deterministic_text_pattern_processing_ready": 9103,
+    "direct_structured_processing_ready": 17,
+    "low_yield_context_only": 191,
+    "mixed_structured_and_text_processing_ready": 4849
+  },
+  "lane_counts": {
+    "field_span_lane_001": 2832,
+    "field_span_lane_002": 2832,
+    "field_span_lane_003": 2832,
+    "field_span_lane_004": 2832,
+    "field_span_lane_005": 2832
+  },
+  "sha256": "5dc4070d49e450d6dd6784d09ed523a80a697e65256663484539358aa9da5629",
+  "unique_payloads": 14160
+}

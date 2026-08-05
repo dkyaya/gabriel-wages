@@ -1,0 +1,29 @@
+{
+  "by_lane": {
+    "field_span_lane_001": {
+      "count": 0,
+      "payload_ids": []
+    },
+    "field_span_lane_002": {
+      "count": 0,
+      "payload_ids": []
+    },
+    "field_span_lane_003": {
+      "count": 0,
+      "payload_ids": []
+    },
+    "field_span_lane_004": {
+      "count": 0,
+      "payload_ids": []
+    },
+    "field_span_lane_005": {
+      "count": 0,
+      "payload_ids": []
+    }
+  },
+  "count": 0,
+  "generated_at": "2026-08-05T22:54:25.776095+00:00",
+  "local_full_id_manifest": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/runtime_recovery/incomplete_payload_ids.jsonl",
+  "local_full_id_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "payload_ids": []
+}

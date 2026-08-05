@@ -1,0 +1,8 @@
+{
+  "ambiguous_narrative_manual_review": 50271,
+  "exact_labeled_text": 3436140,
+  "exact_structured_cell": 116526,
+  "exact_table_row_with_header": 1557912,
+  "strong_pattern_with_local_context": 565696,
+  "weak_pattern_requires_review": 4121662
+}

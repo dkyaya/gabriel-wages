@@ -1,0 +1,22 @@
+{
+  "accepted_payloads_rerun": false,
+  "action": "coordinator_finalize_executed",
+  "action_recorded_at": "2026-08-05T22:54:26.947672+00:00",
+  "classification_basis": [
+    "all 14,160 locked payloads have one globally unique terminal outcome",
+    "all five checkpoints are complete at 2,832 of 2,832",
+    "all lane ledger row counts equal sums declared by accepted outcomes",
+    "all queue, checkpoint, outcome, artifact-pointer, and rule-registry checks reconcile",
+    "no worker or coordinator exists in either process observation",
+    "merge/validation outputs were absent at classification time"
+  ],
+  "classified_state": "D_payload_processing_complete_coordinator_interrupted",
+  "coordinator_finalize_outputs_present": true,
+  "logs_or_artifacts_deleted": false,
+  "prior_interrupted_gzip_repair_recorded": true,
+  "replacement_worker_pids": [],
+  "replacement_workers_launched": false,
+  "resume_queues_created": false,
+  "truncated_ledger_line_repaired_during_this_recovery": false,
+  "workers_terminated": false
+}

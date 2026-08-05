@@ -1,0 +1,730 @@
+{
+  "conclusion": "No production process existed in either pass; completed ledgers and checkpoints remained byte/count/mtime stable.",
+  "interval_within_requested_60_to_90_seconds": true,
+  "lane_comparison": {
+    "field_span_lane_001": {
+      "advanced": false,
+      "changed_fields": [],
+      "interpretation": "finished_and_stable"
+    },
+    "field_span_lane_002": {
+      "advanced": false,
+      "changed_fields": [],
+      "interpretation": "finished_and_stable"
+    },
+    "field_span_lane_003": {
+      "advanced": false,
+      "changed_fields": [],
+      "interpretation": "finished_and_stable"
+    },
+    "field_span_lane_004": {
+      "advanced": false,
+      "changed_fields": [],
+      "interpretation": "finished_and_stable"
+    },
+    "field_span_lane_005": {
+      "advanced": false,
+      "changed_fields": [],
+      "interpretation": "finished_and_stable"
+    }
+  },
+  "observation_interval_seconds": 77.462582,
+  "observation_one": {
+    "disk_total_bytes": 494384795648,
+    "disk_used_bytes": 457005682688,
+    "free_disk_bytes": 37379112960,
+    "globally_accepted_payload_count": 14160,
+    "lanes": [
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 320322,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_001",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:07:07.832297+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 640454,
+        "field_record_ledger_row_count": 879812,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_001",
+        "last_accepted_payload_id": "EXTPAYLOAD-ffe3e776ae4f8bd41e78a895",
+        "last_output_modification_timestamp": "2026-08-05T22:07:07.832279+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 157610706,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 14687915,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832236+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 90,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832213+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 79616827,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832254+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 61258967,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832279+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2046907,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.831416+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T21:54:21.926576+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_001.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 351823,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_002",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:11:55.019330+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 763671,
+        "field_record_ledger_row_count": 976572,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_002",
+        "last_accepted_payload_id": "EXTPAYLOAD-fff0e523739a2ebacf1d5fa2",
+        "last_output_modification_timestamp": "2026-08-05T22:11:55.019257+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 181363724,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 16590484,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019114+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 90,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019094+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 91534807,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019131+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 71188287,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019257+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2050056,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.017430+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T21:56:21.931398+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_002.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 409992,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_003",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:15:24.406417+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 913231,
+        "field_record_ledger_row_count": 1146329,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_003",
+        "last_accepted_payload_id": "EXTPAYLOAD-ffea6307df78d486908f02e1",
+        "last_output_modification_timestamp": "2026-08-05T22:15:24.406384+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 210752057,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 19170530,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406316+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 41,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406297+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 107841384,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406337+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 81690274,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406384+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2049828,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.405542+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T22:02:43.638373+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_003.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 361722,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_004",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:16:33.116163+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 754994,
+        "field_record_ledger_row_count": 1017484,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_004",
+        "last_accepted_payload_id": "EXTPAYLOAD-fff9cad8e18c6b4bc650ed90",
+        "last_output_modification_timestamp": "2026-08-05T22:16:33.115404+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 180304789,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 16490368,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.114345+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 41,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.114331+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 90360465,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.114362+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 71405526,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.115404+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2048389,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.113733+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T22:04:43.639948+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_004.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 759205,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_005",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:21:53.056328+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 1217087,
+        "field_record_ledger_row_count": 1538573,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_005",
+        "last_accepted_payload_id": "EXTPAYLOAD-fffddb4d070f0012eff801b4",
+        "last_output_modification_timestamp": "2026-08-05T22:21:53.056278+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 283431414,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 32950555,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056192+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 41,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056176+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 142751727,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056205+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 105686540,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056278+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2042551,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.055197+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T22:09:06.252476+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_005.log"
+        }
+      }
+    ],
+    "observation_completed_at": "2026-08-05T22:43:27.830103+00:00",
+    "observation_label": "observation_one",
+    "observation_started_at": "2026-08-05T22:42:54.197650+00:00",
+    "process_inventory_source": "bounded ps -Ao inspection performed separately in the same observation window",
+    "task_owned_process_count": 0,
+    "task_owned_processes": []
+  },
+  "observation_two": {
+    "disk_total_bytes": 494384795648,
+    "disk_used_bytes": 457012936704,
+    "free_disk_bytes": 37371858944,
+    "globally_accepted_payload_count": 14160,
+    "lanes": [
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 320322,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_001",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:07:07.832297+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 640454,
+        "field_record_ledger_row_count": 879812,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_001",
+        "last_accepted_payload_id": "EXTPAYLOAD-ffe3e776ae4f8bd41e78a895",
+        "last_output_modification_timestamp": "2026-08-05T22:07:07.832279+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 157610706,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 14687915,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832236+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 90,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832213+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 79616827,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832254+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 61258967,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.832279+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2046907,
+            "exists": true,
+            "mtime": "2026-08-05T22:07:07.831416+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_001/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T21:54:21.926576+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_001.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 351823,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_002",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:11:55.019330+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 763671,
+        "field_record_ledger_row_count": 976572,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_002",
+        "last_accepted_payload_id": "EXTPAYLOAD-fff0e523739a2ebacf1d5fa2",
+        "last_output_modification_timestamp": "2026-08-05T22:11:55.019257+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 181363724,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 16590484,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019114+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 90,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019094+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 91534807,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019131+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 71188287,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.019257+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2050056,
+            "exists": true,
+            "mtime": "2026-08-05T22:11:55.017430+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_002/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T21:56:21.931398+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_002.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 409992,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_003",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:15:24.406417+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 913231,
+        "field_record_ledger_row_count": 1146329,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_003",
+        "last_accepted_payload_id": "EXTPAYLOAD-ffea6307df78d486908f02e1",
+        "last_output_modification_timestamp": "2026-08-05T22:15:24.406384+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 210752057,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 19170530,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406316+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 41,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406297+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 107841384,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406337+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 81690274,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.406384+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2049828,
+            "exists": true,
+            "mtime": "2026-08-05T22:15:24.405542+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_003/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T22:02:43.638373+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_003.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 361722,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_004",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:16:33.116163+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 754994,
+        "field_record_ledger_row_count": 1017484,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_004",
+        "last_accepted_payload_id": "EXTPAYLOAD-fff9cad8e18c6b4bc650ed90",
+        "last_output_modification_timestamp": "2026-08-05T22:16:33.115404+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 180304789,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 16490368,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.114345+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 41,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.114331+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 90360465,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.114362+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 71405526,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.115404+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2048389,
+            "exists": true,
+            "mtime": "2026-08-05T22:16:33.113733+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_004/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T22:04:43.639948+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_004.log"
+        }
+      },
+      {
+        "accepted_payload_count": 2832,
+        "active_pid": null,
+        "ambiguity_ledger_row_count": 759205,
+        "checkpoint": {
+          "completed_count": 2832,
+          "lane_id": "field_span_lane_005",
+          "locked_count": 2832,
+          "remaining_count": 0,
+          "status": "complete",
+          "updated_at": "2026-08-05T22:21:53.056328+00:00"
+        },
+        "checkpoint_offset": 2832,
+        "conflict_ledger_row_count": 0,
+        "error_count": 0,
+        "evidence_span_ledger_row_count": 1217087,
+        "field_record_ledger_row_count": 1538573,
+        "gzip_read_errors": {},
+        "lane_id": "field_span_lane_005",
+        "last_accepted_payload_id": "EXTPAYLOAD-fffddb4d070f0012eff801b4",
+        "last_output_modification_timestamp": "2026-08-05T22:21:53.056278+00:00",
+        "outcome_final_newline_complete": true,
+        "outcome_parse_errors": [],
+        "output_file_size_bytes": 283431414,
+        "output_file_stats": {
+          "ambiguities.jsonl.gz": {
+            "bytes": 32950555,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056192+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/ambiguities.jsonl.gz"
+          },
+          "conflicts.jsonl.gz": {
+            "bytes": 41,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056176+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/conflicts.jsonl.gz"
+          },
+          "evidence_spans.jsonl.gz": {
+            "bytes": 142751727,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056205+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/evidence_spans.jsonl.gz"
+          },
+          "field_records.jsonl.gz": {
+            "bytes": 105686540,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.056278+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/field_records.jsonl.gz"
+          },
+          "payload_outcomes.jsonl": {
+            "bytes": 2042551,
+            "exists": true,
+            "mtime": "2026-08-05T22:21:53.055197+00:00",
+            "path": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction/lanes/field_span_lane_005/payload_outcomes.jsonl"
+          }
+        },
+        "process_state": "no_task_owned_process_observed",
+        "temporary_artifact_count": 0,
+        "temporary_artifacts": [],
+        "terminal_outcome_count": 2832,
+        "worker_log": {
+          "bytes": 0,
+          "exists": true,
+          "mtime": "2026-08-05T22:09:06.252476+00:00",
+          "path": "tmp/broad_state_whole_corpus_available_external_data_deterministic_field_span_extraction_2026-08-05_logs/field_span_lane_005.log"
+        }
+      }
+    ],
+    "observation_completed_at": "2026-08-05T22:44:45.115605+00:00",
+    "observation_label": "observation_two",
+    "observation_started_at": "2026-08-05T22:44:11.660232+00:00",
+    "process_inventory_source": "bounded ps -Ao inspection performed separately in the same observation window",
+    "task_owned_process_count": 0,
+    "task_owned_processes": []
+  }
+}
