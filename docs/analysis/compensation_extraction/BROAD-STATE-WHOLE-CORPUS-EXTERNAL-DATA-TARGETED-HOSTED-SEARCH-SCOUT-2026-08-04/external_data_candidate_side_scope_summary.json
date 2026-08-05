@@ -1,0 +1,27 @@
+{
+  "counts": {
+    "all_units": 12065,
+    "fire": 2146,
+    "fire|mixed": 9,
+    "fire|non_safety": 45,
+    "fire|non_safety|police": 60,
+    "fire|non_safety|police|side_independent": 13,
+    "fire|non_safety|side_independent": 15,
+    "fire|police": 365,
+    "fire|police|safety_combined": 8,
+    "fire|police|safety_combined|side_independent": 11,
+    "fire|police|side_independent": 130,
+    "fire|side_independent": 168,
+    "mixed": 42,
+    "mixed|police": 107,
+    "non_safety": 1366,
+    "non_safety|police": 128,
+    "non_safety|police|side_independent": 5,
+    "non_safety|side_independent": 158,
+    "police": 8359,
+    "police|side_independent": 292,
+    "safety_combined": 116,
+    "side_independent": 4185
+  },
+  "record_count": 29793
+}

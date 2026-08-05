@@ -1,0 +1,5 @@
+{
+  "mechanism_exposures": 13391,
+  "root_compensation_actions": 2998,
+  "warning": "Mechanism-exposure totals must not be represented as unique compensation actions."
+}

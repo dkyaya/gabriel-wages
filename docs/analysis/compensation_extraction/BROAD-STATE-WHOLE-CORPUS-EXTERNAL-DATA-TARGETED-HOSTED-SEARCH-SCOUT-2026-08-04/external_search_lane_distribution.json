@@ -1,0 +1,24 @@
+{
+  "disjoint": true,
+  "lane_counts": {
+    "external_search_lane_001": 459,
+    "external_search_lane_002": 460,
+    "external_search_lane_003": 460,
+    "external_search_lane_004": 459,
+    "external_search_lane_005": 459
+  },
+  "lane_weight": {
+    "external_search_lane_001": 600,
+    "external_search_lane_002": 600,
+    "external_search_lane_003": 600,
+    "external_search_lane_004": 599,
+    "external_search_lane_005": 599
+  },
+  "stagger_offsets_minutes": {
+    "external_search_lane_001": 0,
+    "external_search_lane_002": 8,
+    "external_search_lane_003": 16,
+    "external_search_lane_004": 24,
+    "external_search_lane_005": 32
+  }
+}

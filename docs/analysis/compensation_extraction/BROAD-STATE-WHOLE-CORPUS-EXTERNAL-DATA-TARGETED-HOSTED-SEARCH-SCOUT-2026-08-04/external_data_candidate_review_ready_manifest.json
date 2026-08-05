@@ -1,0 +1,29 @@
+{
+  "candidate_only": true,
+  "canonical_candidate_count": 29793,
+  "download_status": "not_started",
+  "sharded": true,
+  "shards": [
+    {
+      "csv_bytes": 23000735,
+      "csv_path": "external_data_candidate_review_ready_queue.csv",
+      "csv_sha256": "8a5aff8c28934bcc19dd9b1df2841a94d51ae9aaac65141e38ddea83737c94d4",
+      "jsonl_bytes": 33462566,
+      "jsonl_path": "external_data_candidate_review_ready_queue.jsonl",
+      "jsonl_sha256": "f1005c64a662b01abbd091da981fd19bd7f7a0d50d021995d4542404c39afcc8",
+      "part": 1,
+      "row_count": 20000
+    },
+    {
+      "csv_bytes": 11263012,
+      "csv_path": "external_data_candidate_review_ready_queue.part-002.csv",
+      "csv_sha256": "8e718724db1fae12080dfc00b611c5a761d3bda2cac51e1ea4e7ca7b79fbf073",
+      "jsonl_bytes": 16385430,
+      "jsonl_path": "external_data_candidate_review_ready_queue.part-002.jsonl",
+      "jsonl_sha256": "af317cfe6ba213cb1e01f959f5a845b469d4bc3c7c8af70195113dd65222f50c",
+      "part": 2,
+      "row_count": 9793
+    }
+  ],
+  "verification_status": "not_started"
+}

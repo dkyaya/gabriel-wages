@@ -1,0 +1,7 @@
+{
+  "clear_labels_require_moderate_or_high": true,
+  "counts": {
+    "high": 42,
+    "low": 1566
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "category_A_usable": true,
+  "external_calls_attempted": 9,
+  "no_search_control": {
+    "diagnostic_name": "no_search_control",
+    "failure_class": "",
+    "family": "control",
+    "passed": true,
+    "response_id_present": true,
+    "source_count": 0,
+    "token_usage_present": true,
+    "web_search_enabled": false
+  },
+  "production_probe": {
+    "candidate_urls_opened": false,
+    "failure_class": "",
+    "passed": true,
+    "promoted": false,
+    "ran": true,
+    "source_count": 26
+  },
+  "raw_prompts_persisted": false,
+  "raw_responses_persisted": false,
+  "redaction_passed": true,
+  "representative_hosted_search_smokes": [
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_payroll_and_earnings",
+          "failure_class": "",
+          "family": "payroll_and_earnings",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 26,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_payroll_and_earnings",
+      "failure_class": "",
+      "family": "payroll_and_earnings",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 26,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    },
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_staffing_and_headcount",
+          "failure_class": "",
+          "family": "staffing_and_headcount",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 17,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_staffing_and_headcount",
+      "failure_class": "",
+      "family": "staffing_and_headcount",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 17,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    },
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_recruitment_and_retention",
+          "failure_class": "",
+          "family": "recruitment_and_retention",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 20,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_recruitment_and_retention",
+      "failure_class": "",
+      "family": "recruitment_and_retention",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 20,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    },
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_tenure_and_progression",
+          "failure_class": "",
+          "family": "tenure_and_progression",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 12,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_tenure_and_progression",
+      "failure_class": "",
+      "family": "tenure_and_progression",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 12,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    },
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_implementation",
+          "failure_class": "",
+          "family": "implementation",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 22,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_implementation",
+      "failure_class": "",
+      "family": "implementation",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 22,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    },
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_benefits_and_total_compensation",
+          "failure_class": "",
+          "family": "benefits_and_total_compensation",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 27,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_benefits_and_total_compensation",
+      "failure_class": "",
+      "family": "benefits_and_total_compensation",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 27,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    },
+    {
+      "attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "diagnostic_name": "hosted_search_urbanicity_and_context",
+          "failure_class": "",
+          "family": "urbanicity_and_context",
+          "passed": true,
+          "response_id_present": true,
+          "source_count": 29,
+          "token_usage_present": true,
+          "web_search_enabled": true
+        }
+      ],
+      "diagnostic_name": "hosted_search_urbanicity_and_context",
+      "failure_class": "",
+      "family": "urbanicity_and_context",
+      "passed": true,
+      "response_id_present": true,
+      "source_count": 29,
+      "token_usage_present": true,
+      "web_search_enabled": true
+    }
+  ],
+  "run_at": "2026-08-04T23:03:43.336828+00:00",
+  "secrets_logged": false,
+  "smoke_family_count": 7,
+  "transport_category": "A"
+}

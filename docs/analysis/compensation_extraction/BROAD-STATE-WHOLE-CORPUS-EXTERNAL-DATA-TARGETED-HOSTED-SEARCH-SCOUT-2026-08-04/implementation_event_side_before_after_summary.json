@@ -1,0 +1,20 @@
+{
+  "after": {
+    "fire": 295,
+    "mixed": 12,
+    "non_safety": 149,
+    "police": 965,
+    "remains_unclear": 1184,
+    "safety_combined": 11,
+    "side_independent": 382
+  },
+  "before": {
+    "fire": 287,
+    "mixed": 12,
+    "non_safety": 140,
+    "police": 940,
+    "safety_combined": 11,
+    "unclear": 1608
+  },
+  "reconciles": true
+}

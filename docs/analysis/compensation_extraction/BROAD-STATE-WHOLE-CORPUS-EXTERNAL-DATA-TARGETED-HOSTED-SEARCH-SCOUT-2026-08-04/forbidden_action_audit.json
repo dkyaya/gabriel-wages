@@ -1,0 +1,18 @@
+{
+  "candidate_url_get_or_head": false,
+  "candidate_verification": false,
+  "causal_effect_estimate": false,
+  "final_map_or_report_visual": false,
+  "gabriel_rating": false,
+  "national_prevalence_estimate": false,
+  "national_wage_gap_estimate": false,
+  "normalization_or_matching": false,
+  "ocr": false,
+  "passed": true,
+  "pdf_docx_slides": false,
+  "regression": false,
+  "source_download": false,
+  "source_review": false,
+  "text_extraction": false,
+  "treatment_effect": false
+}

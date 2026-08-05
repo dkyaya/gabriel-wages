@@ -1,0 +1,8 @@
+{
+  "default_calls_per_target": 1,
+  "production_primary_call_budget": 2297,
+  "production_probe_calls": 1,
+  "repair_call_maximum": 2297,
+  "smoke_calls": 8,
+  "uncontrolled_retries": 0
+}

@@ -1,0 +1,20 @@
+{
+  "components": [
+    "locked objective",
+    "input/output contracts",
+    "allowed/forbidden actions",
+    "preflight",
+    "bulk joins",
+    "queue compaction",
+    "five staggered lanes",
+    "per-target checkpoints",
+    "resume protection",
+    "bounded repair",
+    "call ledger",
+    "candidate dedup",
+    "failure routing",
+    "dashboard",
+    "relay",
+    "candidate-discovery stop"
+  ]
+}

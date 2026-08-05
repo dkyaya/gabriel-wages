@@ -1,0 +1,33 @@
+{
+  "derived_crosswalk_tracked": true,
+  "sources": [
+    {
+      "bytes": 1221402,
+      "local_name": "2024_Gaz_place_national.zip",
+      "official_source": "U.S. Census Bureau",
+      "payload_tracked": false,
+      "reference_year": "2024"
+    },
+    {
+      "bytes": 1491107,
+      "local_name": "2024_Gaz_cousubs_national.zip",
+      "official_source": "U.S. Census Bureau",
+      "payload_tracked": false,
+      "reference_year": "2024"
+    },
+    {
+      "bytes": 4523425,
+      "local_name": "tab20_ua20_place20_natl.txt",
+      "official_source": "U.S. Census Bureau",
+      "payload_tracked": false,
+      "reference_year": "2020"
+    },
+    {
+      "bytes": 5260432,
+      "local_name": "tab20_ua20_cousub20_natl.txt",
+      "official_source": "U.S. Census Bureau",
+      "payload_tracked": false,
+      "reference_year": "2020"
+    }
+  ]
+}

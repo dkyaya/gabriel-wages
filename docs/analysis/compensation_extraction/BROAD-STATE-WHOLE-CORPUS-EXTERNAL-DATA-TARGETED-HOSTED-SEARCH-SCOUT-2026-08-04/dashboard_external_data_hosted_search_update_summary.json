@@ -1,0 +1,21 @@
+{
+  "current_stage": "Targeted external-data hosted-search scout complete",
+  "browser_visual_validation": "not_run_no_connected_browser_instance",
+  "dashboard_build_status": "pass",
+  "final_pi_report_href": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
+  "map_primary_metric": "scout_coverage_rate",
+  "local_http_link_checks": {
+    "corrected_scaffold": 200,
+    "final_pi_report": 200,
+    "prior_draft": 200,
+    "semantic_repair_scaffold": 200
+  },
+  "next_task": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-CANDIDATE-REVIEW-2026-08-05",
+  "no_final_heatmaps_added": true,
+  "prior_corrected_scaffold_href": "reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
+  "prior_draft_href": "reports/whole_corpus_claim_package_review_2026-08-03/whole_corpus_causal_mechanism_report_draft_2026-08-03.md",
+  "scout_coverage_percent": 99.9579,
+  "semantic_scaffold_href": "reports/whole_corpus_evidence_semantic_repair_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_semantic_repair_2026-08-04.md",
+  "technical_details_collapsed": true,
+  "wage_growth_continuity_preserved": true
+}

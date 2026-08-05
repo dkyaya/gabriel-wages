@@ -156,7 +156,36 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
             "BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/"
             "whole_corpus_evidence_correction_summary.json"
         )
-        if whole_corpus_correction_summary.exists() and json.loads(
+        whole_corpus_external_scout_summary = (
+            ROOT / "docs/analysis/compensation_extraction/"
+            "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/"
+            "broad_state_whole_corpus_external_data_hosted_search_summary.json"
+        )
+        if whole_corpus_external_scout_summary.exists() and json.loads(
+            whole_corpus_external_scout_summary.read_text()
+        ).get("decision") == (
+            "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready"
+        ):
+            self.assertEqual(
+                phase["current_phase_code"],
+                "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready",
+            )
+            self.assertEqual(
+                phase["stage"],
+                "broad_state_whole_corpus_external_data_targeted_hosted_search_scout_complete",
+            )
+            self.assertEqual(phase["semantically_rewritten_evidence_card_count"], 31)
+            self.assertEqual(phase["root_compensation_event_count"], 2998)
+            self.assertEqual(phase["compacted_external_data_target_count"], 2297)
+            self.assertEqual(phase["canonical_external_data_candidate_count"], 29793)
+            self.assertEqual(
+                phase["semantic_repair_scaffold_href"],
+                "reports/whole_corpus_evidence_semantic_repair_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_semantic_repair_2026-08-04.md",
+            )
+            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+            self.assertFalse(phase["candidate_verification_performed"])
+            self.assertFalse(phase["final_visual_report_created"])
+        elif whole_corpus_correction_summary.exists() and json.loads(
             whole_corpus_correction_summary.read_text()
         ).get("decision") == (
             "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready"
@@ -781,7 +810,34 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
                                                                             and json.loads(whole_corpus_correction_summary.read_text()).get("decision")
                                                                             == "broad_state_whole_corpus_evidence_correction_completed_external_data_search_ready"
                                                                         )
-                                                                        if whole_corpus_correction_complete:
+                                                                        whole_corpus_external_scout_summary = (
+                                                                            ROOT / "docs/analysis/compensation_extraction/"
+                                                                            "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/"
+                                                                            "broad_state_whole_corpus_external_data_hosted_search_summary.json"
+                                                                        )
+                                                                        whole_corpus_external_scout_complete = (
+                                                                            whole_corpus_external_scout_summary.exists()
+                                                                            and json.loads(whole_corpus_external_scout_summary.read_text()).get("decision")
+                                                                            == "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready"
+                                                                        )
+                                                                        if whole_corpus_external_scout_complete:
+                                                                            self.assertEqual(
+                                                                                phase["current_phase"],
+                                                                                "Targeted external-data hosted-search scout complete",
+                                                                            )
+                                                                            self.assertEqual(
+                                                                                phase["next_task"],
+                                                                                "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-CANDIDATE-REVIEW-2026-08-05",
+                                                                            )
+                                                                            self.assertEqual(phase["semantically_rewritten_evidence_card_count"], 31)
+                                                                            self.assertEqual(phase["root_compensation_event_count"], 2998)
+                                                                            self.assertEqual(phase["compacted_external_data_target_count"], 2297)
+                                                                            self.assertEqual(phase["canonical_external_data_candidate_count"], 29793)
+                                                                            self.assertEqual(
+                                                                                phase["semantic_repair_scaffold_link_label"],
+                                                                                "Open semantically repaired whole-corpus evidence scaffold (MD)",
+                                                                            )
+                                                                        elif whole_corpus_correction_complete:
                                                                             self.assertEqual(
                                                                                 phase["current_phase"],
                                                                                 "Whole-corpus evidence correction and implementation-event recoding complete",

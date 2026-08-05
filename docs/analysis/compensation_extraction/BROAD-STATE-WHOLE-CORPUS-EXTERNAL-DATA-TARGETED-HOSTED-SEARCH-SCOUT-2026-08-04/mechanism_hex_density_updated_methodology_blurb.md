@@ -1,0 +1,3 @@
+# How the map is counted
+
+Each map counts deduplicated mechanism-exposure events at the municipality × compensation cycle × mechanism × employee-side level. Only formally adopted, implemented, or paid/observed actions enter the visual-ready layer. Repeated mentions do not add events, and corroborating sources increase confidence rather than counts. Missing sides remain outside safety and non-safety totals. Safety and non-safety views use the same fixed 50 km EPSG:5070 lower-48 grid, scale metadata, and legend rule. Alaska and Hawaii are preserved as future inset-ready records. Hex density summarizes regional concentration without asking readers to inspect thousands of municipality points; these are documentary event counts, not population prevalence.

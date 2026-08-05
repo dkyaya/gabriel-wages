@@ -1,0 +1,54 @@
+{
+  "families_separate": true,
+  "mechanism_exposure_events": 13391,
+  "root_events": 2998,
+  "tag_counts": {
+    "compensation_outcome": {
+      "across_the_board_raise": 373,
+      "base_wage_change": 120,
+      "benefit_cost_change": 65,
+      "classification_band_change": 45,
+      "cola_cpi_adjustment": 79,
+      "holiday_pay": 22,
+      "longevity": 40,
+      "lump_sum": 22,
+      "no_direct_compensation_outcome": 546,
+      "non_base_compensation_other": 292,
+      "overtime": 38,
+      "reimbursement": 7,
+      "retroactive_pay": 1427,
+      "salary_range_change": 12,
+      "step_progression": 90,
+      "stipend_or_premium": 63,
+      "uniform_or_equipment_allowance": 69
+    },
+    "institutional_channel": {
+      "budget_pay_plan_process": 618,
+      "classification_civil_service": 4,
+      "collective_bargaining": 17,
+      "interest_arbitration": 1,
+      "none_identified": 2163,
+      "ordinance_council_adoption": 260,
+      "settlement_or_mou": 59
+    },
+    "pressure_channel": {
+      "bargaining_leverage": 17,
+      "comparability_parity": 6,
+      "fiscal_constraint": 619,
+      "inflation_indexing": 31,
+      "market_recruitment_retention": 44,
+      "none_identified": 2285,
+      "vacancy_pressure": 8
+    },
+    "timing_implementation": {
+      "budget_appropriation": 64,
+      "contract_ratification": 9,
+      "one_time": 311,
+      "ordinance_adoption": 211,
+      "payroll_effective_date": 1996,
+      "recurring": 794,
+      "retroactive": 1427,
+      "unclear": 141
+    }
+  }
+}

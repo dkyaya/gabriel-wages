@@ -1,0 +1,8 @@
+{
+  "compacted_live_targets": 2297,
+  "cross_family_shared_searches": true,
+  "many_to_many_linkage_rows": 14395,
+  "raw_targets": 20986,
+  "reduction_percent": 89.0546,
+  "resolved_by_authoritative_bulk_join": 2998
+}

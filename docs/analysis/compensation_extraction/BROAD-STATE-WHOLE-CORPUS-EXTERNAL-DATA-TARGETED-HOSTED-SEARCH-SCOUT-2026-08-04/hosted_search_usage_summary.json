@@ -1,0 +1,18 @@
+{
+  "dollar_cost_status": "reliable_dollar_cost_not_available",
+  "hosted_search_smoke_calls": 7,
+  "input_tokens": 19763330,
+  "no_search_control_calls": 1,
+  "output_tokens": 2089150,
+  "production_primary_calls": 2297,
+  "production_probe_calls": 1,
+  "reasoning_tokens": 288653,
+  "repair_calls": 5,
+  "retry_calls": 0,
+  "successful_or_terminal_recorded_calls": 2311,
+  "superseded_sandbox_hosted_search_attempts": 14,
+  "superseded_sandbox_no_search_attempts": 1,
+  "superseded_sandbox_transport_attempts": 15,
+  "total_tokens": 21852480,
+  "total_transport_attempts": 2326
+}

@@ -39,6 +39,38 @@
       ]
     },
     {
+      "id": "whole-corpus-evidence-semantic-repair-2026-08-04",
+      "title": "Semantically repaired whole-corpus evidence scaffold",
+      "report_type": "Active internal evidence-review scaffold",
+      "date": "2026-08-04",
+      "checkpoint": "31 cards; 2998 root actions; 29793 candidate-only leads",
+      "summary": "Specific evidence-card explanations, split mechanism taxonomy, repaired sides, authoritative geography, visual-ready hex data, and metadata-only external candidate discovery. Not a final report or estimate.",
+      "tags": [
+        "whole corpus",
+        "semantic repair",
+        "external data",
+        "internal review"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "reports/whole_corpus_evidence_semantic_repair_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_semantic_repair_2026-08-04.md",
+      "link_label": "Open semantically repaired whole-corpus evidence scaffold (MD)",
+      "scope_metrics": [
+        {
+          "label": "evidence cards",
+          "value": 31
+        },
+        {
+          "label": "root actions",
+          "value": 2998
+        },
+        {
+          "label": "canonical candidates",
+          "value": 29793
+        }
+      ]
+    },
+    {
       "id": "whole-corpus-evidence-corrected-2026-08-04",
       "title": "Corrected whole-corpus causal-mechanism evidence scaffold",
       "report_type": "Active internal evidence-review scaffold",

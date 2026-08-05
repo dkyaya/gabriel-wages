@@ -1,0 +1,91 @@
+# Validation report
+
+- PASS — 01 all 31 evidence cards processed
+- PASS — 02 every retained card has bounded excerpt
+- PASS — 03 every card has specific mechanism explanation
+- PASS — 04 every card has pressure and beneficiary
+- PASS — 05 every card explains safety wage growth relevance
+- PASS — 06 every card has example specific limitation
+- PASS — 07 template duplication audited
+- PASS — 08 narrative scaffold excludes machine identifiers
+- PASS — 09 root compensation event layer exists
+- PASS — 10 institutional channels separate from outcomes
+- PASS — 11 timing channels separate
+- PASS — 12 pressure channels separate
+- PASS — 13 validated multi tag bundles preserved
+- PASS — 14 exposures link to root events
+- PASS — 15 no duplicate mechanism map key
+- PASS — 16 root and exposure counts separate
+- PASS — 17 collective bargaining not hidden
+- PASS — 18 procedural no outcome preserved
+- PASS — 19 all 1608 unclear side events processed
+- PASS — 20 specific side repairs have moderate or high confidence
+- PASS — 21 low confidence sides not forced
+- PASS — 22 side independent is separate
+- PASS — 23 unresolved sides retain reasons
+- PASS — 24 side before after counts reconcile
+- PASS — 25 coordinates are authoritative
+- PASS — 26 no coordinates fabricated
+- PASS — 27 geographic crosswalk has stable ids
+- PASS — 28 coordinate conflicts and missing documented
+- PASS — 29 urbanicity method documented
+- PASS — 30 suburban classification not fabricated
+- PASS — 31 external reference payloads not in output
+- PASS — 32 one fixed lower48 grid
+- PASS — 33 fixed radius is 50km
+- PASS — 34 safety non safety share scale metadata
+- PASS — 35 hexes use event counts
+- PASS — 36 repeated mentions do not inflate hexes
+- PASS — 37 alaska hawaii not silently dropped
+- PASS — 38 difference views labeled event count difference
+- PASS — 39 no final map image created
+- PASS — 40 raw 20986 target queue preserved
+- PASS — 41 compacted queue created
+- PASS — 42 every raw target has terminal compaction route
+- PASS — 43 many to many target event linkage reconciles
+- PASS — 44 no external data family silently lost
+- PASS — 45 planned call budget exists
+- PASS — 46 primary and repair query rules documented
+- PASS — 47 successful targets reused across linked events
+- PASS — 48 transport preflight passed
+- PASS — 49 production probe passed
+- PASS — 50 five lane queues are disjoint
+- PASS — 51 five lanes cover each target once
+- PASS — 52 each target has one terminal status
+- PASS — 53 checkpoints reconcile to results
+- PASS — 54 completed targets not uncontrolled rerun
+- PASS — 55 call ledger reconciles
+- PASS — 56 call types separated
+- PASS — 57 no secrets in logs
+- PASS — 58 every candidate links to target
+- PASS — 59 candidate duplicates preserve linkage
+- PASS — 60 canonical candidates reconcile
+- PASS — 61 official source flags use domain metadata
+- PASS — 62 review queue excludes duplicate only rows
+- PASS — 63 no candidate url verification
+- PASS — 64 no candidate source download
+- PASS — 65 no candidate source review
+- PASS — 66 no candidate text extraction
+- PASS — 67 no ocr
+- PASS — 68 no rating
+- PASS — 69 no new normalization or matching
+- PASS — 70 no regression or treatment effect
+- PASS — 71 no national wage gap estimate
+- PASS — 72 no national prevalence estimate
+- PASS — 73 no causal effect estimate
+- PASS — 74 semantic scaffold analysis exists
+- PASS — 75 semantic scaffold public exists
+- PASS — 76 new dashboard link resolves statically
+- PASS — 77 prior draft link intact
+- PASS — 78 prior corrected scaffold link intact
+- PASS — 79 final pi report link intact
+- PASS — 80 wage growth module intact
+- PASS — 81 dashboard map remains scout coverage rate
+- PASS — 82 no final heatmap added to dashboard
+- PASS — 83 dashboard structure remains compact
+- PASS — 84 no pdf docx or slides created
+- PASS — 85 retained source root still ignored
+- PASS — 86 extracted text root still ignored
+- PASS — 87 external reference root ignored
+- PASS — 88 hosted search metadata root ignored
+- PASS — 89 no local payload in analysis output

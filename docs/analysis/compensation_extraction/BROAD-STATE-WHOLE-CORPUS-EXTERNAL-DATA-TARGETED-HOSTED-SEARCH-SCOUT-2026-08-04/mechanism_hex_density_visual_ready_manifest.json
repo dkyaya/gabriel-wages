@@ -1,0 +1,8 @@
+{
+  "event_unit": "deduplicated mechanism exposure",
+  "final_images_created": 0,
+  "fixed_grid": true,
+  "hex_radius_km": 50,
+  "projection": "EPSG:5070",
+  "row_count": 6387
+}

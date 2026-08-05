@@ -1,0 +1,3 @@
+# Search-target compaction summary
+
+The preserved blanket queue contains 20,986 event-family rows. Census bulk joins resolve 2,998 geography/context rows. The remaining gaps are compacted into 2,297 shared municipality × period × side-scope administrative-source searches, a 89.05% reduction from the raw queue. Each compacted target retains every source family and a many-to-many linkage back to root actions, mechanism exposures, and missingness rows. One successful municipal budget, payroll portal, HR report, or compensation study can therefore serve multiple linked gaps without repeated search calls.

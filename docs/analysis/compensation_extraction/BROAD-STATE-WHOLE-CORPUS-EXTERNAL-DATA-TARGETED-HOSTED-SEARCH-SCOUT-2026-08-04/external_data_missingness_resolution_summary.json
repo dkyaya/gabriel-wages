@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "candidate_discovered": 17958,
+    "resolved_by_bulk_reference": 2998,
+    "zero_candidate": 30
+  },
+  "record_count": 20986
+}

@@ -1,0 +1,11 @@
+{
+  "incident_count": 1,
+  "incidents": [
+    {
+      "candidate_rows_promoted": 0,
+      "effect": "all failed before usable response; no target consumed; rerun outside restricted sandbox passed Category A",
+      "transport_attempts": 15,
+      "type": "sandbox_network_restriction"
+    }
+  ]
+}

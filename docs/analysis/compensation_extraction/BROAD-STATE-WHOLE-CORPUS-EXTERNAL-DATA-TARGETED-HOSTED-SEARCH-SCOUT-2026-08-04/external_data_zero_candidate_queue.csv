@@ -1,0 +1,3 @@
+candidate_count,completed_at,failure_class,lane_id,primary_call_completed,repair_call_used,search_target_id,terminal_target_status
+0,2026-08-04T23:51:04.677097+00:00,,external_search_lane_001,true,true,EXTSEARCH-ca25704908fb1973e9a37f88,zero_candidate
+0,2026-08-05T00:22:19.411143+00:00,,external_search_lane_005,true,true,EXTSEARCH-b43900a5896fa8f61c73bb76,zero_candidate

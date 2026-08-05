@@ -1,0 +1,36 @@
+{
+  "candidate_manifest_hash": "8a5aff8c28934bcc19dd9b1df2841a94d51ae9aaac65141e38ddea83737c94d4",
+  "decision": "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready",
+  "finalized_at": "2026-08-05T00:47:51.527173+00:00",
+  "head_before": "14e677e74b090d78eba4d63e3eeaa0d05143c847",
+  "input_hashes": {
+    "artifacts/local_external_reference_data/whole_corpus_external_data_search_2026-08-04/2024_Gaz_cousubs_national.zip": "5b9404979bdd978f6eaf6b37dc2bd995f9aedbdbfac1fe7c98c407bc1a337f75",
+    "artifacts/local_external_reference_data/whole_corpus_external_data_search_2026-08-04/2024_Gaz_place_national.zip": "cf262fc92b2326f7a8c62a89d156a60eb17d64d6d35f7a62310c43bb08972c06",
+    "artifacts/local_external_reference_data/whole_corpus_external_data_search_2026-08-04/tab20_ua20_cousub20_natl.txt": "efa7b94863e588ad298fdbaf1ac13a101f7368873639bfc3e96417f37cdd4598",
+    "artifacts/local_external_reference_data/whole_corpus_external_data_search_2026-08-04/tab20_ua20_place20_natl.txt": "f4545604f67c71f58bd3e6d79bead37303dd365eb8903e547037e94d517b70cb",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_missingness_matrix.csv": "54f0889fbfc9dd723a962baeeca3910de73aea773b93ca7937f90b8a3a90259b",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/external_data_search_target_queue.csv": "8a3145ec19933d2202acd54caafd64e23f6d383b239f5418223e99c68084734a",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_layer.csv": "4a1ab048f776dc124d2f0d7ba20d0a71f36704fda816a1163bfdab8961d408f1",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/repaired_evidence_examples.csv": "191782b1755c6dfb253129679e21a152dd566f78b2b1accafe0f9bd1e2eca5b4",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md": "6a74ec930e8c67e0a7b64af970716e3c6d5133adbd420be3bddddc05da202e21",
+    "docs/analysis/national_municipality_universe.csv": "cf7af977846a7bb3386dbdfa0d92c5f25c53126c47068f254a9dc304fc7cc4bd"
+  },
+  "lane_completion": {
+    "external_search_lane_001": "complete",
+    "external_search_lane_002": "complete",
+    "external_search_lane_003": "complete",
+    "external_search_lane_004": "complete",
+    "external_search_lane_005": "complete"
+  },
+  "live_search_complete": true,
+  "locked_counts": {
+    "cards": 31,
+    "implementation_events": 2998,
+    "raw_targets": 20986,
+    "unclear_sides": 1608
+  },
+  "prepared": true,
+  "prepared_at": "2026-08-04T22:34:00Z",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04",
+  "transport_preflight_complete": true
+}

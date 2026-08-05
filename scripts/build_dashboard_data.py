@@ -20774,6 +20774,101 @@ def main() -> int:
         reports_index["reports"].insert(1, corrected_report)
         reports_index["reports"].insert(2, prior_report)
 
+    # The targeted external-data scout is the next validated post-builder
+    # layer.  Apply it after the correction overlay so routine dashboard data
+    # regeneration preserves the semantic-repair scaffold as the active
+    # internal review artifact while retaining every prior report link.
+    external_scout_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04"
+    )
+    external_scout_summary_path = (
+        external_scout_dir
+        / "broad_state_whole_corpus_external_data_hosted_search_summary.json"
+    )
+    semantic_scaffold_href = (
+        "reports/whole_corpus_evidence_semantic_repair_2026-08-04/"
+        "whole_corpus_causal_mechanism_evidence_scaffold_semantic_repair_2026-08-04.md"
+    )
+    semantic_scaffold_path = (
+        ROOT / "docs" / "dashboard" / "public" / semantic_scaffold_href
+    )
+    if external_scout_summary_path.is_file() and semantic_scaffold_path.is_file():
+        external_scout = read_json(external_scout_summary_path)
+        project_phase_summary.update(
+            {
+                "current_phase": "Targeted external-data hosted-search scout complete",
+                "stage": "broad_state_whole_corpus_external_data_targeted_hosted_search_scout_complete",
+                "current_phase_code": external_scout["decision"],
+                "current_evidence_status": "candidate_discovery_complete_candidate_review_pending",
+                "next_task": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-CANDIDATE-REVIEW-2026-08-05",
+                "semantically_rewritten_evidence_card_count": external_scout["semantic_cards"],
+                "root_compensation_event_count": external_scout["root_compensation_events"],
+                "mechanism_exposure_event_count": external_scout["mechanism_exposure_events"],
+                "side_label_repair_count": external_scout["side_repair"]["repaired_to_specific_side"],
+                "side_independent_event_count": external_scout["side_repair"]["side_independent"],
+                "remaining_unclear_side_event_count": external_scout["side_repair"]["remains_unclear"],
+                "municipality_coordinate_join_count": external_scout["coordinates"]["coordinates_joined"],
+                "municipality_coordinate_missing_count": external_scout["coordinates"]["missing"],
+                "municipality_coordinate_conflict_count": external_scout["coordinates"]["conflicts"],
+                "municipality_urbanicity_counts": external_scout["urbanicity"]["counts"],
+                "mechanism_hex_density_visual_ready_row_count": external_scout["hex_density_rows"],
+                "raw_external_data_target_count": external_scout["raw_targets"],
+                "compacted_external_data_target_count": external_scout["compacted_targets"],
+                "external_data_target_reduction_percent": external_scout["reduction_percent"],
+                "hosted_search_production_call_count": external_scout["production_calls"],
+                "hosted_search_repair_call_count": external_scout["repair_calls"],
+                "candidate_bearing_target_count": external_scout["candidate_bearing_targets"],
+                "zero_candidate_target_count": external_scout["zero_candidate_targets"],
+                "canonical_external_data_candidate_count": external_scout["canonical_candidates"],
+                "official_source_candidate_count": external_scout["official_source_candidates"],
+                "external_data_candidates_by_family": external_scout["candidate_family_counts"],
+                "staffing_hypothesis_candidate_count": external_scout["staffing_hypothesis_candidates"],
+                "semantic_repair_scaffold_available": True,
+                "semantic_repair_scaffold_href": semantic_scaffold_href,
+                "semantic_repair_scaffold_link_label": "Open semantically repaired whole-corpus evidence scaffold (MD)",
+                "active_internal_review_href": semantic_scaffold_href,
+                "global_wage_gap_readiness": False,
+                "global_causal_readiness": False,
+                "causal_mechanism_interpretation_gate": external_scout["causal_mechanism_interpretation"],
+                "candidate_verification_performed": False,
+                "candidate_source_download_performed": False,
+                "candidate_text_extraction_performed": False,
+                "candidate_rating_performed": False,
+                "final_visual_report_created": False,
+                "dashboard_map_primary_metric": "scout_coverage_rate",
+            }
+        )
+        semantic_report = {
+            "id": "whole-corpus-evidence-semantic-repair-2026-08-04",
+            "title": "Semantically repaired whole-corpus evidence scaffold",
+            "report_type": "Active internal evidence-review scaffold",
+            "date": "2026-08-04",
+            "checkpoint": (
+                f"{external_scout['semantic_cards']} cards; "
+                f"{external_scout['root_compensation_events']} root actions; "
+                f"{external_scout['canonical_candidates']} candidate-only leads"
+            ),
+            "summary": "Specific evidence-card explanations, split mechanism taxonomy, repaired sides, authoritative geography, visual-ready hex data, and metadata-only external candidate discovery. Not a final report or estimate.",
+            "tags": ["whole corpus", "semantic repair", "external data", "internal review"],
+            "current": False,
+            "historical": False,
+            "href": semantic_scaffold_href,
+            "link_label": "Open semantically repaired whole-corpus evidence scaffold (MD)",
+            "scope_metrics": [
+                {"label": "evidence cards", "value": external_scout["semantic_cards"]},
+                {"label": "root actions", "value": external_scout["root_compensation_events"]},
+                {"label": "canonical candidates", "value": external_scout["canonical_candidates"]},
+            ],
+        }
+        reports_index["reports"] = [
+            report
+            for report in reports_index["reports"]
+            if report.get("id") != semantic_report["id"]
+        ]
+        reports_index["reports"].insert(1, semantic_report)
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),

@@ -1,0 +1,12 @@
+{
+  "exact_duplicate_explanations": {
+    "The words “EFFECTIVE JULY 1, 2023 TO JUNE 30, 2026 ARTICLE NO. 1 PREAMBLE 1.1 This Agreement entered into by the City of Big” identify the concrete compensation term; they show how the effective date reaches backward, converting a later decision into compensation owed for an earlier period.": 2,
+    "The words “most employees who have completed one year of service with a 4% cost-of-living adjustment (COLA) while allocating a base pay increase for” identify the concrete COLA or indexing rule; they show how the formula links pay to an inflation measure or stated cost-of-living adjustment.": 2,
+    "The words “provide additional base wage increases for all the bargaining unit members as set forth more fully below. This MOA by and between” identify the concrete pay term; they show how market or staffing evidence is used to justify compensation intended to recruit or retain workers.": 2,
+    "The words “• Assessor- $1,311.36 increase – market adjustment for 2025 Building inspection - $9,992.50 Increase (increase on salaries and contracted services)” identify the concrete compensation term; they show how the operative language connects an institutional decision to a defined compensation rule or payment.": 2
+  },
+  "duplicate_groups_justified": true,
+  "handling_reason": "Repeated explanation text occurs only where the same bounded excerpt and citation are intentionally reused in more than one claim section; no generic template repetition spans distinct evidence.",
+  "passed": true,
+  "unique_support_explanations": 27
+}

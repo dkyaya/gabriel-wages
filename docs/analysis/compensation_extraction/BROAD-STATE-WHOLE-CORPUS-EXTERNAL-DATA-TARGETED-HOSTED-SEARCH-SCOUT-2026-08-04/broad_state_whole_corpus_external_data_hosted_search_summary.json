@@ -1,0 +1,60 @@
+{
+  "candidate_bearing_targets": 2295,
+  "candidate_discovery_only": true,
+  "candidate_family_counts": {
+    "benefits_and_total_compensation": 29793,
+    "implementation": 29793,
+    "payroll_and_earnings": 29793,
+    "recruitment_and_retention": 29793,
+    "staffing_and_headcount": 29793,
+    "tenure_and_progression": 29793
+  },
+  "canonical_candidates": 29793,
+  "causal_mechanism_interpretation": "pass",
+  "compacted_targets": 2297,
+  "coordinates": {
+    "conflicts": 0,
+    "coordinates_joined": 1440,
+    "fabricated": 0,
+    "missing": 0,
+    "unique_municipalities": 1440
+  },
+  "decision": "broad_state_whole_corpus_external_data_hosted_search_scout_completed_candidate_review_ready",
+  "error_targets": 0,
+  "global_causal_estimation_readiness": false,
+  "global_wage_gap_readiness": false,
+  "hex_density_rows": 6387,
+  "lane_counts": {
+    "external_search_lane_001": 459,
+    "external_search_lane_002": 460,
+    "external_search_lane_003": 460,
+    "external_search_lane_004": 459,
+    "external_search_lane_005": 459
+  },
+  "mechanism_exposure_events": 13391,
+  "official_source_candidates": 12101,
+  "production_calls": 2297,
+  "raw_candidates": 52529,
+  "raw_targets": 20986,
+  "reduction_percent": 89.0546,
+  "repair_calls": 5,
+  "root_compensation_events": 2998,
+  "semantic_cards": 31,
+  "side_repair": {
+    "processed": 1608,
+    "remains_unclear": 1184,
+    "repaired_to_specific_side": 42,
+    "side_independent": 382,
+    "write_off": 0
+  },
+  "staffing_hypothesis_candidates": 29793,
+  "urbanicity": {
+    "counts": {
+      "rural": 682,
+      "unknown": 290,
+      "urban": 468
+    },
+    "suburban_created": false
+  },
+  "zero_candidate_targets": 2
+}

@@ -1,0 +1,37 @@
+{
+  "convention": "the required base filename is part 001; .part-NNN files continue it",
+  "parts": [
+    {
+      "csv_bytes": 23023297,
+      "csv_path": "merged_external_data_candidates.csv",
+      "csv_sha256": "5ab339f25b5139502430ce561b2340f780346fe17b844130aac7b3c789d2388f",
+      "jsonl_bytes": 33485032,
+      "jsonl_path": "merged_external_data_candidates.jsonl",
+      "jsonl_sha256": "11453ce63f814d8cd9ddcd782d2f86a022463b8a238c7ed6397e8138acdacabe",
+      "part": 1,
+      "row_count": 20000
+    },
+    {
+      "csv_bytes": 23033669,
+      "csv_path": "merged_external_data_candidates.part-002.csv",
+      "csv_sha256": "b703e0cb1673cd3d11403a433b3844e1b7439560b2290d94396c66be1b9dae1a",
+      "jsonl_bytes": 33495866,
+      "jsonl_path": "merged_external_data_candidates.part-002.jsonl",
+      "jsonl_sha256": "48a9db44473aacc05e9d997efd47a91bdd33671ebab2c126fbd7d57cdc58bf26",
+      "part": 2,
+      "row_count": 20000
+    },
+    {
+      "csv_bytes": 14414250,
+      "csv_path": "merged_external_data_candidates.part-003.csv",
+      "csv_sha256": "f6af982098f52550c1808d858a00d881f13f81f3e9483267183bfdba01de570c",
+      "jsonl_bytes": 20967502,
+      "jsonl_path": "merged_external_data_candidates.part-003.jsonl",
+      "jsonl_sha256": "97734515007b738e06fc8e5f2084c0ad6f5b32ae982878a2b37b711e3cb8749f",
+      "part": 3,
+      "row_count": 12529
+    }
+  ],
+  "sharded": true,
+  "total_rows": 52529
+}
