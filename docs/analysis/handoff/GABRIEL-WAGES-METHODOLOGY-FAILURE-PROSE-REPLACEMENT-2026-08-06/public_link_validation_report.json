@@ -1,0 +1,17 @@
+{
+  "status": "deployment_pending",
+  "content_commit": "59a1bfc926108a2a5591980a9b4efd048115a902",
+  "push_status": "pushed to origin/main",
+  "raw_github_pdf_url": "https://raw.githubusercontent.com/dkyaya/gabriel-wages/main/docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+  "raw_github_http_validation": "pass",
+  "raw_github_sha256": "781adb2ffe047d8a8523fcf3a65e743917bb1a3e0ca00c7df0f8c85a035a9b76",
+  "committed_pdf_sha256": "781adb2ffe047d8a8523fcf3a65e743917bb1a3e0ca00c7df0f8c85a035a9b76",
+  "checksum_match": true,
+  "raw_github_pages": 58,
+  "github_pages_pdf_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+  "github_pages_landing_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/",
+  "github_pages_http_result_at_audit": 404,
+  "github_pages_workflow_run": "https://github.com/dkyaya/gabriel-wages/actions/runs/31128806166",
+  "github_pages_workflow_status_at_audit": "in_progress during repository checkout",
+  "interpretation": "The committed and raw-GitHub PDF are validated. The Pages endpoint is pending and is not a PDF QA failure."
+}

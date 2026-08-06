@@ -13,5 +13,10 @@
   "final_pdf_sha256": "781adb2ffe047d8a8523fcf3a65e743917bb1a3e0ca00c7df0f8c85a035a9b76",
   "final_pdf_bytes": 2409377,
   "scope": "surgical methodology prose replacement",
-  "new_research": false
+  "new_research": false,
+  "content_commit": "59a1bfc926108a2a5591980a9b4efd048115a902",
+  "push_status": "pushed to origin/main",
+  "raw_github_validation": "pass; downloaded file matches the committed SHA-256",
+  "github_pages_status": "deployment pending",
+  "github_pages_run": "https://github.com/dkyaya/gabriel-wages/actions/runs/31128806166"
 }
