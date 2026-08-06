@@ -26,7 +26,7 @@
     "VOL-022"
   ],
   "next_incomplete_volume_id": "VOL-023",
-  "read_me_first_SHA256": "6298f14fb447d9a9cb1b3afff6f44f8e9691867ae5d54fa6fb5d8803f54d2ad6",
+  "read_me_first_SHA256": "7b2efb016341281ae12c3efc3c4841a8edc2ef6dea52228d86a8cdd7429eb974",
   "read_me_first_path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/gabriel-wages-source-library-2026-08-06.READ-ME-FIRST.zip",
   "remaining_planned_bytes": 11048027602,
   "remaining_volume_count": 6,
