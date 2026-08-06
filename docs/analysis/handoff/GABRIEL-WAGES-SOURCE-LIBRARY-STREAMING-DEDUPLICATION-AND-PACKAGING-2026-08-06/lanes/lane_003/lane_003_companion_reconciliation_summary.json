@@ -1,0 +1,109 @@
+{
+  "blockers": [],
+  "canonical_source_count": 26637,
+  "canonical_source_files_missing": 0,
+  "canonical_source_files_present": 26637,
+  "companion_status_counts": {
+    "current_text_companion_available": 23454,
+    "no_text_companion_extraction_repair_required": 97,
+    "no_text_companion_no_extraction_manifest": 2623,
+    "no_text_companion_ocr_deferred": 118,
+    "no_text_companion_readiness_excluded": 328,
+    "structured_only_no_text_companion": 17
+  },
+  "forbidden_actions": {
+    "commit": false,
+    "copy": false,
+    "delete": false,
+    "extraction": false,
+    "ocr": false,
+    "package": false,
+    "stage": false
+  },
+  "generated_at": "2026-08-06T22:58:08.303797+00:00",
+  "lane_id": "lane_003",
+  "legacy_manifest_input_audit": [
+    {
+      "accepted": 321,
+      "manifest": "docs/analysis/compensation_extraction/TARGETED-TEXT-LAYER-EXTRACTION-321-READINESS-READY-SOURCES-2026-07-26/targeted_text_layer_extraction_321_results.csv",
+      "rows": 321,
+      "status": "loaded"
+    },
+    {
+      "accepted": 378,
+      "manifest": "docs/analysis/compensation_extraction/DASHBOARD-DECLUTTER-MAP-CORRECTION-AND-TIER-C-TEXT-SPAN-EXTRACTION-378-2026-07-27/tier_c_text_layer_extraction_378_results.csv",
+      "rows": 378,
+      "status": "loaded"
+    },
+    {
+      "accepted": 3815,
+      "manifest": "docs/analysis/compensation_extraction/COMBINED-BROAD-TEXT-EXTRACTION-4051-PARALLEL-LANES-2026-07-28/combined_broad_text_extraction_4051_results.csv",
+      "rows": 4051,
+      "status": "loaded"
+    },
+    {
+      "accepted": 2795,
+      "manifest": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30/extracted_text_manifest.csv",
+      "rows": 2940,
+      "status": "loaded"
+    },
+    {
+      "accepted": 2366,
+      "manifest": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02/extracted_text_manifest.csv",
+      "rows": 2558,
+      "status": "loaded"
+    }
+  ],
+  "linkage_uncertainty_counts": {
+    "linkage_unavailable": 2623,
+    "multiple_distinct_companion_versions_selected_by_priority": 357,
+    "multiple_paths_same_or_unhashed_text_selected_by_priority": 4,
+    "none_exact_source_hash_link": 23093,
+    "none_known_extraction_failure": 97,
+    "none_known_ocr_hold": 118,
+    "none_known_readiness_exclusion": 328,
+    "none_text_companion_not_applicable_to_csv": 17
+  },
+  "missing_manifested_companion_candidate_paths": 0,
+  "qa": {
+    "canonical_source_count": 26637,
+    "canonical_source_files_missing": 0,
+    "canonical_source_files_present": 26637,
+    "generated_at": "2026-08-06T22:58:08.303797+00:00",
+    "manifested_size_matches_actual_for_selected": 23454,
+    "manifested_size_mismatch_for_selected": 0,
+    "no_extraction_performed": true,
+    "no_files_copied_moved_deleted_or_packaged": true,
+    "no_ocr_performed": true,
+    "passed": true,
+    "proposed_companion_path_collisions": 0,
+    "queue_row_count": 26637,
+    "reconciliation_row_count": 26637,
+    "sampled_companion_hash_count": 50,
+    "sampled_companion_hash_matches": 50,
+    "selected_companion_count": 23454,
+    "selected_companions_exist": true,
+    "selected_links_use_exact_source_hash": true,
+    "source_hashes_outside_phase0_canonical_inventory": 0,
+    "unique_reconciliation_source_count": 26637
+  },
+  "scope": "extracted_text_companion_reconciliation_only",
+  "selected_companion_source_counts": {
+    "broad_state_4x2500_text": 2625,
+    "combined_broad_text_4051": 3761,
+    "remaining_municipalities_text": 2292,
+    "targeted_text_layer_321": 289,
+    "tier_c_text_layer_378": 344,
+    "whole_corpus_external_non_ocr_extraction": 14143
+  },
+  "selected_text_companion_bytes": 1201303562,
+  "selected_text_companion_count": 23454,
+  "selected_text_companion_manifested_bytes": 1201303562,
+  "selection_universe": "Phase 0 canonical sources after exact duplicate grouping",
+  "sources_without_selected_text_companion": 3183,
+  "uncertainties": [
+    "Multiple exact-hash-linked text variants are retained as alternatives; the newest complete pipeline is selected first.",
+    "Sources without any extraction manifest are not assumed to lack extractable text; they are left unlinked.",
+    "CSV sources with structured extraction are classified separately because they do not have a text companion."
+  ]
+}

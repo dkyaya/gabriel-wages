@@ -1,0 +1,15 @@
+{
+  "accepted_volume_count": 22,
+  "archive_volumes_git_tracked": false,
+  "canonical_selected_sources": 26635,
+  "no_full_uncompressed_staging_copy": true,
+  "original_sources_deleted": 0,
+  "release": "gabriel-wages-source-library-2026-08-06",
+  "remaining_volume_count": 6,
+  "selected_source_bytes": 56164354195,
+  "selected_text_bytes": 1201303562,
+  "selected_text_companions": 23454,
+  "status": "partial_transfer_space_required",
+  "task_id": "GABRIEL-WAGES-SOURCE-LIBRARY-STREAMING-DEDUPLICATION-AND-PACKAGING-2026-08-06",
+  "volume_count": 28
+}

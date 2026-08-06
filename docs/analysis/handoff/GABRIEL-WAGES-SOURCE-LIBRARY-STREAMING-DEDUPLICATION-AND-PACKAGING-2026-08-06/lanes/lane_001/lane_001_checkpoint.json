@@ -1,0 +1,19 @@
+{
+  "blocking_exceptions": 0,
+  "canonical_sources_accounted_for": 26637,
+  "completed_at_utc": "2026-08-06T22:56:04.679907+00:00",
+  "completed_queue_items": [
+    "L1-001",
+    "L1-002",
+    "L1-003",
+    "L1-004",
+    "L1-005",
+    "L1-006",
+    "L1-007"
+  ],
+  "eligible_canonical_sources": 26636,
+  "incomplete_queue_items": [],
+  "lane_id": "lane_001",
+  "quarantine_candidates": 1,
+  "status": "completed"
+}

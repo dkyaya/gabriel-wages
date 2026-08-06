@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "archive file exists",
+    "archive byte size matches manifest",
+    "volume SHA-256 matches",
+    "archive opens without error",
+    "member paths remain under the declared family root",
+    "no duplicate member paths",
+    "member count matches",
+    "uncompressed byte total matches",
+    "member SHA-256 matches canonical index when full-member-hash is enabled",
+    "first and last canonical IDs match deterministic ordering"
+  ],
+  "failure_behavior": "Do not transfer, reconstruct, or advance the packaging checkpoint for a failed volume.",
+  "purpose": "Validate one volume independently before transfer or reconstruction.",
+  "required_cli_contract": [
+    "--library-root",
+    "--volume-manifest",
+    "--volume-id",
+    "--full-member-hash"
+  ],
+  "result_values": [
+    "passed",
+    "failed",
+    "quarantined"
+  ],
+  "tool_name": "validate_source_library_volume"
+}

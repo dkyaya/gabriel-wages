@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "canonical_source_id": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "extraction_method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extraction_status": {
+      "enum": [
+        "available",
+        "partial",
+        "ocr_deferred",
+        "repair_required",
+        "unavailable"
+      ]
+    },
+    "limitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "original_library_relative_path": {
+      "description": "POSIX path relative to the source-library root.",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "type": "string"
+    },
+    "text_library_relative_path": {
+      "anyOf": [
+        {
+          "description": "POSIX path relative to the source-library root.",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "text_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "text_size_bytes": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "text_volume_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "canonical_source_id",
+    "original_library_relative_path",
+    "extraction_status"
+  ],
+  "title": "Extracted text companion record",
+  "type": "object"
+}

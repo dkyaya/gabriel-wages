@@ -1,0 +1,51 @@
+{
+  "fail_closed_conditions": [
+    "missing source",
+    "source size mismatch",
+    "source SHA-256 mismatch",
+    "path collision",
+    "archive write failure",
+    "checksum failure",
+    "member count mismatch",
+    "insufficient free space",
+    "unauthorized redistribution status"
+  ],
+  "invariants": [
+    "sort canonical sources deterministically by canonical_source_id",
+    "read each original once from its current canonical relative path",
+    "never materialize a complete uncompressed library tree",
+    "write no more than one active bounded volume plus compression overhead",
+    "preserve original bytes and file extension",
+    "reject absolute paths and parent traversal",
+    "close, checksum, list, and validate each volume before starting the next",
+    "append atomic checkpoint state only after a volume passes validation",
+    "do not delete, rename, or modify originals"
+  ],
+  "purpose": "Write bounded compressed source volumes directly from canonical roots without a full staging copy.",
+  "required_cli_contract": [
+    "--library-root",
+    "--canonical-index",
+    "--alias-index",
+    "--redistribution-index",
+    "--output-root",
+    "--max-uncompressed-bytes",
+    "--resume-state"
+  ],
+  "required_inputs": [
+    "canonical source selection table",
+    "alias table",
+    "redistribution review table",
+    "output directory",
+    "maximum uncompressed bytes per volume",
+    "archive format"
+  ],
+  "required_outputs_per_volume": [
+    "compressed archive",
+    "volume manifest row",
+    "SHA-256 checksum",
+    "member inventory",
+    "validation record",
+    "resume checkpoint"
+  ],
+  "tool_name": "stream_source_library_volumes"
+}

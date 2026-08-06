@@ -1,0 +1,28 @@
+{
+  "accepted_canonical_source_ids": 26637,
+  "completed_segments": [
+    "phase_0_canonical_source_queue",
+    "whole_corpus_non_ocr_extraction_pointer_reconciliation",
+    "legacy_extraction_manifest_reconciliation",
+    "companion_selection",
+    "status_and_uncertainty_classification",
+    "QA"
+  ],
+  "generated_at": "2026-08-06T22:58:08.303797+00:00",
+  "lane_id": "lane_003",
+  "output_hashes": {
+    "companion_linkage_uncertainty.csv": "a8b6334ccd81ad25b342482a309b3a6c3f4a44a0e30ee210aefe83d18372c560",
+    "companion_proposed_path_collision_audit.csv": "d6af56ff9abbbbdf44be8cf59efc333573e18931d5805def74e7ea9661418ff0",
+    "companion_status_summary.csv": "2967f69f8480a273362b059b5f9f70cc3b440423aa66ee4d32fed51646ed8077",
+    "lane_003_QA.json": "d25838f6566488f4a05a5c4297bd7490e67cdc50871702457a8de0c543eaba2a",
+    "lane_003_companion_reconciliation_summary.json": "e5c9ba79a579ee9d5a3f5d94c965d351853752213fbbdfb6a878dc9d25dae8b7",
+    "lane_003_queue.csv": "456f779be200fd53eda92a5f489e7c03b4d14d74b0c4ba983bb21261e1f77303",
+    "missing_or_nontext_companions.csv": "b571c40bcd48aea3134598cc232a1974bf1007a9fda932fb640758a0d72205b8",
+    "sampled_companion_hash_QA.csv": "565d81fd774bb1426b7d1aa7b0e3179af954458f004df96396237736600c5d8e",
+    "selected_extracted_text_companions.csv": "d6cf85fae176d760ea725bcbb607bed55d043a3d2d06396652a522e04f1ecfd7",
+    "source_companion_reconciliation.csv": "826857afe4de7c4edf8d390bdf40585c5ecb0b3e11d05d78bd605bf2955b24ec"
+  },
+  "resume_required": false,
+  "selected_companion_count": 23454,
+  "status": "completed"
+}

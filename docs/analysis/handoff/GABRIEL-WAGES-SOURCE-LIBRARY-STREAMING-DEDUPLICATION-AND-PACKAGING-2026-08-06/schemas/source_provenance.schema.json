@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gabriel Wages source provenance record",
+  "type": "object",
+  "required": ["source_id", "discovery_stage", "original_URL", "original_filename", "original_hash", "local_lineage_pointer"],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "discovery_stage": {"type": "string"},
+    "original_URL": {"type": "string"},
+    "retrieval_or_retention_date_if_known": {"type": "string"},
+    "source_host": {"type": "string"},
+    "official_source_flag_if_known": {"type": "string"},
+    "original_filename": {"type": "string"},
+    "original_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "local_lineage_pointer": {"type": "string"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

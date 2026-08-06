@@ -1,0 +1,26 @@
+{
+  "canonical_identity_count": 26637,
+  "decision": "Packaging may preserve sources for controlled handoff, but transfer scope and public redistribution require source-level review.",
+  "eligible_source_candidate_bytes": 56164354350,
+  "eligible_source_candidate_count_after_non_source_quarantine": 26636,
+  "extraction_status_metadata_counts": {
+    "blank": 26637
+  },
+  "public_distribution_ready_count": 0,
+  "redistribution_status_counts": {
+    "manual_review_required": 26637
+  },
+  "required_controls": [
+    "carry redistribution status into every canonical record",
+    "exclude restricted or unresolved sources when the transfer authorization requires it",
+    "do not publish source volumes on a public dashboard",
+    "record named-transfer approval without treating it as public redistribution permission"
+  ],
+  "review_reason_counts": {
+    "Redistribution rights not adjudicated in current project metadata.": 26637
+  },
+  "source_type_metadata_counts": {
+    "blank": 26637
+  },
+  "status": "manual_review_required_before_transfer_or_publication"
+}

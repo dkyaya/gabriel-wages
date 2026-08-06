@@ -1,0 +1,9 @@
+{
+  "lane_001": "canonical source reconciliation, exact duplicates, bounded source-hash validation",
+  "lane_002": "navigation metadata, aliases, provenance, geography, source families, portable paths",
+  "lane_003": "existing extracted-text companion reconciliation and OCR/extraction status",
+  "lane_004": "volume assignment, streaming tar.zst production, verification, resume architecture",
+  "lane_005": "recipient documentation, security, portability, redistribution review, schemas",
+  "archive_writer": "single coordinator after preparation lanes",
+  "status": "all five preparation lanes complete"
+}

@@ -1,0 +1,116 @@
+{
+  "large_local_files": [
+    {
+      "bytes": 1755887609,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-001.tar.zst"
+    },
+    {
+      "bytes": 1687321960,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-002.tar.zst"
+    },
+    {
+      "bytes": 1722219109,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-003.tar.zst"
+    },
+    {
+      "bytes": 1779032876,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-004.tar.zst"
+    },
+    {
+      "bytes": 1766370235,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-005.tar.zst"
+    },
+    {
+      "bytes": 1835644546,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-006.tar.zst"
+    },
+    {
+      "bytes": 1712305613,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-007.tar.zst"
+    },
+    {
+      "bytes": 1775811968,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-008.tar.zst"
+    },
+    {
+      "bytes": 1785048819,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-009.tar.zst"
+    },
+    {
+      "bytes": 1732565062,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-010.tar.zst"
+    },
+    {
+      "bytes": 1718060075,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-011.tar.zst"
+    },
+    {
+      "bytes": 1825300112,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-012.tar.zst"
+    },
+    {
+      "bytes": 1743940487,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-013.tar.zst"
+    },
+    {
+      "bytes": 1805881191,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-014.tar.zst"
+    },
+    {
+      "bytes": 1768867682,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-015.tar.zst"
+    },
+    {
+      "bytes": 1787478984,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-016.tar.zst"
+    },
+    {
+      "bytes": 1736433498,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-017.tar.zst"
+    },
+    {
+      "bytes": 1708784309,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-018.tar.zst"
+    },
+    {
+      "bytes": 1710665600,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-019.tar.zst"
+    },
+    {
+      "bytes": 1743100391,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-020.tar.zst"
+    },
+    {
+      "bytes": 1887038998,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-021.tar.zst"
+    },
+    {
+      "bytes": 1748035001,
+      "git_status": "ignored package volume",
+      "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/parts/gabriel-wages-source-library-2026-08-06.part-022.tar.zst"
+    }
+  ],
+  "large_tracked_files_added": 0,
+  "status": "pass"
+}

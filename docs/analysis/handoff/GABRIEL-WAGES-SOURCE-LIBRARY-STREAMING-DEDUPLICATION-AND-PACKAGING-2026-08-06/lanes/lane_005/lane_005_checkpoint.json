@@ -1,0 +1,16 @@
+{
+  "blockers": [],
+  "completed_at_utc": "2026-08-06T23:28:14.978596+00:00",
+  "completed_queue_items": [
+    "L5-001",
+    "L5-002",
+    "L5-003",
+    "L5-004",
+    "L5-005",
+    "L5-006",
+    "L5-007"
+  ],
+  "incomplete_queue_items": [],
+  "lane_id": "lane_005",
+  "status": "completed"
+}

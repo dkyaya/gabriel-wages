@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gabriel Wages source alias record",
+  "type": "object",
+  "required": ["source_id", "alias_id", "alias_filename", "original_local_pointer_hash", "alias_type"],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "alias_id": {"type": "string"},
+    "alias_title": {"type": "string"},
+    "alias_filename": {"type": "string"},
+    "alias_URL": {"type": "string"},
+    "alias_municipality": {"type": "string"},
+    "alias_state": {"type": "string"},
+    "original_local_pointer_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "alias_type": {"type": "string"}
+  },
+  "additionalProperties": false
+}

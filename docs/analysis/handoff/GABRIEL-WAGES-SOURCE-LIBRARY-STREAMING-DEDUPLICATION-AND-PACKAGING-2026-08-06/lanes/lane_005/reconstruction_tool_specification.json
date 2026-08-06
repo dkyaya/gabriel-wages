@@ -1,0 +1,31 @@
+{
+  "clean_room_acceptance": [
+    "no dependency on the original project repository",
+    "all relative paths resolve under the supplied library root",
+    "canonical count and bytes reconcile",
+    "all aliases resolve to a known canonical identity",
+    "redistribution review remains visible"
+  ],
+  "modes": [
+    "full_reconstruction",
+    "family_reconstruction",
+    "selective_canonical_source"
+  ],
+  "procedure": [
+    "validate the top-level library manifest",
+    "verify every selected volume checksum",
+    "reject archive path traversal, absolute members, and symlink escapes",
+    "extract originals and extracted text into separate roots",
+    "verify extracted original member hashes against canonical IDs",
+    "write a reconstruction report without altering package manifests"
+  ],
+  "purpose": "Reconstruct or selectively extract a verified library in a clean environment.",
+  "required_cli_contract": [
+    "--library-root",
+    "--destination",
+    "--verify-checksums",
+    "--family",
+    "--select-id"
+  ],
+  "tool_name": "reconstruct_source_library"
+}

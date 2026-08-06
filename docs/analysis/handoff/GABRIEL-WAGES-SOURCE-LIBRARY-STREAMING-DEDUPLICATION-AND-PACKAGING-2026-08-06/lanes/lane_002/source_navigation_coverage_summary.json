@@ -1,0 +1,63 @@
+{
+  "status": "complete_with_bounded_metadata_gaps",
+  "canonical_source_rows": 26637,
+  "navigation_packaging_eligible_rows": 26635,
+  "excluded_non_source_control_rows": 2,
+  "phase0_alias_rows": 162,
+  "raw_trusted_metadata_rows_indexed": 26801,
+  "sha256_exact_metadata_matches": 26635,
+  "phase0_path_only_rows": 2,
+  "metadata_confidence": {
+    "high": 24012,
+    "medium": 2623,
+    "limited": 2
+  },
+  "unresolved_field_counts": {
+    "extraction_status": 2774,
+    "mime_type": 2857,
+    "municipality": 2,
+    "original_url": 2,
+    "period": 6711,
+    "source_title": 14435,
+    "state": 2
+  },
+  "unresolved_field_rates": {
+    "extraction_status": 0.104141,
+    "mime_type": 0.107257,
+    "municipality": 7.5e-05,
+    "original_url": 7.5e-05,
+    "period": 0.251943,
+    "source_title": 0.541915,
+    "state": 7.5e-05
+  },
+  "source_family_counts": {
+    "administrative_report": 187,
+    "arbitration_or_factfinding": 425,
+    "benefits_or_pension": 440,
+    "budget_or_finance": 378,
+    "collective_bargaining": 3051,
+    "news_or_context": 8,
+    "ordinance_or_policy": 2802,
+    "other_document": 3967,
+    "payroll_or_earnings": 11238,
+    "salary_schedule_or_pay_plan": 3548,
+    "staffing_or_human_resources": 534,
+    "structured_data": 57,
+    "system_control_metadata": 2
+  },
+  "retrieval_stage_counts": {
+    "broad_state_4x2500": 3672,
+    "combined_broad_review": 4928,
+    "remaining_municipalities": 2858,
+    "targeted_tier_c": 422,
+    "targeted_verified_leads": 347,
+    "whole_corpus_external_pipeline": 14410
+  },
+  "archive_path_collision_groups": 0,
+  "readable_pre_hash_collision_groups": 390,
+  "maximum_archive_path_length": 218,
+  "maximum_sanitized_filename_length": 103,
+  "source_binaries_read": false,
+  "source_binaries_copied_or_modified": false,
+  "claims_or_analytical_outputs_included": false
+}

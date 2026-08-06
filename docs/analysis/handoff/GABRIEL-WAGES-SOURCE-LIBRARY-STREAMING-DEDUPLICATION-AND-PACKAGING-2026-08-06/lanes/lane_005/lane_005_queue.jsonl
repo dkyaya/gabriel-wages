@@ -1,0 +1,7 @@
+{"output_count": 5, "queue_item_id": "L5-001", "status": "completed", "work_item": "write recipient documentation"}
+{"output_count": 4, "queue_item_id": "L5-002", "status": "completed", "work_item": "run redacted metadata security scan"}
+{"output_count": 2, "queue_item_id": "L5-003", "status": "completed", "work_item": "audit relative-path portability"}
+{"output_count": 2, "queue_item_id": "L5-004", "status": "completed", "work_item": "audit redistribution status"}
+{"output_count": 2, "queue_item_id": "L5-005", "status": "completed", "work_item": "audit source-only boundary"}
+{"output_count": 7, "queue_item_id": "L5-006", "status": "completed", "work_item": "define package record schemas"}
+{"output_count": 4, "queue_item_id": "L5-007", "status": "completed", "work_item": "define packager, validator, and reconstruction tools"}

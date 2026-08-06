@@ -1,0 +1,7 @@
+{"exception_count": 0, "queue_item_id": "L1-001", "record_count": 6, "status": "completed", "work_item": "validate Phase 0 input manifests"}
+{"exception_count": 0, "queue_item_id": "L1-002", "record_count": 26799, "status": "completed", "work_item": "scan every physical source path and size"}
+{"exception_count": 0, "queue_item_id": "L1-003", "record_count": 26637, "status": "completed", "work_item": "reconcile canonical IDs, aliases, and duplicate groups"}
+{"exception_count": 0, "queue_item_id": "L1-004", "record_count": 50, "status": "completed", "work_item": "rehash deterministic 50-file trusted-hash sample"}
+{"exception_count": 0, "queue_item_id": "L1-005", "record_count": 0, "status": "completed_not_applicable", "work_item": "rehash every source over 1 GiB"}
+{"exception_count": 0, "queue_item_id": "L1-006", "record_count": 10, "status": "completed", "work_item": "validate suspicious duplicate groups or largest-group backstop"}
+{"exception_count": 1, "queue_item_id": "L1-007", "record_count": 1, "status": "completed", "work_item": "screen non-source and zero-byte quarantine candidates"}

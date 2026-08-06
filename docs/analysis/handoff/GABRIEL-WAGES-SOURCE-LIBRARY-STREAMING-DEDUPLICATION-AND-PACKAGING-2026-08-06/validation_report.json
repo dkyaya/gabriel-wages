@@ -1,0 +1,12 @@
+{
+  "accepted_sources": 21065,
+  "accepted_volumes": 22,
+  "decision": "gabriel_wages_source_library_packaging_partial_transfer_space_required",
+  "original_sources_deleted": 0,
+  "quality_gates": "pass for produced partial release",
+  "read_me_first_QA": "pass",
+  "recipient_reconstruction_QA": "pass",
+  "remaining_volumes": 6,
+  "status": "pass_partial_transfer_space_required",
+  "verified_source_members": 21065
+}

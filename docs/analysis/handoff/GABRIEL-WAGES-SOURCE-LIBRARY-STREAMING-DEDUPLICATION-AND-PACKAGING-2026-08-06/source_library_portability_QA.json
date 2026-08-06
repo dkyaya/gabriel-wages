@@ -1,0 +1,20 @@
+{
+  "historical_repository_absolute_path_records_excluded": 89,
+  "maximum_proposed_path_length": 82,
+  "physical_source_absolute_pointer_count": 0,
+  "physical_source_pointer_count": 26799,
+  "proposed_library_absolute_path_count": 0,
+  "proposed_library_backslash_count": 0,
+  "proposed_library_casefold_collision_count": 0,
+  "proposed_library_parent_traversal_count": 0,
+  "proposed_library_path_count": 26637,
+  "proposed_library_path_unique_count": 26637,
+  "proposed_library_unicode_path_count": 0,
+  "requirements": [
+    "resolve all member paths relative to a caller-supplied library root",
+    "store POSIX member paths in manifests and archives",
+    "reject absolute paths, parent traversal, and archive members outside the target root",
+    "do not depend on the original repository layout"
+  ],
+  "status": "pass"
+}

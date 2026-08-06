@@ -1,0 +1,4 @@
+queue_item,status,canonical_record_count,description
+text_companion_reconciliation,completed,26635,Reconcile one current extracted-text companion per selected canonical source where available
+text_companion_hash_sample,completed,50,Validate a deterministic sample of selected companion hashes
+text_companion_linkage_QA,completed,23454,Confirm selected companion existence size linkage and archive-path uniqueness

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "canonical_source_id": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "extension": {
+      "pattern": "^\\.[A-Za-z0-9]+$",
+      "type": "string"
+    },
+    "extraction_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "file_size_bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "known_issue_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "library_relative_path": {
+      "description": "POSIX path relative to the source-library root.",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "type": "string"
+    },
+    "media_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "municipality": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "original_url_or_cite": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "period": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance_pointer": {
+      "description": "POSIX path relative to the source-library root.",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "type": "string"
+    },
+    "redistribution_status": {
+      "enum": [
+        "manual_review_required",
+        "approved_for_named_transfer",
+        "public_redistribution_allowed",
+        "restricted",
+        "excluded"
+      ]
+    },
+    "source_corpus": {
+      "enum": [
+        "causal",
+        "discourse",
+        null
+      ]
+    },
+    "source_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "volume_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "canonical_source_id",
+    "library_relative_path",
+    "volume_id",
+    "file_size_bytes",
+    "extension",
+    "provenance_pointer",
+    "redistribution_status",
+    "known_issue_ids"
+  ],
+  "title": "Canonical source record",
+  "type": "object"
+}

@@ -1,0 +1,3 @@
+{"incident": "Phase 0 included two quota-control objects among source identities", "resolution": "Excluded the zero-byte lock and 155-byte quota state as non-source operational controls; no source payload was removed."}
+{"incident": "Thirteen enriched source URLs contained credential-like query parameter names", "resolution": "Removed those query parameters from transfer metadata without recording values; source payloads were unchanged."}
+{"incident": "Local capacity could not hold all planned volumes above the 8 GiB floor", "resolution": "Stopped before VOL-023; preserved 22 validated volumes and froze 6 remaining assignments."}

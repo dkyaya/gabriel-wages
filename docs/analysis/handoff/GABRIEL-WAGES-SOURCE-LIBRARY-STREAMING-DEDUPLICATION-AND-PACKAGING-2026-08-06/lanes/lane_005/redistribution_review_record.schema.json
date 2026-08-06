@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "canonical_source_id": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "redistribution_status": {
+      "enum": [
+        "manual_review_required",
+        "approved_for_named_transfer",
+        "public_redistribution_allowed",
+        "restricted",
+        "excluded"
+      ]
+    },
+    "review_reason": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "reviewed_at_utc": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "canonical_source_id",
+    "redistribution_status",
+    "review_reason"
+  ],
+  "title": "Redistribution review record",
+  "type": "object"
+}

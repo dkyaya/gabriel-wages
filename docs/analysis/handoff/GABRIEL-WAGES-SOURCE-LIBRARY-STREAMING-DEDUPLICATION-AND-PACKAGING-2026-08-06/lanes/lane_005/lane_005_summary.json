@@ -1,0 +1,29 @@
+{
+  "archive_volumes_created": 0,
+  "blockers": [],
+  "canonical_source_rows_reviewed": 26637,
+  "completed_at_utc": "2026-08-06T23:28:14.978401+00:00",
+  "credential_risk_candidate_count": 0,
+  "eligible_source_candidate_bytes": 56164354350,
+  "eligible_source_candidates": 26636,
+  "lane_id": "lane_005",
+  "package_path_risk_candidate_count": 0,
+  "physical_source_metadata_rows_scanned": 26799,
+  "public_distribution_ready_count": 0,
+  "recipient_document_count": 5,
+  "redistribution_manual_review_required_count": 26637,
+  "repository_absolute_path_records_excluded_from_package": 89,
+  "schema_count": 7,
+  "scope": "source-only recipient documentation, schemas, tool specifications, and bounded risk audits",
+  "source_files_copied": 0,
+  "source_only_boundary_preserved": true,
+  "source_payload_content_scan_completed": false,
+  "sources_deleted_or_modified": 0,
+  "started_at_utc": "2026-08-06T23:28:14.554110+00:00",
+  "tool_specification_count": 3,
+  "warnings": [
+    "Redistribution rights remain unresolved for every canonical identity.",
+    "Descriptive source metadata are blank in the current canonical inventory.",
+    "The source payload contents were not exhaustively scanned for private information."
+  ]
+}

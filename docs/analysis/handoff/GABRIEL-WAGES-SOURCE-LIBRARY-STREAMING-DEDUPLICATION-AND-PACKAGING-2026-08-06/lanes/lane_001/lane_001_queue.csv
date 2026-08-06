@@ -1,0 +1,8 @@
+queue_item_id,work_item,status,record_count,exception_count
+L1-001,validate Phase 0 input manifests,completed,6,0
+L1-002,scan every physical source path and size,completed,26799,0
+L1-003,"reconcile canonical IDs, aliases, and duplicate groups",completed,26637,0
+L1-004,rehash deterministic 50-file trusted-hash sample,completed,50,0
+L1-005,rehash every source over 1 GiB,completed_not_applicable,0,0
+L1-006,validate suspicious duplicate groups or largest-group backstop,completed,10,0
+L1-007,screen non-source and zero-byte quarantine candidates,completed,1,1

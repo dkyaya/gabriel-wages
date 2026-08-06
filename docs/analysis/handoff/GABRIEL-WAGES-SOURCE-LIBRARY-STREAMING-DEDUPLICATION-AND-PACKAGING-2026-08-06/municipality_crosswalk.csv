@@ -1,0 +1,6850 @@
+state,municipality,geography_type
+AK,Akutan,municipality
+AK,Aleknagik,municipality
+AK,Anaktuvuk Pass,municipality
+AK,Angoon,municipality
+AK,Atka,municipality
+AK,Atqasuk,municipality
+AK,Chignik,municipality
+AK,Chuathbaluk,municipality
+AK,Cold Bay,municipality
+AK,Cordova,municipality
+AK,Delta Junction,municipality
+AK,Dillingham,municipality
+AK,Edna Bay,municipality
+AK,Egegik,municipality
+AK,Elim,municipality
+AK,False Pass,municipality
+AK,Fort Yukon,municipality
+AK,Gambell,municipality
+AK,Gustavus,municipality
+AK,Huslia,municipality
+AK,Kachemak,municipality
+AK,Kake,municipality
+AK,Kasaan,municipality
+AK,Ketchikan,municipality
+AK,King Cove,municipality
+AK,Kivalina,municipality
+AK,Kotlik,municipality
+AK,Kotzebue,municipality
+AK,Kupreanof,municipality
+AK,Manokotak,municipality
+AK,Nenana,municipality
+AK,Newhalen,municipality
+AK,Nome,municipality
+AK,Pilot Station,municipality
+AK,Point Hope,municipality
+AK,Port Lions,municipality
+AK,Quinhagak,municipality
+AK,Sand Point,municipality
+AK,Seward,municipality
+AK,Tanana,municipality
+AK,Teller,municipality
+AK,Togiak,municipality
+AK,Toksook Bay,municipality
+AK,Whale Pass,municipality
+AK,White Mountain,municipality
+AK,Whittier,municipality
+AL,Alabaster,municipality
+AL,Andalusia,municipality
+AL,Anniston,municipality
+AL,Ashland,municipality
+AL,Ashville,municipality
+AL,Attalla,municipality
+AL,Bayou La Batre,municipality
+AL,Berlin,municipality
+AL,Birmingham,municipality
+AL,Brantley,municipality
+AL,Brookwood,municipality
+AL,Brundidge,municipality
+AL,Calera,municipality
+AL,Cedar Bluff,municipality
+AL,Chickasaw,municipality
+AL,Cleveland,municipality
+AL,Collinsville,municipality
+AL,County Line,municipality
+AL,Creola,municipality
+AL,Dadeville,municipality
+AL,Daleville,municipality
+AL,Demopolis,municipality
+AL,Dodge City,municipality
+AL,Dora,municipality
+AL,Dutton,municipality
+AL,East Brewton,municipality
+AL,Foley,municipality
+AL,Fort Payne,municipality
+AL,Gadsden,municipality
+AL,Glencoe,municipality
+AL,Good Hope,municipality
+AL,Graysville,municipality
+AL,Gulf Shores,municipality
+AL,Hartselle,municipality
+AL,Headland,municipality
+AL,Hueytown,municipality
+AL,Irondale,municipality
+AL,Jasper,municipality
+AL,Kinsey,municipality
+AL,La Fayette,municipality
+AL,Lake View,municipality
+AL,Lakeview,municipality
+AL,Lanett,municipality
+AL,Lincoln,municipality
+AL,Lineville,municipality
+AL,Loachapoka,municipality
+AL,Loxley,municipality
+AL,Margaret,municipality
+AL,Marion,municipality
+AL,Midfield,municipality
+AL,Millbrook,municipality
+AL,Montevallo,municipality
+AL,Moulton,municipality
+AL,Mulga,municipality
+AL,Muscle Shoals,municipality
+AL,Nauvoo,municipality
+AL,Oneonta,municipality
+AL,Owens Cross Roads,municipality
+AL,Ozark,municipality
+AL,Pell City,municipality
+AL,Pleasant Grove,municipality
+AL,Prichard,municipality
+AL,Ragland,municipality
+AL,Rainsville,municipality
+AL,Roanoke,municipality
+AL,Robertsdale,municipality
+AL,Satsuma,municipality
+AL,Scottsboro,municipality
+AL,Sheffield,municipality
+AL,South Vinemont,municipality
+AL,Southside,municipality
+AL,Spanish Fort,municipality
+AL,Steele,municipality
+AL,Stevenson,municipality
+AL,Summerdale,municipality
+AL,Sylvan Springs,municipality
+AL,Talladega,municipality
+AL,Triana,municipality
+AL,Trinity,municipality
+AL,Valley Grande,municipality
+AL,Weaver,municipality
+AL,Westover,municipality
+AR,Ash Flat,municipality
+AR,Austin,municipality
+AR,Avoca,municipality
+AR,Batesville,municipality
+AR,Beebe,municipality
+AR,Brookland,municipality
+AR,Bryant,municipality
+AR,Cammack Village,municipality
+AR,Cave City,municipality
+AR,Cedarville,municipality
+AR,Cherokee Village,municipality
+AR,Crossett,municipality
+AR,Dardanelle,municipality
+AR,Des Arc,municipality
+AR,Diamond City,municipality
+AR,El Dorado,municipality
+AR,Elkins,municipality
+AR,Eudora,municipality
+AR,Fairfield Bay,municipality
+AR,Farmington,municipality
+AR,Forrest City,municipality
+AR,Gassville,municipality
+AR,Gateway,municipality
+AR,Gentry,municipality
+AR,Goshen,municipality
+AR,Gosnell,municipality
+AR,Greenland,municipality
+AR,Hardy,municipality
+AR,Haskell,municipality
+AR,Hazen,municipality
+AR,Helena-West Helena,municipality
+AR,Highland,municipality
+AR,Hot Springs,municipality
+AR,Humnoke,municipality
+AR,Johnson,municipality
+AR,Keo,municipality
+AR,Lake City,municipality
+AR,Little Flock,municipality
+AR,Little Rock,municipality
+AR,Lockesburg,municipality
+AR,Lonoke,municipality
+AR,Marion,municipality
+AR,Maumelle,municipality
+AR,Mayflower,municipality
+AR,McCrory,municipality
+AR,Monette,municipality
+AR,Monticello,municipality
+AR,Morrilton,municipality
+AR,Mountain Home,municipality
+AR,Mulberry,municipality
+AR,Newport,municipality
+AR,Norfork,municipality
+AR,Oak Grove,municipality
+AR,Ozark,municipality
+AR,Pea Ridge,municipality
+AR,Ravenden,municipality
+AR,Rockport,municipality
+AR,Russell,municipality
+AR,Searcy,municipality
+AR,Shannon Hills,municipality
+AR,Siloam Springs,municipality
+AR,Stephens,municipality
+AR,Tontitown,municipality
+AR,Traskwood,municipality
+AR,Turrell,municipality
+AR,Vilonia,municipality
+AR,Ward,municipality
+AR,Warren,municipality
+AR,West Memphis,municipality
+AR,Wynne,municipality
+AZ,Apache Junction,municipality
+AZ,Buckeye,municipality
+AZ,Bullhead City,municipality
+AZ,Carefree,municipality
+AZ,Cave Creek,municipality
+AZ,Chandler,municipality
+AZ,Clifton,municipality
+AZ,Colorado City,municipality
+AZ,Coolidge,municipality
+AZ,Douglas,municipality
+AZ,Duncan,municipality
+AZ,Eagar,municipality
+AZ,El Mirage,municipality
+AZ,Fountain Hills,municipality
+AZ,Fredonia,municipality
+AZ,Hayden,municipality
+AZ,Holbrook,municipality
+AZ,Kingman,municipality
+AZ,Litchfield Park,municipality
+AZ,Miami,municipality
+AZ,Nogales,municipality
+AZ,Oro Valley,municipality
+AZ,Page,municipality
+AZ,Paradise Valley,municipality
+AZ,Parker,municipality
+AZ,Patagonia,municipality
+AZ,Payson,municipality
+AZ,Phoenix,municipality
+AZ,Pima,municipality
+AZ,Pinetop-Lakeside,municipality
+AZ,Quartzsite,municipality
+AZ,Show Low,municipality
+AZ,Sierra Vista,municipality
+AZ,Somerton,municipality
+AZ,Springerville,municipality
+AZ,Star Valley,municipality
+AZ,Tucson,municipality
+AZ,Wellton,municipality
+AZ,Willcox,municipality
+AZ,Williams,municipality
+AZ,Youngtown,municipality
+CA,Agoura Hills,municipality
+CA,Anderson,municipality
+CA,Antioch,municipality
+CA,Artesia,municipality
+CA,Auburn,municipality
+CA,Avenal,municipality
+CA,Beaumont,municipality
+CA,Belvedere,municipality
+CA,Big Bear Lake,municipality
+CA,Biggs,municipality
+CA,Bishop,municipality
+CA,Blue Lake,municipality
+CA,Blythe,municipality
+CA,Buellton,municipality
+CA,Burbank,municipality
+CA,California City,municipality
+CA,Calimesa,municipality
+CA,Canyon Lake,municipality
+CA,Carmel-by-the-Sea,municipality
+CA,Carpinteria,municipality
+CA,Ceres,municipality
+CA,Citrus Heights,municipality
+CA,Colfax,municipality
+CA,Colma,municipality
+CA,Colusa,municipality
+CA,Concord,municipality
+CA,Corning,municipality
+CA,Coronado,municipality
+CA,Corte Madera,municipality
+CA,Covina,municipality
+CA,Crescent City,municipality
+CA,Dos Palos,municipality
+CA,Dunsmuir,municipality
+CA,El Segundo,municipality
+CA,Elk Grove,municipality
+CA,Escalon,municipality
+CA,Etna,municipality
+CA,Exeter,municipality
+CA,Fairfax,municipality
+CA,Fillmore,municipality
+CA,Firebaugh,municipality
+CA,Fontana,municipality
+CA,Fort Jones,municipality
+CA,Fortuna,municipality
+CA,Garden Grove,municipality
+CA,Gardena,municipality
+CA,Gonzales,municipality
+CA,Gridley,municipality
+CA,Guadalupe,municipality
+CA,Gustine,municipality
+CA,Healdsburg,municipality
+CA,Hidden Hills,municipality
+CA,Hollister,municipality
+CA,Holtville,municipality
+CA,Imperial Beach,municipality
+CA,Indio,municipality
+CA,Inglewood,municipality
+CA,Ione,municipality
+CA,Kingsburg,municipality
+CA,La Mesa,municipality
+CA,La Palma,municipality
+CA,Laguna Woods,municipality
+CA,Lakeport,municipality
+CA,Live Oak,municipality
+CA,Los Alamitos,municipality
+CA,Los Banos,municipality
+CA,Mendota,municipality
+CA,Mill Valley,municipality
+CA,Monte Sereno,municipality
+CA,Montebello,municipality
+CA,Monterey Park,municipality
+CA,Moreno Valley,municipality
+CA,Morro Bay,municipality
+CA,Newman,municipality
+CA,Novato,municipality
+CA,Orange Cove,municipality
+CA,Orinda,municipality
+CA,Orland,municipality
+CA,Oxnard,municipality
+CA,Pinole,municipality
+CA,Pittsburg,municipality
+CA,Placerville,municipality
+CA,Point Arena,municipality
+CA,Portola,municipality
+CA,Rancho Mirage,municipality
+CA,Redding,municipality
+CA,Rocklin,municipality
+CA,Rohnert Park,municipality
+CA,San Juan Bautista,municipality
+CA,San Leandro,municipality
+CA,San Marino,municipality
+CA,San Ramon,municipality
+CA,Sand City,municipality
+CA,Santa Ana,municipality
+CA,Santa Cruz,municipality
+CA,Santa Maria,municipality
+CA,Santa Monica,municipality
+CA,Santee,municipality
+CA,Seal Beach,municipality
+CA,Sebastopol,municipality
+CA,Shasta Lake,municipality
+CA,Sierra Madre,municipality
+CA,Solana Beach,municipality
+CA,Solvang,municipality
+CA,Sonoma,municipality
+CA,Sonora,municipality
+CA,South El Monte,municipality
+CA,South Gate,municipality
+CA,Stockton,municipality
+CA,Sunnyvale,municipality
+CA,Sutter Creek,municipality
+CA,Tehachapi,municipality
+CA,Tiburon,municipality
+CA,Tulelake,municipality
+CA,Vallejo,municipality
+CA,Waterford,municipality
+CA,Westmorland,municipality
+CA,Wheatland,municipality
+CA,Winters,municipality
+CO,Aspen,municipality
+CO,Aurora,municipality
+CO,Buena Vista,municipality
+CO,Castle Pines,municipality
+CO,Castle Rock,municipality
+CO,Cañon City,municipality
+CO,Cherry Hills Village,municipality
+CO,Cheyenne Wells,municipality
+CO,Commerce City,municipality
+CO,Cortez,municipality
+CO,Crestone,municipality
+CO,Cripple Creek,municipality
+CO,Denver,municipality
+CO,Dinosaur,municipality
+CO,Elizabeth,municipality
+CO,Englewood,municipality
+CO,Evans,municipality
+CO,Federal Heights,municipality
+CO,Firestone,municipality
+CO,Fleming,municipality
+CO,Florence,municipality
+CO,Fort Morgan,municipality
+CO,Frederick,municipality
+CO,Fruita,municipality
+CO,Gilcrest,municipality
+CO,Granby,municipality
+CO,Grand Lake,municipality
+CO,Greenwood Village,municipality
+CO,Gypsum,municipality
+CO,Holly,municipality
+CO,Hotchkiss,municipality
+CO,Hugo,municipality
+CO,Johnstown,municipality
+CO,Keystone,municipality
+CO,La Jara,municipality
+CO,Lafayette,municipality
+CO,Limon,municipality
+CO,Littleton,municipality
+CO,Lone Tree,municipality
+CO,Manitou Springs,municipality
+CO,Mead,municipality
+CO,Moffat,municipality
+CO,Montrose,municipality
+CO,Morrison,municipality
+CO,Mountain Village,municipality
+CO,New Castle,municipality
+CO,Northglenn,municipality
+CO,Norwood,municipality
+CO,Paonia,municipality
+CO,Parachute,municipality
+CO,Parker,municipality
+CO,Pierce,municipality
+CO,Rifle,municipality
+CO,Simla,municipality
+CO,Snowmass Village,municipality
+CO,Steamboat Springs,municipality
+CO,Superior,municipality
+CO,Timnath,municipality
+CO,Trinidad,municipality
+CO,Wellington,municipality
+CO,Wheat Ridge,municipality
+CO,Woodland Park,municipality
+CO,Yampa,municipality
+CT,Andover,municipality
+CT,Avon,municipality
+CT,Beacon Falls,municipality
+CT,Berlin,municipality
+CT,Bethlehem,municipality
+CT,Bolton,municipality
+CT,Brookfield,municipality
+CT,Brooklyn,municipality
+CT,Cheshire,municipality
+CT,Colchester,municipality
+CT,Coventry,municipality
+CT,Cromwell,municipality
+CT,Durham,municipality
+CT,East Haddam,municipality
+CT,East Hartford,municipality
+CT,East Haven,municipality
+CT,East Lyme,municipality
+CT,East Windsor,municipality
+CT,Ellington,municipality
+CT,Fairfield,municipality
+CT,Glastonbury,municipality
+CT,Greenwich,municipality
+CT,Groton,municipality
+CT,Groton Long Point,municipality
+CT,Guilford,municipality
+CT,Hebron,municipality
+CT,Killingly,municipality
+CT,Litchfield,municipality
+CT,Madison,municipality
+CT,Mansfield,municipality
+CT,Marlborough,municipality
+CT,Monroe,municipality
+CT,Montville,municipality
+CT,Morris,municipality
+CT,New Canaan,municipality
+CT,New Hartford,municipality
+CT,New Milford,municipality
+CT,Newington,municipality
+CT,Newtown,municipality
+CT,North Branford,municipality
+CT,North Canaan,municipality
+CT,North Haven,municipality
+CT,Orange,municipality
+CT,Plainfield,municipality
+CT,Plainville,municipality
+CT,Portland,municipality
+CT,Prospect,municipality
+CT,Ridgefield,municipality
+CT,Salisbury,municipality
+CT,Seymour,municipality
+CT,Simsbury,municipality
+CT,Southbury,municipality
+CT,Southington,municipality
+CT,Sprague,municipality
+CT,Stratford,municipality
+CT,Suffield,municipality
+CT,Trumbull,municipality
+CT,Union,municipality
+CT,Vernon,municipality
+CT,Wallingford,municipality
+CT,Watertown,municipality
+CT,Westport,municipality
+CT,Wilton,municipality
+CT,Winchester,municipality
+CT,Windham,municipality
+CT,Windsor,municipality
+CT,Windsor Locks,municipality
+CT,Wolcott,municipality
+CT,Woodbridge,municipality
+CT,Woodbury,municipality
+DE,Arden,municipality
+DE,Bellefonte,municipality
+DE,Blades,municipality
+DE,Bowers,municipality
+DE,Bridgeville,municipality
+DE,Camden,municipality
+DE,Cheswold,municipality
+DE,Delmar,municipality
+DE,Dewey Beach,municipality
+DE,Ellendale,municipality
+DE,Elsmere,municipality
+DE,Frederica,municipality
+DE,Greenwood,municipality
+DE,Harrington,municipality
+DE,Henlopen Acres,municipality
+DE,Houston,municipality
+DE,Magnolia,municipality
+DE,Millville,municipality
+DE,Milton,municipality
+DE,Ocean View,municipality
+DE,Rehoboth Beach,municipality
+DE,Selbyville,municipality
+DE,South Bethany,municipality
+DE,Townsend,municipality
+DE,Wilmington,municipality
+DE,Wyoming,municipality
+FL,Arcadia,municipality
+FL,Archer,municipality
+FL,Astatula,municipality
+FL,Atlantic Beach,municipality
+FL,Bay Harbor Islands,municipality
+FL,Bay Lake,municipality
+FL,Belle Isle,municipality
+FL,Belleview,municipality
+FL,Biscayne Park,municipality
+FL,Bonifay,municipality
+FL,Bristol,municipality
+FL,Callahan,municipality
+FL,Cedar Key,municipality
+FL,Century,municipality
+FL,Dade City,municipality
+FL,Daytona Beach Shores,municipality
+FL,Dundee,municipality
+FL,Dunnellon,municipality
+FL,Eagle Lake,municipality
+FL,Eatonville,municipality
+FL,El Portal,municipality
+FL,Eustis,municipality
+FL,Flagler Beach,municipality
+FL,Fort Meade,municipality
+FL,Fort White,municipality
+FL,Golden Beach,municipality
+FL,Greenville,municipality
+FL,Gulf Breeze,municipality
+FL,Haines City,municipality
+FL,Hampton,municipality
+FL,Hialeah,municipality
+FL,High Springs,municipality
+FL,Highland Beach,municipality
+FL,Holly Hill,municipality
+FL,Howey-in-the-Hills,municipality
+FL,Indian Harbour Beach,municipality
+FL,Indian River Shores,municipality
+FL,Inglis,municipality
+FL,Juno Beach,municipality
+FL,Jupiter,municipality
+FL,Jupiter Inlet Colony,municipality
+FL,Jupiter Island,municipality
+FL,Kenneth City,municipality
+FL,Key Colony Beach,municipality
+FL,Keystone Heights,municipality
+FL,LaBelle,municipality
+FL,Lake City,municipality
+FL,Lake Clarke Shores,municipality
+FL,Lake Park,municipality
+FL,Lantana,municipality
+FL,Lauderdale-by-the-Sea,municipality
+FL,Lighthouse Point,municipality
+FL,Madeira Beach,municipality
+FL,Manalapan,municipality
+FL,Marianna,municipality
+FL,Medley,municipality
+FL,Melbourne Beach,municipality
+FL,Mexico Beach,municipality
+FL,Miami Gardens,municipality
+FL,Milton,municipality
+FL,Moore Haven,municipality
+FL,Neptune Beach,municipality
+FL,New Port Richey,municipality
+FL,Newberry,municipality
+FL,Niceville,municipality
+FL,Noma,municipality
+FL,North Bay Village,municipality
+FL,North Palm Beach,municipality
+FL,Ocean Ridge,municipality
+FL,Orange City,municipality
+FL,Orange Park,municipality
+FL,Pahokee,municipality
+FL,Palm Bay,municipality
+FL,Palm Beach,municipality
+FL,Palm Beach Gardens,municipality
+FL,Penney Farms,municipality
+FL,Port St. Joe,municipality
+FL,Sanford,municipality
+FL,Sea Ranch Lakes,municipality
+FL,Sewall's Point,municipality
+FL,Surfside,municipality
+FL,Tampa,municipality
+FL,Tequesta,municipality
+FL,Treasure Island,municipality
+FL,Wauchula,municipality
+FL,West Miami,municipality
+FL,West Park,municipality
+FL,Westlake,municipality
+FL,Wilton Manors,municipality
+FL,Winter Garden,municipality
+GA,Acworth,municipality
+GA,Adel,municipality
+GA,Alamo,municipality
+GA,Alpharetta,municipality
+GA,Americus,municipality
+GA,Arabi,municipality
+GA,Argyle,municipality
+GA,Arnoldsville,municipality
+GA,Atlanta,municipality
+GA,Austell,municipality
+GA,Barnesville,municipality
+GA,Berkeley Lake,municipality
+GA,Bowdon,municipality
+GA,Brookhaven,municipality
+GA,Buckhead,municipality
+GA,Buford,municipality
+GA,Calhoun,municipality
+GA,Carl,municipality
+GA,Cartersville,municipality
+GA,Centerville,municipality
+GA,Centralhatchee,municipality
+GA,Chamblee,municipality
+GA,Chattahoochee Hills,municipality
+GA,Clarkston,municipality
+GA,Cochran,municipality
+GA,Coolidge,municipality
+GA,Covington,municipality
+GA,Dacula,municipality
+GA,Dalton,municipality
+GA,Danielsville,municipality
+GA,Decatur,municipality
+GA,Donalsonville,municipality
+GA,Doraville,municipality
+GA,Dublin,municipality
+GA,East Point,municipality
+GA,Elberton,municipality
+GA,Euharlee,municipality
+GA,Fairburn,municipality
+GA,Fayetteville,municipality
+GA,Flovilla,municipality
+GA,Flowery Branch,municipality
+GA,Forest Park,municipality
+GA,Fort Oglethorpe,municipality
+GA,Fort Valley,municipality
+GA,Franklin Springs,municipality
+GA,Griffin,municipality
+GA,Grovetown,municipality
+GA,Guyton,municipality
+GA,Hamilton,municipality
+GA,Hampton,municipality
+GA,Hartwell,municipality
+GA,Helen,municipality
+GA,Hogansville,municipality
+GA,Holly Springs,municipality
+GA,Homer,municipality
+GA,Jasper,municipality
+GA,Jefferson,municipality
+GA,Jesup,municipality
+GA,Johns Creek,municipality
+GA,Kingsland,municipality
+GA,Lake City,municipality
+GA,Lake Park,municipality
+GA,Lavonia,municipality
+GA,Lilburn,municipality
+GA,Lone Oak,municipality
+GA,Mableton,municipality
+GA,Madison,municipality
+GA,Marietta,municipality
+GA,McDonough,municipality
+GA,McIntyre,municipality
+GA,Milledgeville,municipality
+GA,Millen,municipality
+GA,Monroe,municipality
+GA,Montezuma,municipality
+GA,Morrow,municipality
+GA,Moultrie,municipality
+GA,Nelson,municipality
+GA,Newborn,municipality
+GA,Newnan,municipality
+GA,Nicholson,municipality
+GA,Ocilla,municipality
+GA,Oconee,municipality
+GA,Oglethorpe,municipality
+GA,Oxford,municipality
+GA,Patterson,municipality
+GA,Pelham,municipality
+GA,Perry,municipality
+GA,Pine Lake,municipality
+GA,Pinehurst,municipality
+GA,Pooler,municipality
+GA,Port Wentworth,municipality
+GA,Poulan,municipality
+GA,Powder Springs,municipality
+GA,Quitman,municipality
+GA,Reidsville,municipality
+GA,Resaca,municipality
+GA,Rocky Ford,municipality
+GA,Rossville,municipality
+GA,Sandersville,municipality
+GA,Shady Dale,municipality
+GA,Sharpsburg,municipality
+GA,Snellville,municipality
+GA,Social Circle,municipality
+GA,St. Marys,municipality
+GA,Statham,municipality
+GA,Stonecrest,municipality
+GA,Sugar Hill,municipality
+GA,Sumner,municipality
+GA,Suwanee,municipality
+GA,Thomaston,municipality
+GA,Thomasville,municipality
+GA,Thunderbolt,municipality
+GA,Tifton,municipality
+GA,Toomsboro,municipality
+GA,Trion,municipality
+GA,Tyrone,municipality
+GA,Union Point,municipality
+GA,Valdosta,municipality
+GA,Vidalia,municipality
+GA,Villa Rica,municipality
+GA,Waycross,municipality
+GA,Whitesburg,municipality
+GA,Winder,municipality
+GA,Woodstock,municipality
+IA,Ackley,municipality
+IA,Adel,municipality
+IA,Agency,municipality
+IA,Albert City,municipality
+IA,Albia,municipality
+IA,Alden,municipality
+IA,Algona,municipality
+IA,Alleman,municipality
+IA,Allerton,municipality
+IA,Alta,municipality
+IA,Anamosa,municipality
+IA,Andrew,municipality
+IA,Aplington,municipality
+IA,Asbury,municipality
+IA,Avoca,municipality
+IA,Bayard,municipality
+IA,Bennett,municipality
+IA,Bertram,municipality
+IA,Bloomfield,municipality
+IA,Buffalo,municipality
+IA,Burt,municipality
+IA,Calamus,municipality
+IA,Callender,municipality
+IA,Calmar,municipality
+IA,Cambridge,municipality
+IA,Carlisle,municipality
+IA,Carroll,municipality
+IA,Carter Lake,municipality
+IA,Center Point,municipality
+IA,Chariton,municipality
+IA,Charter Oak,municipality
+IA,Clarence,municipality
+IA,Clarinda,municipality
+IA,Clarion,municipality
+IA,Clear Lake,municipality
+IA,Coggon,municipality
+IA,Colfax,municipality
+IA,Collins,municipality
+IA,Colo,municipality
+IA,Columbus Junction,municipality
+IA,Correctionville,municipality
+IA,Corydon,municipality
+IA,Creston,municipality
+IA,Cumming,municipality
+IA,Dayton,municipality
+IA,DeWitt,municipality
+IA,Decorah,municipality
+IA,Delmar,municipality
+IA,Denison,municipality
+IA,Dike,municipality
+IA,Duncombe,municipality
+IA,Dunkerton,municipality
+IA,Eagle Grove,municipality
+IA,Earlham,municipality
+IA,Early,municipality
+IA,Eldora,municipality
+IA,Eldridge,municipality
+IA,Elk Horn,municipality
+IA,Emmetsburg,municipality
+IA,Epworth,municipality
+IA,Estherville,municipality
+IA,Evansdale,municipality
+IA,Fairbank,municipality
+IA,Fairfax,municipality
+IA,Farmington,municipality
+IA,Fertile,municipality
+IA,Fontanelle,municipality
+IA,Forest City,municipality
+IA,Fort Madison,municipality
+IA,Fruitland,municipality
+IA,Garnavillo,municipality
+IA,George,municipality
+IA,Gilman,municipality
+IA,Gilmore City,municipality
+IA,Glenwood,municipality
+IA,Goose Lake,municipality
+IA,Gowrie,municipality
+IA,Graettinger,municipality
+IA,Greene,municipality
+IA,Grundy Center,municipality
+IA,Guttenberg,municipality
+IA,Hampton,municipality
+IA,Harlan,municipality
+IA,Hartley,municipality
+IA,Hawkeye,municipality
+IA,Hiawatha,municipality
+IA,Hinton,municipality
+IA,Hudson,municipality
+IA,Humboldt,municipality
+IA,Huxley,municipality
+IA,Ida Grove,municipality
+IA,Independence,municipality
+IA,Indianola,municipality
+IA,Iowa Falls,municipality
+IA,Ireton,municipality
+IA,Jefferson,municipality
+IA,Jesup,municipality
+IA,Jewell Junction,municipality
+IA,Kanawha,municipality
+IA,Keokuk,municipality
+IA,Keota,municipality
+IA,Knoxville,municipality
+IA,Lake City,municipality
+IA,Lake Mills,municipality
+IA,Lake Park,municipality
+IA,Lake View,municipality
+IA,Lamont,municipality
+IA,Lansing,municipality
+IA,Lawler,municipality
+IA,Leon,municipality
+IA,Lester,municipality
+IA,Lisbon,municipality
+IA,Little Rock,municipality
+IA,Luxemburg,municipality
+IA,Madrid,municipality
+IA,Manson,municipality
+IA,Maquoketa,municipality
+IA,Marengo,municipality
+IA,Maurice,municipality
+IA,Mechanicsville,municipality
+IA,Merrill,municipality
+IA,Miles,municipality
+IA,Milford,municipality
+IA,Milo,municipality
+IA,Minden,municipality
+IA,Monona,municipality
+IA,Monticello,municipality
+IA,Montrose,municipality
+IA,Moravia,municipality
+IA,Moulton,municipality
+IA,Mount Vernon,municipality
+IA,Moville,municipality
+IA,Murray,municipality
+IA,Nevada,municipality
+IA,New Hampton,municipality
+IA,New Virginia,municipality
+IA,North English,municipality
+IA,Ocheyedan,municipality
+IA,Oelwein,municipality
+IA,Okoboji,municipality
+IA,Onawa,municipality
+IA,Osage,municipality
+IA,Osceola,municipality
+IA,Palo,municipality
+IA,Perry,municipality
+IA,Pilot Mound,municipality
+IA,Pleasantville,municipality
+IA,Pocahontas,municipality
+IA,Polk City,municipality
+IA,Red Oak,municipality
+IA,Redfield,municipality
+IA,Ringsted,municipality
+IA,Robins,municipality
+IA,Rock Rapids,municipality
+IA,Rock Valley,municipality
+IA,Rockwell,municipality
+IA,Rolfe,municipality
+IA,Ruthven,municipality
+IA,Salix,municipality
+IA,Schaller,municipality
+IA,Sergeant Bluff,municipality
+IA,Sheldon,municipality
+IA,Shell Rock,municipality
+IA,Shellsburg,municipality
+IA,Shenandoah,municipality
+IA,Sidney,municipality
+IA,Sioux Center,municipality
+IA,Sloan,municipality
+IA,Spirit Lake,municipality
+IA,St. Ansgar,municipality
+IA,St. Charles,municipality
+IA,Stanhope,municipality
+IA,Story City,municipality
+IA,Templeton,municipality
+IA,Tiffin,municipality
+IA,Titonka,municipality
+IA,University Heights,municipality
+IA,Van Meter,municipality
+IA,Victor,municipality
+IA,Vinton,municipality
+IA,Walcott,municipality
+IA,Waukon,municipality
+IA,Waverly,municipality
+IA,Webb,municipality
+IA,Webster City,municipality
+IA,Wellman,municipality
+IA,Wellsburg,municipality
+IA,West Bend,municipality
+IA,West Branch,municipality
+IA,West Okoboji,municipality
+IA,Westgate,municipality
+IA,Whiting,municipality
+IA,Winterset,municipality
+IA,Worthington,municipality
+ID,American Falls,municipality
+ID,Arco,municipality
+ID,Athol,municipality
+ID,Blackfoot,municipality
+ID,Bloomington,municipality
+ID,Boise City,municipality
+ID,Buhl,municipality
+ID,Chubbuck,municipality
+ID,Clark Fork,municipality
+ID,Council,municipality
+ID,Craigmont,municipality
+ID,Driggs,municipality
+ID,Dubois,municipality
+ID,Fernan Lake Village,municipality
+ID,Fruitland,municipality
+ID,Genesee,municipality
+ID,Georgetown,municipality
+ID,Grand View,municipality
+ID,Grangeville,municipality
+ID,Hailey,municipality
+ID,Hauser,municipality
+ID,Hayden,municipality
+ID,Heyburn,municipality
+ID,Idaho City,municipality
+ID,Idaho Falls,municipality
+ID,Inkom,municipality
+ID,Jerome,municipality
+ID,Lava Hot Springs,municipality
+ID,Mackay,municipality
+ID,Malad City,municipality
+ID,Meridian,municipality
+ID,Montpelier,municipality
+ID,Moore,municipality
+ID,New Meadows,municipality
+ID,Orofino,municipality
+ID,Payette,municipality
+ID,Ponderay,municipality
+ID,Post Falls,municipality
+ID,Preston,municipality
+ID,Richfield,municipality
+ID,Rigby,municipality
+ID,Roberts,municipality
+ID,Rupert,municipality
+ID,Sandpoint,municipality
+ID,Shelley,municipality
+ID,Shoshone,municipality
+ID,Sun Valley,municipality
+ID,Teton,municipality
+ID,Tetonia,municipality
+ID,Wallace,municipality
+ID,Weiser,municipality
+ID,Wendell,municipality
+IL,Addison,municipality
+IL,Albers,municipality
+IL,Aledo,municipality
+IL,Algonquin,municipality
+IL,Alsip,municipality
+IL,Altamont,municipality
+IL,Alton,municipality
+IL,Andalusia,municipality
+IL,Anna,municipality
+IL,Annawan,municipality
+IL,Ashmore,municipality
+IL,Assumption,municipality
+IL,Auburn,municipality
+IL,Aviston,municipality
+IL,Barrington,municipality
+IL,Barrington Hills,municipality
+IL,Bartonville,municipality
+IL,Beach Park,municipality
+IL,Beckemeyer,municipality
+IL,Bedford Park,municipality
+IL,Beecher,municipality
+IL,Bellflower,municipality
+IL,Bellwood,municipality
+IL,Belvidere,municipality
+IL,Benton,municipality
+IL,Berwyn,municipality
+IL,Bethalto,municipality
+IL,Bloom,municipality
+IL,Bloomington City,municipality
+IL,Bourbonnais,municipality
+IL,Bradford,municipality
+IL,Bradley,municipality
+IL,Braidwood,municipality
+IL,Breese,municipality
+IL,Bremen,municipality
+IL,Bridgeview,municipality
+IL,Brimfield,municipality
+IL,Broadview,municipality
+IL,Brookfield,municipality
+IL,Buffalo Grove,municipality
+IL,Bunker Hill,municipality
+IL,Burnham,municipality
+IL,Burr Ridge,municipality
+IL,Byron,municipality
+IL,Cahokia Heights,municipality
+IL,Caledonia,municipality
+IL,Calumet,municipality
+IL,Camargo,municipality
+IL,Campton,municipality
+IL,Campton Hills,municipality
+IL,Canteen,municipality
+IL,Canton,municipality
+IL,Capital,municipality
+IL,Carlinville,municipality
+IL,Carlock,municipality
+IL,Carterville,municipality
+IL,Cary,municipality
+IL,Casey,municipality
+IL,Caseyville,municipality
+IL,Centralia,municipality
+IL,Cerro Gordo,municipality
+IL,Chadwick,municipality
+IL,Champaign,municipality
+IL,Champaign City,municipality
+IL,Channahon,municipality
+IL,Charleston,municipality
+IL,Chebanse,municipality
+IL,Cherry Valley,municipality
+IL,Chillicothe,municipality
+IL,Cicero,municipality
+IL,Clifton,municipality
+IL,Coal Valley,municipality
+IL,Colchester,municipality
+IL,Collinsville,municipality
+IL,Colona,municipality
+IL,Colp,municipality
+IL,Cortland,municipality
+IL,Country Club Hills,municipality
+IL,Crest Hill,municipality
+IL,Crestwood,municipality
+IL,Crete,municipality
+IL,Cuba,municipality
+IL,Curran,municipality
+IL,Dakota,municipality
+IL,Dawson,municipality
+IL,De Soto,municipality
+IL,Deer Park,municipality
+IL,Dolton,municipality
+IL,Dorr,municipality
+IL,Downers Grove,municipality
+IL,Downs,municipality
+IL,Dry Grove,municipality
+IL,Du Page,municipality
+IL,Dundee,municipality
+IL,Dupo,municipality
+IL,Earlville,municipality
+IL,East Alton,municipality
+IL,East Dundee,municipality
+IL,East St. Louis,municipality
+IL,Edwardsville,municipality
+IL,Effingham,municipality
+IL,El Paso,municipality
+IL,Elburn,municipality
+IL,Elgin,municipality
+IL,Elk Grove,municipality
+IL,Elkhart,municipality
+IL,Elmhurst,municipality
+IL,Elmwood,municipality
+IL,Elmwood Park,municipality
+IL,Elwood,municipality
+IL,Energy,municipality
+IL,Essex,municipality
+IL,Fairfield,municipality
+IL,Fairmont City,municipality
+IL,Farmer City,municipality
+IL,Farmington,municipality
+IL,Fisher,municipality
+IL,Flora,municipality
+IL,Flossmoor,municipality
+IL,Ford Heights,municipality
+IL,Forest View,municipality
+IL,Forsyth,municipality
+IL,Fox Lake,municipality
+IL,Fox River Grove,municipality
+IL,Frankfort,municipality
+IL,Franklin Grove,municipality
+IL,Franklin Park,municipality
+IL,Freeburg,municipality
+IL,Freeport,municipality
+IL,Fulton,municipality
+IL,Galesburg City,municipality
+IL,Geneseo,municipality
+IL,Geneva,municipality
+IL,Georgetown,municipality
+IL,Germantown,municipality
+IL,Germantown Hills,municipality
+IL,Gibson City,municipality
+IL,Glen Carbon,municipality
+IL,Godfrey,municipality
+IL,Grandview,municipality
+IL,Grant Park,municipality
+IL,Grantfork,municipality
+IL,Green Oaks,municipality
+IL,Greenup,municipality
+IL,Greenville,municipality
+IL,Gridley,municipality
+IL,Hainesville,municipality
+IL,Hamilton,municipality
+IL,Hammond,municipality
+IL,Hampshire,municipality
+IL,Hampton,municipality
+IL,Hanover,municipality
+IL,Hanover Park,municipality
+IL,Harlem,municipality
+IL,Harrisburg,municipality
+IL,Harvey,municipality
+IL,Havana,municipality
+IL,Herrin,municipality
+IL,Heyworth,municipality
+IL,Hickory Hills,municipality
+IL,Highwood,municipality
+IL,Hillsboro,municipality
+IL,Hinsdale,municipality
+IL,Hodgkins,municipality
+IL,Holiday Hills,municipality
+IL,Homer,municipality
+IL,Hoopeston,municipality
+IL,Huntley,municipality
+IL,Illiopolis,municipality
+IL,Inverness,municipality
+IL,Island Lake,municipality
+IL,Jerome,municipality
+IL,Justice,municipality
+IL,Kane,municipality
+IL,Kankakee,municipality
+IL,Keithsburg,municipality
+IL,Kewanee,municipality
+IL,Kildeer,municipality
+IL,Kincaid,municipality
+IL,Kingston Mines,municipality
+IL,Knoxville,municipality
+IL,La Grange,municipality
+IL,La Grange Park,municipality
+IL,LaSalle,municipality
+IL,Ladd,municipality
+IL,Lake Forest,municipality
+IL,Lake Villa,municipality
+IL,Lake Zurich,municipality
+IL,Lake in the Hills,municipality
+IL,Lakewood,municipality
+IL,Lansing,municipality
+IL,Lawrenceville,municipality
+IL,Le Roy,municipality
+IL,Lemont,municipality
+IL,Lena,municipality
+IL,Libertyville,municipality
+IL,Limestone,municipality
+IL,Lincolnshire,municipality
+IL,Lindenhurst,municipality
+IL,Lisle,municipality
+IL,Little Rock,municipality
+IL,Loami,municipality
+IL,Lockport,municipality
+IL,Louisville,municipality
+IL,Lovington,municipality
+IL,Lyndon,municipality
+IL,Lynwood,municipality
+IL,Lyons,municipality
+IL,Macomb,municipality
+IL,Macomb City,municipality
+IL,Macon,municipality
+IL,Maine,municipality
+IL,Manhattan,municipality
+IL,Manteno,municipality
+IL,Marion,municipality
+IL,Maroa,municipality
+IL,Marseilles,municipality
+IL,Martinsville,municipality
+IL,Matteson,municipality
+IL,Mattoon,municipality
+IL,Mazon,municipality
+IL,McHenry,municipality
+IL,McLeansboro,municipality
+IL,Medina,municipality
+IL,Metamora,municipality
+IL,Midlothian,municipality
+IL,Mill Shoals,municipality
+IL,Minier,municipality
+IL,Minooka,municipality
+IL,Mokena,municipality
+IL,Momence,municipality
+IL,Monee,municipality
+IL,Montgomery,municipality
+IL,Monticello,municipality
+IL,Morris,municipality
+IL,Morton,municipality
+IL,Mount Prospect,municipality
+IL,Mount Pulaski,municipality
+IL,Mount Vernon,municipality
+IL,Mount Zion,municipality
+IL,Moweaqua,municipality
+IL,Murphysboro,municipality
+IL,Naperville,municipality
+IL,Neoga,municipality
+IL,Neponset,municipality
+IL,New Berlin,municipality
+IL,New Lenox,municipality
+IL,New Trier,municipality
+IL,Newman,municipality
+IL,Newton,municipality
+IL,Noble,municipality
+IL,Nokomis,municipality
+IL,North Aurora,municipality
+IL,Northlake,municipality
+IL,Northville,municipality
+IL,Norwood,municipality
+IL,Norwood Park,municipality
+IL,Oblong,municipality
+IL,Odell,municipality
+IL,Ogden,municipality
+IL,Oglesby,municipality
+IL,Okawville,municipality
+IL,Olney,municipality
+IL,Orangeville,municipality
+IL,Oreana,municipality
+IL,Oregon,municipality
+IL,Oregon-Nashua,municipality
+IL,Orient,municipality
+IL,Orland,municipality
+IL,Orland Park,municipality
+IL,Palestine,municipality
+IL,Palos,municipality
+IL,Palos Heights,municipality
+IL,Palos Hills,municipality
+IL,Pana,municipality
+IL,Park Ridge,municipality
+IL,Pearl City,municipality
+IL,Pecatonica,municipality
+IL,Peoria City,municipality
+IL,Peoria Heights,municipality
+IL,Peotone,municipality
+IL,Peru,municipality
+IL,Petersburg,municipality
+IL,Pin Oak,municipality
+IL,Pinckneyville,municipality
+IL,Pittsfield,municipality
+IL,Plano,municipality
+IL,Pontiac,municipality
+IL,Port Barrington,municipality
+IL,Prairie Grove,municipality
+IL,Princeton,municipality
+IL,Princeville,municipality
+IL,Prospect Heights,municipality
+IL,Proviso,municipality
+IL,Quincy,municipality
+IL,Rich,municipality
+IL,Richmond,municipality
+IL,River Forest,municipality
+IL,Riverdale,municipality
+IL,Riverside,municipality
+IL,Riverton,municipality
+IL,Roanoke,municipality
+IL,Robbins,municipality
+IL,Rochelle,municipality
+IL,Rock Falls,municipality
+IL,Rock Island,municipality
+IL,Rockdale,municipality
+IL,Rockford,municipality
+IL,Rockton,municipality
+IL,Roodhouse,municipality
+IL,Roscoe,municipality
+IL,Rosemont,municipality
+IL,Roseville,municipality
+IL,Rossville,municipality
+IL,Round Lake,municipality
+IL,Roxana,municipality
+IL,Rushville,municipality
+IL,Rutland,municipality
+IL,Salem,municipality
+IL,Sammons Point,municipality
+IL,San Jose,municipality
+IL,Sauk Village,municipality
+IL,Savanna,municipality
+IL,Schaumburg,municipality
+IL,Sesser,municipality
+IL,Shawnee,municipality
+IL,Shawneetown,municipality
+IL,Sherman,municipality
+IL,Shiloh,municipality
+IL,Shorewood,municipality
+IL,Silvis,municipality
+IL,Skokie,municipality
+IL,Smithton,municipality
+IL,South Barrington,municipality
+IL,South Jacksonville,municipality
+IL,South Rock Island,municipality
+IL,Spring Bay,municipality
+IL,Spring Grove,municipality
+IL,St. Clair,municipality
+IL,St. Elmo,municipality
+IL,St. Jacob,municipality
+IL,Steger,municipality
+IL,Sterling,municipality
+IL,Stickney,municipality
+IL,Stockton,municipality
+IL,Stone Park,municipality
+IL,Stonington,municipality
+IL,Streamwood,municipality
+IL,Streator,municipality
+IL,Stronghurst,municipality
+IL,Sugar Grove,municipality
+IL,Sullivan,municipality
+IL,Summit,municipality
+IL,Swansea,municipality
+IL,Sycamore,municipality
+IL,Taylor Springs,municipality
+IL,Taylorville,municipality
+IL,Teutopolis,municipality
+IL,Thornton,municipality
+IL,Tinley Park,municipality
+IL,Tiskilwa,municipality
+IL,Tolono,municipality
+IL,Tremont,municipality
+IL,Trenton,municipality
+IL,Troy,municipality
+IL,Tuscola,municipality
+IL,University Park,municipality
+IL,Urbana,municipality
+IL,Utica,municipality
+IL,Valmeyer,municipality
+IL,Vandalia,municipality
+IL,Varna,municipality
+IL,Vernon,municipality
+IL,Virden,municipality
+IL,Virgil,municipality
+IL,Wapella,municipality
+IL,Warrensburg,municipality
+IL,Warrenville,municipality
+IL,Washington,municipality
+IL,Waterloo,municipality
+IL,Wauconda,municipality
+IL,Waukegan,municipality
+IL,Waynesville,municipality
+IL,West Dundee,municipality
+IL,Westchester,municipality
+IL,Wheatland,municipality
+IL,Willow Creek,municipality
+IL,Willow Springs,municipality
+IL,Wilmington,municipality
+IL,Windsor,municipality
+IL,Winnebago,municipality
+IL,Winthrop Harbor,municipality
+IL,Wood River,municipality
+IL,Yates,municipality
+IL,Yates City,municipality
+IL,Zion,municipality
+IN,Albany,municipality
+IN,Albion,municipality
+IN,Angola,municipality
+IN,Batesville,municipality
+IN,Beech Grove,municipality
+IN,Berne,municipality
+IN,Beverly Shores,municipality
+IN,Bloomington,municipality
+IN,Boonville,municipality
+IN,Borden,municipality
+IN,Brazil,municipality
+IN,Bristol,municipality
+IN,Brooksburg,municipality
+IN,Brookston,municipality
+IN,Buck Creek,municipality
+IN,Burns Harbor,municipality
+IN,Cambridge City,municipality
+IN,Camden,municipality
+IN,Carmel,municipality
+IN,Cedar Creek,municipality
+IN,Cedar Lake,municipality
+IN,Center,municipality
+IN,Centerville,municipality
+IN,Centre,municipality
+IN,Chalmers,municipality
+IN,Chrisney,municipality
+IN,Churubusco,municipality
+IN,Clear Lake,municipality
+IN,Clermont,municipality
+IN,Columbia,municipality
+IN,Columbia City,municipality
+IN,Corydon,municipality
+IN,Covington,municipality
+IN,Culver,municipality
+IN,Cumberland,municipality
+IN,Dale,municipality
+IN,Danville,municipality
+IN,Darmstadt,municipality
+IN,Dayton,municipality
+IN,Decatur,municipality
+IN,Delphi,municipality
+IN,Dillsboro,municipality
+IN,East Chicago,municipality
+IN,Edgewood,municipality
+IN,Edinburgh,municipality
+IN,Elkhart,municipality
+IN,Ellettsville,municipality
+IN,Elwood,municipality
+IN,Evansville,municipality
+IN,Fairmount,municipality
+IN,Ferdinand,municipality
+IN,Fort Branch,municipality
+IN,Fort Wayne,municipality
+IN,Fortville,municipality
+IN,Francesville,municipality
+IN,Frankfort,municipality
+IN,Franklin,municipality
+IN,Garrett,municipality
+IN,Geneva,municipality
+IN,Gentryville,municipality
+IN,Georgetown,municipality
+IN,German,municipality
+IN,Glenwood,municipality
+IN,Gosport,municipality
+IN,Grabill,municipality
+IN,Grandview,municipality
+IN,Green,municipality
+IN,Greensburg,municipality
+IN,Greentown,municipality
+IN,Hagerstown,municipality
+IN,Hammond,municipality
+IN,Hartford City,municipality
+IN,Haubstadt,municipality
+IN,Highland,municipality
+IN,Hobart,municipality
+IN,Honey Creek,municipality
+IN,Hope,municipality
+IN,Huntertown,municipality
+IN,Huntingburg,municipality
+IN,Huntington,municipality
+IN,Indianapolis city (balance),municipality
+IN,Jackson,municipality
+IN,Jamestown,municipality
+IN,Jasper,municipality
+IN,Jennings,municipality
+IN,Kendallville,municipality
+IN,Kentland,municipality
+IN,Keyser,municipality
+IN,Kingsford Heights,municipality
+IN,Kirklin,municipality
+IN,Knightstown,municipality
+IN,Knox,municipality
+IN,Kokomo,municipality
+IN,La Paz,municipality
+IN,La Porte,municipality
+IN,Ladoga,municipality
+IN,Lagrange,municipality
+IN,Lagro,municipality
+IN,Lapel,municipality
+IN,Laurel,municipality
+IN,Lawrence,municipality
+IN,Lawrenceburg,municipality
+IN,Lebanon,municipality
+IN,Liberty,municipality
+IN,Ligonier,municipality
+IN,Logansport,municipality
+IN,Loogootee,municipality
+IN,Lowell,municipality
+IN,Lynn,municipality
+IN,Marion,municipality
+IN,Martinsville,municipality
+IN,McCordsville,municipality
+IN,Medaryville,municipality
+IN,Meridian Hills,municipality
+IN,Middlebury,municipality
+IN,Middletown,municipality
+IN,Millersburg,municipality
+IN,Milton,municipality
+IN,Monon,municipality
+IN,Montpelier,municipality
+IN,Mooreland,municipality
+IN,Mooresville,municipality
+IN,Morgan,municipality
+IN,Munster,municipality
+IN,Nashville,municipality
+IN,New Carlisle,municipality
+IN,New Castle,municipality
+IN,New Chicago,municipality
+IN,New Harmony,municipality
+IN,New Richmond,municipality
+IN,New Whiteland,municipality
+IN,Newcastle,municipality
+IN,Noblesville,municipality
+IN,North Manchester,municipality
+IN,North Vernon,municipality
+IN,Odon,municipality
+IN,Ogden Dunes,municipality
+IN,Orleans,municipality
+IN,Osgood,municipality
+IN,Owensville,municipality
+IN,Paoli,municipality
+IN,Peru,municipality
+IN,Pike,municipality
+IN,Plymouth,municipality
+IN,Porter,municipality
+IN,Portland,municipality
+IN,Posey,municipality
+IN,Princeton,municipality
+IN,Redkey,municipality
+IN,Rensselaer,municipality
+IN,Ridgeville,municipality
+IN,Riley,municipality
+IN,Roann,municipality
+IN,Rochester,municipality
+IN,Rome City,municipality
+IN,Royal Center,municipality
+IN,Russiaville,municipality
+IN,Salem,municipality
+IN,Schererville,municipality
+IN,Scottsburg,municipality
+IN,Sellersburg,municipality
+IN,Shadeland,municipality
+IN,Shawswick,municipality
+IN,Shelburn,municipality
+IN,Shelby,municipality
+IN,Sheridan,municipality
+IN,Silver Creek,municipality
+IN,Silver Lake,municipality
+IN,Spencer,municipality
+IN,Spring Grove,municipality
+IN,Spurgeon,municipality
+IN,St. John,municipality
+IN,St. Paul,municipality
+IN,Stampers Creek,municipality
+IN,Thorntown,municipality
+IN,Tippecanoe,municipality
+IN,Trail Creek,municipality
+IN,Troy,municipality
+IN,Ulen,municipality
+IN,Union,municipality
+IN,Van Buren,municipality
+IN,Veedersburg,municipality
+IN,Vermillion,municipality
+IN,Versailles,municipality
+IN,Wabash,municipality
+IN,Walton,municipality
+IN,Warsaw,municipality
+IN,Washington,municipality
+IN,Wayne,municipality
+IN,West Baden Springs,municipality
+IN,West Terre Haute,municipality
+IN,Westport,municipality
+IN,Wheatfield,municipality
+IN,White River,municipality
+IN,Whitestown,municipality
+IN,Whiting,municipality
+IN,Winamac,municipality
+IN,Winfield,municipality
+IN,Winslow,municipality
+IN,Wolcottville,municipality
+IN,Worthington,municipality
+IN,Yorktown,municipality
+KS,Afton,municipality
+KS,Alta Vista,municipality
+KS,Altamont,municipality
+KS,Altoona,municipality
+KS,Americus,municipality
+KS,Andover,municipality
+KS,Anthony,municipality
+KS,Argonia,municipality
+KS,Arkansas City,municipality
+KS,Arma,municipality
+KS,Atchison,municipality
+KS,Augusta,municipality
+KS,Basehor,municipality
+KS,Baxter Springs,municipality
+KS,Bazine,municipality
+KS,Bel Aire,municipality
+KS,Belle Plaine,municipality
+KS,Belleville,municipality
+KS,Bennington,municipality
+KS,Bentley,municipality
+KS,Benton,municipality
+KS,Bird City,municipality
+KS,Burden,municipality
+KS,Burlington,municipality
+KS,Caney,municipality
+KS,Canton,municipality
+KS,Cawker City,municipality
+KS,Chanute,municipality
+KS,Chase,municipality
+KS,Cheney,municipality
+KS,Cherryvale,municipality
+KS,Claflin,municipality
+KS,Clearwater,municipality
+KS,Coffeyville,municipality
+KS,Colby,municipality
+KS,Coldwater,municipality
+KS,Columbus,municipality
+KS,Colwich,municipality
+KS,Conway Springs,municipality
+KS,Council Grove,municipality
+KS,Culver,municipality
+KS,Cunningham,municipality
+KS,Deerfield,municipality
+KS,Dodge,municipality
+KS,Downs,municipality
+KS,Eastborough,municipality
+KS,Edgerton,municipality
+KS,Edna,municipality
+KS,Edwardsville,municipality
+KS,El Dorado,municipality
+KS,Ellinwood,municipality
+KS,Ellsworth,municipality
+KS,Elwood,municipality
+KS,Emporia,municipality
+KS,Eskridge,municipality
+KS,Eudora,municipality
+KS,Eureka,municipality
+KS,Fairview,municipality
+KS,Galena,municipality
+KS,Garden Plain,municipality
+KS,Gardner,municipality
+KS,Gas,municipality
+KS,Glasco,municipality
+KS,Glen Elder,municipality
+KS,Goessel,municipality
+KS,Goodland,municipality
+KS,Great Bend,municipality
+KS,Gridley,municipality
+KS,Halstead,municipality
+KS,Harper,municipality
+KS,Haven,municipality
+KS,Haviland,municipality
+KS,Herington,municipality
+KS,Hiawatha,municipality
+KS,Hillsboro,municipality
+KS,Hoisington,municipality
+KS,Holcomb,municipality
+KS,Hope,municipality
+KS,Inman,municipality
+KS,Jewell,municipality
+KS,Johnson City,municipality
+KS,Kanopolis,municipality
+KS,Kansas City,municipality
+KS,Kechi,municipality
+KS,Kinsley,municipality
+KS,La Cygne,municipality
+KS,Lake Quivira,municipality
+KS,Lansing,municipality
+KS,Larned,municipality
+KS,Lawrence,municipality
+KS,Lebo,municipality
+KS,Lecompton,municipality
+KS,Leonardville,municipality
+KS,Lincoln,municipality
+KS,Lincoln Center,municipality
+KS,Linn,municipality
+KS,Linn Valley,municipality
+KS,Louisburg,municipality
+KS,Madison,municipality
+KS,Maize,municipality
+KS,Mankato,municipality
+KS,Maple Hill,municipality
+KS,Marysville,municipality
+KS,McLouth,municipality
+KS,McPherson,municipality
+KS,Medicine Lodge,municipality
+KS,Melvern,municipality
+KS,Meriden,municipality
+KS,Minneapolis,municipality
+KS,Minneola,municipality
+KS,Mission,municipality
+KS,Mission Creek,municipality
+KS,Mission Hills,municipality
+KS,Moundridge,municipality
+KS,Mount Hope,municipality
+KS,Mulberry,municipality
+KS,Mulvane,municipality
+KS,Natoma,municipality
+KS,Neodesha,municipality
+KS,New Strawn,municipality
+KS,Newton,municipality
+KS,Nickerson,municipality
+KS,Ninnescah,municipality
+KS,Nortonville,municipality
+KS,Oakley,municipality
+KS,Oberlin,municipality
+KS,Offerle,municipality
+KS,Osage,municipality
+KS,Osage City,municipality
+KS,Osborne,municipality
+KS,Ottawa,municipality
+KS,Overbrook,municipality
+KS,Ozawkie,municipality
+KS,Park City,municipality
+KS,Parker,municipality
+KS,Peabody,municipality
+KS,Pittsburg,municipality
+KS,Pleasanton,municipality
+KS,Pomona,municipality
+KS,Pottawatomie,municipality
+KS,Potwin,municipality
+KS,Pratt,municipality
+KS,Pretty Prairie,municipality
+KS,Ramona,municipality
+KS,Richmond,municipality
+KS,Robinson,municipality
+KS,Rose Hill,municipality
+KS,Rossville,municipality
+KS,Scranton,municipality
+KS,Sedan,municipality
+KS,Sedgwick,municipality
+KS,Seneca,municipality
+KS,Shawnee,municipality
+KS,Silver Lake,municipality
+KS,Smith,municipality
+KS,Soldier,municipality
+KS,Solomon,municipality
+KS,South Hutchinson,municipality
+KS,Spearville,municipality
+KS,Spring Hill,municipality
+KS,St. Francis,municipality
+KS,St. George,municipality
+KS,St. John,municipality
+KS,St. Marys,municipality
+KS,Sterling,municipality
+KS,Sylvia,municipality
+KS,Syracuse,municipality
+KS,Towanda,municipality
+KS,Troy,municipality
+KS,Udall,municipality
+KS,Valley Falls,municipality
+KS,Victoria,municipality
+KS,Wakefield,municipality
+KS,Washington,municipality
+KS,Wellington,municipality
+KS,West Mineral,municipality
+KS,Westwood Hills,municipality
+KS,Wetmore,municipality
+KS,White City,municipality
+KS,Wichita,municipality
+KS,Williamsburg,municipality
+KS,Wilson,municipality
+KS,Winchester,municipality
+KS,Yates Center,municipality
+KY,Alexandria,municipality
+KY,Ashland,municipality
+KY,Audubon Park,municipality
+KY,Bardstown,municipality
+KY,Beattyville,municipality
+KY,Bedford,municipality
+KY,Beechwood Village,municipality
+KY,Bellefonte,municipality
+KY,Bellemeade,municipality
+KY,Bellevue,municipality
+KY,Benton,municipality
+KY,Berry,municipality
+KY,Bloomfield,municipality
+KY,Blue Ridge Manor,municipality
+KY,Brandenburg,municipality
+KY,Bromley,municipality
+KY,Burkesville,municipality
+KY,Calvert City,municipality
+KY,Carrollton,municipality
+KY,Catlettsburg,municipality
+KY,Centertown,municipality
+KY,Cold Spring,municipality
+KY,Crittenden,municipality
+KY,Cumberland,municipality
+KY,Danville,municipality
+KY,Dayton,municipality
+KY,Drakesboro,municipality
+KY,Dry Ridge,municipality
+KY,Earlington,municipality
+KY,Edgewood,municipality
+KY,Flemingsburg,municipality
+KY,Fort Mitchell,municipality
+KY,Fort Thomas,municipality
+KY,Fort Wright,municipality
+KY,Fox Chase,municipality
+KY,Goshen,municipality
+KY,Grand Rivers,municipality
+KY,Greensburg,municipality
+KY,Guthrie,municipality
+KY,Heritage Creek,municipality
+KY,Highland Heights,municipality
+KY,Hills and Dales,municipality
+KY,Hurstbourne,municipality
+KY,Hustonville,municipality
+KY,Indian Hills,municipality
+KY,Jamestown,municipality
+KY,Junction City,municipality
+KY,Kingsley,municipality
+KY,La Grange,municipality
+KY,Lancaster,municipality
+KY,Lawrenceburg,municipality
+KY,Leitchfield,municipality
+KY,London,municipality
+KY,Louisa,municipality
+KY,Loyall,municipality
+KY,Ludlow,municipality
+KY,Marion,municipality
+KY,Mayfield,municipality
+KY,Meadow Vale,municipality
+KY,Melbourne,municipality
+KY,Metro Government Of Louisville-Jefferson County,municipality
+KY,Morganfield,municipality
+KY,Mount Olivet,municipality
+KY,Mount Washington,municipality
+KY,Munfordville,municipality
+KY,New Castle,municipality
+KY,Newport,municipality
+KY,Norwood,municipality
+KY,Oak Grove,municipality
+KY,Orchard Grass Hills,municipality
+KY,Paducah,municipality
+KY,Paris,municipality
+KY,Park City,municipality
+KY,Park Hills,municipality
+KY,Pikeville,municipality
+KY,Plantation,municipality
+KY,Pleasureville,municipality
+KY,Prestonville,municipality
+KY,Princeton,municipality
+KY,Radcliff,municipality
+KY,Richlawn,municipality
+KY,Riverwood,municipality
+KY,Rolling Hills,municipality
+KY,Russell Springs,municipality
+KY,Russellville,municipality
+KY,Ryland Heights,municipality
+KY,Sacramento,municipality
+KY,Salt Lick,municipality
+KY,Shelbyville,municipality
+KY,Shepherdsville,municipality
+KY,Shively,municipality
+KY,Silver Grove,municipality
+KY,Simpsonville,municipality
+KY,Smiths Grove,municipality
+KY,Somerset,municipality
+KY,Southgate,municipality
+KY,Springfield,municipality
+KY,St. Matthews,municipality
+KY,Stamping Ground,municipality
+KY,Stanford,municipality
+KY,Sycamore,municipality
+KY,Taylor Mill,municipality
+KY,Union,municipality
+KY,Vine Grove,municipality
+KY,Walton,municipality
+KY,Watterson Park,municipality
+KY,West Buechel,municipality
+KY,West Liberty,municipality
+KY,West Point,municipality
+KY,Wilder,municipality
+KY,Williamstown,municipality
+KY,Wilmore,municipality
+KY,Woodland Hills,municipality
+KY,Woodlawn,municipality
+LA,Abbeville,municipality
+LA,Abita Springs,municipality
+LA,Alexandria,municipality
+LA,Anacoco,municipality
+LA,Arcadia,municipality
+LA,Athens,municipality
+LA,Baker,municipality
+LA,Bastrop,municipality
+LA,Belcher,municipality
+LA,Bernice,municipality
+LA,Berwick,municipality
+LA,Blanchard,municipality
+LA,Breaux Bridge,municipality
+LA,Brusly,municipality
+LA,Carencro,municipality
+LA,Chataignier,municipality
+LA,Choudrant,municipality
+LA,Church Point,municipality
+LA,Cotton Valley,municipality
+LA,Covington,municipality
+LA,Creola,municipality
+LA,Delcambre,municipality
+LA,Delhi,municipality
+LA,Denham Springs,municipality
+LA,Dixie Inn,municipality
+LA,Doyline,municipality
+LA,Dry Prong,municipality
+LA,Elton,municipality
+LA,Erath,municipality
+LA,Farmerville,municipality
+LA,Ferriday,municipality
+LA,Forest Hill,municipality
+LA,French Settlement,municipality
+LA,Gilbert,municipality
+LA,Goldonna,municipality
+LA,Gramercy,municipality
+LA,Grand Cane,municipality
+LA,Grand Isle,municipality
+LA,Greenwood,municipality
+LA,Grosse Tete,municipality
+LA,Gueydan,municipality
+LA,Harrisonburg,municipality
+LA,Haughton,municipality
+LA,Hosston,municipality
+LA,Ida,municipality
+LA,Iowa,municipality
+LA,Jackson,municipality
+LA,Jean Lafitte,municipality
+LA,Jeanerette,municipality
+LA,Jena,municipality
+LA,Jennings,municipality
+LA,Killian,municipality
+LA,Kinder,municipality
+LA,Lake Arthur,municipality
+LA,Lecompte,municipality
+LA,Livingston,municipality
+LA,Logansport,municipality
+LA,Loreauville,municipality
+LA,Mansfield,municipality
+LA,Maringouin,municipality
+LA,Maurice,municipality
+LA,Mer Rouge,municipality
+LA,Mermentau,municipality
+LA,Morganza,municipality
+LA,Morse,municipality
+LA,Napoleonville,municipality
+LA,New Llano,municipality
+LA,Norwood,municipality
+LA,Oberlin,municipality
+LA,Oil City,municipality
+LA,Patterson,municipality
+LA,Pearl River,municipality
+LA,Pineville,municipality
+LA,Pioneer,municipality
+LA,Plain Dealing,municipality
+LA,Plaquemine,municipality
+LA,Pollock,municipality
+LA,Ponchatoula,municipality
+LA,Port Barre,municipality
+LA,Richwood,municipality
+LA,Rosepine,municipality
+LA,Sibley,municipality
+LA,Sikes,municipality
+LA,Simmesport,municipality
+LA,Simsboro,municipality
+LA,Springfield,municipality
+LA,Springhill,municipality
+LA,St. Martinville,municipality
+LA,Sterlington,municipality
+LA,Stonewall,municipality
+LA,Tullos,municipality
+LA,Vidalia,municipality
+LA,Vienna,municipality
+LA,Ville Platte,municipality
+LA,Vinton,municipality
+LA,Vivian,municipality
+LA,Walker,municipality
+LA,Washington,municipality
+LA,Westwego,municipality
+LA,White Castle,municipality
+LA,Winnfield,municipality
+LA,Youngsville,municipality
+LA,Zachary,municipality
+LA,Zwolle,municipality
+MA,Abington,municipality
+MA,Andover,municipality
+MA,Arlington,municipality
+MA,Ashby,municipality
+MA,Auburn,municipality
+MA,Bedford,municipality
+MA,Belchertown,municipality
+MA,Berkley,municipality
+MA,Blandford,municipality
+MA,Bourne,municipality
+MA,Braintree Town,municipality
+MA,Brewster,municipality
+MA,Brimfield,municipality
+MA,Brockton,municipality
+MA,Brookfield,municipality
+MA,Brookline,municipality
+MA,Burlington,municipality
+MA,Carver,municipality
+MA,Charlemont,municipality
+MA,Chelmsford,municipality
+MA,Chilmark,municipality
+MA,Clarksburg,municipality
+MA,Clinton,municipality
+MA,Cohasset,municipality
+MA,Colrain,municipality
+MA,Conway,municipality
+MA,Dalton,municipality
+MA,Danvers,municipality
+MA,Dartmouth,municipality
+MA,Dracut,municipality
+MA,Dunstable,municipality
+MA,Duxbury,municipality
+MA,Easton,municipality
+MA,Fairhaven,municipality
+MA,Fall River,municipality
+MA,Foxborough,municipality
+MA,Georgetown,municipality
+MA,Gill,municipality
+MA,Groton,municipality
+MA,Hamilton,municipality
+MA,Hancock,municipality
+MA,Hanover,municipality
+MA,Harwich,municipality
+MA,Hatfield,municipality
+MA,Hawley,municipality
+MA,Holland,municipality
+MA,Holliston,municipality
+MA,Hopkinton,municipality
+MA,Hull,municipality
+MA,Ipswich,municipality
+MA,Leicester,municipality
+MA,Leverett,municipality
+MA,Leyden,municipality
+MA,Lincoln,municipality
+MA,Ludlow,municipality
+MA,Lynn,municipality
+MA,Marblehead,municipality
+MA,Marshfield,municipality
+MA,Mashpee,municipality
+MA,Medway,municipality
+MA,Mendon,municipality
+MA,Merrimac,municipality
+MA,Middleborough,municipality
+MA,Milford,municipality
+MA,Millbury,municipality
+MA,Millis,municipality
+MA,Montague,municipality
+MA,Monterey,municipality
+MA,Nahant,municipality
+MA,Nantucket,municipality
+MA,Needham,municipality
+MA,New Ashford,municipality
+MA,New Braintree,municipality
+MA,Newton,municipality
+MA,Norfolk,municipality
+MA,North Andover,municipality
+MA,North Reading,municipality
+MA,Northborough,municipality
+MA,Northbridge,municipality
+MA,Norwell,municipality
+MA,Orange,municipality
+MA,Oxford,municipality
+MA,Pelham,municipality
+MA,Raynham,municipality
+MA,Rehoboth,municipality
+MA,Rowe,municipality
+MA,Russell,municipality
+MA,Sandisfield,municipality
+MA,Sheffield,municipality
+MA,Shelburne,municipality
+MA,Shirley,municipality
+MA,Shutesbury,municipality
+MA,Somerset,municipality
+MA,Somerville,municipality
+MA,Southampton,municipality
+MA,Spencer,municipality
+MA,Sturbridge,municipality
+MA,Sudbury,municipality
+MA,Swampscott,municipality
+MA,Tyngsborough,municipality
+MA,Ware,municipality
+MA,Wareham,municipality
+MA,Warwick,municipality
+MA,West Bridgewater,municipality
+MA,West Brookfield,municipality
+MA,Westford,municipality
+MA,Westhampton,municipality
+MA,Westport,municipality
+MA,Williamstown,municipality
+MA,Worcester,municipality
+MA,Yarmouth,municipality
+MD,Boonsboro,municipality
+MD,Brookeville,municipality
+MD,Cecilton,municipality
+MD,Church Hill,municipality
+MD,Cottage City,municipality
+MD,Denton,municipality
+MD,Edmonston,municipality
+MD,Emmitsburg,municipality
+MD,Fairmount Heights,municipality
+MD,Forest Heights,municipality
+MD,Friendsville,municipality
+MD,Galena,municipality
+MD,Glen Echo,municipality
+MD,Glenarden,municipality
+MD,Hagerstown,municipality
+MD,Indian Head,municipality
+MD,Keedysville,municipality
+MD,Kensington,municipality
+MD,Kitzmiller,municipality
+MD,Landover Hills,municipality
+MD,Loch Lynn Heights,municipality
+MD,Lonaconing,municipality
+MD,Mardela Springs,municipality
+MD,Marydel,municipality
+MD,New Market,municipality
+MD,North Chevy Chase,municipality
+MD,North East,municipality
+MD,Perryville,municipality
+MD,Pittsville,municipality
+MD,Pocomoke City,municipality
+MD,Poolesville,municipality
+MD,Port Deposit,municipality
+MD,Preston,municipality
+MD,Queenstown,municipality
+MD,Rock Hall,municipality
+MD,Seat Pleasant,municipality
+MD,Sharpsburg,municipality
+MD,Sharptown,municipality
+MD,St. Michaels,municipality
+MD,Sudlersville,municipality
+MD,Trappe,municipality
+MD,University Park,municipality
+MD,Washington Grove,municipality
+MD,Westernport,municipality
+ME,Alna,municipality
+ME,Amherst,municipality
+ME,Andover,municipality
+ME,Anson,municipality
+ME,Arrowsic,municipality
+ME,Augusta,municipality
+ME,Baileyville,municipality
+ME,Baldwin,municipality
+ME,Bar Harbor,municipality
+ME,Beaver Cove,municipality
+ME,Beddington,municipality
+ME,Belgrade,municipality
+ME,Berwick,municipality
+ME,Blue Hill,municipality
+ME,Boothbay,municipality
+ME,Bradford,municipality
+ME,Bradford|Kingsbury,municipality
+ME,Bradley,municipality
+ME,Brewer,municipality
+ME,Bridgton,municipality
+ME,Brooks,municipality
+ME,Brunswick,municipality
+ME,Buxton,municipality
+ME,Calais,municipality
+ME,Camden,municipality
+ME,Canaan,municipality
+ME,Caratunk,municipality
+ME,Carrabassett Valley,municipality
+ME,Casco,municipality
+ME,Chebeague Island,municipality
+ME,Chelsea,municipality
+ME,Chesterville,municipality
+ME,China,municipality
+ME,Clinton,municipality
+ME,Corinna,municipality
+ME,Cranberry Isles,municipality
+ME,Crystal,municipality
+ME,Dayton,municipality
+ME,Dover-Foxcroft,municipality
+ME,Eastport,municipality
+ME,Edgecomb,municipality
+ME,Eliot,municipality
+ME,Fairfield,municipality
+ME,Falmouth,municipality
+ME,Farmingdale,municipality
+ME,Farmington,municipality
+ME,Fort Fairfield,municipality
+ME,Fort Kent,municipality
+ME,Frankfort,municipality
+ME,Freeport,municipality
+ME,Glenburn,municipality
+ME,Gorham,municipality
+ME,Gray,municipality
+ME,Greene,municipality
+ME,Guilford,municipality
+ME,Hallowell,municipality
+ME,Hampden,municipality
+ME,Hancock,municipality
+ME,Harpswell,municipality
+ME,Hartland,municipality
+ME,Hermon,municipality
+ME,Hiram,municipality
+ME,Houlton,municipality
+ME,Howland,municipality
+ME,Island Falls,municipality
+ME,Isle au Haut,municipality
+ME,Jackman,municipality
+ME,Jay,municipality
+ME,Jonesport,municipality
+ME,Kennebunk,municipality
+ME,Kingsbury,municipality
+ME,Kittery,municipality
+ME,Lebanon,municipality
+ME,Limerick,municipality
+ME,Lincoln,municipality
+ME,Lincolnville,municipality
+ME,Lisbon,municipality
+ME,Livermore,municipality
+ME,Lubec,municipality
+ME,Machias,municipality
+ME,Madawaska,municipality
+ME,Madison,municipality
+ME,Mapleton,municipality
+ME,Mechanic Falls,municipality
+ME,Mercer,municipality
+ME,Mexico,municipality
+ME,Millinocket,municipality
+ME,Monhegan,municipality
+ME,Monmouth,municipality
+ME,New Gloucester,municipality
+ME,Newburgh,municipality
+ME,Newcastle,municipality
+ME,Nobleboro,municipality
+ME,Norridgewock,municipality
+ME,North Berwick,municipality
+ME,North Yarmouth,municipality
+ME,Oakland,municipality
+ME,Ogunquit,municipality
+ME,Old Orchard Beach,municipality
+ME,Orono,municipality
+ME,Orrington,municipality
+ME,Oxford,municipality
+ME,Palmyra,municipality
+ME,Paris,municipality
+ME,Phippsburg,municipality
+ME,Pittsfield,municipality
+ME,Poland,municipality
+ME,Portland,municipality
+ME,Pownal,municipality
+ME,Presque Isle,municipality
+ME,Raymond,municipality
+ME,Readfield,municipality
+ME,Rockport,municipality
+ME,Rumford,municipality
+ME,Sabattus,municipality
+ME,Sandy River,municipality
+ME,Sangerville,municipality
+ME,Scarborough,municipality
+ME,Searsmont,municipality
+ME,Searsport,municipality
+ME,Sebago,municipality
+ME,Sebec,municipality
+ME,Sedgwick,municipality
+ME,Shapleigh,municipality
+ME,Skowhegan,municipality
+ME,Smithfield,municipality
+ME,Solon,municipality
+ME,South Berwick,municipality
+ME,Southwest Harbor,municipality
+ME,Strong,municipality
+ME,Thomaston,municipality
+ME,Topsham,municipality
+ME,Turner,municipality
+ME,Vassalboro,municipality
+ME,Veazie,municipality
+ME,Verona Island,municipality
+ME,Vienna,municipality
+ME,Waldoboro,municipality
+ME,Wales,municipality
+ME,Warren,municipality
+ME,Waterboro,municipality
+ME,Wayne,municipality
+ME,Weld,municipality
+ME,West Bath,municipality
+ME,Westfield,municipality
+ME,Whitefield,municipality
+ME,Wilton,municipality
+ME,Winslow,municipality
+ME,Winterport,municipality
+ME,Winthrop,municipality
+ME,Wiscasset,municipality
+ME,York,municipality
+MI,Aetna,municipality
+MI,Alaiedon,municipality
+MI,Albion,municipality
+MI,Algonac,municipality
+MI,Allegan,municipality
+MI,Allendale charter,municipality
+MI,Alma,municipality
+MI,Almont,municipality
+MI,Alpena,municipality
+MI,Antrim,municipality
+MI,Antwerp,municipality
+MI,Arbela,municipality
+MI,Arlington,municipality
+MI,Armada,municipality
+MI,Ashley,municipality
+MI,Assyria,municipality
+MI,Atlas,municipality
+MI,Au Gres,municipality
+MI,Au Sable,municipality
+MI,Au Train,municipality
+MI,Augusta charter,municipality
+MI,Bad Axe,municipality
+MI,Baldwin,municipality
+MI,Bangor,municipality
+MI,Bangor charter,municipality
+MI,Bay,municipality
+MI,Bay Mills,municipality
+MI,Beaverton,municipality
+MI,Belding,municipality
+MI,Belknap,municipality
+MI,Bellaire,municipality
+MI,Belleville,municipality
+MI,Bellevue,municipality
+MI,Benona,municipality
+MI,Bentley,municipality
+MI,Benton charter,municipality
+MI,Bergland,municipality
+MI,Berrien,municipality
+MI,Berrien Springs,municipality
+MI,Bertrand,municipality
+MI,Beverly Hills,municipality
+MI,Big Rapids,municipality
+MI,Big Rapids charter,municipality
+MI,Bingham,municipality
+MI,Birch Run,municipality
+MI,Blair,municipality
+MI,Blissfield,municipality
+MI,Bloomfield,municipality
+MI,Bloomfield Hills,municipality
+MI,Bloomfield charter,municipality
+MI,Blue Lake,municipality
+MI,Boyne City,municipality
+MI,Brampton,municipality
+MI,Brevort,municipality
+MI,Brighton,municipality
+MI,Briley,municipality
+MI,Bronson,municipality
+MI,Brooklyn,municipality
+MI,Brownstown charter,municipality
+MI,Buchanan,municipality
+MI,Buena Vista charter,municipality
+MI,Bunker Hill,municipality
+MI,Burdell,municipality
+MI,Burt,municipality
+MI,Butman,municipality
+MI,Cadillac,municipality
+MI,Caledonia,municipality
+MI,Calumet,municipality
+MI,Calumet charter,municipality
+MI,Carp Lake,municipality
+MI,Carrollton,municipality
+MI,Casco,municipality
+MI,Casnovia,municipality
+MI,Cassopolis,municipality
+MI,Cement City,municipality
+MI,Center Line,municipality
+MI,Centreville,municipality
+MI,Charlotte,municipality
+MI,Cheboygan,municipality
+MI,Chelsea,municipality
+MI,Chesaning,municipality
+MI,Chestonia,municipality
+MI,Clarksville,municipality
+MI,Claybanks,municipality
+MI,Clayton charter,municipality
+MI,Clinton charter,municipality
+MI,Clyde,municipality
+MI,Coldsprings,municipality
+MI,Coldwater,municipality
+MI,Columbia,municipality
+MI,Commerce charter,municipality
+MI,Comstock charter,municipality
+MI,Concord,municipality
+MI,Convis,municipality
+MI,Conway,municipality
+MI,Coopersville,municipality
+MI,Corunna,municipality
+MI,Covert,municipality
+MI,Cross Village,municipality
+MI,Croswell,municipality
+MI,Crystal,municipality
+MI,Crystal Falls,municipality
+MI,Crystal Lake,municipality
+MI,Cumming,municipality
+MI,Davison,municipality
+MI,DeWitt,municipality
+MI,DeWitt charter,municipality
+MI,Decatur,municipality
+MI,Deerfield,municipality
+MI,Delhi charter,municipality
+MI,Delta charter,municipality
+MI,Detroit,municipality
+MI,Dexter,municipality
+MI,Dimondale,municipality
+MI,Dowagiac,municipality
+MI,Drummond,municipality
+MI,Eagle Harbor,municipality
+MI,East China,municipality
+MI,East Grand Rapids,municipality
+MI,East Jordan,municipality
+MI,Eastpointe,municipality
+MI,Eaton Rapids,municipality
+MI,Eckford,municipality
+MI,Ecorse,municipality
+MI,Egelston,municipality
+MI,Elk,municipality
+MI,Ellsworth,municipality
+MI,Elmer,municipality
+MI,Elmira,municipality
+MI,Elmwood charter,municipality
+MI,Elsie,municipality
+MI,Emmett,municipality
+MI,Empire,municipality
+MI,Essexville,municipality
+MI,Estral Beach,municipality
+MI,Eureka,municipality
+MI,Evart,municipality
+MI,Fairgrove,municipality
+MI,Farmington,municipality
+MI,Felch,municipality
+MI,Fife Lake,municipality
+MI,Filer charter,municipality
+MI,Fillmore,municipality
+MI,Flint,municipality
+MI,Flint charter,municipality
+MI,Fork,municipality
+MI,Forsyth,municipality
+MI,Fort Gratiot charter,municipality
+MI,Foster,municipality
+MI,Fowler,municipality
+MI,Frankenmuth,municipality
+MI,Frankfort,municipality
+MI,Franklin,municipality
+MI,Fraser,municipality
+MI,Fredonia,municipality
+MI,Frenchtown,municipality
+MI,Friendship,municipality
+MI,Fruitport charter,municipality
+MI,Gaines,municipality
+MI,Gaines charter,municipality
+MI,Garfield,municipality
+MI,Garfield charter,municipality
+MI,Gaylord,municipality
+MI,Genesee charter,municipality
+MI,Genoa,municipality
+MI,Gibraltar,municipality
+MI,Gladstone,municipality
+MI,Gladwin,municipality
+MI,Glen Arbor,municipality
+MI,Golden,municipality
+MI,Goodland,municipality
+MI,Goodrich,municipality
+MI,Grand Beach,municipality
+MI,Grand Blanc,municipality
+MI,Grand Blanc charter,municipality
+MI,Grand Haven,municipality
+MI,Grand Haven charter,municipality
+MI,Grand Ledge,municipality
+MI,Grand Rapids charter,municipality
+MI,Grant,municipality
+MI,Grass Lake charter,municipality
+MI,Grayling,municipality
+MI,Grayling charter,municipality
+MI,Greenbush,municipality
+MI,Greendale,municipality
+MI,Greenwood,municipality
+MI,Grosse Ile,municipality
+MI,Grosse Pointe Farms,municipality
+MI,Grosse Pointe Park,municipality
+MI,Grosse Pointe Woods,municipality
+MI,Grout,municipality
+MI,Gun Plain,municipality
+MI,Hamburg,municipality
+MI,Hancock,municipality
+MI,Handy,municipality
+MI,Harbor Beach,municipality
+MI,Harper Woods,municipality
+MI,Harrison,municipality
+MI,Hart,municipality
+MI,Hartford,municipality
+MI,Hartland,municipality
+MI,Hastings,municipality
+MI,Hatton,municipality
+MI,Hay,municipality
+MI,Hazel Park,municipality
+MI,Heath,municipality
+MI,Helena,municipality
+MI,Henrietta,municipality
+MI,Highland Park,municipality
+MI,Highland charter,municipality
+MI,Holland charter,municipality
+MI,Holly,municipality
+MI,Honor,municipality
+MI,Hope,municipality
+MI,Hopkins,municipality
+MI,Howard City,municipality
+MI,Howell,municipality
+MI,Hudson,municipality
+MI,Hume,municipality
+MI,Huntington Woods,municipality
+MI,Huron charter,municipality
+MI,Imlay,municipality
+MI,Imlay City,municipality
+MI,Independence charter,municipality
+MI,Ingham,municipality
+MI,Inkster,municipality
+MI,Inverness,municipality
+MI,Iron Mountain,municipality
+MI,Ironwood,municipality
+MI,Isabella,municipality
+MI,Ishpeming,municipality
+MI,Ithaca,municipality
+MI,James,municipality
+MI,Jamestown charter,municipality
+MI,Jefferson,municipality
+MI,Johnstown,municipality
+MI,Kalamazoo charter,municipality
+MI,Kasson,municipality
+MI,Kearney,municipality
+MI,Keeler,municipality
+MI,Kenockee,municipality
+MI,Kinderhook,municipality
+MI,Kingsford,municipality
+MI,Kinross charter,municipality
+MI,L'Anse,municipality
+MI,Laingsburg,municipality
+MI,Lake City,municipality
+MI,Lake Isabella,municipality
+MI,Lake Orion,municipality
+MI,Lakewood Club,municipality
+MI,Lansing charter,municipality
+MI,Lapeer,municipality
+MI,Lathrup Village,municipality
+MI,Lawton,municipality
+MI,Leavitt,municipality
+MI,Leelanau,municipality
+MI,Leoni,municipality
+MI,Lexington,municipality
+MI,Liberty,municipality
+MI,Lincoln,municipality
+MI,Lincoln charter,municipality
+MI,Littlefield,municipality
+MI,Lovells,municipality
+MI,Ludington,municipality
+MI,Luna Pier,municipality
+MI,Lyon charter,municipality
+MI,Lyons,municipality
+MI,Mackinac Island,municipality
+MI,Macomb,municipality
+MI,Mancelona,municipality
+MI,Manistee,municipality
+MI,Marilla,municipality
+MI,Marion,municipality
+MI,Markey,municipality
+MI,Marquette charter,municipality
+MI,Marshall,municipality
+MI,Marysville,municipality
+MI,Mason,municipality
+MI,Mastodon,municipality
+MI,Mayville,municipality
+MI,Melvindale,municipality
+MI,Meridian charter,municipality
+MI,Mesick,municipality
+MI,Michiana,municipality
+MI,Middle Branch,municipality
+MI,Milan,municipality
+MI,Milford,municipality
+MI,Millington,municipality
+MI,Minden,municipality
+MI,Moffatt,municipality
+MI,Monroe charter,municipality
+MI,Montague,municipality
+MI,Moorland,municipality
+MI,Morrice,municipality
+MI,Morton,municipality
+MI,Mundy,municipality
+MI,Munro,municipality
+MI,Muskegon Heights,municipality
+MI,Muskegon charter,municipality
+MI,Nashville,municipality
+MI,Negaunee,municipality
+MI,New Baltimore,municipality
+MI,New Buffalo,municipality
+MI,New Haven,municipality
+MI,Niles,municipality
+MI,North Branch,municipality
+MI,Northfield,municipality
+MI,Northville,municipality
+MI,Norvell,municipality
+MI,Norway,municipality
+MI,Nottawa,municipality
+MI,Novi,municipality
+MI,Oakland charter,municipality
+MI,Ogden,municipality
+MI,Olive,municipality
+MI,Oneida charter,municipality
+MI,Onekama,municipality
+MI,Onondaga,municipality
+MI,Orchard Lake Village,municipality
+MI,Orion charter,municipality
+MI,Ortonville,municipality
+MI,Oscoda charter,municipality
+MI,Otisco,municipality
+MI,Otsego,municipality
+MI,Otter Lake,municipality
+MI,Ovid,municipality
+MI,Oxford charter,municipality
+MI,Palmyra,municipality
+MI,Paradise,municipality
+MI,Parma,municipality
+MI,Paw Paw,municipality
+MI,Peaine,municipality
+MI,Pennfield charter,municipality
+MI,Pentland,municipality
+MI,Pentwater,municipality
+MI,Pere Marquette charter,municipality
+MI,Petersburg,municipality
+MI,Petoskey,municipality
+MI,Pewamo,municipality
+MI,Pinconning,municipality
+MI,Pine Grove,municipality
+MI,Pine River,municipality
+MI,Plainfield,municipality
+MI,Plainfield charter,municipality
+MI,Pleasant Ridge,municipality
+MI,Pleasantview,municipality
+MI,Plymouth charter,municipality
+MI,Port Austin,municipality
+MI,Port Huron charter,municipality
+MI,Port Sanilac,municipality
+MI,Portage,municipality
+MI,Portage charter,municipality
+MI,Potterville,municipality
+MI,Prairieville,municipality
+MI,Pulawski,municipality
+MI,Putnam,municipality
+MI,Quincy,municipality
+MI,Reading,municipality
+MI,Reed City,municipality
+MI,Resort,municipality
+MI,Rich,municipality
+MI,Richfield,municipality
+MI,Richland,municipality
+MI,Richmond,municipality
+MI,Riley,municipality
+MI,Riverton,municipality
+MI,Riverview,municipality
+MI,Rives,municipality
+MI,Rockford,municipality
+MI,Rockwood,municipality
+MI,Rogers City,municipality
+MI,Rolland,municipality
+MI,Roosevelt Park,municipality
+MI,Royalton,municipality
+MI,Salem,municipality
+MI,Saline,municipality
+MI,Sanborn,municipality
+MI,Sand Lake,municipality
+MI,Sands,municipality
+MI,Sanilac,municipality
+MI,Saranac,municipality
+MI,Sauble,municipality
+MI,Schoolcraft,municipality
+MI,Scio,municipality
+MI,Sebewaing,municipality
+MI,Shelby,municipality
+MI,Sheridan,municipality
+MI,Sherman,municipality
+MI,Shiawassee,municipality
+MI,Silver Creek,municipality
+MI,Sims,municipality
+MI,Solon,municipality
+MI,Somerset,municipality
+MI,Soo,municipality
+MI,South Branch,municipality
+MI,South Lyon,municipality
+MI,South Range,municipality
+MI,Southfield,municipality
+MI,Sparta,municipality
+MI,Speaker,municipality
+MI,Spring Arbor,municipality
+MI,Spring Lake,municipality
+MI,Springfield,municipality
+MI,Springfield charter,municipality
+MI,Springvale,municipality
+MI,St. Clair,municipality
+MI,St. Johns,municipality
+MI,St. Louis,municipality
+MI,Standish,municipality
+MI,Stanton,municipality
+MI,Sterling Heights,municipality
+MI,Stevensville,municipality
+MI,Stockbridge,municipality
+MI,Sturgis,municipality
+MI,Summit,municipality
+MI,Superior charter,municipality
+MI,Surrey,municipality
+MI,Suttons Bay,municipality
+MI,Swartz Creek,municipality
+MI,Texas charter,municipality
+MI,Thomas,municipality
+MI,Thornapple,municipality
+MI,Three Oaks,municipality
+MI,Tompkins,municipality
+MI,Torch Lake,municipality
+MI,Trout Lake,municipality
+MI,Tuscarora,municipality
+MI,Tyrone,municipality
+MI,Unadilla,municipality
+MI,Union charter,municipality
+MI,Unionville,municipality
+MI,Utica,municipality
+MI,Van Buren charter,municipality
+MI,Vermontville,municipality
+MI,Vicksburg,municipality
+MI,Victor,municipality
+MI,Victory,municipality
+MI,Village of Clarkston,municipality
+MI,Village of Grosse Pointe Shores,municipality
+MI,Walled Lake,municipality
+MI,Walton,municipality
+MI,Warren,municipality
+MI,Washington,municipality
+MI,Waterford charter,municipality
+MI,Waterloo,municipality
+MI,Watersmeet,municipality
+MI,Weare,municipality
+MI,Webster,municipality
+MI,Weldon,municipality
+MI,West Bloomfield charter,municipality
+MI,West Branch,municipality
+MI,Wheatfield,municipality
+MI,White Lake charter,municipality
+MI,Whitewater,municipality
+MI,Whitney,municipality
+MI,Williams charter,municipality
+MI,Williamston,municipality
+MI,Williamstown,municipality
+MI,Windsor charter,municipality
+MI,Woodhaven,municipality
+MI,Woodland,municipality
+MI,Yale,municipality
+MI,York charter,municipality
+MI,Ypsilanti charter,municipality
+MI,Zeeland,municipality
+MI|OH,Bay,multi_municipality
+MN,Adams,municipality
+MN,Albany,municipality
+MN,Amo,municipality
+MN,Andover,municipality
+MN,Anoka,municipality
+MN,Appleton,municipality
+MN,Austin,municipality
+MN,Avon,municipality
+MN,Backus,municipality
+MN,Badger,municipality
+MN,Bagley,municipality
+MN,Balaton,municipality
+MN,Baldwin,municipality
+MN,Balkan,municipality
+MN,Barnesville,municipality
+MN,Battle Lake,municipality
+MN,Baxter,municipality
+MN,Beaver Bay,municipality
+MN,Becker,municipality
+MN,Belgrade,municipality
+MN,Belle Plaine,municipality
+MN,Bemidji,municipality
+MN,Benson,municipality
+MN,Bethel,municipality
+MN,Big Lake,municipality
+MN,Bigfork,municipality
+MN,Bird Island,municipality
+MN,Biwabik,municipality
+MN,Blackberry,municipality
+MN,Blackduck,municipality
+MN,Blooming Prairie,municipality
+MN,Blue Earth,municipality
+MN,Braham,municipality
+MN,Brainerd,municipality
+MN,Breitung,municipality
+MN,Brooklyn Park,municipality
+MN,Browns Valley,municipality
+MN,Brownsdale,municipality
+MN,Brownsville,municipality
+MN,Buhl,municipality
+MN,Burnsville,municipality
+MN,Byron,municipality
+MN,Caledonia,municipality
+MN,Callaway,municipality
+MN,Candor,municipality
+MN,Cannon Falls,municipality
+MN,Canosia,municipality
+MN,Canton,municipality
+MN,Carlos,municipality
+MN,Carver,municipality
+MN,Cass Lake,municipality
+MN,Cedar Mills,municipality
+MN,Center City,municipality
+MN,Chandler,municipality
+MN,Chaska,municipality
+MN,Chatfield,municipality
+MN,Chengwatana,municipality
+MN,Chisago Lake,municipality
+MN,Chisholm,municipality
+MN,Clara City,municipality
+MN,Clarks Grove,municipality
+MN,Cleveland,municipality
+MN,Cold Spring,municipality
+MN,Coleraine,municipality
+MN,Cologne,municipality
+MN,Columbus,municipality
+MN,Coon Rapids,municipality
+MN,Corcoran,municipality
+MN,Credit River,municipality
+MN,Crooked Lake,municipality
+MN,Crosby,municipality
+MN,Crow Wing,municipality
+MN,Crystal Bay,municipality
+MN,Dassel,municipality
+MN,Dawson,municipality
+MN,Deephaven,municipality
+MN,Deer River,municipality
+MN,Dellwood,municipality
+MN,Detroit,municipality
+MN,Detroit Lakes,municipality
+MN,Dilworth,municipality
+MN,Dover,municipality
+MN,Duluth,municipality
+MN,Dundas,municipality
+MN,Eagle Bend,municipality
+MN,Eagle Lake,municipality
+MN,Eagles Nest,municipality
+MN,East Bethel,municipality
+MN,East Grand Forks,municipality
+MN,Eastern,municipality
+MN,Echo,municipality
+MN,Eden Prairie,municipality
+MN,Elgin,municipality
+MN,Elko New Market,municipality
+MN,Ellsburg,municipality
+MN,Elmore,municipality
+MN,Ely,municipality
+MN,Elysian,municipality
+MN,Fairmont,municipality
+MN,Fairview,municipality
+MN,Fayal,municipality
+MN,Fertile,municipality
+MN,Finlayson,municipality
+MN,Fish Lake,municipality
+MN,Floodwood,municipality
+MN,Foley,municipality
+MN,Forest,municipality
+MN,Forest Prairie,municipality
+MN,Fosston,municipality
+MN,Foster,municipality
+MN,Fountain,municipality
+MN,Franklin,municipality
+MN,Freeborn,municipality
+MN,Fulda,municipality
+MN,Geneva,municipality
+MN,Ghent,municipality
+MN,Gilbert,municipality
+MN,Glencoe,municipality
+MN,Glenwood,municipality
+MN,Glyndon,municipality
+MN,Grand Lake,municipality
+MN,Grand Marais,municipality
+MN,Granite Falls,municipality
+MN,Greenbush,municipality
+MN,Grey Eagle,municipality
+MN,Hallock,municipality
+MN,Hanover,municipality
+MN,Hanska,municipality
+MN,Harmony,municipality
+MN,Harris,municipality
+MN,Hawley,municipality
+MN,Hector,municipality
+MN,Heidelberg,municipality
+MN,Hermantown,municipality
+MN,Heron Lake,municipality
+MN,Hinckley,municipality
+MN,Hokah,municipality
+MN,Hollandale,municipality
+MN,Hoyt Lakes,municipality
+MN,Ideal,municipality
+MN,International Falls,municipality
+MN,Inver Grove Heights,municipality
+MN,Isanti,municipality
+MN,Isle,municipality
+MN,Ivanhoe,municipality
+MN,Jackson,municipality
+MN,Jasper,municipality
+MN,Jeffers,municipality
+MN,Jordan,municipality
+MN,Kabetogama,municipality
+MN,Kandiyohi,municipality
+MN,Karlstad,municipality
+MN,Kasson,municipality
+MN,Kenyon,municipality
+MN,Kettle River,municipality
+MN,Kimball,municipality
+MN,La Crescent,municipality
+MN,Lac qui Parle,municipality
+MN,Lake,municipality
+MN,Lake Benton,municipality
+MN,Lake Bronson,municipality
+MN,Lake City,municipality
+MN,Lake Crystal,municipality
+MN,Lake Elmo,municipality
+MN,Lake Lillian,municipality
+MN,Lake Mary,municipality
+MN,Lake Park,municipality
+MN,Lake Shore,municipality
+MN,Lamberton,municipality
+MN,Lancaster,municipality
+MN,Landfall,municipality
+MN,Lanesboro,municipality
+MN,Leon,municipality
+MN,Leonidas,municipality
+MN,Lexington,municipality
+MN,Lismore,municipality
+MN,Litchfield,municipality
+MN,Little Falls,municipality
+MN,Littlefork,municipality
+MN,Long Lake,municipality
+MN,Long Prairie,municipality
+MN,Lonsdale,municipality
+MN,Lyle,municipality
+MN,Lynd,municipality
+MN,Madelia,municipality
+MN,Madison,municipality
+MN,Mantorville,municipality
+MN,Mantrap,municipality
+MN,Maple Grove,municipality
+MN,Maple Lake,municipality
+MN,Maple Plain,municipality
+MN,Maplewood,municipality
+MN,Marshall,municipality
+MN,May,municipality
+MN,Mayer,municipality
+MN,Mazeppa,municipality
+MN,McGregor,municipality
+MN,Medford,municipality
+MN,Medicine Lake,municipality
+MN,Menahga,municipality
+MN,Mendota Heights,municipality
+MN,Middle River,municipality
+MN,Milaca,municipality
+MN,Milan,municipality
+MN,Milo,municipality
+MN,Milroy,municipality
+MN,Minneapolis,municipality
+MN,Minneota,municipality
+MN,Minnesota Lake,municipality
+MN,Minnetrista,municipality
+MN,Mission,municipality
+MN,Montgomery,municipality
+MN,Moorhead,municipality
+MN,Moose Lake,municipality
+MN,Mora,municipality
+MN,Morgan,municipality
+MN,Morris,municipality
+MN,Mound,municipality
+MN,Mounds View,municipality
+MN,Mountain Lake,municipality
+MN,Nashwauk,municipality
+MN,Nevis,municipality
+MN,New Auburn,municipality
+MN,New Dosey,municipality
+MN,New Hartford,municipality
+MN,New Munich,municipality
+MN,New Prague,municipality
+MN,New Richland,municipality
+MN,New York Mills,municipality
+MN,Northome,municipality
+MN,Oak Park Heights,municipality
+MN,Ogema,municipality
+MN,Onamia,municipality
+MN,Orono,municipality
+MN,Oronoco,municipality
+MN,Orrock,municipality
+MN,Ortonville,municipality
+MN,Osakis,municipality
+MN,Otto,municipality
+MN,Park Rapids,municipality
+MN,Paynesville,municipality
+MN,Pelican,municipality
+MN,Pelican Rapids,municipality
+MN,Pemberton,municipality
+MN,Pequaywan,municipality
+MN,Pequot Lakes,municipality
+MN,Perham,municipality
+MN,Pierz,municipality
+MN,Pine City,municipality
+MN,Pine Island,municipality
+MN,Pine River,municipality
+MN,Pipestone,municipality
+MN,Plainview,municipality
+MN,Pokegama,municipality
+MN,Port Hope,municipality
+MN,Princeton,municipality
+MN,Randall,municipality
+MN,Ranier,municipality
+MN,Redwood Falls,municipality
+MN,Rice Lake,municipality
+MN,Richmond,municipality
+MN,Robbinsdale,municipality
+MN,Rogers,municipality
+MN,Roseau,municipality
+MN,Rothsay,municipality
+MN,Royalton,municipality
+MN,Sand Creek,municipality
+MN,Sandstone,municipality
+MN,Sauk Centre,municipality
+MN,Sauk Rapids,municipality
+MN,Scambler,municipality
+MN,Scandia Valley,municipality
+MN,Shakopee,municipality
+MN,Shelly,municipality
+MN,Sherburn,municipality
+MN,Shorewood,municipality
+MN,Silver Creek,municipality
+MN,Skyline,municipality
+MN,Slayton,municipality
+MN,Sleepy Eye,municipality
+MN,Spring Lake Park,municipality
+MN,Spring Valley,municipality
+MN,St. Augusta,municipality
+MN,St. Charles,municipality
+MN,St. Francis,municipality
+MN,St. James,municipality
+MN,St. Paul Park,municipality
+MN,St. Peter,municipality
+MN,St. Stephen,municipality
+MN,Stanchfield,municipality
+MN,Staples,municipality
+MN,Star Lake,municipality
+MN,Starbuck,municipality
+MN,Stewart,municipality
+MN,Stillwater,municipality
+MN,Sunfish Lake,municipality
+MN,Thief River Falls,municipality
+MN,Thomson,municipality
+MN,Tonka Bay,municipality
+MN,Tracy,municipality
+MN,Trimont,municipality
+MN,Truman,municipality
+MN,Two Harbors,municipality
+MN,Tyler,municipality
+MN,Vasa,municipality
+MN,Vergas,municipality
+MN,Virginia,municipality
+MN,Wabasha,municipality
+MN,Waconia,municipality
+MN,Wahkon,municipality
+MN,Waite Park,municipality
+MN,Walnut Grove,municipality
+MN,Watab,municipality
+MN,Waterford,municipality
+MN,Watertown,municipality
+MN,Waterville,municipality
+MN,Wayzata,municipality
+MN,Welcome,municipality
+MN,Westbrook,municipality
+MN,Whalan,municipality
+MN,White Bear,municipality
+MN,White Earth,municipality
+MN,Wilma,municipality
+MN,Windemere,municipality
+MN,Winsted,municipality
+MN,Wisconsin,municipality
+MN,Wolverton,municipality
+MN,Woodland,municipality
+MN,Wrenshall,municipality
+MN,Wyoming,municipality
+MN,Zimmerman,municipality
+MN,Zumbrota,municipality
+MO,Agency,municipality
+MO,Anderson,municipality
+MO,Arcadia,municipality
+MO,Archie,municipality
+MO,Arrow Rock,municipality
+MO,Augusta,municipality
+MO,Bel-Nor,municipality
+MO,Bellefontaine Neighbors,municipality
+MO,Berkeley,municipality
+MO,Black Jack,municipality
+MO,Brentwood,municipality
+MO,Bucklin,municipality
+MO,Burlington Junction,municipality
+MO,Cameron,municipality
+MO,Carl Junction,municipality
+MO,Carthage,municipality
+MO,Caruthersville,municipality
+MO,Cassville,municipality
+MO,Center,municipality
+MO,Chula,municipality
+MO,Clay,municipality
+MO,Clinton,municipality
+MO,Concordia,municipality
+MO,Cottleville,municipality
+MO,Crane,municipality
+MO,Dardenne Prairie,municipality
+MO,Doniphan,municipality
+MO,Eldon,municipality
+MO,Eolia,municipality
+MO,Festus,municipality
+MO,Forsyth,municipality
+MO,Freeman,municipality
+MO,Gladstone,municipality
+MO,Glenaire,municipality
+MO,Grain Valley,municipality
+MO,Grant City,municipality
+MO,Greendale,municipality
+MO,Greentop,municipality
+MO,Henrietta,municipality
+MO,Hopkins,municipality
+MO,Huntleigh,municipality
+MO,Iron Mountain Lake,municipality
+MO,Jackson,municipality
+MO,Jameson,municipality
+MO,Jefferson,municipality
+MO,Joplin,municipality
+MO,Kahoka,municipality
+MO,Kansas City,municipality
+MO,Kearney,municipality
+MO,Kennett,municipality
+MO,Knob Noster,municipality
+MO,La Grange,municipality
+MO,Lake Annette,municipality
+MO,Lamar,municipality
+MO,Lancaster,municipality
+MO,Lee's Summit,municipality
+MO,Liberty,municipality
+MO,Lowry City,municipality
+MO,Maplewood,municipality
+MO,Marble Hill,municipality
+MO,Marceline,municipality
+MO,Marshall,municipality
+MO,Marthasville,municipality
+MO,Meadville,municipality
+MO,Memphis,municipality
+MO,Mexico,municipality
+MO,Miner,municipality
+MO,Moberly,municipality
+MO,Mountain Grove,municipality
+MO,Neosho,municipality
+MO,New Bloomfield,municipality
+MO,New Florence,municipality
+MO,Nixa,municipality
+MO,Norborne,municipality
+MO,Odessa,municipality
+MO,Osage Beach,municipality
+MO,Otterville,municipality
+MO,Overland,municipality
+MO,Pacific,municipality
+MO,Parkway,municipality
+MO,Pasadena Park,municipality
+MO,Peculiar,municipality
+MO,Perryville,municipality
+MO,Platte City,municipality
+MO,Platte Woods,municipality
+MO,Pleasant Hill,municipality
+MO,Polk,municipality
+MO,Poplar Bluff,municipality
+MO,Portageville,municipality
+MO,Prairie Home,municipality
+MO,Rich Hill,municipality
+MO,Ridgeway,municipality
+MO,Rogersville,municipality
+MO,Smithville,municipality
+MO,Springfield,municipality
+MO,St. John,municipality
+MO,Steelville,municipality
+MO,Stella,municipality
+MO,Sunrise Beach,municipality
+MO,Trenton,municipality
+MO,Trimble,municipality
+MO,Union,municipality
+MO,Wardsville,municipality
+MO,Warrensburg,municipality
+MO,Washington,municipality
+MO,Wayland,municipality
+MO,Waynesville,municipality
+MO,Webb City,municipality
+MO,Wentzville,municipality
+MO,West Plains,municipality
+MO,Willard,municipality
+MO,Woodson Terrace,municipality
+MS,Batesville,municipality
+MS,Bay St. Louis,municipality
+MS,Booneville,municipality
+MS,Byhalia,municipality
+MS,Carrollton,municipality
+MS,Cleveland,municipality
+MS,Crystal Springs,municipality
+MS,D'Iberville,municipality
+MS,Flora,municipality
+MS,Florence,municipality
+MS,Lucedale,municipality
+MS,Pass Christian,municipality
+MS,Plantersville,municipality
+MS,Prentiss,municipality
+MS,Quitman,municipality
+MS,Rolling Fork,municipality
+MS,Sherman,municipality
+MS,Sturgis,municipality
+MS,Terry,municipality
+MS,Utica,municipality
+MS,Water Valley,municipality
+MS,Waynesboro,municipality
+MS,West Point,municipality
+MT,Alberton,municipality
+MT,Anaconda-Deer Lodge County,municipality
+MT,Bainville,municipality
+MT,Big Sandy,municipality
+MT,Boulder,municipality
+MT,Bridger,municipality
+MT,Broadus,municipality
+MT,Chester,municipality
+MT,Choteau,municipality
+MT,Circle,municipality
+MT,Clyde Park,municipality
+MT,Colstrip,municipality
+MT,Culbertson,municipality
+MT,Cut Bank,municipality
+MT,Darby,municipality
+MT,Dutton,municipality
+MT,East Helena,municipality
+MT,Ennis,municipality
+MT,Eureka,municipality
+MT,Fairfield,municipality
+MT,Fairview,municipality
+MT,Forsyth,municipality
+MT,Fort Benton,municipality
+MT,Froid,municipality
+MT,Fromberg,municipality
+MT,Glasgow,municipality
+MT,Harlowton,municipality
+MT,Hot Springs,municipality
+MT,Joliet,municipality
+MT,Libby,municipality
+MT,Lima,municipality
+MT,Malta,municipality
+MT,Medicine Lake,municipality
+MT,Philipsburg,municipality
+MT,Shelby,municipality
+MT,Sheridan,municipality
+MT,St. Ignatius,municipality
+MT,Terry,municipality
+MT,Three Forks,municipality
+MT,Townsend,municipality
+MT,Twin Bridges,municipality
+MT,Valier,municipality
+MT,Virginia City,municipality
+MT,Walkerville,municipality
+MT,West Yellowstone,municipality
+MT,Whitehall,municipality
+MT,Winifred,municipality
+NC,Aberdeen,municipality
+NC,Alamance,municipality
+NC,Archdale,municipality
+NC,Archer Lodge,municipality
+NC,Asheboro,municipality
+NC,Atlantic Beach,municipality
+NC,Ayden,municipality
+NC,Badin,municipality
+NC,Bailey,municipality
+NC,Banner Elk,municipality
+NC,Beech Mountain,municipality
+NC,Belmont,municipality
+NC,Belville,municipality
+NC,Bethania,municipality
+NC,Bethel,municipality
+NC,Biscoe,municipality
+NC,Bladenboro,municipality
+NC,Blowing Rock,municipality
+NC,Bogue,municipality
+NC,Boiling Springs,municipality
+NC,Bolivia,municipality
+NC,Boone,municipality
+NC,Boonville,municipality
+NC,Broadway,municipality
+NC,Brookford,municipality
+NC,Burnsville,municipality
+NC,Cameron,municipality
+NC,Cedar Point,municipality
+NC,Chocowinity,municipality
+NC,Claremont,municipality
+NC,Clarkton,municipality
+NC,Clemmons,municipality
+NC,Coats,municipality
+NC,Colerain,municipality
+NC,Columbus,municipality
+NC,Conetoe,municipality
+NC,Conover,municipality
+NC,Creswell,municipality
+NC,Davidson,municipality
+NC,Denton,municipality
+NC,Drexel,municipality
+NC,Duck,municipality
+NC,East Spencer,municipality
+NC,Elizabeth City,municipality
+NC,Elizabethtown,municipality
+NC,Elon,municipality
+NC,Erwin,municipality
+NC,Fairmont,municipality
+NC,Fairview,municipality
+NC,Faison,municipality
+NC,Farmville,municipality
+NC,Flat Rock,municipality
+NC,Fletcher,municipality
+NC,Forest City,municipality
+NC,Franklin,municipality
+NC,Gibsonville,municipality
+NC,Glen Alpine,municipality
+NC,Graham,municipality
+NC,Green Level,municipality
+NC,Hamilton,municipality
+NC,Harrisburg,municipality
+NC,Havelock,municipality
+NC,Henderson,municipality
+NC,Hendersonville,municipality
+NC,Hope Mills,municipality
+NC,Hot Springs,municipality
+NC,Huntersville,municipality
+NC,Jamestown,municipality
+NC,Jamesville,municipality
+NC,Jonesville,municipality
+NC,Kernersville,municipality
+NC,Kill Devil Hills,municipality
+NC,King,municipality
+NC,Kinston,municipality
+NC,Kitty Hawk,municipality
+NC,Knightdale,municipality
+NC,Kure Beach,municipality
+NC,La Grange,municipality
+NC,Landis,municipality
+NC,Laurel Park,municipality
+NC,Laurinburg,municipality
+NC,Leland,municipality
+NC,Lenoir,municipality
+NC,Lewisville,municipality
+NC,Liberty,municipality
+NC,Locust,municipality
+NC,Lucama,municipality
+NC,Maggie Valley,municipality
+NC,Magnolia,municipality
+NC,Marion,municipality
+NC,Marshall,municipality
+NC,Matthews,municipality
+NC,Maxton,municipality
+NC,Mayodan,municipality
+NC,McAdenville,municipality
+NC,Mebane,municipality
+NC,Middlesex,municipality
+NC,Midway,municipality
+NC,Mills River,municipality
+NC,Mint Hill,municipality
+NC,Misenheimer,municipality
+NC,Mocksville,municipality
+NC,Montreat,municipality
+NC,Morehead City,municipality
+NC,Mount Gilead,municipality
+NC,Mount Holly,municipality
+NC,Nags Head,municipality
+NC,New Bern,municipality
+NC,New London,municipality
+NC,Newton,municipality
+NC,North Topsail Beach,municipality
+NC,North Wilkesboro,municipality
+NC,Oakboro,municipality
+NC,Oriental,municipality
+NC,Oxford,municipality
+NC,Parkton,municipality
+NC,Pembroke,municipality
+NC,Pikeville,municipality
+NC,Pinebluff,municipality
+NC,Pinetops,municipality
+NC,Pineville,municipality
+NC,Plymouth,municipality
+NC,Powellsville,municipality
+NC,Princeton,municipality
+NC,Ramseur,municipality
+NC,Randleman,municipality
+NC,Ranlo,municipality
+NC,Red Cross,municipality
+NC,Red Springs,municipality
+NC,Rich Square,municipality
+NC,River Bend,municipality
+NC,Roanoke Rapids,municipality
+NC,Robbins,municipality
+NC,Robbinsville,municipality
+NC,Robersonville,municipality
+NC,Rockingham,municipality
+NC,Rolesville,municipality
+NC,Ruth,municipality
+NC,Rutherford College,municipality
+NC,Rutherfordton,municipality
+NC,Salisbury,municipality
+NC,Seaboard,municipality
+NC,Seagrove,municipality
+NC,Selma,municipality
+NC,Shallotte,municipality
+NC,Shelby,municipality
+NC,Siler City,municipality
+NC,Smithfield,municipality
+NC,Southern Pines,municipality
+NC,Southern Shores,municipality
+NC,Spencer,municipality
+NC,Spring Hope,municipality
+NC,Spring Lake,municipality
+NC,St. James,municipality
+NC,Stallings,municipality
+NC,Stanfield,municipality
+NC,Statesville,municipality
+NC,Stedman,municipality
+NC,Stem,municipality
+NC,Stoneville,municipality
+NC,Sunset Beach,municipality
+NC,Swansboro,municipality
+NC,Teachey,municipality
+NC,Thomasville,municipality
+NC,Tobaccoville,municipality
+NC,Tryon,municipality
+NC,Unionville,municipality
+NC,Valdese,municipality
+NC,Vanceboro,municipality
+NC,Vass,municipality
+NC,Wade,municipality
+NC,Wadesboro,municipality
+NC,Washington,municipality
+NC,Washington Park,municipality
+NC,Waxhaw,municipality
+NC,Waynesville,municipality
+NC,Weaverville,municipality
+NC,Weddington,municipality
+NC,Whispering Pines,municipality
+NC,White Lake,municipality
+NC,Whiteville,municipality
+NC,Whitsett,municipality
+NC,Williamston,municipality
+NC,Winfall,municipality
+NC,Winterville,municipality
+NC,Woodfin,municipality
+NC,Yadkinville,municipality
+NC,Yanceyville,municipality
+ND,Alexander,municipality
+ND,Alexandria,municipality
+ND,Apple Creek,municipality
+ND,Argusville,municipality
+ND,Arnegard,municipality
+ND,Beach,municipality
+ND,Berthold,municipality
+ND,Beulah,municipality
+ND,Bottineau,municipality
+ND,Buffalo,municipality
+ND,Burlington,municipality
+ND,Buxton,municipality
+ND,Cando,municipality
+ND,Canton City (Hensel),municipality
+ND,Carrington,municipality
+ND,Cathay,municipality
+ND,Center,municipality
+ND,Columbus,municipality
+ND,Cooperstown,municipality
+ND,Davenport,municipality
+ND,Deering,municipality
+ND,Des Lacs,municipality
+ND,Drake,municipality
+ND,Drayton,municipality
+ND,Edmore,municipality
+ND,Elgin,municipality
+ND,Ellendale,municipality
+ND,Emerado,municipality
+ND,Epping,municipality
+ND,Fairmount,municipality
+ND,Fingal,municipality
+ND,Finley,municipality
+ND,Forman,municipality
+ND,Fort Ransom,municipality
+ND,Frontier,municipality
+ND,Galesburg,municipality
+ND,Gilby,municipality
+ND,Glen Ullin,municipality
+ND,Golva,municipality
+ND,Goodrich,municipality
+ND,Gwinner,municipality
+ND,Hague,municipality
+ND,Halliday,municipality
+ND,Hamlin,municipality
+ND,Harvey,municipality
+ND,Hatton,municipality
+ND,Hazen,municipality
+ND,Hebron,municipality
+ND,Hurdsfield,municipality
+ND,Kenmare,municipality
+ND,Killdeer,municipality
+ND,Kindred,municipality
+ND,La Moure,municipality
+ND,Lakota,municipality
+ND,Langdon,municipality
+ND,Lansford,municipality
+ND,Leeds,municipality
+ND,Lignite,municipality
+ND,Linton,municipality
+ND,Maddock,municipality
+ND,Makoti,municipality
+ND,Mandan,municipality
+ND,Marmarth,municipality
+ND,Max,municipality
+ND,Mayville,municipality
+ND,McVille,municipality
+ND,Michigan,municipality
+ND,Michigan City,municipality
+ND,Milnor,municipality
+ND,Minnewaukan,municipality
+ND,Minto,municipality
+ND,Mohall,municipality
+ND,Munich,municipality
+ND,New England,municipality
+ND,New Rockford,municipality
+ND,New Salem,municipality
+ND,Newburg,municipality
+ND,Park River,municipality
+ND,Pembina,municipality
+ND,Plaza,municipality
+ND,Portal,municipality
+ND,Powers Lake,municipality
+ND,Reile's Acres,municipality
+ND,Richardton,municipality
+ND,Rolla,municipality
+ND,Rutland,municipality
+ND,Selfridge,municipality
+ND,Sentinel Butte,municipality
+ND,Souris,municipality
+ND,Spring Lake,municipality
+ND,St. Thomas,municipality
+ND,Stanley,municipality
+ND,Surrey,municipality
+ND,Tioga,municipality
+ND,Turtle Lake,municipality
+ND,Velva,municipality
+ND,Walhalla,municipality
+ND,Washburn,municipality
+ND,Watford City,municipality
+ND,West Hope,municipality
+ND,Westhope,municipality
+ND,Wild Rose,municipality
+ND,Wildrose,municipality
+ND,Wilton,municipality
+ND,Woodworth,municipality
+ND,Wyndmere,municipality
+ND,Zap,municipality
+NE,Ainsworth,municipality
+NE,Albion,municipality
+NE,Alma,municipality
+NE,Arapahoe,municipality
+NE,Arcadia,municipality
+NE,Arnold,municipality
+NE,Atkinson,municipality
+NE,Auburn,municipality
+NE,Aurora,municipality
+NE,Avoca,municipality
+NE,Bayard,municipality
+NE,Beaver Crossing,municipality
+NE,Benkelman,municipality
+NE,Bennet,municipality
+NE,Bennington,municipality
+NE,Bertrand,municipality
+NE,Bradshaw,municipality
+NE,Broken Bow,municipality
+NE,Brownville,municipality
+NE,Brule,municipality
+NE,Cambridge,municipality
+NE,Campbell,municipality
+NE,Ceresco,municipality
+NE,Clatonia,municipality
+NE,Clearwater,municipality
+NE,Cortland,municipality
+NE,Creighton,municipality
+NE,Crete,municipality
+NE,Dalton,municipality
+NE,David City,municipality
+NE,De Witt,municipality
+NE,Deshler,municipality
+NE,Dorchester,municipality
+NE,Duncan,municipality
+NE,Eagle,municipality
+NE,Elm Creek,municipality
+NE,Elmwood,municipality
+NE,Emerson,municipality
+NE,Ewing,municipality
+NE,Fairbury,municipality
+NE,Falls City,municipality
+NE,Firth,municipality
+NE,Fort Calhoun,municipality
+NE,Fremont,municipality
+NE,Geneva,municipality
+NE,Giltner,municipality
+NE,Glenvil,municipality
+NE,Goehner,municipality
+NE,Gordon,municipality
+NE,Gothenburg,municipality
+NE,Grant,municipality
+NE,Greenwood,municipality
+NE,Gretna,municipality
+NE,Gurley,municipality
+NE,Haigler,municipality
+NE,Hallam,municipality
+NE,Hemingford,municipality
+NE,Holdrege,municipality
+NE,Hoskins,municipality
+NE,Juniata,municipality
+NE,Kenesaw,municipality
+NE,Lexington,municipality
+NE,Lodgepole,municipality
+NE,Long Pine,municipality
+NE,Malcolm,municipality
+NE,Manley,municipality
+NE,Mead,municipality
+NE,Milford,municipality
+NE,Minatare,municipality
+NE,Minden,municipality
+NE,Morrill,municipality
+NE,Mullen,municipality
+NE,Murray,municipality
+NE,Nehawka,municipality
+NE,Neligh,municipality
+NE,North Bend,municipality
+NE,North Platte,municipality
+NE,Oakdale,municipality
+NE,Oconto,municipality
+NE,Ogallala,municipality
+NE,Omaha,municipality
+NE,Oshkosh,municipality
+NE,Osmond,municipality
+NE,Oxford,municipality
+NE,Page,municipality
+NE,Panama,municipality
+NE,Pender,municipality
+NE,Pierce,municipality
+NE,Plainview,municipality
+NE,Plattsmouth,municipality
+NE,Ponca,municipality
+NE,Primrose,municipality
+NE,Randolph,municipality
+NE,Raymond,municipality
+NE,Roseland,municipality
+NE,Shelton,municipality
+NE,Shickley,municipality
+NE,Sidney,municipality
+NE,Spalding,municipality
+NE,St. Edward,municipality
+NE,Stromsburg,municipality
+NE,Sutherland,municipality
+NE,Sutton,municipality
+NE,Syracuse,municipality
+NE,Tecumseh,municipality
+NE,Tilden,municipality
+NE,Unadilla,municipality
+NE,Union,municipality
+NE,Utica,municipality
+NE,Valley,municipality
+NE,Valparaiso,municipality
+NE,Wallace,municipality
+NE,Walthill,municipality
+NE,Wauneta,municipality
+NE,Wayne,municipality
+NE,Weeping Water,municipality
+NE,Wilber,municipality
+NE,Wilcox,municipality
+NE,Winside,municipality
+NE,Wymore,municipality
+NH,Acworth,municipality
+NH,Alexandria,municipality
+NH,Allenstown,municipality
+NH,Alstead,municipality
+NH,Amherst,municipality
+NH,Barrington,municipality
+NH,Belmont,municipality
+NH,Bennington,municipality
+NH,Boscawen,municipality
+NH,Brentwood,municipality
+NH,Bridgewater,municipality
+NH,Bristol,municipality
+NH,Canterbury,municipality
+NH,Colebrook,municipality
+NH,Conway,municipality
+NH,Croydon,municipality
+NH,Danville,municipality
+NH,Derry,municipality
+NH,Dummer,municipality
+NH,Durham,municipality
+NH,Eaton,municipality
+NH,Exeter,municipality
+NH,Farmington,municipality
+NH,Fremont,municipality
+NH,Goffstown,municipality
+NH,Goshen,municipality
+NH,Grantham,municipality
+NH,Greenland,municipality
+NH,Hampton,municipality
+NH,Hampton Falls,municipality
+NH,Hanover,municipality
+NH,Hart's Location,municipality
+NH,Hebron,municipality
+NH,Hill,municipality
+NH,Hillsborough,municipality
+NH,Hooksett,municipality
+NH,Hudson,municipality
+NH,Jackson,municipality
+NH,Jaffrey,municipality
+NH,Kensington,municipality
+NH,Lempster,municipality
+NH,Littleton,municipality
+NH,Lyme,municipality
+NH,Madison,municipality
+NH,Meredith,municipality
+NH,Merrimack,municipality
+NH,Monroe,municipality
+NH,New London,municipality
+NH,Newington,municipality
+NH,Newton,municipality
+NH,North Hampton,municipality
+NH,Northfield,municipality
+NH,Northwood,municipality
+NH,Nottingham,municipality
+NH,Ossipee,municipality
+NH,Plymouth,municipality
+NH,Rindge,municipality
+NH,Rye,municipality
+NH,Sanbornton,municipality
+NH,Seabrook,municipality
+NH,Shelburne,municipality
+NH,Stark,municipality
+NH,Strafford,municipality
+NH,Surry,municipality
+NH,Tamworth,municipality
+NH,Tilton,municipality
+NH,Troy,municipality
+NH,Warner,municipality
+NH,Weare,municipality
+NH,Whitefield,municipality
+NH,Windham,municipality
+NH,Wolfeboro,municipality
+NJ,Absecon,municipality
+NJ,Alexandria,municipality
+NJ,Allamuchy,municipality
+NJ,Allendale,municipality
+NJ,Allentown,municipality
+NJ,Alpine,municipality
+NJ,Andover,municipality
+NJ,Audubon,municipality
+NJ,Audubon Park,municipality
+NJ,Avon-by-the-Sea,municipality
+NJ,Barnegat,municipality
+NJ,Barnegat Light,municipality
+NJ,Barrington,municipality
+NJ,Bass River,municipality
+NJ,Bedminster,municipality
+NJ,Belleville,municipality
+NJ,Bellmawr,municipality
+NJ,Berkeley,municipality
+NJ,Berkeley Heights,municipality
+NJ,Berlin,municipality
+NJ,Bernards,municipality
+NJ,Bernardsville,municipality
+NJ,Bethlehem,municipality
+NJ,Bloomfield,municipality
+NJ,Bogota,municipality
+NJ,Bound Brook,municipality
+NJ,Bradley Beach,municipality
+NJ,Branchville,municipality
+NJ,Bridgewater,municipality
+NJ,Brooklawn,municipality
+NJ,Butler,municipality
+NJ,Byram,municipality
+NJ,Cape May,municipality
+NJ,Carlstadt,municipality
+NJ,Chatham,municipality
+NJ,Chesilhurst,municipality
+NJ,Cinnaminson,municipality
+NJ,City of Orange,municipality
+NJ,Clark,municipality
+NJ,Clementon,municipality
+NJ,Clinton,municipality
+NJ,Colts Neck,municipality
+NJ,Cresskill,municipality
+NJ,Delanco,municipality
+NJ,Delaware,municipality
+NJ,Delran,municipality
+NJ,Demarest,municipality
+NJ,Dennis,municipality
+NJ,Denville,municipality
+NJ,Deptford,municipality
+NJ,Downe,municipality
+NJ,Dunellen,municipality
+NJ,East Hanover,municipality
+NJ,East Newark,municipality
+NJ,East Orange,municipality
+NJ,East Windsor,municipality
+NJ,Edgewater Park,municipality
+NJ,Edison,municipality
+NJ,Egg Harbor,municipality
+NJ,Elk,municipality
+NJ,Emerson,municipality
+NJ,Essex Fells,municipality
+NJ,Evesham,municipality
+NJ,Fairview,municipality
+NJ,Farmingdale,municipality
+NJ,Flemington,municipality
+NJ,Florence,municipality
+NJ,Folsom,municipality
+NJ,Frankford,municipality
+NJ,Franklin,municipality
+NJ,Franklin Lakes,municipality
+NJ,Freehold,municipality
+NJ,Frenchtown,municipality
+NJ,Galloway,municipality
+NJ,Garwood,municipality
+NJ,Gibbsboro,municipality
+NJ,Glassboro,municipality
+NJ,Glen Ridge,municipality
+NJ,Glen Rock,municipality
+NJ,Gloucester,municipality
+NJ,Green,municipality
+NJ,Greenwich,municipality
+NJ,Guttenberg,municipality
+NJ,Hackettstown,municipality
+NJ,Haddon,municipality
+NJ,Haddonfield,municipality
+NJ,Haledon,municipality
+NJ,Hamburg,municipality
+NJ,Hamilton,municipality
+NJ,Hampton,municipality
+NJ,Hanover,municipality
+NJ,Harding,municipality
+NJ,Hardyston,municipality
+NJ,Harmony,municipality
+NJ,Harrington Park,municipality
+NJ,Harrison,municipality
+NJ,Harvey Cedars,municipality
+NJ,Haworth,municipality
+NJ,Helmetta,municipality
+NJ,High Bridge,municipality
+NJ,Hightstown,municipality
+NJ,Hillsdale,municipality
+NJ,Holland,municipality
+NJ,Holmdel,municipality
+NJ,Hopewell,municipality
+NJ,Irvington,municipality
+NJ,Island Heights,municipality
+NJ,Jackson,municipality
+NJ,Jamesburg,municipality
+NJ,Jefferson,municipality
+NJ,Keansburg,municipality
+NJ,Kingwood,municipality
+NJ,Kinnelon,municipality
+NJ,Knowlton,municipality
+NJ,Lakewood,municipality
+NJ,Lambertville,municipality
+NJ,Lavallette,municipality
+NJ,Lawrence,municipality
+NJ,Lebanon,municipality
+NJ,Leonia,municipality
+NJ,Liberty,municipality
+NJ,Lincoln Park,municipality
+NJ,Little Egg Harbor,municipality
+NJ,Little Falls,municipality
+NJ,Little Silver,municipality
+NJ,Livingston,municipality
+NJ,Lodi,municipality
+NJ,Long Beach,municipality
+NJ,Long Branch,municipality
+NJ,Long Hill,municipality
+NJ,Longport,municipality
+NJ,Lower,municipality
+NJ,Lumberton,municipality
+NJ,Lyndhurst,municipality
+NJ,Manalapan,municipality
+NJ,Manchester,municipality
+NJ,Mansfield,municipality
+NJ,Maple Shade,municipality
+NJ,Maplewood,municipality
+NJ,Margate City,municipality
+NJ,Marlboro,municipality
+NJ,Matawan,municipality
+NJ,Maywood,municipality
+NJ,Medford,municipality
+NJ,Mendham,municipality
+NJ,Merchantville,municipality
+NJ,Middle,municipality
+NJ,Middletown,municipality
+NJ,Millburn,municipality
+NJ,Millstone,municipality
+NJ,Monmouth Beach,municipality
+NJ,Monroe,municipality
+NJ,Montclair,municipality
+NJ,Montgomery,municipality
+NJ,Montvale,municipality
+NJ,Moorestown,municipality
+NJ,Morris,municipality
+NJ,Morris Plains,municipality
+NJ,Mount Arlington,municipality
+NJ,Mount Laurel,municipality
+NJ,Mount Olive,municipality
+NJ,Mountain Lakes,municipality
+NJ,Mountainside,municipality
+NJ,Mullica,municipality
+NJ,New Hanover,municipality
+NJ,New Providence,municipality
+NJ,Newark,municipality
+NJ,Newton,municipality
+NJ,North Bergen,municipality
+NJ,North Brunswick,municipality
+NJ,North Haledon,municipality
+NJ,North Hanover,municipality
+NJ,Northfield,municipality
+NJ,Northvale,municipality
+NJ,Nutley,municipality
+NJ,Oakland,municipality
+NJ,Oaklyn,municipality
+NJ,Ocean,municipality
+NJ,Ocean City,municipality
+NJ,Oceanport,municipality
+NJ,Ogdensburg,municipality
+NJ,Old Tappan,municipality
+NJ,Oradell,municipality
+NJ,Palmyra,municipality
+NJ,Park Ridge,municipality
+NJ,Parsippany-Troy Hills,municipality
+NJ,Paulsboro,municipality
+NJ,Peapack and Gladstone,municipality
+NJ,Pemberton,municipality
+NJ,Pennington,municipality
+NJ,Penns Grove,municipality
+NJ,Pennsville,municipality
+NJ,Pittsgrove,municipality
+NJ,Pompton Lakes,municipality
+NJ,Princeton,municipality
+NJ,Ramsey,municipality
+NJ,Randolph,municipality
+NJ,Raritan,municipality
+NJ,Readington,municipality
+NJ,Ridgefield,municipality
+NJ,River Edge,municipality
+NJ,Riverdale,municipality
+NJ,Riverside,municipality
+NJ,Riverton,municipality
+NJ,Rockaway,municipality
+NJ,Roosevelt,municipality
+NJ,Roxbury,municipality
+NJ,Runnemede,municipality
+NJ,Saddle Brook,municipality
+NJ,Saddle River,municipality
+NJ,Salem,municipality
+NJ,Scotch Plains,municipality
+NJ,Sea Bright,municipality
+NJ,Sea Girt,municipality
+NJ,Sea Isle City,municipality
+NJ,Shamong,municipality
+NJ,Shiloh,municipality
+NJ,Shrewsbury,municipality
+NJ,Somerdale,municipality
+NJ,Somers Point,municipality
+NJ,South Amboy,municipality
+NJ,South Brunswick,municipality
+NJ,South Hackensack,municipality
+NJ,South Orange Village,municipality
+NJ,Spring Lake,municipality
+NJ,Spring Lake Heights,municipality
+NJ,Stanhope,municipality
+NJ,Stillwater,municipality
+NJ,Stone Harbor,municipality
+NJ,Stow Creek,municipality
+NJ,Stratford,municipality
+NJ,Surf City,municipality
+NJ,Teaneck,municipality
+NJ,Tewksbury,municipality
+NJ,Toms River,municipality
+NJ,Totowa,municipality
+NJ,Trenton,municipality
+NJ,Union Beach,municipality
+NJ,Upper,municipality
+NJ,Upper Deerfield,municipality
+NJ,Upper Pittsgrove,municipality
+NJ,Ventnor City,municipality
+NJ,Vernon,municipality
+NJ,Verona,municipality
+NJ,Waldwick,municipality
+NJ,Wantage,municipality
+NJ,Washington,municipality
+NJ,Watchung,municipality
+NJ,Wayne,municipality
+NJ,West Caldwell,municipality
+NJ,West Deptford,municipality
+NJ,West Long Branch,municipality
+NJ,West Milford,municipality
+NJ,West Orange,municipality
+NJ,West Windsor,municipality
+NJ,Westampton,municipality
+NJ,Westville,municipality
+NJ,Weymouth,municipality
+NJ,Wharton,municipality
+NJ,White,municipality
+NJ,Wildwood Crest,municipality
+NJ,Winfield,municipality
+NJ,Wood-Ridge,municipality
+NJ,Woodbury,municipality
+NJ,Woodcliff Lake,municipality
+NJ,Woodstown,municipality
+NJ,Woolwich,municipality
+NJ,Wyckoff,municipality
+NM,Albuquerque,municipality
+NM,Angel Fire,municipality
+NM,Aztec,municipality
+NM,Bayard,municipality
+NM,Carrizozo,municipality
+NM,Cimarron,municipality
+NM,Cloudcroft,municipality
+NM,Columbus,municipality
+NM,Cuba,municipality
+NM,Estancia,municipality
+NM,Eunice,municipality
+NM,Floyd,municipality
+NM,Hatch,municipality
+NM,Hobbs,municipality
+NM,Hurley,municipality
+NM,Jemez Springs,municipality
+NM,Kirtland,municipality
+NM,Melrose,municipality
+NM,Mesilla,municipality
+NM,Moriarty,municipality
+NM,Mosquero,municipality
+NM,Mountainair,municipality
+NM,Raton,municipality
+NM,Ruidoso Downs,municipality
+NM,San Ysidro,municipality
+NM,Santa Rosa,municipality
+NM,Springer,municipality
+NM,Taos Ski Valley,municipality
+NM,Tijeras,municipality
+NM,Tucumcari,municipality
+NM,Tularosa,municipality
+NM,Wagon Mound,municipality
+NM,Williamsburg,municipality
+NV,Caliente,municipality
+NV,Carlin,municipality
+NV,Carson,municipality
+NV,Ely,municipality
+NV,Las Vegas,municipality
+NV,Lovelock,municipality
+NV,Wells,municipality
+NV,West Wendover,municipality
+NV,Yerington,municipality
+NY,Addison,municipality
+NY,Airmont,municipality
+NY,Akron,municipality
+NY,Albany,municipality
+NY,Albion,municipality
+NY,Alden,municipality
+NY,Alfred,municipality
+NY,Almond,municipality
+NY,Altamont,municipality
+NY,Amenia,municipality
+NY,Amherst,municipality
+NY,Amity,municipality
+NY,Amityville,municipality
+NY,Amsterdam,municipality
+NY,Ancram,municipality
+NY,Angola,municipality
+NY,Annsville,municipality
+NY,Arcade,municipality
+NY,Ardsley,municipality
+NY,Asharoken,municipality
+NY,Athens,municipality
+NY,Attica,municipality
+NY,Aurelius,municipality
+NY,Aurora,municipality
+NY,Avoca,municipality
+NY,Avon,municipality
+NY,Babylon,municipality
+NY,Ballston,municipality
+NY,Bangor,municipality
+NY,Barker,municipality
+NY,Barton,municipality
+NY,Batavia,municipality
+NY,Bedford,municipality
+NY,Beekman,municipality
+NY,Beekmantown,municipality
+NY,Belle Terre,municipality
+NY,Bellport,municipality
+NY,Belmont,municipality
+NY,Bethlehem,municipality
+NY,Big Flats,municipality
+NY,Binghamton,municipality
+NY,Blenheim,municipality
+NY,Blooming Grove,municipality
+NY,Bolivar,municipality
+NY,Boonville,municipality
+NY,Briarcliff Manor,municipality
+NY,Broadalbin,municipality
+NY,Brockport,municipality
+NY,Bronxville,municipality
+NY,Brookhaven,municipality
+NY,Broome,municipality
+NY,Brownville,municipality
+NY,Brunswick,municipality
+NY,Buchanan,municipality
+NY,Buffalo,municipality
+NY,Caledonia,municipality
+NY,Callicoon,municipality
+NY,Cambridge,municipality
+NY,Camillus,municipality
+NY,Campbell,municipality
+NY,Canaan,municipality
+NY,Canadice,municipality
+NY,Canandaigua,municipality
+NY,Canastota,municipality
+NY,Caneadea,municipality
+NY,Carlisle,municipality
+NY,Carmel,municipality
+NY,Caroga,municipality
+NY,Caroline,municipality
+NY,Cato,municipality
+NY,Cayuga Heights,municipality
+NY,Centerville,municipality
+NY,Champion,municipality
+NY,Charleston,municipality
+NY,Charlotte,municipality
+NY,Chaumont,municipality
+NY,Chazy,municipality
+NY,Cheektowaga,municipality
+NY,Chenango,municipality
+NY,Chester,municipality
+NY,Chittenango,municipality
+NY,Cicero,municipality
+NY,Clarence,municipality
+NY,Clarkson,municipality
+NY,Clarkstown,municipality
+NY,Clay,municipality
+NY,Clayton,municipality
+NY,Clermont,municipality
+NY,Clifton Park,municipality
+NY,Cochecton,municipality
+NY,Coeymans,municipality
+NY,Colchester,municipality
+NY,Cold Spring,municipality
+NY,Colden,municipality
+NY,Colonie,municipality
+NY,Columbia,municipality
+NY,Conesville,municipality
+NY,Conklin,municipality
+NY,Cooperstown,municipality
+NY,Copake,municipality
+NY,Corinth,municipality
+NY,Corning,municipality
+NY,Cornwall,municipality
+NY,Cortlandt,municipality
+NY,Coventry,municipality
+NY,Covert,municipality
+NY,Coxsackie,municipality
+NY,Croghan,municipality
+NY,Croton-on-Hudson,municipality
+NY,Danby,municipality
+NY,Dannemora,municipality
+NY,Dansville,municipality
+NY,Day,municipality
+NY,De Witt,municipality
+NY,DeRuyter,municipality
+NY,Delaware,municipality
+NY,Denmark,municipality
+NY,Denning,municipality
+NY,Diana,municipality
+NY,Dobbs Ferry,municipality
+NY,Dryden,municipality
+NY,Dunkirk,municipality
+NY,East Aurora,municipality
+NY,East Fishkill,municipality
+NY,East Greenbush,municipality
+NY,East Hampton,municipality
+NY,East Nassau,municipality
+NY,East Rochester,municipality
+NY,Eastchester,municipality
+NY,Ellenville,municipality
+NY,Ellicott,municipality
+NY,Ellicottville,municipality
+NY,Elmira,municipality
+NY,Elmira Heights,municipality
+NY,Enfield,municipality
+NY,Erin,municipality
+NY,Erwin,municipality
+NY,Esopus,municipality
+NY,Evans,municipality
+NY,Evans Mills,municipality
+NY,Fairport,municipality
+NY,Falconer,municipality
+NY,Fallsburg,municipality
+NY,Farmingdale,municipality
+NY,Farmington,municipality
+NY,Fayetteville,municipality
+NY,Fishkill,municipality
+NY,Fleming,municipality
+NY,Florida,municipality
+NY,Floyd,municipality
+NY,Forestburgh,municipality
+NY,Fort Ann,municipality
+NY,Fort Plain,municipality
+NY,Fowler,municipality
+NY,Frankfort,municipality
+NY,Franklin,municipality
+NY,Freeville,municipality
+NY,Friendship,municipality
+NY,Fulton,municipality
+NY,Galway,municipality
+NY,Gates,municipality
+NY,Geddes,municipality
+NY,Genesee,municipality
+NY,Geneseo,municipality
+NY,Germantown,municipality
+NY,Gilboa,municipality
+NY,Goshen,municipality
+NY,Gowanda,municipality
+NY,Grand Island,municipality
+NY,Grand View-on-Hudson,municipality
+NY,Granville,municipality
+NY,Great Neck,municipality
+NY,Greece,municipality
+NY,Greenburgh,municipality
+NY,Greene,municipality
+NY,Greenport,municipality
+NY,Greig,municipality
+NY,Groton,municipality
+NY,Guilderland,municipality
+NY,Hague,municipality
+NY,Halcott,municipality
+NY,Halfmoon,municipality
+NY,Hamburg,municipality
+NY,Hammondsport,municipality
+NY,Hampton,municipality
+NY,Hancock,municipality
+NY,Hanover,municipality
+NY,Hardenburgh,municipality
+NY,Harrietstown,municipality
+NY,Harrison,municipality
+NY,Hartsville,municipality
+NY,Hastings-on-Hudson,municipality
+NY,Haverstraw,municipality
+NY,Hector,municipality
+NY,Henderson,municipality
+NY,Herkimer,municipality
+NY,Heuvelton,municipality
+NY,Highland,municipality
+NY,Hillburn,municipality
+NY,Hilton,municipality
+NY,Homer,municipality
+NY,Hoosick,municipality
+NY,Hornell,municipality
+NY,Horseheads,municipality
+NY,Hudson,municipality
+NY,Hudson Falls,municipality
+NY,Hume,municipality
+NY,Huntington Bay,municipality
+NY,Huron,municipality
+NY,Hyde Park,municipality
+NY,Indian Lake,municipality
+NY,Inlet,municipality
+NY,Interlaken,municipality
+NY,Irondequoit,municipality
+NY,Ischua,municipality
+NY,Ithaca,municipality
+NY,Jamestown,municipality
+NY,Jerusalem,municipality
+NY,Johnsburg,municipality
+NY,Johnstown,municipality
+NY,Junius,municipality
+NY,Keene,municipality
+NY,Kiantone,municipality
+NY,Kinderhook,municipality
+NY,Kings Point,municipality
+NY,Kingsbury,municipality
+NY,Kingston,municipality
+NY,Kirkland,municipality
+NY,Kirkwood,municipality
+NY,Knox,municipality
+NY,LaGrange,municipality
+NY,Lackawanna,municipality
+NY,Lake Placid,municipality
+NY,Lake Success,municipality
+NY,Lakewood,municipality
+NY,Lancaster,municipality
+NY,Lansing,municipality
+NY,Larchmont,municipality
+NY,Le Roy,municipality
+NY,Lewiston,municipality
+NY,Lima,municipality
+NY,Lisbon,municipality
+NY,Little Falls,municipality
+NY,Little Valley,municipality
+NY,Liverpool,municipality
+NY,Livingston,municipality
+NY,Lloyd Harbor,municipality
+NY,Locke,municipality
+NY,Lockport,municipality
+NY,Lodi,municipality
+NY,Long Lake,municipality
+NY,Lorraine,municipality
+NY,Lowville,municipality
+NY,Lumberland,municipality
+NY,Lyme,municipality
+NY,Lyndonville,municipality
+NY,Lyons Falls,municipality
+NY,Lysander,municipality
+NY,Macedon,municipality
+NY,Machias,municipality
+NY,Malone,municipality
+NY,Malta,municipality
+NY,Malverne,municipality
+NY,Mamaroneck,municipality
+NY,Manlius,municipality
+NY,Manorhaven,municipality
+NY,Marathon,municipality
+NY,Marcellus,municipality
+NY,Marion,municipality
+NY,Massena,municipality
+NY,Mayfield,municipality
+NY,Medina,municipality
+NY,Menands,municipality
+NY,Mentz,municipality
+NY,Mexico,municipality
+NY,Middleburgh,municipality
+NY,Middlefield,municipality
+NY,Milton,municipality
+NY,Minetto,municipality
+NY,Minoa,municipality
+NY,Monroe,municipality
+NY,Monticello,municipality
+NY,Montour,municipality
+NY,Moreau,municipality
+NY,Morristown,municipality
+NY,Mount Hope,municipality
+NY,Mount Kisco,municipality
+NY,Mount Morris,municipality
+NY,Muttontown,municipality
+NY,Naples,municipality
+NY,Nelsonville,municipality
+NY,New Baltimore,municipality
+NY,New Berlin,municipality
+NY,New Bremen,municipality
+NY,New Castle,municipality
+NY,New Hartford,municipality
+NY,New Hyde Park,municipality
+NY,New Lebanon,municipality
+NY,New Paltz,municipality
+NY,New Rochelle,municipality
+NY,New Scotland,municipality
+NY,New Windsor,municipality
+NY,New York Mills,municipality
+NY,Newark,municipality
+NY,Newburgh,municipality
+NY,Newfield,municipality
+NY,Newstead,municipality
+NY,Niagara,municipality
+NY,Niagara Falls,municipality
+NY,Nichols,municipality
+NY,Niskayuna,municipality
+NY,Nissequogue,municipality
+NY,Norfolk,municipality
+NY,North Castle,municipality
+NY,North Elba,municipality
+NY,North Greenbush,municipality
+NY,North Hempstead,municipality
+NY,North Syracuse,municipality
+NY,Northumberland,municipality
+NY,Norwich,municipality
+NY,Norwood,municipality
+NY,Nyack,municipality
+NY,Ogdensburg,municipality
+NY,Ohio,municipality
+NY,Old Brookville,municipality
+NY,Old Field,municipality
+NY,Olean,municipality
+NY,Olive,municipality
+NY,Oneida,municipality
+NY,Onondaga,municipality
+NY,Ontario,municipality
+NY,Oppenheim,municipality
+NY,Orangetown,municipality
+NY,Orchard Park,municipality
+NY,Oriskany,municipality
+NY,Ossining,municipality
+NY,Oswego,municipality
+NY,Otego,municipality
+NY,Otisco,municipality
+NY,Otsego,municipality
+NY,Owego,municipality
+NY,Oyster Bay,municipality
+NY,Painted Post,municipality
+NY,Parish,municipality
+NY,Pawling,municipality
+NY,Pelham,municipality
+NY,Pelham Manor,municipality
+NY,Pembroke,municipality
+NY,Pendleton,municipality
+NY,Penn Yan,municipality
+NY,Perry,municipality
+NY,Philipstown,municipality
+NY,Pierrepont,municipality
+NY,Pine Plains,municipality
+NY,Pittsfield,municipality
+NY,Pittsford,municipality
+NY,Plainfield,municipality
+NY,Plandome Heights,municipality
+NY,Plattsburgh,municipality
+NY,Pleasant Valley,municipality
+NY,Pompey,municipality
+NY,Port Dickinson,municipality
+NY,Port Jefferson,municipality
+NY,Port Jervis,municipality
+NY,Portland,municipality
+NY,Portville,municipality
+NY,Potsdam,municipality
+NY,Potter,municipality
+NY,Prattsville,municipality
+NY,Putnam Valley,municipality
+NY,Queensbury,municipality
+NY,Quogue,municipality
+NY,Redfield,municipality
+NY,Rensselaer,municipality
+NY,Rensselaer Falls,municipality
+NY,Rensselaerville,municipality
+NY,Ridgeway,municipality
+NY,Riga,municipality
+NY,Riverhead,municipality
+NY,Rockland,municipality
+NY,Rome,municipality
+NY,Romulus,municipality
+NY,Roseboom,municipality
+NY,Rosendale,municipality
+NY,Rotterdam,municipality
+NY,Roxbury,municipality
+NY,Rushville,municipality
+NY,Rye,municipality
+NY,Rye Brook,municipality
+NY,Sag Harbor,municipality
+NY,Salamanca,municipality
+NY,Salina,municipality
+NY,Sand Lake,municipality
+NY,Sandy Creek,municipality
+NY,Saranac,municipality
+NY,Saranac Lake,municipality
+NY,Saugerties,municipality
+NY,Schroeppel,municipality
+NY,Schuyler Falls,municipality
+NY,Schuylerville,municipality
+NY,Scotia,municipality
+NY,Sennett,municipality
+NY,Shawangunk,municipality
+NY,Shelter Island,municipality
+NY,Sinclairville,municipality
+NY,Skaneateles,municipality
+NY,Sloan,municipality
+NY,Sloatsburg,municipality
+NY,Smithtown,municipality
+NY,Solvay,municipality
+NY,Somers,municipality
+NY,Somerset,municipality
+NY,South Glens Falls,municipality
+NY,Southampton,municipality
+NY,Southold,municipality
+NY,Southport,municipality
+NY,Spafford,municipality
+NY,Spencerport,municipality
+NY,Springport,municipality
+NY,Springville,municipality
+NY,St. Johnsville,municipality
+NY,Stafford,municipality
+NY,Stamford,municipality
+NY,Stephentown,municipality
+NY,Stony Point,municipality
+NY,Suffern,municipality
+NY,Sullivan,municipality
+NY,Summerhill,municipality
+NY,Sweden,municipality
+NY,Sylvan Beach,municipality
+NY,Taghkanic,municipality
+NY,Tarrytown,municipality
+NY,Theresa,municipality
+NY,Thomaston,municipality
+NY,Thompson,municipality
+NY,Thurman,municipality
+NY,Thurston,municipality
+NY,Ticonderoga,municipality
+NY,Tioga,municipality
+NY,Tivoli,municipality
+NY,Tompkins,municipality
+NY,Tonawanda,municipality
+NY,Tuckahoe,municipality
+NY,Tupper Lake,municipality
+NY,Tuscarora,municipality
+NY,Tuxedo Park,municipality
+NY,Tyre,municipality
+NY,Ulster,municipality
+NY,Ulysses,municipality
+NY,Unadilla,municipality
+NY,Union,municipality
+NY,Utica,municipality
+NY,Van Buren,municipality
+NY,Varick,municipality
+NY,Vernon,municipality
+NY,Vestal,municipality
+NY,Veteran,municipality
+NY,Victor,municipality
+NY,Victory,municipality
+NY,Walden,municipality
+NY,Wallkill,municipality
+NY,Walton,municipality
+NY,Wappingers Falls,municipality
+NY,Warrensburg,municipality
+NY,Warsaw,municipality
+NY,Warwick,municipality
+NY,Washingtonville,municipality
+NY,Waterford,municipality
+NY,Watertown,municipality
+NY,Watervliet,municipality
+NY,Watkins Glen,municipality
+NY,Wawarsing,municipality
+NY,Wayne,municipality
+NY,Webb,municipality
+NY,Weedsport,municipality
+NY,Wellsville,municipality
+NY,West Almond,municipality
+NY,West Hampton Dunes,municipality
+NY,West Seneca,municipality
+NY,Westfield,municipality
+NY,Westhampton Beach,municipality
+NY,Westville,municipality
+NY,Wheatfield,municipality
+NY,White Creek,municipality
+NY,Williamson,municipality
+NY,Williamsville,municipality
+NY,Wilmington,municipality
+NY,Wilna,municipality
+NY,Windham,municipality
+NY,Wirt,municipality
+NY,Woodstock,municipality
+NY,Yorkshire,municipality
+NY,Yorktown,municipality
+NY,Yorkville,municipality
+OH,Alexandria,municipality
+OH,Amboy,municipality
+OH,American,municipality
+OH,Amherst,municipality
+OH,Anderson,municipality
+OH,Antwerp,municipality
+OH,Apple Creek,municipality
+OH,Arcadia,municipality
+OH,Arcanum,municipality
+OH,Ashtabula,municipality
+OH,Athens,municipality
+OH,Auburn,municipality
+OH,Austintown,municipality
+OH,Bainbridge,municipality
+OH,Baltic,municipality
+OH,Baltimore,municipality
+OH,Batavia,municipality
+OH,Bath,municipality
+OH,Bay,municipality
+OH,Bazetta,municipality
+OH,Beaver,municipality
+OH,Beavercreek,municipality
+OH,Bedford,municipality
+OH,Belpre,municipality
+OH,Berlin,municipality
+OH,Bethel,municipality
+OH,Blendon,municipality
+OH,Bloom,municipality
+OH,Bloomdale,municipality
+OH,Blue Ash,municipality
+OH,Boardman,municipality
+OH,Bolivar,municipality
+OH,Boston Heights,municipality
+OH,Bradford,municipality
+OH,Bradner,municipality
+OH,Bratenahl,municipality
+OH,Bremen,municipality
+OH,Brewster,municipality
+OH,Brimfield,municipality
+OH,Brinkhaven,municipality
+OH,Brookfield,municipality
+OH,Brookville,municipality
+OH,Brunswick Hills,municipality
+OH,Bucyrus,municipality
+OH,Burbank,municipality
+OH,Burton,municipality
+OH,Butler,municipality
+OH,Caldwell,municipality
+OH,Caledonia,municipality
+OH,Canfield,municipality
+OH,Carlisle,municipality
+OH,Carroll,municipality
+OH,Catawba Island,municipality
+OH,Chagrin Falls,municipality
+OH,Champion,municipality
+OH,Chardon,municipality
+OH,Chauncey,municipality
+OH,Chester,municipality
+OH,Chippewa Lake,municipality
+OH,Cincinnati,municipality
+OH,Circleville,municipality
+OH,Clear Creek,municipality
+OH,Clearcreek,municipality
+OH,Cleveland,municipality
+OH,Clinton,municipality
+OH,Coal Grove,municipality
+OH,Colerain,municipality
+OH,Columbus Grove,municipality
+OH,Concord,municipality
+OH,Copley,municipality
+OH,Corwin,municipality
+OH,Coventry,municipality
+OH,Covington,municipality
+OH,Creston,municipality
+OH,Crooksville,municipality
+OH,Custar,municipality
+OH,Cuyahoga Heights,municipality
+OH,Dalton,municipality
+OH,Danville,municipality
+OH,Darby,municipality
+OH,De Graff,municipality
+OH,Deerfield,municipality
+OH,Defiance,municipality
+OH,Delaware,municipality
+OH,Delhi,municipality
+OH,Dover,municipality
+OH,Dublin,municipality
+OH,Duchouquet,municipality
+OH,East Sparta,municipality
+OH,Elida,municipality
+OH,Elmore,municipality
+OH,Elyria,municipality
+OH,Etna,municipality
+OH,Fairfax,municipality
+OH,Fairfield,municipality
+OH,Farmersville,municipality
+OH,Farmington,municipality
+OH,Findlay,municipality
+OH,Frankfort,municipality
+OH,Franklin,municipality
+OH,Fredericktown,municipality
+OH,Galena,municipality
+OH,Garrettsville,municipality
+OH,Gates Mills,municipality
+OH,Genoa,municipality
+OH,German,municipality
+OH,Gibsonburg,municipality
+OH,Glandorf,municipality
+OH,Glendale,municipality
+OH,Glenwillow,municipality
+OH,Goshen,municipality
+OH,Grafton,municipality
+OH,Grand Rapids,municipality
+OH,Granville,municipality
+OH,Green,municipality
+OH,Greenfield,municipality
+OH,Greenville,municipality
+OH,Greenwich,municipality
+OH,Groveport,municipality
+OH,Hamilton,municipality
+OH,Hanover,municipality
+OH,Harris,municipality
+OH,Harrison,municipality
+OH,Harveysburg,municipality
+OH,Hebron,municipality
+OH,Hinckley,municipality
+OH,Hiram,municipality
+OH,Hocking,municipality
+OH,Holiday City,municipality
+OH,Holland,municipality
+OH,Howland,municipality
+OH,Hubbard,municipality
+OH,Hunting Valley,municipality
+OH,Huntington,municipality
+OH,Huntsville,municipality
+OH,Independence,municipality
+OH,Jackson,municipality
+OH,Jackson Center,municipality
+OH,Jefferson,municipality
+OH,Jerome,municipality
+OH,Jeromesville,municipality
+OH,Killbuck,municipality
+OH,Kirkersville,municipality
+OH,Lake,municipality
+OH,Lakemore,municipality
+OH,Lakeview,municipality
+OH,Laurelville,municipality
+OH,Lawrence,municipality
+OH,Lebanon,municipality
+OH,Leipsic,municipality
+OH,Lemon,municipality
+OH,Lewisburg,municipality
+OH,Liberty,municipality
+OH,Licking,municipality
+OH,Lisbon,municipality
+OH,Loveland,municipality
+OH,Lynchburg,municipality
+OH,Mad River,municipality
+OH,Madison,municipality
+OH,Magnolia,municipality
+OH,Malta,municipality
+OH,Mantua,municipality
+OH,Margaretta,municipality
+OH,Marion,municipality
+OH,Mason,municipality
+OH,Mayfield,municipality
+OH,McComb,municipality
+OH,McConnelsville,municipality
+OH,McDonald,municipality
+OH,Mechanicsburg,municipality
+OH,Medina,municipality
+OH,Mentor-on-the-Lake,municipality
+OH,Miami,municipality
+OH,Middlefield,municipality
+OH,Middleport,municipality
+OH,Middletown,municipality
+OH,Mifflin,municipality
+OH,Milan,municipality
+OH,Milford,municipality
+OH,Milford Center,municipality
+OH,Monclova,municipality
+OH,Monroe,municipality
+OH,Montville,municipality
+OH,Moreland Hills,municipality
+OH,Mount Healthy,municipality
+OH,Munroe Falls,municipality
+OH,Muskingum,municipality
+OH,Napoleon,municipality
+OH,Navarre,municipality
+OH,New Bloomington,municipality
+OH,New Concord,municipality
+OH,New Holland,municipality
+OH,New Lebanon,municipality
+OH,New London,municipality
+OH,New Madison,municipality
+OH,New Russia,municipality
+OH,Newark,municipality
+OH,Newtown,municipality
+OH,Nimishillen,municipality
+OH,Northfield Center,municipality
+OH,Norwalk,municipality
+OH,Norwich,municipality
+OH,Oakwood,municipality
+OH,Ohio,municipality
+OH,Olmsted,municipality
+OH,Ontario,municipality
+OH,Orange,municipality
+OH,Orwell,municipality
+OH,Ottoville,municipality
+OH,Oxford,municipality
+OH,Painesville,municipality
+OH,Paris,municipality
+OH,Payne,municipality
+OH,Peninsula,municipality
+OH,Perkins,municipality
+OH,Perry,municipality
+OH,Perrysburg,municipality
+OH,Phillipsburg,municipality
+OH,Pierce,municipality
+OH,Pike,municipality
+OH,Piketon,municipality
+OH,Plain,municipality
+OH,Pleasant,municipality
+OH,Pleasant Hill,municipality
+OH,Plymouth,municipality
+OH,Poland,municipality
+OH,Prairie,municipality
+OH,Prospect,municipality
+OH,Put-in-Bay,municipality
+OH,Ravenna,municipality
+OH,Reading,municipality
+OH,Richland,municipality
+OH,Riverside,municipality
+OH,Roseville,municipality
+OH,Ross,municipality
+OH,Russell,municipality
+OH,Russia,municipality
+OH,Sagamore Hills,municipality
+OH,Salem,municipality
+OH,Sandusky,municipality
+OH,Saybrook,municipality
+OH,Scio,municipality
+OH,Scioto,municipality
+OH,Seven Mile,municipality
+OH,Seville,municipality
+OH,Shawnee,municipality
+OH,Shawnee Hills,municipality
+OH,Shelby,municipality
+OH,Shreve,municipality
+OH,Smithville,municipality
+OH,Somerset,municipality
+OH,South Amherst,municipality
+OH,South Bloomfield,municipality
+OH,South Zanesville,municipality
+OH,Spencerville,municipality
+OH,Springboro,municipality
+OH,Springcreek,municipality
+OH,Springfield,municipality
+OH,St. Clair,municipality
+OH,Sugarcreek,municipality
+OH,Swanton,municipality
+OH,Sycamore,municipality
+OH,Symmes,municipality
+OH,Tate,municipality
+OH,Thornville,municipality
+OH,Toledo,municipality
+OH,Trumbull,municipality
+OH,Turtlecreek,municipality
+OH,Tuscarawas,municipality
+OH,Twinsburg,municipality
+OH,Union,municipality
+OH,Upper Sandusky,municipality
+OH,Urbana,municipality
+OH,Urbancrest,municipality
+OH,Vanlue,municipality
+OH,Versailles,municipality
+OH,Vienna,municipality
+OH,Wadsworth,municipality
+OH,Wakeman,municipality
+OH,Walton Hills,municipality
+OH,Warren,municipality
+OH,Washington,municipality
+OH,Waterville,municipality
+OH,Wayne,municipality
+OH,Wayne Lakes,municipality
+OH,Waynesfield,municipality
+OH,Waynesville,municipality
+OH,Weathersfield,municipality
+OH,West Lafayette,municipality
+OH,West Leipsic,municipality
+OH,West Liberty,municipality
+OH,Westerville,municipality
+OH,Weston,municipality
+OH,Willard,municipality
+OH,Williamsburg,municipality
+OH,Woodsfield,municipality
+OH,Wooster,municipality
+OH,Worthington,municipality
+OK,Alva,municipality
+OK,Antlers,municipality
+OK,Bristow,municipality
+OK,Burns Flat,municipality
+OK,Central High,municipality
+OK,Checotah,municipality
+OK,Cherokee,municipality
+OK,Chickasha,municipality
+OK,Choctaw,municipality
+OK,Chouteau,municipality
+OK,Claremore,municipality
+OK,Cleveland,municipality
+OK,Collinsville,municipality
+OK,Comanche,municipality
+OK,Coyle,municipality
+OK,Cushing,municipality
+OK,Del City,municipality
+OK,Disney,municipality
+OK,Drummond,municipality
+OK,Durant,municipality
+OK,El Reno,municipality
+OK,Elgin,municipality
+OK,Eufaula,municipality
+OK,Geary,municipality
+OK,Grandfield,municipality
+OK,Harrah,municipality
+OK,Hartshorne,municipality
+OK,Heavener,municipality
+OK,Henryetta,municipality
+OK,Hinton,municipality
+OK,Holdenville,municipality
+OK,Hugo,municipality
+OK,Jenks,municipality
+OK,Jones,municipality
+OK,Kiefer,municipality
+OK,Kiowa,municipality
+OK,Krebs,municipality
+OK,Laverne,municipality
+OK,Mannford,municipality
+OK,Marlow,municipality
+OK,Marshall,municipality
+OK,McAlester,municipality
+OK,Moore,municipality
+OK,Mountain Park,municipality
+OK,Mustang,municipality
+OK,New Cordell,municipality
+OK,Newcastle,municipality
+OK,Noble,municipality
+OK,Oilton,municipality
+OK,Okemah,municipality
+OK,Okmulgee,municipality
+OK,Oologah,municipality
+OK,Owasso,municipality
+OK,Perry,municipality
+OK,Pink,municipality
+OK,Pocola,municipality
+OK,Ponca City,municipality
+OK,Pond Creek,municipality
+OK,Porter,municipality
+OK,Purcell,municipality
+OK,Ringwood,municipality
+OK,Salina,municipality
+OK,Shattuck,municipality
+OK,Skiatook,municipality
+OK,Sperry,municipality
+OK,Stilwell,municipality
+OK,Sulphur,municipality
+OK,Tahlequah,municipality
+OK,Tecumseh,municipality
+OK,Tonkawa,municipality
+OK,Tuttle,municipality
+OK,Warr Acres,municipality
+OK,Waynoka,municipality
+OK,Weatherford,municipality
+OK,Welch,municipality
+OK,Wilburton,municipality
+OK,Woodward,municipality
+OK,Yukon,municipality
+OR,Adair Village,municipality
+OR,Amity,municipality
+OR,Arlington,municipality
+OR,Athena,municipality
+OR,Aumsville,municipality
+OR,Banks,municipality
+OR,Beaverton,municipality
+OR,Boardman,municipality
+OR,Burns,municipality
+OR,Butte Falls,municipality
+OR,Canyonville,municipality
+OR,Cascade Locks,municipality
+OR,Clatskanie,municipality
+OR,Coburg,municipality
+OR,Condon,municipality
+OR,Coquille,municipality
+OR,Corvallis,municipality
+OR,Culver,municipality
+OR,Donald,municipality
+OR,Dundee,municipality
+OR,Elgin,municipality
+OR,Elkton,municipality
+OR,Gearhart,municipality
+OR,Gold Beach,municipality
+OR,Haines,municipality
+OR,Halfway,municipality
+OR,Halsey,municipality
+OR,Idanha,municipality
+OR,Irrigon,municipality
+OR,Junction City,municipality
+OR,La Pine,municipality
+OR,Lafayette,municipality
+OR,Lakeview,municipality
+OR,Lyons,municipality
+OR,Manzanita,municipality
+OR,Merrill,municipality
+OR,Millersburg,municipality
+OR,Milton-Freewater,municipality
+OR,Moro,municipality
+OR,Mount Angel,municipality
+OR,Myrtle Creek,municipality
+OR,North Plains,municipality
+OR,North Powder,municipality
+OR,Nyssa,municipality
+OR,Oakridge,municipality
+OR,Phoenix,municipality
+OR,Port Orford,municipality
+OR,Rainier,municipality
+OR,Rockaway Beach,municipality
+OR,Rogue River,municipality
+OR,Shady Cove,municipality
+OR,Sheridan,municipality
+OR,Turner,municipality
+OR,Ukiah,municipality
+OR,Vale,municipality
+OR,Wallowa,municipality
+OR,Willamina,municipality
+OR,Winston,municipality
+OR,Yamhill,municipality
+PA,Adams,municipality
+PA,Albion,municipality
+PA,Alburtis,municipality
+PA,Aldan,municipality
+PA,Allegheny,municipality
+PA,Ambler,municipality
+PA,Amity,municipality
+PA,Annville,municipality
+PA,Baldwin,municipality
+PA,Bally,municipality
+PA,Bangor,municipality
+PA,Barnett,municipality
+PA,Bart,municipality
+PA,Beaver,municipality
+PA,Beaver Falls,municipality
+PA,Belle Vernon,municipality
+PA,Bellefonte,municipality
+PA,Ben Avon Heights,municipality
+PA,Benezette,municipality
+PA,Bernville,municipality
+PA,Bethel,municipality
+PA,Bethlehem,municipality
+PA,Blair,municipality
+PA,Blakely,municipality
+PA,Bowmanstown,municipality
+PA,Bradford,municipality
+PA,Brady,municipality
+PA,Brecknock,municipality
+PA,Brentwood,municipality
+PA,Briar Creek,municipality
+PA,Brighton,municipality
+PA,Bristol,municipality
+PA,Brookhaven,municipality
+PA,Buckingham,municipality
+PA,Bushkill,municipality
+PA,Butler,municipality
+PA,Caernarvon,municipality
+PA,Caln,municipality
+PA,Cambridge Springs,municipality
+PA,Camp Hill,municipality
+PA,Carnegie,municipality
+PA,Carroll,municipality
+PA,Cascade,municipality
+PA,Castle Shannon,municipality
+PA,Catasauqua,municipality
+PA,Catawissa,municipality
+PA,Catharine,municipality
+PA,Cecil,municipality
+PA,Center,municipality
+PA,Centre,municipality
+PA,Chanceford,municipality
+PA,Chapman,municipality
+PA,Charlestown,municipality
+PA,Cheltenham,municipality
+PA,Cherrytree,municipality
+PA,Chester,municipality
+PA,Chester Hill,municipality
+PA,Chippewa,municipality
+PA,Clairton,municipality
+PA,Clarion,municipality
+PA,Clark,municipality
+PA,Clay,municipality
+PA,Clifton Heights,municipality
+PA,Clintonville,municipality
+PA,Clymer,municipality
+PA,Coaldale,municipality
+PA,Collingdale,municipality
+PA,Colwyn,municipality
+PA,Concord,municipality
+PA,Conemaugh,municipality
+PA,Conestoga,municipality
+PA,Conewago,municipality
+PA,Connellsville,municipality
+PA,Connoquenessing,municipality
+PA,Conoy,municipality
+PA,Conshohocken,municipality
+PA,Conyngham,municipality
+PA,Coolbaugh,municipality
+PA,Coplay,municipality
+PA,Corry,municipality
+PA,Covington,municipality
+PA,Cranberry,municipality
+PA,Cumberland,municipality
+PA,Cumru,municipality
+PA,Cussewago,municipality
+PA,Delmont,municipality
+PA,Denver,municipality
+PA,Derry,municipality
+PA,Dickson City,municipality
+PA,Donegal,municipality
+PA,Dormont,municipality
+PA,Douglass,municipality
+PA,Doylestown,municipality
+PA,Dublin,municipality
+PA,Dunbar,municipality
+PA,Dupont,municipality
+PA,Duquesne,municipality
+PA,Durham,municipality
+PA,Eagles Mere,municipality
+PA,East Berlin,municipality
+PA,East Bradford,municipality
+PA,East Donegal,municipality
+PA,East Fallowfield,municipality
+PA,East Goshen,municipality
+PA,East Hempfield,municipality
+PA,East Lampeter,municipality
+PA,East Manchester,municipality
+PA,East Norriton,municipality
+PA,East Nottingham,municipality
+PA,East Rockhill,municipality
+PA,East Whiteland,municipality
+PA,Ebensburg,municipality
+PA,Economy,municipality
+PA,Edgeworth,municipality
+PA,Edinboro,municipality
+PA,Eldred,municipality
+PA,Elizabeth,municipality
+PA,Elk Creek,municipality
+PA,Elkland,municipality
+PA,Emmaus,municipality
+PA,Ephrata,municipality
+PA,Exeter,municipality
+PA,Factoryville,municipality
+PA,Fairfield,municipality
+PA,Fairview,municipality
+PA,Falls,municipality
+PA,Fannett,municipality
+PA,Farrell,municipality
+PA,Felton,municipality
+PA,Ferguson,municipality
+PA,Findlay,municipality
+PA,Fleetwood,municipality
+PA,Folcroft,municipality
+PA,Forest Hills,municipality
+PA,Forks,municipality
+PA,Forty Fort,municipality
+PA,Foster,municipality
+PA,Fox,municipality
+PA,Franconia,municipality
+PA,Franklin,municipality
+PA,Freeland,municipality
+PA,Freemansburg,municipality
+PA,Freeport,municipality
+PA,Fulton,municipality
+PA,Gallitzin,municipality
+PA,Gamble,municipality
+PA,Gibson,municipality
+PA,Glassport,municipality
+PA,Glenolden,municipality
+PA,Granville,municipality
+PA,Green Tree,municipality
+PA,Greene,municipality
+PA,Greenfield,municipality
+PA,Greenwood,municipality
+PA,Grove City,municipality
+PA,Haines,municipality
+PA,Hamilton,municipality
+PA,Hampden,municipality
+PA,Hampton,municipality
+PA,Hanover,municipality
+PA,Harrisville,municipality
+PA,Hatfield,municipality
+PA,Heidelberg,municipality
+PA,Hellertown,municipality
+PA,Hemlock,municipality
+PA,Hempfield,municipality
+PA,Hereford,municipality
+PA,Highspire,municipality
+PA,Hilltown,municipality
+PA,Honesdale,municipality
+PA,Honey Brook,municipality
+PA,Hopewell,municipality
+PA,Horsham,municipality
+PA,Howe,municipality
+PA,Hummelstown,municipality
+PA,Independence,municipality
+PA,Indian Lake,municipality
+PA,Ingram,municipality
+PA,Irwin,municipality
+PA,Jackson,municipality
+PA,Jeannette,municipality
+PA,Jefferson,municipality
+PA,Jenkintown,municipality
+PA,Jessup,municipality
+PA,Jim Thorpe,municipality
+PA,Juniata,municipality
+PA,Keating,municipality
+PA,Kittanning,municipality
+PA,Knox,municipality
+PA,Kulpmont,municipality
+PA,Laceyville,municipality
+PA,Lamar,municipality
+PA,Lancaster,municipality
+PA,Langhorne,municipality
+PA,Lansford,municipality
+PA,Larksville,municipality
+PA,Latimore,municipality
+PA,Latrobe,municipality
+PA,Laurel Mountain,municipality
+PA,Lawrence Park,municipality
+PA,Lehigh,municipality
+PA,Lehman,municipality
+PA,Lenhartsville,municipality
+PA,Lewisberry,municipality
+PA,Lewistown,municipality
+PA,Ligonier,municipality
+PA,Limerick,municipality
+PA,Limestone,municipality
+PA,Linesville,municipality
+PA,Lock Haven,municipality
+PA,Lower Allen,municipality
+PA,Lower Heidelberg,municipality
+PA,Lower Makefield,municipality
+PA,Lower Milford,municipality
+PA,Lower Moreland,municipality
+PA,Lower Oxford,municipality
+PA,Lower Paxton,municipality
+PA,Lower Salford,municipality
+PA,Lower Southampton,municipality
+PA,Lower Swatara,municipality
+PA,Lower Windsor,municipality
+PA,Lykens,municipality
+PA,Lynn,municipality
+PA,Macungie,municipality
+PA,Mahoning,municipality
+PA,Maidencreek,municipality
+PA,Manchester,municipality
+PA,Manheim,municipality
+PA,Manor,municipality
+PA,Manorville,municipality
+PA,Marple,municipality
+PA,Mars,municipality
+PA,Marysville,municipality
+PA,Maxatawny,municipality
+PA,McCandless,municipality
+PA,McIntyre,municipality
+PA,McKees Rocks,municipality
+PA,Mercer,municipality
+PA,Meyersdale,municipality
+PA,Middleburg,municipality
+PA,Middlesex,municipality
+PA,Middletown,municipality
+PA,Mifflin,municipality
+PA,Mifflintown,municipality
+PA,Millcreek,municipality
+PA,Millersburg,municipality
+PA,Millersville,municipality
+PA,Milton,municipality
+PA,Monaca,municipality
+PA,Monessen,municipality
+PA,Monongahela,municipality
+PA,Montoursville,municipality
+PA,Moore,municipality
+PA,Morgan,municipality
+PA,Morton,municipality
+PA,Mount Carmel,municipality
+PA,Mount Joy,municipality
+PA,Mount Wolf,municipality
+PA,Muhlenberg,municipality
+PA,Muncy,municipality
+PA,Muncy Creek,municipality
+PA,Nanty-Glo,municipality
+PA,Nazareth,municipality
+PA,Nether Providence,municipality
+PA,New Beaver,municipality
+PA,New Berlin,municipality
+PA,New Brighton,municipality
+PA,New Britain,municipality
+PA,New Buffalo,municipality
+PA,New Castle,municipality
+PA,New Florence,municipality
+PA,New Hope,municipality
+PA,New Sewickley,municipality
+PA,Newport,municipality
+PA,Newtown,municipality
+PA,Newville,municipality
+PA,North Catasauqua,municipality
+PA,North Codorus,municipality
+PA,North Cornwall,municipality
+PA,North East,municipality
+PA,North Heidelberg,municipality
+PA,North Sewickley,municipality
+PA,North Whitehall,municipality
+PA,North York,municipality
+PA,Northampton,municipality
+PA,Northumberland,municipality
+PA,Nottingham,municipality
+PA,Oakland,municipality
+PA,Oakmont,municipality
+PA,Old Lycoming,municipality
+PA,Oley,municipality
+PA,Oneida,municipality
+PA,Ontelaunee,municipality
+PA,Orwell,municipality
+PA,Orwigsburg,municipality
+PA,Oxford,municipality
+PA,Packer,municipality
+PA,Paint,municipality
+PA,Palmer,municipality
+PA,Palmerton,municipality
+PA,Palmyra,municipality
+PA,Paradise,municipality
+PA,Patterson,municipality
+PA,Patton,municipality
+PA,Penn,municipality
+PA,Penn Forest,municipality
+PA,Pennsbury Village,municipality
+PA,Philipsburg,municipality
+PA,Pine Creek,municipality
+PA,Pitcairn,municipality
+PA,Pittsburgh,municipality
+PA,Pittston,municipality
+PA,Pleasant,municipality
+PA,Plumstead,municipality
+PA,Plunketts Creek,municipality
+PA,Plymouth,municipality
+PA,Pocono,municipality
+PA,Polk,municipality
+PA,Port Allegany,municipality
+PA,Port Vue,municipality
+PA,Portage,municipality
+PA,Potter,municipality
+PA,Pottstown,municipality
+PA,Preston,municipality
+PA,Prompton,municipality
+PA,Pulaski,municipality
+PA,Punxsutawney,municipality
+PA,Quakertown,municipality
+PA,Quarryville,municipality
+PA,Raccoon,municipality
+PA,Radnor,municipality
+PA,Ralpho,municipality
+PA,Ransom,municipality
+PA,Reading,municipality
+PA,Red Lion,municipality
+PA,Redstone,municipality
+PA,Richland,municipality
+PA,Ridgway,municipality
+PA,Ridley,municipality
+PA,Ridley Park,municipality
+PA,Rimersburg,municipality
+PA,Riverside,municipality
+PA,Robeson,municipality
+PA,Rochester,municipality
+PA,Rockefeller,municipality
+PA,Rose Valley,municipality
+PA,Rosslyn Farms,municipality
+PA,Rostraver,municipality
+PA,Ruscombmanor,municipality
+PA,Rye,municipality
+PA,Salem,municipality
+PA,Salisbury,municipality
+PA,Saville,municipality
+PA,Saxonburg,municipality
+PA,Sayre,municipality
+PA,Schuylkill,municipality
+PA,Schuylkill Haven,municipality
+PA,Scott,municipality
+PA,Scottdale,municipality
+PA,Selinsgrove,municipality
+PA,Seven Valleys,municipality
+PA,Sewickley,municipality
+PA,Shaler,municipality
+PA,Shamokin Dam,municipality
+PA,Sharon Hill,municipality
+PA,Shenandoah,municipality
+PA,Shenango,municipality
+PA,Sheshequin,municipality
+PA,Shinglehouse,municipality
+PA,Shippensburg,municipality
+PA,Shippingport,municipality
+PA,Shiremanstown,municipality
+PA,Shohola,municipality
+PA,Silver Lake,municipality
+PA,Smithfield,municipality
+PA,Somerset,municipality
+PA,Souderton,municipality
+PA,South Beaver,municipality
+PA,South Centre,municipality
+PA,South Coatesville,municipality
+PA,South Greensburg,municipality
+PA,South Londonderry,municipality
+PA,South Newton,municipality
+PA,South Park,municipality
+PA,South Woodbury,municipality
+PA,Spring Brook,municipality
+PA,Spring Garden,municipality
+PA,Springdale,municipality
+PA,Springettsbury,municipality
+PA,Springfield,municipality
+PA,St. Clair,municipality
+PA,State College,municipality
+PA,Steelton,municipality
+PA,Stewartstown,municipality
+PA,Stoneboro,municipality
+PA,Strasburg,municipality
+PA,Stroudsburg,municipality
+PA,Sugarcreek,municipality
+PA,Summit,municipality
+PA,Summit Hill,municipality
+PA,Susquehanna Depot,municipality
+PA,Swatara,municipality
+PA,Swissvale,municipality
+PA,Tamaqua,municipality
+PA,Tarentum,municipality
+PA,Tatamy,municipality
+PA,Taylor,municipality
+PA,Texas,municipality
+PA,Thornburg,municipality
+PA,Three Springs,municipality
+PA,Tilden,municipality
+PA,Tinicum,municipality
+PA,Tioga,municipality
+PA,Topton,municipality
+PA,Towamencin,municipality
+PA,Towamensing,municipality
+PA,Towanda,municipality
+PA,Trafford,municipality
+PA,Tredyffrin,municipality
+PA,Tullytown,municipality
+PA,Tunkhannock,municipality
+PA,Tyrone,municipality
+PA,Upper Allen,municipality
+PA,Upper Bern,municipality
+PA,Upper Chichester,municipality
+PA,Upper Dublin,municipality
+PA,Upper Gwynedd,municipality
+PA,Upper Leacock,municipality
+PA,Upper Macungie,municipality
+PA,Upper Makefield,municipality
+PA,Upper Merion,municipality
+PA,Upper Moreland,municipality
+PA,Upper Mount Bethel,municipality
+PA,Upper Providence,municipality
+PA,Upper Saucon,municipality
+PA,Upper St. Clair,municipality
+PA,Upper Uwchlan,municipality
+PA,Uwchlan,municipality
+PA,Venango,municipality
+PA,Walker,municipality
+PA,Wallace,municipality
+PA,Warminster,municipality
+PA,Warren,municipality
+PA,Warrington,municipality
+PA,Warrior Run,municipality
+PA,Warwick,municipality
+PA,Washington,municipality
+PA,Waterford,municipality
+PA,Watsontown,municipality
+PA,Waverly,municipality
+PA,Wayne,municipality
+PA,Weatherly,municipality
+PA,Weisenberg,municipality
+PA,West Brownsville,municipality
+PA,West Conshohocken,municipality
+PA,West Deer,municipality
+PA,West Grove,municipality
+PA,West Hempfield,municipality
+PA,West Lampeter,municipality
+PA,West Mahanoy,municipality
+PA,West Manchester,municipality
+PA,West Mayfield,municipality
+PA,West Mead,municipality
+PA,West Newton,municipality
+PA,West Nottingham,municipality
+PA,West Pittston,municipality
+PA,West View,municipality
+PA,West Vincent,municipality
+PA,West Whiteland,municipality
+PA,Westfield,municipality
+PA,White Deer,municipality
+PA,White Oak,municipality
+PA,Whitehall,municipality
+PA,Whitpain,municipality
+PA,Wilkes-Barre,municipality
+PA,Wilkins,municipality
+PA,Windber,municipality
+PA,Windsor,municipality
+PA,Wright,municipality
+PA,Wyalusing,municipality
+PA,Wyoming,municipality
+PA,Yardley,municipality
+PA,York,municipality
+PA,Zerbe,municipality
+RI,Barrington,municipality
+RI,Bristol,municipality
+RI,Burrillville,municipality
+RI,Charlestown,municipality
+RI,Coventry,municipality
+RI,Cumberland,municipality
+RI,East Greenwich,municipality
+RI,Exeter,municipality
+RI,Foster,municipality
+RI,Glocester,municipality
+RI,Hopkinton,municipality
+RI,Jamestown,municipality
+RI,Johnston,municipality
+RI,Little Compton,municipality
+RI,Middletown,municipality
+RI,Narragansett,municipality
+RI,New Shoreham,municipality
+RI,North Kingstown,municipality
+RI,North Providence,municipality
+RI,Portsmouth,municipality
+RI,Richmond,municipality
+RI,Scituate,municipality
+RI,Smithfield,municipality
+RI,Tiverton,municipality
+RI,Warren,municipality
+RI,West Greenwich,municipality
+RI,West Warwick,municipality
+RI,Westerly,municipality
+SC,Abbeville,municipality
+SC,Allendale,municipality
+SC,Anderson,municipality
+SC,Andrews,municipality
+SC,Atlantic Beach,municipality
+SC,Barnwell,municipality
+SC,Batesburg-Leesville,municipality
+SC,Beaufort,municipality
+SC,Bennettsville,municipality
+SC,Bethune,municipality
+SC,Blacksburg,municipality
+SC,Blythewood,municipality
+SC,Cayce,municipality
+SC,Chesnee,municipality
+SC,Clemson,municipality
+SC,Clinton,municipality
+SC,Clover,municipality
+SC,Conway,municipality
+SC,Cowpens,municipality
+SC,Easley,municipality
+SC,Edisto Beach,municipality
+SC,Florence,municipality
+SC,Folly Beach,municipality
+SC,Forest Acres,municipality
+SC,Fort Mill,municipality
+SC,Gaffney,municipality
+SC,Gaston,municipality
+SC,Gilbert,municipality
+SC,Hilton Head Island,municipality
+SC,Honea Path,municipality
+SC,Inman,municipality
+SC,Isle of Palms,municipality
+SC,James Island,municipality
+SC,Kiawah Island,municipality
+SC,Kingstree,municipality
+SC,Lake City,municipality
+SC,Lake View,municipality
+SC,Lancaster,municipality
+SC,Landrum,municipality
+SC,Laurens,municipality
+SC,Lexington,municipality
+SC,Marion,municipality
+SC,Mauldin,municipality
+SC,McCormick,municipality
+SC,Moncks Corner,municipality
+SC,Myrtle Beach,municipality
+SC,Olanta,municipality
+SC,Orangeburg,municipality
+SC,Pawleys Island,municipality
+SC,Pickens,municipality
+SC,Quinby,municipality
+SC,Ridgeland,municipality
+SC,Ridgeway,municipality
+SC,South Congaree,municipality
+SC,Spartanburg,municipality
+SC,Springdale,municipality
+SC,Sullivan's Island,municipality
+SC,Sumter,municipality
+SC,Surfside Beach,municipality
+SC,Swansea,municipality
+SC,Tega Cay,municipality
+SC,Turbeville,municipality
+SC,Vance,municipality
+SC,Walterboro,municipality
+SC,Ware Shoals,municipality
+SC,West Columbia,municipality
+SC,West Union,municipality
+SC,Westminster,municipality
+SC,Williamston,municipality
+SC,Williston,municipality
+SD,Alcester,municipality
+SD,Armour,municipality
+SD,Belle,municipality
+SD,Beresford,municipality
+SD,Big Stone City,municipality
+SD,Bowdle,municipality
+SD,Brandt,municipality
+SD,Bristol,municipality
+SD,Britton,municipality
+SD,Bruce,municipality
+SD,Buffalo Gap,municipality
+SD,Canistota,municipality
+SD,Carthage,municipality
+SD,Castlewood,municipality
+SD,Centerville,municipality
+SD,Chancellor,municipality
+SD,Clark,municipality
+SD,Clear Lake,municipality
+SD,Colome,municipality
+SD,Colton,municipality
+SD,Cresbard,municipality
+SD,Crooks,municipality
+SD,Day,municipality
+SD,De Smet,municipality
+SD,Deadwood,municipality
+SD,Dell Rapids,municipality
+SD,Edgemont,municipality
+SD,Egan,municipality
+SD,Elkton,municipality
+SD,Emery,municipality
+SD,Eureka,municipality
+SD,Farmer,municipality
+SD,Faulkton,municipality
+SD,Flandreau,municipality
+SD,Fort Pierre,municipality
+SD,Freeman,municipality
+SD,Garretson,municipality
+SD,Gary,municipality
+SD,Gayville,municipality
+SD,Gregory,municipality
+SD,Hartford,municipality
+SD,Hayti,municipality
+SD,Herreid,municipality
+SD,Hosmer,municipality
+SD,Howard,municipality
+SD,Hurley,municipality
+SD,Huron,municipality
+SD,Ipswich,municipality
+SD,Jefferson,municipality
+SD,Kadoka,municipality
+SD,Kennebec,municipality
+SD,Keystone,municipality
+SD,Kimball,municipality
+SD,La Bolt,municipality
+SD,Lake Norden,municipality
+SD,Langford,municipality
+SD,Lead,municipality
+SD,Lemmon,municipality
+SD,Lennox,municipality
+SD,Marion,municipality
+SD,Mellette,municipality
+SD,Menno,municipality
+SD,Milbank,municipality
+SD,Miller,municipality
+SD,Mission Hill,municipality
+SD,Mobridge,municipality
+SD,Montrose,municipality
+SD,New Underwood,municipality
+SD,Newell,municipality
+SD,North Sioux City,municipality
+SD,Onida,municipality
+SD,Parkston,municipality
+SD,Philip,municipality
+SD,Pickstown,municipality
+SD,Plankinton,municipality
+SD,Redfield,municipality
+SD,Roscoe,municipality
+SD,Roslyn,municipality
+SD,Salem,municipality
+SD,Sherman,municipality
+SD,Sisseton,municipality
+SD,South Shore,municipality
+SD,Springfield,municipality
+SD,Timber Lake,municipality
+SD,Valley Springs,municipality
+SD,Vermillion,municipality
+SD,Viborg,municipality
+SD,Volga,municipality
+SD,Wagner,municipality
+SD,Webster,municipality
+SD,Wentworth,municipality
+SD,Wessington,municipality
+SD,Wessington Springs,municipality
+SD,White,municipality
+SD,White Lake,municipality
+SD,Whitewood,municipality
+SD,Winner,municipality
+SD,Wolsey,municipality
+SD,Worthing,municipality
+TN,Adams,municipality
+TN,Adamsville,municipality
+TN,Alcoa,municipality
+TN,Alexandria,municipality
+TN,Arlington,municipality
+TN,Ashland City,municipality
+TN,Athens,municipality
+TN,Atwood,municipality
+TN,Baileyton,municipality
+TN,Bell Buckle,municipality
+TN,Belle Meade,municipality
+TN,Bluff City,municipality
+TN,Bolivar,municipality
+TN,Brownsville,municipality
+TN,Bruceton,municipality
+TN,Carthage,municipality
+TN,Caryville,municipality
+TN,Charleston,municipality
+TN,Church Hill,municipality
+TN,Clarksburg,municipality
+TN,Columbia,municipality
+TN,Coopertown,municipality
+TN,Crab Orchard,municipality
+TN,Cumberland City,municipality
+TN,Cumberland Gap,municipality
+TN,Dandridge,municipality
+TN,Dayton,municipality
+TN,Decaturville,municipality
+TN,Dickson,municipality
+TN,Eagleville,municipality
+TN,East Ridge,municipality
+TN,Elizabethton,municipality
+TN,Englewood,municipality
+TN,Fairview,municipality
+TN,Fayetteville,municipality
+TN,Friendship,municipality
+TN,Gibson,municipality
+TN,Goodlettsville,municipality
+TN,Greenback,municipality
+TN,Harriman,municipality
+TN,Henderson,municipality
+TN,Hollow Rock,municipality
+TN,Huntingdon,municipality
+TN,Jefferson City,municipality
+TN,Jellico,municipality
+TN,Jonesborough,municipality
+TN,Kimball,municipality
+TN,La Follette,municipality
+TN,Lakesite,municipality
+TN,Lenoir City,municipality
+TN,Lewisburg,municipality
+TN,Lexington,municipality
+TN,Lobelville,municipality
+TN,Loudon,municipality
+TN,Mason,municipality
+TN,Maury City,municipality
+TN,McEwen,municipality
+TN,McKenzie,municipality
+TN,McMinnville,municipality
+TN,Medina,municipality
+TN,Millington,municipality
+TN,Monteagle,municipality
+TN,Morrison,municipality
+TN,Mount Carmel,municipality
+TN,Mountain City,municipality
+TN,Munford,municipality
+TN,Nashville-Davidson County,municipality
+TN,New Market,municipality
+TN,New Tazewell,municipality
+TN,Newbern,municipality
+TN,Newport,municipality
+TN,Niota,municipality
+TN,Nolensville,municipality
+TN,Norris,municipality
+TN,Oak Hill,municipality
+TN,Oliver Springs,municipality
+TN,Paris,municipality
+TN,Pegram,municipality
+TN,Pigeon Forge,municipality
+TN,Pikeville,municipality
+TN,Pleasant Hill,municipality
+TN,Portland,municipality
+TN,Red Boiling Springs,municipality
+TN,Ridgely,municipality
+TN,Rockford,municipality
+TN,Rockwood,municipality
+TN,Savannah,municipality
+TN,Selmer,municipality
+TN,Sevierville,municipality
+TN,Shelbyville,municipality
+TN,Signal Mountain,municipality
+TN,Smithville,municipality
+TN,Soddy-Daisy,municipality
+TN,Somerville,municipality
+TN,South Carthage,municipality
+TN,Sparta,municipality
+TN,Spencer,municipality
+TN,Sweetwater,municipality
+TN,Tellico Plains,municipality
+TN,Tennessee Ridge,municipality
+TN,Tiptonville,municipality
+TN,Watertown,municipality
+TN,Westmoreland,municipality
+TN,White Bluff,municipality
+TN,White House,municipality
+TN,White Pine,municipality
+TN,Whitwell,municipality
+TN,Woodland Mills,municipality
+TX,Abernathy,municipality
+TX,Abilene,municipality
+TX,Addison,municipality
+TX,Alamo,municipality
+TX,Alice,municipality
+TX,Allen,municipality
+TX,Alto,municipality
+TX,Alton,municipality
+TX,Alvin,municipality
+TX,Amherst,municipality
+TX,Andrews,municipality
+TX,Angleton,municipality
+TX,Anna,municipality
+TX,Anson,municipality
+TX,Arcola,municipality
+TX,Arp,municipality
+TX,Athens,municipality
+TX,Aubrey,municipality
+TX,Avery,municipality
+TX,Azle,municipality
+TX,Balcones Heights,municipality
+TX,Balmorhea,municipality
+TX,Bardwell,municipality
+TX,Bastrop,municipality
+TX,Bayou Vista,municipality
+TX,Bear Creek,municipality
+TX,Beeville,municipality
+TX,Bellaire,municipality
+TX,Bellmead,municipality
+TX,Belton,municipality
+TX,Benbrook,municipality
+TX,Big Sandy,municipality
+TX,Big Spring,municipality
+TX,Bishop,municipality
+TX,Blooming Grove,municipality
+TX,Blue Mound,municipality
+TX,Boerne,municipality
+TX,Bonney,municipality
+TX,Borger,municipality
+TX,Boyd,municipality
+TX,Breckenridge,municipality
+TX,Brenham,municipality
+TX,Brownwood,municipality
+TX,Bruceville-Eddy,municipality
+TX,Bryson,municipality
+TX,Buda,municipality
+TX,Burkburnett,municipality
+TX,Burnet,municipality
+TX,Burton,municipality
+TX,Caney City,municipality
+TX,Carbon,municipality
+TX,Chillicothe,municipality
+TX,Clarendon,municipality
+TX,Clarksville City,municipality
+TX,Clear Lake Shores,municipality
+TX,Cleveland,municipality
+TX,Clint,municipality
+TX,Collinsville,municipality
+TX,Colmesneil,municipality
+TX,Colorado City,municipality
+TX,Commerce,municipality
+TX,Corinth,municipality
+TX,Corsicana,municipality
+TX,Crockett,municipality
+TX,Crosbyton,municipality
+TX,Cross Roads,municipality
+TX,Dalhart,municipality
+TX,Del Rio,municipality
+TX,Denison,municipality
+TX,Denton,municipality
+TX,Diboll,municipality
+TX,Dickinson,municipality
+TX,Donna,municipality
+TX,Double Horn,municipality
+TX,Double Oak,municipality
+TX,Dripping Springs,municipality
+TX,Dumas,municipality
+TX,El Lago,municipality
+TX,El Paso,municipality
+TX,Ennis,municipality
+TX,Everman,municipality
+TX,Fair Oaks Ranch,municipality
+TX,Fate,municipality
+TX,Fayetteville,municipality
+TX,Floresville,municipality
+TX,Forest Hill,municipality
+TX,Forney,municipality
+TX,Fort Stockton,municipality
+TX,Fredericksburg,municipality
+TX,Freeport,municipality
+TX,Fulton,municipality
+TX,Gainesville,municipality
+TX,Gatesville,municipality
+TX,Gholson,municipality
+TX,Giddings,municipality
+TX,Glen Rose,municipality
+TX,Granbury,municipality
+TX,Granger,municipality
+TX,Gun Barrel City,municipality
+TX,Gunter,municipality
+TX,Hamlin,municipality
+TX,Hardin,municipality
+TX,Haslet,municipality
+TX,Heath,municipality
+TX,Helotes,municipality
+TX,Hidalgo,municipality
+TX,Highland Village,municipality
+TX,Hitchcock,municipality
+TX,Holland,municipality
+TX,Hollywood Park,municipality
+TX,Horizon City,municipality
+TX,Humble,municipality
+TX,Hunters Creek Village,municipality
+TX,Hutto,municipality
+TX,Ingleside,municipality
+TX,Ingleside on the Bay,municipality
+TX,Iowa Park,municipality
+TX,Jacksonville,municipality
+TX,Jones Creek,municipality
+TX,Jonestown,municipality
+TX,Joshua,municipality
+TX,Kemah,municipality
+TX,Kemp,municipality
+TX,Kempner,municipality
+TX,Kerens,municipality
+TX,Kilgore,municipality
+TX,Kingsville,municipality
+TX,Kountze,municipality
+TX,Krum,municipality
+TX,Kurten,municipality
+TX,La Marque,municipality
+TX,La Vernia,municipality
+TX,Ladonia,municipality
+TX,Laguna Vista,municipality
+TX,Lake Jackson,municipality
+TX,Lake Worth,municipality
+TX,Lakeway,municipality
+TX,Leander,municipality
+TX,Lefors,municipality
+TX,Live Oak,municipality
+TX,Lone Star,municipality
+TX,Lufkin,municipality
+TX,Lumberton,municipality
+TX,Manor,municipality
+TX,Marshall,municipality
+TX,Maud,municipality
+TX,McLendon-Chisholm,municipality
+TX,Meadowlakes,municipality
+TX,Mercedes,municipality
+TX,Mexia,municipality
+TX,Mingus,municipality
+TX,Mont Belvieu,municipality
+TX,Montgomery,municipality
+TX,Mount Enterprise,municipality
+TX,Mount Pleasant,municipality
+TX,Mount Vernon,municipality
+TX,Murphy,municipality
+TX,Natalia,municipality
+TX,Navasota,municipality
+TX,Nederland,municipality
+TX,New Berlin,municipality
+TX,New Fairview,municipality
+TX,Niederwald,municipality
+TX,Orange,municipality
+TX,Ore City,municipality
+TX,Palestine,municipality
+TX,Palisades,municipality
+TX,Palmview,municipality
+TX,Pampa,municipality
+TX,Pantego,municipality
+TX,Paris,municipality
+TX,Parker,municipality
+TX,Patton Village,municipality
+TX,Pelican Bay,municipality
+TX,Penitas,municipality
+TX,Pilot Point,municipality
+TX,Pinehurst,municipality
+TX,Pineland,municipality
+TX,Plainview,municipality
+TX,Plum Grove,municipality
+TX,Point Venture,municipality
+TX,Port Lavaca,municipality
+TX,Port Neches,municipality
+TX,Quintana,municipality
+TX,Ranger,municipality
+TX,Ravenna,municipality
+TX,Raymondville,municipality
+TX,Rice,municipality
+TX,Rio Grande City,municipality
+TX,Rio Hondo,municipality
+TX,Riverside,municipality
+TX,Robinson,municipality
+TX,Robstown,municipality
+TX,Rockport,municipality
+TX,Rocksprings,municipality
+TX,Rollingwood,municipality
+TX,Rosebud,municipality
+TX,Rosenberg,municipality
+TX,Roxton,municipality
+TX,Royse City,municipality
+TX,Rule,municipality
+TX,Sabinal,municipality
+TX,Saginaw,municipality
+TX,San Antonio,municipality
+TX,San Benito,municipality
+TX,San Felipe,municipality
+TX,San Leanna,municipality
+TX,San Marcos,municipality
+TX,Sandy Oaks,municipality
+TX,Savoy,municipality
+TX,Seadrift,municipality
+TX,Seagraves,municipality
+TX,Sealy,municipality
+TX,Selma,municipality
+TX,Seymour,municipality
+TX,Shallowater,municipality
+TX,Shenandoah,municipality
+TX,Silsbee,municipality
+TX,Smiley,municipality
+TX,South Padre Island,municipality
+TX,Southlake,municipality
+TX,Stafford,municipality
+TX,Star Harbor,municipality
+TX,Stephenville,municipality
+TX,Sudan,municipality
+TX,Sulphur Springs,municipality
+TX,Sundown,municipality
+TX,Sunrise Beach Village,municipality
+TX,Surfside Beach,municipality
+TX,Tatum,municipality
+TX,Texas City,municipality
+TX,Thompsons,municipality
+TX,Throckmorton,municipality
+TX,Tioga,municipality
+TX,Todd Mission,municipality
+TX,Tolar,municipality
+TX,Tomball,municipality
+TX,Toyah,municipality
+TX,Trenton,municipality
+TX,Trophy Club,municipality
+TX,Uvalde,municipality
+TX,Valley View,municipality
+TX,Vidor,municipality
+TX,Volente,municipality
+TX,Waco,municipality
+TX,Waelder,municipality
+TX,Watauga,municipality
+TX,Wells,municipality
+TX,West Lake Hills,municipality
+TX,West University Place,municipality
+TX,Weston Lakes,municipality
+TX,Winfield,municipality
+TX,Wink,municipality
+TX,Wolfe City,municipality
+TX,Woodbranch,municipality
+TX,Woodcreek,municipality
+TX,Woodway,municipality
+TX,Yoakum,municipality
+UT,Altamont,municipality
+UT,Bluff,municipality
+UT,Boulder,municipality
+UT,Brigham City,municipality
+UT,Castle Valley,municipality
+UT,Cottonwood Heights,municipality
+UT,Daniel,municipality
+UT,Deweyville,municipality
+UT,Dutch John,municipality
+UT,Elk Ridge,municipality
+UT,Enterprise,municipality
+UT,Escalante,municipality
+UT,Eureka,municipality
+UT,Ferron,municipality
+UT,Fielding,municipality
+UT,Fillmore,municipality
+UT,Fountain Green,municipality
+UT,Francis,municipality
+UT,Fruit Heights,municipality
+UT,Garland,municipality
+UT,Glendale,municipality
+UT,Grantsville,municipality
+UT,Hatch,municipality
+UT,Heber,municipality
+UT,Hideout,municipality
+UT,Hildale,municipality
+UT,Hooper,municipality
+UT,Howell,municipality
+UT,Hyrum,municipality
+UT,Kanab,municipality
+UT,Leeds,municipality
+UT,Magna metro,municipality
+UT,Mapleton,municipality
+UT,Marysvale,municipality
+UT,Mendon,municipality
+UT,Midway,municipality
+UT,Millville,municipality
+UT,Mona,municipality
+UT,Naples,municipality
+UT,Nephi,municipality
+UT,Nibley,municipality
+UT,North Ogden,municipality
+UT,Panguitch,municipality
+UT,Paragonah,municipality
+UT,Parowan,municipality
+UT,Plain City,municipality
+UT,Pleasant View,municipality
+UT,River Heights,municipality
+UT,South Ogden,municipality
+UT,South Weber,municipality
+UT,Tabiona,municipality
+UT,Tremonton,municipality
+UT,Uintah,municipality
+UT,Vineyard,municipality
+UT,Washington Terrace,municipality
+UT,West Bountiful,municipality
+UT,West Point,municipality
+UT,White City metro,municipality
+UT,Willard,municipality
+UT,Woodland Hills,municipality
+VA,Altavista,municipality
+VA,Amherst,municipality
+VA,Appalachia,municipality
+VA,Appomattox,municipality
+VA,Big Stone Gap,municipality
+VA,Bowling Green,municipality
+VA,Bridgewater,municipality
+VA,Broadway,municipality
+VA,Brookneal,municipality
+VA,Buena Vista,municipality
+VA,Cape Charles,municipality
+VA,Cedar Bluff,municipality
+VA,Chase City,municipality
+VA,Chilhowie,municipality
+VA,Chincoteague,municipality
+VA,Christiansburg,municipality
+VA,Clifton Forge,municipality
+VA,Covington,municipality
+VA,Culpeper,municipality
+VA,Dumfries,municipality
+VA,Dungannon,municipality
+VA,Emporia,municipality
+VA,Exmore,municipality
+VA,Falls Church,municipality
+VA,Front Royal,municipality
+VA,Gate City,municipality
+VA,Glade Spring,municipality
+VA,Glasgow,municipality
+VA,Gordonsville,municipality
+VA,Gretna,municipality
+VA,Grottoes,municipality
+VA,Haymarket,municipality
+VA,Hillsville,municipality
+VA,Hopewell,municipality
+VA,Iron Gate,municipality
+VA,Louisa,municipality
+VA,Lovettsville,municipality
+VA,Luray,municipality
+VA,Madison,municipality
+VA,Manassas Park,municipality
+VA,Martinsville,municipality
+VA,Monterey,municipality
+VA,Narrows,municipality
+VA,Occoquan,municipality
+VA,Onancock,municipality
+VA,Onley,municipality
+VA,Parksley,municipality
+VA,Poquoson,municipality
+VA,Portsmouth,municipality
+VA,Pulaski,municipality
+VA,Purcellville,municipality
+VA,Radford,municipality
+VA,Smithfield,municipality
+VA,South Hill,municipality
+VA,Tappahannock,municipality
+VA,Timberville,municipality
+VA,Urbanna,municipality
+VA,Wakefield,municipality
+VA,Warrenton,municipality
+VA,Waverly,municipality
+VA,Waynesboro,municipality
+VA,Williamsburg,municipality
+VA,Woodstock,municipality
+VA,Wytheville,municipality
+VT,Addison,municipality
+VT,Alburgh,municipality
+VT,Arlington,municipality
+VT,Athens,municipality
+VT,Bakersfield,municipality
+VT,Barton,municipality
+VT,Bennington,municipality
+VT,Benson,municipality
+VT,Berlin,municipality
+VT,Bethel,municipality
+VT,Bolton,municipality
+VT,Bradford,municipality
+VT,Brandon,municipality
+VT,Brattleboro,municipality
+VT,Brighton,municipality
+VT,Bristol,municipality
+VT,Brookline,municipality
+VT,Cabot,municipality
+VT,Canaan,municipality
+VT,Castleton,municipality
+VT,Charleston,municipality
+VT,Charlotte,municipality
+VT,Chelsea,municipality
+VT,Chester,municipality
+VT,Clarendon,municipality
+VT,Colchester,municipality
+VT,Concord,municipality
+VT,Corinth,municipality
+VT,Craftsbury,municipality
+VT,Danby,municipality
+VT,Derby,municipality
+VT,Dummerston,municipality
+VT,East Montpelier,municipality
+VT,Eden,municipality
+VT,Enosburg Falls,municipality
+VT,Fair Haven,municipality
+VT,Fairfax,municipality
+VT,Fairlee,municipality
+VT,Ferrisburgh,municipality
+VT,Fletcher,municipality
+VT,Glover,municipality
+VT,Grafton,municipality
+VT,Grand Isle,municipality
+VT,Greensboro,municipality
+VT,Guilford,municipality
+VT,Hardwick,municipality
+VT,Hartland,municipality
+VT,Highgate,municipality
+VT,Hinesburg,municipality
+VT,Hyde Park,municipality
+VT,Isle La Motte,municipality
+VT,Jeffersonville,municipality
+VT,Johnson,municipality
+VT,Killington,municipality
+VT,Kirby,municipality
+VT,Lincoln,municipality
+VT,Ludlow,municipality
+VT,Lyndon,municipality
+VT,Manchester,municipality
+VT,Marlboro,municipality
+VT,Middlebury,municipality
+VT,Middletown Springs,municipality
+VT,Moretown,municipality
+VT,Morgan,municipality
+VT,Mount Holly,municipality
+VT,New Haven,municipality
+VT,Newfane,municipality
+VT,North Hero,municipality
+VT,Norwich,municipality
+VT,Orange,municipality
+VT,Pittsford,municipality
+VT,Plainfield,municipality
+VT,Pomfret,municipality
+VT,Poultney,municipality
+VT,Pownal,municipality
+VT,Randolph,municipality
+VT,Reading,municipality
+VT,Readsboro,municipality
+VT,Richmond,municipality
+VT,Royalton,municipality
+VT,Shaftsbury,municipality
+VT,Shelburne,municipality
+VT,South Burlington,municipality
+VT,Springfield,municipality
+VT,St. Albans,municipality
+VT,St. Johnsbury,municipality
+VT,Stamford,municipality
+VT,Starksboro,municipality
+VT,Strafford,municipality
+VT,Sunderland,municipality
+VT,Swanton,municipality
+VT,Townshend,municipality
+VT,Vergennes,municipality
+VT,Vershire,municipality
+VT,Waitsfield,municipality
+VT,Washington,municipality
+VT,Waterbury,municipality
+VT,Waterford,municipality
+VT,Wells River,municipality
+VT,West Fairlee,municipality
+VT,Westfield,municipality
+VT,Westford,municipality
+VT,Westminster,municipality
+VT,Westmore,municipality
+VT,Weston,municipality
+VT,Williston,municipality
+VT,Wilmington,municipality
+VT,Winhall,municipality
+VT,Wolcott,municipality
+VT,Woodbury,municipality
+VT,Woodstock,municipality
+WA,Airway Heights,municipality
+WA,Asotin,municipality
+WA,Benton City,municipality
+WA,Brewster,municipality
+WA,Bridgeport,municipality
+WA,Brier,municipality
+WA,Buckley,municipality
+WA,Carbonado,municipality
+WA,Carnation,municipality
+WA,Castle Rock,municipality
+WA,Clarkston,municipality
+WA,Cle Elum,municipality
+WA,Clyde Hill,municipality
+WA,Concrete,municipality
+WA,Connell,municipality
+WA,Cosmopolis,municipality
+WA,Coupeville,municipality
+WA,Darrington,municipality
+WA,DuPont,municipality
+WA,Eatonville,municipality
+WA,Electric City,municipality
+WA,Elmer City,municipality
+WA,Endicott,municipality
+WA,Entiat,municipality
+WA,Everson,municipality
+WA,Fairfield,municipality
+WA,Farmington,municipality
+WA,Federal Way,municipality
+WA,Fircrest,municipality
+WA,Forks,municipality
+WA,Garfield,municipality
+WA,Gold Bar,municipality
+WA,Granite Falls,municipality
+WA,Hoquiam,municipality
+WA,Kettle Falls,municipality
+WA,La Center,municipality
+WA,Lacey,municipality
+WA,Lakewood,municipality
+WA,Langley,municipality
+WA,Leavenworth,municipality
+WA,Mabton,municipality
+WA,Malden,municipality
+WA,McCleary,municipality
+WA,Medical Lake,municipality
+WA,Medina,municipality
+WA,Metaline Falls,municipality
+WA,Milton,municipality
+WA,Montesano,municipality
+WA,Moxee,municipality
+WA,Naches,municipality
+WA,Normandy Park,municipality
+WA,North Bend,municipality
+WA,North Bonneville,municipality
+WA,Ocean Shores,municipality
+WA,Odessa,municipality
+WA,Omak,municipality
+WA,Oroville,municipality
+WA,Othello,municipality
+WA,Pacific,municipality
+WA,Palouse,municipality
+WA,Raymond,municipality
+WA,Reardan,municipality
+WA,Renton,municipality
+WA,Republic,municipality
+WA,Ritzville,municipality
+WA,Roslyn,municipality
+WA,Roy,municipality
+WA,Royal City,municipality
+WA,Ruston,municipality
+WA,Snohomish,municipality
+WA,Soap Lake,municipality
+WA,South Cle Elum,municipality
+WA,Steilacoom,municipality
+WA,Stevenson,municipality
+WA,Tacoma,municipality
+WA,Tekoa,municipality
+WA,Tenino,municipality
+WA,Toppenish,municipality
+WA,Twisp,municipality
+WA,Union Gap,municipality
+WA,Vancouver,municipality
+WA,Waitsburg,municipality
+WA,Wapato,municipality
+WA,Warden,municipality
+WA,Wilbur,municipality
+WA,Wilkeson,municipality
+WA,Winlock,municipality
+WA,Woodway,municipality
+WA,Yacolt,municipality
+WA,Yakima,municipality
+WA,Zillah,municipality
+WI,Adams,municipality
+WI,Agenda,municipality
+WI,Alban,municipality
+WI,Algoma,municipality
+WI,Alma,municipality
+WI,Alma Center,municipality
+WI,Almond,municipality
+WI,Alto,municipality
+WI,Amery,municipality
+WI,Anderson,municipality
+WI,Antigo,municipality
+WI,Arcadia,municipality
+WI,Arena,municipality
+WI,Argyle,municipality
+WI,Arland,municipality
+WI,Armenia,municipality
+WI,Ashland,municipality
+WI,Atlanta,municipality
+WI,Auburndale,municipality
+WI,Avoca,municipality
+WI,Aztalan,municipality
+WI,Balsam Lake,municipality
+WI,Bangor,municipality
+WI,Baraboo,municipality
+WI,Barnes,municipality
+WI,Barneveld,municipality
+WI,Bass Lake,municipality
+WI,Bayfield,municipality
+WI,Bayside,municipality
+WI,Bayview,municipality
+WI,Bear Lake,municipality
+WI,Beaver Dam,municipality
+WI,Belle Plaine,municipality
+WI,Belleville,municipality
+WI,Beloit,municipality
+WI,Bergen,municipality
+WI,Berlin,municipality
+WI,Berry,municipality
+WI,Black Earth,municipality
+WI,Black River Falls,municipality
+WI,Blair,municipality
+WI,Bloomer,municipality
+WI,Bloomfield,municipality
+WI,Bloomington,municipality
+WI,Bonduel,municipality
+WI,Boscobel,municipality
+WI,Brigham,municipality
+WI,Brodhead,municipality
+WI,Brookfield,municipality
+WI,Bruce,municipality
+WI,Buffalo,municipality
+WI,Buffalo City,municipality
+WI,Butler,municipality
+WI,Cable,municipality
+WI,Caledonia,municipality
+WI,Calumet,municipality
+WI,Camp Douglas,municipality
+WI,Cassville,municipality
+WI,Castle Rock,municipality
+WI,Cecil,municipality
+WI,Cedarburg,municipality
+WI,Chenequa,municipality
+WI,Chetek,municipality
+WI,Chilton,municipality
+WI,Cicero,municipality
+WI,Clarno,municipality
+WI,Clay Banks,municipality
+WI,Cleveland,municipality
+WI,Clinton,municipality
+WI,Colby,municipality
+WI,Coleman,municipality
+WI,Colfax,municipality
+WI,Columbus,municipality
+WI,Combined Locks,municipality
+WI,Concord,municipality
+WI,Cooperstown,municipality
+WI,Corning,municipality
+WI,Couderay,municipality
+WI,Cross Plains,municipality
+WI,Crystal Lake,municipality
+WI,Cuba City,municipality
+WI,Cumberland,municipality
+WI,Cutler,municipality
+WI,Dairyland,municipality
+WI,Darien,municipality
+WI,De Pere,municipality
+WI,Decatur,municipality
+WI,Delafield,municipality
+WI,Delavan,municipality
+WI,Dell Prairie,municipality
+WI,Dewey,municipality
+WI,Dickeyville,municipality
+WI,Dodgeville,municipality
+WI,Dover,municipality
+WI,Dovre,municipality
+WI,Dresser,municipality
+WI,Drummond,municipality
+WI,Dunbar,municipality
+WI,Dunn,municipality
+WI,Eagle,municipality
+WI,Eagle Point,municipality
+WI,Eagle River,municipality
+WI,East Troy,municipality
+WI,Easton,municipality
+WI,Eaton,municipality
+WI,Eau Claire,municipality
+WI,Eau Pleine,municipality
+WI,Edgar,municipality
+WI,Edgerton,municipality
+WI,Egg Harbor,municipality
+WI,Eland,municipality
+WI,Elkhart Lake,municipality
+WI,Ellsworth,municipality
+WI,Elm Grove,municipality
+WI,Elmwood,municipality
+WI,Elroy,municipality
+WI,Ephraim,municipality
+WI,Evansville,municipality
+WI,Evergreen,municipality
+WI,Fall Creek,municipality
+WI,Farmington,municipality
+WI,Fennimore,municipality
+WI,Fifield,municipality
+WI,Flambeau,municipality
+WI,Fontana-on-Geneva Lake,municipality
+WI,Forestville,municipality
+WI,Fountain City,municipality
+WI,Fox Lake,municipality
+WI,Frankfort,municipality
+WI,Franklin,municipality
+WI,Frederic,municipality
+WI,Freedom,municipality
+WI,Friesland,municipality
+WI,Galesville,municipality
+WI,Garden Valley,municipality
+WI,Genoa City,municipality
+WI,Georgetown,municipality
+WI,Germantown,municipality
+WI,Gibraltar,municipality
+WI,Glendale,municipality
+WI,Goodman,municipality
+WI,Gordon,municipality
+WI,Grand Chute,municipality
+WI,Grant,municipality
+WI,Grantsburg,municipality
+WI,Green Lake,municipality
+WI,Greenbush,municipality
+WI,Greenfield,municipality
+WI,Greenwood,municipality
+WI,Gresham,municipality
+WI,Hales Corners,municipality
+WI,Hamilton,municipality
+WI,Hansen,municipality
+WI,Harmony,municipality
+WI,Harrison,municipality
+WI,Hartford,municipality
+WI,Hartland,municipality
+WI,Hazel Green,municipality
+WI,Herman,municipality
+WI,Hewitt,municipality
+WI,Highland,municipality
+WI,Hilbert,municipality
+WI,Hillsboro,municipality
+WI,Horicon,municipality
+WI,Hortonville,municipality
+WI,Howards Grove,municipality
+WI,Hull,municipality
+WI,Iola,municipality
+WI,Jackson,municipality
+WI,Jacksonport,municipality
+WI,Jefferson,municipality
+WI,Johnson,municipality
+WI,Johnson Creek,municipality
+WI,Junction City,municipality
+WI,Juneau,municipality
+WI,Kaukauna,municipality
+WI,Kewaskum,municipality
+WI,Kewaunee,municipality
+WI,Kiel,municipality
+WI,Kildare,municipality
+WI,Kimberly,municipality
+WI,Kingston,municipality
+WI,Kohler,municipality
+WI,Koshkonong,municipality
+WI,La Follette,municipality
+WI,La Grange,municipality
+WI,La Valle,municipality
+WI,Ladysmith,municipality
+WI,Lafayette,municipality
+WI,Lake Hallie,municipality
+WI,Lake Nebagamon,municipality
+WI,Lancaster,municipality
+WI,Langlade,municipality
+WI,Lebanon,municipality
+WI,Leeds,municipality
+WI,Lena,municipality
+WI,Leola,municipality
+WI,Leon,municipality
+WI,Leroy,municipality
+WI,Lessor,municipality
+WI,Lincoln,municipality
+WI,Lind,municipality
+WI,Linn,municipality
+WI,Little Black,municipality
+WI,Lomira,municipality
+WI,Long Lake,municipality
+WI,Loyal,municipality
+WI,Luck,municipality
+WI,Lyons,municipality
+WI,Maiden Rock,municipality
+WI,Manchester,municipality
+WI,Maple,municipality
+WI,Marathon,municipality
+WI,Marathon City,municipality
+WI,Marion,municipality
+WI,Marshall,municipality
+WI,Marshfield,municipality
+WI,Mauston,municipality
+WI,Mayville,municipality
+WI,Medary,municipality
+WI,Medford,municipality
+WI,Meeme,municipality
+WI,Menasha,municipality
+WI,Menomonee Falls,municipality
+WI,Menomonie,municipality
+WI,Merrillan,municipality
+WI,Merrimac,municipality
+WI,Milladore,municipality
+WI,Millston,municipality
+WI,Milltown,municipality
+WI,Milton,municipality
+WI,Milwaukee,municipality
+WI,Mineral Point,municipality
+WI,Minong,municipality
+WI,Mondovi,municipality
+WI,Monroe,municipality
+WI,Montello,municipality
+WI,Monticello,municipality
+WI,Morgan,municipality
+WI,Mosinee,municipality
+WI,Mount Calvary,municipality
+WI,Mukwonago,municipality
+WI,Muscoda,municipality
+WI,Muskego,municipality
+WI,Nashville,municipality
+WI,Necedah,municipality
+WI,Neillsville,municipality
+WI,Nekimi,municipality
+WI,Nekoosa,municipality
+WI,Nelson,municipality
+WI,Neva,municipality
+WI,New Denmark,municipality
+WI,New Glarus,municipality
+WI,New Holstein,municipality
+WI,New Lisbon,municipality
+WI,New Richmond,municipality
+WI,Niagara,municipality
+WI,Nichols,municipality
+WI,North Fond du Lac,municipality
+WI,North Freedom,municipality
+WI,Norwood,municipality
+WI,Oakdale,municipality
+WI,Oakland,municipality
+WI,Oconomowoc,municipality
+WI,Oconomowoc Lake,municipality
+WI,Oconto,municipality
+WI,Oconto Falls,municipality
+WI,Omro,municipality
+WI,Onalaska,municipality
+WI,Oneida,municipality
+WI,Orfordville,municipality
+WI,Osceola,municipality
+WI,Otter Creek,municipality
+WI,Owen,municipality
+WI,Oxford,municipality
+WI,Packwaukee,municipality
+WI,Palmyra,municipality
+WI,Park Falls,municipality
+WI,Pelican,municipality
+WI,Pembine,municipality
+WI,Pepin,municipality
+WI,Perry,municipality
+WI,Peshtigo,municipality
+WI,Phelps,municipality
+WI,Phillips,municipality
+WI,Pine Lake,municipality
+WI,Pleasant Springs,municipality
+WI,Pleasant Valley,municipality
+WI,Plymouth,municipality
+WI,Polar,municipality
+WI,Port Edwards,municipality
+WI,Poynette,municipality
+WI,Prairie du Chien,municipality
+WI,Prescott,municipality
+WI,Princeton,municipality
+WI,Pulaski,municipality
+WI,Racine,municipality
+WI,Randolph,municipality
+WI,Readstown,municipality
+WI,Red Cedar,municipality
+WI,Red Springs,municipality
+WI,Redgranite,municipality
+WI,Reedsburg,municipality
+WI,Rib Lake,municipality
+WI,Rice Lake,municipality
+WI,Richland,municipality
+WI,Richland Center,municipality
+WI,Richmond,municipality
+WI,Ridgeway,municipality
+WI,River Falls,municipality
+WI,River Hills,municipality
+WI,Roberts,municipality
+WI,Rock Creek,municipality
+WI,Rockbridge,municipality
+WI,Rome,municipality
+WI,Rothschild,municipality
+WI,Rusk,municipality
+WI,Russell,municipality
+WI,Salem,municipality
+WI,Sand Lake,municipality
+WI,Sauk City,municipality
+WI,Saukville,municipality
+WI,Saxeville,municipality
+WI,Schofield,municipality
+WI,Scott,municipality
+WI,Seymour,municipality
+WI,Sheboygan,municipality
+WI,Shelby,municipality
+WI,Sherman,municipality
+WI,Sherry,municipality
+WI,Shiocton,municipality
+WI,Shorewood Hills,municipality
+WI,Shullsburg,municipality
+WI,Silver Cliff,municipality
+WI,Sioux Creek,municipality
+WI,Siren,municipality
+WI,Sister Bay,municipality
+WI,Soldiers Grove,municipality
+WI,Somers,municipality
+WI,Somerset,municipality
+WI,Spencer,municipality
+WI,Spooner,municipality
+WI,Spring Brook,municipality
+WI,Spring Green,municipality
+WI,Spring Prairie,municipality
+WI,Springfield,municipality
+WI,Springvale,municipality
+WI,St. Croix Falls,municipality
+WI,St. Francis,municipality
+WI,St. Lawrence,municipality
+WI,Stanton,municipality
+WI,Stephenson,municipality
+WI,Sterling,municipality
+WI,Stockbridge,municipality
+WI,Stoddard,municipality
+WI,Sugar Camp,municipality
+WI,Sullivan,municipality
+WI,Sumner,municipality
+WI,Taycheedah,municipality
+WI,Tilden,municipality
+WI,Tomah,municipality
+WI,Tomahawk,municipality
+WI,Trade Lake,municipality
+WI,Trempealeau,municipality
+WI,Trenton,municipality
+WI,Troy,municipality
+WI,Turtle Lake,municipality
+WI,Twin Lakes,municipality
+WI,Two Rivers,municipality
+WI,Union,municipality
+WI,Valders,municipality
+WI,Vernon,municipality
+WI,Verona,municipality
+WI,Viroqua,municipality
+WI,Walworth,municipality
+WI,Wascott,municipality
+WI,Washington,municipality
+WI,Waterloo,municipality
+WI,Watertown,municipality
+WI,Waunakee,municipality
+WI,Waupaca,municipality
+WI,Waupun,municipality
+WI,Wausau,municipality
+WI,Webster,municipality
+WI,Wells,municipality
+WI,West Milwaukee,municipality
+WI,West Point,municipality
+WI,West Salem,municipality
+WI,Weston,municipality
+WI,Wheatland,municipality
+WI,Wheeler,municipality
+WI,White River,municipality
+WI,Whitelaw,municipality
+WI,Whitestown,municipality
+WI,Williams Bay,municipality
+WI,Wind Point,municipality
+WI,Winneconne,municipality
+WI,Winter,municipality
+WI,Wisconsin Dells,municipality
+WI,Woodmohr,municipality
+WI,Wrightstown,municipality
+WI,Wyocena,municipality
+WI,Wyoming,municipality
+WI,York,municipality
+WI,Yorkville,municipality
+WV,Ansted,municipality
+WV,Athens,municipality
+WV,Barboursville,municipality
+WV,Beech Bottom,municipality
+WV,Belington,municipality
+WV,Belle,municipality
+WV,Benwood,municipality
+WV,Bethany,municipality
+WV,Beverly,municipality
+WV,Bolivar,municipality
+WV,Bridgeport,municipality
+WV,Buckhannon,municipality
+WV,Cameron,municipality
+WV,Ceredo,municipality
+WV,Danville,municipality
+WV,Davis,municipality
+WV,Dunbar,municipality
+WV,Elkins,municipality
+WV,Fayetteville,municipality
+WV,Flatwoods,municipality
+WV,Gauley Bridge,municipality
+WV,Glen Dale,municipality
+WV,Glenville,municipality
+WV,Hinton,municipality
+WV,Hundred,municipality
+WV,Kingwood,municipality
+WV,Lewisburg,municipality
+WV,Mason,municipality
+WV,Milton,municipality
+WV,Moorefield,municipality
+WV,Nitro,municipality
+WV,North Hills,municipality
+WV,Oceana,municipality
+WV,Parsons,municipality
+WV,Paw Paw,municipality
+WV,Petersburg,municipality
+WV,Quinwood,municipality
+WV,Reedsville,municipality
+WV,Richwood,municipality
+WV,Shepherdstown,municipality
+WV,Shinnston,municipality
+WV,Star City,municipality
+WV,Thomas,municipality
+WV,Vienna,municipality
+WV,West Milford,municipality
+WV,White Hall,municipality
+WV,White Sulphur Springs,municipality
+WV,Williamstown,municipality
+WY,Afton,municipality
+WY,Alpine,municipality
+WY,Bar Nunn,municipality
+WY,Bear River,municipality
+WY,Buffalo,municipality
+WY,Byron,municipality
+WY,Clearmont,municipality
+WY,Diamondville,municipality
+WY,Douglas,municipality
+WY,Elk Mountain,municipality
+WY,Evansville,municipality
+WY,Fort Laramie,municipality
+WY,Frannie,municipality
+WY,Guernsey,municipality
+WY,Hulett,municipality
+WY,Kemmerer,municipality
+WY,Meeteetse,municipality
+WY,Moorcroft,municipality
+WY,Pine Haven,municipality
+WY,Ranchester,municipality
+WY,Riverside,municipality
+WY,Rock River,municipality
+WY,Rock Springs,municipality
+WY,Shoshoni,municipality
+WY,Sinclair,municipality
+WY,Star Valley Ranch,municipality
+WY,Sundance,municipality
+WY,Superior,municipality
+WY,Thermopolis,municipality
+WY,Torrington,municipality
+WY,Wamsutter,municipality
+WY,Wheatland,municipality
+WY,Wright,municipality

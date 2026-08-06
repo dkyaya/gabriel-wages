@@ -1,0 +1,129 @@
+{
+  "schema_name": "Gabriel Wages source-library navigation index",
+  "schema_version": "1.0.0",
+  "row_unit": "one exact-deduplicated canonical physical source object",
+  "primary_key": "source_index_id",
+  "canonical_identity": "canonical_source_id and sha256 are the Phase 0 SHA-256 content identity",
+  "exclusions": "No project claims, claim classes, counterexamples, report conclusions, or analytical tables.",
+  "fields": {
+    "source_index_id": {
+      "type": "string"
+    },
+    "canonical_source_id": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string"
+    },
+    "archive_relative_path": {
+      "type": "string"
+    },
+    "canonical_original_path": {
+      "type": "string"
+    },
+    "display_title": {
+      "type": "string"
+    },
+    "display_title_basis": {
+      "type": "string"
+    },
+    "original_filename": {
+      "type": "string"
+    },
+    "extension": {
+      "type": "string"
+    },
+    "mime_type": {
+      "type": "string"
+    },
+    "file_size_bytes": {
+      "type": "integer"
+    },
+    "source_family": {
+      "type": "string"
+    },
+    "source_family_raw": {
+      "type": "string"
+    },
+    "document_type_raw": {
+      "type": "string"
+    },
+    "municipality": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "period_label": {
+      "type": "string"
+    },
+    "period_start_year": {
+      "type": "string"
+    },
+    "period_end_year": {
+      "type": "string"
+    },
+    "geography_basis": {
+      "type": "string"
+    },
+    "period_basis": {
+      "type": "string"
+    },
+    "source_family_basis": {
+      "type": "string"
+    },
+    "metadata_confidence": {
+      "type": "string"
+    },
+    "original_url": {
+      "type": "string"
+    },
+    "url_host": {
+      "type": "string"
+    },
+    "official_source_flag": {
+      "type": "string"
+    },
+    "extraction_status": {
+      "type": "string"
+    },
+    "redistribution_status": {
+      "type": "string"
+    },
+    "physical_copy_count": {
+      "type": "integer"
+    },
+    "alias_count": {
+      "type": "integer"
+    },
+    "provenance_index_id": {
+      "type": "string"
+    },
+    "metadata_match_basis": {
+      "type": "string"
+    },
+    "source_metadata_status": {
+      "type": "string"
+    },
+    "unresolved_fields": {
+      "type": "string"
+    },
+    "navigation_packaging_eligible": {
+      "type": "boolean"
+    },
+    "exclusion_reason": {
+      "type": "string"
+    },
+    "phase0_expected_source_library_path": {
+      "type": "string"
+    },
+    "phase0_lineage": {
+      "type": "string"
+    }
+  },
+  "path_design": "originals/state/municipality/source_family/period/hash16__sanitized-title.ext",
+  "path_safety": "ASCII lowercase slugs; bounded components; SHA-256 prefix disambiguation; casefold collision audit."
+}

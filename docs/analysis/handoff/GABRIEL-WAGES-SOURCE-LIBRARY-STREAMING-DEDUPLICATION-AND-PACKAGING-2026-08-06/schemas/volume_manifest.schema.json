@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gabriel Wages volume manifest record",
+  "type": "object",
+  "required": ["volume_id", "filename", "status", "source_count", "source_bytes", "planned_total_bytes", "verification_status"],
+  "properties": {
+    "volume_id": {"type": "string", "pattern": "^VOL-[0-9]{3}$"},
+    "filename": {"type": "string", "pattern": "\\.tar\\.zst$"},
+    "status": {"enum": ["planned", "writing", "validation_pending", "accepted", "failed", "held_for_space", "held_for_source_repair", "transferred"]},
+    "source_count": {"type": ["string", "integer"]},
+    "source_bytes": {"type": ["string", "integer"]},
+    "text_companion_count": {"type": ["string", "integer"]},
+    "text_bytes": {"type": ["string", "integer"]},
+    "planned_total_bytes": {"type": ["string", "integer"]},
+    "compressed_bytes": {"type": ["string", "integer"]},
+    "compression_ratio": {"type": ["string", "number"]},
+    "archive_SHA256": {"type": "string"},
+    "first_source_id": {"type": "string"},
+    "last_source_id": {"type": "string"},
+    "state_coverage": {"type": "string"},
+    "municipality_count": {"type": ["string", "integer"]},
+    "member_count": {"type": ["string", "integer"]},
+    "validation_method": {"type": "string"},
+    "verified_source_member_count": {"type": ["string", "integer"]},
+    "verification_status": {"type": "string"},
+    "runtime_seconds": {"type": ["string", "number"]}
+  },
+  "additionalProperties": false
+}

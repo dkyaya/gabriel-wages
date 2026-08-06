@@ -1,0 +1,75 @@
+{
+  "generated_at_utc": "2026-08-06T23:28:14.998794+00:00",
+  "inputs": {
+    "aliases": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_archive_alias_inventory.csv",
+      "sha256": "7969256eca59f7e6a63090730bf3dac660acd72f3376135461216b31afe16d06"
+    },
+    "canonical": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_archive_canonical_source_inventory.csv",
+      "sha256": "b3b936574d43e6f92063d0cdd786e07b2f4ef60d055d53f0eae5c6365755cddf"
+    },
+    "lane1_summary": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-SOURCE-LIBRARY-STREAMING-DEDUPLICATION-AND-PACKAGING-2026-08-06/lanes/lane_001/lane_001_summary.json",
+      "sha256": "6743706286e0cbb20ee97df5df3bb90f3bab16c7978541de79d263d68638b616"
+    },
+    "physical": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_archive_physical_file_inventory.csv",
+      "sha256": "7c0793ff583c3ef7e7bf00e60fc0a4f7fcf04b76174265f1863d5a4830df7601"
+    },
+    "proposed": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_library_proposed_path_map.csv",
+      "sha256": "4d1bac5a92bc496ce1b528b04d45baf3cb529c6021c73866d56f679e1ce8118d"
+    },
+    "redistribution": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_archive_redistribution_review_queue.csv",
+      "sha256": "e6bba1e7f410bce2dfc6b20b8551d57c4fbe11c4c030e2e59a95296662f05827"
+    },
+    "repo_absolute_paths": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/local_absolute_path_inventory.csv",
+      "sha256": "5fcebbff5560d69b8015f9e5eed2583a60b1a99923a3d7b7eca84e828d9aa947"
+    },
+    "repo_security": {
+      "relative_path": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/repository_secret_and_path_audit.json",
+      "sha256": "2d4c0ef08e062506d63077e3f60279833aa2c1a39d202e86ee9f727caeec0b09"
+    }
+  },
+  "lane_id": "lane_005",
+  "outputs": [
+    "DATA_DICTIONARY.md",
+    "KNOWN_ISSUES.md",
+    "README.md",
+    "SOURCE_USE_GUIDE.md",
+    "START_HERE.md",
+    "build_recipient_documentation_and_audits.py",
+    "canonical_source_record.schema.json",
+    "credential_risk_candidates.csv",
+    "credential_risk_candidates.jsonl",
+    "extracted_text_record.schema.json",
+    "lane_005_checkpoint.json",
+    "lane_005_queue.csv",
+    "lane_005_queue.jsonl",
+    "lane_005_summary.json",
+    "lane_005_summary.md",
+    "package_path_risk_candidates.csv",
+    "package_path_risk_candidates.jsonl",
+    "reconstruction_tool_specification.json",
+    "redistribution_review_record.schema.json",
+    "source_alias_record.schema.json",
+    "source_library_manifest.schema.json",
+    "source_library_portability_audit.json",
+    "source_library_portability_audit.md",
+    "source_library_redistribution_audit.json",
+    "source_library_redistribution_audit.md",
+    "source_library_security_audit.json",
+    "source_library_security_audit.md",
+    "source_library_tool_specifications.md",
+    "source_only_boundary_audit.json",
+    "source_only_boundary_audit.md",
+    "streaming_packager_tool_specification.json",
+    "volume_checksum_record.schema.json",
+    "volume_manifest_record.schema.json",
+    "volume_validator_tool_specification.json"
+  ],
+  "source_only_boundary_preserved": true
+}

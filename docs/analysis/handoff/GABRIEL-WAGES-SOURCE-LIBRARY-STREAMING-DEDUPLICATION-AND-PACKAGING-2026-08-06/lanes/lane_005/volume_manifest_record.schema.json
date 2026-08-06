@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "archive_format": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "compressed_bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "first_canonical_source_id": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "last_canonical_source_id": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "member_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "uncompressed_bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "validation_status": {
+      "enum": [
+        "pending",
+        "passed",
+        "failed",
+        "quarantined"
+      ]
+    },
+    "volume_family": {
+      "enum": [
+        "originals",
+        "extracted_text"
+      ]
+    },
+    "volume_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "volume_relative_path": {
+      "description": "POSIX path relative to the source-library root.",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "type": "string"
+    },
+    "volume_sequence": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "volume_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "volume_id",
+    "volume_sequence",
+    "volume_family",
+    "volume_relative_path",
+    "archive_format",
+    "member_count",
+    "uncompressed_bytes",
+    "compressed_bytes",
+    "volume_sha256",
+    "validation_status"
+  ],
+  "title": "Volume manifest record",
+  "type": "object"
+}

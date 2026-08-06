@@ -1,0 +1,22 @@
+{
+  "canonical_source_count": 26637,
+  "canonical_source_files_missing": 0,
+  "canonical_source_files_present": 26637,
+  "generated_at": "2026-08-06T22:58:08.303797+00:00",
+  "manifested_size_matches_actual_for_selected": 23454,
+  "manifested_size_mismatch_for_selected": 0,
+  "no_extraction_performed": true,
+  "no_files_copied_moved_deleted_or_packaged": true,
+  "no_ocr_performed": true,
+  "passed": true,
+  "proposed_companion_path_collisions": 0,
+  "queue_row_count": 26637,
+  "reconciliation_row_count": 26637,
+  "sampled_companion_hash_count": 50,
+  "sampled_companion_hash_matches": 50,
+  "selected_companion_count": 23454,
+  "selected_companions_exist": true,
+  "selected_links_use_exact_source_hash": true,
+  "source_hashes_outside_phase0_canonical_inventory": 0,
+  "unique_reconciliation_source_count": 26637
+}

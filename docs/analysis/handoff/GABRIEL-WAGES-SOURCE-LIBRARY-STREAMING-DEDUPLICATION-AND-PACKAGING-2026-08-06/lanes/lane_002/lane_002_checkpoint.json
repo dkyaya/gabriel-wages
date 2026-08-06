@@ -1,0 +1,30 @@
+{
+  "lane_id": "lane_002",
+  "status": "complete",
+  "completed_at": "2026-08-06T22:58:59.183360+00:00",
+  "row_unit": "one exact-deduplicated canonical physical source object",
+  "canonical_source_rows": 26637,
+  "packaging_eligible_rows": 26635,
+  "alias_rows": 162,
+  "sha256_exact_metadata_matches": 26635,
+  "phase0_path_only_rows": 2,
+  "exact_archive_path_collisions": 0,
+  "readable_pre_hash_collision_groups": 390,
+  "source_binaries_read": false,
+  "source_binaries_copied_modified_or_deleted": false,
+  "claims_conclusions_or_analytical_tables_included": false,
+  "writes_outside_lane_directory": false,
+  "runtime_seconds": 3.758,
+  "outputs": [
+    "SOURCE_INDEX.csv.gz/schema.json/schema.md",
+    "source_aliases.csv",
+    "source_provenance.csv.gz",
+    "source_metadata_inference_audit.csv.gz",
+    "deterministic_archive_path_map.csv.gz",
+    "filename_sanitization_audit.csv.gz",
+    "archive_path_collision_audit.csv",
+    "source_navigation_coverage_summary.json/md",
+    "lane_002_queue.csv",
+    "lane_002_summary.md"
+  ]
+}

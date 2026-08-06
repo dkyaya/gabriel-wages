@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "file_size_bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "validated_at_utc": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "validation_status": {
+      "enum": [
+        "pending",
+        "passed",
+        "failed"
+      ]
+    },
+    "volume_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "volume_relative_path": {
+      "description": "POSIX path relative to the source-library root.",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "type": "string"
+    }
+  },
+  "required": [
+    "volume_id",
+    "volume_relative_path",
+    "sha256",
+    "file_size_bytes",
+    "validation_status"
+  ],
+  "title": "Volume checksum record",
+  "type": "object"
+}

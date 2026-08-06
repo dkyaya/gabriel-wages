@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "staged_file_count": 175,
+  "staged_worktree_bytes": 12906341,
+  "largest_staged_file_bytes": 4011546,
+  "largest_staged_file": "source_library_volume_assignments.csv.gz",
+  "source_binaries_staged": 0,
+  "archive_volumes_staged": 0,
+  "read_me_first_zip_staged": false,
+  "extracted_text_corpus_staged": false,
+  "raw_analytical_corpus_staged": false,
+  "tracked_scope": "compact manifests, indexes, schemas, documentation, tools, validation, hashes, and package pointers",
+  "notes": "CSV files use conventional CRLF records in several generated outputs; git diff --check reports those record terminators as whitespace but no patch corruption or unsafe path was found."
+}

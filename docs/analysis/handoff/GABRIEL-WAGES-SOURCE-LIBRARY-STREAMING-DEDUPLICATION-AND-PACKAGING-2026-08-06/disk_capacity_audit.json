@@ -1,0 +1,11 @@
+{
+  "free_bytes_at_final_audit": 8969117696,
+  "free_bytes_at_first_volume": 16221888512,
+  "next_volume_planned_bytes": 2146363709,
+  "projected_free_after_next_volume": 7458883267,
+  "rolling_stop_required": true,
+  "safe_floor_bytes": 8589934592,
+  "status": "pass",
+  "final_free_gib": 8.353141784667969,
+  "note": "The next archive was held before its write. Compact task-owned duplicate preparation outputs were then removed so the final metadata and commit stage remained just above the 8 GiB floor. No source or accepted archive was removed."
+}

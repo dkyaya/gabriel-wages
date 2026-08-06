@@ -1,0 +1,25 @@
+{
+  "exact_duplicate_bytes_avoided": 409679973,
+  "exact_duplicate_groups": 154,
+  "exact_duplicate_redundant_copies": 162,
+  "excluded_non_source_control_count": 2,
+  "excluded_records": [
+    {
+      "path": "artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/retained_quota_state.json",
+      "reason": "non_source_quota_control_file",
+      "source_id": "76dd6bab6cfc91bb05a58dcec9dc93b2ddaa022f8c3e0c27dabf96055c713809"
+    },
+    {
+      "path": "artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/retained_quota.lock",
+      "reason": "non_source_quota_control_file",
+      "source_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "missing_source_count": 0,
+  "packaging_eligible_source_bytes": 56164354195,
+  "packaging_eligible_source_count": 26635,
+  "phase0_canonical_bytes": 56164354350,
+  "phase0_canonical_count": 26637,
+  "phase0_physical_candidate_bytes": 56574034323,
+  "phase0_physical_candidate_count": 26799
+}

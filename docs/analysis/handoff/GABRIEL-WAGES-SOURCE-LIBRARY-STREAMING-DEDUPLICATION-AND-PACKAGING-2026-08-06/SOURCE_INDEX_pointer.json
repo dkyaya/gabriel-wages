@@ -1,0 +1,10 @@
+{
+  "csv_sha256": "ffa31b609b914bb6bb2af37363931240d0b1b0e544849428e21e6b80a42d80b8",
+  "jsonl_sha256": "477a284af3511d34bf46290316ba5bd9a630437383e7b5b8d97f539ec5132573",
+  "package_paths": [
+    "gabriel-wages-source-library-2026-08-06/SOURCE_INDEX.csv",
+    "gabriel-wages-source-library-2026-08-06/SOURCE_INDEX.jsonl"
+  ],
+  "reason_not_tracked_uncompressed": "Complete indexes are transfer-package metadata and are too large for sensible Git tracking.",
+  "row_count": 26635
+}

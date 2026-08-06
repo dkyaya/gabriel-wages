@@ -1,0 +1,15 @@
+{
+  "API_calls": 0,
+  "GABRIEL_calls": 0,
+  "OCR_runs": 0,
+  "claim_work": 0,
+  "claims_or_conclusions_packaged": false,
+  "cloud_uploads": 0,
+  "dashboard_work": 0,
+  "full_uncompressed_staging_copy_created": false,
+  "hosted_search_calls": 0,
+  "original_sources_deleted": 0,
+  "redownloads": 0,
+  "regressions": 0,
+  "status": "pass"
+}

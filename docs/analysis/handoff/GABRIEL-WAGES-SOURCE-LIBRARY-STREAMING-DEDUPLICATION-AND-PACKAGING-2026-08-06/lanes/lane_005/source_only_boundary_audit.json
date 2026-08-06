@@ -1,0 +1,27 @@
+{
+  "allowed_content": [
+    "original source files",
+    "extracted-text companions",
+    "source provenance",
+    "source aliases",
+    "checksums",
+    "extraction status",
+    "known source issues",
+    "redistribution review metadata",
+    "recipient documentation",
+    "validation tools"
+  ],
+  "analytical_rows_emitted_by_lane": 0,
+  "archive_volumes_created_by_lane": 0,
+  "excluded_content": [
+    "analytical classifications",
+    "report arguments",
+    "adjudication results",
+    "report-specific evidence links",
+    "counterexample packets",
+    "report visuals"
+  ],
+  "recipient_document_count": 5,
+  "source_files_copied_by_lane": 0,
+  "status": "pass"
+}

@@ -1,0 +1,17 @@
+{
+  "aliases_represented_in_metadata": true,
+  "archive_format": "tar.zst",
+  "bounded_extraction": "pass",
+  "independent_listing": "pass",
+  "original_SHA256_reproduction": "2 of 2",
+  "recipient_extract_all_test": "pass",
+  "recipient_verify_library_test": "pass",
+  "source_members": 2,
+  "source_types": [
+    "PDF",
+    "HTML"
+  ],
+  "status": "pass",
+  "temporary_extraction_removed": true,
+  "text_companions": 1
+}

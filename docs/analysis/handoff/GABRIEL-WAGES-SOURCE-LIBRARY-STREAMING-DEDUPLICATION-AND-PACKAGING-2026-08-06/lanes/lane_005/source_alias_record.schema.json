@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alias_file_size_bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "alias_relative_path": {
+      "description": "POSIX path relative to the source-library root.",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "type": "string"
+    },
+    "alias_type": {
+      "enum": [
+        "exact_physical_duplicate",
+        "historical_name",
+        "source_locator_alias"
+      ]
+    },
+    "canonical_source_id": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "provenance_pointer": {
+      "anyOf": [
+        {
+          "description": "POSIX path relative to the source-library root.",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "canonical_source_id",
+    "alias_relative_path",
+    "alias_type",
+    "alias_file_size_bytes"
+  ],
+  "title": "Source alias record",
+  "type": "object"
+}

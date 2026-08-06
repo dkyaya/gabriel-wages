@@ -1,0 +1,10 @@
+{
+  "complete_transfer_indexes": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/gabriel-wages-source-library-2026-08-06.READ-ME-FIRST.zip",
+  "complete_volume_assignment": "source_library_volume_assignments.csv.gz",
+  "phase_0_physical_inventory": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_archive_physical_file_inventory.csv",
+  "phase_0_canonical_inventory": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06/source_archive_canonical_source_inventory.csv",
+  "source_index_csv_sha256": "ffa31b609b914bb6bb2af37363931240d0b1b0e544849428e21e6b80a42d80b8",
+  "source_index_jsonl_sha256": "477a284af3511d34bf46290316ba5bd9a630437383e7b5b8d97f539ec5132573",
+  "source_index_rows": 26635,
+  "tracking_policy": "The complete row-level transfer indexes remain in the ignored READ-ME-FIRST package. Git tracks compact summaries, checksums, the frozen assignment, schemas, and tools rather than duplicate multi-megabyte preparation tables."
+}

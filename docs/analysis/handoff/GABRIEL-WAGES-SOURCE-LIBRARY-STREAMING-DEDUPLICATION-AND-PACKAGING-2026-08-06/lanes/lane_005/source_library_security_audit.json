@@ -1,0 +1,15 @@
+{
+  "boundary": "Quarantine sensitive material if encountered; never reproduce a credential value in an audit.",
+  "credential_like_filename_findings": 0,
+  "metadata_credential_finding_count": 0,
+  "original_url_pointer_count": 0,
+  "payload_content_scan_completed": false,
+  "physical_source_metadata_rows_scanned": 26799,
+  "prior_repository_absolute_path_file_count": 89,
+  "prior_repository_environment_file_count": 0,
+  "prior_repository_secret_pattern_file_count": 0,
+  "scope": "source-selection metadata and recipient documents; source payload contents not exhaustively scanned",
+  "secret_values_written_to_lane_outputs": false,
+  "status": "pass_with_transfer_review_required",
+  "url_credential_findings": 0
+}

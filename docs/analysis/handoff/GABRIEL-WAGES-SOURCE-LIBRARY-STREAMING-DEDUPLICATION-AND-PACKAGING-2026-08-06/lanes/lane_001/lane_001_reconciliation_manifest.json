@@ -1,0 +1,39 @@
+{
+  "generated_at_utc": "2026-08-06T22:56:04.679971+00:00",
+  "input_manifest_sha256": {
+    "aliases": "7969256eca59f7e6a63090730bf3dac660acd72f3376135461216b31afe16d06",
+    "canonical": "b3b936574d43e6f92063d0cdd786e07b2f4ef60d055d53f0eae5c6365755cddf",
+    "duplicates": "55641c90fa746596e74e93ee3099d4a4ce2e12047bcc6feba8577c3e980c0ae8",
+    "phase0_hash_sample": "6e35f931706db1e69d45bbebbb9c5b3e4558a0d9433eb1dc2f4edf6c1b2e829b",
+    "physical": "7c0793ff583c3ef7e7bf00e60fc0a4f7fcf04b76174265f1863d5a4830df7601",
+    "proposed_paths": "4d1bac5a92bc496ce1b528b04d45baf3cb529c6021c73866d56f679e1ce8118d"
+  },
+  "lane_id": "lane_001",
+  "outputs": [
+    "bounded_hash_validation_results.csv",
+    "bounded_hash_validation_results.jsonl",
+    "canonical_source_reconciliation_exceptions.csv",
+    "canonical_source_reconciliation_exceptions.jsonl",
+    "canonical_source_selection_reconciliation.csv",
+    "duplicate_group_reconciliation.csv",
+    "lane_001_checkpoint.json",
+    "lane_001_queue.csv",
+    "lane_001_queue.jsonl",
+    "lane_001_summary.json",
+    "lane_001_summary.md",
+    "missing_or_size_mismatch_candidates.csv",
+    "missing_or_size_mismatch_candidates.jsonl",
+    "quarantine_candidates.csv",
+    "quarantine_candidates.jsonl",
+    "reconcile_canonical_sources.py",
+    "sources_over_1_GiB.csv"
+  ],
+  "script": "docs/analysis/handoff/GABRIEL-WAGES-SOURCE-LIBRARY-STREAMING-DEDUPLICATION-AND-PACKAGING-2026-08-06/lanes/lane_001/reconcile_canonical_sources.py",
+  "source_only_boundary": {
+    "adjudication_included": false,
+    "archive_volumes_created": false,
+    "claims_included": false,
+    "report_visuals_included": false,
+    "source_files_copied": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "lane_id": "lane_004",
+  "scope": "packaging architecture",
+  "status": "in_progress",
+  "items": [
+    "deterministic volume assignment",
+    "streaming tar.zst writer",
+    "independent volume verification",
+    "recipient extraction tools",
+    "rolling-space checkpoint and resume logic",
+    "bounded smoke archive"
+  ],
+  "large_archive_writer_owner": "coordinator only"
+}

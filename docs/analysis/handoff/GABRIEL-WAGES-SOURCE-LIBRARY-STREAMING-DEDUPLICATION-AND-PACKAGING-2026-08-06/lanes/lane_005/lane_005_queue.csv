@@ -1,0 +1,8 @@
+queue_item_id,work_item,status,output_count
+L5-001,write recipient documentation,completed,5
+L5-002,run redacted metadata security scan,completed,4
+L5-003,audit relative-path portability,completed,2
+L5-004,audit redistribution status,completed,2
+L5-005,audit source-only boundary,completed,2
+L5-006,define package record schemas,completed,7
+L5-007,"define packager, validator, and reconstruction tools",completed,4
