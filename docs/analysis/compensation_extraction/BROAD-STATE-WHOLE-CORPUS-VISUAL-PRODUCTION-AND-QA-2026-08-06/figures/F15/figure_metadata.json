@@ -1,0 +1,55 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f15.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f15.svg",
+  "adjudicated_claim_ids": [],
+  "analytical_unit": "municipality or root event",
+  "caption_stub": "The canonical crosswalk identifies 468 urban, 682 rural, and 290 unknown municipalities. Event counts are retained-document distribution, not urban/rural prevalence, and unknown status is not inferred.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "declared per panel",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "repaired geography",
+  "figure_id": "F15",
+  "figure_number": 15,
+  "final_claim_classes": [],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "41e17a34701e1f307ef1e3cfe18c9776c92ab4618d74ea59cc3b7957d4eda184",
+    "7508aa3d75ea8ce0c5ed6ed13c885bec4d90cb4a290cf7a633cabd43826ade1a"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f15.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f15.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "The canonical crosswalk identifies 468 urban, 682 rural, and 290 unknown municipalities. Event counts are retained-document distribution, not urban/rural prevalence, and unknown status is not inferred.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_005"
+  },
+  "methods_note": "Analytical unit: municipality or root event. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "geography",
+  "render_version": "2026-08-06.1",
+  "report_section": "geography",
+  "sample_size": "1,440 municipalities; 2,998 events",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Unknown urbanicity remains visible rather than inferred",
+  "subtitle_text": "Unknown urbanicity remains visible rather than inferred",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f15_thumb.png",
+  "title": "Urban and rural distribution of implementation evidence",
+  "title_text": "Urban and rural distribution of implementation evidence",
+  "unresolved_count": 0,
+  "visual_approval_status": "needs_visual_data_repair",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Unknown urbanicity remains visible rather than inferred"
+}

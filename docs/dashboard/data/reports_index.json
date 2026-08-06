@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-04T21:49:42Z",
-  "data_vintage": "2026-07-30",
+  "generated_at": "2026-08-06T06:05:00Z",
+  "data_vintage": "2026-08-06",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
@@ -35,6 +35,37 @@
         {
           "label": "PI-usable comparisons",
           "value": 1
+        }
+      ]
+    },
+    {
+      "id": "whole-corpus-visual-review-2026-08-06",
+      "title": "Review the whole-corpus visuals",
+      "report_type": "Visual review gallery",
+      "date": "2026-08-06",
+      "checkpoint": "16 adjudicated figures rendered; 16 passed visual QA",
+      "summary": "Publication-ready PNG and SVG figures preserve strict and broader bounded evidence, counterexamples, conflicts, sample sizes, and interpretation limits. User review is required before prose drafting.",
+      "tags": [
+        "whole corpus",
+        "visual review",
+        "user review pending"
+      ],
+      "current": false,
+      "historical": false,
+      "href": "reports/whole_corpus_visual_review_2026-08-06/",
+      "link_label": "Review the whole-corpus visuals",
+      "scope_metrics": [
+        {
+          "label": "figures",
+          "value": 16
+        },
+        {
+          "label": "passed QA",
+          "value": 16
+        },
+        {
+          "label": "pending user review",
+          "value": 16
         }
       ]
     },

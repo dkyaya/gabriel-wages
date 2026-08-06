@@ -1,0 +1,9 @@
+{
+  "claim_supported": [],
+  "counterexample_or_caveat": "Counts describe distinct source and extraction units. Native PDF pages and the separate text-page equivalent are reported independently; neither is a measure of analytical support.",
+  "figure_id": "F01",
+  "intended_takeaway": "Large source volume, with analytical usefulness varying by layer",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

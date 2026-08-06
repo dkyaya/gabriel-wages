@@ -1,0 +1,7 @@
+analytical_unit,count,denominator,hold_type,proportion
+canonical external observation,131124,1876183,normalized_basis_hold,0.0698887
+canonical external observation,266849,1876183,normalized_conflict_hold,0.14222973
+canonical external observation,244,1876183,normalized_identity_hold,0.00013005
+canonical external observation,1134192,1876183,normalized_side_hold,0.60452099
+prior compatible candidate,201,201,local_comparison_no_match,1.0
+conditional growth candidate,6731,6731,growth_hold,1.0

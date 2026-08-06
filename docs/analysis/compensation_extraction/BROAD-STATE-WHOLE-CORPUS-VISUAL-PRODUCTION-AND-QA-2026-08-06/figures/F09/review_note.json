@@ -1,0 +1,13 @@
+{
+  "claim_supported": [
+    "CLAIM-B",
+    "CLAIM-G",
+    "UNSUP-05"
+  ],
+  "counterexample_or_caveat": "Unit-cycle weighted documentary records show a safety-leaning step-progression cell, mixed across-board results, and sparse COLA comparisons. The cells are small and nonrepresentative; there is no uniform safety growth advantage.",
+  "figure_id": "F09",
+  "intended_takeaway": "Step progression leans safety; across-board results are mixed; COLA evidence is sparse",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

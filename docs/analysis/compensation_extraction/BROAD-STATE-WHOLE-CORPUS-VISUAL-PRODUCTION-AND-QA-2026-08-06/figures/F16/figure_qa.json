@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "accessible_svg_desc": true,
+    "accessible_svg_title": true,
+    "analytical_unit_present": true,
+    "caption_at_most_80_words": true,
+    "color_not_sole_encoding": true,
+    "conflicts_excluded_or_shown": true,
+    "denominator_present": true,
+    "map_dimensions": true,
+    "not_blank": true,
+    "plain_visible_title": true,
+    "png_opens": true,
+    "png_width_at_least_1600": true,
+    "svg_opens": true,
+    "thumbnail_opens": true,
+    "tier_present": true,
+    "white_background": true
+  },
+  "figure_id": "F16",
+  "pixel_variance": 1787.498702764511,
+  "png_dimensions": [
+    1893,
+    1103
+  ],
+  "reviewed_at": "2026-08-06T05:55:03.393142+00:00",
+  "status": "pass",
+  "thumbnail_dimensions": [
+    560,
+    326
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f10.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f10.svg",
+  "adjudicated_claim_ids": [
+    "CLAIM-G",
+    "CLAIM-H",
+    "UNSUP-01"
+  ],
+  "analytical_unit": "bounded local comparison",
+  "caption_stub": "Ten bounded local comparisons include five safety-favorable, four non-safety-favorable, and one neutral result. Role and period caveats remain, so the examples cannot be averaged into a national wage gap.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "10",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "nine Tier 2; one Tier 3",
+  "figure_id": "F10",
+  "figure_number": 10,
+  "final_claim_classes": [
+    "mixed_or_countervailing",
+    "supported",
+    "unsupported"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "4f846da0554eebe969b4ac556ef6b14d5538e136c049ce83d3af3d935d321530",
+    "afff5a7c442838f57d4fdb85cbabd176b87cd15012b47115ed81db4783388ceb"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f10.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f10.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "Ten bounded local comparisons include five safety-favorable, four non-safety-favorable, and one neutral result. Role and period caveats remain, so the examples cannot be averaged into a national wage gap.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_004"
+  },
+  "methods_note": "Analytical unit: bounded local comparison. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "local comparisons",
+  "render_version": "2026-08-06.1",
+  "report_section": "local comparisons",
+  "sample_size": "10",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Five favor safety, four favor non-safety, and one is neutral",
+  "subtitle_text": "Five favor safety, four favor non-safety, and one is neutral",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f10_thumb.png",
+  "title": "Bounded local wage comparisons point in both directions",
+  "title_text": "Bounded local wage comparisons point in both directions",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_with_caption_caveat",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Five favor safety, four favor non-safety, and one is neutral"
+}

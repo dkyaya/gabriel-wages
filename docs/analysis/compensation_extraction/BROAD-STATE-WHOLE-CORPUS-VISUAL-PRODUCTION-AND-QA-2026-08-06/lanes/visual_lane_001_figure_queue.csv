@@ -1,0 +1,4 @@
+approval_status,figure_id,figure_number,lane_id,state,subtitle,title
+approved_for_rendering,F01,1,visual_lane_001,locked_pending,"Large source volume, with analytical usefulness varying by layer",Corpus scale and source mix
+approved_with_caption_caveat,F02,2,visual_lane_001,locked_pending,Filtering preserves incompatible and unresolved evidence instead of forcing it into estimates,Evidence pipeline and analytical readiness
+approved_for_rendering,F16,16,visual_lane_001,locked_pending,"The project supports bounded mechanism findings, not national or causal estimates",What the evidence supports—and what it does not establish

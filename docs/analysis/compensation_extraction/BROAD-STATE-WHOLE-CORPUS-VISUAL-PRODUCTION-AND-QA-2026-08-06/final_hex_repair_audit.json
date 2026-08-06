@@ -1,0 +1,6 @@
+{
+  "action": "canonical_layer_reused",
+  "raw_observation_counts_used": false,
+  "source_counts_used_as_event_counts": false,
+  "status": "pass"
+}

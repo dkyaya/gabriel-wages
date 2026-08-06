@@ -1,0 +1,55 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f14.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f14.svg",
+  "adjudicated_claim_ids": [],
+  "analytical_unit": "deduplicated municipality-cycle-mechanism-side event",
+  "caption_stub": "Fixed 50-km hexagons count deduplicated retroactive-pay implementation events by side. Safety and non-safety panels use the same scale; concentration is documentary coverage, not population prevalence.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "fixed-grid events",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "repaired canonical event grid",
+  "figure_id": "F14",
+  "figure_number": 14,
+  "final_claim_classes": [],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "562ffc61a54e4c962298a84475c3ce8713201b550baed0dfddaee63124cfe1e1",
+    "a01fd723ad6df915b58d25292bc145546322c9014deea370df6ba708b6f31abf"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f14.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f14.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "concentration is documentary coverage, not population prevalence.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_003"
+  },
+  "methods_note": "Analytical unit: deduplicated municipality-cycle-mechanism-side event. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "geography",
+  "render_version": "2026-08-06.1",
+  "report_section": "geography",
+  "sample_size": "393",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Fixed-grid event counts show documentary concentration, not population prevalence",
+  "subtitle_text": "Fixed-grid event counts show documentary concentration, not population prevalence",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f14_thumb.png",
+  "title": "Geographic concentration of retroactive-pay records",
+  "title_text": "Geographic concentration of retroactive-pay records",
+  "unresolved_count": 0,
+  "visual_approval_status": "needs_visual_data_repair",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Fixed-grid event counts show documentary concentration, not population prevalence"
+}

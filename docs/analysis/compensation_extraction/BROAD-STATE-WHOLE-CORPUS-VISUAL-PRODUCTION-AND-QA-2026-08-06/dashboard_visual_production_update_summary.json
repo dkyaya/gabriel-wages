@@ -1,0 +1,24 @@
+{
+  "causal_estimate": false,
+  "current_stage": "whole-corpus visual production and QA complete",
+  "external_gabriel_scoring": false,
+  "figures_passing_qa": 16,
+  "figures_rendered": 16,
+  "hex_layer": "validated",
+  "native_pdf_pages": 1029482,
+  "next_stage": "user visual review, then visual-first report drafting",
+  "preserved": [
+    "final PI report",
+    "prior drafts",
+    "evidence scaffolds",
+    "wage-growth module",
+    "strict baseline outputs"
+  ],
+  "primary_dashboard_map": "scout_coverage_rate",
+  "public_visual_review_page": "/reports/whole_corpus_visual_review_2026-08-06/",
+  "regression": false,
+  "report_draft": "not started",
+  "storage_held_sources": 7895,
+  "unsearched_targets": 12844,
+  "urbanicity_rejoin": "validated"
+}

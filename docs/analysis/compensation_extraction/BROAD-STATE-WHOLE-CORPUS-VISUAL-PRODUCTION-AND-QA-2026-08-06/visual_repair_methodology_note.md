@@ -1,0 +1,3 @@
+# Visual Repair Methodology Note
+
+The canonical fixed hex grid and exact municipality/state urbanicity crosswalk were reused; no source recovery, geographic inference, or event rededuplication occurred.

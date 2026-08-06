@@ -1,0 +1,3 @@
+# No Gabriel Visual Interpretation Note
+
+New external administrative evidence was not scored by GABRIEL. Visuals distinguish documentary GABRIEL-derived evidence from deterministic external evidence where relevant.

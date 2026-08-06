@@ -1,0 +1,12 @@
+{
+  "claim_supported": [
+    "CLAIM-H",
+    "UNSUP-06"
+  ],
+  "counterexample_or_caveat": "The matrix separates reviewed Tier 1, Tier 2, and Tier 3 support from counterexamples and conflicts for all 14 claims. Final classes remain bounded by the adjudicated wording.",
+  "figure_id": "F13",
+  "intended_takeaway": "Precise support is rare; mechanism support and explicit limitations dominate",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

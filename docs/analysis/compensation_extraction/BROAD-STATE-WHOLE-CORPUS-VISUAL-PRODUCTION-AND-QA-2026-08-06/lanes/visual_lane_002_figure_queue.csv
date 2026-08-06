@@ -1,0 +1,4 @@
+approval_status,figure_id,figure_number,lane_id,state,subtitle,title
+approved_for_rendering,F04,4,visual_lane_002,locked_pending,Most retained staffing units describe vacancies or position reductions,Staffing evidence by type
+approved_tiered_sensitivity_visual,F05,5,visual_lane_002,locked_pending,A small reviewed subset directly or descriptively fits the proposed channels,Staffing-channel evidence by tier
+approved_with_caption_caveat,F06,6,visual_lane_002,locked_pending,"Staffing records span 511 municipalities, unevenly across states",Geographic reach of staffing evidence

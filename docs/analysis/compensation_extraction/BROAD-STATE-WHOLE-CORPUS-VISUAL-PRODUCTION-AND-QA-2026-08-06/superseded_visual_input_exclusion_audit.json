@@ -1,0 +1,11 @@
+{
+  "canonical_replacements": [
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_hex_density_visual_ready_layer.jsonl",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/municipality_urbanicity_layer.jsonl"
+  ],
+  "excluded": [
+    "mathematical-module empty hex placeholder",
+    "mathematical-module empty urbanicity placeholder"
+  ],
+  "status": "pass"
+}

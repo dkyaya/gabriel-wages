@@ -1,0 +1,19 @@
+{
+  "failed_figures": [],
+  "figure_count": 16,
+  "gates": {
+    "A_figure_accounting": "pass",
+    "B_data_fidelity": "pass",
+    "C_headline_fidelity": "pass",
+    "D_analytical_unit_fidelity": "pass",
+    "E_tier_fidelity": "pass",
+    "F_counterexample_fidelity": "pass",
+    "G_conflict_integrity": "pass",
+    "H_map_integrity": "pass",
+    "I_scale_integrity": "pass",
+    "J_accessibility": "pass",
+    "K_language_boundary": "pass",
+    "L_no_report_drafting": "pass"
+  },
+  "status": "pass"
+}

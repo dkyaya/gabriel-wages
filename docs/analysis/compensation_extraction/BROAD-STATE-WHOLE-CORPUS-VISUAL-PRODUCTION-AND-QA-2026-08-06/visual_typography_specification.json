@@ -1,0 +1,12 @@
+{
+  "body_points": 11,
+  "font_stack": [
+    "Inter",
+    "Arial",
+    "Helvetica",
+    "DejaVu Sans"
+  ],
+  "minimum_annotation_points": 8,
+  "subtitle_points": 12,
+  "title_points": 22
+}

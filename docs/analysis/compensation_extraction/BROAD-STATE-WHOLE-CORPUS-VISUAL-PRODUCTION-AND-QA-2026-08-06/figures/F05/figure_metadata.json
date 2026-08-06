@@ -1,0 +1,59 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f05.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f05.svg",
+  "adjudicated_claim_ids": [
+    "CLAIM-D"
+  ],
+  "analytical_unit": "reviewed staffing record",
+  "caption_stub": "Seven reviewed records directly support a staffing channel and 216 are descriptively consistent; 18,135 remain contextual, insufficient, or unresolved. Counts describe evidence status, not causal effects or national prevalence.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "18,358",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "Tier 2/3/context",
+  "figure_id": "F05",
+  "figure_number": 5,
+  "final_claim_classes": [
+    "mechanism_supported_only"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "9098293ec801db2566767c3a5742293ab47003d50f45812152144f4c3d344d77",
+    "ebf0d4ac3f9d2500210703423f1e2bae7057d2f3d515f343bc942cc14b42f69a"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f05.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f05.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "18,135 remain contextual, insufficient, or unresolved. Counts describe evidence status, not causal effects or national prevalence.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_002"
+  },
+  "methods_note": "Analytical unit: reviewed staffing record. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "staffing",
+  "render_version": "2026-08-06.1",
+  "report_section": "staffing",
+  "sample_size": "18,358",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "A small reviewed subset directly or descriptively fits the proposed channels",
+  "subtitle_text": "A small reviewed subset directly or descriptively fits the proposed channels",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f05_thumb.png",
+  "title": "Staffing-channel evidence by tier",
+  "title_text": "Staffing-channel evidence by tier",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_tiered_sensitivity_visual",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "A small reviewed subset directly or descriptively fits the proposed channels"
+}

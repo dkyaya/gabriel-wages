@@ -1,0 +1,11 @@
+{
+  "conflicts": 0,
+  "join_keys": [
+    "canonical municipality",
+    "state"
+  ],
+  "status": "pass",
+  "suburban_invented": false,
+  "unknown_inferred": false,
+  "unmatched": 0
+}

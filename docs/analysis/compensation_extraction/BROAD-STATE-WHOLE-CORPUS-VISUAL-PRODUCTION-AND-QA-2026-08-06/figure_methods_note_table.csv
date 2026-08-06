@@ -1,0 +1,17 @@
+figure_id,text
+F01,Analytical unit: source/content unit. Strict and broader evidence remain labeled.
+F02,Analytical unit: stage-specific analytical unit. Strict and broader evidence remain labeled.
+F03,Analytical unit: eligible municipality. Strict and broader evidence remain labeled.
+F04,Analytical unit: staffing analytical unit. Strict and broader evidence remain labeled.
+F05,Analytical unit: reviewed staffing record. Strict and broader evidence remain labeled.
+F06,Analytical unit: unique municipality within state. Strict and broader evidence remain labeled.
+F07,Analytical unit: implementation sequence. Strict and broader evidence remain labeled.
+F08,"Analytical unit: unique source, municipality, or root event. Strict and broader evidence remain labeled."
+F09,Analytical unit: documentary unit-cycle growth record. Strict and broader evidence remain labeled.
+F10,Analytical unit: bounded local comparison. Strict and broader evidence remain labeled.
+F11,Analytical unit: reviewed counterexample record. Strict and broader evidence remain labeled.
+F12,Analytical unit: record or candidate group. Strict and broader evidence remain labeled.
+F13,Analytical unit: adjudicated claim. Strict and broader evidence remain labeled.
+F14,Analytical unit: deduplicated municipality-cycle-mechanism-side event. Strict and broader evidence remain labeled.
+F15,Analytical unit: municipality or root event. Strict and broader evidence remain labeled.
+F16,Analytical unit: adjudicated report claim. Strict and broader evidence remain labeled.

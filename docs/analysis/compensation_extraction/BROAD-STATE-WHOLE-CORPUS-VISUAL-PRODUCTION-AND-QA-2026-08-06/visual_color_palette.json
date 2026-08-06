@@ -1,0 +1,17 @@
+{
+  "grid": "#E5E7EB",
+  "ink": "#111827",
+  "mixed": "#7C3AED",
+  "muted": "#6B7280",
+  "non_safety": "#2563EB",
+  "paper": "#FFFFFF",
+  "positive": "#0F766E",
+  "safety": "#C2410C",
+  "side_independent": "#4B5563",
+  "tier_1": "#1F2937",
+  "tier_2": "#0F766E",
+  "tier_3": "#D97706",
+  "tier_4": "#9CA3AF",
+  "unknown": "#D1D5DB",
+  "unsupported": "#B91C1C"
+}

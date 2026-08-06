@@ -1,0 +1,7 @@
+{"accounting_lane": "native PDF", "category": "Native PDF pages", "count": 1029482, "unit": "pages"}
+{"accounting_lane": "native PDF", "category": "Unique PDFs", "count": 15163, "unit": "files"}
+{"accounting_lane": "non-PDF", "category": "HTML documents", "count": 8718, "unit": "documents"}
+{"accounting_lane": "non-PDF", "category": "HTML tables", "count": 96484, "unit": "tables"}
+{"accounting_lane": "non-PDF", "category": "HTML table rows", "count": 1017511, "unit": "rows"}
+{"accounting_lane": "non-PDF", "category": "Embedded records", "count": 132188, "unit": "records"}
+{"accounting_lane": "non-PDF", "category": "CSV/TSV rows", "count": 1445, "unit": "rows"}

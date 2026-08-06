@@ -1,0 +1,5 @@
+{"claim_status": "supported", "count": 1}
+{"claim_status": "conditionally_supported", "count": 1}
+{"claim_status": "mechanism_supported_only", "count": 5}
+{"claim_status": "mixed_or_countervailing", "count": 1}
+{"claim_status": "unsupported", "count": 6}

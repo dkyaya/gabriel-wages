@@ -1,0 +1,9 @@
+{
+  "claim_supported": [],
+  "counterexample_or_caveat": "The canonical crosswalk identifies 468 urban, 682 rural, and 290 unknown municipalities. Event counts are retained-document distribution, not urban/rural prevalence, and unknown status is not inferred.",
+  "figure_id": "F15",
+  "intended_takeaway": "Unknown urbanicity remains visible rather than inferred",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

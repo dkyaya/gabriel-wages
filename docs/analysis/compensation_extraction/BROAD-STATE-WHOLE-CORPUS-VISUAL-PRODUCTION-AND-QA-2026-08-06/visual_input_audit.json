@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "claim_count_14": true,
+    "counterexamples_7": true,
+    "figure_count_16": true,
+    "head_is_expected": true,
+    "headline_count_9": true,
+    "headlines_reproduce": true,
+    "native_pdf_pages": true,
+    "no_held_source_recovery": true,
+    "visual_statuses_reconcile": true
+  },
+  "conflicts_excluded_from_clean_visuals": 201,
+  "held_sources_processed": 0,
+  "inputs": 21,
+  "status": "pass",
+  "strict_and_bounded_distinguishable": true
+}

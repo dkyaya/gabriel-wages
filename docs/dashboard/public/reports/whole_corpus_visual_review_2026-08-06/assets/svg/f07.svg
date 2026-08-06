@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="842.76pt" height="496.728pt" viewBox="0 0 842.76 496.728" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="figure-title figure-desc"><title id="figure-title">Implementation evidence distinguishes adoption from payment</title><desc id="figure-desc">Thirty-eight sequences support bounded lifecycle descriptions; 1,230 remain on hold. Nineteen adopted sequences have no paid stage observed in the retained evidence—this does not mean they were never paid.</desc>
+ <title>Implementation evidence distinguishes adoption from payment</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Implementation evidence distinguishes adoption from payment</dc:title>
+    <dc:date>2026-08-06T02:05:13.270592</dc:date>
+    <dc:description>Thirty-eight sequences support bounded lifecycle descriptions; 1,230 remain on hold. Nineteen adopted sequences have no paid stage observed in the retained evidence—this does not mean they were never paid.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 496.728 
+L 842.76 496.728 
+L 842.76 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 217.8 402.84 
+L 629.64 402.84 
+L 629.64 95.4 
+L 217.8 95.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 217.8 402.84 
+L 217.8 95.4 
+" clip-path="url(#pac74d696b2)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mb79d544a05" d="M 0 0 
+L 0 3.5 
+" style="stroke: #6b7280; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mb79d544a05" x="217.8" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="217.8" y="417.713594" transform="rotate(-0 217.8 417.713594)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 304.503158 402.84 
+L 304.503158 95.4 
+" clip-path="url(#pac74d696b2)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mb79d544a05" x="304.503158" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="304.503158" y="417.713594" transform="rotate(-0 304.503158 417.713594)">5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 391.206316 402.84 
+L 391.206316 95.4 
+" clip-path="url(#pac74d696b2)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mb79d544a05" x="391.206316" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="391.206316" y="417.713594" transform="rotate(-0 391.206316 417.713594)">10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 477.909474 402.84 
+L 477.909474 95.4 
+" clip-path="url(#pac74d696b2)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mb79d544a05" x="477.909474" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="477.909474" y="417.713594" transform="rotate(-0 477.909474 417.713594)">15</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 564.612632 402.84 
+L 564.612632 95.4 
+" clip-path="url(#pac74d696b2)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mb79d544a05" x="564.612632" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="564.612632" y="417.713594" transform="rotate(-0 564.612632 417.713594)">20</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="423.72" y="431.773438" transform="rotate(-0 423.72 431.773438)">Reviewed implementation sequences</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="214.3" y="373.527016" transform="rotate(-0 214.3 373.527016)">Proposed only</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="214.3" y="325.338929" transform="rotate(-0 214.3 325.338929)">Partial</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="214.3" y="277.150841" transform="rotate(-0 214.3 277.150841)">Paid with prior adoption</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14"/>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="214.3" y="228.962753" transform="rotate(-0 214.3 228.962753)">Negotiated only</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15"/>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="214.3" y="180.774665" transform="rotate(-0 214.3 180.774665)">Amended</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16"/>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="214.3" y="132.586577" transform="rotate(-0 214.3 132.586577)">Adopted; no paid stage observed</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 217.8 388.865455 
+L 287.162526 388.865455 
+L 287.162526 350.314984 
+L 217.8 350.314984 
+z
+" clip-path="url(#pac74d696b2)" style="fill: #1f2937"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 217.8 340.677367 
+L 252.481263 340.677367 
+L 252.481263 302.126897 
+L 217.8 302.126897 
+z
+" clip-path="url(#pac74d696b2)" style="fill: #1f2937"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 217.8 292.489279 
+L 252.481263 292.489279 
+L 252.481263 253.938809 
+L 217.8 253.938809 
+z
+" clip-path="url(#pac74d696b2)" style="fill: #1f2937"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 217.8 244.301191 
+L 235.140632 244.301191 
+L 235.140632 205.750721 
+L 217.8 205.750721 
+z
+" clip-path="url(#pac74d696b2)" style="fill: #1f2937"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 217.8 196.113103 
+L 391.206316 196.113103 
+L 391.206316 157.562633 
+L 217.8 157.562633 
+z
+" clip-path="url(#pac74d696b2)" style="fill: #1f2937"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 217.8 147.925016 
+L 547.272 147.925016 
+L 547.272 109.374545 
+L 217.8 109.374545 
+z
+" clip-path="url(#pac74d696b2)" style="fill: #1f2937"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 217.8 402.84 
+L 629.64 402.84 
+" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="295.832842" y="372.441626" transform="rotate(-0 295.832842 372.441626)">4</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="261.151579" y="324.253538" transform="rotate(-0 261.151579 324.253538)">2</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="261.151579" y="276.06545" transform="rotate(-0 261.151579 276.06545)">2</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="243.810947" y="227.877362" transform="rotate(-0 243.810947 227.877362)">1</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="399.876632" y="179.689275" transform="rotate(-0 399.876632 179.689275)">10</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="555.942316" y="131.501187" transform="rotate(-0 555.942316 131.501187)">19</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_10">
+    <path d="M 698.28 402.84 
+L 835.56 402.84 
+L 835.56 95.4 
+L 698.28 95.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 704.52 402.84 
+L 829.32 402.84 
+L 829.32 118.173333 
+L 704.52 118.173333 
+z
+" clip-path="url(#pa885815478)" style="fill: #9ca3af"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_6">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#mb79d544a05" x="766.92" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="766.92" y="417.847656" transform="rotate(-0 766.92 417.847656)">Sequence holds</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4"/>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(753.157969 257.548526)">1,230</text>
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(746.439375 269.16762)">of 1,268</text>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #111827" x="7.2" y="23.215312" transform="rotate(-0 7.2 23.215312)">Implementation evidence distinguishes adoption from payment</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 12px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6b7280" x="7.2" y="40.989375" transform="rotate(-0 7.2 40.989375)">Adoption, amendment, implementation, and payment remain distinct stages</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 478.752637)">Unit: deduplicated implementation sequence  •  38 reviewed; 1,230 held; denominator = 1,268  •  Evidence: strict reviewed sequences</text>
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 487.760062)">“No paid stage observed in retained evidence” is not “never paid.”</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pac74d696b2">
+   <rect x="217.8" y="95.4" width="411.84" height="307.44"/>
+  </clipPath>
+  <clipPath id="pa885815478">
+   <rect x="698.28" y="95.4" width="137.28" height="307.44"/>
+  </clipPath>
+ </defs>
+</svg>

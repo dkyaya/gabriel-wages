@@ -1,0 +1,69 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f11.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f11.svg",
+  "adjudicated_claim_ids": [
+    "CLAIM-G",
+    "CLAIM-H"
+  ],
+  "analytical_unit": "reviewed counterexample record",
+  "caption_stub": "Seven retained counterexamples and countervailing records directly limit broad claims. They are included as analytical evidence, not as decorative caveats, and do not represent a prevalence estimate.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "denominator": "7",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "reviewed bounded evidence",
+  "figure_id": "F11",
+  "figure_number": 11,
+  "final_claim_classes": [
+    "mixed_or_countervailing",
+    "supported"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "ba3eb4c3a3bdaa0790b331d4d48b6be63a7b06d2a3bc47b9e2054963e9c9cab4",
+    "c5ff3c6c9e2e5b7c3a9df7d1923826c8137b1360104b34c588b1eead40303cd3"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f11.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f11.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "Seven retained counterexamples and countervailing records directly limit broad claims. They are included as analytical evidence, not as decorative caveats, and do not represent a prevalence estimate.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_004"
+  },
+  "methods_note": "Analytical unit: reviewed counterexample record. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "counterexamples",
+  "render_version": "2026-08-06.1",
+  "report_section": "counterexamples",
+  "sample_size": "7",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Seven retained records directly challenge or narrow broad interpretations",
+  "subtitle_text": "Seven retained records directly challenge or narrow broad interpretations",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f11_thumb.png",
+  "title": "Counterexamples define the boundary of the findings",
+  "title_text": "Counterexamples define the boundary of the findings",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_for_rendering",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Seven retained records directly challenge or narrow broad interpretations"
+}

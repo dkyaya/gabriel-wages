@@ -1,0 +1,55 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f01.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f01.svg",
+  "adjudicated_claim_ids": [],
+  "analytical_unit": "source/content unit",
+  "caption_stub": "Counts describe distinct source and extraction units. Native PDF pages and the separate text-page equivalent are reported independently; neither is a measure of analytical support.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "declared per category",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "audited scale",
+  "figure_id": "F01",
+  "figure_number": 1,
+  "final_claim_classes": [],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "7fdfc6aa648b4f2892835936f7fb54396e8df3f5d4d9a04c18d65d0a84e77738",
+    "18b9e3dd1ee80e10415fe453fb4835f23b773b56abfe89c71b28f23fc01bb7f9"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f01.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f01.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "neither is a measure of analytical support.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_001"
+  },
+  "methods_note": "Analytical unit: source/content unit. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "methods",
+  "render_version": "2026-08-06.1",
+  "report_section": "methods",
+  "sample_size": "seven distinct counts",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Large source volume, with analytical usefulness varying by layer",
+  "subtitle_text": "Large source volume, with analytical usefulness varying by layer",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f01_thumb.png",
+  "title": "Corpus scale and source mix",
+  "title_text": "Corpus scale and source mix",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_for_rendering",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Large source volume, with analytical usefulness varying by layer"
+}

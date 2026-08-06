@@ -1,0 +1,7 @@
+analytical_unit,count,denominator,proportion,staffing_type
+source-specific staffing analytical unit,80,18358,0.00435777,hiring_freeze
+source-specific staffing analytical unit,313,18358,0.01704979,layoff
+source-specific staffing analytical unit,378,18358,0.02059048,filled_position_reduction
+source-specific staffing analytical unit,2379,18358,0.12958928,budgeted_position_reduction
+source-specific staffing analytical unit,5455,18358,0.29714566,authorized_position_reduction
+source-specific staffing analytical unit,9753,18358,0.53126702,vacancy_without_elimination

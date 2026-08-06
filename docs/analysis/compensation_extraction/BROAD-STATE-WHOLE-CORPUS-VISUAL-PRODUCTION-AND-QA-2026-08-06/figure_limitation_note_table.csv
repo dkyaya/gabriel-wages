@@ -1,0 +1,17 @@
+figure_id,text
+F01,neither is a measure of analytical support.
+F02,"The pipeline preserves incompatible, unresolved, and conditional records instead of forcing them into clean estimates. Stage counts use different declared units and should not be read as a single loss rate."
+F03,"State coverage is the share of eligible municipalities reached by the scout. It measures discovery coverage, not evidence quality, claim support, or population representativeness."
+F04,"The 18,358 staffing units are dominated by vacancy and position-reduction records. These are source-specific levels or changes and do not by themselves identify a staffing trend or causal effect."
+F05,"18,135 remain contextual, insufficient, or unresolved. Counts describe evidence status, not causal effects or national prevalence."
+F06,"Staffing evidence reaches 511 municipalities, but coverage is geographically uneven. Counts are unique municipalities represented in retained staffing records, not state-level staffing rates."
+F07,"1,230 remain on hold. Nineteen adopted sequences have no paid stage observed in the retained evidence—this does not mean they were never paid."
+F08,"Administrative corroboration is shown separately by unique source, municipality, and root compensation event. The measures describe retained coverage and must not be combined or interpreted as mechanism prevalence."
+F09,there is no uniform safety growth advantage.
+F10,"Ten bounded local comparisons include five safety-favorable, four non-safety-favorable, and one neutral result. Role and period caveats remain, so the examples cannot be averaged into a national wage gap."
+F11,"Seven retained counterexamples and countervailing records directly limit broad claims. They are included as analytical evidence, not as decorative caveats, and do not represent a prevalence estimate."
+F12,it is not evidence of a wage effect.
+F13,"The matrix separates reviewed Tier 1, Tier 2, and Tier 3 support from counterexamples and conflicts for all 14 claims. Final classes remain bounded by the adjudicated wording."
+F14,"concentration is documentary coverage, not population prevalence."
+F15,"The canonical crosswalk identifies 468 urban, 682 rural, and 290 unknown municipalities. Event counts are retained-document distribution, not urban/rural prevalence, and unknown status is not inferred."
+F16,"One claim is supported, one conditional, five mechanism-supported, one mixed, and six unsupported. The project does not estimate a national wage gap, representative prevalence, regression relationship, or causal effect."

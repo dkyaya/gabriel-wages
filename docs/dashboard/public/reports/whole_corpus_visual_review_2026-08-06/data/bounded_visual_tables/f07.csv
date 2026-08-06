@@ -1,0 +1,8 @@
+analytical_unit,count,denominator,display,proportion,sequence_status
+implementation sequence,19,1268,Adopted; no paid stage observed,0.01498423,adopted_not_paid_observed
+implementation sequence,10,1268,Amended,0.00788644,amended_sequence
+implementation sequence,1,1268,Negotiated only,0.00078864,negotiated_only
+implementation sequence,2,1268,Paid with prior adoption,0.00157729,paid_with_prior_adoption
+implementation sequence,2,1268,Partial,0.00157729,partial_sequence
+implementation sequence,4,1268,Proposed only,0.00315457,proposed_only
+implementation sequence,1230,1268,Held: incomplete or incompatible,0.97003155,sequence_hold

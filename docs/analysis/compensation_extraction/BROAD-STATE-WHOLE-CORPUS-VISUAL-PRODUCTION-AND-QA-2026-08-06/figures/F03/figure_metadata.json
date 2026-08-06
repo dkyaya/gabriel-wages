@@ -1,0 +1,59 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f03.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f03.svg",
+  "adjudicated_claim_ids": [
+    "UNSUP-02"
+  ],
+  "analytical_unit": "eligible municipality",
+  "caption_stub": "State coverage is the share of eligible municipalities reached by the scout. It measures discovery coverage, not evidence quality, claim support, or population representativeness.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "eligible municipality universe",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "coverage",
+  "figure_id": "F03",
+  "figure_number": 3,
+  "final_claim_classes": [
+    "unsupported"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "1638d0c0096355cc069b8633b4ebebc68875b16e95b09a197f7f8fc0c52001d3",
+    "a8b098d0de44e19285c8a41a19ba284bc422067062cd59977f6b897b4eaba9bc"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f03.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f03.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "State coverage is the share of eligible municipalities reached by the scout. It measures discovery coverage, not evidence quality, claim support, or population representativeness.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_005"
+  },
+  "methods_note": "Analytical unit: eligible municipality. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "methods",
+  "render_version": "2026-08-06.1",
+  "report_section": "methods",
+  "sample_size": "51 states/district",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Coverage is the share of eligible municipalities reached—not raw source volume",
+  "subtitle_text": "Coverage is the share of eligible municipalities reached—not raw source volume",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f03_thumb.png",
+  "title": "Municipality scout coverage by state",
+  "title_text": "Municipality scout coverage by state",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_with_caption_caveat",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Coverage is the share of eligible municipalities reached—not raw source volume"
+}

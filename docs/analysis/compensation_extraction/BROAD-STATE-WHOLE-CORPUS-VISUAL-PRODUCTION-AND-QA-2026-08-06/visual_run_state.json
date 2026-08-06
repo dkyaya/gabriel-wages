@@ -1,0 +1,12 @@
+{
+  "audits_complete": true,
+  "ending_head": "abe0a0c6a4a0211aada8675dfacf13cf51a7fbbb",
+  "figures_complete": 16,
+  "last_command": "audits",
+  "last_command_runtime_seconds": 0.03,
+  "runtime_seconds": 695.369,
+  "stage": "complete",
+  "starting_head": "abe0a0c6a4a0211aada8675dfacf13cf51a7fbbb",
+  "status": "user_review_ready",
+  "updated_at": "2026-08-06T06:06:03.446928+00:00"
+}

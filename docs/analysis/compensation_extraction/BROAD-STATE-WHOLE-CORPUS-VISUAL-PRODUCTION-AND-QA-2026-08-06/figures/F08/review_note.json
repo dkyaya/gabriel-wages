@@ -1,0 +1,13 @@
+{
+  "claim_supported": [
+    "CLAIM-A",
+    "CLAIM-C",
+    "CLAIM-F"
+  ],
+  "counterexample_or_caveat": "Administrative corroboration is shown separately by unique source, municipality, and root compensation event. The measures describe retained coverage and must not be combined or interpreted as mechanism prevalence.",
+  "figure_id": "F08",
+  "intended_takeaway": "Coverage is shown separately for sources, municipalities, and root events",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

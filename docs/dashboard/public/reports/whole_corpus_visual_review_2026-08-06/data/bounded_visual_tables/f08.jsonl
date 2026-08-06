@@ -1,0 +1,6 @@
+{"mechanism": "retroactive_pay", "raw_linked_rows_not_prevalence": 1876183, "unique_claims": 6, "unique_mechanism_events": 8249, "unique_municipalities": 871, "unique_root_events": 1795, "unique_sources": 8084}
+{"mechanism": "budget_pay_plan_process", "raw_linked_rows_not_prevalence": 1876183, "unique_claims": 6, "unique_mechanism_events": 3714, "unique_municipalities": 390, "unique_root_events": 839, "unique_sources": 3738}
+{"mechanism": "across_the_board_raise", "raw_linked_rows_not_prevalence": 1876183, "unique_claims": 6, "unique_mechanism_events": 3129, "unique_municipalities": 307, "unique_root_events": 785, "unique_sources": 2526}
+{"mechanism": "non_base_compensation_other", "raw_linked_rows_not_prevalence": 1876183, "unique_claims": 6, "unique_mechanism_events": 2109, "unique_municipalities": 198, "unique_root_events": 524, "unique_sources": 1701}
+{"mechanism": "step_progression", "raw_linked_rows_not_prevalence": 1876183, "unique_claims": 6, "unique_mechanism_events": 787, "unique_municipalities": 70, "unique_root_events": 182, "unique_sources": 745}
+{"mechanism": "market_recruitment_retention", "raw_linked_rows_not_prevalence": 1876183, "unique_claims": 6, "unique_mechanism_events": 573, "unique_municipalities": 37, "unique_root_events": 132, "unique_sources": 266}

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="818.666106pt" height="496.728pt" viewBox="0 0 818.666106 496.728" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="figure-title figure-desc"><title id="figure-title">Staffing-channel evidence by tier</title><desc id="figure-desc">Seven reviewed records directly support a staffing channel and 216 are descriptively consistent; 18,135 remain contextual, insufficient, or unresolved. Counts describe evidence status, not causal effects or national prevalence.</desc>
+ <title>Staffing-channel evidence by tier</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Staffing-channel evidence by tier</dc:title>
+    <dc:date>2026-08-06T01:56:03.118429</dc:date>
+    <dc:description>Seven reviewed records directly support a staffing channel and 216 are descriptively consistent; 18,135 remain contextual, insufficient, or unresolved. Counts describe evidence status, not causal effects or national prevalence.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 496.728 
+L 818.666106 496.728 
+L 818.666106 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 253.44 402.84 
+L 771.84 402.84 
+L 771.84 90.36 
+L 253.44 90.36 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 253.44 402.84 
+L 253.44 90.36 
+" clip-path="url(#p6e6ea53db9)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mc24f307088" d="M 0 0 
+L 0 3.5 
+" style="stroke: #6b7280; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc24f307088" x="253.44" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- $\mathdefault{0}$ -->
+      <g style="fill: #6b7280" transform="translate(250.36 417.713594)">
+       <text>
+        <tspan x="0" y="-0.09375" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 384.622847 402.84 
+L 384.622847 90.36 
+" clip-path="url(#p6e6ea53db9)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mc24f307088" x="384.622847" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- $\mathdefault{10^{1}}$ -->
+      <g style="fill: #6b7280" transform="translate(375.987847 421.18375)">
+       <text>
+        <tspan x="0" y="-0.799313" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">1</tspan>
+        <tspan x="6.117676" y="-0.799313" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">0</tspan>
+        <tspan x="12.427009" y="-8.465625" style="font-size: 7.7px; font-family: 'Arial'; fill: #6b7280">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 502.687408 402.84 
+L 502.687408 90.36 
+" clip-path="url(#p6e6ea53db9)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mc24f307088" x="502.687408" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- $\mathdefault{10^{2}}$ -->
+      <g style="fill: #6b7280" transform="translate(494.052408 421.18375)">
+       <text>
+        <tspan x="0" y="-0.799313" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">1</tspan>
+        <tspan x="6.117676" y="-0.799313" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">0</tspan>
+        <tspan x="12.427009" y="-8.465625" style="font-size: 7.7px; font-family: 'Arial'; fill: #6b7280">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 620.75197 402.84 
+L 620.75197 90.36 
+" clip-path="url(#p6e6ea53db9)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mc24f307088" x="620.75197" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- $\mathdefault{10^{3}}$ -->
+      <g style="fill: #6b7280" transform="translate(612.11697 421.18375)">
+       <text>
+        <tspan x="0" y="-0.799313" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">1</tspan>
+        <tspan x="6.117676" y="-0.799313" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">0</tspan>
+        <tspan x="12.427009" y="-8.465625" style="font-size: 7.7px; font-family: 'Arial'; fill: #6b7280">3</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 738.816532 402.84 
+L 738.816532 90.36 
+" clip-path="url(#p6e6ea53db9)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mc24f307088" x="738.816532" y="402.84" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- $\mathdefault{10^{4}}$ -->
+      <g style="fill: #6b7280" transform="translate(730.181532 421.07375)">
+       <text>
+        <tspan x="0" y="-0.821188" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">1</tspan>
+        <tspan x="6.117676" y="-0.821188" style="font-size: 11px; font-family: 'Arial'; fill: #6b7280">0</tspan>
+        <tspan x="12.427009" y="-8.4875" style="font-size: 7.7px; font-family: 'Arial'; fill: #6b7280">4</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="512.64" y="435.377656" transform="rotate(-0 512.64 435.377656)">Records (symmetric log scale; zero retained)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(132.545938 137.08217)">Direct channel evidence</text>
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(173.306094 148.716732)">Tier 2: bounded</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(135.014063 245.442422)">Descriptively consistent</text>
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(165.989375 257.205891)">Tier 3: directional</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(81.389063 353.93158)">Context, insufficient, or unresolved</text>
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(180.662344 365.566143)">Tier 4: context</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 253.44 104.563636 
+L 345.267993 104.563636 
+L 345.267993 171.786954 
+L 253.44 171.786954 
+z
+" clip-path="url(#p6e6ea53db9)" style="fill: #0f766e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 253.44 212.988341 
+L 542.174544 212.988341 
+L 542.174544 280.211659 
+L 253.44 280.211659 
+z
+" clip-path="url(#p6e6ea53db9)" style="fill: #d97706"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 253.44 321.413046 
+L 769.338295 321.413046 
+L 769.338295 388.636364 
+L 253.44 388.636364 
+z
+" clip-path="url(#p6e6ea53db9)" style="fill: #9ca3af"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 253.44 402.84 
+L 771.84 402.84 
+" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="393.971346" y="141.026701" transform="rotate(-0 393.971346 141.026701)">7</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="550.661262" y="249.451406" transform="rotate(-0 550.661262 249.451406)">216</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="777.825012" y="357.876111" transform="rotate(-0 777.825012 357.876111)">18,135</text>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #111827" x="7.2" y="23.215312" transform="rotate(-0 7.2 23.215312)">Staffing-channel evidence by tier</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 12px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6b7280" x="7.2" y="41.135625" transform="rotate(-0 7.2 41.135625)">A small reviewed subset directly or descriptively fits the proposed channels</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 478.752637)">Unit: reviewed staffing record  •  n = 18,358  •  Evidence: Tier 2 / Tier 3 / context</text>
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 487.8585)">Direct means source-explicit channel evidence—not an estimated causal effect.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6e6ea53db9">
+   <rect x="253.44" y="90.36" width="518.4" height="312.48"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-08-06T06:06:03.430771+00:00",
+  "figure_count": 16,
+  "five_lane_plan": {
+    "1": [
+      "F01",
+      "F02",
+      "F16"
+    ],
+    "2": [
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "3": [
+      "F07",
+      "F08",
+      "F14"
+    ],
+    "4": [
+      "F09",
+      "F10",
+      "F11"
+    ],
+    "5": [
+      "F03",
+      "F12",
+      "F13",
+      "F15"
+    ]
+  },
+  "forbidden_network_data_collection": true,
+  "repairs": [
+    "canonical fixed hex reuse",
+    "exact urbanicity rejoin"
+  ],
+  "run_id": "whole-corpus-visual-production-2026-08-06",
+  "starting_head": "abe0a0c6a4a0211aada8675dfacf13cf51a7fbbb",
+  "strict_bounded_separation": true
+}

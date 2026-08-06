@@ -1,0 +1,11 @@
+{
+  "claim_supported": [
+    "CLAIM-D"
+  ],
+  "counterexample_or_caveat": "Seven reviewed records directly support a staffing channel and 216 are descriptively consistent; 18,135 remain contextual, insufficient, or unresolved. Counts describe evidence status, not causal effects or national prevalence.",
+  "figure_id": "F05",
+  "intended_takeaway": "A small reviewed subset directly or descriptively fits the proposed channels",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

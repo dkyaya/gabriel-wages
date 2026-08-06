@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "alaska_rows_49": true,
+    "deduplicated_event_unit": true,
+    "difference_rows_2221": true,
+    "fixed_hex_radius_km_50": true,
+    "non_safety_rows_467": true,
+    "projection_epsg_5070": true,
+    "row_count_6387": true,
+    "safety_rows_2012": true
+  },
+  "rematerialized": false,
+  "reused_canonical_layer": true,
+  "status": "pass"
+}

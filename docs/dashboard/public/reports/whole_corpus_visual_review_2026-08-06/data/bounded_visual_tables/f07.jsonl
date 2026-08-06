@@ -1,0 +1,7 @@
+{"analytical_unit": "implementation sequence", "count": 19, "denominator": 1268, "display": "Adopted; no paid stage observed", "proportion": 0.01498423, "sequence_status": "adopted_not_paid_observed"}
+{"analytical_unit": "implementation sequence", "count": 10, "denominator": 1268, "display": "Amended", "proportion": 0.00788644, "sequence_status": "amended_sequence"}
+{"analytical_unit": "implementation sequence", "count": 1, "denominator": 1268, "display": "Negotiated only", "proportion": 0.00078864, "sequence_status": "negotiated_only"}
+{"analytical_unit": "implementation sequence", "count": 2, "denominator": 1268, "display": "Paid with prior adoption", "proportion": 0.00157729, "sequence_status": "paid_with_prior_adoption"}
+{"analytical_unit": "implementation sequence", "count": 2, "denominator": 1268, "display": "Partial", "proportion": 0.00157729, "sequence_status": "partial_sequence"}
+{"analytical_unit": "implementation sequence", "count": 4, "denominator": 1268, "display": "Proposed only", "proportion": 0.00315457, "sequence_status": "proposed_only"}
+{"analytical_unit": "implementation sequence", "count": 1230, "denominator": 1268, "display": "Held: incomplete or incompatible", "proportion": 0.97003155, "sequence_status": "sequence_hold"}

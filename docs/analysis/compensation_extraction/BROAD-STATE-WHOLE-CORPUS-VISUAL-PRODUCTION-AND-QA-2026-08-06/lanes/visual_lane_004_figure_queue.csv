@@ -1,0 +1,4 @@
+approval_status,figure_id,figure_number,lane_id,state,subtitle,title
+approved_tiered_sensitivity_visual,F09,9,visual_lane_004,locked_pending,Step progression leans safety; across-board results are mixed; COLA evidence is sparse,Documentary wage-growth evidence is mechanism-specific
+approved_with_caption_caveat,F10,10,visual_lane_004,locked_pending,"Five favor safety, four favor non-safety, and one is neutral",Bounded local wage comparisons point in both directions
+approved_for_rendering,F11,11,visual_lane_004,locked_pending,Seven retained records directly challenge or narrow broad interpretations,Counterexamples define the boundary of the findings

@@ -1,0 +1,6 @@
+claim_status,count
+supported,1
+conditionally_supported,1
+mechanism_supported_only,5
+mixed_or_countervailing,1
+unsupported,6

@@ -1,0 +1,9 @@
+{
+  "expected_gallery_url": "https://dkyaya.github.io/gabriel-wages/reports/whole_corpus_visual_review_2026-08-06/",
+  "gallery_local_http": 200,
+  "github_pages_remote_status": "pending push-triggered deployment",
+  "local_production_build": "pass",
+  "missing_links": 0,
+  "sample_figure_local_http": 200,
+  "static_links_checked": 80
+}

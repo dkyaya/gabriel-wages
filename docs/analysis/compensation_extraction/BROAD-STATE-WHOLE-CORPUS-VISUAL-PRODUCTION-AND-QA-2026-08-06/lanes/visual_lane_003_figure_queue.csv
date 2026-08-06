@@ -1,0 +1,4 @@
+approval_status,figure_id,figure_number,lane_id,state,subtitle,title
+approved_strict_lane_only,F07,7,visual_lane_003,locked_pending,"Adoption, amendment, implementation, and payment remain distinct stages",Implementation evidence stops short of payment in most reviewed sequences
+approved_with_caption_caveat,F08,8,visual_lane_003,locked_pending,"Coverage is shown separately for sources, municipalities, and root events",Administrative corroboration by compensation mechanism
+needs_visual_data_repair,F14,14,visual_lane_003,locked_pending,"Fixed-grid event counts show documentary concentration, not population prevalence",Geographic concentration of retroactive-pay records

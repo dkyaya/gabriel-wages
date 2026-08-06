@@ -1,0 +1,11 @@
+{
+  "caption_max_words": 80,
+  "plain_language": true,
+  "required": [
+    "analytical unit",
+    "sample size",
+    "denominator",
+    "evidence tier",
+    "limitation"
+  ]
+}

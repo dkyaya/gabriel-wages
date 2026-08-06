@@ -1,0 +1,59 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f04.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f04.svg",
+  "adjudicated_claim_ids": [
+    "CLAIM-D"
+  ],
+  "analytical_unit": "staffing analytical unit",
+  "caption_stub": "The 18,358 staffing units are dominated by vacancy and position-reduction records. These are source-specific levels or changes and do not by themselves identify a staffing trend or causal effect.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "18,358",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "descriptive",
+  "figure_id": "F04",
+  "figure_number": 4,
+  "final_claim_classes": [
+    "mechanism_supported_only"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "d6d4b9d2df48b584005269db5b58b73e0bf84f1ca30c234512cce5ee35963bb7",
+    "bb993ec6325a24fb684cea0db73d5e1e65806b30200f6d4d36a5642593709226"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f04.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f04.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "The 18,358 staffing units are dominated by vacancy and position-reduction records. These are source-specific levels or changes and do not by themselves identify a staffing trend or causal effect.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_002"
+  },
+  "methods_note": "Analytical unit: staffing analytical unit. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "staffing",
+  "render_version": "2026-08-06.1",
+  "report_section": "staffing",
+  "sample_size": "18,358",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Most retained staffing units describe vacancies or position reductions",
+  "subtitle_text": "Most retained staffing units describe vacancies or position reductions",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f04_thumb.png",
+  "title": "Staffing evidence by type",
+  "title_text": "Staffing evidence by type",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_for_rendering",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Most retained staffing units describe vacancies or position reductions"
+}

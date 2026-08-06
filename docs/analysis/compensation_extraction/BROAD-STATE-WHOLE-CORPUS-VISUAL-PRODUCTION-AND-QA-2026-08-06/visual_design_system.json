@@ -1,0 +1,38 @@
+{
+  "background": "white",
+  "color_is_never_sole_encoding": true,
+  "font_stack": [
+    "Inter",
+    "Arial",
+    "Helvetica",
+    "DejaVu Sans"
+  ],
+  "map_minimum_dimensions": [
+    1800,
+    1100
+  ],
+  "minimum_png_width": 1600,
+  "palette": {
+    "grid": "#E5E7EB",
+    "ink": "#111827",
+    "mixed": "#7C3AED",
+    "muted": "#6B7280",
+    "non_safety": "#2563EB",
+    "paper": "#FFFFFF",
+    "positive": "#0F766E",
+    "safety": "#C2410C",
+    "side_independent": "#4B5563",
+    "tier_1": "#1F2937",
+    "tier_2": "#0F766E",
+    "tier_3": "#D97706",
+    "tier_4": "#9CA3AF",
+    "unknown": "#D1D5DB",
+    "unsupported": "#B91C1C"
+  },
+  "stable_term_map": {
+    "canonical observation": "administrative record",
+    "claim-readiness stratum": "evidence status",
+    "mechanism exposure event": "compensation mechanism"
+  },
+  "version": "2026-08-06.1"
+}

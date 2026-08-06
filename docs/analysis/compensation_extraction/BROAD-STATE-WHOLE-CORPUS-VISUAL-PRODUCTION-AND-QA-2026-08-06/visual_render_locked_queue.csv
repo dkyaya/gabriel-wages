@@ -1,0 +1,17 @@
+approval_status,figure_id,figure_number,lane_id,state,subtitle,title
+approved_for_rendering,F01,1,visual_lane_001,locked_pending,"Large source volume, with analytical usefulness varying by layer",Corpus scale and source mix
+approved_with_caption_caveat,F02,2,visual_lane_001,locked_pending,Filtering preserves incompatible and unresolved evidence instead of forcing it into estimates,Evidence pipeline and analytical readiness
+approved_with_caption_caveat,F03,3,visual_lane_005,locked_pending,Coverage is the share of eligible municipalities reached—not raw source volume,Municipality scout coverage by state
+approved_for_rendering,F04,4,visual_lane_002,locked_pending,Most retained staffing units describe vacancies or position reductions,Staffing evidence by type
+approved_tiered_sensitivity_visual,F05,5,visual_lane_002,locked_pending,A small reviewed subset directly or descriptively fits the proposed channels,Staffing-channel evidence by tier
+approved_with_caption_caveat,F06,6,visual_lane_002,locked_pending,"Staffing records span 511 municipalities, unevenly across states",Geographic reach of staffing evidence
+approved_strict_lane_only,F07,7,visual_lane_003,locked_pending,"Adoption, amendment, implementation, and payment remain distinct stages",Implementation evidence stops short of payment in most reviewed sequences
+approved_with_caption_caveat,F08,8,visual_lane_003,locked_pending,"Coverage is shown separately for sources, municipalities, and root events",Administrative corroboration by compensation mechanism
+approved_tiered_sensitivity_visual,F09,9,visual_lane_004,locked_pending,Step progression leans safety; across-board results are mixed; COLA evidence is sparse,Documentary wage-growth evidence is mechanism-specific
+approved_with_caption_caveat,F10,10,visual_lane_004,locked_pending,"Five favor safety, four favor non-safety, and one is neutral",Bounded local wage comparisons point in both directions
+approved_for_rendering,F11,11,visual_lane_004,locked_pending,Seven retained records directly challenge or narrow broad interpretations,Counterexamples define the boundary of the findings
+approved_for_rendering,F12,12,visual_lane_005,locked_pending,"Unresolved side, basis, identity, and conflict holds remain outside clean comparisons",Why the external evidence did not become a clean wage panel
+approved_with_caption_caveat,F13,13,visual_lane_005,locked_pending,Precise support is rare; mechanism support and explicit limitations dominate,Evidence composition and final status of 14 claims
+needs_visual_data_repair,F14,14,visual_lane_003,locked_pending,"Fixed-grid event counts show documentary concentration, not population prevalence",Geographic concentration of retroactive-pay records
+needs_visual_data_repair,F15,15,visual_lane_005,locked_pending,Unknown urbanicity remains visible rather than inferred,Urban and rural distribution of implementation evidence
+approved_for_rendering,F16,16,visual_lane_001,locked_pending,"The project supports bounded mechanism findings, not national or causal estimates",What the evidence supports—and what it does not establish

@@ -1,0 +1,3 @@
+# Strict Vs Bounded Visual Methodology Note
+
+Tier 1 supports precise statements; Tier 2 supports bounded calculations with caveats; Tier 3 supports direction or mechanism only.

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="787.68pt" height="496.728pt" viewBox="0 0 787.68 496.728" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="figure-title figure-desc"><title id="figure-title">Staffing evidence by type</title><desc id="figure-desc">The 18,358 staffing units are dominated by vacancy and position-reduction records. These are source-specific levels or changes and do not by themselves identify a staffing trend or causal effect.</desc>
+ <title>Staffing evidence by type</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Staffing evidence by type</dc:title>
+    <dc:date>2026-08-06T01:56:02.976865</dc:date>
+    <dc:description>The 18,358 staffing units are dominated by vacancy and position-reduction records. These are source-specific levels or changes and do not by themselves identify a staffing trend or causal effect.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 496.728 
+L 787.68 496.728 
+L 787.68 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 227.52 407.88 
+L 780.48 407.88 
+L 780.48 85.32 
+L 227.52 85.32 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 227.52 407.88 
+L 227.52 85.32 
+" clip-path="url(#p315c5e8898)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m67b704f3d1" d="M 0 0 
+L 0 3.5 
+" style="stroke: #6b7280; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m67b704f3d1" x="227.52" y="407.88" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="227.52" y="422.753594" transform="rotate(-0 227.52 422.753594)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 323.615595 407.88 
+L 323.615595 85.32 
+" clip-path="url(#p315c5e8898)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m67b704f3d1" x="323.615595" y="407.88" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="323.615595" y="422.753594" transform="rotate(-0 323.615595 422.753594)">2000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 419.71119 407.88 
+L 419.71119 85.32 
+" clip-path="url(#p315c5e8898)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m67b704f3d1" x="419.71119" y="407.88" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="419.71119" y="422.753594" transform="rotate(-0 419.71119 422.753594)">4000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 515.806785 407.88 
+L 515.806785 85.32 
+" clip-path="url(#p315c5e8898)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m67b704f3d1" x="515.806785" y="407.88" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="515.806785" y="422.753594" transform="rotate(-0 515.806785 422.753594)">6000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 611.90238 407.88 
+L 611.90238 85.32 
+" clip-path="url(#p315c5e8898)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m67b704f3d1" x="611.90238" y="407.88" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="611.90238" y="422.753594" transform="rotate(-0 611.90238 422.753594)">8000</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 707.997975 407.88 
+L 707.997975 85.32 
+" clip-path="url(#p315c5e8898)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m67b704f3d1" x="707.997975" y="407.88" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="707.997975" y="422.753594" transform="rotate(-0 707.997975 422.753594)">10000</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="504" y="436.9475" transform="rotate(-0 504 436.9475)">Source-specific staffing analytical units</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="224.02" y="376.931781" transform="rotate(-0 224.02 376.931781)">Hiring Freeze</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="224.02" y="326.440819" transform="rotate(-0 224.02 326.440819)">Layoff</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="224.02" y="275.815794" transform="rotate(-0 224.02 275.815794)">Filled Position Reduction</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="224.02" y="225.2578" transform="rotate(-0 224.02 225.2578)">Budgeted Position Reduction</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="224.02" y="174.699806" transform="rotate(-0 224.02 174.699806)">Authorized Position Reduction</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="224.02" y="124.141813" transform="rotate(-0 224.02 124.141813)">Vacancy Without Elimination</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 227.52 393.218182 
+L 231.363824 393.218182 
+L 231.363824 352.771787 
+L 227.52 352.771787 
+z
+" clip-path="url(#p315c5e8898)" style="fill: #4b5563"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 227.52 342.660188 
+L 242.558961 342.660188 
+L 242.558961 302.213793 
+L 227.52 302.213793 
+z
+" clip-path="url(#p315c5e8898)" style="fill: #4b5563"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 227.52 292.102194 
+L 245.682067 292.102194 
+L 245.682067 251.655799 
+L 227.52 251.655799 
+z
+" clip-path="url(#p315c5e8898)" style="fill: #4b5563"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 227.52 241.544201 
+L 341.82571 241.544201 
+L 341.82571 201.097806 
+L 227.52 201.097806 
+z
+" clip-path="url(#p315c5e8898)" style="fill: #4b5563"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 227.52 190.986207 
+L 489.620736 190.986207 
+L 489.620736 150.539812 
+L 227.52 150.539812 
+z
+" clip-path="url(#p315c5e8898)" style="fill: #4b5563"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 227.52 140.428213 
+L 696.130169 140.428213 
+L 696.130169 99.981818 
+L 227.52 99.981818 
+z
+" clip-path="url(#p315c5e8898)" style="fill: #4b5563"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 227.52 407.88 
+L 780.48 407.88 
+" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 10px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="238.392976" y="375.582484" transform="rotate(-0 238.392976 375.582484)">80  (0.4%)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="249.588113" y="325.024491" transform="rotate(-0 249.588113 325.024491)">313  (1.7%)</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="252.71122" y="274.466497" transform="rotate(-0 252.71122 274.466497)">378  (2.1%)</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="348.854863" y="223.908503" transform="rotate(-0 348.854863 223.908503)">2,379  (13.0%)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 10px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="496.649888" y="173.350509" transform="rotate(-0 496.649888 173.350509)">5,455  (29.7%)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="703.159322" y="122.792516" transform="rotate(-0 703.159322 122.792516)">9,753  (53.1%)</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #111827" x="7.2" y="23.215312" transform="rotate(-0 7.2 23.215312)">Staffing evidence by type</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 12px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6b7280" x="7.2" y="41.135625" transform="rotate(-0 7.2 41.135625)">Most retained staffing units describe vacancies or position reductions</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 478.6542)">Unit: staffing analytical unit  •  n = 18,358; denominator = 18,358  •  Evidence: descriptive</text>
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 487.760062)">Levels and changes remain distinct; no vacancy rate or causal effect is calculated.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p315c5e8898">
+   <rect x="227.52" y="85.32" width="552.96" height="322.56"/>
+  </clipPath>
+ </defs>
+</svg>

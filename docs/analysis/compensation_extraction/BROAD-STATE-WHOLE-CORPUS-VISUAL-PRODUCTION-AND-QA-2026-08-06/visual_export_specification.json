@@ -1,0 +1,14 @@
+{
+  "accessible_svg": true,
+  "background": "white",
+  "formats": [
+    "PNG",
+    "SVG",
+    "thumbnail PNG"
+  ],
+  "map_minimum": [
+    1800,
+    1100
+  ],
+  "minimum_png_width": 1600
+}

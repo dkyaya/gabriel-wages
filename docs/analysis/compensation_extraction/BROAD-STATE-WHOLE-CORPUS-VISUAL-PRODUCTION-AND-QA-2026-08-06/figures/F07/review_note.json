@@ -1,0 +1,12 @@
+{
+  "claim_supported": [
+    "CLAIM-E",
+    "CLAIM-F"
+  ],
+  "counterexample_or_caveat": "Thirty-eight sequences support bounded lifecycle descriptions; 1,230 remain on hold. Nineteen adopted sequences have no paid stage observed in the retained evidence—this does not mean they were never paid.",
+  "figure_id": "F07",
+  "intended_takeaway": "Adoption, amendment, implementation, and payment remain distinct stages",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

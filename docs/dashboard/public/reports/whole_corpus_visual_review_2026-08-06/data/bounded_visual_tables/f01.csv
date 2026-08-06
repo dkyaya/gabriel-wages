@@ -1,0 +1,8 @@
+accounting_lane,category,count,unit
+native PDF,Native PDF pages,1029482,pages
+native PDF,Unique PDFs,15163,files
+non-PDF,HTML documents,8718,documents
+non-PDF,HTML tables,96484,tables
+non-PDF,HTML table rows,1017511,rows
+non-PDF,Embedded records,132188,records
+non-PDF,CSV/TSV rows,1445,rows

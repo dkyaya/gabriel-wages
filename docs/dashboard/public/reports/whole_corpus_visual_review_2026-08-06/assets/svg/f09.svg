@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="796.32pt" height="496.728pt" viewBox="0 0 796.32 496.728" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="figure-title figure-desc"><title id="figure-title">Documentary wage-growth evidence is mechanism-specific</title><desc id="figure-desc">Unit-cycle weighted documentary records show a safety-leaning step-progression cell, mixed across-board results, and sparse COLA comparisons. The cells are small and nonrepresentative; there is no uniform safety growth advantage.</desc>
+ <title>Documentary wage-growth evidence is mechanism-specific</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Documentary wage-growth evidence is mechanism-specific</dc:title>
+    <dc:date>2026-08-06T01:59:50.648459</dc:date>
+    <dc:description>Unit-cycle weighted documentary records show a safety-leaning step-progression cell, mixed across-board results, and sparse COLA comparisons. The cells are small and nonrepresentative; there is no uniform safety growth advantage.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 496.728 
+L 796.32 496.728 
+L 796.32 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 72 397.8 
+L 789.12 397.8 
+L 789.12 95.4 
+L 72 95.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m193fdffac4" d="M 0 0 
+L 0 3.5 
+" style="stroke: #6b7280; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m193fdffac4" x="187.303555" y="397.8" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="187.303555" y="412.807656" transform="rotate(-0 187.303555 412.807656)">Step progression</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m193fdffac4" x="430.56" y="397.8" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="430.56" y="412.673594" transform="rotate(-0 430.56 412.673594)">Across-board</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m193fdffac4" x="673.816445" y="397.8" style="fill: #6b7280; stroke: #6b7280; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b7280" x="673.816445" y="412.673594" transform="rotate(-0 673.816445 412.673594)">COLA</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 72 397.8 
+L 789.12 397.8 
+" clip-path="url(#p5221013f9c)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="mdcf3884d78" d="M 0 0 
+L -3.5 0 
+" style="stroke: #111827; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdcf3884d78" x="72" y="397.8" style="fill: #111827; stroke: #111827; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="65" y="401.736797" transform="rotate(-0 65 401.736797)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 72 332.06087 
+L 789.12 332.06087 
+" clip-path="url(#p5221013f9c)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mdcf3884d78" x="72" y="332.06087" style="fill: #111827; stroke: #111827; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="65" y="335.997666" transform="rotate(-0 65 335.997666)">2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 72 266.321739 
+L 789.12 266.321739 
+" clip-path="url(#p5221013f9c)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mdcf3884d78" x="72" y="266.321739" style="fill: #111827; stroke: #111827; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="65" y="270.258536" transform="rotate(-0 65 270.258536)">4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 72 200.582609 
+L 789.12 200.582609 
+" clip-path="url(#p5221013f9c)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mdcf3884d78" x="72" y="200.582609" style="fill: #111827; stroke: #111827; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="65" y="204.519406" transform="rotate(-0 65 204.519406)">6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 72 134.843478 
+L 789.12 134.843478 
+" clip-path="url(#p5221013f9c)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mdcf3884d78" x="72" y="134.843478" style="fill: #111827; stroke: #111827; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #111827" x="65" y="138.780275" transform="rotate(-0 65 138.780275)">8</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="52.567813" y="246.6" transform="rotate(-90 52.567813 246.6)">Mean growth per unit-cycle (%)</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 104.596364 397.8 
+L 187.303555 397.8 
+L 187.303555 153.104362 
+L 104.596364 153.104362 
+z
+" clip-path="url(#p5221013f9c)" style="fill: #c2410c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 347.852809 397.8 
+L 430.56 397.8 
+L 430.56 244.816662 
+L 347.852809 244.816662 
+z
+" clip-path="url(#p5221013f9c)" style="fill: #c2410c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 591.109254 397.8 
+L 673.816445 397.8 
+L 673.816445 290.847497 
+L 591.109254 290.847497 
+z
+" clip-path="url(#p5221013f9c)" style="fill: #c2410c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 187.303555 397.8 
+L 270.010746 397.8 
+L 270.010746 307.408696 
+L 187.303555 307.408696 
+z
+" clip-path="url(#p5221013f9c)" style="fill: url(#h5ea96451fc); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 430.56 397.8 
+L 513.267191 397.8 
+L 513.267191 198.756507 
+L 430.56 198.756507 
+z
+" clip-path="url(#p5221013f9c)" style="fill: url(#h5ea96451fc); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 673.816445 397.8 
+L 756.523636 397.8 
+L 756.523636 292.617391 
+L 673.816445 292.617391 
+z
+" clip-path="url(#p5221013f9c)" style="fill: url(#h5ea96451fc); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 72 397.8 
+L 789.12 397.8 
+" clip-path="url(#p5221013f9c)" style="fill: none; stroke: #111827; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 72 397.8 
+L 789.12 397.8 
+" style="fill: none; stroke: #e5e7eb; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(133.191053 136.537294)">7.44%</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(138.316834 146.056482)">n=9</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(376.447498 228.249594)">4.65%</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(379.070857 237.768781)">n=47</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(619.703943 274.280429)">3.25%</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(622.327303 283.799616)">n=13</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(215.898244 290.841628)">2.75%</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(221.024026 300.360815)">n=3</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(459.154689 182.189439)">6.06%</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(464.280471 191.708627)">n=9</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(702.411134 276.050323)">3.20%</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(707.536916 285.569511)">n=1</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_10">
+     <path d="M 611.25 113.307656 
+L 633.25 113.307656 
+L 633.25 105.607656 
+L 611.25 105.607656 
+z
+" style="fill: #c2410c; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="642.05" y="113.307656" transform="rotate(-0 642.05 113.307656)">Safety</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 695.233281 113.307656 
+L 717.233281 113.307656 
+L 717.233281 105.607656 
+L 695.233281 105.607656 
+z
+" style="fill: url(#h5ea96451fc); stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 11px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="726.033281" y="113.307656" transform="rotate(-0 726.033281 113.307656)">Non-safety</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #111827" x="7.2" y="23.215312" transform="rotate(-0 7.2 23.215312)">Documentary wage-growth evidence is mechanism-specific</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 12px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6b7280" x="7.2" y="41.143125" transform="rotate(-0 7.2 41.143125)">Step progression leans safety; across-board results are mixed; COLA evidence is sparse</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 478.6479)">Unit: documentary unit-cycle growth record  •  cell n shown above each bar  •  Evidence: Tier 1–2 numeric summary; Tier 3 directional context</text>
+   <text style="font-size: 8.4px; font-family: 'Inter', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #6b7280" transform="translate(7.2 487.760062)">Weighted means are sample-specific; COLA cells are sparse and no uniform safety advantage is inferred.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5221013f9c">
+   <rect x="72" y="95.4" width="717.12" height="302.4"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="h5ea96451fc" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#2563eb"/>
+   <path d="M -36 36 
+L 36 -36 
+M -30 42 
+L 42 -30 
+M -24 48 
+L 48 -24 
+M -18 54 
+L 54 -18 
+M -12 60 
+L 60 -12 
+M -6 66 
+L 66 -6 
+M 0 72 
+L 72 0 
+M 6 78 
+L 78 6 
+M 12 84 
+L 84 12 
+M 18 90 
+L 90 18 
+M 24 96 
+L 96 24 
+M 30 102 
+L 102 30 
+M 36 108 
+L 108 36 
+" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

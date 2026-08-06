@@ -1,0 +1,9 @@
+{
+  "claim_supported": [],
+  "counterexample_or_caveat": "Most external records could not enter clean wage comparisons because side, basis, identity, or conflict gates were unresolved. Correct exclusion protects comparability; it is not evidence of a wage effect.",
+  "figure_id": "F12",
+  "intended_takeaway": "Unresolved side, basis, identity, and conflict holds remain outside clean comparisons",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

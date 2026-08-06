@@ -1,0 +1,15 @@
+{
+  "conflicts": 0,
+  "event_counts": {
+    "rural": 1280,
+    "unknown": 747,
+    "urban": 971
+  },
+  "municipality_counts": {
+    "rural": 682,
+    "unknown": 290,
+    "urban": 468
+  },
+  "status": "pass",
+  "unmatched": 0
+}

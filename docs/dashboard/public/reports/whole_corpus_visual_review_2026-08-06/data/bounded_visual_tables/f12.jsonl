@@ -1,0 +1,6 @@
+{"analytical_unit": "canonical external observation", "count": 131124, "denominator": 1876183, "hold_type": "normalized_basis_hold", "proportion": 0.0698887}
+{"analytical_unit": "canonical external observation", "count": 266849, "denominator": 1876183, "hold_type": "normalized_conflict_hold", "proportion": 0.14222973}
+{"analytical_unit": "canonical external observation", "count": 244, "denominator": 1876183, "hold_type": "normalized_identity_hold", "proportion": 0.00013005}
+{"analytical_unit": "canonical external observation", "count": 1134192, "denominator": 1876183, "hold_type": "normalized_side_hold", "proportion": 0.60452099}
+{"analytical_unit": "prior compatible candidate", "count": 201, "denominator": 201, "hold_type": "local_comparison_no_match", "proportion": 1.0}
+{"analytical_unit": "conditional growth candidate", "count": 6731, "denominator": 6731, "hold_type": "growth_hold", "proportion": 1.0}

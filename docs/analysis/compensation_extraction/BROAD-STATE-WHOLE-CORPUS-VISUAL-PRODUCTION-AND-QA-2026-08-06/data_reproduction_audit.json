@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "F01_native_pdf_pages_1029482": true,
+    "F03_rates_are_percent_0_to_100": true,
+    "F04_staffing_total_18358": true,
+    "F05_staffing_tiers_total_18358": true,
+    "F07_sequence_total_1268": true,
+    "F09_six_numeric_cells": true,
+    "F10_direction_5_4_1": true,
+    "F10_ten_comparisons": true,
+    "F11_seven_counterexamples": true,
+    "F13_fourteen_claims": true,
+    "F15_urbanicity_468_682_290": true,
+    "F16_classes_1_1_5_1_6": true,
+    "all_nine_headlines_reproduce": true
+  },
+  "status": "pass"
+}

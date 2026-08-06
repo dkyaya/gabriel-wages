@@ -1,0 +1,16 @@
+{"claim_ids": [], "figure_id": "F01"}
+{"claim_ids": [], "figure_id": "F02"}
+{"claim_ids": ["UNSUP-02"], "figure_id": "F03"}
+{"claim_ids": ["CLAIM-D"], "figure_id": "F04"}
+{"claim_ids": ["CLAIM-D"], "figure_id": "F05"}
+{"claim_ids": [], "figure_id": "F06"}
+{"claim_ids": ["CLAIM-E", "CLAIM-F"], "figure_id": "F07"}
+{"claim_ids": ["CLAIM-A", "CLAIM-C", "CLAIM-F"], "figure_id": "F08"}
+{"claim_ids": ["CLAIM-B", "CLAIM-G", "UNSUP-05"], "figure_id": "F09"}
+{"claim_ids": ["CLAIM-G", "CLAIM-H", "UNSUP-01"], "figure_id": "F10"}
+{"claim_ids": ["CLAIM-G", "CLAIM-H"], "figure_id": "F11"}
+{"claim_ids": [], "figure_id": "F12"}
+{"claim_ids": ["CLAIM-H", "UNSUP-06"], "figure_id": "F13"}
+{"claim_ids": [], "figure_id": "F14"}
+{"claim_ids": [], "figure_id": "F15"}
+{"claim_ids": ["UNSUP-01", "UNSUP-02", "UNSUP-03", "UNSUP-04", "UNSUP-05", "UNSUP-06"], "figure_id": "F16"}

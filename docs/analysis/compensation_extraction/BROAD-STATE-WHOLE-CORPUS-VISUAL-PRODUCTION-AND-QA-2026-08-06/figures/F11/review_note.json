@@ -1,0 +1,12 @@
+{
+  "claim_supported": [
+    "CLAIM-G",
+    "CLAIM-H"
+  ],
+  "counterexample_or_caveat": "Seven retained counterexamples and countervailing records directly limit broad claims. They are included as analytical evidence, not as decorative caveats, and do not represent a prevalence estimate.",
+  "figure_id": "F11",
+  "intended_takeaway": "Seven retained records directly challenge or narrow broad interpretations",
+  "potential_misreading": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "unresolved_visual_question": "None before user review.",
+  "user_review_status": "pending user review"
+}

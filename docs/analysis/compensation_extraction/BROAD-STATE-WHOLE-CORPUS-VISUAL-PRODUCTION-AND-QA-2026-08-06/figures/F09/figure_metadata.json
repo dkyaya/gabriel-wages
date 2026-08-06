@@ -1,0 +1,63 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f09.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f09.svg",
+  "adjudicated_claim_ids": [
+    "CLAIM-B",
+    "CLAIM-G",
+    "UNSUP-05"
+  ],
+  "analytical_unit": "documentary unit-cycle growth record",
+  "caption_stub": "Unit-cycle weighted documentary records show a safety-leaning step-progression cell, mixed across-board results, and sparse COLA comparisons. The cells are small and nonrepresentative; there is no uniform safety growth advantage.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "cell-specific",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "Tier 1/2 numeric",
+  "figure_id": "F09",
+  "figure_number": 9,
+  "final_claim_classes": [
+    "conditionally_supported",
+    "mixed_or_countervailing",
+    "unsupported"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "3922b84722d47c414f6ce6065a56f6cfd128100c676fafa12115f0acc7cfe921",
+    "66f52630fb415a2531e5e215805e810182eed521564d3154a18062b089df6dfc"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f09.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f09.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "there is no uniform safety growth advantage.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_004"
+  },
+  "methods_note": "Analytical unit: documentary unit-cycle growth record. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "growth",
+  "render_version": "2026-08-06.1",
+  "report_section": "growth",
+  "sample_size": "cell n displayed",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "tiered/bounded where labeled",
+  "subtitle": "Step progression leans safety; across-board results are mixed; COLA evidence is sparse",
+  "subtitle_text": "Step progression leans safety; across-board results are mixed; COLA evidence is sparse",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f09_thumb.png",
+  "title": "Documentary wage-growth evidence is mechanism-specific",
+  "title_text": "Documentary wage-growth evidence is mechanism-specific",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_tiered_sensitivity_visual",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Step progression leans safety; across-board results are mixed; COLA evidence is sparse"
+}

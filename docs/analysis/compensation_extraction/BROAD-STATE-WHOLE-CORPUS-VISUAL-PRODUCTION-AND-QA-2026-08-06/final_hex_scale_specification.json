@@ -1,0 +1,12 @@
+{
+  "alaska": "explicit inset",
+  "difference_center": 0,
+  "extent": "identical lower-48 extent",
+  "hex_radius_km": 50,
+  "projection": "EPSG:5070",
+  "safety_non_safety_shared_scale": [
+    0,
+    28
+  ],
+  "unit": "deduplicated implementation event"
+}

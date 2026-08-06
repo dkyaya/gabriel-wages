@@ -1,0 +1,291 @@
+classification_method,municipality,municipality_id,reference_year,state,suburban_classification_created,urban_land_share,urbanicity
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Adams,cog_2025_193998,2020,PA,false,0.473748,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Alaiedon,cog_2025_167028,2020,MI,false,0.059378,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Alden,cog_2025_170800,2020,NY,false,0.038964,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Allegan,cog_2025_166842,2020,MI,false,0.080353,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Allegheny,cog_2025_209428,2020,PA,false,0.160401,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Andover,cog_2025_161508,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Antigo,cog_2025_136703,2020,WI,false,0.015625,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Atlas,cog_2025_208363,2020,MI,false,0.000364,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Augusta,cog_2025_164964,2020,KS,false,0.008823,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Augusta charter,cog_2025_106593,2020,MI,false,0.039685,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Aurora,cog_2025_170801,2020,NY,false,0.136997,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ballston,cog_2025_170985,2020,NY,false,0.296605,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Barrington Hills,cog_2025_162272,2020,IL,false,0.047668,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Batavia,cog_2025_170831,2020,NY,false,0.06197,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Baxter,cog_2025_211757,2020,MN,false,0.324999,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bay,cog_2025_225686,2020,OH,false,0.15764,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bazetta,cog_2025_111011,2020,OH,false,0.30649,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bedminster,cog_2025_170340,2020,NJ,false,0.113782,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Beekman,cog_2025_170793,2020,NY,false,0.410844,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bemidji,cog_2025_193561,2020,MN,false,0.05079,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bethlehem,cog_2025_161475,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Big Flats,cog_2025_170754,2020,NY,false,0.170589,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Big Rapids charter,cog_2025_167149,2020,MI,false,0.063323,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bradford,cog_2025_209389,2020,PA,false,0.023156,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bradley,cog_2025_166270,2020,ME,false,0.011102,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Brighton,cog_2025_211438,2020,PA,false,0.408111,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Brookfield,cog_2025_173234,2020,OH,false,0.185914,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Brunswick Hills,cog_2025_110950,2020,OH,false,0.461538,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bucyrus,cog_2025_172811,2020,OH,false,0.002219,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Bushkill,cog_2025_174647,2020,PA,false,0.137858,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Camillus,cog_2025_170912,2020,NY,false,0.29976,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Canfield,cog_2025_173041,2020,OH,false,0.411657,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Carlinville,cog_2025_207913,2020,IL,false,0.084487,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Castle Pines,cog_2025_225518,2020,CO,false,0.379582,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Champion,cog_2025_208895,2020,NY,false,0.024504,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Champion,cog_2025_111013,2020,OH,false,0.193825,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Charleston,cog_2025_185062,2020,IL,false,0.206928,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Chatham,cog_2025_170321,2020,NJ,false,0.459579,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Chattahoochee Hills,cog_2025_219891,2020,GA,false,0.001498,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Chenango,cog_2025_109605,2020,NY,false,0.236059,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Circleville,cog_2025_173141,2020,OH,false,0.202826,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Clarkson,cog_2025_170883,2020,NY,false,0.091802,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Clay,cog_2025_204998,2020,NY,false,0.488134,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Clayton charter,cog_2025_166975,2020,MI,false,0.10328,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Colona,cog_2025_125196,2020,IL,false,0.117324,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Columbus,cog_2025_177374,2020,WI,false,0.002134,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Conemaugh,cog_2025_194023,2020,PA,false,0.054308,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Conewago,cog_2025_205334,2020,PA,false,0.149205,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Corning,cog_2025_171014,2020,NY,false,0.043695,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Cornwall,cog_2025_109677,2020,NY,false,0.261988,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Covert,cog_2025_167322,2020,MI,false,0.005231,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Cranberry,cog_2025_174756,2020,PA,false,0.043719,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,DeWitt charter,cog_2025_185938,2020,MI,false,0.371683,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Defiance,cog_2025_172831,2020,OH,false,0.179133,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Delaware,cog_2025_225359,2020,NJ,false,0.003562,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Detroit,cog_2025_167724,2020,MN,false,0.025094,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Dover,cog_2025_173257,2020,OH,false,0.026109,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Dripping Springs,cog_2025_176188,2020,TX,false,0.034335,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Dunkirk,cog_2025_170743,2020,NY,false,0.257316,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Dunnellon,cog_2025_124264,2020,FL,false,0.209309,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Dunstable,cog_2025_166523,2020,MA,false,0.025976,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Eagle Point,cog_2025_177354,2020,WI,false,0.033075,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,East Fishkill,cog_2025_208880,2020,NY,false,0.471672,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,East Greenbush,cog_2025_131416,2020,NY,false,0.400166,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Egelston,cog_2025_128499,2020,MI,false,0.122516,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Elizabeth,cog_2025_187323,2020,PA,false,0.040402,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ellenville,cog_2025_131297,2020,NY,false,0.198476,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ellicott,cog_2025_170744,2020,NY,false,0.170162,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Elmira,cog_2025_193782,2020,NY,false,0.127053,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Erwin,cog_2025_211242,2020,NY,false,0.156957,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Esopus,cog_2025_109714,2020,NY,false,0.044119,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Evans,cog_2025_131348,2020,NY,false,0.239814,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Exeter,cog_2025_209385,2020,PA,false,0.002415,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Fairfield,cog_2025_161456,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Fairmont,cog_2025_167547,2020,MN,false,0.242435,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Falmouth,cog_2025_166200,2020,ME,false,0.309823,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Filer charter,cog_2025_167130,2020,MI,false,0.119601,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Findlay,cog_2025_205283,2020,PA,false,0.36668,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Fishkill,cog_2025_170794,2020,NY,false,0.4472,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Flora,cog_2025_189955,2020,IL,false,0.045172,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Frankenmuth,cog_2025_225628,2020,MI,false,0.00404,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Franklin,cog_2025_225604,2020,MI,false,0.019606,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Franklin,cog_2025_209324,2020,PA,false,0.110199,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Freedom,cog_2025_177617,2020,WI,false,0.000815,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Frenchtown,cog_2025_167178,2020,MI,false,0.303699,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Fruitland,cog_2025_138230,2020,IA,false,0.250573,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Gaines,cog_2025_128411,2020,MI,false,0.01485,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Galloway,cog_2025_184023,2020,NJ,false,0.221491,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Gates Mills,cog_2025_172362,2020,OH,false,0.149964,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Geneseo,cog_2025_162961,2020,IL,false,0.103549,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,German,cog_2025_172776,2020,OH,false,0.099191,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Gill,cog_2025_128128,2020,MA,false,0.008506,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Goshen,cog_2025_193913,2020,OH,false,0.014947,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Grand Haven charter,cog_2025_106573,2020,MI,false,0.453121,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Graysville,cog_2025_160641,2020,AL,false,0.282631,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Greenville,cog_2025_191195,2020,OH,false,0.116143,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Greenwich,cog_2025_193754,2020,NJ,false,0.195078,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Groton,cog_2025_128143,2020,MA,false,0.181352,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hamilton,cog_2025_208262,2020,MA,false,0.244382,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hamilton,cog_2025_173275,2020,OH,false,0.397695,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hampshire,cog_2025_207813,2020,IL,false,0.339371,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hampton Falls,cog_2025_208753,2020,NH,false,0.303106,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hanover,cog_2025_204984,2020,NY,false,0.050076,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hardyston,cog_2025_130910,2020,NJ,false,0.102798,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Harrietstown,cog_2025_139378,2020,NY,false,0.009976,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Harrisburg,cog_2025_193243,2020,IL,false,0.145103,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Harrison,cog_2025_205156,2020,OH,false,0.214383,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hatfield,cog_2025_128138,2020,MA,false,0.260255,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hemlock,cog_2025_133738,2020,PA,false,0.117748,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hempfield,cog_2025_209394,2020,PA,false,0.172511,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Highland charter,cog_2025_167207,2020,MI,false,0.340165,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hillsboro,cog_2025_163203,2020,IL,false,0.083057,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hinckley,cog_2025_173055,2020,OH,false,0.066549,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hitchcock,cog_2025_113606,2020,TX,false,0.113974,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hocking,cog_2025_172848,2020,OH,false,0.006565,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hopewell,cog_2025_190903,2020,NJ,false,0.054404,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Hyde Park,cog_2025_170795,2020,NY,false,0.389476,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Inverness,cog_2025_166924,2020,MI,false,0.036186,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jackson,cog_2025_207982,2020,IN,false,0.005388,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jackson,cog_2025_168414,2020,MN,false,0.166227,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jackson,cog_2025_170331,2020,NJ,false,0.374364,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jackson,cog_2025_225691,2020,OH,false,0.017075,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jefferson,cog_2025_170324,2020,NJ,false,0.277192,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jefferson,cog_2025_209884,2020,WI,false,0.000187,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jerome,cog_2025_132770,2020,OH,false,0.132342,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jerusalem,cog_2025_171084,2020,NY,false,0.034776,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jim Thorpe,cog_2025_191338,2020,PA,false,0.167526,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Johnstown,cog_2025_204991,2020,NY,false,0.030084,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Jonestown,cog_2025_205487,2020,TX,false,0.200051,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Kaukauna,cog_2025_177619,2020,WI,false,0.008392,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Kingston,cog_2025_186694,2020,NY,false,0.055674,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Kinross charter,cog_2025_166933,2020,MI,false,0.021239,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Kirkland,cog_2025_131390,2020,NY,false,0.111614,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Kirkwood,cog_2025_193777,2020,NY,false,0.138474,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,LaGrange,cog_2025_109632,2020,NY,false,0.313054,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lake,cog_2025_191225,2020,OH,false,0.441241,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lancaster,cog_2025_170807,2020,NY,false,0.49326,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lehigh,cog_2025_174649,2020,PA,false,0.034411,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Leoni,cog_2025_201936,2020,MI,false,0.198743,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lewiston,cog_2025_204996,2020,NY,false,0.229561,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Licking,cog_2025_173003,2020,OH,false,0.03742,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Little Falls,cog_2025_170848,2020,NY,false,0.001907,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lloyd Harbor,cog_2025_170649,2020,NY,false,0.32061,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lumberton,cog_2025_170263,2020,NJ,false,0.448694,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lynd,cog_2025_168079,2020,MN,false,0.000443,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Lysander,cog_2025_170916,2020,NY,false,0.15795,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Macedon,cog_2025_171061,2020,NY,false,0.017856,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mad River,cog_2025_209113,2020,OH,false,0.092677,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Madison,cog_2025_161942,2020,GA,false,0.48909,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Madison,cog_2025_211815,2020,OH,false,0.055598,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Malone,cog_2025_193787,2020,NY,false,0.033998,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Manistee,cog_2025_208392,2020,MI,false,0.090816,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Manlius,cog_2025_204999,2020,NY,false,0.317978,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Manor,cog_2025_202496,2020,PA,false,0.20273,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mantorville,cog_2025_208465,2020,MN,false,0.298994,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mapleton,cog_2025_166189,2020,ME,false,0.00284,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Margaretta,cog_2025_225665,2020,OH,false,0.031075,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Marion,cog_2025_164133,2020,IN,false,0.027401,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Marion,cog_2025_186969,2020,OH,false,0.107382,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Markey,cog_2025_167262,2020,MI,false,0.093404,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Marlborough,cog_2025_101716,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Medina,cog_2025_132690,2020,OH,false,0.366666,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mendham,cog_2025_170325,2020,NJ,false,0.174828,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Middle,cog_2025_170275,2020,NJ,false,0.17917,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Middlesex,cog_2025_174296,2020,PA,false,0.120478,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mifflin,cog_2025_173181,2020,OH,false,0.127722,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Millcreek,cog_2025_191386,2020,PA,false,0.052658,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Miner,cog_2025_193645,2020,MO,false,0.358047,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Montgomery,cog_2025_170342,2020,NJ,false,0.436881,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Montgomery,cog_2025_113680,2020,TX,false,0.397266,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Montville,cog_2025_183978,2020,OH,false,0.447823,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Moreau,cog_2025_205005,2020,NY,false,0.193032,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mount Vernon,cog_2025_162997,2020,IL,false,0.176224,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Mullica,cog_2025_170253,2020,NJ,false,0.005206,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Muncy,cog_2025_174593,2020,PA,false,0.066566,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Muskingum,cog_2025_173286,2020,OH,false,0.060029,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Napoleon,cog_2025_132644,2020,OH,false,0.127558,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Negaunee,cog_2025_190505,2020,MI,false,0.001247,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Nekoosa,cog_2025_177290,2020,WI,false,0.471582,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New Britain,cog_2025_112127,2020,PA,false,0.431597,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New Buffalo,cog_2025_166888,2020,MI,false,0.232412,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New Hartford,cog_2025_161481,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New London,cog_2025_208991,2020,NC,false,0.462099,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New Russia,cog_2025_173026,2020,OH,false,0.052135,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New Scotland,cog_2025_109598,2020,NY,false,0.040632,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,New Windsor,cog_2025_170933,2020,NY,false,0.477509,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Niagara,cog_2025_194253,2020,WI,false,0.000753,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Nimishillen,cog_2025_173220,2020,OH,false,0.176921,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,North Castle,cog_2025_171069,2020,NY,false,0.27693,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,North Sewickley,cog_2025_133665,2020,PA,false,0.024814,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,North Topsail Beach,cog_2025_139456,2020,NC,false,0.464799,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Northfield,cog_2025_167329,2020,MI,false,0.076621,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Norwalk,cog_2025_212088,2020,OH,false,0.083903,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Oakland charter,cog_2025_128511,2020,MI,false,0.28267,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ocean,cog_2025_186569,2020,NJ,false,0.234185,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ohio,cog_2025_193897,2020,OH,false,0.076041,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Old Lycoming,cog_2025_174594,2020,PA,false,0.234062,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Olney,cog_2025_163256,2020,IL,false,0.130203,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Onondaga,cog_2025_170917,2020,NY,false,0.217623,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ontario,cog_2025_139401,2020,NY,false,0.206883,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Orange,cog_2025_166496,2020,MA,false,0.134568,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Oscoda charter,cog_2025_208374,2020,MI,false,0.087352,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Owego,cog_2025_171034,2020,NY,false,0.081042,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Oxford,cog_2025_186961,2020,OH,false,0.197761,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Parker,cog_2025_176056,2020,TX,false,0.432615,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Pemberton,cog_2025_170266,2020,NJ,false,0.119131,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Pennfield charter,cog_2025_128385,2020,MI,false,0.078887,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Pere Marquette charter,cog_2025_167146,2020,MI,false,0.378754,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Perkins,cog_2025_132611,2020,OH,false,0.399188,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Perry,cog_2025_131458,2020,NY,false,0.047451,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Perry,cog_2025_191189,2020,OH,false,0.064752,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Philipstown,cog_2025_170959,2020,NY,false,0.027347,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Plain,cog_2025_193928,2020,OH,false,0.017713,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Pleasant Valley,cog_2025_202214,2020,NY,false,0.125409,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Plymouth,cog_2025_177736,2020,WI,false,0.019095,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Pocono,cog_2025_174625,2020,PA,false,0.24033,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Poland,cog_2025_173044,2020,OH,false,0.425565,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Prairie,cog_2025_211817,2020,OH,false,0.252516,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Putnam,cog_2025_167114,2020,MI,false,0.088201,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Putnam Valley,cog_2025_131415,2020,NY,false,0.185492,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Queensbury,cog_2025_190999,2020,NY,false,0.414029,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ralpho,cog_2025_209406,2020,PA,false,0.122967,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Readington,cog_2025_184034,2020,NJ,false,0.134497,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Redstone,cog_2025_174456,2020,PA,false,0.029657,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Richmond,cog_2025_184998,2020,IL,false,0.262795,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Rosendale,cog_2025_205008,2020,NY,false,0.038047,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ruscombmanor,cog_2025_209307,2020,PA,false,0.003106,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Russell,cog_2025_193905,2020,OH,false,0.014295,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Salem,cog_2025_211420,2020,OH,false,0.042808,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Saline,cog_2025_167330,2020,MI,false,0.018981,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Salisbury,cog_2025_101723,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sandersville,cog_2025_161999,2020,GA,false,0.480965,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Saugerties,cog_2025_171048,2020,NY,false,0.147349,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Saybrook,cog_2025_132561,2020,OH,false,0.218896,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sealy,cog_2025_175976,2020,TX,false,0.490824,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Shadeland,cog_2025_163676,2020,IN,false,0.046042,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Shamong,cog_2025_130881,2020,NJ,false,0.063274,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Shawnee,cog_2025_209108,2020,OH,false,0.46774,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Shelby,cog_2025_177523,2020,WI,false,0.048512,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sibley,cog_2025_166144,2020,LA,false,0.312838,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Soo,cog_2025_208351,2020,MI,false,0.013218,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,South Newton,cog_2025_174416,2020,PA,false,0.028235,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Spencer,cog_2025_202841,2020,WI,false,8.7e-05,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Springfield,cog_2025_209137,2020,OH,false,0.179109,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,St. Clair,cog_2025_167285,2020,MI,false,0.071137,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,St. Clair,cog_2025_172795,2020,OH,false,0.198605,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sterling,cog_2025_125367,2020,IL,false,0.340577,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sugarcreek,cog_2025_225693,2020,OH,false,0.003819,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sugarcreek,cog_2025_174127,2020,PA,false,0.036341,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Sunrise Beach,cog_2025_129465,2020,MO,false,0.001471,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Superior charter,cog_2025_167332,2020,MI,false,0.156943,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Taylorville,cog_2025_162219,2020,IL,false,0.399501,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Tioga,cog_2025_171035,2020,NY,false,0.00344,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Tunkhannock,cog_2025_209397,2020,PA,false,0.03437,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Turtlecreek,cog_2025_173278,2020,OH,false,0.176217,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Tuscarawas,cog_2025_173223,2020,OH,false,0.068879,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ulster,cog_2025_109716,2020,NY,false,0.362368,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ulysses,cog_2025_171041,2020,NY,false,0.014412,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Union,cog_2025_161512,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Union charter,cog_2025_167055,2020,MI,false,0.223909,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Upper,cog_2025_109138,2020,NJ,false,0.136885,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Upper Mount Bethel,cog_2025_209405,2020,PA,false,0.000723,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Urbana,cog_2025_162779,2020,IL,false,0.167642,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Valley Grande,cog_2025_215829,2020,AL,false,0.001892,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Varick,cog_2025_109703,2020,NY,false,0.005456,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Vernon,cog_2025_161513,2020,CT,false,,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Vestal,cog_2025_131311,2020,NY,false,0.231202,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Veteran,cog_2025_170756,2020,NY,false,0.0194,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Vienna,cog_2025_173244,2020,OH,false,0.004811,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Viroqua,cog_2025_177763,2020,WI,false,0.001215,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Wabash,cog_2025_164165,2020,IN,false,0.431757,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Wadsworth,cog_2025_132691,2020,OH,false,0.1271,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Wallkill,cog_2025_170935,2020,NY,false,0.196372,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Walton Hills,cog_2025_132422,2020,OH,false,0.404835,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Ware,cog_2025_128139,2020,MA,false,0.092748,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Warren,cog_2025_209145,2020,OH,false,0.037627,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Washington,cog_2025_225675,2020,OH,false,0.437204,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Washington,cog_2025_209429,2020,PA,false,0.063996,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Watertown,cog_2025_177502,2020,WI,false,0.013655,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Wawarsing,cog_2025_171049,2020,NY,false,0.025312,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Webster,cog_2025_167333,2020,MI,false,0.003596,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Weisenberg,cog_2025_191387,2020,PA,false,0.1496,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Wellsville,cog_2025_170709,2020,NY,false,0.097658,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,West Deer,cog_2025_174208,2020,PA,false,0.322202,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,West Nottingham,cog_2025_174350,2020,PA,false,0.125687,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Weston,cog_2025_209806,2020,WI,false,0.459766,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Whitsett,cog_2025_186790,2020,NC,false,0.017246,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Winnebago,cog_2025_163412,2020,IL,false,0.014243,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,York charter,cog_2025_185970,2020,MI,false,0.157572,unknown
+urban if at least half of 2020 Census entity land overlaps a 2020 Census Urban Area; rural if zero overlap; otherwise unknown,Yorkville,cog_2025_248439,2020,WI,false,0.002015,unknown

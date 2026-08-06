@@ -1,0 +1,60 @@
+{
+  "PNG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/png/f07.png",
+  "QA_status": "pass",
+  "SVG_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/svg/f07.svg",
+  "adjudicated_claim_ids": [
+    "CLAIM-E",
+    "CLAIM-F"
+  ],
+  "analytical_unit": "implementation sequence",
+  "caption_stub": "Thirty-eight sequences support bounded lifecycle descriptions; 1,230 remain on hold. Nineteen adopted sequences have no paid stage observed in the retained evidence—this does not mean they were never paid.",
+  "conflict_exclusion_count": 201,
+  "counterexample_ids": [],
+  "denominator": "1,268",
+  "design_system_hash": "8808acc3dd9ee3cad437b3daad24c15619e616d7885e1d3798c5288f41b045eb",
+  "evidence_tier": "strict reviewed",
+  "figure_id": "F07",
+  "figure_number": 7,
+  "final_claim_classes": [
+    "mechanism_supported_only"
+  ],
+  "formula_ids": [
+    "canonical stored formula or count"
+  ],
+  "input_table_hashes": [
+    "33b33c6d7520b2a2b319d682851d539723972a717d81f68b8e405961e3d67b41",
+    "b5e8f9d04e2c86b3b93b55f6b3698cb9821c2d7a4a0df9d778f3528d8bfa849f"
+  ],
+  "input_table_paths": [
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f07.csv",
+    "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/data/bounded_visual_tables/f07.jsonl"
+  ],
+  "limitation_ids": [
+    "SEARCH-12844",
+    "STORAGE-7895",
+    "NO-CAUSAL-ESTIMATE"
+  ],
+  "limitation_note": "1,230 remain on hold. Nineteen adopted sequences have no paid stage observed in the retained evidence—this does not mean they were never paid.",
+  "lineage_fields": {
+    "canonical_approval": "final_visual_approval_table.jsonl",
+    "lane_id": "visual_lane_003"
+  },
+  "methods_note": "Analytical unit: implementation sequence. Strict and broader evidence remain labeled.",
+  "numerator": "plotted count or bounded statistic",
+  "proposed_report_placement": "implementation",
+  "render_version": "2026-08-06.1",
+  "report_section": "implementation",
+  "sample_size": "1,268",
+  "source_event_deduplication_basis": "declared analytical unit; sources do not multiply events",
+  "source_note": "Canonical adjudicated whole-corpus analytical tables; no new sources.",
+  "strict_or_bounded_lane": "strict",
+  "subtitle": "Adoption, amendment, implementation, and payment remain distinct stages",
+  "subtitle_text": "Adoption, amendment, implementation, and payment remain distinct stages",
+  "thumbnail_path": "docs/dashboard/public/reports/whole_corpus_visual_review_2026-08-06/assets/thumbnails/f07_thumb.png",
+  "title": "Implementation evidence distinguishes adoption from payment",
+  "title_text": "Implementation evidence distinguishes adoption from payment",
+  "unresolved_count": 0,
+  "visual_approval_status": "approved_strict_lane_only",
+  "what_this_does_not_show": "A national wage gap, representative prevalence, regression result, or causal effect.",
+  "what_this_shows": "Adoption, amendment, implementation, and payment remain distinct stages"
+}

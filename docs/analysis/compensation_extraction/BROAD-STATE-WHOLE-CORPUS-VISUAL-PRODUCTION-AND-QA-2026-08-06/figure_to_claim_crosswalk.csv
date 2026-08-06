@@ -1,0 +1,17 @@
+claim_ids,figure_id
+[],F01
+[],F02
+"[""UNSUP-02""]",F03
+"[""CLAIM-D""]",F04
+"[""CLAIM-D""]",F05
+[],F06
+"[""CLAIM-E"", ""CLAIM-F""]",F07
+"[""CLAIM-A"", ""CLAIM-C"", ""CLAIM-F""]",F08
+"[""CLAIM-B"", ""CLAIM-G"", ""UNSUP-05""]",F09
+"[""CLAIM-G"", ""CLAIM-H"", ""UNSUP-01""]",F10
+"[""CLAIM-G"", ""CLAIM-H""]",F11
+[],F12
+"[""CLAIM-H"", ""UNSUP-06""]",F13
+[],F14
+[],F15
+"[""UNSUP-01"", ""UNSUP-02"", ""UNSUP-03"", ""UNSUP-04"", ""UNSUP-05"", ""UNSUP-06""]",F16
