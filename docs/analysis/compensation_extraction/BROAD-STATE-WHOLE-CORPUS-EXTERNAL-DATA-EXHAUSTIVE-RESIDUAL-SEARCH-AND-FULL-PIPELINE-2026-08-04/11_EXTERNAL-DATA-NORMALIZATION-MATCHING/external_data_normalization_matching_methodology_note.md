@@ -1,0 +1,9 @@
+# External-data normalization and matching methodology
+
+Normalization and matching used only reconciled stage-10 records. Five independent local lanes preserved raw values, parsed literals, exact source coordinates, source identity, and reconciliation lineage. Exact numeric strings, currencies, dates, percentages, counts, and categorical labels were mechanically normalized without imputation.
+
+No hourly/annual conversion occurred and no 2,080-hour or full-time assumption was used. Pay, earnings, overtime, budget, staffing, benefits, salary schedules, one-time payments, and recurring compensation remained distinct. Local safety/non-safety matches required the same municipality, period, unit, pay basis, compensation basis, recurring status, and compatible identity class. Growth required compatible identity, ordered explicit periods, side, and basis. Staffing gaps, vacancy rates, and overtime shares used only explicit same-context compatible components. Total-compensation components remained separate unless explicitly nonoverlapping and additive; no component sum met that strict gate in this run.
+
+Cross-source corroboration remained source-independent. Unresolved conflicts and incompatible records remained in hold layers. Counterexamples passed the same compatibility gates as supporting cases. Deterministic formulas are auditable, but mechanical QA is not independent human semantic gold coding and claim-critical records still require bounded source-level cross-examination.
+
+No hosted search, GABRIEL scoring, network request, OCR, regression, causal estimate, final claim adjudication, or visual production occurred. Implementation-event deduplication was not rerun. The limitations remain 12,844 unsearched targets and 7,895 storage-held verified sources. The audit-final corpus contains 1,029,482 unique native PDF pages.

@@ -1,0 +1,10 @@
+{
+  "decision": "broad_state_whole_corpus_external_data_normalization_completed_math_ready",
+  "growth_manifest": "matched_growth_manifest.json",
+  "local_match_manifest": "matched_local_comparison_manifest.json",
+  "normalized_value_manifest": "normalized_external_value_manifest.json",
+  "registry_hash": "efd468f79cc690b97156f56b152e17f93ae93957fb8455e47480cd57e9d34c16",
+  "source_independence": true,
+  "starting_head": "572ed3f64288255d84d47a1a881c26b5b388a14a",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-NORMALIZATION-AND-MATCHING-2026-08-05"
+}

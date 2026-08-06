@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "date and period",
+  "rules": [
+    {
+      "basis": "preserve reconciled ISO date and fiscal/calendar distinctions",
+      "rule_id": "DATE-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

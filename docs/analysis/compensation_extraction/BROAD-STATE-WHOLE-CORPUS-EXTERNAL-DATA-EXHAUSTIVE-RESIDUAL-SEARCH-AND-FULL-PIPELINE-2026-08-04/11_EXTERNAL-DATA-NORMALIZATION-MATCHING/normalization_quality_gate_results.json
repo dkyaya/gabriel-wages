@@ -1,0 +1,62 @@
+{
+  "A_raw_value_fidelity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "B_unit_compatibility": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "C_basis_compatibility": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "D_period_compatibility": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.99
+  },
+  "E_side_integrity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "F_formula_accuracy": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "G_conflict_exclusion": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "H_source_independence": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "I_growth_identity_integrity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.99
+  },
+  "J_component_non_overlap": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "K_counterexample_validity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.98
+  },
+  "L_no_premature_claiming": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  }
+}

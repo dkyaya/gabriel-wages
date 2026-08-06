@@ -1,0 +1,52 @@
+{
+  "fields": [
+    {
+      "name": "external_implementation_sequence_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "root_event_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "observation_ids",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_ids",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "municipalities",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "stages",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "dates_or_periods",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "sequence_status",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "missing_stages_inferred",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "claim_ids",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_independence_preserved",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "implementation_sequence",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

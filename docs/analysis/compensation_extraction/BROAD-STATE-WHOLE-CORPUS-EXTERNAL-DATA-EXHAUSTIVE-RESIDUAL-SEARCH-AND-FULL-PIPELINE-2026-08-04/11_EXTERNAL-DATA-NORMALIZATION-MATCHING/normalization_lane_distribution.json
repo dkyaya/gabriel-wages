@@ -1,0 +1,49 @@
+{
+  "assignment": "preserved accepted stage-10 lane ownership; coordinator performs global candidate matching",
+  "complete_union": true,
+  "disjoint": true,
+  "lanes": [
+    {
+      "lane_id": "normalization_lane_001",
+      "observation_rows": 375237,
+      "queue_hash": "cdbaa7867a32e9152b5074189c37c0628e5cb71f8c150e30d4f8ec52abc9ab9c",
+      "source_lane": "reconciliation_lane_001",
+      "source_shards": 16,
+      "start_delay_minutes": 0
+    },
+    {
+      "lane_id": "normalization_lane_002",
+      "observation_rows": 375237,
+      "queue_hash": "c005721780fe60577e0622ff92ccdc9a82449d0d7a2b8ac8d341d48513ad0088",
+      "source_lane": "reconciliation_lane_002",
+      "source_shards": 16,
+      "start_delay_minutes": 2
+    },
+    {
+      "lane_id": "normalization_lane_003",
+      "observation_rows": 375237,
+      "queue_hash": "2aef235021be299a8c5e93849f29ec0e2485363ff39d35c074a79b67ee8acd91",
+      "source_lane": "reconciliation_lane_003",
+      "source_shards": 16,
+      "start_delay_minutes": 4
+    },
+    {
+      "lane_id": "normalization_lane_004",
+      "observation_rows": 375236,
+      "queue_hash": "c11f4d342ce0a5f639dcff95242b0cb598289af80346eff94dd3adedb9619d23",
+      "source_lane": "reconciliation_lane_004",
+      "source_shards": 16,
+      "start_delay_minutes": 6
+    },
+    {
+      "lane_id": "normalization_lane_005",
+      "observation_rows": 375236,
+      "queue_hash": "c94bbb9b72d0cda6cd19b79ef1e29a88e531570cf988858669f724ca36878adc",
+      "source_lane": "reconciliation_lane_005",
+      "source_shards": 16,
+      "start_delay_minutes": 8
+    }
+  ],
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-NORMALIZATION-AND-MATCHING-2026-08-05",
+  "total_rows": 1876183
+}

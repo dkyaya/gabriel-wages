@@ -1,0 +1,8 @@
+layer,row_count,pointer_manifest
+local_comparison,0,matched_local_comparison_pointer_manifest.jsonl
+growth,0,matched_growth_pointer_manifest.jsonl
+staffing,18358,staffing_analysis_unit_pointer_manifest.jsonl
+total_compensation,0,total_compensation_unit_pointer_manifest.jsonl
+implementation,38,implementation_sequence_pointer_manifest.jsonl
+mechanism_outcomes,1876183,mechanism_linked_outcome_unit_pointer_manifest.jsonl
+counterexamples,0,external_counterexample_core_queue.jsonl

@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "implementation sequence",
+  "rules": [
+    {
+      "basis": "preserve source-supported ordered lifecycle stages without inferring missing stages",
+      "rule_id": "IMPLSEQ-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

@@ -1,0 +1,9 @@
+{
+  "filter_field": "total_compensation_readiness",
+  "filter_value": "total_compensation_candidate",
+  "immutable": true,
+  "queue": "total_compensation_locked_queue",
+  "rows": 5907,
+  "sha256": "2297566406f6a1d60368c3aac7b9e1f38f7c53eca72eb628c33c93d1284939ed",
+  "source_shards": 80
+}

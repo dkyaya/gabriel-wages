@@ -1,0 +1,80 @@
+{
+  "fields": [
+    {
+      "name": "normalized_external_value_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "reconciled_external_observation_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "raw_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "parsed_literal_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "normalized_literal_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "currency",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "unit",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "pay_basis",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "compensation_basis",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "period",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "municipality",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "department",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "side",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "identity",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "conflict_status",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "normalization_rule_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_coordinates",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "lineage",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "normalized_external_value",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

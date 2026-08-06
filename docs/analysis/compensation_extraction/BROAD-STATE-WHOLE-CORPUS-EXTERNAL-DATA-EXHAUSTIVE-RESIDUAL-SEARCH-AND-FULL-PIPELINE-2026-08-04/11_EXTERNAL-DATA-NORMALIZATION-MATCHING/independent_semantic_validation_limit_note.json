@@ -1,0 +1,5 @@
+{
+  "independent_human_gold": false,
+  "mechanical_qa": true,
+  "semantic_cross_examination_pending": true
+}

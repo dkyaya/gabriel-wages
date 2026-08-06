@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "tests": {
+    "compatible_pair": true,
+    "conflict_hold": true,
+    "currency_exact": true,
+    "incompatible_hourly_annual": true,
+    "no_2080_assumption": true,
+    "no_hourly_annual_conversion": true,
+    "one_time_recurring_distinct": true,
+    "schedule_payroll_distinct": true,
+    "source_independence": true,
+    "unresolved_side_hold": true
+  }
+}

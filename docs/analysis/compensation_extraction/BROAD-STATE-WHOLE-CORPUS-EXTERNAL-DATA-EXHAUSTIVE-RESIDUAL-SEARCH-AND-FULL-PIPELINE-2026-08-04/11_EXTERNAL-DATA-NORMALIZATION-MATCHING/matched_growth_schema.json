@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "name": "external_growth_unit_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "terminal_match_status",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "matched_growth",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

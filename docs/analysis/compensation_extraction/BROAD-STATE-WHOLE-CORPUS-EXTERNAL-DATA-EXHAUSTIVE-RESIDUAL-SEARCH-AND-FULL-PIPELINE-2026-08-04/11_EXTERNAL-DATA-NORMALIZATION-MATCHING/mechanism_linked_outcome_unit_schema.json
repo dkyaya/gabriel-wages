@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "normalized_external_value_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "root_event_ids",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "mechanism_event_ids",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "claim_ids",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source identity",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "mechanism_linked_outcome_unit",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

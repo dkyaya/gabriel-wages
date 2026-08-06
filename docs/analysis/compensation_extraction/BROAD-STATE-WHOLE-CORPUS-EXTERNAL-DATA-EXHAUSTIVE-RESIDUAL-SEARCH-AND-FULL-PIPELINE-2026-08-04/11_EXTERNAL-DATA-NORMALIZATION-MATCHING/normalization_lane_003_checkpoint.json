@@ -1,0 +1,8 @@
+{
+  "accepted_observations": 375237,
+  "accepted_shards": 16,
+  "lane_id": "normalization_lane_003",
+  "state": "complete",
+  "summary_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/summary.json",
+  "updated_at": "2026-08-06T02:34:53.968166+00:00"
+}

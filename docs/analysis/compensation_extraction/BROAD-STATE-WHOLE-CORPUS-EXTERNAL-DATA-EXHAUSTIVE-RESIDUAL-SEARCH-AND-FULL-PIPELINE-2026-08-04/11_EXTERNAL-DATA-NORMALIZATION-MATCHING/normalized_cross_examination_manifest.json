@@ -1,0 +1,16 @@
+{
+  "adjudications": 0,
+  "new_compatible_counterexamples_added": 0,
+  "packet_counts": {
+    "conflict": 201,
+    "core": 1225,
+    "counterexample": 0,
+    "headline_number": 358,
+    "implementation_lifecycle": 150,
+    "reserve": 0,
+    "safety_wage_growth": 90,
+    "staffing_hypothesis": 301,
+    "total_compensation": 1500
+  },
+  "prior_core_preserved": 1225
+}

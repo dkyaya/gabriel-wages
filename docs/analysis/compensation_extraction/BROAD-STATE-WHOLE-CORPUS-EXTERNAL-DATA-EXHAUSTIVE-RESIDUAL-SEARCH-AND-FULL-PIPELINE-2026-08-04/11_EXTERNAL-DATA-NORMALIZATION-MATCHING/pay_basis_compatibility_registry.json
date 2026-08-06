@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "pay basis compatibility",
+  "rules": [
+    {
+      "basis": "exact equal canonical pay basis only; no conversion",
+      "rule_id": "PAYCOMPAT-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

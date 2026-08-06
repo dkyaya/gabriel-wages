@@ -1,0 +1,7 @@
+{"layer":"local_comparison","pointer_manifest":"matched_local_comparison_pointer_manifest.jsonl","row_count":0}
+{"layer":"growth","pointer_manifest":"matched_growth_pointer_manifest.jsonl","row_count":0}
+{"layer":"staffing","pointer_manifest":"staffing_analysis_unit_pointer_manifest.jsonl","row_count":18358}
+{"candidate_count":5907,"hold_reason":"incomplete component sets excluded","layer":"total_compensation","pointer_manifest":"total_compensation_unit_pointer_manifest.jsonl","row_count":0}
+{"candidate_sequence_count":1268,"hold_reason":"sequence-hold records excluded","layer":"implementation","pointer_manifest":"implementation_sequence_pointer_manifest.jsonl","row_count":38}
+{"layer":"mechanism_outcomes","pointer_manifest":"mechanism_linked_outcome_unit_pointer_manifest.jsonl","row_count":1876183}
+{"layer":"counterexamples","pointer_manifest":"external_counterexample_core_queue.jsonl","row_count":0}

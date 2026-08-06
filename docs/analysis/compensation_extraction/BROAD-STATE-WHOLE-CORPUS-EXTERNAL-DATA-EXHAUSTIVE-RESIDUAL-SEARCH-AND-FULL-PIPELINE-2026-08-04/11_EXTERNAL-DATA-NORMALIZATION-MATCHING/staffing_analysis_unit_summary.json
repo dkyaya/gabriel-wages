@@ -1,0 +1,13 @@
+{
+  "analytical_units": 18358,
+  "hypothesis_types": {
+    "authorized_position_reduction": 5455,
+    "budgeted_position_reduction": 2379,
+    "filled_position_reduction": 378,
+    "hiring_freeze": 80,
+    "layoff": 313,
+    "vacancy_without_elimination": 9753
+  },
+  "strict_overtime_share_calculations": 0,
+  "strict_vacancy_rate_calculations": 0
+}

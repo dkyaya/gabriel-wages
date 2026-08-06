@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "compensation basis compatibility",
+  "rules": [
+    {
+      "basis": "exact equal canonical compensation basis only",
+      "rule_id": "COMPCOMPAT-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "currency",
+  "rules": [
+    {
+      "basis": "remove currency symbols and thousands separators without changing magnitude, sign, or currency",
+      "rule_id": "CURRENCY-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

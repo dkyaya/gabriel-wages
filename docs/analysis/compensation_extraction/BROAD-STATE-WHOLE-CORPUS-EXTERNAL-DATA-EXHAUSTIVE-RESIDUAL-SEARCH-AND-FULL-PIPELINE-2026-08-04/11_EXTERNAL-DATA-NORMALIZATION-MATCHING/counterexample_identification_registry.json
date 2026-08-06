@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "counterexamples",
+  "rules": [
+    {
+      "basis": "apply identical compatibility gates and classify negative local differences",
+      "rule_id": "COUNTER-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

@@ -1,0 +1,9 @@
+{
+  "filter_field": "mechanism_outcome_readiness",
+  "filter_value": "mechanism_linked_outcome_candidate",
+  "immutable": true,
+  "queue": "mechanism_linked_outcome_locked_queue",
+  "rows": 1876183,
+  "sha256": "f82c6f80633ddae7dc0aff85dd60cc124de31f12e443d097a2bf9e4bb28f2122",
+  "source_shards": 80
+}

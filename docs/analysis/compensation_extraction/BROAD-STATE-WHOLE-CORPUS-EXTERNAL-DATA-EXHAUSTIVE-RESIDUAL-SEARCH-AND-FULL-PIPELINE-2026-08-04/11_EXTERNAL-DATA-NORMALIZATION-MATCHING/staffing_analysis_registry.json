@@ -1,0 +1,15 @@
+{
+  "opaque_model_scores": false,
+  "registry": "staffing",
+  "rules": [
+    {
+      "basis": "preserve explicit staffing unit",
+      "rule_id": "STAFF-001"
+    },
+    {
+      "basis": "same-unit same-period explicit authorized, filled, or vacant components",
+      "rule_id": "STAFF-002"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

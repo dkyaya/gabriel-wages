@@ -1,0 +1,19 @@
+{
+  "accepted_observations_rerun": 0,
+  "normalized_values_changed": 0,
+  "passed": true,
+  "requirements": [
+    "staffing_count pay basis",
+    "staffing/non-compensation basis",
+    "same resolved department",
+    "same explicit period",
+    "same source context and unit",
+    "nonnegative integer counts",
+    "vacant not greater than authorized"
+  ],
+  "rule_id": "STAFF-COMPAT-REPAIR-001",
+  "source_coordinates_changed": 0,
+  "staffing_candidates": 18358,
+  "strict_overtime_shares": 0,
+  "strict_vacancy_rates": 0
+}

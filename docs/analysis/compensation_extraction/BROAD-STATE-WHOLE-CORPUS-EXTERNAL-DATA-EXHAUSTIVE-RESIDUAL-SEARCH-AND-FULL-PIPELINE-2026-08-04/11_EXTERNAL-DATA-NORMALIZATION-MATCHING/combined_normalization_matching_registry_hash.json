@@ -1,0 +1,21 @@
+{
+  "component_registries": [
+    "compensation_basis_compatibility_registry",
+    "counterexample_identification_registry",
+    "currency_normalization_registry",
+    "date_period_normalization_registry",
+    "formula_registry",
+    "growth_matching_registry",
+    "implementation_sequence_registry",
+    "literal_value_normalization_registry",
+    "local_comparison_matching_registry",
+    "mechanism_outcome_linkage_registry",
+    "overtime_share_registry",
+    "pay_basis_compatibility_registry",
+    "staffing_analysis_registry",
+    "total_compensation_component_registry",
+    "vacancy_rate_registry"
+  ],
+  "registry_version": "external-normalization-matching-2026-08-05-v1",
+  "sha256": "efd468f79cc690b97156f56b152e17f93ae93957fb8455e47480cd57e9d34c16"
+}

@@ -1,0 +1,31 @@
+{
+  "duplicate_workers": false,
+  "launched_at": "2026-08-06T02:30:28.472858+00:00",
+  "workers": [
+    {
+      "delay_seconds": 0,
+      "lane_id": "normalization_lane_001",
+      "pid": 55285
+    },
+    {
+      "delay_seconds": 120,
+      "lane_id": "normalization_lane_002",
+      "pid": 55286
+    },
+    {
+      "delay_seconds": 240,
+      "lane_id": "normalization_lane_003",
+      "pid": 55287
+    },
+    {
+      "delay_seconds": 360,
+      "lane_id": "normalization_lane_004",
+      "pid": 55288
+    },
+    {
+      "delay_seconds": 480,
+      "lane_id": "normalization_lane_005",
+      "pid": 55289
+    }
+  ]
+}

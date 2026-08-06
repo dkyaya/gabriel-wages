@@ -1,0 +1,11 @@
+{
+  "conflicts_excluded": 266849,
+  "growth_holds": 6731,
+  "local_no_match": 201,
+  "normalization_holds": {
+    "normalized_basis_hold": 131124,
+    "normalized_conflict_hold": 266849,
+    "normalized_identity_hold": 244,
+    "normalized_side_hold": 1134192
+  }
+}

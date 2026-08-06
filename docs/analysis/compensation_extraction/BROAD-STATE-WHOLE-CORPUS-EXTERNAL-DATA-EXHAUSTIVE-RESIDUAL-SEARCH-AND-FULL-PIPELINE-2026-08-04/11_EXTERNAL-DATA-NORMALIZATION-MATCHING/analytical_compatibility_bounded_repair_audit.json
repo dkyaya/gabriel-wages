@@ -1,0 +1,23 @@
+{
+  "accepted_observations_rerun": 0,
+  "clean_growth_pairs_after_strict_gate": 0,
+  "clean_local_matches_after_strict_gate": 0,
+  "growth_candidates": 6731,
+  "growth_candidates_held": 6731,
+  "local_candidates": 201,
+  "local_candidates_held_or_unmatched": 201,
+  "normalized_values_changed": 0,
+  "passed": true,
+  "requirements": [
+    "resolved recurring status for calculated local pairs",
+    "substantive value field for growth",
+    "explicit nonanonymous longitudinal identity",
+    "explicit side",
+    "identical unit and currency"
+  ],
+  "rule_ids": [
+    "LOCAL-RECURRING-COMPAT-REPAIR-001",
+    "GROWTH-VALUE-IDENTITY-REPAIR-001"
+  ],
+  "source_coordinates_changed": 0
+}

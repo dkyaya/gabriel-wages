@@ -1,0 +1,15 @@
+{
+  "base_rate": 9977,
+  "base_salary": 4993,
+  "benefit_component": 5105,
+  "gross_pay": 1531,
+  "not_applicable": 147064,
+  "overtime": 4386,
+  "premium_pay": 28651,
+  "regular_earnings": 1472,
+  "retroactive_pay": 403,
+  "salary_schedule_rate": 430720,
+  "staffing_or_non_compensation": 266043,
+  "total_earnings": 282,
+  "unclear": 975556
+}

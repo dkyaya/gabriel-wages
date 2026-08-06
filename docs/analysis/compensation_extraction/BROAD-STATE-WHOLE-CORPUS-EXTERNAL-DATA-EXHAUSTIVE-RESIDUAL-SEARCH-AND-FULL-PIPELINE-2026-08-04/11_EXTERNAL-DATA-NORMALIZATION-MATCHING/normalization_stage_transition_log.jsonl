@@ -1,0 +1,9 @@
+{"at":"2026-08-06T02:30:06.096528+00:00","from":"not_started","reason":"all preflight gates passed","to":"prepared"}
+{"at":"2026-08-06T02:30:28.473504+00:00","from":"prepared","reason":"five disjoint workers launched with 0/2/4/6/8 minute stagger","to":"production_running"}
+{"at":"2026-08-06T02:40:21.344182+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}
+{"at":"2026-08-06T02:41:04.186518+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}
+{"at":"2026-08-06T02:42:58.867024+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}
+{"at":"2026-08-06T02:43:58.186280+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}
+{"at":"2026-08-06T02:44:51.976153+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}
+{"at":"2026-08-06T02:45:32.271933+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}
+{"at":"2026-08-06T02:46:11.060470+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_normalization_completed_math_ready","to":"validated_complete"}

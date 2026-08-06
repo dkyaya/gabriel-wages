@@ -1,0 +1,54 @@
+{
+  "compensation_basis": {
+    "base_rate": 9977,
+    "base_salary": 4993,
+    "benefit_component": 5105,
+    "gross_pay": 1531,
+    "not_applicable": 147064,
+    "overtime": 4386,
+    "premium_pay": 28651,
+    "regular_earnings": 1472,
+    "retroactive_pay": 403,
+    "salary_schedule_rate": 430720,
+    "staffing_or_non_compensation": 266043,
+    "total_earnings": 282,
+    "unclear": 975556
+  },
+  "pay_basis": {
+    "annual_salary": 21380,
+    "benefit_contribution": 5768,
+    "biweekly_rate": 198,
+    "contextual_value": 208726,
+    "gross_pay": 1488,
+    "hourly_rate": 21287,
+    "lump_sum": 401,
+    "not_applicable": 147064,
+    "overtime_earnings": 3658,
+    "regular_earnings": 1472,
+    "staffing_count": 57317,
+    "total_earnings": 280,
+    "unclear": 1406606,
+    "weekly_rate": 538
+  },
+  "raw_values_preserved": true,
+  "row_count": 1876183,
+  "side": {
+    "fire": 25739,
+    "mixed": 2240,
+    "non_safety": 52193,
+    "police": 67513,
+    "safety_combined": 2662,
+    "side_independent": 202278,
+    "unclear": 1523558
+  },
+  "source_coordinates_preserved": true,
+  "terminal_status": {
+    "normalized_analysis_ready": 120278,
+    "normalized_basis_hold": 131124,
+    "normalized_conditional": 31668,
+    "normalized_conflict_hold": 266849,
+    "normalized_context_only": 191828,
+    "normalized_identity_hold": 244,
+    "normalized_side_hold": 1134192
+  }
+}

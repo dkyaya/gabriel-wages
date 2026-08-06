@@ -1,0 +1,20 @@
+{
+  "fixed_seed_basis": "sorted deterministic IDs",
+  "minimums_applied": true,
+  "samples_may_overlap": true,
+  "strata": {
+    "claim_critical": 150,
+    "conflicts": 150,
+    "counterexamples": 0,
+    "growth": 0,
+    "holds": 200,
+    "implementation": 150,
+    "local_matches": 0,
+    "mechanism": 150,
+    "overtime": 0,
+    "prior_local_ready": 201,
+    "staffing": 250,
+    "total_compensation": 150,
+    "vacancy": 0
+  }
+}

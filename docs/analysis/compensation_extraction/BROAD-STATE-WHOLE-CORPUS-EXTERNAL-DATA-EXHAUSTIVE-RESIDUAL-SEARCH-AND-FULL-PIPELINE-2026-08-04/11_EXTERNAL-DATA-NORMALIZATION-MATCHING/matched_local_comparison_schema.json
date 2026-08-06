@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "name": "external_match_unit_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "terminal_match_status",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "matched_local_comparison",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

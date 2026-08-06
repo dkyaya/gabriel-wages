@@ -1,0 +1,17 @@
+{
+  "accepted_observations_rerun": 0,
+  "expected_rows": 5907,
+  "lane_counts": {
+    "normalization_lane_001": 1180,
+    "normalization_lane_002": 1168,
+    "normalization_lane_003": 1196,
+    "normalization_lane_004": 1193,
+    "normalization_lane_005": 1170
+  },
+  "passed": true,
+  "raw_values_changed": 0,
+  "reason": "canonical analytical role carried total-compensation eligibility while readiness literal was not populated",
+  "rows": 5907,
+  "rule_id": "TOTALCOMP-CANDIDATE-REPAIR-001",
+  "source_coordinates_changed": 0
+}

@@ -1,0 +1,19 @@
+{
+  "adjudication_rows": 1401,
+  "mechanical_not_independent_human_gold": true,
+  "sample_counts": {
+    "claim_critical": 150,
+    "conflicts": 150,
+    "counterexamples": 0,
+    "growth": 0,
+    "holds": 200,
+    "implementation": 150,
+    "local_matches": 0,
+    "mechanism": 150,
+    "overtime": 0,
+    "prior_local_ready": 201,
+    "staffing": 250,
+    "total_compensation": 150,
+    "vacancy": 0
+  }
+}

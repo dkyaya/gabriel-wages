@@ -1,0 +1,15 @@
+{
+  "opaque_model_scores": false,
+  "registry": "literal value",
+  "rules": [
+    {
+      "basis": "exact Decimal parsing; raw value preserved",
+      "rule_id": "LITERAL-001"
+    },
+    {
+      "basis": "exact categorical literal preserved",
+      "rule_id": "LITERAL-002"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

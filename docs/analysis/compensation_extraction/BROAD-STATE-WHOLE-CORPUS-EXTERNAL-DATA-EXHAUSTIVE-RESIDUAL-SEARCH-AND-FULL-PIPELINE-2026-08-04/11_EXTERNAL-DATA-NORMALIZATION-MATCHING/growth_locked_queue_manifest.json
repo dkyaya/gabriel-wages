@@ -1,0 +1,9 @@
+{
+  "filter_field": "growth_readiness",
+  "filter_value": "growth_conditional",
+  "immutable": true,
+  "queue": "growth_locked_queue",
+  "rows": 6731,
+  "sha256": "d435c13764e155a4c6d0df38102c419f908b643ce537145ad9f69c0551bc6a7c",
+  "source_shards": 80
+}

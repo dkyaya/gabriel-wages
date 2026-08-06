@@ -1,0 +1,15 @@
+{
+  "formulas": {
+    "GROWTH-ABS-001": "later - earlier",
+    "GROWTH-PCT-001": "(later - earlier) / earlier * 100",
+    "LOCAL-ABS-001": "safety - non_safety",
+    "LOCAL-PCT-001": "(safety - non_safety) / non_safety * 100",
+    "LOCAL-RATIO-001": "safety / non_safety",
+    "OVERTIME-SHARE-001": "overtime / total_or_gross * 100",
+    "POSITION-GAP-001": "authorized - filled",
+    "VACANCY-RATE-001": "vacant / authorized * 100"
+  },
+  "registry": "formulas",
+  "rounding": "Decimal output rounded to six decimal places only for stored calculated result; inputs retained exactly",
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

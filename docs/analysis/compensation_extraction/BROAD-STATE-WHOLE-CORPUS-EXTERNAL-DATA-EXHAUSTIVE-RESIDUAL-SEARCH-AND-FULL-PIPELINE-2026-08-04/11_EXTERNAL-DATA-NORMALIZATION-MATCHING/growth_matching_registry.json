@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "growth",
+  "rules": [
+    {
+      "basis": "same municipality, side, identity, field, pay and compensation basis across explicit ordered periods",
+      "rule_id": "GROWTH-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

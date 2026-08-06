@@ -1,0 +1,72 @@
+{
+  "fields": [
+    {
+      "name": "external_staffing_unit_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "observation_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "municipality",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "department",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "side",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "period",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "observation_type",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "field_name",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "raw_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "normalized_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "unit",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "staffing_hypothesis_type",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "terminal_match_status",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_SHA_256",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_coordinate_input_sha256",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "claim_ids",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "staffing_analysis_unit",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

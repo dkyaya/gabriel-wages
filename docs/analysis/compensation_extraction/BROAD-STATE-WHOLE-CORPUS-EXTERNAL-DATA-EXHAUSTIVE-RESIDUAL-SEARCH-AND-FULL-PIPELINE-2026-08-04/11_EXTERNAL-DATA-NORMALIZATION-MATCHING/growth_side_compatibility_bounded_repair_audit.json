@@ -1,0 +1,9 @@
+{
+  "accepted_observations_rerun": 0,
+  "candidate_observations_routed_to_side_hold": 6543,
+  "normalized_values_changed": 0,
+  "passed": true,
+  "reason": "clean growth units require an explicit reconciled side",
+  "rule_id": "GROWTH-SIDE-REPAIR-001",
+  "source_coordinates_changed": 0
+}

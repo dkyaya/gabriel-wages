@@ -1,0 +1,15 @@
+{
+  "opaque_model_scores": false,
+  "registry": "total compensation",
+  "rules": [
+    {
+      "basis": "components remain separate",
+      "rule_id": "TOTALCOMP-001"
+    },
+    {
+      "basis": "sum only explicit nonoverlapping additive components",
+      "rule_id": "TOTALCOMP-002"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

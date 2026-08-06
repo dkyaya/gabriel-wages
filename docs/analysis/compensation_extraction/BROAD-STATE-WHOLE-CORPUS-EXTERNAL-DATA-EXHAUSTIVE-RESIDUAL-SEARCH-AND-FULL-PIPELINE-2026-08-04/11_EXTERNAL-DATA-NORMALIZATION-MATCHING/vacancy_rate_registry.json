@@ -1,0 +1,11 @@
+{
+  "opaque_model_scores": false,
+  "registry": "vacancy rate",
+  "rules": [
+    {
+      "basis": "vacant divided by authorized from explicit compatible components",
+      "rule_id": "VACANCY-001"
+    }
+  ],
+  "version": "external-normalization-matching-2026-08-05-v1"
+}

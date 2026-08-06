@@ -1,0 +1,16 @@
+{
+  "five_lanes": [
+    "normalization_lane_001",
+    "normalization_lane_002",
+    "normalization_lane_003",
+    "normalization_lane_004",
+    "normalization_lane_005"
+  ],
+  "forbidden_network": true,
+  "input_rows": 1876183,
+  "predecessor": "572ed3f64288255d84d47a1a881c26b5b388a14a",
+  "registry_hash": "efd468f79cc690b97156f56b152e17f93ae93957fb8455e47480cd57e9d34c16",
+  "started_at": "2026-08-06T02:30:06.096528+00:00",
+  "starting_head": "572ed3f64288255d84d47a1a881c26b5b388a14a",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-NORMALIZATION-AND-MATCHING-2026-08-05"
+}

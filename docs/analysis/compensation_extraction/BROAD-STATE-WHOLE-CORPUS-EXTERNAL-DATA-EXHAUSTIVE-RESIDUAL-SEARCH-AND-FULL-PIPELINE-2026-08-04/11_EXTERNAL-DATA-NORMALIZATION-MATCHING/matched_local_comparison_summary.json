@@ -1,0 +1,13 @@
+{
+  "candidate_observations": 201,
+  "clean_matches": 0,
+  "conditional_matches": 0,
+  "directions": {},
+  "formula_outputs": {
+    "absolute_difference": 0,
+    "percentage_difference": 0,
+    "ratio": 0
+  },
+  "match_types": {},
+  "no_compatible_match_observations": 201
+}

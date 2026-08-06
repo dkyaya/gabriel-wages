@@ -1,0 +1,9 @@
+{
+  "filter_field": "local_comparison_readiness",
+  "filter_value": "local_comparison_ready",
+  "immutable": true,
+  "queue": "local_comparison_locked_queue",
+  "rows": 201,
+  "sha256": "63b543c22f812b847f54cc0db96fb4d97807d3ac45c020b018b84737a7ebe621",
+  "source_shards": 80
+}

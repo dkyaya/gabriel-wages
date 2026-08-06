@@ -1,0 +1,15 @@
+{
+  "layer": "implementation_sequence",
+  "row_count": 1268,
+  "shards": [
+    {
+      "bytes": 2343411,
+      "ledger": "implementation_sequence",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/implementation/implementation_sequence_shard_0000.jsonl.gz",
+      "row_count": 1268,
+      "sha256": "7e6ecc3af09b85aab9b66318d7a7e68fc78374521d92f416c1acccc11df8fc76",
+      "shard_id": "implementation_sequence_shard_0000"
+    }
+  ],
+  "source_independence": true
+}

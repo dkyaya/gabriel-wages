@@ -1,0 +1,19 @@
+{
+  "causal_estimates": 0,
+  "claim_adjudications": 0,
+  "claim_critical_semantic_review_pending": true,
+  "conflicts_excluded": true,
+  "coordinates_preserved": true,
+  "counterexample_equal_gates": true,
+  "five_lanes": true,
+  "gabriel_scores": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "input": "reconciled_records_only",
+  "ocr": 0,
+  "raw_values_preserved": true,
+  "regressions": 0,
+  "source_independence": true,
+  "unsupported_conversions": 0,
+  "visuals": 0
+}

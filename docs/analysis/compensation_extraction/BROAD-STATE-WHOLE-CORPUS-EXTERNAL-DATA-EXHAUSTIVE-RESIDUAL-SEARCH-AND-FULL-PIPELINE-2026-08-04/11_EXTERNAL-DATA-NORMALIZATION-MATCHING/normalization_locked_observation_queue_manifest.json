@@ -1,0 +1,9 @@
+{
+  "filter_field": "",
+  "filter_value": "",
+  "immutable": true,
+  "queue": "normalization_locked_observation_queue",
+  "rows": 1876183,
+  "sha256": "bdde8afb993f3563294bf7b95aa1556d6c9c9686287714edd7c92bea072a5977",
+  "source_shards": 80
+}

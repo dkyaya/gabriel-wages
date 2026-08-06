@@ -1,0 +1,23 @@
+{
+  "accepted_observations_rerun": 0,
+  "failed_units": 0,
+  "repair_rules": [
+    "TOTALCOMP-CANDIDATE-REPAIR-001",
+    "GROWTH-SIDE-REPAIR-001",
+    "LOCAL-RECURRING-COMPAT-REPAIR-001",
+    "GROWTH-VALUE-IDENTITY-REPAIR-001",
+    "STAFF-COMPAT-REPAIR-001"
+  ],
+  "replacement": [
+    "per-lane total_compensation_units_repaired ledgers",
+    "strictly compatible local calculation layer",
+    "strictly compatible growth calculation layer",
+    "strictly compatible staffing component calculation layer"
+  ],
+  "superseded_outputs": [
+    "empty per-lane total_compensation_units ledgers",
+    "three coordinator local pairs with unresolved recurring status",
+    "eleven coordinator growth pairs lacking explicit side or substantive value/identity compatibility",
+    "sixty preliminary vacancy ratios lacking strict count/department/period compatibility"
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "full_hold_pointers": [
+    {
+      "bytes": 2014961,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0000.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "c40e66512ade5d7e5c92a77eb485d7f3ce04a791863115252545361128311392",
+      "shard_id": "hold_records_shard_0000"
+    },
+    {
+      "bytes": 1985705,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0001.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "3b7c07f08a3ee67d353c2acc681997d66548ef0ef7caae6b27e02433b6b9fe85",
+      "shard_id": "hold_records_shard_0001"
+    },
+    {
+      "bytes": 2007741,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0002.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "079a08e52946cdde77b918550b31c89b74c046a21529718f675b66c03a7b492a",
+      "shard_id": "hold_records_shard_0002"
+    },
+    {
+      "bytes": 1988473,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0003.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "95dd4392e0328fc19a73a56e2ea81907b7c192670434cd8e4bdc989a494f452f",
+      "shard_id": "hold_records_shard_0003"
+    },
+    {
+      "bytes": 1943912,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0004.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "14536e43aa1bb1d11921d678f7c05c7cbe4a05e04b38395cc847159769c6327c",
+      "shard_id": "hold_records_shard_0004"
+    },
+    {
+      "bytes": 2001653,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0005.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "9fa55644bf6c4b9322b409446be43b535a1b4a3ca12a00fe365fd86cac0323a6",
+      "shard_id": "hold_records_shard_0005"
+    },
+    {
+      "bytes": 1984400,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0006.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "736922592a391fe729d22029908cf3e2a2447d4791843f08a4cd2a4c21e2c190",
+      "shard_id": "hold_records_shard_0006"
+    },
+    {
+      "bytes": 1966994,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0007.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "28014cef8152574529deb745aebacb3b8acc77af9892685f42b7a678c08d4ebe",
+      "shard_id": "hold_records_shard_0007"
+    },
+    {
+      "bytes": 1946888,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0008.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "d38eb2d76474e71aaa60cc1c6a178c3c03f7103218ecc02cd6ca23c56f94cb5a",
+      "shard_id": "hold_records_shard_0008"
+    },
+    {
+      "bytes": 1963593,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0009.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "e362c0bc0d2b3109c6728a7aefb73efe9abf4a5f9ccc5ea793cd97e27f50ff3e",
+      "shard_id": "hold_records_shard_0009"
+    },
+    {
+      "bytes": 1972216,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0010.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "6a17290322b9521e874c73328e2f3288e809dd6987bd550f0e25775581208771",
+      "shard_id": "hold_records_shard_0010"
+    },
+    {
+      "bytes": 1983094,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0011.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "9631e4b5ecfcbdb2e8cb7842bb92ef0a0ca8dc5b1bf2e0ac1c6d5ab4e3934fcc",
+      "shard_id": "hold_records_shard_0011"
+    },
+    {
+      "bytes": 507844,
+      "lane_id": "normalization_lane_001",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_001/hold_records/hold_records_shard_0012.jsonl.gz",
+      "row_count": 6436,
+      "sha256": "44528107057dc66416f5b001ee1233e2383d85fa257e5245b3aee7d1d03062ef",
+      "shard_id": "hold_records_shard_0012"
+    },
+    {
+      "bytes": 2014882,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0000.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "0b5c6e77833fb50b70760a16738b5cefbd47c2a549a7430a7b1497ec0ae52b32",
+      "shard_id": "hold_records_shard_0000"
+    },
+    {
+      "bytes": 1987765,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0001.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "b97b49661b84a11198f3af400a23768f823d8c41e62c27a5980cb6e00d944777",
+      "shard_id": "hold_records_shard_0001"
+    },
+    {
+      "bytes": 2006650,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0002.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "5bebdac710181f15d3523ec01573bc8130715d06d37755d03544ff432184537a",
+      "shard_id": "hold_records_shard_0002"
+    },
+    {
+      "bytes": 1991460,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0003.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "1ccb032f0e296bdbf00b8e6a4334de496a39becc1fe5d3e6894cef8a070c0154",
+      "shard_id": "hold_records_shard_0003"
+    },
+    {
+      "bytes": 1942693,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0004.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "39c7388677099a97bf697ace8c2e1f679a1c44d23ccab726f8164a3cb6f399ce",
+      "shard_id": "hold_records_shard_0004"
+    },
+    {
+      "bytes": 2003675,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0005.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "a45805acc0fc0bdc78a2478838bcfa624a428531a9055999dd7ffc786aaf7dcf",
+      "shard_id": "hold_records_shard_0005"
+    },
+    {
+      "bytes": 1983594,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0006.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "93990162fa5e6196f13ab0eb65f80a1ea1d9808b285f3c301d877db77b7a2a94",
+      "shard_id": "hold_records_shard_0006"
+    },
+    {
+      "bytes": 1966592,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0007.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "655aed9f00e57bd8104bc421b1df56bdcd32c8342fde1321d8435fa1eb6256e2",
+      "shard_id": "hold_records_shard_0007"
+    },
+    {
+      "bytes": 1946585,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0008.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "7f3aadce7a16792882e6f17c76c31d9830db2e94021692d731df50ef082a5c3e",
+      "shard_id": "hold_records_shard_0008"
+    },
+    {
+      "bytes": 1960731,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0009.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "10c53ac535dc95afd8a914bee48563b43de702637ab1002315464ce2281b23f8",
+      "shard_id": "hold_records_shard_0009"
+    },
+    {
+      "bytes": 1973247,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0010.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "05e61ac57cdeacf43987a9b7a379d5c94ec377da6421bcea8f1a9dc04fd7aff9",
+      "shard_id": "hold_records_shard_0010"
+    },
+    {
+      "bytes": 1982054,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0011.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "a424675e8c5d34190fdf3429f81fdcbd0b6f5bdac54b2ff1a0adcab325c9ac3b",
+      "shard_id": "hold_records_shard_0011"
+    },
+    {
+      "bytes": 517992,
+      "lane_id": "normalization_lane_002",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_002/hold_records/hold_records_shard_0012.jsonl.gz",
+      "row_count": 6554,
+      "sha256": "fd8f0b4d4b8f22d4332465af6b694929bc8f16a5527883e8b582d0dbabb4e8ad",
+      "shard_id": "hold_records_shard_0012"
+    },
+    {
+      "bytes": 2015033,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0000.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "a14c65d2e09f126c443016e5e119813f99bf205049b8cfba4c6cc1599f741773",
+      "shard_id": "hold_records_shard_0000"
+    },
+    {
+      "bytes": 1986829,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0001.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "c7800ca19b7d59d3e367cf42c93d6296211d8a9e34f4bac1501dda8ba438933f",
+      "shard_id": "hold_records_shard_0001"
+    },
+    {
+      "bytes": 2007346,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0002.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "083461a2a656c32ff27c4148e327f46f456490ce8adc6047dc80c8dc05492d85",
+      "shard_id": "hold_records_shard_0002"
+    },
+    {
+      "bytes": 1990019,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0003.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "a347db43077d4e02f390e8fd223e700f90c7f4373edd7427d42941ac9ae9177f",
+      "shard_id": "hold_records_shard_0003"
+    },
+    {
+      "bytes": 1943123,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0004.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "9ead826c24176bc4c5331ac2a03e9965f5957d423297dd0ce8cbe90e8810fcf0",
+      "shard_id": "hold_records_shard_0004"
+    },
+    {
+      "bytes": 2003072,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0005.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "cbd10cb2b12f108b1dc75993487ff0f2f941a5a5446491d304240ac9ab5bfe73",
+      "shard_id": "hold_records_shard_0005"
+    },
+    {
+      "bytes": 1984550,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0006.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "7aac55adc4dd73359aabf27e73596a0860c7987d8508bb1a97b4779a9e2171c5",
+      "shard_id": "hold_records_shard_0006"
+    },
+    {
+      "bytes": 1966157,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0007.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "0f655db2474cb28da871c6fdcf6f2ed108e158a77d73f96795dece80f93bdb35",
+      "shard_id": "hold_records_shard_0007"
+    },
+    {
+      "bytes": 1946008,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0008.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "9984b18f138cd023d67eddf11f3e2a911350be777e15a89f1f43ac0578971d17",
+      "shard_id": "hold_records_shard_0008"
+    },
+    {
+      "bytes": 1961005,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0009.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "b7922f645bf277be5356d1d3c5275566e84f77f9ed6f26af41a8817cda72cf57",
+      "shard_id": "hold_records_shard_0009"
+    },
+    {
+      "bytes": 1973940,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0010.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "fc19f1fe46352aac9f25f975b719be0d62f6011ff9506dc3c22e8baf9a39e889",
+      "shard_id": "hold_records_shard_0010"
+    },
+    {
+      "bytes": 1982719,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0011.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "fccf8c90fd2d720f10a719fab2271f6f1d9570397a21bf7c4f5d6895f0564e30",
+      "shard_id": "hold_records_shard_0011"
+    },
+    {
+      "bytes": 512427,
+      "lane_id": "normalization_lane_003",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_003/hold_records/hold_records_shard_0012.jsonl.gz",
+      "row_count": 6486,
+      "sha256": "577a90593a6c2a9d91e7adaedee49038082763a3fd4e4da597db6008d3458207",
+      "shard_id": "hold_records_shard_0012"
+    },
+    {
+      "bytes": 2016239,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0000.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "2dbb124e964b3e5ba656e1656a173b5c657d520e0942dcbc4c57cdb1ec25f470",
+      "shard_id": "hold_records_shard_0000"
+    },
+    {
+      "bytes": 1985531,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0001.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "893ee49c074ff21c6abd8108c7da5c9f0a2b36a3a071915816af06c6affa2979",
+      "shard_id": "hold_records_shard_0001"
+    },
+    {
+      "bytes": 2008548,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0002.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "21dad3ce3c94ceab7aacc92ab58e89529793d03a0257a708f5f1a3934ca37768",
+      "shard_id": "hold_records_shard_0002"
+    },
+    {
+      "bytes": 1990552,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0003.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "d05090c67d5d9cb90c1c1c83441c7b28241a7e6bd57a4ddb2000739de61f0ecb",
+      "shard_id": "hold_records_shard_0003"
+    },
+    {
+      "bytes": 1943664,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0004.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "bd288353a12a7d1b81e2cd2d2d817ff1285bdfd3009ae6d40162bf2469ec830f",
+      "shard_id": "hold_records_shard_0004"
+    },
+    {
+      "bytes": 2004828,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0005.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "223c943c3fd44899c7c820a95d34e0f7813086727c41082b9f925f0c2f2fe6c4",
+      "shard_id": "hold_records_shard_0005"
+    },
+    {
+      "bytes": 1982306,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0006.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "a08dfe614c23557d284b62d7e232c4fd376afd7e3fa59cd1f1c2889926fc7ccb",
+      "shard_id": "hold_records_shard_0006"
+    },
+    {
+      "bytes": 1965135,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0007.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "fa66c6a9f32bc868fe62cb71ec5817acb23f081c5422b0b1c49ce016fde08d3f",
+      "shard_id": "hold_records_shard_0007"
+    },
+    {
+      "bytes": 1946956,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0008.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "4e264a60210fbb5bb3d35ed139771ffe440000fef8f9a785cf9d477b3feb164c",
+      "shard_id": "hold_records_shard_0008"
+    },
+    {
+      "bytes": 1962510,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0009.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "37b83500678048736f74f878562a68e52f8bb9f9adb5ff5f1a5ccf171c4d3029",
+      "shard_id": "hold_records_shard_0009"
+    },
+    {
+      "bytes": 1973542,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0010.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "4975d0d2c72d992e60d846136940f958a94a21bb410831268ab3989f03d018bd",
+      "shard_id": "hold_records_shard_0010"
+    },
+    {
+      "bytes": 1983996,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0011.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "dcb2c49ee406e7f2ecea2397ec4768b4ab7deec94102f9f5298bc4b018203bf1",
+      "shard_id": "hold_records_shard_0011"
+    },
+    {
+      "bytes": 522696,
+      "lane_id": "normalization_lane_004",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_004/hold_records/hold_records_shard_0012.jsonl.gz",
+      "row_count": 6615,
+      "sha256": "c5bb0f780cb5085b94edd48455e1347ed6e419c82a4305b1c5ceafd6b59d001c",
+      "shard_id": "hold_records_shard_0012"
+    },
+    {
+      "bytes": 2014317,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0000.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "e610ad2eb73976c388ec958c9f0dfd1f556b2b5e915057f39b321660a3878efd",
+      "shard_id": "hold_records_shard_0000"
+    },
+    {
+      "bytes": 1985458,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0001.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "60fc3b8133053799f602c7d6b7e00d4a6755abeb85fd06284e3ac245341f9547",
+      "shard_id": "hold_records_shard_0001"
+    },
+    {
+      "bytes": 2007036,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0002.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "2d3bc310d7136940751764a4f3be5052e571209c3a850e91d386108810892262",
+      "shard_id": "hold_records_shard_0002"
+    },
+    {
+      "bytes": 1987283,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0003.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "effda3f43edd14c978c5712a1b5b268e698ac4ed49aee5f3371c72f29573958f",
+      "shard_id": "hold_records_shard_0003"
+    },
+    {
+      "bytes": 1943192,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0004.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "4f79c8abcc72bfdbdc42eac2717d8339aeb27336c1da70f7b6d9b1262b9f3990",
+      "shard_id": "hold_records_shard_0004"
+    },
+    {
+      "bytes": 2003287,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0005.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "beecd330b3c1c0e6f1bc90c98b6c7b5fe47db4c6fe422f690fa24aa9410a95d3",
+      "shard_id": "hold_records_shard_0005"
+    },
+    {
+      "bytes": 1983765,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0006.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "4544d01fa2ec7eee20c757831d95eee70029563c456d18fcabd5810c23a43300",
+      "shard_id": "hold_records_shard_0006"
+    },
+    {
+      "bytes": 1966085,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0007.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "d1632e87578f6d724df14d2e860dfd7ca8f73435ed18984aa7b1589e7e1c118c",
+      "shard_id": "hold_records_shard_0007"
+    },
+    {
+      "bytes": 1946537,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0008.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "3dce0801a58cf05f55dfbb5ed527fdb1aa2314d996708944e4fc5cbae1e61e12",
+      "shard_id": "hold_records_shard_0008"
+    },
+    {
+      "bytes": 1963820,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0009.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "7cfc1551a696e98464a707ccb193c85a7d057c5d848c41016b6a380fab9947de",
+      "shard_id": "hold_records_shard_0009"
+    },
+    {
+      "bytes": 1972916,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0010.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "e08c1ba1f8daa60be6efe8c5bd9f1d0f9e0b0d91978dbccbeeb779fcd8b320e5",
+      "shard_id": "hold_records_shard_0010"
+    },
+    {
+      "bytes": 1984412,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0011.jsonl.gz",
+      "row_count": 25000,
+      "sha256": "8fc4e318e2706c67a30187b092b3e986bdd03d803462bd5caa9f5a5d94d35743",
+      "shard_id": "hold_records_shard_0011"
+    },
+    {
+      "bytes": 498459,
+      "lane_id": "normalization_lane_005",
+      "ledger": "hold_records",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/lanes/normalization_lane_005/hold_records/hold_records_shard_0012.jsonl.gz",
+      "row_count": 6318,
+      "sha256": "da00161711aeaf8e67f78893f2cb6eee82b168a35bf427ac114502eb02656a42",
+      "shard_id": "hold_records_shard_0012"
+    }
+  ],
+  "growth_holds": 6731,
+  "local_no_compatible_match": 201,
+  "normalized_analysis_ready": 120278,
+  "normalized_basis_hold": 131124,
+  "normalized_conditional": 31668,
+  "normalized_conflict_hold": 266849,
+  "normalized_context_only": 191828,
+  "normalized_identity_hold": 244,
+  "normalized_side_hold": 1134192
+}

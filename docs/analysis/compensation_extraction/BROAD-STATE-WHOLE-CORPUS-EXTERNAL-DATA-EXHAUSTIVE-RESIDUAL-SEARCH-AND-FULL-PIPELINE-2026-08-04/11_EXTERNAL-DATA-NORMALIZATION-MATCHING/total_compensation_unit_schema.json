@@ -1,0 +1,56 @@
+{
+  "fields": [
+    {
+      "name": "external_total_compensation_unit_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "observation_id",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "municipality",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "period",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "side",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "component_type",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "raw_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "normalized_value",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "status",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "component_sum_calculated",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_SHA_256",
+      "type": "string_or_literal"
+    },
+    {
+      "name": "source_coordinate_input_sha256",
+      "type": "string_or_literal"
+    }
+  ],
+  "raw_value_preserved": true,
+  "schema": "total_compensation_unit",
+  "source_coordinates_preserved": true,
+  "version": "external-normalization-matching-2026-08-05-v1"
+}
