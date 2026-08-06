@@ -1,0 +1,9 @@
+{
+  "decision": "broad_state_whole_corpus_external_data_ingestion_completed_reconciliation_ready",
+  "observations": 1876183,
+  "quality_gates_passed": true,
+  "runtime_seconds_total": 1212.644,
+  "spans": 1781186,
+  "state": "complete",
+  "updated_at": "2026-08-06T00:43:42.462859+00:00"
+}

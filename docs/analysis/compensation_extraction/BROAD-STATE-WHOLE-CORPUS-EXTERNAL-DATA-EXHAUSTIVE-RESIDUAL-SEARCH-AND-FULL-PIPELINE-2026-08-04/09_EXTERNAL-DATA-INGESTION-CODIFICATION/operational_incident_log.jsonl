@@ -1,0 +1,1 @@
+{"action":"rerun dashboard build from docs/dashboard","incident":"initial dashboard build invoked from repository root without a package manifest","impact":"none; command failed before writing build output","severity":"non_material","timestamp":"2026-08-06T00:46:00Z"}

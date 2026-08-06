@@ -1,0 +1,16 @@
+{
+  "dimensions": [
+    "side",
+    "department",
+    "employee_or_position_identity",
+    "period",
+    "pay_basis",
+    "compensation_basis",
+    "recurring_status",
+    "implementation_status",
+    "conflict",
+    "claim_linkage",
+    "source_version"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

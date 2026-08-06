@@ -1,0 +1,10 @@
+{
+  "canonical_layer_manifest": "canonical_external_layer_manifest.json",
+  "decision": "broad_state_whole_corpus_external_data_ingestion_completed_reconciliation_ready",
+  "input_manifest": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_administrative_observation_manifest.json",
+  "local_output_ignored": true,
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers",
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/09_EXTERNAL-DATA-INGESTION-CODIFICATION",
+  "registry_hash": "fd5bb9f686f2a3c3a8dd960f62f1d9075c873706373fba7d7b03e7330e39205e",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05"
+}

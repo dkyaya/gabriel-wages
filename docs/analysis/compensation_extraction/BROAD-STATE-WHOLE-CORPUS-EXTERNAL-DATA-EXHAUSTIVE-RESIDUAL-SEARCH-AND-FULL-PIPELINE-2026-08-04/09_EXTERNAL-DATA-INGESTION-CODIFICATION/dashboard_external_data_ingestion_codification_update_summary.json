@@ -1,0 +1,69 @@
+{
+  "analysis_preparation_counts": {
+    "growth_analysis": 206401,
+    "implementation_confirmation": 145409,
+    "local_comparison": 1002804,
+    "mechanism_linked_outcome": 1876183,
+    "staffing_hypothesis": 56944,
+    "total_compensation": 5907
+  },
+  "analytical_role_counts": {
+    "contextual_only": 191828,
+    "growth_candidate": 206401,
+    "implementation_confirmation_candidate": 145409,
+    "local_comparison_candidate": 1002804,
+    "pending_reconciliation": 266890,
+    "staffing_hypothesis_candidate": 56944,
+    "total_compensation_candidate": 5907
+  },
+  "claim_linkage_counts": {
+    "event_linked_claim_pending": 1493412,
+    "exact_claim_id_link": 382771
+  },
+  "compact_observations_ingested": 1876183,
+  "cross_examination_candidate_count": 1226,
+  "current_stage": "external administrative ingestion and codification complete",
+  "final_claims_or_visuals": false,
+  "final_pi_report_preserved": true,
+  "gabriel_scores": 0,
+  "implementation_event_deduplication_preserved": true,
+  "ingestion_class_counts": {
+    "ingestion_ready_conflict_preserved": 266890,
+    "ingestion_ready_direct_administrative": 1117471,
+    "ingestion_ready_implementation_record": 145409,
+    "ingestion_ready_official_summary": 271577,
+    "ingestion_ready_schedule_record": 74836
+  },
+  "next_task": "external administrative reconciliation and linkage",
+  "normalization_or_math": false,
+  "observation_family_counts": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 26752,
+    "tenure_and_progression": 430720,
+    "vacancy_and_position_status": 12331
+  },
+  "ocr": 0,
+  "primary_map": "scout_coverage_rate",
+  "prior_report_drafts_preserved": true,
+  "reconciliation_queue_counts": {
+    "claim_linkage": 1493412,
+    "compensation_basis": 1439489,
+    "conflict": 266890,
+    "department": 1752853,
+    "employee_or_position_identity": 1876183,
+    "implementation_status": 146781,
+    "pay_basis": 1417289,
+    "period": 79067,
+    "recurring_status": 1025251,
+    "side": 1400925
+  },
+  "storage_holds": 7895,
+  "supporting_spans_ingested": 1781186,
+  "unique_native_pdf_pages": 1029482,
+  "unsearched_targets": 12844,
+  "wage_growth_continuity_module_preserved": true
+}

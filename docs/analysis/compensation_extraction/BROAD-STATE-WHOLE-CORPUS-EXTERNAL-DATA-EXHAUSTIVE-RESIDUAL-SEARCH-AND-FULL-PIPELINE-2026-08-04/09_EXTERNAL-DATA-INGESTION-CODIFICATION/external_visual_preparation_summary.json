@@ -1,0 +1,14 @@
+{
+  "figures": 0,
+  "heatmaps": 0,
+  "indexes": [
+    "external_visual_preparation_index",
+    "mechanism_hex_visual_preparation_index",
+    "safety_non_safety_visual_preparation_index",
+    "payroll_geography_visual_preparation_index",
+    "staffing_vacancy_visual_preparation_index",
+    "implementation_lifecycle_visual_preparation_index"
+  ],
+  "maps": 0,
+  "mechanism_maps_must_use_implementation_event_counts": true
+}

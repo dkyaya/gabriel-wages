@@ -1,0 +1,16 @@
+{
+  "codes": [
+    "direct_official_administrative_record",
+    "direct_official_structured_record",
+    "official_administrative_summary",
+    "official_implementation_record",
+    "official_schedule_or_policy_record",
+    "official_contextual_record",
+    "reputable_secondary_context",
+    "ambiguous_narrative_record",
+    "conflicting_administrative_record",
+    "weak_or_unusable_record",
+    "manual_review_required"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

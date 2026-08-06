@@ -1,0 +1,15 @@
+{
+  "basis": "classified supporting-span source_family memberships",
+  "counts": {
+    "benefits_and_total_compensation": 854979,
+    "contextual_controls": 88013,
+    "implementation_confirmation": 1482808,
+    "multi_family_administrative_source": 1122459,
+    "payroll_and_earnings": 1379385,
+    "recruitment_and_retention": 884921,
+    "staffing_and_headcount": 1101376,
+    "tenure_and_progression": 598332,
+    "unclear": 629
+  },
+  "memberships_not_mutually_exclusive": true
+}

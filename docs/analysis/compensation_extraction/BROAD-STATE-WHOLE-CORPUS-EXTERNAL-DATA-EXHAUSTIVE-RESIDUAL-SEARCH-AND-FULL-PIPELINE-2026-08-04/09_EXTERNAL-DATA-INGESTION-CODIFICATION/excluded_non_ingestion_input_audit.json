@@ -1,0 +1,13 @@
+{
+  "boilerplate_or_structural_writeoffs": 3139445,
+  "classification_errors": 0,
+  "duplicate_only_records": 0,
+  "extraction_repair": 97,
+  "failed_quality_gate_outputs": 0,
+  "ocr_later": 118,
+  "raw_evidence_spans": 4289437,
+  "raw_field_records": 5558770,
+  "storage_held_sources": 7895,
+  "superseded_generation_000": "excluded by canonical generation-001 pointer manifests",
+  "unsearched_targets": 12844
+}

@@ -1,0 +1,12 @@
+{
+  "csv_tsv_files": 17,
+  "csv_tsv_rows": 1445,
+  "embedded_json_xml_records": 132188,
+  "html_table_rows": 1017511,
+  "html_tables": 96484,
+  "native_pages_separate_from_text_equivalents": true,
+  "rough_500_word_text_equivalent": 650482,
+  "substantive_html_documents": 8718,
+  "unique_native_pdf_pages": 1029482,
+  "unique_pdfs": 15163
+}

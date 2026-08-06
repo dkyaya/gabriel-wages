@@ -1,0 +1,12 @@
+{
+  "conflicting_value_or_identity": 198,
+  "conflicting_value_or_identity|lifecycle_sequence_relevance": 3,
+  "conflicting_value_or_identity|staffing_or_vacancy_claim_relevance": 1,
+  "exact_claim_id_linked_direct_observation": 120,
+  "exact_claim_id_linked_direct_observation|lifecycle_sequence_relevance": 64,
+  "exact_claim_id_linked_direct_observation|staffing_or_vacancy_claim_relevance": 53,
+  "headline_or_local_comparison_candidate": 358,
+  "lifecycle_sequence_relevance": 83,
+  "staffing_or_vacancy_claim_relevance": 246,
+  "total_compensation_component": 100
+}

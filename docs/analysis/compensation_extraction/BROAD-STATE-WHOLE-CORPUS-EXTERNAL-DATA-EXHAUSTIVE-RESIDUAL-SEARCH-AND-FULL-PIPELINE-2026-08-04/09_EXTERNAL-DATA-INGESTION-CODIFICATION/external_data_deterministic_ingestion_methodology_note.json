@@ -1,0 +1,23 @@
+{
+  "categorical_codes_without_substantive_value_changes": true,
+  "claim_critical_cross_examination_prepared_not_performed": true,
+  "classified_spans_ingested": 1781186,
+  "compact_observations_ingested": 1876183,
+  "conflicts_and_ambiguities_explicit": true,
+  "cross_source_corroboration_linked_not_merged": true,
+  "five_independent_local_lanes": true,
+  "gabriel_scores": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "independent_human_semantic_gold_coding": false,
+  "normalization_matching_math_claim_adjudication_visuals": false,
+  "one_compact_observation_ingested_once": true,
+  "raw_field_and_span_hits_excluded": true,
+  "raw_values_and_coordinates_preserved": true,
+  "reconciliation_performed": false,
+  "source_specific_observations_independent": true,
+  "storage_held_sources": 7895,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05",
+  "unique_native_pdf_pages": 1029482,
+  "unsearched_targets": 12844
+}

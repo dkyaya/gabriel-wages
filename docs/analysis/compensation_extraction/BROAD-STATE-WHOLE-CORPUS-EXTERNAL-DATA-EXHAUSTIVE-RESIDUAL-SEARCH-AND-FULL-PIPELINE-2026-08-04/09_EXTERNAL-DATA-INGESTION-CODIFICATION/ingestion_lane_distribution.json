@@ -1,0 +1,38 @@
+{
+  "assignment": "stable global source-manifest order modulo five",
+  "covers_every_observation_once": true,
+  "disjoint": true,
+  "lanes": [
+    {
+      "lane_id": "ingestion_lane_001",
+      "observation_count": 375237,
+      "span_count": 356238,
+      "stagger_seconds": 0
+    },
+    {
+      "lane_id": "ingestion_lane_002",
+      "observation_count": 375237,
+      "span_count": 356237,
+      "stagger_seconds": 120
+    },
+    {
+      "lane_id": "ingestion_lane_003",
+      "observation_count": 375237,
+      "span_count": 356237,
+      "stagger_seconds": 240
+    },
+    {
+      "lane_id": "ingestion_lane_004",
+      "observation_count": 375236,
+      "span_count": 356237,
+      "stagger_seconds": 360
+    },
+    {
+      "lane_id": "ingestion_lane_005",
+      "observation_count": 375236,
+      "span_count": 356237,
+      "stagger_seconds": 480
+    }
+  ],
+  "total": 1876183
+}

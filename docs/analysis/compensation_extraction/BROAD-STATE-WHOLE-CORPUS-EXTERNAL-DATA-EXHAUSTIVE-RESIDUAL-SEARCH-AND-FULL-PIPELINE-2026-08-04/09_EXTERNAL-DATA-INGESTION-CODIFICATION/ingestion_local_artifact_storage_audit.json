@@ -1,0 +1,6 @@
+{
+  "bulky_canonical_layers_staged": false,
+  "ignored": true,
+  "local_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers",
+  "passed": true
+}

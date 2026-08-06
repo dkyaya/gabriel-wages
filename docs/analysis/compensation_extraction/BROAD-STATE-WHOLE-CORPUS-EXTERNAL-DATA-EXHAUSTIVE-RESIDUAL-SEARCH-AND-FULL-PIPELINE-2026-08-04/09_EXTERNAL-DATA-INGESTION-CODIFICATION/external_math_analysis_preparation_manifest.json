@@ -1,0 +1,13 @@
+{
+  "calculations_performed": 0,
+  "matching_performed": false,
+  "normalization_performed": false,
+  "queue_counts": {
+    "growth_analysis": 206401,
+    "implementation_confirmation": 145409,
+    "local_comparison": 1002804,
+    "mechanism_linked_outcome": 1876183,
+    "staffing_hypothesis": 56944,
+    "total_compensation": 5907
+  }
+}

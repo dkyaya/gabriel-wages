@@ -1,0 +1,24 @@
+{
+  "combined_ingestion_registry_hash": "fd5bb9f686f2a3c3a8dd960f62f1d9075c873706373fba7d7b03e7330e39205e",
+  "principles": [
+    "one compact observation in, one canonical row out",
+    "source independence",
+    "raw-value and coordinate fidelity",
+    "corroboration linkage only",
+    "conflicts unresolved",
+    "no substantive value transformation",
+    "no premature analysis"
+  ],
+  "registries": [
+    "external_analytical_role_registry.json",
+    "external_claim_linkage_status_registry.json",
+    "external_evidence_quality_registry.json",
+    "external_ingestion_layer_schema_registry.json",
+    "external_lifecycle_status_registry.json",
+    "external_observation_family_registry.json",
+    "external_observation_type_registry.json",
+    "external_reconciliation_need_registry.json",
+    "external_source_corroboration_status_registry.json"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

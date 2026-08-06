@@ -1,0 +1,131 @@
+{
+  "bounded": true,
+  "passed": true,
+  "production_authorized": true,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05",
+  "tests": [
+    {
+      "canonical_family": "payroll_and_earnings",
+      "canonical_type": "position_compensation_observation",
+      "observation_id": "EXTOBS-8547fba2c8845486fbc5275b",
+      "passed": true,
+      "test": "employee_or_position_payroll"
+    },
+    {
+      "canonical_family": "tenure_and_progression",
+      "canonical_type": "salary_schedule_step_observation",
+      "observation_id": "EXTOBS-62f13da98e032a9d47769699",
+      "passed": true,
+      "test": "salary_schedule_step"
+    },
+    {
+      "canonical_family": "payroll_and_earnings",
+      "canonical_type": "overtime_earnings_observation",
+      "observation_id": "EXTOBS-3cc785918984c51acebb6412",
+      "passed": true,
+      "test": "overtime"
+    },
+    {
+      "canonical_family": "staffing_and_headcount",
+      "canonical_type": "FTE_observation",
+      "observation_id": "EXTOBS-c8f6d10db9daa6899541bfd6",
+      "passed": true,
+      "test": "staffing"
+    },
+    {
+      "canonical_family": "vacancy_and_position_status",
+      "canonical_type": "vacant_position_observation",
+      "observation_id": "EXTOBS-67399714485ab05eabc61629",
+      "passed": true,
+      "test": "vacancy"
+    },
+    {
+      "canonical_family": "implementation_confirmation",
+      "canonical_type": "resolution_observation",
+      "observation_id": "EXTOBS-c33e3e0e4698145073ad04bf",
+      "passed": true,
+      "test": "implementation_lifecycle"
+    },
+    {
+      "canonical_family": "benefits_and_total_compensation",
+      "canonical_type": "other_benefit_observation",
+      "observation_id": "EXTOBS-ff7b4193f1eb94f75144f9da",
+      "passed": true,
+      "test": "benefits"
+    },
+    {
+      "canonical_family": "contextual_controls",
+      "canonical_type": "other_context_observation",
+      "observation_id": "EXTOBS-966d19c464b24ae4f0b30f68",
+      "passed": true,
+      "test": "context"
+    },
+    {
+      "canonical_family": "payroll_and_earnings",
+      "canonical_type": "position_compensation_observation",
+      "observation_id": "EXTOBS-80655876628c31a252ed880d",
+      "passed": true,
+      "test": "direct_structured"
+    },
+    {
+      "canonical_family": "tenure_and_progression",
+      "canonical_type": "salary_schedule_step_observation",
+      "observation_id": "EXTOBS-dba6ddc3e26649ac46ec0e73",
+      "passed": true,
+      "test": "official_summary"
+    },
+    {
+      "canonical_family": "payroll_and_earnings",
+      "canonical_type": "position_compensation_observation",
+      "observation_id": "EXTOBS-bf587161cc9f6162068e55bb",
+      "passed": true,
+      "test": "conflict_preserved"
+    },
+    {
+      "canonical_family": "implementation_confirmation",
+      "canonical_type": "resolution_observation",
+      "observation_id": "EXTOBS-c33e3e0e4698145073ad04bf",
+      "passed": true,
+      "test": "exact_claim"
+    },
+    {
+      "note": "no representative in bounded smoke prefix",
+      "passed": true,
+      "test": "claim_family_only"
+    },
+    {
+      "canonical_family": "payroll_and_earnings",
+      "canonical_type": "position_compensation_observation",
+      "observation_id": "EXTOBS-8547fba2c8845486fbc5275b",
+      "passed": true,
+      "test": "unresolved_claim"
+    },
+    {
+      "canonical_family": "payroll_and_earnings",
+      "canonical_type": "position_compensation_observation",
+      "observation_id": "EXTOBS-fa72dbe9e4dec25f5cbb5543",
+      "passed": true,
+      "test": "cross_source_corroboration"
+    },
+    {
+      "canonical_family": "implementation_confirmation",
+      "canonical_type": "resolution_observation",
+      "observation_id": "EXTOBS-c33e3e0e4698145073ad04bf",
+      "passed": true,
+      "test": "within_source_span"
+    },
+    {
+      "note": "zero ambiguity-flagged compact-input population; raw ambiguity queues excluded",
+      "passed": true,
+      "test": "ambiguous_status_routed_not_resolved"
+    },
+    {
+      "passed": true,
+      "test": "source_independence"
+    },
+    {
+      "passed": true,
+      "test": "no_value_normalization_or_matching"
+    }
+  ]
+}

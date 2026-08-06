@@ -1,0 +1,11 @@
+{
+  "codes": [
+    "exact_corroboration",
+    "likely_corroboration",
+    "related_nonidentical",
+    "conflicting",
+    "version_relationship",
+    "no_corroboration_link"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

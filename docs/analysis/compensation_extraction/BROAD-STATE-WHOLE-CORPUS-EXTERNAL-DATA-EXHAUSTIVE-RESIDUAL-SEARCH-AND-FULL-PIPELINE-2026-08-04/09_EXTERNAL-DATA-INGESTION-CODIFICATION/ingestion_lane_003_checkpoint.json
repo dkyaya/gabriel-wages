@@ -1,0 +1,11 @@
+{
+  "accepted_observations": 375237,
+  "accepted_spans": 356237,
+  "completed_at": "2026-08-06T00:37:29.549601+00:00",
+  "duplicate_canonical_ids": 0,
+  "errors": 0,
+  "lane_id": "ingestion_lane_003",
+  "outcome_ledger_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/outcomes.jsonl",
+  "outcome_ledger_sha256": "e411b08d3e43e28d8ec2907af6c09258612ab88aeabb22b2b1af3452039db0d6",
+  "status": "complete"
+}

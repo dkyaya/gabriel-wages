@@ -1,0 +1,36 @@
+{
+  "actual": {
+    "ambiguous": 0,
+    "benefits": 100,
+    "conflicts": 200,
+    "context": 100,
+    "corroboration_groups": 100,
+    "exact_claim": 100,
+    "implementation": 150,
+    "payroll": 300,
+    "schedule": 200,
+    "span_links": 100,
+    "staffing": 150,
+    "vacancy": 150
+  },
+  "ambiguity_shortfall_reason": "validated compact ingestion input contains no ambiguity-flagged observations",
+  "design_seed": "SHA256(QA-20260805|observation_id)",
+  "independent_human_semantic_gold_coding": false,
+  "mechanical_invariant_replay": true,
+  "observation_sample_checks": 1450,
+  "observation_sample_passes": 1450,
+  "requested": {
+    "ambiguous": 150,
+    "benefits": 100,
+    "conflicts": 200,
+    "context": 100,
+    "corroboration_groups": 100,
+    "exact_claim": 100,
+    "implementation": 150,
+    "payroll": 300,
+    "schedule": 200,
+    "span_links": 100,
+    "staffing": 150,
+    "vacancy": 150
+  }
+}

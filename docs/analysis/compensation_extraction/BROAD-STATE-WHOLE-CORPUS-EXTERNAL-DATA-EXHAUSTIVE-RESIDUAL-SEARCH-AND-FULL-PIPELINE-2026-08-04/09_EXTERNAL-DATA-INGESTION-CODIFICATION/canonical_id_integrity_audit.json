@@ -1,0 +1,944 @@
+{
+  "audited_at": "2026-08-06T00:46:01.861034+00:00",
+  "duplicate_original_or_canonical_observation_ids": 0,
+  "duplicate_original_or_canonical_span_ids": 0,
+  "hash_checks": [
+    {
+      "actual_sha256": "384f9dd9506dd29a864c1c9a7df6dc29a35beb6fc751a24957d9c8e768380431",
+      "expected_sha256": "384f9dd9506dd29a864c1c9a7df6dc29a35beb6fc751a24957d9c8e768380431",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "ea42c9364ae795a4d23dcdf8cb809ef2ab0ba46f0d535d4acaffbfbed6d748c4",
+      "expected_sha256": "ea42c9364ae795a4d23dcdf8cb809ef2ab0ba46f0d535d4acaffbfbed6d748c4",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e1f20ff21d1b796167b4408397edcddcf16f12b034bcec8549a5d90c544c08a1",
+      "expected_sha256": "e1f20ff21d1b796167b4408397edcddcf16f12b034bcec8549a5d90c544c08a1",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "7394f27d58165b15297e60436354549c3253a07f00655a5310b0bab7f6cf9fbc",
+      "expected_sha256": "7394f27d58165b15297e60436354549c3253a07f00655a5310b0bab7f6cf9fbc",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "85975003ed938a2c2129e79722ad0752333d04d24d5a9baf3cc5920af97cc570",
+      "expected_sha256": "85975003ed938a2c2129e79722ad0752333d04d24d5a9baf3cc5920af97cc570",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "689cfaaefdcd0b7d8dc991daa12cef5fa892798e2535ffcdb507688b0aa9cf78",
+      "expected_sha256": "689cfaaefdcd0b7d8dc991daa12cef5fa892798e2535ffcdb507688b0aa9cf78",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1bdb89ff53a80d51b79c5b457217d522ca4062da346a40ce49b52a97a1d44423",
+      "expected_sha256": "1bdb89ff53a80d51b79c5b457217d522ca4062da346a40ce49b52a97a1d44423",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "b562c9d890b41fc563b229f8542127901182e976ea2fbdd2e50e43c332efad7a",
+      "expected_sha256": "b562c9d890b41fc563b229f8542127901182e976ea2fbdd2e50e43c332efad7a",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "8663dadf76c44d40617abc3a1d3f592a52462937260e51ae0fa6773b9e563793",
+      "expected_sha256": "8663dadf76c44d40617abc3a1d3f592a52462937260e51ae0fa6773b9e563793",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d25ac1869fa4f09dac652ceca9dcbaacd8d1950250e874eed59baf7f977c9b74",
+      "expected_sha256": "d25ac1869fa4f09dac652ceca9dcbaacd8d1950250e874eed59baf7f977c9b74",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "2b0993cb4471cc511c4bf3dccac1e6748a75858be57117d6a753897a93cbb737",
+      "expected_sha256": "2b0993cb4471cc511c4bf3dccac1e6748a75858be57117d6a753897a93cbb737",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "7285f65b8ff1c21bba701f6d5f418e7bf7efd22d927463d0122d467ae273cec2",
+      "expected_sha256": "7285f65b8ff1c21bba701f6d5f418e7bf7efd22d927463d0122d467ae273cec2",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "af6dc08590093be4c8c12bcd9a978c4a79225c3e965cd83e177a4c2b9d5e072f",
+      "expected_sha256": "af6dc08590093be4c8c12bcd9a978c4a79225c3e965cd83e177a4c2b9d5e072f",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fa251cd1176df1b3a0c2bfd347b8bf9c37a659242a440ab0eda74d8393939606",
+      "expected_sha256": "fa251cd1176df1b3a0c2bfd347b8bf9c37a659242a440ab0eda74d8393939606",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "660e8eca333b8b2025fe5b83d06404817e18108c168f8dc1edcb8113a7ef9efa",
+      "expected_sha256": "660e8eca333b8b2025fe5b83d06404817e18108c168f8dc1edcb8113a7ef9efa",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "4e67702e4f6bfc054e9dcbc3d4601a875a3e03d4e7c513a595e6a1add78e2b20",
+      "expected_sha256": "4e67702e4f6bfc054e9dcbc3d4601a875a3e03d4e7c513a595e6a1add78e2b20",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_observations/observation_shard_0015.jsonl.gz"
+    },
+    {
+      "actual_sha256": "07f08bcc99ab31ad4748bacbc7b1ae1b00e88af1d20eb0be018946620a228d61",
+      "expected_sha256": "07f08bcc99ab31ad4748bacbc7b1ae1b00e88af1d20eb0be018946620a228d61",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "182059571605868ebe35e116b8d52cfafd65600d440fcacc63eb115fddc4830d",
+      "expected_sha256": "182059571605868ebe35e116b8d52cfafd65600d440fcacc63eb115fddc4830d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d7a81fcc8993c75f948057165ebb74ce9893fc341ca2a670b5b1f6a7678b9d90",
+      "expected_sha256": "d7a81fcc8993c75f948057165ebb74ce9893fc341ca2a670b5b1f6a7678b9d90",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "9202d7885eb46291581c28d5b64bfd029d597c0d85d71f2e29abfacd27bad6dc",
+      "expected_sha256": "9202d7885eb46291581c28d5b64bfd029d597c0d85d71f2e29abfacd27bad6dc",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f25cdb72764fdb66df1a49c5bea1d07a27e5ab3f606ca547ff45d03b7f8d918d",
+      "expected_sha256": "f25cdb72764fdb66df1a49c5bea1d07a27e5ab3f606ca547ff45d03b7f8d918d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e5ec69e76707255b66f14f612de648fc15f02d37dddd8af74bc311e167b51e0a",
+      "expected_sha256": "e5ec69e76707255b66f14f612de648fc15f02d37dddd8af74bc311e167b51e0a",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a1d1c84b7d8d5800719e17a6343eb2f1f7b65e0899f36d6794dad4dc703452b0",
+      "expected_sha256": "a1d1c84b7d8d5800719e17a6343eb2f1f7b65e0899f36d6794dad4dc703452b0",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "16aeedf1c5be8abc0b00db74443d9997619bf8462ec1873e0643272b8d5989e3",
+      "expected_sha256": "16aeedf1c5be8abc0b00db74443d9997619bf8462ec1873e0643272b8d5989e3",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "91209ad047bf0c2819b145b171b025399cfd613cb92ca2b305b3187bf3a99376",
+      "expected_sha256": "91209ad047bf0c2819b145b171b025399cfd613cb92ca2b305b3187bf3a99376",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1946204e2410c33844cbbc22a7836b61918b79c3bc751f178d111d006706fa4d",
+      "expected_sha256": "1946204e2410c33844cbbc22a7836b61918b79c3bc751f178d111d006706fa4d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "3addecae0d43ba39d2917de2dd4e81f0344e62ac6211deb7023874da34b2ae31",
+      "expected_sha256": "3addecae0d43ba39d2917de2dd4e81f0344e62ac6211deb7023874da34b2ae31",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6f710949392c09c882341abf0f9e6b5e11a6128f70f6654b23176a26229d5e8a",
+      "expected_sha256": "6f710949392c09c882341abf0f9e6b5e11a6128f70f6654b23176a26229d5e8a",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1af61758682fc5c5d91c3d9f299e72d7a55903561ed25ef3dc3780846a21d64d",
+      "expected_sha256": "1af61758682fc5c5d91c3d9f299e72d7a55903561ed25ef3dc3780846a21d64d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "03752059cbccbbac6698da9f4d8ebfa13b307e9ace18671c1cd0fe37dbe65f12",
+      "expected_sha256": "03752059cbccbbac6698da9f4d8ebfa13b307e9ace18671c1cd0fe37dbe65f12",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dfd26690bde255015e08be0355900a1cc11980388cc016f5ab6dccf69a448daa",
+      "expected_sha256": "dfd26690bde255015e08be0355900a1cc11980388cc016f5ab6dccf69a448daa",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "9abdf0d594e1d30fa389c90bb477becd756c8b2d40529e0106ee5e9fa81b1da6",
+      "expected_sha256": "9abdf0d594e1d30fa389c90bb477becd756c8b2d40529e0106ee5e9fa81b1da6",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_observations/observation_shard_0015.jsonl.gz"
+    },
+    {
+      "actual_sha256": "03a507c21b1694f34927424d3e635e8b29b9114f5edfc77f6dda6795991a70eb",
+      "expected_sha256": "03a507c21b1694f34927424d3e635e8b29b9114f5edfc77f6dda6795991a70eb",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d30db0afa4c4ce73f86a8b421d050ba3012f2257b0cb2051c281ebbf1c4ffc7c",
+      "expected_sha256": "d30db0afa4c4ce73f86a8b421d050ba3012f2257b0cb2051c281ebbf1c4ffc7c",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "68151005d0cc72aadd3cd097b8eada5fd67f573aadee91bc66bf160e583f413d",
+      "expected_sha256": "68151005d0cc72aadd3cd097b8eada5fd67f573aadee91bc66bf160e583f413d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0734158b38b73126e2f09f996f2345cf1a2459ba8bc2ff25ae676a53dbde5f00",
+      "expected_sha256": "0734158b38b73126e2f09f996f2345cf1a2459ba8bc2ff25ae676a53dbde5f00",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dabdf5d41b9fa98a078863b099fa211afc3624f42392bd1ebc908f0af5d55aae",
+      "expected_sha256": "dabdf5d41b9fa98a078863b099fa211afc3624f42392bd1ebc908f0af5d55aae",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a5ca25ad448a95b6213ae1fba588a0e2da6b35a936dee4c0c16e99a8d28237b3",
+      "expected_sha256": "a5ca25ad448a95b6213ae1fba588a0e2da6b35a936dee4c0c16e99a8d28237b3",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "4d03d315b768283df056f236c3cced994ae3da24d69ef6bfef10aef6afc16448",
+      "expected_sha256": "4d03d315b768283df056f236c3cced994ae3da24d69ef6bfef10aef6afc16448",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dcaa498cc529bd2447a5506cf90a623000ef84b30ea4567c12e535dd7edc24e6",
+      "expected_sha256": "dcaa498cc529bd2447a5506cf90a623000ef84b30ea4567c12e535dd7edc24e6",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "84175b6613da7bafebcf3845f5b453a425e5c3786c528dfe30832a09c19d80f8",
+      "expected_sha256": "84175b6613da7bafebcf3845f5b453a425e5c3786c528dfe30832a09c19d80f8",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "15d1ee32a28c014f1fa2dc3be0e0b7eb6168b8a1e66f39a5369460b8f726d7d1",
+      "expected_sha256": "15d1ee32a28c014f1fa2dc3be0e0b7eb6168b8a1e66f39a5369460b8f726d7d1",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "17a29e74ba76633a84f9b8330cb1b1d17bdec128f0e32784260759f244a8aed6",
+      "expected_sha256": "17a29e74ba76633a84f9b8330cb1b1d17bdec128f0e32784260759f244a8aed6",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "99dd351cacb9317fed62f04464b629515c3c5b2e48b1886e2099442f7fb1b972",
+      "expected_sha256": "99dd351cacb9317fed62f04464b629515c3c5b2e48b1886e2099442f7fb1b972",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "558e38e61b6782ebbab5cb749c7e9958decf5392e664a8de28918bcd68d8c2c4",
+      "expected_sha256": "558e38e61b6782ebbab5cb749c7e9958decf5392e664a8de28918bcd68d8c2c4",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "5aad42cf9764a6267bca63b5cf42436bfdf19c658d47fd7d2f530512d387c983",
+      "expected_sha256": "5aad42cf9764a6267bca63b5cf42436bfdf19c658d47fd7d2f530512d387c983",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0c61169a6e28b8a7160b6d6a8dd5731e291d6b89172ffd0b7dd7cff6ed06712c",
+      "expected_sha256": "0c61169a6e28b8a7160b6d6a8dd5731e291d6b89172ffd0b7dd7cff6ed06712c",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "b49424fec49efc3a3e3b3523333fb4e3a777c3df6b1bb64f2f2f33334cda3bcc",
+      "expected_sha256": "b49424fec49efc3a3e3b3523333fb4e3a777c3df6b1bb64f2f2f33334cda3bcc",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_observations/observation_shard_0015.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e1d26b673d7fa0385aa51899ec27ce10adaf66b316e7e9a54a121003816e778e",
+      "expected_sha256": "e1d26b673d7fa0385aa51899ec27ce10adaf66b316e7e9a54a121003816e778e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "7dac610d1ad1c663c1d9b27a746fc4c86cdf8e0ba2e9a55e26422aff9b9f333c",
+      "expected_sha256": "7dac610d1ad1c663c1d9b27a746fc4c86cdf8e0ba2e9a55e26422aff9b9f333c",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "4e81ab3ae915892894eb7cce92ee2c8f50f030e09132f84e795c212b9882cc6e",
+      "expected_sha256": "4e81ab3ae915892894eb7cce92ee2c8f50f030e09132f84e795c212b9882cc6e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f19f1e5cdb60c727beabac20a74f41d82c047efa6d949acd5685d136eb972aa8",
+      "expected_sha256": "f19f1e5cdb60c727beabac20a74f41d82c047efa6d949acd5685d136eb972aa8",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a6c2a9dcd4ea90cc3010f56361f481d8f2121ddc7924b22316f9cebb9376ad99",
+      "expected_sha256": "a6c2a9dcd4ea90cc3010f56361f481d8f2121ddc7924b22316f9cebb9376ad99",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "45161cfeecf97c216113c66630fbc39dda1f658c0986229668000ad6d5ed6583",
+      "expected_sha256": "45161cfeecf97c216113c66630fbc39dda1f658c0986229668000ad6d5ed6583",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1bbbb11009494cc47893aaffc635d7841d6d0b5cd915e46b834a0d981e825453",
+      "expected_sha256": "1bbbb11009494cc47893aaffc635d7841d6d0b5cd915e46b834a0d981e825453",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a75421190c039c4ba12bb10409a422c7a452ad8f6f86ac5849d1afa4e729306f",
+      "expected_sha256": "a75421190c039c4ba12bb10409a422c7a452ad8f6f86ac5849d1afa4e729306f",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fa915d31e3b2e80498d2ae5dc42693c2ce0d584739eb241964ff1fcb6bcf3f68",
+      "expected_sha256": "fa915d31e3b2e80498d2ae5dc42693c2ce0d584739eb241964ff1fcb6bcf3f68",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "04dbeaafc5a715f08df4910aaa5f1877b636fc5a049d8f01dbb00a65be9687a7",
+      "expected_sha256": "04dbeaafc5a715f08df4910aaa5f1877b636fc5a049d8f01dbb00a65be9687a7",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "825342b6708273235e3360db3252757840a853ed983e7a56f509111b06a54c4f",
+      "expected_sha256": "825342b6708273235e3360db3252757840a853ed983e7a56f509111b06a54c4f",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0456d49e9be9c24981d334422b7eb7186c86fa80fbb7f13b1d6358b86fdb9667",
+      "expected_sha256": "0456d49e9be9c24981d334422b7eb7186c86fa80fbb7f13b1d6358b86fdb9667",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e3741b31052db14fc05706013d55e6064ff3cd21ced8cf947db0593dc4df6e86",
+      "expected_sha256": "e3741b31052db14fc05706013d55e6064ff3cd21ced8cf947db0593dc4df6e86",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a966d02dc4d6a788a96087925ea9f52d12201bb6af2e659b9bde83b96026b613",
+      "expected_sha256": "a966d02dc4d6a788a96087925ea9f52d12201bb6af2e659b9bde83b96026b613",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "7f362a8b546e6477d937ff720e442979fb53c6d62c93f1cf51b1ada279d62f7b",
+      "expected_sha256": "7f362a8b546e6477d937ff720e442979fb53c6d62c93f1cf51b1ada279d62f7b",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a33e6e1608c9f1c5e9b63ac920d96e7c2cb2230c77ee23612c6343ea8c219840",
+      "expected_sha256": "a33e6e1608c9f1c5e9b63ac920d96e7c2cb2230c77ee23612c6343ea8c219840",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_observations/observation_shard_0015.jsonl.gz"
+    },
+    {
+      "actual_sha256": "65a16b05b5ddbdbb51685e2159a563487c406b39b87094acaeb80d6e9062fd1b",
+      "expected_sha256": "65a16b05b5ddbdbb51685e2159a563487c406b39b87094acaeb80d6e9062fd1b",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6b2ca0d080ad636851102a5aef07fdd05007882728e29f8eff724643ab466dc5",
+      "expected_sha256": "6b2ca0d080ad636851102a5aef07fdd05007882728e29f8eff724643ab466dc5",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "7cf737b51ca1d24b60862faeaf7ba578752b1313c42db9c1e71e780be2f42db9",
+      "expected_sha256": "7cf737b51ca1d24b60862faeaf7ba578752b1313c42db9c1e71e780be2f42db9",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6a310222aec81e8878863e81da33d97698919dbc86ad0bfe5b234eab6347da66",
+      "expected_sha256": "6a310222aec81e8878863e81da33d97698919dbc86ad0bfe5b234eab6347da66",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "654f7be9e1ca05d74f626a6d193000bce00d77864c6c325224e73056855ddc61",
+      "expected_sha256": "654f7be9e1ca05d74f626a6d193000bce00d77864c6c325224e73056855ddc61",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d27f8cd1b2f7c56effd6f8bd4815efe3d7cdf5f564ee21e110cf0f40668fbf0e",
+      "expected_sha256": "d27f8cd1b2f7c56effd6f8bd4815efe3d7cdf5f564ee21e110cf0f40668fbf0e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f02faa0a74f75de3d76dfcf6a2470e05b20936a3b65739faad2fb722ff32ea29",
+      "expected_sha256": "f02faa0a74f75de3d76dfcf6a2470e05b20936a3b65739faad2fb722ff32ea29",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "cd31d56b96850fccd4831a2d49729027f2d32bfa7885d18a199a94364f0fcea0",
+      "expected_sha256": "cd31d56b96850fccd4831a2d49729027f2d32bfa7885d18a199a94364f0fcea0",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f41150668ff7128d1490cc38267179a88a5b2dd84e10e26091074da11dbfcf61",
+      "expected_sha256": "f41150668ff7128d1490cc38267179a88a5b2dd84e10e26091074da11dbfcf61",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e051a559a81bed1400007a86aafa138dd279632d8cd53f632a6998d30597f7d3",
+      "expected_sha256": "e051a559a81bed1400007a86aafa138dd279632d8cd53f632a6998d30597f7d3",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "c991bf347fd62e8a8ca64b45b4e2a8ef6b1e86e0f3605e7b1ada9f2e70567454",
+      "expected_sha256": "c991bf347fd62e8a8ca64b45b4e2a8ef6b1e86e0f3605e7b1ada9f2e70567454",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "2bfdbfe6ab2adb75bcbef1cbed9e7ea8d6c7d82936d4ee85b14649c2a56f5963",
+      "expected_sha256": "2bfdbfe6ab2adb75bcbef1cbed9e7ea8d6c7d82936d4ee85b14649c2a56f5963",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "5c6ab0a2d530a532468cabba2561646a63ae08b14640c99b1a7fbb9070879029",
+      "expected_sha256": "5c6ab0a2d530a532468cabba2561646a63ae08b14640c99b1a7fbb9070879029",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f7cb2bd6e421b9f76d1b7f2bcc36ce23221a966ee9bc9bcc1f15679c5463cc74",
+      "expected_sha256": "f7cb2bd6e421b9f76d1b7f2bcc36ce23221a966ee9bc9bcc1f15679c5463cc74",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "cb60cba4c350af5fc031218f999af558ca9ee118f739e72304a512ec82aa4d68",
+      "expected_sha256": "cb60cba4c350af5fc031218f999af558ca9ee118f739e72304a512ec82aa4d68",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "9a33f4d4203f0fe29a2ceb185e0bc4941cd611e3a621b685340ee506baa353ef",
+      "expected_sha256": "9a33f4d4203f0fe29a2ceb185e0bc4941cd611e3a621b685340ee506baa353ef",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_observations/observation_shard_0015.jsonl.gz"
+    },
+    {
+      "actual_sha256": "05e3c59baf83d20b2fb4771db822ab032b6730197855a752a556381bd37687b9",
+      "expected_sha256": "05e3c59baf83d20b2fb4771db822ab032b6730197855a752a556381bd37687b9",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6edd401ef83e4b616bfb88d4a541d2be0ec076ebe1c3ba7b3284bcf0dc8f4bd8",
+      "expected_sha256": "6edd401ef83e4b616bfb88d4a541d2be0ec076ebe1c3ba7b3284bcf0dc8f4bd8",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "c789101a1bb6eb5d4a8a38839decb4df43b2fff9d088d28a4d768d2a6ed587e1",
+      "expected_sha256": "c789101a1bb6eb5d4a8a38839decb4df43b2fff9d088d28a4d768d2a6ed587e1",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6c3836bf770db41f943aa3fc0459de3fab26fb816ba1d1344d37cc4bafecf598",
+      "expected_sha256": "6c3836bf770db41f943aa3fc0459de3fab26fb816ba1d1344d37cc4bafecf598",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "76a059d50b47c54b06bba1909461f771934a22cb0d18864f82f58c270162d7ee",
+      "expected_sha256": "76a059d50b47c54b06bba1909461f771934a22cb0d18864f82f58c270162d7ee",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dbce675b9e11b4e4a9917856f356bda97a552e306bc5a3d0d20e72ef3e623c18",
+      "expected_sha256": "dbce675b9e11b4e4a9917856f356bda97a552e306bc5a3d0d20e72ef3e623c18",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f59377cfb8ae61194fe759a038ed7d22f359f2410be7e86fd7d9e58e24b6c794",
+      "expected_sha256": "f59377cfb8ae61194fe759a038ed7d22f359f2410be7e86fd7d9e58e24b6c794",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e77c9139be712e5eb4b1ff33af36af5aaf32f2428b2743cf490e88aa4d7e2713",
+      "expected_sha256": "e77c9139be712e5eb4b1ff33af36af5aaf32f2428b2743cf490e88aa4d7e2713",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0b3dba5902a4701b4237c91f47b8eaf706c83df76dbc10a157e848b82fe0a02c",
+      "expected_sha256": "0b3dba5902a4701b4237c91f47b8eaf706c83df76dbc10a157e848b82fe0a02c",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "73a00901a810ea8ca7ea378ee01ab4652de537ad08edcc9be7917edb6bbefc9e",
+      "expected_sha256": "73a00901a810ea8ca7ea378ee01ab4652de537ad08edcc9be7917edb6bbefc9e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "968819558b1a03b2302402d12de032a0a37678608b60e18849c3ecbb5bd51b0d",
+      "expected_sha256": "968819558b1a03b2302402d12de032a0a37678608b60e18849c3ecbb5bd51b0d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1edbd8ed7f51a36928549a479009ef7fe522d82760a18dc3a8dc6112b34bdcbe",
+      "expected_sha256": "1edbd8ed7f51a36928549a479009ef7fe522d82760a18dc3a8dc6112b34bdcbe",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "4849651b2d5c98fd29699fb42caebd639991c025ca5c36233b14791d10b76ec9",
+      "expected_sha256": "4849651b2d5c98fd29699fb42caebd639991c025ca5c36233b14791d10b76ec9",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e95fb440f4c8dc19830e021d66399913bf586509163734e4c9aa901ee4defc45",
+      "expected_sha256": "e95fb440f4c8dc19830e021d66399913bf586509163734e4c9aa901ee4defc45",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a4f2a61eac64154425fdb1ad871fd2ac04837b709b89eb5d24c3745c67fe75b8",
+      "expected_sha256": "a4f2a61eac64154425fdb1ad871fd2ac04837b709b89eb5d24c3745c67fe75b8",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_001/canonical_spans/span_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d113be68d6c843f7f2411f6f7b805eac5357a49f1132b389339ab56890ebbf2b",
+      "expected_sha256": "d113be68d6c843f7f2411f6f7b805eac5357a49f1132b389339ab56890ebbf2b",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "acca8bba9814ad529899618bd513146a7c4bd547dda0ab5b161414b74db4fad3",
+      "expected_sha256": "acca8bba9814ad529899618bd513146a7c4bd547dda0ab5b161414b74db4fad3",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "3fa1e788cfc8fbae811c29e63c45751f68837f8fb250913c1a1333b2048ca237",
+      "expected_sha256": "3fa1e788cfc8fbae811c29e63c45751f68837f8fb250913c1a1333b2048ca237",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "3522420a964de19157549474418a18d32f3c58af371ae0c7b3a62218d4423b23",
+      "expected_sha256": "3522420a964de19157549474418a18d32f3c58af371ae0c7b3a62218d4423b23",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "41d0d4ae4425048189d752ff58c6b80b10ccfbee847fc9c3c4c675dc4504d98d",
+      "expected_sha256": "41d0d4ae4425048189d752ff58c6b80b10ccfbee847fc9c3c4c675dc4504d98d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "474f9684173f1f6188c015bb1ae1c6f080f29f862b638f32e40cdd151369c253",
+      "expected_sha256": "474f9684173f1f6188c015bb1ae1c6f080f29f862b638f32e40cdd151369c253",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "64c5d8886a5246369347b583e4c5898fab359be2b955954ce74c6822a5bc7467",
+      "expected_sha256": "64c5d8886a5246369347b583e4c5898fab359be2b955954ce74c6822a5bc7467",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "775b5de46bda0c01513bb3b24b43318dfebce90cabac1b877dbb00bb5af2f9e0",
+      "expected_sha256": "775b5de46bda0c01513bb3b24b43318dfebce90cabac1b877dbb00bb5af2f9e0",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "8c58c73ee4e1a8e2961322af1f1287c302b2109942670df90235ac7cbfa92a06",
+      "expected_sha256": "8c58c73ee4e1a8e2961322af1f1287c302b2109942670df90235ac7cbfa92a06",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "2244326d3dca33528425d5db1776cd8f382998d9b79ec1d66d4a2b289194c4f5",
+      "expected_sha256": "2244326d3dca33528425d5db1776cd8f382998d9b79ec1d66d4a2b289194c4f5",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "c7ddf652ff0231fc4660ddc40286f3d545ee1c6a6a4868e4d518afa4ad463b90",
+      "expected_sha256": "c7ddf652ff0231fc4660ddc40286f3d545ee1c6a6a4868e4d518afa4ad463b90",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "e92ea3f9830066aa341f24756e70ea91a6b1492419b67272529602c72e915c5e",
+      "expected_sha256": "e92ea3f9830066aa341f24756e70ea91a6b1492419b67272529602c72e915c5e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "721652ddfedd2ef3fd198883025230eebab49c40c2a92368e0e1244104a00d06",
+      "expected_sha256": "721652ddfedd2ef3fd198883025230eebab49c40c2a92368e0e1244104a00d06",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a7a7676bad75a26c51ce5d7d00b138fa19885127da7da5999acd8e186df7e198",
+      "expected_sha256": "a7a7676bad75a26c51ce5d7d00b138fa19885127da7da5999acd8e186df7e198",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "21ce3d550f648d1824abb8c652e384b117ff468640f59f81ba85e618b81b90ed",
+      "expected_sha256": "21ce3d550f648d1824abb8c652e384b117ff468640f59f81ba85e618b81b90ed",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_002/canonical_spans/span_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "cffa341955f8914fab3538a3520d8ceaa8262618a4a2409b7b59de345ae957f7",
+      "expected_sha256": "cffa341955f8914fab3538a3520d8ceaa8262618a4a2409b7b59de345ae957f7",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "b9ee64d4df261317e072bb33d5670bd574940a86256e0cea5b1f09ef8c8b5126",
+      "expected_sha256": "b9ee64d4df261317e072bb33d5670bd574940a86256e0cea5b1f09ef8c8b5126",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6d1528638ba5b58f27857a8c71a2c451f4b6fd7301e9ff9df517fd5c0752a9ed",
+      "expected_sha256": "6d1528638ba5b58f27857a8c71a2c451f4b6fd7301e9ff9df517fd5c0752a9ed",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fa2bf435697228cc2fadc954174cc583e8e1fc4885022638b43285d8293e0666",
+      "expected_sha256": "fa2bf435697228cc2fadc954174cc583e8e1fc4885022638b43285d8293e0666",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6c37f154f2de6a29362417125bb31518801bd703bd746c9d26379d8c5e30d60f",
+      "expected_sha256": "6c37f154f2de6a29362417125bb31518801bd703bd746c9d26379d8c5e30d60f",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "7897b2965067437428f4ba7ce9a98a4abf764fdce9fb9b621adf3fc49dfd1cf2",
+      "expected_sha256": "7897b2965067437428f4ba7ce9a98a4abf764fdce9fb9b621adf3fc49dfd1cf2",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "23b8552e1f5a6421ee49281733b391bc301772fe12ecedbdb209edc9bf565f93",
+      "expected_sha256": "23b8552e1f5a6421ee49281733b391bc301772fe12ecedbdb209edc9bf565f93",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "ff43b1e4550f627f3f043296bedeb955f9c47945a1c05577ce724225db6d1613",
+      "expected_sha256": "ff43b1e4550f627f3f043296bedeb955f9c47945a1c05577ce724225db6d1613",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "5b6589870cc9cba32d23c7508640d8eb919bd9c21a59ef732ca41412ab53a3fe",
+      "expected_sha256": "5b6589870cc9cba32d23c7508640d8eb919bd9c21a59ef732ca41412ab53a3fe",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fc3d52461be5212b166bf54deda9b7ba8909b6d8ecad2fba5cfb064b7b6ea24d",
+      "expected_sha256": "fc3d52461be5212b166bf54deda9b7ba8909b6d8ecad2fba5cfb064b7b6ea24d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d4bbcc8db2920565349eccab3727c4f9c29623bde694231e2bf66cc3f41657f4",
+      "expected_sha256": "d4bbcc8db2920565349eccab3727c4f9c29623bde694231e2bf66cc3f41657f4",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "065de30101c0e756e340afbc6ef30125b5eb3180420cd12d1ca860d226de74a2",
+      "expected_sha256": "065de30101c0e756e340afbc6ef30125b5eb3180420cd12d1ca860d226de74a2",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "bc6771f95911fee02d6e32602aab221334b980de0b2d5a12fb9703cf358a3a42",
+      "expected_sha256": "bc6771f95911fee02d6e32602aab221334b980de0b2d5a12fb9703cf358a3a42",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "b3c8386514202783be96b9220bb2ca80aa6a9662260038a9218911562451325d",
+      "expected_sha256": "b3c8386514202783be96b9220bb2ca80aa6a9662260038a9218911562451325d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fbbe07caf2fbd37e7b2a62c48d4724e642c6dbd52058f3887f4f3d693a338c90",
+      "expected_sha256": "fbbe07caf2fbd37e7b2a62c48d4724e642c6dbd52058f3887f4f3d693a338c90",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_003/canonical_spans/span_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "89c08262292a29c88c77c5b75fa824a8fc41a6598913e165730514c7413ce3c6",
+      "expected_sha256": "89c08262292a29c88c77c5b75fa824a8fc41a6598913e165730514c7413ce3c6",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "651d0aa62ec3cce7806547ce8369578a6d0a0224a057a87d86b4b3a0039a6a53",
+      "expected_sha256": "651d0aa62ec3cce7806547ce8369578a6d0a0224a057a87d86b4b3a0039a6a53",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0cef6197ba2faefdeed0440e1cd86a32ed90ebec429ae41f37647c7ba0c8ebce",
+      "expected_sha256": "0cef6197ba2faefdeed0440e1cd86a32ed90ebec429ae41f37647c7ba0c8ebce",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6266effaef3c593ff5bf571574545d175070ce0985c94a763ab952e40c81c37b",
+      "expected_sha256": "6266effaef3c593ff5bf571574545d175070ce0985c94a763ab952e40c81c37b",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a0d1aa715a5ff578415b77c4aad5c12958ae9a70c2ffbd725d26e0fedbf8fc25",
+      "expected_sha256": "a0d1aa715a5ff578415b77c4aad5c12958ae9a70c2ffbd725d26e0fedbf8fc25",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "93c94474e15d136791419104013e253842d87e69d274c2100c54ebd9cfaeb09e",
+      "expected_sha256": "93c94474e15d136791419104013e253842d87e69d274c2100c54ebd9cfaeb09e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dde91b63e7e47c23e7afb9426bae61dd430178459e0335d36abdb5ceed6e08ab",
+      "expected_sha256": "dde91b63e7e47c23e7afb9426bae61dd430178459e0335d36abdb5ceed6e08ab",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "17ff1461dbdb7a95798c90cd3d3ebc049d26c67e1c86bd4cb01c877dfa93c3b5",
+      "expected_sha256": "17ff1461dbdb7a95798c90cd3d3ebc049d26c67e1c86bd4cb01c877dfa93c3b5",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1c66134b9e0f5568aa639b728e7206ffaf2f6277abcd9d4648bf7237bba1bcdf",
+      "expected_sha256": "1c66134b9e0f5568aa639b728e7206ffaf2f6277abcd9d4648bf7237bba1bcdf",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fbfb0a3bae0818c2b394e5841b27307c1a02c428928ea76819192869e7e74c44",
+      "expected_sha256": "fbfb0a3bae0818c2b394e5841b27307c1a02c428928ea76819192869e7e74c44",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "73f268786922b8350a6131bea410bdc17cb3cdcf52041f90cee23748c129b11e",
+      "expected_sha256": "73f268786922b8350a6131bea410bdc17cb3cdcf52041f90cee23748c129b11e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dd85417f2cb1ebc553eb9cf252f67e695c85ec6603560a078213fc35d7c01df7",
+      "expected_sha256": "dd85417f2cb1ebc553eb9cf252f67e695c85ec6603560a078213fc35d7c01df7",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "fc90d2f1d05ba5de0eb085a62e662eb6cadb6344640eafc408ab91f9008510a3",
+      "expected_sha256": "fc90d2f1d05ba5de0eb085a62e662eb6cadb6344640eafc408ab91f9008510a3",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0ef31400c8ab06546593cb980c373bf1432f3e9bc72d18ee6d8e2a237ce09f64",
+      "expected_sha256": "0ef31400c8ab06546593cb980c373bf1432f3e9bc72d18ee6d8e2a237ce09f64",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "2fe595e54cbc8426c3dc5ec5d931ba04f81dc90c4667ca18f07ddf5beb26617d",
+      "expected_sha256": "2fe595e54cbc8426c3dc5ec5d931ba04f81dc90c4667ca18f07ddf5beb26617d",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_004/canonical_spans/span_shard_0014.jsonl.gz"
+    },
+    {
+      "actual_sha256": "3b27d899d7ad22194981db81bbb375900238aac952606099820e974a039d9295",
+      "expected_sha256": "3b27d899d7ad22194981db81bbb375900238aac952606099820e974a039d9295",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0000.jsonl.gz"
+    },
+    {
+      "actual_sha256": "b87b4ffc270a90216bbd68f1042ca1284b262290601529c20449ac65b2cc0562",
+      "expected_sha256": "b87b4ffc270a90216bbd68f1042ca1284b262290601529c20449ac65b2cc0562",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "8c657dc34050cc72a7f49a7b6d3b9aa9d6b1f79565bddc28969f63522256371b",
+      "expected_sha256": "8c657dc34050cc72a7f49a7b6d3b9aa9d6b1f79565bddc28969f63522256371b",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d163baddfe8f7f1de72081c519ede68a1c50b609765c9a13bacb7011ab2c8022",
+      "expected_sha256": "d163baddfe8f7f1de72081c519ede68a1c50b609765c9a13bacb7011ab2c8022",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f6dd2e2520985eb7d1790a45ea440ce5915004b8517979ee4d07ca0c0cd941cc",
+      "expected_sha256": "f6dd2e2520985eb7d1790a45ea440ce5915004b8517979ee4d07ca0c0cd941cc",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "1ea9816bec4f1929eae421de19e507147c557ab9a621dfe2f047b67b71297486",
+      "expected_sha256": "1ea9816bec4f1929eae421de19e507147c557ab9a621dfe2f047b67b71297486",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "a857ece8e0e8dc7684ee96aa20fc66ab7e6ca15cfaa03314e61f20d8bfb88934",
+      "expected_sha256": "a857ece8e0e8dc7684ee96aa20fc66ab7e6ca15cfaa03314e61f20d8bfb88934",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0006.jsonl.gz"
+    },
+    {
+      "actual_sha256": "423b598d3e02e4998a226a88ef45ab9a4a7edb540f4ecd31e86a5248d427a24e",
+      "expected_sha256": "423b598d3e02e4998a226a88ef45ab9a4a7edb540f4ecd31e86a5248d427a24e",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0007.jsonl.gz"
+    },
+    {
+      "actual_sha256": "abfa8609ced6ddf8c7dfcebdfedb01c5e0466dba4cf510f73d389a3a7f8fbbfb",
+      "expected_sha256": "abfa8609ced6ddf8c7dfcebdfedb01c5e0466dba4cf510f73d389a3a7f8fbbfb",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0008.jsonl.gz"
+    },
+    {
+      "actual_sha256": "9a7684fbf7f9742eec91a3c17d87a5aa56939879b55c18dd2fdec8d62ccc2be9",
+      "expected_sha256": "9a7684fbf7f9742eec91a3c17d87a5aa56939879b55c18dd2fdec8d62ccc2be9",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0009.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d0c972cd962774c6fb87ae406042a357b39b9a899ae51320b3e3254b67f33be5",
+      "expected_sha256": "d0c972cd962774c6fb87ae406042a357b39b9a899ae51320b3e3254b67f33be5",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0010.jsonl.gz"
+    },
+    {
+      "actual_sha256": "6ba34b53d6d4a6e135ba12554590f7c409097df354ac7c6d57c857ed66c7250a",
+      "expected_sha256": "6ba34b53d6d4a6e135ba12554590f7c409097df354ac7c6d57c857ed66c7250a",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0011.jsonl.gz"
+    },
+    {
+      "actual_sha256": "0c72f0f3aa313276ed0d90c2e2b410ab3579df119970372395be90db26123581",
+      "expected_sha256": "0c72f0f3aa313276ed0d90c2e2b410ab3579df119970372395be90db26123581",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0012.jsonl.gz"
+    },
+    {
+      "actual_sha256": "93c4a247d5ab690f41d22226db8d3ccb72a212aa02810769c4baac61fa64b3d1",
+      "expected_sha256": "93c4a247d5ab690f41d22226db8d3ccb72a212aa02810769c4baac61fa64b3d1",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0013.jsonl.gz"
+    },
+    {
+      "actual_sha256": "d3c2088e7f9c9293a86dff43f0535f85e11895887c6dc8883bbaf1042caf41db",
+      "expected_sha256": "d3c2088e7f9c9293a86dff43f0535f85e11895887c6dc8883bbaf1042caf41db",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/lanes/ingestion_lane_005/canonical_spans/span_shard_0014.jsonl.gz"
+    }
+  ],
+  "missing_observation_coordinates": 0,
+  "missing_observation_raw_value_fields": 0,
+  "missing_span_coordinates": 0,
+  "note": "coordinate gaps are reported separately; sampled coordinate fidelity is governed by Gate C",
+  "observations": 1876183,
+  "passed": true,
+  "spans": 1781186
+}

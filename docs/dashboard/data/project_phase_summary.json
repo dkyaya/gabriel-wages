@@ -21,7 +21,7 @@
   "available_external_compact_administrative_observations": 1876183,
   "available_external_conflict_records": 0,
   "available_external_corroboration_groups": 34225,
-  "available_external_current_stage": "external administrative observation compaction and classification complete",
+  "available_external_current_stage": "external administrative ingestion and codification complete",
   "available_external_data_actionable_candidate_rows": 62139,
   "available_external_data_blocked_auth_captcha_count": 4509,
   "available_external_data_candidate_review_complete": true,
@@ -184,7 +184,7 @@
     "unclear": 1875661
   },
   "available_external_native_pdf_pages": 611124,
-  "available_external_next_task": "external administrative evidence ingestion and codification",
+  "available_external_next_task": "external administrative reconciliation and linkage",
   "available_external_observations_by_evidence_quality": {
     "conflicting_administrative_record": 266890,
     "direct_official_administrative_record": 751006,
@@ -5658,6 +5658,57 @@
   "exact_span_rating_quarantine_count": 312,
   "exact_span_rating_queue_size": 17259,
   "exact_span_rating_valid_count": 16947,
+  "external_administrative_analysis_preparation": {
+    "growth_analysis": 206401,
+    "implementation_confirmation": 145409,
+    "local_comparison": 1002804,
+    "mechanism_linked_outcome": 1876183,
+    "staffing_hypothesis": 56944,
+    "total_compensation": 5907
+  },
+  "external_administrative_claim_linkage": {
+    "event_linked_claim_pending": 1493412,
+    "exact_claim_id_link": 382771
+  },
+  "external_administrative_compact_observations_ingested": 1876183,
+  "external_administrative_conflicts_preserved": 266890,
+  "external_administrative_cross_examination_candidates": 1226,
+  "external_administrative_final_claims_or_visuals": false,
+  "external_administrative_gabriel_scores": 0,
+  "external_administrative_ingestion_family_counts": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 26752,
+    "tenure_and_progression": 430720,
+    "vacancy_and_position_status": 12331
+  },
+  "external_administrative_ingestion_role_counts": {
+    "contextual_only": 191828,
+    "growth_candidate": 206401,
+    "implementation_confirmation_candidate": 145409,
+    "local_comparison_candidate": 1002804,
+    "pending_reconciliation": 266890,
+    "staffing_hypothesis_candidate": 56944,
+    "total_compensation_candidate": 5907
+  },
+  "external_administrative_normalization_or_math": false,
+  "external_administrative_ocr_runs": 0,
+  "external_administrative_reconciliation_queues": {
+    "claim_linkage": 1493412,
+    "compensation_basis": 1439489,
+    "conflict": 266890,
+    "department": 1752853,
+    "employee_or_position_identity": 1876183,
+    "implementation_status": 146781,
+    "pay_basis": 1417289,
+    "period": 79067,
+    "recurring_status": 1025251,
+    "side": 1400925
+  },
+  "external_administrative_supporting_spans_ingested": 1781186,
   "external_data_candidates_by_family": {
     "benefits_and_total_compensation": 29793,
     "implementation": 29793,
@@ -5719,6 +5770,7 @@
   "hosted_search_production_call_count": 2297,
   "hosted_search_repair_call_count": 5,
   "human_readable_citation_count": 31,
+  "implementation_event_deduplication_preserved": true,
   "implementation_event_deduplication_rerun_for_external_readiness": false,
   "implementation_event_deduplication_rerun_for_external_source_review": false,
   "implementation_event_deduplication_rerun_for_external_verification": false,
@@ -7073,6 +7125,7 @@
   "wage_growth_dashboard_weighting_method": "unit_cycle_weighted_average",
   "warnings": [],
   "whole_corpus_500_word_page_equivalent": 650482,
+  "whole_corpus_audit_final_unique_native_pdf_pages": 1029482,
   "whole_corpus_canonical_layer_count": 10,
   "whole_corpus_claim_boundary_counts": {
     "claim_ready": 8701,
@@ -7107,8 +7160,10 @@
   "whole_corpus_report_major_claim_count": 8,
   "whole_corpus_report_selected_example_count": 31,
   "whole_corpus_source_count": 7538,
+  "whole_corpus_storage_capacity_holds_preserved": 7895,
   "whole_corpus_synthesis_available": true,
   "whole_corpus_unique_native_pdf_pages": 1029482,
+  "whole_corpus_unresolved_hosted_search_targets": 12844,
   "whole_corpus_unresolved_pdf_page_conflicts": 0,
   "zero_candidate_target_count": 2
 }

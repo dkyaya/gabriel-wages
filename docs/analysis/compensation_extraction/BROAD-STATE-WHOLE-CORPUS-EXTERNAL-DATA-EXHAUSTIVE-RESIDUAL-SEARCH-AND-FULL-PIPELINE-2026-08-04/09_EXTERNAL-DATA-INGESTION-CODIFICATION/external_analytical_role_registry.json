@@ -1,0 +1,15 @@
+{
+  "codes": [
+    "local_comparison_candidate",
+    "total_compensation_candidate",
+    "staffing_hypothesis_candidate",
+    "growth_candidate",
+    "implementation_confirmation_candidate",
+    "mechanism_support_candidate",
+    "national_readiness_candidate",
+    "contextual_only",
+    "no_material_analytical_role",
+    "pending_reconciliation"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

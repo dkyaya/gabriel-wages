@@ -1,0 +1,26 @@
+{
+  "implementation_event_deduplication_rerun": false,
+  "input_observations": 1876183,
+  "input_spans": 1781186,
+  "lanes": [
+    "ingestion_lane_001",
+    "ingestion_lane_002",
+    "ingestion_lane_003",
+    "ingestion_lane_004",
+    "ingestion_lane_005"
+  ],
+  "local_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers",
+  "local_root_ignored": true,
+  "network_authorized": false,
+  "registry_hash": "fd5bb9f686f2a3c3a8dd960f62f1d9075c873706373fba7d7b03e7330e39205e",
+  "stagger_seconds": {
+    "ingestion_lane_001": 0,
+    "ingestion_lane_002": 120,
+    "ingestion_lane_003": 240,
+    "ingestion_lane_004": 360,
+    "ingestion_lane_005": 480
+  },
+  "started_at": "2026-08-06T00:28:02.507431+00:00",
+  "starting_head": "f9b6b319d6d297b4ca750555c0da5061b45b78dc",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05"
+}

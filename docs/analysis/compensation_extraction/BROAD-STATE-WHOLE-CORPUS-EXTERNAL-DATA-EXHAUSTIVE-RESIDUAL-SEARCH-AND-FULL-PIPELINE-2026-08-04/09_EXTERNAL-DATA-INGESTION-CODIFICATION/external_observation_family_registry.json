@@ -1,0 +1,17 @@
+{
+  "codes": [
+    "payroll_and_earnings",
+    "staffing_and_headcount",
+    "vacancy_and_position_status",
+    "recruitment_and_retention",
+    "tenure_and_progression",
+    "implementation_confirmation",
+    "benefits_and_total_compensation",
+    "contextual_controls",
+    "qualitative_administrative_context",
+    "conflict_record",
+    "ambiguous_record",
+    "unclear"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

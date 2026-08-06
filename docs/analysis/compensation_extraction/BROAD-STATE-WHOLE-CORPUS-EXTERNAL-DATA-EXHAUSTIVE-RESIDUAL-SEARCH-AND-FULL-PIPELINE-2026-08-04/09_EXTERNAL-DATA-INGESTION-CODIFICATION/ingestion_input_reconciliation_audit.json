@@ -1,0 +1,117 @@
+{
+  "checks": {
+    "all_input_hashes": true,
+    "analytical_role_equation": true,
+    "analytical_roles": true,
+    "classification_input_ignored": true,
+    "classification_manifest_exists": true,
+    "disk_reserve": true,
+    "holds": true,
+    "ingestion_class_equation": true,
+    "ingestion_classes": true,
+    "ingestion_output_ignored": true,
+    "observation_count": true,
+    "ocr": true,
+    "page_accounting": true,
+    "quality_gates_passed": true,
+    "raw_hits_not_inputs": true,
+    "repair": true,
+    "repository_path": true,
+    "required_commit_ancestor": true,
+    "span_count": true,
+    "superseded_outputs_excluded": true,
+    "unrelated_dirty_worktree_absent": true,
+    "unsearched": true
+  },
+  "free_bytes": 30858735616,
+  "git_status_short": "?? docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/09_EXTERNAL-DATA-INGESTION-CODIFICATION/\n?? scripts/run_external_data_deterministic_ingestion_codification.py",
+  "input_hash_checks": [
+    {
+      "actual_sha256": "48edc1aa55d4a6fd850557aab231d52072808c4904ed33a3fe7edddf0f777bb5",
+      "exists": true,
+      "expected_sha256": "48edc1aa55d4a6fd850557aab231d52072808c4904ed33a3fe7edddf0f777bb5",
+      "kind": "observation",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_001.jsonl.gz"
+    },
+    {
+      "actual_sha256": "03cd3b4a82828e3e06c3a02153ad6451a60be408afa4c6164d64cf2c7064199d",
+      "exists": true,
+      "expected_sha256": "03cd3b4a82828e3e06c3a02153ad6451a60be408afa4c6164d64cf2c7064199d",
+      "kind": "observation",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_002.jsonl.gz"
+    },
+    {
+      "actual_sha256": "952483a29d290607d863e5b4c585f48ac3b8c4101451fbf18951eaf9841ef0e7",
+      "exists": true,
+      "expected_sha256": "952483a29d290607d863e5b4c585f48ac3b8c4101451fbf18951eaf9841ef0e7",
+      "kind": "observation",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_003.jsonl.gz"
+    },
+    {
+      "actual_sha256": "58259cad4d42c854f52b178f5636e091a3e75b37985e71b6bc6b55322ff81fe6",
+      "exists": true,
+      "expected_sha256": "58259cad4d42c854f52b178f5636e091a3e75b37985e71b6bc6b55322ff81fe6",
+      "kind": "observation",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_004.jsonl.gz"
+    },
+    {
+      "actual_sha256": "dc1e11dcfab93678b609ad41326e53b8c75905d28a5e991272be31b0b8a37116",
+      "exists": true,
+      "expected_sha256": "dc1e11dcfab93678b609ad41326e53b8c75905d28a5e991272be31b0b8a37116",
+      "kind": "observation",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/administrative_observations/classification_lane_005.jsonl.gz"
+    },
+    {
+      "actual_sha256": "ba17f88fc0aa81f3a31ec666440428ce3cd0bac582e468d51c5b9e9dc5d16be1",
+      "exists": true,
+      "expected_sha256": "ba17f88fc0aa81f3a31ec666440428ce3cd0bac582e468d51c5b9e9dc5d16be1",
+      "kind": "span",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_001/classified_spans.jsonl.gz"
+    },
+    {
+      "actual_sha256": "f7f250aa302f0832eb3832b0de9c96eeddf10123f00f5c9021bbf3c3e1a07d27",
+      "exists": true,
+      "expected_sha256": "f7f250aa302f0832eb3832b0de9c96eeddf10123f00f5c9021bbf3c3e1a07d27",
+      "kind": "span",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_002/classified_spans.jsonl.gz"
+    },
+    {
+      "actual_sha256": "3cfda78f60f5bd93c49843d0d844aafc4ad0f88d1bbfb77c4822e08347aef6d4",
+      "exists": true,
+      "expected_sha256": "3cfda78f60f5bd93c49843d0d844aafc4ad0f88d1bbfb77c4822e08347aef6d4",
+      "kind": "span",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_003/classified_spans.jsonl.gz"
+    },
+    {
+      "actual_sha256": "40703b3394fb8d8beede0091d5cbd32091a33324038103de278b31154f227a4f",
+      "exists": true,
+      "expected_sha256": "40703b3394fb8d8beede0091d5cbd32091a33324038103de278b31154f227a4f",
+      "kind": "span",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_004/classified_spans.jsonl.gz"
+    },
+    {
+      "actual_sha256": "94db305cb6b3627c68b101ca043fc6ed3d7b52146880f2da31ca960badff777f",
+      "exists": true,
+      "expected_sha256": "94db305cb6b3627c68b101ca043fc6ed3d7b52146880f2da31ca960badff777f",
+      "kind": "span",
+      "passed": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations/lanes/classification_lane_005/classified_spans.jsonl.gz"
+    }
+  ],
+  "minimum_free_bytes": 8589934592,
+  "passed": true,
+  "process_inspection": "external ps inventory checked before this runner; no matching ingestion/classification worker",
+  "started_at": "2026-08-06T00:28:02.507496+00:00",
+  "starting_head": "f9b6b319d6d297b4ca750555c0da5061b45b78dc",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05",
+  "unexpected_dirty_entries": []
+}

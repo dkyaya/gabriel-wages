@@ -1,0 +1,26 @@
+{
+  "basis": "classified supporting spans linked by source identity",
+  "counts": {
+    "audit_or_financial_report": 1869,
+    "benefits_document": 1654,
+    "budget": 49502,
+    "compensation_study": 3941,
+    "contract_or_mou": 9647,
+    "earnings_report": 2707,
+    "government_dataset": 4093,
+    "implementation_record": 13,
+    "media_or_context": 604,
+    "meeting_packet": 578,
+    "open_checkbook": 21,
+    "open_data_portal": 76,
+    "ordinance_or_resolution": 65192,
+    "other": 22312,
+    "payroll_roster": 1338386,
+    "pension_or_retirement_document": 84243,
+    "recruitment_study": 25,
+    "salary_schedule": 117883,
+    "staffing_table": 78063,
+    "unclear": 3,
+    "vacancy_report": 374
+  }
+}

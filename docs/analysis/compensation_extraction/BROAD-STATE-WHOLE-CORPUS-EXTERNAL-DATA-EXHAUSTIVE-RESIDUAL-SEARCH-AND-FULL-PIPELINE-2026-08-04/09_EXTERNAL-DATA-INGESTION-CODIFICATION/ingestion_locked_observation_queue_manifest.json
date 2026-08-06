@@ -1,0 +1,66 @@
+{
+  "class_counts": {
+    "ingestion_ready_conflict_preserved": 266890,
+    "ingestion_ready_direct_administrative": 1117471,
+    "ingestion_ready_implementation_record": 145409,
+    "ingestion_ready_official_summary": 271577,
+    "ingestion_ready_schedule_record": 74836
+  },
+  "created_at": "2026-08-06T00:30:53.536352+00:00",
+  "raw_field_or_span_hits_included": false,
+  "role_counts": {
+    "contextual_only": 191828,
+    "growth_candidate": 206401,
+    "implementation_confirmation_candidate": 145409,
+    "local_comparison_candidate": 1002804,
+    "pending_reconciliation": 266890,
+    "staffing_hypothesis_candidate": 56944,
+    "total_compensation_candidate": 5907
+  },
+  "row_count": 1876183,
+  "sha256_basis": "five immutable gzip shard hashes in lane order",
+  "shards": [
+    {
+      "bytes": 45773059,
+      "lane_id": "ingestion_lane_001",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/locked_queue/ingestion_lane_001.jsonl.gz",
+      "row_count": 375237,
+      "sha256": "1796d7c33170b799258f333474dc3f6eb2ed54d6eafe244682b5f78d41269381",
+      "shard_id": "ingestion_lane_001"
+    },
+    {
+      "bytes": 45785734,
+      "lane_id": "ingestion_lane_002",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/locked_queue/ingestion_lane_002.jsonl.gz",
+      "row_count": 375237,
+      "sha256": "15afca69ac8fe7eb935c0ad69f3e9f1b5f7be04719ede5a37be482580abad3d0",
+      "shard_id": "ingestion_lane_002"
+    },
+    {
+      "bytes": 45789519,
+      "lane_id": "ingestion_lane_003",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/locked_queue/ingestion_lane_003.jsonl.gz",
+      "row_count": 375237,
+      "sha256": "b09f9d34d5438e77ea058518e417f2442225cb8af8336bcdff5d5fa79cf8f19b",
+      "shard_id": "ingestion_lane_003"
+    },
+    {
+      "bytes": 45799377,
+      "lane_id": "ingestion_lane_004",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/locked_queue/ingestion_lane_004.jsonl.gz",
+      "row_count": 375236,
+      "sha256": "ab39d8925912c7dd99d072b874f1ad3808b14da611ccc733cad4750a5952a183",
+      "shard_id": "ingestion_lane_004"
+    },
+    {
+      "bytes": 45787056,
+      "lane_id": "ingestion_lane_005",
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/locked_queue/ingestion_lane_005.jsonl.gz",
+      "row_count": 375236,
+      "sha256": "bb17bf67843be0e0fc74e070a9460ceb85e6a79515b8a2f0f788a36c88f62b0e",
+      "shard_id": "ingestion_lane_005"
+    }
+  ],
+  "superseded_or_failed_gate_outputs_included": false,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05"
+}

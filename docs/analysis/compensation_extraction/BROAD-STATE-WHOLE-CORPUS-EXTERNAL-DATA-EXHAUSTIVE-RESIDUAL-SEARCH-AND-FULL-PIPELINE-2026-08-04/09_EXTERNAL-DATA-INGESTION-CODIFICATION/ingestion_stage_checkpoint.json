@@ -1,0 +1,14 @@
+{
+  "completed_lanes": [
+    "ingestion_lane_001",
+    "ingestion_lane_002",
+    "ingestion_lane_003",
+    "ingestion_lane_004",
+    "ingestion_lane_005"
+  ],
+  "dashboard_complete": true,
+  "merge_complete": true,
+  "stage": "complete",
+  "updated_at": "2026-08-06T00:43:42.463114+00:00",
+  "validation_complete": true
+}

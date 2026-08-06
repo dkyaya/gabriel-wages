@@ -1,0 +1,11 @@
+{
+  "codes": [
+    "exact_claim_id_link",
+    "claim_family_only",
+    "event_linked_claim_pending",
+    "multiple_possible_claims",
+    "no_canonical_claim_mapping",
+    "contextual_not_claim_linked"
+  ],
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}

@@ -1,0 +1,20 @@
+{
+  "mechanical_not_human_gold": true,
+  "minimums": {
+    "ambiguous": 150,
+    "benefits": 100,
+    "conflicts": 200,
+    "context": 100,
+    "corroboration_groups": 100,
+    "exact_claim": 100,
+    "implementation": 150,
+    "payroll": 300,
+    "schedule": 200,
+    "span_links": 100,
+    "staffing": 150,
+    "vacancy": 150
+  },
+  "overlap_allowed": true,
+  "seed": "SHA256(QA-20260805|observation_id)",
+  "stratified": true
+}

@@ -1,0 +1,46 @@
+{
+  "caveat": "deterministic invariant replay is not independent human semantic gold coding",
+  "gates": {
+    "A_observation_input_integrity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    },
+    "B_raw_value_fidelity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    },
+    "C_source_coordinate_fidelity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 0.995
+    },
+    "D_source_independence_preservation": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    },
+    "E_conflict_preservation": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    },
+    "F_writeoff_exclusion": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    },
+    "G_claim_link_fidelity": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    },
+    "H_no_premature_analysis": {
+      "passed": true,
+      "rate": 1.0,
+      "threshold": 1.0
+    }
+  },
+  "passed": true
+}

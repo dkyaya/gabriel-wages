@@ -1,0 +1,22 @@
+{
+  "codes": [
+    "proposed",
+    "recommended",
+    "negotiated",
+    "tentative",
+    "adopted",
+    "approved",
+    "ratified",
+    "appropriated",
+    "implemented",
+    "payroll_effective",
+    "paid",
+    "amended",
+    "rejected",
+    "expired",
+    "unclear",
+    "not_applicable"
+  ],
+  "note": "not_applicable replaces unclear only when lifecycle is substantively irrelevant",
+  "version": "external-deterministic-ingestion-codification-2026-08-05-v1"
+}
