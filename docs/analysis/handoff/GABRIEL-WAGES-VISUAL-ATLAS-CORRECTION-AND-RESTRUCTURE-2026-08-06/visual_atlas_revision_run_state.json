@@ -1,6 +1,7 @@
 {
-  "stage": "complete",
-  "decision": "gabriel_wages_visual_atlas_revision_completed_source_packaging_ready",
+  "stage": "deployment_validation",
+  "decision": "gabriel_wages_visual_atlas_revision_partial_resume_ready",
+  "blocker": "GitHub Actions and Pages major outage; workflow run 31124212169 queued without a runner",
   "lanes": {
     "1": "complete",
     "2": "complete",

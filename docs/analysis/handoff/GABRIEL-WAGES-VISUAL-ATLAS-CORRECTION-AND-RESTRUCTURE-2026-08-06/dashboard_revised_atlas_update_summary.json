@@ -1,7 +1,7 @@
 {
-  "status": "locally_built_pending_public_deployment_validation",
+  "status": "locally_built_public_deployment_blocked_by_github_outage",
   "current_stage": "revised visual atlas complete",
-  "next_stage": "source-library streaming compression and split-volume packaging",
+  "next_stage": "resume public deployment validation, then source-library streaming compression and split-volume packaging",
   "revised_atlas_pages": 71,
   "integrated_mechanism_profiles": 8,
   "reader_facing_mechanism_categories": 35,

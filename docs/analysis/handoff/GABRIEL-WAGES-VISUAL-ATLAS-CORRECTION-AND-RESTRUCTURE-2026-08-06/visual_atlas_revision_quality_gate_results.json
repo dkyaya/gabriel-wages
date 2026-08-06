@@ -15,7 +15,7 @@
   "N_methodology_truthfulness": true,
   "O_PDF_integrity": true,
   "P_page_plan_integrity": true,
-  "Q_dashboard_deployment": "pending_push_validation",
+  "Q_dashboard_deployment": "blocked_external_github_actions_pages_major_outage",
   "R_no_unauthorized_research": true,
   "S_source_packaging_policy": true
 }

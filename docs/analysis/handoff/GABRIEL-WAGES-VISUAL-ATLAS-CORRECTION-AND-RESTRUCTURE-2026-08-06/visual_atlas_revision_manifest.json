@@ -70,7 +70,13 @@
     "claim_readjudication": false
   },
   "completed_at": "2026-08-06T17:39:04.351119+00:00",
-  "decision": "gabriel_wages_visual_atlas_revision_completed_source_packaging_ready",
+  "decision": "gabriel_wages_visual_atlas_revision_partial_resume_ready",
+  "deployment_validation": {
+    "status": "blocked_external_resume_ready",
+    "github_actions_and_pages_status": "major_outage",
+    "workflow_run_id": 31124212169,
+    "accepted_local_work_preserved": true
+  },
   "page_count": 71,
   "pdf_sha256": "46608bb50eaf0dee046f85629c92210472b96777b5e8a048e49b8a52059fe247",
   "five_lanes_complete": true

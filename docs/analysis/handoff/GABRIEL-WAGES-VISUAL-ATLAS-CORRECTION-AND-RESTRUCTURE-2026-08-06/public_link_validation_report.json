@@ -1,0 +1,20 @@
+{
+  "status": "blocked_external_resume_ready",
+  "checked_at": "2026-08-06T18:01:00Z",
+  "commit": "c0851b84675b9c24e752cac3c8803ff2891daea9",
+  "push_status": "pushed_to_origin_main",
+  "workflow_run_id": 31124212169,
+  "workflow_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/31124212169",
+  "workflow_status": "queued_without_runner",
+  "github_status": {
+    "actions": "major_outage",
+    "pages": "major_outage"
+  },
+  "main_dashboard_HTTP": 200,
+  "revised_landing_page_HTTP": 404,
+  "revised_PDF_HTTP": 404,
+  "local_PDF_SHA256": "46608bb50eaf0dee046f85629c92210472b96777b5e8a048e49b8a52059fe247",
+  "served_PDF_checksum_validated": false,
+  "project_side_build_status": "pass",
+  "resume_instructions": "After GitHub recovers, complete or rerun the workflow for the same commit, require HTTP 200 for both revised public URLs, download the served PDF, and require an exact SHA-256 match."
+}

@@ -1,5 +1,5 @@
 {
-  "decision": "gabriel_wages_visual_atlas_revision_completed_source_packaging_ready",
+  "decision": "gabriel_wages_visual_atlas_revision_partial_resume_ready",
   "page_count": 71,
   "corrected_category_maps": 38,
   "integrated_mechanism_profiles": 8,
@@ -19,6 +19,9 @@
   "full_source_copy_created": false,
   "source_packaging_streaming_policy": true,
   "forbidden_action_occurred": false,
+  "deployment_status": "blocked_by_github_actions_and_pages_major_outage",
+  "deployment_run_id": 31124212169,
+  "deployment_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/31124212169",
   "pdf_sha256": "46608bb50eaf0dee046f85629c92210472b96777b5e8a048e49b8a52059fe247",
   "five_lane_completion": {
     "1": "complete",

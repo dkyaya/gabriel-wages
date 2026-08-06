@@ -1,5 +1,14 @@
 {
-  "status": "pass_local_pending_public_HTTP",
+  "status": "pass_local_public_validation_blocked_external",
+  "external_blocker": {
+    "service": "GitHub Actions and GitHub Pages",
+    "reported_status": "major_outage",
+    "workflow_run_id": 31124212169,
+    "workflow_run_status": "queued_without_runner",
+    "landing_page_HTTP": 404,
+    "main_dashboard_HTTP": 200,
+    "resume_scope": "wait for service recovery, complete deployment, require HTTP 200 for landing page and PDF, and compare the served PDF checksum"
+  },
   "checks": {
     "page_count": 71,
     "claims": 14,
