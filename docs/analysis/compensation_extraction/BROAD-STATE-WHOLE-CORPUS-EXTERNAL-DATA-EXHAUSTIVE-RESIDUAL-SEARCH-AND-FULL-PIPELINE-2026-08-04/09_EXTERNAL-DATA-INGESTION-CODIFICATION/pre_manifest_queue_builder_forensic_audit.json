@@ -1,0 +1,23 @@
+{
+  "accepted_manifest_referenced_quarantine": false,
+  "accepted_observation_count": 1876183,
+  "accepted_output_impact": false,
+  "accepted_queue_hashes_match_locked_manifest": true,
+  "accepted_span_count": 1781186,
+  "canonical_observation_duplicate_id_count": 0,
+  "canonical_observation_rows": 1876183,
+  "canonical_shard_hashes_match_manifest": true,
+  "canonical_span_duplicate_id_count": 0,
+  "canonical_span_rows": 1781186,
+  "duplicate_production_workers": 0,
+  "finding": "The original queue-builder process outlived its terminal poll and briefly overlapped a second preparation-only builder. Files moved to quarantine continued receiving bytes and at least one quarantined gzip stream is invalid. No quarantined file was referenced by the accepted locked manifest, and no production lane had started.",
+  "forensic_checked_at": "2026-08-06T00:53:14Z",
+  "overlapping_pre_manifest_queue_builders": 1,
+  "production_lane_errors": 0,
+  "production_lanes_unique": true,
+  "quarantine_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/quarantine/unaccepted_prepare_attempt_20260806T002802Z",
+  "quarantined_attempt_gzip_valid": false,
+  "quarantined_attempt_manifested": false,
+  "resolution": "Retain the unaccepted corrupt attempt in ignored local quarantine; rely only on the later manifest-locked queues whose row counts, IDs, source lineage, and shard hashes passed independent full-corpus audits.",
+  "status": "bounded_no_accepted_output_impact"
+}

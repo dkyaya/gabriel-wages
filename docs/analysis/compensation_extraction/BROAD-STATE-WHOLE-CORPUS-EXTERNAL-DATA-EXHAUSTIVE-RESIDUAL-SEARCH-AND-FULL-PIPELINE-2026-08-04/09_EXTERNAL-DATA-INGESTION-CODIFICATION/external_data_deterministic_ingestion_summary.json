@@ -157,7 +157,10 @@
     "vacant_position_observation": 9920
   },
   "ocr_later_preserved": 118,
-  "operational_incident_count": 2,
+  "operational_incident_count": 3,
+  "overlapping_pre_manifest_queue_builders": 1,
+  "duplicate_production_workers": 0,
+  "pre_manifest_builder_incident_accepted_output_impact": false,
   "quality_gates_passed": true,
   "reconciliation_queue_counts": {
     "claim_linkage": 1493412,

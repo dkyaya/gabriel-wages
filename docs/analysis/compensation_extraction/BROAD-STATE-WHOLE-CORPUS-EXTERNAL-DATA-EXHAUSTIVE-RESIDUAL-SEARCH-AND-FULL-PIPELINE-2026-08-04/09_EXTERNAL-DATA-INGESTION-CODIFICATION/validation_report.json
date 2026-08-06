@@ -65,6 +65,12 @@
     "63_large_file_audit": true
   },
   "mechanical_qa_not_independent_human_semantic_gold": true,
+  "process_control_incident": {
+    "accepted_output_impact": false,
+    "duplicate_production_workers": 0,
+    "overlapping_pre_manifest_queue_builders": 1,
+    "quarantined_attempt_manifested_or_accepted": false
+  },
   "passed": true,
   "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-DETERMINISTIC-INGESTION-AND-CODIFICATION-2026-08-05"
 }
