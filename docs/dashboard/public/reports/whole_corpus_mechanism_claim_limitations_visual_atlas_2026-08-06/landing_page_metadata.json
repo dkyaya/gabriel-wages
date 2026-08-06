@@ -4,5 +4,6 @@
   "page_count": 76,
   "mechanism_count": 38,
   "claim_count": 14,
-  "last_updated": "2026-08-06"
+  "last_updated": "2026-08-06",
+  "deployment_artifact_revision": 2
 }
