@@ -17,6 +17,9 @@
     "images_open": true,
     "svg_open": true,
     "pdf_opens": true,
+    "public_landing_http_200": true,
+    "public_pdf_http_200": true,
+    "public_pdf_checksum_matches": true,
     "prior_gallery_preserved": true,
     "primary_map_preserved": "scout_coverage_rate"
   }

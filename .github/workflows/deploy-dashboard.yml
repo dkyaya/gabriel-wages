@@ -78,7 +78,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # Large visual-report releases can remain queued in the Pages backend
-          # beyond the action's 10-minute default even after the artifact uploads.
-          timeout: 1800000

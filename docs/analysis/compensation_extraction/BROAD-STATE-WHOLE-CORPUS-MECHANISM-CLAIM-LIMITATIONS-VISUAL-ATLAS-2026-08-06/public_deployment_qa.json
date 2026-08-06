@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "validated_at": "2026-08-06T08:54:00-04:00",
+  "landing_page": {
+    "url": "https://dkyaya.github.io/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/",
+    "http_status": 200,
+    "response_bytes": 2784,
+    "content_checks": {
+      "title_present": true,
+      "pdf_link_present": true,
+      "mechanism_count_38_present": true,
+      "claim_count_14_present": true,
+      "page_count_76_present": true,
+      "prior_gallery_link_present": true,
+      "dashboard_link_present": true
+    }
+  },
+  "pdf": {
+    "url": "https://dkyaya.github.io/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+    "http_status": 200,
+    "response_bytes": 8709892,
+    "public_sha256": "4a38a78cf5be4db2960dfe89953c446f8d56eaed4ec2c0fafff3f99bd1591fa7",
+    "committed_sha256": "4a38a78cf5be4db2960dfe89953c446f8d56eaed4ec2c0fafff3f99bd1591fa7",
+    "checksum_matches": true
+  },
+  "dashboard": {
+    "atlas_card_present_in_built_data": true,
+    "primary_map_preserved": "scout_coverage_rate",
+    "prior_visual_review_gallery_preserved": true
+  },
+  "deployment_note": "GitHub Pages published the artifact asynchronously after the action-side deployment poller timed out while the backend reported deployment_queued. Direct HTTP and checksum validation are authoritative for the published package."
+}

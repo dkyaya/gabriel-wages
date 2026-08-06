@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "links": [
+    {
+      "role": "visual_atlas_landing_page",
+      "url": "https://dkyaya.github.io/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/",
+      "http_status": 200
+    },
+    {
+      "role": "visual_atlas_pdf",
+      "url": "https://dkyaya.github.io/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+      "http_status": 200
+    },
+    {
+      "role": "prior_visual_review_gallery",
+      "url": "https://dkyaya.github.io/gabriel-wages/reports/whole_corpus_visual_review_2026-08-06/",
+      "preserved": true
+    },
+    {
+      "role": "main_dashboard",
+      "url": "https://dkyaya.github.io/gabriel-wages/",
+      "preserved": true
+    }
+  ]
+}

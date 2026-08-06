@@ -15,7 +15,7 @@
   "caption_voice_QA": "pass",
   "visual_QA": "pass",
   "PDF_QA": "pass",
-  "public_deployment_QA": "pending_push_validation",
+  "public_deployment_QA": "pass",
   "counterexamples_covered": 7,
   "unresolved_conflicts_preserved": 201,
   "native_pdf_pages": 1029482,
