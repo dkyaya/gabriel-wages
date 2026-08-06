@@ -1,0 +1,828 @@
+{
+  "bulky_payloads": "ignored local storage with tracked pointers",
+  "created_at": "2026-08-06T04:45:12.641425+00:00",
+  "files": [
+    {
+      "bytes": 429,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_basis_compatibility_registry.json",
+      "sha256": "28040ab95c402e69f83f91d32057c65fed3ccea90acf7a6d9991f8c44d1393c1"
+    },
+    {
+      "bytes": 326,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_basis_compatibility_registry.md",
+      "sha256": "8277007a015e8fa28548fcee5275d013884c469aa9802abe9e37b530e16e0b9f"
+    },
+    {
+      "bytes": 379,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_conflict_registry.json",
+      "sha256": "8d6620d4b57c19ef9b922206ea77ee82c5d7aa31e0adaf1d5a967a85e3d7d14e"
+    },
+    {
+      "bytes": 276,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_conflict_registry.md",
+      "sha256": "d9cab9c8c5e470c2e232f904817cc404b8ab0ea1e9704497ed12a274ca21dc4e"
+    },
+    {
+      "bytes": 518,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_corroboration_registry.json",
+      "sha256": "b5b6427b2463963344baaa4a0d0a56513693094b4e00259d2900f796acfe0ed2"
+    },
+    {
+      "bytes": 393,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_corroboration_registry.md",
+      "sha256": "aa23b15f381e2b22e5e45aa67295cafffd16f10610456ae5c59ecef7c26efe40"
+    },
+    {
+      "bytes": 934,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_evidence_tier_registry.json",
+      "sha256": "e9bb01a8cc855619f72b10de6aa3d9eedadbaae0cb04e8674392737cbd895089"
+    },
+    {
+      "bytes": 797,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_evidence_tier_registry.md",
+      "sha256": "76447e057171ae471efa74ea4eabe7eba2115912abd76ba73c04aa9b6067d6d1"
+    },
+    {
+      "bytes": 406,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_growth_registry.json",
+      "sha256": "234e2e7b79a5f7bfb0a31e629ebd92025d8cd4d2028ba0a23ffee71fc130dbe0"
+    },
+    {
+      "bytes": 301,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_growth_registry.md",
+      "sha256": "029ee4117b2cf73df415d893285f4b1d3faa58182db0d43a19bd36cc661db6e9"
+    },
+    {
+      "bytes": 407,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_implementation_registry.json",
+      "sha256": "c890704f0bca20b5cf1fbbfce959e7325c9859553952da215a6a1214728fca49"
+    },
+    {
+      "bytes": 302,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_implementation_registry.md",
+      "sha256": "01e4a9f9dee9629dd246bb6f246ccc97fe9102eb3523f22a075b75c167e564ee"
+    },
+    {
+      "bytes": 400,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_period_compatibility_registry.json",
+      "sha256": "b2bccd140d7069ddf0778a15b489e63dcbbffe71937de20416db8565b1d300cd"
+    },
+    {
+      "bytes": 295,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_period_compatibility_registry.md",
+      "sha256": "0189d4d303ae48b98964185af031f7d223e86a7c5992313679e7d86e2c7964ad"
+    },
+    {
+      "bytes": 279,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_range_analysis_registry.json",
+      "sha256": "adc92260461f9a9c431eea80e8a215db3d80eba2989b0a412b367efe221897cc"
+    },
+    {
+      "bytes": 182,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_range_analysis_registry.md",
+      "sha256": "c2e5d2e75364f7ddd086f8e951b0d989650911d130b62a9144cc2dac0dde2875"
+    },
+    {
+      "bytes": 415,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_role_comparability_registry.json",
+      "sha256": "dc1af1d38547dee375a9ef633c963165302cb5f2ae68e3e5c0e25c23809b53da"
+    },
+    {
+      "bytes": 312,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_role_comparability_registry.md",
+      "sha256": "95a98fd87e41bd4b0d640c9d1dec3a7bbb402353274373afc2d2e8cf44a979a0"
+    },
+    {
+      "bytes": 321,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_side_inference_registry.json",
+      "sha256": "3f06e9e5913e4115cb1fa66a284870db474faa6a4141138b87aae8c83db97d5e"
+    },
+    {
+      "bytes": 218,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_side_inference_registry.md",
+      "sha256": "49e6389837aece9830aa1a75419cd9de2e95bd58aca9fb5daf68c6a199047a52"
+    },
+    {
+      "bytes": 472,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_smoke_test_results.json",
+      "sha256": "f34f050854234ba8e59f9efca8ceaba2053b0680235c1d4cf930d60a60b3fb5e"
+    },
+    {
+      "bytes": 394,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_staffing_registry.json",
+      "sha256": "0d83ccc00959cc066e09b79180924280ef63045e3308c1b479c814d4b20bf292"
+    },
+    {
+      "bytes": 289,
+      "path": "01_EVIDENCE-TIER-REDESIGN/aggressive_staffing_registry.md",
+      "sha256": "d75ab98fcaf57656a3a94652fdc9c3b20e44233905f6533b171dd3015df68a23"
+    },
+    {
+      "bytes": 1317,
+      "path": "01_EVIDENCE-TIER-REDESIGN/combined_aggressive_registry_hash.json",
+      "sha256": "373f488ae6b6025d0c2248add2fa37bfd090560830b404f17bef888a5a92e156"
+    },
+    {
+      "bytes": 84718,
+      "path": "01_EVIDENCE-TIER-REDESIGN/rejected_after_reconsideration.csv",
+      "sha256": "fd167a8ea5a2eb86e68ca43b6e33dce2e0cc946083212eb27a0334dfa600d0be"
+    },
+    {
+      "bytes": 148587,
+      "path": "01_EVIDENCE-TIER-REDESIGN/rejected_after_reconsideration.jsonl",
+      "sha256": "0bfbd976db0760c8abcffaa8be2838a124946bc83ec9365c561cc57d07a52752"
+    },
+    {
+      "bytes": 315426,
+      "path": "01_EVIDENCE-TIER-REDESIGN/strict_baseline_manifest.json",
+      "sha256": "b069e3fbfbb982eba3475122c5d7e6a0607f56f0061cc68cfb7192b9166e28e7"
+    },
+    {
+      "bytes": 533,
+      "path": "01_EVIDENCE-TIER-REDESIGN/tier_assignment_results.csv",
+      "sha256": "7abde5d3cfeadfa5484876dd383444655f3e5fd7de889f708e925adef9d0df87"
+    },
+    {
+      "bytes": 582,
+      "path": "01_EVIDENCE-TIER-REDESIGN/tier_assignment_results.jsonl",
+      "sha256": "999ec4da06571bf197ba52b6a1d21d7b55654c25ae77665cc19fd283c2d1ec9a"
+    },
+    {
+      "bytes": 233,
+      "path": "01_EVIDENCE-TIER-REDESIGN/tier_assignment_summary.json",
+      "sha256": "501e4900e10ab41358ebde340e970fab7f46b837db7e8cbf5f9169cbcf144ecf"
+    },
+    {
+      "bytes": 146,
+      "path": "01_EVIDENCE-TIER-REDESIGN/tier_transition_summary.json",
+      "sha256": "cd737101bc010fab5a26b624f26ce195ab0adf3eacad399ebbbf85a479bee96c"
+    },
+    {
+      "bytes": 8517,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_counterexample_units.csv",
+      "sha256": "aee765a9accca3192556eddb3658f6685f5f429a03080c3292c53dee6d569877"
+    },
+    {
+      "bytes": 10580,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_counterexample_units.jsonl",
+      "sha256": "8d422fbbeb5d048fdfef8585904780cb2c1388263fef7fdec2625bdde803053e"
+    },
+    {
+      "bytes": 277350,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_growth_units.csv",
+      "sha256": "9dd4a737f1a1c3a6b55a66cbea2504e35138326efb0329a26f3d2a7821b526a0"
+    },
+    {
+      "bytes": 500673,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_growth_units.jsonl",
+      "sha256": "58ae92acb08b16275902ea93c27c838ecc11be82faecd43464a39eb08ef47fb6"
+    },
+    {
+      "bytes": 542,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_hold_units.csv",
+      "sha256": "9941ff327d85b63983f5367d492ca99e51e0949b0009c31b8be3d37c381f0916"
+    },
+    {
+      "bytes": 591,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_hold_units.jsonl",
+      "sha256": "63dfb8921394890cdbd9705a3474eb12fd778b67597e3503c999c39e23627223"
+    },
+    {
+      "bytes": 550,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_implementation_units.csv",
+      "sha256": "332856d45cfe6be55ef99f15988116fa48d4b992e0e2957e4f4d63cc743ad48b"
+    },
+    {
+      "bytes": 599,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_implementation_units.jsonl",
+      "sha256": "1e0b70634d044d0de9672aa91231f42ad13fb1c5278c26077086387eea06c6dc"
+    },
+    {
+      "bytes": 519,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_001_checkpoint.json",
+      "sha256": "4c16f43508e242353c82a55b01ba136c00557f924eb253ab5b14276ba013a709"
+    },
+    {
+      "bytes": 689987,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_001_locked_queue.jsonl",
+      "sha256": "9ab9693cc4aa1354dfc976b76c7103d3606290fe437c70764d7cd183ebb645cc"
+    },
+    {
+      "bytes": 198548,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_001_result_ledger.jsonl",
+      "sha256": "2513ff485f59c58965648bc06de193e59bd80073b13044d8f2b877570e081a3b"
+    },
+    {
+      "bytes": 519,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_002_checkpoint.json",
+      "sha256": "3b0acf61a7cf41b5ad415b39c6d554fd974cf856840a7b099124d10ddc2dce71"
+    },
+    {
+      "bytes": 944876,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_002_locked_queue.jsonl",
+      "sha256": "f9baf974d9f365b7f88274012bb7b5bc5e9210803d4fe98d4dc529087969c137"
+    },
+    {
+      "bytes": 500673,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_002_result_ledger.jsonl",
+      "sha256": "58ae92acb08b16275902ea93c27c838ecc11be82faecd43464a39eb08ef47fb6"
+    },
+    {
+      "bytes": 523,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_003_checkpoint.json",
+      "sha256": "613b1cb9ea05c12128587c8723678aa84be2cf0e63d43646897212c426ca0ce6"
+    },
+    {
+      "bytes": 602,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_003_locked_queue.jsonl",
+      "sha256": "8e24802d1fabe071f75e623aac3f86708de76f69e9b2d6eff2ce34c2e7d35cc6"
+    },
+    {
+      "bytes": 603,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_003_result_ledger.jsonl",
+      "sha256": "166cb5cc6f4bbf0042364a007b5d89475bb8ab4ba9c8627537f085af8d334fbc"
+    },
+    {
+      "bytes": 521,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_004_checkpoint.json",
+      "sha256": "d9bc1915baf29ece48c17ac14f99d781711fd4f2b4f491473251eb5f0c604065"
+    },
+    {
+      "bytes": 600,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_004_locked_queue.jsonl",
+      "sha256": "43dbcb57432159eab285e9ab3d69f988b53019550715bd82e2e8fd4b61db9a1a"
+    },
+    {
+      "bytes": 601,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_004_result_ledger.jsonl",
+      "sha256": "de3aa87813bd8dac0abe6be4d295e51d2ec6e09f8ce72d26ec69def279524bae"
+    },
+    {
+      "bytes": 521,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_005_checkpoint.json",
+      "sha256": "669e6364f050e90991e1c3a9015fdcf05556396dca2b3f75431afc6a7aa833ba"
+    },
+    {
+      "bytes": 601,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_005_locked_queue.jsonl",
+      "sha256": "06c1884ba0ce60fad0fc407a5714c5e609f9118f0a59429caa1c1c242f304ba1"
+    },
+    {
+      "bytes": 600,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_005_result_ledger.jsonl",
+      "sha256": "9cbb84bb283ca5aaf9bca685643f8f5612f32606d460e3529f4ca0fd9c49ddbf"
+    },
+    {
+      "bytes": 1392,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_distribution.json",
+      "sha256": "bc78288e4373b79425896124a3d2839739a91ec0600b7353da909a4042a00662"
+    },
+    {
+      "bytes": 447,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_lane_distribution.md",
+      "sha256": "c7a2f39d6afa539a7114f98bc5743a4aa4de649f9a79aba8e8d70ce996af2698"
+    },
+    {
+      "bytes": 133447,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_local_comparison_units.csv",
+      "sha256": "89406a0e89b8a1ad8e68b319da309e87b03720fd684f1a246efa91d386d3946a"
+    },
+    {
+      "bytes": 198548,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_local_comparison_units.jsonl",
+      "sha256": "2513ff485f59c58965648bc06de193e59bd80073b13044d8f2b877570e081a3b"
+    },
+    {
+      "bytes": 28524,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_mechanism_units.csv",
+      "sha256": "d712b96f9d974091052a63565f6ef02c961b2d73718e081a551c36bd3a55c155"
+    },
+    {
+      "bytes": 45256,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_mechanism_units.jsonl",
+      "sha256": "9c10589640403fdbeefdc7a87a15e0ad1b9905b54ce78fee427cd94f86401247"
+    },
+    {
+      "bytes": 546,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_staffing_units.csv",
+      "sha256": "4332904cb59e9e330b4f8b94c9edbe67b0e05c9814c7f7a6fee6867a80d44741"
+    },
+    {
+      "bytes": 595,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_staffing_units.jsonl",
+      "sha256": "7d0f957a0b5fb54f3e4a5d8fca345f7cdd95eabb6e1995f8ba8d1c94e8a065e0"
+    },
+    {
+      "bytes": 3957072,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_total_compensation_units.csv",
+      "sha256": "f0bec84da82fb28a4eaa325aacdd9057c46c2e151ea041a46d9f02b70c97e477"
+    },
+    {
+      "bytes": 602,
+      "path": "02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_total_compensation_units.jsonl",
+      "sha256": "6573bb61333d32212ef521a14aa6f349d22dc99a9fafa4702ee7c2d710773ca0"
+    },
+    {
+      "bytes": 274,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_counterexample_summary.json",
+      "sha256": "c8c8b09a4811593f878f992bcfbaf6a3ef63827098423e638bd8ed27e6b6d861"
+    },
+    {
+      "bytes": 323,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_counterexample_summary.md",
+      "sha256": "ea7aa8e9d53b2972685598626df4cf421f5b06aaddf1dd4f1c39e6960bcd26c6"
+    },
+    {
+      "bytes": 440,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_growth_summary.json",
+      "sha256": "f0d13be1184b8e253b23afc4e8f67698471666ae66dc0825d309fa2ca462d2d2"
+    },
+    {
+      "bytes": 481,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_growth_summary.md",
+      "sha256": "c76e4e1409e71ebdfcc99137f4b67465788702af6b2c0e5036d97b40131b81b8"
+    },
+    {
+      "bytes": 442,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_implementation_summary.json",
+      "sha256": "a3d2142161be4bf6ea69b52a55890fb1b4a2002f96978d3da9c19613ee97590e"
+    },
+    {
+      "bytes": 491,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_implementation_summary.md",
+      "sha256": "cb5135b6a844e41485c43c49fa4f99226a3299d189e3b1d74606f74336fd867d"
+    },
+    {
+      "bytes": 604,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_local_comparison_summary.json",
+      "sha256": "01b86722fff575aec0e023e093bc86d576106425b6f607e7918710e74044532f"
+    },
+    {
+      "bytes": 655,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_local_comparison_summary.md",
+      "sha256": "62ffa6aaabbd76890b7f26fcaa27a80856d0f19f3d32dc1b47892276b36986a0"
+    },
+    {
+      "bytes": 254,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_mechanism_summary.json",
+      "sha256": "fd4f447ce86859d0b21b943007b48d4240c88717c3f641d634d7509823ac4716"
+    },
+    {
+      "bytes": 298,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_mechanism_summary.md",
+      "sha256": "b9b46ec4bec0c5fb4677ad0338ec4c3bcd1aaac5e25225d3b3ae7f547c23f5ab"
+    },
+    {
+      "bytes": 592,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_staffing_summary.json",
+      "sha256": "c373206326f1f1ad5f09d75ea4d84381be5f63efdcb8dbf9b5a8812ec06419f7"
+    },
+    {
+      "bytes": 635,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/aggressive_staffing_summary.md",
+      "sha256": "78b918f84653f3b48bb32fe9d883f2cc40fb9b43ef6493b007e5835cb0583d76"
+    },
+    {
+      "bytes": 796,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/tier_1_math_results.json",
+      "sha256": "a74fe5131075f9694002da2e053738a462208d3403ea5c24cc8a9fc680540661"
+    },
+    {
+      "bytes": 189,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/tier_2_math_results.json",
+      "sha256": "ef87d7b8683996b5dec8bb35811610954ecd9033f5069d3c990210601b167410"
+    },
+    {
+      "bytes": 159,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/tier_3_directional_results.json",
+      "sha256": "75bce6466db9f0fba43e5a6bde0337cbe3b085fb26c72af6986491b258a76c3c"
+    },
+    {
+      "bytes": 1799,
+      "path": "03_AGGRESSIVE-MATHEMATICAL-REANALYSIS/tier_combined_sensitivity_results.json",
+      "sha256": "66467f98c1dd83cb61d507521661abf7af0c9bd942194a8f6b93c7a8bb03a912"
+    },
+    {
+      "bytes": 671108,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_cross_exam_results.csv",
+      "sha256": "536cb6dba3c0e7ee8e019843cb157cd11e39084826f4ad6b86f0784214bd4468"
+    },
+    {
+      "bytes": 999471,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_cross_exam_results.jsonl",
+      "sha256": "02b8966cb60c7f1a8d691e61f5ee267a92d26db00d5b8027942ae872eda4d140"
+    },
+    {
+      "bytes": 344,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_cross_exam_summary.json",
+      "sha256": "d526224800e55c94ca6d1fb11b0b6ddebd9e52229c581acd8c99e8992c3fef5f"
+    },
+    {
+      "bytes": 201,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_cross_exam_summary.md",
+      "sha256": "d04970a52c31c9c24578d187cc3c0b063df6e423903e9f79b73fcb292024135d"
+    },
+    {
+      "bytes": 84718,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_rejected.csv",
+      "sha256": "fd167a8ea5a2eb86e68ca43b6e33dce2e0cc946083212eb27a0334dfa600d0be"
+    },
+    {
+      "bytes": 148587,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_rejected.jsonl",
+      "sha256": "0bfbd976db0760c8abcffaa8be2838a124946bc83ec9365c561cc57d07a52752"
+    },
+    {
+      "bytes": 1708,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_2_downgraded.csv",
+      "sha256": "2b10db629d185d2a95ad8511eee96b6f946433ee6394bc66364b6b4ef1f75388"
+    },
+    {
+      "bytes": 1843,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_2_downgraded.jsonl",
+      "sha256": "29d65c44476600d7a731e59b6c97e3376e4de37b5f858acafbb1d59ff30a21e0"
+    },
+    {
+      "bytes": 18689,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_2_narrowed.csv",
+      "sha256": "a612eb8fa32246bf195f00aa7f2beb55ff150a2237107a2659e155d3bf322171"
+    },
+    {
+      "bytes": 22774,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_2_narrowed.jsonl",
+      "sha256": "578d7a134c58c963657a4ed05d8a37236fc328574e00a72c8c22cde7f635a4e8"
+    },
+    {
+      "bytes": 15602,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_2_upheld.csv",
+      "sha256": "d02d685b493532a0e3c296f2c8d98dffa557603b29c485e81ab561ee6eea72ec"
+    },
+    {
+      "bytes": 21119,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_2_upheld.jsonl",
+      "sha256": "757a5ff1d552e8fecf9651832b3bd906774f0210df27f984a15ffeff519ea24b"
+    },
+    {
+      "bytes": 637350,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_3_upheld.csv",
+      "sha256": "cee5436a4faa7c2ac745e0ab19a564da26cde911d86fbfe1ceef5a3fdec8bc0e"
+    },
+    {
+      "bytes": 955578,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_tier_3_upheld.jsonl",
+      "sha256": "456f07a6854d464a5b4e7da1f60a2fe6dda7d9ed4f0b2df73306f582e118d6de"
+    },
+    {
+      "bytes": 546,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_unresolved.csv",
+      "sha256": "7b37ac104229bf7faabd1a56e16f08bdbfc6e69ccdbcc0d9f10c46f76b70cfc5"
+    },
+    {
+      "bytes": 595,
+      "path": "04_AGGRESSIVE-SEMANTIC-CROSS-EXAMINATION/aggressive_unresolved.jsonl",
+      "sha256": "6792add1f9ddede2cf367b9ef0edd4b507f99ef50743f3931e69ac722c55b9d0"
+    },
+    {
+      "bytes": 4348,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/claim_status_change_candidates.csv",
+      "sha256": "09e9ee7ff9dabea493de288777eda6e72e27bb79074e2fa5e3bb320987dd2416"
+    },
+    {
+      "bytes": 6267,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/claim_status_change_candidates.jsonl",
+      "sha256": "2eb02f4231f6aa6da800444ca052848e0d3f93e9b583aa7a9dcc23fb61cade75"
+    },
+    {
+      "bytes": 948,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/mixed_claims.csv",
+      "sha256": "57a9e531989f2edac279c6188f5d55828dbf6dfa103d2c88c099970d4739f31d"
+    },
+    {
+      "bytes": 1035,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/mixed_claims.jsonl",
+      "sha256": "6e591c63973fd69f3abc827549059935e1229001b8e61bc714ad2763f9246cef"
+    },
+    {
+      "bytes": 6,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/still_untestable_claims.csv",
+      "sha256": "45fd2f9df187bc411dc80df5c4c4844ac00f4dd69bc69453f1893a5d143433d6"
+    },
+    {
+      "bytes": 0,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/still_untestable_claims.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3679,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/strengthened_claims.csv",
+      "sha256": "858da62f0bb92ad40e0f0c0dfad7a6461d0737831a8937f30e074841b319418f"
+    },
+    {
+      "bytes": 5232,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/strengthened_claims.jsonl",
+      "sha256": "12243909d35eefe560d13099c7d067b1f170623eacc1bd6850707c1c1b678443"
+    },
+    {
+      "bytes": 192,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/strict_vs_bounded_claim_sensitivity_summary.json",
+      "sha256": "f66f11d8492a5681b66db95e8d247f2547d3ae4da5fb73af5d3e29c3e3ce5797"
+    },
+    {
+      "bytes": 217,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/strict_vs_bounded_claim_sensitivity_summary.md",
+      "sha256": "4e6d8aff4a4791b82a80e8b90120f3792d89a3b8a1e7b2ba10f2c6e874e22e90"
+    },
+    {
+      "bytes": 8510,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/strict_vs_bounded_claim_sensitivity_table.csv",
+      "sha256": "6e39fc58e2f687264637506b8345ffcd7d7eed9b44febe7816de10cecdf4b91e"
+    },
+    {
+      "bytes": 13371,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/strict_vs_bounded_claim_sensitivity_table.jsonl",
+      "sha256": "5c67ac57520360a692082a41dcabfd112a505194dca9c1d8cbfb1ccfc54ad840"
+    },
+    {
+      "bytes": 4441,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/unchanged_claims.csv",
+      "sha256": "a81b25ab9ea32ebf0f5a59c28e39b2a008c42f5f7b9db4bd0126c19ea7b3662c"
+    },
+    {
+      "bytes": 7104,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/unchanged_claims.jsonl",
+      "sha256": "d24100128f9da44c9f808d3910cc5fe190d20b568756cfe91cc5c20a1d428105"
+    },
+    {
+      "bytes": 6,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/weakened_claims.csv",
+      "sha256": "45fd2f9df187bc411dc80df5c4c4844ac00f4dd69bc69453f1893a5d143433d6"
+    },
+    {
+      "bytes": 0,
+      "path": "05_STRICT-VS-BOUNDED-SENSITIVITY/weakened_claims.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 194,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_adjudication_preparation_manifest.json",
+      "sha256": "fd2528dffabc0ed969a3c5508e0728cdddde0699338cea06d921ed17774a1ac0"
+    },
+    {
+      "bytes": 12691,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_adjudication_ready_table.csv",
+      "sha256": "16d1a53df323acab4f75c87a817dab0cfc1bac5fe97d50d9df87033e5b3ea2f3"
+    },
+    {
+      "bytes": 15965,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_adjudication_ready_table.jsonl",
+      "sha256": "44c486fedb178dc5f0e11b61cb4e872caf381f2018c3c5ec6182db4d86cc2341"
+    },
+    {
+      "bytes": 84718,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_conflict_packet.csv",
+      "sha256": "fd167a8ea5a2eb86e68ca43b6e33dce2e0cc946083212eb27a0334dfa600d0be"
+    },
+    {
+      "bytes": 148587,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_conflict_packet.jsonl",
+      "sha256": "0bfbd976db0760c8abcffaa8be2838a124946bc83ec9365c561cc57d07a52752"
+    },
+    {
+      "bytes": 17100,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_counterexample_packet.csv",
+      "sha256": "c686d2873690edd34e43ff126527ebfb71525c5bf14987f295321c1e8ddf99dc"
+    },
+    {
+      "bytes": 20963,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_counterexample_packet.jsonl",
+      "sha256": "a29c31692c740471f8b589d9b03399560a20ea060ab7d808b40b53222d8db3b5"
+    },
+    {
+      "bytes": 943,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_language_boundaries.csv",
+      "sha256": "7362045b598ad770783f497b6d14297c88fe06b579a6160abb375dffb60fc40f"
+    },
+    {
+      "bytes": 1448,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_language_boundaries.jsonl",
+      "sha256": "46527bbc621e1fca14051e92b52fe8e5d6a8e759d021583cc82201ea2c01a232"
+    },
+    {
+      "bytes": 654245,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_support_packet.csv",
+      "sha256": "33865ec09f877bb4e448191968a8b49007880a3d928cd9617c0b53fd0c377de4"
+    },
+    {
+      "bytes": 978508,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_claim_support_packet.jsonl",
+      "sha256": "e42deeab5a86d5bf3f09c857fc13972fa228f3d682c35e9c3c1e3519eea103ed"
+    },
+    {
+      "bytes": 391,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_headline_candidate_table.csv",
+      "sha256": "30376bbd67ae05457bb95eb3629cef8c62202b1d08461a7bdf259ad81c273ecc"
+    },
+    {
+      "bytes": 625,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_headline_candidate_table.jsonl",
+      "sha256": "59dc83e5828e6c9bdab916844fbe4ba918703426102100bd918378057ef7fb2d"
+    },
+    {
+      "bytes": 638,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_visual_figure_spec_updates.json",
+      "sha256": "028ef259ba26e1beaf97791245b16aa9919b162284074463d8eee6d007eb72cb"
+    },
+    {
+      "bytes": 157,
+      "path": "06_CLAIM-ADJUDICATION-PREP/aggressive_visual_input_table_manifest.json",
+      "sha256": "8d50f4f3c47aa4bdee00affb714a24d14c6d64fbfce96a9fce2132b770205624"
+    },
+    {
+      "bytes": 201,
+      "path": "06_CLAIM-ADJUDICATION-PREP/strict_vs_bounded_visual_comparison_table.csv",
+      "sha256": "3c61b820041a9d40cb44c9e45d1f761f92559ce1552e26c1b7868e2dfb00869c"
+    },
+    {
+      "bytes": 410,
+      "path": "06_CLAIM-ADJUDICATION-PREP/strict_vs_bounded_visual_comparison_table.jsonl",
+      "sha256": "133f319c78eab3c3358711b2c0a536d41311c7e1d0019f801de210b5ee1f7e8e"
+    },
+    {
+      "bytes": 6,
+      "path": "07_DASHBOARD-RELAY/aggressive_failed_rule_repair_queue.csv",
+      "sha256": "45fd2f9df187bc411dc80df5c4c4844ac00f4dd69bc69453f1893a5d143433d6"
+    },
+    {
+      "bytes": 0,
+      "path": "07_DASHBOARD-RELAY/aggressive_failed_rule_repair_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 479,
+      "path": "07_DASHBOARD-RELAY/aggressive_quality_gate_results.json",
+      "sha256": "bb9470e2c4bf8efe01684af219fe9ef7623d4cc24c767d415f3b72e0448405e3"
+    },
+    {
+      "bytes": 413,
+      "path": "07_DASHBOARD-RELAY/aggressive_quality_gate_results.md",
+      "sha256": "434bc3bfc27bf9e5d867bf927be69a795c7d38268eec0f8d24de29df1d365d7b"
+    },
+    {
+      "bytes": 15899,
+      "path": "07_DASHBOARD-RELAY/aggressive_sampled_qa_adjudication.csv",
+      "sha256": "9aec88ffc752d84b5330f0c156c89a169b39d8a19fa57ed75cb5b00541e32ba9"
+    },
+    {
+      "bytes": 40764,
+      "path": "07_DASHBOARD-RELAY/aggressive_sampled_qa_adjudication.jsonl",
+      "sha256": "1f36f421be7f140a700690932af326fbd1064694a905ee39d47a09318eed49ec"
+    },
+    {
+      "bytes": 136,
+      "path": "07_DASHBOARD-RELAY/aggressive_sampled_qa_design.json",
+      "sha256": "162cf8aba790aaccfcfde7d71ba10823fbf62326c9dba4b1cffec5764bdb1929"
+    },
+    {
+      "bytes": 14956,
+      "path": "07_DASHBOARD-RELAY/aggressive_sampled_qa_records.csv",
+      "sha256": "72d290500946ba2fbabe4f69ea2de5384f68544f0d66a7bfed57891f89fa8fdf"
+    },
+    {
+      "bytes": 37439,
+      "path": "07_DASHBOARD-RELAY/aggressive_sampled_qa_records.jsonl",
+      "sha256": "3ec19f17576062ff8e6a197abc997db7663a728779189dd993cc61ecb65a3e56"
+    },
+    {
+      "bytes": 42,
+      "path": "07_DASHBOARD-RELAY/compacted_local_payload_manifest.json",
+      "sha256": "775a8184f4032a63597fa3e9b24cb7ec2115e5c9d81cff5c106ea5cebc6c53f7"
+    },
+    {
+      "bytes": 1885,
+      "path": "07_DASHBOARD-RELAY/dashboard_aggressive_bounded_reanalysis_update_summary.json",
+      "sha256": "e3615232e2233ee4dd202f93cd31b0760ab1c4aa1229d78f5e38811364156c60"
+    },
+    {
+      "bytes": 90,
+      "path": "07_DASHBOARD-RELAY/disk_capacity_audit.json",
+      "sha256": "c9d3a1bba5e1acf38ced939c2e4f2db49f226945cd86f84dd8299dff214b534c"
+    },
+    {
+      "bytes": 330,
+      "path": "07_DASHBOARD-RELAY/forbidden_action_audit.json",
+      "sha256": "d76dd799d68deab906d6690dd8b77bcf07f215bc9aa018c855f29f2023be5e95"
+    },
+    {
+      "bytes": 57,
+      "path": "07_DASHBOARD-RELAY/large_file_audit.json",
+      "sha256": "69dd28ab21217a4ff80c23563dbc2256227f47979872389f950d493cbaadd745"
+    },
+    {
+      "bytes": 191,
+      "path": "07_DASHBOARD-RELAY/local_artifact_storage_audit.json",
+      "sha256": "ab7b886958a0d772275c162edbe1cd032910a8d588e73770bd3a53fe2d973a12"
+    },
+    {
+      "bytes": 397,
+      "path": "07_DASHBOARD-RELAY/next_task.md",
+      "sha256": "1a29c6011f7f65e33be0e7e709812a2421c1882a222b18924c8967c2641fa09a"
+    },
+    {
+      "bytes": 0,
+      "path": "07_DASHBOARD-RELAY/operational_incident_log.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 391,
+      "path": "07_DASHBOARD-RELAY/preflight_audit.json",
+      "sha256": "80a9cd1d3ee570b3d8d5faab4a09dce3c52e14d0c03105fb8c3a55c5f40dcceb"
+    },
+    {
+      "bytes": 187,
+      "path": "07_DASHBOARD-RELAY/staged_file_audit.json",
+      "sha256": "fc41d762fafdec1438e6b60b29e05ba8b24f0d67c6a599f4020987a491284015"
+    },
+    {
+      "bytes": 1007,
+      "path": "07_DASHBOARD-RELAY/validation_report.json",
+      "sha256": "69a4a29294a103c5aeb4387c796459b7ccd15c416e9994e1033edc265466ae46"
+    },
+    {
+      "bytes": 128,
+      "path": "07_DASHBOARD-RELAY/validation_report.md",
+      "sha256": "75a9054b33c6f8274df63c86335ceb18407de2787e03f306914a9cc5b6c3036a"
+    },
+    {
+      "bytes": 222,
+      "path": "aggressive_bounded_reanalysis_methodology_note.json",
+      "sha256": "f1ef63ac21a95de7ec8700161f4ef2ebe4aeea3bc1b4baf5e56a1ec21df77d6e"
+    },
+    {
+      "bytes": 1630,
+      "path": "aggressive_bounded_reanalysis_methodology_note.md",
+      "sha256": "fabda6231832b3c5f2b8d5a1272e081fb32c2b1bdc3d5c43fb206f33568c2247"
+    },
+    {
+      "bytes": 6830,
+      "path": "aggressive_bounded_reanalysis_summary.json",
+      "sha256": "20e656fe30b37e4b43fe33786012b289d682dfe7be1363da46d3fb46812be4e5"
+    },
+    {
+      "bytes": 594,
+      "path": "aggressive_bounded_reanalysis_summary.md",
+      "sha256": "7dbf6e301ccb206dd6ef42be69622dc62f9989188b0080b4b3062af6675e0054"
+    },
+    {
+      "bytes": 5104,
+      "path": "aggressive_run_state.json",
+      "sha256": "0f6d1e7dbcde3d674bd7633d6956faa251ce5ef02c2b7d70c2702aba0d816f6f"
+    },
+    {
+      "bytes": 210,
+      "path": "aggressive_stage_checkpoint.json",
+      "sha256": "247d13c142ac55a293b527e18af6eda5276ee689652e84572b9dd7fb996dc257"
+    },
+    {
+      "bytes": 323,
+      "path": "deterministic_external_data_classification_methodology_note.md",
+      "sha256": "4825ede98c3d71d1d7bbc11993636e7904168df3534d18d42b2abfac7275626f"
+    },
+    {
+      "bytes": 244,
+      "path": "external_search_capacity_limitation_note.md",
+      "sha256": "5d2b7c4ae7c7ee09544839af3da16fc151ae66ecfe207040e249ad8c1f4c9101"
+    },
+    {
+      "bytes": 166,
+      "path": "implementation_event_deduplication_preservation_note.md",
+      "sha256": "60acac3fef80daeea33396e926c29fc456697b37dcde18337f3d48c2e4257d2b"
+    },
+    {
+      "bytes": 68,
+      "path": "no_gabriel_external_evidence_methodology_note.json",
+      "sha256": "5ef5d37f2aee1fc752dc9f8ca867e30cbe670e85283263db70990f4acf1a4f31"
+    },
+    {
+      "bytes": 158,
+      "path": "no_gabriel_external_evidence_methodology_note.md",
+      "sha256": "8c269ca667017705c0ececcc968be4bd45eb28da82a0dd4b777ceba9dc5eae6f"
+    },
+    {
+      "bytes": 160,
+      "path": "storage_capacity_hold_preservation_summary.md",
+      "sha256": "274729a4e98b8b20a5dfe906389b0c21fbe2d444abcbcbbd799703220f11f289"
+    },
+    {
+      "bytes": 155,
+      "path": "strict_vs_bounded_methodology_note.json",
+      "sha256": "cdb3b4ef5b201c2917a933c686122ba6847920f0a3746779a3b005c74bfcd926"
+    },
+    {
+      "bytes": 253,
+      "path": "strict_vs_bounded_methodology_note.md",
+      "sha256": "a43488027776209719b0dd257fde14661c6e71ea9058691ebdca84b1e6f11d5f"
+    }
+  ],
+  "strict_baseline_digest": "e39be01eef98e426f36ff284b893cd7814a3ddecfe7c31aaf5f5b4585d1d3ba9",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06"
+}

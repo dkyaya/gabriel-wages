@@ -1,0 +1,17 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-PERIOD",
+  "rules": [
+    {
+      "allow": "same fiscal/calendar/contract compensation cycle",
+      "caveat_required": true,
+      "rule_id": "PERIOD-2"
+    },
+    {
+      "reject": "materially different cycles absent longitudinal design",
+      "rule_id": "PERIOD-X"
+    }
+  ],
+  "scope": "period compatibility",
+  "version": "2026-08-06.1"
+}

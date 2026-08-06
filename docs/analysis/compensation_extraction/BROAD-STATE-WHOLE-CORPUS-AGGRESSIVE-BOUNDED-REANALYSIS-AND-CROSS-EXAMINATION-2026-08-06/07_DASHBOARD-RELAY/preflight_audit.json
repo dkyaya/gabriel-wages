@@ -1,0 +1,14 @@
+{
+  "free_bytes": 20493377536,
+  "gabriel_workers": 0,
+  "head": "b5494e73014ed23a21ccebdd3761010971b7b20b",
+  "held_sources_excluded": 7895,
+  "hosted_search_workers": 0,
+  "local_roots_ignored": true,
+  "minimum_reserve_bytes": 8589934592,
+  "ocr_workers": 0,
+  "passed": true,
+  "prior_commits_are_ancestors": true,
+  "strict_inputs_exist": true,
+  "unsearched_targets_excluded": 12844
+}

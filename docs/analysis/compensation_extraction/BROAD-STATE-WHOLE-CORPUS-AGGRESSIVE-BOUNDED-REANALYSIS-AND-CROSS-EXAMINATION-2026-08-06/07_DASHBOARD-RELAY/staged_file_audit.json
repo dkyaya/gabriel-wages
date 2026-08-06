@@ -1,0 +1,6 @@
+{
+  "forbidden_staged": [],
+  "passed": true,
+  "scope": "tracked metadata, registries, summaries, bounded analytical indexes, QA, methodology, dashboard status",
+  "staged_count": 167
+}

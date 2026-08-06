@@ -1,0 +1,13 @@
+{
+  "all_claim_changing_tier_2_3_reviewed": true,
+  "final_claim_adjudication_performed": false,
+  "outcomes": {
+    "downgrade_to_tier_3": 1,
+    "narrow_tier_2": 9,
+    "uphold_counterexample": 7,
+    "uphold_tier_2_with_narrower_wording": 13,
+    "uphold_tier_3_directional": 677
+  },
+  "reviewed": 707,
+  "source_evidence_required": true
+}

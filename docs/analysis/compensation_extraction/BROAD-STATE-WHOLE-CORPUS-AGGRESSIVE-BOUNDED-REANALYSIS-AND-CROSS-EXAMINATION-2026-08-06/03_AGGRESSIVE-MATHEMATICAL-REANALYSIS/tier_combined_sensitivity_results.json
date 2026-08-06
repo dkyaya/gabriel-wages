@@ -1,0 +1,51 @@
+{
+  "regression_readiness": "failed",
+  "regression_reason": "Only nine documentary numeric growth records meet Tier-1/2; no compatible external cross-side panel, treatment variation, control set, or reproducible model matrix.",
+  "regression_run": false,
+  "tier_1_only": {
+    "documentary_growth_numeric_records": 3,
+    "documentary_growth_records": 432,
+    "documentary_local_comparison_records": 21,
+    "external_growth_pairs": 0,
+    "external_growth_series": 0,
+    "external_local_matches": 0,
+    "external_mathematical_counterexamples": 0,
+    "implementation_math_ready": 38,
+    "implementation_sequences": 1268,
+    "mechanism_linked_observations": 1876183,
+    "named_local_examples": 4,
+    "overtime_shares": 0,
+    "staffing_units": 18358,
+    "strict_baseline_preserved": true,
+    "strict_cross_exam_outcomes": {
+      "downgraded_to_conditional": 18,
+      "downgraded_to_context": 833,
+      "unresolved_conflict": 201,
+      "upheld_as_context_only": 29,
+      "upheld_as_stated": 5,
+      "upheld_with_narrower_wording": 640
+    },
+    "total_compensation_sums": 0,
+    "vacancy_rates": 0
+  },
+  "tiers_1_2": {
+    "bounded_numeric_growth_units": 6,
+    "direct_staffing_channel_evidence": 7,
+    "local_comparison_units": 9,
+    "new_likely_implemented_sequences": 0,
+    "new_total_compensation_sums": 0,
+    "strict_external_matches": 0
+  },
+  "tiers_1_3": {
+    "bounded_numeric_growth_units": 6,
+    "descriptive_staffing_channel_evidence": 216,
+    "direct_staffing_channel_evidence": 7,
+    "directional_growth_records": 423,
+    "local_comparison_units": 9,
+    "mechanism_categories": 38,
+    "new_likely_implemented_sequences": 0,
+    "new_total_compensation_sums": 0,
+    "separate_from_point_estimates": true
+  },
+  "tiers_blended_without_composition": false
+}

@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "gates": {
+    "A_strict_baseline_preservation": true,
+    "B_tier_traceability": true,
+    "C_unit_compatibility": true,
+    "D_formula_accuracy": true,
+    "E_side_precision": true,
+    "F_role_caveat_precision": true,
+    "G_growth_integrity": true,
+    "H_implementation_wording": true,
+    "I_counterexample_symmetry": true,
+    "J_cross_examination_discipline": true,
+    "K_no_prevalence_inflation": true,
+    "L_no_causal_overreach": true
+  }
+}

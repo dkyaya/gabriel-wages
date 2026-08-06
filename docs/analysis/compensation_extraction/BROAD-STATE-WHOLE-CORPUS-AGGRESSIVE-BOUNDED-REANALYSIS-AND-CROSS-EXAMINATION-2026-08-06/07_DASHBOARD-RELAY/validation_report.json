@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "all_broader_records_tiered": true,
+    "claim_changing_evidence_cross_examined": true,
+    "corroboration_not_event_multiplication": true,
+    "dashboard_assets_preserved": true,
+    "direction_changing_conflicts_excluded": true,
+    "held_sources_excluded": true,
+    "implementation_rededup_not_run": true,
+    "no_base_total_mixing": true,
+    "no_causal_effect": true,
+    "no_gabriel_api": true,
+    "no_hosted_search": true,
+    "no_incompatible_calculations": true,
+    "no_national_wage_gap": true,
+    "no_ocr": true,
+    "no_prevalence": true,
+    "no_rendered_visual": true,
+    "no_report_drafting": true,
+    "no_unsupported_hourly_annual_conversion": true,
+    "quality_gates_pass": true,
+    "range_midpoints_sensitivity_only": true,
+    "role_caveats_labeled": true,
+    "side_inference_rule": true,
+    "strict_outputs_unchanged": true,
+    "support_counterexample_symmetry": true,
+    "tier2_caveats": true,
+    "tier3_directional_only": false
+  },
+  "passed": true
+}

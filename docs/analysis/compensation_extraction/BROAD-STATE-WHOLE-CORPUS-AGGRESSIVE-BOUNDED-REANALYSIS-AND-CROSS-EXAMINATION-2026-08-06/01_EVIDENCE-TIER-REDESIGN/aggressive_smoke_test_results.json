@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "tests": {
+    "base_total_mixing_rejected": true,
+    "corroboration_not_event_multiplication": true,
+    "final_claim_emitted": false,
+    "hourly_annual_conversion_rejected": true,
+    "likely_implemented_not_paid": true,
+    "range_midpoint_sensitivity_only": true,
+    "strict_baseline_preserved": true,
+    "tier2_growth_named_position": true,
+    "tier2_hourly_same_source_role_caveat": true,
+    "tier3_source_reported_direction": true
+  }
+}

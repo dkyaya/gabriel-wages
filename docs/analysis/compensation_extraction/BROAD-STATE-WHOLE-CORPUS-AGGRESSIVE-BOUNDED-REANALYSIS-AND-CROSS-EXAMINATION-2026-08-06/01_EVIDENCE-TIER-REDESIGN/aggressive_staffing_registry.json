@@ -1,0 +1,17 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-STAFF",
+  "rules": [
+    {
+      "requirements": "explicit type and source-local side; level/change distinguished",
+      "rule_id": "STAFF-2"
+    },
+    {
+      "causal_effect": false,
+      "requirements": "explicit shortage-pressure mechanism",
+      "rule_id": "STAFF-3"
+    }
+  ],
+  "scope": "staffing",
+  "version": "2026-08-06.1"
+}

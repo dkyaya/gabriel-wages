@@ -1,0 +1,27 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-CORR",
+  "rules": [
+    {
+      "label": "not_corroborated",
+      "rule_id": "CORR-1",
+      "sources": 1
+    },
+    {
+      "label": "corroborated",
+      "rule_id": "CORR-2",
+      "sources": 2
+    },
+    {
+      "label": "strongly_corroborated",
+      "rule_id": "CORR-3",
+      "sources": "3+"
+    },
+    {
+      "rule_id": "CORR-EVENT",
+      "source_count_multiplies_event_count": false
+    }
+  ],
+  "scope": "corroboration",
+  "version": "2026-08-06.1"
+}

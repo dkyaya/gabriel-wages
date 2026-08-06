@@ -1,0 +1,4 @@
+{"headline_id": "AGG-HEAD-LOCAL", "limitation": "not a national wage gap", "number": 10, "tier": "Tiers 2-3", "unit": "unique bounded documentary local comparison facts"}
+{"headline_id": "AGG-HEAD-GROWTH2", "limitation": "documentary, not external panel", "number": 6, "tier": "Tier 2", "unit": "Tier-2 numeric growth units"}
+{"headline_id": "AGG-HEAD-GROWTH3", "limitation": "not point estimates", "number": 423, "tier": "Tier 3", "unit": "directional growth records"}
+{"headline_id": "AGG-HEAD-STRICTZERO", "limitation": "strict result unchanged", "number": 0, "tier": "Tier 1", "unit": "compatible external wage matches"}

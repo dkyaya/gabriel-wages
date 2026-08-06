@@ -1,0 +1,10 @@
+{
+  "change_classes": {
+    "more_mixed": 1,
+    "stronger_but_same_claim_class": 5,
+    "unchanged": 8
+  },
+  "claim_class_upgrades": 0,
+  "claims": 14,
+  "strict_baseline_preserved": true
+}

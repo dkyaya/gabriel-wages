@@ -1,0 +1,5 @@
+headline_id,limitation,number,tier,unit
+AGG-HEAD-LOCAL,not a national wage gap,10,Tiers 2-3,unique bounded documentary local comparison facts
+AGG-HEAD-GROWTH2,"documentary, not external panel",6,Tier 2,Tier-2 numeric growth units
+AGG-HEAD-GROWTH3,not point estimates,423,Tier 3,directional growth records
+AGG-HEAD-STRICTZERO,strict result unchanged,0,Tier 1,compatible external wage matches

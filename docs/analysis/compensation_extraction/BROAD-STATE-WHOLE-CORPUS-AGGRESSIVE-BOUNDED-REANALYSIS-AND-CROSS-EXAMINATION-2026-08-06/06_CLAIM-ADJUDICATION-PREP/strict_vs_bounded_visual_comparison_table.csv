@@ -1,0 +1,5 @@
+rendered,table_id,tier_1,tier_2,tier_3
+False,strict_vs_bounded_local,0,9,1
+False,strict_vs_bounded_growth,3,6,423
+False,strict_vs_bounded_staffing,0,7,216
+False,strict_vs_bounded_implementation,38,0,0

@@ -1,0 +1,13 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-RANGE",
+  "rules": [
+    {
+      "midpoint_is_observed_pay": false,
+      "outputs": "minimum, maximum, midpoint, overlap",
+      "rule_id": "RANGE-2"
+    }
+  ],
+  "scope": "range sensitivity",
+  "version": "2026-08-06.1"
+}

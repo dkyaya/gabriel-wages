@@ -1,0 +1,20 @@
+{
+  "causal_effect_observations": 0,
+  "descriptive_channel_consistent": 216,
+  "direct_channel_evidence": 7,
+  "duplicate_review_representations_collapsed": 3,
+  "input_units": 18358,
+  "prior_review_representations": 229,
+  "review_class": {
+    "descriptive_channel_consistent": 216,
+    "direct_channel_evidence": 7,
+    "insufficient_side_or_type": 18132,
+    "unresolved": 3
+  },
+  "tier_composition": {
+    "tier_2_bounded_analytically_usable": 7,
+    "tier_3_directional_or_mechanism_supporting": 216,
+    "tier_4_context_only": 18135
+  },
+  "unique_prior_review_observations": 226
+}

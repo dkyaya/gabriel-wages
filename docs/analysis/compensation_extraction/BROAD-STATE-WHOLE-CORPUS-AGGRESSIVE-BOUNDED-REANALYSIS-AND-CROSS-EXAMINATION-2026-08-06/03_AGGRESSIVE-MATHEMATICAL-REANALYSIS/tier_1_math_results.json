@@ -1,0 +1,26 @@
+{
+  "documentary_growth_numeric_records": 3,
+  "documentary_growth_records": 432,
+  "documentary_local_comparison_records": 21,
+  "external_growth_pairs": 0,
+  "external_growth_series": 0,
+  "external_local_matches": 0,
+  "external_mathematical_counterexamples": 0,
+  "implementation_math_ready": 38,
+  "implementation_sequences": 1268,
+  "mechanism_linked_observations": 1876183,
+  "named_local_examples": 4,
+  "overtime_shares": 0,
+  "staffing_units": 18358,
+  "strict_baseline_preserved": true,
+  "strict_cross_exam_outcomes": {
+    "downgraded_to_conditional": 18,
+    "downgraded_to_context": 833,
+    "unresolved_conflict": 201,
+    "upheld_as_context_only": 29,
+    "upheld_as_stated": 5,
+    "upheld_with_narrower_wording": 640
+  },
+  "total_compensation_sums": 0,
+  "vacancy_rates": 0
+}

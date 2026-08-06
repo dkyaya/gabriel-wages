@@ -1,0 +1,17 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-IMPL",
+  "rules": [
+    {
+      "likely_implemented_requires": "two aligned adoption/effective/schedule/payroll/budget indicators",
+      "rule_id": "IMPL-2"
+    },
+    {
+      "likely_implemented_is_paid": false,
+      "rule_id": "IMPL-BOUND",
+      "stages_remain_distinct": true
+    }
+  ],
+  "scope": "implementation",
+  "version": "2026-08-06.1"
+}

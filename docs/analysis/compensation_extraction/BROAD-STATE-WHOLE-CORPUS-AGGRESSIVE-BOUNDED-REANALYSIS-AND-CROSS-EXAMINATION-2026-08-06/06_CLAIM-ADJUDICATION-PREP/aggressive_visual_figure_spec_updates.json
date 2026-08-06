@@ -1,0 +1,33 @@
+{
+  "status": "metadata_only_no_rendering",
+  "updates": [
+    {
+      "rendered": false,
+      "table_id": "strict_vs_bounded_local",
+      "tier_1": 0,
+      "tier_2": 9,
+      "tier_3": 1
+    },
+    {
+      "rendered": false,
+      "table_id": "strict_vs_bounded_growth",
+      "tier_1": 3,
+      "tier_2": 6,
+      "tier_3": 423
+    },
+    {
+      "rendered": false,
+      "table_id": "strict_vs_bounded_staffing",
+      "tier_1": 0,
+      "tier_2": 7,
+      "tier_3": 216
+    },
+    {
+      "rendered": false,
+      "table_id": "strict_vs_bounded_implementation",
+      "tier_1": 38,
+      "tier_2": 0,
+      "tier_3": 0
+    }
+  ]
+}

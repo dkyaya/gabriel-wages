@@ -1,0 +1,40 @@
+{
+  "disjoint_output_ownership": true,
+  "lanes": [
+    {
+      "lane_id": "aggressive_lane_001",
+      "planned_start_offset_seconds": 0,
+      "queue_sha256": "9ab9693cc4aa1354dfc976b76c7103d3606290fe437c70764d7cd183ebb645cc",
+      "records": 211,
+      "role": "local comparison and side inference"
+    },
+    {
+      "lane_id": "aggressive_lane_002",
+      "planned_start_offset_seconds": 120,
+      "queue_sha256": "f9baf974d9f365b7f88274012bb7b5bc5e9210803d4fe98d4dc529087969c137",
+      "records": 432,
+      "role": "growth and range analysis"
+    },
+    {
+      "lane_id": "aggressive_lane_003",
+      "planned_start_offset_seconds": 240,
+      "queue_sha256": "a538511b0035b0e646f26934a82b7de697411ee5b7a9b035a38d31e74247c9f8",
+      "records": 18358,
+      "role": "staffing and vacancy-pressure evidence"
+    },
+    {
+      "lane_id": "aggressive_lane_004",
+      "planned_start_offset_seconds": 360,
+      "queue_sha256": "5cb4b30726bbd957de24274812601097eb17f8ef48f3e20de4eaa3b8c1de3a67",
+      "records": 1268,
+      "role": "implementation and mechanism outcome evidence"
+    },
+    {
+      "lane_id": "aggressive_lane_005",
+      "planned_start_offset_seconds": 480,
+      "queue_sha256": "f04eaac5adb3d7a92fee8005594a5779f7311c15f89fa79462582918e98f1af6",
+      "records": 5907,
+      "role": "conflicts, corroboration, total compensation, and counterexamples"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "combined_sha256": "6393bfc003361b9c53716b17789a9d14e8ac8c588b1049fc4e97cd564f3f833c",
+  "registries": {
+    "aggressive_basis_compatibility_registry": "28040ab95c402e69f83f91d32057c65fed3ccea90acf7a6d9991f8c44d1393c1",
+    "aggressive_conflict_registry": "8d6620d4b57c19ef9b922206ea77ee82c5d7aa31e0adaf1d5a967a85e3d7d14e",
+    "aggressive_corroboration_registry": "b5b6427b2463963344baaa4a0d0a56513693094b4e00259d2900f796acfe0ed2",
+    "aggressive_evidence_tier_registry": "e9bb01a8cc855619f72b10de6aa3d9eedadbaae0cb04e8674392737cbd895089",
+    "aggressive_growth_registry": "234e2e7b79a5f7bfb0a31e629ebd92025d8cd4d2028ba0a23ffee71fc130dbe0",
+    "aggressive_implementation_registry": "c890704f0bca20b5cf1fbbfce959e7325c9859553952da215a6a1214728fca49",
+    "aggressive_period_compatibility_registry": "b2bccd140d7069ddf0778a15b489e63dcbbffe71937de20416db8565b1d300cd",
+    "aggressive_range_analysis_registry": "adc92260461f9a9c431eea80e8a215db3d80eba2989b0a412b367efe221897cc",
+    "aggressive_role_comparability_registry": "dc1af1d38547dee375a9ef633c963165302cb5f2ae68e3e5c0e25c23809b53da",
+    "aggressive_side_inference_registry": "3f06e9e5913e4115cb1fa66a284870db474faa6a4141138b87aae8c83db97d5e",
+    "aggressive_staffing_registry": "0d83ccc00959cc066e09b79180924280ef63045e3308c1b479c814d4b20bf292"
+  }
+}

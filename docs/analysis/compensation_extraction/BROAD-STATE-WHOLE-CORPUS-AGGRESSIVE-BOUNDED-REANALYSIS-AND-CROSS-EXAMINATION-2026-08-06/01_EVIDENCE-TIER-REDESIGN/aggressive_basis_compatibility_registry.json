@@ -1,0 +1,16 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-BASIS",
+  "rules": [
+    {
+      "allow": "schedule-schedule, earnings-earnings, base-base, total-total, min-min, max-max",
+      "rule_id": "BASIS-2"
+    },
+    {
+      "reject": "hourly/annual without explicit inputs; base/total; schedule/earnings; recurring/one-time",
+      "rule_id": "BASIS-X"
+    }
+  ],
+  "scope": "basis compatibility",
+  "version": "2026-08-06.1"
+}

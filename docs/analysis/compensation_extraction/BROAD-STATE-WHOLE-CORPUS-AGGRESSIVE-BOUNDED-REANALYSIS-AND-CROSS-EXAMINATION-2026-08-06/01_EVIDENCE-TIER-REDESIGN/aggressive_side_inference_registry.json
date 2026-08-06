@@ -1,0 +1,16 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-SIDE",
+  "rules": [
+    {
+      "requirements": "two independent source-local indicators",
+      "rule_id": "SIDE-2"
+    },
+    {
+      "reject": "query metadata alone",
+      "rule_id": "SIDE-X"
+    }
+  ],
+  "scope": "side inference",
+  "version": "2026-08-06.1"
+}

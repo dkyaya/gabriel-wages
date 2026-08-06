@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-08-06T04:32:44.201397+00:00",
+  "input_records": 211,
+  "lane_id": 1,
+  "local_ledger": "artifacts/local_structured_external_data/whole_corpus_aggressive_bounded_reanalysis_2026-08-06/lane_001/result_ledger.jsonl.gz",
+  "queue_sha256": "9ab9693cc4aa1354dfc976b76c7103d3606290fe437c70764d7cd183ebb645cc",
+  "result_records": 211,
+  "result_sha256": "2513ff485f59c58965648bc06de193e59bd80073b13044d8f2b877570e081a3b",
+  "started_at": "2026-08-06T04:32:44.195483+00:00",
+  "status": "complete"
+}

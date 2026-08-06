@@ -1,0 +1,170 @@
+{
+  "claim_changes": {
+    "more_mixed": 1,
+    "stronger_but_same_claim_class": 5,
+    "unchanged": 8
+  },
+  "claim_class_upgrades": 0,
+  "counterexamples": {
+    "cross_examined_counterexamples": 7,
+    "symmetry_rule": "same tier and compatibility rules applied to supporting and countervailing evidence",
+    "tier_composition": {
+      "tier_2_bounded_analytically_usable": 1,
+      "tier_3_directional_or_mechanism_supporting": 6
+    }
+  },
+  "decision": "broad_state_whole_corpus_aggressive_bounded_reanalysis_completed_claim_adjudication_ready",
+  "final_claim_adjudication_performed": false,
+  "forbidden_action_occurred": false,
+  "growth": {
+    "bounded_interpretation": "Step progression leans safety; across-board evidence is mixed; COLA cells are sparse; no uniform safety advantage.",
+    "canonical_documentary_records": 432,
+    "direction": {
+      "neutral_or_unspecified": 3,
+      "positive": 429
+    },
+    "numeric_formula_records": 9,
+    "strict_external_pairs": 0,
+    "strict_external_series": 0,
+    "tier_1_numeric": 3,
+    "tier_2_bounded_numeric": 6,
+    "tier_3_directional": 423
+  },
+  "held_source_recovery": "still potentially needed after final adjudication and claim-gap reassessment; not required to adjudicate the current bounded record",
+  "implementation": {
+    "hold_sequences": 1230,
+    "input_sequences": 1268,
+    "new_likely_implemented": 0,
+    "sequence_status": {
+      "adopted_not_paid_observed": 19,
+      "amended_sequence": 10,
+      "negotiated_only": 1,
+      "paid_with_prior_adoption": 2,
+      "partial_sequence": 2,
+      "proposed_only": 4,
+      "sequence_hold": 1230
+    },
+    "strict_math_ready": 38,
+    "wording_boundary": "no paid stage observed in retained evidence; never paid is not asserted"
+  },
+  "implementation_event_deduplication_rerun": false,
+  "lanes": [
+    {
+      "completed_at": "2026-08-06T04:32:44.201397+00:00",
+      "input_records": 211,
+      "lane_id": 1,
+      "local_ledger": "artifacts/local_structured_external_data/whole_corpus_aggressive_bounded_reanalysis_2026-08-06/lane_001/result_ledger.jsonl.gz",
+      "queue_sha256": "9ab9693cc4aa1354dfc976b76c7103d3606290fe437c70764d7cd183ebb645cc",
+      "result_records": 211,
+      "result_sha256": "2513ff485f59c58965648bc06de193e59bd80073b13044d8f2b877570e081a3b",
+      "started_at": "2026-08-06T04:32:44.195483+00:00",
+      "status": "complete"
+    },
+    {
+      "completed_at": "2026-08-06T04:34:47.632135+00:00",
+      "input_records": 432,
+      "lane_id": 2,
+      "local_ledger": "artifacts/local_structured_external_data/whole_corpus_aggressive_bounded_reanalysis_2026-08-06/lane_002/result_ledger.jsonl.gz",
+      "queue_sha256": "f9baf974d9f365b7f88274012bb7b5bc5e9210803d4fe98d4dc529087969c137",
+      "result_records": 432,
+      "result_sha256": "58ae92acb08b16275902ea93c27c838ecc11be82faecd43464a39eb08ef47fb6",
+      "started_at": "2026-08-06T04:34:47.618083+00:00",
+      "status": "complete"
+    },
+    {
+      "completed_at": "2026-08-06T04:36:50.703558+00:00",
+      "input_records": 18358,
+      "lane_id": 3,
+      "local_ledger": "artifacts/local_structured_external_data/whole_corpus_aggressive_bounded_reanalysis_2026-08-06/lane_003/result_ledger.jsonl.gz",
+      "queue_sha256": "a538511b0035b0e646f26934a82b7de697411ee5b7a9b035a38d31e74247c9f8",
+      "result_records": 18358,
+      "result_sha256": "7f23593d681d0c94480d903a3aa978223b29d2b25791b54d6f593327c1bc00be",
+      "started_at": "2026-08-06T04:36:50.204081+00:00",
+      "status": "complete"
+    },
+    {
+      "completed_at": "2026-08-06T04:38:52.578402+00:00",
+      "input_records": 1268,
+      "lane_id": 4,
+      "local_ledger": "artifacts/local_structured_external_data/whole_corpus_aggressive_bounded_reanalysis_2026-08-06/lane_004/result_ledger.jsonl.gz",
+      "queue_sha256": "5cb4b30726bbd957de24274812601097eb17f8ef48f3e20de4eaa3b8c1de3a67",
+      "result_records": 1306,
+      "result_sha256": "f6906c49d6a27279325b930ac04ec955ebbbd2e27a95254a4bfb5ef28f86809c",
+      "started_at": "2026-08-06T04:38:52.331561+00:00",
+      "status": "complete"
+    },
+    {
+      "completed_at": "2026-08-06T04:40:57.804651+00:00",
+      "input_records": 5907,
+      "lane_id": 5,
+      "local_ledger": "artifacts/local_structured_external_data/whole_corpus_aggressive_bounded_reanalysis_2026-08-06/lane_005/result_ledger.jsonl.gz",
+      "queue_sha256": "f04eaac5adb3d7a92fee8005594a5779f7311c15f89fa79462582918e98f1af6",
+      "result_records": 6115,
+      "result_sha256": "3b41dd8c1001d53f9b856437ab6332948ffc365e29675fa49868b76fcba95063",
+      "started_at": "2026-08-06T04:40:57.651179+00:00",
+      "status": "complete"
+    }
+  ],
+  "local_comparisons": {
+    "aggressive_unique_bounded_units": 10,
+    "direction": {
+      "neutral": 1,
+      "non_safety_favorable": 4,
+      "safety_favorable": 5
+    },
+    "interpretation": "Five safety-favorable, four non-safety-favorable, and one neutral bounded local fact; no national wage-gap estimate.",
+    "new_deduplicated_units_beyond_named_four": 6,
+    "prior_qa_representations_collapsed": 11,
+    "strict_documentary_input_records": 21,
+    "strict_external_matches": 0,
+    "strict_named_examples": 4,
+    "tier_composition": {
+      "tier_2_bounded_analytically_usable": 9,
+      "tier_3_directional_or_mechanism_supporting": 1
+    }
+  },
+  "mechanism": {
+    "analytical_unit": "unique source / municipality / root event / mechanism event",
+    "mechanism_categories": 38,
+    "raw_linked_observations_used_as_prevalence": false,
+    "tier_composition": {
+      "tier_3_directional_or_mechanism_supporting": 38
+    }
+  },
+  "no_gabriel_scoring": true,
+  "regression_readiness": "failed",
+  "regression_run": false,
+  "rendered_visuals": 0,
+  "staffing": {
+    "causal_effect_observations": 0,
+    "descriptive_channel_consistent": 216,
+    "direct_channel_evidence": 7,
+    "duplicate_review_representations_collapsed": 3,
+    "input_units": 18358,
+    "prior_review_representations": 229,
+    "review_class": {
+      "descriptive_channel_consistent": 216,
+      "direct_channel_evidence": 7,
+      "insufficient_side_or_type": 18132,
+      "unresolved": 3
+    },
+    "tier_composition": {
+      "tier_2_bounded_analytically_usable": 7,
+      "tier_3_directional_or_mechanism_supporting": 216,
+      "tier_4_context_only": 18135
+    },
+    "unique_prior_review_observations": 226
+  },
+  "storage_held_sources": 7895,
+  "strict_baseline_digest": "e39be01eef98e426f36ff284b893cd7814a3ddecfe7c31aaf5f5b4585d1d3ba9",
+  "strict_baseline_preserved": true,
+  "tier_counts": {
+    "rejected": 201,
+    "tier_1_strict_claim_safe": 41,
+    "tier_2_bounded_analytically_usable": 23,
+    "tier_3_directional_or_mechanism_supporting": 5696,
+    "tier_4_context_only": 20461
+  },
+  "unique_native_pdf_pages": 1029482,
+  "unsearched_targets": 12844
+}

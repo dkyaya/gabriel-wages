@@ -1,0 +1,6 @@
+{
+  "blending_without_composition": false,
+  "strict_is_baseline": true,
+  "tier2_use": "bounded sensitivity",
+  "tier3_use": "direction/mechanism only"
+}

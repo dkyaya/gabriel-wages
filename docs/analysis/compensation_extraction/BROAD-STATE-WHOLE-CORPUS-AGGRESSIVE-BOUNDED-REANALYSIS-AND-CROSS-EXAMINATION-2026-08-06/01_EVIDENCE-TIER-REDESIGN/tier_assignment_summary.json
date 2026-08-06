@@ -1,0 +1,10 @@
+{
+  "by_tier": {
+    "rejected": 201,
+    "tier_1_strict_claim_safe": 41,
+    "tier_2_bounded_analytically_usable": 23,
+    "tier_3_directional_or_mechanism_supporting": 5696,
+    "tier_4_context_only": 20461
+  },
+  "total": 26422
+}

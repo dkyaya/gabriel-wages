@@ -1,0 +1,33 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-TIER",
+  "rules": [
+    {
+      "basis": "all strict compatibility and traceability gates",
+      "rule_id": "TIER-1",
+      "value": "tier_1_strict_claim_safe"
+    },
+    {
+      "basis": "compatible value with explicit bounded caveat",
+      "rule_id": "TIER-2",
+      "value": "tier_2_bounded_analytically_usable"
+    },
+    {
+      "basis": "direction/mechanism supported; not a clean point estimate",
+      "rule_id": "TIER-3",
+      "value": "tier_3_directional_or_mechanism_supporting"
+    },
+    {
+      "basis": "context retained; insufficient for claim calculation",
+      "rule_id": "TIER-4",
+      "value": "tier_4_context_only"
+    },
+    {
+      "basis": "wrong subject/unit, incompatible, duplicate-only, conflict, or unsupported",
+      "rule_id": "REJECT",
+      "value": "rejected"
+    }
+  ],
+  "scope": "primary tier assignment",
+  "version": "2026-08-06.1"
+}

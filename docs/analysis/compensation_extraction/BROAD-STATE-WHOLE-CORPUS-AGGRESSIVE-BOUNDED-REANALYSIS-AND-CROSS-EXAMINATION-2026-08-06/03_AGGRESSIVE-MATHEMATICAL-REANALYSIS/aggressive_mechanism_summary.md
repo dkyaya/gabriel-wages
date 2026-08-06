@@ -1,0 +1,12 @@
+# Aggressive Mechanism Summary
+
+```json
+{
+  "mechanism_categories": 38,
+  "analytical_unit": "unique source / municipality / root event / mechanism event",
+  "raw_linked_observations_used_as_prevalence": false,
+  "tier_composition": {
+    "tier_3_directional_or_mechanism_supporting": 38
+  }
+}
+```

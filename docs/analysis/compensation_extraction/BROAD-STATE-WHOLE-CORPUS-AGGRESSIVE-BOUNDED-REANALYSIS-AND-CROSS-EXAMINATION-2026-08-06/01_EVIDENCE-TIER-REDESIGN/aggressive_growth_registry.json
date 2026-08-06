@@ -1,0 +1,17 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-GROWTH",
+  "rules": [
+    {
+      "requirements": "same source/identity/basis; ordered period; exact formula",
+      "rule_id": "GROWTH-2"
+    },
+    {
+      "point_estimate_use": false,
+      "requirements": "explicit source-reported direction or percentage",
+      "rule_id": "GROWTH-3"
+    }
+  ],
+  "scope": "growth",
+  "version": "2026-08-06.1"
+}

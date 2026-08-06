@@ -1,0 +1,16 @@
+{
+  "opaque_scores_used": false,
+  "registry_id": "AGG-CONFLICT",
+  "rules": [
+    {
+      "allow_only": "version, period, budget/actual, component, or identity explanation",
+      "rule_id": "CONFLICT-2"
+    },
+    {
+      "reject": "unresolved direction-changing conflict",
+      "rule_id": "CONFLICT-X"
+    }
+  ],
+  "scope": "conflict handling",
+  "version": "2026-08-06.1"
+}
