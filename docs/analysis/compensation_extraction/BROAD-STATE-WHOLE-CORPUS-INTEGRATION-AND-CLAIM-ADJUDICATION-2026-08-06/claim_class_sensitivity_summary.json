@@ -1,0 +1,8 @@
+{
+  "claims": 14,
+  "final_class_changes_due_to_bounded_evidence": 0,
+  "more_mixed": 1,
+  "strict_and_bounded_separate": true,
+  "stronger_same_class": 5,
+  "unchanged": 8
+}

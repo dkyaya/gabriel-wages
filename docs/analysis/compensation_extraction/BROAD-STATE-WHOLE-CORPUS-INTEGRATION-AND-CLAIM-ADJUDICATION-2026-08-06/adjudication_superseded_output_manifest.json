@@ -1,0 +1,10 @@
+{
+  "strict_predecessors_mutated": false,
+  "superseded_outputs": [
+    {
+      "reason": "Initial integration attached the global 201-record unlinked conflict hold and the full counterexample packet to each substantive claim. Final QA replaced those with zero claim-linked conflicts, a separately declared global hold count, and claim-specific counterexample links.",
+      "scope": "pre-final lane accounting fields",
+      "semantic_class_or_wording_changed": false
+    }
+  ]
+}

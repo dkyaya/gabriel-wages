@@ -1,0 +1,39 @@
+{
+  "appendix_claims": 1,
+  "approved_or_conditionally_approved_visuals": 14,
+  "causal_estimate": false,
+  "counterexamples": 7,
+  "coverage_map_metric": "scout_coverage_rate",
+  "current_stage": "whole-corpus integration and claim adjudication complete",
+  "excluded_claims": 0,
+  "final_claim_classes": {
+    "conditionally_supported": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "supported": 1,
+    "unsupported": 6
+  },
+  "final_visuals_rendered": false,
+  "gabriel_external_scoring": false,
+  "headline_numbers": 9,
+  "held_source_recovery_required": false,
+  "limitation_claims": 5,
+  "native_pdf_pages": 1029482,
+  "next_stage": "visual production and visual QA",
+  "recommended_recovery_tranche_size": 0,
+  "regression": false,
+  "report_body_claims": 8,
+  "report_drafted": false,
+  "report_outline_ready": true,
+  "storage_held_sources": 7895,
+  "strict_vs_bounded": {
+    "class_upgrades": 0,
+    "more_mixed": 1,
+    "stronger_same_class": 5,
+    "unchanged": 8
+  },
+  "unresolved_conflicts": 201,
+  "unsearched_targets": 12844,
+  "visuals_needing_repair": 2,
+  "visuals_needing_source_recovery": 0
+}

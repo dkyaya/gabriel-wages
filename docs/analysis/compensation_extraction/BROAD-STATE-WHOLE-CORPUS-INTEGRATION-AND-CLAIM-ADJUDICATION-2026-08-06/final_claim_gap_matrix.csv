@@ -1,0 +1,15 @@
+cannot_be_filled_by_documents_alone,claim_id,gap_categories,gap_effect,held_source_decision,prevents_report_body,requires_causal_design,requires_future_hosted_search
+False,CLAIM-A,"[""missing_causal_design"", ""missing_prevalence_denominator"", ""missing_compatible_pay_basis""]",no_material_gap_for_bounded_wording,recovery_unlikely_to_change_claim,False,False,False
+False,CLAIM-B,"[""missing_longitudinal_identity"", ""missing_non-safety_side"", ""missing_causal_design""]",prevents_stronger_wording,targeted_recovery_likely_helpful,False,False,False
+False,CLAIM-C,"[""missing_total-compensation_structure"", ""missing_benefit_components"", ""missing_compatible_pay_basis""]",no_material_gap_for_bounded_wording,recovery_unlikely_to_change_claim,False,False,False
+False,CLAIM-D,"[""missing_staffing_denominator"", ""missing_causal_design"", ""missing_non-safety_side""]",no_material_gap_for_bounded_wording,recovery_unlikely_to_change_claim,False,False,False
+False,CLAIM-E,"[""missing_payroll_confirmation"", ""missing_implementation_confirmation""]",no_material_gap_for_bounded_wording,recovery_unlikely_to_change_claim,False,False,False
+False,CLAIM-F,"[""missing_implementation_confirmation"", ""missing_payroll_confirmation""]",no_material_gap_for_bounded_wording,recovery_unlikely_to_change_claim,False,False,False
+False,CLAIM-G,"[""missing_compatible_pay_basis"", ""missing_compatible_period"", ""missing_safety_side"", ""missing_non-safety_side""]",prevents_stronger_wording,targeted_recovery_likely_helpful,False,False,False
+False,CLAIM-H,"[""missing_prevalence_denominator"", ""missing_causal_design"", ""missing_independent_human_review""]",no_material_gap_for_bounded_wording,targeted_recovery_likely_helpful,False,False,False
+False,UNSUP-01,"[""missing_safety_side"", ""missing_non-safety_side"", ""missing_compatible_pay_basis"", ""missing_compatible_period"", ""missing_prevalence_denominator""]",prevents_claim_support,targeted_recovery_likely_helpful,True,False,True
+True,UNSUP-02,"[""missing_prevalence_denominator"", ""missing_geographic_coverage""]",prevents_claim_support,defer_recovery_to_future_research,True,False,True
+True,UNSUP-03,"[""missing_causal_design""]",prevents_claim_support,defer_recovery_to_future_research,True,True,False
+True,UNSUP-04,"[""missing_causal_design""]",prevents_claim_support,defer_recovery_to_future_research,True,True,False
+False,UNSUP-05,"[""missing_longitudinal_identity"", ""missing_compatible_pay_basis"", ""missing_non-safety_side""]",prevents_claim_support,targeted_recovery_likely_helpful,True,False,True
+True,UNSUP-06,"[""missing_causal_design""]",prevents_claim_support,defer_recovery_to_future_research,True,True,False

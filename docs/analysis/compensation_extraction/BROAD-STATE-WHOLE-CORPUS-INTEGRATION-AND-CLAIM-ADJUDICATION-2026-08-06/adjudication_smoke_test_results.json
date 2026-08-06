@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "tests": {
+    "conditional": true,
+    "conflict_excluded": true,
+    "counterexample_included": true,
+    "final_wording_separates_tiers": true,
+    "held_sources_helpful_but_not_required_case": true,
+    "mechanism_only": true,
+    "mixed": true,
+    "more_mixed": true,
+    "no_recovery_case": true,
+    "supported": true,
+    "tier_strengthened_same_class": true,
+    "unsupported": true
+  }
+}

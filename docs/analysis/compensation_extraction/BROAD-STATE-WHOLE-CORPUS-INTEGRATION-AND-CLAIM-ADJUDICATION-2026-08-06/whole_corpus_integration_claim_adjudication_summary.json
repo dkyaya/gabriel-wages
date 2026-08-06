@@ -1,0 +1,65 @@
+{
+  "causal_estimate": false,
+  "counterexamples": 7,
+  "decision": "broad_state_whole_corpus_claim_adjudication_completed_visual_production_ready",
+  "external_gabriel_scoring": false,
+  "final_claim_classes": {
+    "conditionally_supported": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "supported": 1,
+    "unsupported": 6
+  },
+  "final_claim_count": 14,
+  "forbidden_action_occurred": false,
+  "full_report_drafted": false,
+  "headlines": {
+    "appendix_statistic": 1,
+    "limitations_headline": 2,
+    "methods_headline": 1,
+    "report_body_headline": 2,
+    "section_headline": 3
+  },
+  "held_source_recovery": {
+    "held_sources_preserved": 7895,
+    "recommended_tranche_size": 0,
+    "required_before_visual": false
+  },
+  "hex_repair": "reuse and validate canonical 6,387-row EPSG:5070 layer",
+  "limitations_ready": true,
+  "methodology_ready": true,
+  "native_pdf_pages": 1029482,
+  "regression_run": false,
+  "report_outline_ready": true,
+  "report_placements": {
+    "appendix_only": 1,
+    "report_core_argument": 1,
+    "report_counterexample_section": 1,
+    "report_limitations": 5,
+    "report_major_section": 1,
+    "report_supporting_finding": 5
+  },
+  "storage_held_sources": 7895,
+  "strict_vs_bounded": {
+    "class_upgrades": 0,
+    "more_mixed": 1,
+    "stronger_same_class": 5,
+    "unchanged": 8
+  },
+  "unresolved_conflicts": 201,
+  "unsearched_targets": 12844,
+  "urbanicity_repair": "rejoin canonical 1,440-municipality layer; preserve 290 unknown",
+  "visuals": {
+    "count": 16,
+    "rendered": 0,
+    "repair_tasks": 2,
+    "source_recovery_needed": 0,
+    "statuses": {
+      "approved_for_rendering": 5,
+      "approved_strict_lane_only": 1,
+      "approved_tiered_sensitivity_visual": 2,
+      "approved_with_caption_caveat": 6,
+      "needs_visual_data_repair": 2
+    }
+  }
+}

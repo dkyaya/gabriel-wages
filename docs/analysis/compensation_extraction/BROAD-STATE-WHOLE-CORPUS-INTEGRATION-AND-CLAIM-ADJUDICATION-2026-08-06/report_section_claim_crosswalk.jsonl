@@ -1,0 +1,8 @@
+{"claims": ["CLAIM-H"], "section": "1. Executive finding and evidence boundary"}
+{"claims": [], "section": "2. Research design and corpus"}
+{"claims": ["CLAIM-A", "CLAIM-C", "CLAIM-E", "CLAIM-F"], "section": "3. Institutional mechanism channels"}
+{"claims": ["CLAIM-D"], "section": "4. Staffing, recruitment, and retention"}
+{"claims": ["CLAIM-B", "CLAIM-G"], "section": "5. Local comparisons and growth"}
+{"claims": ["CLAIM-G", "CLAIM-H"], "section": "6. Geography, counterexamples, and readiness"}
+{"claims": ["CLAIM-A", "CLAIM-B", "CLAIM-C", "CLAIM-D", "CLAIM-E", "CLAIM-F", "CLAIM-G", "CLAIM-H", "UNSUP-01", "UNSUP-02", "UNSUP-03", "UNSUP-04", "UNSUP-05", "UNSUP-06"], "section": "7. What is and is not supported"}
+{"claims": ["UNSUP-04"], "section": "Appendices"}

@@ -1,0 +1,89 @@
+{
+  "claims": [
+    {
+      "claim_id": "CLAIM-A",
+      "evidence_links": 9,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-A.json",
+      "sha256": "0c4809a5721fa3e79eb11f79a64c608811654b361ff5ccef28821dd9ad6b4c00"
+    },
+    {
+      "claim_id": "CLAIM-B",
+      "evidence_links": 8,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-B.json",
+      "sha256": "fdae81ec23cce95144905865c1629a62a44f986ecd353b36ac0ddb6360de223f"
+    },
+    {
+      "claim_id": "CLAIM-C",
+      "evidence_links": 5,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-C.json",
+      "sha256": "d53c81b47c9b0148d64f083748ed679c2b7e4e0e42faf2f2929953090d9237ef"
+    },
+    {
+      "claim_id": "CLAIM-D",
+      "evidence_links": 7,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-D.json",
+      "sha256": "336a1884e64b56065bf05186c831d3c497afc5e887adf3e9d35bebcb3911afda"
+    },
+    {
+      "claim_id": "CLAIM-E",
+      "evidence_links": 5,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-E.json",
+      "sha256": "4aa13daca3d73ebbab78093cd208aeb56f63ea6cd52b798178cd8386433fb668"
+    },
+    {
+      "claim_id": "CLAIM-F",
+      "evidence_links": 9,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-F.json",
+      "sha256": "2bc6c31e1f65d02e5167c5ec6e31bc622e682e6e820223e44ade6e3e7cb8188a"
+    },
+    {
+      "claim_id": "CLAIM-G",
+      "evidence_links": 19,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-G.json",
+      "sha256": "4f4d465912cd4e408b762d39995322686d67fdabb4f9bdf76fced8862e25fbc1"
+    },
+    {
+      "claim_id": "CLAIM-H",
+      "evidence_links": 22,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/CLAIM-H.json",
+      "sha256": "50b8a651388b9745d57fd77e0919e6aa0ab2caa3441c943d7f989914e653f4f9"
+    },
+    {
+      "claim_id": "UNSUP-01",
+      "evidence_links": 1,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/UNSUP-01.json",
+      "sha256": "0e957f12f49f468ce54f699288a64490829b261524a6f93a998ee5f1c564d3ad"
+    },
+    {
+      "claim_id": "UNSUP-02",
+      "evidence_links": 1,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/UNSUP-02.json",
+      "sha256": "fac5b51ae9b65f1f8428c0278568f190ce3ade441e4bc5d2b5b1b781b0f0ce88"
+    },
+    {
+      "claim_id": "UNSUP-03",
+      "evidence_links": 1,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/UNSUP-03.json",
+      "sha256": "2e81a636ccae26848cf666d743b4bf29b2e2602a2c5950a4f944060dedf37c60"
+    },
+    {
+      "claim_id": "UNSUP-04",
+      "evidence_links": 1,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/UNSUP-04.json",
+      "sha256": "aab8ab08d1482935758e79ae2488144f8ebb51208de4374c03f0f73d191b1fdd"
+    },
+    {
+      "claim_id": "UNSUP-05",
+      "evidence_links": 1,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/UNSUP-05.json",
+      "sha256": "a0e30300d8c09eafcf1b679609b79c02192a95d79d874dc5a570222fe561f977"
+    },
+    {
+      "claim_id": "UNSUP-06",
+      "evidence_links": 1,
+      "local_pointer": "artifacts/local_structured_external_data/whole_corpus_integration_claim_adjudication_2026-08-06/claims/UNSUP-06.json",
+      "sha256": "c4043eeb1ffadd3711dd4ba13627ac8a5fcac4ebee7050499309f84e5571cd99"
+    }
+  ],
+  "full_packets_in_ignored_local_storage": true
+}

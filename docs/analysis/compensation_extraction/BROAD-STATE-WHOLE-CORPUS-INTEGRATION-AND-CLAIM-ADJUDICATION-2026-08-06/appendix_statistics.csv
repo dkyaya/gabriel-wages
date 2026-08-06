@@ -1,0 +1,2 @@
+cross_exam_outcome,denominator,exact_number,final_headline_placement,final_language_boundary,formula,headline_id,numerator,reproduced,source_layer,unit
+upheld_with_narrower_wording,1268,38,appendix_statistic,"The number reproduces, but it must be labeled as an analytical-unit or linkage count rather than population prevalence or independent-event support.",38/1268,IMPL-MATH-READY,38,True,implementation sequence layer,math-ready implementation sequences

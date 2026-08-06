@@ -1,0 +1,15 @@
+claim_id,interpretation,known_relevant_sources,limitation_effect,unsearched_targets
+CLAIM-A,"unsearched possibilities, not known missing evidence",False,modestly reduces completeness but likely does not affect the bounded class,12844
+CLAIM-B,"unsearched possibilities, not known missing evidence",False,materially limits stronger wording and modestly reduces confidence,12844
+CLAIM-C,"unsearched possibilities, not known missing evidence",False,modestly reduces completeness but likely does not affect the bounded class,12844
+CLAIM-D,"unsearched possibilities, not known missing evidence",False,modestly reduces completeness but likely does not affect the bounded class,12844
+CLAIM-E,"unsearched possibilities, not known missing evidence",False,modestly reduces completeness but likely does not affect the bounded class,12844
+CLAIM-F,"unsearched possibilities, not known missing evidence",False,modestly reduces completeness but likely does not affect the bounded class,12844
+CLAIM-G,"unsearched possibilities, not known missing evidence",False,materially limits stronger wording and modestly reduces confidence,12844
+CLAIM-H,"unsearched possibilities, not known missing evidence",False,modestly reduces completeness but likely does not affect the bounded class,12844
+UNSUP-01,"unsearched possibilities, not known missing evidence",False,"prevents prevalence, national generalization, or causal/representative inference",12844
+UNSUP-02,"unsearched possibilities, not known missing evidence",False,"prevents prevalence, national generalization, or causal/representative inference",12844
+UNSUP-03,"unsearched possibilities, not known missing evidence",False,"prevents prevalence, national generalization, or causal/representative inference",12844
+UNSUP-04,"unsearched possibilities, not known missing evidence",False,"prevents prevalence, national generalization, or causal/representative inference",12844
+UNSUP-05,"unsearched possibilities, not known missing evidence",False,"prevents prevalence, national generalization, or causal/representative inference",12844
+UNSUP-06,"unsearched possibilities, not known missing evidence",False,"prevents prevalence, national generalization, or causal/representative inference",12844

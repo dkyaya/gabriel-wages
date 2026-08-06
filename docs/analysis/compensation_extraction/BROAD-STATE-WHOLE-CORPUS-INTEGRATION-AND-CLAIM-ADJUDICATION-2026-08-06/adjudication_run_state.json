@@ -1,0 +1,189 @@
+{
+  "claim_class_counts": {
+    "conditionally_supported": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "supported": 1,
+    "unsupported": 6
+  },
+  "completed_at": "2026-08-06T05:18:56.229317+00:00",
+  "critical_input_snapshot": {
+    "combined_sha256": "e0484c53237bd380250ba9757ea6e6712919bcc86827487450c1c2bc1660875f",
+    "files": [
+      {
+        "bytes": 9416,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/internal_claim_map.jsonl",
+        "sha256": "36977b8590102b396ef39f10135ee0fcae0f6af324f69cb0d45d7d119cd6ad46"
+      },
+      {
+        "bytes": 13558,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_by_claim_mathematical_evidence_table.jsonl",
+        "sha256": "6a58efdc2f47d5158cce8c2f7490ec69a7c542d045497329c8a18109f655e40f"
+      },
+      {
+        "bytes": 17950,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_figure_specifications.json",
+        "sha256": "95b1d090fa3c3a4898ea0303271b316fc6264e044aab8c7dc6bf7e77520a6ed9"
+      },
+      {
+        "bytes": 28901,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_cross_exam_recommendations.jsonl",
+        "sha256": "bc017853284190ff762fa26e0eeb43f3d8cbda20aa8d1655573a9bdf8a3896b9"
+      },
+      {
+        "bytes": 16750,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_counterexample_core_packet.jsonl",
+        "sha256": "6ee1506212be42340e7c6d22d800e87ac9745e9e9da1bf9a22c69537e430994c"
+      },
+      {
+        "bytes": 455135,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_conflicts.jsonl",
+        "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+      },
+      {
+        "bytes": 13371,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06/05_STRICT-VS-BOUNDED-SENSITIVITY/strict_vs_bounded_claim_sensitivity_table.jsonl",
+        "sha256": "5c67ac57520360a692082a41dcabfd112a505194dca9c1d8cbfb1ccfc54ad840"
+      },
+      {
+        "bytes": 15965,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06/06_CLAIM-ADJUDICATION-PREP/aggressive_claim_adjudication_ready_table.jsonl",
+        "sha256": "44c486fedb178dc5f0e11b61cb4e872caf381f2018c3c5ec6182db4d86cc2341"
+      }
+    ]
+  },
+  "decision": "broad_state_whole_corpus_claim_adjudication_completed_visual_production_ready",
+  "lane_checkpoints": [
+    {
+      "adjudication_sha256": "9397860059d9cd2e64862d6061981c5870f6cf67795770e206bd3a3340605133",
+      "claim_ids": [
+        "CLAIM-C",
+        "UNSUP-01",
+        "UNSUP-05"
+      ],
+      "claims": 3,
+      "completed_at": "2026-08-06T05:17:32.722913+00:00",
+      "evidence_links": 7,
+      "lane_id": "adjudication_lane_001",
+      "status": "complete"
+    },
+    {
+      "adjudication_sha256": "901f113ac78cb0264a6ab0a073df41cc03926bf11fbb292f20c39121e63a0502",
+      "claim_ids": [
+        "CLAIM-B",
+        "CLAIM-G"
+      ],
+      "claims": 2,
+      "completed_at": "2026-08-06T05:17:32.716283+00:00",
+      "evidence_links": 27,
+      "lane_id": "adjudication_lane_002",
+      "status": "complete"
+    },
+    {
+      "adjudication_sha256": "aeff12e53f733f72425286d796db94159a5527e1692fa27d3c75ca0deb55327b",
+      "claim_ids": [
+        "CLAIM-D"
+      ],
+      "claims": 1,
+      "completed_at": "2026-08-06T05:17:32.715601+00:00",
+      "evidence_links": 7,
+      "lane_id": "adjudication_lane_003",
+      "status": "complete"
+    },
+    {
+      "adjudication_sha256": "db315304c9d7f6da6058652ab95d6f3048c7d2f714181c66429ea7e97f550f57",
+      "claim_ids": [
+        "CLAIM-A",
+        "CLAIM-E",
+        "CLAIM-F"
+      ],
+      "claims": 3,
+      "completed_at": "2026-08-06T05:17:32.717848+00:00",
+      "evidence_links": 23,
+      "lane_id": "adjudication_lane_004",
+      "status": "complete"
+    },
+    {
+      "adjudication_sha256": "ae7fccf0dba28f23837f14c2d41f71c73db8792ee7ab49a30cdc56760c93a480",
+      "claim_ids": [
+        "CLAIM-H",
+        "UNSUP-02",
+        "UNSUP-03",
+        "UNSUP-04",
+        "UNSUP-06"
+      ],
+      "claims": 5,
+      "completed_at": "2026-08-06T05:17:32.726197+00:00",
+      "evidence_links": 26,
+      "lane_id": "adjudication_lane_005",
+      "status": "complete"
+    }
+  ],
+  "lane_distribution": [
+    {
+      "claim_count": 3,
+      "claim_ids": [
+        "CLAIM-C",
+        "UNSUP-01",
+        "UNSUP-05"
+      ],
+      "lane_id": "adjudication_lane_001",
+      "queue_sha256": "ce2242c0eee27a32093104cd436717e797b60601b9087e35c0295d551dd54fda",
+      "role": "compensation-level and local-comparison claims",
+      "start_offset_seconds": 0
+    },
+    {
+      "claim_count": 2,
+      "claim_ids": [
+        "CLAIM-B",
+        "CLAIM-G"
+      ],
+      "lane_id": "adjudication_lane_002",
+      "queue_sha256": "1146963d807b9e675a2270144227a70a04db9e219dadcae56166bb86bb658c0e",
+      "role": "growth, step, COLA, and across-board claims",
+      "start_offset_seconds": 60
+    },
+    {
+      "claim_count": 1,
+      "claim_ids": [
+        "CLAIM-D"
+      ],
+      "lane_id": "adjudication_lane_003",
+      "queue_sha256": "d24f182b185d903d6a1a2ae16e85d373ebc2718fc61d3cbc30494292dc5d73ed",
+      "role": "staffing, vacancy, overtime, recruitment, and retention claims",
+      "start_offset_seconds": 120
+    },
+    {
+      "claim_count": 3,
+      "claim_ids": [
+        "CLAIM-A",
+        "CLAIM-E",
+        "CLAIM-F"
+      ],
+      "lane_id": "adjudication_lane_004",
+      "queue_sha256": "18c886fae59f376b4c70acd453d131f5fb26ed45beadd4100eaaaf109a7be39f",
+      "role": "implementation, retroactivity, non-base, budget/pay-plan, and institutional mechanism claims",
+      "start_offset_seconds": 180
+    },
+    {
+      "claim_count": 5,
+      "claim_ids": [
+        "CLAIM-H",
+        "UNSUP-02",
+        "UNSUP-03",
+        "UNSUP-04",
+        "UNSUP-06"
+      ],
+      "lane_id": "adjudication_lane_005",
+      "queue_sha256": "1829e81d8095e20ae0052f7d809ddc14c5c9ff78d5b2249cae6b452cd2e7fae8",
+      "role": "global/generalization, unsupported, counterexample, limitation, recovery, and residual claims",
+      "start_offset_seconds": 240
+    }
+  ],
+  "recommended_recovery_tranche_size": 0,
+  "registry_hash": "5fb7918da72e473be847cbb61219eaeee85e0f977efadfd687b36ff0bd8788a0",
+  "started_at": "2026-08-06T05:10:31.309565+00:00",
+  "starting_head": "153ff5c2206b022da88e0f3e2211d731ca576f57",
+  "status": "complete",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06"
+}

@@ -1,0 +1,11 @@
+{
+  "canonical_source_layer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_hex_density_visual_ready_layer.jsonl",
+  "decision": "bounded deterministic reuse and validation",
+  "figure_id": "FIGSPEC-14",
+  "hex_radius_km": 50,
+  "identical_safety_non_safety_grid": true,
+  "projection": "EPSG:5070",
+  "rows": 6387,
+  "source_recovery_required": false,
+  "task": "Revalidate event IDs and current adjudicated mechanism filters, then reuse; do not rematerialize from raw observations."
+}

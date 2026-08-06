@@ -1,0 +1,13 @@
+{
+  "adjudication_sha256": "db315304c9d7f6da6058652ab95d6f3048c7d2f714181c66429ea7e97f550f57",
+  "claim_ids": [
+    "CLAIM-A",
+    "CLAIM-E",
+    "CLAIM-F"
+  ],
+  "claims": 3,
+  "completed_at": "2026-08-06T05:17:32.717848+00:00",
+  "evidence_links": 23,
+  "lane_id": "adjudication_lane_004",
+  "status": "complete"
+}

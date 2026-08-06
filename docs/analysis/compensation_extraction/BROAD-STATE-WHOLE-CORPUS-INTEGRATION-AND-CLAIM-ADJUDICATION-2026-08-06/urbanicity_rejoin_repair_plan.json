@@ -1,0 +1,12 @@
+{
+  "canonical_source_layer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/municipality_urbanicity_layer.jsonl",
+  "decision": "bounded deterministic rejoin",
+  "figure_id": "FIGSPEC-15",
+  "municipalities": 1440,
+  "rural": 682,
+  "source_recovery_required": false,
+  "suburban_created": false,
+  "task": "Join canonical urbanicity to current event IDs; retain unknown rather than infer.",
+  "unknown": 290,
+  "urban": 468
+}

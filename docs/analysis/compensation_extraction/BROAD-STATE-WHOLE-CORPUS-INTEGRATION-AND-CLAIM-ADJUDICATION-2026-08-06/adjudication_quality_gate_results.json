@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "gates": {
+    "A_claim_accounting": true,
+    "B_evidence_traceability": true,
+    "C_strict_bounded_separation": true,
+    "D_counterexample_inclusion": true,
+    "E_conflict_integrity": true,
+    "F_wording_fidelity": true,
+    "G_unsupported_claim_discipline": true,
+    "H_mechanism_specificity": true,
+    "I_held_source_proportionality": true,
+    "J_visual_compatibility": true,
+    "K_limitation_completeness": true,
+    "L_no_report_drafting": true
+  }
+}

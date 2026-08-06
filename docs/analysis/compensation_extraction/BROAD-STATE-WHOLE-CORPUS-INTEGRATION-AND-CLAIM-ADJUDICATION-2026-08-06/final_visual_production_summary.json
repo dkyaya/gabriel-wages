@@ -1,0 +1,11 @@
+{
+  "next_stage": "visual production and QA",
+  "status_counts": {
+    "approved_for_rendering": 5,
+    "approved_strict_lane_only": 1,
+    "approved_tiered_sensitivity_visual": 2,
+    "approved_with_caption_caveat": 6,
+    "needs_visual_data_repair": 2
+  },
+  "visual_count": 16
+}

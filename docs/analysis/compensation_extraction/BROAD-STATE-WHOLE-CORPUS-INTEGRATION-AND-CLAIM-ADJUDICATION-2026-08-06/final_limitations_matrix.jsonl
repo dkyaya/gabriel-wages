@@ -1,0 +1,8 @@
+{"effect": "unknown completeness gap; prevents representative or national inference", "limitation_id": "LIM-SEARCH", "unit": "unsearched targets", "value": 12844}
+{"effect": "known held-source completeness gap; zero required before visuals", "limitation_id": "LIM-STORAGE", "unit": "storage-held verified sources", "value": 7895}
+{"effect": "excluded from current evidence", "limitation_id": "LIM-OCR", "unit": "OCR-later PDFs", "value": 118}
+{"effect": "not treated as valid evidence", "limitation_id": "LIM-REPAIR", "unit": "extraction-repair payloads", "value": 97}
+{"effect": "no external wage-gap estimate", "limitation_id": "LIM-MATCH", "unit": "compatible external wage matches", "value": 0}
+{"effect": "documentary growth remains canonical", "limitation_id": "LIM-GROWTH", "unit": "compatible external growth pairs", "value": 0}
+{"effect": "no regression or causal estimate", "limitation_id": "LIM-REG", "unit": "regressions run", "value": 0}
+{"effect": "bounded subset, not full-corpus gold coding", "limitation_id": "LIM-SEMANTIC", "unit": "strict claim-critical records reviewed", "value": 1726}

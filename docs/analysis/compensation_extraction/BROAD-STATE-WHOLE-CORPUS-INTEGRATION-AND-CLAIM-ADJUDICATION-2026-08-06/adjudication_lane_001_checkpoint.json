@@ -1,0 +1,13 @@
+{
+  "adjudication_sha256": "9397860059d9cd2e64862d6061981c5870f6cf67795770e206bd3a3340605133",
+  "claim_ids": [
+    "CLAIM-C",
+    "UNSUP-01",
+    "UNSUP-05"
+  ],
+  "claims": 3,
+  "completed_at": "2026-08-06T05:17:32.722913+00:00",
+  "evidence_links": 7,
+  "lane_id": "adjudication_lane_001",
+  "status": "complete"
+}

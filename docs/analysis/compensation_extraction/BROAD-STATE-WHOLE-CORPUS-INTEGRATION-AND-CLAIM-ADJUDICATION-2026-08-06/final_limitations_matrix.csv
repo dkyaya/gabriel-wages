@@ -1,0 +1,9 @@
+effect,limitation_id,unit,value
+unknown completeness gap; prevents representative or national inference,LIM-SEARCH,unsearched targets,12844
+known held-source completeness gap; zero required before visuals,LIM-STORAGE,storage-held verified sources,7895
+excluded from current evidence,LIM-OCR,OCR-later PDFs,118
+not treated as valid evidence,LIM-REPAIR,extraction-repair payloads,97
+no external wage-gap estimate,LIM-MATCH,compatible external wage matches,0
+documentary growth remains canonical,LIM-GROWTH,compatible external growth pairs,0
+no regression or causal estimate,LIM-REG,regressions run,0
+"bounded subset, not full-corpus gold coding",LIM-SEMANTIC,strict claim-critical records reviewed,1726

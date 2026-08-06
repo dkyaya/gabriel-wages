@@ -1,0 +1,5 @@
+{"claim_id": "CLAIM-H", "effect": "no_material_gap_for_bounded_wording", "gaps": ["missing_prevalence_denominator", "missing_causal_design", "missing_independent_human_review"]}
+{"claim_id": "UNSUP-02", "effect": "prevents_claim_support", "gaps": ["missing_prevalence_denominator", "missing_geographic_coverage"]}
+{"claim_id": "UNSUP-03", "effect": "prevents_claim_support", "gaps": ["missing_causal_design"]}
+{"claim_id": "UNSUP-04", "effect": "prevents_claim_support", "gaps": ["missing_causal_design"]}
+{"claim_id": "UNSUP-06", "effect": "prevents_claim_support", "gaps": ["missing_causal_design"]}

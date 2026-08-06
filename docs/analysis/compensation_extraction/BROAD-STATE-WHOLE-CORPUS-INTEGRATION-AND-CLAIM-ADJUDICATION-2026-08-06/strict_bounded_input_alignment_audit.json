@@ -1,0 +1,37 @@
+{
+  "aligned": true,
+  "bounded_claim_ids": [
+    "CLAIM-A",
+    "CLAIM-B",
+    "CLAIM-C",
+    "CLAIM-D",
+    "CLAIM-E",
+    "CLAIM-F",
+    "CLAIM-G",
+    "CLAIM-H",
+    "UNSUP-01",
+    "UNSUP-02",
+    "UNSUP-03",
+    "UNSUP-04",
+    "UNSUP-05",
+    "UNSUP-06"
+  ],
+  "passed": true,
+  "strict_and_bounded_separate": true,
+  "strict_claim_ids": [
+    "CLAIM-A",
+    "CLAIM-B",
+    "CLAIM-C",
+    "CLAIM-D",
+    "CLAIM-E",
+    "CLAIM-F",
+    "CLAIM-G",
+    "CLAIM-H",
+    "UNSUP-01",
+    "UNSUP-02",
+    "UNSUP-03",
+    "UNSUP-04",
+    "UNSUP-05",
+    "UNSUP-06"
+  ]
+}

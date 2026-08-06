@@ -1,0 +1,21 @@
+{
+  "claim_count": 14,
+  "claim_ids": [
+    "CLAIM-A",
+    "CLAIM-B",
+    "CLAIM-C",
+    "CLAIM-D",
+    "CLAIM-E",
+    "CLAIM-F",
+    "CLAIM-G",
+    "CLAIM-H",
+    "UNSUP-01",
+    "UNSUP-02",
+    "UNSUP-03",
+    "UNSUP-04",
+    "UNSUP-05",
+    "UNSUP-06"
+  ],
+  "immutable": true,
+  "queue_sha256": "e9d394c59f3d1dab0bee31b0b59383cc171dea7abe9aa8a528880e92e82c2049"
+}

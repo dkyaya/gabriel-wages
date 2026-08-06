@@ -1,0 +1,3 @@
+{"claim_id": "CLAIM-C", "effect": "no_material_gap_for_bounded_wording", "gaps": ["missing_total-compensation_structure", "missing_benefit_components", "missing_compatible_pay_basis"]}
+{"claim_id": "UNSUP-01", "effect": "prevents_claim_support", "gaps": ["missing_safety_side", "missing_non-safety_side", "missing_compatible_pay_basis", "missing_compatible_period", "missing_prevalence_denominator"]}
+{"claim_id": "UNSUP-05", "effect": "prevents_claim_support", "gaps": ["missing_longitudinal_identity", "missing_compatible_pay_basis", "missing_non-safety_side"]}

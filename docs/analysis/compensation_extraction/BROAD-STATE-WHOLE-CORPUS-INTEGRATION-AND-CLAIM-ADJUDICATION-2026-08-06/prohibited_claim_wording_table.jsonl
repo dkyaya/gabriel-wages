@@ -1,0 +1,14 @@
+{"claim_id": "CLAIM-A", "prohibited_claim_text": "Formal bargaining causes safety wages to rise faster nationwide."}
+{"claim_id": "CLAIM-B", "prohibited_claim_text": "Safety wages generally grow faster nationwide because of step progression or COLAs."}
+{"claim_id": "CLAIM-C", "prohibited_claim_text": "Safety workers receive more total compensation than non-safety workers nationwide."}
+{"claim_id": "CLAIM-D", "prohibited_claim_text": "Staffing shortages cause higher safety wages."}
+{"claim_id": "CLAIM-E", "prohibited_claim_text": "Every adopted or retroactive provision was implemented and paid."}
+{"claim_id": "CLAIM-F", "prohibited_claim_text": "Budget and council action uniformly increase compensation."}
+{"claim_id": "CLAIM-G", "prohibited_claim_text": "Non-safety compensation lacks institutional growth mechanisms, or safety always has the advantage."}
+{"claim_id": "CLAIM-H", "prohibited_claim_text": "The corpus estimates a national safety wage gap or causal effect."}
+{"claim_id": "UNSUP-01", "prohibited_claim_text": "The corpus provides a national safety wage-gap estimate."}
+{"claim_id": "UNSUP-02", "prohibited_claim_text": "The corpus estimates national mechanism prevalence."}
+{"claim_id": "UNSUP-03", "prohibited_claim_text": "The corpus identifies causal effects of compensation mechanisms."}
+{"claim_id": "UNSUP-04", "prohibited_claim_text": "Regression results establish the proposed relationship."}
+{"claim_id": "UNSUP-05", "prohibited_claim_text": "Safety wages grow X percent faster nationally."}
+{"claim_id": "UNSUP-06", "prohibited_claim_text": "The documented mechanism caused the observed wage difference."}

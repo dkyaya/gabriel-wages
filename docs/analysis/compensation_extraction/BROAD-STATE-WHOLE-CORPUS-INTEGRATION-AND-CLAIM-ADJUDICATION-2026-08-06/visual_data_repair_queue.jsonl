@@ -1,0 +1,2 @@
+{"figure_id": "FIGSPEC-14", "repair_task": "Reuse and validate the canonical 6,387-row fixed EPSG:5070 hex layer; retain identical safety/non-safety grid and scales.", "source_recovery_required": false}
+{"figure_id": "FIGSPEC-15", "repair_task": "Rejoin the canonical 1,440-municipality urbanicity layer; preserve urban=468, rural=682, unknown=290 and do not fabricate suburban labels.", "source_recovery_required": false}

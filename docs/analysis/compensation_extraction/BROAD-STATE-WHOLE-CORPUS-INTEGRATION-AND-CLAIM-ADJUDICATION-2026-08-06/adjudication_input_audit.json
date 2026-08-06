@@ -1,0 +1,73 @@
+{
+  "bounded_sensitivity": {
+    "more_mixed": 1,
+    "stronger_but_same_claim_class": 5,
+    "unchanged": 8
+  },
+  "counts": {
+    "bounded_local_units": 10,
+    "conflicts": 201,
+    "counterexamples": 7,
+    "growth_records": 432,
+    "headlines": 9,
+    "held_sources": 7895,
+    "preserved_local_context_rows": 201,
+    "visual_specs": 16
+  },
+  "critical_input_snapshot": {
+    "combined_sha256": "e0484c53237bd380250ba9757ea6e6712919bcc86827487450c1c2bc1660875f",
+    "files": [
+      {
+        "bytes": 9416,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/internal_claim_map.jsonl",
+        "sha256": "36977b8590102b396ef39f10135ee0fcae0f6af324f69cb0d45d7d119cd6ad46"
+      },
+      {
+        "bytes": 13558,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_by_claim_mathematical_evidence_table.jsonl",
+        "sha256": "6a58efdc2f47d5158cce8c2f7490ec69a7c542d045497329c8a18109f655e40f"
+      },
+      {
+        "bytes": 17950,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_figure_specifications.json",
+        "sha256": "95b1d090fa3c3a4898ea0303271b316fc6264e044aab8c7dc6bf7e77520a6ed9"
+      },
+      {
+        "bytes": 28901,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_cross_exam_recommendations.jsonl",
+        "sha256": "bc017853284190ff762fa26e0eeb43f3d8cbda20aa8d1655573a9bdf8a3896b9"
+      },
+      {
+        "bytes": 16750,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_counterexample_core_packet.jsonl",
+        "sha256": "6ee1506212be42340e7c6d22d800e87ac9745e9e9da1bf9a22c69537e430994c"
+      },
+      {
+        "bytes": 455135,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_conflicts.jsonl",
+        "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+      },
+      {
+        "bytes": 13371,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06/05_STRICT-VS-BOUNDED-SENSITIVITY/strict_vs_bounded_claim_sensitivity_table.jsonl",
+        "sha256": "5c67ac57520360a692082a41dcabfd112a505194dca9c1d8cbfb1ccfc54ad840"
+      },
+      {
+        "bytes": 15965,
+        "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06/06_CLAIM-ADJUDICATION-PREP/aggressive_claim_adjudication_ready_table.jsonl",
+        "sha256": "44c486fedb178dc5f0e11b61cb4e872caf381f2018c3c5ec6182db4d86cc2341"
+      }
+    ]
+  },
+  "free_bytes": 20561031168,
+  "passed": true,
+  "predecessors_are_ancestors": true,
+  "starting_head": "153ff5c2206b022da88e0f3e2211d731ca576f57",
+  "strict_recommendations": {
+    "candidate_for_conditional": 1,
+    "candidate_for_mechanism_supported_only": 5,
+    "candidate_for_mixed": 1,
+    "candidate_for_supported": 1,
+    "candidate_for_unsupported": 6
+  }
+}

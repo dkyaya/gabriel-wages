@@ -1,0 +1,15 @@
+Tier_1_support_count,Tier_2_support_count,Tier_3_support_count,bounded_effect,claim_id,class_changed,depends_materially_on_tier_2_3,final_class,strict_status
+6,0,1,stronger_but_same_claim_class,CLAIM-A,False,False,mechanism_supported_only,mechanism_supported_only
+7,6,423,unchanged,CLAIM-B,False,True,conditionally_supported,descriptively_supported
+2,0,1,stronger_but_same_claim_class,CLAIM-C,False,False,mechanism_supported_only,mechanism_supported_only
+4,7,217,stronger_but_same_claim_class,CLAIM-D,False,True,mechanism_supported_only,mechanism_supported_only
+40,0,1,stronger_but_same_claim_class,CLAIM-E,False,False,mechanism_supported_only,mechanism_supported_only
+44,0,1,stronger_but_same_claim_class,CLAIM-F,False,False,mechanism_supported_only,mechanism_supported_only
+11,15,424,more_mixed,CLAIM-G,False,True,mixed_or_countervailing,mixed_or_countervailing
+52,23,677,unchanged,CLAIM-H,False,False,supported,mathematically_supported_bounded
+0,0,0,unchanged,UNSUP-01,False,False,unsupported,unsupported_by_current_math
+0,0,0,unchanged,UNSUP-02,False,False,unsupported,unsupported_by_current_math
+0,0,0,unchanged,UNSUP-03,False,False,unsupported,unsupported_by_current_math
+0,0,0,unchanged,UNSUP-04,False,False,unsupported,unsupported_by_current_math
+0,0,0,unchanged,UNSUP-05,False,False,unsupported,unsupported_by_current_math
+0,0,0,unchanged,UNSUP-06,False,False,unsupported,unsupported_by_current_math

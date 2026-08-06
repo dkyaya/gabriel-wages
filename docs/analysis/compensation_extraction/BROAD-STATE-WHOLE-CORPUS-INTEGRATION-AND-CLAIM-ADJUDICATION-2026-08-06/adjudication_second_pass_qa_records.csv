@@ -1,0 +1,15 @@
+claim_id,class,conflicts_not_support,counterexample_accounted,evidence_traceable,held_recovery_targeted,one_class,passed,tiers_separate,visuals_declared,wording_bounded
+CLAIM-A,mechanism_supported_only,True,True,True,True,True,True,True,True,True
+CLAIM-B,conditionally_supported,True,True,True,True,True,True,True,True,True
+CLAIM-C,mechanism_supported_only,True,True,True,True,True,True,True,True,True
+CLAIM-D,mechanism_supported_only,True,True,True,True,True,True,True,True,True
+CLAIM-E,mechanism_supported_only,True,True,True,True,True,True,True,True,True
+CLAIM-F,mechanism_supported_only,True,True,True,True,True,True,True,True,True
+CLAIM-G,mixed_or_countervailing,True,True,True,True,True,True,True,True,True
+CLAIM-H,supported,True,True,True,True,True,True,True,True,True
+UNSUP-01,unsupported,True,True,True,True,True,True,True,True,True
+UNSUP-02,unsupported,True,True,True,True,True,True,True,True,True
+UNSUP-03,unsupported,True,True,True,True,True,True,True,True,True
+UNSUP-04,unsupported,True,True,True,True,True,True,True,True,True
+UNSUP-05,unsupported,True,True,True,True,True,True,True,True,True
+UNSUP-06,unsupported,True,True,True,True,True,True,True,True,True

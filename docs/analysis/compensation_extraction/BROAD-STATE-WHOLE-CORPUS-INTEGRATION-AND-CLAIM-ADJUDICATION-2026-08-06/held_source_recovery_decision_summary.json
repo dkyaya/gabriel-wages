@@ -1,0 +1,9 @@
+{
+  "claim_targeted_queue": 0,
+  "future_research_ranked_preview": 250,
+  "held_sources": 7895,
+  "reason": "No current bounded claim or approved visual depends on a missing held source. Additional documents cannot by themselves create a national denominator or causal design; compatible held sources may be useful after report drafting or for future panel construction.",
+  "recommended_recovery_tranche_size": 0,
+  "recovery_required_before_visuals": false,
+  "visual_targeted_queue": 0
+}

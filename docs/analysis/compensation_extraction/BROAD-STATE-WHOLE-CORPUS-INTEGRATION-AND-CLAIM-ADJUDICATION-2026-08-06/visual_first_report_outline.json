@@ -1,0 +1,218 @@
+{
+  "full_report_drafted": false,
+  "sections": [
+    {
+      "claims": [
+        "CLAIM-H"
+      ],
+      "counterexamples": [
+        "counterexample-packet:7"
+      ],
+      "examples": [],
+      "headlines": [
+        "EXTERNAL-WAGE-MATCH",
+        "EXTERNAL-GROWTH-MATCH"
+      ],
+      "language_boundaries": "mechanism/direction, not national gap or causality",
+      "limitations": [
+        "UNSUP-01",
+        "UNSUP-03"
+      ],
+      "methodology_note": "strict and bounded lanes separated",
+      "purpose": "Lead with CLAIM-H and the zero-match boundary.",
+      "section": "1. Executive finding and evidence boundary",
+      "unresolved_issue": "independent human review remains bounded",
+      "visuals": [
+        "FIGSPEC-13",
+        "FIGSPEC-16"
+      ]
+    },
+    {
+      "claims": [],
+      "counterexamples": [],
+      "examples": [],
+      "headlines": [
+        "CORPUS-PDF-PAGES"
+      ],
+      "language_boundaries": "coverage is not representativeness",
+      "limitations": [
+        "UNSUP-02"
+      ],
+      "methodology_note": "Human-AI roles and two-corpus boundary",
+      "purpose": "Explain within-city cross-occupation design and evidence scale.",
+      "section": "2. Research design and corpus",
+      "unresolved_issue": "12,844 unsearched targets",
+      "visuals": [
+        "FIGSPEC-01",
+        "FIGSPEC-02",
+        "FIGSPEC-03"
+      ]
+    },
+    {
+      "claims": [
+        "CLAIM-A",
+        "CLAIM-C",
+        "CLAIM-E",
+        "CLAIM-F"
+      ],
+      "counterexamples": [
+        "counterexample-packet:7"
+      ],
+      "examples": "canonical example IDs by claim",
+      "headlines": [
+        "MECH-SOURCES",
+        "MECH-EVENTS",
+        "IMPL-MATH-READY"
+      ],
+      "language_boundaries": "mechanism existence/operation only",
+      "limitations": [
+        "UNSUP-06"
+      ],
+      "methodology_note": "corroboration does not multiply events",
+      "purpose": "Present bargaining, non-base, retroactivity, and fiscal formalization.",
+      "section": "3. Institutional mechanism channels",
+      "unresolved_issue": "1,230 implementation sequence holds",
+      "visuals": [
+        "FIGSPEC-07",
+        "FIGSPEC-08"
+      ]
+    },
+    {
+      "claims": [
+        "CLAIM-D"
+      ],
+      "counterexamples": "staffing countervailing packet",
+      "examples": "staffing reviewed packet",
+      "headlines": [
+        "STAFF-UNITS"
+      ],
+      "language_boundaries": "noncausal; no prevalence",
+      "limitations": [
+        "missing staffing denominators"
+      ],
+      "methodology_note": "7 direct, 216 descriptive unique records",
+      "purpose": "Separate direct from descriptive channel evidence.",
+      "section": "4. Staffing, recruitment, and retention",
+      "unresolved_issue": "18,135 context/insufficient units",
+      "visuals": [
+        "FIGSPEC-04",
+        "FIGSPEC-05",
+        "FIGSPEC-06"
+      ]
+    },
+    {
+      "claims": [
+        "CLAIM-B",
+        "CLAIM-G"
+      ],
+      "counterexamples": [
+        "Canastota",
+        "counterexample-packet:7"
+      ],
+      "examples": "ten unique bounded local facts",
+      "headlines": [],
+      "language_boundaries": "local/unit-cycle only; no average national gap",
+      "limitations": [
+        "UNSUP-01",
+        "UNSUP-05"
+      ],
+      "methodology_note": "Tier 1/2/3 composition annotated",
+      "purpose": "Show bounded supporting, neutral, and countervailing results.",
+      "section": "5. Local comparisons and growth",
+      "unresolved_issue": "sparse cells and identity gaps",
+      "visuals": [
+        "FIGSPEC-09",
+        "FIGSPEC-10",
+        "FIGSPEC-11"
+      ]
+    },
+    {
+      "claims": [
+        "CLAIM-G",
+        "CLAIM-H"
+      ],
+      "counterexamples": [
+        "counterexample-packet:7"
+      ],
+      "examples": [],
+      "headlines": [
+        "STORAGE-HOLD",
+        "UNSEARCHED"
+      ],
+      "language_boundaries": "event density, not population prevalence",
+      "limitations": [
+        "UNSUP-02"
+      ],
+      "methodology_note": "fixed EPSG:5070; urbanicity unknown retained",
+      "purpose": "Display coverage while foregrounding missingness and conflicts.",
+      "section": "6. Geography, counterexamples, and readiness",
+      "unresolved_issue": "hex reuse and urbanicity rejoin required",
+      "visuals": [
+        "FIGSPEC-12",
+        "FIGSPEC-14",
+        "FIGSPEC-15",
+        "FIGSPEC-16"
+      ]
+    },
+    {
+      "claims": [
+        "CLAIM-A",
+        "CLAIM-B",
+        "CLAIM-C",
+        "CLAIM-D",
+        "CLAIM-E",
+        "CLAIM-F",
+        "CLAIM-G",
+        "CLAIM-H",
+        "UNSUP-01",
+        "UNSUP-02",
+        "UNSUP-03",
+        "UNSUP-04",
+        "UNSUP-05",
+        "UNSUP-06"
+      ],
+      "counterexamples": [
+        "counterexample-packet:7"
+      ],
+      "examples": [],
+      "headlines": [],
+      "language_boundaries": "use final wording table",
+      "limitations": [
+        "UNSUP-01",
+        "UNSUP-02",
+        "UNSUP-03",
+        "UNSUP-04",
+        "UNSUP-05",
+        "UNSUP-06"
+      ],
+      "methodology_note": "no full narrative drafted in this stage",
+      "purpose": "State final classes, prohibited language, and future design needs.",
+      "section": "7. What is and is not supported",
+      "unresolved_issue": "held sources deferred; human review remains",
+      "visuals": [
+        "FIGSPEC-13"
+      ]
+    },
+    {
+      "claims": [
+        "UNSUP-04"
+      ],
+      "counterexamples": "all retained counterexamples",
+      "examples": "all bounded examples",
+      "headlines": [
+        "IMPL-MATH-READY"
+      ],
+      "language_boundaries": "technical definitions and denominators",
+      "limitations": "full limitation matrix",
+      "methodology_note": "reproducibility manifests",
+      "purpose": "Technical tier, formula, conflict, headline, and source manifests.",
+      "section": "Appendices",
+      "unresolved_issue": "none required before visual production",
+      "visuals": [
+        "FIGSPEC-02",
+        "FIGSPEC-12",
+        "FIGSPEC-16"
+      ]
+    }
+  ]
+}

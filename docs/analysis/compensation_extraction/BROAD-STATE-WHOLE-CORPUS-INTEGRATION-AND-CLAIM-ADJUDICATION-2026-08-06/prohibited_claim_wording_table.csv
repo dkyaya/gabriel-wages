@@ -1,0 +1,15 @@
+claim_id,prohibited_claim_text
+CLAIM-A,Formal bargaining causes safety wages to rise faster nationwide.
+CLAIM-B,Safety wages generally grow faster nationwide because of step progression or COLAs.
+CLAIM-C,Safety workers receive more total compensation than non-safety workers nationwide.
+CLAIM-D,Staffing shortages cause higher safety wages.
+CLAIM-E,Every adopted or retroactive provision was implemented and paid.
+CLAIM-F,Budget and council action uniformly increase compensation.
+CLAIM-G,"Non-safety compensation lacks institutional growth mechanisms, or safety always has the advantage."
+CLAIM-H,The corpus estimates a national safety wage gap or causal effect.
+UNSUP-01,The corpus provides a national safety wage-gap estimate.
+UNSUP-02,The corpus estimates national mechanism prevalence.
+UNSUP-03,The corpus identifies causal effects of compensation mechanisms.
+UNSUP-04,Regression results establish the proposed relationship.
+UNSUP-05,Safety wages grow X percent faster nationally.
+UNSUP-06,The documented mechanism caused the observed wage difference.

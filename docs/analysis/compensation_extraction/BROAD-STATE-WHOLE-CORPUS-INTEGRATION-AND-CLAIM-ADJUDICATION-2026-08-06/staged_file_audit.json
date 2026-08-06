@@ -1,0 +1,6 @@
+{
+  "allowed_scope": "final metadata, bounded links, wording, gap/recovery metadata, visual/report/methodology inputs, QA, dashboard, script",
+  "forbidden_staged": [],
+  "passed": true,
+  "staged_count": 271
+}

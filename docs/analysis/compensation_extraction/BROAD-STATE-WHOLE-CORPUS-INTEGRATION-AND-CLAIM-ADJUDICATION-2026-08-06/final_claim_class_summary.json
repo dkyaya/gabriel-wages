@@ -1,0 +1,10 @@
+{
+  "claim_count": 14,
+  "counts": {
+    "conditionally_supported": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "supported": 1,
+    "unsupported": 6
+  }
+}

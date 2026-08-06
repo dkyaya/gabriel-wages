@@ -1,0 +1,14 @@
+{
+  "combined_sha256": "5fb7918da72e473be847cbb61219eaeee85e0f977efadfd687b36ff0bd8788a0",
+  "registries": {
+    "claim_gap_registry": "0d8cb22492486def3fb86ced5197261f712827af3f6a4b5d3eb2cbdc89312483",
+    "claim_wording_boundary_registry": "102a65164d32c9240be6c87170a858ad7da4ea2066c4f5dcbd7117443ba2379e",
+    "evidence_role_registry": "7ed8438af3bb8f459dfd4e6855a15475824193dfc1c8e8fd033371a845dba04a",
+    "final_claim_class_registry": "b90731ec85184247fa66620f8ae7828f1fcf597f91edbe1aa7492314bdff41ac",
+    "held_source_recovery_decision_registry": "cc0c3e8125c7f5478f3ac003d03a5cc37f17997fbd7861d3cc59fda227b39251",
+    "methodology_attribution_registry": "5c488c446f014a0470fa5c21f2c8f0c21691a9f623ace92ca3db9b4d7f2e465b",
+    "report_placement_registry": "44b20895ebb71ed52e2a8ca25810482de5105f03f278e8e1730ffda8db47256b",
+    "report_section_registry": "a64f9a5f6e756454c450cb627c86971499d79b229b20337d795634111e971823",
+    "visual_approval_registry": "a9b4bf123e225e00ce79e941a1155dc39571cc832dd67e4d9a957dcd15ff67f2"
+  }
+}

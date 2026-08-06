@@ -1,0 +1,2 @@
+{"claim_id": "CLAIM-B", "effect": "prevents_stronger_wording", "gaps": ["missing_longitudinal_identity", "missing_non-safety_side", "missing_causal_design"]}
+{"claim_id": "CLAIM-G", "effect": "prevents_stronger_wording", "gaps": ["missing_compatible_pay_basis", "missing_compatible_period", "missing_safety_side", "missing_non-safety_side"]}

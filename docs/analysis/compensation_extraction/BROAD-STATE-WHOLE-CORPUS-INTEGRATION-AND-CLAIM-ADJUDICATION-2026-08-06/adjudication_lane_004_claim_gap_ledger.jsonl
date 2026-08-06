@@ -1,0 +1,3 @@
+{"claim_id": "CLAIM-A", "effect": "no_material_gap_for_bounded_wording", "gaps": ["missing_causal_design", "missing_prevalence_denominator", "missing_compatible_pay_basis"]}
+{"claim_id": "CLAIM-E", "effect": "no_material_gap_for_bounded_wording", "gaps": ["missing_payroll_confirmation", "missing_implementation_confirmation"]}
+{"claim_id": "CLAIM-F", "effect": "no_material_gap_for_bounded_wording", "gaps": ["missing_implementation_confirmation", "missing_payroll_confirmation"]}

@@ -1,0 +1,14 @@
+{
+  "ready_after_bounded_repairs": true,
+  "rendered": 0,
+  "repair_queue": 2,
+  "source_recovery_required": 0,
+  "status_counts": {
+    "approved_for_rendering": 5,
+    "approved_strict_lane_only": 1,
+    "approved_tiered_sensitivity_visual": 2,
+    "approved_with_caption_caveat": 6,
+    "needs_visual_data_repair": 2
+  },
+  "visual_count": 16
+}

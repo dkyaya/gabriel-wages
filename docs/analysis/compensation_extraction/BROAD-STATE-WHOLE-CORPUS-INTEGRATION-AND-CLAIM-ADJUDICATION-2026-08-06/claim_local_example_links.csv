@@ -1,0 +1,3 @@
+claim_id,evidence_id,evidence_link_id,evidence_role,material,source_pointer,tier
+CLAIM-G,bounded-local-comparisons:10,EVLINK-9387907ae18d05f6c9a021c3,local_example,True,docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06/02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_local_comparison_units.jsonl,Tier 2/3 separated
+CLAIM-H,bounded-local-comparisons:10,EVLINK-ad830ada8faf227b9abd1c42,local_example,True,docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-AGGRESSIVE-BOUNDED-REANALYSIS-AND-CROSS-EXAMINATION-2026-08-06/02_AGGRESSIVE-NORMALIZATION-MATCHING/aggressive_local_comparison_units.jsonl,Tier 2/3 separated

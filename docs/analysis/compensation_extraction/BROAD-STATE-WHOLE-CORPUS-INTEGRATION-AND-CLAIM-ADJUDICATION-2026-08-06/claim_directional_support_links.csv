@@ -1,0 +1,4 @@
+claim_id,evidence_id,evidence_link_id,evidence_role,material,source_pointer,tier
+CLAIM-B,documentary-growth:432,EVLINK-dd6dd60039932e08740e6f54,directional_support,True,docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_descriptive_table.jsonl,Tier 1/2/3 separated
+CLAIM-G,documentary-growth:432,EVLINK-4ee5f4d78989b97cb6bd9692,directional_support,True,docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_descriptive_table.jsonl,Tier 1/2/3 separated
+CLAIM-H,documentary-growth:432,EVLINK-c1ab9ced6203d7e2e9b41e4f,directional_support,True,docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_descriptive_table.jsonl,Tier 1/2/3 separated

@@ -1,0 +1,12 @@
+{
+  "levels": [
+    "strict",
+    "broader_bounded",
+    "prohibited",
+    "report_body",
+    "technical_appendix"
+  ],
+  "registry_id": "claim_wording_boundary_registry",
+  "tier_3_precise_magnitude": false,
+  "version": "2026-08-06.1"
+}

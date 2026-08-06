@@ -1,0 +1,3 @@
+cross_exam_outcome,denominator,exact_number,final_headline_placement,final_language_boundary,formula,headline_id,numerator,reproduced,source_layer,unit
+upheld_as_stated,6731,0,report_body_headline,"The numerator, denominator, unit, source layer, and limitation reproduce exactly; this remains a bounded corpus/readiness statement.",0/6731,EXTERNAL-GROWTH-MATCH,0,True,stage-11 growth gate,compatible external growth pairs
+upheld_as_stated,201,0,report_body_headline,"The numerator, denominator, unit, source layer, and limitation reproduce exactly; this remains a bounded corpus/readiness statement.",0/201,EXTERNAL-WAGE-MATCH,0,True,stage-11 match gate,compatible external wage matches

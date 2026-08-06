@@ -1,0 +1,15 @@
+{
+  "claim_count": 14,
+  "independent_human_gold_coding": false,
+  "outline": {
+    "ChatGPT": "designed orchestration prompts, analytical frameworks, validation gates, and report structure",
+    "Codex": "executed local pipeline stages, scripts, parallel lanes, validation, and artifact generation",
+    "GABRIEL": "scored prior canonical documentary evidence where available; did not score new external administrative evidence",
+    "Joachim": "directed research goals, scope, analytical priorities, evidence standards, and iterative corrections",
+    "data_handling": "raw extraction hits were compacted before analysis; strict and broader lanes remained separate; failures and limits were retained",
+    "external_evidence": "explicit administrative evidence used deterministic/local rules after hosted-search/API capacity became unavailable",
+    "semantic_review": "claim-critical evidence received bounded semantic AI review, not independent human gold coding"
+  },
+  "raw_hits_compacted": true,
+  "strict_bounded_separate": true
+}
