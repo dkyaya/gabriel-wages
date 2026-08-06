@@ -1,0 +1,12 @@
+{
+  "narrative_window_characters_each_side": 450,
+  "registry": "source_context_boundary_registry",
+  "table_context": [
+    "headers",
+    "row",
+    "footnotes",
+    "adjacent_row_if_needed"
+  ],
+  "version": "whole-corpus-claim-critical-cross-examination-2026-08-06-v1",
+  "whole_document_summary_forbidden": true
+}

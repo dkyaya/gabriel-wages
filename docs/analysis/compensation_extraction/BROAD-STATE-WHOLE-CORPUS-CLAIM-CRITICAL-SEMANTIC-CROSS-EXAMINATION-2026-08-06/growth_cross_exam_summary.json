@@ -1,0 +1,8 @@
+{
+  "bounded_interpretation": "step progression leans safety; across-board is mixed; COLA is sparse; no uniform advantage",
+  "canonical_growth_records": 432,
+  "computed_downgraded_conditional": 16,
+  "interpretations_reviewed": 4,
+  "record_level_reviewed": 200,
+  "source_reported_upheld_narrowly": 184
+}

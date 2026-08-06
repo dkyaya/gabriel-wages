@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "gates": {
+    "A_review_accounting": true,
+    "B_source_availability_integrity": true,
+    "C_coordinate_fidelity": true,
+    "D_formula_fidelity": true,
+    "E_headline_validity": true,
+    "F_local_comparison_fidelity": true,
+    "G_staffing_precision": true,
+    "H_lifecycle_precision": true,
+    "I_counterexample_validity": true,
+    "J_claim_recommendation_fidelity": true,
+    "K_correction_traceability": true,
+    "L_no_final_adjudication": true
+  }
+}

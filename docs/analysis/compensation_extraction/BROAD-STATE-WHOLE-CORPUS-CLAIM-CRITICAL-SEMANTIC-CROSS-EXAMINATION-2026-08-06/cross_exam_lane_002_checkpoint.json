@@ -1,0 +1,13 @@
+{
+  "accepted_review_records": 527,
+  "completed_at": "2026-08-06T04:06:29.131980+00:00",
+  "lane_id": "cross_exam_lane_002",
+  "outcomes": {
+    "downgraded_to_context": 292,
+    "unresolved_conflict": 1,
+    "upheld_with_narrower_wording": 234
+  },
+  "role": "staffing_hypothesis_and_administrative_pressure",
+  "state": "complete",
+  "total": 527
+}

@@ -1,0 +1,10 @@
+# Implementation Lifecycle Review Registry
+
+Version: `whole-corpus-claim-critical-cross-examination-2026-08-06-v1`
+
+```json
+{
+  "required_absence_wording": "no paid stage observed in retained evidence",
+  "stages_distinct": true
+}
+```

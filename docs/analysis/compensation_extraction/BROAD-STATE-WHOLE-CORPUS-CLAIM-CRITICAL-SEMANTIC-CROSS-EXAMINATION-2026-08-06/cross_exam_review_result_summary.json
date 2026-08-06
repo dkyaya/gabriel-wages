@@ -1,0 +1,18 @@
+{
+  "outcomes": {
+    "downgraded_to_conditional": 18,
+    "downgraded_to_context": 833,
+    "unresolved_conflict": 201,
+    "upheld_as_context_only": 29,
+    "upheld_as_stated": 5,
+    "upheld_with_narrower_wording": 640
+  },
+  "supporting_dispositions": {
+    "bounds_claim": 239,
+    "contextualizes_claim": 1311,
+    "contradicts_claim": 1,
+    "supports_claim": 3,
+    "weakly_supports_claim": 172
+  },
+  "unique_review_records": 1726
+}

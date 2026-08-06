@@ -1,0 +1,32 @@
+# Semantic Review Outcome Registry
+
+Version: `whole-corpus-claim-critical-cross-examination-2026-08-06-v1`
+
+```json
+{
+  "outcomes": [
+    "upheld_as_stated",
+    "upheld_with_narrower_wording",
+    "upheld_as_context_only",
+    "corrected_minor",
+    "corrected_material",
+    "downgraded_to_conditional",
+    "downgraded_to_mechanism_only",
+    "downgraded_to_context",
+    "rejected_wrong_source_interpretation",
+    "rejected_wrong_subject",
+    "rejected_wrong_side",
+    "rejected_wrong_period",
+    "rejected_wrong_pay_basis",
+    "rejected_wrong_compensation_basis",
+    "rejected_wrong_lifecycle_status",
+    "rejected_formula_or_transcription_error",
+    "rejected_duplicate_or_nonindependent",
+    "rejected_unsupported_inference",
+    "unresolved_conflict",
+    "unresolved_ambiguity",
+    "evidence_unavailable_for_current_cross_examination",
+    "manual_human_review_required"
+  ]
+}
+```

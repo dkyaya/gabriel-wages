@@ -1,0 +1,9 @@
+# Claim-critical cross-examination methodology
+
+This stage reviewed a bounded claim-critical subset rather than the full corpus. Overlapping packets were deduplicated by canonical review-record ID while all packet memberships were preserved. Exact retained excerpts, table rows, bounded surrounding context, source coordinates, and formulas were reviewed. Each unique record received exactly one uphold, narrow, correct, downgrade, reject, conflict, ambiguity, unavailable-evidence, or manual-review outcome.
+
+Source evidence remained the authority. Deterministic preprocessing and mathematical reproducibility were not treated as semantic validation. Corrections preserve original values, corrected values, reasons, and affected outputs; no material mathematical correction was required in this run. Counterexamples were actively retained. Claim recommendations were prepared for later adjudication but were not final decisions.
+
+New external administrative evidence was classified through deterministic and locally auditable rules rather than GABRIEL scoring because hosted-search/API capacity became unavailable. Explicit structured values were processed directly; ambiguous narrative evidence was retained for manual or future model-assisted review. No new evidence was GABRIEL-scored. This bounded agent review is not independent human gold coding, and unreviewed administrative observations remain contextual or pending.
+
+No hosted search, network access, OCR, regression, causal estimate, final visual, or report drafting occurred. The 12,844 unsearched targets and 7,895 storage-held verified sources remain completeness limitations. Implementation-event deduplication was not rerun. The audit-final corpus contains 1,029,482 unique native PDF pages, kept separate from text-page equivalents.

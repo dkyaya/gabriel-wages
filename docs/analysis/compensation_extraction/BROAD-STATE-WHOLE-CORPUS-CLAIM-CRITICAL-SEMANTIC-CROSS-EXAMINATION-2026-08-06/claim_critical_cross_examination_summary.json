@@ -1,0 +1,130 @@
+{
+  "bounded_math_repair_queue": 0,
+  "causal_estimates": 0,
+  "claim_adjudication_ready_packets": {
+    "claim_adjudication_ready_claim_table": 14,
+    "claim_adjudication_ready_conflict_packet": 201,
+    "claim_adjudication_ready_counterexample_packet": 7,
+    "claim_adjudication_ready_evidence_packet": 1726,
+    "claim_adjudication_ready_growth_table": 204,
+    "claim_adjudication_ready_headline_table": 9,
+    "claim_adjudication_ready_implementation_table": 38,
+    "claim_adjudication_ready_local_comparison_table": 4,
+    "claim_adjudication_ready_staffing_table": 229
+  },
+  "claim_recommendations": {
+    "claims_reviewed": 14,
+    "final_claim_decisions": 0,
+    "recommendations": {
+      "candidate_for_conditional": 1,
+      "candidate_for_mechanism_supported_only": 5,
+      "candidate_for_mixed": 1,
+      "candidate_for_supported": 1,
+      "candidate_for_unsupported": 6
+    }
+  },
+  "conflict_results": {
+    "arbitrary_precedence_used": false,
+    "preserved_unresolved": 201,
+    "resolved_with_explicit_support": 0,
+    "reviewed_high_impact": 201
+  },
+  "counterexample_results": {
+    "direct_quantitative": 1,
+    "rejected": 0,
+    "retained": 7,
+    "reviewed": 7
+  },
+  "decision": "broad_state_whole_corpus_cross_examination_completed_claim_adjudication_ready",
+  "external_compatible_growth_pairs": 0,
+  "external_compatible_wage_matches": 0,
+  "final_claim_adjudications": 0,
+  "gabriel_api_calls": 0,
+  "growth_results": {
+    "bounded_interpretation": "step progression leans safety; across-board is mixed; COLA is sparse; no uniform advantage",
+    "canonical_growth_records": 432,
+    "computed_downgraded_conditional": 16,
+    "interpretations_reviewed": 4,
+    "record_level_reviewed": 200,
+    "source_reported_upheld_narrowly": 184
+  },
+  "headline_results": {
+    "corrected": 0,
+    "narrowed": 4,
+    "rejected": 0,
+    "reviewed": 9,
+    "upheld": 5
+  },
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "implementation_results": {
+    "narrowed": 38,
+    "rejected": 0,
+    "reviewed_math_ready_sequences": 38,
+    "unresolved": 0,
+    "wording_gate_passed": true
+  },
+  "local_comparison_results": {
+    "averaged": false,
+    "conditional": 2,
+    "rejected": 0,
+    "reviewed": 4,
+    "upheld_or_narrowed": 2
+  },
+  "mathematical_corrections": 0,
+  "network_requests": 0,
+  "ocr_runs": 0,
+  "packet_input_counts": {
+    "claim": 14,
+    "conflict": 201,
+    "core": 1225,
+    "counterexample": 7,
+    "headline": 358,
+    "implementation": 150,
+    "local_comparison": 4,
+    "safety_wage_growth": 90,
+    "staffing": 301
+  },
+  "quality_gates_passed": true,
+  "regressions": 0,
+  "rendered_visuals": 0,
+  "review_outcomes": {
+    "downgraded_to_conditional": 18,
+    "downgraded_to_context": 833,
+    "unresolved_conflict": 201,
+    "upheld_as_context_only": 29,
+    "upheld_as_stated": 5,
+    "upheld_with_narrower_wording": 640
+  },
+  "second_pass_qa": {
+    "all_passed": true,
+    "failed": 0,
+    "passed": 368,
+    "sample_records": 368
+  },
+  "staffing_results": {
+    "context_or_unresolved": 3,
+    "explicit_causal_effect_findings": 0,
+    "post_review_descriptive": 219,
+    "post_review_direct": 7,
+    "pre_review_non_safety_reduction": 16,
+    "pre_review_safety_pressure": 213,
+    "review_classes": {
+      "descriptive_channel_consistent": 219,
+      "direct_channel_evidence": 7,
+      "unresolved": 3
+    },
+    "reviewed_strict_universe": 229
+  },
+  "storage_held": 7895,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06",
+  "unique_native_pdf_pages": 1029482,
+  "unique_review_records": 1726,
+  "unsearched_targets": 12844,
+  "visual_input_status": {
+    "corrections": 0,
+    "holds": 16,
+    "inputs": 16,
+    "rendered": 0
+  }
+}

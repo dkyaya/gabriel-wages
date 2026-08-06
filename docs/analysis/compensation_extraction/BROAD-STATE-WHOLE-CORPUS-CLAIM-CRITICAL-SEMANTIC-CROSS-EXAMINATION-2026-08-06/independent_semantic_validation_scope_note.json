@@ -1,0 +1,5 @@
+{
+  "bounded_claim_critical_agent_review": true,
+  "full_corpus_semantic_review": false,
+  "independent_human_gold_coding": false
+}

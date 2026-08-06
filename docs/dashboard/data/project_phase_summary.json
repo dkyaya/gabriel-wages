@@ -5520,6 +5520,105 @@
   "checkpoint_pause_rule": "The current retained wave proceeds downstream. When source expansion resumes, default to broad state-by-state scanning with geographic and source-family balance; use mechanism-targeted scouting only as secondary gap-filling.",
   "checkpoint_status": "reached_exceeded",
   "checkpoint_target_scout_covered": 2000,
+  "claim_critical_semantic_cross_examination": {
+    "bounded_math_repairs": 0,
+    "claim_adjudication_ready_packet_counts": {
+      "claim_adjudication_ready_claim_table": 14,
+      "claim_adjudication_ready_conflict_packet": 201,
+      "claim_adjudication_ready_counterexample_packet": 7,
+      "claim_adjudication_ready_evidence_packet": 1726,
+      "claim_adjudication_ready_growth_table": 204,
+      "claim_adjudication_ready_headline_table": 9,
+      "claim_adjudication_ready_implementation_table": 38,
+      "claim_adjudication_ready_local_comparison_table": 4,
+      "claim_adjudication_ready_staffing_table": 229
+    },
+    "claim_recommendations": {
+      "candidate_for_conditional": 1,
+      "candidate_for_mechanism_supported_only": 5,
+      "candidate_for_mixed": 1,
+      "candidate_for_supported": 1,
+      "candidate_for_unsupported": 6
+    },
+    "conflicts": {
+      "arbitrary_precedence_used": false,
+      "preserved_unresolved": 201,
+      "resolved_with_explicit_support": 0,
+      "reviewed_high_impact": 201
+    },
+    "counterexamples": {
+      "direct_quantitative": 1,
+      "rejected": 0,
+      "retained": 7,
+      "reviewed": 7
+    },
+    "coverage_map_primary_metric": "scout_coverage_rate",
+    "current_stage": "claim-critical semantic cross-examination complete",
+    "external_compatible_growth_pairs": 0,
+    "external_compatible_wage_matches": 0,
+    "final_claim_decisions": 0,
+    "gabriel_scoring": false,
+    "growth": {
+      "bounded_interpretation": "step progression leans safety; across-board is mixed; COLA is sparse; no uniform advantage",
+      "canonical_growth_records": 432,
+      "computed_downgraded_conditional": 16,
+      "interpretations_reviewed": 4,
+      "record_level_reviewed": 200,
+      "source_reported_upheld_narrowly": 184
+    },
+    "headlines": {
+      "corrected": 0,
+      "narrowed": 4,
+      "rejected": 0,
+      "reviewed": 9,
+      "upheld": 5
+    },
+    "implementation": {
+      "narrowed": 38,
+      "rejected": 0,
+      "reviewed_math_ready_sequences": 38,
+      "unresolved": 0,
+      "wording_gate_passed": true
+    },
+    "implementation_event_deduplication_preserved": true,
+    "local_comparisons": {
+      "averaged": false,
+      "conditional": 2,
+      "rejected": 0,
+      "reviewed": 4,
+      "upheld_or_narrowed": 2
+    },
+    "next_task": "whole-corpus integration and claim adjudication",
+    "ocr": false,
+    "rendered_visuals": 0,
+    "review_outcomes": {
+      "downgraded_to_conditional": 18,
+      "downgraded_to_context": 833,
+      "unresolved_conflict": 201,
+      "upheld_as_context_only": 29,
+      "upheld_as_stated": 5,
+      "upheld_with_narrower_wording": 640
+    },
+    "staffing": {
+      "context_or_unresolved": 3,
+      "explicit_causal_effect_findings": 0,
+      "post_review_descriptive": 219,
+      "post_review_direct": 7,
+      "pre_review_non_safety_reduction": 16,
+      "pre_review_safety_pressure": 213,
+      "review_classes": {
+        "descriptive_channel_consistent": 219,
+        "direct_channel_evidence": 7,
+        "unresolved": 3
+      },
+      "reviewed_strict_universe": 229
+    },
+    "storage_capacity_holds": 7895,
+    "unique_native_pdf_pages": 1029482,
+    "unique_review_records": 1726,
+    "unresolved_hosted_search_targets": 12844,
+    "visual_input_holds": 16
+  },
   "claim_package_claim_family_count": 8,
   "claim_package_example_count": 123,
   "claim_package_strength_summary": {
@@ -5574,7 +5673,7 @@
   "current_report_publication_status": "dashboard_public_asset_ready",
   "current_report_title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",
   "current_scout_covered": 16887,
-  "current_stage": "whole-corpus mathematical execution and descriptive analysis complete",
+  "current_stage": "claim-critical semantic cross-examination complete",
   "cycle_to_cycle_growth_readiness_candidate_count": 141,
   "dashboard_map_filter": "scout_coverage_rate_only",
   "dashboard_map_includes_latest_tier_c_numbers": true,
@@ -6088,7 +6187,7 @@
     "rows_per_lane": 1000,
     "status": "completed"
   },
-  "next_task": "BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06",
+  "next_task": "whole-corpus integration and claim adjudication",
   "normalization_deferred_manual_review_count": 720,
   "normalization_full_count": 672,
   "normalization_mechanism_only_count": 3769,

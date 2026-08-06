@@ -1,0 +1,12 @@
+{
+  "registry": "local_comparison_review_registry",
+  "requirements": [
+    "same_municipality",
+    "same_period",
+    "same_unit",
+    "formula_reproduction",
+    "role_caveat",
+    "no_aggregation"
+  ],
+  "version": "whole-corpus-claim-critical-cross-examination-2026-08-06-v1"
+}

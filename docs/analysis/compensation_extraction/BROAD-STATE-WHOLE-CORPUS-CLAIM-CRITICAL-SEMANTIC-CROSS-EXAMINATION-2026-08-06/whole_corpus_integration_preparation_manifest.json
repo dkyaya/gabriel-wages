@@ -1,0 +1,16 @@
+{
+  "decision": "broad_state_whole_corpus_cross_examination_completed_claim_adjudication_ready",
+  "final_claim_adjudication_performed": false,
+  "packets": {
+    "claim_adjudication_ready_claim_table": 14,
+    "claim_adjudication_ready_conflict_packet": 201,
+    "claim_adjudication_ready_counterexample_packet": 7,
+    "claim_adjudication_ready_evidence_packet": 1726,
+    "claim_adjudication_ready_growth_table": 204,
+    "claim_adjudication_ready_headline_table": 9,
+    "claim_adjudication_ready_implementation_table": 38,
+    "claim_adjudication_ready_local_comparison_table": 4,
+    "claim_adjudication_ready_staffing_table": 229
+  },
+  "source_independence_preserved": true
+}

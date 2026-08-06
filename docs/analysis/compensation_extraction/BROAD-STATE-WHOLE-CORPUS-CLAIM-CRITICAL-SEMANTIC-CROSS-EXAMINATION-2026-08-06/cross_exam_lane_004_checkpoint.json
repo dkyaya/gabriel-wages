@@ -1,0 +1,14 @@
+{
+  "accepted_review_records": 253,
+  "bounded_review_repairs": 5,
+  "completed_at": "2026-08-06T04:10:30.409255+00:00",
+  "lane_id": "cross_exam_lane_004",
+  "outcomes": {
+    "downgraded_to_conditional": 18,
+    "downgraded_to_context": 44,
+    "upheld_with_narrower_wording": 191
+  },
+  "role": "documentary_local_comparisons_growth_and_safety_wage_growth",
+  "state": "complete",
+  "total": 253
+}

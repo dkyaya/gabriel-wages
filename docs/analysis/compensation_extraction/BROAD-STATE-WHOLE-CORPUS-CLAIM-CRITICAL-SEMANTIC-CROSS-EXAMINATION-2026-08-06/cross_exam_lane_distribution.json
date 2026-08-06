@@ -1,0 +1,32 @@
+{
+  "complete_coverage": true,
+  "disjoint": true,
+  "lanes": {
+    "cross_exam_lane_001": {
+      "count": 367,
+      "delay_seconds": 0,
+      "role": "headline_numbers_and_corpus_scale_claims"
+    },
+    "cross_exam_lane_002": {
+      "count": 527,
+      "delay_seconds": 60,
+      "role": "staffing_hypothesis_and_administrative_pressure"
+    },
+    "cross_exam_lane_003": {
+      "count": 188,
+      "delay_seconds": 120,
+      "role": "implementation_lifecycle_and_mechanism_corroboration"
+    },
+    "cross_exam_lane_004": {
+      "count": 253,
+      "delay_seconds": 180,
+      "role": "documentary_local_comparisons_growth_and_safety_wage_growth"
+    },
+    "cross_exam_lane_005": {
+      "count": 391,
+      "delay_seconds": 240,
+      "role": "counterexamples_conflicts_claims_and_residual_core"
+    }
+  },
+  "total": 1726
+}

@@ -1,0 +1,15 @@
+{
+  "all_claim_recommendations": 14,
+  "all_headlines": 9,
+  "all_implementation_sequences": 38,
+  "all_local_comparisons": 4,
+  "all_material_corrections": 0,
+  "growth_sample": 100,
+  "seed_basis": "sha256(review_record_id)",
+  "source_unavailable_sample": 0,
+  "staffing_downgraded_sample": 3,
+  "staffing_rejected_sample": 0,
+  "staffing_upheld_sample": 100,
+  "total_unique_second_pass_records": 368,
+  "unresolved_sample": 100
+}

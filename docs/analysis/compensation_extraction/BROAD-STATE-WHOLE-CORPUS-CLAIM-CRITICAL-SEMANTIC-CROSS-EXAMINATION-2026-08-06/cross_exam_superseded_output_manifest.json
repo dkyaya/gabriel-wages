@@ -1,0 +1,11 @@
+{
+  "canonical_mathematical_inputs_changed": false,
+  "count": 5,
+  "superseded_review_outputs": [
+    {
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_claim_cross_examination_2026-08-06/review_ledgers/cross_exam_lane_004_superseded_review_results.jsonl",
+      "reason": "bounded review-rule and source-pointer repair",
+      "rows": 5
+    }
+  ]
+}

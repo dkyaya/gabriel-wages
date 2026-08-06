@@ -1,0 +1,17 @@
+{
+  "combined_sha256": "4ddf318975645fbe7e36d0e2f5db9604f4f276d2ac7f269c7353f9a141007d96",
+  "registry_hashes": {
+    "claim_evidence_review_registry": "2b8da4559bfc0e9a780531c3befcbabb1d62ffcf58dfa3b49bed2ce74092181e",
+    "conflict_review_registry": "9696eb636a298213cdc08e1aff0913cd83527d313fa12d5a4db09eef88c426e4",
+    "counterexample_review_registry": "0af0f07004374aae09e8b6062c6655184494c934603bb087acf05ac2596999b0",
+    "growth_interpretation_review_registry": "67062c900d27fd33cad029afa59d398240cf99060b991be762a71e3089016b21",
+    "headline_validation_registry": "fcaea97a17c8dcdd373b7aa41fb1d2b7f160b042b6af5a15458a9052507c3450",
+    "implementation_lifecycle_review_registry": "c1c36e03bddfc9f028eaf33deb52dd18a96114ead49a9e26d936694b9966815e",
+    "local_comparison_review_registry": "a9b9514e185f6cd0c3bdb5282aa000024c92c8aaa5a265f17e4c3f76c3645169",
+    "semantic_review_confidence_registry": "6fb53419f593d826908a71ee38ef44330c2fb22d5c288ae671a86b87b40bae25",
+    "semantic_review_outcome_registry": "7812b6b64440de8ec057d266dd0f260999b5854d169c28f101d6693a7cc5eaa0",
+    "source_context_boundary_registry": "82112a02029b203f85b45276d0ef3924f3ee54ac867b26c143e269ad3877ed7b",
+    "staffing_channel_review_registry": "557bcecd76de8e50fcd9870bea81210bcfd006c751af6d33947f1b26268e5b21"
+  },
+  "version": "whole-corpus-claim-critical-cross-examination-2026-08-06-v1"
+}

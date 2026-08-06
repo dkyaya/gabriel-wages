@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-08-06T04:12:57.105715+00:00",
+  "largest_files": [
+    {
+      "bytes": 7325683,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unique_review_locked_queue.csv"
+    },
+    {
+      "bytes": 7125188,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unique_review_locked_queue.jsonl"
+    },
+    {
+      "bytes": 4801144,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_evidence_packet.jsonl"
+    },
+    {
+      "bytes": 4801144,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_review_results.jsonl"
+    },
+    {
+      "bytes": 3706564,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_evidence_packet.csv"
+    },
+    {
+      "bytes": 3706564,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_review_results.csv"
+    },
+    {
+      "bytes": 2355996,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/downgraded_records.jsonl"
+    },
+    {
+      "bytes": 2032869,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_queue.csv"
+    },
+    {
+      "bytes": 1984522,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_queue.jsonl"
+    },
+    {
+      "bytes": 1919268,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_with_narrower_wording.jsonl"
+    },
+    {
+      "bytes": 1818993,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/downgraded_records.csv"
+    },
+    {
+      "bytes": 1804010,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_queue.csv"
+    },
+    {
+      "bytes": 1768757,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_queue.jsonl"
+    },
+    {
+      "bytes": 1510557,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_with_narrower_wording.csv"
+    },
+    {
+      "bytes": 1508530,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_review_result_ledger.jsonl"
+    },
+    {
+      "bytes": 1356447,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_queue.csv"
+    },
+    {
+      "bytes": 1324595,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_queue.csv"
+    },
+    {
+      "bytes": 1315121,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_queue.jsonl"
+    },
+    {
+      "bytes": 1285050,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_queue.jsonl"
+    },
+    {
+      "bytes": 1174486,
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_review_result_ledger.csv"
+    }
+  ],
+  "over_threshold": [],
+  "passed": true,
+  "threshold_bytes": 52428800
+}

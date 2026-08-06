@@ -1,0 +1,20 @@
+{
+  "bulky_review_outputs_staged": false,
+  "causal_effect_estimates": 0,
+  "final_claim_adjudications": 0,
+  "force_push": false,
+  "full_corpus_semantic_pass": false,
+  "gabriel_api_calls": 0,
+  "history_rewrite": false,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "national_wage_gap_estimates": 0,
+  "network_requests": 0,
+  "new_sources": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "prevalence_estimates": 0,
+  "redownloads": 0,
+  "regressions": 0,
+  "rendered_charts_maps_heatmaps_pdf_docx_slides": 0
+}

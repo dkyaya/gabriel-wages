@@ -1,0 +1,19 @@
+# Semantic Review Confidence Registry
+
+Version: `whole-corpus-claim-critical-cross-examination-2026-08-06-v1`
+
+```json
+{
+  "confidence_basis": [
+    "exact_structured_source_row",
+    "exact_source_clause",
+    "exact_source_table_with_headers",
+    "exact_formula_reproduction",
+    "strong_bounded_context",
+    "partial_context_only",
+    "source_conflict",
+    "source_unavailable",
+    "manual_judgment_required"
+  ]
+}
+```

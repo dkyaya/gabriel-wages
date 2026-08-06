@@ -1,0 +1,46 @@
+{
+  "duplicate_workers": false,
+  "launched_at": "2026-08-06T04:04:54.100927+00:00",
+  "workers": [
+    {
+      "delay_seconds": 0,
+      "lane_id": "cross_exam_lane_001",
+      "launched_at": "2026-08-06T04:04:54.096466+00:00",
+      "log": "tmp/broad_state_whole_corpus_claim_critical_semantic_cross_examination_2026-08-06_logs/cross_exam_lane_001.log",
+      "pid": 61948,
+      "role": "headline_numbers_and_corpus_scale_claims"
+    },
+    {
+      "delay_seconds": 60,
+      "lane_id": "cross_exam_lane_002",
+      "launched_at": "2026-08-06T04:04:54.097465+00:00",
+      "log": "tmp/broad_state_whole_corpus_claim_critical_semantic_cross_examination_2026-08-06_logs/cross_exam_lane_002.log",
+      "pid": 61949,
+      "role": "staffing_hypothesis_and_administrative_pressure"
+    },
+    {
+      "delay_seconds": 120,
+      "lane_id": "cross_exam_lane_003",
+      "launched_at": "2026-08-06T04:04:54.098327+00:00",
+      "log": "tmp/broad_state_whole_corpus_claim_critical_semantic_cross_examination_2026-08-06_logs/cross_exam_lane_003.log",
+      "pid": 61950,
+      "role": "implementation_lifecycle_and_mechanism_corroboration"
+    },
+    {
+      "delay_seconds": 180,
+      "lane_id": "cross_exam_lane_004",
+      "launched_at": "2026-08-06T04:04:54.099392+00:00",
+      "log": "tmp/broad_state_whole_corpus_claim_critical_semantic_cross_examination_2026-08-06_logs/cross_exam_lane_004.log",
+      "pid": 61951,
+      "role": "documentary_local_comparisons_growth_and_safety_wage_growth"
+    },
+    {
+      "delay_seconds": 240,
+      "lane_id": "cross_exam_lane_005",
+      "launched_at": "2026-08-06T04:04:54.100902+00:00",
+      "log": "tmp/broad_state_whole_corpus_claim_critical_semantic_cross_examination_2026-08-06_logs/cross_exam_lane_005.log",
+      "pid": 61952,
+      "role": "counterexamples_conflicts_claims_and_residual_core"
+    }
+  ]
+}

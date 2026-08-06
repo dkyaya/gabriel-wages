@@ -1,0 +1,10 @@
+{
+  "bounded_subset": true,
+  "deduplicated_packet_overlap": true,
+  "no_final_adjudication": true,
+  "no_gabriel": true,
+  "not_independent_human_gold_coding": true,
+  "outcome_per_record": true,
+  "source_evidence_authority": true,
+  "unique_native_pdf_pages": 1029482
+}

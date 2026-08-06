@@ -1,0 +1,13 @@
+{
+  "accepted_review_records": 391,
+  "completed_at": "2026-08-06T04:09:29.116962+00:00",
+  "lane_id": "cross_exam_lane_005",
+  "outcomes": {
+    "downgraded_to_context": 85,
+    "unresolved_conflict": 197,
+    "upheld_with_narrower_wording": 109
+  },
+  "role": "counterexamples_conflicts_claims_and_residual_core",
+  "state": "complete",
+  "total": 391
+}

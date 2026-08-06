@@ -1,0 +1,1686 @@
+{
+  "artifact_count": 334,
+  "artifacts": [
+    {
+      "bytes": 3177,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/adoption_payment_wording_audit.csv",
+      "sha256": "9e3d5a32ef8f71fc6a215681c2d09cee4a931ebbd4eb68512d0f00b1716c3125"
+    },
+    {
+      "bytes": 5890,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/adoption_payment_wording_audit.jsonl",
+      "sha256": "7f4c529de7d4b6a88f878967db24dd6e84802f0f88e48db13e4266640eb5992b"
+    },
+    {
+      "bytes": 43,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/affected_mathematical_output_manifest.json",
+      "sha256": "b392122cbf55348275e8c95030e160af4b60e554fcf637ad4b2cb2cb3a959d05"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/bounded_mathematical_repair_queue.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/bounded_mathematical_repair_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 20356,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_claim_table.csv",
+      "sha256": "447b474420cabf06c1d4bf2d4251049ead4f32c6c46990f23cd2900289067294"
+    },
+    {
+      "bytes": 28901,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_claim_table.jsonl",
+      "sha256": "bc017853284190ff762fa26e0eeb43f3d8cbda20aa8d1655573a9bdf8a3896b9"
+    },
+    {
+      "bytes": 328961,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_conflict_packet.csv",
+      "sha256": "f624bdda3bd7567a97ea33f93244347efb50cc07c570221bf66a60ee6a21ae8e"
+    },
+    {
+      "bytes": 455135,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_conflict_packet.jsonl",
+      "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+    },
+    {
+      "bytes": 12812,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_counterexample_packet.csv",
+      "sha256": "5dd559ab175e3353273ed5641e05913bc5bb754e25f69b25e6b2b07ad5a7ad0b"
+    },
+    {
+      "bytes": 16750,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_counterexample_packet.jsonl",
+      "sha256": "6ee1506212be42340e7c6d22d800e87ac9745e9e9da1bf9a22c69537e430994c"
+    },
+    {
+      "bytes": 3706564,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_evidence_packet.csv",
+      "sha256": "82f6f7c4bc70e60cc0b99821a86df501a0d4b72eb8f03e3db36aadeee058ddf9"
+    },
+    {
+      "bytes": 4801144,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_evidence_packet.jsonl",
+      "sha256": "598177ce71df119c37b664fb30778e0bc991f5f1e0e039f67fd570cd8ee3a777"
+    },
+    {
+      "bytes": 256539,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_growth_table.csv",
+      "sha256": "7e8af44f2f837fe93a7470bd86a2af0834ccbbe757e881f641b0e222568f24eb"
+    },
+    {
+      "bytes": 387301,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_growth_table.jsonl",
+      "sha256": "fe6dc63ff5434371e44f3324ec4d539bdb85a5a9ba8d645037bc11b7909bbf90"
+    },
+    {
+      "bytes": 16383,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_headline_table.csv",
+      "sha256": "7d9b83e487fdc81aba47d4fc9602bf851f3ced16277c609dcba05a462da99d16"
+    },
+    {
+      "bytes": 21673,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_headline_table.jsonl",
+      "sha256": "14dc88f9782a52b43e07294b253418fb20a86fd9d54aab29f30fe69bd126eaa4"
+    },
+    {
+      "bytes": 369453,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_implementation_table.csv",
+      "sha256": "9efc5d034c989577247f49dad53c370227464957aad5b1cffd42ab3ef7084c29"
+    },
+    {
+      "bytes": 393062,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_implementation_table.jsonl",
+      "sha256": "e9a184774a20c032285dc42abf8666414fc4f927226aaebf5d7ab9d048f31b18"
+    },
+    {
+      "bytes": 12619,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_local_comparison_table.csv",
+      "sha256": "ffc16af1f11e95dc50e2555ec0d0a10b7a14b1e4f786331e2476e13abe15f281"
+    },
+    {
+      "bytes": 14440,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_local_comparison_table.jsonl",
+      "sha256": "d420c8e51b7942427678ee4f085903ce56319e1a255f1c655705aeb73ed9aaf7"
+    },
+    {
+      "bytes": 506228,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_staffing_table.csv",
+      "sha256": "bd9279260edf597f8d3e61403190aa7eff8c73898eba85a62baffe5e67e14adb"
+    },
+    {
+      "bytes": 652033,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_adjudication_ready_staffing_table.jsonl",
+      "sha256": "6f0085be2e2bdb92c628fe367ad4a0e614cf92b70787cbfe9672a95d270de85a"
+    },
+    {
+      "bytes": 544718,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_countervailing_evidence_links.csv",
+      "sha256": "9dc8ec567f33053b419910750ea3aad6e36bb216283001c35fc7f062db9b6278"
+    },
+    {
+      "bytes": 695953,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_countervailing_evidence_links.jsonl",
+      "sha256": "b159f879499c2324ed1a5387fc510d5e2eca374c130ef9802609d8c14412393d"
+    },
+    {
+      "bytes": 273,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_critical_cross_examination_methodology_note.json",
+      "sha256": "8cf96f15b33deb908b5a5791172229aec698d8456994d9aeef0f236ccbcfec51"
+    },
+    {
+      "bytes": 1801,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_critical_cross_examination_methodology_note.md",
+      "sha256": "0d263ec0cfaf9e79186a820ad707bf236889b9872944218024898322c255461a"
+    },
+    {
+      "bytes": 3780,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_critical_cross_examination_summary.json",
+      "sha256": "fbd4d17fa391d152d5a29ea93758efaf2b0358b1d8ab06de3aa44fedd6311a9d"
+    },
+    {
+      "bytes": 453,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_critical_cross_examination_summary.md",
+      "sha256": "7c5cca67573f6d71ba000f64d7e0b613a89e69ee286881251aff8218a8f9960d"
+    },
+    {
+      "bytes": 20356,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_cross_exam_recommendations.csv",
+      "sha256": "447b474420cabf06c1d4bf2d4251049ead4f32c6c46990f23cd2900289067294"
+    },
+    {
+      "bytes": 28901,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_cross_exam_recommendations.jsonl",
+      "sha256": "bc017853284190ff762fa26e0eeb43f3d8cbda20aa8d1655573a9bdf8a3896b9"
+    },
+    {
+      "bytes": 270,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_cross_exam_summary.json",
+      "sha256": "29f6ba28826e077ea23f6116984edae607a03bced7091bce89f6dce10565b200"
+    },
+    {
+      "bytes": 279,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_cross_exam_summary.md",
+      "sha256": "615beb2b8b0c92cccd4e9b465b8273d946fed51917c3fa41b45e5a8c4710ef3c"
+    },
+    {
+      "bytes": 174,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_evidence_review_registry.json",
+      "sha256": "2b8da4559bfc0e9a780531c3befcbabb1d62ffcf58dfa3b49bed2ce74092181e"
+    },
+    {
+      "bytes": 168,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_evidence_review_registry.md",
+      "sha256": "9a31e2597b827d93d4b054517dab56e3a38af2f982578d39ca75918b34ab25b7"
+    },
+    {
+      "bytes": 20356,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_manual_decision_queue.csv",
+      "sha256": "447b474420cabf06c1d4bf2d4251049ead4f32c6c46990f23cd2900289067294"
+    },
+    {
+      "bytes": 28901,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_manual_decision_queue.jsonl",
+      "sha256": "bc017853284190ff762fa26e0eeb43f3d8cbda20aa8d1655573a9bdf8a3896b9"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_rejected_evidence_links.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_rejected_evidence_links.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 411837,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_supporting_evidence_links.csv",
+      "sha256": "21c875e951524cff8cd057699fde052016ff68445d4766ec8235db55af59a05c"
+    },
+    {
+      "bytes": 522084,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_supporting_evidence_links.jsonl",
+      "sha256": "7e5ee9752664d85131557f8d9e3bc32b579839ad8345c81d468025bc0ff36822"
+    },
+    {
+      "bytes": 328961,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_unresolved_evidence_links.csv",
+      "sha256": "f624bdda3bd7567a97ea33f93244347efb50cc07c570221bf66a60ee6a21ae8e"
+    },
+    {
+      "bytes": 455135,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/claim_unresolved_evidence_links.jsonl",
+      "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+    },
+    {
+      "bytes": 1383,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/combined_cross_examination_registry_hash.json",
+      "sha256": "29d08c441d2721aeefddd8e689dadd78e7094b0007a076f90f304a2bdbe92a28"
+    },
+    {
+      "bytes": 3541,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conditional_counterexamples.csv",
+      "sha256": "c6abc6d18e25552b6170b57ea5f145fc40f289af28db3c27df2e6fc486712d0d"
+    },
+    {
+      "bytes": 3561,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conditional_counterexamples.jsonl",
+      "sha256": "eb28eec1628988e788e78d2f2f6fc95c1ce1f1551d22e9eace0a883586f4ef44"
+    },
+    {
+      "bytes": 7434,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conditional_local_comparisons.csv",
+      "sha256": "789fafb88738fc39f4258619545d0df17822015c31947d14c81f3b4285007574"
+    },
+    {
+      "bytes": 8015,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conditional_local_comparisons.jsonl",
+      "sha256": "1a79f7bd48f4d18d991d7306883a91e9d46340f2bba890e1cbff31194e18d806"
+    },
+    {
+      "bytes": 142,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conflict_cross_exam_summary.json",
+      "sha256": "8b38a8c528009e27ba8eafd4ad85426ebd00c98d4ac285fb67384a9a7edcae9a"
+    },
+    {
+      "bytes": 141,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conflict_cross_exam_summary.md",
+      "sha256": "7a6461ac9cbe085cb51aec6a5e0232553cb5a6a1c8b18f0458c207f250acd1e3"
+    },
+    {
+      "bytes": 210,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conflict_review_registry.json",
+      "sha256": "9696eb636a298213cdc08e1aff0913cd83527d313fa12d5a4db09eef88c426e4"
+    },
+    {
+      "bytes": 204,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/conflict_review_registry.md",
+      "sha256": "c9b591084bdef8f2717054b1aaba8ba20666079bfc9709f845f4ae2d8f806e1f"
+    },
+    {
+      "bytes": 129,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corpus_scale_accounting_preservation_note.json",
+      "sha256": "32cb964881b93057545e52ff258be09de70ddca893a2a4d9a6d5476cbbac82d0"
+    },
+    {
+      "bytes": 124,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corpus_scale_accounting_preservation_note.md",
+      "sha256": "b6cae3f226f4eda5c89203985b0ae6f7013e73dab2cca357a7af817fc0cb34c7"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corrected_claim_packet_inputs.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corrected_claim_packet_inputs.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corrected_formula_outputs.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corrected_formula_outputs.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corrected_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/corrected_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 82,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/counterexample_cross_exam_summary.json",
+      "sha256": "1f97bdcc017ea4ac564d230bcd2bcbf4f6040b91f44aa2042ed24fdd6c790e37"
+    },
+    {
+      "bytes": 167,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/counterexample_cross_exam_summary.md",
+      "sha256": "f612f85d85daf6897eb0094957d84262fab708950ce9cee587fb68c8e82ad540"
+    },
+    {
+      "bytes": 202,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/counterexample_review_registry.json",
+      "sha256": "0af0f07004374aae09e8b6062c6655184494c934603bb087acf05ac2596999b0"
+    },
+    {
+      "bytes": 196,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/counterexample_review_registry.md",
+      "sha256": "691163ec164572697ced2df20b8b7a214e7c88effd737da337dc16940ba4c7c5"
+    },
+    {
+      "bytes": 86,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_correction_manifest.json",
+      "sha256": "1b31bf55d48dc8ba5af34698e40cad2df8c77f6374a84db28935083e9bb935d2"
+    },
+    {
+      "bytes": 133,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_disk_capacity_audit.json",
+      "sha256": "908695b958466a6c1c9373a15d5c2df663818cbcd907f40eafddc9798e6ca142"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_failed_record_repair_queue.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_failed_record_repair_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 544,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_forbidden_action_audit.json",
+      "sha256": "41f0309a51577e05c0929cb6f93ddaaa5f5683bfcd7a01a10fa0f1acb2b00cf8"
+    },
+    {
+      "bytes": 1084,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_input_audit.json",
+      "sha256": "a78cf1600aa86e184adcc2f0dba35f9eca02aee46f7e3d383bc999b4c1e11747"
+    },
+    {
+      "bytes": 260,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_input_audit.md",
+      "sha256": "21ccae944c4c69cb8ffdc281d2195d786546ebfe36c94388b615b4f9f2f89499"
+    },
+    {
+      "bytes": 375,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_checkpoint.json",
+      "sha256": "dec18e24179b73b04435ed6dee03edadbd0834cc5800aff176f0a1a1d358a563"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_claim_disposition_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_claim_disposition_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_hold_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_hold_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1324595,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_queue.csv",
+      "sha256": "d3b5b8a1b51f7c92f68696952d4de6ab92e71c85eafda8943ee5968f7a598e06"
+    },
+    {
+      "bytes": 1285050,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_queue.jsonl",
+      "sha256": "7eced617e66136ca73cda206846f78380eff0f871c68b6e15fb021e0cf270258"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_rejection_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_rejection_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 733850,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_review_result_ledger.csv",
+      "sha256": "15fb5a89e5b6ce285a2f892cb1e1a7598e0850596193013c372ed113f3713e07"
+    },
+    {
+      "bytes": 965265,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_001_review_result_ledger.jsonl",
+      "sha256": "e2ada7b3d9e708ae27e0bb0a465d5a4d7f54aa1ff58326ded78c3aac92c5bc2b"
+    },
+    {
+      "bytes": 352,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_checkpoint.json",
+      "sha256": "2b0cef0058cbdef26f224d2ea1da6d33ab21b72bd185d6514617a845cdfbb6d9"
+    },
+    {
+      "bytes": 512978,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_claim_disposition_ledger.csv",
+      "sha256": "3b3dac190913d0094d043c11b0002656ceb34712d6a68d5b97b3759f4d621e5b"
+    },
+    {
+      "bytes": 659513,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_claim_disposition_ledger.jsonl",
+      "sha256": "8e4638443b14352fb6873f6b7ecd88ec42873e6743f73d0d2f1e8936dc8e54f3"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3013,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_hold_ledger.csv",
+      "sha256": "6cac2dbb13cd691da66fe9c6e3afd0455b491c4ce992f20e26cdb13a4d5afec1"
+    },
+    {
+      "bytes": 3071,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_hold_ledger.jsonl",
+      "sha256": "1d8361565d9bfb21b17e70a6ceed02e1872fbe5d1c2dabaa71d59608d907a375"
+    },
+    {
+      "bytes": 1804010,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_queue.csv",
+      "sha256": "e279fd414b8555d8faffb4e04130676e391cf3fd3c9224288aa587b7e07d003a"
+    },
+    {
+      "bytes": 1768757,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_queue.jsonl",
+      "sha256": "0878adaeeccbaff69d8f12a98fc001602adfacae05ba63c5f9490668aad74725"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_rejection_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_rejection_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1174486,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_review_result_ledger.csv",
+      "sha256": "676f712b865b26fdc1243a50c98092cdc65824aae7faaca1290fddfadf47702e"
+    },
+    {
+      "bytes": 1508530,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_002_review_result_ledger.jsonl",
+      "sha256": "6354490b04cd09d0ac27bdf610e4a037319ca19efc1ece8fdc17cf9b146e30a7"
+    },
+    {
+      "bytes": 389,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_checkpoint.json",
+      "sha256": "67184da6914631c4caeb871ddb06a4a55c31a7a0328b8c98b88cae8da2c471ac"
+    },
+    {
+      "bytes": 497332,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_claim_disposition_ledger.csv",
+      "sha256": "e35320b218a54dec41e0d46ba288634535063cde83084a0732a3cb9e915d888c"
+    },
+    {
+      "bytes": 560183,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_claim_disposition_ledger.jsonl",
+      "sha256": "2b9542da9a608184ac1b392924de0f516709374dd476a224e37f77b48ab9955f"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7142,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_hold_ledger.csv",
+      "sha256": "b5d8b6480540af7b1b1005c40c9714d8c371aa7f9343074211f40545f5a11de2"
+    },
+    {
+      "bytes": 8456,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_hold_ledger.jsonl",
+      "sha256": "187b4946060e16a22750f533b8cdd236e748aaf7dc3990cca8fafb20b1ab364f"
+    },
+    {
+      "bytes": 2032869,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_queue.csv",
+      "sha256": "a2c097549fbb5aba877a89e85770016f0ae3ebf7e35d213fcdf46d6a4f5cab70"
+    },
+    {
+      "bytes": 1984522,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_queue.jsonl",
+      "sha256": "1b101f3e407e58d4c94092f92a5e818a75eb5b77ed5912b03cec1402491999ba"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_rejection_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_rejection_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 696572,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_review_result_ledger.csv",
+      "sha256": "11ec74ad0230771bca2924a8372f77f3e170b3dea2a70d88c8319c32dfc05ca0"
+    },
+    {
+      "bytes": 814978,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_003_review_result_ledger.jsonl",
+      "sha256": "8cc8b1451127322819d0c3e1d10f75ce04e73776e87a32bf499e2cfd090d41c9"
+    },
+    {
+      "bytes": 401,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_checkpoint.json",
+      "sha256": "7023e85cc46734ae4939927294a3c28231ee2a6c58eeb812f91dc12db16985a9"
+    },
+    {
+      "bytes": 100448,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_claim_disposition_ledger.csv",
+      "sha256": "77edf1ee993df55f503e79985b7bf63d2215f1bb0474bd31bbe51bf8e37d9ffd"
+    },
+    {
+      "bytes": 128262,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_claim_disposition_ledger.jsonl",
+      "sha256": "0cac65c3b546fa36f14f3b5c1248d4b4fb7b27838611f5e54ba767021b74996a"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_hold_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_hold_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 808158,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_queue.csv",
+      "sha256": "d675021b1b10aab60dd4ba5dfd2f0dbb1ad5f72faf68104b57ac7f5707302871"
+    },
+    {
+      "bytes": 771738,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_queue.jsonl",
+      "sha256": "47f91508200d011983fd7a53e19a9e99bde04b92b17290837f9eea3fa4a53ea4"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_rejection_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_rejection_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 368468,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_review_result_ledger.csv",
+      "sha256": "f0dc7a6a8db16d844485dce53c259927ae53f21e49211fc2b6db535c8c69d31d"
+    },
+    {
+      "bytes": 530003,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_004_review_result_ledger.jsonl",
+      "sha256": "81f02adc80ce0fea49d568a53a134c67c00ace2760c1ac277a37c6f4b7ab3d6b"
+    },
+    {
+      "bytes": 356,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_checkpoint.json",
+      "sha256": "57ce32da69359ffba7e07ed7a758c4f87acebb93848674b383a4718853b81f6a"
+    },
+    {
+      "bytes": 184369,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_claim_disposition_ledger.csv",
+      "sha256": "5c8a8980b868c88a172823e0fe28b8477325322e7abb8286d9bdb6fb39b86968"
+    },
+    {
+      "bytes": 239800,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_claim_disposition_ledger.jsonl",
+      "sha256": "2a8db6f01b3319361489a2cf8cf5b8928b6a3891b3d4a45dde26c714748c553a"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 319944,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_hold_ledger.csv",
+      "sha256": "df3050fdb2069895ffdd22c363f05efda352e2385dc531b2c850825542f32f09"
+    },
+    {
+      "bytes": 443608,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_hold_ledger.jsonl",
+      "sha256": "dc54ac71072b01df496dea84bdb2752485b9d383d382f2ddebd9357fcabf4742"
+    },
+    {
+      "bytes": 1356447,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_queue.csv",
+      "sha256": "1b22dba690f3145464d7948211a7680a37adb846e1614c5007951940a317f29c"
+    },
+    {
+      "bytes": 1315121,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_queue.jsonl",
+      "sha256": "d38b556aff724f66fba398c24e2b51ff7b1153cb4851dc27505c07f614c3f629"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_rejection_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_rejection_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 735464,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_review_result_ledger.csv",
+      "sha256": "ba23c1a5293bbd617e3506e6024e17ec3836d0ce8c7c797bec092801ad1b3d3e"
+    },
+    {
+      "bytes": 982368,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_005_review_result_ledger.jsonl",
+      "sha256": "7f06e1dc482f577879a4417624b0e146316571dcc04c98dc4eeda5f6ffaa3624"
+    },
+    {
+      "bytes": 836,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_distribution.json",
+      "sha256": "dd634a4e63fb42763e99bf4d1147bc0618ebd690b761fdbf4c6b4100144d030f"
+    },
+    {
+      "bytes": 542,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_lane_distribution.md",
+      "sha256": "7e0556d725c40aae289297bf7aaa97627e2a64b91c0a8a84bd6c97ed90cac20e"
+    },
+    {
+      "bytes": 4207,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_large_file_audit.json",
+      "sha256": "b3ec92574f265c18f9459afccd0a66a3687a8806de6f4dda4f4118e331dcfe0c"
+    },
+    {
+      "bytes": 303,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_local_artifact_storage_audit.json",
+      "sha256": "9433ae560c23945c2e328296c23036620719259cd6524f1317067c60510fcb5b"
+    },
+    {
+      "bytes": 990,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_operational_incident_log.jsonl",
+      "sha256": "91e27cbcb8bafb3cbdc402f0c33c36db6817a3eee06085efd257b41dd2d8d961"
+    },
+    {
+      "bytes": 490,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_quality_gate_results.json",
+      "sha256": "03afb499ffd6570d92809f384e931be187f47e3ab20fa2996be87222c7225953"
+    },
+    {
+      "bytes": 483,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_quality_gate_results.md",
+      "sha256": "d1eab6cda3202f373d3d1dfa3e33c96e4536d2179fa1671e119c044e8f712314"
+    },
+    {
+      "bytes": 956,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_review_result_schema.json",
+      "sha256": "1f21e5b7fcf5405c3c16f3ab507065c387a577660d74b00e5409c94114623b63"
+    },
+    {
+      "bytes": 442,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_review_result_summary.json",
+      "sha256": "5ba136e75552c46d6c166fe6014eb09d098c7c6e95ac08fff89b584e7081ceef"
+    },
+    {
+      "bytes": 3706564,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_review_results.csv",
+      "sha256": "82f6f7c4bc70e60cc0b99821a86df501a0d4b72eb8f03e3db36aadeee058ddf9"
+    },
+    {
+      "bytes": 4801144,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_review_results.jsonl",
+      "sha256": "598177ce71df119c37b664fb30778e0bc991f5f1e0e039f67fd570cd8ee3a777"
+    },
+    {
+      "bytes": 360,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_run_manifest.json",
+      "sha256": "72d9207a2d168a95355012f8aef520f0a1a8c3a13db01c639100c43dc9d4b29e"
+    },
+    {
+      "bytes": 307,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_run_state.json",
+      "sha256": "031b23a3b37f0af1b3d5b5e0469fd9625fca20710c57ed3e38b1c1e00cb7922e"
+    },
+    {
+      "bytes": 45987,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_adjudication.csv",
+      "sha256": "e89bb56238a5130ccef891d8182d7c1c247bc2f7def0ed36e990516d7a98dc0a"
+    },
+    {
+      "bytes": 132998,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_adjudication.jsonl",
+      "sha256": "ac266c0895c7808caca73565eb7167cf2585bedec5e54e6facd0f380a9370322"
+    },
+    {
+      "bytes": 435,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_design.json",
+      "sha256": "b4b4e057ea2559f7d4af088e3a5bf3de5e179a7ec29e74cda168c157a081dc9c"
+    },
+    {
+      "bytes": 45987,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_records.csv",
+      "sha256": "e89bb56238a5130ccef891d8182d7c1c247bc2f7def0ed36e990516d7a98dc0a"
+    },
+    {
+      "bytes": 132998,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_records.jsonl",
+      "sha256": "ac266c0895c7808caca73565eb7167cf2585bedec5e54e6facd0f380a9370322"
+    },
+    {
+      "bytes": 82,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_summary.json",
+      "sha256": "5286ec25378d038da088cd6bba7c02c89bbaa1b825264f9053f8bc8dc2748e99"
+    },
+    {
+      "bytes": 87,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_second_pass_qa_summary.md",
+      "sha256": "464e6057f51ed8b5643f49b6e274e9d57f4061133fefa6ef91d4ce4b5465bedd"
+    },
+    {
+      "bytes": 286,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_stage_checkpoint.json",
+      "sha256": "6c82be9007b3fd6920c7eb420e4d7d722b13d26d77858877c255605dc808f90d"
+    },
+    {
+      "bytes": 557,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_stage_transition_log.jsonl",
+      "sha256": "64535068a6c22652d6bf2371e6bd43e82f775ed63523c72d314579e75f7e8963"
+    },
+    {
+      "bytes": 122,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_staged_file_audit.json",
+      "sha256": "67494f5b31651ae81bbc7335c01f9ee2112f3de2afc8bee59517d8749ed0563d"
+    },
+    {
+      "bytes": 374,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_superseded_output_manifest.json",
+      "sha256": "23565b2149dd6a327d187386e1fe41bcdf3397392a11faf788c01cf7a0533bc9"
+    },
+    {
+      "bytes": 1860,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_exam_worker_process_inventory.json",
+      "sha256": "9b3aadf738c796e1ce8f6ba795aa5565736550089a657a663e0cbf405e4419b9"
+    },
+    {
+      "bytes": 20356,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_claim_evidence_table.csv",
+      "sha256": "447b474420cabf06c1d4bf2d4251049ead4f32c6c46990f23cd2900289067294"
+    },
+    {
+      "bytes": 28901,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_claim_evidence_table.jsonl",
+      "sha256": "bc017853284190ff762fa26e0eeb43f3d8cbda20aa8d1655573a9bdf8a3896b9"
+    },
+    {
+      "bytes": 328961,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_conflict_packet.csv",
+      "sha256": "f624bdda3bd7567a97ea33f93244347efb50cc07c570221bf66a60ee6a21ae8e"
+    },
+    {
+      "bytes": 455135,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_conflict_packet.jsonl",
+      "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+    },
+    {
+      "bytes": 12812,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_counterexample_core_packet.csv",
+      "sha256": "5dd559ab175e3353273ed5641e05913bc5bb754e25f69b25e6b2b07ad5a7ad0b"
+    },
+    {
+      "bytes": 16750,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_counterexample_core_packet.jsonl",
+      "sha256": "6ee1506212be42340e7c6d22d800e87ac9745e9e9da1bf9a22c69537e430994c"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_counterexample_reserve_packet.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_counterexample_reserve_packet.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 256539,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_growth_record_packet.csv",
+      "sha256": "7e8af44f2f837fe93a7470bd86a2af0834ccbbe757e881f641b0e222568f24eb"
+    },
+    {
+      "bytes": 387301,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_growth_record_packet.jsonl",
+      "sha256": "fe6dc63ff5434371e44f3324ec4d539bdb85a5a9ba8d645037bc11b7909bbf90"
+    },
+    {
+      "bytes": 16383,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_headline_number_table.csv",
+      "sha256": "7d9b83e487fdc81aba47d4fc9602bf851f3ced16277c609dcba05a462da99d16"
+    },
+    {
+      "bytes": 21673,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_headline_number_table.jsonl",
+      "sha256": "14dc88f9782a52b43e07294b253418fb20a86fd9d54aab29f30fe69bd126eaa4"
+    },
+    {
+      "bytes": 369453,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_implementation_sequence_packet.csv",
+      "sha256": "9efc5d034c989577247f49dad53c370227464957aad5b1cffd42ab3ef7084c29"
+    },
+    {
+      "bytes": 393062,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_implementation_sequence_packet.jsonl",
+      "sha256": "e9a184774a20c032285dc42abf8666414fc4f927226aaebf5d7ab9d048f31b18"
+    },
+    {
+      "bytes": 12619,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_local_comparison_table.csv",
+      "sha256": "ffc16af1f11e95dc50e2555ec0d0a10b7a14b1e4f786331e2476e13abe15f281"
+    },
+    {
+      "bytes": 14440,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_local_comparison_table.jsonl",
+      "sha256": "d420c8e51b7942427678ee4f085903ce56319e1a255f1c655705aeb73ed9aaf7"
+    },
+    {
+      "bytes": 506228,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_staffing_record_packet.csv",
+      "sha256": "bd9279260edf597f8d3e61403190aa7eff8c73898eba85a62baffe5e67e14adb"
+    },
+    {
+      "bytes": 652033,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_staffing_record_packet.jsonl",
+      "sha256": "6f0085be2e2bdb92c628fe367ad4a0e614cf92b70787cbfe9672a95d270de85a"
+    },
+    {
+      "bytes": 5663,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_visual_input_status.csv",
+      "sha256": "d68348db6b2dfef006b36136995524e34f6bb7de8460a011732c6bba0694e064"
+    },
+    {
+      "bytes": 6743,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/cross_examined_visual_input_status.jsonl",
+      "sha256": "adff98b1a10cf809a88e0fca58bb3d91b9f85946757dc87f86994b689fd67219"
+    },
+    {
+      "bytes": 3066,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/dashboard_claim_critical_cross_examination_update_summary.json",
+      "sha256": "05e3ca9f68491eb282686f7cc70d3be8fee4833606a9db8f8963b0f89a9f219e"
+    },
+    {
+      "bytes": 485942,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/descriptive_staffing_channel_evidence.csv",
+      "sha256": "be94404a4d25e21954dcff21a5ccad03fd9931505bca23d22d6a2fb710ef2e81"
+    },
+    {
+      "bytes": 625369,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/descriptive_staffing_channel_evidence.jsonl",
+      "sha256": "2770677b6a23d3d6e9265e2e4b32166e40525c0073b3611d8f8be145bcc1663b"
+    },
+    {
+      "bytes": 323,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/deterministic_external_data_classification_methodology_note.md",
+      "sha256": "4825ede98c3d71d1d7bbc11993636e7904168df3534d18d42b2abfac7275626f"
+    },
+    {
+      "bytes": 3541,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/direct_quantitative_counterexamples.csv",
+      "sha256": "c6abc6d18e25552b6170b57ea5f145fc40f289af28db3c27df2e6fc486712d0d"
+    },
+    {
+      "bytes": 3561,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/direct_quantitative_counterexamples.jsonl",
+      "sha256": "eb28eec1628988e788e78d2f2f6fc95c1ce1f1551d22e9eace0a883586f4ef44"
+    },
+    {
+      "bytes": 16096,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/direct_staffing_channel_evidence.csv",
+      "sha256": "73e238bb41e49db9e61843f076cc0aee4ba402044d8268cee7e2142ff6673adb"
+    },
+    {
+      "bytes": 20000,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/direct_staffing_channel_evidence.jsonl",
+      "sha256": "49c471aefb6565ecd5a55eec24489e6e3ae663ad9df6594d9643d6b28f54c947"
+    },
+    {
+      "bytes": 1818993,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/downgraded_records.csv",
+      "sha256": "ef58fd72540316b0f7d9d9ff4d44fb1d3f572d3263a87c1b2f853ddc864a01db"
+    },
+    {
+      "bytes": 2355996,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/downgraded_records.jsonl",
+      "sha256": "0ddf9b5936fe8a1051082ab674a7a008cdbc35da0e03ce3e010c078444f4a5c7"
+    },
+    {
+      "bytes": 203,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/excluded_non_review_input_audit.json",
+      "sha256": "3bb45b85976976f05de4af798b1665c6fe27df62e416608fdaa369adada08ceb"
+    },
+    {
+      "bytes": 216,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/external_search_capacity_limitation_note.md",
+      "sha256": "1c32c3f8e5a76fca9b5fbe684b6314e9c2e742ed3a362a0a0afa8b887f577584"
+    },
+    {
+      "bytes": 115,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/figure_specification_evidence_status_update.json",
+      "sha256": "32d49f5c540ebc81917633ad87b8dddd571c85757c8afaf778db4b316d90cdbc"
+    },
+    {
+      "bytes": 544,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/forbidden_action_audit.json",
+      "sha256": "41f0309a51577e05c0929cb6f93ddaaa5f5683bfcd7a01a10fa0f1acb2b00cf8"
+    },
+    {
+      "bytes": 2043,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_countervailing_review.csv",
+      "sha256": "49a2e10fb0296a4b1217f1acc88076e060a8ce0facd61e22d27cdd480ba88747"
+    },
+    {
+      "bytes": 2121,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_countervailing_review.jsonl",
+      "sha256": "512fca1b65bf515816104a4921ace8880d8d69415773cc754bc660ee1ab8400e"
+    },
+    {
+      "bytes": 308,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_cross_exam_summary.json",
+      "sha256": "c73f99a0ba9bb438b1567fb5377b30fc63c0ee525acf6fee9bd1af185c4a8730"
+    },
+    {
+      "bytes": 231,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_cross_exam_summary.md",
+      "sha256": "b39ae2ea52a10ee01b85293cd1aeef2a2e68645ac430015cdebf22cea4e4375a"
+    },
+    {
+      "bytes": 256539,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_narrowed.csv",
+      "sha256": "7e8af44f2f837fe93a7470bd86a2af0834ccbbe757e881f641b0e222568f24eb"
+    },
+    {
+      "bytes": 387301,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_narrowed.jsonl",
+      "sha256": "fe6dc63ff5434371e44f3324ec4d539bdb85a5a9ba8d645037bc11b7909bbf90"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_rejected.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_rejected.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 297,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_review_registry.json",
+      "sha256": "67062c900d27fd33cad029afa59d398240cf99060b991be762a71e3089016b21"
+    },
+    {
+      "bytes": 291,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_review_registry.md",
+      "sha256": "4188eb66e1b0f0df81315a98a999b3855014d3ed7bd6d31560e93c832607f57f"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_upheld.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_interpretation_upheld.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 6314,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_sparse_cell_review.csv",
+      "sha256": "d0de8728ef7893576ae831618c8aaa55dee7a6e7c2a797eb35bc8edbc5ddbd93"
+    },
+    {
+      "bytes": 8333,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/growth_sparse_cell_review.jsonl",
+      "sha256": "8d33b26ba1ddbbdabadc6fa9ccf712be127508c5edf7fabc6f977bfee8e908d9"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_number_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_number_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 87,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_number_cross_exam_summary.json",
+      "sha256": "aa59833cd39523ef1aa52dba5d3887e56277eaace4b7a5a7c3ede576972d820b"
+    },
+    {
+      "bytes": 121,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_number_cross_exam_summary.md",
+      "sha256": "2fbda0399c3580eb4a6227387338cf2105eb09f6710dd423683e6ee2a11751f2"
+    },
+    {
+      "bytes": 540,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_number_formula_reaudit.csv",
+      "sha256": "815419cc14365793add191a0f48eb97adb87156c1b36a1d7b6980db86a14dbc2"
+    },
+    {
+      "bytes": 1172,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_number_formula_reaudit.jsonl",
+      "sha256": "78bd5da84fb589ba38b632429d9bcd389b24553e694476c6784c6ed3bbb7689e"
+    },
+    {
+      "bytes": 277,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_validation_registry.json",
+      "sha256": "fcaea97a17c8dcdd373b7aa41fb1d2b7f160b042b6af5a15458a9052507c3450"
+    },
+    {
+      "bytes": 271,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/headline_validation_registry.md",
+      "sha256": "e260c8131e9f4a18d77efa4897e6c34175b4de687391f555058bf0401a6bb051"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_counterexamples.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_counterexamples.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 127,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_cross_exam_summary.json",
+      "sha256": "f2d30871b9a8144354ed4a11fc7075fa8f84958fc9b163cf9e57a84f191ff231"
+    },
+    {
+      "bytes": 246,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_cross_exam_summary.md",
+      "sha256": "93c3727323369f3e27d5db3445debacbbc99c082f6c06efb1054f117ef4c67f4"
+    },
+    {
+      "bytes": 121,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_event_deduplication_preservation_note.md",
+      "sha256": "63a2ffcb189c1dad70e64337895f7ebc919f6fcaf231ea4ce1b07ff28068c14e"
+    },
+    {
+      "bytes": 241,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_lifecycle_review_registry.json",
+      "sha256": "c1c36e03bddfc9f028eaf33deb52dd18a96114ead49a9e26d936694b9966815e"
+    },
+    {
+      "bytes": 235,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_lifecycle_review_registry.md",
+      "sha256": "be6f1556171da88403fccde84e2afbb66c7d1e7e3d8288a94d72eff22b2e2524"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_sequence_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/implementation_sequence_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 132,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/independent_semantic_validation_scope_note.json",
+      "sha256": "fdc224875d1b0fa4d46a1fd3d6c91fdeabcdc0c2567f54c33c7fb63e0b430531"
+    },
+    {
+      "bytes": 178,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/independent_semantic_validation_scope_note.md",
+      "sha256": "5ece69dcfa3526c70eed946cb8f801aa92822b698cd651bac98481dd1b21174e"
+    },
+    {
+      "bytes": 4207,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/large_file_audit.json",
+      "sha256": "b3ec92574f265c18f9459afccd0a66a3687a8806de6f4dda4f4118e331dcfe0c"
+    },
+    {
+      "bytes": 303,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_artifact_storage_audit.json",
+      "sha256": "9433ae560c23945c2e328296c23036620719259cd6524f1317067c60510fcb5b"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_comparison_correction_ledger.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_comparison_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 105,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_comparison_cross_exam_summary.json",
+      "sha256": "8d6d9a3b04cd7cdfe6636b6a639dc6097c0d7cd1b103b18d96e9ff7405e1f987"
+    },
+    {
+      "bytes": 164,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_comparison_cross_exam_summary.md",
+      "sha256": "39ce2197858c2fc0555d22b6fee7068c6995a9fe8dbc887afba9839cf6a94925"
+    },
+    {
+      "bytes": 283,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_comparison_review_registry.json",
+      "sha256": "a9b9514e185f6cd0c3bdb5282aa000024c92c8aaa5a265f17e4c3f76c3645169"
+    },
+    {
+      "bytes": 277,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/local_comparison_review_registry.md",
+      "sha256": "9026d80b9e28af68a16d02eeb1b9c7212db032dfb79bafdda4c3f0eef08ed783"
+    },
+    {
+      "bytes": 328961,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/manual_conflict_review_queue.csv",
+      "sha256": "f624bdda3bd7567a97ea33f93244347efb50cc07c570221bf66a60ee6a21ae8e"
+    },
+    {
+      "bytes": 455135,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/manual_conflict_review_queue.jsonl",
+      "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/manual_human_review_required_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/manual_human_review_required_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/mechanism_specific_counterexamples.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/mechanism_specific_counterexamples.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7720,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/narrowed_headline_numbers.csv",
+      "sha256": "bba77b0f7017560a55869c87f297cea2f87c016ac026ee3abe59d7466054fd08"
+    },
+    {
+      "bytes": 9755,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/narrowed_headline_numbers.jsonl",
+      "sha256": "9a6cb1266da9477bc91dd1c9221b51420cf27732e6b61ab86fea7b466e6c7f50"
+    },
+    {
+      "bytes": 369453,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/narrowed_implementation_sequences.csv",
+      "sha256": "9efc5d034c989577247f49dad53c370227464957aad5b1cffd42ab3ef7084c29"
+    },
+    {
+      "bytes": 393062,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/narrowed_implementation_sequences.jsonl",
+      "sha256": "e9a184774a20c032285dc42abf8666414fc4f927226aaebf5d7ab9d048f31b18"
+    },
+    {
+      "bytes": 603,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/next_task.md",
+      "sha256": "91369434d7806de4d1bf6a9c9b95fd7d44865d0af0ef76820968f84f78815196"
+    },
+    {
+      "bytes": 106,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/no_external_growth_match_finding_note.md",
+      "sha256": "e06ee6da7661840774b052cf21fa0cc4e5acf4e8b6fc8581f21295e682c4f9c9"
+    },
+    {
+      "bytes": 100,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/no_external_wage_match_finding_note.md",
+      "sha256": "89b9a5812e72e46f16e19e251baaa853ab9afebb15213e26b870dd5aad70dc83"
+    },
+    {
+      "bytes": 82,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/no_gabriel_external_evidence_methodology_note.json",
+      "sha256": "3614beb76ab2e381f6ba9245d80461c373a8c1b89777f49b8eed60f35bfd752a"
+    },
+    {
+      "bytes": 171,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/no_gabriel_external_evidence_methodology_note.md",
+      "sha256": "6b9add0dc314d6c4ce94fed972d14d69ee31e1f70105d3271547109333443a32"
+    },
+    {
+      "bytes": 990,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/operational_incident_log.jsonl",
+      "sha256": "91e27cbcb8bafb3cbdc402f0c33c36db6817a3eee06085efd257b41dd2d8d961"
+    },
+    {
+      "bytes": 111251,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/packet_membership_audit.csv",
+      "sha256": "5fbaa9b8cd0b3d5b36ae9895530df007eb39d3dd0d4a979df312dc48d308fcb6"
+    },
+    {
+      "bytes": 259250,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/packet_membership_audit.jsonl",
+      "sha256": "ab1eb1009234ed363bb334a33ac1edbe951f725c4166202063c547938aadd172"
+    },
+    {
+      "bytes": 107,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/post_interpretation_storage_hold_recovery_strategy.json",
+      "sha256": "32b9099f738f84684787027b933941c0e9061212dead6ca1bbb2639dca7147fa"
+    },
+    {
+      "bytes": 143,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/post_interpretation_storage_hold_recovery_strategy.md",
+      "sha256": "2e70dadb46fcb375a0535831fe9c4410048bc29f7495d8ac4076b208fdc0c300"
+    },
+    {
+      "bytes": 9840,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/qualitative_counterexamples.csv",
+      "sha256": "91526285522209c5e15ffdf31637251dad8769e15495d6c2e57fedff85056808"
+    },
+    {
+      "bytes": 13189,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/qualitative_counterexamples.jsonl",
+      "sha256": "cab7f2e66bfd334ccd5e05e16671c8008d2a05f1ad03e9828c90f3525cc0602e"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_conflicting_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_conflicting_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_counterexamples.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_counterexamples.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_headline_numbers.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_headline_numbers.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_implementation_sequences.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_implementation_sequences.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_local_comparisons.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_local_comparisons.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/rejected_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/resolved_conflicts.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/resolved_conflicts.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 434,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/semantic_review_confidence_registry.json",
+      "sha256": "6fb53419f593d826908a71ee38ef44330c2fb22d5c288ae671a86b87b40bae25"
+    },
+    {
+      "bytes": 428,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/semantic_review_confidence_registry.md",
+      "sha256": "d4c84e4399244e324c36030047fd5d8cc11dbfa9e0b28783c7d99f7d30e482ad"
+    },
+    {
+      "bytes": 906,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/semantic_review_outcome_registry.json",
+      "sha256": "7812b6b64440de8ec057d266dd0f260999b5854d169c28f101d6693a7cc5eaa0"
+    },
+    {
+      "bytes": 900,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/semantic_review_outcome_registry.md",
+      "sha256": "bdbc69eecc404138bd89e3ce902176113d93b22b728c461fe15201099c0b442f"
+    },
+    {
+      "bytes": 319,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/source_context_boundary_registry.json",
+      "sha256": "82112a02029b203f85b45276d0ef3924f3ee54ac867b26c143e269ad3877ed7b"
+    },
+    {
+      "bytes": 313,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/source_context_boundary_registry.md",
+      "sha256": "c61867fc940ed5a4b95980f47e51a4aa3adf5b0c94cbee882a1f87c1472b112c"
+    },
+    {
+      "bytes": 371,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_channel_count_recalculation.json",
+      "sha256": "9bc7c88da43813c900f94c47a72afe9e2baa957e313bf79d3fc62b8f16511817"
+    },
+    {
+      "bytes": 266,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_channel_review_registry.json",
+      "sha256": "557bcecd76de8e50fcd9870bea81210bcfd006c751af6d33947f1b26268e5b21"
+    },
+    {
+      "bytes": 260,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_channel_review_registry.md",
+      "sha256": "3e457e97feebff21c95600896c39e08e6166217d9c5cf0bbab5b9d0a3e41f74a"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_conflict_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_conflict_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_context_only.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_context_only.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_counterexamples.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_counterexamples.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_countervailing.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_countervailing.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 371,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_cross_exam_summary.json",
+      "sha256": "9bc7c88da43813c900f94c47a72afe9e2baa957e313bf79d3fc62b8f16511817"
+    },
+    {
+      "bytes": 240,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_cross_exam_summary.md",
+      "sha256": "a61579ac8de4226df399ffab988f71bbe80c65fccaa541caa434f5cf77cbb80d"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_duplicate_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_duplicate_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5328,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_unresolved_records.csv",
+      "sha256": "3f77f6d94ca2a793875a5851f60999b74fcaee477801cd1a6e997ff0d2a71f96"
+    },
+    {
+      "bytes": 6664,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_unresolved_records.jsonl",
+      "sha256": "4cd014f02fee2cf5c143048bc4ebc51752c65cbae1a84e3791f9293580c38d66"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_wrong_side.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_wrong_side.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_wrong_type.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staffing_wrong_type.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 122,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/staged_file_audit.json",
+      "sha256": "67494f5b31651ae81bbc7335c01f9ee2112f3de2afc8bee59517d8749ed0563d"
+    },
+    {
+      "bytes": 99,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/storage_capacity_hold_preservation_summary.md",
+      "sha256": "137c78786727dee4fda6fbd6d1f325a00cff915b766c61fcca06dc2bb83fa1b0"
+    },
+    {
+      "bytes": 45,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/superseded_mathematical_output_manifest.json",
+      "sha256": "31458ffb0f8f1709ef5624ec8fdd0f51b9d1d889a50b62caec1b707bbedc2cdd"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unavailable_evidence_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unavailable_evidence_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7325683,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unique_review_locked_queue.csv",
+      "sha256": "bb9bc7407cf3836e6bf8299937918ebc540695887e151147bb9b4edaa4160d2a"
+    },
+    {
+      "bytes": 7125188,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unique_review_locked_queue.jsonl",
+      "sha256": "26d925d76a5222071a8570c3f1a8713c11d44e36352db0180cec0e850e6f1781"
+    },
+    {
+      "bytes": 212,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unique_review_locked_queue_manifest.json",
+      "sha256": "ade3f2700c721777fc9b0f75501f0cf8abb296baa51766d7bc724f69371f8724"
+    },
+    {
+      "bytes": 173,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unique_review_record_manifest.json",
+      "sha256": "55ee402077f28aa126abaeefc5beb77b0716372551a55bbdd9b3dbed19763a19"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_ambiguity_records.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_ambiguity_records.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 328961,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_conflict_records.csv",
+      "sha256": "f624bdda3bd7567a97ea33f93244347efb50cc07c570221bf66a60ee6a21ae8e"
+    },
+    {
+      "bytes": 455135,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_conflict_records.jsonl",
+      "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+    },
+    {
+      "bytes": 328961,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_conflicts.csv",
+      "sha256": "f624bdda3bd7567a97ea33f93244347efb50cc07c570221bf66a60ee6a21ae8e"
+    },
+    {
+      "bytes": 455135,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_conflicts.jsonl",
+      "sha256": "c7476ee875d5f30f0fcb26ecfb2fde9e2b454ea3194cc852acb14126ea5c7cd6"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_contradictions.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/unresolved_contradictions.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9232,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_headline_numbers.csv",
+      "sha256": "a12ec212b28d40ba7463faada77d84a1f73a6d0eb725f63e1c049060f331ac69"
+    },
+    {
+      "bytes": 11918,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_headline_numbers.jsonl",
+      "sha256": "e79b74240ae2361cfcd59d735c521032144b6c588acf36b449eb299a7eb1b132"
+    },
+    {
+      "bytes": 569,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_implementation_sequences.csv",
+      "sha256": "a77addd98814a40aded703d404bcf36c130191d04a032da3f1d17b56088596d7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_implementation_sequences.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5754,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_local_comparisons.csv",
+      "sha256": "614c045df81a32f8300d5b532feb3cfdff33e0f94c0e5c06fa9b2709e50f3838"
+    },
+    {
+      "bytes": 6425,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_local_comparisons.jsonl",
+      "sha256": "4625b22e208ea240dfaeab724adfa7d7d57c3d22fd9ed50069c7bff78d0938d1"
+    },
+    {
+      "bytes": 9232,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_records.csv",
+      "sha256": "a12ec212b28d40ba7463faada77d84a1f73a6d0eb725f63e1c049060f331ac69"
+    },
+    {
+      "bytes": 11918,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_records.jsonl",
+      "sha256": "e79b74240ae2361cfcd59d735c521032144b6c588acf36b449eb299a7eb1b132"
+    },
+    {
+      "bytes": 1510557,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_with_narrower_wording.csv",
+      "sha256": "f82f8a5ac4f0f0ab6681e5fabf1d4c91e3df39147266ea1cbde3e3fb6b4a1bae"
+    },
+    {
+      "bytes": 1919268,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/upheld_with_narrower_wording.jsonl",
+      "sha256": "dbc7da1ee43d23271cd14b1b2f15c38b65b1fc4eb30c67bf835f87a3b081b59f"
+    },
+    {
+      "bytes": 1278,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/validation_report.json",
+      "sha256": "f5bd64313a4b09b81659a33d9a9ed2722931c0140949d44745433b7cb08058f1"
+    },
+    {
+      "bytes": 996,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/validation_report.md",
+      "sha256": "dc63916bf5005743248c4919258f6ddc2da3f6a9c86e8668bc9ff037dadb03a6"
+    },
+    {
+      "bytes": 95,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/visual_production_cross_exam_summary.json",
+      "sha256": "9aa36fae182fb228d182088d8e66b96152e268184d161ed4a52910da12a2573d"
+    },
+    {
+      "bytes": 5663,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/visual_production_hold_queue.csv",
+      "sha256": "d68348db6b2dfef006b36136995524e34f6bb7de8460a011732c6bba0694e064"
+    },
+    {
+      "bytes": 6743,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/visual_production_hold_queue.jsonl",
+      "sha256": "adff98b1a10cf809a88e0fca58bb3d91b9f85946757dc87f86994b689fd67219"
+    },
+    {
+      "bytes": 24,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/visual_table_correction_ledger.csv",
+      "sha256": "02cd222c36f823e26bd34d0e31752f695e72a44422a29ef9504e6bb9cc1c4395"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/visual_table_correction_ledger.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 684,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06/whole_corpus_integration_preparation_manifest.json",
+      "sha256": "eb7f4df1ad1d9405c1d027ad1849d28f1a327ec328f6b49597ece3121bde9315"
+    }
+  ],
+  "commit": "pending_final_commit",
+  "created_at": "2026-08-06T04:10:50.028287+00:00",
+  "decision": "broad_state_whole_corpus_cross_examination_completed_claim_adjudication_ready",
+  "final_claim_adjudication": false,
+  "five_lanes_complete": true,
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_claim_cross_examination_2026-08-06",
+  "manifest_refreshed_at": "2026-08-06T04:13:06.536014+00:00",
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06",
+  "push_status": "pending",
+  "rendered_visuals": 0,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-CLAIM-CRITICAL-SEMANTIC-CROSS-EXAMINATION-2026-08-06"
+}

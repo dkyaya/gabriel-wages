@@ -1,0 +1,14 @@
+{
+  "accepted_review_records": 367,
+  "completed_at": "2026-08-06T04:05:29.074646+00:00",
+  "lane_id": "cross_exam_lane_001",
+  "outcomes": {
+    "downgraded_to_context": 268,
+    "upheld_as_context_only": 28,
+    "upheld_as_stated": 5,
+    "upheld_with_narrower_wording": 66
+  },
+  "role": "headline_numbers_and_corpus_scale_claims",
+  "state": "complete",
+  "total": 367
+}

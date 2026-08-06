@@ -1,0 +1,12 @@
+{
+  "accepted_records": 1726,
+  "lanes_complete": [
+    "cross_exam_lane_001",
+    "cross_exam_lane_002",
+    "cross_exam_lane_003",
+    "cross_exam_lane_004",
+    "cross_exam_lane_005"
+  ],
+  "stage": "cross_examination_finalized",
+  "updated_at": "2026-08-06T04:10:49.885005+00:00"
+}

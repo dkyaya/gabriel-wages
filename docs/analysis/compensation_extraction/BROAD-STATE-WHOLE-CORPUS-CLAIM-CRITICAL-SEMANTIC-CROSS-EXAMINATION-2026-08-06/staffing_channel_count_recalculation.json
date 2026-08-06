@@ -1,0 +1,14 @@
+{
+  "context_or_unresolved": 3,
+  "explicit_causal_effect_findings": 0,
+  "post_review_descriptive": 219,
+  "post_review_direct": 7,
+  "pre_review_non_safety_reduction": 16,
+  "pre_review_safety_pressure": 213,
+  "review_classes": {
+    "descriptive_channel_consistent": 219,
+    "direct_channel_evidence": 7,
+    "unresolved": 3
+  },
+  "reviewed_strict_universe": 229
+}

@@ -1,0 +1,14 @@
+{
+  "accepted_review_records": 188,
+  "completed_at": "2026-08-06T04:07:29.049689+00:00",
+  "lane_id": "cross_exam_lane_003",
+  "outcomes": {
+    "downgraded_to_context": 144,
+    "unresolved_conflict": 3,
+    "upheld_as_context_only": 1,
+    "upheld_with_narrower_wording": 40
+  },
+  "role": "implementation_lifecycle_and_mechanism_corroboration",
+  "state": "complete",
+  "total": 188
+}

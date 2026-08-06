@@ -1,0 +1,9 @@
+{
+  "bytes": 35777542,
+  "checked_at": "2026-08-06T04:12:57.105827+00:00",
+  "full_source_context_bundle_staged": false,
+  "git_ignored": true,
+  "local_root": "artifacts/local_structured_external_data/whole_corpus_claim_cross_examination_2026-08-06",
+  "passed": true,
+  "staged_local_artifacts": []
+}

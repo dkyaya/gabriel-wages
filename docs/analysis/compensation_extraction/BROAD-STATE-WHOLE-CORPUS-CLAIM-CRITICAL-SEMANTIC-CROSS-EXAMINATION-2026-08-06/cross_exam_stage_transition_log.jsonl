@@ -1,0 +1,3 @@
+{"at":"2026-08-06T04:02:09.482417+00:00","from":"not_started","reason":"preflight, source reconstruction, queue lock, registries, and bounded smoke checks passed","to":"prepared"}
+{"at":"2026-08-06T04:04:54.101354+00:00","from":"prepared","reason":"five independent review lanes launched with 0/1/2/3/4-minute stagger","to":"review_running"}
+{"at":"2026-08-06T04:10:49.885359+00:00","from":"review_running","reason":"five lane results merged; second-pass QA and all gates passed; claim recommendations prepared without final adjudication","to":"completed"}
