@@ -1,0 +1,52 @@
+{
+  "purpose": "Provide a concise public opening that states the question, gives the main evidence boundary, and teaches readers how to interpret the atlas before the first analytical visual.",
+  "page_sequence": [
+    {
+      "page_role": "cover",
+      "heading": "Why Public-Safety Wages May Grow Differently",
+      "subheading": "A Visual Atlas of Municipal Compensation Evidence",
+      "deck": "Compensation mechanisms, claim boundaries, and project-wide limitations",
+      "body_word_target": 0
+    },
+    {
+      "page_role": "executive_summary",
+      "heading": "What the evidence supports",
+      "body_word_target": 150,
+      "required_elements": [
+        "bounded mechanism account",
+        "mixed local comparative evidence",
+        "one supported, one conditional, five mechanism-only, one mixed, and six unsupported claims",
+        "no national wage-gap, prevalence, regression, or causal estimate"
+      ]
+    },
+    {
+      "page_role": "reader_guide_1",
+      "heading": "The question and the comparison",
+      "body_word_target": 180
+    },
+    {
+      "page_role": "reader_guide_2",
+      "heading": "Evidence types and analytical units",
+      "body_word_target": 220
+    },
+    {
+      "page_role": "reader_guide_3",
+      "heading": "How to read maps, counts, and claims",
+      "body_word_target": 220
+    },
+    {
+      "page_role": "glossary",
+      "heading": "Terms used in the atlas",
+      "layout": "two or three columns; continue to a second glossary page only if the minimum type size would otherwise be violated"
+    }
+  ],
+  "reader_guide_page_limit": 3,
+  "front_matter_principles": [
+    "Define safety, non-safety, evidence tiers, implementation events, and map units before first use.",
+    "Lead with the bounded finding rather than project history.",
+    "Keep source-scale counts separate by unit.",
+    "Treat documentation imbalance as a property of retained evidence, not national prevalence.",
+    "Reserve workflow detail for the methodology section."
+  ],
+  "executive_summary_copy": "The reviewed records show several concrete ways municipal compensation can change: bargaining and arbitration, scheduled increases, non-base pay, staffing and market pressure, retroactive implementation, budgets, pay plans, and council action. The strongest conclusion is a bounded account of these processes, not a national estimate of how much faster safety wages grow. The final claim set contains one supported claim, one conditionally supported claim, five claims supported only as compensation mechanisms, one mixed finding, and six unsupported national, regression, or causal claims. Safety-side events appear more often in the retained and successfully classified evidence, but the corpus also contains more readily identifiable safety documentation. That imbalance is relevant to interpretation; it does not prove that the same imbalance exists nationally or that it caused a wage difference."
+}

@@ -1,0 +1,37 @@
+{
+  "lane_id": "lane_001",
+  "status": "complete",
+  "completed_at": "2026-08-06T19:09:09Z",
+  "scope": "Front matter, reader guide, public-language cleanup, title and metadata, glossary, and heading hierarchy",
+  "outputs": [
+    "lane_001_front_matter.json",
+    "lane_001_front_matter.md",
+    "final_reader_guide_content.md",
+    "final_glossary.csv",
+    "final_glossary.jsonl",
+    "revision_language_inventory.csv",
+    "revision_language_inventory.jsonl",
+    "revision_language_removal_log.csv",
+    "revision_language_removal_log.jsonl",
+    "final_public_title_subtitle.json",
+    "final_public_metadata.json",
+    "heading_recommendations.csv",
+    "heading_recommendations.jsonl",
+    "lane_001_summary.md"
+  ],
+  "validation": {
+    "reader_guide_pages": 3,
+    "reader_guide_word_counts": [178, 189, 209],
+    "glossary_terms": 52,
+    "language_items_audited": 20,
+    "language_dispositions_recorded": 20,
+    "heading_recommendations": 15,
+    "canonical_claim_count": 14,
+    "claim_classes_preserved": true,
+    "two_corpus_rule_preserved": true,
+    "public_title_contains_revision_history": false,
+    "new_research_performed": false,
+    "shared_files_modified": false
+  },
+  "ready_for_coordinator_merge": true
+}

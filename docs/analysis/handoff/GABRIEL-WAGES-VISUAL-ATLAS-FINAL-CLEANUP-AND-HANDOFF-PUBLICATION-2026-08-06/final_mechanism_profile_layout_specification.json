@@ -1,0 +1,30 @@
+{
+  "status": "ready_for_rendering",
+  "page_size": "US Letter landscape",
+  "profile_count": 8,
+  "appendix_group_count": 1,
+  "profile_page_template": {
+    "header": "profile title and one-sentence definition",
+    "map_region": "fixed lower-48 map occupying 45–50 percent of usable width",
+    "alaska_region": "labeled point inset when events exist; explicit no-retained-event statement otherwise",
+    "side_region": "five-category side composition with exact counts and denominator",
+    "content_region": "wage channel, one bounded example, final claim boundary, and main limitation",
+    "caption_region": "70–115 words; no process-history or revision language",
+    "technical_footer": "exact analytical unit, fixed grid, evidence-not-prevalence boundary"
+  },
+  "appendix_template": {
+    "page_1": "11 reader-facing categories with fewer than 25 events, grouped as compact cards with exact counts and point locations",
+    "page_2": "three classification outcomes in a separate status table, including exact Alaska status",
+    "density_rule": "no Alaska density hexes and no sparse-category density shading"
+  },
+  "minimum_font_points": {
+    "title": 20,
+    "subtitle": 11,
+    "body": 9,
+    "labels": 8.5,
+    "technical_notes": 7.5
+  },
+  "claim_policy": "final claim IDs, classes, and wording remain unchanged",
+  "public_copy_policy": "standalone language only; no revised, corrected, prior-version, cleanup, lane, task, or internal workflow wording",
+  "alaska_policy": "point inset for retained profile events; explicit none otherwise; exact point/table treatment in sparse/status appendix"
+}

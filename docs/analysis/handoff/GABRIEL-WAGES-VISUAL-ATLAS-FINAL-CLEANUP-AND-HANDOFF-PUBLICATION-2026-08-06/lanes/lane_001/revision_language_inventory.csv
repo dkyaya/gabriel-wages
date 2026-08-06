@@ -1,0 +1,21 @@
+item_id,location,current_visible_language,issue_type,recommended_public_language,action,rationale
+RL-001,PDF metadata and cover,A Corrected Visual Atlas of Municipal Compensation Evidence,revision_history,A Visual Atlas of Municipal Compensation Evidence,replace,Readers need the publication title rather than its production history.
+RL-002,PDF cover footer,Gabriel Wages · August 2026 · revised for handoff,internal_workflow,Joachim Johnson · August 2026,replace,Handoff status is not part of the research result.
+RL-003,PDF opening,What changed in this revision,revision_history,What the evidence supports,replace,The opening should lead with the result rather than document editing.
+RL-004,PDF reader guide,Deduplication correction,repair_history,Counting distinct implementation events,replace,Explain the analytical unit without narrating the repair.
+RL-005,PDF evidence-base heading,Evidence pipeline and responsible attrition,pipeline_jargon,How records became usable evidence,replace,Use plain language and avoid presenting workflow terminology as a finding.
+RL-006,PDF limitations,unsearched queue,internal_workflow,unsearched targets,replace,Queue is an internal execution term.
+RL-007,PDF limitations,Storage-held sources were not processed for this revision,revision_history,Storage-held sources are outside the evidence analyzed in this atlas,replace,State the scope boundary without version history.
+RL-008,PDF appendix,Corrected map-event count,repair_history,Distinct implementation events,replace,Name the final analytical unit directly.
+RL-009,PDF appendix,13,391 raw mechanism-link rows,internal_workflow,"13,391 mechanism records before event-level grouping",replace,Raw and link are ambiguous without pipeline context.
+RL-010,PDF appendix,11,698 corrected map events,repair_history,11,698 distinct implementation events at the declared map unit,replace,Use the final unit rather than its correction history.
+RL-011,PDF source notes,This revision used existing local artifacts only,revision_history,This atlas uses retained documentary and administrative evidence and the final reviewed analytical tables,replace,Describe the sources rather than the production pass.
+RL-012,PDF source notes,The 76-page first atlas remains archived and byte-preserved,archive_history,,remove,Version preservation belongs in technical handoff records rather than the public atlas.
+RL-013,Landing-page title,Revised Visual Atlas,revision_history,Visual Atlas,replace,The public landing page should present one canonical publication.
+RL-014,Landing-page eyebrow,corrected handoff atlas,internal_workflow,municipal compensation evidence,replace,Readers do not need handoff or correction status.
+RL-015,Landing-page description,This revised visual atlas repairs the national mechanism maps,repair_history,This visual atlas presents compensation mechanisms claim boundaries project-wide limitations and methodology,replace,Describe content rather than repairs.
+RL-016,Landing-page button,Open revised PDF,revision_history,Open the visual atlas,replace,Use stable public navigation language.
+RL-017,Landing-page section,What changed,revision_history,What the atlas contains,replace,Remove editorial history from the public page.
+RL-018,Landing-page body,Source packaging not started; the next task will stream sources,internal_workflow,,remove,Future packaging operations do not belong in public atlas copy.
+RL-019,Landing-page statistics,14 final claims preserved,repair_history,14 adjudicated claims,replace,Preserved describes process rather than evidence status.
+RL-020,Public headings and labels,canonical layer; ingestion row; lane; queue; shard; task ID,internal_jargon,"retained evidence; record; omit other execution terms",replace_or_remove,Internal orchestration terms should not be visible to a general reader.

@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "file_count": 341,
+  "total_bytes": 18350850,
+  "outside_authorized_scope": [],
+  "source_or_raw_corpus_files": [],
+  "source_binaries_staged": false,
+  "extracted_text_corpus_staged": false,
+  "raw_analytical_corpus_staged": false
+}

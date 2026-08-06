@@ -1,0 +1,7 @@
+prior_page,title,removal_type,content_removed_from_atlas,content_relocated,final_destination
+26,Cross-mechanism findings,divider_removed,True,False,
+27,Documentary wage-growth evidence,standalone_page_removed,False,True,Scheduled base-wage growth profile and claim matrix
+28,Staffing-channel evidence,standalone_page_removed,False,True,Staffing market and comparability pressure profile and claim matrix
+29,Implementation lifecycle,standalone_page_removed,False,True,Retroactivity and payroll timing profile with adoption cross-reference
+30,Ten bounded local comparisons,standalone_page_removed,False,True,Local comparisons and counterexamples claim page
+31,Counterexamples,standalone_page_removed,False,True,Local comparisons and counterexamples claim page

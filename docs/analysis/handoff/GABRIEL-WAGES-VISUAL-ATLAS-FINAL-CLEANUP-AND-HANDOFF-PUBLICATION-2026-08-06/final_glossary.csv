@@ -1,0 +1,53 @@
+term,definition,category,first_use_section
+Safety,"Police, fire, or a combined public-safety bargaining unit.",side,Reader guide
+Non-safety,"Municipal occupations outside police and fire, including clerical, public works, sanitation, parks, libraries, transit, and health roles.",side,Reader guide
+Bargaining unit,"A group of employees represented together for negotiation and contract purposes.",analytical_unit,Reader guide
+Compensation cycle,"The contract, budget, or pay-setting period to which a compensation action belongs.",analytical_unit,Reader guide
+Local comparison,"A safety and non-safety comparison within the same municipality and compatible compensation cycle.",analytical_unit,Reader guide
+Compensation mechanism,"A process or rule that sets, changes, implements, or constrains pay.",mechanism,Reader guide
+Implementation event,"One documented municipal compensation action for a municipality, compensation cycle, compensation mechanism, and side.",analytical_unit,Reader guide
+Documentary evidence,"Contracts, agreements, awards, ordinances, and reports that document compensation rules or decisions.",evidence,Reader guide
+Administrative record,"A payroll, staffing, budget, pay-plan, schedule, or implementation document.",evidence,Reader guide
+Causal corpus,"Collective bargaining agreements, arbitration awards, and factfinding reports that can directly govern compensation terms.",corpus,Methodology
+Discourse corpus,"News, commentary, and budget narratives that explain compensation but do not themselves govern a bargaining unit contract.",corpus,Methodology
+Strict evidence,"Evidence with an exact subject, municipality, compatible period, side, pay basis, source identity, and reproducible calculation.",evidence_status,Reader guide
+Bounded evidence,"Analytically usable evidence with a stated limitation such as a same-cycle period match or a closely comparable role.",evidence_status,Reader guide
+Directional evidence,"Evidence that identifies a mechanism or direction without supporting a precise magnitude.",evidence_status,Reader guide
+Context,"Relevant background that does not directly support a claim.",evidence_status,Reader guide
+Rejected evidence,"A record excluded because its unit, identity, source support, or direction is incompatible with the proposed use.",evidence_status,Reader guide
+Mixed,"A record or result that materially contains both safety and non-safety evidence or both supporting and opposing directions.",side_and_result,Reader guide
+Side-independent,"A compensation action that applies across municipal roles without a defensible safety or non-safety assignment.",side,Reader guide
+Unresolved,"Evidence that cannot be assigned or interpreted reliably with the retained source material.",evidence_status,Reader guide
+Side-classified,"Evidence with a defensible safety or non-safety assignment.",side,Reader guide
+Hex map,"A map that groups nearby municipalities into equal-sized areas to display regional concentrations of documented events.",visual,Reader guide
+Prevalence,"The share of an eligible population that has a mechanism or outcome; it requires a valid population denominator.",inference_boundary,Reader guide
+Causal effect,"A change attributable to a mechanism rather than merely observed alongside it.",inference_boundary,Reader guide
+Wage gap,"A difference in wages between two groups measured on a compatible basis and period.",inference_boundary,Reader guide
+Base wage,"Regular salary or hourly pay before overtime, premiums, allowances, benefits, and one-time payments.",pay_basis,Mechanisms
+Total compensation,"Base wages plus all additional cash compensation and benefits included under a stated definition.",pay_basis,Mechanisms
+Across-the-board raise,"The same general increase applied across covered roles or classifications.",mechanism,Mechanisms
+COLA,"A cost-of-living adjustment, often tied to inflation or a stated index.",mechanism,Mechanisms
+Step progression,"Scheduled movement through pay steps based on time, service, qualification, or another stated rule.",mechanism,Mechanisms
+Salary schedule,"A table of pay rates by classification, rank, grade, or step.",mechanism,Mechanisms
+Pay plan,"A formally adopted structure of classifications, grades, ranges, and compensation rules.",mechanism,Mechanisms
+Retroactive pay,"Pay owed for an effective period that began before approval, payroll processing, or payment.",mechanism,Mechanisms
+Non-base pay,"Compensation outside regular base wages, such as overtime, premiums, stipends, and allowances.",mechanism,Mechanisms
+Premium pay,"Additional pay for a condition, assignment, shift, skill, hazard, or responsibility.",mechanism,Mechanisms
+Overtime,"Pay for covered work beyond regular hours under an applicable rate or rule.",mechanism,Mechanisms
+Longevity pay,"Additional compensation based on completed years of service.",mechanism,Mechanisms
+One-time payment,"A nonrecurring payment that does not permanently raise the base wage unless the source says otherwise.",mechanism,Mechanisms
+Bargaining leverage,"The practical power employees, unions, or employers can use to influence negotiated terms.",mechanism,Mechanisms
+Collective bargaining,"Negotiation between an employer and an employee representative over compensation and working conditions.",mechanism,Mechanisms
+Interest arbitration,"A process in which an arbitrator resolves disputed terms of a new or renewed agreement.",mechanism,Mechanisms
+Factfinding,"A formal review that evaluates an unresolved labor dispute and may recommend settlement terms.",mechanism,Mechanisms
+Market adjustment,"A pay change intended to align a role or schedule with a stated labor market or comparator group.",mechanism,Mechanisms
+Staffing pressure,"Hiring, vacancy, retention, workload, or minimum-staffing conditions cited in a compensation decision.",mechanism,Mechanisms
+Recruitment or retention pressure,"Difficulty attracting or keeping employees that is cited to justify a pay change or premium.",mechanism,Mechanisms
+Classification adjustment,"A change to a job classification, grade, band, range, or assigned pay level.",mechanism,Mechanisms
+Pay compression,"A narrowing pay difference between roles, ranks, grades, or experience levels.",mechanism,Mechanisms
+Ordinance adoption,"Formal authorization of compensation terms through municipal legislative action.",implementation,Mechanisms
+Payroll-effective,"A stage at which a compensation term is scheduled to operate in payroll; it remains distinct from observed payment.",implementation,Mechanisms
+Paid stage,"Retained evidence showing that a payment occurred, rather than only that it was proposed, adopted, or scheduled.",implementation,Mechanisms
+Corroboration,"Independent source support that increases confidence without multiplying the underlying event count.",evidence,Methodology
+Counterexample,"Reviewed evidence that runs against or narrows a proposed generalization.",evidence_role,Claims
+Conflict hold,"Evidence kept out of clean calculations because an unresolved conflict could change its meaning or direction.",evidence_role,Claims

@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "prior_atlases_read_only": true,
+  "excluded_as_final_page_assets": [
+    "complete rendered pages",
+    "180-DPI page renders",
+    "prior PDF pages"
+  ]
+}

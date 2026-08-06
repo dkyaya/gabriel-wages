@@ -1,0 +1,15 @@
+{"order":1,"level":"cover","heading":"Why Public-Safety Wages May Grow Differently","running_header":"","public_purpose":"State the research question without asserting an estimated wage gap."}
+{"order":2,"level":"cover_subtitle","heading":"A Visual Atlas of Municipal Compensation Evidence","running_header":"","public_purpose":"Identify the format and evidence base."}
+{"order":3,"level":"h1","heading":"What the evidence supports","running_header":"Executive summary","public_purpose":"Give the bounded conclusion and the principal exclusions."}
+{"order":4,"level":"h1","heading":"How to read this atlas","running_header":"Reader guide","public_purpose":"Define the comparison, evidence statuses, and analytical units before use."}
+{"order":5,"level":"h2","heading":"The question and the comparison","running_header":"Reader guide","public_purpose":"Explain the within-municipality comparison and side definitions."}
+{"order":6,"level":"h2","heading":"Evidence types and analytical units","running_header":"Reader guide","public_purpose":"Separate strict, bounded, directional, contextual, and rejected evidence."}
+{"order":7,"level":"h2","heading":"How to read maps, counts, and claims","running_header":"Reader guide","public_purpose":"Prevent prevalence, causal, and unit misreadings."}
+{"order":8,"level":"h1","heading":"Terms used in the atlas","running_header":"Glossary","public_purpose":"Define unfamiliar compensation and evidence terms before the analysis."}
+{"order":9,"level":"part","heading":"The evidence base","running_header":"Part I","public_purpose":"Show corpus scale, discovery, retention, and side visibility without mixing units."}
+{"order":10,"level":"part","heading":"Compensation mechanisms and related claims","running_header":"Part II","public_purpose":"Integrate each mechanism definition, wage channel, evidence, and claim boundary."}
+{"order":11,"level":"part","heading":"Findings across mechanisms","running_header":"Part III","public_purpose":"Present growth, staffing, implementation, local comparisons, and counterexamples."}
+{"order":12,"level":"part","heading":"What the claims support","running_header":"Part IV","public_purpose":"Show all fourteen final claim classes and prohibited inferences."}
+{"order":13,"level":"part","heading":"What limits the evidence","running_header":"Part V","public_purpose":"Explain project-wide limitations alongside what still worked."}
+{"order":14,"level":"part","heading":"How the project worked","running_header":"Part VI","public_purpose":"Describe the Human-AI workflow, tools, scaling, failures, and repairs."}
+{"order":15,"level":"part","heading":"Technical appendix","running_header":"Appendix","public_purpose":"Preserve detailed counts, evidence-status outcomes, methods, and source notes."}

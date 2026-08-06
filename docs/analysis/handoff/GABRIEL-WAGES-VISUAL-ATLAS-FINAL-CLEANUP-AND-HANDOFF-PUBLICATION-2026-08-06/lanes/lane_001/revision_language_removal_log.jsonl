@@ -1,0 +1,20 @@
+{"item_id":"RL-001","disposition":"replace","final_public_text":"A Visual Atlas of Municipal Compensation Evidence","scope":"PDF title, cover, and metadata","verification_rule":"No visible corrected or revised title language."}
+{"item_id":"RL-002","disposition":"replace","final_public_text":"Joachim Johnson · August 2026","scope":"PDF cover","verification_rule":"No handoff status on cover."}
+{"item_id":"RL-003","disposition":"replace","final_public_text":"What the evidence supports","scope":"PDF opening","verification_rule":"Opening leads with evidence rather than revision history."}
+{"item_id":"RL-004","disposition":"replace","final_public_text":"Counting distinct implementation events","scope":"Reader guide","verification_rule":"Declared analytical unit remains explicit."}
+{"item_id":"RL-005","disposition":"replace","final_public_text":"How records became usable evidence","scope":"Evidence-base visual","verification_rule":"No unexplained pipeline terminology."}
+{"item_id":"RL-006","disposition":"replace","final_public_text":"unsearched targets","scope":"Limitations","verification_rule":"No visible execution-queue language."}
+{"item_id":"RL-007","disposition":"replace","final_public_text":"Storage-held sources are outside the evidence analyzed in this atlas","scope":"Limitations","verification_rule":"Scope boundary retained without version language."}
+{"item_id":"RL-008","disposition":"replace","final_public_text":"Distinct implementation events","scope":"Appendix","verification_rule":"Final unit named directly."}
+{"item_id":"RL-009","disposition":"replace","final_public_text":"13,391 mechanism records before event-level grouping","scope":"Appendix","verification_rule":"Count and pre-grouping status retained."}
+{"item_id":"RL-010","disposition":"replace","final_public_text":"11,698 distinct implementation events at the declared map unit","scope":"Appendix","verification_rule":"Final map count retained without correction history."}
+{"item_id":"RL-011","disposition":"replace","final_public_text":"This atlas uses retained documentary and administrative evidence and the final reviewed analytical tables","scope":"Source note","verification_rule":"Public source description replaces production history."}
+{"item_id":"RL-012","disposition":"remove","final_public_text":"","scope":"Public PDF","verification_rule":"Archive history remains only in handoff metadata."}
+{"item_id":"RL-013","disposition":"replace","final_public_text":"Visual Atlas","scope":"Landing page","verification_rule":"One canonical public publication title."}
+{"item_id":"RL-014","disposition":"replace","final_public_text":"Municipal compensation evidence","scope":"Landing page","verification_rule":"No corrected-handoff eyebrow."}
+{"item_id":"RL-015","disposition":"replace","final_public_text":"This visual atlas presents compensation mechanisms, claim boundaries, project-wide limitations, and methodology.","scope":"Landing page","verification_rule":"Description states content rather than repair history."}
+{"item_id":"RL-016","disposition":"replace","final_public_text":"Open the visual atlas","scope":"Landing page","verification_rule":"Stable public action label."}
+{"item_id":"RL-017","disposition":"replace","final_public_text":"What the atlas contains","scope":"Landing page","verification_rule":"No revision-history section heading."}
+{"item_id":"RL-018","disposition":"remove","final_public_text":"","scope":"Landing page","verification_rule":"No future source-packaging operations in public copy."}
+{"item_id":"RL-019","disposition":"replace","final_public_text":"14 adjudicated claims","scope":"Landing page","verification_rule":"Statistic describes evidence status."}
+{"item_id":"RL-020","disposition":"replace_or_remove","final_public_text":"Use plain evidence and record terminology throughout","scope":"All visible copy","verification_rule":"Zero unexplained lane, queue, shard, task-ID, or canonical-layer references."}

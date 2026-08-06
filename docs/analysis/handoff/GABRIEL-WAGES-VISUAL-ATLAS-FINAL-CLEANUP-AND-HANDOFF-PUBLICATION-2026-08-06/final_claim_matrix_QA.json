@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "pages": 2,
+  "labels_readable": true,
+  "actual_counts": true,
+  "log_transform_explained": true,
+  "directional_not_equated_to_strict": true
+}

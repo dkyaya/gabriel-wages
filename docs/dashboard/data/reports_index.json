@@ -5,6 +5,41 @@
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
     {
+      "id": "gabriel-wages-visual-atlas-final-2026-08-06",
+      "title": "Gabriel Wages Visual Atlas",
+      "report_type": "Primary project and handoff visual atlas",
+      "date": "2026-08-06",
+      "checkpoint": "Native-text publication; 60 pages; complete page-render and theme QA",
+      "summary": "A visual-first summary of the municipal compensation mechanisms, evidence, final claim boundaries, methodology, and project-wide limitations.",
+      "tags": [
+        "current",
+        "handoff",
+        "visual atlas",
+        "native text",
+        "PDF"
+      ],
+      "current": true,
+      "historical": false,
+      "href": "gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/",
+      "link_label": "Open atlas",
+      "secondary_href": "gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+      "secondary_link_label": "Open PDF",
+      "scope_metrics": [
+        {
+          "label": "integrated profiles",
+          "value": 8
+        },
+        {
+          "label": "claims",
+          "value": 14
+        },
+        {
+          "label": "PDF pages",
+          "value": 60
+        }
+      ]
+    },
+    {
       "id": "gabriel-wages-visual-atlas-revised-2026-08-06",
       "title": "Why Public-Safety Wages May Grow Differently — Revised Visual Atlas",
       "report_type": "Primary handoff visual atlas PDF",
@@ -12,14 +47,13 @@
       "checkpoint": "Map bounds repaired; mechanisms and claims integrated; project-wide methods and limits expanded",
       "summary": "The corrected primary atlas restores the full lower-48 map extent and Alaska, explains compensation mechanisms and their wage channels, documents the safety/non-safety evidence imbalance, preserves all 14 final claim boundaries, and covers the complete project workflow.",
       "tags": [
-        "current",
         "handoff",
         "visual atlas",
         "corrected maps",
         "PDF"
       ],
-      "current": true,
-      "historical": false,
+      "current": false,
+      "historical": true,
       "href": "gabriel-wages/reports/gabriel_wages_visual_atlas_revised_2026-08-06/",
       "link_label": "Open revised visual atlas",
       "secondary_href": "gabriel-wages/reports/gabriel_wages_visual_atlas_revised_2026-08-06/gabriel_wages_visual_atlas_revised_2026-08-06.pdf",

@@ -1,0 +1,33 @@
+{
+  "lane_id": "lane_002",
+  "status": "complete",
+  "completed_at": "2026-08-06T19:10:06.787399+00:00",
+  "outputs": [
+    "final_alaska_event_inventory.csv/jsonl",
+    "final_alaska_mechanism_status.csv/jsonl",
+    "final_alaska_render_audit.json/md",
+    "final_alaska_missing_event_audit.json/md",
+    "final_mechanism_profile_layout_specification.json/md",
+    "final_mechanism_profile_manifest.csv/jsonl",
+    "final_mechanism_profile_caption_table.csv/jsonl",
+    "final_mechanism_profile_QA.csv/jsonl",
+    "caption_similarity_audit.csv/jsonl",
+    "lane_002_summary.md"
+  ],
+  "counts": {
+    "integrated_profiles": 8,
+    "grouped_appendix": 1,
+    "reader_facing_categories": 35,
+    "status_categories": 3,
+    "sparse_reader_facing_categories": 11,
+    "raw_alaska_rows": 49,
+    "deduplicated_alaska_category_units": 43,
+    "alaska_root_events": 11,
+    "alaska_municipalities": 8,
+    "profiles_with_alaska": 5,
+    "maximum_caption_similarity": 0.2231
+  },
+  "claim_classes_changed": false,
+  "figures_rendered": false,
+  "writes_outside_lane_directory": false
+}

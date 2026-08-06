@@ -1,0 +1,7 @@
+prior_page,prior_title,prior_section,final_disposition,final_destination,claim_links,reason,preservation_requirement
+26,Cross-mechanism findings,Part IV,remove_divider,none,,Standalone section becomes unnecessary after relocation,No analytical content on divider
+27,Documentary wage-growth evidence,Part IV,relocate,Scheduled base-wage growth profile and CLAIMS-MATRIX-1,CLAIM-B|CLAIM-G,Growth evidence directly interprets the scheduled-growth mechanism,Keep step progression safety lean; across-board mixed; COLA sparse; 432 records
+28,Staffing-channel evidence,Part IV,relocate,Staffing market and comparability pressure profile and CLAIMS-MATRIX-1,CLAIM-D,Staffing evidence belongs beside the mechanism and its noncausal boundary,Keep 7 direct; 216 descriptively consistent; 18135 context or insufficient
+29,Implementation lifecycle,Part IV,relocate,Retroactivity and payroll timing profile with adoption cross-reference,CLAIM-E|CLAIM-F,Lifecycle evidence explains the distinction between authorization implementation and payment,Keep exact wording no paid stage observed; never say never paid
+30,Ten bounded local comparisons,Part IV,relocate,CLAIMS-MIXED,CLAIM-G|CLAIM-H,Local comparisons are countervailing evidence for the mixed global proposition,Keep 10 comparisons: 5 safety favorable; 4 non-safety favorable; 1 neutral
+31,Counterexamples,Part IV,relocate,CLAIMS-MIXED,CLAIM-G|CLAIM-H,Counterexamples belong beside the mixed claim and bounded core conclusion,Keep all 7 unique records; do not count the two claim linkages as 14

@@ -1,0 +1,30 @@
+{
+  "title": "Why Public-Safety Wages May Grow Differently: A Visual Atlas of Municipal Compensation Evidence",
+  "author": "Joachim Johnson",
+  "subject": "Municipal compensation mechanisms, final claim boundaries, project-wide limitations, and research methodology",
+  "keywords": [
+    "municipal compensation",
+    "public safety",
+    "collective bargaining",
+    "wage growth",
+    "administrative records",
+    "documentary evidence"
+  ],
+  "language": "en-US",
+  "publication_date": "2026-08-06",
+  "rights_note": "Source-document redistribution remains subject to the source-library review; the atlas contains bounded analytical summaries and source-linked evidence.",
+  "accessibility_title": "Visual atlas of municipal compensation evidence and its limits",
+  "description": "A visual-first account of how compensation mechanisms operate in reviewed municipal records, what fourteen adjudicated claims support, and what the evidence does not establish.",
+  "canonical_claim_count": 14,
+  "claim_class_counts": {
+    "supported": 1,
+    "conditionally_supported": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "unsupported": 6,
+    "exploratory": 0,
+    "contradicted": 0
+  },
+  "version_history_visible": false,
+  "national_or_causal_estimate_claimed": false
+}

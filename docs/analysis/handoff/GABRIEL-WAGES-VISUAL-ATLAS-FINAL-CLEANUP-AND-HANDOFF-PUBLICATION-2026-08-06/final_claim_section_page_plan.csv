@@ -1,0 +1,7 @@
+sequence,page_id,page_type,title,content_ids,source_visuals,disposition,preservation_note
+1,CLAIMS-OPEN,divider,What the claims support,CLAIM-A|CLAIM-B|CLAIM-C|CLAIM-D|CLAIM-E|CLAIM-F|CLAIM-G|CLAIM-H|UNSUP-01|UNSUP-02|UNSUP-03|UNSUP-04|UNSUP-05|UNSUP-06,revised_claim_overview,retain_and_simplify,Show class totals once
+2,CLAIMS-MATRIX-1,matrix,What the evidence supports,CLAIM-A|CLAIM-B|CLAIM-C|CLAIM-D|CLAIM-E|CLAIM-F|CLAIM-G|CLAIM-H,repaired_claim_evidence_matrix,replace_with_two_page_matrix,Complete wording and linked-record counts
+3,CLAIMS-MATRIX-2,matrix,What the evidence does not establish,UNSUP-01|UNSUP-02|UNSUP-03|UNSUP-04|UNSUP-05|UNSUP-06,repaired_claim_evidence_matrix,replace_with_two_page_matrix,Keep all six unsupported propositions
+4,CLAIMS-MIXED,visual,Local comparisons and counterexamples,CLAIM-G|CLAIM-H,Ten bounded local comparisons|Counterexamples,relocate_from_cross_mechanism_section,Preserve all ten local comparisons and seven unique counterexamples
+5,CLAIMS-SENSITIVITY,visual,Strict and broader evidence stayed separate,CLAIM-A|CLAIM-B|CLAIM-C|CLAIM-D|CLAIM-E|CLAIM-F|CLAIM-G|CLAIM-H,Strict versus broader evidence,retain_and_clean,Five stronger same class; one more mixed; eight unchanged; zero upgrades
+6,CLAIMS-BOUNDARY,visual,Final evidence boundary,UNSUP-01|UNSUP-02|UNSUP-03|UNSUP-04|UNSUP-05|UNSUP-06,Final evidence boundary,retain_and_clean,No national wage gap prevalence regression or causal effect

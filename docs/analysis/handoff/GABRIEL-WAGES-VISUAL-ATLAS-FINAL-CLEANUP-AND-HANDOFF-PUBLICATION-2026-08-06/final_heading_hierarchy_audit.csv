@@ -1,0 +1,61 @@
+page,section,page_title,duplicate_internal_title,status
+1,Opening,Cover,False,pass
+2,Opening,Executive summary,False,pass
+3,Part I · Reader guide,Research question and analytical units,False,pass
+4,Part I · Reader guide,Maps and evidence tiers,False,pass
+5,Part I · Reader guide,Core compensation-mechanism glossary,False,pass
+6,Part II · Corpus and evidence base,Corpus scale and source mix,False,pass
+7,Part II · Corpus and evidence base,"Discovery, retention, and usable evidence",False,pass
+8,Part II · Corpus and evidence base,Safety and non-safety visibility,False,pass
+9,Part II · Corpus and evidence base,Analytical readiness and evidence boundaries,False,pass
+10,Part III · Compensation mechanisms,Retroactivity and payroll timing,False,pass
+11,Part III · Compensation mechanisms,Non-base and one-time compensation,False,pass
+12,Part III · Compensation mechanisms,Scheduled base-wage growth,False,pass
+13,Part III · Compensation mechanisms,"Budgets, pay plans, and fiscal constraint",False,pass
+14,Part III · Compensation mechanisms,Council and ordinance adoption,False,pass
+15,Part III · Compensation mechanisms,Formal bargaining and impasse resolution,False,pass
+16,Part III · Compensation mechanisms,Classification and pay structure,False,pass
+17,Part III · Compensation mechanisms,"Staffing, market, and comparability pressure",False,pass
+18,Part III · Compensation mechanisms,Documentary growth by evidence tier,False,pass
+19,Part III · Compensation mechanisms,Staffing pressure and channel evidence,False,pass
+20,Part III · Compensation mechanisms,Implementation lifecycle,False,pass
+21,Part IV · Final claim boundaries,Ten bounded local comparisons,False,pass
+22,Part IV · Final claim boundaries,Final claim classes,False,pass
+23,Part IV · Final claim boundaries,Evidence matrix: bounded findings,False,pass
+24,Part IV · Final claim boundaries,Evidence matrix: unsupported boundaries,False,pass
+25,Part IV · Final claim boundaries,Claims CLAIM-A and CLAIM-B,False,pass
+26,Part IV · Final claim boundaries,Claims CLAIM-C and CLAIM-D,False,pass
+27,Part IV · Final claim boundaries,Claims CLAIM-E and CLAIM-F,False,pass
+28,Part IV · Final claim boundaries,Claims CLAIM-G and CLAIM-H,False,pass
+29,Part IV · Final claim boundaries,Claims UNSUP-01 and UNSUP-02,False,pass
+30,Part IV · Final claim boundaries,Claims UNSUP-03 and UNSUP-04,False,pass
+31,Part IV · Final claim boundaries,Claims UNSUP-05 and UNSUP-06,False,pass
+32,Part IV · Final claim boundaries,Counterexamples and countervailing evidence,False,pass
+33,Part IV · Final claim boundaries,Strict evidence and broader evidence,False,pass
+34,Part V · Project-wide limitations,Limitations 1: Research design and scope,False,pass
+35,Part V · Project-wide limitations,"Limitations 2: Verification, access, and storage",False,pass
+36,Part V · Project-wide limitations,Limitations 3: Extraction volume and compaction,False,pass
+37,Part V · Project-wide limitations,Limitations 4: Rating and semantic review,False,pass
+38,Part V · Project-wide limitations,Limitations 5: Safety and non-safety evidence imbalance,False,pass
+39,Part V · Project-wide limitations,Limitations 6: Locality and visual grouping,False,pass
+40,Part V · Project-wide limitations,"What worked, what did not, and what remains possible",False,pass
+41,Part VI · Methodology and project history,Full project workflow,False,pass
+42,Part VI · Methodology and project history,From a continuing log to relay packages,False,pass
+43,Part VI · Methodology and project history,Human and AI roles; tools by stage,False,pass
+44,Part VI · Methodology and project history,"Codex execution, worktrees, and staggered lanes",False,pass
+45,Part VI · Methodology and project history,Representative scaling milestones,False,pass
+46,Part VI · Methodology and project history,Failures and repairs: evidence pipeline,False,pass
+47,Part VI · Methodology and project history,Failures and repairs: analysis and publication,False,pass
+48,Part VI · Methodology and project history,Evidence tiers remained separate,False,pass
+49,Appendix · Mechanism categories,Reader-facing categories 1–4,False,pass
+50,Appendix · Mechanism categories,Reader-facing categories 5–8,False,pass
+51,Appendix · Mechanism categories,Reader-facing categories 9–12,False,pass
+52,Appendix · Mechanism categories,Reader-facing categories 13–16,False,pass
+53,Appendix · Mechanism categories,Reader-facing categories 17–20,False,pass
+54,Appendix · Mechanism categories,Reader-facing categories 21–24,False,pass
+55,Appendix · Mechanism categories,Reader-facing categories 25–28,False,pass
+56,Appendix · Mechanism categories,Reader-facing categories 29–32,False,pass
+57,Appendix · Mechanism categories,Reader-facing categories 33–35,False,pass
+58,Appendix,Unclassified or no direct compensation outcome,False,pass
+59,Appendix,Technical counts and analytical boundaries,False,pass
+60,Appendix,Source and method notes,False,pass

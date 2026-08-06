@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "raw_alaska_mechanism_link_rows": 49,
+  "deduplicated_alaska_category_map_units": 43,
+  "duplicate_rows_removed_at_declared_map_unit": 6,
+  "unique_alaska_root_events": 11,
+  "unique_alaska_municipalities": 8,
+  "categories_with_alaska_events": 13,
+  "categories_with_explicit_none": 25,
+  "profiles_with_point_inset": 5,
+  "profiles_with_explicit_none": 3,
+  "profiles_with_hex_inset": 0,
+  "profile_decisions": [
+    {
+      "profile_id": "formal-bargaining",
+      "alaska_event_count": 0,
+      "alaska_municipality_count": 0,
+      "display_mode": "explicit_none"
+    },
+    {
+      "profile_id": "scheduled-base-growth",
+      "alaska_event_count": 5,
+      "alaska_municipality_count": 4,
+      "display_mode": "point_inset"
+    },
+    {
+      "profile_id": "non-base-compensation",
+      "alaska_event_count": 3,
+      "alaska_municipality_count": 3,
+      "display_mode": "point_inset"
+    },
+    {
+      "profile_id": "staffing-market-pressure",
+      "alaska_event_count": 0,
+      "alaska_municipality_count": 0,
+      "display_mode": "explicit_none"
+    },
+    {
+      "profile_id": "retroactivity-payroll",
+      "alaska_event_count": 6,
+      "alaska_municipality_count": 6,
+      "display_mode": "point_inset"
+    },
+    {
+      "profile_id": "budgets-pay-plans",
+      "alaska_event_count": 1,
+      "alaska_municipality_count": 1,
+      "display_mode": "point_inset"
+    },
+    {
+      "profile_id": "ordinance-adoption",
+      "alaska_event_count": 3,
+      "alaska_municipality_count": 2,
+      "display_mode": "point_inset"
+    },
+    {
+      "profile_id": "classification-structure",
+      "alaska_event_count": 0,
+      "alaska_municipality_count": 0,
+      "display_mode": "explicit_none"
+    }
+  ],
+  "render_rule": "Use exact points for Alaska where events exist; use an explicit no-retained-event statement otherwise; never use Alaska density shading."
+}

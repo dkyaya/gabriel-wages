@@ -1,0 +1,10 @@
+profile_id,profile_type,event_count_matches_profile_plan,alaska_count_matches_map_manifest,mechanism_tags_match,claim_ids_preserved,claim_classes_preserved,caption_components_complete,caption_word_count,caption_within_70_115_words,alaska_display_explicit,revision_language_in_public_copy,qa_status
+formal-bargaining,integrated_mechanism_profile,True,True,True,True,True,True,71,True,True,False,pass
+scheduled-base-growth,integrated_mechanism_profile,True,True,True,True,True,True,70,True,True,False,pass
+non-base-compensation,integrated_mechanism_profile,True,True,True,True,True,True,75,True,True,False,pass
+staffing-market-pressure,integrated_mechanism_profile,True,True,True,True,True,True,72,True,True,False,pass
+retroactivity-payroll,integrated_mechanism_profile,True,True,True,True,True,True,72,True,True,False,pass
+budgets-pay-plans,integrated_mechanism_profile,True,True,True,True,True,True,79,True,True,False,pass
+ordinance-adoption,integrated_mechanism_profile,True,True,True,True,True,True,72,True,True,False,pass
+classification-structure,integrated_mechanism_profile,True,True,True,True,True,True,76,True,True,False,pass
+grouped-sparse-status-appendix,grouped_sparse_status_appendix,not_applicable,True,True,True,True,True,84,True,True,False,pass

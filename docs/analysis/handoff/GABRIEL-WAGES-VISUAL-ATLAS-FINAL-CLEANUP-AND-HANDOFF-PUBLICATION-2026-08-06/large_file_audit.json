@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "threshold_bytes": 20971520,
+  "files_at_or_above_threshold": [],
+  "final_pdf_bytes": 2369807,
+  "bulky_render_QA_tracked": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "deduplicated_alaska_category_map_units_expected": 43,
+  "deduplicated_alaska_category_map_units_in_inventory": 43,
+  "coordinate_missing_count": 0,
+  "category_count_mismatch_count": 0,
+  "profile_count_mismatch_count": 0,
+  "missing_event_count": 0,
+  "raw_duplicate_rows_correctly_excluded": 6,
+  "all_eight_profiles_have_explicit_alaska_status": true
+}

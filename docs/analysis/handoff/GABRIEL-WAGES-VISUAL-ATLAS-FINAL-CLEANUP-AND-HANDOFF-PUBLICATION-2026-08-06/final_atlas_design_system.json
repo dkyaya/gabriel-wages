@@ -1,0 +1,37 @@
+{
+  "page_size": "US Letter landscape",
+  "width_points": 792.0,
+  "height_points": 612.0,
+  "native_text": true,
+  "figure_embedding": "vector PDF merged into reserved region",
+  "font_family": "Helvetica system sans-serif",
+  "palette": {
+    "navy": "#17263A",
+    "teal": "#078579",
+    "safety": "#D83A00",
+    "non_safety": "#1368E8",
+    "mixed": "#7B2FF7",
+    "independent": "#4B5563",
+    "unresolved": "#D1D5DB",
+    "body": "#667085",
+    "pale": "#F4F6F8",
+    "line": "#D9DEE7",
+    "white": "#FFFFFF",
+    "danger": "#B42318",
+    "amber": "#B54708",
+    "green": "#067647",
+    "blue_pale": "#EEF4FF",
+    "orange_pale": "#FFF4ED",
+    "teal_pale": "#E8F7F5"
+  },
+  "minimum_sizes_points": {
+    "cover": 30,
+    "section": 9,
+    "page_title": 21,
+    "subtitle": 11,
+    "body": 9.5,
+    "annotation": 8.5,
+    "source_note": 7.5,
+    "footer": 7.5
+  }
+}

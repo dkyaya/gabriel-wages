@@ -1,0 +1,6 @@
+visual_id,prior_page,prior_title,new_section,new_page_id,new_context,claim_links,exact_content_to_preserve
+XMECH-GROWTH,27,Documentary wage-growth evidence,Compensation mechanisms,SCHEDULED-GROWTH-PROFILE,Inset below mechanism definition and map,CLAIM-B|CLAIM-G,432 growth records; 3 Tier 1 numeric; 6 Tier 2 numeric; 423 directional; mixed mechanism result
+XMECH-STAFFING,28,Staffing-channel evidence,Compensation mechanisms,STAFFING-MARKET-PROFILE,Inset beside wage-channel explanation,CLAIM-D,7 direct channel records; 216 descriptively consistent; no causal finding
+XMECH-IMPLEMENTATION,29,Implementation lifecycle,Compensation mechanisms,RETROACTIVITY-PAYROLL-PROFILE,Compact lifecycle strip plus adoption cross-reference,CLAIM-E|CLAIM-F,1268 sequences; 38 reviewed; 19 adopted with no paid stage observed; 2 paid with prior adoption
+XMECH-LOCAL,30,Ten bounded local comparisons,Claims,CLAIMS-MIXED,Left panel,CLAIM-G|CLAIM-H,10 comparisons; 5 safety favorable; 4 non-safety favorable; 1 neutral; no national average
+XMECH-COUNTER,31,Counterexamples,Claims,CLAIMS-MIXED,Right panel,CLAIM-G|CLAIM-H,7 unique counterexamples; 1 direct quantitative and 6 qualitative or mechanism-bounding

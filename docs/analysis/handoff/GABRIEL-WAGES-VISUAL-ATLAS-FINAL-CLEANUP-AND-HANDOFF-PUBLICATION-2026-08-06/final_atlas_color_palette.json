@@ -1,0 +1,19 @@
+{
+  "navy": "#17263A",
+  "teal": "#078579",
+  "safety": "#D83A00",
+  "non_safety": "#1368E8",
+  "mixed": "#7B2FF7",
+  "independent": "#4B5563",
+  "unresolved": "#D1D5DB",
+  "body": "#667085",
+  "pale": "#F4F6F8",
+  "line": "#D9DEE7",
+  "white": "#FFFFFF",
+  "danger": "#B42318",
+  "amber": "#B54708",
+  "green": "#067647",
+  "blue_pale": "#EEF4FF",
+  "orange_pale": "#FFF4ED",
+  "teal_pale": "#E8F7F5"
+}

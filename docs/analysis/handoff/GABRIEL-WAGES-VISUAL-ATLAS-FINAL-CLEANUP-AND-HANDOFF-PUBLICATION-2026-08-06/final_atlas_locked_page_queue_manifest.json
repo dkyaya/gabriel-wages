@@ -1,0 +1,51 @@
+{
+  "status": "locked",
+  "queues": {
+    "1": [
+      "cover",
+      "executive_summary",
+      "reader_guide_1",
+      "reader_guide_2",
+      "reader_guide_3"
+    ],
+    "2": [
+      "retroactivity-payroll",
+      "non-base-compensation",
+      "scheduled-base-growth",
+      "budgets-pay-plans",
+      "ordinance-adoption",
+      "formal-bargaining",
+      "classification-structure",
+      "staffing-market-pressure",
+      "alaska_mechanism_audit"
+    ],
+    "3": [
+      "corpus",
+      "pipeline",
+      "side_visibility",
+      "readiness",
+      "growth",
+      "staffing",
+      "implementation",
+      "local_comparisons",
+      "claim_overview",
+      "claim_matrix_1",
+      "claim_matrix_2",
+      "counterexamples"
+    ],
+    "4": [
+      "page_plan",
+      "limitations",
+      "methodology",
+      "category_appendix",
+      "status_appendix"
+    ],
+    "5": [
+      "native_composition",
+      "text_extraction",
+      "300dpi_render",
+      "zoom_QA",
+      "publication"
+    ]
+  }
+}

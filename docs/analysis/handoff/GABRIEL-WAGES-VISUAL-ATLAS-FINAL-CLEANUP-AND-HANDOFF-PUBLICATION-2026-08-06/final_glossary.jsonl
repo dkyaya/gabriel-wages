@@ -1,0 +1,52 @@
+{"term":"Safety","definition":"Police, fire, or a combined public-safety bargaining unit.","category":"side","first_use_section":"Reader guide"}
+{"term":"Non-safety","definition":"Municipal occupations outside police and fire, including clerical, public works, sanitation, parks, libraries, transit, and health roles.","category":"side","first_use_section":"Reader guide"}
+{"term":"Bargaining unit","definition":"A group of employees represented together for negotiation and contract purposes.","category":"analytical_unit","first_use_section":"Reader guide"}
+{"term":"Compensation cycle","definition":"The contract, budget, or pay-setting period to which a compensation action belongs.","category":"analytical_unit","first_use_section":"Reader guide"}
+{"term":"Local comparison","definition":"A safety and non-safety comparison within the same municipality and compatible compensation cycle.","category":"analytical_unit","first_use_section":"Reader guide"}
+{"term":"Compensation mechanism","definition":"A process or rule that sets, changes, implements, or constrains pay.","category":"mechanism","first_use_section":"Reader guide"}
+{"term":"Implementation event","definition":"One documented municipal compensation action for a municipality, compensation cycle, compensation mechanism, and side.","category":"analytical_unit","first_use_section":"Reader guide"}
+{"term":"Documentary evidence","definition":"Contracts, agreements, awards, ordinances, and reports that document compensation rules or decisions.","category":"evidence","first_use_section":"Reader guide"}
+{"term":"Administrative record","definition":"A payroll, staffing, budget, pay-plan, schedule, or implementation document.","category":"evidence","first_use_section":"Reader guide"}
+{"term":"Causal corpus","definition":"Collective bargaining agreements, arbitration awards, and factfinding reports that can directly govern compensation terms.","category":"corpus","first_use_section":"Methodology"}
+{"term":"Discourse corpus","definition":"News, commentary, and budget narratives that explain compensation but do not themselves govern a bargaining unit contract.","category":"corpus","first_use_section":"Methodology"}
+{"term":"Strict evidence","definition":"Evidence with an exact subject, municipality, compatible period, side, pay basis, source identity, and reproducible calculation.","category":"evidence_status","first_use_section":"Reader guide"}
+{"term":"Bounded evidence","definition":"Analytically usable evidence with a stated limitation such as a same-cycle period match or a closely comparable role.","category":"evidence_status","first_use_section":"Reader guide"}
+{"term":"Directional evidence","definition":"Evidence that identifies a mechanism or direction without supporting a precise magnitude.","category":"evidence_status","first_use_section":"Reader guide"}
+{"term":"Context","definition":"Relevant background that does not directly support a claim.","category":"evidence_status","first_use_section":"Reader guide"}
+{"term":"Rejected evidence","definition":"A record excluded because its unit, identity, source support, or direction is incompatible with the proposed use.","category":"evidence_status","first_use_section":"Reader guide"}
+{"term":"Mixed","definition":"A record or result that materially contains both safety and non-safety evidence or both supporting and opposing directions.","category":"side_and_result","first_use_section":"Reader guide"}
+{"term":"Side-independent","definition":"A compensation action that applies across municipal roles without a defensible safety or non-safety assignment.","category":"side","first_use_section":"Reader guide"}
+{"term":"Unresolved","definition":"Evidence that cannot be assigned or interpreted reliably with the retained source material.","category":"evidence_status","first_use_section":"Reader guide"}
+{"term":"Side-classified","definition":"Evidence with a defensible safety or non-safety assignment.","category":"side","first_use_section":"Reader guide"}
+{"term":"Hex map","definition":"A map that groups nearby municipalities into equal-sized areas to display regional concentrations of documented events.","category":"visual","first_use_section":"Reader guide"}
+{"term":"Prevalence","definition":"The share of an eligible population that has a mechanism or outcome; it requires a valid population denominator.","category":"inference_boundary","first_use_section":"Reader guide"}
+{"term":"Causal effect","definition":"A change attributable to a mechanism rather than merely observed alongside it.","category":"inference_boundary","first_use_section":"Reader guide"}
+{"term":"Wage gap","definition":"A difference in wages between two groups measured on a compatible basis and period.","category":"inference_boundary","first_use_section":"Reader guide"}
+{"term":"Base wage","definition":"Regular salary or hourly pay before overtime, premiums, allowances, benefits, and one-time payments.","category":"pay_basis","first_use_section":"Mechanisms"}
+{"term":"Total compensation","definition":"Base wages plus all additional cash compensation and benefits included under a stated definition.","category":"pay_basis","first_use_section":"Mechanisms"}
+{"term":"Across-the-board raise","definition":"The same general increase applied across covered roles or classifications.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"COLA","definition":"A cost-of-living adjustment, often tied to inflation or a stated index.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Step progression","definition":"Scheduled movement through pay steps based on time, service, qualification, or another stated rule.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Salary schedule","definition":"A table of pay rates by classification, rank, grade, or step.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Pay plan","definition":"A formally adopted structure of classifications, grades, ranges, and compensation rules.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Retroactive pay","definition":"Pay owed for an effective period that began before approval, payroll processing, or payment.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Non-base pay","definition":"Compensation outside regular base wages, such as overtime, premiums, stipends, and allowances.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Premium pay","definition":"Additional pay for a condition, assignment, shift, skill, hazard, or responsibility.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Overtime","definition":"Pay for covered work beyond regular hours under an applicable rate or rule.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Longevity pay","definition":"Additional compensation based on completed years of service.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"One-time payment","definition":"A nonrecurring payment that does not permanently raise the base wage unless the source says otherwise.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Bargaining leverage","definition":"The practical power employees, unions, or employers can use to influence negotiated terms.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Collective bargaining","definition":"Negotiation between an employer and an employee representative over compensation and working conditions.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Interest arbitration","definition":"A process in which an arbitrator resolves disputed terms of a new or renewed agreement.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Factfinding","definition":"A formal review that evaluates an unresolved labor dispute and may recommend settlement terms.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Market adjustment","definition":"A pay change intended to align a role or schedule with a stated labor market or comparator group.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Staffing pressure","definition":"Hiring, vacancy, retention, workload, or minimum-staffing conditions cited in a compensation decision.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Recruitment or retention pressure","definition":"Difficulty attracting or keeping employees that is cited to justify a pay change or premium.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Classification adjustment","definition":"A change to a job classification, grade, band, range, or assigned pay level.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Pay compression","definition":"A narrowing pay difference between roles, ranks, grades, or experience levels.","category":"mechanism","first_use_section":"Mechanisms"}
+{"term":"Ordinance adoption","definition":"Formal authorization of compensation terms through municipal legislative action.","category":"implementation","first_use_section":"Mechanisms"}
+{"term":"Payroll-effective","definition":"A stage at which a compensation term is scheduled to operate in payroll; it remains distinct from observed payment.","category":"implementation","first_use_section":"Mechanisms"}
+{"term":"Paid stage","definition":"Retained evidence showing that a payment occurred, rather than only that it was proposed, adopted, or scheduled.","category":"implementation","first_use_section":"Mechanisms"}
+{"term":"Corroboration","definition":"Independent source support that increases confidence without multiplying the underlying event count.","category":"evidence","first_use_section":"Methodology"}
+{"term":"Counterexample","definition":"Reviewed evidence that runs against or narrows a proposed generalization.","category":"evidence_role","first_use_section":"Claims"}
+{"term":"Conflict hold","definition":"Evidence kept out of clean calculations because an unresolved conflict could change its meaning or direction.","category":"evidence_role","first_use_section":"Claims"}

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "starting_head": "a1db1828914da159e089d3effafdf0c6b42a4296",
+  "claims": 14,
+  "counterexamples": 7,
+  "unresolved_conflicts": 201,
+  "reader_facing_categories": 35,
+  "status_categories": 3,
+  "profiles": 8,
+  "source_packaging_started": false,
+  "cleanup_started": false,
+  "free_gib": 15.188,
+  "native_compositor": "ReportLab plus pypdf vector-page merge"
+}

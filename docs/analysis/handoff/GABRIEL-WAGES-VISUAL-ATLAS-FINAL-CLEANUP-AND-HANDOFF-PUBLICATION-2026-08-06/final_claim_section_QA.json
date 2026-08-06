@@ -1,0 +1,57 @@
+{
+  "status": "pass_editorial_and_data_pre_render",
+  "render_status": "not_rendered_by_lane_003",
+  "checks": {
+    "claim_count": {"expected": 14, "observed": 14, "pass": true},
+    "claim_ids_unique": {"expected": 14, "observed": 14, "pass": true},
+    "claim_text_exact_match": {"expected": 14, "observed": 14, "pass": true},
+    "claim_class_exact_match": {"expected": 14, "observed": 14, "pass": true},
+    "class_distribution": {
+      "expected": {"supported": 1, "conditionally_supported": 1, "mechanism_supported_only": 5, "mixed_or_countervailing": 1, "unsupported": 6},
+      "observed": {"supported": 1, "conditionally_supported": 1, "mechanism_supported_only": 5, "mixed_or_countervailing": 1, "unsupported": 6},
+      "pass": true
+    },
+    "counterexample_link_rows": {"expected": 14, "observed": 14, "pass": true},
+    "unique_counterexamples": {"expected": 7, "observed": 7, "pass": true},
+    "counterexample_claims": {"expected": ["CLAIM-G", "CLAIM-H"], "observed": ["CLAIM-G", "CLAIM-H"], "pass": true},
+    "global_unlinked_conflicts": {"expected": 201, "observed": 201, "pass": true},
+    "claim_specific_conflicts": {"expected": 0, "observed": 0, "pass": true},
+    "two_page_matrix": {"expected_pages": 2, "observed_pages": 2, "pass": true},
+    "count_non_equivalence_warning": {"required": true, "present": true, "pass": true},
+    "full_claim_labels_required": {"required": true, "specified": true, "pass": true},
+    "cross_mechanism_analytical_visuals_relocated": {"expected": 5, "observed": 5, "pass": true},
+    "cross_mechanism_analytical_visuals_discarded": {"expected": 0, "observed": 0, "pass": true},
+    "claim_readjudication": {"expected": false, "observed": false, "pass": true}
+  },
+  "side_data_checks": {
+    "documentary_spans": {"sum": 51639, "denominator": 51639, "pass": true},
+    "implementation_events": {"sum": 2998, "denominator": 2998, "pass": true},
+    "mechanism_map_events": {"sum": 11698, "denominator": 11698, "pass": true},
+    "documentary_growth": {"sum": 432, "denominator": 432, "pass": true},
+    "bounded_local_comparisons": {"sum": 10, "denominator": 10, "pass": true},
+    "source_level_rate_omitted": true
+  },
+  "csv_jsonl_parity": {
+    "final_corpus_chart_data": {"csv_rows": 20, "jsonl_rows": 20, "pass": true},
+    "final_side_visibility_data": {"csv_rows": 25, "jsonl_rows": 25, "pass": true},
+    "final_claim_matrix_data": {"csv_rows": 14, "jsonl_rows": 14, "pass": true},
+    "final_claim_section_page_plan": {"csv_rows": 6, "jsonl_rows": 6, "pass": true},
+    "cross_mechanism_visual_disposition": {"csv_rows": 6, "jsonl_rows": 6, "pass": true},
+    "removed_cross_mechanism_pages": {"csv_rows": 6, "jsonl_rows": 6, "pass": true},
+    "relocated_cross_mechanism_visuals": {"csv_rows": 5, "jsonl_rows": 5, "pass": true}
+  },
+  "remaining_render_qa": [
+    "verify wrapped full claim text on both matrix pages",
+    "verify minimum font sizes at report width",
+    "verify no label or footer clipping",
+    "verify exact plotted values against lane tables",
+    "verify side bars total 100 percent within rounding tolerance",
+    "verify counterexample and conflict notes remain attached to the correct visual"
+  ],
+  "canonical_sources": [
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/final_adjudicated_claim_table.csv",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/claim_counterexample_links.csv",
+    "docs/analysis/handoff/GABRIEL-WAGES-VISUAL-ATLAS-CORRECTION-AND-RESTRUCTURE-2026-08-06/side_composition_by_evidence_layer.csv",
+    "docs/analysis/handoff/GABRIEL-WAGES-VISUAL-ATLAS-CORRECTION-AND-RESTRUCTURE-2026-08-06/revised_PDF_page_plan.csv"
+  ]
+}

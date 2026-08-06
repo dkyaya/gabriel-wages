@@ -1,0 +1,88 @@
+{
+  "specification_id": "LANE-003-FINAL-CHART-CLEANUP-V1",
+  "status": "data_and_editorial_plan_complete_render_pending",
+  "global_rules": {
+    "page_size": "US Letter landscape",
+    "minimum_title_pt": 20,
+    "minimum_subtitle_pt": 11,
+    "minimum_body_pt": 9,
+    "minimum_axis_pt": 8.5,
+    "minimum_technical_note_pt": 7.5,
+    "full_labels_required": true,
+    "no_ellipsis_for_required_meaning": true,
+    "no_color_only_encoding": true,
+    "no_truncated_axes": true,
+    "no_unexplained_caps": true,
+    "thousands_separator": true,
+    "percent_precision": "one decimal in the figure; six decimals retained in data",
+    "source_note_required": true,
+    "analytical_unit_required": true,
+    "denominator_required_when_applicable": true
+  },
+  "corpus_charts": {
+    "source": "final_corpus_chart_data.csv",
+    "CORPUS-01": {
+      "title": "The corpus contains several different kinds of material",
+      "design": "two-column labeled metric groups rather than one shared bar chart",
+      "left_panel": "native PDF files and native PDF pages",
+      "right_panel": "HTML documents, tables, rows, embedded records, and CSV/TSV files and rows",
+      "required_warning": "These counts use different units and are not additive. Native PDF pages must not be added to a text-page equivalent.",
+      "forbidden": ["single quantitative axis across files pages tables rows and records", "combined grand total"]
+    },
+    "CORPUS-02": {
+      "title": "Source volume narrowed into bounded analytical layers",
+      "design": "four compact panels with exact counts and explicit units",
+      "panels": ["source inventory", "external pipeline", "analytical units", "claim boundaries"],
+      "required_warning": "Sources, payloads, events, mechanism links, municipalities, claims, counterexamples, and conflicts are different analytical units.",
+      "mechanism_count_reconciliation": "13,391 is the canonical mechanism-to-event link count. The 11,698 side-visibility denominator is the final deduplicated map-unit layer. Label both units and never substitute one for the other."
+    }
+  },
+  "side_visibility_chart": {
+    "source": "final_side_visibility_data.csv",
+    "title": "Safety records are more visible among records whose side could be classified",
+    "panel_A": {
+      "design": "four 100-percent stacked horizontal bars",
+      "layers": ["documentary_spans", "implementation_events", "mechanism_map_events", "documentary_growth"],
+      "categories": ["safety", "non_safety", "mixed", "side_independent", "unresolved"],
+      "label": "show denominator and exact analytical unit next to each bar",
+      "scale": "0 to 100 percent for every layer"
+    },
+    "panel_B": {
+      "design": "paired safety/non-safety bars among side-classified records only",
+      "denominator": "safety plus non-safety within each layer",
+      "annotation": "Bounded local comparisons are two-sided comparison units and remain a note, not a fifth side-classification bar"
+    },
+    "required_interpretation": "Safety-side records appear more often than non-safety records in the retained successfully classified evidence.",
+    "required_boundary": "The imbalance may reflect institutional differences, document formality, label clarity, source discovery, or unresolved classifications. It is not a national prevalence, wage-growth, or causal estimate.",
+    "forbidden": ["event-per-document rate", "cross-layer count total", "claim that non-safety mechanisms are absent"]
+  },
+  "claim_matrix": {
+    "source": "final_claim_matrix_data.csv",
+    "layout_specification": "final_claim_matrix_layout_specification.json",
+    "design": "two-page matrix",
+    "page_1_claims": 8,
+    "page_2_claims": 6,
+    "full_claim_text_required": true,
+    "count_warning_required": true,
+    "global_conflicts_display": "one footer callout for 201 global unlinked conflicts",
+    "counterexample_display": "seven unique records; linked to CLAIM-G and CLAIM-H without doubling the corpus total"
+  },
+  "relocated_cross_mechanism_visuals": {
+    "source": "relocated_cross_mechanism_visuals.csv",
+    "standalone_cross_mechanism_section_removed": true,
+    "analytical_visuals_removed": 0,
+    "visuals_relocated": 5,
+    "principle": "place each visual beside the mechanism or claim it interprets"
+  },
+  "rendering_handoff": {
+    "final_rendering_authorized_in_lane": false,
+    "required_next_checks": [
+      "render both claim-matrix pages at report size",
+      "confirm no claim wording or labels clip",
+      "confirm all side bars total 100 percent within rounding tolerance",
+      "confirm exact data labels match the lane tables",
+      "confirm the seven counterexamples remain visibly distinct",
+      "confirm 201 conflicts are described as a global hold"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+page,section,title,page_role,density,thin_divider,standalone_cross_mechanism,accounting,review_status,concrete_correction
+1,Opening,Cover,cover,balanced,false,false,"35 categories; 14 claims; 7 counterexamples",pass,none
+2,Opening,Executive summary,summary,balanced,false,false,"core findings and four scale counts",pass_with_copy_change,"Replace mechanism-event link records with mechanism records before event-level grouping."
+3,Reader guide,Research question and analytical units,guide,balanced,false,false,"units and side definitions",pass_with_copy_change,"Replace deduplicated with distinct in the implementation-event definition."
+4,Reader guide,Maps and evidence tiers,guide,balanced,false,false,"map boundary and five evidence statuses",pass,none
+5,Reader guide,Core compensation-mechanism glossary,guide_glossary,dense_but_readable,false,false,"16 core terms before analytical use",pass,"Keep at least 7.9-point definitions; do not add entries to this page."
+6,Corpus and evidence base,Corpus scale and source mix,analytical_visual,balanced,false,false,"separate corpus units",pass,none
+7,Corpus and evidence base,Discovery retention and usable evidence,analytical_visual,balanced,false,false,"discovery through usable evidence",pass,none
+8,Corpus and evidence base,Safety and non-safety visibility,analytical_visual,balanced,false,false,"side categories by layer",pass,none
+9,Corpus and evidence base,Analytical readiness and evidence boundaries,analytical_visual,balanced,false,false,"readiness outcomes and zero matches",pass,none
+10,Compensation mechanisms,Retroactivity and payroll timing,integrated_profile,full,false,false,"3 of 35 categories",pass,none
+11,Compensation mechanisms,Non-base and one-time compensation,integrated_profile,full,false,false,"10 of 35 categories",pass,none
+12,Compensation mechanisms,Scheduled base-wage growth,integrated_profile,full,false,false,"6 of 35 categories",pass,none
+13,Compensation mechanisms,"Budgets pay plans and fiscal constraint",integrated_profile,full,false,false,"3 of 35 categories",pass,none
+14,Compensation mechanisms,Council and ordinance adoption,integrated_profile,full,false,false,"2 of 35 categories",pass,none
+15,Compensation mechanisms,Formal bargaining and impasse resolution,integrated_profile,full,false,false,"5 of 35 categories",pass,none
+16,Compensation mechanisms,Classification and pay structure,integrated_profile,full,false,false,"3 of 35 categories",pass,none
+17,Compensation mechanisms,"Staffing market and comparability pressure",integrated_profile,full,false,false,"3 of 35 categories",pass,none
+18,Compensation mechanisms,Documentary growth by evidence tier,relocated_visual,balanced,false,false,"growth evidence",pass,"Retain here beside scheduled-growth profile; do not recreate a cross-mechanism section."
+19,Compensation mechanisms,Staffing pressure and channel evidence,relocated_visual,balanced,false,false,"staffing evidence",pass,"Retain here beside staffing-pressure profile."
+20,Compensation mechanisms,Implementation lifecycle,relocated_visual,balanced,false,false,"implementation stages",pass,"Retain here beside retroactivity and formal-adoption profiles."
+21,Final claim boundaries,Ten bounded local comparisons,relocated_visual,balanced,false,false,"10 local comparisons",pass,"Retain with claim boundaries because it tests comparative direction."
+22,Final claim boundaries,Final claim classes,claim_overview,balanced,false,false,"14 claims",pass,none
+23,Final claim boundaries,Evidence matrix bounded findings,claim_matrix,full,false,false,"8 bounded or mixed claims",pass,none
+24,Final claim boundaries,Evidence matrix unsupported boundaries,claim_matrix,full,false,false,"6 unsupported claims",pass,none
+25,Final claim boundaries,Claims CLAIM-A and CLAIM-B,claim_cards,full,false,false,"claims 1-2 of 14",pass,none
+26,Final claim boundaries,Claims CLAIM-C and CLAIM-D,claim_cards,full,false,false,"claims 3-4 of 14",pass,none
+27,Final claim boundaries,Claims CLAIM-E and CLAIM-F,claim_cards,full,false,false,"claims 5-6 of 14",pass,none
+28,Final claim boundaries,Claims CLAIM-G and CLAIM-H,claim_cards,full,false,false,"claims 7-8 of 14",pass,none
+29,Final claim boundaries,Claims UNSUP-01 and UNSUP-02,claim_cards,full,false,false,"claims 9-10 of 14",pass,none
+30,Final claim boundaries,Claims UNSUP-03 and UNSUP-04,claim_cards,full,false,false,"claims 11-12 of 14",pass,none
+31,Final claim boundaries,Claims UNSUP-05 and UNSUP-06,claim_cards,full,false,false,"claims 13-14 of 14",pass,none
+32,Final claim boundaries,Counterexamples and countervailing evidence,counterexample_page,full,false,false,"7 counterexamples",pass,none
+33,Final claim boundaries,Strict evidence and broader evidence,boundary_page,balanced,false,false,"5 strengthened; 1 more mixed; 8 unchanged; 0 upgrades",pass,none
+34,Project-wide limitations,Research design and discovery,paired_limitations,full,false,false,"limitations 1-2 of 12",pass,none
+35,Project-wide limitations,Verification access storage and readiness,paired_limitations,full,false,false,"limitations 3-4 of 12",pass,none
+36,Project-wide limitations,Extraction and analytical framing,paired_limitations,full,false,false,"limitations 5-6 of 12",pass,none
+37,Project-wide limitations,Rating review and comparability,paired_limitations,full,false,false,"limitations 7-8 of 12",pass,none
+38,Project-wide limitations,Side imbalance and mathematical design,paired_limitations,full,false,false,"limitations 9-10 of 12",pass,none
+39,Project-wide limitations,Locality visual grouping and infrastructure,paired_limitations,full,false,false,"limitations 11-12 of 12",pass,none
+40,Project-wide limitations,What worked what did not and what remains possible,limitation_synthesis,balanced,false,false,"12-topic synthesis",pass,none
+41,Methodology and project history,Full project workflow,methodology,full,false,false,"method topic 1 of 9",pass,"Keep workflow entries to one concise sentence each."
+42,Methodology and project history,From a continuing log to relay packages,methodology,balanced,false,false,"method topic 2 of 9",pass,none
+43,Methodology and project history,Human and AI roles; tools by stage,methodology,full,false,false,"method topics 3-4 of 9",pass,"Keep role and tool entries distinct; do not repeat the workflow page."
+44,Methodology and project history,Codex execution worktrees and staggered lanes,methodology,full,false,false,"method topics 5-6 of 9",pass,"Use concise execution concepts rather than task-level chronology."
+45,Methodology and project history,Representative scaling milestones,methodology,full,false,false,"method topic 7 of 9",pass,none
+46,Methodology and project history,Failures and repairs evidence workflow,methodology,balanced,false,false,"first half of method topic 8",pass,none
+47,Methodology and project history,Failures and repairs analysis and publication,methodology,balanced,false,false,"second half of method topic 8",pass,none
+48,Methodology and project history,Evidence tiers remained separate,methodology,balanced,false,false,"method topic 9 of 9",pass,none
+49,Mechanism category appendix,Reader-facing categories 1-4,category_cards,full,false,false,"categories 1-4 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+50,Mechanism category appendix,Reader-facing categories 5-8,category_cards,full,false,false,"categories 5-8 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+51,Mechanism category appendix,Reader-facing categories 9-12,category_cards,full,false,false,"categories 9-12 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+52,Mechanism category appendix,Reader-facing categories 13-16,category_cards,full,false,false,"categories 13-16 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+53,Mechanism category appendix,Reader-facing categories 17-20,category_cards,full,false,false,"categories 17-20 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+54,Mechanism category appendix,Reader-facing categories 21-24,category_cards,full,false,false,"categories 21-24 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+55,Mechanism category appendix,Reader-facing categories 25-28,category_cards,full,false,false,"categories 25-28 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+56,Mechanism category appendix,Reader-facing categories 29-32,category_cards,full,false,false,"categories 29-32 of 35",pass_with_copy_change,"Remove canonical from the subtitle; say category counts."
+57,Mechanism category appendix,Reader-facing categories 33-35,category_cards,moderate,false,false,"categories 33-35 of 35",pass_with_layout_change,"Use a three-column full-height arrangement rather than a two-by-two grid with one empty quadrant."
+58,Appendix,Unclassified or no direct compensation outcome,status_cards,balanced,false,false,"3 of 3 evidence-status categories",pass_with_copy_change,"Replace deduplicated map units with distinct implementation events."
+59,Appendix,Technical counts and analytical boundaries,technical_counts,full,false,false,"all major counts by unit",pass_with_copy_change,"Use unique sources after exact duplicate grouping and mechanism records before event-level grouping."
+60,Appendix,Source method and future-use notes,source_method_notes,full,false,false,"lineage roles review and future use",pass_with_copy_change,"Remove handoff from the title and move split-archive packaging instructions to repository documentation; retain only a short source-availability note."

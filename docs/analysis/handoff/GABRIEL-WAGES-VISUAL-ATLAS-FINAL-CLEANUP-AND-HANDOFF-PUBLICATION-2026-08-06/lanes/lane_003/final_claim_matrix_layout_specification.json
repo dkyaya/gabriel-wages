@@ -1,0 +1,79 @@
+{
+  "specification_id": "FINAL-CLAIM-MATRIX-2PAGE-V1",
+  "status": "editorial_and_data_ready_no_render",
+  "page_size": "US Letter landscape",
+  "page_count": 2,
+  "source_table": "final_claim_matrix_data.csv",
+  "page_1": {
+    "title": "What the evidence supports",
+    "claims": ["CLAIM-A", "CLAIM-B", "CLAIM-C", "CLAIM-D", "CLAIM-E", "CLAIM-F", "CLAIM-G", "CLAIM-H"],
+    "row_label": "wrapped full final claim text with short label and small claim ID",
+    "columns": [
+      "final claim class",
+      "linked records",
+      "strict evidence count",
+      "bounded evidence count",
+      "directional evidence count",
+      "counterexamples or countervailing evidence",
+      "strict-versus-broader effect"
+    ],
+    "row_height_rule": "dynamic; allocate at least two lines to every claim and three where needed",
+    "minimum_font_pt": 9,
+    "color_rule": "color encodes final claim class only; numeric evidence cells use text and neutral backgrounds",
+    "counterexample_rule": "CLAIM-G and CLAIM-H each link to the same seven retained counterexamples; the unique corpus total remains seven"
+  },
+  "page_2": {
+    "title": "What the evidence does not establish",
+    "claims": ["UNSUP-01", "UNSUP-02", "UNSUP-03", "UNSUP-04", "UNSUP-05", "UNSUP-06"],
+    "row_label": "complete final unsupported wording; no truncated labels",
+    "columns": [
+      "unsupported proposition",
+      "final class",
+      "linked records",
+      "missing analytical requirement",
+      "report placement"
+    ],
+    "missing_requirement_mapping": {
+      "UNSUP-01": "compatible matched wage panel and representative scope",
+      "UNSUP-02": "defined national denominator and representative sampling",
+      "UNSUP-03": "credible causal identification design",
+      "UNSUP-04": "regression-ready data and a passed model gate",
+      "UNSUP-05": "matched longitudinal safety and non-safety growth panel",
+      "UNSUP-06": "design linking a mechanism to the observed wage difference"
+    },
+    "minimum_font_pt": 9,
+    "color_rule": "unsupported class uses a single restrained boundary color; zero cells are shown as em dashes rather than shaded absence"
+  },
+  "count_warning": {
+    "warning_id": "COUNT-WARN-01",
+    "required_footer_text": "Counts describe different reviewed evidence units. Linked-record, strict, bounded, directional, counterexample, and conflict counts are not equivalent weights and must not be added or compared as if they measured the same thing.",
+    "tier_count_note": "Tier counts are claim-material reviewed records or explicitly declared aggregate units. Directional counts can be much larger because one claim may link to an aggregate evidence family.",
+    "conflict_note": "The 201 unresolved high-impact conflicts form a global unlinked hold. They are shown once in the matrix footer and are not repeated as 201 claim-specific conflicts in every row.",
+    "no_heatmap_intensity": true,
+    "no_cap": true
+  },
+  "accessibility": {
+    "full_claim_text_required": true,
+    "claim_ids_not_primary_labels": true,
+    "no_ellipsis": true,
+    "no_color_only_encoding": true,
+    "minimum_contrast_ratio": 4.5,
+    "text_boundary_margin_pt": 8
+  },
+  "preservation": {
+    "claim_count": 14,
+    "class_counts": {
+      "supported": 1,
+      "conditionally_supported": 1,
+      "mechanism_supported_only": 5,
+      "mixed_or_countervailing": 1,
+      "unsupported": 6,
+      "exploratory": 0,
+      "contradicted": 0
+    },
+    "unique_retained_counterexamples": 7,
+    "global_unresolved_high_impact_conflicts": 201,
+    "claim_classes_changed": false,
+    "claim_wording_changed": false
+  }
+}

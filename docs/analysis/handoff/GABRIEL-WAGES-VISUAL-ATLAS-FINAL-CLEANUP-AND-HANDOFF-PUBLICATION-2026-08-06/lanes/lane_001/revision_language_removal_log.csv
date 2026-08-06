@@ -1,0 +1,21 @@
+item_id,disposition,final_public_text,scope,verification_rule
+RL-001,replace,A Visual Atlas of Municipal Compensation Evidence,PDF title cover and metadata,No visible corrected or revised title language.
+RL-002,replace,Joachim Johnson · August 2026,PDF cover,No handoff status on cover.
+RL-003,replace,What the evidence supports,PDF opening,Opening leads with evidence rather than revision history.
+RL-004,replace,Counting distinct implementation events,Reader guide,Declared analytical unit remains explicit.
+RL-005,replace,How records became usable evidence,Evidence-base visual,No unexplained pipeline terminology.
+RL-006,replace,unsearched targets,Limitations,No visible execution-queue language.
+RL-007,replace,Storage-held sources are outside the evidence analyzed in this atlas,Limitations,Scope boundary retained without version language.
+RL-008,replace,Distinct implementation events,Appendix,Final unit named directly.
+RL-009,replace,"13,391 mechanism records before event-level grouping",Appendix,Count and pre-grouping status retained.
+RL-010,replace,"11,698 distinct implementation events at the declared map unit",Appendix,Final map count retained without correction history.
+RL-011,replace,This atlas uses retained documentary and administrative evidence and the final reviewed analytical tables,Source note,Public source description replaces production history.
+RL-012,remove,,Public PDF,Archive history remains only in handoff metadata.
+RL-013,replace,Visual Atlas,Landing page,One canonical public publication title.
+RL-014,replace,Municipal compensation evidence,Landing page,No corrected-handoff eyebrow.
+RL-015,replace,"This visual atlas presents compensation mechanisms, claim boundaries, project-wide limitations, and methodology.",Landing page,Description states content rather than repair history.
+RL-016,replace,Open the visual atlas,Landing page,Stable public action label.
+RL-017,replace,What the atlas contains,Landing page,No revision-history section heading.
+RL-018,remove,,Landing page,No future source-packaging operations in public copy.
+RL-019,replace,14 adjudicated claims,Landing page,Statistic describes evidence status.
+RL-020,replace_or_remove,Use plain evidence and record terminology throughout,All visible copy,Zero unexplained lane queue shard task-ID or canonical-layer references.

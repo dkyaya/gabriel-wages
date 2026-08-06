@@ -1,0 +1,20 @@
+{
+  "decision": "gabriel_wages_final_visual_atlas_completed_deployment_pending",
+  "page_count": 60,
+  "pdf_bytes": 2369807,
+  "pdf_sha256": "e5260ee42a70081e166120b337a789c2e1663631755baa99e585c8d75939e8b8",
+  "native_text": true,
+  "reader_guide_pages": 3,
+  "alaska_canonical_events": 49,
+  "claim_classes_preserved": true,
+  "counterexamples_preserved": 7,
+  "prior_versions_preserved": true,
+  "cross_mechanism_section_absent": true,
+  "vector_figures": 21,
+  "rendered_300dpi_pages": 60,
+  "revision_language_visible": false,
+  "forbidden_action_occurred": false,
+  "public_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+  "landing_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/",
+  "raw_github_url": "https://raw.githubusercontent.com/dkyaya/gabriel-wages/main/docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf"
+}

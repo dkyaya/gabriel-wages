@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "sections": [
+    "cover",
+    "reader guide",
+    "corpus",
+    "mechanisms",
+    "claims",
+    "limitations",
+    "methodology",
+    "appendix"
+  ],
+  "consistent_palette_typography_margins_footers": true
+}

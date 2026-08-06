@@ -1,0 +1,150 @@
+{
+  "status": "pass",
+  "canonical_records": 49,
+  "profiles": [
+    {
+      "profile_id": "retroactivity-payroll",
+      "profile_title": "Retroactivity and payroll timing",
+      "mechanism_tags": "retroactive|retroactive_pay|payroll_effective_date",
+      "profile_events": 2253,
+      "lower48_events": 2247,
+      "alaska_events": 6,
+      "alaska_municipalities": 6,
+      "alaska_display": "event_points",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "non-base-compensation",
+      "profile_title": "Non-base and one-time compensation",
+      "mechanism_tags": "non_base_compensation_other|stipend_or_premium|uniform_or_equipment_allowance|overtime|holiday_pay|longevity|benefit_cost_change|reimbursement|one_time|lump_sum",
+      "profile_events": 890,
+      "lower48_events": 887,
+      "alaska_events": 3,
+      "alaska_municipalities": 3,
+      "alaska_display": "event_points",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "scheduled-base-growth",
+      "profile_title": "Scheduled base-wage growth",
+      "mechanism_tags": "across_the_board_raise|base_wage_change|step_progression|cola_cpi_adjustment|inflation_indexing|recurring",
+      "profile_events": 809,
+      "lower48_events": 804,
+      "alaska_events": 5,
+      "alaska_municipalities": 4,
+      "alaska_display": "event_points",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "budgets-pay-plans",
+      "profile_title": "Budgets, pay plans, and fiscal constraint",
+      "mechanism_tags": "budget_pay_plan_process|fiscal_constraint|budget_appropriation",
+      "profile_events": 636,
+      "lower48_events": 635,
+      "alaska_events": 1,
+      "alaska_municipalities": 1,
+      "alaska_display": "event_points",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "ordinance-adoption",
+      "profile_title": "Council and ordinance adoption",
+      "mechanism_tags": "ordinance_council_adoption|ordinance_adoption",
+      "profile_events": 315,
+      "lower48_events": 312,
+      "alaska_events": 3,
+      "alaska_municipalities": 2,
+      "alaska_display": "event_points",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "formal-bargaining",
+      "profile_title": "Formal bargaining and impasse resolution",
+      "mechanism_tags": "bargaining_leverage|collective_bargaining|settlement_or_mou|contract_ratification|interest_arbitration",
+      "profile_events": 81,
+      "lower48_events": 81,
+      "alaska_events": 0,
+      "alaska_municipalities": 0,
+      "alaska_display": "outline_with_no_event_statement",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "classification-structure",
+      "profile_title": "Classification and pay structure",
+      "mechanism_tags": "classification_band_change|salary_range_change|classification_civil_service",
+      "profile_events": 57,
+      "lower48_events": 57,
+      "alaska_events": 0,
+      "alaska_municipalities": 0,
+      "alaska_display": "outline_with_no_event_statement",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    },
+    {
+      "profile_id": "staffing-market-pressure",
+      "profile_title": "Staffing, market, and comparability pressure",
+      "mechanism_tags": "market_recruitment_retention|vacancy_pressure|comparability_parity",
+      "profile_events": 56,
+      "lower48_events": 56,
+      "alaska_events": 0,
+      "alaska_municipalities": 0,
+      "alaska_display": "outline_with_no_event_statement",
+      "missing_geography": 0,
+      "fixed_extent": [
+        -2471470.260722646,
+        2373511.492285076,
+        167264.18964099674,
+        3267119.089553831
+      ],
+      "qa_status": "pass"
+    }
+  ]
+}

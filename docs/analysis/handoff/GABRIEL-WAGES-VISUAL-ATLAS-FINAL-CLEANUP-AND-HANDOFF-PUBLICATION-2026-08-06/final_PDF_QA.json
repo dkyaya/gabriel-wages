@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "pages": 60,
+  "page_plan_reconciles": true,
+  "native_text": true,
+  "text_extractable_pages": 60,
+  "vector_figures": 21,
+  "complete_page_rasters": 0,
+  "rendered_300dpi_pages": 60,
+  "blank_pages": 0,
+  "bookmarks": 9,
+  "metadata_author": "Joachim Johnson",
+  "checksum": "e5260ee42a70081e166120b337a789c2e1663631755baa99e585c8d75939e8b8"
+}

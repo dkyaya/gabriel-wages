@@ -1,0 +1,11 @@
+{
+  "stage": "local_publication_complete",
+  "lanes": {
+    "1": "complete",
+    "2": "complete",
+    "3": "complete",
+    "4": "complete",
+    "5": "complete"
+  },
+  "deployment": "pending_push_validation"
+}
