@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-G",
+  "final_claim_class": "mixed_or_countervailing",
+  "final_claim_text": "Both safety and non-safety units use bargaining, steps, COLAs, and pay plans. The available evidence is consistent with a reinforcing safety-pressure bundle in some settings, but local and growth results are mixed and do not establish a uniform safety advantage.",
+  "strict_claim_text": "Safety and non-safety units both use formal compensation-growth mechanisms; the comparative pattern in reviewed records is mixed.",
+  "broader_bounded_claim_text": "Both safety and non-safety units use bargaining, steps, COLAs, and pay plans. The available evidence is consistent with a reinforcing safety-pressure bundle in some settings, but local and growth results are mixed and do not establish a uniform safety advantage.",
+  "prohibited_claim_text": "Non-safety compensation lacks institutional growth mechanisms, or safety always has the advantage.",
+  "report_placement": "report_counterexample_section",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-g.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-g.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-g.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

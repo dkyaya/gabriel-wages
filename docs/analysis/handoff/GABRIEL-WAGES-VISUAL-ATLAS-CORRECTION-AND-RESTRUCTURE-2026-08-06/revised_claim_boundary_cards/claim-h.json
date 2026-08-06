@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-H",
+  "final_claim_class": "supported",
+  "final_claim_text": "The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect estimate.",
+  "strict_claim_text": "The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect estimate.",
+  "broader_bounded_claim_text": "The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect estimate.",
+  "prohibited_claim_text": "The corpus estimates a national safety wage gap or causal effect.",
+  "report_placement": "report_core_argument",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-h.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-h.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-h.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

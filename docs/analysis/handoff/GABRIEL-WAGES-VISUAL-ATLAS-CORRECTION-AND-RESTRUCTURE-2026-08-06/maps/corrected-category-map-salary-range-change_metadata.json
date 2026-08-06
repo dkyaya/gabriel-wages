@@ -1,0 +1,34 @@
+{
+  "figure_id": "corrected-category-map-salary-range-change",
+  "kind": "category",
+  "title": "Salary Range Change",
+  "mechanism_tags": "salary_range_change",
+  "claim_ids": "CLAIM-B",
+  "event_count": 12,
+  "mapped_event_count": 12,
+  "lower48_event_count": 12,
+  "alaska_event_count": 0,
+  "side_counts": {
+    "side_independent": 1,
+    "unresolved": 9,
+    "safety": 2
+  },
+  "fixed_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "projection": "EPSG:5070",
+  "hex_radius_km": 50,
+  "input_unit": "deduplicated municipality × compensation cycle × mechanism × side implementation event",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-category-map-salary-range-change.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-category-map-salary-range-change.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/corrected-category-map-salary-range-change.png",
+  "data_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/data/corrected-category-map-salary-range-change.csv",
+  "outside_fixed_extent": 0,
+  "all_events_accounted_for": true,
+  "northern_records_present": true,
+  "alaska_explicit": true,
+  "qa_status": "pass"
+}

@@ -1,0 +1,11 @@
+{
+  "stage": "complete",
+  "decision": "gabriel_wages_visual_atlas_revision_completed_source_packaging_ready",
+  "lanes": {
+    "1": "complete",
+    "2": "complete",
+    "3": "complete",
+    "4": "complete",
+    "5": "complete"
+  }
+}

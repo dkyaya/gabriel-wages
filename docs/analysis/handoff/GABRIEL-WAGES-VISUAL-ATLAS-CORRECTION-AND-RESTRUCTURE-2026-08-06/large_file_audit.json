@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "staged_files_over_10_mib": 0,
+  "staged_files_over_50_mib": 0,
+  "largest_tracked_task_asset": {
+    "path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/gabriel_wages_visual_atlas_revised_2026-08-06.pdf",
+    "bytes": 7483415
+  }
+}

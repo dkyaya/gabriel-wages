@@ -1,0 +1,11 @@
+incident,repair,verification,qualification
+Dirty worktree,classified active rendered assets instead of deleting them,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Source-less hosted search,"stopped production and preserved 12,844 targets",verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Large checkpoints,replaced arrays with append-only ledgers,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+30 GiB ceiling,"retained 14,449 payloads and held 7,895",verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Parser timeouts,added child-process wall limits,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Quadratic lookup,indexed and resumed incomplete inputs only,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Interface interruption,"accepted 14,160 payloads remained valid",verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Strict matching,kept zero-match baseline and added bounded tiers,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Deployment delay,verified direct URL and committed checksum,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.
+Phase 0 launcher/output issues,repaired only task-owned inventory files,verified in project incident logs or Phase 0 inventory,Service-capacity cause and retrospective workflow judgments remain qualified.

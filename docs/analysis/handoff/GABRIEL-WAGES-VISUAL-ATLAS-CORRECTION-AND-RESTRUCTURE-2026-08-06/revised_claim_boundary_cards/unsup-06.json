@@ -1,0 +1,14 @@
+{
+  "claim_id": "UNSUP-06",
+  "final_claim_class": "unsupported",
+  "final_claim_text": "The evidence does not establish that a documented mechanism caused an observed wage difference.",
+  "strict_claim_text": "The evidence does not establish that a documented mechanism caused an observed wage difference.",
+  "broader_bounded_claim_text": "The evidence does not establish that a documented mechanism caused an observed wage difference.",
+  "prohibited_claim_text": "The documented mechanism caused the observed wage difference.",
+  "report_placement": "report_limitations",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-06.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-06.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-unsup-06.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

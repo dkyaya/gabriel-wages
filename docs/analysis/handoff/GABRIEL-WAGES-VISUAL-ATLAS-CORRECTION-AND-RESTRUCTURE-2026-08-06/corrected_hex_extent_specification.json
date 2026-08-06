@@ -1,0 +1,23 @@
+{
+  "projection": "EPSG:5070",
+  "radius_meters": 50000,
+  "extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "extent_source": "complete lower-48 state basemap with fixed padding",
+  "old_incorrect_ylim": [
+    -1500000,
+    1700000
+  ],
+  "canonical_basemap_y_range": [
+    269416.292,
+    3174405.85
+  ],
+  "event_hex_y_range": [
+    303108.891,
+    3074390.183
+  ]
+}

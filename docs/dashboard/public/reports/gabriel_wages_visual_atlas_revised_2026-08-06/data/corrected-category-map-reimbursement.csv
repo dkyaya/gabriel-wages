@@ -1,0 +1,8 @@
+hex_cell_id,geography_panel,mechanism_tag,side,implementation_event_count,projected_hex_center_x,projected_hex_center_y,centroid_latitude,centroid_longitude
+CONUS50-+00014-+00018,lower_48,reimbursement,fire,1,1050000.0,2165063.509,41.551631,-83.468027
+CONUS50-+00014-+00018,lower_48,reimbursement,police,1,1050000.0,2165063.509,41.551631,-83.468027
+CONUS50-+00014-+00018,lower_48,reimbursement,side_independent,1,1050000.0,2165063.509,41.691566,-83.401339
+CONUS50-+00016-+00016,lower_48,reimbursement,remains_unclear,1,1200000.0,2078460.969,41.094856,-81.342265
+CONUS50-+00018-+00009,lower_48,reimbursement,non_safety,1,1350000.0,1558845.727,35.899716,-80.561095
+CONUS50-+00018-+00015,lower_48,reimbursement,remains_unclear,1,1350000.0,2078460.969,40.417056,-80.054317
+CONUS50-+00024-+00014,lower_48,reimbursement,remains_unclear,1,1800000.0,2251666.05,41.684927,-73.79575

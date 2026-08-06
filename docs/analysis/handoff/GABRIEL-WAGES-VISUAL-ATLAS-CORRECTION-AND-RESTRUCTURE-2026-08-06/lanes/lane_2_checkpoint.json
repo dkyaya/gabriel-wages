@@ -1,0 +1,17 @@
+{
+  "lane": 2,
+  "status": "complete",
+  "completed": [
+    "retroactivity-payroll",
+    "non-base-compensation",
+    "scheduled-base-growth",
+    "budgets-pay-plans",
+    "ordinance-adoption",
+    "formal-bargaining",
+    "classification-structure",
+    "staffing-market-pressure",
+    "none-identified",
+    "no-direct-compensation-outcome",
+    "unclear"
+  ]
+}

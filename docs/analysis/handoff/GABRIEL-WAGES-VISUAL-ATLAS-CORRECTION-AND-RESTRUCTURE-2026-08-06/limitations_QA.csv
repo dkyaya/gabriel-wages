@@ -1,0 +1,14 @@
+figure_id,success_paired,status
+limitation-research-design-scope,True,pass
+limitation-discovery-search,True,pass
+limitation-verification-retention,True,pass
+limitation-document-readiness,True,pass
+limitation-extraction-overproduction,True,pass
+limitation-analytical-framing,True,pass
+limitation-rating-review,True,pass
+limitation-comparability,True,pass
+limitation-side-imbalance,True,pass
+limitation-mathematical-design,True,pass
+limitation-reporting-visuals,True,pass
+limitation-operations-infrastructure,True,pass
+what_worked_what_failed_visual,True,pass

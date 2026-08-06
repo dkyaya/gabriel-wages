@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-B",
+  "final_claim_class": "conditionally_supported",
+  "final_claim_text": "In reviewed unit-cycle records, step, seniority, rank, and COLA provisions create recurring scheduled wage-growth paths; step progression leans safety in the available sample, while across-board results are mixed and COLA cells are sparse.",
+  "strict_claim_text": "The reviewed documentary corpus contains recurring step, seniority, rank, and COLA structures; comparative growth implications remain sample-specific.",
+  "broader_bounded_claim_text": "In reviewed unit-cycle records, step, seniority, rank, and COLA provisions create recurring scheduled wage-growth paths; step progression leans safety in the available sample, while across-board results are mixed and COLA cells are sparse.",
+  "prohibited_claim_text": "Safety wages generally grow faster nationwide because of step progression or COLAs.",
+  "report_placement": "report_major_section",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-b.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-b.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-b.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "locally_built_pending_public_deployment_validation",
+  "current_stage": "revised visual atlas complete",
+  "next_stage": "source-library streaming compression and split-volume packaging",
+  "revised_atlas_pages": 71,
+  "integrated_mechanism_profiles": 8,
+  "reader_facing_mechanism_categories": 35,
+  "evidence_status_categories": 3,
+  "final_claims": 14,
+  "project_wide_limitation_visuals": 13,
+  "methodology_visuals": 9,
+  "safety_non_safety_analysis_included": true,
+  "map_layout_QA": "pass",
+  "text_completeness_QA": "pass",
+  "original_atlas_preserved": true,
+  "source_packaging_started": false,
+  "full_copy_packaging_policy_active": true,
+  "primary_scout_coverage_map_preserved": true
+}

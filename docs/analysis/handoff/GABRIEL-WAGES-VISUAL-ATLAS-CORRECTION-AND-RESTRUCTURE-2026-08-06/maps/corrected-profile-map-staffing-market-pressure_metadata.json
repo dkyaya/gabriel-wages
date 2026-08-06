@@ -1,0 +1,36 @@
+{
+  "figure_id": "corrected-profile-map-staffing-market-pressure",
+  "kind": "profile",
+  "title": "Staffing, market, and comparability pressure",
+  "mechanism_tags": "market_recruitment_retention|vacancy_pressure|comparability_parity",
+  "claim_ids": "CLAIM-A|CLAIM-D",
+  "event_count": 56,
+  "mapped_event_count": 56,
+  "lower48_event_count": 56,
+  "alaska_event_count": 0,
+  "side_counts": {
+    "safety": 22,
+    "unresolved": 23,
+    "side_independent": 3,
+    "non_safety": 7,
+    "mixed": 1
+  },
+  "fixed_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "projection": "EPSG:5070",
+  "hex_radius_km": 50,
+  "input_unit": "deduplicated municipality × compensation cycle × mechanism × side implementation event",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-profile-map-staffing-market-pressure.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-profile-map-staffing-market-pressure.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/corrected-profile-map-staffing-market-pressure.png",
+  "data_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/data/corrected-profile-map-staffing-market-pressure.csv",
+  "outside_fixed_extent": 0,
+  "all_events_accounted_for": true,
+  "northern_records_present": true,
+  "alaska_explicit": true,
+  "qa_status": "pass"
+}

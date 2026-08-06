@@ -1,0 +1,17 @@
+hex_cell_id,geography_panel,mechanism_tag,side,implementation_event_count,projected_hex_center_x,projected_hex_center_y,centroid_latitude,centroid_longitude
+CONUS50-+00005-+00016,lower_48,bargaining_leverage,remains_unclear,1,375000.0,1602146.997,37.367583,-91.767023
+CONUS50-+00007-+00023,lower_48,bargaining_leverage,police,2,525000.0,2294967.32,43.468072,-89.738387
+CONUS50-+00008-+00022,lower_48,bargaining_leverage,police,1,600000.0,2251666.05,42.972663,-88.787067
+CONUS50-+00009-+00020,lower_48,bargaining_leverage,remains_unclear,1,675000.0,2121762.239,41.788452,-87.813921
+CONUS50-+00013-+00017,lower_48,bargaining_leverage,fire,1,975000.0,2035159.699,40.585726,-84.736957
+CONUS50-+00014-+00014,lower_48,bargaining_leverage,fire,1,1050000.0,1818653.348,38.980999,-83.337154
+CONUS50-+00014-+00018,lower_48,bargaining_leverage,police,1,1050000.0,2165063.509,41.48348,-83.016313
+CONUS50-+00015-+00015,lower_48,bargaining_leverage,police,1,1125000.0,1948557.159,39.74616,-82.975542
+CONUS50-+00016-+00017,lower_48,bargaining_leverage,fire,1,1200000.0,2165063.509,41.535863,-81.340912
+CONUS50-+00017-+00016,lower_48,bargaining_leverage,police,1,1275000.0,2121762.239,41.095626,-80.451427
+CONUS50-+00018-+00015,lower_48,bargaining_leverage,non_safety,1,1350000.0,2078460.969,40.514782,-79.601134
+CONUS50-+00018-+00015,lower_48,bargaining_leverage,police,1,1350000.0,2078460.969,40.514782,-79.601134
+CONUS50-+00018-+00016,lower_48,bargaining_leverage,remains_unclear,1,1350000.0,2165063.509,41.496794,-79.760924
+CONUS50-+00022-+00013,lower_48,bargaining_leverage,police,1,1650000.0,2078460.969,40.064424,-76.795847
+CONUS50-+00023-+00014,lower_48,bargaining_leverage,police,1,1725000.0,2208364.78,41.037737,-75.489638
+CONUS50-+00025-+00011,lower_48,bargaining_leverage,remains_unclear,1,1875000.0,2035159.699,39.60155,-74.226367

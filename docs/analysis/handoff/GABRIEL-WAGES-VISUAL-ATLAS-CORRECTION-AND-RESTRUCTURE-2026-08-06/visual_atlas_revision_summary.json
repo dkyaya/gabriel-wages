@@ -1,0 +1,30 @@
+{
+  "decision": "gabriel_wages_visual_atlas_revision_completed_source_packaging_ready",
+  "page_count": 71,
+  "corrected_category_maps": 38,
+  "integrated_mechanism_profiles": 8,
+  "status_categories": 3,
+  "claim_count": 14,
+  "counterexamples": 7,
+  "unresolved_conflicts": 201,
+  "limitation_visuals": 13,
+  "methodology_visuals": 9,
+  "map_issue": "northern records and Alaska were omitted by old rendering bounds/filter; canonical data were present",
+  "northern_records_missing_in_old_render": true,
+  "northern_records_missing_in_revised_render": false,
+  "original_atlas_preserved": true,
+  "public_pdf_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_revised_2026-08-06/gabriel_wages_visual_atlas_revised_2026-08-06.pdf",
+  "landing_page_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_revised_2026-08-06/",
+  "source_packaging_started": false,
+  "full_source_copy_created": false,
+  "source_packaging_streaming_policy": true,
+  "forbidden_action_occurred": false,
+  "pdf_sha256": "46608bb50eaf0dee046f85629c92210472b96777b5e8a048e49b8a52059fe247",
+  "five_lane_completion": {
+    "1": "complete",
+    "2": "complete",
+    "3": "complete",
+    "4": "complete",
+    "5": "complete"
+  }
+}

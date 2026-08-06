@@ -1,0 +1,12 @@
+hex_cell_id,geography_panel,mechanism_tag,side,implementation_event_count,projected_hex_center_x,projected_hex_center_y,centroid_latitude,centroid_longitude
+CONUS50-+00002-+00027,lower_48,salary_range_change,police,1,150000.0,2424871.131,44.769566,-94.151027
+CONUS50-+00002-+00029,lower_48,salary_range_change,police,1,150000.0,2598076.211,45.977198,-94.10082
+CONUS50-+00008-+00019,lower_48,salary_range_change,side_independent,1,600000.0,1991858.429,40.645875,-89.224831
+CONUS50-+00017-+00009,lower_48,salary_range_change,remains_unclear,1,1275000.0,1515544.457,35.755545,-81.572674
+CONUS50-+00018-+00008,lower_48,salary_range_change,remains_unclear,1,1350000.0,1472243.186,35.549567,-80.610475
+CONUS50-+00020-+00007,lower_48,salary_range_change,remains_unclear,2,1500000.0,1472243.186,34.806148,-79.181112
+CONUS50-+00021-+00007,lower_48,salary_range_change,remains_unclear,1,1575000.0,1515544.457,35.322217,-78.67353
+CONUS50-+00022-+00007,lower_48,salary_range_change,remains_unclear,1,1650000.0,1558845.727,35.306519,-77.789906
+CONUS50-+00023-+00014,lower_48,salary_range_change,remains_unclear,1,1725000.0,2208364.78,40.974073,-74.802584
+CONUS50-+00024-+00013,lower_48,salary_range_change,remains_unclear,1,1800000.0,2165063.509,41.001257,-74.55129
+CONUS50-+00025-+00015,lower_48,salary_range_change,remains_unclear,1,1875000.0,2381569.86,42.190191,-72.954263

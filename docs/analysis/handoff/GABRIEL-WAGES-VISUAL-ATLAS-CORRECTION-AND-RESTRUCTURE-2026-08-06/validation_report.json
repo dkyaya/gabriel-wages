@@ -1,0 +1,13 @@
+{
+  "status": "pass_local_pending_public_HTTP",
+  "checks": {
+    "page_count": 71,
+    "claims": 14,
+    "counterexamples": 7,
+    "category_maps": 38,
+    "integrated_profiles": 8,
+    "original_preserved": true,
+    "source_packaging_policy": true,
+    "no_forbidden_action": true
+  }
+}

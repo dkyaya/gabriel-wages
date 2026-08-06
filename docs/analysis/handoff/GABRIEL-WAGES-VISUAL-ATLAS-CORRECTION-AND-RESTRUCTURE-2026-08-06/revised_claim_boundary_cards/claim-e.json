@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-E",
+  "final_claim_class": "mechanism_supported_only",
+  "final_claim_text": "Reviewed records show that retroactive effective dates and implementation clauses can convert some bargaining delays into payable increases or back pay; adoption alone is not payment, and only retained evidence with a paid stage is described as paid.",
+  "strict_claim_text": "Reviewed records show that retroactive effective dates and implementation clauses can convert some bargaining delays into payable increases or back pay.",
+  "broader_bounded_claim_text": "Reviewed records show that retroactive effective dates and implementation clauses can convert some bargaining delays into payable increases or back pay; adoption alone is not payment, and only retained evidence with a paid stage is described as paid.",
+  "prohibited_claim_text": "Every adopted or retroactive provision was implemented and paid.",
+  "report_placement": "report_supporting_finding",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-e.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-e.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-e.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

@@ -1,0 +1,14 @@
+{
+  "claim_id": "UNSUP-02",
+  "final_claim_class": "unsupported",
+  "final_claim_text": "A national prevalence estimate for any compensation mechanism is not supported by the current corpus.",
+  "strict_claim_text": "A national prevalence estimate for any compensation mechanism is not supported by the current corpus.",
+  "broader_bounded_claim_text": "A national prevalence estimate for any compensation mechanism is not supported by the current corpus.",
+  "prohibited_claim_text": "The corpus estimates national mechanism prevalence.",
+  "report_placement": "report_limitations",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-02.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-02.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-unsup-02.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

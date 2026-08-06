@@ -1,0 +1,3 @@
+# Safety and non-safety documentation imbalance
+
+Safety-side compensation events appear more frequently than non-safety events in the retained and successfully classified evidence. The repeated imbalance is relevant because safety compensation is more visible and more frequently formalized in the records collected. Possible explanations include real institutional differences, clearer safety department labels, more safety-specific contracts, broader non-safety personnel schedules, unresolved side classifications, and uneven discovery. The imbalance does not prove national prevalence, absence of non-safety mechanisms, faster safety wage growth, or causality.

@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "original_pdf_sha256_before": "4a38a78cf5be4db2960dfe89953c446f8d56eaed4ec2c0fafff3f99bd1591fa7",
+  "original_pdf_sha256_after": "4a38a78cf5be4db2960dfe89953c446f8d56eaed4ec2c0fafff3f99bd1591fa7",
+  "byte_preserved": true,
+  "original_assets_deleted": false,
+  "archive_label": "Initial visual atlas, archived version"
+}

@@ -1,0 +1,9 @@
+hex_cell_id,geography_panel,mechanism_tag,side,implementation_event_count,projected_hex_center_x,projected_hex_center_y,centroid_latitude,centroid_longitude
+CONUS50-+00005-+00024,lower_48,contract_ratification,police,1,375000.0,2294967.32,43.481155,-90.892126
+CONUS50-+00007-+00022,lower_48,contract_ratification,police,1,525000.0,2208364.78,42.603019,-89.637626
+CONUS50-+00012-+00021,lower_48,contract_ratification,remains_unclear,1,900000.0,2338268.59,43.575408,-84.817063
+CONUS50-+00013-+00019,lower_48,contract_ratification,fire,1,975000.0,2208364.78,42.388627,-83.729032
+CONUS50-+00014-+00016,lower_48,contract_ratification,side_independent,1,1050000.0,1991858.429,40.286476,-83.074864
+CONUS50-+00026-+00013,lower_48,contract_ratification,remains_unclear,1,1950000.0,2251666.05,40.876617,-72.403089
+CONUS50-+00027-+00014,lower_48,contract_ratification,police,2,2025000.0,2381569.86,42.262428,-70.798883
+CONUS50--00030-+00036,lower_48,contract_ratification,non_safety,1,-2250000.0,1818653.348,36.552881,-121.921919

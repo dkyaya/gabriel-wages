@@ -1,0 +1,13 @@
+{
+  "hosted_search": false,
+  "GABRIEL_or_API": false,
+  "external_data_collection": false,
+  "OCR": false,
+  "source_redownload": false,
+  "held_source_processing": false,
+  "regression": false,
+  "claim_readjudication": false,
+  "full_source_copy": false,
+  "source_packaging": false,
+  "forbidden_action_occurred": false
+}

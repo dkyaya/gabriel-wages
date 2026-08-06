@@ -1,0 +1,14 @@
+{
+  "claim_id": "UNSUP-04",
+  "final_claim_class": "unsupported",
+  "final_claim_text": "No regression-based claim is supported because no regression-ready design passed the gate and no regression was run.",
+  "strict_claim_text": "No regression-based claim is supported because no regression-ready design passed the gate and no regression was run.",
+  "broader_bounded_claim_text": "No regression-based claim is supported because no regression-ready design passed the gate and no regression was run.",
+  "prohibited_claim_text": "Regression results establish the proposed relationship.",
+  "report_placement": "appendix_only",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-04.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-04.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-unsup-04.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

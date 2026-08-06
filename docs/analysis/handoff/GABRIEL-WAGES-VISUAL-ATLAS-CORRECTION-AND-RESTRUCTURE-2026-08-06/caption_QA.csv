@@ -1,0 +1,12 @@
+figure_id,definition,wage_channel,side_pattern,project_relevance,limitation,word_count,status
+retroactivity-payroll,True,True,True,True,True,117,review
+non-base-compensation,True,True,True,True,True,198,review
+scheduled-base-growth,True,True,True,True,True,137,review
+budgets-pay-plans,True,True,True,True,True,108,pass
+ordinance-adoption,True,True,True,True,True,99,pass
+formal-bargaining,True,True,True,True,True,137,review
+classification-structure,True,True,True,True,True,113,pass
+staffing-market-pressure,True,True,True,True,True,109,pass
+none-identified,True,True,True,True,True,56,pass
+no-direct-compensation-outcome,True,True,True,True,True,49,review
+unclear,True,True,True,True,True,45,review

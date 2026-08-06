@@ -1,0 +1,3 @@
+{"incident_id": "ATLASREV-MAP-001", "status": "repaired", "description": "Old map extent clipped northern records and filtered Alaska", "data_loss": false}
+{"incident_id": "ATLASREV-LAYOUT-002", "status": "repaired", "description": "The final render-first QA loop found and repaired a redundant embedded map heading before publication", "data_loss": false}
+{"incident_id": "ATLASREV-TEXT-003", "status": "repaired", "description": "The final render-first QA loop repaired claim-label, limitation-heading, and methodology-caption defects before publication", "data_loss": false}

@@ -1,0 +1,35 @@
+{
+  "figure_id": "corrected-category-map-ordinance-council-adoption",
+  "kind": "category",
+  "title": "Ordinance Council Adoption",
+  "mechanism_tags": "ordinance_council_adoption",
+  "claim_ids": "CLAIM-F",
+  "event_count": 255,
+  "mapped_event_count": 255,
+  "lower48_event_count": 252,
+  "alaska_event_count": 3,
+  "side_counts": {
+    "unresolved": 117,
+    "side_independent": 60,
+    "safety": 61,
+    "non_safety": 17
+  },
+  "fixed_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "projection": "EPSG:5070",
+  "hex_radius_km": 50,
+  "input_unit": "deduplicated municipality × compensation cycle × mechanism × side implementation event",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-category-map-ordinance-council-adoption.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-category-map-ordinance-council-adoption.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/corrected-category-map-ordinance-council-adoption.png",
+  "data_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/data/corrected-category-map-ordinance-council-adoption.csv",
+  "outside_fixed_extent": 0,
+  "all_events_accounted_for": true,
+  "northern_records_present": true,
+  "alaska_explicit": true,
+  "qa_status": "pass"
+}

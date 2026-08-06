@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-F",
+  "final_claim_class": "mechanism_supported_only",
+  "final_claim_text": "Reviewed ordinances, budgets, pay plans, and classification records show how compensation proposals can be formalized or constrained by fiscal institutions; these records do not establish that every proposal was implemented or paid.",
+  "strict_claim_text": "Reviewed ordinances, budgets, pay plans, and classification records show how compensation proposals can be formalized or constrained by fiscal institutions.",
+  "broader_bounded_claim_text": "Reviewed ordinances, budgets, pay plans, and classification records show how compensation proposals can be formalized or constrained by fiscal institutions; these records do not establish that every proposal was implemented or paid.",
+  "prohibited_claim_text": "Budget and council action uniformly increase compensation.",
+  "report_placement": "report_supporting_finding",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-f.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-f.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-f.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "layers_separate": true,
+  "exact_denominators": true,
+  "unlike_units_not_summed": true,
+  "no_prevalence_claim": true,
+  "no_causal_claim": true
+}

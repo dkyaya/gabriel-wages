@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "claim_count": 14,
+  "matrix_full_claim_labels": true,
+  "no_ellipsis_hiding_required_meaning": true,
+  "actual_counts_annotated": true,
+  "color_scale": "log1p; explicitly labeled"
+}

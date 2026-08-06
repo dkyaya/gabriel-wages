@@ -1,0 +1,10 @@
+{
+  "incidents": [
+    {
+      "incident": "Original map extent clipped northern data and omitted Alaska",
+      "impact": "all 38 category maps affected",
+      "repair": "basemap-derived fixed extent, corrected event-unit deduplication, labeled Alaska inset",
+      "accepted_data_preserved": true
+    }
+  ]
+}

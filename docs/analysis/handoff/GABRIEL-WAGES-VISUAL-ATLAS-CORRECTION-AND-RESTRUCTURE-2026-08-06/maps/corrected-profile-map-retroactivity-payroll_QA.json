@@ -1,0 +1,36 @@
+{
+  "figure_id": "corrected-profile-map-retroactivity-payroll",
+  "kind": "profile",
+  "title": "Retroactivity and payroll timing",
+  "mechanism_tags": "retroactive|retroactive_pay|payroll_effective_date",
+  "claim_ids": "CLAIM-E",
+  "event_count": 2253,
+  "mapped_event_count": 2253,
+  "lower48_event_count": 2247,
+  "alaska_event_count": 6,
+  "side_counts": {
+    "unresolved": 893,
+    "safety": 945,
+    "non_safety": 114,
+    "side_independent": 297,
+    "mixed": 4
+  },
+  "fixed_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "projection": "EPSG:5070",
+  "hex_radius_km": 50,
+  "input_unit": "deduplicated municipality × compensation cycle × mechanism × side implementation event",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-profile-map-retroactivity-payroll.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-profile-map-retroactivity-payroll.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/corrected-profile-map-retroactivity-payroll.png",
+  "data_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/data/corrected-profile-map-retroactivity-payroll.csv",
+  "outside_fixed_extent": 0,
+  "all_events_accounted_for": true,
+  "northern_records_present": true,
+  "alaska_explicit": true,
+  "qa_status": "pass"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "excluded_visible_terms": [
+    "mechanism exposure",
+    "canonical layer",
+    "ingestion row",
+    "shard",
+    "lane ID",
+    "queue",
+    "task ID",
+    "claim stratum",
+    "normalization-ready"
+  ]
+}

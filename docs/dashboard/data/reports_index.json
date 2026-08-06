@@ -1,9 +1,44 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-06T11:59:11Z",
+  "generated_at": "2026-08-06T17:36:00Z",
   "data_vintage": "2026-08-06",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
+    {
+      "id": "gabriel-wages-visual-atlas-revised-2026-08-06",
+      "title": "Why Public-Safety Wages May Grow Differently — Revised Visual Atlas",
+      "report_type": "Primary handoff visual atlas PDF",
+      "date": "2026-08-06",
+      "checkpoint": "Map bounds repaired; mechanisms and claims integrated; project-wide methods and limits expanded",
+      "summary": "The corrected primary atlas restores the full lower-48 map extent and Alaska, explains compensation mechanisms and their wage channels, documents the safety/non-safety evidence imbalance, preserves all 14 final claim boundaries, and covers the complete project workflow.",
+      "tags": [
+        "current",
+        "handoff",
+        "visual atlas",
+        "corrected maps",
+        "PDF"
+      ],
+      "current": true,
+      "historical": false,
+      "href": "gabriel-wages/reports/gabriel_wages_visual_atlas_revised_2026-08-06/",
+      "link_label": "Open revised visual atlas",
+      "secondary_href": "gabriel-wages/reports/gabriel_wages_visual_atlas_revised_2026-08-06/gabriel_wages_visual_atlas_revised_2026-08-06.pdf",
+      "secondary_link_label": "Open revised PDF",
+      "scope_metrics": [
+        {
+          "label": "integrated profiles",
+          "value": 8
+        },
+        {
+          "label": "claims",
+          "value": 14
+        },
+        {
+          "label": "PDF pages",
+          "value": 71
+        }
+      ]
+    },
     {
       "id": "whole-corpus-mechanism-claim-limitations-visual-atlas-2026-08-06",
       "title": "Mechanisms, Claims, and Limitations Visual Atlas",
@@ -17,8 +52,8 @@
         "PDF",
         "user review"
       ],
-      "current": true,
-      "historical": false,
+      "current": false,
+      "historical": true,
       "href": "gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/",
       "link_label": "Open visual atlas",
       "secondary_href": "gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",

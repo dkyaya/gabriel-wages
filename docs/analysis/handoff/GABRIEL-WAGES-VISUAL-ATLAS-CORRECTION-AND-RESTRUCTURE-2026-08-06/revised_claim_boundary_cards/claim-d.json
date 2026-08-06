@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-D",
+  "final_claim_class": "mechanism_supported_only",
+  "final_claim_text": "Reviewed sources explicitly use recruitment, retention, comparator, vacancy, and staffing pressure to justify schedule changes or targeted premiums in some public-safety settings; the staffing evidence is descriptive, not causal or prevalence evidence.",
+  "strict_claim_text": "Reviewed sources explicitly use recruitment, retention, comparator, vacancy, and staffing pressure to justify schedule changes or targeted premiums in some public-safety settings.",
+  "broader_bounded_claim_text": "Reviewed sources explicitly use recruitment, retention, comparator, vacancy, and staffing pressure to justify schedule changes or targeted premiums in some public-safety settings; the staffing evidence is descriptive, not causal or prevalence evidence.",
+  "prohibited_claim_text": "Staffing shortages cause higher safety wages.",
+  "report_placement": "report_supporting_finding",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-d.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-d.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-d.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

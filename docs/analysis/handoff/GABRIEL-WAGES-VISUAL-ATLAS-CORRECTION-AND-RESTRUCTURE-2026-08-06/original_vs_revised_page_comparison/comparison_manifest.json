@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "original_page": 9,
+  "revised_page": 18,
+  "mechanism": "retroactivity and payroll timing",
+  "comparison_asset": "original_page_09_vs_revised_page_18.png",
+  "original_problem": "the map's hard-coded projected vertical range clipped northern records and omitted Alaska",
+  "revised_result": "the map uses a fixed basemap-derived lower-48 extent, retains all mapped events, and includes a labeled Alaska inset"
+}

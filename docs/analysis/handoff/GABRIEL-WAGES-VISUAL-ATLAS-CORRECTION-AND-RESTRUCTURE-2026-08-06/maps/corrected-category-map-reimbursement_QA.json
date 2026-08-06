@@ -1,0 +1,35 @@
+{
+  "figure_id": "corrected-category-map-reimbursement",
+  "kind": "category",
+  "title": "Reimbursement",
+  "mechanism_tags": "reimbursement",
+  "claim_ids": "CLAIM-C",
+  "event_count": 7,
+  "mapped_event_count": 7,
+  "lower48_event_count": 7,
+  "alaska_event_count": 0,
+  "side_counts": {
+    "non_safety": 1,
+    "unresolved": 3,
+    "safety": 2,
+    "side_independent": 1
+  },
+  "fixed_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "projection": "EPSG:5070",
+  "hex_radius_km": 50,
+  "input_unit": "deduplicated municipality × compensation cycle × mechanism × side implementation event",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-category-map-reimbursement.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/maps/corrected-category-map-reimbursement.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/corrected-category-map-reimbursement.png",
+  "data_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/data/corrected-category-map-reimbursement.csv",
+  "outside_fixed_extent": 0,
+  "all_events_accounted_for": true,
+  "northern_records_present": true,
+  "alaska_explicit": true,
+  "qa_status": "pass"
+}

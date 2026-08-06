@@ -1,0 +1,77 @@
+{
+  "task_id": "GABRIEL-WAGES-VISUAL-ATLAS-CORRECTION-AND-RESTRUCTURE-2026-08-06",
+  "created_at": "2026-08-06T17:27:02.223062+00:00",
+  "starting_head": "0ff008d69ed27793d65bb6eecaa176ec7737faa0",
+  "input_hashes": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_exposure_event_layer.jsonl",
+      "sha256": "633aafaf18d4ef87dccbdc5e052e9d79ffcab0d6fda0320cfceb6068f95f2c75",
+      "bytes": 8761940
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_hex_density_visual_ready_layer.jsonl",
+      "sha256": "752523b6894c46d80585d4b2900bde93b4e8d13776639ff5307598c8613ab6d7",
+      "bytes": 5549899
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/municipality_geographic_crosswalk.jsonl",
+      "sha256": "cc7e7c1b119b0aa4e6d0c2a3dcbab8dad5704beeff0fe56161c82a6f117efc8e",
+      "bytes": 810134
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/municipality_urbanicity_layer.jsonl",
+      "sha256": "19e693d1a611c6ac4ca72560c043b23c12ebb4f38a069e848678cda8ba7ecbbc",
+      "bytes": 492636
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/final_adjudicated_claim_table.jsonl",
+      "sha256": "deec42071c88185711efe0e0d07275a000a9a212ad97f02c1b2e2c774d987649",
+      "bytes": 73834
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/claim_counterexample_links.jsonl",
+      "sha256": "5ce5debea8a631e5f650acf91be2da32b1a8718b909458e7689613dfbf812632",
+      "bytes": 5572
+    },
+    {
+      "path": "docs/dashboard/src/assets/us-states-2025-20m.geojson",
+      "sha256": "31715da6d14711893c54bff23bdd57c1817ad646a1686ca925d79857254ecb37",
+      "bytes": 293563
+    },
+    {
+      "path": "docs/dashboard/public/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+      "sha256": "4a38a78cf5be4db2960dfe89953c446f8d56eaed4ec2c0fafff3f99bd1591fa7",
+      "bytes": 8709892
+    },
+    {
+      "path": "docs/dashboard/public/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/index.html",
+      "sha256": "de259194e29a5d2ad9d904e628ae8fadd9b9648ac2394454b1e80f1b74068e98",
+      "bytes": 2784
+    }
+  ],
+  "raw_mechanism_link_rows": 13391,
+  "deduplicated_map_events": 11698,
+  "duplicate_rows_removed_for_declared_map_unit": 1693,
+  "root_events": 2994,
+  "registry_categories": 38,
+  "reader_facing_categories": 35,
+  "status_categories": 3,
+  "integrated_profiles": 11,
+  "claim_count": 14,
+  "missing_geography": 0,
+  "forbidden_actions": {
+    "hosted_search": false,
+    "GABRIEL": false,
+    "external_API": false,
+    "OCR": false,
+    "source_redownload": false,
+    "held_source_processing": false,
+    "regression": false,
+    "claim_readjudication": false
+  },
+  "completed_at": "2026-08-06T17:39:04.351119+00:00",
+  "decision": "gabriel_wages_visual_atlas_revision_completed_source_packaging_ready",
+  "page_count": 71,
+  "pdf_sha256": "46608bb50eaf0dee046f85629c92210472b96777b5e8a048e49b8a52059fe247",
+  "five_lanes_complete": true
+}

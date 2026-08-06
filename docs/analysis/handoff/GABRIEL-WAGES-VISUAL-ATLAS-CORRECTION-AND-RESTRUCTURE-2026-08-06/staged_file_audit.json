@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "staged_file_count": 595,
+  "staged_deletion_count": 0,
+  "staged_extensions": {
+    "csv": 92,
+    "html": 1,
+    "json": 151,
+    "jsonl": 54,
+    "md": 29,
+    "pdf": 1,
+    "png": 177,
+    "py": 1,
+    "sha256": 1,
+    "svg": 88
+  },
+  "source_binaries_staged": false,
+  "extracted_corpus_staged": false,
+  "bulky_local_intermediate_staged": false,
+  "original_atlas_deletions_staged": false,
+  "secret_values_staged": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "fixed_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ],
+  "lower48_state_geometry_complete": true,
+  "northern_y_max": 3267119.089553831,
+  "original_y_max": 1700000,
+  "projection": "EPSG:5070"
+}

@@ -1,0 +1,15 @@
+claim_id,full_label_in_matrix,card_complete,class_unchanged
+CLAIM-A,True,True,True
+CLAIM-B,True,True,True
+CLAIM-C,True,True,True
+CLAIM-D,True,True,True
+CLAIM-E,True,True,True
+CLAIM-F,True,True,True
+CLAIM-G,True,True,True
+CLAIM-H,True,True,True
+UNSUP-01,True,True,True
+UNSUP-02,True,True,True
+UNSUP-03,True,True,True
+UNSUP-04,True,True,True
+UNSUP-05,True,True,True
+UNSUP-06,True,True,True

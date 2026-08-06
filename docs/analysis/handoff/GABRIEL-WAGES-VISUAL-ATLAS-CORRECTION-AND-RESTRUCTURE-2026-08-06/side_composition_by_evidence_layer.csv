@@ -1,0 +1,26 @@
+evidence_layer,analytical_unit,side_category,count,denominator,share,units_not_combined_across_layers
+Documentary evidence spans,rated evidence span,safety,13040,51639,0.252522,True
+Documentary evidence spans,rated evidence span,non_safety,1786,51639,0.034586,True
+Documentary evidence spans,rated evidence span,mixed,120,51639,0.002324,True
+Documentary evidence spans,rated evidence span,side_independent,1867,51639,0.036155,True
+Documentary evidence spans,rated evidence span,unresolved,34826,51639,0.674413,True
+Implementation events,root implementation event,safety,1271,2998,0.423949,True
+Implementation events,root implementation event,non_safety,149,2998,0.0497,True
+Implementation events,root implementation event,mixed,12,2998,0.004003,True
+Implementation events,root implementation event,side_independent,382,2998,0.127418,True
+Implementation events,root implementation event,unresolved,1184,2998,0.39493,True
+Mechanism-event map units,deduplicated mechanism map event,safety,4740,11698,0.405197,True
+Mechanism-event map units,deduplicated mechanism map event,non_safety,630,11698,0.053855,True
+Mechanism-event map units,deduplicated mechanism map event,mixed,39,11698,0.003334,True
+Mechanism-event map units,deduplicated mechanism map event,side_independent,1675,11698,0.143187,True
+Mechanism-event map units,deduplicated mechanism map event,unresolved,4614,11698,0.394426,True
+Documentary growth records,documentary growth record,safety,171,432,0.395833,True
+Documentary growth records,documentary growth record,non_safety,42,432,0.097222,True
+Documentary growth records,documentary growth record,mixed,0,432,0.0,True
+Documentary growth records,documentary growth record,side_independent,0,432,0.0,True
+Documentary growth records,documentary growth record,unresolved,219,432,0.506944,True
+Bounded local comparisons,two-sided local comparison,safety,0,10,0.0,True
+Bounded local comparisons,two-sided local comparison,non_safety,0,10,0.0,True
+Bounded local comparisons,two-sided local comparison,mixed,10,10,1.0,True
+Bounded local comparisons,two-sided local comparison,side_independent,0,10,0.0,True
+Bounded local comparisons,two-sided local comparison,unresolved,0,10,0.0,True

@@ -1,0 +1,29 @@
+{
+  "status": "confirmed_data_display_failure",
+  "cause": [
+    "hard-coded projected y-limit excluded northern state and event geometry",
+    "Alaska rows filtered without inset",
+    "small map axes and generic PDF image placement compressed geographic ink"
+  ],
+  "canonical_hex_rows": 6387,
+  "lower48_hex_rows": 6338,
+  "alaska_rows": 49,
+  "view_lower48_rows": 6338,
+  "view_clipped_rows": 5179,
+  "view_clipped_row_rate": 0.817135,
+  "view_lower48_event_counts": 13342,
+  "view_clipped_event_counts": 11840,
+  "view_clipped_event_rate": 0.887423,
+  "northern_records_missing_from_render": true,
+  "canonical_data_missing": false,
+  "old_ylim": [
+    -1500000,
+    1700000
+  ],
+  "new_extent": [
+    -2471470.260722646,
+    2373511.492285076,
+    167264.18964099674,
+    3267119.089553831
+  ]
+}

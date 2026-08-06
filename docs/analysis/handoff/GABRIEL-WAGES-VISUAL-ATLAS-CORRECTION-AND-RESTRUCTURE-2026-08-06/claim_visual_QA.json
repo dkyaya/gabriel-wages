@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "claims": 14,
+  "classes_unchanged": true,
+  "counterexamples": 7,
+  "conflicts_preserved": 201,
+  "prohibited_wording_preserved": true
+}

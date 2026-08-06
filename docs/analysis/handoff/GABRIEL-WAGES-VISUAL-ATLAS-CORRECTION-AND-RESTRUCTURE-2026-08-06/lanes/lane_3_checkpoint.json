@@ -1,0 +1,26 @@
+{
+  "lane": 3,
+  "status": "complete",
+  "completed": [
+    "side_overall",
+    "side_mechanism",
+    "claim_overview",
+    "claim_matrix",
+    "sensitivity",
+    "counterexamples",
+    "CLAIM-A",
+    "CLAIM-B",
+    "CLAIM-C",
+    "CLAIM-D",
+    "CLAIM-E",
+    "CLAIM-F",
+    "CLAIM-G",
+    "CLAIM-H",
+    "UNSUP-01",
+    "UNSUP-02",
+    "UNSUP-03",
+    "UNSUP-04",
+    "UNSUP-05",
+    "UNSUP-06"
+  ]
+}

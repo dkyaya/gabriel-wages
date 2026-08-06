@@ -1,0 +1,71 @@
+{"page": 1, "page_type": "cover", "title": "Cover", "section": "Opening"}
+{"page": 2, "page_type": "text", "title": "Executive visual summary", "section": "Opening"}
+{"page": 3, "page_type": "text", "title": "What this project asked", "section": "Part I"}
+{"page": 4, "page_type": "text", "title": "How to read the atlas", "section": "Part I"}
+{"page": 5, "page_type": "text", "title": "How to read a hex map", "section": "Part I"}
+{"page": 6, "page_type": "text", "title": "Evidence tiers", "section": "Part I"}
+{"page": 7, "page_type": "text", "title": "Safety and non-safety definitions", "section": "Part I"}
+{"page": 8, "page_type": "text", "title": "What an implementation event is", "section": "Part I"}
+{"page": 9, "page_type": "glossary", "title": "Compensation and evidence glossary", "section": "Part I"}
+{"page": 10, "page_type": "glossary", "title": "Compensation and evidence glossary", "section": "Part I"}
+{"page": 11, "page_type": "divider", "title": "What the corpus looks like", "section": "Part II"}
+{"page": 12, "page_type": "image", "title": "Corpus scale and source mix", "section": "Part II"}
+{"page": 13, "page_type": "image", "title": "Evidence pipeline and attrition", "section": "Part II"}
+{"page": 14, "page_type": "image", "title": "Safety and non-safety visibility", "section": "Part II"}
+{"page": 15, "page_type": "image", "title": "Side composition by category", "section": "Part II"}
+{"page": 16, "page_type": "image", "title": "Geographic scouting coverage", "section": "Part II"}
+{"page": 17, "page_type": "divider", "title": "Compensation mechanisms and related claims", "section": "Part III"}
+{"page": 18, "page_type": "profile", "title": "Retroactivity and payroll timing", "section": "Part III"}
+{"page": 19, "page_type": "profile", "title": "Non-base and one-time compensation", "section": "Part III"}
+{"page": 20, "page_type": "profile", "title": "Scheduled base-wage growth", "section": "Part III"}
+{"page": 21, "page_type": "profile", "title": "Budgets, pay plans, and fiscal constraint", "section": "Part III"}
+{"page": 22, "page_type": "profile", "title": "Council and ordinance adoption", "section": "Part III"}
+{"page": 23, "page_type": "profile", "title": "Formal bargaining and impasse resolution", "section": "Part III"}
+{"page": 24, "page_type": "profile", "title": "Classification and pay structure", "section": "Part III"}
+{"page": 25, "page_type": "profile", "title": "Staffing, market, and comparability pressure", "section": "Part III"}
+{"page": 26, "page_type": "divider", "title": "Cross-mechanism findings", "section": "Part IV"}
+{"page": 27, "page_type": "image", "title": "Documentary wage-growth evidence", "section": "Part IV"}
+{"page": 28, "page_type": "image", "title": "Staffing-channel evidence", "section": "Part IV"}
+{"page": 29, "page_type": "image", "title": "Implementation lifecycle", "section": "Part IV"}
+{"page": 30, "page_type": "image", "title": "Ten bounded local comparisons", "section": "Part IV"}
+{"page": 31, "page_type": "image", "title": "Counterexamples", "section": "Part IV"}
+{"page": 32, "page_type": "divider", "title": "What the claims support", "section": "Part V"}
+{"page": 33, "page_type": "image", "title": "Final claim overview", "section": "Part V"}
+{"page": 34, "page_type": "image", "title": "Claim evidence matrix", "section": "Part V"}
+{"page": 35, "page_type": "claim_cards", "title": "Claims CLAIM-A–CLAIM-B", "section": "Part V"}
+{"page": 36, "page_type": "claim_cards", "title": "Claims CLAIM-C–CLAIM-D", "section": "Part V"}
+{"page": 37, "page_type": "claim_cards", "title": "Claims CLAIM-E–CLAIM-F", "section": "Part V"}
+{"page": 38, "page_type": "claim_cards", "title": "Claims CLAIM-G–CLAIM-H", "section": "Part V"}
+{"page": 39, "page_type": "claim_cards", "title": "Claims UNSUP-01–UNSUP-02", "section": "Part V"}
+{"page": 40, "page_type": "claim_cards", "title": "Claims UNSUP-03–UNSUP-04", "section": "Part V"}
+{"page": 41, "page_type": "claim_cards", "title": "Claims UNSUP-05–UNSUP-06", "section": "Part V"}
+{"page": 42, "page_type": "image", "title": "Strict versus broader evidence", "section": "Part V"}
+{"page": 43, "page_type": "image", "title": "Final evidence boundary", "section": "Part V"}
+{"page": 44, "page_type": "divider", "title": "Project-wide limitations", "section": "Part VI"}
+{"page": 45, "page_type": "limitation", "title": "Research design and scope", "section": "Part VI"}
+{"page": 46, "page_type": "limitation", "title": "Discovery and hosted-search limits", "section": "Part VI"}
+{"page": 47, "page_type": "limitation", "title": "Verification, access, and storage", "section": "Part VI"}
+{"page": 48, "page_type": "limitation", "title": "Document readiness", "section": "Part VI"}
+{"page": 49, "page_type": "limitation", "title": "Extraction volume and compaction", "section": "Part VI"}
+{"page": 50, "page_type": "limitation", "title": "Analytical framing and table calibration", "section": "Part VI"}
+{"page": 51, "page_type": "limitation", "title": "Rating and semantic review", "section": "Part VI"}
+{"page": 52, "page_type": "limitation", "title": "Reconciliation and comparability", "section": "Part VI"}
+{"page": 53, "page_type": "limitation", "title": "Safety and non-safety evidence imbalance", "section": "Part VI"}
+{"page": 54, "page_type": "limitation", "title": "Mathematical and causal design", "section": "Part VI"}
+{"page": 55, "page_type": "limitation", "title": "Locality and visual grouping", "section": "Part VI"}
+{"page": 56, "page_type": "limitation", "title": "Operational and infrastructure limits", "section": "Part VI"}
+{"page": 57, "page_type": "limitation", "title": "What worked, what did not, and what remains possible", "section": "Part VI"}
+{"page": 58, "page_type": "divider", "title": "How the project worked", "section": "Part VII"}
+{"page": 59, "page_type": "methodology", "title": "Full-summer research workflow", "section": "Part VII"}
+{"page": 60, "page_type": "methodology", "title": "From a continuing log to relay packages", "section": "Part VII"}
+{"page": 61, "page_type": "methodology", "title": "Human and AI division of work", "section": "Part VII"}
+{"page": 62, "page_type": "methodology", "title": "Tools and functions by stage", "section": "Part VII"}
+{"page": 63, "page_type": "methodology", "title": "Codex execution workflow evolved with scale", "section": "Part VII"}
+{"page": 64, "page_type": "methodology", "title": "How staggered independent lanes worked", "section": "Part VII"}
+{"page": 65, "page_type": "methodology", "title": "Representative scaling milestones", "section": "Part VII"}
+{"page": 66, "page_type": "methodology", "title": "Errors, failures, and repairs", "section": "Part VII"}
+{"page": 67, "page_type": "methodology", "title": "Strict and broader evidence stayed separate", "section": "Part VII"}
+{"page": 68, "page_type": "divider", "title": "Appendix", "section": "Appendix"}
+{"page": 69, "page_type": "text", "title": "Evidence-status outcomes", "section": "Appendix"}
+{"page": 70, "page_type": "text", "title": "Technical counts and boundaries", "section": "Appendix"}
+{"page": 71, "page_type": "text", "title": "Source and handoff notes", "section": "Appendix"}

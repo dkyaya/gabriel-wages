@@ -1,0 +1,51 @@
+{
+  "1": [
+    "retroactivity-payroll",
+    "non-base-compensation",
+    "scheduled-base-growth",
+    "budgets-pay-plans",
+    "ordinance-adoption",
+    "formal-bargaining",
+    "classification-structure",
+    "staffing-market-pressure"
+  ],
+  "2": [
+    "retroactivity-payroll",
+    "non-base-compensation",
+    "scheduled-base-growth",
+    "budgets-pay-plans",
+    "ordinance-adoption",
+    "formal-bargaining",
+    "classification-structure",
+    "staffing-market-pressure",
+    "none-identified",
+    "no-direct-compensation-outcome",
+    "unclear"
+  ],
+  "3": [
+    "CLAIM-A",
+    "CLAIM-B",
+    "CLAIM-C",
+    "CLAIM-D",
+    "CLAIM-E",
+    "CLAIM-F",
+    "CLAIM-G",
+    "CLAIM-H",
+    "UNSUP-01",
+    "UNSUP-02",
+    "UNSUP-03",
+    "UNSUP-04",
+    "UNSUP-05",
+    "UNSUP-06",
+    "side_overall",
+    "side_by_mechanism"
+  ],
+  "4": [
+    "limitations",
+    "methodology"
+  ],
+  "5": [
+    "original_audit",
+    "assembly_prep"
+  ]
+}

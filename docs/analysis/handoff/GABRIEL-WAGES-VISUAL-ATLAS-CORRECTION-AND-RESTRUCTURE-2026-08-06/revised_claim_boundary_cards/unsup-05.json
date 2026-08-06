@@ -1,0 +1,14 @@
+{
+  "claim_id": "UNSUP-05",
+  "final_claim_class": "unsupported",
+  "final_claim_text": "A precise claim that safety wages grow a fixed percentage faster is not supported by the available matched evidence.",
+  "strict_claim_text": "A precise claim that safety wages grow a fixed percentage faster is not supported by the available matched evidence.",
+  "broader_bounded_claim_text": "A precise claim that safety wages grow a fixed percentage faster is not supported by the available matched evidence.",
+  "prohibited_claim_text": "Safety wages grow X percent faster nationally.",
+  "report_placement": "report_limitations",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-05.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-unsup-05.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-unsup-05.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

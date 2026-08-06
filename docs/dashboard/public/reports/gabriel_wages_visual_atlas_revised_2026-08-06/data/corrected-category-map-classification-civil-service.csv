@@ -1,0 +1,5 @@
+hex_cell_id,geography_panel,mechanism_tag,side,implementation_event_count,projected_hex_center_x,projected_hex_center_y,centroid_latitude,centroid_longitude
+CONUS50-+00013-+00017,lower_48,classification_civil_service,police,1,975000.0,2035159.699,40.675113,-84.041425
+CONUS50-+00014-+00017,lower_48,classification_civil_service,fire,1,1050000.0,2078460.969,41.02912,-83.58485
+CONUS50-+00014-+00018,lower_48,classification_civil_service,remains_unclear,1,1050000.0,2165063.509,41.679455,-82.849774
+CONUS50--00002-+00011,lower_48,classification_civil_service,remains_unclear,1,-150000.0,866025.404,30.88826,-97.401361

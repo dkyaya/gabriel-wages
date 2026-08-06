@@ -1,0 +1,72 @@
+page,page_type,title,section
+1,cover,Cover,Opening
+2,text,Executive visual summary,Opening
+3,text,What this project asked,Part I
+4,text,How to read the atlas,Part I
+5,text,How to read a hex map,Part I
+6,text,Evidence tiers,Part I
+7,text,Safety and non-safety definitions,Part I
+8,text,What an implementation event is,Part I
+9,glossary,Compensation and evidence glossary,Part I
+10,glossary,Compensation and evidence glossary,Part I
+11,divider,What the corpus looks like,Part II
+12,image,Corpus scale and source mix,Part II
+13,image,Evidence pipeline and attrition,Part II
+14,image,Safety and non-safety visibility,Part II
+15,image,Side composition by category,Part II
+16,image,Geographic scouting coverage,Part II
+17,divider,Compensation mechanisms and related claims,Part III
+18,profile,Retroactivity and payroll timing,Part III
+19,profile,Non-base and one-time compensation,Part III
+20,profile,Scheduled base-wage growth,Part III
+21,profile,"Budgets, pay plans, and fiscal constraint",Part III
+22,profile,Council and ordinance adoption,Part III
+23,profile,Formal bargaining and impasse resolution,Part III
+24,profile,Classification and pay structure,Part III
+25,profile,"Staffing, market, and comparability pressure",Part III
+26,divider,Cross-mechanism findings,Part IV
+27,image,Documentary wage-growth evidence,Part IV
+28,image,Staffing-channel evidence,Part IV
+29,image,Implementation lifecycle,Part IV
+30,image,Ten bounded local comparisons,Part IV
+31,image,Counterexamples,Part IV
+32,divider,What the claims support,Part V
+33,image,Final claim overview,Part V
+34,image,Claim evidence matrix,Part V
+35,claim_cards,Claims CLAIM-A–CLAIM-B,Part V
+36,claim_cards,Claims CLAIM-C–CLAIM-D,Part V
+37,claim_cards,Claims CLAIM-E–CLAIM-F,Part V
+38,claim_cards,Claims CLAIM-G–CLAIM-H,Part V
+39,claim_cards,Claims UNSUP-01–UNSUP-02,Part V
+40,claim_cards,Claims UNSUP-03–UNSUP-04,Part V
+41,claim_cards,Claims UNSUP-05–UNSUP-06,Part V
+42,image,Strict versus broader evidence,Part V
+43,image,Final evidence boundary,Part V
+44,divider,Project-wide limitations,Part VI
+45,limitation,Research design and scope,Part VI
+46,limitation,Discovery and hosted-search limits,Part VI
+47,limitation,"Verification, access, and storage",Part VI
+48,limitation,Document readiness,Part VI
+49,limitation,Extraction volume and compaction,Part VI
+50,limitation,Analytical framing and table calibration,Part VI
+51,limitation,Rating and semantic review,Part VI
+52,limitation,Reconciliation and comparability,Part VI
+53,limitation,Safety and non-safety evidence imbalance,Part VI
+54,limitation,Mathematical and causal design,Part VI
+55,limitation,Locality and visual grouping,Part VI
+56,limitation,Operational and infrastructure limits,Part VI
+57,limitation,"What worked, what did not, and what remains possible",Part VI
+58,divider,How the project worked,Part VII
+59,methodology,Full-summer research workflow,Part VII
+60,methodology,From a continuing log to relay packages,Part VII
+61,methodology,Human and AI division of work,Part VII
+62,methodology,Tools and functions by stage,Part VII
+63,methodology,Codex execution workflow evolved with scale,Part VII
+64,methodology,How staggered independent lanes worked,Part VII
+65,methodology,Representative scaling milestones,Part VII
+66,methodology,"Errors, failures, and repairs",Part VII
+67,methodology,Strict and broader evidence stayed separate,Part VII
+68,divider,Appendix,Appendix
+69,text,Evidence-status outcomes,Appendix
+70,text,Technical counts and boundaries,Appendix
+71,text,Source and handoff notes,Appendix

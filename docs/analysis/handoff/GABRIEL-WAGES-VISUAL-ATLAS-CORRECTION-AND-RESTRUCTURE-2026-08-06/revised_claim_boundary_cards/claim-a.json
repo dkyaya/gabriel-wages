@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-A",
+  "final_claim_class": "mechanism_supported_only",
+  "final_claim_text": "In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional channels that can set or preserve safety-compensation terms; the evidence establishes mechanism operation, not an average wage effect.",
+  "strict_claim_text": "In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional channels that can set or preserve safety-compensation terms.",
+  "broader_bounded_claim_text": "In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional channels that can set or preserve safety-compensation terms; the evidence establishes mechanism operation, not an average wage effect.",
+  "prohibited_claim_text": "Formal bargaining causes safety wages to rise faster nationwide.",
+  "report_placement": "report_supporting_finding",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-a.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-a.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-a.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}

@@ -1,0 +1,7 @@
+hex_cell_id,geography_panel,mechanism_tag,side,implementation_event_count,projected_hex_center_x,projected_hex_center_y,centroid_latitude,centroid_longitude
+CONUS50-+00003-+00007,lower_48,comparability_parity,police,1,225000.0,736121.593,29.960768,-93.96179
+CONUS50-+00009-+00020,lower_48,comparability_parity,safety_combined,1,675000.0,2121762.239,42.029901,-87.977329
+CONUS50-+00024-+00013,lower_48,comparability_parity,safety_combined,1,1800000.0,2165063.509,40.76804,-74.235692
+CONUS50-+00024-+00015,lower_48,comparability_parity,police,1,1800000.0,2338268.59,42.055483,-74.165388
+CONUS50-+00024-+00015,lower_48,comparability_parity,remains_unclear,1,1800000.0,2338268.59,42.092591,-73.98811
+CONUS50--00014-+00030,lower_48,comparability_parity,side_independent,1,-1050000.0,1991858.429,40.239861,-109.006795

@@ -1,0 +1,28 @@
+{
+  "lane": 4,
+  "status": "complete",
+  "completed": [
+    "limitation-research-design-scope",
+    "limitation-discovery-search",
+    "limitation-verification-retention",
+    "limitation-document-readiness",
+    "limitation-extraction-overproduction",
+    "limitation-analytical-framing",
+    "limitation-rating-review",
+    "limitation-comparability",
+    "limitation-side-imbalance",
+    "limitation-mathematical-design",
+    "limitation-reporting-visuals",
+    "limitation-operations-infrastructure",
+    "what_worked_what_failed_visual",
+    "full_project_workflow_visual",
+    "relay_system_evolution_visual",
+    "human_ai_roles_expanded_visual",
+    "tools_by_stage_visual",
+    "Codex_execution_evolution_visual",
+    "staggered_lane_system_visual",
+    "scaling_over_time_visual",
+    "errors_failures_repairs_visual",
+    "evidence_tier_redesign_visual"
+  ]
+}

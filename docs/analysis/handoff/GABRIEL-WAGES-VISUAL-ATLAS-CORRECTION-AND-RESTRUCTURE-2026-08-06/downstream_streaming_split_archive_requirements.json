@@ -1,0 +1,10 @@
+{
+  "full_uncompressed_staging_copy": false,
+  "stream_from_canonical_roots": true,
+  "bounded_split_volumes": true,
+  "checksum_each_volume": true,
+  "validate_reconstruction_before_deletion": true,
+  "max_local_archive_volumes_where_possible": 1,
+  "external_storage_device_required": false,
+  "delete_original_sources": false
+}

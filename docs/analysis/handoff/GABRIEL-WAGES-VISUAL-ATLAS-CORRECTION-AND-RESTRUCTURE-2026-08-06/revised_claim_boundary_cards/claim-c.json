@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLAIM-C",
+  "final_claim_class": "mechanism_supported_only",
+  "final_claim_text": "Reviewed safety-compensation records contain structured non-base channels—including overtime, holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond base pay; no complete total-compensation sum is estimated.",
+  "strict_claim_text": "Reviewed safety-compensation records contain structured non-base channels—including overtime, holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond base pay.",
+  "broader_bounded_claim_text": "Reviewed safety-compensation records contain structured non-base channels—including overtime, holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond base pay; no complete total-compensation sum is estimated.",
+  "prohibited_claim_text": "Safety workers receive more total compensation than non-safety workers nationwide.",
+  "report_placement": "report_supporting_finding",
+  "png_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-c.png",
+  "svg_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/figures/claim-card-claim-c.svg",
+  "thumbnail_path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_revised_2026-08-06/assets/thumbnails/claim-card-claim-c.png",
+  "claim_class_unchanged": true,
+  "qa_status": "pass"
+}
