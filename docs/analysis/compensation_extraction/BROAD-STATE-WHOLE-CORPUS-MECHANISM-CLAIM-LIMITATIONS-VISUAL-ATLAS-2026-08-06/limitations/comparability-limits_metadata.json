@@ -1,0 +1,9 @@
+{
+  "figure_id": "comparability-limits",
+  "title": "Comparability limits",
+  "caption": "The project found extensive payroll, budget, and staffing material, but 1,523,558 reconciled observations still lacked a defensible safety or non-safety side. Pay basis, compensation basis, conflicts, identity, and timing created additional holds. That is why the external layer produced zero compatible wage matches, growth pairs, vacancy rates, overtime shares, or total-compensation sums. The constraint was compatible analytical units, not a lack of documents. Broader rules recovered local and directional evidence, but they still did not create a representative cross-occupation panel.",
+  "caption_word_count": 82,
+  "png_path": "assets/limitations/comparability-limits.png",
+  "svg_path": "assets/limitations/comparability-limits.svg",
+  "qa_status": "pass"
+}

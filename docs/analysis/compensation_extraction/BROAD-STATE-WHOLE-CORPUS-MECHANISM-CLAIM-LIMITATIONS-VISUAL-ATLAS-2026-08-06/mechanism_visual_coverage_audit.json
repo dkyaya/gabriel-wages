@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "canonical_mechanisms": 38,
+  "represented_mechanisms": 38,
+  "missing": [],
+  "standalone": 27,
+  "small_multiple": 9,
+  "sparse": 2
+}

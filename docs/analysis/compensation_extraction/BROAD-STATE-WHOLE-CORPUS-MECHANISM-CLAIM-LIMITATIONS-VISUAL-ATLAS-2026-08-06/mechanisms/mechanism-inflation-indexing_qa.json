@@ -1,0 +1,10 @@
+{
+  "figure_id": "mechanism-inflation-indexing",
+  "data_reproduced": true,
+  "analytical_unit_correct": true,
+  "event_deduplication_correct": true,
+  "caption_boundary_correct": true,
+  "no_prevalence_language": true,
+  "export_png_svg": true,
+  "status": "pass"
+}

@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-unsup-04",
+  "claim_id": "UNSUP-04",
+  "title": "A regression result is not available",
+  "final_class": "unsupported",
+  "caption": "I classify this claim as unsupported. No regression-based claim is supported because no regression-ready design passed the gate and no regression was run. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 74,
+  "png_path": "assets/claims/claim-card-unsup-04.png",
+  "svg_path": "assets/claims/claim-card-unsup-04.svg",
+  "report_placement": "appendix_only",
+  "qa_status": "pass"
+}

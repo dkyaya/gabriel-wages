@@ -1,0 +1,533 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "figure_id": "mechanism-across-the-board-raise",
+      "group": "mechanism",
+      "word_count": 61,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-bargaining-leverage",
+      "group": "mechanism",
+      "word_count": 56,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-base-wage-change",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-benefit-cost-change",
+      "group": "mechanism",
+      "word_count": 61,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-budget-appropriation",
+      "group": "mechanism",
+      "word_count": 57,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-budget-pay-plan-process",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-classification-band-change",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-classification-civil-service",
+      "group": "mechanism",
+      "word_count": 65,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-cola-cpi-adjustment",
+      "group": "mechanism",
+      "word_count": 61,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-collective-bargaining",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-comparability-parity",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-contract-ratification",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-fiscal-constraint",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-holiday-pay",
+      "group": "mechanism",
+      "word_count": 55,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-inflation-indexing",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-interest-arbitration",
+      "group": "mechanism",
+      "word_count": 65,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-longevity",
+      "group": "mechanism",
+      "word_count": 55,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-lump-sum",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-market-recruitment-retention",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-no-direct-compensation-outcome",
+      "group": "mechanism",
+      "word_count": 64,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-non-base-compensation-other",
+      "group": "mechanism",
+      "word_count": 64,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-none-identified",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-one-time",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-ordinance-adoption",
+      "group": "mechanism",
+      "word_count": 57,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-ordinance-council-adoption",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-overtime",
+      "group": "mechanism",
+      "word_count": 56,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-payroll-effective-date",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-recurring",
+      "group": "mechanism",
+      "word_count": 59,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-reimbursement",
+      "group": "mechanism",
+      "word_count": 57,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-retroactive-pay",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-retroactive",
+      "group": "mechanism",
+      "word_count": 58,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-salary-range-change",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-settlement-or-mou",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-step-progression",
+      "group": "mechanism",
+      "word_count": 62,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-stipend-or-premium",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-unclear",
+      "group": "mechanism",
+      "word_count": 63,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-uniform-or-equipment-allowance",
+      "group": "mechanism",
+      "word_count": 61,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "mechanism-vacancy-pressure",
+      "group": "mechanism",
+      "word_count": 60,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-a",
+      "group": "claim",
+      "word_count": 79,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-b",
+      "group": "claim",
+      "word_count": 75,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-c",
+      "group": "claim",
+      "word_count": 82,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-d",
+      "group": "claim",
+      "word_count": 81,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-e",
+      "group": "claim",
+      "word_count": 80,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-f",
+      "group": "claim",
+      "word_count": 79,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-g",
+      "group": "claim",
+      "word_count": 76,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-claim-h",
+      "group": "claim",
+      "word_count": 84,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-unsup-01",
+      "group": "claim",
+      "word_count": 69,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-unsup-02",
+      "group": "claim",
+      "word_count": 72,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-unsup-03",
+      "group": "claim",
+      "word_count": 72,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-unsup-04",
+      "group": "claim",
+      "word_count": 74,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-unsup-05",
+      "group": "claim",
+      "word_count": 76,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "claim-card-unsup-06",
+      "group": "claim",
+      "word_count": 71,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "analytical-design-limits",
+      "group": "limitation",
+      "word_count": 76,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": false
+    },
+    {
+      "figure_id": "comparability-limits",
+      "group": "limitation",
+      "word_count": 82,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "coverage-representativeness-limits",
+      "group": "limitation",
+      "word_count": 72,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": false
+    },
+    {
+      "figure_id": "evidence-discovery-limits",
+      "group": "limitation",
+      "word_count": 90,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "extraction-limits",
+      "group": "limitation",
+      "word_count": 78,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "failed-attempts-repair-timeline",
+      "group": "limitation",
+      "word_count": 88,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "final-evidence-boundary",
+      "group": "limitation",
+      "word_count": 84,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "raw-to-compacted-limits",
+      "group": "limitation",
+      "word_count": 83,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": false
+    },
+    {
+      "figure_id": "review-limits",
+      "group": "limitation",
+      "word_count": 76,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": false
+    },
+    {
+      "figure_id": "storage-retention-limits",
+      "group": "limitation",
+      "word_count": 91,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "error-recovery-timeline",
+      "group": "methodology",
+      "word_count": 107,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "full-workflow-overview",
+      "group": "methodology",
+      "word_count": 113,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "human-ai-division-of-work",
+      "group": "methodology",
+      "word_count": 112,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    },
+    {
+      "figure_id": "strict-bounded-evidence-lanes",
+      "group": "methodology",
+      "word_count": 106,
+      "within_word_boundary": true,
+      "stock_phrase_free": true,
+      "first_person_or_direct": true
+    }
+  ]
+}

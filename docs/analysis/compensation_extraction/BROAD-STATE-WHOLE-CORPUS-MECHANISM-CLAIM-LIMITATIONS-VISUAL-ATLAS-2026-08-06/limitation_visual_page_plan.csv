@@ -1,0 +1,11 @@
+figure_id,title,order
+analytical-design-limits,Analytical-design limits,1
+comparability-limits,Comparability limits,2
+coverage-representativeness-limits,Coverage and representativeness limits,3
+evidence-discovery-limits,Evidence discovery limits,4
+extraction-limits,Extraction limits,5
+failed-attempts-repair-timeline,Attempts that did not work—and what changed,6
+final-evidence-boundary,What the evidence still supports,7
+raw-to-compacted-limits,Raw extraction and compaction,8
+review-limits,Review limits,9
+storage-retention-limits,Storage and source-retention limits,10

@@ -1,0 +1,9 @@
+{
+  "figure_id": "raw-to-compacted-limits",
+  "title": "Raw extraction and compaction",
+  "caption": "Automated field recovery produced 5,558,770 raw field hits and 4,289,437 raw spans. Compaction reduced that material to 1,876,183 administrative observations—a 66.25% reduction in field records—by removing duplication, boilerplate, and structurally unusable material. More extracted rows did not mean more independent facts. The compact observations still preserve many-to-many source lineage and cannot be read as event prevalence. This reduction was necessary to prevent repeated source fragments from inflating the apparent amount or strength of evidence.",
+  "caption_word_count": 83,
+  "png_path": "assets/limitations/raw-to-compacted-limits.png",
+  "svg_path": "assets/limitations/raw-to-compacted-limits.svg",
+  "qa_status": "pass"
+}

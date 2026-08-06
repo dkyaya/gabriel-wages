@@ -1,0 +1,10 @@
+{
+  "mechanism_count": 38,
+  "deduplicated_event_count": 13391,
+  "tier_counts": {
+    "standalone": 27,
+    "small_multiple": 9,
+    "sparse": 2
+  },
+  "event_link_source_rows": 13391
+}

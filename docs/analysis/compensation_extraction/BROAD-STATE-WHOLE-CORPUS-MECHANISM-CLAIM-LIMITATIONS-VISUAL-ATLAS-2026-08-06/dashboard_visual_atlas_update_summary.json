@@ -1,0 +1,22 @@
+{
+  "current_stage": "whole-corpus mechanism, claim, and limitations visual atlas complete",
+  "next_stage": "USER PDF REVIEW",
+  "decision": "broad_state_whole_corpus_visual_atlas_completed_dashboard_ready",
+  "mechanism_categories_included": 38,
+  "final_claims_included": 14,
+  "limitation_visuals": 10,
+  "methodology_visuals": 4,
+  "pdf_page_count": 76,
+  "public_landing_page": "/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/",
+  "public_pdf": "/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+  "primary_dashboard_map": "scout_coverage_rate",
+  "prior_visual_review_preserved": true,
+  "native_pdf_pages": 1029482,
+  "unsearched_targets": 12844,
+  "storage_held_sources": 7895,
+  "external_GABRIEL_scoring": false,
+  "regression": false,
+  "causal_estimate": false,
+  "full_report_drafted": false,
+  "last_updated": "2026-08-06"
+}

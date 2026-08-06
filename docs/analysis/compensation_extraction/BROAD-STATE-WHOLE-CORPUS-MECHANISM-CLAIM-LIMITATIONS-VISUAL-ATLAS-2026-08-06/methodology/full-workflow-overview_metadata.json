@@ -1,0 +1,9 @@
+{
+  "figure_id": "full-workflow-overview",
+  "title": "How the evidence moved through the project",
+  "caption": "I directed a staged workflow from scouting and verification through retention, extraction, compaction, reconciliation, mathematical analysis, semantic review, bounded reanalysis, claim adjudication, and visual production. Each stage narrowed the usable evidence while preserving source lineage and exclusions. The process is long because the research question requires matched occupations within the same city and compensation cycle. No later stage was allowed to turn unmatched administrative material into a clean wage comparison. At each transition, deterministic checks recorded the analytical unit, exclusions, denominator, source coordinates, and whether the evidence was strict, bounded, directional, contextual, or rejected. Those controls make the result reproducible while keeping later interpretation tied to the evidence that actually survived each gate.",
+  "caption_word_count": 113,
+  "png_path": "assets/methodology/full-workflow-overview.png",
+  "svg_path": "assets/methodology/full-workflow-overview.svg",
+  "qa_status": "pass"
+}

@@ -1,0 +1,9 @@
+{
+  "figure_id": "storage-retention-limits",
+  "title": "Storage and source-retention limits",
+  "caption": "The review pipeline identified 49,294 source-ready locators, retained 14,449 unique payloads under a 30 GiB ceiling, and held 7,895 verified sources for possible later recovery. Another 24,569 low-value context sources were deferred. The storage limit therefore shaped which evidence could enter later stages. It does not indicate that held sources favor either side, and this atlas does not treat them as observed evidence. A targeted recovery remains possible later, but final adjudication found that no held-source tranche was required to produce the present bounded claims or visuals.",
+  "caption_word_count": 91,
+  "png_path": "assets/limitations/storage-retention-limits.png",
+  "svg_path": "assets/limitations/storage-retention-limits.svg",
+  "qa_status": "pass"
+}

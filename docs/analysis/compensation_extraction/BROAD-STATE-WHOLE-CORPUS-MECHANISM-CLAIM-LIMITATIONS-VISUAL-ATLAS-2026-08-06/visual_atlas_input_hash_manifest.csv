@@ -1,0 +1,6 @@
+path,sha256,bytes
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_exposure_event_layer.jsonl,633aafaf18d4ef87dccbdc5e052e9d79ffcab0d6fda0320cfceb6068f95f2c75,8761940
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_hex_density_visual_ready_layer.jsonl,752523b6894c46d80585d4b2900bde93b4e8d13776639ff5307598c8613ab6d7,5549899
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/final_adjudicated_claim_table.jsonl,deec42071c88185711efe0e0d07275a000a9a212ad97f02c1b2e2c774d987649,73834
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/claim_counterexample_links.jsonl,5ce5debea8a631e5f650acf91be2da32b1a8718b909458e7689613dfbf812632,5572
+docs/dashboard/src/assets/us-states-2025-20m.geojson,31715da6d14711893c54bff23bdd57c1817ad646a1686ca925d79857254ecb37,293563

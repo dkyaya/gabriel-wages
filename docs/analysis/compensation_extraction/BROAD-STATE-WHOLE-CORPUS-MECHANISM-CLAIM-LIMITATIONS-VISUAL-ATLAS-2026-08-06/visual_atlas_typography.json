@@ -1,0 +1,9 @@
+{
+  "primary": "Arial",
+  "fallback": [
+    "Helvetica",
+    "sans-serif"
+  ],
+  "minimum_figure_points": 8,
+  "minimum_pdf_body_points": 8.5
+}

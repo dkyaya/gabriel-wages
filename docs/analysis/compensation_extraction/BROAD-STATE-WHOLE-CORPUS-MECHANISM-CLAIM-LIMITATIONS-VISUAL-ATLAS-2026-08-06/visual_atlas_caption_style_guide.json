@@ -1,0 +1,32 @@
+{
+  "mechanism_words": [
+    45,
+    120
+  ],
+  "claim_words": [
+    45,
+    90
+  ],
+  "limitation_words": [
+    70,
+    130
+  ],
+  "methodology_words": [
+    90,
+    160
+  ],
+  "voice": "first person where natural; direct, plain, bounded",
+  "preferred_terms": [
+    "compensation mechanism",
+    "administrative record",
+    "documentary evidence",
+    "strict evidence",
+    "bounded evidence",
+    "directional evidence",
+    "implementation event",
+    "compensation cycle",
+    "staffing pressure",
+    "local comparison",
+    "evidence gap"
+  ]
+}

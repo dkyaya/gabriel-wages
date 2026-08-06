@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "opens": true,
+  "page_count": 76,
+  "title": "Why Public-Safety Wages May Grow Differently: A Visual Atlas of Municipal Compensation Evidence",
+  "author": "Joachim Johnson",
+  "subject": "Municipal compensation mechanisms, claim boundaries, and project-wide limitations",
+  "file_bytes": 8709892,
+  "metadata_correct": true,
+  "all_pages_render_required": true,
+  "pages_rendered_with_poppler": 76,
+  "representative_pages_visually_inspected": [1, 8, 46, 55, 65, 69, 72, 73, 76],
+  "text_selectability_verified": true,
+  "blank_or_clipped_page_count": 0
+}

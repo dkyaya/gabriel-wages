@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-unsup-05",
+  "claim_id": "UNSUP-05",
+  "title": "A fixed safety growth advantage is not established",
+  "final_class": "unsupported",
+  "caption": "I classify this claim as unsupported. A precise claim that safety wages grow a fixed percentage faster is not supported by the available matched evidence. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 76,
+  "png_path": "assets/claims/claim-card-unsup-05.png",
+  "svg_path": "assets/claims/claim-card-unsup-05.svg",
+  "report_placement": "report_limitations",
+  "qa_status": "pass"
+}

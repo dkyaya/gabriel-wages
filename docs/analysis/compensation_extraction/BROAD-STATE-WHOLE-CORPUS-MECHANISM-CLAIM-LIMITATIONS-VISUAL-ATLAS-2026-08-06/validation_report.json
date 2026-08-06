@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "checks": {
+    "mechanisms": true,
+    "claims": true,
+    "limitations": true,
+    "methodology": true,
+    "event_rows_source": 13391,
+    "root_events_preserved": 2998,
+    "municipalities_with_coordinates": 1440,
+    "hex_rows_preserved": 6387,
+    "counterexamples": 7,
+    "conflicts": 201,
+    "native_pdf_pages": 1029482,
+    "unsearched_targets": 12844,
+    "storage_held_sources": 7895,
+    "images_open": true,
+    "svg_open": true,
+    "pdf_opens": true,
+    "prior_gallery_preserved": true,
+    "primary_map_preserved": "scout_coverage_rate"
+  }
+}

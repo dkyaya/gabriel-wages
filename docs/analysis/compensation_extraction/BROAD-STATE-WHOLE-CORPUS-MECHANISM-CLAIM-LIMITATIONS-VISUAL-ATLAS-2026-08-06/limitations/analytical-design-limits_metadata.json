@@ -1,0 +1,9 @@
+{
+  "figure_id": "analytical-design-limits",
+  "title": "Analytical-design limits",
+  "caption": "Only 3 of 16 regression-readiness gates passed. I therefore did not run a regression, estimate a national safety wage gap, estimate mechanism prevalence, or claim a causal effect. A larger row count would not repair unclear units, incompatible pay measures, missing controls, or repeated-event ambiguity. These are design failures, not merely small-sample problems. The correct result is therefore that the model was not design-ready, not a zero effect or evidence that the mechanisms do not matter.",
+  "caption_word_count": 76,
+  "png_path": "assets/limitations/analytical-design-limits.png",
+  "svg_path": "assets/limitations/analytical-design-limits.svg",
+  "qa_status": "pass"
+}

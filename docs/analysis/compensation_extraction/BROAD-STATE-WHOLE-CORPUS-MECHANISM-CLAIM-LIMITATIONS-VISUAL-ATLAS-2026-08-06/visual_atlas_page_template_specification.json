@@ -1,0 +1,15 @@
+{
+  "size_inches": [
+    11,
+    8.5
+  ],
+  "orientation": "landscape",
+  "margins_inches": [
+    0.52,
+    0.52,
+    0.48,
+    0.48
+  ],
+  "header": "running section title",
+  "footer": "page number and evidence boundary"
+}

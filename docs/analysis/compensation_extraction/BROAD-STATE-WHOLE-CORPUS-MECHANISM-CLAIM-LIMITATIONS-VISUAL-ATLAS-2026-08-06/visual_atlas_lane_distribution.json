@@ -1,0 +1,68 @@
+[
+  {
+    "lane": 1,
+    "mechanisms": [
+      "none_identified",
+      "payroll_effective_date",
+      "retroactive",
+      "retroactive_pay",
+      "recurring",
+      "fiscal_constraint",
+      "budget_pay_plan_process",
+      "no_direct_compensation_outcome",
+      "across_the_board_raise",
+      "one_time",
+      "non_base_compensation_other",
+      "ordinance_council_adoption",
+      "ordinance_adoption",
+      "unclear"
+    ],
+    "special": "mechanisms"
+  },
+  {
+    "lane": 2,
+    "mechanisms": [
+      "base_wage_change",
+      "step_progression",
+      "cola_cpi_adjustment",
+      "uniform_or_equipment_allowance",
+      "benefit_cost_change",
+      "budget_appropriation",
+      "stipend_or_premium",
+      "settlement_or_mou",
+      "market_recruitment_retention",
+      "classification_band_change",
+      "longevity",
+      "overtime",
+      "inflation_indexing"
+    ],
+    "special": "mechanisms"
+  },
+  {
+    "lane": 3,
+    "mechanisms": [
+      "holiday_pay",
+      "lump_sum",
+      "bargaining_leverage",
+      "collective_bargaining",
+      "salary_range_change",
+      "contract_ratification",
+      "vacancy_pressure",
+      "reimbursement",
+      "comparability_parity",
+      "classification_civil_service",
+      "interest_arbitration"
+    ],
+    "special": "mechanisms"
+  },
+  {
+    "lane": 4,
+    "mechanisms": [],
+    "special": "claims"
+  },
+  {
+    "lane": 5,
+    "mechanisms": [],
+    "special": "limitations_and_methodology"
+  }
+]

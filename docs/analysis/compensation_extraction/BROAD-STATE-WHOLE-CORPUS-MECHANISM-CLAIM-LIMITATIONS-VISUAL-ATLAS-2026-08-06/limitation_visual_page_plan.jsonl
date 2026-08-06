@@ -1,0 +1,10 @@
+{"figure_id": "analytical-design-limits", "title": "Analytical-design limits", "order": 1}
+{"figure_id": "comparability-limits", "title": "Comparability limits", "order": 2}
+{"figure_id": "coverage-representativeness-limits", "title": "Coverage and representativeness limits", "order": 3}
+{"figure_id": "evidence-discovery-limits", "title": "Evidence discovery limits", "order": 4}
+{"figure_id": "extraction-limits", "title": "Extraction limits", "order": 5}
+{"figure_id": "failed-attempts-repair-timeline", "title": "Attempts that did not work—and what changed", "order": 6}
+{"figure_id": "final-evidence-boundary", "title": "What the evidence still supports", "order": 7}
+{"figure_id": "raw-to-compacted-limits", "title": "Raw extraction and compaction", "order": 8}
+{"figure_id": "review-limits", "title": "Review limits", "order": 9}
+{"figure_id": "storage-retention-limits", "title": "Storage and source-retention limits", "order": 10}

@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "tracked_candidate_over_50_mib": [],
+  "largest_staged_file": "docs/dashboard/public/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+  "largest_staged_file_bytes": 8709892,
+  "threshold_bytes": 52428800
+}

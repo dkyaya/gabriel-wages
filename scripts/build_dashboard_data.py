@@ -21182,6 +21182,85 @@ def main() -> int:
             reports_index["reports"].insert(1, visual_review_report)
             reports_index["data_vintage"] = "2026-08-06"
 
+    # The visual-atlas overlay follows the earlier 16-figure review package and
+    # adds a separate, permanent PDF card without replacing the scout coverage
+    # map or the prior gallery.  It is applied only after the atlas validation
+    # report passes.
+    visual_atlas_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-MECHANISM-CLAIM-LIMITATIONS-VISUAL-ATLAS-2026-08-06"
+    )
+    visual_atlas_summary_path = visual_atlas_dir / "visual_atlas_summary.json"
+    visual_atlas_dashboard_path = visual_atlas_dir / "dashboard_visual_atlas_update_summary.json"
+    visual_atlas_validation_path = visual_atlas_dir / "validation_report.json"
+    if (
+        visual_atlas_summary_path.is_file()
+        and visual_atlas_dashboard_path.is_file()
+        and visual_atlas_validation_path.is_file()
+    ):
+        visual_atlas_summary = read_json(visual_atlas_summary_path)
+        visual_atlas_dashboard = read_json(visual_atlas_dashboard_path)
+        visual_atlas_validation = read_json(visual_atlas_validation_path)
+        if visual_atlas_validation.get("status") == "pass":
+            project_phase_summary.update(
+                {
+                    "current_phase": "Mechanism, claim, and limitations visual atlas complete",
+                    "stage": "whole_corpus_visual_atlas_complete",
+                    "current_phase_code": visual_atlas_summary["decision"],
+                    "current_evidence_status": "visual_atlas_user_review_ready",
+                    "next_task": "USER PDF REVIEW",
+                    "whole_corpus_visual_atlas_complete": True,
+                    "whole_corpus_visual_atlas_page": visual_atlas_dashboard["public_landing_page"],
+                    "whole_corpus_visual_atlas_pdf": visual_atlas_dashboard["public_pdf"],
+                    "whole_corpus_visual_atlas_mechanisms": visual_atlas_summary["mechanism_count"],
+                    "whole_corpus_visual_atlas_claims": visual_atlas_summary["claim_cards"],
+                    "whole_corpus_visual_atlas_limitations": visual_atlas_summary["limitation_visuals"],
+                    "whole_corpus_visual_atlas_pages": visual_atlas_summary["pdf_page_count"],
+                    "unresolved_hosted_search_target_count": visual_atlas_summary["unsearched_targets"],
+                    "available_external_data_storage_capacity_holds": visual_atlas_summary["storage_held_sources"],
+                    "available_external_data_gabriel_scoring_used": False,
+                    "whole_corpus_visual_regression_run": False,
+                    "whole_corpus_visual_causal_estimate_made": False,
+                    "whole_corpus_report_draft_started": False,
+                    "dashboard_map_primary_metric": "scout_coverage_rate",
+                }
+            )
+            visual_atlas_report = {
+                "id": "whole-corpus-mechanism-claim-limitations-visual-atlas-2026-08-06",
+                "title": "Mechanisms, Claims, and Limitations Visual Atlas",
+                "report_type": "Visual atlas PDF",
+                "date": "2026-08-06",
+                "checkpoint": (
+                    f"{visual_atlas_summary['mechanism_count']} mechanisms, "
+                    f"{visual_atlas_summary['claim_cards']} final claims, and "
+                    f"{visual_atlas_summary['limitation_visuals']} limitation visuals"
+                ),
+                "summary": (
+                    "A visual-first summary of the compensation mechanisms I found, "
+                    "what the final claims support, and the limits that shaped the analysis."
+                ),
+                "tags": ["whole corpus", "visual atlas", "PDF", "user review"],
+                "current": True,
+                "historical": False,
+                "href": visual_atlas_dashboard["public_landing_page"].lstrip("/"),
+                "link_label": "Open visual atlas",
+                "secondary_href": visual_atlas_dashboard["public_pdf"].lstrip("/"),
+                "secondary_link_label": "Open PDF",
+                "scope_metrics": [
+                    {"label": "mechanisms", "value": visual_atlas_summary["mechanism_count"]},
+                    {"label": "claims", "value": visual_atlas_summary["claim_cards"]},
+                    {"label": "PDF pages", "value": visual_atlas_summary["pdf_page_count"]},
+                ],
+            }
+            reports_index["reports"] = [
+                report
+                for report in reports_index["reports"]
+                if report.get("id") != visual_atlas_report["id"]
+            ]
+            reports_index["reports"].insert(0, visual_atlas_report)
+            reports_index["data_vintage"] = "2026-08-06"
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),

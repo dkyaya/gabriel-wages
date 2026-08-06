@@ -1,0 +1,9 @@
+{
+  "figure_id": "strict-bounded-evidence-lanes",
+  "title": "Strict and broader evidence lanes",
+  "caption": "I kept five evidence outcomes separate. Strict evidence supports exact, claim-safe statements. Bounded evidence permits compatible comparisons with explicit caveats. Directional evidence supports mechanisms or direction without a precise magnitude. Context records explain the setting, while rejected records do not support claims. The broader redesign recovered useful evidence without rewriting the strict baseline. It strengthened five claims within their existing class, made one claim more mixed, and produced no claim-class upgrades. The same admission rules applied to supporting and countervailing evidence. A broader record could strengthen context or mechanism interpretation, but directional evidence could not become a precise wage estimate and unresolved direction-changing conflicts remained excluded.",
+  "caption_word_count": 106,
+  "png_path": "assets/methodology/strict-bounded-evidence-lanes.png",
+  "svg_path": "assets/methodology/strict-bounded-evidence-lanes.svg",
+  "qa_status": "pass"
+}

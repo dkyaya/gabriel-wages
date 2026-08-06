@@ -1,0 +1,9 @@
+{
+  "figure_id": "coverage-representativeness-limits",
+  "title": "Coverage and representativeness limits",
+  "caption": "Geographic coverage is uneven across states and compensation mechanisms. The canonical crosswalk identifies 468 urban municipalities, 682 rural municipalities, and 290 with unknown urbanicity. Local comparisons remain local, and mechanism maps show where documented events appear—not how common a process is among all municipalities. Without an eligible-universe denominator, geographic density cannot support prevalence claims. The unknown and uneven cells stay visible rather than being inferred from neighboring municipalities or better-covered states.",
+  "caption_word_count": 72,
+  "png_path": "assets/limitations/coverage-representativeness-limits.png",
+  "svg_path": "assets/limitations/coverage-representativeness-limits.svg",
+  "qa_status": "pass"
+}

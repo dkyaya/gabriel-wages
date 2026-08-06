@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-unsup-03",
+  "claim_id": "UNSUP-03",
+  "title": "A causal effect is not established",
+  "final_class": "unsupported",
+  "caption": "I classify this claim as unsupported. A causal effect estimate for any compensation mechanism is not supported by the current design. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 72,
+  "png_path": "assets/claims/claim-card-unsup-03.png",
+  "svg_path": "assets/claims/claim-card-unsup-03.svg",
+  "report_placement": "report_limitations",
+  "qa_status": "pass"
+}

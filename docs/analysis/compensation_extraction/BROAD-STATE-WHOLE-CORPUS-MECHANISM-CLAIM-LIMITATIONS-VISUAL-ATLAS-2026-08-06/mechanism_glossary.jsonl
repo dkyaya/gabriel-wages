@@ -1,0 +1,38 @@
+{"mechanism_tag": "none_identified", "mechanism_name": "None Identified", "definition": "No specific compensation mechanism was identified in the retained event record.", "event_count": 3694}
+{"mechanism_tag": "payroll_effective_date", "mechanism_name": "Payroll Effective Date", "definition": "The date a compensation change became operative in payroll administration.", "event_count": 1876}
+{"mechanism_tag": "retroactive", "mechanism_name": "Retroactive", "definition": "A compensation change applied to an earlier effective period.", "event_count": 1418}
+{"mechanism_tag": "retroactive_pay", "mechanism_name": "Retroactive Pay", "definition": "Back pay issued after a compensation term took effect or was settled.", "event_count": 1418}
+{"mechanism_tag": "recurring", "mechanism_name": "Recurring", "definition": "A compensation component that continues rather than ending after one payment.", "event_count": 720}
+{"mechanism_tag": "fiscal_constraint", "mechanism_name": "Fiscal Constraint", "definition": "Budget pressure or limited fiscal capacity that constrained compensation choices.", "event_count": 619}
+{"mechanism_tag": "budget_pay_plan_process", "mechanism_name": "Budget Pay Plan Process", "definition": "A budget or pay-plan process that formally set or revised compensation.", "event_count": 617}
+{"mechanism_tag": "no_direct_compensation_outcome", "mechanism_name": "No Direct Compensation Outcome", "definition": "A documented administrative event without a direct pay outcome in the retained evidence.", "event_count": 544}
+{"mechanism_tag": "across_the_board_raise", "mechanism_name": "Across The Board Raise", "definition": "The same general increase applied across covered roles or classifications.", "event_count": 373}
+{"mechanism_tag": "one_time", "mechanism_name": "One Time", "definition": "A payment or adjustment that does not recur in the regular base schedule.", "event_count": 299}
+{"mechanism_tag": "non_base_compensation_other", "mechanism_name": "Non Base Compensation Other", "definition": "Compensation outside regular base wages that did not fit a more specific category.", "event_count": 292}
+{"mechanism_tag": "ordinance_council_adoption", "mechanism_name": "Ordinance Council Adoption", "definition": "A council or ordinance action formally approving a compensation change.", "event_count": 255}
+{"mechanism_tag": "ordinance_adoption", "mechanism_name": "Ordinance Adoption", "definition": "Formal adoption of compensation terms through an ordinance.", "event_count": 206}
+{"mechanism_tag": "unclear", "mechanism_name": "Unclear", "definition": "The retained evidence points to a compensation event but does not identify the mechanism clearly.", "event_count": 140}
+{"mechanism_tag": "base_wage_change", "mechanism_name": "Base Wage Change", "definition": "A change to the recurring base wage or salary rate.", "event_count": 120}
+{"mechanism_tag": "step_progression", "mechanism_name": "Step Progression", "definition": "Movement through a salary schedule based on steps, service, rank, or progression rules.", "event_count": 87}
+{"mechanism_tag": "cola_cpi_adjustment", "mechanism_name": "COLA CPI Adjustment", "definition": "A cost-of-living adjustment, sometimes linked to inflation or a price index.", "event_count": 79}
+{"mechanism_tag": "uniform_or_equipment_allowance", "mechanism_name": "Uniform Or Equipment Allowance", "definition": "A payment for required uniforms, equipment, maintenance, or related costs.", "event_count": 68}
+{"mechanism_tag": "benefit_cost_change", "mechanism_name": "Benefit Cost Change", "definition": "A change in benefit value, employee contributions, or employer benefit costs.", "event_count": 65}
+{"mechanism_tag": "budget_appropriation", "mechanism_name": "Budget Appropriation", "definition": "A budget allocation that authorized or funded compensation.", "event_count": 64}
+{"mechanism_tag": "stipend_or_premium", "mechanism_name": "Stipend Or Premium", "definition": "A supplemental payment for assignments, qualifications, shifts, or special duties.", "event_count": 62}
+{"mechanism_tag": "settlement_or_mou", "mechanism_name": "Settlement Or MOU", "definition": "A settlement or memorandum of understanding that changed compensation terms.", "event_count": 58}
+{"mechanism_tag": "market_recruitment_retention", "mechanism_name": "Market Recruitment Retention", "definition": "Pay action justified by labor-market competition, hiring, or retention pressure.", "event_count": 44}
+{"mechanism_tag": "classification_band_change", "mechanism_name": "Classification Band Change", "definition": "A change to job classification, pay grade, range, or band.", "event_count": 43}
+{"mechanism_tag": "longevity", "mechanism_name": "Longevity", "definition": "Additional compensation tied to years of service.", "event_count": 40}
+{"mechanism_tag": "overtime", "mechanism_name": "Overtime", "definition": "Compensation for hours or duties beyond regular schedules.", "event_count": 38}
+{"mechanism_tag": "inflation_indexing", "mechanism_name": "Inflation Indexing", "definition": "A compensation rule explicitly linked to inflation or an index.", "event_count": 31}
+{"mechanism_tag": "holiday_pay", "mechanism_name": "Holiday Pay", "definition": "Premium or additional compensation for holidays.", "event_count": 22}
+{"mechanism_tag": "lump_sum", "mechanism_name": "Lump Sum", "definition": "A single lump-sum payment rather than a recurring wage-rate increase.", "event_count": 18}
+{"mechanism_tag": "bargaining_leverage", "mechanism_name": "Bargaining Leverage", "definition": "Evidence that negotiating leverage shaped compensation terms.", "event_count": 17}
+{"mechanism_tag": "collective_bargaining", "mechanism_name": "Collective Bargaining", "definition": "Negotiation between a public employer and represented employees over compensation.", "event_count": 17}
+{"mechanism_tag": "salary_range_change", "mechanism_name": "Salary Range Change", "definition": "A change to the minimum, maximum, or span of a salary range.", "event_count": 12}
+{"mechanism_tag": "contract_ratification", "mechanism_name": "Contract Ratification", "definition": "Formal approval of negotiated contract terms by the relevant parties.", "event_count": 9}
+{"mechanism_tag": "vacancy_pressure", "mechanism_name": "Vacancy Pressure", "definition": "Unfilled positions or vacancy conditions cited in compensation or staffing decisions.", "event_count": 8}
+{"mechanism_tag": "reimbursement", "mechanism_name": "Reimbursement", "definition": "Repayment of eligible work-related expenses rather than ordinary wages.", "event_count": 7}
+{"mechanism_tag": "comparability_parity", "mechanism_name": "Comparability Parity", "definition": "Compensation linked to comparison with another role, unit, or jurisdiction.", "event_count": 6}
+{"mechanism_tag": "classification_civil_service", "mechanism_name": "Classification Civil Service", "definition": "Civil-service or classification rules that structure pay placement or progression.", "event_count": 4}
+{"mechanism_tag": "interest_arbitration", "mechanism_name": "Interest Arbitration", "definition": "A neutral decision process that resolves bargaining impasses over contract terms.", "event_count": 1}

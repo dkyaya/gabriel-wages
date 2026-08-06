@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-claim-c",
+  "claim_id": "CLAIM-C",
+  "title": "Non-base pay creates additional compensation channels",
+  "final_class": "mechanism_supported_only",
+  "caption": "I classify this claim as mechanism supported only. Reviewed safety-compensation records contain structured non-base channels—including overtime, holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond base pay. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 82,
+  "png_path": "assets/claims/claim-card-claim-c.png",
+  "svg_path": "assets/claims/claim-card-claim-c.svg",
+  "report_placement": "report_supporting_finding",
+  "qa_status": "pass"
+}

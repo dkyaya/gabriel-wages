@@ -1,0 +1,14 @@
+{"claim_id": "CLAIM-A", "page_group": 1, "title": "Formal bargaining institutions shape compensation terms", "final_class": "mechanism_supported_only"}
+{"claim_id": "CLAIM-B", "page_group": 1, "title": "Scheduled growth mechanisms can differ by occupation", "final_class": "conditionally_supported"}
+{"claim_id": "CLAIM-C", "page_group": 2, "title": "Non-base pay creates additional compensation channels", "final_class": "mechanism_supported_only"}
+{"claim_id": "CLAIM-D", "page_group": 2, "title": "Staffing pressure can enter compensation decisions", "final_class": "mechanism_supported_only"}
+{"claim_id": "CLAIM-E", "page_group": 3, "title": "Retroactivity can turn delay into back pay", "final_class": "mechanism_supported_only"}
+{"claim_id": "CLAIM-F", "page_group": 3, "title": "Budgets and ordinances formalize or constrain pay", "final_class": "mechanism_supported_only"}
+{"claim_id": "CLAIM-G", "page_group": 4, "title": "The safety and non-safety pattern is mixed", "final_class": "mixed_or_countervailing"}
+{"claim_id": "CLAIM-H", "page_group": 4, "title": "The evidence supports a bounded mechanism account", "final_class": "supported"}
+{"claim_id": "UNSUP-01", "page_group": 5, "title": "A national safety wage gap is not established", "final_class": "unsupported"}
+{"claim_id": "UNSUP-02", "page_group": 5, "title": "National mechanism prevalence is not established", "final_class": "unsupported"}
+{"claim_id": "UNSUP-03", "page_group": 6, "title": "A causal effect is not established", "final_class": "unsupported"}
+{"claim_id": "UNSUP-04", "page_group": 6, "title": "A regression result is not available", "final_class": "unsupported"}
+{"claim_id": "UNSUP-05", "page_group": 7, "title": "A fixed safety growth advantage is not established", "final_class": "unsupported"}
+{"claim_id": "UNSUP-06", "page_group": 7, "title": "Mechanisms do not prove a wage difference", "final_class": "unsupported"}

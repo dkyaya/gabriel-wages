@@ -91,6 +91,24 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["failed_unparseable_outcomes"], 15)
         self.assertEqual(phase["remaining_unscouted_eligible_municipality_count"], 15)
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
+        atlas_decision = "broad_state_whole_corpus_visual_atlas_completed_dashboard_ready"
+        if phase.get("current_phase_code") == atlas_decision:
+            self.assertEqual(phase["current_phase"], "Mechanism, claim, and limitations visual atlas complete")
+            self.assertEqual(phase["stage"], "whole_corpus_visual_atlas_complete")
+            self.assertEqual(phase["next_task"], "USER PDF REVIEW")
+            self.assertTrue(phase["whole_corpus_visual_atlas_complete"])
+            self.assertEqual(phase["whole_corpus_visual_atlas_mechanisms"], 38)
+            self.assertEqual(phase["whole_corpus_visual_atlas_claims"], 14)
+            self.assertEqual(phase["whole_corpus_visual_atlas_limitations"], 10)
+            self.assertEqual(phase["whole_corpus_visual_atlas_pages"], 76)
+            self.assertEqual(phase["available_external_data_storage_capacity_holds"], 7895)
+            self.assertEqual(phase["unresolved_hosted_search_target_count"], 12844)
+            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+            self.assertFalse(phase["available_external_data_gabriel_scoring_used"])
+            self.assertFalse(phase["whole_corpus_visual_regression_run"])
+            self.assertFalse(phase["whole_corpus_visual_causal_estimate_made"])
+            self.assertFalse(phase["whole_corpus_report_draft_started"])
+            return
         visual_decision = "broad_state_whole_corpus_visual_production_completed_user_review_ready"
         if phase.get("current_phase_code") == visual_decision:
             self.assertEqual(phase["current_phase"], "Whole-corpus visual production and QA complete")

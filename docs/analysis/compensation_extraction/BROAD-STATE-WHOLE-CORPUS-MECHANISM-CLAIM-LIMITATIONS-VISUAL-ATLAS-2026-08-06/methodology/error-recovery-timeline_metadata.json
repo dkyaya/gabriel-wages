@@ -1,0 +1,9 @@
+{
+  "figure_id": "error-recovery-timeline",
+  "title": "Errors, interruptions, and recovery",
+  "caption": "The pipeline encountered a dirty-worktree blocker, a source-less hosted-search backend, oversized checkpoints, overlapping preparation work, invalid gzip files, a storage ceiling, extraction overproduction, overly strict promotion gates, and dashboard deployment problems. The response was not to hide failed work. I preserved completed artifacts, quarantined invalid files, replaced fragile checkpoints, separated strict and bounded evidence, and repaired deployment. Some limits remained: no additional hosted search, no external GABRIEL scoring, and no defensible regression. The key recovery principle was to resume from accepted checkpoints and repair only the affected module. That preserved valid earlier work while preventing a failed source, process, or analytical rule from silently contaminating later outputs.",
+  "caption_word_count": 107,
+  "png_path": "assets/methodology/error-recovery-timeline.png",
+  "svg_path": "assets/methodology/error-recovery-timeline.svg",
+  "qa_status": "pass"
+}

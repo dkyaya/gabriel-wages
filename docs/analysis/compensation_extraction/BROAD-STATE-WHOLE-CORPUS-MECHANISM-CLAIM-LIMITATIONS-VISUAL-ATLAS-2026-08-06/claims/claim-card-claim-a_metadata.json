@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-claim-a",
+  "claim_id": "CLAIM-A",
+  "title": "Formal bargaining institutions shape compensation terms",
+  "final_class": "mechanism_supported_only",
+  "caption": "I classify this claim as mechanism supported only. In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional channels that can set or preserve safety-compensation terms. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 79,
+  "png_path": "assets/claims/claim-card-claim-a.png",
+  "svg_path": "assets/claims/claim-card-claim-a.svg",
+  "report_placement": "report_supporting_finding",
+  "qa_status": "pass"
+}

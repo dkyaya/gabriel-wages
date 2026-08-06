@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-claim-e",
+  "claim_id": "CLAIM-E",
+  "title": "Retroactivity can turn delay into back pay",
+  "final_class": "mechanism_supported_only",
+  "caption": "I classify this claim as mechanism supported only. Reviewed records show that retroactive effective dates and implementation clauses can convert some bargaining delays into payable increases or back pay. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 80,
+  "png_path": "assets/claims/claim-card-claim-e.png",
+  "svg_path": "assets/claims/claim-card-claim-e.svg",
+  "report_placement": "report_supporting_finding",
+  "qa_status": "pass"
+}

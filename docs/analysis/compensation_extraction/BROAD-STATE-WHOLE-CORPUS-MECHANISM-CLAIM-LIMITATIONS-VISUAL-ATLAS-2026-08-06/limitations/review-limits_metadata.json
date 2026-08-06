@@ -1,0 +1,9 @@
+{
+  "figure_id": "review-limits",
+  "title": "Review limits",
+  "caption": "New administrative evidence was classified with deterministic local rules and bounded semantic AI review; it was not scored by GABRIEL. That review improves traceability but is not independent human gold coding. The project also preserved 201 unresolved high-impact conflicts rather than choosing convenient values. Those conflicts are visible as a limitation and excluded from clean headline calculations. Independent human review of the most consequential records would strengthen confidence, especially where wording or source version remains disputed.",
+  "caption_word_count": 76,
+  "png_path": "assets/limitations/review-limits.png",
+  "svg_path": "assets/limitations/review-limits.svg",
+  "qa_status": "pass"
+}

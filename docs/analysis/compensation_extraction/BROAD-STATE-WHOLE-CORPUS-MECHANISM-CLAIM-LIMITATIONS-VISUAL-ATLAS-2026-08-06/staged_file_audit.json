@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "staged_file_count": 520,
+  "staged_bytes": 36178154,
+  "forbidden_path_hits": [],
+  "full_source_or_extracted_corpus_staged": false,
+  "bulky_local_artifact_staged": false,
+  "tracked_content_scope": "final visual assets, bounded mechanism source tables, captions, manifests, page plans, QA, dashboard metadata, and rendering scripts"
+}

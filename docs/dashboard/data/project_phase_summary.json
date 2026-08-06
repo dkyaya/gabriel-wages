@@ -5661,18 +5661,18 @@
   "computed_cycle_to_cycle_growth_count": 16,
   "conditional_bounded_wage_differential_candidate_count": 3,
   "corrected_claim_gate_statuses": {
-    "causal_mechanism_interpretation_gate": "pass",
-    "external_data_search_readiness_gate": "pass",
-    "global_causal_readiness_gate": "fail",
-    "global_wage_gap_readiness_gate": "fail",
-    "growth_evidence_gate": "partial",
-    "implementation_event_visual_readiness_gate": "partial",
     "local_comparison_gate": "partial",
-    "mechanism_evidence_gate": "pass",
-    "national_readiness_gate": "partial",
-    "non_base_compensation_gate": "partial",
     "same_side_evidence_gate": "partial",
-    "whole_corpus_synthesis_gate": "pass"
+    "mechanism_evidence_gate": "pass",
+    "growth_evidence_gate": "partial",
+    "non_base_compensation_gate": "partial",
+    "national_readiness_gate": "partial",
+    "whole_corpus_synthesis_gate": "pass",
+    "global_wage_gap_readiness_gate": "fail",
+    "global_causal_readiness_gate": "fail",
+    "causal_mechanism_interpretation_gate": "pass",
+    "implementation_event_visual_readiness_gate": "partial",
+    "external_data_search_readiness_gate": "pass"
   },
   "corrected_scaffold_available": true,
   "corrected_scaffold_href": "reports/whole_corpus_evidence_corrected_2026-08-04/whole_corpus_causal_mechanism_evidence_scaffold_corrected_2026-08-04.md",
@@ -5681,11 +5681,11 @@
   "current_bounded_wage_differential_candidate_count": 4,
   "current_candidate_positive_municipalities": 2297,
   "current_candidate_queue_rows": 23018,
-  "current_evidence_status": "whole_corpus_visuals_user_review_ready",
+  "current_evidence_status": "visual_atlas_user_review_ready",
   "current_failure_only_municipalities": 67,
   "current_operational_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
-  "current_phase": "Whole-corpus visual production and QA complete",
-  "current_phase_code": "broad_state_whole_corpus_visual_production_completed_user_review_ready",
+  "current_phase": "Mechanism, claim, and limitations visual atlas complete",
+  "current_phase_code": "broad_state_whole_corpus_visual_atlas_completed_dashboard_ready",
   "current_report_format": "polished_crimson_pdf",
   "current_report_markdown_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.md",
   "current_report_path": "reports/pi_report_final_2026-07-30/pi_report_final_2026-07-30.pdf",
@@ -6077,7 +6077,7 @@
   "future_rating_artifact_completeness_policy_created": true,
   "future_scout_default": "broad_state_by_state_geographic_and_source_family_diverse",
   "future_summary_reconstruction_fallback_created": true,
-  "generated_at": "2026-08-06T06:20:51Z",
+  "generated_at": "2026-08-06T11:59:11Z",
   "global_analysis_readiness": false,
   "global_analysis_readiness_gate_available": true,
   "global_causal_analysis_readiness": "blocked_pending_matched_structure",
@@ -6147,12 +6147,12 @@
   "mechanism_exposure_event_count": 13391,
   "mechanism_hex_density_visual_ready_row_count": 6387,
   "mechanism_implementation_by_side": {
-    "fire": 287,
-    "mixed": 12,
-    "non_safety": 140,
-    "police": 940,
+    "unclear": 1608,
     "safety_combined": 11,
-    "unclear": 1608
+    "police": 940,
+    "non_safety": 140,
+    "fire": 287,
+    "mixed": 12
   },
   "mechanism_implementation_event_count": 2998,
   "mechanism_only_records_upgraded_count": 416,
@@ -6193,20 +6193,20 @@
     "decide whether to refine evidence or authorize a polished export"
   ],
   "next_planned_round": {
-    "checkpoint_overshoot_intent": "completed_intentional_user_approved",
+    "round_id": "BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27",
+    "status": "completed",
+    "profile": "four_independent_geographic_shards",
+    "lanes": 4,
+    "rows_per_lane": 1000,
     "expected_attempted": 4000,
-    "expected_checkpoint_margin": 4922,
     "expected_parseable_at_recent_rate": 4000,
     "expected_post_round_scout_covered": 6922,
+    "expected_checkpoint_margin": 4922,
+    "checkpoint_overshoot_intent": "completed_intentional_user_approved",
     "lane_start_stagger_minutes": 8,
-    "lanes": 4,
-    "profile": "four_independent_geographic_shards",
-    "projection_status": "completed_actual_coverage",
-    "round_id": "BROAD-STATE-BY-STATE-4X1000-PARALLEL-LIVE-SCOUT-STAGGERED-2026-07-27",
-    "rows_per_lane": 1000,
-    "status": "completed"
+    "projection_status": "completed_actual_coverage"
   },
-  "next_task": "USER VISUAL REVIEW",
+  "next_task": "USER PDF REVIEW",
   "normalization_deferred_manual_review_count": 720,
   "normalization_full_count": 672,
   "normalization_mechanism_only_count": 3769,
@@ -6304,15 +6304,15 @@
   "progress_percentage": 844.4,
   "projected_cumulative_scout_covered_if_all_parseable": 16919,
   "proposal_adoption_implementation_counts": {
-    "formally_adopted": 736,
+    "unclear_status": 16676,
     "implemented": 4389,
-    "negotiated_term": 15090,
-    "paid_or_observed": 18,
+    "formally_adopted": 736,
     "proposal_or_demand": 328,
     "recommendation": 123,
-    "rejected_or_not_adopted": 2,
+    "negotiated_term": 15090,
     "tentative_agreement": 7,
-    "unclear_status": 16676
+    "paid_or_observed": 18,
+    "rejected_or_not_adopted": 2
   },
   "quantitatively_supported_growth_mechanism_claim_count": 95,
   "rating_codification_analysis_layer_counts": {
@@ -6416,10 +6416,6 @@
     "weak_context_not_supported_material": 5080
   },
   "rating_summary_filter_catalog": {
-    "cba_vs_non_cba_mixed": {
-      "exact_cba": 4098,
-      "non_cba_or_mixed": 12849
-    },
     "claim_readiness_bucket": {
       "directional_hint_only": 597,
       "global_descriptive_ready": 75,
@@ -6430,15 +6426,6 @@
       "quant_needs_normalization": 9625,
       "source_navigation_only": 493,
       "weak_or_not_supported": 4379
-    },
-    "claim_relevance": {
-      "context_only": 5825,
-      "direct_text_claim": 2231,
-      "documentary_mechanism_claim": 1374,
-      "not_claim_ready": 1262,
-      "provisional_causal_candidate": 1,
-      "quantitative_compensation_claim": 6108,
-      "source_navigation_claim": 146
     },
     "dashboard_evidence_box": {
       "automatic_raise_cola_percentage_evidence": 1966,
@@ -6454,13 +6441,6 @@
       "source_navigation_references": 493,
       "weak_context_not_supported_material": 5080
     },
-    "direction_of_pressure": {
-      "gap_narrowing": 185,
-      "neutral_or_unclear": 4092,
-      "non_safety_advantage": 360,
-      "not_applicable": 12252,
-      "safety_advantage": 58
-    },
     "evidence_family": {
       "non_base_compensation": 2213,
       "not_supported": 728,
@@ -6468,6 +6448,15 @@
       "quantitative_compensation": 8169,
       "source_navigation_reference": 495,
       "weak_or_not_compensation_relevant": 3608
+    },
+    "claim_relevance": {
+      "context_only": 5825,
+      "direct_text_claim": 2231,
+      "documentary_mechanism_claim": 1374,
+      "not_claim_ready": 1262,
+      "provisional_causal_candidate": 1,
+      "quantitative_compensation_claim": 6108,
+      "source_navigation_claim": 146
     },
     "evidence_strength": {
       "moderate": 3174,
@@ -6511,11 +6500,12 @@
       "unknown_quantitative_compensation": 842,
       "wage_schedule": 337
     },
-    "region": {
-      "Midwest": 6691,
-      "Northeast": 4051,
-      "South": 3000,
-      "West": 3205
+    "direction_of_pressure": {
+      "gap_narrowing": 185,
+      "neutral_or_unclear": 4092,
+      "non_safety_advantage": 360,
+      "not_applicable": 12252,
+      "safety_advantage": 58
     },
     "source_family": {
       "agenda_packet_or_minutes": 1245,
@@ -6536,6 +6526,12 @@
       "salary_ordinance": 217,
       "unknown_or_needs_review": 159,
       "wage_schedule": 2493
+    },
+    "region": {
+      "Midwest": 6691,
+      "Northeast": 4051,
+      "South": 3000,
+      "West": 3205
     },
     "state": {
       "AK": 189,
@@ -6587,6 +6583,10 @@
       "WI": 740,
       "WV": 58,
       "WY": 21
+    },
+    "cba_vs_non_cba_mixed": {
+      "exact_cba": 4098,
+      "non_cba_or_mixed": 12849
     }
   },
   "rating_summary_quarantine_excluded_count": 312,
@@ -7277,12 +7277,12 @@
   "span_source_navigation_count": 441,
   "span_sources_with_positive_count": 2721,
   "staffing_hypothesis_candidate_count": 29793,
-  "stage": "whole_corpus_visual_production_and_qa_complete",
+  "stage": "whole_corpus_visual_atlas_complete",
   "superseded_plans": [
     {
-      "reason": "User explicitly selected the aggressive 3x300 round.",
       "round_id": "POST-PI-CHECKPOINT-ROUND-3X160-2026-07-23",
-      "status": "superseded_preserved_not_active"
+      "status": "superseded_preserved_not_active",
+      "reason": "User explicitly selected the aggressive 3x300 round."
     }
   ],
   "text_extracted_ok_count": 2795,
@@ -7537,5 +7537,12 @@
   "whole_corpus_visual_tiered_sensitivity_figures": 2,
   "whole_corpus_visual_urbanicity_rejoin_status": "1,440 municipalities; 468 urban, 682 rural, 290 unknown; zero unmatched",
   "whole_corpus_visuals_approved_or_conditional": 14,
-  "zero_candidate_target_count": 2
+  "zero_candidate_target_count": 2,
+  "whole_corpus_visual_atlas_complete": true,
+  "whole_corpus_visual_atlas_page": "/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/",
+  "whole_corpus_visual_atlas_pdf": "/gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+  "whole_corpus_visual_atlas_mechanisms": 38,
+  "whole_corpus_visual_atlas_claims": 14,
+  "whole_corpus_visual_atlas_limitations": 10,
+  "whole_corpus_visual_atlas_pages": 76
 }

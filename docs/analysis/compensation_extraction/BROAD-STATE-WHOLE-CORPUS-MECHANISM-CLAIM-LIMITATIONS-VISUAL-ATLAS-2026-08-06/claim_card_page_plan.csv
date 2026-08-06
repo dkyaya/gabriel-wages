@@ -1,0 +1,15 @@
+claim_id,page_group,title,final_class
+CLAIM-A,1,Formal bargaining institutions shape compensation terms,mechanism_supported_only
+CLAIM-B,1,Scheduled growth mechanisms can differ by occupation,conditionally_supported
+CLAIM-C,2,Non-base pay creates additional compensation channels,mechanism_supported_only
+CLAIM-D,2,Staffing pressure can enter compensation decisions,mechanism_supported_only
+CLAIM-E,3,Retroactivity can turn delay into back pay,mechanism_supported_only
+CLAIM-F,3,Budgets and ordinances formalize or constrain pay,mechanism_supported_only
+CLAIM-G,4,The safety and non-safety pattern is mixed,mixed_or_countervailing
+CLAIM-H,4,The evidence supports a bounded mechanism account,supported
+UNSUP-01,5,A national safety wage gap is not established,unsupported
+UNSUP-02,5,National mechanism prevalence is not established,unsupported
+UNSUP-03,6,A causal effect is not established,unsupported
+UNSUP-04,6,A regression result is not available,unsupported
+UNSUP-05,7,A fixed safety growth advantage is not established,unsupported
+UNSUP-06,7,Mechanisms do not prove a wage difference,unsupported

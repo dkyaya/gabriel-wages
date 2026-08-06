@@ -1,9 +1,43 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-06T06:20:51Z",
+  "generated_at": "2026-08-06T11:59:11Z",
   "data_vintage": "2026-08-06",
   "source_file": "docs/dashboard/reports/reports_index.json",
   "reports": [
+    {
+      "id": "whole-corpus-mechanism-claim-limitations-visual-atlas-2026-08-06",
+      "title": "Mechanisms, Claims, and Limitations Visual Atlas",
+      "report_type": "Visual atlas PDF",
+      "date": "2026-08-06",
+      "checkpoint": "38 mechanisms, 14 final claims, and 10 limitation visuals",
+      "summary": "A visual-first summary of the compensation mechanisms I found, what the final claims support, and the limits that shaped the analysis.",
+      "tags": [
+        "whole corpus",
+        "visual atlas",
+        "PDF",
+        "user review"
+      ],
+      "current": true,
+      "historical": false,
+      "href": "gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/",
+      "link_label": "Open visual atlas",
+      "secondary_href": "gabriel-wages/reports/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06/whole_corpus_mechanism_claim_limitations_visual_atlas_2026-08-06.pdf",
+      "secondary_link_label": "Open PDF",
+      "scope_metrics": [
+        {
+          "label": "mechanisms",
+          "value": 38
+        },
+        {
+          "label": "claims",
+          "value": 14
+        },
+        {
+          "label": "PDF pages",
+          "value": 76
+        }
+      ]
+    },
     {
       "id": "broad-state-4x2500-pi-report-final-2026-07-30",
       "title": "Why Public-Safety Wages May Rise Faster Than Other Municipal Wages",

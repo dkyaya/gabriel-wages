@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-claim-f",
+  "claim_id": "CLAIM-F",
+  "title": "Budgets and ordinances formalize or constrain pay",
+  "final_class": "mechanism_supported_only",
+  "caption": "I classify this claim as mechanism supported only. Reviewed ordinances, budgets, pay plans, and classification records show how compensation proposals can be formalized or constrained by fiscal institutions. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 79,
+  "png_path": "assets/claims/claim-card-claim-f.png",
+  "svg_path": "assets/claims/claim-card-claim-f.svg",
+  "report_placement": "report_supporting_finding",
+  "qa_status": "pass"
+}

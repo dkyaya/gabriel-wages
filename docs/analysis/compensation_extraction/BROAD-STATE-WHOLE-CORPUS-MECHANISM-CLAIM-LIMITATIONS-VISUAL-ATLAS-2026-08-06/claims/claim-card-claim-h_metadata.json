@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-claim-h",
+  "claim_id": "CLAIM-H",
+  "title": "The evidence supports a bounded mechanism account",
+  "final_class": "supported",
+  "caption": "I classify this claim as supported. The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect estimate. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 84,
+  "png_path": "assets/claims/claim-card-claim-h.png",
+  "svg_path": "assets/claims/claim-card-claim-h.svg",
+  "report_placement": "report_core_argument",
+  "qa_status": "pass"
+}

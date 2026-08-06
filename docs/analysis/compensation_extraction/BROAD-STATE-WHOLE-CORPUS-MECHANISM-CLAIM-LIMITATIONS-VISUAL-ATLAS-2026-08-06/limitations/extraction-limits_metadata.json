@@ -1,0 +1,9 @@
+{
+  "figure_id": "extraction-limits",
+  "title": "Extraction limits",
+  "caption": "The project inspected 14,703 retained-source records. Of 14,257 extraction-ready records, 14,160 produced usable extracted payloads; 118 PDFs were set aside for later OCR and 97 records required extraction repair. These are explicit availability limits, not silently imputed documents. The usable corpus is large, but claims that depend on the excluded records remain less complete. I kept these categories separate so a failed extraction could not be mistaken for a source that contained no relevant evidence.",
+  "caption_word_count": 78,
+  "png_path": "assets/limitations/extraction-limits.png",
+  "svg_path": "assets/limitations/extraction-limits.svg",
+  "qa_status": "pass"
+}

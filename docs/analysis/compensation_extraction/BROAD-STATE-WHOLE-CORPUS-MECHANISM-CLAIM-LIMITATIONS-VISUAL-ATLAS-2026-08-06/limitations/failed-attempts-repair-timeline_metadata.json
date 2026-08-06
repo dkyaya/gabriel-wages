@@ -1,0 +1,9 @@
+{
+  "figure_id": "failed-attempts-repair-timeline",
+  "title": "Attempts that did not work—and what changed",
+  "caption": "The workflow was not linear. Hosted search became source-less, storage reached its ceiling, large checkpoints strained memory, and raw extraction overproduced noisy records. Strict matching then returned zero external wage and growth matches; a broader bounded redesign recovered usable directional evidence but did not upgrade any claim class. Regression still failed readiness, and external GABRIEL scoring did not run. Each failure changed the method while preserving earlier results. The repairs improved reliability and evidence use, but they could not recover information that the available sources did not contain.",
+  "caption_word_count": 88,
+  "png_path": "assets/limitations/failed-attempts-repair-timeline.png",
+  "svg_path": "assets/limitations/failed-attempts-repair-timeline.svg",
+  "qa_status": "pass"
+}

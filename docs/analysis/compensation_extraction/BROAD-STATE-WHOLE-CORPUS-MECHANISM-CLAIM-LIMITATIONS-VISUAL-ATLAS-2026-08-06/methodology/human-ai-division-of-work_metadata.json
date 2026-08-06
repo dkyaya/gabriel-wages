@@ -1,0 +1,9 @@
+{
+  "figure_id": "human-ai-division-of-work",
+  "title": "Human and AI roles",
+  "caption": "I set the research question, evidence standards, priorities, corrections, and final judgment. ChatGPT helped design orchestration prompts, analytical frameworks, validation gates, and report structure. Codex executed local scripts, five-lane runs, checkpointing, validation, and artifact generation. GABRIEL scored earlier documentary evidence where available. When API capacity blocked new external scoring, deterministic local rules processed explicit administrative fields. The AI work remained bounded by my direction and is not a substitute for independent human validation. This division matters because the systems handled volume and reproducibility, while the research design, standards, and judgment remained human-directed. I did not manually review millions of records, and I did not accept model output without iterative correction and validation.",
+  "caption_word_count": 112,
+  "png_path": "assets/methodology/human-ai-division-of-work.png",
+  "svg_path": "assets/methodology/human-ai-division-of-work.svg",
+  "qa_status": "pass"
+}

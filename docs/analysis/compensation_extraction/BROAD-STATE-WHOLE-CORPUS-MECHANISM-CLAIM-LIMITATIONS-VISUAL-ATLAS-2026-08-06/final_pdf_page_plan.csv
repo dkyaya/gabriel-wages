@@ -1,0 +1,75 @@
+page,type,title
+1,cover,Cover
+2,executive,Executive visual summary
+3,guide,How to read the atlas
+4,contents,Contents
+5,divider,Section I: Compensation mechanisms
+6,image,Mechanism overview
+7,mechanism,None Identified
+8,mechanism,Payroll Effective Date
+9,mechanism,Retroactive
+10,mechanism,Retroactive Pay
+11,mechanism,Recurring
+12,mechanism,Fiscal Constraint
+13,mechanism,Budget Pay Plan Process
+14,mechanism,No Direct Compensation Outcome
+15,mechanism,Across The Board Raise
+16,mechanism,One Time
+17,mechanism,Non Base Compensation Other
+18,mechanism,Ordinance Council Adoption
+19,mechanism,Ordinance Adoption
+20,mechanism,Unclear
+21,mechanism,Base Wage Change
+22,mechanism,Step Progression
+23,mechanism,COLA CPI Adjustment
+24,mechanism,Uniform Or Equipment Allowance
+25,mechanism,Benefit Cost Change
+26,mechanism,Budget Appropriation
+27,mechanism,Stipend Or Premium
+28,mechanism,Settlement Or MOU
+29,mechanism,Market Recruitment Retention
+30,mechanism,Classification Band Change
+31,mechanism,Longevity
+32,mechanism,Overtime
+33,mechanism,Inflation Indexing
+34,mechanism_group,Small-multiple mechanisms
+35,mechanism_group,Small-multiple mechanisms
+36,mechanism_group,Small-multiple mechanisms
+37,mechanism_group,Sparse mechanisms
+38,glossary,Mechanism glossary
+39,divider,Section II: What the claims say
+40,image,Final claim overview
+41,image,Claim evidence matrix
+42,image,Strict versus broader evidence
+43,image,Counterexamples
+44,claim,Formal bargaining institutions shape compensation terms
+45,claim,Scheduled growth mechanisms can differ by occupation
+46,claim,Non-base pay creates additional compensation channels
+47,claim,Staffing pressure can enter compensation decisions
+48,claim,Retroactivity can turn delay into back pay
+49,claim,Budgets and ordinances formalize or constrain pay
+50,claim,The safety and non-safety pattern is mixed
+51,claim,The evidence supports a bounded mechanism account
+52,claim,A national safety wage gap is not established
+53,claim,National mechanism prevalence is not established
+54,claim,A causal effect is not established
+55,claim,A regression result is not available
+56,claim,A fixed safety growth advantage is not established
+57,claim,Mechanisms do not prove a wage difference
+58,divider,Section III: What limited the analysis
+59,meta,Analytical-design limits
+60,meta,Comparability limits
+61,meta,Coverage and representativeness limits
+62,meta,Evidence discovery limits
+63,meta,Extraction limits
+64,meta,Attempts that did not work—and what changed
+65,meta,What the evidence still supports
+66,meta,Raw extraction and compaction
+67,meta,Review limits
+68,meta,Storage and source-retention limits
+69,divider,Section IV: How the project worked
+70,meta,"Errors, interruptions, and recovery"
+71,meta,How the evidence moved through the project
+72,meta,Human and AI roles
+73,meta,Strict and broader evidence lanes
+74,appendix,Technical notes and evidence boundary

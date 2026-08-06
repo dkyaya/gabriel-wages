@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-unsup-02",
+  "claim_id": "UNSUP-02",
+  "title": "National mechanism prevalence is not established",
+  "final_class": "unsupported",
+  "caption": "I classify this claim as unsupported. A national prevalence estimate for any compensation mechanism is not supported by the current corpus. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 72,
+  "png_path": "assets/claims/claim-card-unsup-02.png",
+  "svg_path": "assets/claims/claim-card-unsup-02.svg",
+  "report_placement": "report_limitations",
+  "qa_status": "pass"
+}

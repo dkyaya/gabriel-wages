@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "actions": {
+    "hosted_search": false,
+    "GABRIEL_API": false,
+    "network_data_collection": false,
+    "OCR": false,
+    "held_source_processing": false,
+    "new_claim_adjudication": false,
+    "regression": false,
+    "causal_estimate": false,
+    "full_narrative_report": false,
+    "implementation_event_rededuplication": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-unsup-06",
+  "claim_id": "UNSUP-06",
+  "title": "Mechanisms do not prove a wage difference",
+  "final_class": "unsupported",
+  "caption": "I classify this claim as unsupported. The evidence does not establish that a documented mechanism caused an observed wage difference. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 71,
+  "png_path": "assets/claims/claim-card-unsup-06.png",
+  "svg_path": "assets/claims/claim-card-unsup-06.svg",
+  "report_placement": "report_limitations",
+  "qa_status": "pass"
+}

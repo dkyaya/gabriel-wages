@@ -1,0 +1,39 @@
+mechanism_tag,mechanism_name,definition,event_count
+none_identified,None Identified,No specific compensation mechanism was identified in the retained event record.,3694
+payroll_effective_date,Payroll Effective Date,The date a compensation change became operative in payroll administration.,1876
+retroactive,Retroactive,A compensation change applied to an earlier effective period.,1418
+retroactive_pay,Retroactive Pay,Back pay issued after a compensation term took effect or was settled.,1418
+recurring,Recurring,A compensation component that continues rather than ending after one payment.,720
+fiscal_constraint,Fiscal Constraint,Budget pressure or limited fiscal capacity that constrained compensation choices.,619
+budget_pay_plan_process,Budget Pay Plan Process,A budget or pay-plan process that formally set or revised compensation.,617
+no_direct_compensation_outcome,No Direct Compensation Outcome,A documented administrative event without a direct pay outcome in the retained evidence.,544
+across_the_board_raise,Across The Board Raise,The same general increase applied across covered roles or classifications.,373
+one_time,One Time,A payment or adjustment that does not recur in the regular base schedule.,299
+non_base_compensation_other,Non Base Compensation Other,Compensation outside regular base wages that did not fit a more specific category.,292
+ordinance_council_adoption,Ordinance Council Adoption,A council or ordinance action formally approving a compensation change.,255
+ordinance_adoption,Ordinance Adoption,Formal adoption of compensation terms through an ordinance.,206
+unclear,Unclear,The retained evidence points to a compensation event but does not identify the mechanism clearly.,140
+base_wage_change,Base Wage Change,A change to the recurring base wage or salary rate.,120
+step_progression,Step Progression,"Movement through a salary schedule based on steps, service, rank, or progression rules.",87
+cola_cpi_adjustment,COLA CPI Adjustment,"A cost-of-living adjustment, sometimes linked to inflation or a price index.",79
+uniform_or_equipment_allowance,Uniform Or Equipment Allowance,"A payment for required uniforms, equipment, maintenance, or related costs.",68
+benefit_cost_change,Benefit Cost Change,"A change in benefit value, employee contributions, or employer benefit costs.",65
+budget_appropriation,Budget Appropriation,A budget allocation that authorized or funded compensation.,64
+stipend_or_premium,Stipend Or Premium,"A supplemental payment for assignments, qualifications, shifts, or special duties.",62
+settlement_or_mou,Settlement Or MOU,A settlement or memorandum of understanding that changed compensation terms.,58
+market_recruitment_retention,Market Recruitment Retention,"Pay action justified by labor-market competition, hiring, or retention pressure.",44
+classification_band_change,Classification Band Change,"A change to job classification, pay grade, range, or band.",43
+longevity,Longevity,Additional compensation tied to years of service.,40
+overtime,Overtime,Compensation for hours or duties beyond regular schedules.,38
+inflation_indexing,Inflation Indexing,A compensation rule explicitly linked to inflation or an index.,31
+holiday_pay,Holiday Pay,Premium or additional compensation for holidays.,22
+lump_sum,Lump Sum,A single lump-sum payment rather than a recurring wage-rate increase.,18
+bargaining_leverage,Bargaining Leverage,Evidence that negotiating leverage shaped compensation terms.,17
+collective_bargaining,Collective Bargaining,Negotiation between a public employer and represented employees over compensation.,17
+salary_range_change,Salary Range Change,"A change to the minimum, maximum, or span of a salary range.",12
+contract_ratification,Contract Ratification,Formal approval of negotiated contract terms by the relevant parties.,9
+vacancy_pressure,Vacancy Pressure,Unfilled positions or vacancy conditions cited in compensation or staffing decisions.,8
+reimbursement,Reimbursement,Repayment of eligible work-related expenses rather than ordinary wages.,7
+comparability_parity,Comparability Parity,"Compensation linked to comparison with another role, unit, or jurisdiction.",6
+classification_civil_service,Classification Civil Service,Civil-service or classification rules that structure pay placement or progression.,4
+interest_arbitration,Interest Arbitration,A neutral decision process that resolves bargaining impasses over contract terms.,1

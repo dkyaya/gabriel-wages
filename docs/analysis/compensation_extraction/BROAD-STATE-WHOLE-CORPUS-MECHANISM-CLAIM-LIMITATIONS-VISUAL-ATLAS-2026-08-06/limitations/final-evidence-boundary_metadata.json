@@ -1,0 +1,9 @@
+{
+  "figure_id": "final-evidence-boundary",
+  "title": "What the evidence still supports",
+  "caption": "The final evidence supports one bounded claim, one conditional claim, five compensation-mechanism claims, a mixed finding, staffing and implementation patterns, local examples, documentary growth patterns, and administrative corroboration. It does not establish a national wage gap, a nationally representative safety growth advantage, mechanism prevalence, a regression estimate, or a causal effect. That boundary is the project’s result, not an omitted final step. This distinction keeps the final package useful without letting a large corpus substitute for the comparison design the strongest claims require.",
+  "caption_word_count": 84,
+  "png_path": "assets/limitations/final-evidence-boundary.png",
+  "svg_path": "assets/limitations/final-evidence-boundary.svg",
+  "qa_status": "pass"
+}

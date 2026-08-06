@@ -1,0 +1,12 @@
+{
+  "figure_id": "claim-card-claim-b",
+  "claim_id": "CLAIM-B",
+  "title": "Scheduled growth mechanisms can differ by occupation",
+  "final_class": "conditionally_supported",
+  "caption": "I classify this claim as conditionally supported. The reviewed documentary corpus contains recurring step, seniority, rank, and COLA structures; comparative growth implications remain sample-specific. The broader evidence can add context or direction, but it cannot erase the strict evidence boundary. The main limit is unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain. This card states what I can use in the report and what I must not turn into a national or causal conclusion.",
+  "caption_word_count": 75,
+  "png_path": "assets/claims/claim-card-claim-b.png",
+  "svg_path": "assets/claims/claim-card-claim-b.svg",
+  "report_placement": "report_major_section",
+  "qa_status": "pass"
+}

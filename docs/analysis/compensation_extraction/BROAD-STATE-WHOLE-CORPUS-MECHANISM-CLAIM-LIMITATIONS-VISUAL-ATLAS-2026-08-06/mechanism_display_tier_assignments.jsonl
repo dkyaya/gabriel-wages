@@ -1,0 +1,38 @@
+{"mechanism_tag": "none_identified", "mechanism_name": "None Identified", "valid_deduplicated_event_count": 3694, "display_tier": "standalone"}
+{"mechanism_tag": "payroll_effective_date", "mechanism_name": "Payroll Effective Date", "valid_deduplicated_event_count": 1876, "display_tier": "standalone"}
+{"mechanism_tag": "retroactive", "mechanism_name": "Retroactive", "valid_deduplicated_event_count": 1418, "display_tier": "standalone"}
+{"mechanism_tag": "retroactive_pay", "mechanism_name": "Retroactive Pay", "valid_deduplicated_event_count": 1418, "display_tier": "standalone"}
+{"mechanism_tag": "recurring", "mechanism_name": "Recurring", "valid_deduplicated_event_count": 720, "display_tier": "standalone"}
+{"mechanism_tag": "fiscal_constraint", "mechanism_name": "Fiscal Constraint", "valid_deduplicated_event_count": 619, "display_tier": "standalone"}
+{"mechanism_tag": "budget_pay_plan_process", "mechanism_name": "Budget Pay Plan Process", "valid_deduplicated_event_count": 617, "display_tier": "standalone"}
+{"mechanism_tag": "no_direct_compensation_outcome", "mechanism_name": "No Direct Compensation Outcome", "valid_deduplicated_event_count": 544, "display_tier": "standalone"}
+{"mechanism_tag": "across_the_board_raise", "mechanism_name": "Across The Board Raise", "valid_deduplicated_event_count": 373, "display_tier": "standalone"}
+{"mechanism_tag": "one_time", "mechanism_name": "One Time", "valid_deduplicated_event_count": 299, "display_tier": "standalone"}
+{"mechanism_tag": "non_base_compensation_other", "mechanism_name": "Non Base Compensation Other", "valid_deduplicated_event_count": 292, "display_tier": "standalone"}
+{"mechanism_tag": "ordinance_council_adoption", "mechanism_name": "Ordinance Council Adoption", "valid_deduplicated_event_count": 255, "display_tier": "standalone"}
+{"mechanism_tag": "ordinance_adoption", "mechanism_name": "Ordinance Adoption", "valid_deduplicated_event_count": 206, "display_tier": "standalone"}
+{"mechanism_tag": "unclear", "mechanism_name": "Unclear", "valid_deduplicated_event_count": 140, "display_tier": "standalone"}
+{"mechanism_tag": "base_wage_change", "mechanism_name": "Base Wage Change", "valid_deduplicated_event_count": 120, "display_tier": "standalone"}
+{"mechanism_tag": "step_progression", "mechanism_name": "Step Progression", "valid_deduplicated_event_count": 87, "display_tier": "standalone"}
+{"mechanism_tag": "cola_cpi_adjustment", "mechanism_name": "COLA CPI Adjustment", "valid_deduplicated_event_count": 79, "display_tier": "standalone"}
+{"mechanism_tag": "uniform_or_equipment_allowance", "mechanism_name": "Uniform Or Equipment Allowance", "valid_deduplicated_event_count": 68, "display_tier": "standalone"}
+{"mechanism_tag": "benefit_cost_change", "mechanism_name": "Benefit Cost Change", "valid_deduplicated_event_count": 65, "display_tier": "standalone"}
+{"mechanism_tag": "budget_appropriation", "mechanism_name": "Budget Appropriation", "valid_deduplicated_event_count": 64, "display_tier": "standalone"}
+{"mechanism_tag": "stipend_or_premium", "mechanism_name": "Stipend Or Premium", "valid_deduplicated_event_count": 62, "display_tier": "standalone"}
+{"mechanism_tag": "settlement_or_mou", "mechanism_name": "Settlement Or MOU", "valid_deduplicated_event_count": 58, "display_tier": "standalone"}
+{"mechanism_tag": "market_recruitment_retention", "mechanism_name": "Market Recruitment Retention", "valid_deduplicated_event_count": 44, "display_tier": "standalone"}
+{"mechanism_tag": "classification_band_change", "mechanism_name": "Classification Band Change", "valid_deduplicated_event_count": 43, "display_tier": "standalone"}
+{"mechanism_tag": "longevity", "mechanism_name": "Longevity", "valid_deduplicated_event_count": 40, "display_tier": "standalone"}
+{"mechanism_tag": "overtime", "mechanism_name": "Overtime", "valid_deduplicated_event_count": 38, "display_tier": "standalone"}
+{"mechanism_tag": "inflation_indexing", "mechanism_name": "Inflation Indexing", "valid_deduplicated_event_count": 31, "display_tier": "standalone"}
+{"mechanism_tag": "holiday_pay", "mechanism_name": "Holiday Pay", "valid_deduplicated_event_count": 22, "display_tier": "small_multiple"}
+{"mechanism_tag": "lump_sum", "mechanism_name": "Lump Sum", "valid_deduplicated_event_count": 18, "display_tier": "small_multiple"}
+{"mechanism_tag": "bargaining_leverage", "mechanism_name": "Bargaining Leverage", "valid_deduplicated_event_count": 17, "display_tier": "small_multiple"}
+{"mechanism_tag": "collective_bargaining", "mechanism_name": "Collective Bargaining", "valid_deduplicated_event_count": 17, "display_tier": "small_multiple"}
+{"mechanism_tag": "salary_range_change", "mechanism_name": "Salary Range Change", "valid_deduplicated_event_count": 12, "display_tier": "small_multiple"}
+{"mechanism_tag": "contract_ratification", "mechanism_name": "Contract Ratification", "valid_deduplicated_event_count": 9, "display_tier": "small_multiple"}
+{"mechanism_tag": "vacancy_pressure", "mechanism_name": "Vacancy Pressure", "valid_deduplicated_event_count": 8, "display_tier": "small_multiple"}
+{"mechanism_tag": "reimbursement", "mechanism_name": "Reimbursement", "valid_deduplicated_event_count": 7, "display_tier": "small_multiple"}
+{"mechanism_tag": "comparability_parity", "mechanism_name": "Comparability Parity", "valid_deduplicated_event_count": 6, "display_tier": "small_multiple"}
+{"mechanism_tag": "classification_civil_service", "mechanism_name": "Classification Civil Service", "valid_deduplicated_event_count": 4, "display_tier": "sparse"}
+{"mechanism_tag": "interest_arbitration", "mechanism_name": "Interest Arbitration", "valid_deduplicated_event_count": 1, "display_tier": "sparse"}

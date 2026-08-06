@@ -1,0 +1,9 @@
+{
+  "figure_id": "evidence-discovery-limits",
+  "title": "Evidence discovery limits",
+  "caption": "I began with 18,689 intended residual search targets. The local workflow completed or resolved 5,845, while 12,844 remained unsearched after the hosted-search backend stopped returning sources. Unsearched means unknown: it does not mean that no relevant evidence exists. This gap reduces completeness and prevents national generalization, but it does not erase findings supported by sources already retained and reviewed. The practical consequence is a ceiling on coverage: I can describe what the reviewed sources show, but I cannot assume the unseen targets would confirm the same pattern.",
+  "caption_word_count": 90,
+  "png_path": "assets/limitations/evidence-discovery-limits.png",
+  "svg_path": "assets/limitations/evidence-discovery-limits.svg",
+  "qa_status": "pass"
+}

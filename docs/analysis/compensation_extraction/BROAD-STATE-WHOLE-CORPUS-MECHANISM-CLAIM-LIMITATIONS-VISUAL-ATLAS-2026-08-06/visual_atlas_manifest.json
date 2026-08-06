@@ -1,0 +1,46 @@
+{
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-MECHANISM-CLAIM-LIMITATIONS-VISUAL-ATLAS-2026-08-06",
+  "created_at": "2026-08-06T12:02:28.751454+00:00",
+  "input_hashes": [
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_exposure_event_layer.jsonl",
+      "sha256": "633aafaf18d4ef87dccbdc5e052e9d79ffcab0d6fda0320cfceb6068f95f2c75",
+      "bytes": 8761940
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04/mechanism_hex_density_visual_ready_layer.jsonl",
+      "sha256": "752523b6894c46d80585d4b2900bde93b4e8d13776639ff5307598c8613ab6d7",
+      "bytes": 5549899
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/final_adjudicated_claim_table.jsonl",
+      "sha256": "deec42071c88185711efe0e0d07275a000a9a212ad97f02c1b2e2c774d987649",
+      "bytes": 73834
+    },
+    {
+      "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-INTEGRATION-AND-CLAIM-ADJUDICATION-2026-08-06/claim_counterexample_links.jsonl",
+      "sha256": "5ce5debea8a631e5f650acf91be2da32b1a8718b909458e7689613dfbf812632",
+      "bytes": 5572
+    },
+    {
+      "path": "docs/dashboard/src/assets/us-states-2025-20m.geojson",
+      "sha256": "31715da6d14711893c54bff23bdd57c1817ad646a1686ca925d79857254ecb37",
+      "bytes": 293563
+    }
+  ],
+  "mechanism_count": 38,
+  "claim_count": 14,
+  "counterexample_count": 7,
+  "strict_baseline_preserved": true,
+  "held_sources_processed": false,
+  "hosted_search_used": false,
+  "GABRIEL_called": false,
+  "OCR_used": false,
+  "network_data_collection": false,
+  "design_hash": "54144e1d3dc4633c819bfea29793a3fb4e87b5308befe55ea2d5da3ee868c34d",
+  "decision": "broad_state_whole_corpus_visual_atlas_completed_dashboard_ready",
+  "pdf_page_count": 76,
+  "pdf_sha256": "4a38a78cf5be4db2960dfe89953c446f8d56eaed4ec2c0fafff3f99bd1591fa7",
+  "five_lanes_complete": true,
+  "completed_at": "2026-08-06T12:02:50.200230+00:00"
+}

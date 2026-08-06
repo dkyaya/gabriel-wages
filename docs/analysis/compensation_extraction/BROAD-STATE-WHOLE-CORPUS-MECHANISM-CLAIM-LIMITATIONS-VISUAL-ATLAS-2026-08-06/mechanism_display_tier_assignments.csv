@@ -1,0 +1,39 @@
+mechanism_tag,mechanism_name,valid_deduplicated_event_count,display_tier
+none_identified,None Identified,3694,standalone
+payroll_effective_date,Payroll Effective Date,1876,standalone
+retroactive,Retroactive,1418,standalone
+retroactive_pay,Retroactive Pay,1418,standalone
+recurring,Recurring,720,standalone
+fiscal_constraint,Fiscal Constraint,619,standalone
+budget_pay_plan_process,Budget Pay Plan Process,617,standalone
+no_direct_compensation_outcome,No Direct Compensation Outcome,544,standalone
+across_the_board_raise,Across The Board Raise,373,standalone
+one_time,One Time,299,standalone
+non_base_compensation_other,Non Base Compensation Other,292,standalone
+ordinance_council_adoption,Ordinance Council Adoption,255,standalone
+ordinance_adoption,Ordinance Adoption,206,standalone
+unclear,Unclear,140,standalone
+base_wage_change,Base Wage Change,120,standalone
+step_progression,Step Progression,87,standalone
+cola_cpi_adjustment,COLA CPI Adjustment,79,standalone
+uniform_or_equipment_allowance,Uniform Or Equipment Allowance,68,standalone
+benefit_cost_change,Benefit Cost Change,65,standalone
+budget_appropriation,Budget Appropriation,64,standalone
+stipend_or_premium,Stipend Or Premium,62,standalone
+settlement_or_mou,Settlement Or MOU,58,standalone
+market_recruitment_retention,Market Recruitment Retention,44,standalone
+classification_band_change,Classification Band Change,43,standalone
+longevity,Longevity,40,standalone
+overtime,Overtime,38,standalone
+inflation_indexing,Inflation Indexing,31,standalone
+holiday_pay,Holiday Pay,22,small_multiple
+lump_sum,Lump Sum,18,small_multiple
+bargaining_leverage,Bargaining Leverage,17,small_multiple
+collective_bargaining,Collective Bargaining,17,small_multiple
+salary_range_change,Salary Range Change,12,small_multiple
+contract_ratification,Contract Ratification,9,small_multiple
+vacancy_pressure,Vacancy Pressure,8,small_multiple
+reimbursement,Reimbursement,7,small_multiple
+comparability_parity,Comparability Parity,6,small_multiple
+classification_civil_service,Classification Civil Service,4,sparse
+interest_arbitration,Interest Arbitration,1,sparse
