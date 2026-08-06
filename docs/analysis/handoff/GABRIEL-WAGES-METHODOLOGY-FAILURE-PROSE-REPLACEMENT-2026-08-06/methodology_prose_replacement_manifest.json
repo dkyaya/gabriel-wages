@@ -1,0 +1,17 @@
+{
+  "task_id": "GABRIEL-WAGES-METHODOLOGY-FAILURE-PROSE-REPLACEMENT-2026-08-06",
+  "started_at": "2026-08-06T22:04:17.260594+00:00",
+  "completed_at": "2026-08-06T22:04:55.892614+00:00",
+  "runtime_seconds": 38.632,
+  "starting_head": "0c3aea04a60e238edc93dffa9ccaaf0c8ac821c5",
+  "source_pdf_pages": 60,
+  "methodology_source_pages_replaced": 8,
+  "replacement_methodology_pages": 6,
+  "final_pdf_pages": 58,
+  "replacement_prose_words": 2718,
+  "source_pdf_sha256": "e5260ee42a70081e166120b337a789c2e1663631755baa99e585c8d75939e8b8",
+  "final_pdf_sha256": "781adb2ffe047d8a8523fcf3a65e743917bb1a3e0ca00c7df0f8c85a035a9b76",
+  "final_pdf_bytes": 2409377,
+  "scope": "surgical methodology prose replacement",
+  "new_research": false
+}

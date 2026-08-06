@@ -1,0 +1,53 @@
+source_page,final_page,region_compared,pixel_identical,allowed_difference,status
+1,1,complete_page,True,none,pass
+2,2,complete_page,True,none,pass
+3,3,complete_page,True,none,pass
+4,4,complete_page,True,none,pass
+5,5,complete_page,True,none,pass
+6,6,complete_page,True,none,pass
+7,7,complete_page,True,none,pass
+8,8,complete_page,True,none,pass
+9,9,complete_page,True,none,pass
+10,10,complete_page,True,none,pass
+11,11,complete_page,True,none,pass
+12,12,complete_page,True,none,pass
+13,13,complete_page,True,none,pass
+14,14,complete_page,True,none,pass
+15,15,complete_page,True,none,pass
+16,16,complete_page,True,none,pass
+17,17,complete_page,True,none,pass
+18,18,complete_page,True,none,pass
+19,19,complete_page,True,none,pass
+20,20,complete_page,True,none,pass
+21,21,complete_page,True,none,pass
+22,22,complete_page,True,none,pass
+23,23,complete_page,True,none,pass
+24,24,complete_page,True,none,pass
+25,25,complete_page,True,none,pass
+26,26,complete_page,True,none,pass
+27,27,complete_page,True,none,pass
+28,28,complete_page,True,none,pass
+29,29,complete_page,True,none,pass
+30,30,complete_page,True,none,pass
+31,31,complete_page,True,none,pass
+32,32,complete_page,True,none,pass
+33,33,complete_page,True,none,pass
+34,34,complete_page,True,none,pass
+35,35,complete_page,True,none,pass
+36,36,complete_page,True,none,pass
+37,37,complete_page,True,none,pass
+38,38,complete_page,True,none,pass
+39,39,complete_page,True,none,pass
+40,40,complete_page,True,none,pass
+49,47,complete_page_except_renumbered_footer,True,footer page number 49 to 47,pass
+50,48,complete_page_except_renumbered_footer,True,footer page number 50 to 48,pass
+51,49,complete_page_except_renumbered_footer,True,footer page number 51 to 49,pass
+52,50,complete_page_except_renumbered_footer,True,footer page number 52 to 50,pass
+53,51,complete_page_except_renumbered_footer,True,footer page number 53 to 51,pass
+54,52,complete_page_except_renumbered_footer,True,footer page number 54 to 52,pass
+55,53,complete_page_except_renumbered_footer,True,footer page number 55 to 53,pass
+56,54,complete_page_except_renumbered_footer,True,footer page number 56 to 54,pass
+57,55,complete_page_except_renumbered_footer,True,footer page number 57 to 55,pass
+58,56,complete_page_except_renumbered_footer,True,footer page number 58 to 56,pass
+59,57,complete_page_except_renumbered_footer,True,footer page number 59 to 57,pass
+60,58,complete_page_except_renumbered_footer,True,footer page number 60 to 58,pass

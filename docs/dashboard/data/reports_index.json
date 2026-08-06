@@ -9,7 +9,7 @@
       "title": "Gabriel Wages Visual Atlas",
       "report_type": "Primary project and handoff visual atlas",
       "date": "2026-08-06",
-      "checkpoint": "Native-text publication; 60 pages; complete page-render and theme QA",
+      "checkpoint": "Native-text publication; 58 pages; prose methodology and complete page-render QA",
       "summary": "A visual-first summary of the municipal compensation mechanisms, evidence, final claim boundaries, methodology, and project-wide limitations.",
       "tags": [
         "current",
@@ -35,7 +35,7 @@
         },
         {
           "label": "PDF pages",
-          "value": 60
+          "value": 58
         }
       ]
     },

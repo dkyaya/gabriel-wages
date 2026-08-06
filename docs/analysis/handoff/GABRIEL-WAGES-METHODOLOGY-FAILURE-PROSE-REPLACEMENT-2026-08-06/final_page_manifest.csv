@@ -1,0 +1,59 @@
+page,section,page_type,title,subtitle
+1,Opening,cover,Cover,
+2,Opening,standard,Executive summary,The corpus supports a bounded account of compensation mechanisms more strongly than a national wage-gap or causal estimate.
+3,Part I · Reader guide,standard,Research question and analytical units,The project compares occupations within municipalities while keeping city and compensation cycle central.
+4,Part I · Reader guide,standard,Maps and evidence tiers,Map shading describes documented events; evidence tiers describe how safely a record can support a claim.
+5,Part I · Reader guide,standard,Core compensation-mechanism glossary,Plain-language definitions used throughout the mechanism profiles.
+6,Part II · Corpus and evidence base,standard,Corpus scale and source mix,"The project assembled a large, mixed-format corpus, but different source units are never combined into one total."
+7,Part II · Corpus and evidence base,standard,"Discovery, retention, and usable evidence","Near-complete municipality scouting did not make every discovered source accessible, retained, or analytically compatible."
+8,Part II · Corpus and evidence base,standard,Safety and non-safety visibility,Safety appears more often in retained classified evidence; unresolved and side-independent material remains visible.
+9,Part II · Corpus and evidence base,standard,Analytical readiness and evidence boundaries,"Millions of extracted records became compact evidence layers, but strict compatibility gates still produced no external wage or growth panel."
+10,Part III · Compensation mechanisms,standard,Retroactivity and payroll timing,"2,253 distinct profile events · 1,269 municipalities · 42 states"
+11,Part III · Compensation mechanisms,standard,Non-base and one-time compensation,890 distinct profile events · 551 municipalities · 32 states
+12,Part III · Compensation mechanisms,standard,Scheduled base-wage growth,809 distinct profile events · 540 municipalities · 36 states
+13,Part III · Compensation mechanisms,standard,"Budgets, pay plans, and fiscal constraint",636 distinct profile events · 409 municipalities · 33 states
+14,Part III · Compensation mechanisms,standard,Council and ordinance adoption,315 distinct profile events · 271 municipalities · 38 states
+15,Part III · Compensation mechanisms,standard,Formal bargaining and impasse resolution,81 distinct profile events · 69 municipalities · 22 states
+16,Part III · Compensation mechanisms,standard,Classification and pay structure,57 distinct profile events · 54 municipalities · 14 states
+17,Part III · Compensation mechanisms,standard,"Staffing, market, and comparability pressure",56 distinct profile events · 47 municipalities · 17 states
+18,Part III · Compensation mechanisms,standard,Documentary growth by evidence tier,"Step progression leans safety, across-the-board results are mixed, and COLA evidence is sparse."
+19,Part III · Compensation mechanisms,standard,Staffing pressure and channel evidence,A small direct channel sits inside a much larger descriptive and unresolved staffing layer.
+20,Part III · Compensation mechanisms,standard,Implementation lifecycle,"Adoption, effective date, payroll operation, and payment are distinct stages."
+21,Part IV · Final claim boundaries,standard,Ten bounded local comparisons,"Five favor safety, four favor non-safety, and one is neutral."
+22,Part IV · Final claim boundaries,standard,Final claim classes,The final universe contains fourteen claims; evidence volume alone does not determine support.
+23,Part IV · Final claim boundaries,standard,Evidence matrix: bounded findings,"Eight claims supported, qualified, or bounded by mechanism and countervailing evidence."
+24,Part IV · Final claim boundaries,standard,Evidence matrix: unsupported boundaries,Six proposed global claims remain unsupported because the required analytical design is absent.
+25,Part IV · Final claim boundaries,standard,Claims CLAIM-A and CLAIM-B,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+26,Part IV · Final claim boundaries,standard,Claims CLAIM-C and CLAIM-D,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+27,Part IV · Final claim boundaries,standard,Claims CLAIM-E and CLAIM-F,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+28,Part IV · Final claim boundaries,standard,Claims CLAIM-G and CLAIM-H,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+29,Part IV · Final claim boundaries,standard,Claims UNSUP-01 and UNSUP-02,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+30,Part IV · Final claim boundaries,standard,Claims UNSUP-03 and UNSUP-04,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+31,Part IV · Final claim boundaries,standard,Claims UNSUP-05 and UNSUP-06,"Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording."
+32,Part IV · Final claim boundaries,standard,Counterexamples and countervailing evidence,Seven retained records prevent the mechanism account from becoming a uniform safety-growth claim.
+33,Part IV · Final claim boundaries,standard,Strict evidence and broader evidence,Broader evidence strengthened interpretation without erasing the strict baseline or upgrading any claim class.
+34,Part V · Project-wide limitations,standard,Limitations 1: Research design and scope,Each constraint is paired with what the project still accomplished and the boundary it imposes.
+35,Part V · Project-wide limitations,standard,"Limitations 2: Verification, access, and storage",Each constraint is paired with what the project still accomplished and the boundary it imposes.
+36,Part V · Project-wide limitations,standard,Limitations 3: Extraction volume and compaction,Each constraint is paired with what the project still accomplished and the boundary it imposes.
+37,Part V · Project-wide limitations,standard,Limitations 4: Rating and semantic review,Each constraint is paired with what the project still accomplished and the boundary it imposes.
+38,Part V · Project-wide limitations,standard,Limitations 5: Safety and non-safety evidence imbalance,Each constraint is paired with what the project still accomplished and the boundary it imposes.
+39,Part V · Project-wide limitations,standard,Limitations 6: Locality and visual grouping,Each constraint is paired with what the project still accomplished and the boundary it imposes.
+40,Part V · Project-wide limitations,standard,"What worked, what did not, and what remains possible",The limits narrow the claims; they do not erase the project’s traceable evidence and reusable infrastructure.
+41,Part VI · Methodology and project history,prose,How I built the project,Native-text methodological narrative
+42,Part VI · Methodology and project history,prose,How I used AI and why relays mattered,Native-text methodological narrative
+43,Part VI · Methodology and project history,prose,How Codex execution evolved and scaled,Native-text methodological narrative
+44,Part VI · Methodology and project history,prose,What failed during collection and processing,Native-text methodological narrative
+45,Part VI · Methodology and project history,prose,What failed during analysis and publication,Native-text methodological narrative
+46,Part VI · Methodology and project history,prose,Why I separated strict and broader evidence,Native-text methodological narrative
+47,Appendix · Mechanism categories,standard,Reader-facing categories 1–4,Category counts and Alaska status are preserved beneath the integrated profiles.
+48,Appendix · Mechanism categories,standard,Reader-facing categories 5–8,Category counts and Alaska status are preserved beneath the integrated profiles.
+49,Appendix · Mechanism categories,standard,Reader-facing categories 9–12,Category counts and Alaska status are preserved beneath the integrated profiles.
+50,Appendix · Mechanism categories,standard,Reader-facing categories 13–16,Category counts and Alaska status are preserved beneath the integrated profiles.
+51,Appendix · Mechanism categories,standard,Reader-facing categories 17–20,Category counts and Alaska status are preserved beneath the integrated profiles.
+52,Appendix · Mechanism categories,standard,Reader-facing categories 21–24,Category counts and Alaska status are preserved beneath the integrated profiles.
+53,Appendix · Mechanism categories,standard,Reader-facing categories 25–28,Category counts and Alaska status are preserved beneath the integrated profiles.
+54,Appendix · Mechanism categories,standard,Reader-facing categories 29–32,Category counts and Alaska status are preserved beneath the integrated profiles.
+55,Appendix · Mechanism categories,standard,Reader-facing categories 33–35,Category counts and Alaska status are preserved beneath the integrated profiles.
+56,Appendix,standard,Unclassified or no direct compensation outcome,"These categories describe evidence status, not reader-facing wage-setting processes."
+57,Appendix,standard,Technical counts and analytical boundaries,Counts with different units remain separate.
+58,Appendix,standard,Source and method notes,The atlas is a reader-facing summary; project documentation preserves exact lineage and reconstruction instructions.

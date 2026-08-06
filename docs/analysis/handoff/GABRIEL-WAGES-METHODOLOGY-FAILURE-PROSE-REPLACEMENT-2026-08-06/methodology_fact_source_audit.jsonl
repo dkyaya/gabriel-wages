@@ -1,0 +1,19 @@
+{"fact": "eligible municipalities", "value": "35,589", "existing_project_source": "verified_runtime_output_milestones.csv; final atlas corpus pages", "new_research": false, "status": "verified_existing_record"}
+{"fact": "scout-covered municipalities", "value": "35,574", "existing_project_source": "final atlas source data and coverage audit", "new_research": false, "status": "verified_existing_record"}
+{"fact": "unique PDFs", "value": "15,163", "existing_project_source": "final adjudication corpus-scale accounting", "new_research": false, "status": "verified_existing_record"}
+{"fact": "native PDF pages", "value": "1,029,482", "existing_project_source": "final adjudication corpus-scale accounting", "new_research": false, "status": "verified_existing_record"}
+{"fact": "usable external payloads", "value": "14,160", "existing_project_source": "external extraction manifest; verified_runtime_output_milestones.csv", "new_research": false, "status": "verified_existing_record"}
+{"fact": "raw field hits", "value": "5,558,770", "existing_project_source": "deterministic field/span extraction summary", "new_research": false, "status": "verified_existing_record"}
+{"fact": "raw spans", "value": "4,289,437", "existing_project_source": "deterministic field/span extraction summary", "new_research": false, "status": "verified_existing_record"}
+{"fact": "compact administrative observations", "value": "1,876,183", "existing_project_source": "compaction/classification summary", "new_research": false, "status": "verified_existing_record"}
+{"fact": "final claims", "value": "14", "existing_project_source": "final adjudicated claim table", "new_research": false, "status": "verified_existing_record"}
+{"fact": "unsearched residual targets", "value": "12,844", "existing_project_source": "final limitations and incident audit", "new_research": false, "status": "verified_existing_record"}
+{"fact": "retained external payloads", "value": "14,449", "existing_project_source": "external source-review retention summary", "new_research": false, "status": "verified_existing_record"}
+{"fact": "storage-held verified sources", "value": "7,895", "existing_project_source": "storage-capacity audit", "new_research": false, "status": "verified_existing_record"}
+{"fact": "OCR-later sources", "value": "118", "existing_project_source": "external non-OCR extraction readiness summary", "new_research": false, "status": "verified_existing_record"}
+{"fact": "regression readiness", "value": "3 of 16 gates", "existing_project_source": "mathematical execution readiness audit", "new_research": false, "status": "verified_existing_record"}
+{"fact": "strict external matches", "value": "zero wage; zero growth", "existing_project_source": "final mathematical result tables", "new_research": false, "status": "verified_existing_record"}
+{"fact": "evidence sensitivity", "value": "5 stronger; 1 more mixed; 8 unchanged; 0 upgrades", "existing_project_source": "final strict-vs-bounded summary", "new_research": false, "status": "verified_existing_record"}
+{"fact": "GABRIEL pilot", "value": "4 rows", "existing_project_source": "verified_runtime_output_milestones.csv", "new_research": false, "status": "verified_existing_record"}
+{"fact": "source-review pilots", "value": "150, 500, and 1,500 sources", "existing_project_source": "verified_runtime_output_milestones.csv", "new_research": false, "status": "verified_existing_record"}
+{"fact": "broad scouting stages", "value": "4,000 and 10,000 rows", "existing_project_source": "verified_runtime_output_milestones.csv", "new_research": false, "status": "verified_existing_record"}

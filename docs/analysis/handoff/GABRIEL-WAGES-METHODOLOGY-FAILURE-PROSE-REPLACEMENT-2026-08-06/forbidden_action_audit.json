@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "hosted_search": false,
+  "GABRIEL_call": false,
+  "external_API": false,
+  "OCR": false,
+  "source_processing": false,
+  "regression": false,
+  "causal_analysis": false,
+  "claim_readjudication": false,
+  "unrelated_visual_change": false
+}

@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "topics_required": [
+    "complete workflow",
+    "human-AI roles",
+    "PROGRESS.md",
+    "relay ZIPs",
+    "Routine and Heavy profiles",
+    "Git worktrees",
+    "staggered lanes",
+    "checkpointing and resumability",
+    "scaling",
+    "collection failures",
+    "processing failures",
+    "analysis failures",
+    "publication failures",
+    "evidence-tier redesign",
+    "methodological lesson"
+  ],
+  "topics_present": [
+    "complete workflow",
+    "human-AI roles",
+    "PROGRESS.md",
+    "relay ZIPs",
+    "Routine and Heavy profiles",
+    "Git worktrees",
+    "staggered lanes",
+    "checkpointing and resumability",
+    "scaling",
+    "collection failures",
+    "processing failures",
+    "analysis failures",
+    "publication failures",
+    "evidence-tier redesign",
+    "methodological lesson"
+  ],
+  "total_prose_words": 2718
+}

@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "staged_file_count": 48,
+  "staged_total_bytes": 5330040,
+  "authorized_scope": [
+    "replacement prose and compact QA",
+    "archived pre-prose PDF",
+    "final atlas PDF",
+    "page-count metadata",
+    "bounded assembly script"
+  ],
+  "source_binaries_staged": false,
+  "extracted_corpus_staged": false,
+  "raw_analytical_corpus_staged": false,
+  "staged_deletions": 0,
+  "largest_staged_files": [
+    {
+      "path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+      "bytes": 2409377,
+      "role": "final atlas"
+    },
+    {
+      "path": "docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/archive/gabriel_wages_visual_atlas_final_before_methodology_prose_2026-08-06.pdf",
+      "bytes": 2369807,
+      "role": "required pre-edit archive"
+    }
+  ]
+}

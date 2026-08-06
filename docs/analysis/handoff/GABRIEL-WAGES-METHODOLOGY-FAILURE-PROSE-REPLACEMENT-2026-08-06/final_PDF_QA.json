@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "pages": 58,
+  "page_size_points": [
+    792,
+    612
+  ],
+  "source_boundary_page_40": "pass",
+  "replacement_pages_41_46": "pass",
+  "appendix_transition_page_47": "pass",
+  "blank_pages": 0,
+  "clipped_pages": 0,
+  "native_text": true,
+  "page_plan_matches": true,
+  "bookmarks_match": true,
+  "rendered_at_300_DPI": 58
+}

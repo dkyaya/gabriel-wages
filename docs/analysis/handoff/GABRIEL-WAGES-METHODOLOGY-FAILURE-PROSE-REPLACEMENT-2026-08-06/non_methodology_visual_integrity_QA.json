@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "front_pages_pixel_identical": 40,
+  "appendix_pages_body_pixel_identical": 12,
+  "allowed_differences": "appendix footer page numbers only",
+  "unrelated_visual_changes": 0,
+  "limitations_pages_34_40_unchanged": true,
+  "appendix_body_pages_49_60_preserved_as_47_58": true
+}

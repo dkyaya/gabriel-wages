@@ -1,0 +1,20 @@
+fact,value,existing_project_source,new_research,status
+eligible municipalities,"35,589",verified_runtime_output_milestones.csv; final atlas corpus pages,False,verified_existing_record
+scout-covered municipalities,"35,574",final atlas source data and coverage audit,False,verified_existing_record
+unique PDFs,"15,163",final adjudication corpus-scale accounting,False,verified_existing_record
+native PDF pages,"1,029,482",final adjudication corpus-scale accounting,False,verified_existing_record
+usable external payloads,"14,160",external extraction manifest; verified_runtime_output_milestones.csv,False,verified_existing_record
+raw field hits,"5,558,770",deterministic field/span extraction summary,False,verified_existing_record
+raw spans,"4,289,437",deterministic field/span extraction summary,False,verified_existing_record
+compact administrative observations,"1,876,183",compaction/classification summary,False,verified_existing_record
+final claims,14,final adjudicated claim table,False,verified_existing_record
+unsearched residual targets,"12,844",final limitations and incident audit,False,verified_existing_record
+retained external payloads,"14,449",external source-review retention summary,False,verified_existing_record
+storage-held verified sources,"7,895",storage-capacity audit,False,verified_existing_record
+OCR-later sources,118,external non-OCR extraction readiness summary,False,verified_existing_record
+regression readiness,3 of 16 gates,mathematical execution readiness audit,False,verified_existing_record
+strict external matches,zero wage; zero growth,final mathematical result tables,False,verified_existing_record
+evidence sensitivity,5 stronger; 1 more mixed; 8 unchanged; 0 upgrades,final strict-vs-bounded summary,False,verified_existing_record
+GABRIEL pilot,4 rows,verified_runtime_output_milestones.csv,False,verified_existing_record
+source-review pilots,"150, 500, and 1,500 sources",verified_runtime_output_milestones.csv,False,verified_existing_record
+broad scouting stages,"4,000 and 10,000 rows",verified_runtime_output_milestones.csv,False,verified_existing_record

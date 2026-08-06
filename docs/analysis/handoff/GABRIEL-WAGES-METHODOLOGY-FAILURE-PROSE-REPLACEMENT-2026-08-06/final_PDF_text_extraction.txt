@@ -1,0 +1,1260 @@
+Why Public-Safety Wages
+May Grow Differently
+A Visual Atlas of Municipal Compensation Evidence, Claims, and Limitations
+A visual-first account of municipal compensation mechanisms, the evidence supporting fourteen final claim
+boundaries, the limits of the analysis, and the Human-AI workflow used to build the project.
+35 reader-facing categories 14 final claims 7 retained counterexamples 0 causal estimates
+Joachim Johnson
+Gabriel Wages · Municipal compensation research
+
+OPENING
+Executive summary
+The corpus supports a bounded account of compensation mechanisms more strongly than a national wage-gap or causal estimate.
+What the project investigated What the evidence supports What it does not establish
+Why public-safety wages may grow differently from One supported bounded account, one conditional No national safety wage gap, representative growth
+other municipal occupations, using documentary and claim, five mechanism-only claims, and one mixed advantage, prevalence estimate, regression result, or
+administrative evidence while holding city and finding. Safety-side events are more visible in causal effect. Six proposed global claims remain
+compensation cycle central to comparison. retained classified evidence, but that visibility is not unsupported.
+national prevalence.
+1,029,482 14,160 2,998 13,391
+unique native PDF pages usable external payloads implementation events mechanism-event link records
+How to use this atlas: begin with the reader guide, then read the corpus pages before interpreting the mechanism maps. Each profile states what a compensation
+mechanism means, how it can affect pay, which side is more visible, and what the evidence cannot prove. The final sections preserve counterexamples,
+limitations, and project history.
+Gabriel Wages · Municipal compensation evidence 2
+
+PART I · READER GUIDE
+Research question and analytical units
+The project compares occupations within municipalities while keeping city and compensation cycle central.
+Research question One implementation event
+Why might public-safety compensation grow differently from pay in other A deduplicated municipality × compensation cycle × compensation mechanism
+municipal occupations? The strongest design compares separate bargaining × side record. It documents an administrative or contractual compensation
+units in the same city and overlapping compensation cycle. event; it is not a worker, source document, wage effect, or prevalence estimate.
+Safety Non-safety Mixed
+Police, fire, or combined public-safety evidence. Municipal occupations outside police and fire. A record that concerns both safety and non-safety
+sides.
+Side-independent Unresolved Different units
+A municipal process or record without an The available evidence does not support a precise side Sources, pages, spans, events, municipalities, claims,
+occupation-specific side. assignment. and comparisons are reported separately and cannot
+be added.
+Gabriel Wages · Municipal compensation evidence 3
+
+PART I · READER GUIDE
+Maps and evidence tiers
+Map shading describes documented events; evidence tiers describe how safely a record can support a claim.
+Strict evidence Bounded evidence
+How to read a hex map
+Exact and claim-safe: compatible Analytically usable with an explicit
+A hex map groups nearby municipalities into equal-sized areas so regional subject, municipality, period, side, role, caveat about role, period, range, or
+patterns are easier to see. Darker areas contain more distinct documented pay basis, and traceable formula. another limited dimension.
+compensation events. The shading does not represent more employees, a larger
+wage effect, or how common the mechanism is nationwide. Alaska uses a
+separate inset scale.
+Directional evidence Context
+Supports a mechanism or direction but Relevant background that does not
+not a clean point estimate. directly support a claim.
+Rejected
+Broader evidence can strengthen a bounded interpretation without changing its
+Incompatible, duplicate, conflicted, or
+claim class. In this project, five claims became stronger within the same class, one unsupported evidence kept outside
+became more mixed, eight were unchanged, and none upgraded class. claim support.
+Gabriel Wages · Municipal compensation evidence 4
+
+PART I · READER GUIDE
+Core compensation-mechanism glossary
+Plain-language definitions used throughout the mechanism profiles.
+Compensation mechanism Compensation cycle Documentary evidence
+A process or rule that sets, changes, delays, funds, or The fiscal, contract, bargaining, or implementation period to Contracts, ordinances, agreements, awards, reports, and
+supplements pay. which an event belongs. related documents.
+Administrative record Retroactive pay Step progression
+Payroll, staffing, budget, personnel, or implementation Back pay owed because a term applies to an earlier effective Movement through a salary schedule based on service, rank,
+material. period. or another rule.
+COLA Across-the-board raise Non-base pay
+A cost-of-living adjustment, sometimes linked to inflation or a The same general increase applied across covered roles or Overtime, premiums, stipends, allowances, longevity, or
+price index. classifications. other pay outside the base rate.
+Bargaining leverage Staffing pressure Pay plan
+Practical power used to improve terms during negotiations. Vacancy, recruitment, retention, or minimum-staffing A formal municipal schedule or process that establishes
+conditions entering pay decisions. compensation rates.
+Salary schedule Classification adjustment Compression
+A table of rates, grades, steps, or ranges for covered jobs. A change to a job's grade, band, range, or civil-service A narrowing pay difference between experience levels,
+placement. ranks, or related roles.
+Premium pay
+Additional pay for specific duties, qualifications, shifts, or
+working conditions.
+Gabriel Wages · Municipal compensation evidence 5
+
+PART II · CORPUS AND EVIDENCE BASE
+Corpus scale and source mix
+The project assembled a large, mixed-format corpus, but different source units are never combined into one total.
+Native PDF pages 1,029,482
+HTML table rows 1,017,511
+Separate text-page equivalent 650,482
+Embedded structured records 132,188
+HTML tables 96,484
+Unique physical PDFs 15,163
+Substantive HTML documents 8,718
+CSV/TSV rows 1,445
+104 105 106
+Count · logarithmic scale
+Exact values are labeled. Counts have different analytical units and are not additive.
+Native PDF pages and the separate non-PDF text-page equivalent are never added together.
+Gabriel Wages · Municipal compensation evidence 6
+
+PART II · CORPUS AND EVIDENCE BASE
+Discovery, retention, and usable evidence
+Near-complete municipality scouting did not make every discovered source accessible, retained, or analytically compatible.
+Eligible municipalities 35,589
+Scout-covered municipalities 35,574
+Source-library candidates 26,799
+Canonical sources after duplicate grouping 26,637
+Retained external payloads 14,449
+Usable extracted payloads 14,160
+0 5000 10000 15000 20000 25000 30000 35000
+Records or municipalities
+Filtering, duplicate grouping, storage holds, and readiness checks are expected pipeline decisions, not accidental loss.
+Scout coverage is a discovery result, not representative sampling or national prevalence.
+Gabriel Wages · Municipal compensation evidence 7
+
+PART II · CORPUS AND EVIDENCE BASE
+Safety and non-safety visibility
+Safety appears more often in retained classified evidence; unresolved and side-independent material remains visible.
+Documentary evidence spans
+(n=51,639)
+Documentary growth records
+(n=432)
+Implementation events
+(n=2,998)
+Bounded local comparisons
+(n=10)
+Mechanism-event map units
+(n=11,698)
+0% 20% 40% 60% 80% 100% 0% 20% 40% 60% 80% 100%
+Safety Non Safety Mixed Side Independent Unresolved
+Rows use different analytical units and cannot be added. Local comparisons are intrinsically two-sided and are shown as mixed.
+Each row has its own analytical unit and denominator. The rows cannot be added.
+Gabriel Wages · Municipal compensation evidence 8
+
+PART II · CORPUS AND EVIDENCE BASE
+Analytical readiness and evidence boundaries
+Millions of extracted records became compact evidence layers, but strict compatibility gates still produced no external wage or growth panel.
+Compact administrative observations 1,876,183
+Raw field hits 5,558,770
+Raw spans 4,289,437
+Staffing analytical units 18,358
+Implementation sequences 1,268
+Math-ready sequences 38
+Compatible external wage matches 0
+Compatible growth pairs 0
+0 1 2 3 4 5 6 7
+Display length = log10(count + 1)
+Zero compatible external wage matches and growth pairs reflect unit incompatibility, not a lack of documents.
+Gabriel Wages · Municipal compensation evidence 9
+
+PART III · COMPENSATION MECHANISMS
+Retroactivity and payroll timing
+2,253 distinct profile events · 1,269 municipalities · 42 states
+What the mechanism means
+A compensation term whose effective date reaches back before
+the final approval or payment date.
+How it can affect pay
+It can push compensation upward by making a later settlement
+effective for earlier work. It converts the earlier effective period
+into an owed payment, often delivered as back pay. It
+determines when an approved increase starts reaching
+60 paychecks and prevents adoption dates from being mistaken for
+Side pattern
+50
+Safety 945 · Non-safety 114 · Mixed, side-independent, or
+unresolved 1,194.
+40
+Example in the retained evidence
+30 Flint charter, MI: a cba record codes retroactivity implementation for
+police_direct; the package preserves the bounded evidence pointer
+and source lineage.
+20 Claim boundary
+local/mechanism/sample-specific; no national wage gap, prevalence,
+10
+or causal effect
+0
+Lower 48 · common national extent
+A compensation term whose effective date reaches back before the final approval or payment date. It can push compensation upward by making a later settlement effective for earlier work. It converts the
+earlier effective period into an owed payment, often delivered as back pay. It determines when an approved increase starts reaching paychecks and prevents adoption dates from being mistaken for
+payment. Among side-classified events, safety appears more often (945 versus 114) in the retained evidence. That pattern matters because it shows which side is more visible in the documents I could
+classify, but safety records were also easier to identify and more common in the corpus. It does not establish national prevalence or a wage effect.
+Gabriel Wages · Municipal compensation evidence 10
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+6 retained events
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Non-base and one-time compensation
+890 distinct profile events · 551 municipalities · 32 states
+What the mechanism means
+Compensation outside regular base wages that does not fit a
+more specific category.
+How it can affect pay
+It adds pay outside the base rate, so a base-wage comparison
+can miss part of compensation. It raises pay for specific duties,
+qualifications, shifts, or working conditions. It increases cash
+compensation or reimburses required job costs without changing
+base pay. It can substantially increase earnings beyond base
+30
+Side pattern
+25 Safety 452 · Non-safety 37 · Mixed, side-independent, or
+unresolved 401.
+20
+Example in the retained evidence
+Milaca, MN: a cba record codes non base compensation for
+15
+police_direct; the package preserves the bounded evidence pointer
+and source lineage.
+10 Claim boundary
+local/mechanism/sample-specific; no national wage gap, prevalence,
+5
+or causal effect
+0
+Lower 48 · common national extent
+Compensation outside regular base wages that does not fit a more specific category. It adds pay outside the base rate, so a base-wage comparison can miss part of compensation. It raises pay for specific
+duties, qualifications, shifts, or working conditions. It increases cash compensation or reimburses required job costs without changing base pay. It can substantially increase earnings beyond base pay
+when staffing or scheduling produces extra hours. It adds premium compensation for holiday work or recognized holidays. It adds scheduled pay as service accumulates and can steepen wage growth for
+long-tenured workers. It can change total compensation or take-home value even when base wages do not move. It offsets work expenses but should not be treated as recurring wages. It raises current
+Gabriel Wages · Municipal compensation evidence 11
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+3 retained events
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Scheduled base-wage growth
+809 distinct profile events · 540 municipalities · 36 states
+What the mechanism means
+The same general increase applied across covered jobs or
+classifications.
+How it can affect pay
+It raises covered rates together, but does not necessarily
+change the gap between safety and non-safety jobs. It directly
+changes recurring salary or wage rates. It can generate
+repeated wage growth as employees move through scheduled
+steps. It can preserve purchasing power by linking raises to
+20.0 Side pattern
+17.5 Safety 384 · Non-safety 32 · Mixed, side-independent, or
+unresolved 393.
+15.0
+Example in the retained evidence
+12.5
+Wellsville, NY: a cba record codes step schedule seniority for
+10.0 police_direct; the package preserves the bounded evidence pointer
+and source lineage.
+7.5
+Claim boundary
+5.0
+local/mechanism/sample-specific; no national wage gap, prevalence,
+or causal effect
+2.5
+0.0
+Lower 48 · common national extent
+The same general increase applied across covered jobs or classifications. It raises covered rates together, but does not necessarily change the gap between safety and non-safety jobs. It directly changes
+recurring salary or wage rates. It can generate repeated wage growth as employees move through scheduled steps. It can preserve purchasing power by linking raises to inflation or a stated percentage. It
+can trigger recurring adjustments as inflation changes. It raises future compensation repeatedly because the amount remains in the pay structure. Among side-classified events, safety appears more often
+(384 versus 32) in the retained evidence. That pattern matters because it shows which side is more visible in the documents I could classify, but safety records were also easier to identify and more
+Gabriel Wages · Municipal compensation evidence 12
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+5 retained events
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Budgets, pay plans, and fiscal constraint
+636 distinct profile events · 409 municipalities · 33 states
+What the mechanism means
+A budget or pay-plan process that formally sets or revises
+compensation schedules.
+How it can affect pay
+It can authorize, sequence, or constrain the schedules through
+which wages become operative. It can hold pay down, delay
+implementation, or redirect increases toward narrower groups or
+one-time payments. It supplies the legal or financial authority for
+compensation to be paid.
+Side pattern
+20
+Safety 154 · Non-safety 69 · Mixed, side-independent, or
+unresolved 413.
+15 Example in the retained evidence
+Huntington Bay, NY: a arbitration_award record codes budget fiscal
+constraint for police_direct; the package preserves the bounded
+10
+evidence pointer and source lineage.
+Claim boundary
+5 local/mechanism/sample-specific; no national wage gap, prevalence,
+or causal effect
+0
+Lower 48 · common national extent
+A budget or pay-plan process that formally sets or revises compensation schedules. It can authorize, sequence, or constrain the schedules through which wages become operative. It can hold pay down,
+delay implementation, or redirect increases toward narrower groups or one-time payments. It supplies the legal or financial authority for compensation to be paid. Among side-classified events, safety
+appears more often (154 versus 69) in the retained evidence. That pattern matters because it shows which side is more visible in the documents I could classify, but safety records were also easier to
+identify and more common in the corpus. It does not establish national prevalence or a wage effect.
+Gabriel Wages · Municipal compensation evidence 13
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+1 retained event
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Council and ordinance adoption
+315 distinct profile events · 271 municipalities · 38 states
+What the mechanism means
+A city council or ordinance action that formally authorizes
+compensation terms.
+How it can affect pay
+It turns a proposal or agreement into an authorized municipal
+action, although authorization is not proof of payment. It
+formalizes compensation terms, but the retained evidence must
+still show implementation or payment separately.
+12
+Side pattern
+Safety 76 · Non-safety 21 · Mixed, side-independent, or
+10
+unresolved 218.
+Example in the retained evidence
+8
+Washington, PA: a agenda_packet_or_minutes record codes
+6 ordinance council adoption for police_direct; the package preserves
+the bounded evidence pointer and source lineage.
+Claim boundary
+4
+local/mechanism/sample-specific; no national wage gap, prevalence,
+or causal effect
+2
+0
+Lower 48 · common national extent
+A city council or ordinance action that formally authorizes compensation terms. It turns a proposal or agreement into an authorized municipal action, although authorization is not proof of payment. It
+formalizes compensation terms, but the retained evidence must still show implementation or payment separately. Among side-classified events, safety appears more often (76 versus 21) in the retained
+evidence. That pattern matters because it shows which side is more visible in the documents I could classify, but safety records were also easier to identify and more common in the corpus. It does not
+establish national prevalence or a wage effect.
+Gabriel Wages · Municipal compensation evidence 14
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+3 retained events
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Formal bargaining and impasse resolution
+81 distinct profile events · 69 municipalities · 22 states
+What the mechanism means
+The practical power employees or unions can use to win better
+terms during negotiations.
+How it can affect pay
+It can improve negotiated terms when employees can credibly
+apply staffing, political, legal, or job-action pressure. It provides
+the formal channel through which wage schedules and non-base
+terms are negotiated. It can implement targeted changes faster
+7 or more narrowly than a complete successor contract. It
+Side pattern
+6
+Safety 42 · Non-safety 5 · Mixed, side-independent, or
+5 unresolved 34.
+Example in the retained evidence
+4
+Harrison, OH: a mou_or_memorandum record codes collective
+bargaining for police_direct; the package preserves the bounded
+3
+evidence pointer and source lineage.
+Claim boundary
+2
+local/mechanism/sample-specific; no national wage gap, prevalence,
+1 or causal effect
+0
+Lower 48 · common national extent
+The practical power employees or unions can use to win better terms during negotiations. It can improve negotiated terms when employees can credibly apply staffing, political, legal, or job-action
+pressure. It provides the formal channel through which wage schedules and non-base terms are negotiated. It can implement targeted changes faster or more narrowly than a complete successor contract.
+It approves negotiated terms but remains distinct from their payroll-effective or paid stage. It can impose compensation terms when ordinary bargaining reaches an impasse. Among side-classified events,
+safety appears more often (42 versus 5) in the retained evidence. That pattern matters because it shows which side is more visible in the documents I could classify, but safety records were also easier to
+Gabriel Wages · Municipal compensation evidence 15
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+No retained Alaska event
+for this mechanism
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Classification and pay structure
+57 distinct profile events · 54 municipalities · 14 states
+What the mechanism means
+A change to a job classification, pay grade, range, or band.
+How it can affect pay
+It can raise or lower attainable pay by moving a job into a
+different grade or range. It changes the floor, ceiling, or spread
+of possible pay rather than necessarily changing observed
+earnings immediately. It governs placement and progression in
+ways that can structure long-run pay paths.
+3.0
+Side pattern
+Safety 23 · Non-safety 2 · Mixed, side-independent, or
+2.5
+unresolved 32.
+Example in the retained evidence
+2.0
+Franklin, IN: a budget_or_pay_plan record codes classification civil
+1.5 service for police_direct; the package preserves the bounded
+evidence pointer and source lineage.
+Claim boundary
+1.0
+local/mechanism/sample-specific; no national wage gap, prevalence,
+or causal effect
+0.5
+0.0
+Lower 48 · common national extent
+A change to a job classification, pay grade, range, or band. It can raise or lower attainable pay by moving a job into a different grade or range. It changes the floor, ceiling, or spread of possible pay rather
+than necessarily changing observed earnings immediately. It governs placement and progression in ways that can structure long-run pay paths. Among side-classified events, safety appears more often
+(23 versus 2) in the retained evidence. That pattern matters because it shows which side is more visible in the documents I could classify, but safety records were also easier to identify and more common
+in the corpus. It does not establish national prevalence or a wage effect.
+Gabriel Wages · Municipal compensation evidence 16
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+No retained Alaska event
+for this mechanism
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Staffing, market, and comparability pressure
+56 distinct profile events · 47 municipalities · 17 states
+What the mechanism means
+A pay action justified by labor-market competition, hiring, or
+retention pressure.
+How it can affect pay
+It can produce targeted raises or premiums when employers
+struggle to hire or keep workers. It can motivate targeted raises,
+premiums, or retention measures when positions are hard to fill.
+It can pull pay toward a reference job, bargaining unit, or
+6 neighboring jurisdiction.
+Side pattern
+5
+Safety 22 · Non-safety 7 · Mixed, side-independent, or
+unresolved 27.
+4
+Example in the retained evidence
+3 Ontario, NY: a civil_service_or_hr_pay_plan record codes market
+recruitment retention for non_safety_direct; the package preserves
+the bounded evidence pointer and source lineage.
+2
+Claim boundary
+local/mechanism/sample-specific; no national wage gap, prevalence,
+1
+or causal effect
+0
+Lower 48 · common national extent
+A pay action justified by labor-market competition, hiring, or retention pressure. It can produce targeted raises or premiums when employers struggle to hire or keep workers. It can motivate targeted raises,
+premiums, or retention measures when positions are hard to fill. It can pull pay toward a reference job, bargaining unit, or neighboring jurisdiction. Among side-classified events, safety appears more often
+(22 versus 7) in the retained evidence. That pattern matters because it shows which side is more visible in the documents I could classify, but safety records were also easier to identify and more common
+in the corpus. It does not establish national prevalence or a wage effect.
+Gabriel Wages · Municipal compensation evidence 17
+xeh
+rep
+stneve
+detnemucoD
+Alaska
+No retained Alaska event
+for this mechanism
+Inset uses its own geographic scale.
+
+PART III · COMPENSATION MECHANISMS
+Documentary growth by evidence tier
+Step progression leans safety, across-the-board results are mixed, and COLA evidence is sparse.
+Strict numeric 3
+Bounded numeric 6
+Directional 423
+101 102
+Growth records · logarithmic scale
+432 total records. Step progression leans safety; across-board results are mixed; COLA evidence is sparse.
+Interpretation boundary
+Growth results remain mechanism-specific and sample-specific; they do not establish a uniform national safety advantage.
+Gabriel Wages · Municipal compensation evidence 18
+
+PART III · COMPENSATION MECHANISMS
+Staffing pressure and channel evidence
+A small direct channel sits inside a much larger descriptive and unresolved staffing layer.
+Direct channel evidence 7
+Descriptively consistent 216
+Context or insufficient 18,135
+101 102 103 104
+Staffing analytical units · logarithmic scale
+18,358 units total. These are descriptive and mechanism-oriented; no causal effect was estimated.
+Interpretation boundary
+Staffing evidence is descriptive and mechanism-oriented. No causal effect was estimated.
+Gabriel Wages · Municipal compensation evidence 19
+
+PART III · COMPENSATION MECHANISMS
+Implementation lifecycle
+Adoption, effective date, payroll operation, and payment are distinct stages.
+Adopted; no paid stage observed 19
+Paid with prior adoption 2
+Proposed only 4
+Negotiated only 1
+Amended 10
+Partial 2
+Sequence holds 1,230
+100 101 102 103
+Implementation sequences · logarithmic scale
+Adoption, effective date, likely implementation, payroll-effective status, and paid status remain distinct.
+Interpretation boundary
+Use “no paid stage observed in the retained evidence,” never “never paid.”
+Gabriel Wages · Municipal compensation evidence 20
+
+PART IV · FINAL CLAIM BOUNDARIES
+Ten bounded local comparisons
+Five favor safety, four favor non-safety, and one is neutral.
+Safety-favorable 5
+Non-safety-favorable 4
+Neutral 1
+0 1 2 3 4 5
+Bounded local comparison units
+Ten local comparisons: nine bounded numeric and one directional. They are local examples, not a national estimate.
+Interpretation boundary
+Local comparisons remain local and are not averaged into a national wage-gap estimate.
+Gabriel Wages · Municipal compensation evidence 21
+
+PART IV · FINAL CLAIM BOUNDARIES
+Final claim classes
+The final universe contains fourteen claims; evidence volume alone does not determine support.
+Supported 1
+Conditionally supported 1
+Mechanism supported only 5
+Mixed or countervailing 1
+Unsupported 6
+0 1 2 3 4 5 6
+Final adjudicated claims
+All 14 classes are preserved. Evidence volume alone does not determine class.
+One claim is supported, one is conditionally supported, five are mechanism supported only, one is mixed or countervailing, and six remain unsupported. No claim is
+exploratory or contradicted.
+Gabriel Wages · Municipal compensation evidence 22
+
+PART IV · FINAL CLAIM BOUNDARIES
+Evidence matrix: bounded findings
+Eight claims supported, qualified, or bounded by mechanism and countervailing evidence.
+Strict Bounded Directional Counterexamples Conflicts
+Formal bargaining and impasse resolution 6 0 1 0 0
+Scheduled wage-growth mechanisms 7 6 423 0 0
+Non-base compensation channels 2 0 1 0 0
+Staffing and labor-market pressure 4 7 217 0 0
+Retroactivity and implementation timing 40 0 1 0 0
+Fiscal institutions and formal adoption 44 0 1 0 0
+Mixed and countervailing evidence 11 15 424 7 0
+A bounded compensation-mechanism account 52 23 677 7 0
+Cells are linked-record counts; color intensity uses log(1 + count). Large directional counts are not equivalent to strict evidence.
+Cells show linked-record counts. Color intensity uses log(1 + count) to keep large directional layers readable. Counts are not equally weighted proof, and a zero count does not by itself disprove a
+claim.
+Gabriel Wages · Municipal compensation evidence 23
+
+PART IV · FINAL CLAIM BOUNDARIES
+Evidence matrix: unsupported boundaries
+Six proposed global claims remain unsupported because the required analytical design is absent.
+Strict Bounded Directional Counterexamples Conflicts
+No national safety wage-gap estimate 0 0 0 0 0
+No national mechanism-prevalence estimate 0 0 0 0 0
+No causal-effect estimate 0 0 0 0 0
+No regression-based claim 0 0 0 0 0
+No uniform safety growth advantage 0 0 0 0 0
+Documentation is not causal identification 0 0 0 0 0
+Cells are linked-record counts; color intensity uses log(1 + count). Large directional counts are not equivalent to strict evidence.
+Cells show linked-record counts. Color intensity uses log(1 + count) to keep large directional layers readable. Counts are not equally weighted proof, and a zero count does not by itself disprove a
+claim.
+Gabriel Wages · Municipal compensation evidence 24
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims CLAIM-A and CLAIM-B
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+Formal bargaining and impasse resolution Scheduled wage-growth mechanisms
+Mechanism supported only Conditionally supported
+What I can responsibly say What I can responsibly say
+In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional In reviewed unit-cycle records, step, seniority, rank, and COLA provisions create recurring scheduled
+channels that can set or preserve safety-compensation terms; the evidence establishes mechanism wage-growth paths; step progression leans safety in the available sample, while across-board results
+operation, not an average wage effect. are mixed and COLA cells are sparse.
+Strict conclusion Strict conclusion
+In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional The reviewed documentary corpus contains recurring step, seniority, rank, and COLA structures;
+channels that can set or preserve safety-compensation terms. comparative growth implications remain sample-specific.
+Broader bounded conclusion Broader bounded conclusion
+In the reviewed corpus, formal bargaining, arbitration, and factfinding provide recurring institutional In reviewed unit-cycle records, step, seniority, rank, and COLA provisions create recurring scheduled
+channels that can set or preserve safety-compensation terms; the evidence establishes mechanism wage-growth paths; step progression leans safety in the available sample, while across-board results
+operation, not an average wage effect. are mixed and COLA cells are sparse.
+What I cannot responsibly say What I cannot responsibly say
+Formal bargaining causes safety wages to rise faster nationwide. Safety wages generally grow faster nationwide because of step progression or COLAs.
+Main uncertainty Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain remain
+Gabriel Wages · Municipal compensation evidence 25
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims CLAIM-C and CLAIM-D
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+Non-base compensation channels Staffing and labor-market pressure
+Mechanism supported only Mechanism supported only
+What I can responsibly say What I can responsibly say
+Reviewed safety-compensation records contain structured non-base channels—including overtime, Reviewed sources explicitly use recruitment, retention, comparator, vacancy, and staffing pressure to
+holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond justify schedule changes or targeted premiums in some public-safety settings; the staffing evidence is
+base pay; no complete total-compensation sum is estimated. descriptive, not causal or prevalence evidence.
+Strict conclusion Strict conclusion
+Reviewed safety-compensation records contain structured non-base channels—including overtime, Reviewed sources explicitly use recruitment, retention, comparator, vacancy, and staffing pressure to
+holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond justify schedule changes or targeted premiums in some public-safety settings.
+base pay.
+Broader bounded conclusion
+Broader bounded conclusion
+Reviewed sources explicitly use recruitment, retention, comparator, vacancy, and staffing pressure to
+Reviewed safety-compensation records contain structured non-base channels—including overtime, justify schedule changes or targeted premiums in some public-safety settings; the staffing evidence is
+holiday, longevity, premium, stipend, and allowance provisions—that can raise compensation beyond descriptive, not causal or prevalence evidence.
+base pay; no complete total-compensation sum is estimated.
+What I cannot responsibly say
+What I cannot responsibly say
+Staffing shortages cause higher safety wages.
+Safety workers receive more total compensation than non-safety workers nationwide.
+Main uncertainty
+Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits remain
+remain
+Gabriel Wages · Municipal compensation evidence 26
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims CLAIM-E and CLAIM-F
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+Retroactivity and implementation timing Fiscal institutions and formal adoption
+Mechanism supported only Mechanism supported only
+What I can responsibly say What I can responsibly say
+Reviewed records show that retroactive effective dates and implementation clauses can convert Reviewed ordinances, budgets, pay plans, and classification records show how compensation
+some bargaining delays into payable increases or back pay; adoption alone is not payment, and only proposals can be formalized or constrained by fiscal institutions; these records do not establish that
+retained evidence with a paid stage is described as paid. every proposal was implemented or paid.
+Strict conclusion Strict conclusion
+Reviewed records show that retroactive effective dates and implementation clauses can convert Reviewed ordinances, budgets, pay plans, and classification records show how compensation
+some bargaining delays into payable increases or back pay. proposals can be formalized or constrained by fiscal institutions.
+Broader bounded conclusion Broader bounded conclusion
+Reviewed records show that retroactive effective dates and implementation clauses can convert Reviewed ordinances, budgets, pay plans, and classification records show how compensation
+some bargaining delays into payable increases or back pay; adoption alone is not payment, and only proposals can be formalized or constrained by fiscal institutions; these records do not establish that
+retained evidence with a paid stage is described as paid. every proposal was implemented or paid.
+What I cannot responsibly say What I cannot responsibly say
+Every adopted or retroactive provision was implemented and paid. Budget and council action uniformly increase compensation.
+Main uncertainty Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain remain
+Gabriel Wages · Municipal compensation evidence 27
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims CLAIM-G and CLAIM-H
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+Mixed and countervailing evidence A bounded compensation-mechanism account
+Mixed or countervailing Supported
+What I can responsibly say What I can responsibly say
+Both safety and non-safety units use bargaining, steps, COLAs, and pay plans. The available The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting
+evidence is consistent with a reinforcing safety-pressure bundle in some settings, but local and safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect
+growth results are mixed and do not establish a uniform safety advantage. estimate.
+Strict conclusion Strict conclusion
+Safety and non-safety units both use formal compensation-growth mechanisms; the comparative The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting
+pattern in reviewed records is mixed. safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect
+estimate.
+Broader bounded conclusion
+Broader bounded conclusion
+Both safety and non-safety units use bargaining, steps, COLAs, and pay plans. The available
+evidence is consistent with a reinforcing safety-pressure bundle in some settings, but local and The reviewed corpus supports a bounded account of mechanisms and directional pressures affecting
+growth results are mixed and do not establish a uniform safety advantage. safety compensation more strongly than it supports any global wage-gap, prevalence, or causal-effect
+estimate.
+What I cannot responsibly say
+What I cannot responsibly say
+Non-safety compensation lacks institutional growth mechanisms, or safety always has the advantage.
+The corpus estimates a national safety wage gap or causal effect.
+Main uncertainty
+Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain
+Gabriel Wages · Municipal compensation evidence 28
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims UNSUP-01 and UNSUP-02
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+No national safety wage-gap estimate No national mechanism-prevalence estimate
+Unsupported Unsupported
+What I can responsibly say What I can responsibly say
+A national safety wage-gap estimate is not supported by the current corpus. A national prevalence estimate for any compensation mechanism is not supported by the current
+corpus.
+Strict conclusion
+Strict conclusion
+A national safety wage-gap estimate is not supported by the current corpus.
+A national prevalence estimate for any compensation mechanism is not supported by the current
+Broader bounded conclusion corpus.
+A national safety wage-gap estimate is not supported by the current corpus.
+Broader bounded conclusion
+What I cannot responsibly say A national prevalence estimate for any compensation mechanism is not supported by the current
+The corpus provides a national safety wage-gap estimate. corpus.
+Main uncertainty What I cannot responsibly say
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits The corpus estimates national mechanism prevalence.
+remain
+Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain
+Gabriel Wages · Municipal compensation evidence 29
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims UNSUP-03 and UNSUP-04
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+No causal-effect estimate No regression-based claim
+Unsupported Unsupported
+What I can responsibly say What I can responsibly say
+A causal effect estimate for any compensation mechanism is not supported by the current design. No regression-based claim is supported because no regression-ready design passed the gate and no
+regression was run.
+Strict conclusion
+Strict conclusion
+A causal effect estimate for any compensation mechanism is not supported by the current design.
+No regression-based claim is supported because no regression-ready design passed the gate and no
+Broader bounded conclusion regression was run.
+A causal effect estimate for any compensation mechanism is not supported by the current design.
+Broader bounded conclusion
+What I cannot responsibly say No regression-based claim is supported because no regression-ready design passed the gate and no
+The corpus identifies causal effects of compensation mechanisms. regression was run.
+Main uncertainty What I cannot responsibly say
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits Regression results establish the proposed relationship.
+remain
+Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain
+Gabriel Wages · Municipal compensation evidence 30
+
+PART IV · FINAL CLAIM BOUNDARIES
+Claims UNSUP-05 and UNSUP-06
+Compact adjudication cards preserve the exact class, defensible language, principal evidence, and prohibited wording.
+No uniform safety growth advantage Documentation is not causal identification
+Unsupported Unsupported
+What I can responsibly say What I can responsibly say
+A precise claim that safety wages grow a specified percentage faster is not supported by the available The evidence does not establish that a documented mechanism caused an observed wage
+matched evidence. difference.
+Strict conclusion Strict conclusion
+A precise claim that safety wages grow a specified percentage faster is not supported by the available The evidence does not establish that a documented mechanism caused an observed wage
+matched evidence. difference.
+Broader bounded conclusion Broader bounded conclusion
+A precise claim that safety wages grow a specified percentage faster is not supported by the available The evidence does not establish that a documented mechanism caused an observed wage
+matched evidence. difference.
+What I cannot responsibly say What I cannot responsibly say
+Safety wages grow X percent faster nationally. The documented mechanism caused the observed wage difference.
+Main uncertainty Main uncertainty
+unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits unsearched, storage-held, conflict, linkage, compatibility, and independent-human-review limits
+remain remain
+Gabriel Wages · Municipal compensation evidence 31
+
+PART IV · FINAL CLAIM BOUNDARIES
+Counterexamples and countervailing evidence
+Seven retained records prevent the mechanism account from becoming a uniform safety-growth claim.
+Why they matter
+Direct quantitative 1 One direct quantitative counterexample and six qualitative or mechanism-bounding
+records show that non-safety units also use bargaining, steps, COLAs, pay plans,
+and related mechanisms. They are part of the analysis, not decorative warnings.
+Qualitative or mechanism-bounding 6
+0 1 2 3 4 5 6
+Retained counterexamples
+Seven counterexamples remain visible and bound the claims they affect.
+1. Direct local comparison 2. Fiscal formalization can cut both ways
+Canastota's 2023-24 record lists Code Enforcement at $24.82 per hour and a first-year police officer at Budget and adoption processes can delay, constrain, or reject compensation as well as authorize
+$23.91; role and tenure remain conditional. increases.
+3. National comparisons remain incompatible 4. Document frequency is not prevalence
+Pay basis, period, and role comparability are incomplete across the national administrative material. A compensation mechanism can be coded more than once within a source, so record counts cannot
+become population rates.
+5. Local examples remain local 6. Non-safety mechanisms are visible
+The reviewed local comparisons support bounded examples, not a scalable national wage-gap Non-safety units also receive bargaining, COLA, step, and pay-plan mechanisms, which bounds any
+estimator. safety-only account.
+7. Mechanisms are not causal effects
+Documented institutional channels do not identify the counterfactual wage outcome required for a
+causal claim.
+Gabriel Wages · Municipal compensation evidence 32
+
+PART IV · FINAL CLAIM BOUNDARIES
+Strict evidence and broader evidence
+Broader evidence strengthened interpretation without erasing the strict baseline or upgrading any claim class.
+Stronger; same class 5
+More mixed 1
+Unchanged 8
+Class upgrades 0
+0 1 2 3 4 5 6 7 8
+Claims
+The broader evidence lanes increased usable evidence without erasing the strict baseline or upgrading any claim class.
+Not established Not established Not established
+No national safety wage-gap estimate No national mechanism-prevalence estimate No causal effect estimate
+Not established Not established Not established
+No regression-based claim No uniform national safety-growth advantage Documentation does not establish causation
+Gabriel Wages · Municipal compensation evidence 33
+
+PART V · PROJECT-WIDE LIMITATIONS
+Limitations 1: Research design and scope
+Each constraint is paired with what the project still accomplished and the boundary it imposes.
+Research design and scope Discovery and hosted-search limits
+Constraint Constraint
+The corpus is not a representative national sample and has no national worker, Of 18,689 intended residual targets, 12,844 remained unsearched after repeated
+bargaining-unit, or pay-record denominator. source-less search outcomes. Those targets are unknown possibilities, not known missing
+evidence.
+What still worked
+What still worked
+Scouting reached 35,574 of 35,589 eligible municipalities (99.9579%), and the retained
+corpus contains 15,163 unique PDFs with 1,029,482 native PDF pages. Previously found candidates and verified sources remained intact, and the unsearched
+queue was preserved rather than treated as evidence of absence.
+Interpretation boundary
+Interpretation boundary
+Near-complete discovery coverage is not analytical representativeness.
+The failure was consistent with a service or capacity limitation, but its exact cause was not
+exposed.
+Gabriel Wages · Municipal compensation evidence 34
+
+PART V · PROJECT-WIDE LIMITATIONS
+Limitations 2: Verification, access, and storage
+Each constraint is paired with what the project still accomplished and the boundary it imposes.
+Verification, access, and storage Document readiness
+Constraint Constraint
+Access blocks, unavailable URLs, corrupt payloads, and a 30 GiB retention ceiling left PDFs, HTML, tables, CSVs, embedded data, shells, and low-text files required different
+7,895 verified sources storage-held and 24,569 low-value context sources deferred. paths; 118 sources were deferred for OCR and 97 needed extraction repair.
+What still worked What still worked
+The project retained 14,449 unique external payloads with hashes and source pointers and Of 14,703 inspected retained-source records, 14,257 were extraction-ready and 14,160
+kept storage holds separate from substantive rejections. produced usable payloads.
+Interpretation boundary Interpretation boundary
+Storage-held sources were not processed for this revision. OCR deferral means image-only documents were not silently treated as empty.
+Gabriel Wages · Municipal compensation evidence 35
+
+PART V · PROJECT-WIDE LIMITATIONS
+Limitations 3: Extraction volume and compaction
+Each constraint is paired with what the project still accomplished and the boundary it imposes.
+Extraction volume and compaction Analytical framing and table calibration
+Constraint Constraint
+Extraction produced 5,558,770 raw field hits and 4,289,437 raw spans. Repeated tables, Early wage-table signals were not reliable enough to become a clean comparable wage
+boilerplate, and ambiguous labels meant those were not independent facts. panel; a five-case rendered challenge contradicted all five assisted outcomes.
+What still worked What still worked
+Deterministic compaction reduced the field layer by 66.25% and preserved 1,876,183 The project did not force those signals into estimates. It expanded to staffing,
+compact administrative observations. implementation, documentary growth, local comparisons, and compensation mechanisms.
+Interpretation boundary Interpretation boundary
+Large row counts measure processing volume, not evidence prevalence. The broader framing improved evidence use but did not manufacture missing wage
+matches.
+Gabriel Wages · Municipal compensation evidence 36
+
+PART V · PROJECT-WIDE LIMITATIONS
+Limitations 4: Rating and semantic review
+Each constraint is paired with what the project still accomplished and the boundary it imposes.
+Rating and semantic review Reconciliation and comparability
+Constraint Constraint
+The new external administrative layer did not receive GABRIEL scoring. Deterministic rules Side, period, role, pay basis, and compensation basis often did not align: 1,523,558
+and bounded semantic AI review are not independent human gold coding. observations remained side-unresolved, with 131,124 basis holds and 266,849
+conflict-sensitive observations.
+What still worked
+What still worked
+Claim-critical review examined 1,726 unique records; 368 sampled second-pass QA
+records passed, and 201 conflicts remained unresolved rather than conveniently resolved. The project preserved 18,358 staffing units, 1,268 implementation sequences, 10 bounded
+local comparisons, and 432 documentary growth records.
+Interpretation boundary
+Interpretation boundary
+Earlier eligible documentary evidence did use GABRIEL where available.
+The external layer still produced zero compatible wage matches, growth pairs, vacancy
+rates, overtime shares, or total-compensation sums.
+Gabriel Wages · Municipal compensation evidence 37
+
+PART V · PROJECT-WIDE LIMITATIONS
+Limitations 5: Safety and non-safety evidence imbalance
+Each constraint is paired with what the project still accomplished and the boundary it imposes.
+Safety and non-safety evidence imbalance Mathematical and causal design
+Constraint Constraint
+Safety-specific records are more visible, while non-safety pay is often embedded in broad Only 3 of 16 regression-readiness gates passed. There was no defensible external
+budgets or personnel schedules and many records remain unresolved. matched wage panel or causal identification design.
+What still worked What still worked
+The analysis keeps safety, non-safety, mixed, side-independent, and unresolved records No regression was run and no national wage-gap, prevalence, or causal estimate was
+separate and reports exact denominators. produced; strict descriptive and mechanism findings were retained.
+Interpretation boundary Interpretation boundary
+Documentation absence cannot be treated as real-world absence or national prevalence. Not running an invalid model is a substantive quality decision.
+Gabriel Wages · Municipal compensation evidence 38
+
+PART V · PROJECT-WIDE LIMITATIONS
+Limitations 6: Locality and visual grouping
+Each constraint is paired with what the project still accomplished and the boundary it imposes.
+Locality and visual grouping Operational and infrastructure limits
+Constraint Constraint
+Local comparisons remain local; maps show documented events, not workers, wage-effect Hosted search failed, storage filled, checkpoint designs scaled poorly, some parsers hung,
+size, or prevalence; grouping compresses source lineage. interfaces interrupted coordination, and deployment jobs were delayed.
+What still worked What still worked
+All 14 claims were adjudicated, seven counterexamples remained visible, and 201 Lane-owned files, append-only ledgers, checkpoints, quarantine, hashes, and resume-only
+high-impact conflicts stayed outside clean totals. logic preserved accepted work. Phase 0 inventoried about 119.88 GiB without deleting it.
+Interpretation boundary Interpretation boundary
+Appendix tables preserve the category and claim lineage hidden by concise profiles. Operational recovery protected evidence but added monitoring and reconciliation cost.
+Gabriel Wages · Municipal compensation evidence 39
+
+PART V · PROJECT-WIDE LIMITATIONS
+What worked, what did not, and what remains possible
+The limits narrow the claims; they do not erase the project’s traceable evidence and reusable infrastructure.
+What worked What did not become possible What remains possible
+99.9579% municipality scout coverage Representative national sampling Targeted source recovery
+More than one million native PDF pages Compatible external wage or growth panel Better matched local panels
+14,160 usable external payloads National prevalence estimate Human review of selected conflicts
+1,876,183 compact observations Regression or causal effect Improved side and pay-basis classification
+Staffing, implementation, local, growth, and Uniform safety growth advantage Future longitudinal and causal designs
+mechanism evidence
+Gabriel Wages · Municipal compensation evidence 40
+
+PART VI · METHODOLOGY AND PROJECT HISTORY
+How I built the project
+I began with a simple empirical question: why might police and fire wages grow differently from the wages of other municipal employees? The useful comparison
+was not a pile of safety contracts by itself. I needed safety and non-safety units from the same municipality and roughly the same compensation cycle so that
+place and time were held as constant as the documents allowed. That matched design shaped the original collection strategy, but the workflow was not fully
+specified at the beginning. I changed it as the evidence exposed weaknesses in each earlier approach.
+The first stage was broad discovery. I built a universe of 35,589 eligible municipalities and recorded scout coverage for 35,574 of them. Coverage meant that a
+municipality had been searched through the approved discovery process; it did not mean that every relevant document was found or that every city supplied a
+usable comparison. Candidate sources then went through verification, source review, exact-duplicate checks, retention, and document-readiness review. I treated
+those as separate decisions because a link can be discoverable but unavailable, a file can be retained but unreadable, and a readable document can still lack the
+side, period, role, or pay basis needed for analysis.
+The resulting corpus was large and mixed. It included 15,163 unique PDFs with 1,029,482 native PDF pages, as well as HTML pages, tables, embedded
+structured records, and small tabular files. The later external collection produced 14,160 usable payloads. Those counts describe different units and were never
+added into one master total. More importantly, I did not treat size as proof. A million pages can document many municipal processes while still failing to create a
+clean safety-versus-non-safety wage panel.
+Once files were ready, Codex recovered text, tables, embedded records, targeted fields, and exact source spans. Earlier documentary material received
+GABRIEL ratings when it was eligible. The later administrative material was processed with deterministic local rules and bounded semantic AI review when
+additional GABRIEL-supported processing was no longer available. Extraction was deliberately generous at first so that potentially relevant material would not be
+lost too early. That choice produced millions of provisional records and made a separate compaction stage necessary.
+Compaction reduced repeated, ambiguous, and structurally redundant material before analysis. The compact records were then reconciled across municipality,
+department side, period, source identity, role, and compensation basis. Normalization made units more comparable without pretending that incompatible
+measures were the same. Mathematical analysis tested only the comparisons that survived those gates. Source-level semantic review then returned to
+claim-critical excerpts and tables to check whether the structured interpretation still matched the underlying language.
+The final analytical design kept both a strict layer and broader, explicitly qualified layers. I used aggressive bounded reanalysis to recover evidence that was
+useful with a clear caveat, but I did not overwrite the strict results. Counterexamples, conflicts, rejected records, and unsupported propositions remained visible
+during final adjudication. That process ended with fourteen locked claims, each assigned one class, defensible wording, prohibited wording, evidence links,
+limitations, and a report placement. Visual production came last. The figures summarize an adjudicated evidence system; they are not a substitute for it.
+Gabriel Wages · Municipal compensation evidence 41
+
+PART VI · METHODOLOGY AND PROJECT HISTORY
+How I used AI and why relays mattered
+I made the research decisions. I set the question, chose priorities, reviewed outputs, corrected the framing, challenged interpretations that were either too loose or
+too restrictive, approved the evidence standards, and determined the final voice and presentation. I did not manually read or classify millions of records. My role
+was to direct the research, inspect consequential outputs, decide what counted as defensible evidence, and make the final judgment calls.
+ChatGPT translated those decisions into bounded stages. It wrote self-contained prompts for Codex, specified allowed and forbidden actions, designed validation
+gates, developed the evidence-tier framework, reviewed relay packages, and planned the reporting and handoff structure. Codex performed the local execution: it
+created and ran scripts, processed files, carried out authorized searches, built structured layers, saved checkpoints, ran validation, generated figures and PDFs,
+and committed accepted outputs. GABRIEL supplied numerical and qualitative ratings for eligible earlier documentary evidence. When that scoring route was not
+available for the later external administrative layer, deterministic rules and bounded semantic AI review handled the narrower classification work.
+These roles were complementary, but they were not interchangeable. ChatGPT could design a strong validation plan without having executed the files. Codex
+could produce millions of structured records without deciding what the project should claim. GABRIEL could score eligible text without settling the research
+design. I used the systems to extend the amount of material that could be searched, organized, and checked, while retaining human responsibility for the
+question, standards, interpretation, and final exclusions.
+From a continuing log to relay packages
+At first, the handoff between stages depended on a continuing project log called PROGRESS.md. Decisions, surprises, and next steps were copied forward
+manually. That was workable while the project was small because one entry could summarize the relevant state. As the number of tasks, local artifacts, validation
+reports, and partially completed processes grew, the log became cumbersome. Too much context had to be carried by hand, it became harder to tell which results
+were final, and assumptions could drift between one run and the next.
+I replaced that system with compact ZIP relay packages. At the end of a bounded Codex stage, the relay recorded what changed, which files were created or
+modified, the commit, validation results, decisions, blockers, uncertainties, and the recommended next step. The relay did not attempt to copy the full corpus. It
+preserved enough compact state to establish what had actually happened.
+The working loop became consistent. Codex executed a bounded task and created a relay. I uploaded that relay to ChatGPT. ChatGPT reviewed the recorded
+output, explained the result in plain language, and drafted the next self-contained prompt. Codex then resumed from the accepted repository state rather than
+from an informal description of unfinished work. This reduced copy-and-paste context, strengthened traceability, made error recovery easier, and separated
+planning from execution. It also made failures harder to hide: a stage that produced zero compatible matches, a deployment delay, or a partial worker result had
+to be recorded before the next task could be designed around it.
+Gabriel Wages · Municipal compensation evidence 42
+
+PART VI · METHODOLOGY AND PROJECT HISTORY
+How Codex execution evolved and scaled
+The project used two broad execution profiles: Routine and Heavy. Routine work covered smaller deterministic rebuilds, maintenance, and validation. Heavy work
+covered large, uncertain, architectural, or claim-critical stages where the execution plan itself required more judgment. The distinction was practical rather than
+analytical: it helped match the amount of checking and orchestration to the risk of the stage.
+I also experimented with Git worktrees as a way to isolate simultaneous tasks. Separate working directories looked attractive because workers could avoid direct
+file collisions. In practice, the worktrees duplicated state, complicated branch and merge management, and made shared summaries harder to reconcile. For
+many stages, the coordination burden exceeded the isolation benefit. I reduced their use and moved toward a staggered lane system inside one controlled project
+state.
+For large jobs, I stopped treating Codex as one worker moving through one enormous queue. Instead, a task was divided into independent lanes. Each lane
+received a locked portion of the work, such as a set of states, sources, documents, claims, or figures, and wrote only to lane-owned files. Workers started a few
+minutes apart so they were less likely to compete for memory, disk access, or an external service at exactly the same time. Each lane saved accepted progress
+frequently. Some stages used small atomic checkpoints and append-only ledgers so completed records did not have to be rewritten every time state changed.
+The resume rule was equally important: restart only incomplete work. A worker interruption was not a reason to throw away already accepted outputs. After the
+lanes finished, one coordinator reconciled the counts, checked lineage and hashes, merged the lane outputs, and updated shared summaries. Shared files were
+protected until that merge. This structure reduced full restarts and made large batches manageable, but it did not remove coordination costs. Workers still had to
+be monitored, duplicate processes could appear, and partial results could disagree. The lane system is useful when work can be divided cleanly; it is not a general
+reason to parallelize every task.
+How the project scaled
+The workflow grew through calibrated steps. A four-row GABRIEL pilot tested the first rating assumptions. A 150-source review pilot produced 149 downloads and
+exposed practical source-handling issues. Later batches grew to 500 sources and then 1,500 sources. Broad scouting expanded through 4,000-row and
+10,000-row stages before reaching the 35,589-municipality universe. The external processing layer eventually retained 14,160 usable payloads, and extraction
+created millions of provisional records before compaction. The final analytical universe, however, remained fourteen claims.
+The pilots mattered because they tested schemas, provenance, extraction behavior, validation, and output quality while errors were still cheap to repair. Once a
+stage had passed calibration, repeating tiny pilots stopped adding much information. Larger resumable batches became more efficient, provided that the inputs
+were locked, progress was checkpointed, and outputs could be audited independently. Scaling therefore meant more than making a batch larger. It meant
+changing the state design so that a larger batch could fail without erasing everything that had already worked.
+Gabriel Wages · Municipal compensation evidence 43
+
+PART VI · METHODOLOGY AND PROJECT HISTORY
+What failed during collection and processing
+The collection and processing workflow did not proceed in a straight line. Several failures changed the method, and I preserved them because they explain the
+limits of the final evidence.
+The clearest discovery failure occurred when the later residual hosted-search channel began returning results without usable sources. Repeated attempts did not
+establish that the remaining 12,844 targets lacked evidence. They established only that the search route had stopped producing verifiable material, possibly
+because of an external product or capacity limit that the project could not diagnose conclusively. I therefore preserved those targets as unsearched discovery
+gaps. Coding them as negative results would have confused a failed search channel with an absence of documents.
+Storage also became a binding constraint. One retention stage reached roughly a 30 GiB local ceiling. The project retained 14,449 external payloads, while 7,895
+verified sources remained held because of storage capacity. Their metadata and recovery status were preserved rather than silently discarded. Final claim
+adjudication found that no held-source recovery was required for the present claims or visuals, but that conclusion does not make the held material irrelevant to
+future work.
+Some early checkpoint designs did not scale. Large arrays embedded inside state files became slow and memory intensive. Later stages replaced them with
+smaller checkpoints, append-only ledgers, hashed queues, and compact summaries. That repair changed how the process recorded progress, not the accepted
+evidence itself. It also reinforced the rule that a checkpoint should identify completed work rather than duplicate an entire analytical layer.
+Documents and parsers created a different set of failures. Some files were corrupt, invalidly compressed, nearly empty, shell-like wrappers, or hostile to the
+available parser. Long-running child processes needed wall-time limits and quarantine paths. OCR was deferred for 118 sources rather than run indiscriminately,
+because this project had authorized a large non-OCR extraction stage and did not treat every low-text file as permission to introduce a new recognition pipeline.
+Files that failed remained classified as repair, manual-review, or OCR-later cases instead of being forced into the usable corpus.
+The most visible processing problem was extraction overproduction. Generous recovery produced 5,558,770 raw field hits and 4,289,437 raw spans. Many were
+repeated table cells, boilerplate, ambiguous labels, or several representations of the same underlying fact. Raw extraction volume was therefore not evidence
+volume. Deterministic compaction reduced the material to 1,876,183 compact administrative observations while preserving pointers back to the source layers.
+The large reduction was a correction to representation, not the deletion of inconvenient findings.
+An early emphasis on wage tables was also too narrow. The project initially hoped that enough schedules could produce direct cross-occupation wage
+comparisons. A rendered challenge exposed weaknesses in assisted wage-table signals, and many documents described pay-setting processes without
+supplying comparable wage cells. I did not force those records into a wage estimate. The design expanded to capture compensation mechanisms, staffing
+pressure, implementation stages, documentary growth, and bounded local comparisons. That broader framing retained analytically meaningful evidence while
+keeping the unavailable national comparison unavailable.
+Gabriel Wages · Municipal compensation evidence 44
+
+PART VI · METHODOLOGY AND PROJECT HISTORY
+What failed during analysis and publication
+The largest analytical failure was not a software error. After reconciliation and strict compatibility checks, the external administrative corpus produced zero
+compatible wage matches, zero compatible growth pairs, zero valid vacancy-rate calculations, zero valid overtime-share calculations, and zero valid
+total-compensation sums. The corpus was abundant, but abundance was not enough. A valid comparison required more than the same municipality: department
+side, period, role, pay basis, compensation basis, and analytical unit had to align. Most records answered a related question rather than that exact one.
+I kept those zeros because they were the honest mathematical result. The strict failure also prevented regression. Only three of sixteen regression-readiness
+gates passed, so no model was run. Running one anyway would have replaced a missing design with false precision. The project therefore produced no national
+wage-gap estimate, no nationally representative growth advantage, no prevalence estimate, and no causal effect.
+There were operational interruptions as well. At times the visible interface or coordinator state was interrupted while underlying workers and their checkpointed
+outputs remained valid. The response was to inspect process state, accept only completed files, and resume incomplete portions rather than restart the full batch.
+A quadratic lookup in one later stage was replaced with indexed access and resume-only-incomplete processing. These repairs affected execution performance,
+not evidence interpretation.
+Publication also failed independently of research. GitHub Pages runs were delayed, queued, or cancelled without a runner even when the committed PDF was
+valid. Direct repository files, local rendering, extracted text, checksums, and raw-file URLs supplied an independent publication check. A deployment failure could
+delay access, but it could not change a claim class or create new evidence.
+The handoff inventory produced two smaller but instructive failures. An initial shell launcher used a reserved variable or incompatible background behavior, so it
+stopped before changing project files. The launcher was repaired within the task-owned area. The first merged inventory was also too verbose: it repeated
+information at a scale that made the handoff harder to use. That output was compacted into family-level decisions and smaller indexes. In both cases, the
+principle was the same: repair the affected layer and preserve accepted upstream work.
+Gabriel Wages · Municipal compensation evidence 45
+
+PART VI · METHODOLOGY AND PROJECT HISTORY
+Why I separated strict and broader evidence
+As the analytical gates became stricter, they protected the project from overclaiming but also began to place several different kinds of evidence into one unusable
+bucket. A locally comparable range, a source-reported percentage, a directional mechanism record, and a genuinely incompatible record do not warrant the same
+claim, but neither should they all be discarded for the same reason. I kept the strict baseline and added a layered evidence system on top of it.
+Strict evidence contains exact, claim-safe values, formulas, or comparisons. Bounded evidence is analytically usable only with an explicit limitation, such as a
+restricted role, period, range, or unit. Directional evidence supports a mechanism or direction but not a precise magnitude. Context helps explain implementation
+or setting without serving as claim support. Rejected evidence is incompatible, duplicative, conflicted, unsupported, or otherwise outside the final claim.
+This redesign did not relax the wording rules. Broader evidence could strengthen interpretation only within its own limits, and it could also make a claim more
+mixed by bringing countervailing records into view. The strict result remained visible in every sensitivity comparison. After the broader review, five claims became
+stronger without changing class, one became more mixed, eight were unchanged, and no claim upgraded class. That was useful because it showed that the core
+conclusions did not depend on pretending that weaker records were strict proof. It also allowed the atlas to use more of the corpus without forcing a choice
+between perfect comparability and ignoring everything else.
+The project did not produce the simple national wage-gap answer I originally hoped to estimate. It did produce a large traceable municipal corpus, documented
+compensation mechanisms, bounded local comparisons, staffing and implementation evidence, explicit claim boundaries, and a reusable record of the Human-AI
+workflow. The main methodological lesson was that scale did not remove the need for judgment. AI made it possible to search, extract, classify, and review
+municipal material at a volume I could not have handled manually. As the corpus grew, however, it became more important - not less - to separate successful
+processing from analytical proof. The final project records what the evidence could not establish as carefully as what it could.
+Gabriel Wages · Municipal compensation evidence 46
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 1–4
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Payroll Effective Date Retroactive
+1,876 distinct implementation events · 1,119 municipalities · 42 states 1,418 distinct implementation events · 922 municipalities · 42 states
+Safety 786 Non-safety 105 Alaska 3 Safety 597 Non-safety 52 Alaska 6
+The date on which an approved compensation change becomes operative in payroll. A compensation term whose effective date reaches back before the final approval or payment
+date.
+It determines when an approved increase starts reaching paychecks and prevents adoption dates
+from being mistaken for payment. It can push compensation upward by making a later settlement effective for earlier work.
+Retroactive Pay Recurring
+1,418 distinct implementation events · 922 municipalities · 42 states 720 distinct implementation events · 515 municipalities · 35 states
+Safety 597 Non-safety 52 Alaska 6 Safety 337 Non-safety 27 Alaska 5
+Back pay owed because an agreement or award applies to an earlier period. A compensation component that continues in the regular schedule instead of ending after one
+payment.
+It converts the earlier effective period into an owed payment, often delivered as back pay.
+It raises future compensation repeatedly because the amount remains in the pay structure.
+Gabriel Wages · Municipal compensation evidence 47
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 5–8
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Fiscal Constraint Budget Pay Plan Process
+619 distinct implementation events · 395 municipalities · 33 states 617 distinct implementation events · 391 municipalities · 31 states
+Safety 152 Non-safety 69 Alaska 1 Safety 146 Non-safety 68 Alaska 1
+Budget pressure or limited fiscal capacity that narrows the compensation choices available to a A budget or pay-plan process that formally sets or revises compensation schedules.
+municipality.
+It can authorize, sequence, or constrain the schedules through which wages become operative.
+It can hold pay down, delay implementation, or redirect increases toward narrower groups or one-time
+payments.
+Across The Board Raise One Time
+373 distinct implementation events · 298 municipalities · 34 states 299 distinct implementation events · 242 municipalities · 25 states
+Safety 178 Non-safety 11 Alaska 3 Safety 139 Non-safety 10 Alaska 2
+The same general increase applied across covered jobs or classifications. A payment or adjustment that does not recur in the regular base schedule.
+It raises covered rates together, but does not necessarily change the gap between safety and It raises current compensation without permanently increasing the base schedule.
+non-safety jobs.
+Gabriel Wages · Municipal compensation evidence 48
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 9–12
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Non Base Compensation Other Ordinance Council Adoption
+292 distinct implementation events · 195 municipalities · 18 states 255 distinct implementation events · 221 municipalities · 33 states
+Safety 174 Non-safety 12 Alaska 0 Safety 61 Non-safety 17 Alaska 3
+Compensation outside regular base wages that does not fit a more specific category. A city council or ordinance action that formally authorizes compensation terms.
+It adds pay outside the base rate, so a base-wage comparison can miss part of compensation. It turns a proposal or agreement into an authorized municipal action, although authorization is not
+proof of payment.
+Ordinance Adoption Base Wage Change
+206 distinct implementation events · 188 municipalities · 35 states 120 distinct implementation events · 98 municipalities · 19 states
+Safety 50 Non-safety 12 Alaska 2 Safety 59 Non-safety 3 Alaska 0
+Formal adoption of compensation terms through an ordinance. A change to the recurring base wage or salary rate.
+It formalizes compensation terms, but the retained evidence must still show implementation or It directly changes recurring salary or wage rates.
+payment separately.
+Gabriel Wages · Municipal compensation evidence 49
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 13–16
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Step Progression COLA CPI Adjustment
+87 distinct implementation events · 74 municipalities · 18 states 79 distinct implementation events · 61 municipalities · 23 states
+Safety 45 Non-safety 7 Alaska 1 Safety 35 Non-safety 5 Alaska 0
+Movement through a salary schedule based on service, rank, or another progression rule. A cost-of-living adjustment, sometimes linked to inflation or a price index.
+It can generate repeated wage growth as employees move through scheduled steps. It can preserve purchasing power by linking raises to inflation or a stated percentage.
+Uniform Or Equipment Allowance Benefit Cost Change
+68 distinct implementation events · 56 municipalities · 13 states 65 distinct implementation events · 53 municipalities · 15 states
+Safety 36 Non-safety 4 Alaska 0 Safety 28 Non-safety 5 Alaska 0
+A payment for required uniforms, equipment, maintenance, or related costs. A change in benefit value, employee contributions, or employer benefit costs.
+It increases cash compensation or reimburses required job costs without changing base pay. It can change total compensation or take-home value even when base wages do not move.
+Gabriel Wages · Municipal compensation evidence 50
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 17–20
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Budget Appropriation Stipend Or Premium
+64 distinct implementation events · 58 municipalities · 24 states 62 distinct implementation events · 52 municipalities · 15 states
+Safety 17 Non-safety 6 Alaska 0 Safety 30 Non-safety 1 Alaska 1
+A budget allocation that authorizes or funds compensation. Supplemental pay for assignments, qualifications, shifts, or special duties.
+It supplies the legal or financial authority for compensation to be paid. It raises pay for specific duties, qualifications, shifts, or working conditions.
+Settlement Or MOU Market Recruitment Retention
+58 distinct implementation events · 48 municipalities · 19 states 44 distinct implementation events · 35 municipalities · 16 states
+Safety 27 Non-safety 4 Alaska 0 Safety 17 Non-safety 5 Alaska 0
+A settlement or memorandum of understanding that changes compensation terms. A pay action justified by labor-market competition, hiring, or retention pressure.
+It can implement targeted changes faster or more narrowly than a complete successor contract. It can produce targeted raises or premiums when employers struggle to hire or keep workers.
+Gabriel Wages · Municipal compensation evidence 51
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 21–24
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Classification Band Change Longevity
+43 distinct implementation events · 40 municipalities · 13 states 40 distinct implementation events · 35 municipalities · 13 states
+Safety 19 Non-safety 2 Alaska 0 Safety 18 Non-safety 1 Alaska 0
+A change to a job classification, pay grade, range, or band. Additional compensation tied to years of service.
+It can raise or lower attainable pay by moving a job into a different grade or range. It adds scheduled pay as service accumulates and can steepen wage growth for long-tenured
+workers.
+Overtime Inflation Indexing
+38 distinct implementation events · 36 municipalities · 15 states 31 distinct implementation events · 22 municipalities · 8 states
+Safety 15 Non-safety 2 Alaska 0 Safety 21 Non-safety 0 Alaska 0
+Compensation for hours or duties beyond the regular schedule. A compensation rule explicitly linked to inflation or a price index.
+It can substantially increase earnings beyond base pay when staffing or scheduling produces extra It can trigger recurring adjustments as inflation changes.
+hours.
+Gabriel Wages · Municipal compensation evidence 52
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 25–28
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Holiday Pay Lump Sum
+22 distinct implementation events · 19 municipalities · 9 states 18 distinct implementation events · 16 municipalities · 6 states
+Safety 13 Non-safety 1 Alaska 0 Safety 14 Non-safety 0 Alaska 0
+Premium or additional compensation for holidays. A single payment rather than a recurring wage-rate increase.
+It adds premium compensation for holiday work or recognized holidays. It increases compensation once but does not by itself raise future base wages.
+Bargaining Leverage Collective Bargaining
+17 distinct implementation events · 15 municipalities · 6 states 17 distinct implementation events · 15 municipalities · 6 states
+Safety 12 Non-safety 1 Alaska 0 Safety 12 Non-safety 1 Alaska 0
+The practical power employees or unions can use to win better terms during negotiations. Negotiation between a public employer and represented employees over compensation.
+It can improve negotiated terms when employees can credibly apply staffing, political, legal, or It provides the formal channel through which wage schedules and non-base terms are negotiated.
+job-action pressure.
+Gabriel Wages · Municipal compensation evidence 53
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 29–32
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Salary Range Change Contract Ratification
+12 distinct implementation events · 12 municipalities · 5 states 9 distinct implementation events · 9 municipalities · 6 states
+Safety 2 Non-safety 0 Alaska 0 Safety 5 Non-safety 1 Alaska 0
+A change to the minimum, maximum, or span of a salary range. Formal approval of negotiated contract terms by the relevant parties.
+It changes the floor, ceiling, or spread of possible pay rather than necessarily changing observed It approves negotiated terms but remains distinct from their payroll-effective or paid stage.
+earnings immediately.
+Vacancy Pressure Reimbursement
+8 distinct implementation events · 8 municipalities · 4 states 7 distinct implementation events · 6 municipalities · 4 states
+Safety 2 Non-safety 2 Alaska 0 Safety 2 Non-safety 1 Alaska 0
+Unfilled jobs or vacancy conditions cited in compensation or staffing decisions. Repayment of eligible work-related expenses rather than ordinary wages.
+It can motivate targeted raises, premiums, or retention measures when positions are hard to fill. It offsets work expenses but should not be treated as recurring wages.
+Gabriel Wages · Municipal compensation evidence 54
+
+APPENDIX · MECHANISM CATEGORIES
+Reader-facing categories 33–35
+Category counts and Alaska status are preserved beneath the integrated profiles.
+Comparability Parity Classification Civil Service Interest Arbitration
+6 distinct implementation events · 6 municipalities · 5 4 distinct implementation events · 4 municipalities · 2 1 distinct implementation event · 1 municipality · 1 state
+states states
+Safety 1 Non-safety 0 Alaska 0
+Safety 4 Non-safety 0 Alaska 0 Safety 2 Non-safety 0 Alaska 0
+A neutral decision process that resolves a bargaining
+Compensation linked to comparison with another role, Civil-service or classification rules that structure pay impasse over contract terms.
+unit, or jurisdiction. placement or progression.
+It can impose compensation terms when ordinary bargaining
+It can pull pay toward a reference job, bargaining unit, or It governs placement and progression in ways that can reaches an impasse.
+neighboring jurisdiction. structure long-run pay paths.
+Gabriel Wages · Municipal compensation evidence 55
+
+APPENDIX
+Unclassified or no direct compensation outcome
+These categories describe evidence status, not reader-facing wage-setting processes.
+None Identified No Direct Compensation Outcome Unclear
+The retained record documents compensation activity An administrative event for which the retained record The record points to a compensation event but does
+but does not identify a specific wage-setting process. does not show a direct pay outcome. Count: 544 not identify the mechanism clearly. Count: 140 distinct
+Count: 2,001 distinct implementation events. Safety distinct implementation events. Safety 142; non-safety implementation events. Safety 55; non-safety 12; other
+890; non-safety 71; other or unresolved 1,040. This 60; other or unresolved 342. This category remains or unresolved 73. This category remains outside the
+category remains outside the outside the compensation-mechanism profiles. compensation-mechanism profiles.
+compensation-mechanism profiles.
+Gabriel Wages · Municipal compensation evidence 56
+
+APPENDIX
+Technical counts and analytical boundaries
+Counts with different units remain separate.
+Corpus Source inventory Discovery and storage
+15,163 unique PDFs · 1,029,482 native PDF pages · 26,799 physical source candidates · 26,637 unique 12,844 residual targets remain unsearched · 7,895
+8,718 substantive HTML documents · 96,484 HTML sources after exact duplicate grouping · 14,449 verified sources remain storage-held. Neither count
+tables · 1,017,511 table rows · 132,188 structured retained external payloads · 14,160 usable extracted reveals the direction of missing evidence.
+records · 1,445 CSV/TSV rows. payloads.
+Mechanism layer Claims Page-equivalent boundary
+2,998 root implementation events · 13,391 mechanism 14 final claims · 7 counterexamples · 201 unresolved The separate 650,482 non-PDF text-page equivalent is
+records before event-level grouping · 13,526 linked high-impact conflicts · 0 national wage-gap estimates · reported independently and is never added to native
+administrative sources · 1,314 linked municipalities. 0 regressions · 0 causal estimates. PDF pages.
+Record counts are not prevalence.
+Gabriel Wages · Municipal compensation evidence 57
+
+APPENDIX
+Source and method notes
+The atlas is a reader-facing summary; project documentation preserves exact lineage and reconstruction instructions.
+Source lineage Human and AI methodology
+Every claim-supporting layer retains source pointers, coordinates, registry hashes, and I set the research question, priorities, evidence standards, framing, and final judgment.
+source-level review outcomes in the project repository. This atlas does not reproduce the ChatGPT designed staged orchestration and QA. Codex executed local workflows.
+full evidence corpus. GABRIEL rated eligible earlier documentary evidence; later administrative evidence used
+deterministic local processing and bounded semantic AI review.
+Review boundary Scope of this atlas
+Bounded semantic AI review is not independent human gold coding. Unresolved conflicts This document summarizes mechanisms, final claim boundaries, counterexamples,
+remain unresolved, rejected evidence remains excluded, and claim classes do not limitations, and methodology. It does not reproduce original source files or the full
+change in this publication stage. extracted and structured evidence layers.
+Gabriel Wages · Municipal compensation evidence 58
