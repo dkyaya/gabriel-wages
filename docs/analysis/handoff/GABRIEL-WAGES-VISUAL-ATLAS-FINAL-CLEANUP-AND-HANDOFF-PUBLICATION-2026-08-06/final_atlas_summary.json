@@ -1,5 +1,7 @@
 {
   "decision": "gabriel_wages_final_visual_atlas_completed_deployment_pending",
+  "content_commit": "833ab96315d4fdd12df5f6873bc3dcf6ee6cdbcb",
+  "push_status": "pushed_to_origin_main",
   "page_count": 60,
   "pdf_bytes": 2369807,
   "pdf_sha256": "e5260ee42a70081e166120b337a789c2e1663631755baa99e585c8d75939e8b8",
@@ -16,5 +18,9 @@
   "forbidden_action_occurred": false,
   "public_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
   "landing_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/",
-  "raw_github_url": "https://raw.githubusercontent.com/dkyaya/gabriel-wages/main/docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf"
+  "raw_github_url": "https://raw.githubusercontent.com/dkyaya/gabriel-wages/main/docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+  "raw_github_pdf_status": 200,
+  "github_pages_landing_status": 404,
+  "deployment_run_id": 31126967034,
+  "deployment_note": "GitHub Pages deployment was manually dispatched for the content commit and remained queued during finalization; local PDF QA and raw-GitHub availability passed."
 }

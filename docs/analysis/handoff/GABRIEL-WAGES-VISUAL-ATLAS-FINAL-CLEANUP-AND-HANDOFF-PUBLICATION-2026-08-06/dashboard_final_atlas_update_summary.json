@@ -1,5 +1,5 @@
 {
-  "status": "local_assets_complete_pending_push",
+  "status": "committed_and_pushed_github_pages_pending",
   "current_stage": "Final visual atlas complete",
   "next_stage": "Source-library streaming split-volume packaging",
   "pages": 60,
@@ -12,5 +12,9 @@
   "theme_QA": "pass",
   "prior_versions_preserved": true,
   "source_packaging_started": false,
-  "no_full_copy_policy": true
+  "no_full_copy_policy": true,
+  "content_commit": "833ab96315d4fdd12df5f6873bc3dcf6ee6cdbcb",
+  "deployment_run_id": 31126967034,
+  "raw_github_pdf_status": 200,
+  "github_pages_status": "queued"
 }

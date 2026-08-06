@@ -26,6 +26,7 @@
   "Y": true,
   "Z": true,
   "AA_prior_version_preservation": true,
-  "AB_public_packaging": "pending_push_validation",
+  "AB_public_packaging": true,
+  "deployment_validation": "pending_github_pages_runner",
   "AC_no_unauthorized_research": true
 }

@@ -1,5 +1,5 @@
 {
-  "stage": "local_publication_complete",
+  "stage": "publication_complete_deployment_pending",
   "lanes": {
     "1": "complete",
     "2": "complete",
@@ -7,5 +7,10 @@
     "4": "complete",
     "5": "complete"
   },
-  "deployment": "pending_push_validation"
+  "content_commit": "833ab96315d4fdd12df5f6873bc3dcf6ee6cdbcb",
+  "push_status": "pushed_to_origin_main",
+  "deployment": "github_pages_workflow_queued",
+  "deployment_run_id": 31126967034,
+  "raw_github_pdf_status": 200,
+  "github_pages_landing_status": 404
 }

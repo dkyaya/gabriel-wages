@@ -1,0 +1,21 @@
+{
+  "result": "pass_with_deployment_pending",
+  "local_quality_gates_passed": 29,
+  "local_quality_gates_failed": 0,
+  "page_count": 60,
+  "page_plan_reconciled": true,
+  "native_text_coverage": "100_percent_of_relevant_pages",
+  "text_extraction": "pass",
+  "rendered_page_QA": "60_of_60_pass",
+  "zoom_QA": "pass_at_100_200_400_percent",
+  "theme_QA": "pass",
+  "claim_classes_preserved": true,
+  "counterexamples_preserved": 7,
+  "prior_versions_preserved": true,
+  "forbidden_actions": 0,
+  "push_status": "pushed_to_origin_main",
+  "raw_github_pdf_status": 200,
+  "raw_github_checksum_matches_local": true,
+  "github_pages_status": "queued",
+  "decision": "gabriel_wages_final_visual_atlas_completed_deployment_pending"
+}

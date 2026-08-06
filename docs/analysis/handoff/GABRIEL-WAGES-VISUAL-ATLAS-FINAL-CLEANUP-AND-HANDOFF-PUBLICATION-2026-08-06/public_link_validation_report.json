@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-08-06T19:34:41Z",
+  "content_commit": "833ab96315d4fdd12df5f6873bc3dcf6ee6cdbcb",
+  "deployment_run_id": 31126967034,
+  "deployment_run_url": "https://github.com/dkyaya/gabriel-wages/actions/runs/31126967034",
+  "deployment_run_status_at_finalization": "queued",
+  "landing_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/",
+  "landing_http_status": 404,
+  "public_pdf_url": "https://dkyaya.github.io/gabriel-wages/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+  "raw_github_pdf_url": "https://raw.githubusercontent.com/dkyaya/gabriel-wages/main/docs/dashboard/public/reports/gabriel_wages_visual_atlas_final_2026-08-06/gabriel_wages_visual_atlas_final_2026-08-06.pdf",
+  "raw_github_pdf_http_status": 200,
+  "raw_github_content_length": 2369807,
+  "raw_github_pdf_sha256": "e5260ee42a70081e166120b337a789c2e1663631755baa99e585c8d75939e8b8",
+  "raw_github_checksum_matches_local": true,
+  "local_pdf_bytes": 2369807,
+  "local_pdf_sha256": "e5260ee42a70081e166120b337a789c2e1663631755baa99e585c8d75939e8b8",
+  "result": "deployment_pending",
+  "interpretation": "The final assets are committed and pushed. Raw GitHub serves a byte-for-byte match of the committed PDF. GitHub Pages had not deployed the new path when checked; this is recorded as deployment pending, not a PDF QA failure."
+}
