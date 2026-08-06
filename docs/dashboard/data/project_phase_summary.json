@@ -21,7 +21,7 @@
   "available_external_compact_administrative_observations": 1876183,
   "available_external_conflict_records": 0,
   "available_external_corroboration_groups": 34225,
-  "available_external_current_stage": "external administrative ingestion and codification complete",
+  "available_external_current_stage": "external administrative reconciliation and linkage complete",
   "available_external_data_actionable_candidate_rows": 62139,
   "available_external_data_blocked_auth_captcha_count": 4509,
   "available_external_data_candidate_review_complete": true,
@@ -184,7 +184,7 @@
     "unclear": 1875661
   },
   "available_external_native_pdf_pages": 611124,
-  "available_external_next_task": "external administrative reconciliation and linkage",
+  "available_external_next_task": "external administrative normalization and matching",
   "available_external_observations_by_evidence_quality": {
     "conflicting_administrative_record": 266890,
     "direct_official_administrative_record": 751006,
@@ -609,7 +609,7 @@
     },
     {
       "average_strength_score": 2.574,
-      "careful_claim_text": "Within the processed rated corpus, automatic wage-growth provisions—including scheduled increases, percentage raises, and indexed adjustments—form a recurring documentary mechanism.",
+      "careful_claim_text": "Within the processed rated corpus, automatic wage-growth provisions\u2014including scheduled increases, percentage raises, and indexed adjustments\u2014form a recurring documentary mechanism.",
       "causal_prevalence_boundary_warning": "Does not by itself establish causality, population/national prevalence, or a normalized wage gap.",
       "caveats": "This describes rated contract language; it does not establish national prevalence, comparative wage effects, or causality.",
       "claim_id": "B4X2500-CLAIM-20260730-004",
@@ -1513,7 +1513,7 @@
       "median_strength_score": 1.0,
       "normalization_dependency": true,
       "normalization_needed_count": 24,
-      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings \u2014 bounded directional context",
       "report_ready_count": 16,
       "representative_paraphrases": [
         "The passage references market, comparison, recruitment, or retention context.",
@@ -1609,7 +1609,7 @@
       "median_strength_score": 1.0,
       "normalization_dependency": true,
       "normalization_needed_count": 27,
-      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings \u2014 bounded directional context",
       "report_ready_count": 7,
       "representative_paraphrases": [
         "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
@@ -1705,7 +1705,7 @@
       "median_strength_score": 0.0,
       "normalization_dependency": true,
       "normalization_needed_count": 404,
-      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings \u2014 bounded directional context",
       "report_ready_count": 42,
       "representative_paraphrases": [
         "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
@@ -1801,7 +1801,7 @@
       "median_strength_score": 0.0,
       "normalization_dependency": true,
       "normalization_needed_count": 16,
-      "recommended_pi_report_placement": "Findings — bounded directional context",
+      "recommended_pi_report_placement": "Findings \u2014 bounded directional context",
       "report_ready_count": 5,
       "representative_paraphrases": [
         "The passage describes a possible wage-setting or employment-rule mechanism for later review.",
@@ -2075,7 +2075,7 @@
   "broad_state_4x2500_ingested_mechanism_clusters": {
     "automatic_wage_growth": {
       "average_strength_score": 1.377,
-      "careful_claim_text": "Within the processed rated corpus, automatic wage-growth provisions—including scheduled increases, percentage raises, and indexed adjustments—form a recurring documentary mechanism.",
+      "careful_claim_text": "Within the processed rated corpus, automatic wage-growth provisions\u2014including scheduled increases, percentage raises, and indexed adjustments\u2014form a recurring documentary mechanism.",
       "causal_claim_allowed": false,
       "caveat": "This describes rated contract language; it does not establish national prevalence, comparative wage effects, or causality.",
       "context_count": 876,
@@ -5720,6 +5720,148 @@
   "external_data_missingness_matrix_count": 20986,
   "external_data_search_target_count": 20986,
   "external_data_target_reduction_percent": 89.0546,
+  "external_reconciliation_cross_examination_packets": {
+    "core": 1225,
+    "finalized_conflict_cross_examination_packet": 201,
+    "finalized_counterexample_cross_examination_packet": 0,
+    "finalized_headline_number_cross_examination_packet": 358,
+    "finalized_implementation_lifecycle_cross_examination_packet": 150,
+    "finalized_safety_wage_growth_cross_examination_packet": 90,
+    "finalized_staffing_hypothesis_cross_examination_packet": 301,
+    "reserve": 0
+  },
+  "external_reconciliation_dimension_status": {
+    "claim": {
+      "event_linked_claim_pending": 1493412,
+      "exact_claim_id_link": 382771
+    },
+    "compensation_basis": {
+      "base_rate": 9977,
+      "base_salary": 4993,
+      "benefit_component": 5105,
+      "gross_pay": 1531,
+      "not_applicable": 147064,
+      "overtime": 4386,
+      "premium_pay": 28651,
+      "regular_earnings": 1472,
+      "retroactive_pay": 403,
+      "salary_schedule_rate": 430720,
+      "staffing_or_non_compensation": 266043,
+      "total_earnings": 282,
+      "unclear": 975556
+    },
+    "conflict": {
+      "genuine_unresolved_basis_conflict": 247728,
+      "genuine_unresolved_value_conflict": 19121,
+      "not_applicable": 1609293,
+      "resolved_by_explicit_final_version": 41
+    },
+    "department": {
+      "department_not_applicable": 202278,
+      "department_unresolved": 1532649,
+      "deterministic_department_alias": 19697,
+      "exact_source_department": 121559
+    },
+    "identity": {
+      "anonymous_row_preserved": 1026449,
+      "identity_type_from_observation": 831500,
+      "identity_unresolved": 18234
+    },
+    "lifecycle": {
+      "adopted": 173,
+      "amended": 23,
+      "appropriated": 1,
+      "approved": 11,
+      "negotiated": 20,
+      "not_applicable": 1729119,
+      "paid": 2211,
+      "proposed": 30,
+      "recommended": 1,
+      "tentative": 3,
+      "unclear": 144591
+    },
+    "municipality": {
+      "deterministic_alias_match": 1876144,
+      "municipality_unresolved": 39
+    },
+    "pay_basis": {
+      "annual_salary": 21380,
+      "benefit_contribution": 5768,
+      "biweekly_rate": 198,
+      "contextual_value": 208726,
+      "gross_pay": 1488,
+      "hourly_rate": 21287,
+      "lump_sum": 401,
+      "not_applicable": 147064,
+      "overtime_earnings": 3658,
+      "regular_earnings": 1472,
+      "staffing_count": 57317,
+      "total_earnings": 280,
+      "unclear": 1406606,
+      "weekly_rate": 538
+    },
+    "period": {
+      "exact_source_period": 1793182,
+      "multiple_periods_preserved": 83001
+    },
+    "recurring": {
+      "not_applicable": 400272,
+      "one_time": 15070,
+      "recurring": 5311,
+      "retroactive_one_time": 399,
+      "unclear": 1455131
+    },
+    "side": {
+      "explicit_department_side": 139017,
+      "explicit_mixed_department": 2239,
+      "preserved_explicit_side": 9091,
+      "side_independent_observation": 202278,
+      "side_unresolved": 1523558
+    },
+    "source_version": {
+      "amended": 61,
+      "corrected": 26,
+      "final": 384,
+      "preliminary": 74,
+      "revised": 243,
+      "superseded": 122,
+      "version_unclear": 1875273
+    }
+  },
+  "external_reconciliation_growth_readiness": {
+    "growth_basis_hold": 199670,
+    "growth_conditional": 6731,
+    "growth_not_appropriate": 1669782
+  },
+  "external_reconciliation_local_comparison_readiness": {
+    "local_comparison_basis_hold": 124518,
+    "local_comparison_not_appropriate": 873379,
+    "local_comparison_ready": 201,
+    "local_comparison_side_hold": 878085
+  },
+  "external_reconciliation_observations_processed": 1876183,
+  "external_reconciliation_previously_unlinked_spans": 436537,
+  "external_reconciliation_span_dispositions": {
+    "contextual_source_background_only": 316494,
+    "creates_benefit_or_compensation_context_record": 29937,
+    "creates_implementation_context_record": 89822,
+    "creates_staffing_or_recruitment_context_record": 284,
+    "linked_to_existing_observation": 1344649
+  },
+  "external_reconciliation_staffing_readiness": {
+    "staffing_context_only": 1819239,
+    "staffing_hypothesis_ready": 18358,
+    "unclear_staffing_change": 38586
+  },
+  "external_reconciliation_supporting_spans_processed": 1781186,
+  "external_reconciliation_terminal_status": {
+    "reconciled_analysis_preparation_ready": 2110,
+    "reconciled_basis_pending": 1740,
+    "reconciled_claim_linkage_pending": 200027,
+    "reconciled_identity_pending": 15,
+    "reconciled_multiple_dimensions_pending": 1405442,
+    "reconciled_with_preserved_conflict": 266849
+  },
   "external_search_capacity_limitation_documented": true,
   "external_search_executed_in_correction_task": false,
   "failed_unparseable_outcomes": 15,

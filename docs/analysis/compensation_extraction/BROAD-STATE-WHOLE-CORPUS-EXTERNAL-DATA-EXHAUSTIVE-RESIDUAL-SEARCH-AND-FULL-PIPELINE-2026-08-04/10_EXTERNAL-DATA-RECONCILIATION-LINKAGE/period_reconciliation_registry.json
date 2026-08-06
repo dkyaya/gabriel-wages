@@ -1,0 +1,21 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "period",
+  "rules": [
+    {
+      "basis": "preserved explicit period/date fields",
+      "rule_id": "PERIOD-001"
+    }
+  ],
+  "statuses": [
+    "exact_source_period",
+    "exact_table_period",
+    "exact_date_derived_period",
+    "source_event_lineage_period",
+    "multiple_periods_preserved",
+    "conflicting_periods",
+    "period_unresolved",
+    "period_not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

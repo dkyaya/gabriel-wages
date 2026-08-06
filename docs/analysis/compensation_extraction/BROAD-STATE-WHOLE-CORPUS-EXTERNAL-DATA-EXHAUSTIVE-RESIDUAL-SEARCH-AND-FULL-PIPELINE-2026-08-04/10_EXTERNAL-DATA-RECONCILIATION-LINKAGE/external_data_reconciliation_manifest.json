@@ -1,0 +1,10 @@
+{
+  "decision": "broad_state_whole_corpus_external_data_reconciliation_completed_normalization_ready",
+  "normalization_performed": false,
+  "observation_manifest": "reconciled_external_observation_manifest.json",
+  "registry_hash": "8ed5e759bcc4fd74ffba0ecd4f7855d7844d0d1001a330389ce33024ef203f9e",
+  "source_independence": true,
+  "span_manifest": "reconciled_external_span_manifest.json",
+  "starting_head": "b21b623cfa3cf6430bb420d29f6fd33eb38c2d8b",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-RECONCILIATION-AND-LINKAGE-2026-08-05"
+}

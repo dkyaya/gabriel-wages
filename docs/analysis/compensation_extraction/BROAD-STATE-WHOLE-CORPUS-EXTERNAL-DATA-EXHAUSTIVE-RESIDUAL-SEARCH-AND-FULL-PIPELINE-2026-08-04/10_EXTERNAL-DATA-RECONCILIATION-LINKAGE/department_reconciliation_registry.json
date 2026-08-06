@@ -1,0 +1,22 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "department",
+  "rules": [
+    {
+      "basis": "explicit source-local department or unit",
+      "rule_id": "DEPT-001"
+    },
+    {
+      "basis": "explicit position/title dictionary",
+      "rule_id": "DEPT-002"
+    }
+  ],
+  "statuses": [
+    "exact_source_department",
+    "deterministic_department_alias",
+    "source_heading_or_title_match",
+    "department_unresolved",
+    "department_not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

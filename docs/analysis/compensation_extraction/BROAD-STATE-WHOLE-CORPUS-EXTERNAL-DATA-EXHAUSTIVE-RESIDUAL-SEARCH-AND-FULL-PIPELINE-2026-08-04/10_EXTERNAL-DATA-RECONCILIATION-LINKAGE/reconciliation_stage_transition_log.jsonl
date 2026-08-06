@@ -1,0 +1,6 @@
+{"at":"2026-08-06T01:34:37.818883+00:00","from":"preflight","reason":"all fail-closed input gates passed","to":"prepared"}
+{"at":"2026-08-06T01:34:37.819587+00:00","from":"queue_build","reason":"five immutable queues and primary-span index completed","to":"smoke_test_pending"}
+{"at":"2026-08-06T01:34:51.364087+00:00","from":"smoke_test_pending","reason":"18 deterministic smoke cases passed","to":"production_ready"}
+{"at":"2026-08-06T01:34:57.145585+00:00","from":"production_ready","reason":"five independent lane controllers launched with 0/2/4/6/8 minute stagger","to":"production_running"}
+{"at":"2026-08-06T01:47:57.711272+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_reconciliation_completed_normalization_ready","to":"validated_complete"}
+{"at":"2026-08-06T01:52:33.494549+00:00","from":"production_running","reason":"broad_state_whole_corpus_external_data_reconciliation_completed_normalization_ready","to":"validated_complete"}

@@ -1,0 +1,8 @@
+{
+  "crs": "EPSG:5070",
+  "figures_created": 0,
+  "mechanism_map_unit": "deduplicated municipality x compensation cycle x mechanism x side implementation event",
+  "metadata_indexes": 9,
+  "primary_dashboard_map_unchanged": true,
+  "primary_map_metric": "scout_coverage_rate"
+}

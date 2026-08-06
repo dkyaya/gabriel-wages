@@ -1,0 +1,7 @@
+{"crs":"EPSG:5070","index":"mechanism_event_hex","observation_or_span_intensity_forbidden":true,"unit":"deduplicated municipality x compensation cycle x mechanism x side implementation event"}
+{"index":"safety_non_safety_implementation","unit":"existing deduplicated implementation event"}
+{"index":"staffing_vacancy","unit":"reconciled observation metadata"}
+{"index":"payroll_geography","unit":"source-independent reconciled observation"}
+{"index":"local_comparison","unit":"preparation unit; no match or value calculated"}
+{"index":"growth","unit":"preparation unit; no growth calculated"}
+{"index":"total_compensation","unit":"separate components"}

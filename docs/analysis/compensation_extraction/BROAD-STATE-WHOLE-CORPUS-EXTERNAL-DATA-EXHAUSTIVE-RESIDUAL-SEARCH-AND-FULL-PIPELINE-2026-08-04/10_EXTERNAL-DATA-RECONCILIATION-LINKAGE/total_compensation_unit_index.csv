@@ -1,0 +1,7 @@
+unit_family,status_counts
+local_pay_comparison,"{""local_comparison_basis_hold"": 124518, ""local_comparison_not_appropriate"": 873379, ""local_comparison_ready"": 201, ""local_comparison_side_hold"": 878085}"
+growth,"{""growth_basis_hold"": 199670, ""growth_conditional"": 6731, ""growth_not_appropriate"": 1669782}"
+staffing_hypothesis,"{""staffing_context_only"": 1819239, ""staffing_hypothesis_ready"": 18358, ""unclear_staffing_change"": 38586}"
+total_compensation,
+implementation_sequence,
+mechanism_outcome,

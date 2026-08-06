@@ -1,0 +1,62 @@
+{
+  "A_observation_accounting": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "B_raw_value_fidelity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "C_source_coordinate_fidelity": {
+    "observed": 0.9997435897435898,
+    "passed": true,
+    "threshold": 0.995
+  },
+  "D_side_precision": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.98
+  },
+  "E_period_precision": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.98
+  },
+  "F_basis_precision": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.98
+  },
+  "G_lifecycle_precision": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.98
+  },
+  "H_conflict_integrity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "I_source_independence": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "J_claim_link_fidelity": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  },
+  "K_span_disposition_precision": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 0.97
+  },
+  "L_no_premature_analysis": {
+    "observed": 1.0,
+    "passed": true,
+    "threshold": 1.0
+  }
+}

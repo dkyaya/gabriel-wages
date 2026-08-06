@@ -1,0 +1,24 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "source_version",
+  "rules": [
+    {
+      "basis": "explicit source-local version wording",
+      "rule_id": "VERSION-001"
+    }
+  ],
+  "statuses": [
+    "original",
+    "revised",
+    "amended",
+    "corrected",
+    "preliminary",
+    "final",
+    "superseded",
+    "duplicate_exact_payload",
+    "related_nonidentical",
+    "unrelated",
+    "version_unclear"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

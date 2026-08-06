@@ -1,0 +1,8 @@
+{
+  "accepted_observations_from_incident": 0,
+  "accepted_spans_from_incident": 0,
+  "duplicate_production_worker_contamination": false,
+  "predecessor_incident": "one preparation-only process briefly overlapped another queue builder",
+  "quarantined_invalid_gzip_artifacts": 1,
+  "reintroduced_in_reconciliation": false
+}

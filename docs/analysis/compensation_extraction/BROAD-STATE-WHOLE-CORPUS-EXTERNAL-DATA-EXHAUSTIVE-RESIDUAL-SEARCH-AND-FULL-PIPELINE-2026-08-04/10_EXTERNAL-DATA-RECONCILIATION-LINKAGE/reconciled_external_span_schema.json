@@ -1,0 +1,365 @@
+{
+  "properties": {
+    "ambiguity_flags": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "candidate_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "canonical_external_span_ingestion_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "canonical_payload_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_linkage_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "classified_span_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "deterministic_confidence": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "direct_link_before_reconciliation": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "evidence_quality_class": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "evidence_type": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "exact_excerpt": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "exact_excerpt_input_sha256": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "external_evidence_span_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "field_family": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_lane_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_registry_hash": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_timestamp": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "lane_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "lineage_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "mechanism_event_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciled_external_span_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciliation_registry_hash": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciliation_timestamp": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "retained_source_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "root_event_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "rule_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "rule_registry_version": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_SHA_256": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_character_end": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_character_start": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_column_end": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_column_start": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_coordinate_input_sha256": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_page": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_row_end": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_row_start": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_section": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_table_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "span_disposition": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "span_disposition_rule_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "span_linkage_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "supported_observation_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "supported_observation_ids_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "reconciled_external_span_id",
+    "canonical_external_span_ingestion_id",
+    "external_evidence_span_id",
+    "source_SHA_256",
+    "exact_excerpt",
+    "span_disposition"
+  ],
+  "type": "object"
+}

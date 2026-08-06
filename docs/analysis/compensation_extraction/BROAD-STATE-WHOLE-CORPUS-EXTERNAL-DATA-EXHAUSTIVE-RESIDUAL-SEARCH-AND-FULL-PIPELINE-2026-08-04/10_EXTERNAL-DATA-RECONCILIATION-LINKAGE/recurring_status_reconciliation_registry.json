@@ -1,0 +1,20 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "recurring_status",
+  "rules": [
+    {
+      "basis": "explicit payment/component wording only",
+      "rule_id": "RECUR-001"
+    }
+  ],
+  "statuses": [
+    "recurring",
+    "one_time",
+    "retroactive_one_time",
+    "recurring_with_retroactive_component",
+    "variable",
+    "unclear",
+    "not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

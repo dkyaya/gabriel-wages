@@ -1,0 +1,19 @@
+{
+  "implementation_event_deduplication_rerun": false,
+  "input_observations": 1876183,
+  "input_spans": 1781186,
+  "lanes": [
+    "reconciliation_lane_001",
+    "reconciliation_lane_002",
+    "reconciliation_lane_003",
+    "reconciliation_lane_004",
+    "reconciliation_lane_005"
+  ],
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers",
+  "network_authorized": false,
+  "predecessor": "b21b623cfa3cf6430bb420d29f6fd33eb38c2d8b",
+  "registry_hash": "8ed5e759bcc4fd74ffba0ecd4f7855d7844d0d1001a330389ce33024ef203f9e",
+  "started_at": "2026-08-06T01:32:44.133284+00:00",
+  "starting_head": "b21b623cfa3cf6430bb420d29f6fd33eb38c2d8b",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-RECONCILIATION-AND-LINKAGE-2026-08-05"
+}

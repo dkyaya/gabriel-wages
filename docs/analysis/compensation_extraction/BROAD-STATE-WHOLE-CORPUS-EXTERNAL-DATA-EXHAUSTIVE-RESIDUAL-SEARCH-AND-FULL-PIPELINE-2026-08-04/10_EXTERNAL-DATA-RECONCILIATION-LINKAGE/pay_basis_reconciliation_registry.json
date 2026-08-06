@@ -1,0 +1,33 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "pay_basis",
+  "rules": [
+    {
+      "basis": "explicit source label, type, and unit; no conversion",
+      "rule_id": "PAYBASIS-001"
+    }
+  ],
+  "statuses": [
+    "hourly_rate",
+    "annual_salary",
+    "biweekly_rate",
+    "weekly_rate",
+    "daily_rate",
+    "per_shift_rate",
+    "per_diem_rate",
+    "per_event_rate",
+    "percentage",
+    "total_earnings",
+    "regular_earnings",
+    "overtime_earnings",
+    "gross_pay",
+    "lump_sum",
+    "stipend_or_allowance",
+    "benefit_contribution",
+    "staffing_count",
+    "contextual_value",
+    "unclear",
+    "not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

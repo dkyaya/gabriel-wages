@@ -1,0 +1,23 @@
+{
+  "final_matches_created": 0,
+  "growth_readiness": {
+    "growth_basis_hold": 199670,
+    "growth_conditional": 6731,
+    "growth_not_appropriate": 1669782
+  },
+  "implementation_candidates": 145409,
+  "local_comparison_readiness": {
+    "local_comparison_basis_hold": 124518,
+    "local_comparison_not_appropriate": 873379,
+    "local_comparison_ready": 201,
+    "local_comparison_side_hold": 878085
+  },
+  "observation_rows": 1876183,
+  "staffing_readiness": {
+    "staffing_context_only": 1819239,
+    "staffing_hypothesis_ready": 18358,
+    "unclear_staffing_change": 38586
+  },
+  "total_compensation_candidates": 5907,
+  "values_calculated": 0
+}

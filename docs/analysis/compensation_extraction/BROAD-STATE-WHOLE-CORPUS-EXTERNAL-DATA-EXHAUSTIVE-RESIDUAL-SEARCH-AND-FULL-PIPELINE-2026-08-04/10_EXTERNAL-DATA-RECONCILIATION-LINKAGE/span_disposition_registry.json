@@ -1,0 +1,33 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "span_disposition",
+  "rules": [
+    {
+      "basis": "accepted direct link",
+      "rule_id": "SPAN-001"
+    },
+    {
+      "basis": "exact primary-span or unique same-coordinate link",
+      "rule_id": "SPAN-002"
+    },
+    {
+      "basis": "standalone family-preserving qualitative disposition",
+      "rule_id": "SPAN-003"
+    }
+  ],
+  "statuses": [
+    "linked_to_existing_observation",
+    "creates_standalone_qualitative_context_record",
+    "creates_implementation_context_record",
+    "creates_staffing_or_recruitment_context_record",
+    "creates_benefit_or_compensation_context_record",
+    "contextual_source_background_only",
+    "claim_linkage_only",
+    "ambiguity_manual_review",
+    "duplicate_span",
+    "boilerplate_or_structural_writeoff",
+    "orphaned_unusable_span",
+    "span_linkage_error"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

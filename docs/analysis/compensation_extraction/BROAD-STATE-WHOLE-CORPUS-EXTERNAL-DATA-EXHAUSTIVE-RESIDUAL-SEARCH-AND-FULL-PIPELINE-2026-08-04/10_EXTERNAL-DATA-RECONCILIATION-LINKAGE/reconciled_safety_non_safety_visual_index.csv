@@ -1,0 +1,8 @@
+index,crs,unit,observation_or_span_intensity_forbidden
+mechanism_event_hex,EPSG:5070,deduplicated municipality x compensation cycle x mechanism x side implementation event,True
+safety_non_safety_implementation,,existing deduplicated implementation event,
+staffing_vacancy,,reconciled observation metadata,
+payroll_geography,,source-independent reconciled observation,
+local_comparison,,preparation unit; no match or value calculated,
+growth,,preparation unit; no growth calculated,
+total_compensation,,separate components,

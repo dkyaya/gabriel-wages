@@ -1,0 +1,53 @@
+{
+  "immutable": true,
+  "lanes": [
+    {
+      "bytes": 60994940,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_queue/reconciliation_lane_001.jsonl.gz",
+      "queue_type": "canonical_observation_reconciliation_queue",
+      "row_count": 375237,
+      "sha256": "5207ad1a12e02ab4e2aa92f965b53f2c7f02c25f6481b60f20c74a4bc258fedf",
+      "shard_id": "reconciliation_lane_001"
+    },
+    {
+      "bytes": 61016727,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_queue/reconciliation_lane_002.jsonl.gz",
+      "queue_type": "canonical_observation_reconciliation_queue",
+      "row_count": 375237,
+      "sha256": "500783b3b5b2fae72ff9496e83ef6752f6dcf0bc8bc7b996b822e82d51ffe8b6",
+      "shard_id": "reconciliation_lane_002"
+    },
+    {
+      "bytes": 61031293,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_queue/reconciliation_lane_003.jsonl.gz",
+      "queue_type": "canonical_observation_reconciliation_queue",
+      "row_count": 375237,
+      "sha256": "882f6f91d97c2cbc5c39c695fe97ea47414e15c2e5d4b32d6ba9eb8c87c6f28c",
+      "shard_id": "reconciliation_lane_003"
+    },
+    {
+      "bytes": 61048824,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_queue/reconciliation_lane_004.jsonl.gz",
+      "queue_type": "canonical_observation_reconciliation_queue",
+      "row_count": 375236,
+      "sha256": "9e7bfbd2a034482abf25a51adb6f26779167b42898cdc18c0637ace677160d0d",
+      "shard_id": "reconciliation_lane_004"
+    },
+    {
+      "bytes": 61006384,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_queue/reconciliation_lane_005.jsonl.gz",
+      "queue_type": "canonical_observation_reconciliation_queue",
+      "row_count": 375236,
+      "sha256": "dc041c2221f33a8f1b3769251e2d3e2ec7db9494e74671e61d64b4745c37b309",
+      "shard_id": "reconciliation_lane_005"
+    }
+  ],
+  "registry_hash": "8ed5e759bcc4fd74ffba0ecd4f7855d7844d0d1001a330389ce33024ef203f9e",
+  "rows": 1876183,
+  "source_manifest": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/09_EXTERNAL-DATA-INGESTION-CODIFICATION/canonical_external_layer_manifest.json"
+}

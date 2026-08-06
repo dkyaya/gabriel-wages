@@ -1,0 +1,8 @@
+{
+  "accepted_observations": 1876183,
+  "accepted_spans": 1781186,
+  "decision": "broad_state_whole_corpus_external_data_reconciliation_completed_normalization_ready",
+  "lanes_complete": 5,
+  "stage": "complete",
+  "updated_at": "2026-08-06T01:52:33.494387+00:00"
+}

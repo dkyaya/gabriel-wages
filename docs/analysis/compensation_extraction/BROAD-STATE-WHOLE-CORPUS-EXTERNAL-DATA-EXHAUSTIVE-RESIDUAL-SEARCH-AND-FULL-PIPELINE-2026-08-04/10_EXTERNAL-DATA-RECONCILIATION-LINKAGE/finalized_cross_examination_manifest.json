@@ -1,0 +1,17 @@
+{
+  "adjudications_performed": 0,
+  "core_limit": 1500,
+  "duplicate_source_coordinates_removed": 1,
+  "packet_counts": {
+    "core": 1225,
+    "finalized_conflict_cross_examination_packet": 201,
+    "finalized_counterexample_cross_examination_packet": 0,
+    "finalized_headline_number_cross_examination_packet": 358,
+    "finalized_implementation_lifecycle_cross_examination_packet": 150,
+    "finalized_safety_wage_growth_cross_examination_packet": 90,
+    "finalized_staffing_hypothesis_cross_examination_packet": 301,
+    "reserve": 0
+  },
+  "prior_candidates": 1226,
+  "reserve_limit": 2500
+}

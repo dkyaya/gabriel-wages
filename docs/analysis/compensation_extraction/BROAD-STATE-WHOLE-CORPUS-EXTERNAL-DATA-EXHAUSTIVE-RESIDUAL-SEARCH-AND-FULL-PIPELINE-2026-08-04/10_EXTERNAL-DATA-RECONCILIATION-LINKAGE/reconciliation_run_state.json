@@ -1,0 +1,10 @@
+{
+  "accepted_observations": 1876183,
+  "accepted_spans": 1781186,
+  "decision": "broad_state_whole_corpus_external_data_reconciliation_completed_normalization_ready",
+  "runtime_seconds_total": 1392.602,
+  "stage": "normalization_matching_ready",
+  "state": "complete",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-RECONCILIATION-AND-LINKAGE-2026-08-05",
+  "updated_at": "2026-08-06T01:52:33.494199+00:00"
+}

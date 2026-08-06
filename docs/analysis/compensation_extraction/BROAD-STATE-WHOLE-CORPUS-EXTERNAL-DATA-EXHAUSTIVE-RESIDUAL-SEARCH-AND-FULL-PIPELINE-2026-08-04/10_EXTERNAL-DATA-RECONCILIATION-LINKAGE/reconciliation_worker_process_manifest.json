@@ -1,0 +1,82 @@
+{
+  "duplicate_workers": 0,
+  "launched_at": "2026-08-06T01:34:57.143361+00:00",
+  "true_parallel_controllers": 5,
+  "workers": [
+    {
+      "command": [
+        "/Users/joachimjohnson/.pyenv/versions/3.11.7/bin/python",
+        "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/scripts/run_external_data_reconciliation_linkage.py",
+        "--delayed-lane",
+        "reconciliation_lane_001",
+        "--delay-seconds",
+        "0"
+      ],
+      "delay_seconds": 0,
+      "lane_id": "reconciliation_lane_001",
+      "log": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_001.log",
+      "pid": 50864,
+      "pid_file": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_001.pid"
+    },
+    {
+      "command": [
+        "/Users/joachimjohnson/.pyenv/versions/3.11.7/bin/python",
+        "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/scripts/run_external_data_reconciliation_linkage.py",
+        "--delayed-lane",
+        "reconciliation_lane_002",
+        "--delay-seconds",
+        "120"
+      ],
+      "delay_seconds": 120,
+      "lane_id": "reconciliation_lane_002",
+      "log": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_002.log",
+      "pid": 50865,
+      "pid_file": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_002.pid"
+    },
+    {
+      "command": [
+        "/Users/joachimjohnson/.pyenv/versions/3.11.7/bin/python",
+        "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/scripts/run_external_data_reconciliation_linkage.py",
+        "--delayed-lane",
+        "reconciliation_lane_003",
+        "--delay-seconds",
+        "240"
+      ],
+      "delay_seconds": 240,
+      "lane_id": "reconciliation_lane_003",
+      "log": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_003.log",
+      "pid": 50866,
+      "pid_file": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_003.pid"
+    },
+    {
+      "command": [
+        "/Users/joachimjohnson/.pyenv/versions/3.11.7/bin/python",
+        "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/scripts/run_external_data_reconciliation_linkage.py",
+        "--delayed-lane",
+        "reconciliation_lane_004",
+        "--delay-seconds",
+        "360"
+      ],
+      "delay_seconds": 360,
+      "lane_id": "reconciliation_lane_004",
+      "log": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_004.log",
+      "pid": 50867,
+      "pid_file": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_004.pid"
+    },
+    {
+      "command": [
+        "/Users/joachimjohnson/.pyenv/versions/3.11.7/bin/python",
+        "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages/scripts/run_external_data_reconciliation_linkage.py",
+        "--delayed-lane",
+        "reconciliation_lane_005",
+        "--delay-seconds",
+        "480"
+      ],
+      "delay_seconds": 480,
+      "lane_id": "reconciliation_lane_005",
+      "log": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_005.log",
+      "pid": 50868,
+      "pid_file": "tmp/broad_state_whole_corpus_external_data_reconciliation_linkage_2026-08-05_logs/reconciliation_lane_005.pid"
+    }
+  ]
+}

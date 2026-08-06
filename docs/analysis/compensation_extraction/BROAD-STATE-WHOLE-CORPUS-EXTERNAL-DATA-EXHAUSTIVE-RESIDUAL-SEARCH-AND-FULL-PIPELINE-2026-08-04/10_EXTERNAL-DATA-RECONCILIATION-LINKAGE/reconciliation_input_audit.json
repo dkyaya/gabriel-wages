@@ -1,0 +1,57 @@
+{
+  "active_reconciliation_workers": [],
+  "authorized_bootstrap_paths": [
+    "?? scripts/run_external_data_reconciliation_linkage.py"
+  ],
+  "canonical_observations": 1876183,
+  "canonical_spans": 1781186,
+  "checked_at": "2026-08-06T01:32:44.133168+00:00",
+  "claim_linkage_counts": {
+    "event_linked_claim_pending": 1493412,
+    "exact_claim_id_link": 382771
+  },
+  "corroboration_linkage_separate": true,
+  "directly_linked_spans": 1344649,
+  "duplicate_workers": 0,
+  "elapsed_seconds": 0.593,
+  "evidence_quality_counts": {
+    "conflicting_administrative_record": 266890,
+    "direct_official_administrative_record": 751006,
+    "direct_official_structured_record": 366465,
+    "official_administrative_summary": 271577,
+    "official_implementation_record": 145409,
+    "official_schedule_or_policy_record": 74836
+  },
+  "family_counts": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 26752,
+    "tenure_and_progression": 430720,
+    "vacancy_and_position_status": 12331
+  },
+  "free_bytes": 27776065536,
+  "input_root_ignored": true,
+  "locked_observation_rows": 1876183,
+  "locked_queue_hashes_valid": true,
+  "locked_span_rows": 1781186,
+  "log_root_ignored": true,
+  "observation_shards": 80,
+  "output_root_ignored": true,
+  "passed": true,
+  "pointer_hashes_valid": true,
+  "predecessor_is_ancestor": true,
+  "previously_unlinked_spans": 436537,
+  "primary_span_index_sha256": "55f672bc97703d59cb8becef29b835489eda1222ecff909b90fac990f221db3d",
+  "quarantined_ingestion_artifact_referenced": false,
+  "raw_field_or_span_inputs": 0,
+  "registry_hash": "8ed5e759bcc4fd74ffba0ecd4f7855d7844d0d1001a330389ce33024ef203f9e",
+  "reserve_bytes": 8589934592,
+  "source_independence_reconstructable": true,
+  "span_shards": 75,
+  "starting_head": "b21b623cfa3cf6430bb420d29f6fd33eb38c2d8b",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-RECONCILIATION-AND-LINKAGE-2026-08-05",
+  "worktree_clean_except_authorized_stage_runner": true
+}

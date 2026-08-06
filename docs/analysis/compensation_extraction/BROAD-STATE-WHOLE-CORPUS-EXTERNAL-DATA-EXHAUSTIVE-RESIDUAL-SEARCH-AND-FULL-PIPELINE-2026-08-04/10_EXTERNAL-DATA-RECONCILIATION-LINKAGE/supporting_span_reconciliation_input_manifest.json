@@ -1,0 +1,53 @@
+{
+  "directly_linked": 1344649,
+  "immutable": true,
+  "lanes": [
+    {
+      "bytes": 51276483,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_spans/reconciliation_lane_001.jsonl.gz",
+      "queue_type": "canonical_span_reconciliation_queue",
+      "row_count": 356238,
+      "sha256": "e200d783f4bfa5d71b05185cbe97df5c9efc2092678155b9edb7c93b8855af30",
+      "shard_id": "reconciliation_lane_001"
+    },
+    {
+      "bytes": 51274774,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_spans/reconciliation_lane_002.jsonl.gz",
+      "queue_type": "canonical_span_reconciliation_queue",
+      "row_count": 356237,
+      "sha256": "7f3690478cdf3045ea299110230a8a0cacf34fa1f9f346f01d01dd8808e0abc8",
+      "shard_id": "reconciliation_lane_002"
+    },
+    {
+      "bytes": 51280237,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_spans/reconciliation_lane_003.jsonl.gz",
+      "queue_type": "canonical_span_reconciliation_queue",
+      "row_count": 356237,
+      "sha256": "7c53e00dbdd70795d35bd1c172a0da0162cdb93764792dbfebb4e61a36de6a97",
+      "shard_id": "reconciliation_lane_003"
+    },
+    {
+      "bytes": 51293694,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_spans/reconciliation_lane_004.jsonl.gz",
+      "queue_type": "canonical_span_reconciliation_queue",
+      "row_count": 356237,
+      "sha256": "7de569c6115634cf4fb09c4f96854a329adc55bd7a0443026fc6cbf6c7f8d333",
+      "shard_id": "reconciliation_lane_004"
+    },
+    {
+      "bytes": 51351686,
+      "immutable": true,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/locked_spans/reconciliation_lane_005.jsonl.gz",
+      "queue_type": "canonical_span_reconciliation_queue",
+      "row_count": 356237,
+      "sha256": "eb85a152ea7d8d9f0d602f9eea9604f6e3aec5d06cfa60613a3ed66f37713e28",
+      "shard_id": "reconciliation_lane_005"
+    }
+  ],
+  "previously_unlinked": 436537,
+  "rows": 1781186
+}

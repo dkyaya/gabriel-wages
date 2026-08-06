@@ -1,0 +1,14 @@
+{
+  "accepted_observations": 375237,
+  "accepted_spans": 356237,
+  "errors": 0,
+  "free_bytes": 26152370176,
+  "lane_id": "reconciliation_lane_002",
+  "observation_total": 375237,
+  "outcome_ledger_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers/lanes/reconciliation_lane_002/outcomes.jsonl",
+  "outcome_ledger_sha256": "f7bbeb257b89a6d4c50e968d73c4f1f2d7e09e1dba17792e099af67a33e8b399",
+  "runtime_seconds": 65.959,
+  "span_total": 356237,
+  "status": "complete",
+  "updated_at": "2026-08-06T01:38:03.176822+00:00"
+}

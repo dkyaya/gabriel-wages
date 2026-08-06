@@ -1,0 +1,21 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "side",
+  "rules": [
+    {
+      "basis": "explicit department, unit, title, schedule heading, or event lineage",
+      "rule_id": "SIDE-001"
+    }
+  ],
+  "statuses": [
+    "police",
+    "fire",
+    "safety_combined",
+    "non_safety",
+    "mixed",
+    "side_independent",
+    "unclear",
+    "not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

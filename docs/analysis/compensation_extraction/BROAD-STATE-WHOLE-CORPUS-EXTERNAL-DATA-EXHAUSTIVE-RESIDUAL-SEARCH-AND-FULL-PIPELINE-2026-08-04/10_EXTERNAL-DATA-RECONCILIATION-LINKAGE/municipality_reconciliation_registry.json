@@ -1,0 +1,24 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "municipality",
+  "rules": [
+    {
+      "basis": "existing canonical ID",
+      "rule_id": "MUNI-001"
+    },
+    {
+      "basis": "unique normalized municipality and state crosswalk",
+      "rule_id": "MUNI-002"
+    }
+  ],
+  "statuses": [
+    "exact_canonical_municipality",
+    "deterministic_alias_match",
+    "source_event_lineage_match",
+    "multiple_possible_municipalities",
+    "wrong_or_conflicting_municipality",
+    "municipality_unresolved",
+    "municipality_not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

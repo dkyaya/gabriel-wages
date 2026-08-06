@@ -1,0 +1,19 @@
+{
+  "component_registries": [
+    "claim_linkage_reconciliation_registry",
+    "compensation_basis_reconciliation_registry",
+    "conflict_reconciliation_registry",
+    "department_reconciliation_registry",
+    "employee_position_identity_registry",
+    "implementation_status_reconciliation_registry",
+    "municipality_reconciliation_registry",
+    "pay_basis_reconciliation_registry",
+    "period_reconciliation_registry",
+    "recurring_status_reconciliation_registry",
+    "side_reconciliation_registry",
+    "source_version_reconciliation_registry",
+    "span_disposition_registry"
+  ],
+  "registry_version": "external-reconciliation-2026-08-05-v1",
+  "sha256": "8ed5e759bcc4fd74ffba0ecd4f7855d7844d0d1001a330389ce33024ef203f9e"
+}

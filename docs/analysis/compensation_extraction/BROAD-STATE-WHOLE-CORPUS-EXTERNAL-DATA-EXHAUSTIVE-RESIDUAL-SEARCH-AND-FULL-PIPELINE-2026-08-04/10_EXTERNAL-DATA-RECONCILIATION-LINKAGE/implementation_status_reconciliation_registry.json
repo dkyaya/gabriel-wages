@@ -1,0 +1,29 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "implementation_status",
+  "rules": [
+    {
+      "basis": "preserved locally supported lifecycle stage",
+      "rule_id": "LIFE-001"
+    }
+  ],
+  "statuses": [
+    "proposed",
+    "recommended",
+    "negotiated",
+    "tentative",
+    "adopted",
+    "approved",
+    "ratified",
+    "appropriated",
+    "implemented",
+    "payroll_effective",
+    "paid",
+    "amended",
+    "rejected",
+    "expired",
+    "unclear",
+    "not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

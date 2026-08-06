@@ -1,0 +1,24 @@
+{
+  "adjudication_rows": 3900,
+  "all_sampled_invariants_passed": false,
+  "mechanical_not_independent_human_gold": true,
+  "sample_counts": {
+    "claim": 250,
+    "compensation_basis": 300,
+    "conflict": 250,
+    "corroboration": 150,
+    "department": 250,
+    "growth": 150,
+    "identity": 250,
+    "lifecycle": 200,
+    "local": 200,
+    "municipality": 250,
+    "pay_basis": 300,
+    "period": 250,
+    "recurring": 200,
+    "side": 300,
+    "source_version": 150,
+    "span_disposition": 300,
+    "staffing": 150
+  }
+}

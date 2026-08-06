@@ -1,0 +1,245 @@
+{
+  "analytical_role_counts_preserved": {
+    "contextual_only": 191828,
+    "growth_candidate": 206401,
+    "implementation_confirmation_candidate": 145409,
+    "local_comparison_candidate": 1002804,
+    "pending_reconciliation": 266890,
+    "staffing_hypothesis_candidate": 56944,
+    "total_compensation_candidate": 5907
+  },
+  "calculations": 0,
+  "canonical_observation_input": 1876183,
+  "canonical_span_input": 1781186,
+  "claim_adjudications": 0,
+  "claim_linkage_after": {
+    "event_linked_claim_pending": 1493412,
+    "exact_claim_id_link": 382771
+  },
+  "claim_linkage_before": {
+    "event_linked_claim_pending": 1493412,
+    "exact_claim_id_link": 382771
+  },
+  "completed_at": "2026-08-06T01:52:33.434763+00:00",
+  "conflict_input": 266890,
+  "conflict_status_after": {
+    "genuine_unresolved_basis_conflict": 247728,
+    "genuine_unresolved_value_conflict": 19121,
+    "not_applicable": 1609293,
+    "resolved_by_explicit_final_version": 41
+  },
+  "corroboration_groups_preserved": 34225,
+  "corroboration_memberships_preserved": 276352,
+  "cross_examination_packet_counts": {
+    "core": 1225,
+    "finalized_conflict_cross_examination_packet": 201,
+    "finalized_counterexample_cross_examination_packet": 0,
+    "finalized_headline_number_cross_examination_packet": 358,
+    "finalized_implementation_lifecycle_cross_examination_packet": 150,
+    "finalized_safety_wage_growth_cross_examination_packet": 90,
+    "finalized_staffing_hypothesis_cross_examination_packet": 301,
+    "reserve": 0
+  },
+  "decision": "broad_state_whole_corpus_external_data_reconciliation_completed_normalization_ready",
+  "dimension_status_counts": {
+    "claim": {
+      "event_linked_claim_pending": 1493412,
+      "exact_claim_id_link": 382771
+    },
+    "compensation_basis": {
+      "base_rate": 9977,
+      "base_salary": 4993,
+      "benefit_component": 5105,
+      "gross_pay": 1531,
+      "not_applicable": 147064,
+      "overtime": 4386,
+      "premium_pay": 28651,
+      "regular_earnings": 1472,
+      "retroactive_pay": 403,
+      "salary_schedule_rate": 430720,
+      "staffing_or_non_compensation": 266043,
+      "total_earnings": 282,
+      "unclear": 975556
+    },
+    "conflict": {
+      "genuine_unresolved_basis_conflict": 247728,
+      "genuine_unresolved_value_conflict": 19121,
+      "not_applicable": 1609293,
+      "resolved_by_explicit_final_version": 41
+    },
+    "department": {
+      "department_not_applicable": 202278,
+      "department_unresolved": 1532649,
+      "deterministic_department_alias": 19697,
+      "exact_source_department": 121559
+    },
+    "identity": {
+      "anonymous_row_preserved": 1026449,
+      "identity_type_from_observation": 831500,
+      "identity_unresolved": 18234
+    },
+    "lifecycle": {
+      "adopted": 173,
+      "amended": 23,
+      "appropriated": 1,
+      "approved": 11,
+      "negotiated": 20,
+      "not_applicable": 1729119,
+      "paid": 2211,
+      "proposed": 30,
+      "recommended": 1,
+      "tentative": 3,
+      "unclear": 144591
+    },
+    "municipality": {
+      "deterministic_alias_match": 1876144,
+      "municipality_unresolved": 39
+    },
+    "pay_basis": {
+      "annual_salary": 21380,
+      "benefit_contribution": 5768,
+      "biweekly_rate": 198,
+      "contextual_value": 208726,
+      "gross_pay": 1488,
+      "hourly_rate": 21287,
+      "lump_sum": 401,
+      "not_applicable": 147064,
+      "overtime_earnings": 3658,
+      "regular_earnings": 1472,
+      "staffing_count": 57317,
+      "total_earnings": 280,
+      "unclear": 1406606,
+      "weekly_rate": 538
+    },
+    "period": {
+      "exact_source_period": 1793182,
+      "multiple_periods_preserved": 83001
+    },
+    "recurring": {
+      "not_applicable": 400272,
+      "one_time": 15070,
+      "recurring": 5311,
+      "retroactive_one_time": 399,
+      "unclear": 1455131
+    },
+    "side": {
+      "explicit_department_side": 139017,
+      "explicit_mixed_department": 2239,
+      "preserved_explicit_side": 9091,
+      "side_independent_observation": 202278,
+      "side_unresolved": 1523558
+    },
+    "source_version": {
+      "amended": 61,
+      "corrected": 26,
+      "final": 384,
+      "preliminary": 74,
+      "revised": 243,
+      "superseded": 122,
+      "version_unclear": 1875273
+    }
+  },
+  "directly_linked_spans_before": 1344649,
+  "disk_reserve_passed": true,
+  "evidence_quality_counts_preserved": {
+    "conflicting_administrative_record": 266890,
+    "direct_official_administrative_record": 751006,
+    "direct_official_structured_record": 366465,
+    "official_administrative_summary": 271577,
+    "official_implementation_record": 145409,
+    "official_schedule_or_policy_record": 74836
+  },
+  "extraction_repair": 97,
+  "family_counts_preserved": {
+    "benefits_and_total_compensation": 5907,
+    "contextual_controls": 208726,
+    "implementation_confirmation": 147064,
+    "payroll_and_earnings": 1026449,
+    "recruitment_and_retention": 18234,
+    "staffing_and_headcount": 26752,
+    "tenure_and_progression": 430720,
+    "vacancy_and_position_status": 12331
+  },
+  "final_matches": 0,
+  "five_lane_observation_completion": {
+    "reconciliation_lane_001": 375237,
+    "reconciliation_lane_002": 375237,
+    "reconciliation_lane_003": 375237,
+    "reconciliation_lane_004": 375236,
+    "reconciliation_lane_005": 375236
+  },
+  "five_lane_span_completion": {
+    "reconciliation_lane_001": 356238,
+    "reconciliation_lane_002": 356237,
+    "reconciliation_lane_003": 356237,
+    "reconciliation_lane_004": 356237,
+    "reconciliation_lane_005": 356237
+  },
+  "free_bytes_final": 22831030272,
+  "gabriel_api_calls": 0,
+  "growth_readiness": {
+    "growth_basis_hold": 199670,
+    "growth_conditional": 6731,
+    "growth_not_appropriate": 1669782
+  },
+  "hosted_search_calls": 0,
+  "implementation_candidates": 145409,
+  "implementation_event_deduplication_rerun": false,
+  "local_comparison_readiness": {
+    "local_comparison_basis_hold": 124518,
+    "local_comparison_not_appropriate": 873379,
+    "local_comparison_ready": 201,
+    "local_comparison_side_hold": 878085
+  },
+  "mathematical_values_calculated": 0,
+  "mechanism_linked_outcome_candidates": 1876183,
+  "network_requests": 0,
+  "newly_linked_spans": 0,
+  "normalizations": 0,
+  "ocr_later": 118,
+  "ocr_runs": 0,
+  "physical_source_merges": 0,
+  "previously_unlinked_spans": 436537,
+  "quality_gates_passed": true,
+  "runtime_seconds_finalize": 193.329,
+  "runtime_seconds_total": 1392.602,
+  "secondary_context_deferred": 24569,
+  "source_version_results": {
+    "amended": 61,
+    "corrected": 26,
+    "final": 384,
+    "preliminary": 74,
+    "revised": 243,
+    "superseded": 122,
+    "version_unclear": 1875273
+  },
+  "staffing_readiness": {
+    "staffing_context_only": 1819239,
+    "staffing_hypothesis_ready": 18358,
+    "unclear_staffing_change": 38586
+  },
+  "storage_held_sources": 7895,
+  "supporting_span_dispositions": {
+    "contextual_source_background_only": 316494,
+    "creates_benefit_or_compensation_context_record": 29937,
+    "creates_implementation_context_record": 89822,
+    "creates_staffing_or_recruitment_context_record": 284,
+    "linked_to_existing_observation": 1344649
+  },
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-RECONCILIATION-AND-LINKAGE-2026-08-05",
+  "terminal_reconciliation_status": {
+    "reconciled_analysis_preparation_ready": 2110,
+    "reconciled_basis_pending": 1740,
+    "reconciled_claim_linkage_pending": 200027,
+    "reconciled_identity_pending": 15,
+    "reconciled_multiple_dimensions_pending": 1405442,
+    "reconciled_with_preserved_conflict": 266849
+  },
+  "total_compensation_candidates": 5907,
+  "unique_native_pdf_pages": 1029482,
+  "unique_physical_pdfs": 15163,
+  "unit_conversions": 0,
+  "unresolved_pdf_page_conflicts": 0,
+  "unsearched_targets": 12844,
+  "visuals_generated": 0
+}

@@ -1,0 +1,27 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "identity",
+  "rules": [
+    {
+      "basis": "observation type and explicit identity",
+      "rule_id": "IDENT-001"
+    }
+  ],
+  "statuses": [
+    "named_employee",
+    "public_employee_identifier",
+    "anonymous_employee_row",
+    "named_position",
+    "classified_position",
+    "salary_schedule_step",
+    "department_aggregate",
+    "municipal_aggregate",
+    "staffing_position_count",
+    "benefit_plan",
+    "implementation_action",
+    "contextual_unit",
+    "qualitative_statement",
+    "unclear"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

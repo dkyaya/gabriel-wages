@@ -1,0 +1,31 @@
+{
+  "opaque_numeric_scores": false,
+  "registry": "compensation_basis",
+  "rules": [
+    {
+      "basis": "explicit observation type and source label",
+      "rule_id": "COMPBASIS-001"
+    }
+  ],
+  "statuses": [
+    "base_rate",
+    "base_salary",
+    "regular_earnings",
+    "overtime",
+    "total_earnings",
+    "gross_pay",
+    "premium_pay",
+    "retroactive_pay",
+    "one_time_payment",
+    "recurring_non_base",
+    "benefit_component",
+    "explicit_total_compensation",
+    "salary_schedule_rate",
+    "budgeted_compensation",
+    "actual_paid_compensation",
+    "staffing_or_non_compensation",
+    "unclear",
+    "not_applicable"
+  ],
+  "version": "external-reconciliation-2026-08-05-v1"
+}

@@ -1,0 +1,9 @@
+{
+  "excluded_quarantine_pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers/quarantine/unaccepted_prepare_attempt_20260806T002802Z",
+  "extraction_repair_payloads_processed_as_evidence": 0,
+  "quarantined_ingestion_artifacts_reintroduced": 0,
+  "raw_evidence_spans_ingested_directly": 0,
+  "raw_field_records_ingested": 0,
+  "secondary_context_deferrals_processed": 0,
+  "storage_held_sources_processed": 0
+}

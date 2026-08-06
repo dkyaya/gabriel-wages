@@ -1,0 +1,1038 @@
+{
+  "properties": {
+    "ambiguity_flags": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ambiguity_flags_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ambiguity_flags_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "analytical_role": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "bounded_evidence_excerpt": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "calendar_year": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "calendar_year_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "calendar_year_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "candidate_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "canonical_external_ingestion_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "canonical_payload_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_family_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_family_ids_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_family_ids_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_ids_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_ids_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_linkage_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_linkage_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "claim_linkage_status_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "compensation_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "compensation_basis_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "compensation_basis_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "compensation_basis_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "conflict_flags": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "conflict_flags_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "conflict_flags_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "conflict_group_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "conflict_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "contributing_raw_field_record_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "contributing_raw_span_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "corroboration_group_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "currency": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "department_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "department_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "department_canonical_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "department_raw": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "department_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "deterministic_confidence_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "employee_or_position_identity": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "end_date": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "end_date_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "evidence_quality_class": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "expected_claim_upgrade_tags": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "external_administrative_observation_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "extraction_artifact_pointer": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "extraction_result_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "field_name": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "fiscal_year": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "fiscal_year_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "fiscal_year_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "growth_readiness": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "identity_raw": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "identity_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "identity_type_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "implementation_readiness": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "implementation_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "implementation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "implementation_status_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "implementation_status_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_lane_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_lineage_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_preparation_class": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_registry_hash": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "ingestion_timestamp": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "lane_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "lineage_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "local_comparison_readiness": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "mechanism_event_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "mechanism_outcome_readiness": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "municipality_canonical_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "municipality_canonical_id_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "municipality_canonical_id_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "municipality_raw": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "municipality_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "observation_family": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "observation_type": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "parsed_literal_value": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "parsed_value_type": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "pay_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "pay_basis_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "pay_basis_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "pay_basis_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "period_raw": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "period_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "position_title_canonical_hint": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "primary_evidence_span_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "primary_raw_field_record_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "raw_value": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "raw_value_input_sha256": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciled_external_observation_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciliation_lineage_basis": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciliation_registry_hash": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciliation_rule_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "reconciliation_timestamp": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "recurring_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "recurring_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "recurring_status_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "recurring_status_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "retained_source_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "root_event_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "rule_ids": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "rule_registry_hash": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "side_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "side_before": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "side_hint": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "side_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_SHA_256": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_character_end": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_character_start": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_column": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_coordinate_input_sha256": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_observation_family": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_observation_type": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_page": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_row": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_section": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_table_id": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "source_version_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "staffing_hypothesis_readiness": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "start_date": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "start_date_after": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "state": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "terminal_reconciliation_status": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "total_compensation_readiness": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "unit": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "unit_raw": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    },
+    "unresolved_dimensions": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "reconciled_external_observation_id",
+    "canonical_external_ingestion_id",
+    "external_administrative_observation_id",
+    "source_SHA_256",
+    "raw_value",
+    "terminal_reconciliation_status",
+    "reconciliation_registry_hash"
+  ],
+  "type": "object"
+}
