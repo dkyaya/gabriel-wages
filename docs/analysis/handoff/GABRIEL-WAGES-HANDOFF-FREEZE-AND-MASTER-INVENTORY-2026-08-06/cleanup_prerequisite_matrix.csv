@@ -1,0 +1,5 @@
+cleanup_level,prerequisite,passed_now,physical_cleanup_authorized
+1,handoff acceptance and confirmation no active worker depends on files,False,False
+2,final asset selection and frozen historical manifest,False,False
+3,"source, scripts, registries, compact canonical layer, and reconstruction test",False,False
+4,"verified source-library transfer, split-volume reconstruction, checksums, durable archive, and explicit user approval",False,False

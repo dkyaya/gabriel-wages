@@ -1,0 +1,2 @@
+relative_path,risk_type,line_number,redacted_fingerprint,value_exposed,recommended_disposition,review_outcome
+scripts/test_gabriel_state_source_scout_direct_sdk.py,authorization_header,146,8417bb20a5dd,False,quarantine_and_rotate_if_real,synthetic_test_fixture_not_a_credential

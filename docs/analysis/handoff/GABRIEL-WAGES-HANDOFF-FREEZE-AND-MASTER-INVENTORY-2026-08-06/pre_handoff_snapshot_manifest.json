@@ -1,0 +1,9 @@
+{
+  "frozen_head": "d1dd03ea51197421102d13ce79aef88868548ccb",
+  "freeze_tag": "pre-handoff-freeze-2026-08-06",
+  "snapshot_time": "2026-08-06T12:49:24-04:00",
+  "working_tree_at_preflight": "clean",
+  "existing_files_mutated": false,
+  "project_files_scanned": 404912,
+  "project_bytes_scanned": 128724992965
+}

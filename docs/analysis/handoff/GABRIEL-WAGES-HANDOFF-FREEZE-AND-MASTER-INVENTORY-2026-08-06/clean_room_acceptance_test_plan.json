@@ -1,0 +1,18 @@
+{
+  "status": "planned_not_run",
+  "tests": [
+    "clone fresh Git history into a clean directory",
+    "install from pinned environment instructions",
+    "run all compact validation scripts",
+    "reproduce claim and headline tables from compact inputs",
+    "render approved figures and compare checksums or bounded values",
+    "serve barebones dashboard locally",
+    "resolve source-library pointer and verify canonical source checksums",
+    "verify no absolute current-machine path is required",
+    "verify no secret or credential is included",
+    "verify archive bundle and restore instructions",
+    "accept only after another operator completes the workflow without the original working tree"
+  ],
+  "acceptance_rule": "all tests pass with recorded versions and checksums",
+  "markdown": "# Clean-room acceptance test plan\n\n1. clone fresh Git history into a clean directory.\n2. install from pinned environment instructions.\n3. run all compact validation scripts.\n4. reproduce claim and headline tables from compact inputs.\n5. render approved figures and compare checksums or bounded values.\n6. serve barebones dashboard locally.\n7. resolve source-library pointer and verify canonical source checksums.\n8. verify no absolute current-machine path is required.\n9. verify no secret or credential is included.\n10. verify archive bundle and restore instructions.\n11. accept only after another operator completes the workflow without the original working tree.\n"
+}

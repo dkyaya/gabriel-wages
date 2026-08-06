@@ -1,0 +1,8 @@
+{"retention_decision": "retain_in_source_library", "file_count": 79537, "bytes": 58008963692, "size_human": "54.03 GiB"}
+{"retention_decision": "retain_in_original_archive_only", "file_count": 20533, "bytes": 18537498040, "size_human": "17.26 GiB"}
+{"retention_decision": "post_acceptance_cleanup_candidate", "file_count": 4646, "bytes": 15873592821, "size_human": "14.78 GiB"}
+{"retention_decision": "temporary_delete_candidate", "file_count": 44065, "bytes": 12801755428, "size_human": "11.92 GiB"}
+{"retention_decision": "superseded_delete_candidate", "file_count": 5913, "bytes": 7548200646, "size_human": "7.03 GiB"}
+{"retention_decision": "replace_with_compact_summary", "file_count": 1522, "bytes": 1806220177, "size_human": "1.68 GiB"}
+{"retention_decision": "retain_in_clean_repo", "file_count": 1578, "bytes": 125930388, "size_human": "120.10 MiB"}
+{"retention_decision": "retain_in_both", "file_count": 300, "bytes": 77745888, "size_human": "74.14 MiB"}

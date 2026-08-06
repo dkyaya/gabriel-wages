@@ -1,0 +1,10 @@
+{
+  "lane_id": "handoff_inventory_lane_001",
+  "modules": [
+    "git state",
+    "tracked infrastructure",
+    "prompts and scripts",
+    "tracked portability risks"
+  ],
+  "read_only_inputs": true
+}

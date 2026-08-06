@@ -1,0 +1,9 @@
+retention_decision,file_count,bytes,size_human
+retain_in_source_library,79537,58008963692,54.03 GiB
+retain_in_original_archive_only,20533,18537498040,17.26 GiB
+post_acceptance_cleanup_candidate,4646,15873592821,14.78 GiB
+temporary_delete_candidate,44065,12801755428,11.92 GiB
+superseded_delete_candidate,5913,7548200646,7.03 GiB
+replace_with_compact_summary,1522,1806220177,1.68 GiB
+retain_in_clean_repo,1578,125930388,120.10 MiB
+retain_in_both,300,77745888,74.14 MiB

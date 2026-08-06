@@ -1,0 +1,10 @@
+{
+  "lane": 2,
+  "scope": "Original retained source files",
+  "records": 26799,
+  "bytes": 56574034323,
+  "unique_sha256": 26637,
+  "exact_duplicate_groups": 154,
+  "hash_errors": 0,
+  "status": "complete"
+}

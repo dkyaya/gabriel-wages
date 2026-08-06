@@ -1,0 +1,24 @@
+{
+  "status": "specification_only_not_full_document",
+  "steps": [
+    "Read README.md, START_HERE.md, PROJECT_HANDOFF.md, FINDINGS_AND_CLAIM_BOUNDARIES.md, KNOWN_LIMITATIONS.md, and REPO_MAP.md.",
+    "Verify the repository environment and run the compact validation suite.",
+    "Inspect the source-library pointer and checksum manifest; do not assume source binaries live in the clean repository.",
+    "Inspect final claims, counterexamples, prohibited wording, and strict-versus-bounded evidence labels.",
+    "Brief the new RA immediately on the question, duration, workflow, strongest outputs, claim classes, mechanisms, corpus imbalance, source availability, failures, limits, and safe next steps.",
+    "Keep local examples local and never infer a national wage gap, prevalence, growth advantage, or causal effect."
+  ],
+  "first_briefing": [
+    "project question and cross-occupation city \u00d7 time design",
+    "summer workflow stages and evidence compaction",
+    "strongest deliverables and final claim classes",
+    "important compensation mechanisms",
+    "safety versus non-safety documentation imbalance",
+    "available data and source packages",
+    "methodological evolution from strict to bounded evidence",
+    "operational failures and repairs",
+    "project-wide limitations and unresolved gaps",
+    "recommended paths and prohibited claims"
+  ],
+  "markdown": "# AGENT_STARTUP_INSTRUCTIONS.md specification\n\n## Required startup sequence\n\n1. Read README.md, START_HERE.md, PROJECT_HANDOFF.md, FINDINGS_AND_CLAIM_BOUNDARIES.md, KNOWN_LIMITATIONS.md, and REPO_MAP.md.\n2. Verify the repository environment and run the compact validation suite.\n3. Inspect the source-library pointer and checksum manifest; do not assume source binaries live in the clean repository.\n4. Inspect final claims, counterexamples, prohibited wording, and strict-versus-bounded evidence labels.\n5. Brief the new RA immediately on the question, duration, workflow, strongest outputs, claim classes, mechanisms, corpus imbalance, source availability, failures, limits, and safe next steps.\n6. Keep local examples local and never infer a national wage gap, prevalence, growth advantage, or causal effect.\n\n## First briefing must cover\n\n- project question and cross-occupation city \u00d7 time design\n- summer workflow stages and evidence compaction\n- strongest deliverables and final claim classes\n- important compensation mechanisms\n- safety versus non-safety documentation imbalance\n- available data and source packages\n- methodological evolution from strict to bounded evidence\n- operational failures and repairs\n- project-wide limitations and unresolved gaps\n- recommended paths and prohibited claims\n"
+}

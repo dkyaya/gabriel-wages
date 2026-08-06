@@ -1,0 +1,11 @@
+{
+  "physical_files": 26799,
+  "physical_bytes": 56574034323,
+  "canonical_sources": 26637,
+  "canonical_bytes": 56164354350,
+  "duplicate_groups": 154,
+  "duplicate_bytes": 409679973,
+  "redistribution_review_required": 26637,
+  "embedded_hash_sample_size": 25,
+  "embedded_hash_sample_matches": 25
+}

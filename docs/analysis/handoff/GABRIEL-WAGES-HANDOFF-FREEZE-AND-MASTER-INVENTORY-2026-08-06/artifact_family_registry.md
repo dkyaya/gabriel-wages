@@ -1,0 +1,37 @@
+# Artifact family registry
+
+- `original_source`
+- `extracted_text`
+- `parsed_table`
+- `embedded_record`
+- `raw_field`
+- `raw_span`
+- `compact_observation`
+- `rating`
+- `ingestion`
+- `reconciliation`
+- `normalization`
+- `matching`
+- `mathematical_analysis`
+- `semantic_review`
+- `claim_adjudication`
+- `visual_data`
+- `rendered_visual`
+- `report`
+- `dashboard`
+- `script`
+- `schema`
+- `documentation`
+- `prompt`
+- `relay`
+- `QA`
+- `validation`
+- `checkpoint`
+- `queue`
+- `log`
+- `cache`
+- `temporary`
+- `archive`
+- `environment`
+- `secret_or_sensitive`
+- `unknown`

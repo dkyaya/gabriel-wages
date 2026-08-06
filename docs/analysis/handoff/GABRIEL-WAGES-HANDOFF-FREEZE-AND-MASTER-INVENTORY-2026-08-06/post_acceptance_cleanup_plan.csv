@@ -1,0 +1,5 @@
+cleanup_level,name,file_or_logical_count,recoverable_bytes,recoverable_size_human,risk,prerequisite,rollback,timing,executed
+1,Safe temporary cleanup,44065,12801755428,11.92 GiB,low,handoff acceptance and confirmation no active worker depends on files,restore from verified Git/source/original archive by checksum,after clean-room acceptance,False
+2,Superseded project output cleanup,7435,9354420823,8.71 GiB,low_to_moderate,final asset selection and frozen historical manifest,restore from verified Git/source/original archive by checksum,after visual and handoff acceptance,False
+3,Large reconstructible data cleanup,4646,15873592821,14.78 GiB,moderate,"source, scripts, registries, compact canonical layer, and reconstruction test",restore from verified Git/source/original archive by checksum,after reproducibility acceptance,False
+4,Source archive local removal,79537,58008963692,54.03 GiB,high,"verified source-library transfer, split-volume reconstruction, checksums, durable archive, and explicit user approval",restore from verified Git/source/original archive by checksum,"last, only after recipient transfer and user approval",False

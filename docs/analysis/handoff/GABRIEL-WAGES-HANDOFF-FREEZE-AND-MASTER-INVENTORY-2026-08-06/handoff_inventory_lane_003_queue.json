@@ -1,0 +1,10 @@
+{
+  "lane_id": "handoff_inventory_lane_003",
+  "modules": [
+    "extracted text",
+    "structured analytical layers",
+    "derived dependencies",
+    "reproducibility retention"
+  ],
+  "read_only_inputs": true
+}

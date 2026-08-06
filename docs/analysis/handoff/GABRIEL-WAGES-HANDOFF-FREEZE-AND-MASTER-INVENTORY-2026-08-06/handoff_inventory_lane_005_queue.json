@@ -1,0 +1,10 @@
+{
+  "lane_id": "handoff_inventory_lane_005",
+  "modules": [
+    "disk usage",
+    "temporary and relay groups",
+    "sensitivity scan",
+    "cleanup estimates"
+  ],
+  "read_only_inputs": true
+}

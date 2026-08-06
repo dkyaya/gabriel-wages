@@ -1,0 +1,65 @@
+{
+  "version": "2026-08-06",
+  "decisions": [
+    {
+      "retention_decision": "retain_in_clean_repo",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "retain_in_source_library",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "retain_in_both",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "retain_in_original_archive_only",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "replace_with_compact_summary",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "post_acceptance_cleanup_candidate",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "temporary_delete_candidate",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "superseded_delete_candidate",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "duplicate_delete_candidate",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "cache_delete_candidate",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "quarantine_for_review",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    },
+    {
+      "retention_decision": "unresolved",
+      "definition": "Controlled non-destructive future disposition.",
+      "physical_action_in_this_task": "none"
+    }
+  ]
+}

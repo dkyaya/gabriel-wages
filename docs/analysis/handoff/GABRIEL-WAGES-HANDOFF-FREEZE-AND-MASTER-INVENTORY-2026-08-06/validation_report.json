@@ -1,0 +1,181 @@
+{
+  "status": "pass",
+  "non_destructive": true,
+  "major_roots_inventoried": true,
+  "filesystem_files_scanned": 404912,
+  "filesystem_bytes_scanned": 128724992965,
+  "physical_sources_hashed": 26799,
+  "retention_complete": true,
+  "counts_reconciled": [
+    {
+      "metric": "unique_physical_pdfs",
+      "preserved_value": 15163,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_page_accounting.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "unique_native_pdf_pages",
+      "preserved_value": 1029482,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/audit_final_whole_corpus_native_pdf_page_accounting.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "substantive_html_documents",
+      "preserved_value": 8718,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_non_pdf_scale_accounting.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "html_tables",
+      "preserved_value": 96484,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_non_pdf_scale_accounting.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "html_table_rows",
+      "preserved_value": 1017511,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_non_pdf_scale_accounting.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "embedded_structured_records",
+      "preserved_value": 132188,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/whole_corpus_non_pdf_scale_accounting.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "retained_source_payloads",
+      "preserved_value": 14449,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "retained_source_records_inspected",
+      "preserved_value": 14703,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/05_EXTERNAL-DATA-READINESS",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "extraction_ready_records",
+      "preserved_value": 14257,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/05_EXTERNAL-DATA-READINESS",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "usable_extracted_payloads",
+      "preserved_value": 14160,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/06_EXTERNAL-DATA-EXTRACTION",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "ocr_later_sources",
+      "preserved_value": 118,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/06_EXTERNAL-DATA-EXTRACTION",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "extraction_repair_sources",
+      "preserved_value": 97,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/06_EXTERNAL-DATA-EXTRACTION",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "storage_held_verified_sources",
+      "preserved_value": 7895,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/04_EXTERNAL-DATA-SOURCE-REVIEW-DOWNLOAD",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "unsearched_residual_targets",
+      "preserved_value": 12844,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/01_RESIDUAL-HOSTED-SEARCH-SCOUT",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "raw_field_hits",
+      "preserved_value": 5558770,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "raw_spans",
+      "preserved_value": 4289437,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/07_EXTERNAL-DATA-FIELD-SPAN-EXTRACTION/external_data_deterministic_field_span_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "compact_administrative_observations",
+      "preserved_value": 1876183,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/raw_to_compacted_record_flow_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "classified_spans",
+      "preserved_value": 1781186,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/08_EXTERNAL-DATA-DETERMINISTIC-CLASSIFICATION-INGESTION-PREP/external_data_deterministic_classification_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "implementation_events",
+      "preserved_value": 2998,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MECHANISM-CLAIM-LIMITATIONS-VISUAL-ATLAS-2026-08-06/mechanism_event_count_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "mechanism_event_records",
+      "preserved_value": 13391,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MECHANISM-CLAIM-LIMITATIONS-VISUAL-ATLAS-2026-08-06/mechanism_event_count_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "final_claims",
+      "preserved_value": 14,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MECHANISM-CLAIM-LIMITATIONS-VISUAL-ATLAS-2026-08-06/visual_atlas_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    },
+    {
+      "metric": "final_visual_atlas_pages",
+      "preserved_value": 76,
+      "supporting_path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MECHANISM-CLAIM-LIMITATIONS-VISUAL-ATLAS-2026-08-06/visual_atlas_summary.json",
+      "support_path_exists": true,
+      "status": "reconciled_to_named_layer"
+    }
+  ],
+  "quality_gates": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true,
+    "E": true,
+    "F": true,
+    "G": true,
+    "H": true,
+    "I": true,
+    "J": true,
+    "K": true,
+    "L": true,
+    "M": true,
+    "N": true
+  }
+}

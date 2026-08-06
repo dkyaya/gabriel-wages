@@ -1,0 +1,165 @@
+{
+  "current_head": "d1dd03ea51197421102d13ce79aef88868548ccb",
+  "recent_commits": [
+    {
+      "short": "d1dd03ea",
+      "subject": "(HEAD -> main, tag: pre-handoff-freeze-2026-08-06, origin/main, origin/HEAD) Record visual atlas public deployment QA [skip ci]"
+    },
+    {
+      "short": "955388d1",
+      "subject": "Extend Pages deployment wait for visual atlas"
+    },
+    {
+      "short": "834d198a",
+      "subject": "Retry visual atlas Pages deployment"
+    },
+    {
+      "short": "8d68415c",
+      "subject": "Produce mechanism claim and limitations visual atlas"
+    },
+    {
+      "short": "1fc73b4c",
+      "subject": "Repair visual dashboard deployment"
+    },
+    {
+      "short": "9b25ff04",
+      "subject": "Produce and validate whole corpus visuals"
+    },
+    {
+      "short": "abe0a0c6",
+      "subject": "Integrate evidence and adjudicate whole corpus claims"
+    },
+    {
+      "short": "153ff5c2",
+      "subject": "Run aggressive bounded whole corpus reanalysis"
+    },
+    {
+      "short": "b5494e73",
+      "subject": "Cross-examine claim critical evidence"
+    },
+    {
+      "short": "cff1596e",
+      "subject": "Execute whole corpus mathematical analysis"
+    },
+    {
+      "short": "c1d07d9f",
+      "subject": "Normalize and match external administrative evidence"
+    },
+    {
+      "short": "572ed3f6",
+      "subject": "Reconcile and link external administrative evidence"
+    },
+    {
+      "short": "b21b623c",
+      "subject": "Clarify ingestion preparation incident"
+    },
+    {
+      "short": "63cbc2d1",
+      "subject": "Ingest and codify external administrative evidence"
+    },
+    {
+      "short": "f9b6b319",
+      "subject": "Compact and classify external administrative evidence"
+    },
+    {
+      "short": "f5275f8b",
+      "subject": "Complete external-data field-span extraction recovery"
+    },
+    {
+      "short": "8f451fd0",
+      "subject": "Extract retained external administrative data"
+    },
+    {
+      "short": "586823c3",
+      "subject": "Classify retained external data readiness"
+    },
+    {
+      "short": "dd69c9e5",
+      "subject": "Retain available external administrative sources"
+    },
+    {
+      "short": "6bf6e6b8",
+      "subject": "Repair verification dashboard deployment test"
+    },
+    {
+      "short": "aa63f631",
+      "subject": "Verify all available external data candidates"
+    },
+    {
+      "short": "0b99e8fb",
+      "subject": "Review available external data candidates"
+    },
+    {
+      "short": "0f231408",
+      "subject": "Record repeated unstable residual search preflight"
+    },
+    {
+      "short": "4a2dd47f",
+      "subject": "Record unstable residual search resume preflight"
+    },
+    {
+      "short": "e2ccee6d",
+      "subject": "Checkpoint residual external search for backend recovery"
+    },
+    {
+      "short": "eadd74d9",
+      "subject": "Complete exhaustive residual external data scout"
+    },
+    {
+      "short": "cca0c841",
+      "subject": "Scout targeted external data for whole corpus"
+    },
+    {
+      "short": "14e677e7",
+      "subject": "Resolve preflight worktree integrity blockers"
+    },
+    {
+      "short": "d2d9710f",
+      "subject": "Complete external data search family queue"
+    },
+    {
+      "short": "ad8fcd45",
+      "subject": "Update dashboard deployment phase contract"
+    },
+    {
+      "short": "ac69d6ef",
+      "subject": "Preserve correction status in dashboard builds"
+    },
+    {
+      "short": "20081e01",
+      "subject": "Correct whole corpus evidence and implementation events"
+    },
+    {
+      "short": "4ec21b44",
+      "subject": "Draft whole corpus causal mechanism report"
+    },
+    {
+      "short": "e1c79f2e",
+      "subject": "Prepare whole corpus causal mechanism claim package"
+    },
+    {
+      "short": "6e3292d4",
+      "subject": "Record whole corpus deployment validation"
+    },
+    {
+      "short": "5831246f",
+      "subject": "Repair whole corpus dashboard deployment"
+    },
+    {
+      "short": "f48c0a38",
+      "subject": "Synthesize whole corpus rating span readiness"
+    },
+    {
+      "short": "b85aee44",
+      "subject": "Record cleanup dashboard deployment validation"
+    },
+    {
+      "short": "da561b1d",
+      "subject": "Clean and archive remaining municipality artifacts"
+    },
+    {
+      "short": "8489cc05",
+      "subject": "Record remaining municipality QA deployment"
+    }
+  ]
+}

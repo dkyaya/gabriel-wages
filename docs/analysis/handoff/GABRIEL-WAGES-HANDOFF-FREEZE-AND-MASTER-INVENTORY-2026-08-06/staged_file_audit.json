@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "staged_file_count": 188,
+  "staged_bytes": 249582516,
+  "staged_content": "compact inventory indexes, hashes, classifications, plans, QA, validation, and one deterministic inventory script",
+  "source_binaries_staged": false,
+  "extracted_corpus_staged": false,
+  "bulky_inventory_copy_staged": false,
+  "temporary_or_cache_files_staged": false,
+  "local_artifact_roots_staged": false,
+  "secret_values_staged": false
+}

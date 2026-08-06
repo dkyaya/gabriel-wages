@@ -1,0 +1,4 @@
+{"cleanup_level": "1", "prerequisite": "handoff acceptance and confirmation no active worker depends on files", "passed_now": false, "physical_cleanup_authorized": false}
+{"cleanup_level": "2", "prerequisite": "final asset selection and frozen historical manifest", "passed_now": false, "physical_cleanup_authorized": false}
+{"cleanup_level": "3", "prerequisite": "source, scripts, registries, compact canonical layer, and reconstruction test", "passed_now": false, "physical_cleanup_authorized": false}
+{"cleanup_level": "4", "prerequisite": "verified source-library transfer, split-volume reconstruction, checksums, durable archive, and explicit user approval", "passed_now": false, "physical_cleanup_authorized": false}

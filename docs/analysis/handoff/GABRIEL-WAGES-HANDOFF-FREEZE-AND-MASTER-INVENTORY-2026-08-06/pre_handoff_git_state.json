@@ -1,0 +1,12 @@
+{
+  "repository_root": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages",
+  "current_head_at_freeze": "d1dd03ea51197421102d13ce79aef88868548ccb",
+  "current_branch": "main",
+  "upstream": "origin/main",
+  "freeze_tag": "pre-handoff-freeze-2026-08-06",
+  "freeze_tag_target": "d1dd03ea51197421102d13ce79aef88868548ccb",
+  "tracked_file_count": 14852,
+  "ignored_file_count": 389007,
+  "untracked_file_count": 0,
+  "preflight_worktree": "clean"
+}

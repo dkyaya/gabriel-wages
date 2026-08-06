@@ -1,0 +1,180 @@
+{
+  "version": "2026-08-06",
+  "families": [
+    {
+      "artifact_family": "original_source",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "extracted_text",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "parsed_table",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "embedded_record",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "raw_field",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "raw_span",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "compact_observation",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "rating",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "ingestion",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "reconciliation",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "normalization",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "matching",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "mathematical_analysis",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "semantic_review",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "claim_adjudication",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "visual_data",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "rendered_visual",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "report",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "dashboard",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "script",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "schema",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "documentation",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "prompt",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "relay",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "QA",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "validation",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "checkpoint",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "queue",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "log",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "cache",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "temporary",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "archive",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "environment",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "secret_or_sensitive",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    },
+    {
+      "artifact_family": "unknown",
+      "definition": "Controlled handoff inventory family.",
+      "allowed": true
+    }
+  ]
+}

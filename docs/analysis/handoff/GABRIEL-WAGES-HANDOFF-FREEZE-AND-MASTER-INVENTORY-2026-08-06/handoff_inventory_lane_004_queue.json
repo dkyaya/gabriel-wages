@@ -1,0 +1,10 @@
+{
+  "lane_id": "handoff_inventory_lane_004",
+  "modules": [
+    "reports",
+    "visuals",
+    "methodology and limitations",
+    "dashboard assets"
+  ],
+  "read_only_inputs": true
+}

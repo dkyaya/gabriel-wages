@@ -1,0 +1,124 @@
+directory,file_count,bytes,size_human
+next_task.md,1,1110,
+.DS_Store,1,6148,
+requirements.txt,1,285,
+PROGRESS.md,1,1252973,
+README.md,1,4794,
+.gitignore,1,2375,
+.env,1,82,
+.gitattributes,1,521,
+AGENTS.md,1,8523,
+CLAUDE.md,1,7825,
+tmp,14641,9740602570,
+data,4,83633,
+.git,116,14739883481,
+.github,1,2131,
+scripts,337,17385068,
+.venv,23801,535680288,
+logs,2,16663,
+docs,236321,33647795187,
+.claude,938,622331943,
+ingest,15,140119,
+corpus,79,216191337,
+inbox,46,96704444,
+artifacts,128601,69106891465,
+artifacts,128601,69106891465,64.36 GiB
+artifacts/local_retained_sources,25949,54511489491,50.77 GiB
+docs,236321,33647795187,31.34 GiB
+docs/analysis,234921,33512378297,31.21 GiB
+docs/analysis/compensation_extraction,232948,33211519594,30.93 GiB
+artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04,14451,32212254769,30.00 GiB
+artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/pdf,5484,29902127442,27.85 GiB
+.git,116,14739883481,13.73 GiB
+.git/objects,12,14735670661,13.72 GiB
+.git/objects/pack,12,14735670661,13.72 GiB
+artifacts/local_structured_external_data,19831,13246108375,12.34 GiB
+artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04,19404,13134381252,12.23 GiB
+docs/analysis/compensation_extraction/COMBINED-BROAD-SOURCE-REVIEW-DOWNLOAD-5589-PARALLEL-LANES-2026-07-28,5070,12516015500,11.66 GiB
+artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28,4961,12475949771,11.62 GiB
+artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28/retained_sources,4961,12475949771,11.62 GiB
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04,3279,10113702715,9.42 GiB
+tmp,14641,9740602570,9.07 GiB
+artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30,3672,6557753939,6.11 GiB
+artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers,757,4734648763,4.41 GiB
+tmp/source_review_pilots,4717,4524452506,4.21 GiB
+artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers,586,3691294558,3.44 GiB
+artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02,2865,3265531012,3.04 GiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24,3051,3196733637,2.98 GiB
+artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations,355,2761942602,2.57 GiB
+artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/html,8947,2310038403,2.15 GiB
+tmp/broad_state_whole_corpus_available_external_data_non_ocr_extraction_2026-08-05_logs,25,2087039254,1.94 GiB
+artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_003,920,1766585622,1.65 GiB
+artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_004,914,1740094131,1.62 GiB
+artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_001,923,1567187135,1.46 GiB
+artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_002,915,1483887051,1.38 GiB
+artifacts/local_extracted_text,51977,1312030768,1.22 GiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_live_attempt1,995,1111127453,1.03 GiB
+docs/analysis/compensation_extraction/DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27,507,1087145671,1.01 GiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_live_attempt1,997,1050943802,1002.26 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_live_attempt1,997,1032357115,984.53 MiB
+artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction,27,1014354770,967.36 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24,1059,1011251823,964.40 MiB
+docs/analysis/compensation_extraction/TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26,421,980738592,935.31 MiB
+artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers,192,872765884,832.33 MiB
+artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_004,572,794025369,757.24 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04,173,732465178,698.53 MiB
+artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_001,575,713161203,680.12 MiB
+artifacts/local_extracted_text/whole_corpus_external_data_exhaustive_pipeline_2026-08-04,42429,657496108,627.04 MiB
+artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_003,577,626671471,597.64 MiB
+.claude,938,622331943,593.50 MiB
+.claude/worktrees,937,622329676,593.50 MiB
+artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_005,569,598238839,570.53 MiB
+.venv,23801,535680288,510.86 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1,500,534930277,510.15 MiB
+artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_002,572,533434130,508.72 MiB
+.venv/lib,23760,530755706,506.17 MiB
+.venv/lib/python3.11,23760,530755706,506.17 MiB
+.venv/lib/python3.11/site-packages,23760,530755706,506.17 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03,95,530203547,505.64 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1,501,475478376,453.45 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30,81,431784555,411.78 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04,103,407874726,388.98 MiB
+tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs,63,394310326,376.04 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30,91,388133008,370.15 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01,131162,372819592,355.55 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03,97,372546262,355.29 MiB
+artifacts/local_extracted_text/combined_broad_text_extraction_4051_2026-07-28,4050,369061301,351.96 MiB
+artifacts/local_extracted_text/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/pdf,16272,368185674,351.13 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03,107,354816954,338.38 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24,607,316467046,301.81 MiB
+.claude/worktrees/remote-diagnosis,476,313655164,299.12 MiB
+.claude/worktrees/tx-oh-expansion-recovery,461,308674512,294.37 MiB
+artifacts/local_extracted_text/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/html,26154,289309979,275.91 MiB
+docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28,154,286419092,273.15 MiB
+tmp/broad_state_external_data_available_candidate_review_2026-08-05_logs,5,264942099,252.67 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02,138,263885894,251.66 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02,89,243857456,232.56 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30,123,241677860,230.48 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03,70,234348005,223.49 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02,92,233960155,223.12 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03,54,227533996,216.99 MiB
+tmp/broad_state_whole_corpus_available_external_data_source_review_download_2026-08-05_logs,21,217060536,207.01 MiB
+corpus,79,216191337,206.18 MiB
+tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/stage1_append_only_checkpoint_archive,15,213321310,203.44 MiB
+docs/analysis/compensation_extraction/COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28,164,201017018,191.70 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01,79,197182476,188.05 MiB
+.claude/worktrees/tx-oh-expansion-recovery/corpus,57,189119138,180.36 MiB
+.claude/worktrees/remote-diagnosis/corpus,57,189119138,180.36 MiB
+artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30,2940,182067064,173.63 MiB
+tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/downstream_append_only_checkpoint_archive,5,180733657,172.36 MiB
+tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/downstream_append_only_checkpoint_archive/stage2_candidate_review,5,180733657,172.36 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30,72,178914262,170.63 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt2_httpx,153,170364328,162.47 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30,65,164234849,156.63 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02,120,145663261,138.92 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30,93,143283554,136.65 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29,60503,138502358,132.09 MiB
+artifacts/local_extracted_text/combined_broad_text_extraction_4051_2026-07-28/extraction_lane_003,1013,132298896,126.17 MiB
+tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt2_httpx,152,132096672,125.98 MiB
+docs/dashboard,1127,116503048,111.11 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01,92,115497565,110.15 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30,86,109704457,104.62 MiB
+docs/analysis/text_table_calibration,831,109049729,104.00 MiB
+docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24,792,107308276,102.34 MiB
+docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03,85,106479708,101.55 MiB

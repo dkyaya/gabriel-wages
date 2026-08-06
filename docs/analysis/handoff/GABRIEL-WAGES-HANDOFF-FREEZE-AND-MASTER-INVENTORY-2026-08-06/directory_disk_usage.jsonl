@@ -1,0 +1,123 @@
+{"directory": "next_task.md", "file_count": 1, "bytes": 1110}
+{"directory": ".DS_Store", "file_count": 1, "bytes": 6148}
+{"directory": "requirements.txt", "file_count": 1, "bytes": 285}
+{"directory": "PROGRESS.md", "file_count": 1, "bytes": 1252973}
+{"directory": "README.md", "file_count": 1, "bytes": 4794}
+{"directory": ".gitignore", "file_count": 1, "bytes": 2375}
+{"directory": ".env", "file_count": 1, "bytes": 82}
+{"directory": ".gitattributes", "file_count": 1, "bytes": 521}
+{"directory": "AGENTS.md", "file_count": 1, "bytes": 8523}
+{"directory": "CLAUDE.md", "file_count": 1, "bytes": 7825}
+{"directory": "tmp", "file_count": 14641, "bytes": 9740602570}
+{"directory": "data", "file_count": 4, "bytes": 83633}
+{"directory": ".git", "file_count": 116, "bytes": 14739883481}
+{"directory": ".github", "file_count": 1, "bytes": 2131}
+{"directory": "scripts", "file_count": 337, "bytes": 17385068}
+{"directory": ".venv", "file_count": 23801, "bytes": 535680288}
+{"directory": "logs", "file_count": 2, "bytes": 16663}
+{"directory": "docs", "file_count": 236321, "bytes": 33647795187}
+{"directory": ".claude", "file_count": 938, "bytes": 622331943}
+{"directory": "ingest", "file_count": 15, "bytes": 140119}
+{"directory": "corpus", "file_count": 79, "bytes": 216191337}
+{"directory": "inbox", "file_count": 46, "bytes": 96704444}
+{"directory": "artifacts", "file_count": 128601, "bytes": 69106891465}
+{"directory": "artifacts", "file_count": 128601, "bytes": 69106891465, "size_human": "64.36 GiB"}
+{"directory": "artifacts/local_retained_sources", "file_count": 25949, "bytes": 54511489491, "size_human": "50.77 GiB"}
+{"directory": "docs", "file_count": 236321, "bytes": 33647795187, "size_human": "31.34 GiB"}
+{"directory": "docs/analysis", "file_count": 234921, "bytes": 33512378297, "size_human": "31.21 GiB"}
+{"directory": "docs/analysis/compensation_extraction", "file_count": 232948, "bytes": 33211519594, "size_human": "30.93 GiB"}
+{"directory": "artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04", "file_count": 14451, "bytes": 32212254769, "size_human": "30.00 GiB"}
+{"directory": "artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/pdf", "file_count": 5484, "bytes": 29902127442, "size_human": "27.85 GiB"}
+{"directory": ".git", "file_count": 116, "bytes": 14739883481, "size_human": "13.73 GiB"}
+{"directory": ".git/objects", "file_count": 12, "bytes": 14735670661, "size_human": "13.72 GiB"}
+{"directory": ".git/objects/pack", "file_count": 12, "bytes": 14735670661, "size_human": "13.72 GiB"}
+{"directory": "artifacts/local_structured_external_data", "file_count": 19831, "bytes": 13246108375, "size_human": "12.34 GiB"}
+{"directory": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04", "file_count": 19404, "bytes": 13134381252, "size_human": "12.23 GiB"}
+{"directory": "docs/analysis/compensation_extraction/COMBINED-BROAD-SOURCE-REVIEW-DOWNLOAD-5589-PARALLEL-LANES-2026-07-28", "file_count": 5070, "bytes": 12516015500, "size_human": "11.66 GiB"}
+{"directory": "artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28", "file_count": 4961, "bytes": 12475949771, "size_human": "11.62 GiB"}
+{"directory": "artifacts/local_retained_sources/combined_broad_source_review_download_5589_2026-07-28/retained_sources", "file_count": 4961, "bytes": 12475949771, "size_human": "11.62 GiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04", "file_count": 3279, "bytes": 10113702715, "size_human": "9.42 GiB"}
+{"directory": "tmp", "file_count": 14641, "bytes": 9740602570, "size_human": "9.07 GiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30", "file_count": 3672, "bytes": 6557753939, "size_human": "6.11 GiB"}
+{"directory": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/reconciled_external_layers", "file_count": 757, "bytes": 4734648763, "size_human": "4.41 GiB"}
+{"directory": "tmp/source_review_pilots", "file_count": 4717, "bytes": 4524452506, "size_human": "4.21 GiB"}
+{"directory": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/ingested_external_layers", "file_count": 586, "bytes": 3691294558, "size_human": "3.44 GiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02", "file_count": 2865, "bytes": 3265531012, "size_human": "3.04 GiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24", "file_count": 3051, "bytes": 3196733637, "size_human": "2.98 GiB"}
+{"directory": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/classified_observations", "file_count": 355, "bytes": 2761942602, "size_human": "2.57 GiB"}
+{"directory": "artifacts/local_retained_sources/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/html", "file_count": 8947, "bytes": 2310038403, "size_human": "2.15 GiB"}
+{"directory": "tmp/broad_state_whole_corpus_available_external_data_non_ocr_extraction_2026-08-05_logs", "file_count": 25, "bytes": 2087039254, "size_human": "1.94 GiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_003", "file_count": 920, "bytes": 1766585622, "size_human": "1.65 GiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_004", "file_count": 914, "bytes": 1740094131, "size_human": "1.62 GiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_001", "file_count": 923, "bytes": 1567187135, "size_human": "1.46 GiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_4x2500_source_review_download_2026-07-30/source_review_lane_002", "file_count": 915, "bytes": 1483887051, "size_human": "1.38 GiB"}
+{"directory": "artifacts/local_extracted_text", "file_count": 51977, "bytes": 1312030768, "size_human": "1.22 GiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_1_live_attempt1", "file_count": 995, "bytes": 1111127453, "size_human": "1.03 GiB"}
+{"directory": "docs/analysis/compensation_extraction/DASHBOARD-DEPLOYMENT-FIX-AND-TIER-C-SOURCE-REVIEW-DOWNLOAD-556-2026-07-27", "file_count": 507, "bytes": 1087145671, "size_human": "1.01 GiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_2_live_attempt1", "file_count": 997, "bytes": 1050943802, "size_human": "1002.26 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH3-3X500-2026-07-24/lane_3_live_attempt1", "file_count": 997, "bytes": 1032357115, "size_human": "984.53 MiB"}
+{"directory": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/field_span_extraction", "file_count": 27, "bytes": 1014354770, "size_human": "967.36 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24", "file_count": 1059, "bytes": 1011251823, "size_human": "964.40 MiB"}
+{"directory": "docs/analysis/compensation_extraction/TARGETED-SOURCE-REVIEW-DOWNLOAD-429-VERIFIED-LEADS-2026-07-26", "file_count": 421, "bytes": 980738592, "size_human": "935.31 MiB"}
+{"directory": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers", "file_count": 192, "bytes": 872765884, "size_human": "832.33 MiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_004", "file_count": 572, "bytes": 794025369, "size_human": "757.24 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-TARGETED-HOSTED-SEARCH-SCOUT-2026-08-04", "file_count": 173, "bytes": 732465178, "size_human": "698.53 MiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_001", "file_count": 575, "bytes": 713161203, "size_human": "680.12 MiB"}
+{"directory": "artifacts/local_extracted_text/whole_corpus_external_data_exhaustive_pipeline_2026-08-04", "file_count": 42429, "bytes": 657496108, "size_human": "627.04 MiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_003", "file_count": 577, "bytes": 626671471, "size_human": "597.64 MiB"}
+{"directory": ".claude", "file_count": 938, "bytes": 622331943, "size_human": "593.50 MiB"}
+{"directory": ".claude/worktrees", "file_count": 937, "bytes": 622329676, "size_human": "593.50 MiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_005", "file_count": 569, "bytes": 598238839, "size_human": "570.53 MiB"}
+{"directory": ".venv", "file_count": 23801, "bytes": 535680288, "size_human": "510.86 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_1_live_attempt1", "file_count": 500, "bytes": 534930277, "size_human": "510.15 MiB"}
+{"directory": "artifacts/local_retained_sources/broad_state_remaining_municipalities_source_review_download_2026-08-02/source_review_lane_002", "file_count": 572, "bytes": 533434130, "size_human": "508.72 MiB"}
+{"directory": ".venv/lib", "file_count": 23760, "bytes": 530755706, "size_human": "506.17 MiB"}
+{"directory": ".venv/lib/python3.11", "file_count": 23760, "bytes": 530755706, "size_human": "506.17 MiB"}
+{"directory": ".venv/lib/python3.11/site-packages", "file_count": 23760, "bytes": 530755706, "size_human": "506.17 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SIDE-RELEVANCE-RECONCILIATION-2026-08-03", "file_count": 95, "bytes": 530203547, "size_human": "505.64 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-BATCH2-500-2026-07-24/lane_2_live_attempt1", "file_count": 501, "bytes": 475478376, "size_human": "453.45 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-RATING-AND-DASHBOARD-CLEANUP-2026-07-30", "file_count": 81, "bytes": 431784555, "size_human": "411.78 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04", "file_count": 103, "bytes": 407874726, "size_human": "388.98 MiB"}
+{"directory": "tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs", "file_count": 63, "bytes": 394310326, "size_human": "376.04 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SPAN-EXTRACTION-2026-07-30", "file_count": 91, "bytes": 388133008, "size_human": "370.15 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-5LANE-LIVE-SCOUT-RETRY-2026-08-01", "file_count": 131162, "bytes": 372819592, "size_human": "355.55 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03", "file_count": 97, "bytes": 372546262, "size_human": "355.29 MiB"}
+{"directory": "artifacts/local_extracted_text/combined_broad_text_extraction_4051_2026-07-28", "file_count": 4050, "bytes": 369061301, "size_human": "351.96 MiB"}
+{"directory": "artifacts/local_extracted_text/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/pdf", "file_count": 16272, "bytes": 368185674, "size_human": "351.13 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-BLOCKER-RESCUE-ANALYSIS-READY-RECLASSIFICATION-2026-08-03", "file_count": 107, "bytes": 354816954, "size_human": "338.38 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24", "file_count": 607, "bytes": 316467046, "size_human": "301.81 MiB"}
+{"directory": ".claude/worktrees/remote-diagnosis", "file_count": 476, "bytes": 313655164, "size_human": "299.12 MiB"}
+{"directory": ".claude/worktrees/tx-oh-expansion-recovery", "file_count": 461, "bytes": 308674512, "size_human": "294.37 MiB"}
+{"directory": "artifacts/local_extracted_text/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/html", "file_count": 26154, "bytes": 289309979, "size_human": "275.91 MiB"}
+{"directory": "docs/analysis/compensation_extraction/COMBINED-BROAD-EXACT-SPAN-RATING-17259-PARALLEL-LIVE-LANES-2026-07-28", "file_count": 154, "bytes": 286419092, "size_human": "273.15 MiB"}
+{"directory": "tmp/broad_state_external_data_available_candidate_review_2026-08-05_logs", "file_count": 5, "bytes": 264942099, "size_human": "252.67 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-GABRIEL-RATING-2026-08-02", "file_count": 138, "bytes": 263885894, "size_human": "251.66 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02", "file_count": 89, "bytes": 243857456, "size_human": "232.56 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-NORMALIZATION-RESCUE-GAP-GROWTH-CLAIMS-2026-07-30", "file_count": 123, "bytes": 241677860, "size_human": "230.48 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-POST-RECONCILIATION-NORMALIZATION-MATCHING-PREP-2026-08-03", "file_count": 70, "bytes": 234348005, "size_human": "223.49 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-RATING-INGESTION-CODIFICATION-2026-08-02", "file_count": 92, "bytes": 233960155, "size_human": "223.12 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-QUANTITATIVE-NORMALIZATION-AND-MATCHING-2026-08-03", "file_count": 54, "bytes": 227533996, "size_human": "216.99 MiB"}
+{"directory": "tmp/broad_state_whole_corpus_available_external_data_source_review_download_2026-08-05_logs", "file_count": 21, "bytes": 217060536, "size_human": "207.01 MiB"}
+{"directory": "corpus", "file_count": 79, "bytes": 216191337, "size_human": "206.18 MiB"}
+{"directory": "tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/stage1_append_only_checkpoint_archive", "file_count": 15, "bytes": 213321310, "size_human": "203.44 MiB"}
+{"directory": "docs/analysis/compensation_extraction/COMBINED-BROAD-SPAN-EVIDENCE-EXTRACTION-3815-PARALLEL-LANES-2026-07-28", "file_count": 164, "bytes": 201017018, "size_human": "191.70 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-CANDIDATE-REVIEW-2026-08-01", "file_count": 79, "bytes": 197182476, "size_human": "188.05 MiB"}
+{"directory": ".claude/worktrees/tx-oh-expansion-recovery/corpus", "file_count": 57, "bytes": 189119138, "size_human": "180.36 MiB"}
+{"directory": ".claude/worktrees/remote-diagnosis/corpus", "file_count": 57, "bytes": 189119138, "size_human": "180.36 MiB"}
+{"directory": "artifacts/local_extracted_text/broad_state_4x2500_text_extraction_2026-07-30", "file_count": 2940, "bytes": 182067064, "size_human": "173.63 MiB"}
+{"directory": "tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/downstream_append_only_checkpoint_archive", "file_count": 5, "bytes": 180733657, "size_human": "172.36 MiB"}
+{"directory": "tmp/broad_state_whole_corpus_external_data_exhaustive_pipeline_2026-08-04_logs/downstream_append_only_checkpoint_archive/stage2_candidate_review", "file_count": 5, "bytes": 180733657, "size_human": "172.36 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-VERIFICATION-2026-07-30", "file_count": 72, "bytes": 178914262, "size_human": "170.63 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_2_live_attempt2_httpx", "file_count": 153, "bytes": 170364328, "size_human": "162.47 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-RATING-INGEST-CODIFY-PI-EVIDENCE-2026-07-30", "file_count": 65, "bytes": 164234849, "size_human": "156.63 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-TEXT-EXTRACTION-2026-08-02", "file_count": 120, "bytes": 145663261, "size_human": "138.92 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-TEXT-EXTRACTION-2026-07-30", "file_count": 93, "bytes": 143283554, "size_human": "136.65 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-LIVE-SCOUT-2026-07-29", "file_count": 60503, "bytes": 138502358, "size_human": "132.09 MiB"}
+{"directory": "artifacts/local_extracted_text/combined_broad_text_extraction_4051_2026-07-28/extraction_lane_003", "file_count": 1013, "bytes": 132298896, "size_human": "126.17 MiB"}
+{"directory": "tmp/source_review_pilots/SOURCE-REVIEW-PILOT1-150-2026-07-24/lane_1_live_attempt2_httpx", "file_count": 152, "bytes": 132096672, "size_human": "125.98 MiB"}
+{"directory": "docs/dashboard", "file_count": 1127, "bytes": 116503048, "size_human": "111.11 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-VERIFICATION-2026-08-01", "file_count": 92, "bytes": 115497565, "size_human": "110.15 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-SOURCE-REVIEW-DOWNLOAD-2026-07-30", "file_count": 86, "bytes": 109704457, "size_human": "104.62 MiB"}
+{"directory": "docs/analysis/text_table_calibration", "file_count": 831, "bytes": 109049729, "size_human": "104.00 MiB"}
+{"directory": "docs/analysis/text_table_calibration/TEXT-TABLE-INDEPENDENT-ADJUDICATION-PREP1-2026-07-24", "file_count": 792, "bytes": 107308276, "size_human": "102.34 MiB"}
+{"directory": "docs/analysis/compensation_extraction/BROAD-STATE-REMAINING-MUNICIPALITIES-LOCAL-COMPARISON-QA-AND-CLAIM-READINESS-2026-08-03", "file_count": 85, "bytes": 106479708, "size_human": "101.55 MiB"}

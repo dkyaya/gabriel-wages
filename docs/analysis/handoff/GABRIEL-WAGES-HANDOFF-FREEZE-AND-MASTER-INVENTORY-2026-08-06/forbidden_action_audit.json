@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "deleted": false,
+  "moved": false,
+  "renamed": false,
+  "compressed_existing": false,
+  "deduplicated": false,
+  "dashboard_modified": false,
+  "visual_atlas_modified": false,
+  "source_library_created": false,
+  "clean_repo_created": false,
+  "hosted_search": false,
+  "gabriel_api": false,
+  "network_collection": false,
+  "ocr": false,
+  "extraction": false,
+  "claim_analysis": false,
+  "visual_rendering": false
+}

@@ -1,0 +1,11 @@
+{
+  "raw": "count: 2104\nsize: 217.38 MiB\nin-pack: 26598\npacks: 4\nsize-pack: 13.72 GiB\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0 bytes",
+  "count": "2104",
+  "size": "217.38 MiB",
+  "in_pack": "26598",
+  "packs": "4",
+  "size_pack": "13.72 GiB",
+  "prune_packable": "0",
+  "garbage": "0",
+  "size_garbage": "0 bytes"
+}

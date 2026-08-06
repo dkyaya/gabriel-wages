@@ -1,0 +1,1 @@
+{"relative_path": "scripts/test_gabriel_state_source_scout_direct_sdk.py", "risk_type": "authorization_header", "line_number": 146, "redacted_fingerprint": "8417bb20a5dd", "value_exposed": false, "recommended_disposition": "quarantine_and_rotate_if_real", "review_outcome": "synthetic_test_fixture_not_a_credential"}

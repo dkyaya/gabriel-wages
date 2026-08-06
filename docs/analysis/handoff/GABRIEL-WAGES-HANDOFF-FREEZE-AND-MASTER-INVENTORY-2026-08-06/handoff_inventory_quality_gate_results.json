@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "gates": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true,
+    "E": true,
+    "F": true,
+    "G": true,
+    "H": true,
+    "I": true,
+    "J": true,
+    "K": true,
+    "L": true,
+    "M": true,
+    "N": true
+  },
+  "notes": {
+    "C": "Filesystem scan totals are the authority; master rows compact dense shard families.",
+    "E": "All retained source candidates have hashes; a reproducible sample of filename-embedded hashes was recalculated from file bytes.",
+    "J": "Risk hits are redacted; no secret values are included."
+  }
+}

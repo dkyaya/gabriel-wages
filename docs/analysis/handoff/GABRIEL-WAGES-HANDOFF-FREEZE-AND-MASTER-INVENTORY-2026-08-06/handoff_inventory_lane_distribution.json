@@ -1,0 +1,52 @@
+{
+  "lanes": [
+    {
+      "lane": 1,
+      "scope": "Git repository and tracked infrastructure",
+      "records": 877,
+      "secret_risk_files": 1,
+      "machine_path_files": 23,
+      "status": "complete"
+    },
+    {
+      "lane": 2,
+      "scope": "Original retained source files",
+      "records": 26799,
+      "bytes": 56574034323,
+      "unique_sha256": 26637,
+      "exact_duplicate_groups": 154,
+      "hash_errors": 0,
+      "status": "complete"
+    },
+    {
+      "lane": 3,
+      "scope": "Extracted text and derived analytical layers",
+      "records": 60735,
+      "logical_dense_groups": 513,
+      "represented_files": 102651,
+      "bytes": 14595401882,
+      "status": "complete"
+    },
+    {
+      "lane": 4,
+      "scope": "Reports, visuals, methodology, limitations, and dashboard",
+      "records": 13125,
+      "reports": 434,
+      "visuals": 276,
+      "dashboard": 344,
+      "status": "complete"
+    },
+    {
+      "lane": 5,
+      "scope": "Storage, duplication, sensitivity, and cleanup planning",
+      "records": 588,
+      "project_files_scanned": 404912,
+      "project_bytes_scanned": 128724992965,
+      "temporary_groups": 587,
+      "relays": 359,
+      "archives": 47837,
+      "status": "complete"
+    }
+  ],
+  "parallel_local_workers": true
+}

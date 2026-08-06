@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "threshold_bytes": 52428800,
+  "staged_files_over_threshold": 0,
+  "largest_staged_file_bytes": 29393350,
+  "largest_staged_file": "handoff_inventory_lane_002_inventory_ledger.jsonl",
+  "source_binary_or_archive_staged": false
+}

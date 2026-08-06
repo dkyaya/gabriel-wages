@@ -1,0 +1,10 @@
+{
+  "lane_id": "handoff_inventory_lane_002",
+  "modules": [
+    "physical retained sources",
+    "source hashes",
+    "duplicate groups",
+    "source-library path proposal"
+  ],
+  "read_only_inputs": true
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06",
+  "output_root": "docs/analysis/handoff/GABRIEL-WAGES-HANDOFF-FREEZE-AND-MASTER-INVENTORY-2026-08-06",
+  "local_temporary_root": "tmp/gabriel_wages_handoff_freeze_master_inventory_2026-08-06",
+  "snapshot_head": "d1dd03ea51197421102d13ce79aef88868548ccb",
+  "freeze_tag": "pre-handoff-freeze-2026-08-06",
+  "five_lanes": true,
+  "non_destructive": true,
+  "master_inventory_schema": "handoff_master_inventory_schema.json",
+  "summary": "handoff_freeze_inventory_summary.json"
+}

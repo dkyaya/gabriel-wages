@@ -1,0 +1,14 @@
+{
+  "clean_repository": "planned_not_created",
+  "source_library": "planned_not_created",
+  "original_archive": "planned_not_created",
+  "post_acceptance_cleanup": "planned_not_executed",
+  "sequence": [
+    "visual atlas correction",
+    "source-library packaging",
+    "clean repository assembly",
+    "clean-room acceptance",
+    "archive verification",
+    "user-approved cleanup"
+  ]
+}
