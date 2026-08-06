@@ -1,0 +1,46 @@
+{
+  "duplicate_workers": false,
+  "launched_at": "2026-08-06T03:28:46.680511+00:00",
+  "workers": [
+    {
+      "delay_seconds": 0,
+      "lane_id": "math_lane_001",
+      "launched_at": "2026-08-06T03:28:46.674188+00:00",
+      "log": "tmp/broad_state_whole_corpus_mathematical_execution_descriptive_analysis_2026-08-05_logs/math_lane_001.log",
+      "pid": 58897,
+      "role": "staffing_and_vacancy_descriptive_analysis"
+    },
+    {
+      "delay_seconds": 120,
+      "lane_id": "math_lane_002",
+      "launched_at": "2026-08-06T03:28:46.676192+00:00",
+      "log": "tmp/broad_state_whole_corpus_mathematical_execution_descriptive_analysis_2026-08-05_logs/math_lane_002.log",
+      "pid": 58898,
+      "role": "implementation_lifecycle_and_sequence_analysis"
+    },
+    {
+      "delay_seconds": 240,
+      "lane_id": "math_lane_003",
+      "launched_at": "2026-08-06T03:28:46.677325+00:00",
+      "log": "tmp/broad_state_whole_corpus_mathematical_execution_descriptive_analysis_2026-08-05_logs/math_lane_003.log",
+      "pid": 58899,
+      "role": "mechanism_source_event_claim_and_coverage_analysis"
+    },
+    {
+      "delay_seconds": 360,
+      "lane_id": "math_lane_004",
+      "launched_at": "2026-08-06T03:28:46.678804+00:00",
+      "log": "tmp/broad_state_whole_corpus_mathematical_execution_descriptive_analysis_2026-08-05_logs/math_lane_004.log",
+      "pid": 58900,
+      "role": "geography_state_urbanicity_and_hex_tables"
+    },
+    {
+      "delay_seconds": 480,
+      "lane_id": "math_lane_005",
+      "launched_at": "2026-08-06T03:28:46.680241+00:00",
+      "log": "tmp/broad_state_whole_corpus_mathematical_execution_descriptive_analysis_2026-08-05_logs/math_lane_005.log",
+      "pid": 58901,
+      "role": "documentary_comparisons_growth_counterexamples_claims_regression_headlines"
+    }
+  ]
+}

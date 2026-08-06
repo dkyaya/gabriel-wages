@@ -1,0 +1,14 @@
+{
+  "registry": "urbanicity_analysis_registry",
+  "rules": [
+    {
+      "basis": "canonical_event_urbanicity",
+      "rule_id": "URBANICITY_ANALYSIS_REGISTRY-001"
+    },
+    {
+      "basis": "unknown_preserved",
+      "rule_id": "URBANICITY_ANALYSIS_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

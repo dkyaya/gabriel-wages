@@ -1,0 +1,11 @@
+{
+  "claim_rows": 14,
+  "final_claim_adjudications": 0,
+  "statuses": {
+    "descriptively_supported": 1,
+    "mathematically_supported_bounded": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "unsupported_by_current_math": 6
+  }
+}

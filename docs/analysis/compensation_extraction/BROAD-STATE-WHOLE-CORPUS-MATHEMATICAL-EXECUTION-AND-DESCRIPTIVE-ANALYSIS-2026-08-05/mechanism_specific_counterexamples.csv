@@ -1,0 +1,7 @@
+limit_id,limit,implication,upgrade_evidence,counterexample_class
+LIMIT-01,"The 21 local comparison records are supporting or conditional examples, not a scalable wage-gap estimator.",local_comparison_gate remains partial,"Audited same-city, same-period, comparable-role values across repeated cycles.",documentary_qualitative_counterexample
+LIMIT-02,Mechanism evidence counts are coded spans and can repeat within sources.,Do not interpret counts as prevalence,Deduplicated source/unit/cycle denominators and sampling weights.,documentary_qualitative_counterexample
+LIMIT-03,"Non-safety units also receive bargaining, COLA, step, and pay-plan mechanisms.",Complicates a safety-only mechanism claim,Matched intensity and outcome comparisons within city-cycle.,documentary_qualitative_counterexample
+LIMIT-04,"Pay basis, period, and role comparability remain incomplete in national strata.",No national wage-gap or prevalence conclusion,Harmonized compensation basis and repeated cross-side matches.,documentary_qualitative_counterexample
+LIMIT-05,Documented institutional channels do not identify counterfactual wage outcomes.,global_causal_readiness_gate remains fail,"Panel design with shocks, controls, and credible identifying variation.",documentary_qualitative_counterexample
+LIMIT-06,Budget and adoption mechanisms can constrain or delay as well as increase compensation.,Direction is mixed for fiscal formalization,"Proposal, rejection, revision, adoption, and payroll implementation histories.",documentary_qualitative_counterexample

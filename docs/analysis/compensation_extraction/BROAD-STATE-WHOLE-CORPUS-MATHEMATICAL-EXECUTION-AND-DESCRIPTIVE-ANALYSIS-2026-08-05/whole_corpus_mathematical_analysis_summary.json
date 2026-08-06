@@ -1,0 +1,630 @@
+{
+  "causal_estimates": 0,
+  "claim_support_statuses": {
+    "descriptively_supported": 1,
+    "mathematically_supported_bounded": 1,
+    "mechanism_supported_only": 5,
+    "mixed_or_countervailing": 1,
+    "unsupported_by_current_math": 6
+  },
+  "commit": "pending_final_commit",
+  "completed_at": "2026-08-06T03:37:50.953058+00:00",
+  "conflicts_and_holds": {
+    "basis_hold": 131124,
+    "conflict_hold": 266849,
+    "growth_candidate_denominator": 6731,
+    "growth_hold": 6731,
+    "identity_hold": 244,
+    "local_candidate_denominator": 201,
+    "local_no_match": 201,
+    "observation_denominator": 1876183,
+    "sequence_denominator": 1268,
+    "sequence_hold": 1230,
+    "side_hold": 1134192,
+    "unresolved_basis_conflicts": 247728,
+    "unresolved_value_conflicts": 19121
+  },
+  "counterexamples": {
+    "claim_adjudication": false,
+    "core_packet": 7,
+    "direct_quantitative": 1,
+    "documentary_qualitative": 6,
+    "external_valid_counterexamples": 0
+  },
+  "cross_examination_packet_counts": {
+    "claim": 14,
+    "conflict": 201,
+    "core": 1225,
+    "counterexample": 7,
+    "headline": 358,
+    "implementation": 150,
+    "local_comparison": 4,
+    "reserve": 0,
+    "safety_wage_growth": 90,
+    "staffing": 301
+  },
+  "decision": "broad_state_whole_corpus_mathematical_analysis_completed_cross_examination_ready",
+  "documentary": {
+    "claim_families": 8,
+    "claim_package_counterexamples_or_limits": 6,
+    "computed_growth_records": 16,
+    "documentary_growth_records": 432,
+    "interpretation": {
+      "COLA": "too sparse for strong comparison",
+      "across_board": "mixed",
+      "step_progression": "leans safety",
+      "uniform_safety_advantage": false
+    },
+    "local_comparison_records_in_canonical_layer": 21,
+    "named_bounded_examples": 4,
+    "named_counterexamples": 1,
+    "named_supporting": 3,
+    "regression_ran": false,
+    "regression_readiness": "failed",
+    "source_reported_growth_records": 416,
+    "unit_cycle_weighted_cells": 99,
+    "unsupported_claims": 6
+  },
+  "ending_head": "pending_final_commit",
+  "external_compatible_wage_matches": 0,
+  "external_growth_pairs": 0,
+  "final_claim_adjudications": 0,
+  "five_lane_completion": {
+    "math_lane_001": "staffing_and_vacancy_descriptive_analysis",
+    "math_lane_002": "implementation_lifecycle_and_sequence_analysis",
+    "math_lane_003": "mechanism_source_event_claim_and_coverage_analysis",
+    "math_lane_004": "geography_state_urbanicity_and_hex_tables",
+    "math_lane_005": "documentary_comparisons_growth_counterexamples_claims_regression_headlines"
+  },
+  "free_bytes_final": 20599996416,
+  "gabriel_api_calls": 0,
+  "geography": {
+    "deduplicated_implementation_events": 2998,
+    "event_unit": "municipality \u00d7 compensation cycle \u00d7 mechanism \u00d7 side implementation event",
+    "fixed_hex_crs": "EPSG:5070",
+    "fixed_hex_rows": 0,
+    "municipalities_by_state": {
+      "AK": 8,
+      "AL": 6,
+      "AR": 4,
+      "CA": 21,
+      "CO": 5,
+      "CT": 8,
+      "FL": 19,
+      "GA": 13,
+      "IA": 36,
+      "ID": 3,
+      "IL": 90,
+      "IN": 37,
+      "KS": 23,
+      "KY": 15,
+      "LA": 11,
+      "MA": 22,
+      "MD": 1,
+      "ME": 18,
+      "MI": 126,
+      "MN": 97,
+      "MO": 13,
+      "MS": 1,
+      "NC": 55,
+      "ND": 9,
+      "NE": 14,
+      "NH": 9,
+      "NJ": 89,
+      "NY": 209,
+      "OH": 137,
+      "OK": 10,
+      "OR": 3,
+      "PA": 99,
+      "SC": 4,
+      "SD": 15,
+      "TN": 23,
+      "TX": 44,
+      "UT": 4,
+      "VA": 1,
+      "VT": 10,
+      "WA": 12,
+      "WI": 115,
+      "WV": 1
+    },
+    "raw_observation_count_as_hex_intensity": false,
+    "side": {
+      "fire": 287,
+      "mixed": 12,
+      "non_safety": 140,
+      "police": 940,
+      "safety_combined": 11,
+      "unclear": 1608
+    },
+    "states": {
+      "AK": 11,
+      "AL": 6,
+      "AR": 7,
+      "CA": 59,
+      "CO": 12,
+      "CT": 14,
+      "FL": 28,
+      "GA": 18,
+      "IA": 46,
+      "ID": 6,
+      "IL": 200,
+      "IN": 59,
+      "KS": 33,
+      "KY": 17,
+      "LA": 13,
+      "MA": 37,
+      "MD": 1,
+      "ME": 31,
+      "MI": 246,
+      "MN": 203,
+      "MO": 15,
+      "MS": 1,
+      "NC": 82,
+      "ND": 12,
+      "NE": 19,
+      "NH": 9,
+      "NJ": 181,
+      "NY": 420,
+      "OH": 645,
+      "OK": 15,
+      "OR": 4,
+      "PA": 173,
+      "SC": 4,
+      "SD": 24,
+      "TN": 26,
+      "TX": 67,
+      "UT": 8,
+      "VA": 1,
+      "VT": 19,
+      "WA": 21,
+      "WI": 204,
+      "WV": 1
+    },
+    "unique_municipalities": 1305,
+    "urbanicity": {
+      "missing_not_validated": 2998
+    }
+  },
+  "headline_candidates": 9,
+  "hosted_search_calls": 0,
+  "implementation": {
+    "elapsed_time_reason": "clean sequences did not expose exact same-event stage-date pairs in the canonical sequence layer",
+    "elapsed_time_results": 0,
+    "input_sequences": 1268,
+    "math_ready_sequences": 38,
+    "sequence_holds": 1230,
+    "sequence_status_counts": {
+      "adopted_not_paid_observed": 19,
+      "amended_sequence": 10,
+      "negotiated_only": 1,
+      "paid_with_prior_adoption": 2,
+      "partial_sequence": 2,
+      "proposed_only": 4,
+      "sequence_hold": 1230
+    },
+    "unique_municipalities": 912,
+    "unique_root_events": 1268,
+    "unique_sources": 3234,
+    "wording_boundary": "adopted with no paid stage observed in the retained evidence; never paid is not asserted"
+  },
+  "implementation_event_deduplication_rerun": false,
+  "matching_criteria_loosened": false,
+  "mechanism": {
+    "claim_unique_source_counts": {
+      "MECH-03": 1841,
+      "MECH-04": 2154,
+      "MECH-06": 828,
+      "MECH-07": 159,
+      "MECH-08": 1239,
+      "MECH-09": 3208
+    },
+    "mechanism_count": 38,
+    "mechanisms": [
+      {
+        "mechanism": "across_the_board_raise",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 3129,
+        "unique_municipalities": 307,
+        "unique_root_events": 785,
+        "unique_sources": 2526
+      },
+      {
+        "mechanism": "bargaining_leverage",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 173,
+        "unique_municipalities": 15,
+        "unique_root_events": 43,
+        "unique_sources": 123
+      },
+      {
+        "mechanism": "base_wage_change",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 1268,
+        "unique_municipalities": 97,
+        "unique_root_events": 252,
+        "unique_sources": 723
+      },
+      {
+        "mechanism": "benefit_cost_change",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 842,
+        "unique_municipalities": 63,
+        "unique_root_events": 189,
+        "unique_sources": 485
+      },
+      {
+        "mechanism": "budget_appropriation",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 592,
+        "unique_municipalities": 61,
+        "unique_root_events": 110,
+        "unique_sources": 515
+      },
+      {
+        "mechanism": "budget_pay_plan_process",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 3714,
+        "unique_municipalities": 390,
+        "unique_root_events": 839,
+        "unique_sources": 3738
+      },
+      {
+        "mechanism": "classification_band_change",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 407,
+        "unique_municipalities": 40,
+        "unique_root_events": 93,
+        "unique_sources": 311
+      },
+      {
+        "mechanism": "classification_civil_service",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 4,
+        "unique_mechanism_events": 17,
+        "unique_municipalities": 2,
+        "unique_root_events": 4,
+        "unique_sources": 6
+      },
+      {
+        "mechanism": "cola_cpi_adjustment",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 805,
+        "unique_municipalities": 59,
+        "unique_root_events": 176,
+        "unique_sources": 450
+      },
+      {
+        "mechanism": "collective_bargaining",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 173,
+        "unique_municipalities": 15,
+        "unique_root_events": 43,
+        "unique_sources": 123
+      },
+      {
+        "mechanism": "comparability_parity",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 4,
+        "unique_mechanism_events": 44,
+        "unique_municipalities": 6,
+        "unique_root_events": 10,
+        "unique_sources": 35
+      },
+      {
+        "mechanism": "contract_ratification",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 99,
+        "unique_municipalities": 10,
+        "unique_root_events": 21,
+        "unique_sources": 66
+      },
+      {
+        "mechanism": "fiscal_constraint",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 3709,
+        "unique_municipalities": 390,
+        "unique_root_events": 840,
+        "unique_sources": 3657
+      },
+      {
+        "mechanism": "holiday_pay",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 237,
+        "unique_municipalities": 19,
+        "unique_root_events": 53,
+        "unique_sources": 199
+      },
+      {
+        "mechanism": "inflation_indexing",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 5,
+        "unique_mechanism_events": 459,
+        "unique_municipalities": 19,
+        "unique_root_events": 108,
+        "unique_sources": 77
+      },
+      {
+        "mechanism": "interest_arbitration",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 1,
+        "unique_mechanism_events": 20,
+        "unique_municipalities": 2,
+        "unique_root_events": 5,
+        "unique_sources": 4
+      },
+      {
+        "mechanism": "longevity",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 5,
+        "unique_mechanism_events": 611,
+        "unique_municipalities": 30,
+        "unique_root_events": 144,
+        "unique_sources": 181
+      },
+      {
+        "mechanism": "lump_sum",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 153,
+        "unique_municipalities": 16,
+        "unique_root_events": 41,
+        "unique_sources": 150
+      },
+      {
+        "mechanism": "market_recruitment_retention",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 573,
+        "unique_municipalities": 37,
+        "unique_root_events": 132,
+        "unique_sources": 266
+      },
+      {
+        "mechanism": "no_direct_compensation_outcome",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 3411,
+        "unique_municipalities": 370,
+        "unique_root_events": 805,
+        "unique_sources": 3464
+      },
+      {
+        "mechanism": "non_base_compensation_other",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 2109,
+        "unique_municipalities": 198,
+        "unique_root_events": 524,
+        "unique_sources": 1701
+      },
+      {
+        "mechanism": "none_identified",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 9882,
+        "unique_municipalities": 1077,
+        "unique_root_events": 2211,
+        "unique_sources": 10609
+      },
+      {
+        "mechanism": "one_time",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 2479,
+        "unique_municipalities": 229,
+        "unique_root_events": 561,
+        "unique_sources": 1701
+      },
+      {
+        "mechanism": "ordinance_adoption",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 1825,
+        "unique_municipalities": 189,
+        "unique_root_events": 381,
+        "unique_sources": 1523
+      },
+      {
+        "mechanism": "ordinance_council_adoption",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 2037,
+        "unique_municipalities": 218,
+        "unique_root_events": 421,
+        "unique_sources": 1751
+      },
+      {
+        "mechanism": "overtime",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 554,
+        "unique_municipalities": 38,
+        "unique_root_events": 133,
+        "unique_sources": 327
+      },
+      {
+        "mechanism": "payroll_effective_date",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 9615,
+        "unique_municipalities": 1051,
+        "unique_root_events": 2127,
+        "unique_sources": 10320
+      },
+      {
+        "mechanism": "recurring",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 5069,
+        "unique_municipalities": 491,
+        "unique_root_events": 1190,
+        "unique_sources": 4252
+      },
+      {
+        "mechanism": "reimbursement",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 4,
+        "unique_mechanism_events": 52,
+        "unique_municipalities": 6,
+        "unique_root_events": 11,
+        "unique_sources": 35
+      },
+      {
+        "mechanism": "retroactive",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 8249,
+        "unique_municipalities": 871,
+        "unique_root_events": 1795,
+        "unique_sources": 8084
+      },
+      {
+        "mechanism": "retroactive_pay",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 8249,
+        "unique_municipalities": 871,
+        "unique_root_events": 1795,
+        "unique_sources": 8084
+      },
+      {
+        "mechanism": "salary_range_change",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 84,
+        "unique_municipalities": 12,
+        "unique_root_events": 17,
+        "unique_sources": 57
+      },
+      {
+        "mechanism": "settlement_or_mou",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 506,
+        "unique_municipalities": 49,
+        "unique_root_events": 113,
+        "unique_sources": 352
+      },
+      {
+        "mechanism": "step_progression",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 787,
+        "unique_municipalities": 70,
+        "unique_root_events": 182,
+        "unique_sources": 745
+      },
+      {
+        "mechanism": "stipend_or_premium",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 707,
+        "unique_municipalities": 45,
+        "unique_root_events": 172,
+        "unique_sources": 336
+      },
+      {
+        "mechanism": "unclear",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 1471,
+        "unique_municipalities": 130,
+        "unique_root_events": 352,
+        "unique_sources": 1108
+      },
+      {
+        "mechanism": "uniform_or_equipment_allowance",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 796,
+        "unique_municipalities": 56,
+        "unique_root_events": 197,
+        "unique_sources": 326
+      },
+      {
+        "mechanism": "vacancy_pressure",
+        "raw_linked_rows_not_prevalence": 1876183,
+        "unique_claims": 6,
+        "unique_mechanism_events": 349,
+        "unique_municipalities": 10,
+        "unique_root_events": 79,
+        "unique_sources": 92
+      }
+    ],
+    "raw_linkage_rows": 1876183,
+    "raw_linkage_rows_used_as_prevalence": false,
+    "unique_exact_claim_ids": 6,
+    "unique_mechanism_events": 11692,
+    "unique_municipalities": 1314,
+    "unique_root_events": 2616,
+    "unique_sources": 13526,
+    "unresolved_side_rows": 1523558
+  },
+  "network_requests": 0,
+  "ocr_runs": 0,
+  "push_status": "pending",
+  "qa_gates_passed": true,
+  "regression_ran": false,
+  "regression_readiness": "failed",
+  "rendered_visuals": 0,
+  "runtime_seconds_finalize": 0.246,
+  "runtime_seconds_total": 693.654,
+  "staffing": {
+    "analytical_unit": "source-specific reconciled staffing analytical unit",
+    "claim_link_counts": {
+      "MECH-06": 3509,
+      "MECH-09": 2379
+    },
+    "contextual_or_noncausal_count": 18358,
+    "explicit_causal_link_count": 0,
+    "input_units": 18358,
+    "insufficient_side_or_type_count": 18129,
+    "national_prevalence_interpretation": false,
+    "non_safety_reduction_channel_count": 16,
+    "safety_pressure_channel_count": 213,
+    "side_counts": {
+      "fire": 83,
+      "mixed": 2,
+      "non_safety": 74,
+      "police": 179,
+      "safety_combined": 10,
+      "unclear": 18010
+    },
+    "source_quality_proxy_counts": {
+      "matched_staffing_ready": 18358
+    },
+    "state_counts": {
+      "unknown": 18358
+    },
+    "type_counts": {
+      "authorized_position_reduction": 5455,
+      "budgeted_position_reduction": 2379,
+      "filled_position_reduction": 378,
+      "hiring_freeze": 80,
+      "layoff": 313,
+      "vacancy_without_elimination": 9753
+    },
+    "unique_municipalities": 511,
+    "unique_sources": 1065,
+    "unique_states": 0,
+    "vacancy_rates_calculated": 0
+  },
+  "storage_held": 7895,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05",
+  "unique_native_pdf_pages": 1029482,
+  "unsearched_targets": 12844,
+  "visual_figure_specs": 16,
+  "visual_ready_tables": 16
+}

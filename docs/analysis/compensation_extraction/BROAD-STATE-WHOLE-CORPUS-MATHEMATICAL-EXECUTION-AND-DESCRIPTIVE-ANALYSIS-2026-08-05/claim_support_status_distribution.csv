@@ -1,0 +1,6 @@
+mathematical_support_status,count,denominator,proportion,analytical_unit
+descriptively_supported,1,14,0.07142857,canonical claim or unsupported claim boundary
+mathematically_supported_bounded,1,14,0.07142857,canonical claim or unsupported claim boundary
+mechanism_supported_only,5,14,0.35714286,canonical claim or unsupported claim boundary
+mixed_or_countervailing,1,14,0.07142857,canonical claim or unsupported claim boundary
+unsupported_by_current_math,6,14,0.42857143,canonical claim or unsupported claim boundary

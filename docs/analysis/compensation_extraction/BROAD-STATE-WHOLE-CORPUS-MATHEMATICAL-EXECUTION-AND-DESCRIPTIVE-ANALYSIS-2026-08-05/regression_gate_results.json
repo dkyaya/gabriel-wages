@@ -1,0 +1,101 @@
+{
+  "all_essential_passed": false,
+  "gates": [
+    {
+      "basis": "zero compatible external wage/growth outcome panel",
+      "essential": true,
+      "gate": "clear_dependent_variable",
+      "passed": false
+    },
+    {
+      "basis": "no clean matched city-cycle occupation panel",
+      "essential": true,
+      "gate": "clear_unit",
+      "passed": false
+    },
+    {
+      "basis": "zero compatible wage matches",
+      "essential": true,
+      "gate": "sufficient_sample",
+      "passed": false
+    },
+    {
+      "basis": "no clean treatment/predictor matrix",
+      "essential": true,
+      "gate": "predictor_variation",
+      "passed": false
+    },
+    {
+      "basis": "131,124 basis holds plus zero clean matches",
+      "essential": true,
+      "gate": "compatible_basis",
+      "passed": false
+    },
+    {
+      "basis": "1,134,192 side holds",
+      "essential": true,
+      "gate": "clear_side",
+      "passed": false
+    },
+    {
+      "basis": "period labels preserved",
+      "essential": true,
+      "gate": "clear_period",
+      "passed": true
+    },
+    {
+      "basis": "39 unresolved of 1,876,183; clean-unit subset identifiable",
+      "essential": true,
+      "gate": "municipality_identity",
+      "passed": true
+    },
+    {
+      "basis": "control matrix not established",
+      "essential": true,
+      "gate": "adequate_controls",
+      "passed": false
+    },
+    {
+      "basis": "many-to-many source/event lineage not a regression panel",
+      "essential": true,
+      "gate": "duplicate_structure",
+      "passed": false
+    },
+    {
+      "basis": "266,849 conflict holds",
+      "essential": true,
+      "gate": "conflict_burden",
+      "passed": false
+    },
+    {
+      "basis": "no model matrix",
+      "essential": true,
+      "gate": "clustering",
+      "passed": false
+    },
+    {
+      "basis": "search/storage holds and compatibility selection",
+      "essential": true,
+      "gate": "selection_process",
+      "passed": false
+    },
+    {
+      "basis": "no design-ready matrix",
+      "essential": true,
+      "gate": "reproducible_matrix",
+      "passed": false
+    },
+    {
+      "basis": "no authorized bounded estimand",
+      "essential": true,
+      "gate": "explicit_estimand",
+      "passed": false
+    },
+    {
+      "basis": "boundary enforced",
+      "essential": true,
+      "gate": "no_claim_beyond_design",
+      "passed": true
+    }
+  ]
+}

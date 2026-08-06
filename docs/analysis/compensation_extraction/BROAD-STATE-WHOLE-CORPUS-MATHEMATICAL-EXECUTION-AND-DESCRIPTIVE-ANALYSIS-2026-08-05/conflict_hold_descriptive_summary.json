@@ -1,0 +1,15 @@
+{
+  "basis_hold": 131124,
+  "conflict_hold": 266849,
+  "growth_candidate_denominator": 6731,
+  "growth_hold": 6731,
+  "identity_hold": 244,
+  "local_candidate_denominator": 201,
+  "local_no_match": 201,
+  "observation_denominator": 1876183,
+  "sequence_denominator": 1268,
+  "sequence_hold": 1230,
+  "side_hold": 1134192,
+  "unresolved_basis_conflicts": 247728,
+  "unresolved_value_conflicts": 19121
+}

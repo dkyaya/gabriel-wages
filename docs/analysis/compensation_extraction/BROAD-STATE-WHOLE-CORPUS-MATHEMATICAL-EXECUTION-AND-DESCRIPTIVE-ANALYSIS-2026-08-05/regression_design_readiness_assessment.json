@@ -1,0 +1,8 @@
+{
+  "causal_estimate": false,
+  "essential_gates_passed": 3,
+  "essential_gates_total": 16,
+  "model_matrix_created": false,
+  "regression_ran": false,
+  "status": "failed"
+}

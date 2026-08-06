@@ -1,0 +1,19 @@
+{
+  "bounded_repairs": 1,
+  "failed_modules": 0,
+  "superseded_outputs": [
+    {
+      "module": "math_lane_003",
+      "reason": "unresolved-side row count was inflated by mechanism-family fanout",
+      "replacement": "current math_lane_003 summary",
+      "result_id": "MATHRESULT-a82c35623a2dfd429bfcca57",
+      "unaffected_results": [
+        "unique_sources",
+        "unique_municipalities",
+        "unique_root_events",
+        "unique_mechanism_events",
+        "unique_claims"
+      ]
+    }
+  ]
+}

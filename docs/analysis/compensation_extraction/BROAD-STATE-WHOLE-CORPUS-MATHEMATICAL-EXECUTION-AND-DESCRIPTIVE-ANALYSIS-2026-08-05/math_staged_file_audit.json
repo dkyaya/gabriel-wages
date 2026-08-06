@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-08-06T03:40:00Z",
+  "staged_file_count_before_audit_files": 351,
+  "staged_bytes_before_audit_files": 23984025,
+  "forbidden_staged_files": [],
+  "full_analytical_corpus_staged": false,
+  "bulky_local_outputs_staged": false,
+  "temporary_or_cache_files_staged": false,
+  "rendered_visuals_staged": false,
+  "passed": true
+}

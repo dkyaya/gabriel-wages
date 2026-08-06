@@ -1,0 +1,14 @@
+{
+  "registry": "headline_number_registry",
+  "rules": [
+    {
+      "basis": "explicit_unit_numerator_denominator_formula_lineage",
+      "rule_id": "HEADLINE_NUMBER_REGISTRY-001"
+    },
+    {
+      "basis": "candidate_not_report_claim",
+      "rule_id": "HEADLINE_NUMBER_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

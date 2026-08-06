@@ -1,0 +1,14 @@
+qa_id,module,sample_size,passed
+MATHQA-18abec83fb94f723f3cb75bb,staffing_summaries,250,True
+MATHQA-3ae6f420d8136afe3ceff91a,staffing_hypothesis,150,True
+MATHQA-27b95c28ffe878c5795c4f68,implementation_sequences,38,True
+MATHQA-0419fa3d4fc38749a5d85651,mechanism_summaries,38,True
+MATHQA-e5c426fe4033d489aff88306,evidence_coverage,7,True
+MATHQA-5b9f33ac7d5a6dd060883c8a,geography,150,True
+MATHQA-085f2fc30b5cc93bf317b8c3,local_comparisons,4,True
+MATHQA-a3f2cf83f99e5c911b431d22,documentary_growth,200,True
+MATHQA-3480ca29e20d5c33b40fa1a4,counterexamples,7,True
+MATHQA-775be33ac2a2018e6f65a3af,conflict_holds,150,True
+MATHQA-61845df9755c6d4b84b164e7,claim_tables,14,True
+MATHQA-040e49fe0bc99df8163b71bb,headline_numbers,9,True
+MATHQA-6298284e4292c52acb98c0cf,regression_readiness,1,True

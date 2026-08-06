@@ -1,0 +1,13 @@
+{"module":"staffing_summaries","passed":true,"qa_id":"MATHQA-18abec83fb94f723f3cb75bb","sample_size":250}
+{"module":"staffing_hypothesis","passed":true,"qa_id":"MATHQA-3ae6f420d8136afe3ceff91a","sample_size":150}
+{"module":"implementation_sequences","passed":true,"qa_id":"MATHQA-27b95c28ffe878c5795c4f68","sample_size":38}
+{"module":"mechanism_summaries","passed":true,"qa_id":"MATHQA-0419fa3d4fc38749a5d85651","sample_size":38}
+{"module":"evidence_coverage","passed":true,"qa_id":"MATHQA-e5c426fe4033d489aff88306","sample_size":7}
+{"module":"geography","passed":true,"qa_id":"MATHQA-5b9f33ac7d5a6dd060883c8a","sample_size":150}
+{"module":"local_comparisons","passed":true,"qa_id":"MATHQA-085f2fc30b5cc93bf317b8c3","sample_size":4}
+{"module":"documentary_growth","passed":true,"qa_id":"MATHQA-a3f2cf83f99e5c911b431d22","sample_size":200}
+{"module":"counterexamples","passed":true,"qa_id":"MATHQA-3480ca29e20d5c33b40fa1a4","sample_size":7}
+{"module":"conflict_holds","passed":true,"qa_id":"MATHQA-775be33ac2a2018e6f65a3af","sample_size":150}
+{"module":"claim_tables","passed":true,"qa_id":"MATHQA-61845df9755c6d4b84b164e7","sample_size":14}
+{"module":"headline_numbers","passed":true,"qa_id":"MATHQA-040e49fe0bc99df8163b71bb","sample_size":9}
+{"module":"regression_readiness","passed":true,"qa_id":"MATHQA-6298284e4292c52acb98c0cf","sample_size":1}

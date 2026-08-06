@@ -1,0 +1,22 @@
+{
+  "immutable": true,
+  "inputs": [
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/11_EXTERNAL-DATA-NORMALIZATION-MATCHING/external_data_normalization_matching_manifest.json",
+      "sha256": "3f2f1982285b9a4daaac3bea009aae2398a652852618603f57ecfc91fe6eabe5"
+    },
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/11_EXTERNAL-DATA-NORMALIZATION-MATCHING/external_data_normalization_matching_summary.json",
+      "sha256": "79a4f205464c69941f2f79f46f78a108a26a08d499f4f069e8d91338eacff058"
+    },
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/11_EXTERNAL-DATA-NORMALIZATION-MATCHING/mathematical_execution_ready_manifest.json",
+      "sha256": "c2ba9ff1b9d539d7a976fce695428e72f3861427266d5a753739bc78986f0fa5"
+    },
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/11_EXTERNAL-DATA-NORMALIZATION-MATCHING/mathematical_execution_hold_manifest.json",
+      "sha256": "62e274ffa5e68cb8f6bb59c9cd1f0f63ca90b27ef6d1276941f5923fe429528a"
+    }
+  ],
+  "zero_result_boundaries_preserved": true
+}

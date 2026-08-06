@@ -1,0 +1,14 @@
+{
+  "five_lanes": [
+    "math_lane_001",
+    "math_lane_002",
+    "math_lane_003",
+    "math_lane_004",
+    "math_lane_005"
+  ],
+  "predecessor": "c1d07d9f4d4b7df5ee9124a7ad32c1e6f46c35d8",
+  "registry_hash": "d390d20eb1cb21d1bc10c94d7d6b4d298c8a1435725d668da2234ea5bc2eb9f9",
+  "started_at": "2026-08-06T03:28:41.670610+00:00",
+  "starting_head": "c1d07d9f4d4b7df5ee9124a7ad32c1e6f46c35d8",
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05"
+}

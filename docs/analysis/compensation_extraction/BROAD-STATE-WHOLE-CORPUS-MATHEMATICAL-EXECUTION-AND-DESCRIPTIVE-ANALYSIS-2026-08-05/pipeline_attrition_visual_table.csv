@@ -1,0 +1,8 @@
+stage,count,denominator,rate,unit
+canonical_reconciled_observations,1876183,1876183,1.0,observation
+normalized_analysis_ready,120278,1876183,0.06410782,observation
+normalized_conditional,31668,1876183,0.01687895,observation
+staffing_math_ready,18358,1876183,0.00978476,observation
+implementation_sequence_math_ready,38,1268,0.02996845,sequence
+external_local_wage_matches,0,201,0.0,candidate
+external_growth_matches,0,6731,0.0,candidate

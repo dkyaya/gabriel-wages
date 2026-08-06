@@ -1,0 +1,18 @@
+{
+  "registry": "regression_readiness_registry",
+  "rules": [
+    {
+      "basis": "sixteen_explicit_gates",
+      "rule_id": "REGRESSION_READINESS_REGISTRY-001"
+    },
+    {
+      "basis": "all_essential_gates_required",
+      "rule_id": "REGRESSION_READINESS_REGISTRY-002"
+    },
+    {
+      "basis": "no_causal_interpretation",
+      "rule_id": "REGRESSION_READINESS_REGISTRY-003"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

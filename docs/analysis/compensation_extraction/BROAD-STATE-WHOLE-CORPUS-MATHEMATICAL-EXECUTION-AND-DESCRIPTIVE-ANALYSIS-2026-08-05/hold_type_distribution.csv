@@ -1,0 +1,10 @@
+hold_type,count,denominator,rate
+unresolved_basis_conflicts,247728,1876183,0.13203829
+unresolved_value_conflicts,19121,1876183,0.01019144
+side_hold,1134192,1876183,0.60452099
+basis_hold,131124,1876183,0.0698887
+conflict_hold,266849,1876183,0.14222973
+identity_hold,244,1876183,0.00013005
+growth_hold,6731,6731,1.0
+local_no_match,201,201,1.0
+sequence_hold,1230,1268,0.97003155

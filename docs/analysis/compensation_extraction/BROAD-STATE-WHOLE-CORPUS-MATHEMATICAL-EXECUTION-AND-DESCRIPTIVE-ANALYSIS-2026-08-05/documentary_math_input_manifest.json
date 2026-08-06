@@ -1,0 +1,21 @@
+{
+  "immutable": true,
+  "inputs": [
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_canonical_layer_manifest.json",
+      "sha256": "800aea9d6757839629c074d711482b906440f95dc4dd82ca8a1ef7603af9641a"
+    },
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/broad_state_whole_corpus_claim_package_prep_manifest.json",
+      "sha256": "d986733f622beadf50bfcf8be9db3013d6d3d38b090b417e74933fd7840cc295"
+    },
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_manifest.json",
+      "sha256": "36f8d82b9958b5d5b64ca5cfeaa044efc6a0eaa6442987e5284703618bafcc99"
+    },
+    {
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/wage_growth_continuity_manifest.json",
+      "sha256": "1c9f8664c3e01b549ba23db841bb3ed24dc7c4f3f98fbf6f068bd96d07f51c6d"
+    }
+  ]
+}

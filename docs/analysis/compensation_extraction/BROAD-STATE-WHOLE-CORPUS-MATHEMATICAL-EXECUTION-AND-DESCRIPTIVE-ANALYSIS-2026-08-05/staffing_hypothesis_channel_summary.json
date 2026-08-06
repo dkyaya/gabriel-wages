@@ -1,0 +1,8 @@
+{
+  "explicit_causal_link_count": 0,
+  "input_units": 18358,
+  "insufficient_side_or_type": 18129,
+  "national_prevalence_claim": false,
+  "supports_non_safety_reduction_channel": 16,
+  "supports_safety_pressure_channel": 213
+}

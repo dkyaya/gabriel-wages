@@ -1,0 +1,1776 @@
+{
+  "artifacts": [
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_claim_table_ledger.jsonl",
+      "sha256": "de6d7766e4ccd483b7322269e8b0ff6bac1bc7a64a14d566d5d55950afa5575b"
+    },
+    {
+      "bytes": 134,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/no_external_wage_match_finding_note.json",
+      "sha256": "e90496d3caf6bfb76aae51ec5f4e033e6250e826883a1a0465733099c4b5fa5c"
+    },
+    {
+      "bytes": 540485,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/proposed_only_sequences.jsonl",
+      "sha256": "d905914a47984581c0dc3d78d6ac991005b9bd07c938aeea7935dba66f02a483"
+    },
+    {
+      "bytes": 607,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/operational_incident_log.jsonl",
+      "sha256": "169acb639bae1bbfd6594ba86cfd3959ec0b10abb62f229564742651df61c456"
+    },
+    {
+      "bytes": 818,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_side_visual_table.jsonl",
+      "sha256": "7d5efd8867c648c841bdd5bcd35100f0f5358a2c7ea4de9674f924f03fbcb6db"
+    },
+    {
+      "bytes": 4240,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_cross_examination_queue.jsonl",
+      "sha256": "5afc1113f04d5b1590b15ba35113008a7b79e2ce5b1482724cf97f64ca004f2d"
+    },
+    {
+      "bytes": 1124454,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_core_packet.csv",
+      "sha256": "6595d52df26af5ba5944af770326b16f2f4db723ed56fea02c68a43d70b84df3"
+    },
+    {
+      "bytes": 1542,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_qualitative_counterexamples.csv",
+      "sha256": "26f9120ab890c43c68d5444d5c416d1ab0701a84f62b092ac9b64593b5cc804a"
+    },
+    {
+      "bytes": 786,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staged_file_audit.json",
+      "sha256": "9f23a9724f9a041bdebfdf2f9ce8fcdda05f068bd5fc8ca457b549c54b4cf863"
+    },
+    {
+      "bytes": 552,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/next_task.md",
+      "sha256": "0254898d46ae0450a922bdca98f32e711e01ddea582dfd7698d48b2feb8ec914"
+    },
+    {
+      "bytes": 13908,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/non_safety_reduction_channel_evidence.jsonl",
+      "sha256": "23c69805f3ff6e00c8512b19da7778e853d37c865eaa90816d41fae5b6f9fbf5"
+    },
+    {
+      "bytes": 100,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conflict_rate_table.csv",
+      "sha256": "722d3e7abcbdf297018c8d4af541c1f5547c0265bfffee0a3a42a89ea2e64a25"
+    },
+    {
+      "bytes": 250,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_module_queue.jsonl",
+      "sha256": "a4193de5f9481f6b464b39b1b65eb1d3f8c536fa054888d095ec75cdb35e2576"
+    },
+    {
+      "bytes": 421,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_quantitative_counterexamples.csv",
+      "sha256": "0db8c5be82e26e2ecc44eb33a7aa2ed705ffc2f8d402019cd19a7832525b8b0a"
+    },
+    {
+      "bytes": 583,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/forbidden_action_audit.json",
+      "sha256": "66923cd76a87dda663fd2b8757c38626f7ed92311b438f110c6b6bd0175e8527"
+    },
+    {
+      "bytes": 957,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_type_distribution.jsonl",
+      "sha256": "65008765e8cbf95f5db31ab00003a96746e40d6fc7325d6dcb641e7b8d995fcf"
+    },
+    {
+      "bytes": 549,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_operational_incident_log.jsonl",
+      "sha256": "015c29c349d98fa4ba5491766362c800cdde7ea60e24b475a6018a9b6fdbbde2"
+    },
+    {
+      "bytes": 267460,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_implementation_packet.jsonl",
+      "sha256": "d0beed94d349cc300ad1b45165c16b37f21781e82c671d547fd476e1b8df1e03"
+    },
+    {
+      "bytes": 45112,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_sparse_cell_warnings.json",
+      "sha256": "9c8091174f45e0806a32213a7186b58012b6c2b3688ca35c00d96361381b2a01"
+    },
+    {
+      "bytes": 386,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_lifecycle_descriptive_summary.md",
+      "sha256": "11b26b9941d89e9a98c69a60933693efdff0db2789a491ffb3680e80a976ec0d"
+    },
+    {
+      "bytes": 204,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_module_queue.csv",
+      "sha256": "79dad246861b20e4a15721767cfe043a709b6a3118b6366bcd60b518f6281834"
+    },
+    {
+      "bytes": 583,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_forbidden_action_audit.json",
+      "sha256": "66923cd76a87dda663fd2b8757c38626f7ed92311b438f110c6b6bd0175e8527"
+    },
+    {
+      "bytes": 739,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_counterexample_core_packet.csv",
+      "sha256": "5d65fd87b83283dff0e3e20afc4a37f69a8db053cb283bda27f4a1404699b57e"
+    },
+    {
+      "bytes": 346,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/external_data_limitation_quantification.md",
+      "sha256": "d71f9c1bf23e99449a6ba8220a0ad7e5e164e36485cfb66c80ba9d40a8159445"
+    },
+    {
+      "bytes": 680,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_lifecycle_descriptive_summary.json",
+      "sha256": "4af7352e31c4f124e23805808d3e3f29e2e050aac784b12a3a8e3314133d7112"
+    },
+    {
+      "bytes": 1188,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/source_counts_by_state.csv",
+      "sha256": "b07e36c37827644fac81d79ce3d7f241739de18f3ba101a1b767846c15d6fec3"
+    },
+    {
+      "bytes": 13558,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_evidence_matrix_visual_table.jsonl",
+      "sha256": "6a58efdc2f47d5158cce8c2f7490ec69a7c542d045497329c8a18109f655e40f"
+    },
+    {
+      "bytes": 145,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/storage_capacity_hold_preservation_summary.md",
+      "sha256": "71c07ad60d41c2096eaa5d617df3ea803b06cc274355f98398fc67096ae3c249"
+    },
+    {
+      "bytes": 186,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_summary_registry.md",
+      "sha256": "959cd7489a6d11bd91459cf5acded6c4e28eaeea083e2039f3d9be38f9ef8fac"
+    },
+    {
+      "bytes": 209,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/corpus_scale_accounting_preservation_note.md",
+      "sha256": "ce9854c5ccbed493c97d5ca376dfc75be899e93b1af61f21d817340e50e10378"
+    },
+    {
+      "bytes": 164,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_evidence_quality_distribution.jsonl",
+      "sha256": "ae930eeda8df59b7c19907a97dc66b64573e8853655d5e269cbaec697159259c"
+    },
+    {
+      "bytes": 2470,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_counterexample_packet.jsonl",
+      "sha256": "8a2508d58fccfbac1f8af8ae9a4e6b8fba15db388f1576430afa0c8f3670e803"
+    },
+    {
+      "bytes": 241,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_hypothesis_channel_summary.md",
+      "sha256": "af12e795ad07b89890e0eeece1b7eb244e5d5e3d7e999464f6d509313ed552f8"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_counterexample_reserve_packet.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 131,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_visual_table_ledger.jsonl",
+      "sha256": "7eb64d2d261b827197bbb7e92766c41c820fe4f4667177aa7acb6ad007fd8c56"
+    },
+    {
+      "bytes": 185029,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/safety_pressure_channel_evidence.jsonl",
+      "sha256": "699829de860585fd01162e34544735505f0a5596d5c8f8056993d30f1a966540"
+    },
+    {
+      "bytes": 214,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_checkpoint.json",
+      "sha256": "68f51a23be9e048c36498fc0f647ad6ca8b08c1eb326f2c834b13f6504bec7eb"
+    },
+    {
+      "bytes": 153,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/urbanicity_analysis_registry.md",
+      "sha256": "3d3122f2356ef9dcefe65fe5a0f32161e24c1bb3be1db42e806563d2814bbe00"
+    },
+    {
+      "bytes": 375,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_summary_registry.json",
+      "sha256": "4d77f89dcff84eefe250988570b9aa12f2931ef8580928c33fc814697177ef78"
+    },
+    {
+      "bytes": 78,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_source_coverage.jsonl",
+      "sha256": "235cc7590680cc79dcdd67831203454c53c6ac4368a651bcfe9df2184ab04c56"
+    },
+    {
+      "bytes": 139,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_headline_ledger.jsonl",
+      "sha256": "64ac7355f89f9bf8b9c499d525aa92cc5d12a9d1d2c5fdd9ce7a5809e066df69"
+    },
+    {
+      "bytes": 421,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conditional_counterexamples.csv",
+      "sha256": "0db8c5be82e26e2ecc44eb33a7aa2ed705ffc2f8d402019cd19a7832525b8b0a"
+    },
+    {
+      "bytes": 615,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_summary.json",
+      "sha256": "c0457cc06df8090ec320a78ff02b3e08043feeee813c5eda825b940d5d84a2c3"
+    },
+    {
+      "bytes": 116,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_units_by_state.csv",
+      "sha256": "026243faffd77ef81f67841e033f8ed899d8756d8baa315a52b5ef5c48a0f0e1"
+    },
+    {
+      "bytes": 8140,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/non_safety_reduction_channel_evidence.csv",
+      "sha256": "932680c21cd9acd1a921b837de851a805f790f39d71080f8971a913e45a52c03"
+    },
+    {
+      "bytes": 967,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_lifecycle_visual_table.jsonl",
+      "sha256": "ddeec486ae9896691be9f2c23881080a792de76d4998c6ae486699d60d692fb0"
+    },
+    {
+      "bytes": 104481,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/safety_pressure_channel_evidence.csv",
+      "sha256": "f28da71da4fedb5f82f123088693ad5a38ab6fdfb36fb932a3e20150942c47c7"
+    },
+    {
+      "bytes": 104,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_side_distribution.jsonl",
+      "sha256": "9f38325edb906818a2919a19cc885d74d8f1aaabef0c871c7a2e93896a19ee66"
+    },
+    {
+      "bytes": 517,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_support_status_distribution.csv",
+      "sha256": "7a622d06680646fc59d045707094edfe77947bd754e345cc5299ea4b892a9dc5"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_reserve_packet.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 175,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/post_interpretation_storage_hold_recovery_strategy.md",
+      "sha256": "4f92c7eeeceaced71b91b607d45f4bdbf1651448516f688c0c8d2dbcdbab8c80"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_elapsed_time_results.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 202,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/independent_semantic_validation_limit_note.md",
+      "sha256": "775105625e1b88d53af61af5f2139673ea35545506993b00a75dada43426aeb6"
+    },
+    {
+      "bytes": 3038,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_adjudication.jsonl",
+      "sha256": "6f4857d117e364f1cefe7bbf7e11deabd18ffc632d29123e9f2fceef0924d591"
+    },
+    {
+      "bytes": 748,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_type_distribution.jsonl",
+      "sha256": "7dc1e0573ac227313d32f2d0d675c22ec44a9f8f6a3a1945c3a97f3a4db40059"
+    },
+    {
+      "bytes": 161,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conflict_rate_table.jsonl",
+      "sha256": "89ef52405c9a460d8012a4ce8884f6de42c3a089c3ca0f2e56588fc8c80e264a"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/fixed_hex_event_density_table.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 183,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_local_comparison_registry.md",
+      "sha256": "1fcef514d2ec387b93c7141c1ff924df6d777af3af67a403a12f0446e80e444d"
+    },
+    {
+      "bytes": 465,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_analysis_registry.json",
+      "sha256": "125d81c3a61f8dbe524b7974c89831f2a59506b69dcdf5f652dc1ff50c81f98f"
+    },
+    {
+      "bytes": 266,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/regression_design_readiness_assessment.md",
+      "sha256": "096bc5d870c0b552d11a281975ed4f38798b21bc3dcaed88542d2d71165a8e02"
+    },
+    {
+      "bytes": 208,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/counterexample_analysis_registry.md",
+      "sha256": "22f657b68dfb22fde7b2e97d3c88a06ff843e87130a49ccb77ca605508b3ba0e"
+    },
+    {
+      "bytes": 127,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/post_interpretation_storage_hold_recovery_strategy.json",
+      "sha256": "228c47c06b873a661bd6f6bb719fe7ef62229505ef92add93ba9cdce29e97ef3"
+    },
+    {
+      "bytes": 182,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_source_quality_mix.csv",
+      "sha256": "d8d69ea41560bd390f3c5ecb34884d01fa2a1250d724ff36a8126956d0e49266"
+    },
+    {
+      "bytes": 1459,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_unique_source_counts.csv",
+      "sha256": "dff19ee2214d606140916f94b138f06fe0cd56a5f09aa43c6e47020ba74913d1"
+    },
+    {
+      "bytes": 280251,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/amended_sequences.csv",
+      "sha256": "fb803f3245c2629026b4a87cd962e03c8d54193ebad94787f7f16a325e8b12f1"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_cross_examination_reserve_packet.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 538870,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_staffing_packet.jsonl",
+      "sha256": "b8e0ba988e7e63e2812098afd91722110f5877747a99d3cebb44b7bc846e89c8"
+    },
+    {
+      "bytes": 315,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_descriptive_summary.md",
+      "sha256": "b62d50b262e708f3f9030ecaf06b0ff3c81ddb9fb15135d25ab7b7f4b6f549b4"
+    },
+    {
+      "bytes": 215,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_checkpoint.json",
+      "sha256": "163af506a38fc42abfca55a6b058ffeb0a8e3145044d144fe66ea59aa0e25eae"
+    },
+    {
+      "bytes": 131,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_visual_table_ledger.jsonl",
+      "sha256": "e0cbaea7c52584519ffc5a7761ce3b6cbd2f13d0c21f48ae7e981517c607a152"
+    },
+    {
+      "bytes": 753,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_readiness_distribution.jsonl",
+      "sha256": "e536ece1d0a6bc32a43b7c973547146afbdc52b37dd66303cfc743e49ed03ae7"
+    },
+    {
+      "bytes": 1776,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_unique_municipality_counts.csv",
+      "sha256": "6d65737754e2b5141225efdb4852b515d5c1d7676a44dd2c2251e9b33a98bcd6"
+    },
+    {
+      "bytes": 483,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conditional_counterexamples.jsonl",
+      "sha256": "f61660fae726a47d8ea3b04c54f6b9ea70858f56a831d68f4565e0dbaf33de58"
+    },
+    {
+      "bytes": 490,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_analysis_registry.json",
+      "sha256": "a73c21f4f9ec4368b230f6ae266b4b181a97641b6091453192a282983e0cb0f7"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/fixed_hex_event_density_table.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2016,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/regression_not_run_reason.json",
+      "sha256": "48759525a863c1cf05ed598c2dbec6bb87354d2a9cf66059c36c55c17d08ce6d"
+    },
+    {
+      "bytes": 358,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_administrative_corroboration_summary.jsonl",
+      "sha256": "09c41d76da6f4cd61610d9d55e42fa846794c8f8e40216edd79a96f3b5e2cb73"
+    },
+    {
+      "bytes": 239770,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_hypothesis_insufficient_evidence.csv",
+      "sha256": "722fd4c58e7c39de029f08e5ddd4e39000469f5b5eb195d838b699e4209e78dd"
+    },
+    {
+      "bytes": 343343,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_descriptive_table.csv",
+      "sha256": "a360154fb5fc0ced5ebf7a4fae2ca032f036e9915e4ff04c0bdf65bbafaa2ba6"
+    },
+    {
+      "bytes": 2339721,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_core_packet.jsonl",
+      "sha256": "261719e7dea5fb0d6dee0af2deb72dd61e8f0d4f00a0739c99b8ae09bc258a08"
+    },
+    {
+      "bytes": 58750,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_visual_table.jsonl",
+      "sha256": "9ee774b96c451c95928fe297fc953f1d5081a110aadedc2f5c9fbe81558f83b5"
+    },
+    {
+      "bytes": 278,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_headline_ledger.jsonl",
+      "sha256": "e9dc0e74ed3922d51baeb3a10ba83223661d73f5b701485e7ff52a2a1e07dda3"
+    },
+    {
+      "bytes": 305,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/denominator_registry.md",
+      "sha256": "34200fcddd1bfd7ec85a912f2cb5cd86a55f46236f015fa96639b902f4829124"
+    },
+    {
+      "bytes": 181,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_quality_gate_results.md",
+      "sha256": "7e6cc579a2de2997c54bfc7112311272a9cc2704374fda6b5e5a087dc82b319c"
+    },
+    {
+      "bytes": 504,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/deterministic_external_data_classification_methodology_note.md",
+      "sha256": "82bfc3ee4659904059efdc0e6b39ad4b341893d310cbf84c78799f5c2ab87f8f"
+    },
+    {
+      "bytes": 386,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_cross_examination_manifest.json",
+      "sha256": "724d1c9352f4b342821b0aa7fa9bde1adc0533cf860e763533b9a117618e8bea"
+    },
+    {
+      "bytes": 957,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_distribution_visual_table.jsonl",
+      "sha256": "65008765e8cbf95f5db31ab00003a96746e40d6fc7325d6dcb641e7b8d995fcf"
+    },
+    {
+      "bytes": 3432,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_unique_source_counts.jsonl",
+      "sha256": "96fec462ff69cb666195bbc4b90668ade95345dcdaa4e66717400fa4965c4b95"
+    },
+    {
+      "bytes": 58,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/urban_rural_visual_table.jsonl",
+      "sha256": "3e0f5cee195144c2779e4bf2169d6be303409c53dcc556007684f6a380f1326e"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/event_administrative_corroboration_summary.jsonl",
+      "sha256": "1a4b764f3f6dce9b1bae6f1baded87e620484837d5e1d64afdb36a2345064fd3"
+    },
+    {
+      "bytes": 50,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/urban_rural_visual_table.csv",
+      "sha256": "96fd404eddd4f88c4f256e07d92c387911d88ab6ce89ef62cbeb3f7fd0ed04d7"
+    },
+    {
+      "bytes": 472,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_side_visual_table.csv",
+      "sha256": "feda595385f992bf140d378fb366f33b211c1c28190bee584578a3ae4bc5e10b"
+    },
+    {
+      "bytes": 244,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conflict_hold_descriptive_summary.md",
+      "sha256": "f6576c5f23c90cf780ae57af8e03428a557745d83e971e0944f53a12cef38275"
+    },
+    {
+      "bytes": 6348,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_evidence_matrix_visual_table.csv",
+      "sha256": "0da4e4e39daf59c12bab5bf08d78e02bad0b1488f1018cc05f32ce9e42a880d0"
+    },
+    {
+      "bytes": 200,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/geography_analysis_registry.md",
+      "sha256": "70c909702f25480382f7f394be993efb0a70ac99803b47cd61525f1804879376"
+    },
+    {
+      "bytes": 607,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/negotiated_only_sequences.jsonl",
+      "sha256": "61d16f7dba73acefedf5cd5c06a18379ce3a7dd1ed958f7b46dd407e633b033c"
+    },
+    {
+      "bytes": 6348,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_by_claim_mathematical_evidence_table.csv",
+      "sha256": "0da4e4e39daf59c12bab5bf08d78e02bad0b1488f1018cc05f32ce9e42a880d0"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_mechanism_distribution.csv",
+      "sha256": "48a466669f8cef79313ee92c8586db59385fe6d47745054db5697c952cc2197a"
+    },
+    {
+      "bytes": 805,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/whole_corpus_mathematical_analysis_methodology_note.json",
+      "sha256": "bd7e6815f954898104c551546d490a954b0e09ef7742eff1cc524ecac65f5407"
+    },
+    {
+      "bytes": 301,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_summary.md",
+      "sha256": "5b65b5b63c13f8de584fbe5b0f30f027a27d6fa342376632ccc1aa5885447599"
+    },
+    {
+      "bytes": 110,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_source_coverage.jsonl",
+      "sha256": "99e85e2a13a5a9a52357c631020764df9182afab36f5b9618922fe5aaf91cb0f"
+    },
+    {
+      "bytes": 290,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_claim_link_distribution.csv",
+      "sha256": "1113c34c376608b3db77c76a97f99273e6fee240a7ca5cf4de8c5b2d8f49842c"
+    },
+    {
+      "bytes": 124,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_urbanicity_distribution.jsonl",
+      "sha256": "3e90e084c133b3b2ff8d37f21a38895630d216300d36d0c4981f69500db465a0"
+    },
+    {
+      "bytes": 1831,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_support_visual_table.csv",
+      "sha256": "a9908df719e44ab40543ead07f5bfcfe8eecd5250ecd4f47593b473f212590c2"
+    },
+    {
+      "bytes": 437,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_readiness_distribution.csv",
+      "sha256": "e6198d73fbf6c5f6befaeeb82003163b5a2179e4eccf618b205abec498de3a5c"
+    },
+    {
+      "bytes": 132,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_geography_visual_table.jsonl",
+      "sha256": "1272a80453aa7eb14e2e5cc767d542e86f79afc1473efea22a4c79aacbcbd9eb"
+    },
+    {
+      "bytes": 121,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/urban_rural_analysis.csv",
+      "sha256": "d583f6c5bbd1cf7a1f4cecf996c8ec5075cd7e812a5c2ae319ee0f86dd9d3457"
+    },
+    {
+      "bytes": 175,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_registry.md",
+      "sha256": "cb14f79d06c58d4559a2552ccc9c25d95f1c26b3c497a1c77923e8d0b239a8de"
+    },
+    {
+      "bytes": 243,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/excluded_non_math_input_audit.json",
+      "sha256": "8ecf74c929cf7497cb9892b06a6d00ce4d875d9ab037a0b2d5dac1bcb5adc431"
+    },
+    {
+      "bytes": 282435,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/amended_sequences.jsonl",
+      "sha256": "49e9895c30f5a9bec0aeb4d358d227f1af068c94713dca26f4b4242a7badc3c2"
+    },
+    {
+      "bytes": 364,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_registry.json",
+      "sha256": "fc6e8e657b3c910d82047564977cb17f01822087d90faf74e12b167512a9356f"
+    },
+    {
+      "bytes": 185,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_candidate_summary.md",
+      "sha256": "df6c7e0e852983109b23cd82de7e1676043e995a5fad1257c8126b0c54ff40af"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_hypothesis_countervailing_evidence.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 200,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_module_queue.csv",
+      "sha256": "dc8982c1d53584f25debae289289a8df379cfe00987131f46464851277789629"
+    },
+    {
+      "bytes": 565,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/negotiated_only_sequences.csv",
+      "sha256": "970af33f72db4258daa0fdbc07f49b962bd2da658b5375ee91fff14b058c4b62"
+    },
+    {
+      "bytes": 739,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_counterexample_packet.csv",
+      "sha256": "5d65fd87b83283dff0e3e20afc4a37f69a8db053cb283bda27f4a1404699b57e"
+    },
+    {
+      "bytes": 110890,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_counterexamples.csv",
+      "sha256": "340703de6fcd51939a9525045d077aab153514ffd6b0661d9111d39e6edb2b03"
+    },
+    {
+      "bytes": 139,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_headline_ledger.jsonl",
+      "sha256": "c3baa284f7998650c971079d85cf911afa8123c381383106a06d665d920fad3d"
+    },
+    {
+      "bytes": 4266246,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequence_holds.csv",
+      "sha256": "e725498d0f71c0f61491310eb721692b8f3e57c8c5d411237607eaab6a9bf988"
+    },
+    {
+      "bytes": 381,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/analytical_unit_registry.md",
+      "sha256": "092fec42d5f662a29f4d1102e7ea8ce323f6fc5b0e70c6f8702c4ade1ea6c83e"
+    },
+    {
+      "bytes": 215,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_checkpoint.json",
+      "sha256": "4dec2defaa5d1bcaafa695e1eb3a1295b093d70c70fc6adbcd94d5743e4c9286"
+    },
+    {
+      "bytes": 77208,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_safety_wage_growth_packet.csv",
+      "sha256": "f5dfe6ef13851a931143119fb4272de8108b40b421f7aa65456bc30528537699"
+    },
+    {
+      "bytes": 1238,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_unresolved_evidence_table.jsonl",
+      "sha256": "9bce233646ae7273b465758fff54c64c24b5939a2efd31e7afda31bb69325468"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_counterexamples.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 158,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_table_registry.md",
+      "sha256": "268a18ea478fc4bebd16cf0ce9c2b303fef9e215bed0189f14f3409c7cd9078d"
+    },
+    {
+      "bytes": 108,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_summary.json",
+      "sha256": "456882339e80226ca44f23e93aea889b0c0124807b60104eb2c657792a9e3d7f"
+    },
+    {
+      "bytes": 439,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_registry.json",
+      "sha256": "dd7b8bb67adefdb4b959b505fcba8d70704bf9a547539ed0b285524fbd893d8c"
+    },
+    {
+      "bytes": 267,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/state_coverage_visual_table.csv",
+      "sha256": "c1e2a2fee393d2917864d33f279dc2d6045c8650216bb58a276e4f1e58a54633"
+    },
+    {
+      "bytes": 125,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_analytical_role_distribution.csv",
+      "sha256": "581574e1999ec2bc161f29a306af3f088d18c0d341a12c5e122cff86a92d415f"
+    },
+    {
+      "bytes": 152,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_status_distribution.jsonl",
+      "sha256": "3950a05e15275811c1a1e3af801f62d8f755ea2c3536b15c5727c2fef7f2e0b6"
+    },
+    {
+      "bytes": 566,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_type_distribution.csv",
+      "sha256": "05debb423d0d3e408a188bb2b28a8034ad792f0129de278b7dd8b3703448f74f"
+    },
+    {
+      "bytes": 90,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_side_distribution.csv",
+      "sha256": "2a179afadad2ed0c66833b6d00472e353a88eec7b68d7fbbb42ed30fafa6f6c4"
+    },
+    {
+      "bytes": 196,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_evidence_table_registry.md",
+      "sha256": "b3aed2ee9a43d9721d64b2582e9294bf5b79e604b549f95872f087f396b71d03"
+    },
+    {
+      "bytes": 753,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_pipeline_attrition_table.jsonl",
+      "sha256": "e536ece1d0a6bc32a43b7c973547146afbdc52b37dd66303cfc743e49ed03ae7"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_municipality_coverage.jsonl",
+      "sha256": "f0c0c1677100a8ac4cb06e667baf0504e084fefc0f981f64f78ce64f6f5d8491"
+    },
+    {
+      "bytes": 493,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_run_manifest.json",
+      "sha256": "f3c37e3aacd1d3cd46d88125a4f4318646f056feda7ef019438c6970773fc1bb"
+    },
+    {
+      "bytes": 1330,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_countervailing_evidence_table.jsonl",
+      "sha256": "077800998a3a79e87d65a0bbf0dd58429ca84bc525bfdc1687c6c3a6523f91bd"
+    },
+    {
+      "bytes": 1308,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_unique_event_counts.csv",
+      "sha256": "d7d8cc6f6a34d0af3448865adc77e26169dbaaa7b49cf7f96222b556f20b7f84"
+    },
+    {
+      "bytes": 100,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_source_coverage.csv",
+      "sha256": "5c426c58bc1f202c1cecac7a8b1c6d6fb400e811024f2365c92e095f366bad9e"
+    },
+    {
+      "bytes": 437,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_readiness_visual_table.csv",
+      "sha256": "e6198d73fbf6c5f6befaeeb82003163b5a2179e4eccf618b205abec498de3a5c"
+    },
+    {
+      "bytes": 153,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_figure_specifications.md",
+      "sha256": "bbfce2731a697ecb8b5d944a3a4eb3872ca879a44865d5a23875a81437589833"
+    },
+    {
+      "bytes": 4029,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/source_counts_by_state.jsonl",
+      "sha256": "e0da8631843842f50ee167c5378c71737b993bb6ffaf07ac97ccf783e825776d"
+    },
+    {
+      "bytes": 26420,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_visual_table.csv",
+      "sha256": "d263c07a8f0650dd202df93be48a0ed55d777e142103c9eb64813d786340fa5f"
+    },
+    {
+      "bytes": 115216,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/adopted_no_paid_stage_observed.jsonl",
+      "sha256": "d68675789aa970e977eca72a49a16806d5cba58bd336d702fbfabcf829506609"
+    },
+    {
+      "bytes": 261,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_by_claim_mathematical_evidence_summary.json",
+      "sha256": "4a0f971d9a2599760f5e5b01f66fc057c7578a8e73a43705bdb1d335dc531add"
+    },
+    {
+      "bytes": 472,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_side_distribution.csv",
+      "sha256": "feda595385f992bf140d378fb366f33b211c1c28190bee584578a3ae4bc5e10b"
+    },
+    {
+      "bytes": 2339721,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_cross_examination_core_packet.jsonl",
+      "sha256": "261719e7dea5fb0d6dee0af2deb72dd61e8f0d4f00a0739c99b8ae09bc258a08"
+    },
+    {
+      "bytes": 115216,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_counterexamples.jsonl",
+      "sha256": "d68675789aa970e977eca72a49a16806d5cba58bd336d702fbfabcf829506609"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_claim_table_ledger.jsonl",
+      "sha256": "256f777255e55ef8d09da5866e634baa5c7550c82d43dad23a4df03d29c9616e"
+    },
+    {
+      "bytes": 129,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/unresolved_contradictions.jsonl",
+      "sha256": "3561014f50a890a09d1f8b24d2f410e2abc693fd671975d73efb44f4a326572e"
+    },
+    {
+      "bytes": 260,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/external_search_capacity_limitation_note.md",
+      "sha256": "e99254be34dc0e8a68079d1b3b9eed674d9c47a4bafea17d4ed320e234f95418"
+    },
+    {
+      "bytes": 205,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_registry.md",
+      "sha256": "3f2cb34b068882eda9d283772a27d1060a9f350906f48edd2e684aef98a525fc"
+    },
+    {
+      "bytes": 194,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_source_quality_mix.jsonl",
+      "sha256": "a4219a0311013643374960acf2a68b2bd5eee7ef7a56df5cc4e9f68c67be8374"
+    },
+    {
+      "bytes": 238,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/corpus_scale_visual_table.csv",
+      "sha256": "7296510b1e208acdaa5450435b300fd6e97f645a59a4192fd43e22938f216385"
+    },
+    {
+      "bytes": 194,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_observation_family_mix.jsonl",
+      "sha256": "a4219a0311013643374960acf2a68b2bd5eee7ef7a56df5cc4e9f68c67be8374"
+    },
+    {
+      "bytes": 115,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_administrative_corroboration_summary.csv",
+      "sha256": "ff1d392da5dc430b2264c7c3427244bbbb6a16d25b85fe0d7c3ad232b8b0519e"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_claim_table_ledger.jsonl",
+      "sha256": "3b372510949f70bbf3741baa94a0cdc0d7aabfaa4f704d4adb4b903b44c9d9a1"
+    },
+    {
+      "bytes": 372,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_local_comparison_registry.json",
+      "sha256": "c95a26bedd2f69355468ce818bf8299712336da002fb486d3f5df11ea7598c07"
+    },
+    {
+      "bytes": 434,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/geography_analysis_registry.json",
+      "sha256": "dfeead20d509a6c0f1748069e8f77da67301c11056db4c8b5b416cf0df5b2198"
+    },
+    {
+      "bytes": 148,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_state_distribution.jsonl",
+      "sha256": "bdd387f6493b269fc853832146bb9948ac0a67a7295c05f2076488d74be40480"
+    },
+    {
+      "bytes": 216,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_checkpoint.json",
+      "sha256": "73d70b6a8904b55bd7a7f6420ff8bcfbaaa3aaa98e5791b6657932d85031033e"
+    },
+    {
+      "bytes": 226,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_module_queue.jsonl",
+      "sha256": "9eb1304f40d7d4825993ddd1a97449a2fd80ce9f15926fe4c498d9e481132dfb"
+    },
+    {
+      "bytes": 566,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_distribution_visual_table.csv",
+      "sha256": "05debb423d0d3e408a188bb2b28a8034ad792f0129de278b7dd8b3703448f74f"
+    },
+    {
+      "bytes": 509,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_superseded_output_manifest.json",
+      "sha256": "2a8d229a02059f7e8a3122b4aadaee3c2ffbd8eca435a3d60cf26e4ff03ce84a"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_counterexample_reserve_packet.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 736,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/combined_mathematical_analysis_registry_hash.json",
+      "sha256": "eb245845db8a5f7612bffbbf811bb49b45f63c4fcf275ca600af3823941df60d"
+    },
+    {
+      "bytes": 5144,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/paid_with_prior_adoption.jsonl",
+      "sha256": "cfefa26ee75e4de9b90c5e1984cb952f1a4895a1613cb8f88776762490e6fc19"
+    },
+    {
+      "bytes": 4558790,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequence_holds.jsonl",
+      "sha256": "4832e2558729b55639292a5f3fe01a03d0476385faae6276d54715c3ad3425c6"
+    },
+    {
+      "bytes": 292,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/descriptive_statistic_registry.md",
+      "sha256": "1fbeffa3a6265952cd37f7e3a4dcc36a5b869af373ca3a8d4b25f0258e0655be"
+    },
+    {
+      "bytes": 203,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/local_artifact_storage_audit.json",
+      "sha256": "6e96ffeaa05f77b0e98c1c6f9b768188f20114fd177fc8d801e94ef654344ce1"
+    },
+    {
+      "bytes": 58750,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_mechanism_side_summary.jsonl",
+      "sha256": "9ee774b96c451c95928fe297fc953f1d5081a110aadedc2f5c9fbe81558f83b5"
+    },
+    {
+      "bytes": 1036,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_descriptive_summary.json",
+      "sha256": "f011b6f0424b5d8f24a77916a327dba39f4d74e296a97cab9fdee4a3247c6bf8"
+    },
+    {
+      "bytes": 1508,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/dashboard_mathematical_analysis_update_summary.json",
+      "sha256": "1b0ae45523539558db5c7c78cb3280773874553b9ad5a4364f4652aa8d2e4df3"
+    },
+    {
+      "bytes": 231,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_analysis_registry.md",
+      "sha256": "302d3a9b24f237a81afc529f1ab007965230d99eb2923864a51fa93666f7655e"
+    },
+    {
+      "bytes": 376,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_type_distribution.csv",
+      "sha256": "96f4c5527e8f519715baf87d517d20f1efb832d2a7bc146a77d24a6b370ad70b"
+    },
+    {
+      "bytes": 326,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_local_comparison_summary.md",
+      "sha256": "c6737be7bd41eddd2a36098bf0c220a2035f9f63f126052014ad254796b27cb2"
+    },
+    {
+      "bytes": 602,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conflict_hold_visual_table.jsonl",
+      "sha256": "7d59602e3f49f7c38191ed27b9ee51ca2abf41f4e3314618b6aa9bbddd7cce06"
+    },
+    {
+      "bytes": 129,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_mechanism_distribution.jsonl",
+      "sha256": "2ace99b47bdfbec7bb7c5493f60a673ce7074651cfb70bd32810ba5eeb60fc30"
+    },
+    {
+      "bytes": 562,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_claim_link_distribution.jsonl",
+      "sha256": "d80f445962c4c6ce77f6d4f526695312867d79b51a5b3941a4b06ed2e8ff9ad9"
+    },
+    {
+      "bytes": 224,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/no_external_growth_match_finding_note.json",
+      "sha256": "95fa4e0611088b3217db9f8facefbef4d40627cf3c4f43ccefdc67c487cf0095"
+    },
+    {
+      "bytes": 489,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_lifecycle_visual_table.csv",
+      "sha256": "0f8a11767946da552f12596f9585062434fdfc4e3834af50f37a58e7025b1400"
+    },
+    {
+      "bytes": 629,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/denominator_registry.json",
+      "sha256": "2eaed541b6ca18059a1911429eaaa6d90483431976ac4866d67cd7c6537372b0"
+    },
+    {
+      "bytes": 878,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_countervailing_evidence_table.csv",
+      "sha256": "212cb740a1d5dcda9b05d2c55fe1c9a954aec7ce79d3507d7d07a14208c88d2e"
+    },
+    {
+      "bytes": 70,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_source_coverage.csv",
+      "sha256": "d9300437f98b9e58f2c0903091cd9b51527e5a0ddf196882eec300dff6abf7af"
+    },
+    {
+      "bytes": 115,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/safety_non_safety_hex_difference_table.jsonl",
+      "sha256": "744d09dadc0ba9da9561a4bc00a7efbbcec240b22f4e91744f369f406a277839"
+    },
+    {
+      "bytes": 679,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_smoke_test_results.json",
+      "sha256": "55c53bbb50bda93f85009ea21bfe933d6b59b6300b4291c63f2841cc0a80facb"
+    },
+    {
+      "bytes": 256,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_analysis_registry.md",
+      "sha256": "4b3e9cec164f1c1d89e3adabfb889115243232b5378ae447f3230dd724ca6730"
+    },
+    {
+      "bytes": 228,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_hypothesis_channel_summary.json",
+      "sha256": "0360798d56f1d431f9a9060917fec339ee46058db2d770a9d43a4afb9cd9943c"
+    },
+    {
+      "bytes": 2336,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_candidate_table.csv",
+      "sha256": "0a0ddc4ecccf841f4c4004fc1af4135982c5cb286d0f56cb6328a65426280474"
+    },
+    {
+      "bytes": 822,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_local_comparison_packet.csv",
+      "sha256": "a2a5f657651930a41173c91a77d34d5d848d243fe0f9daed265998ba50715b16"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_counterexamples.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 310727,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_headline_packet.csv",
+      "sha256": "826ecaaa7970a01c7d4517cf5439410501ab381ebf93453c015be89f1edb1f4b"
+    },
+    {
+      "bytes": 822,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/local_comparison_visual_table.csv",
+      "sha256": "a2a5f657651930a41173c91a77d34d5d848d243fe0f9daed265998ba50715b16"
+    },
+    {
+      "bytes": 251,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_administrative_support_summary.md",
+      "sha256": "14faecbd0ca7c61ab59c63d27247ed3fe1d8123c25fb532c4bccc515578ca4a4"
+    },
+    {
+      "bytes": 1428,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/external_math_ready_input_manifest.json",
+      "sha256": "5a6f6443f693afc634b054aae1a86a3f2fb428832e5a04500cb600fa6856e2b7"
+    },
+    {
+      "bytes": 602,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_hold_distribution.jsonl",
+      "sha256": "7d59602e3f49f7c38191ed27b9ee51ca2abf41f4e3314618b6aa9bbddd7cce06"
+    },
+    {
+      "bytes": 1542,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_specific_counterexamples.csv",
+      "sha256": "26f9120ab890c43c68d5444d5c416d1ab0701a84f62b092ac9b64593b5cc804a"
+    },
+    {
+      "bytes": 1753,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/municipality_counts_by_state.jsonl",
+      "sha256": "7907cbdfa9f4a7d45cf286b0187b47a2421152934498f47179e6e494de10fd6a"
+    },
+    {
+      "bytes": 1349,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_records.jsonl",
+      "sha256": "dd1ee62aae893c2ce9664bdaefd4b4d4763ed00f15e95a0c22a4e2c6bd89c50b"
+    },
+    {
+      "bytes": 877,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/whole_corpus_mathematical_analysis_methodology_note.md",
+      "sha256": "a07cddd0b766c30edbfc09a27b52c9c34191930410d07736129b0f0dc2abbd29"
+    },
+    {
+      "bytes": 632028,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_headline_packet.jsonl",
+      "sha256": "b3627b0a986a934c55a27dcc7cda5835408fc6e06b50c736409b8215f2c1bc66"
+    },
+    {
+      "bytes": 138,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/corpus_scale_accounting_preservation_note.json",
+      "sha256": "c289933a082875b06a256a91d6020461213235922b7d6555552b2f07c9d4f264"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_hypothesis_countervailing_evidence.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 193,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_module_queue.csv",
+      "sha256": "9296c3ac9b9ec4b7d494682b4ebc4641d891e17eca39a0bd6734153d65564850"
+    },
+    {
+      "bytes": 297,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_analysis_input_audit.md",
+      "sha256": "da85482cce777c1f442420cf34b0dfb943bf8c9a59c50c0996825dfacf5a6900"
+    },
+    {
+      "bytes": 967,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequence_distribution.jsonl",
+      "sha256": "ddeec486ae9896691be9f2c23881080a792de76d4998c6ae486699d60d692fb0"
+    },
+    {
+      "bytes": 105,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/event_administrative_corroboration_summary.csv",
+      "sha256": "d7855e6f16a93c5029f1eec75443ac58962c9d24291b02918bb6a13c52e6c2f7"
+    },
+    {
+      "bytes": 18352,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/whole_corpus_mathematical_analysis_summary.json",
+      "sha256": "b3905578a52b54ea8607a8fe45a533701cf3579bb3f0fc68c5c8ec1ee6366c9f"
+    },
+    {
+      "bytes": 753,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_readiness_visual_table.jsonl",
+      "sha256": "e536ece1d0a6bc32a43b7c973547146afbdc52b37dd66303cfc743e49ed03ae7"
+    },
+    {
+      "bytes": 180,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_large_file_audit.json",
+      "sha256": "4c4afc4a89a2118e719fc7530832992b30111604432fcc604d0736ffec13ce1c"
+    },
+    {
+      "bytes": 1524,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_local_comparison_packet.jsonl",
+      "sha256": "ca6180e0614d1dc3ef29cf1b6b2dff19a335ecba51472d0ce5eec45686c8bc02"
+    },
+    {
+      "bytes": 401,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/external_data_limitation_quantification.json",
+      "sha256": "ecbe8a1c69947be455d041c68cc5b5d751b0dd660cfadfcf02f66606d41502d3"
+    },
+    {
+      "bytes": 437,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_pipeline_attrition_table.csv",
+      "sha256": "e6198d73fbf6c5f6befaeeb82003163b5a2179e4eccf618b205abec498de3a5c"
+    },
+    {
+      "bytes": 1437,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_result_ledger.jsonl",
+      "sha256": "e944340d196f7f8c8e4c06e4f91bc34a505068908a30d70be0ef195d4e859ec7"
+    },
+    {
+      "bytes": 1124454,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_cross_examination_core_packet.csv",
+      "sha256": "6595d52df26af5ba5944af770326b16f2f4db723ed56fea02c68a43d70b84df3"
+    },
+    {
+      "bytes": 160,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_coverage_registry.md",
+      "sha256": "73a5615239253859c48bf198722dc7be763d5128dbceeca18c958466eaf62ea1"
+    },
+    {
+      "bytes": 673,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/whole_corpus_mathematical_analysis_summary.md",
+      "sha256": "45826ddc068d3b074020af731010f6d9c15b157bb613ebc28c344939b931bf6f"
+    },
+    {
+      "bytes": 979,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_formula_audit.jsonl",
+      "sha256": "119d162fcedc9830b43895f640672e1e5402c79de5bc2b5a7b885aab01d91e55"
+    },
+    {
+      "bytes": 222,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_module_queue.jsonl",
+      "sha256": "465bb127a89818d06fcf2e984a73fcfbb20c0020b70770c5dc0e5ae386038bc6"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_reserve_packet.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 17950,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_figure_specifications.json",
+      "sha256": "95b1d090fa3c3a4898ea0303271b316fc6264e044aab8c7dc6bf7e77520a6ed9"
+    },
+    {
+      "bytes": 908,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_result_ledger.jsonl",
+      "sha256": "2d056f060697c5b3f24c5b0088acafd134f5db5967a37959de5dd828eef0606b"
+    },
+    {
+      "bytes": 215,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_module_queue.jsonl",
+      "sha256": "ebe73503c17ca047ae237667e7bfa1f530250aa581468e1a9f1c7936dc306c0f"
+    },
+    {
+      "bytes": 4864,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/paid_with_prior_adoption.csv",
+      "sha256": "1deae7c219c95f4db93df0e0287cbc26b881dfdfda752daaa88c77c0c9087e1d"
+    },
+    {
+      "bytes": 822,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_local_comparison_table.csv",
+      "sha256": "a2a5f657651930a41173c91a77d34d5d848d243fe0f9daed265998ba50715b16"
+    },
+    {
+      "bytes": 116,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_state_distribution.csv",
+      "sha256": "026243faffd77ef81f67841e033f8ed899d8756d8baa315a52b5ef5c48a0f0e1"
+    },
+    {
+      "bytes": 539729,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/proposed_only_sequences.csv",
+      "sha256": "c685eff153ff6a41c37860f0ab15b23d59efb96eea3e4356b7437568117e4cce"
+    },
+    {
+      "bytes": 892767,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_descriptive_table.jsonl",
+      "sha256": "fe9323dbd2598a2fbe90963a70aaf3abd6f3082204d4174d6c66d961e5190524"
+    },
+    {
+      "bytes": 13558,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_claim_packet.jsonl",
+      "sha256": "6a58efdc2f47d5158cce8c2f7490ec69a7c542d045497329c8a18109f655e40f"
+    },
+    {
+      "bytes": 139,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_headline_ledger.jsonl",
+      "sha256": "e59a91a1af693c5d3c0d821211980cd6bbbb4af4c453045dbc75ce531fb101fa"
+    },
+    {
+      "bytes": 16486,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_result_ledger.jsonl",
+      "sha256": "8ff9b466ad2247c1dc3c9283d564217174edd7172f04c2be7c73ffe7cf94dbc0"
+    },
+    {
+      "bytes": 2727,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_events_by_state.jsonl",
+      "sha256": "4cfb85422337d37d36bfb733efaa2ae937b2977d6e8ed2bb4bf40c40f06b6d86"
+    },
+    {
+      "bytes": 1708,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_geography_summary.json",
+      "sha256": "5fa496fef1978c9be56a0a2bef8d69f117b9790a73db61981e23c98819537308"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_elapsed_time_results.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 228,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_005_module_queue.csv",
+      "sha256": "5f1100c3aeb23f49a02bd32a2f26e9a3433dfb4bbb9ecf2ccd4ff085f3038b42"
+    },
+    {
+      "bytes": 750,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/analytical_unit_registry.json",
+      "sha256": "2e470cb981bac4cb76f570330db7e4779917ede00b3f5b40462c886bcf91e400"
+    },
+    {
+      "bytes": 6348,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_claim_packet.csv",
+      "sha256": "0da4e4e39daf59c12bab5bf08d78e02bad0b1488f1018cc05f32ce9e42a880d0"
+    },
+    {
+      "bytes": 602,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/readiness_failure_reason_table.jsonl",
+      "sha256": "7d59602e3f49f7c38191ed27b9ee51ca2abf41f4e3314618b6aa9bbddd7cce06"
+    },
+    {
+      "bytes": 348,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_staged_file_audit.json",
+      "sha256": "3f562b13dab38846fbff0a80759e15d9dff77514e5e0cd381c2240b827cd38e5"
+    },
+    {
+      "bytes": 357,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_unresolved_evidence_table.csv",
+      "sha256": "7d4cbc639f27d2bf94912d36c8763d277720c766c0eed3720c4d906fdb6945e3"
+    },
+    {
+      "bytes": 268769,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_staffing_packet.csv",
+      "sha256": "a83a213b08461b23e87cd0cf593506f35ba1d7fff10c3d66323ebedca2692ead"
+    },
+    {
+      "bytes": 4148,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_production_ready_manifest.json",
+      "sha256": "450f7a29b476eb8d7aefc338c0f33b5eb5916d16ead1e99271699380ac8a405f"
+    },
+    {
+      "bytes": 274,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/counterexample_summary.md",
+      "sha256": "c83b4a8335ea046fa675a028b5f6e93c213e52a6c8e0be08599d99ebb895846c"
+    },
+    {
+      "bytes": 4240,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_candidate_table.jsonl",
+      "sha256": "5afc1113f04d5b1590b15ba35113008a7b79e2ce5b1482724cf97f64ca004f2d"
+    },
+    {
+      "bytes": 137,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_analytical_role_distribution.jsonl",
+      "sha256": "66f9f16b78645bceea8d49e90543dad81b382a1726db9fa84a52ad426dc01c90"
+    },
+    {
+      "bytes": 927,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_result_ledger.jsonl",
+      "sha256": "4deb7b262df2e02c995ae76f4a62fd458ce002e91a8d004c65ceadebb671cf78"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_failed_module_repair_queue.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 131,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_visual_table_ledger.jsonl",
+      "sha256": "cc6617f7f9937f20be7da7156ed149f550e5c7f5aa50c120ad1cdf77dbf62b0c"
+    },
+    {
+      "bytes": 362647,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_conflict_packet.jsonl",
+      "sha256": "7361624b058c93027895a7c5d6e063ebf4dcde35fbf95b1ae9ee995bfca13cae"
+    },
+    {
+      "bytes": 429378,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_hypothesis_insufficient_evidence.jsonl",
+      "sha256": "03414d1ca1767c5ec8cb64d302bd430b269213c98d6cafa13db3127a1b065751"
+    },
+    {
+      "bytes": 347,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/visual_table_registry.json",
+      "sha256": "6deb3f64369f7db77394447470eaf4d03efdfc98f767d64fa2ea0dffe77933ec"
+    },
+    {
+      "bytes": 1184,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_result_ledger.jsonl",
+      "sha256": "52600d6e8db8c7e5d711d0c933dadc7931892ec6ba56002843c2ac1e408c7b97"
+    },
+    {
+      "bytes": 72,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequences_by_state.csv",
+      "sha256": "e8d29ca6b9a1f8ee2bc6cf507951818afda348bc7529d27e98e654be422fcd88"
+    },
+    {
+      "bytes": 258,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/corpus_scale_visual_table.jsonl",
+      "sha256": "cd3e165dfe2e0244910219241440da56007d988565d6d53ffd1e3b20198df4cd"
+    },
+    {
+      "bytes": 206,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_summary.md",
+      "sha256": "2931ef72c5883f894a0637fc9ed2f1785da2cbdfcbb0e474d2113dff90c66bdd"
+    },
+    {
+      "bytes": 110890,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/adopted_no_paid_stage_observed.csv",
+      "sha256": "340703de6fcd51939a9525045d077aab153514ffd6b0661d9111d39e6edb2b03"
+    },
+    {
+      "bytes": 489,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequence_distribution.csv",
+      "sha256": "0f8a11767946da552f12596f9585062434fdfc4e3834af50f37a58e7025b1400"
+    },
+    {
+      "bytes": 157438,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_safety_wage_growth_packet.jsonl",
+      "sha256": "78b413265130dc858ad579d8870975b86d69206437b2a7f1fa6fae4cb05345eb"
+    },
+    {
+      "bytes": 889,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_support_status_distribution.jsonl",
+      "sha256": "5da6258c915c2cf70669ae5ef81f6fcedd6a327345adb6e8361240e6b1ff09bc"
+    },
+    {
+      "bytes": 107,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_municipality_coverage.csv",
+      "sha256": "49d6a8d9510ed12c477476a6708ad4f1636efcf742e7c846bd01e7bcf24588ee"
+    },
+    {
+      "bytes": 461,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/regression_readiness_registry.json",
+      "sha256": "f1ab264923825909c0aa5f7203cc115419dd28f7622bc8a389df445db4b26756"
+    },
+    {
+      "bytes": 153,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/counterexample_summary.json",
+      "sha256": "c1ed3e477840becfcd4750dc679f35172263908f7bc5ba316ba141b156bde737"
+    },
+    {
+      "bytes": 101,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/safety_non_safety_hex_difference_table.csv",
+      "sha256": "d091309c851286d6de720514b4f23876cd204c8e0da3043a5d88b91e9088939a"
+    },
+    {
+      "bytes": 10501,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_administrative_support_summary.json",
+      "sha256": "e4192ac10d1a6b24873fb101b7b74836ee678c9f309906c779603a185c8d5fdf"
+    },
+    {
+      "bytes": 437,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/pipeline_attrition_visual_table.csv",
+      "sha256": "e6198d73fbf6c5f6befaeeb82003163b5a2179e4eccf618b205abec498de3a5c"
+    },
+    {
+      "bytes": 1524,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/local_comparison_visual_table.jsonl",
+      "sha256": "ca6180e0614d1dc3ef29cf1b6b2dff19a335ecba51472d0ce5eec45686c8bc02"
+    },
+    {
+      "bytes": 300,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_events_by_state.csv",
+      "sha256": "127c89a5ca69826d375841a860093f7f79448563841136e1d8fe5e14e367fd42"
+    },
+    {
+      "bytes": 2895,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/validation_report.json",
+      "sha256": "2a0af5c9bf87fdf44c5d9d7f79ce53215b5500b88af73044d50514867e965bdf"
+    },
+    {
+      "bytes": 212,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/no_external_wage_match_finding_note.md",
+      "sha256": "85a4df088784f5a909086d919a4c8b3bb03f417cbc6f71106cb1c741aa031e43"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/unresolved_contradictions.csv",
+      "sha256": "22a48acf97f9c4dc547bc977c5844bc0d034a09142bd40139984da6484ebbbd2"
+    },
+    {
+      "bytes": 215,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_001_checkpoint.json",
+      "sha256": "07b93bbcced49bb1b11ce891d8b626053b68392906329891f8ce0a5f41f923f3"
+    },
+    {
+      "bytes": 92,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/no_gabriel_external_evidence_methodology_note.json",
+      "sha256": "3e3d9fb9a3eee5a535741ab4fab3a0ec8ed7a4e2b7a38450ba3fc88f2e591036"
+    },
+    {
+      "bytes": 1987,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_qualitative_counterexamples.jsonl",
+      "sha256": "27fc172a63c7d97f14fffef883ca220d7485cf545388ff9b1d541e183c0bcc4c"
+    },
+    {
+      "bytes": 234,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_claim_table_ledger.jsonl",
+      "sha256": "43616f9e43a0ff052c45a39209999bd0df957805bb572334fca2a924b9bd576c"
+    },
+    {
+      "bytes": 1524,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_local_comparison_table.jsonl",
+      "sha256": "ca6180e0614d1dc3ef29cf1b6b2dff19a335ecba51472d0ce5eec45686c8bc02"
+    },
+    {
+      "bytes": 818,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_side_distribution.jsonl",
+      "sha256": "7d5efd8867c648c841bdd5bcd35100f0f5358a2c7ea4de9674f924f03fbcb6db"
+    },
+    {
+      "bytes": 2261,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_adjudication.csv",
+      "sha256": "b7ba7081dd38791a923949f820a2fcd5858d790d8005440de9be9a69431bc3ea"
+    },
+    {
+      "bytes": 162,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/no_gabriel_external_evidence_methodology_note.md",
+      "sha256": "954ef0353552356cdb783b6a5f09b026932925f0053d56b99e8b28a53c72565e"
+    },
+    {
+      "bytes": 377,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_run_state.json",
+      "sha256": "728cc0e48935c63cab1aaec8601028946dca4cb0f25e99f96fdc9a94d3f8701d"
+    },
+    {
+      "bytes": 86,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_candidate_summary.json",
+      "sha256": "73a70c4c3c5b950e93b2dab2108460e2b29cda65e143e2743c46ac730d10dd48"
+    },
+    {
+      "bytes": 182,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_observation_family_mix.csv",
+      "sha256": "d8d69ea41560bd390f3c5ecb34884d01fa2a1250d724ff36a8126956d0e49266"
+    },
+    {
+      "bytes": 571,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/descriptive_statistic_registry.json",
+      "sha256": "cebcc92f1b82d4033524e74cd8e67b17ef729bc893494dd753c9cd5850c7b897"
+    },
+    {
+      "bytes": 182,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_geography_summary.md",
+      "sha256": "6a45eefe5021cd9242f0992404b68528455d38781414db66d9596b899f856416"
+    },
+    {
+      "bytes": 1341,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/state_coverage_visual_table.jsonl",
+      "sha256": "b7e5c407e082cc8e523d203daf16ca582163381a0d8a5a99888a037b2f54ef98"
+    },
+    {
+      "bytes": 182503,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_conflict_packet.csv",
+      "sha256": "b38fcfe2aebcb2f1807043a0cd982e41093f326563defbefae89476136fa4a4a"
+    },
+    {
+      "bytes": 2470,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/counterexample_visual_table.jsonl",
+      "sha256": "8a2508d58fccfbac1f8af8ae9a4e6b8fba15db388f1576430afa0c8f3670e803"
+    },
+    {
+      "bytes": 132,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_units_by_state.jsonl",
+      "sha256": "1272a80453aa7eb14e2e5cc767d542e86f79afc1473efea22a4c79aacbcbd9eb"
+    },
+    {
+      "bytes": 82,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequences_by_state.jsonl",
+      "sha256": "b59f42d29c21ac6cc083d70ec9f8dbe97dcfec4799f4142c466675ba63af3186"
+    },
+    {
+      "bytes": 373,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conflict_hold_visual_table.csv",
+      "sha256": "64245b6eecf53ab455292649cbe92af3e5f28ac93914447f8ad48d602a8d1069"
+    },
+    {
+      "bytes": 1507,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_lane_plan.json",
+      "sha256": "9f145f3c41497f13ddeddbd13cd772fa2e71b60d7f7617bec3a00487ff4a20a1"
+    },
+    {
+      "bytes": 175,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/regression_design_readiness_assessment.json",
+      "sha256": "daea0ae959c5c1afa4fce9008c3f9f7aa2bf317a2c0352aad86cd6263f24f402"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hex_density_visual_table.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hex_density_visual_table.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 373,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/readiness_failure_reason_table.csv",
+      "sha256": "64245b6eecf53ab455292649cbe92af3e5f28ac93914447f8ad48d602a8d1069"
+    },
+    {
+      "bytes": 2051,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_design.json",
+      "sha256": "0d8fb98a9bdf6d8ea328f0cb9c6cceb27694cdd285660628024ac8a8bc5fa725"
+    },
+    {
+      "bytes": 137,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/urban_rural_analysis.jsonl",
+      "sha256": "5c9b9c9e54efd18de2b036583d4f26ef044d54c000200ee247e1c1b6126d8f1a"
+    },
+    {
+      "bytes": 133243,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_implementation_packet.csv",
+      "sha256": "693393b9045546574a1496f077152f2057fc53314ee01922027ce2a485392111"
+    },
+    {
+      "bytes": 131,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_visual_table_ledger.jsonl",
+      "sha256": "a66aaacc8564ee0c2ec01216876fe705344992306a0457c09f06f139a8f1a271"
+    },
+    {
+      "bytes": 203,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_local_artifact_storage_audit.json",
+      "sha256": "6e96ffeaa05f77b0e98c1c6f9b768188f20114fd177fc8d801e94ef654344ce1"
+    },
+    {
+      "bytes": 2408,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/regression_gate_results.json",
+      "sha256": "381b7ae0e6c6d59ab07e0954dc88b712b2636e6cd916a896426aadb25cea6668"
+    },
+    {
+      "bytes": 227,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/regression_readiness_registry.md",
+      "sha256": "83c5dd8767f417bf07808d579e17d4979e21757ae3b9bb0a00963352e0d9dfa9"
+    },
+    {
+      "bytes": 117,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_002_claim_table_ledger.jsonl",
+      "sha256": "8acc21b597678475e5f37226e1eea94cbe052c1dc79a0f87c645b473769cbf0f"
+    },
+    {
+      "bytes": 342,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/urbanicity_analysis_registry.json",
+      "sha256": "3add51ee9c9097d7357921cc7957ccc444489c45f02c125163be04ab62699fac"
+    },
+    {
+      "bytes": 7,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematically_enriched_cross_examination_reserve_packet.csv",
+      "sha256": "410f0d9cd0f7d301a94ed7fe486e60b5ee007fca5b7fc1e6bda3dc8475e7525c"
+    },
+    {
+      "bytes": 136,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/hold_state_distribution.csv",
+      "sha256": "3f22a6a7361c351c633e8d08df628ee59305899ca81752e74dcdfe517f59f1b5"
+    },
+    {
+      "bytes": 179,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_event_deduplication_preservation_note.md",
+      "sha256": "2d39db4ad96cc91965dca4bf8c9f04b7d367013a625a6394f6e66fca35ea4b97"
+    },
+    {
+      "bytes": 373,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_hold_distribution.csv",
+      "sha256": "64245b6eecf53ab455292649cbe92af3e5f28ac93914447f8ad48d602a8d1069"
+    },
+    {
+      "bytes": 1150,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_math_input_manifest.json",
+      "sha256": "2d54b3370a700c1b5570b545c509284ab34ab70a38ebd5992797fd52b42eab2a"
+    },
+    {
+      "bytes": 227,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/no_external_growth_match_finding_note.md",
+      "sha256": "f3c642117d2682fb337b4029f08f11be14d00ee6840041915a83a3adbee0d29b"
+    },
+    {
+      "bytes": 783,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_sampled_qa_records.csv",
+      "sha256": "49506e1f8359f3732dd6bc4755186ceb8f3b289f5a0e2cadd787ebd30a3722d2"
+    },
+    {
+      "bytes": 413,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_lane_plan.md",
+      "sha256": "e93201571648e45e6e5e2794b4e5e765e1fdbb884f24bb719cae6a688d45adc6"
+    },
+    {
+      "bytes": 702,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_stage_transition_log.jsonl",
+      "sha256": "e24121ba690da02f6d4175f5101ed2600473a0be741b7d0b4a0feddb49eb6307"
+    },
+    {
+      "bytes": 244,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_stage_checkpoint.json",
+      "sha256": "c823d27d5f001525236e674a9bc386e69157b6c7894e48a2b49b2abd175bd58a"
+    },
+    {
+      "bytes": 139,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_headline_ledger.jsonl",
+      "sha256": "d4a91f4588ffa86392e5abdb6bcb239c27fb0447536e0aad80fbe05ed25a92fd"
+    },
+    {
+      "bytes": 138,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_status_distribution.csv",
+      "sha256": "aa4d15c7b796431d6e1fa4699091ef9ed549e2aef299aad5f4c87b9a83a1a848"
+    },
+    {
+      "bytes": 349,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_coverage_registry.json",
+      "sha256": "c724bb0cab3e4c2535b8b7544fa00f4685ccef014e6ec139c83a4c036e405817"
+    },
+    {
+      "bytes": 0,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_failed_module_repair_queue.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 26420,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_growth_mechanism_side_summary.csv",
+      "sha256": "d263c07a8f0650dd202df93be48a0ed55d777e142103c9eb64813d786340fa5f"
+    },
+    {
+      "bytes": 1776,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/validation_report.md",
+      "sha256": "d0e23200e686f4c09989291b6cb394696bff22845e8c6c305ca86c02d8bcfd6f"
+    },
+    {
+      "bytes": 1196,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_pipeline_attrition_summary.json",
+      "sha256": "2d9ac30c6b63f2f84c2d693b1d13015ac7d09dbbb8058bd2c3bede1a095f3aa9"
+    },
+    {
+      "bytes": 195,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_module_queue.csv",
+      "sha256": "b896b4c6ac5601168ce95c8684bcd11099ee438310e88fa88950e5247fdbd002"
+    },
+    {
+      "bytes": 2336,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_cross_examination_queue.csv",
+      "sha256": "0a0ddc4ecccf841f4c4004fc1af4135982c5cb286d0f56cb6328a65426280474"
+    },
+    {
+      "bytes": 13558,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_by_claim_mathematical_evidence_table.jsonl",
+      "sha256": "6a58efdc2f47d5158cce8c2f7490ec69a7c542d045497329c8a18109f655e40f"
+    },
+    {
+      "bytes": 189,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_local_comparison_summary.json",
+      "sha256": "15c95c8f78e65c9c24a83d81d6e70a4f48e6e1a1e8aa75896fc76773c12cfc98"
+    },
+    {
+      "bytes": 739,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/counterexample_visual_table.csv",
+      "sha256": "5d65fd87b83283dff0e3e20afc4a37f69a8db053cb283bda27f4a1404699b57e"
+    },
+    {
+      "bytes": 4946,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_unique_event_counts.jsonl",
+      "sha256": "c55d8d777396b9748945222af0c5bf79fd86624b6dfce9a80ccfca841b4d6d65"
+    },
+    {
+      "bytes": 148,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_evidence_quality_distribution.csv",
+      "sha256": "a099a59d18a2c3e2c6c3bf3043c80b293e760959a3ca19e4df2bee5e63c9b6e5"
+    },
+    {
+      "bytes": 1987,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_specific_counterexamples.jsonl",
+      "sha256": "27fc172a63c7d97f14fffef883ca220d7485cf545388ff9b1d541e183c0bcc4c"
+    },
+    {
+      "bytes": 262,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_003_visual_table_ledger.jsonl",
+      "sha256": "109950de67c63feb67937d815237a429dfb692285974b0ffefbf345af61f967f"
+    },
+    {
+      "bytes": 217,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_lane_004_module_queue.jsonl",
+      "sha256": "490a6a9ddaacf38d6e8ffe51f1c7b6eb1e2edb354c6d9fc65796366546121805"
+    },
+    {
+      "bytes": 63,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/unknown_urbanicity_summary.json",
+      "sha256": "14960cb375ec4e843aa10dc828886e69b80941f484fa697568c4e7444f0ee067"
+    },
+    {
+      "bytes": 387,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/large_file_audit.json",
+      "sha256": "eb4b773b7149af0392e255416d1ad8088519c096ee48d81720260fae59b4161c"
+    },
+    {
+      "bytes": 4008,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_unique_municipality_counts.jsonl",
+      "sha256": "808c32ce5baab0a7693fee5fec090b09f0e6602577ac4a9acb08c62b1bfddad0"
+    },
+    {
+      "bytes": 157,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/independent_semantic_validation_limit_note.json",
+      "sha256": "352e4b864a8bc2f20141656caaa926e5fcc007812cfa907b9386ac6ef8de155c"
+    },
+    {
+      "bytes": 397,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/counterexample_analysis_registry.json",
+      "sha256": "ece35b5e598dc862424da69641c7500287c23c1c719d82aa5d4486735290b092"
+    },
+    {
+      "bytes": 110,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_urbanicity_distribution.csv",
+      "sha256": "f763e97058e3da5c4667b1c0e6a5d45a0993f2e8505480e3f1488e545cbba377"
+    },
+    {
+      "bytes": 411,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/headline_number_formula_audit.csv",
+      "sha256": "82879ca414ef0ff98400e19eca5ea9526726e3a6d52e840b5317ff81a038857d"
+    },
+    {
+      "bytes": 753,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/pipeline_attrition_visual_table.jsonl",
+      "sha256": "e536ece1d0a6bc32a43b7c973547146afbdc52b37dd66303cfc743e49ed03ae7"
+    },
+    {
+      "bytes": 2470,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_counterexample_core_packet.jsonl",
+      "sha256": "8a2508d58fccfbac1f8af8ae9a4e6b8fba15db388f1576430afa0c8f3670e803"
+    },
+    {
+      "bytes": 7510,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mechanism_support_visual_table.jsonl",
+      "sha256": "5533c4c5c2f510bb6c66f2a95087c9b79ed5286a96dda3d50650dee90b34d1ea"
+    },
+    {
+      "bytes": 483,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/documentary_quantitative_counterexamples.jsonl",
+      "sha256": "f61660fae726a47d8ea3b04c54f6b9ea70858f56a831d68f4565e0dbaf33de58"
+    },
+    {
+      "bytes": 402,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/conflict_hold_descriptive_summary.json",
+      "sha256": "01c85855a615f35f397af8e9aeb710848bee3095fe68d33402aaae1693d7a8ab"
+    },
+    {
+      "bytes": 580,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_quality_gate_results.json",
+      "sha256": "f84179548931178a02a4a31241172a7486e71b4697401b38df6477ee253d396b"
+    },
+    {
+      "bytes": 1815,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_worker_process_inventory.json",
+      "sha256": "a83efd18a22b542ff0ef8ea265f8b642cb3d6cf9b54cd2b2d53f7a77af8eb50b"
+    },
+    {
+      "bytes": 385,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_evidence_table_registry.json",
+      "sha256": "5e3e3058d94e761c7ab31e9a16cd0b177379c0a717a49607953d514a2aba70e5"
+    },
+    {
+      "bytes": 133,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/math_disk_capacity_audit.json",
+      "sha256": "4d0b721b255b4fe49d10cdc159748654a12d28fc220530fae654e3c622d4282e"
+    },
+    {
+      "bytes": 5360,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/mathematical_analysis_input_audit.json",
+      "sha256": "7985249a3219314ac8b2dac3ae37f02dd3ef97f8f35c86bbd2afe056169b2409"
+    },
+    {
+      "bytes": 213,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/evidence_pipeline_attrition_summary.md",
+      "sha256": "3b1de9b8553a00eb577489198f57562adbe89fede7c2eec787493424ecd7a7f4"
+    },
+    {
+      "bytes": 116,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_geography_visual_table.csv",
+      "sha256": "026243faffd77ef81f67841e033f8ed899d8756d8baa315a52b5ef5c48a0f0e1"
+    },
+    {
+      "bytes": 171,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/claim_by_claim_mathematical_evidence_summary.md",
+      "sha256": "65c5fce921c2a38e7fa991cf260c4bff45cd8902d90bb9831bd85bd007c4dd97"
+    },
+    {
+      "bytes": 269,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/municipality_counts_by_state.csv",
+      "sha256": "fd7cbdb5d96ed2b06f819d62d19c4100e5bf4550722ac3582aa1c2a6bbf4e92a"
+    },
+    {
+      "bytes": 132,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/staffing_state_distribution.jsonl",
+      "sha256": "1272a80453aa7eb14e2e5cc767d542e86f79afc1473efea22a4c79aacbcbd9eb"
+    }
+  ],
+  "commit": "pending_final_commit",
+  "created_at": "2026-08-06T03:37:50.994165+00:00",
+  "decision": "broad_state_whole_corpus_mathematical_analysis_completed_cross_examination_ready",
+  "ending_head": "pending_final_commit",
+  "five_lanes_complete": true,
+  "local_output_root": "artifacts/local_structured_external_data/whole_corpus_mathematical_analysis_2026-08-05",
+  "output_directory": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05",
+  "push_status": "pending",
+  "regression_ran": false,
+  "rendered_visuals": 0,
+  "runtime_seconds_total": 693.654,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05"
+}

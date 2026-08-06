@@ -1,0 +1,30 @@
+{
+  "computed": 16,
+  "external_growth_pairs_added": 0,
+  "interpretation": {
+    "COLA": "too sparse",
+    "across_board": "mixed",
+    "step_progression": "leans safety",
+    "uniform_safety_advantage": false
+  },
+  "records": 432,
+  "source_reported": 416,
+  "unit_cycle_weighted_means": {
+    "COLA": {
+      "fire": 2.75,
+      "non_safety": 3.2,
+      "police": 3.35,
+      "safety": 3.25
+    },
+    "across_board": {
+      "fire": 6.32,
+      "non_safety": 6.06,
+      "police": 4.02,
+      "safety": 4.65
+    },
+    "step_progression": {
+      "non_safety": 2.75,
+      "safety_or_police": 7.44
+    }
+  }
+}

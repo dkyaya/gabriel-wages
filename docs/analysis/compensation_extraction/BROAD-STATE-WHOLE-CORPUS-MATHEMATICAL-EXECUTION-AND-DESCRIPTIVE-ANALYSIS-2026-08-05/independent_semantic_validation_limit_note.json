@@ -1,0 +1,5 @@
+{
+  "claim_critical_records_require_source_review": true,
+  "mechanical_qa_is_independent_human_gold": false,
+  "semantic_cross_examination_pending": true
+}

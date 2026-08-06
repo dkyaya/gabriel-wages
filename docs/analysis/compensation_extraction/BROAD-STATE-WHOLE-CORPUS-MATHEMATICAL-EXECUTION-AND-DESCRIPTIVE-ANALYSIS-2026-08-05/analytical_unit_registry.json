@@ -1,0 +1,30 @@
+{
+  "registry": "analytical_unit_registry",
+  "rules": [
+    {
+      "basis": "source_specific_staffing_observation",
+      "rule_id": "ANALYTICAL_UNIT_REGISTRY-001"
+    },
+    {
+      "basis": "implementation_sequence",
+      "rule_id": "ANALYTICAL_UNIT_REGISTRY-002"
+    },
+    {
+      "basis": "deduplicated_implementation_event",
+      "rule_id": "ANALYTICAL_UNIT_REGISTRY-003"
+    },
+    {
+      "basis": "unique_source",
+      "rule_id": "ANALYTICAL_UNIT_REGISTRY-004"
+    },
+    {
+      "basis": "unique_municipality",
+      "rule_id": "ANALYTICAL_UNIT_REGISTRY-005"
+    },
+    {
+      "basis": "claim_evidence_unit",
+      "rule_id": "ANALYTICAL_UNIT_REGISTRY-006"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

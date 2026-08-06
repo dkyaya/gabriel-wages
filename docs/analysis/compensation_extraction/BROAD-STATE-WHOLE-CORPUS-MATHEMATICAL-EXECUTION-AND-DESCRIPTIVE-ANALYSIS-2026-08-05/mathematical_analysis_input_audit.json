@@ -1,0 +1,105 @@
+{
+  "canonical_whole_corpus_manifests": [
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-RATING-SPAN-SYNTHESIS-AND-CLAIM-READINESS-2026-08-03/whole_corpus_canonical_layer_manifest.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/broad_state_whole_corpus_claim_package_prep_manifest.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_manifest.json",
+    "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/wage_growth_continuity_manifest.json"
+  ],
+  "checked_at": "2026-08-06T03:28:41.591543+00:00",
+  "disk_passed": true,
+  "documentary_counts": {
+    "claim_package_counterexamples": 6,
+    "conditional_claims": 1,
+    "documentary_growth_records": 432,
+    "documentary_local_records": 21,
+    "supportable_mechanism_claims": 13,
+    "unsupported_claims": 6
+  },
+  "duplicate_workers": false,
+  "free_bytes": 20656631808,
+  "input_hashes": [
+    {
+      "bytes": 1319,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/11_EXTERNAL-DATA-NORMALIZATION-MATCHING/mathematical_execution_ready_manifest.json",
+      "sha256": "c2ba9ff1b9d539d7a976fce695428e72f3861427266d5a753739bc78986f0fa5"
+    },
+    {
+      "bytes": 1743632,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/staffing/staffing_analysis_unit_shard_0000.jsonl.gz",
+      "sha256": "e5bd27665b4dc91c7cbd302f3a8b863c7768cb81efd4827196d41b75845faf6b"
+    },
+    {
+      "bytes": 2343411,
+      "pointer": "artifacts/local_structured_external_data/whole_corpus_external_data_exhaustive_pipeline_2026-08-04/normalized_matched_external_layers/implementation/implementation_sequence_shard_0000.jsonl.gz",
+      "sha256": "7e6ecc3af09b85aab9b66318d7a7e68fc78374521d92f416c1acccc11df8fc76"
+    },
+    {
+      "bytes": 46460,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EXTERNAL-DATA-EXHAUSTIVE-RESIDUAL-SEARCH-AND-FULL-PIPELINE-2026-08-04/11_EXTERNAL-DATA-NORMALIZATION-MATCHING/mechanism_linked_outcome_unit_pointer_manifest.jsonl",
+      "sha256": "e0297ff6f1d16ba8cc33ae632314c67ddcaafd190e20dbe1304cc4b17278df88"
+    },
+    {
+      "bytes": 1362014,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_implementation_event_layer.csv",
+      "sha256": "4a1ab048f776dc124d2f0d7ba20d0a71f36704fda816a1163bfdab8961d408f1"
+    },
+    {
+      "bytes": 424,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-EVIDENCE-CORRECTION-IMPLEMENTATION-EVENT-RECODING-AND-VISUAL-PREP-2026-08-04/mechanism_hex_density_visual_ready_layer.csv",
+      "sha256": "bd90c276f7f1eaf599e336f9c2a3f1a630e9cf6b42b23b24ccf4292d8b3049e9"
+    },
+    {
+      "bytes": 343343,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/mechanism_attributed_growth_records.csv",
+      "sha256": "a360154fb5fc0ced5ebf7a4fae2ca032f036e9915e4ff04c0bdf65bbafaa2ba6"
+    },
+    {
+      "bytes": 74068,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-4X2500-MECHANISM-ATTRIBUTED-WAGE-GROWTH-CONTINUITY-2026-07-31/growth_average_unit_cycle_weighted.json",
+      "sha256": "995e36015a99483653d93a0c15bf0a06bc59a5192830049b9a632a35e73fe261"
+    },
+    {
+      "bytes": 7946,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/internal_claim_map.csv",
+      "sha256": "c33adc5f9ab6bb8e38ebda8f32735ab4a46c95049966b173405ec2ea8080457e"
+    },
+    {
+      "bytes": 1287,
+      "pointer": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-CLAIM-PACKAGE-PREP-2026-08-03/counterexamples_and_limits.csv",
+      "sha256": "1a8fd444005073049401a54df0a146c8553f5d344f209244c3f5c4c4c6d28321"
+    }
+  ],
+  "input_local_root_ignored": true,
+  "output_local_root_ignored": true,
+  "passed": true,
+  "predecessor": "c1d07d9f4d4b7df5ee9124a7ad32c1e6f46c35d8",
+  "reserve_bytes": 8589934592,
+  "stage11_counts": {
+    "conflict_packet": 201,
+    "core_packet": 1225,
+    "external_counterexamples": 0,
+    "growth_pairs": 0,
+    "growth_series": 0,
+    "headline_packet": 358,
+    "implementation_math_ready": 38,
+    "implementation_packet": 150,
+    "implementation_sequences": 1268,
+    "local_matches": 0,
+    "mechanism_rows": 1876183,
+    "normalized_observations": 1876183,
+    "overtime_shares": 0,
+    "safety_growth_packet": 90,
+    "staffing_packet": 301,
+    "staffing_units": 18358,
+    "total_comp_packet": 1500,
+    "total_compensation_sums": 0,
+    "vacancy_rates": 0
+  },
+  "stale_regression_workers": false,
+  "starting_head": "c1d07d9f4d4b7df5ee9124a7ad32c1e6f46c35d8",
+  "storage_held_sources": 7895,
+  "task_id": "BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05",
+  "unique_native_pdf_pages": 1029482,
+  "unsearched_targets": 12844,
+  "worktree_clean_except_task_script": true
+}

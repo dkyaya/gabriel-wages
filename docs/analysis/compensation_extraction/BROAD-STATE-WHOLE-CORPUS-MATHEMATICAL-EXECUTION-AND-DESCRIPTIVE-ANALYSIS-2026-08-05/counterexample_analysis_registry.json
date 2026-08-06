@@ -1,0 +1,14 @@
+{
+  "registry": "counterexample_analysis_registry",
+  "rules": [
+    {
+      "basis": "documentary_and_conditional_evidence_allowed",
+      "rule_id": "COUNTEREXAMPLE_ANALYSIS_REGISTRY-001"
+    },
+    {
+      "basis": "same_validity_boundary_as_supporting_cases",
+      "rule_id": "COUNTEREXAMPLE_ANALYSIS_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

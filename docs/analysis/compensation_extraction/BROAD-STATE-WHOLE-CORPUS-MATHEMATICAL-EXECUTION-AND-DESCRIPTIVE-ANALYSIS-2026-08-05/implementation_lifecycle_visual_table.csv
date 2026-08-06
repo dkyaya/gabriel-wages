@@ -1,0 +1,8 @@
+sequence_status,count,denominator,proportion,analytical_unit
+adopted_not_paid_observed,19,1268,0.01498423,implementation sequence
+amended_sequence,10,1268,0.00788644,implementation sequence
+negotiated_only,1,1268,0.00078864,implementation sequence
+paid_with_prior_adoption,2,1268,0.00157729,implementation sequence
+partial_sequence,2,1268,0.00157729,implementation sequence
+proposed_only,4,1268,0.00315457,implementation sequence
+sequence_hold,1230,1268,0.97003155,implementation sequence

@@ -1,0 +1,27 @@
+{
+  "causal_estimate": false,
+  "claim_adjudication": false,
+  "denominators_and_exclusions_preserved": true,
+  "documentary_comparisons_remain_canonical": true,
+  "external_zero_results": {
+    "growth_pairs": 0,
+    "growth_series": 0,
+    "overtime_shares": 0,
+    "total_compensation_sums": 0,
+    "vacancy_rates": 0,
+    "wage_matches": 0
+  },
+  "five_independent_lanes": true,
+  "gabriel_api_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "matching_criteria_loosened": false,
+  "regression_ran": false,
+  "rendered_visuals": 0,
+  "strongest_external_contributions": [
+    "staffing analytical units",
+    "implementation sequences",
+    "source/municipality/event/claim-deduplicated mechanism corroboration"
+  ],
+  "unique_native_pdf_pages": 1029482
+}

@@ -1,0 +1,17 @@
+{
+  "headline_candidates": 9,
+  "packet_counts": {
+    "claim": 14,
+    "conflict": 201,
+    "core": 1225,
+    "counterexample": 7,
+    "headline": 358,
+    "implementation": 150,
+    "local_comparison": 4,
+    "reserve": 0,
+    "safety_wage_growth": 90,
+    "staffing": 301
+  },
+  "semantic_cross_examination_performed": false,
+  "source_coordinates_preserved_where_available": true
+}

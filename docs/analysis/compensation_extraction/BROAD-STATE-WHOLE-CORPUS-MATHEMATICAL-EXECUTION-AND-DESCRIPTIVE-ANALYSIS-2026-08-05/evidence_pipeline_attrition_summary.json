@@ -1,0 +1,55 @@
+{
+  "correct_exclusion_not_failure": true,
+  "no_match_is_finding": true,
+  "stages": [
+    {
+      "count": 1876183,
+      "denominator": 1876183,
+      "rate": 1.0,
+      "stage": "canonical_reconciled_observations",
+      "unit": "observation"
+    },
+    {
+      "count": 120278,
+      "denominator": 1876183,
+      "rate": 0.06410782,
+      "stage": "normalized_analysis_ready",
+      "unit": "observation"
+    },
+    {
+      "count": 31668,
+      "denominator": 1876183,
+      "rate": 0.01687895,
+      "stage": "normalized_conditional",
+      "unit": "observation"
+    },
+    {
+      "count": 18358,
+      "denominator": 1876183,
+      "rate": 0.00978476,
+      "stage": "staffing_math_ready",
+      "unit": "observation"
+    },
+    {
+      "count": 38,
+      "denominator": 1268,
+      "rate": 0.02996845,
+      "stage": "implementation_sequence_math_ready",
+      "unit": "sequence"
+    },
+    {
+      "count": 0,
+      "denominator": 201,
+      "rate": 0.0,
+      "stage": "external_local_wage_matches",
+      "unit": "candidate"
+    },
+    {
+      "count": 0,
+      "denominator": 6731,
+      "rate": 0.0,
+      "stage": "external_growth_matches",
+      "unit": "candidate"
+    }
+  ]
+}

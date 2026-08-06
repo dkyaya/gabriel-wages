@@ -1,0 +1,14 @@
+{
+  "registry": "claim_evidence_table_registry",
+  "rules": [
+    {
+      "basis": "mathematical_status_not_final_claim_decision",
+      "rule_id": "CLAIM_EVIDENCE_TABLE_REGISTRY-001"
+    },
+    {
+      "basis": "countervailing_and_unresolved_preserved",
+      "rule_id": "CLAIM_EVIDENCE_TABLE_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

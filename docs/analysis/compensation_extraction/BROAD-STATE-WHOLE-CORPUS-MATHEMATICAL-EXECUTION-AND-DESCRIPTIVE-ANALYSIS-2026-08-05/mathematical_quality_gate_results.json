@@ -1,0 +1,19 @@
+{
+  "gates": {
+    "A_unit_integrity": true,
+    "B_denominator_integrity": true,
+    "C_formula_accuracy": true,
+    "D_event_source_deduplication": true,
+    "E_conflict_exclusion": true,
+    "F_staffing_hypothesis_precision": true,
+    "G_implementation_wording_integrity": true,
+    "H_counterexample_validity": true,
+    "I_claim_table_fidelity": true,
+    "J_headline_reproducibility": true,
+    "K_regression_discipline": true,
+    "L_no_premature_claiming": true
+  },
+  "passed": true,
+  "regression_ran": false,
+  "zero_result_universes_audited_as_all_available": true
+}

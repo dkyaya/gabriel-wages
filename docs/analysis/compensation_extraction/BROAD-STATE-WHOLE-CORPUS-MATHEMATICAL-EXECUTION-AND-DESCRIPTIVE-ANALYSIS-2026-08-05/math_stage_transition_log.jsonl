@@ -1,0 +1,4 @@
+{"at":"2026-08-06T03:28:41.670610+00:00","from":"not_started","reason":"preflight, hashes, registries, lane plan, and smoke tests passed","to":"prepared"}
+{"at":"2026-08-06T03:28:46.680982+00:00","from":"prepared","reason":"five specialized lanes launched with 0/2/4/6/8 minute stagger","to":"production_running"}
+{"at":"2026-08-06T03:37:00.428208+00:00","from":"production_running","reason":"five lane outputs merged; all quality gates passed; regression failed readiness and did not run","to":"completed"}
+{"at":"2026-08-06T03:37:50.991625+00:00","from":"production_running","reason":"five lane outputs merged; all quality gates passed; regression failed readiness and did not run","to":"completed"}

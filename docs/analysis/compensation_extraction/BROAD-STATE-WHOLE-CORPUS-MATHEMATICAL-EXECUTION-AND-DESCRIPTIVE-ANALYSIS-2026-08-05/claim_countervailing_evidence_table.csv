@@ -1,0 +1,15 @@
+claim_id,countervailing
+CLAIM-A,zero compatible external wage and growth matches
+CLAIM-B,zero compatible external wage and growth matches
+CLAIM-C,zero compatible external wage and growth matches
+CLAIM-D,zero compatible external wage and growth matches
+CLAIM-E,zero compatible external wage and growth matches
+CLAIM-F,zero compatible external wage and growth matches
+CLAIM-G,zero compatible external wage and growth matches
+CLAIM-H,zero compatible external wage and growth matches
+UNSUP-01,Matched city-cycle breadth and harmonized pay basis are insufficient.
+UNSUP-02,Evidence-unit counts are not population-weighted denominators.
+UNSUP-03,No counterfactual identification design or treatment-effect analysis was run.
+UNSUP-04,No regression was run or authorized.
+UNSUP-05,Global wage-gap readiness fails.
+UNSUP-06,Documentary mechanism interpretation is not causal estimation.

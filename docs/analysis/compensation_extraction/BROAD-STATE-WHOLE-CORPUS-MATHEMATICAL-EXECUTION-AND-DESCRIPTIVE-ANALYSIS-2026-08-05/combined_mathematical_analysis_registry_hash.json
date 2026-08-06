@@ -1,0 +1,22 @@
+{
+  "components": [
+    "analytical_unit_registry",
+    "claim_evidence_table_registry",
+    "counterexample_analysis_registry",
+    "denominator_registry",
+    "descriptive_statistic_registry",
+    "documentary_growth_registry",
+    "documentary_local_comparison_registry",
+    "evidence_coverage_registry",
+    "geography_analysis_registry",
+    "headline_number_registry",
+    "implementation_analysis_registry",
+    "mechanism_summary_registry",
+    "regression_readiness_registry",
+    "staffing_analysis_registry",
+    "urbanicity_analysis_registry",
+    "visual_table_registry"
+  ],
+  "sha256": "d390d20eb1cb21d1bc10c94d7d6b4d298c8a1435725d668da2234ea5bc2eb9f9",
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

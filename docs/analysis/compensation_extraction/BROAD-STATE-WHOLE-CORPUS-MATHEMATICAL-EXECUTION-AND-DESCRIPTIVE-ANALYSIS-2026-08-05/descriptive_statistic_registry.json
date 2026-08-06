@@ -1,0 +1,22 @@
+{
+  "registry": "descriptive_statistic_registry",
+  "rules": [
+    {
+      "basis": "counts",
+      "rule_id": "DESCRIPTIVE_STATISTIC_REGISTRY-001"
+    },
+    {
+      "basis": "proportions_with_explicit_denominator",
+      "rule_id": "DESCRIPTIVE_STATISTIC_REGISTRY-002"
+    },
+    {
+      "basis": "means_medians_ranges_with_n",
+      "rule_id": "DESCRIPTIVE_STATISTIC_REGISTRY-003"
+    },
+    {
+      "basis": "no_population_prevalence",
+      "rule_id": "DESCRIPTIVE_STATISTIC_REGISTRY-004"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

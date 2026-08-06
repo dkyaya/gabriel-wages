@@ -1,0 +1,14 @@
+{
+  "registry": "mechanism_summary_registry",
+  "rules": [
+    {
+      "basis": "unique_source_municipality_root_event_mechanism_event_claim",
+      "rule_id": "MECHANISM_SUMMARY_REGISTRY-001"
+    },
+    {
+      "basis": "raw_rows_not_prevalence",
+      "rule_id": "MECHANISM_SUMMARY_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-08-06T03:40:00Z",
+  "staged_file_count_before_audit_files": 351,
+  "staged_bytes_before_audit_files": 23984025,
+  "allowed_scope": [
+    "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/",
+    "docs/dashboard/data/project_phase_summary.json",
+    "scripts/run_whole_corpus_mathematical_analysis.py"
+  ],
+  "staged_artifacts_or_tmp_files": 0,
+  "staged_retained_sources": 0,
+  "staged_extracted_text": 0,
+  "staged_raw_field_or_span_corpus": 0,
+  "staged_ingested_reconciled_normalized_or_matched_corpus": 0,
+  "staged_bulky_analytical_corpus": 0,
+  "staged_cache_or_build_output": 0,
+  "staged_rendered_visuals_or_documents": 0,
+  "git_diff_cached_check_passed": true,
+  "passed": true
+}

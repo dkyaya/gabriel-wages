@@ -1,0 +1,14 @@
+{
+  "registry": "documentary_local_comparison_registry",
+  "rules": [
+    {
+      "basis": "four_named_bounded_examples",
+      "rule_id": "DOCUMENTARY_LOCAL_COMPARISON_REGISTRY-001"
+    },
+    {
+      "basis": "no_national_average",
+      "rule_id": "DOCUMENTARY_LOCAL_COMPARISON_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

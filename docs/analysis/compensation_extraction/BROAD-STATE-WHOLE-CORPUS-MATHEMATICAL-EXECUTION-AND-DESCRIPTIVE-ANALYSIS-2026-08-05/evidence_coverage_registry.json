@@ -1,0 +1,14 @@
+{
+  "registry": "evidence_coverage_registry",
+  "rules": [
+    {
+      "basis": "stage_specific_unit_and_denominator",
+      "rule_id": "EVIDENCE_COVERAGE_REGISTRY-001"
+    },
+    {
+      "basis": "exclusion_not_failure",
+      "rule_id": "EVIDENCE_COVERAGE_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

@@ -1,0 +1,2 @@
+absolute_difference,caveat,comparison_quality,municipality,non_safety_role,non_safety_value,percentage_difference,period,role,safety_role,safety_value,state,unit,counterexample_class,claim_boundary
+-0.91,conditional role comparison,conditional_comparison,Canastota,Code Enforcement,24.82,-3.67,2023-24,counterexample,Police Officer Year 1,23.91,NY,USD/hour,direct_quantitative_counterexample,conditional local comparison

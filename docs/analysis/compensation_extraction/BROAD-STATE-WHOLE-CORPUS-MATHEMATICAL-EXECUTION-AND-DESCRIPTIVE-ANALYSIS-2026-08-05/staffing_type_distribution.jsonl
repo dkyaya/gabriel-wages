@@ -1,0 +1,6 @@
+{"analytical_unit":"source-specific staffing analytical unit","count":5455,"denominator":18358,"proportion":0.29714566,"staffing_type":"authorized_position_reduction"}
+{"analytical_unit":"source-specific staffing analytical unit","count":2379,"denominator":18358,"proportion":0.12958928,"staffing_type":"budgeted_position_reduction"}
+{"analytical_unit":"source-specific staffing analytical unit","count":378,"denominator":18358,"proportion":0.02059048,"staffing_type":"filled_position_reduction"}
+{"analytical_unit":"source-specific staffing analytical unit","count":80,"denominator":18358,"proportion":0.00435777,"staffing_type":"hiring_freeze"}
+{"analytical_unit":"source-specific staffing analytical unit","count":313,"denominator":18358,"proportion":0.01704979,"staffing_type":"layoff"}
+{"analytical_unit":"source-specific staffing analytical unit","count":9753,"denominator":18358,"proportion":0.53126702,"staffing_type":"vacancy_without_elimination"}

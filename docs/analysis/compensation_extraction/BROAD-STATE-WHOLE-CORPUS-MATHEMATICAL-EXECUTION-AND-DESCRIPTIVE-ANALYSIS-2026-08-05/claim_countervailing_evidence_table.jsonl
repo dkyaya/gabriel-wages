@@ -1,0 +1,14 @@
+{"claim_id":"CLAIM-A","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-B","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-C","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-D","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-E","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-F","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-G","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"CLAIM-H","countervailing":"zero compatible external wage and growth matches"}
+{"claim_id":"UNSUP-01","countervailing":"Matched city-cycle breadth and harmonized pay basis are insufficient."}
+{"claim_id":"UNSUP-02","countervailing":"Evidence-unit counts are not population-weighted denominators."}
+{"claim_id":"UNSUP-03","countervailing":"No counterfactual identification design or treatment-effect analysis was run."}
+{"claim_id":"UNSUP-04","countervailing":"No regression was run or authorized."}
+{"claim_id":"UNSUP-05","countervailing":"Global wage-gap readiness fails."}
+{"claim_id":"UNSUP-06","countervailing":"Documentary mechanism interpretation is not causal estimation."}

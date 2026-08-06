@@ -1,0 +1,20 @@
+{
+  "causal_estimates": 0,
+  "final_claim_adjudications": 0,
+  "gabriel_api_calls": 0,
+  "hosted_search_calls": 0,
+  "implementation_event_deduplication_rerun": false,
+  "invented_growth_pairs": 0,
+  "invented_wage_matches": 0,
+  "matching_criteria_loosened": false,
+  "matching_reruns": 0,
+  "national_prevalence_estimates": 0,
+  "national_wage_gap_estimates": 0,
+  "network_requests_except_authorized_git_push": 0,
+  "ocr_runs": 0,
+  "passed": true,
+  "redownloads": 0,
+  "regressions": 0,
+  "rendered_charts_maps_heatmaps_pdf_docx_slides": 0,
+  "semantic_cross_examinations": 0
+}

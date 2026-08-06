@@ -1,0 +1,9 @@
+{"count":247728,"denominator":1876183,"hold_type":"unresolved_basis_conflicts","rate":0.13203829}
+{"count":19121,"denominator":1876183,"hold_type":"unresolved_value_conflicts","rate":0.01019144}
+{"count":1134192,"denominator":1876183,"hold_type":"side_hold","rate":0.60452099}
+{"count":131124,"denominator":1876183,"hold_type":"basis_hold","rate":0.0698887}
+{"count":266849,"denominator":1876183,"hold_type":"conflict_hold","rate":0.14222973}
+{"count":244,"denominator":1876183,"hold_type":"identity_hold","rate":0.00013005}
+{"count":6731,"denominator":6731,"hold_type":"growth_hold","rate":1.0}
+{"count":201,"denominator":201,"hold_type":"local_no_match","rate":1.0}
+{"count":1230,"denominator":1268,"hold_type":"sequence_hold","rate":0.97003155}

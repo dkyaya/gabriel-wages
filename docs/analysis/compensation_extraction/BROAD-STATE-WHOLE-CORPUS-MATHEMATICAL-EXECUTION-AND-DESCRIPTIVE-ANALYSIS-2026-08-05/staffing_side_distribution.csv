@@ -1,0 +1,7 @@
+side,count,denominator,proportion,analytical_unit
+fire,83,18358,0.00452119,source-specific staffing analytical unit
+mixed,2,18358,0.00010894,source-specific staffing analytical unit
+non_safety,74,18358,0.00403094,source-specific staffing analytical unit
+police,179,18358,0.00975052,source-specific staffing analytical unit
+safety_combined,10,18358,0.00054472,source-specific staffing analytical unit
+unclear,18010,18358,0.98104369,source-specific staffing analytical unit

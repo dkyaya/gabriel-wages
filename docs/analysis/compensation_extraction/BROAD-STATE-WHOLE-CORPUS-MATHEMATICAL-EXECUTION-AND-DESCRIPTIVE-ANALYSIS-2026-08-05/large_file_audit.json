@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-08-06T03:40:00Z",
+  "threshold_bytes": 52428800,
+  "files_over_threshold": 0,
+  "largest_staged_file": {
+    "path": "docs/analysis/compensation_extraction/BROAD-STATE-WHOLE-CORPUS-MATHEMATICAL-EXECUTION-AND-DESCRIPTIVE-ANALYSIS-2026-08-05/implementation_sequence_holds.jsonl",
+    "bytes": 4558790
+  },
+  "largest_file_below_threshold": true,
+  "passed": true
+}

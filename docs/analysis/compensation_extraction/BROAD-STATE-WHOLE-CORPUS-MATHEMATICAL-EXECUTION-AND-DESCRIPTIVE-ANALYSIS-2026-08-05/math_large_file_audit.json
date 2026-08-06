@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-08-06T03:40:00Z",
+  "threshold_bytes": 52428800,
+  "tracked_or_staged_files_over_threshold": [],
+  "largest_staged_file_bytes": 4558790,
+  "passed": true
+}

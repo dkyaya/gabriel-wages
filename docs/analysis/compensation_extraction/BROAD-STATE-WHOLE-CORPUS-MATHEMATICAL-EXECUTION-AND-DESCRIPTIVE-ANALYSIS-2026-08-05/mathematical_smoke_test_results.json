@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "tests": {
+    "claim_table_status_not_adjudication": true,
+    "conflict_rate_denominator": 1876183,
+    "counterexample_not_external_only": true,
+    "documentary_growth_records": 432,
+    "event_source_dedup_distinct": true,
+    "headline_candidate_not_claim": true,
+    "implementation_adopted_paid_distinct": true,
+    "local_examples_preserved": 4,
+    "raw_rows_not_prevalence": true,
+    "regression_gate_failure_expected": true,
+    "side_readiness_denominator": 1876183,
+    "staffing_denominator": true,
+    "staffing_proportion_has_denominator": true,
+    "state_distribution_unit_declared": true,
+    "urbanicity_unknown_preserved": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extraction_repair": 97,
+  "hosted_search_limitation": "The hosted-search stage became unavailable after repeated fail-closed transport checks. API or product-capacity limitations are a plausible explanation, but the backend did not expose a definitive billing diagnosis.",
+  "ocr_later": 118,
+  "secondary_context_deferred": 24569,
+  "storage_held_sources": 7895,
+  "unsearched_targets": 12844
+}

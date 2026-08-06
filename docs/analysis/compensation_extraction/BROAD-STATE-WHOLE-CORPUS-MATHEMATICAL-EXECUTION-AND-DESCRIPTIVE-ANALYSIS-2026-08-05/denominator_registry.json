@@ -1,0 +1,26 @@
+{
+  "registry": "denominator_registry",
+  "rules": [
+    {
+      "basis": "staffing_units_18358",
+      "rule_id": "DENOMINATOR_REGISTRY-001"
+    },
+    {
+      "basis": "implementation_sequences_1268",
+      "rule_id": "DENOMINATOR_REGISTRY-002"
+    },
+    {
+      "basis": "math_ready_sequences_38",
+      "rule_id": "DENOMINATOR_REGISTRY-003"
+    },
+    {
+      "basis": "canonical_observations_1876183",
+      "rule_id": "DENOMINATOR_REGISTRY-004"
+    },
+    {
+      "basis": "deduplicated_events_2998",
+      "rule_id": "DENOMINATOR_REGISTRY-005"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

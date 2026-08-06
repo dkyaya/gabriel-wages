@@ -1,0 +1,18 @@
+{
+  "registry": "implementation_analysis_registry",
+  "rules": [
+    {
+      "basis": "no_paid_stage_observed_not_never_paid",
+      "rule_id": "IMPLEMENTATION_ANALYSIS_REGISTRY-001"
+    },
+    {
+      "basis": "sequence_hold_readiness_only",
+      "rule_id": "IMPLEMENTATION_ANALYSIS_REGISTRY-002"
+    },
+    {
+      "basis": "no_missing_stage_inference",
+      "rule_id": "IMPLEMENTATION_ANALYSIS_REGISTRY-003"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

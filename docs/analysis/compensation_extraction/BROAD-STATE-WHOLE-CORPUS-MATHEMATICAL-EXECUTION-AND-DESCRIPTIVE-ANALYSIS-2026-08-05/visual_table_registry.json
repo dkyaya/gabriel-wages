@@ -1,0 +1,14 @@
+{
+  "registry": "visual_table_registry",
+  "rules": [
+    {
+      "basis": "analytical_units_not_raw_span_intensity",
+      "rule_id": "VISUAL_TABLE_REGISTRY-001"
+    },
+    {
+      "basis": "figure_specs_only_no_rendering",
+      "rule_id": "VISUAL_TABLE_REGISTRY-002"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}

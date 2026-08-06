@@ -1,0 +1,18 @@
+{
+  "registry": "geography_analysis_registry",
+  "rules": [
+    {
+      "basis": "state_counts",
+      "rule_id": "GEOGRAPHY_ANALYSIS_REGISTRY-001"
+    },
+    {
+      "basis": "municipality_counts",
+      "rule_id": "GEOGRAPHY_ANALYSIS_REGISTRY-002"
+    },
+    {
+      "basis": "fixed_epsg5070_event_hex",
+      "rule_id": "GEOGRAPHY_ANALYSIS_REGISTRY-003"
+    }
+  ],
+  "version": "whole-corpus-mathematical-analysis-2026-08-05-v1"
+}
