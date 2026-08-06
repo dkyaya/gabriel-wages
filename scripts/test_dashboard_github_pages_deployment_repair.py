@@ -91,6 +91,25 @@ class DashboardPagesDeploymentRepairTests(unittest.TestCase):
         self.assertEqual(phase["failed_unparseable_outcomes"], 15)
         self.assertEqual(phase["remaining_unscouted_eligible_municipality_count"], 15)
         self.assertAlmostEqual(phase["actual_scout_coverage_rate_percent"], 99.9579, places=4)
+        visual_decision = "broad_state_whole_corpus_visual_production_completed_user_review_ready"
+        if phase.get("current_phase_code") == visual_decision:
+            self.assertEqual(phase["current_phase"], "Whole-corpus visual production and QA complete")
+            self.assertEqual(phase["stage"], "whole_corpus_visual_production_and_qa_complete")
+            self.assertEqual(phase["next_task"], "USER VISUAL REVIEW")
+            self.assertTrue(phase["whole_corpus_visual_production_complete"])
+            self.assertEqual(phase["whole_corpus_visual_figures_rendered"], 16)
+            self.assertEqual(phase["whole_corpus_visual_figures_passing_qa"], 16)
+            self.assertEqual(phase["whole_corpus_visual_repaired_figures"], 2)
+            self.assertEqual(phase["whole_corpus_visual_failed_or_held_figures"], 0)
+            self.assertEqual(phase["whole_corpus_visual_native_pdf_pages"], 1029482)
+            self.assertEqual(phase["available_external_data_storage_capacity_holds"], 7895)
+            self.assertEqual(phase["unresolved_hosted_search_target_count"], 12844)
+            self.assertEqual(phase["dashboard_map_primary_metric"], "scout_coverage_rate")
+            self.assertFalse(phase["available_external_data_gabriel_scoring_used"])
+            self.assertFalse(phase["whole_corpus_visual_regression_run"])
+            self.assertFalse(phase["whole_corpus_visual_causal_estimate_made"])
+            self.assertFalse(phase["whole_corpus_report_draft_started"])
+            return
         remaining_span_manifest = (
             ROOT / "docs/analysis/compensation_extraction/"
             "BROAD-STATE-REMAINING-MUNICIPALITIES-SPAN-EXTRACTION-2026-08-02/"

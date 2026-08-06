@@ -21093,6 +21093,95 @@ def main() -> int:
                 }
             )
 
+    # Preserve compact fields added by later validated stages that are not yet
+    # native to this historical builder. Recomputed scout fields remain the
+    # authority for keys the builder owns; later overlays are then applied
+    # explicitly below.
+    existing_phase_summary_path = OUTPUT_DIR / "project_phase_summary.json"
+    if existing_phase_summary_path.is_file():
+        existing_phase_summary = read_json(existing_phase_summary_path)
+        existing_phase_summary.update(project_phase_summary)
+        project_phase_summary = existing_phase_summary
+
+    # The visual-production overlay is intentionally last: all prior stage
+    # metrics remain available, while the user-facing phase and compact visual
+    # review status reflect the newest validated stage. The primary map metric
+    # remains scout coverage rather than a mechanism-density map.
+    visual_production_dir = (
+        ANALYSIS_DIR
+        / "compensation_extraction"
+        / "BROAD-STATE-WHOLE-CORPUS-VISUAL-PRODUCTION-AND-QA-2026-08-06"
+    )
+    visual_production_summary_path = visual_production_dir / "whole_corpus_visual_production_summary.json"
+    visual_production_dashboard_path = visual_production_dir / "dashboard_visual_production_update_summary.json"
+    visual_production_validation_path = visual_production_dir / "validation_report.json"
+    if (
+        visual_production_summary_path.is_file()
+        and visual_production_dashboard_path.is_file()
+        and visual_production_validation_path.is_file()
+    ):
+        visual_production_summary = read_json(visual_production_summary_path)
+        visual_production_dashboard = read_json(visual_production_dashboard_path)
+        visual_production_validation = read_json(visual_production_validation_path)
+        if visual_production_validation.get("status") == "pass":
+            project_phase_summary.update(
+                {
+                    "current_phase": "Whole-corpus visual production and QA complete",
+                    "stage": "whole_corpus_visual_production_and_qa_complete",
+                    "current_phase_code": visual_production_summary["decision"],
+                    "current_evidence_status": "whole_corpus_visuals_user_review_ready",
+                    "next_task": "USER VISUAL REVIEW",
+                    "whole_corpus_visual_production_complete": True,
+                    "whole_corpus_visual_review_page": visual_production_dashboard["public_visual_review_page"],
+                    "whole_corpus_visual_figures_rendered": visual_production_summary["figures_rendered"],
+                    "whole_corpus_visual_figures_passing_qa": visual_production_summary["figures_passing_qa"],
+                    "whole_corpus_visual_caption_caveats": visual_production_summary["caption_caveats"],
+                    "whole_corpus_visual_strict_lane_figures": visual_production_summary["strict_lane_figures"],
+                    "whole_corpus_visual_tiered_sensitivity_figures": visual_production_summary["tiered_sensitivity_figures"],
+                    "whole_corpus_visual_repaired_figures": visual_production_summary["repaired_figures"],
+                    "whole_corpus_visual_failed_or_held_figures": visual_production_summary["failed_or_held"],
+                    "whole_corpus_visual_hex_layer_status": visual_production_summary["hex_layer_status"],
+                    "whole_corpus_visual_urbanicity_rejoin_status": visual_production_summary["urbanicity_rejoin_status"],
+                    "whole_corpus_visual_native_pdf_pages": visual_production_summary["native_pdf_pages"],
+                    "unresolved_hosted_search_target_count": visual_production_summary["unsearched_targets"],
+                    "available_external_data_storage_capacity_holds": visual_production_summary["storage_held_sources"],
+                    "available_external_data_gabriel_scoring_used": False,
+                    "whole_corpus_visual_regression_run": visual_production_summary["regression"],
+                    "whole_corpus_visual_causal_estimate_made": visual_production_summary["causal_estimate"],
+                    "whole_corpus_report_draft_started": visual_production_summary["report_draft_started"],
+                    "dashboard_map_primary_metric": "scout_coverage_rate",
+                }
+            )
+            visual_review_report = {
+                "id": "whole-corpus-visual-review-2026-08-06",
+                "title": "Review the whole-corpus visuals",
+                "report_type": "Visual review gallery",
+                "date": "2026-08-06",
+                "checkpoint": "16 adjudicated figures rendered; 16 passed visual QA",
+                "summary": (
+                    "Publication-ready PNG and SVG figures preserve strict and broader bounded "
+                    "evidence, counterexamples, conflicts, sample sizes, and interpretation limits. "
+                    "User review is required before prose drafting."
+                ),
+                "tags": ["whole corpus", "visual review", "user review pending"],
+                "current": False,
+                "historical": False,
+                "href": visual_production_dashboard["public_visual_review_page"].lstrip("/"),
+                "link_label": "Review the whole-corpus visuals",
+                "scope_metrics": [
+                    {"label": "figures", "value": visual_production_summary["figures_rendered"]},
+                    {"label": "passed QA", "value": visual_production_summary["figures_passing_qa"]},
+                    {"label": "pending user review", "value": visual_production_summary["figures_rendered"]},
+                ],
+            }
+            reports_index["reports"] = [
+                report
+                for report in reports_index["reports"]
+                if report.get("id") != visual_review_report["id"]
+            ]
+            reports_index["reports"].insert(1, visual_review_report)
+            reports_index["data_vintage"] = "2026-08-06"
+
     outputs = [
         write_json("state_summary.json", state_summary),
         write_json("candidate_queue_summary.json", candidate_summary),
