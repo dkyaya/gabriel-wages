@@ -123,7 +123,7 @@ def main() -> None:
         "completed_volume_count": 28,
         "volume_manifest_SHA256": volume_manifest_sha,
         "READ_ME_FIRST_SHA256": readme_sha,
-        "packaging_commit": "pending resume completion commit",
+        "packaging_commit": "3a736e33a04e54304faabb2e58ad0e01c3181fe5",
         "packaging_status": "complete_waiting_for_final_six_user_transfer",
         "total_compressed_bytes": total_compressed,
     })

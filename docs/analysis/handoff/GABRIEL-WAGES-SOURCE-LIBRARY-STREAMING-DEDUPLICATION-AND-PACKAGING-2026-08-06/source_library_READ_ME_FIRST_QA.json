@@ -1,10 +1,10 @@
 {
-  "bytes": 20260352,
+  "bytes": 20260350,
   "complete_source_index_present": true,
   "documentation_present": true,
   "member_count": 30,
   "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/gabriel-wages-source-library-2026-08-06.READ-ME-FIRST.zip",
-  "sha256": "70fea139685db169444da3da364a5c689d1acec8dc552bcbf9084c5db39b6ed9",
+  "sha256": "21946d9a40fea9a2d83780d0a9219a05b59f6b5eadd8f4dec94d4271099a5f6f",
   "source_binary_member_count": 0,
   "status": "pass"
 }

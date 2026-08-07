@@ -1,5 +1,5 @@
 {
-  "READ_ME_FIRST_SHA256": "70fea139685db169444da3da364a5c689d1acec8dc552bcbf9084c5db39b6ed9",
+  "READ_ME_FIRST_SHA256": "21946d9a40fea9a2d83780d0a9219a05b59f6b5eadd8f4dec94d4271099a5f6f",
   "accepted_compressed_bytes": 48027944647,
   "accepted_volume_count": 6,
   "archive_root": "gabriel-wages-source-library-2026-08-06",
@@ -17,7 +17,7 @@
   "packaged_source_bytes": 56164354195,
   "packaged_source_count": 26635,
   "packaged_text_companion_count": 23454,
-  "packaging_commit": "pending resume completion commit",
+  "packaging_commit": "3a736e33a04e54304faabb2e58ad0e01c3181fe5",
   "packaging_status": "complete_waiting_for_final_six_user_transfer",
   "quarantined_source_count": 2,
   "release_date": "2026-08-06",
