@@ -1,15 +1,17 @@
 {
-  "accepted_volume_count": 22,
+  "accepted_volume_count": 6,
   "archive_volumes_git_tracked": false,
   "canonical_selected_sources": 26635,
+  "completed_volume_count": 28,
   "no_full_uncompressed_staging_copy": true,
   "original_sources_deleted": 0,
   "release": "gabriel-wages-source-library-2026-08-06",
-  "remaining_volume_count": 6,
+  "remaining_volume_count": 0,
   "selected_source_bytes": 56164354195,
   "selected_text_bytes": 1201303562,
   "selected_text_companions": 23454,
-  "status": "partial_transfer_space_required",
+  "status": "complete_waiting_for_final_six_user_transfer",
   "task_id": "GABRIEL-WAGES-SOURCE-LIBRARY-STREAMING-DEDUPLICATION-AND-PACKAGING-2026-08-06",
+  "transferred_volume_count": 22,
   "volume_count": 28
 }

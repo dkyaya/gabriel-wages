@@ -1,3 +1,3 @@
 # READ-ME-FIRST QA
 
-The ZIP passed complete CRC validation. It contains 30 compact documentation, index, metadata, schema, and verification-tool members and zero source binaries. SHA-256: `7b2efb016341281ae12c3efc3c4841a8edc2ef6dea52228d86a8cdd7429eb974`.
+The ZIP passed complete CRC validation. It contains 30 compact documentation, index, metadata, schema, and verification-tool members and zero source binaries. SHA-256: `70fea139685db169444da3da364a5c689d1acec8dc552bcbf9084c5db39b6ed9`.

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "staged_file_count": 62,
+  "staged_worktree_bytes_approximate": 228000,
+  "largest_staged_file": "VOLUME_MANIFEST.json",
+  "largest_staged_file_bytes": 26991,
+  "archive_volumes_staged": 0,
+  "source_binaries_staged": 0,
+  "extracted_text_corpus_staged": false,
+  "read_me_first_zip_staged": false,
+  "artifacts_paths_staged": 0,
+  "tracked_scope": "compact resume manifests, ledgers, documentation, scripts, checksums, and QA"
+}

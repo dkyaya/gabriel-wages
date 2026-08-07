@@ -1,0 +1,11 @@
+{
+  "bytes": 20260352,
+  "member_count": 30,
+  "path": "artifacts/handoff_packages/gabriel-wages-source-library-2026-08-06/gabriel-wages-source-library-2026-08-06.READ-ME-FIRST.zip",
+  "self_reference_note": "The tracked RELEASE_MANIFEST records the final ZIP checksum; a ZIP cannot embed its own final checksum without changing that checksum.",
+  "sha256": "70fea139685db169444da3da364a5c689d1acec8dc552bcbf9084c5db39b6ed9",
+  "source_binary_members": 0,
+  "source_index_rows": 26635,
+  "status": "pass",
+  "volume_manifest_rows": 28
+}

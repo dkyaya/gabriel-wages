@@ -1,0 +1,66 @@
+{
+  "accepted_local_ready_for_transfer_count": 6,
+  "assignment_sha256": "5ee307c414b5370e16b5533c0285a861c99ea0562fa3796fff3ea9ddae1a8fcd",
+  "earlier_volumes_rebuilt": 0,
+  "local_ready_volumes": [
+    {
+      "archive_SHA256": "6d35064916b508bdaac4bb9bb6051f47d1e87c9d39eb285d857f926b7e6a7eed",
+      "compressed_bytes": 1779691715,
+      "filename": "gabriel-wages-source-library-2026-08-06.part-023.tar.zst",
+      "source_count": 1426,
+      "text_companion_count": 1172,
+      "verification_status": "pass",
+      "volume_id": "VOL-023"
+    },
+    {
+      "archive_SHA256": "2ad397aaea04457630035065b14854367a991a5d77bd38e5c231dcfc4bf93513",
+      "compressed_bytes": 1774929494,
+      "filename": "gabriel-wages-source-library-2026-08-06.part-024.tar.zst",
+      "source_count": 962,
+      "text_companion_count": 887,
+      "verification_status": "pass",
+      "volume_id": "VOL-024"
+    },
+    {
+      "archive_SHA256": "8334d0a05c40baf1ee433859725884cf6ebc820c90cebd9d13de483ba45741ac",
+      "compressed_bytes": 1848923764,
+      "filename": "gabriel-wages-source-library-2026-08-06.part-025.tar.zst",
+      "source_count": 648,
+      "text_companion_count": 546,
+      "verification_status": "pass",
+      "volume_id": "VOL-025"
+    },
+    {
+      "archive_SHA256": "d0b6a4d3f3aa74444d9dc3d9cc840bad4a3bd6b37415296bacf034180da9fbd8",
+      "compressed_bytes": 1827714497,
+      "filename": "gabriel-wages-source-library-2026-08-06.part-026.tar.zst",
+      "source_count": 1148,
+      "text_companion_count": 1003,
+      "verification_status": "pass",
+      "volume_id": "VOL-026"
+    },
+    {
+      "archive_SHA256": "8880e7f46b5fa88e983f1cac73bf1d2a28c656c3290b025e6030e8bc4d614da1",
+      "compressed_bytes": 1791182114,
+      "filename": "gabriel-wages-source-library-2026-08-06.part-027.tar.zst",
+      "source_count": 1107,
+      "text_companion_count": 1025,
+      "verification_status": "pass",
+      "volume_id": "VOL-027"
+    },
+    {
+      "archive_SHA256": "68b4ea9de4e5112fefc633d44a4cc4200ef83bb3d003258f8467d62ec780e5c8",
+      "compressed_bytes": 269708938,
+      "filename": "gabriel-wages-source-library-2026-08-06.part-028.tar.zst",
+      "source_count": 279,
+      "text_companion_count": 242,
+      "verification_status": "pass",
+      "volume_id": "VOL-028"
+    }
+  ],
+  "remaining_volume_count": 0,
+  "status": "pass",
+  "total_compressed_bytes": 48027944647,
+  "total_volume_count": 28,
+  "transferred_by_user_count": 22
+}

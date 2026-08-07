@@ -6,11 +6,13 @@ from __future__ import annotations
 import argparse
 import hashlib
 from pathlib import Path, PurePosixPath
+import re
 import subprocess
 import tarfile
 
 
 RELEASE = "gabriel-wages-source-library-2026-08-06"
+EXPECTED_PARTS = set(range(1, 29))
 
 
 def digest(path: Path) -> str:
@@ -66,6 +68,18 @@ def main() -> None:
     parts = sorted(args.parts_directory.glob(f"{RELEASE}.part-*.tar.zst"))
     if not parts:
         raise SystemExit("no source-library parts found")
+    pattern = re.compile(rf"^{re.escape(RELEASE)}\.part-(\d{{3}})\.tar\.zst$")
+    numbers = []
+    for part in parts:
+        match = pattern.match(part.name)
+        if not match:
+            raise SystemExit(f"invalid part filename: {part.name}")
+        numbers.append(int(match.group(1)))
+    missing = sorted(EXPECTED_PARTS - set(numbers))
+    duplicates = sorted(number for number in set(numbers) if numbers.count(number) > 1)
+    unexpected = sorted(set(numbers) - EXPECTED_PARTS)
+    if missing or duplicates or unexpected:
+        raise SystemExit(f"incomplete archive set: missing={missing}, duplicates={duplicates}, unexpected={unexpected}")
     args.destination.mkdir(parents=True, exist_ok=True)
     for part in parts:
         extract_volume(part, args.destination)

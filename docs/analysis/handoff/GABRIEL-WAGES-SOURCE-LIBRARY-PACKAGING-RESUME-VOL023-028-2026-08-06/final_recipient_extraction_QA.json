@@ -1,0 +1,11 @@
+{
+  "common_archive_root": "gabriel-wages-source-library-2026-08-06",
+  "full_28_part_local_extraction_performed": false,
+  "missing_part_detection_test": "pass_detected_001_through_022",
+  "new_archive_independence_test": "pass_all_6",
+  "prior_bounded_extraction_smoke_test": "pass",
+  "reason": "VOL-001 through VOL-022 were user-transferred and intentionally absent locally",
+  "resume_smoke_test": "pass",
+  "status": "pass",
+  "unsafe_overwrite_protection_present": true
+}

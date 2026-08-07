@@ -1,0 +1,14 @@
+{
+  "claims_or_conclusions_packaged": 0,
+  "cloud_uploads": 0,
+  "earlier_volumes_rebuilt": 0,
+  "external_api_calls": 0,
+  "full_uncompressed_staging_copy_created": false,
+  "gabriel_calls": 0,
+  "google_drive_api_calls": 0,
+  "hosted_search_calls": 0,
+  "ocr_runs": 0,
+  "redownloads": 0,
+  "source_deletions": 0,
+  "status": "pass"
+}

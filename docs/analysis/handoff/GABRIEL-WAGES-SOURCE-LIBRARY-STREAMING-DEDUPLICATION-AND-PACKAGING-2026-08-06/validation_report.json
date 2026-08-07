@@ -1,12 +1,12 @@
 {
-  "accepted_sources": 21065,
-  "accepted_volumes": 22,
-  "decision": "gabriel_wages_source_library_packaging_partial_transfer_space_required",
+  "accepted_sources": 26635,
+  "accepted_volumes": 28,
+  "decision": "gabriel_wages_source_library_resume_completed_final_six_ready_for_transfer",
   "original_sources_deleted": 0,
-  "quality_gates": "pass for produced partial release",
+  "quality_gates": "pass for completed 28-volume release",
   "read_me_first_QA": "pass",
   "recipient_reconstruction_QA": "pass",
-  "remaining_volumes": 6,
-  "status": "pass_partial_transfer_space_required",
-  "verified_source_members": 21065
+  "remaining_volumes": 0,
+  "status": "complete_waiting_for_final_six_user_transfer",
+  "verified_source_members": 26635
 }

@@ -50,7 +50,7 @@ def main() -> None:
             transferred_ids = {r["volume_id"] for r in csv.DictReader(stream) if r.get("confirmed_by_user", "").lower() == "true"}
     started = time.time()
     for row in rows:
-        if row["status"] in {"accepted", "transferred"}:
+        if row["status"] in {"accepted", "accepted_local_ready_for_transfer", "transferred", "transferred_by_user"}:
             expected_archive = parts / row["filename"]
             if not expected_archive.is_file() and row["volume_id"] not in transferred_ids:
                 raise FileNotFoundError(f"accepted archive is absent and not confirmed transferred: {row['volume_id']}")
@@ -92,8 +92,9 @@ def main() -> None:
             row["verification_status"] = "not_started_space_floor"
     write_csv(manifest_path, rows)
     write_json(manifests / "VOLUME_MANIFEST.json", rows)
-    accepted = [r for r in rows if r["status"] == "accepted"]
-    remaining = [r for r in rows if r["status"] not in {"accepted", "transferred"}]
+    accepted = [r for r in rows if r["status"] in {"accepted", "accepted_local_ready_for_transfer"}]
+    completed = [r for r in rows if r["status"] in {"accepted", "accepted_local_ready_for_transfer", "transferred", "transferred_by_user"}]
+    remaining = [r for r in rows if r["status"] not in {"accepted", "accepted_local_ready_for_transfer", "transferred", "transferred_by_user"}]
     completed_fields = ["volume_id", "filename", "status", "compressed_bytes", "archive_SHA256", "verification_status", "runtime_seconds"]
     with (manifests / "source_library_completed_volumes.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=completed_fields, extrasaction="ignore")
@@ -112,6 +113,8 @@ def main() -> None:
     checkpoint = {
         "status": "partial_transfer_space_required" if remaining else "complete",
         "accepted_volume_count": len(accepted),
+        "completed_volume_count": len(completed),
+        "transferred_volume_count": sum(r["status"] in {"transferred", "transferred_by_user"} for r in rows),
         "remaining_volume_count": len(remaining),
         "accepted_volume_ids": [r["volume_id"] for r in accepted],
         "next_incomplete_volume_id": remaining[0]["volume_id"] if remaining else None,

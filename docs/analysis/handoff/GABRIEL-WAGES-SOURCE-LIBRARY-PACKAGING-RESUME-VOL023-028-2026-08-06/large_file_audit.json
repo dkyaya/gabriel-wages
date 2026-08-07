@@ -1,0 +1,8 @@
+{
+  "archive_files_in_tracked_paths": 0,
+  "largest_tracked_resume_output_bytes": 0,
+  "local_archive_bytes": 9292150522,
+  "local_archive_files": 6,
+  "note": "All .tar.zst files remain under the ignored package root.",
+  "status": "pass"
+}

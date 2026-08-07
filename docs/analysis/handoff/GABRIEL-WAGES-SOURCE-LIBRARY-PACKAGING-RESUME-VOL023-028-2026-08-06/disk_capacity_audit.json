@@ -1,0 +1,8 @@
+{
+  "floor_respected_before_every_write": true,
+  "free_bytes_at_final_audit": 51082530816,
+  "free_bytes_at_resume_start": 60570148864,
+  "new_local_archive_bytes": 9292150522,
+  "safe_floor_bytes": 8589934592,
+  "status": "pass"
+}

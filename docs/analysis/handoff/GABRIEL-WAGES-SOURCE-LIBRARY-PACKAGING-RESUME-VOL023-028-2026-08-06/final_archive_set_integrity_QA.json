@@ -1,0 +1,12 @@
+{
+  "all_28_checksums_present": true,
+  "all_28_manifest_entries_present": true,
+  "duplicate_member_paths": 0,
+  "new_independent_archive_validation_passed": 6,
+  "new_source_members_verified": 5570,
+  "new_text_members_verified": 4875,
+  "status": "pass",
+  "transferred_prior_local_validation_preserved": 22,
+  "unexpected_members": 0,
+  "unsafe_member_paths": 0
+}

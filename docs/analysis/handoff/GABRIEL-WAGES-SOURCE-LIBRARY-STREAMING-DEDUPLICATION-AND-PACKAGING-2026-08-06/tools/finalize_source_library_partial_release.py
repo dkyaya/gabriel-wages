@@ -103,8 +103,13 @@ def main() -> None:
     if stale_resume.exists():
         stale_resume.unlink()
     volume_rows = read_csv(manifests / "VOLUME_MANIFEST.csv")
-    accepted = [r for r in volume_rows if r["status"] == "accepted"]
-    remaining = [r for r in volume_rows if r["status"] != "accepted"]
+    for row in volume_rows:
+        if row["status"] == "accepted":
+            row["status"] = "accepted_local_ready_for_transfer"
+    transferred = [r for r in volume_rows if r["status"] == "transferred_by_user"]
+    accepted = [r for r in volume_rows if r["status"] in {"accepted", "accepted_local_ready_for_transfer"}]
+    completed = transferred + accepted
+    remaining = [r for r in volume_rows if r["status"] not in {"transferred_by_user", "accepted", "accepted_local_ready_for_transfer"}]
     assignment_hash = json.loads((manifests / "source_library_volume_assignment_hash.json").read_text())["sha256"]
     source_index = compact / "SOURCE_INDEX.csv"
     source_index_rows = read_csv(source_index)
@@ -140,23 +145,26 @@ def main() -> None:
     prior_secret_audit = task / "source_library_secret_audit.json"
     if not risk_records and prior_secret_audit.exists():
         risk_records = json.loads(prior_secret_audit.read_text()).get("findings", [])
-    accepted_ids = {r["volume_id"] for r in accepted}
-    packaged_source_count = sum(r["source_volume_id"] in accepted_ids for r in source_index_rows)
-    packaged_source_bytes = sum(int(r["source_size_bytes"]) for r in source_index_rows if r["source_volume_id"] in accepted_ids)
-    packaged_text_count = sum(r["source_volume_id"] in accepted_ids and r["extracted_text_available"] == "true" for r in source_index_rows)
+    completed_ids = {r["volume_id"] for r in completed}
+    packaged_source_count = sum(r["source_volume_id"] in completed_ids for r in source_index_rows)
+    packaged_source_bytes = sum(int(r["source_size_bytes"]) for r in source_index_rows if r["source_volume_id"] in completed_ids)
+    packaged_text_count = sum(r["source_volume_id"] in completed_ids and r["extracted_text_available"] == "true" for r in source_index_rows)
 
     release_path = compact / "RELEASE_MANIFEST.json"
     release = json.loads(release_path.read_text())
     release.update({
-        "source_library_version": "1.0-partial",
+        "source_library_version": "1.0-complete",
         "packaged_source_count": packaged_source_count,
         "packaged_source_bytes": packaged_source_bytes,
         "packaged_text_companion_count": packaged_text_count,
         "accepted_volume_count": len(accepted),
+        "transferred_volume_count": len(transferred),
+        "local_ready_volume_count": len(accepted),
+        "completed_volume_count": len(completed),
         "remaining_volume_count": len(remaining),
-        "accepted_compressed_bytes": sum(int(r["compressed_bytes"] or 0) for r in accepted),
+        "accepted_compressed_bytes": sum(int(r["compressed_bytes"] or 0) for r in completed),
         "remaining_planned_bytes": sum(int(r["planned_total_bytes"]) for r in remaining),
-        "packaging_status": "partial_transfer_space_required" if remaining else "complete",
+        "packaging_status": "partial_transfer_space_required" if remaining else "complete_waiting_for_final_six_user_transfer",
         "volume_assignment_SHA256": assignment_hash,
         "source_index_SHA256": sha(source_index),
     })
@@ -179,8 +187,13 @@ def main() -> None:
         if bad: raise RuntimeError(f"READ-ME-FIRST ZIP failed at {bad}")
 
     checksum_entries = []
-    for row in accepted:
+    for row in volume_rows:
+        if row["status"] not in {"transferred_by_user", "accepted", "accepted_local_ready_for_transfer"}:
+            continue
         path = parts / row["filename"]
+        if row["status"] == "transferred_by_user":
+            checksum_entries.append((row["archive_SHA256"], f"parts/{row['filename']}"))
+            continue
         if not path.is_file() or sha(path) != row["archive_SHA256"]:
             raise RuntimeError(f"accepted volume checksum failed: {row['volume_id']}")
         checksum_entries.append((row["archive_SHA256"], f"parts/{row['filename']}"))
@@ -195,26 +208,27 @@ def main() -> None:
     # Compact tracked status and transfer records.
     write_csv(task / "VOLUME_MANIFEST.csv", volume_rows)
     write_json(task / "VOLUME_MANIFEST.json", volume_rows)
-    write_csv(task / "source_library_completed_volumes.csv", accepted)
-    write_jsonl(task / "source_library_completed_volumes.jsonl", accepted)
+    write_csv(task / "source_library_completed_volumes.csv", completed)
+    write_jsonl(task / "source_library_completed_volumes.jsonl", completed)
     write_csv(task / "source_library_remaining_volumes.csv", remaining)
     write_jsonl(task / "source_library_remaining_volumes.jsonl", remaining)
-    transferred_fields = ["volume_id", "filename", "transferred_at", "destination_note", "confirmed_by_user"]
-    write_csv(task / "source_library_transferred_volumes.csv", [], transferred_fields)
-    write_jsonl(task / "source_library_transferred_volumes.jsonl", [])
+    # Preserve the explicit user-confirmed transfer ledger written at resume preflight.
     validation_rows = [{"volume_id": r["volume_id"], "filename": r["filename"], "status": r["status"], "validation_method": r["validation_method"], "verified_source_member_count": r["verified_source_member_count"], "verification_status": r["verification_status"], "archive_SHA256": r["archive_SHA256"]} for r in volume_rows]
     write_csv(task / "source_library_volume_validation.csv", validation_rows)
     write_jsonl(task / "source_library_volume_validation.jsonl", validation_rows)
-    compression_rows = [{"volume_id": r["volume_id"], "planned_total_bytes": r["planned_total_bytes"], "compressed_bytes": r["compressed_bytes"], "compression_ratio": r["compression_ratio"], "runtime_seconds": r["runtime_seconds"]} for r in accepted]
+    compression_rows = [{"volume_id": r["volume_id"], "planned_total_bytes": r["planned_total_bytes"], "compressed_bytes": r["compressed_bytes"], "compression_ratio": r["compression_ratio"], "runtime_seconds": r["runtime_seconds"]} for r in completed]
     write_csv(task / "source_library_volume_compression_stats.csv", compression_rows)
     write_jsonl(task / "source_library_volume_compression_stats.jsonl", compression_rows)
     state = {
         "status": release["packaging_status"],
         "total_volume_count": len(volume_rows),
         "accepted_volume_count": len(accepted),
+        "transferred_volume_count": len(transferred),
+        "completed_volume_count": len(completed),
         "remaining_volume_count": len(remaining),
         "next_incomplete_volume_id": remaining[0]["volume_id"] if remaining else None,
         "accepted_volume_ids": [r["volume_id"] for r in accepted],
+        "transferred_volume_ids": [r["volume_id"] for r in transferred],
         "volume_assignment_SHA256": assignment_hash,
         "safe_free_space_floor_bytes": 8 * 1024**3,
         "accepted_compressed_bytes": release["accepted_compressed_bytes"],
@@ -224,7 +238,7 @@ def main() -> None:
     }
     write_json(task / "source_library_packaging_state.json", state)
     write_json(task / "source_library_packaging_checkpoint.json", state)
-    (task / "source_library_packaging_transition_log.jsonl").write_text(json.dumps({"event": "preparation_complete", "volume_count": len(volume_rows), "assignment_sha256": assignment_hash}) + "\n" + json.dumps({"event": "rolling_stop", **state}) + "\n", encoding="utf-8")
+    (task / "source_library_packaging_transition_log.jsonl").write_text(json.dumps({"event": "preparation_complete", "volume_count": len(volume_rows), "assignment_sha256": assignment_hash}) + "\n" + json.dumps({"event": "resume_complete", **state}) + "\n", encoding="utf-8")
     (task / "source_library_packaging_incident_log.jsonl").write_text("", encoding="utf-8")
     write_json(task / "RELEASE_MANIFEST.json", release)
     (task / "CHECKSUMS.sha256").write_text(external_checksums.read_text(), encoding="utf-8")
@@ -244,19 +258,21 @@ def main() -> None:
         "selected_text_bytes": release["extracted_text_bytes"],
         "volume_count": len(volume_rows),
         "accepted_volume_count": len(accepted),
+        "transferred_volume_count": len(transferred),
+        "completed_volume_count": len(completed),
         "remaining_volume_count": len(remaining),
         "no_full_uncompressed_staging_copy": True,
         "original_sources_deleted": 0,
         "archive_volumes_git_tracked": False,
     }
     write_json(task / "source_library_packaging_manifest.json", manifest)
-    summary = {**manifest, "packaged_source_count": packaged_source_count, "packaged_source_bytes": packaged_source_bytes, "accepted_compressed_bytes": release["accepted_compressed_bytes"], "assignment_sha256": assignment_hash, "read_me_first_sha256": sha(zip_path), "decision": "gabriel_wages_source_library_packaging_partial_transfer_space_required" if remaining else "gabriel_wages_source_library_packaging_completed_handoff_repo_ready"}
+    summary = {**manifest, "packaged_source_count": packaged_source_count, "packaged_source_bytes": packaged_source_bytes, "accepted_compressed_bytes": release["accepted_compressed_bytes"], "assignment_sha256": assignment_hash, "read_me_first_sha256": sha(zip_path), "decision": "gabriel_wages_source_library_resume_partial_transfer_space_required" if remaining else "gabriel_wages_source_library_resume_completed_final_six_ready_for_transfer"}
     write_json(task / "source_library_packaging_summary.json", summary)
     (task / "source_library_packaging_summary.md").write_text(
         "# Source-library packaging summary\n\n"
         f"The complete source-only plan contains {release['canonical_source_count']:,} canonical source files and {release['extracted_text_companion_count']:,} existing text companions across {len(volume_rows)} independent volumes. "
-        f"This rolling run accepted {len(accepted)} volumes containing {packaged_source_count:,} sources and produced {release['accepted_compressed_bytes']:,} compressed bytes. "
-        f"The remaining {len(remaining)} volumes were held before the 8 GiB floor could be violated. No full uncompressed staging copy was created and no original source was deleted.\n",
+        f"The release now accounts for all {len(completed)} volumes containing {packaged_source_count:,} sources and {release['accepted_compressed_bytes']:,} compressed bytes. "
+        f"Volumes 001 through 022 were transferred by the user; volumes 023 through 028 are accepted locally and ready for transfer. No full uncompressed staging copy was created and no original source was deleted.\n",
         encoding="utf-8",
     )
     write_json(manifests / "read_me_first_validation.json", {"status": "pass", "path": zip_path.name, "bytes": zip_path.stat().st_size, "sha256": sha(zip_path), "member_count": len(zipfile.ZipFile(zip_path).infolist()), "source_binary_members": 0})

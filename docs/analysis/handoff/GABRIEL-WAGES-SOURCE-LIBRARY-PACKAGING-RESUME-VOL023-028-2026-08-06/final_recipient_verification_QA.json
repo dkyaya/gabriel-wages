@@ -1,0 +1,10 @@
+{
+  "archive_set_mode_available": true,
+  "expected_sequence_check": "001-028",
+  "extracted_library_mode_available": true,
+  "manifest_checksum_fallback": true,
+  "new_full_member_verification_pass_count": 6,
+  "new_verify_volume_pass_count": 6,
+  "status": "pass",
+  "transferred_volume_remote_reverification": "not_performed_by_this_task"
+}

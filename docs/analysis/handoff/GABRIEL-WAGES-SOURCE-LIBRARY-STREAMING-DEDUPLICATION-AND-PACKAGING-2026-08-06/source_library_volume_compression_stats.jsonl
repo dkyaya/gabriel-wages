@@ -20,3 +20,9 @@
 {"compressed_bytes": "1743100391", "compression_ratio": "0.843556", "planned_total_bytes": "2066370678", "runtime_seconds": "15.016", "volume_id": "VOL-020"}
 {"compressed_bytes": "1887038998", "compression_ratio": "0.882868", "planned_total_bytes": "2137395342", "runtime_seconds": "16.408", "volume_id": "VOL-021"}
 {"compressed_bytes": "1748035001", "compression_ratio": "0.816367", "planned_total_bytes": "2141237557", "runtime_seconds": "16.318", "volume_id": "VOL-022"}
+{"compressed_bytes": "1779691715", "compression_ratio": "0.829166", "planned_total_bytes": "2146363709", "runtime_seconds": "9.453", "volume_id": "VOL-023"}
+{"compressed_bytes": "1774929494", "compression_ratio": "0.8323", "planned_total_bytes": "2132559215", "runtime_seconds": "7.576", "volume_id": "VOL-024"}
+{"compressed_bytes": "1848923764", "compression_ratio": "0.865291", "planned_total_bytes": "2136765182", "runtime_seconds": "6.739", "volume_id": "VOL-025"}
+{"compressed_bytes": "1827714497", "compression_ratio": "0.851147", "planned_total_bytes": "2147353602", "runtime_seconds": "7.902", "volume_id": "VOL-026"}
+{"compressed_bytes": "1791182114", "compression_ratio": "0.834358", "planned_total_bytes": "2146777844", "runtime_seconds": "8.686", "volume_id": "VOL-027"}
+{"compressed_bytes": "269708938", "compression_ratio": "0.797465", "planned_total_bytes": "338208050", "runtime_seconds": "1.527", "volume_id": "VOL-028"}

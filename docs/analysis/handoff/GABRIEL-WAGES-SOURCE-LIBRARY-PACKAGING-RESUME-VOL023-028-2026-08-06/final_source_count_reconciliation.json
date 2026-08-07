@@ -1,0 +1,12 @@
+{
+  "canonical_source_count": 26635,
+  "exact_duplicate_bytes_avoided": 409679973,
+  "exact_duplicate_group_count": 154,
+  "hash_verified_before_transfer_count": 21065,
+  "missing_source_count": 0,
+  "new_hash_verified_count": 5570,
+  "redundant_physical_copies_avoided": 162,
+  "source_bytes": 56164354195,
+  "status": "pass",
+  "total_hash_verified_count": 26635
+}
