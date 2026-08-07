@@ -1,0 +1,35 @@
+{
+  "excluded_families": [
+    {
+      "source_family": "source_binaries_and_extracted_text",
+      "canonical_input": "28-volume external source release",
+      "decision": "source_library_external",
+      "clean_destination": "none",
+      "reason": "50+ GiB external research handoff"
+    },
+    {
+      "source_family": "historical_scripts",
+      "canonical_input": "Phase 0 script inventory",
+      "decision": "historical_archive_only",
+      "clean_destination": "none",
+      "reason": "most scripts are one-time or depend on bulky layers"
+    },
+    {
+      "source_family": "old_relays_prompts_tasks_queues_logs",
+      "canonical_input": "historical workflow record",
+      "decision": "exclude_superseded",
+      "clean_destination": "none",
+      "reason": "preserved through prose and original archive"
+    },
+    {
+      "source_family": "huge_analytical_intermediates",
+      "canonical_input": "fields, spans, observations, reconciliation and normalization layers",
+      "decision": "exclude_bulky_intermediate",
+      "clean_destination": "none",
+      "reason": "not needed for normal handoff use"
+    }
+  ],
+  "raw_source_binaries_copied": 0,
+  "archive_parts_copied": 0,
+  "historical_git_copied": false
+}

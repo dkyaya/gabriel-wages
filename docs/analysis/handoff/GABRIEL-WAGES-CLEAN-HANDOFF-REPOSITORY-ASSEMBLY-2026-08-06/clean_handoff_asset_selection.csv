@@ -1,0 +1,16 @@
+source_family,canonical_input,decision,clean_destination,reason
+final_visual_atlas,accepted 58-page atlas with prose methodology,retain_clean_repo,reports/visual_atlas/,primary current research output
+final_claim_adjudication,final fourteen-claim table and wording boundaries,summarize_clean_repo,data/analysis/final_claims.csv,claim fidelity without task internals
+mechanism_profiles,eight integrated reader-facing profiles,summarize_clean_repo,data/analysis/mechanism_summary.csv,"compact mechanism definitions, counts, and boundaries"
+bounded_local_comparisons,nine bounded plus one directional local unit,retain_clean_repo,data/analysis/local_comparisons.csv,all ten final local examples
+growth_staffing_implementation,accepted descriptive summaries,summarize_clean_repo,data/analysis/,durable bounded results
+counterexamples,seven retained counterexamples,retain_clean_repo,data/analysis/counterexamples.csv,protect claim boundaries
+source_library_index,"final 26,635-row SOURCE_INDEX",retain_clean_repo,data/source_library/SOURCE_INDEX.csv,source navigation without source bytes
+source_library_release_metadata,"release, volume, checksum, alias, schema metadata",retain_clean_repo,data/source_library/,portable external-library linkage
+source_binaries_and_extracted_text,28-volume external source release,source_library_external,none,50+ GiB external research handoff
+accepted_methodology_and_limitations,accepted prose methods and cumulative limitations,summarize_clean_repo,METHODS_AND_WORKFLOW.md; KNOWN_LIMITATIONS.md,preserve knowledge instead of process debris
+selected_final_svg_figures,current atlas SVG exports,retain_clean_repo,figures/,useful standalone current visuals
+historical_scripts,Phase 0 script inventory,historical_archive_only,none,most scripts are one-time or depend on bulky layers
+portable_source_tools,final release behavior and recipient tools,retain_clean_repo,tools/,"configuration, status, search, extraction, verification"
+old_relays_prompts_tasks_queues_logs,historical workflow record,exclude_superseded,none,preserved through prose and original archive
+huge_analytical_intermediates,"fields, spans, observations, reconciliation and normalization layers",exclude_bulky_intermediate,none,not needed for normal handoff use

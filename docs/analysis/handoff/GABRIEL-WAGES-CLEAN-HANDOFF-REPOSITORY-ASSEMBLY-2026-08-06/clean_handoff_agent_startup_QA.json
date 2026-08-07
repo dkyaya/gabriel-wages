@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "required_topics": 19,
+  "topics_present": 19,
+  "source_library_behavior": "pass",
+  "proactive_briefing": "required",
+  "analytical_boundaries": "present"
+}

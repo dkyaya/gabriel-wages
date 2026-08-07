@@ -1,0 +1,11 @@
+{
+  "tracked_files": 88,
+  "tracked_bytes": 26400554,
+  "tracked_mib": 25.178,
+  "working_tree_including_git_human": "32 MiB",
+  "git_object_size_human": "6.45 MiB",
+  "preferred_threshold_mib": 250,
+  "hard_threshold_mib": 300,
+  "pass": true,
+  "duplicate_tracked_groups": 0
+}

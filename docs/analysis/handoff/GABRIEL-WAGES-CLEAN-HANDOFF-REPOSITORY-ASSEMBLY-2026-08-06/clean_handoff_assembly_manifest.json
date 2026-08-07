@@ -1,0 +1,61 @@
+{
+  "task_id": "GABRIEL-WAGES-CLEAN-HANDOFF-REPOSITORY-ASSEMBLY-2026-08-06",
+  "decision": "gabriel_wages_clean_handoff_repo_assembly_completed_clean_room_ready",
+  "original_repo_starting_head": "14d0c3dc5cbf0f7e231e388f62462f20f699a67d",
+  "clean_repo_path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/safety-nonsafety-municipal-compensation",
+  "clean_repo_commit": "0d50028786932d2fd6c18bb9ee73bc7bc91bea2d",
+  "clean_repo_branch": "main",
+  "clean_repo_remote_configured": false,
+  "tracked_file_count": 88,
+  "tracked_bytes": 26400554,
+  "working_tree_with_git_human": "32 MiB",
+  "git_object_size_human": "6.45 MiB",
+  "largest_tracked_file": {
+    "relative_path": "data/source_library/SOURCE_INDEX.csv",
+    "size_bytes": 21500589,
+    "sha256": "ffa31b609b914bb6bb2af37363931240d0b1b0e544849428e21e6b80a42d80b8",
+    "artifact_family": "data"
+  },
+  "files_over_10_mib": 1,
+  "files_over_50_mib": 0,
+  "files_over_100_mib": 0,
+  "raw_source_binary_count": 0,
+  "archive_volume_count": 0,
+  "final_atlas": {
+    "relative_path": "reports/visual_atlas/why_public_safety_wages_may_grow_differently.pdf",
+    "pages": 58,
+    "size_bytes": 2409377,
+    "sha256": "781adb2ffe047d8a8523fcf3a65e743917bb1a3e0ca00c7df0f8c85a035a9b76"
+  },
+  "final_claims": {
+    "count": 14,
+    "classes": {
+      "supported": 1,
+      "conditionally_supported": 1,
+      "mechanism_supported_only": 5,
+      "mixed_or_countervailing": 1,
+      "unsupported": 6
+    }
+  },
+  "source_library": {
+    "release": "gabriel-wages-source-library-2026-08-06",
+    "expected_volumes": 28,
+    "canonical_sources": 26635,
+    "text_companions": 23454,
+    "source_index_rows": 26635,
+    "architecture": "external portable local library configured through Git-ignored config/local_paths.toml"
+  },
+  "tests": {
+    "passed": 14,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests"
+  },
+  "dashboard": {
+    "type": "dependency-free optional static HTML/CSS/JS",
+    "dependencies": 0
+  },
+  "portability": "pass",
+  "secret_audit": "pass",
+  "original_repo_preserved": true,
+  "unauthorized_research": false
+}

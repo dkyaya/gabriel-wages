@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "source_index_rows": 26635,
+  "expected_volumes": 28,
+  "configure_exact_relative_command": "pass_bounded_fixture",
+  "status_unconfigured": "configured=false; ready=false",
+  "quick_verify": "25/25 fixture sources",
+  "full_verify_supported": true,
+  "offline_search": "pass",
+  "extract_28_part_fixture": "pass",
+  "local_config_ignored": true
+}
