@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "claims": 14,
+  "classes": {"supported": 1, "conditionally_supported": 1, "mechanism_supported_only": 5, "mixed_or_countervailing": 1, "unsupported": 6},
+  "local_comparisons": 10,
+  "counterexamples": 7,
+  "unresolved_high_impact_conflicts": 201,
+  "analytical_content_changed": false
+}

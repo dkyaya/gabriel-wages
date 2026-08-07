@@ -1,0 +1,9 @@
+{
+  "repairs_applied": true,
+  "repair_commit": "6c77b6901ae057495cf517fe6d83cabf36a3f4f5",
+  "repair_scope": ["fixture validation", "archive extraction safety", "verified resume", "full verification", "configured source resolution", "dashboard serving guidance", "onboarding and transfer wording", "acceptance records"],
+  "analytical_content_changed": false,
+  "atlas_changed": false,
+  "source_packages_changed": false,
+  "remaining_metadata_uncertainty": "one inherited 2023-2080 period label requires source-level review"
+}

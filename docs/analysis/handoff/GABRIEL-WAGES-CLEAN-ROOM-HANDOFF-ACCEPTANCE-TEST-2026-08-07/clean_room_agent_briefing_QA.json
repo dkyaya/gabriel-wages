@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "required_topics": 18,
+  "covered_topics": 18,
+  "coverage_percent": 100,
+  "overclaim_audit": "pass",
+  "redownload_audit": "pass",
+  "dashboard_optional_audit": "pass",
+  "new_ra_ownership_audit": "pass"
+}

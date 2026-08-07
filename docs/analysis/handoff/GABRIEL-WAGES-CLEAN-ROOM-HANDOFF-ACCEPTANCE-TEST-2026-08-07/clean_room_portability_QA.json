@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "absolute_user_paths": 0,
+  "secret_findings": 0,
+  "source_archives": 0,
+  "raw_source_binaries": 0,
+  "local_config_tracked": false,
+  "clean_repo_remote_configured": false,
+  "python": "3.11.7"
+}

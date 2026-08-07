@@ -1,0 +1,11 @@
+{
+  "source_library_transfer_status": "complete_by_user_confirmation",
+  "transfer_destination_label": "Safety_NonSafety_Source_Library",
+  "transfer_destination_type": "private_user_managed_google_drive",
+  "all_28_volumes_reported_uploaded": true,
+  "final_READ_ME_FIRST_reported_uploaded": true,
+  "final_checksums_reported_uploaded": true,
+  "packaging_locally_validated_before_transfer": true,
+  "remote_post_transfer_checksum_verification_by_this_task": false,
+  "google_drive_accessed_by_this_task": false
+}

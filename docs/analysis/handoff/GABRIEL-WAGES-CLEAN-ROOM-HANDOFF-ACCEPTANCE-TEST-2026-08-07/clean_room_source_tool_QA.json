@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "unconfigured_status": "pass",
+  "offline_search": "pass",
+  "fixture_setup": "pass",
+  "quick_verified_sources": 3,
+  "full_verified_sources": 3,
+  "configured_resolution": "pass",
+  "archive_parts_tested": 28,
+  "extraction_safety": "pass",
+  "resume_safety": "pass",
+  "production_validation_weakened": false
+}

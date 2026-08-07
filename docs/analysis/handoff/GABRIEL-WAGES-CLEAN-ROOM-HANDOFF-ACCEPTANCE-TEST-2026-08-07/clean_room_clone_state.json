@@ -1,0 +1,13 @@
+{
+  "clone_method": "git clone --no-local",
+  "isolated_clone_commit": "0d50028786932d2fd6c18bb9ee73bc7bc91bea2d",
+  "initial_tracked_files": 88,
+  "initial_tracked_bytes": 26400554,
+  "initial_local_config_present": false,
+  "initial_source_library_configured": false,
+  "historical_repo_used_during_first_pass": false,
+  "final_clean_repo_commit": "6c77b6901ae057495cf517fe6d83cabf36a3f4f5",
+  "final_tracked_files": 113,
+  "final_tracked_bytes": 26447002,
+  "clean_repo_remote_configured": false
+}

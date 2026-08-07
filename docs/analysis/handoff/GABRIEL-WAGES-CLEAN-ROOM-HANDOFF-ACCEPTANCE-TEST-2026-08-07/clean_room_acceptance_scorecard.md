@@ -1,0 +1,21 @@
+# Acceptance scorecard
+
+| Category | Result |
+|---|---|
+| Human onboarding | PASS |
+| Agent onboarding | PASS |
+| Findings clarity | PASS |
+| Boundary clarity | PASS |
+| Source-library usability | PASS |
+| Tool usability | PASS |
+| Data integrity | PASS |
+| Methods clarity | PASS |
+| Limitation clarity | PASS |
+| Portability | PASS |
+| Environment reproducibility | PASS |
+| Dashboard optionality | PASS |
+| Atlas accessibility | PASS |
+| New-RA ownership | PASS |
+| Repository cleanliness | PASS |
+
+Every initial minor repair was closed before acceptance.

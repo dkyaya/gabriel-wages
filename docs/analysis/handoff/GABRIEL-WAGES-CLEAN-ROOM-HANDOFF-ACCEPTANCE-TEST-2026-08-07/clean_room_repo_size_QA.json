@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "tracked_files": 113,
+  "tracked_bytes": 26447002,
+  "git_object_size": "6.66 MiB",
+  "largest_file": "data/source_library/SOURCE_INDEX.csv",
+  "largest_file_bytes": 21500589,
+  "files_over_50_mib": 0,
+  "files_over_100_mib": 0
+}

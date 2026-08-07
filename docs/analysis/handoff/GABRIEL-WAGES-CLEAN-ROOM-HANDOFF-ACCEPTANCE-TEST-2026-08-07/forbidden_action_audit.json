@@ -1,0 +1,16 @@
+{
+  "source_redownload": false,
+  "google_drive_or_cloud_api": false,
+  "hosted_search": false,
+  "GABRIEL": false,
+  "external_API": false,
+  "OCR": false,
+  "regression": false,
+  "causal_analysis": false,
+  "claim_readjudication": false,
+  "new_research": false,
+  "source_package_modification": false,
+  "source_deletion": false,
+  "historical_repo_stripping": false,
+  "dashboard_pages_work": false
+}
