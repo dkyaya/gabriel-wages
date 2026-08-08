@@ -1,0 +1,33 @@
+{
+  "measurement_basis": "fresh pre-archive logical-byte inventory captured 2026-08-07; task-owned verification clones and external archive outputs are reported separately and are not used to inflate historical-project savings",
+  "current_historical_repo_bytes": 129757083392,
+  "current_historical_repo_human": "120.85 GiB",
+  "strategies": {
+    "A_conservative_strip": {
+      "description": "Keep .git and the tracked working tree; remove ignored temporary/source/derived bulk after prerequisites while retaining selected local package/inbox review allowances.",
+      "expected_remaining_bytes": 36597989783,
+      "expected_remaining_human": "34.08 GiB",
+      "expected_reclaimed_bytes": 93159093609,
+      "expected_reclaimed_human": "86.76 GiB",
+      "estimate_precision": "planning estimate; final path-frozen deletion manifest must eliminate tracked/untracked overlap before execution"
+    },
+    "B_full_local_project_retirement": {
+      "description": "After all durable-transfer prerequisites and explicit approval, remove the entire historical repo locally while retaining the accepted clean repo.",
+      "expected_reclaimed_bytes": 129757083392,
+      "expected_reclaimed_human": "120.85 GiB",
+      "expected_remaining_clean_repo_bytes": 32971871,
+      "expected_remaining_clean_repo_human": "31.44 MiB"
+    }
+  },
+  "later_source_library_scenarios": {
+    "extracted_library_only_bytes": 57398629628,
+    "extracted_library_only_human": "53.46 GiB",
+    "net_savings_vs_current_bytes": 72358453764,
+    "net_savings_vs_current_human": "67.39 GiB",
+    "archives_plus_extracted_library_bytes": 105426574275,
+    "archives_plus_extracted_library_human": "98.19 GiB",
+    "net_savings_if_both_retained_bytes": 24330509117,
+    "net_savings_if_both_retained_human": "22.66 GiB"
+  },
+  "recommendation": "Strategy B after the historical bundle and compact summer record are uploaded and verified, the clean repo is pushed to a new private GitHub repository, source-library availability is confirmed, manual-review items are resolved, and Joachim explicitly approves deletion."
+}

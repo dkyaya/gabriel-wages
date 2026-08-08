@@ -1,0 +1,46 @@
+{
+  "decision": "gabriel_wages_final_handoff_release_archive_cleanup_plan_completed_archive_transfer_and_user_approval_required",
+  "validated_at": "2026-08-08T00:55:13.471491-04:00",
+  "all_gates_passed": true,
+  "quality_gates": {
+    "A_clean_release_accepted": "PASS",
+    "B_clean_repo_tests": "PASS_18_OF_18",
+    "C_release_tag": "PASS",
+    "D_clean_bundle": "PASS_VERIFY_AND_CLONE",
+    "E_github_instructions": "PASS",
+    "F_new_RA_transfer": "PASS",
+    "G_source_library_status": "PASS_USER_CONFIRMED_NO_REMOTE_BYTE_CLAIM",
+    "H_historical_git_bundle": "PASS_VERIFY_AND_BARE_CLONE",
+    "I_compact_summer_record": "PASS",
+    "J_current_disk_accounting": "PASS_FRESH_PRE_ARCHIVE_BASELINE",
+    "K_cleanup_classification": "PASS_19_FAMILIES",
+    "L_irreplaceable_audit": "PASS",
+    "M_cleanup_prerequisites": "PASS",
+    "N_strategy_comparison": "PASS",
+    "O_post_source_library_footprint": "PASS",
+    "P_no_deletion": "PASS",
+    "Q_no_pages_work": "PASS",
+    "R_no_research_expansion": "PASS",
+    "S_git_safety": "PASS_ARCHIVES_EXTERNAL_AND_UNTRACKED",
+    "T_explicit_future_approval": "PASS_REQUIRED"
+  },
+  "archive_hashes_verified": {
+    "clean_bundle": "e35c3441a0c2515b3402a6a1ad29f2fb07c8d7cde652062c0991e90d97e2e4cb",
+    "clean_snapshot": "35f0726c441ce4a8a4a1ccd34e9bff60cdc3d01407062043286f50c37e068fdb",
+    "historical_bundle": "cddc30c978b02f19bb5041858cd4388c5501ad6fa71abd033e2bfad673066533",
+    "summer_record": "8a7b2bd5752f26143073560209c5c7efa500a052743ad04f96d6768f011f8517"
+  },
+  "clean_release_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "clean_release_tag_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "historical_pre_archive_baseline_bytes": 129757083392,
+  "source_library_transfer_status": "complete_by_user_confirmation",
+  "source_library_remote_post_transfer_verification": false,
+  "historical_archive_transfer_status": "pending_user_upload",
+  "cleanup_executed": false,
+  "blocking_before_cleanup": [
+    "create and push the clean private GitHub repository",
+    "upload and independently verify the historical bundle and compact summer record",
+    "resolve manual-review items",
+    "receive explicit Joachim approval for an exact cleanup strategy"
+  ]
+}

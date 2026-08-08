@@ -1,0 +1,113 @@
+{
+  "waves": [
+    {
+      "wave": 1,
+      "name": "Temporary debris",
+      "classes": [
+        "DELETE_LOW_RISK"
+      ],
+      "examples": [
+        "task tmp",
+        "caches",
+        "stale logs",
+        "render QA",
+        "worker state",
+        "task-owned bundle-verification clones"
+      ],
+      "risk": "VERY_LOW_TO_LOW",
+      "prerequisites": [
+        "frozen path manifest",
+        "compact summer record built",
+        "explicit approval"
+      ],
+      "executed": false
+    },
+    {
+      "wave": 2,
+      "name": "Superseded workflow outputs",
+      "classes": [
+        "DELETE_SUPERSEDED"
+      ],
+      "examples": [
+        "old relays",
+        "old prompts",
+        "superseded reports/atlases",
+        "repeated QA",
+        "obsolete dashboard builds"
+      ],
+      "risk": "LOW_TO_MEDIUM",
+      "prerequisites": [
+        "compact record transferred",
+        "historical bundle transferred",
+        "clean release preserved",
+        "explicit approval"
+      ],
+      "executed": false
+    },
+    {
+      "wave": 3,
+      "name": "Reconstructible analytical bulk",
+      "classes": [
+        "DELETE_RECONSTRUCTIBLE"
+      ],
+      "examples": [
+        "raw fields",
+        "raw spans",
+        "reconciliation",
+        "normalization",
+        "matching",
+        "visual intermediates"
+      ],
+      "risk": "MEDIUM",
+      "prerequisites": [
+        "source library available",
+        "clean compact outputs validated",
+        "code/history archived",
+        "explicit approval"
+      ],
+      "executed": false
+    },
+    {
+      "wave": 4,
+      "name": "Original local source storage",
+      "classes": [
+        "DELETE_ORIGINAL_SOURCE_LOCAL_COPY_AFTER_LIBRARY_CONFIRMED"
+      ],
+      "examples": [
+        "retained originals",
+        "canonical/excess extracted text",
+        "redundant local source directories"
+      ],
+      "risk": "HIGH",
+      "prerequisites": [
+        "all 28 volumes remain available",
+        "remote/download checksum verification strongly recommended",
+        "source-index accounting retained",
+        "explicit approval"
+      ],
+      "executed": false
+    },
+    {
+      "wave": 5,
+      "name": "Historical repo retirement",
+      "classes": [
+        "KEEP_UNTIL_REMOTE_ARCHIVE_CONFIRMED"
+      ],
+      "examples": [
+        "remaining historical working tree",
+        "historical .git"
+      ],
+      "risk": "CRITICAL",
+      "prerequisites": [
+        "historical bundle transferred and verified",
+        "summer record transferred and verified",
+        "clean private GitHub repo pushed",
+        "source library externally available",
+        "manual-review items resolved",
+        "explicit Joachim approval"
+      ],
+      "executed": false
+    }
+  ],
+  "no_deletion_in_this_task": true
+}

@@ -1,0 +1,241 @@
+{
+  "staged_file_count": 46,
+  "staged_total_bytes": 405042,
+  "staged_files": [
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/ARCHIVE_TRANSFER_TO_DRIVE.md",
+      "bytes": 2019,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/FINAL_HANDOFF_ARCHIVE_CHECKSUMS.sha256",
+      "bytes": 497,
+      "extension": ".sha256"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/LOCAL_CLEANUP_PREVIEW.md",
+      "bytes": 4729,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/ORIGINAL_PROJECT_ARCHIVE_MANIFEST.json",
+      "bytes": 1377,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/archive_transfer_requirements.json",
+      "bytes": 2018,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/archive_transfer_requirements.md",
+      "bytes": 428,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/clean_repo_bundle_audit.json",
+      "bytes": 1217,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/clean_repo_bundle_audit.md",
+      "bytes": 571,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/clean_repo_release_audit.json",
+      "bytes": 934,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/clean_repo_release_audit.md",
+      "bytes": 677,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_classification.csv",
+      "bytes": 3427,
+      "extension": ".csv"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_classification.jsonl",
+      "bytes": 6240,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_prerequisite_matrix.csv",
+      "bytes": 9345,
+      "extension": ".csv"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_prerequisite_matrix.jsonl",
+      "bytes": 14866,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_strategy_comparison.json",
+      "bytes": 2097,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_strategy_comparison.md",
+      "bytes": 1654,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_wave_plan.json",
+      "bytes": 2803,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/cleanup_wave_plan.md",
+      "bytes": 1651,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/compact_summer_record_audit.json",
+      "bytes": 701,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/compact_summer_record_audit.md",
+      "bytes": 575,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/current_disk_usage_by_artifact_family.csv",
+      "bytes": 7082,
+      "extension": ".csv"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/current_disk_usage_by_artifact_family.jsonl",
+      "bytes": 14331,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/current_disk_usage_by_directory.csv",
+      "bytes": 46158,
+      "extension": ".csv"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/current_disk_usage_by_directory.jsonl",
+      "bytes": 101913,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/disk_capacity_audit.json",
+      "bytes": 642,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/final_handoff_release_manifest.json",
+      "bytes": 2966,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/final_handoff_release_summary.json",
+      "bytes": 933,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/final_handoff_release_summary.md",
+      "bytes": 1495,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/forbidden_action_audit.json",
+      "bytes": 720,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/historical_git_bundle_audit.json",
+      "bytes": 1385,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/historical_git_bundle_audit.md",
+      "bytes": 916,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/irreplaceable_artifact_audit.csv",
+      "bytes": 2624,
+      "extension": ".csv"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/irreplaceable_artifact_audit.jsonl",
+      "bytes": 3713,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/large_file_audit.json",
+      "bytes": 4480,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/next_task.md",
+      "bytes": 1062,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/operational_incident_log.jsonl",
+      "bytes": 1014,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/post_cleanup_disk_estimates.json",
+      "bytes": 1334,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/post_cleanup_disk_estimates.md",
+      "bytes": 641,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/rollback_plan.md",
+      "bytes": 1274,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/source_library_transfer_final_record.json",
+      "bytes": 2611,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/source_library_transfer_final_record.md",
+      "bytes": 2051,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/staged_file_audit.json",
+      "bytes": 9804,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/top_100_current_largest_paths.csv",
+      "bytes": 42859,
+      "extension": ".csv"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/top_100_current_largest_paths.jsonl",
+      "bytes": 92470,
+      "extension": ".jsonl"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/validation_report.json",
+      "bytes": 2237,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/analysis/handoff/GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07/validation_report.md",
+      "bytes": 501,
+      "extension": ".md"
+    }
+  ],
+  "allowed_task_root_only": true,
+  "source_binary_count": 0,
+  "archive_binary_count": 0,
+  "forbidden_root_count": 0,
+  "result": "PASS"
+}

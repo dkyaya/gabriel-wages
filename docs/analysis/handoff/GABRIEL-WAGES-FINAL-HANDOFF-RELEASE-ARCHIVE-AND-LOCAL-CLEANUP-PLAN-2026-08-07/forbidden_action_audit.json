@@ -1,0 +1,25 @@
+{
+  "project_data_deleted": false,
+  "historical_repo_stripped": false,
+  "source_corpus_deleted": false,
+  "source_library_redownloaded": false,
+  "google_drive_accessed": false,
+  "external_API_used": false,
+  "hosted_search_used": false,
+  "GABRIEL_used": false,
+  "OCR_run": false,
+  "extraction_run": false,
+  "analysis_or_regression_run": false,
+  "claim_readjudication_run": false,
+  "github_pages_touched": false,
+  "clean_repo_remote_added": false,
+  "large_archive_staged_in_git": false,
+  "allowed_operations": [
+    "local Git release commit/tag",
+    "Git bundle/archive creation",
+    "read-only disk inventory",
+    "compact documentation",
+    "historical metadata commit/push"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "filename": "gabriel-wages-original-git-history-2026-08-07.bundle",
+  "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/historical/gabriel-wages-original-git-history-2026-08-07.bundle",
+  "bytes": 14830010689,
+  "sha256": "cddc30c978b02f19bb5041858cd4388c5501ad6fa71abd033e2bfad673066533",
+  "historical_repo_head_at_bundle_creation": "2b9c884d830c807a634d4b1bf229639b4738373e",
+  "branch_count": 23,
+  "tag_count": 1,
+  "stash_ref_count": 1,
+  "advertised_ref_count": 34,
+  "bundle_scope": "all refs",
+  "bundle_verify": "passed_complete_history",
+  "bare_clone_test": "passed",
+  "bare_clone_fsck": "passed_with_expected_dangling_stash_commit_after_clone_did_not_import_stash_ref",
+  "bare_clone_imported_ref_count": 24,
+  "main_commit_verified": "2b9c884d830c807a634d4b1bf229639b4738373e",
+  "freeze_tag": "pre-handoff-freeze-2026-08-06",
+  "freeze_tag_commit": "d1dd03ea51197421102d13ce79aef88868548ccb",
+  "representative_commits_verified": 12,
+  "bundle_limitations": [
+    "ignored and untracked files are not included",
+    "reflogs, worktree registrations, local config, hooks, environments and secrets are not included",
+    "the separate source library remains required for original source preservation"
+  ],
+  "remote_transfer_status": "pending_user_upload",
+  "result": "locally_verified_ready_for_private_transfer"
+}

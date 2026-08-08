@@ -1,0 +1,24 @@
+{
+  "repository": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/safety-nonsafety-municipal-compensation",
+  "starting_commit": "6c77b6901ae057495cf517fe6d83cabf36a3f4f5",
+  "release_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "release_tag": "handoff-release-2026-08-07",
+  "release_tag_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "tracked_file_count": 120,
+  "tracked_content_bytes": 26478103,
+  "git_object_bytes": 6526737,
+  "atlas_path": "reports/visual_atlas/why_public_safety_wages_may_grow_differently.pdf",
+  "atlas_pages": 58,
+  "atlas_sha256": "781adb2ffe047d8a8523fcf3a65e743917bb1a3e0ca00c7df0f8c85a035a9b76",
+  "unit_tests": {
+    "passed": 18,
+    "total": 18
+  },
+  "compact_data_validation": "passed",
+  "release_checksum_rows": 119,
+  "release_checksums_verified": true,
+  "remote_configured": false,
+  "source_archives_tracked": 0,
+  "raw_source_binaries_tracked": 0,
+  "result": "passed"
+}

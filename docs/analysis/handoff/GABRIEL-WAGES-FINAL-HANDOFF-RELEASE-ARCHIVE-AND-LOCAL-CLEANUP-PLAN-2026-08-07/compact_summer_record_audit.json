@@ -1,0 +1,16 @@
+{
+  "filename": "gabriel-wages-summer-project-record-2026-08-07.zip",
+  "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/historical/gabriel-wages-summer-project-record-2026-08-07.zip",
+  "bytes": 452412,
+  "sha256": "8a7b2bd5752f26143073560209c5c7efa500a052743ad04f96d6768f011f8517",
+  "zip_member_count": 71,
+  "zip_integrity": "passed",
+  "historical_selected_files": 42,
+  "contains_clean_release_records": true,
+  "contains_cleanup_plan": true,
+  "source_binaries_included": false,
+  "raw_analytical_corpus_included": false,
+  "relay_collection_included": false,
+  "credentials_included": false,
+  "result": "passed_ready_for_private_transfer"
+}

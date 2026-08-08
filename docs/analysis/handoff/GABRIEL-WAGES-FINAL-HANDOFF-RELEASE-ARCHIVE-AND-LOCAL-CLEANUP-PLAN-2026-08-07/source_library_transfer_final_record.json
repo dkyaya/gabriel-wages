@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_date": "2026-08-07",
+  "release_name": "gabriel-wages-source-library-2026-08-06",
+  "status": "transfer_complete_by_user_confirmation_remote_byte_verification_pending",
+  "related_clean_handoff": {
+    "release_tag": "handoff-release-2026-08-07",
+    "release_commit": "71154479e507a5079168bb7152848b10230c5239"
+  },
+  "library_contents": {
+    "canonical_originals": 26635,
+    "extracted_text_companions": 23454,
+    "volume_count": 28,
+    "source_bytes": 56164354195,
+    "compressed_bytes": 48027944647,
+    "exact_duplicate_group_count": 154,
+    "exact_duplicate_copies_removed": 162,
+    "exact_duplicate_bytes_avoided": 409679973,
+    "missing_source_count": 0,
+    "quarantined_source_count": 2
+  },
+  "integrity_anchors": {
+    "source_index_sha256": "ffa31b609b914bb6bb2af37363931240d0b1b0e544849428e21e6b80a42d80b8",
+    "volume_manifest_sha256": "a54509c5cf9f6bc19c91219f8117f9bfb651913d29657703a6626e809dccd4ee",
+    "read_me_first_sha256": "21946d9a40fea9a2d83780d0a9219a05b59f6b5eadd8f4dec94d4271099a5f6f"
+  },
+  "transfer_confirmation": {
+    "destination_type": "private_user_managed_google_drive",
+    "destination_label": "Safety_NonSafety_Source_Library",
+    "all_28_volumes_reported_uploaded": true,
+    "final_read_me_first_reported_uploaded": true,
+    "final_checksums_reported_uploaded": true,
+    "confirmation_basis": "user_confirmation",
+    "drive_accessed_by_this_lane": false,
+    "remote_files_listed_by_this_lane": false,
+    "remote_bytes_downloaded_by_this_lane": false,
+    "remote_post_transfer_checksum_verified": false
+  },
+  "local_validation_before_transfer": {
+    "all_volumes_completed": true,
+    "independent_volume_archives": true,
+    "zstd_integrity_checked": true,
+    "source_member_sha256_validation": "100_percent_before_transfer",
+    "volume_checksum_manifest_present": true
+  },
+  "remaining_acceptance_action": {
+    "required": true,
+    "action": "Independently verify remote or downloaded bytes for all 28 volumes and final metadata against the preserved checksum records.",
+    "recipient_confirmation_required": true
+  },
+  "cleanup_gate": {
+    "local_source_deletion_authorized": false,
+    "local_archive_staging_deletion_authorized": false,
+    "explicit_user_approval_required_after_remote_verification": true,
+    "reason": "User-confirmed upload does not establish remote byte integrity."
+  },
+  "actions_performed_by_this_lane": {
+    "drive_accessed": false,
+    "upload_performed": false,
+    "source_file_modified": false,
+    "source_file_deleted": false,
+    "repository_modified": false
+  }
+}

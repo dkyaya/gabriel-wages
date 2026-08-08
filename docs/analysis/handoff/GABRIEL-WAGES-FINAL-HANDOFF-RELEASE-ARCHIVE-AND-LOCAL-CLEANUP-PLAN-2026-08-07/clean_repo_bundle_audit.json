@@ -1,0 +1,25 @@
+{
+  "filename": "safety-nonsafety-municipal-compensation-handoff-2026-08-07.bundle",
+  "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/clean_repo/safety-nonsafety-municipal-compensation-handoff-2026-08-07.bundle",
+  "bytes": 5110249,
+  "sha256": "e35c3441a0c2515b3402a6a1ad29f2fb07c8d7cde652062c0991e90d97e2e4cb",
+  "bundle_verify": "passed",
+  "advertised_main_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "advertised_release_tag": "handoff-release-2026-08-07",
+  "release_tag_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "clone_test": "passed",
+  "clone_unit_tests": {
+    "passed": 18,
+    "total": 18
+  },
+  "clone_release_checksums": "passed",
+  "clean_snapshot": {
+    "filename": "safety-nonsafety-municipal-compensation-handoff-2026-08-07.zip",
+    "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/clean_repo/safety-nonsafety-municipal-compensation-handoff-2026-08-07.zip",
+    "bytes": 5652686,
+    "sha256": "35f0726c441ce4a8a4a1ccd34e9bff60cdc3d01407062043286f50c37e068fdb",
+    "zip_integrity": "passed",
+    "scope": "tracked working-tree content only"
+  },
+  "result": "passed"
+}

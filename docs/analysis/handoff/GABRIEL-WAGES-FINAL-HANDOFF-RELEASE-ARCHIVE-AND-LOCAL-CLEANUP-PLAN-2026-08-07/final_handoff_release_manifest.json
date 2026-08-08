@@ -1,0 +1,49 @@
+{
+  "task_id": "GABRIEL-WAGES-FINAL-HANDOFF-RELEASE-ARCHIVE-AND-LOCAL-CLEANUP-PLAN-2026-08-07",
+  "decision": "gabriel_wages_final_handoff_release_archive_cleanup_plan_completed_archive_transfer_and_user_approval_required",
+  "clean_repo_start_commit": "6c77b6901ae057495cf517fe6d83cabf36a3f4f5",
+  "clean_repo_release_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "clean_repo_release_tag": "handoff-release-2026-08-07",
+  "clean_repo_remote_configured": false,
+  "clean_repo_tests": "18_of_18_passed",
+  "clean_repo_bundle": {
+    "filename": "safety-nonsafety-municipal-compensation-handoff-2026-08-07.bundle",
+    "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/clean_repo/safety-nonsafety-municipal-compensation-handoff-2026-08-07.bundle",
+    "bytes": 5110249,
+    "sha256": "e35c3441a0c2515b3402a6a1ad29f2fb07c8d7cde652062c0991e90d97e2e4cb"
+  },
+  "clean_repo_snapshot": {
+    "filename": "safety-nonsafety-municipal-compensation-handoff-2026-08-07.zip",
+    "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/clean_repo/safety-nonsafety-municipal-compensation-handoff-2026-08-07.zip",
+    "bytes": 5652686,
+    "sha256": "35f0726c441ce4a8a4a1ccd34e9bff60cdc3d01407062043286f50c37e068fdb"
+  },
+  "historical_repo_head_at_archive_creation": "2b9c884d830c807a634d4b1bf229639b4738373e",
+  "historical_git_bundle": {
+    "filename": "gabriel-wages-original-git-history-2026-08-07.bundle",
+    "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/historical/gabriel-wages-original-git-history-2026-08-07.bundle",
+    "bytes": 14830010689,
+    "sha256": "cddc30c978b02f19bb5041858cd4388c5501ad6fa71abd033e2bfad673066533"
+  },
+  "compact_summer_record": {
+    "filename": "gabriel-wages-summer-project-record-2026-08-07.zip",
+    "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/historical/gabriel-wages-summer-project-record-2026-08-07.zip",
+    "bytes": 452412,
+    "sha256": "8a7b2bd5752f26143073560209c5c7efa500a052743ad04f96d6768f011f8517"
+  },
+  "source_library": {
+    "release": "gabriel-wages-source-library-2026-08-06",
+    "canonical_original_sources": 26635,
+    "extracted_text_companions": 23454,
+    "volume_count": 28,
+    "compressed_bytes": 48027944647,
+    "transfer_status": "complete_by_user_confirmation",
+    "remote_post_transfer_byte_verification": false
+  },
+  "current_historical_repo_pre_archive_baseline_bytes": 129757083392,
+  "current_historical_repo_pre_archive_baseline_human": "120.85 GiB",
+  "cleanup_executed": false,
+  "recommended_strategy": "Strategy B full local project retirement after archive transfer, clean GitHub push, manual-review resolution and explicit Joachim approval",
+  "archive_transfer_status": "pending_user_upload",
+  "user_cleanup_approval_status": "not_requested_until_archive_transfer_confirmed"
+}

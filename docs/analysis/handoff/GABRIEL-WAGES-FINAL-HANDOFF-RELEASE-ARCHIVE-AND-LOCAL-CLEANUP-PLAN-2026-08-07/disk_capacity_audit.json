@@ -1,0 +1,12 @@
+{
+  "filesystem_free_bytes_at_preflight": 54431551488,
+  "filesystem_free_human_at_preflight": "50.69 GiB",
+  "filesystem_free_bytes_after_archive_and_clone_validation": 23021404160,
+  "filesystem_free_human_after_archive_and_clone_validation": "21.44 GiB",
+  "required_free_floor_bytes": 8589934592,
+  "required_free_floor_human": "8.00 GiB",
+  "floor_preserved": true,
+  "historical_bundle_bytes": 14830010689,
+  "historical_verification_clone_allocated_bytes": 14831165440,
+  "note": "The task-owned verification clone is retained because this planning task performs no deletion; it is a Wave 1 candidate in the later approved cleanup."
+}

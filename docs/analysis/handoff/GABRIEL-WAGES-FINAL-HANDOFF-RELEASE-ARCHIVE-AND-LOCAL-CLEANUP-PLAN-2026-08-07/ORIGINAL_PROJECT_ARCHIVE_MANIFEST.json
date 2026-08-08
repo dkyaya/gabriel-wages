@@ -1,0 +1,23 @@
+{
+  "historical_repo_path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/gabriel-wages",
+  "current_HEAD_at_archive_creation": "2b9c884d830c807a634d4b1bf229639b4738373e",
+  "branch_count": 23,
+  "tag_count": 1,
+  "git_bundle_filename": "gabriel-wages-original-git-history-2026-08-07.bundle",
+  "git_bundle_bytes": 14830010689,
+  "git_bundle_SHA256": "cddc30c978b02f19bb5041858cd4388c5501ad6fa71abd033e2bfad673066533",
+  "git_bundle_verify_status": "passed_complete_history",
+  "git_bundle_clone_test_status": "passed_bare_clone_and_fsck",
+  "compact_history_zip_filename": "gabriel-wages-summer-project-record-2026-08-07.zip",
+  "compact_history_zip_bytes": 452412,
+  "compact_history_zip_SHA256": "8a7b2bd5752f26143073560209c5c7efa500a052743ad04f96d6768f011f8517",
+  "source_library_external_status": true,
+  "source_library_transfer_status": "complete_by_user_confirmation",
+  "source_library_remote_post_transfer_verification": false,
+  "clean_handoff_repo_path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/safety-nonsafety-municipal-compensation",
+  "clean_handoff_release_tag": "handoff-release-2026-08-07",
+  "clean_handoff_release_commit": "71154479e507a5079168bb7152848b10230c5239",
+  "ignored_artifacts_not_in_git_bundle": true,
+  "cleanup_not_yet_executed": true,
+  "archive_remote_transfer_status": "pending_user_upload_and_post_transfer_verification"
+}

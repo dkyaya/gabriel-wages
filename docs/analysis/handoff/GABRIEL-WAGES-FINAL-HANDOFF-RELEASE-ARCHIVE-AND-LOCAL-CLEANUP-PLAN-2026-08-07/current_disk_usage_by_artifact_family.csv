@@ -1,0 +1,38 @@
+aggregation_mode,artifact_family,logical_bytes,logical_human,allocated_entry_bytes,allocated_entry_human,file_count,overlap_note,snapshot_generated_at
+primary_exclusive,artifacts_other,3728090977,3.47 GiB,3752800256,3.50 GiB,49195,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,compact_observations,2081516662,1.94 GiB,2083622912,1.94 GiB,421,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,docs_analysis_other,16809712604,15.66 GiB,17537204224,16.33 GiB,226838,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,extracted_text,1416294317,1.32 GiB,1547476992,1.44 GiB,52714,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,git_metadata,15062418352,14.03 GiB,15073140736,14.04 GiB,3744,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,handoff_packages,136292155,129.98 MiB,136499200,130.18 MiB,77,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,matching,3044741,2.90 MiB,3108864,2.96 MiB,23,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,normalization,1540037734,1.43 GiB,1542688768,1.44 GiB,911,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,original_sources,69428281552,64.66 GiB,69493424128,64.72 GiB,31878,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,project_other,1162374931,1.08 GiB,1225101312,1.14 GiB,25767,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,raw_fields,939220163,895.71 MiB,939331584,895.82 MiB,53,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,raw_spans,1721433569,1.60 GiB,1723092992,1.60 GiB,591,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,reconciliation,5514912625,5.14 GiB,5519392768,5.14 GiB,1465,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,reports,214175681,204.25 MiB,217673728,207.59 MiB,1523,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,tmp_caches,580543,566.94 KiB,606208,592.00 KiB,10,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,tmp_logs,22017,21.50 KiB,118784,116.00 KiB,35,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,tmp_other,8029501002,7.48 GiB,8068280320,7.51 GiB,13192,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,tmp_relays_archives,1834632186,1.71 GiB,1838460928,1.71 GiB,1581,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+primary_exclusive,visual_intermediates,134541581,128.31 MiB,136404992,130.09 MiB,920,Mutually exclusive; sums to the filesystem-entry total.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,.git,15062418352,14.03 GiB,15073140736,14.04 GiB,3744,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,artifacts_total,69275266273,64.52 GiB,69488840704,64.72 GiB,128824,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,compact_observations,3048296938,2.84 GiB,3050434560,2.84 GiB,437,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,docs_analysis,33780003321,31.46 GiB,34527313920,32.16 GiB,235944,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,extracted_text,1416294317,1.32 GiB,1547476992,1.44 GiB,52714,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,handoff_packages,136292155,129.98 MiB,136499200,130.18 MiB,77,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,matching,536698300,511.84 MiB,538464256,513.52 MiB,602,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,normalization,1774387796,1.65 GiB,1777238016,1.66 GiB,984,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,raw_fields,939220163,895.71 MiB,939331584,895.82 MiB,53,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,raw_spans,2112663163,1.97 GiB,2114326528,1.97 GiB,596,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,reconciliation,5514937222,5.14 GiB,5519441920,5.14 GiB,1475,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,reports,214175681,204.25 MiB,217673728,207.59 MiB,1523,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,sources_original,69428281552,64.66 GiB,69493424128,64.72 GiB,31878,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,tmp_caches,598190,584.17 KiB,630784,616.00 KiB,12,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,tmp_logs,65055,63.53 KiB,184320,180.00 KiB,45,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,tmp_relays_archives,1848312942,1.72 GiB,1852407808,1.73 GiB,1673,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,tmp_total,9884928139,9.21 GiB,9928151040,9.25 GiB,14987,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00
+requested_selector_overlapping,visual_intermediates_and_assets,850699728,811.29 MiB,861306880,821.41 MiB,4424,Requested view; may overlap another selector and must not be summed across selectors.,2026-08-07T15:30:16.438726+00:00

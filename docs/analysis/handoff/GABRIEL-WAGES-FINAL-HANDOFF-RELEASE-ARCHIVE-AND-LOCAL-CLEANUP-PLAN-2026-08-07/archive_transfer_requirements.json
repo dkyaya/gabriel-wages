@@ -1,0 +1,36 @@
+{
+  "suggested_private_folder": "Safety_NonSafety_Project_Handoff",
+  "required_files": [
+    {
+      "filename": "gabriel-wages-original-git-history-2026-08-07.bundle",
+      "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/historical/gabriel-wages-original-git-history-2026-08-07.bundle",
+      "bytes": 14830010689,
+      "sha256": "cddc30c978b02f19bb5041858cd4388c5501ad6fa71abd033e2bfad673066533"
+    },
+    {
+      "filename": "gabriel-wages-summer-project-record-2026-08-07.zip",
+      "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/historical/gabriel-wages-summer-project-record-2026-08-07.zip",
+      "bytes": 452412,
+      "sha256": "8a7b2bd5752f26143073560209c5c7efa500a052743ad04f96d6768f011f8517"
+    }
+  ],
+  "recommended_files": [
+    {
+      "filename": "safety-nonsafety-municipal-compensation-handoff-2026-08-07.bundle",
+      "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/clean_repo/safety-nonsafety-municipal-compensation-handoff-2026-08-07.bundle",
+      "bytes": 5110249,
+      "sha256": "e35c3441a0c2515b3402a6a1ad29f2fb07c8d7cde652062c0991e90d97e2e4cb"
+    },
+    {
+      "filename": "safety-nonsafety-municipal-compensation-handoff-2026-08-07.zip",
+      "path": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/clean_repo/safety-nonsafety-municipal-compensation-handoff-2026-08-07.zip",
+      "bytes": 5652686,
+      "sha256": "35f0726c441ce4a8a4a1ccd34e9bff60cdc3d01407062043286f50c37e068fdb"
+    }
+  ],
+  "checksum_manifest": "/Users/joachimjohnson/Documents/RA_2026/Pol_Fire/handoff_packages/final_release_2026-08-07/manifests/FINAL_HANDOFF_ARCHIVE_CHECKSUMS.sha256",
+  "required_post_transfer_verification": "independent SHA-256 readback or download verification",
+  "current_remote_status": "not_uploaded_by_this_task",
+  "google_drive_accessed": false,
+  "cleanup_authorized": false
+}
